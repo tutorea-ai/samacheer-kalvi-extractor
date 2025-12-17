@@ -28,4 +28,5 @@ Clone the repository and install the required dependencies:
 git clone [https://github.com/tutorea-ai/samacheer-kalvi-extractor.git](https://github.com/tutorea-ai/samacheer-kalvi-extractor.git)
 cd samacheer-kalvi-extractor
 pip install -r requirements.txt
-
+cd src
+python3 book_downloader.py
