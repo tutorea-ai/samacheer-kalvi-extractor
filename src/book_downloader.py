@@ -3,8 +3,7 @@ import requests
 # ======================================================
 # 1. CONFIGURATION & DATA
 # ======================================================
-CATALOG_URL = "https://raw.githubusercontent.com/Dravid005/samacheer-kalvi-pdf-downloader/main/src/book_catalog.json"
-
+CATALOG_URL = "https://raw.githubusercontent.com/tutorea-ai/samacheer-kalvi-extractor/main/src/book_catalog.json"
 SUB_11_12 = ["Tamil", "English", "Maths", "Physics", "Chemistry", "Biology", "Computer Science", "Commerce", "Accountancy"]
 SUB_6_10  = ["Tamil", "English", "Maths", "Science", "Social Science"]
 
