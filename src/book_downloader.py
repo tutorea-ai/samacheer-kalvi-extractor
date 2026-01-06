@@ -2,6 +2,7 @@ import requests
 import os
 import json
 import PyPDF2
+import gdown
 
 # ======================================================
 # 1. CONFIGURATION
@@ -61,19 +62,17 @@ def load_unit_index(std, subject):
         return {}
 
 def download_file(file_id, filename, hidden=False):
-    url = f"https://drive.google.com/uc?export=download&id={file_id}"
-    
     if not hidden:
-        print(f"\n⬇️  Downloading Full Book: {filename}...")
+        print(f"\n⬇️  Connecting to Google Drive (ID: {file_id})...")
     else:
         print(f"⚙️  Fetching source file for slicing...")
-
+    
     try:
-        with requests.get(url, stream=True) as r:
-            r.raise_for_status() 
-            with open(filename, 'wb') as f:
-                for chunk in r.iter_content(chunk_size=1024):
-                    f.write(chunk)
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, filename, quiet=hidden, fuzzy=True)
+        
+        if not hidden: 
+            print(f"✅ Download Success: {filename}")
         return True
     except Exception as e:
         print(f"❌ Download failed: {e}")
@@ -111,61 +110,90 @@ def generate_book_key(std, term, subject, medium):
 # ======================================================
 # 3. SMART MENU LOGIC
 # ======================================================
-def handle_unit_selection(book_key, unit_data, std, subject):
-    # --- STEP 1: SHOW UNITS ---
-    print(f"\n📖 Available Units in {subject}:")
-    units = list(unit_data.keys()) 
+def handle_unit_selection(book_key, index_data, std, subject):
+    # --- 1. EXTRACT METADATA ---
+    meta = index_data.get("meta", {"prelim_pages": 0, "total_pdf_pages": 999})
+    offset = meta["prelim_pages"]
+    max_pages = meta["total_pdf_pages"]
     
-    for i, u in enumerate(units, 1):
-        print(f"   {i}. {u}")
-    
-    try:
-        u_idx = int(input("👉 Select Unit (Number): ")) - 1
-        selected_unit = units[u_idx]
-    except (ValueError, IndexError):
-        print("❌ Invalid selection.")
+    units = index_data.get("units", [])
+    if not units:
+        print("❌ Error: JSON format is empty or incorrect.")
         return None, None, None
 
-    # --- STEP 2: SHOW LESSONS ---
-    print(f"\n📝 Lessons in {selected_unit}:")
-    lessons_map = unit_data[selected_unit]
-    lesson_names = list(lessons_map.keys())
+    # --- 2. SHOW UNIT MENU FIRST ---
+    print(f"\n📚 Available Units in {subject}:")
+    for i, unit in enumerate(units, 1):
+        u_num = unit.get("unit")
+        month = unit.get("month", "")
+        print(f"   {i}. Unit {u_num} ({month})")
     
-    for i, l in enumerate(lesson_names, 1):
-        print(f"   {i}. {l}")
-
     try:
-        l_idx = int(input("👉 Select Lesson (Number): ")) - 1
-        raw_lesson_name = lesson_names[l_idx]     
-        
-        # --- GET DATA ---
-        lesson_data = lessons_map[raw_lesson_name]
-        
-        if isinstance(lesson_data, dict):
-            page_range = lesson_data['pdf_range']
-        else:
-            page_range = lesson_data 
+        unit_choice = int(input(f"👉 Select Unit (1-{len(units)}): ")) - 1
+        selected_unit = units[unit_choice]
+    except (ValueError, IndexError):
+        print("❌ Invalid unit selection.")
+        return None, None, None
+
+    # --- 3. BUILD LESSON MENU FOR SELECTED UNIT ---
+    unit_num = selected_unit.get("unit")
+    lessons = []
+    
+    for category in ["prose", "poem", "supplementary", "play"]:
+        if category in selected_unit:
+            item = selected_unit[category]
+            label = f"{category.capitalize()}: {item['title']}"
             
+            lessons.append({
+                "label": label,
+                "book_page": item['page'],
+                "clean_name": f"Unit{unit_num}-{category.capitalize()}-{item['title'].replace(' ', '').replace('(', '').replace(')', '')}"
+            })
+    
+    # Sort by page (just in case)
+    lessons.sort(key=lambda x: x["book_page"])
+    
+    # --- 4. SHOW LESSON MENU ---
+    print(f"\n📖 Lessons in Unit {unit_num}:")
+    for i, lesson in enumerate(lessons, 1):
+        print(f"   {i}. {lesson['label']} (Starts at pg {lesson['book_page']})")
+    
+    try:
+        lesson_choice = int(input(f"👉 Select Lesson (1-{len(lessons)}): ")) - 1
+        selected = lessons[lesson_choice]
     except (ValueError, IndexError):
-        print("❌ Invalid selection or missing data.")
+        print("❌ Invalid lesson selection.")
         return None, None, None
 
-    # --- STEP 3: GENERATE CLEAN FILENAME ---
-    clean_unit = selected_unit.replace(" ", "")
+    # --- 5. CALCULATE PDF RANGES ---
+    start_pdf_page = selected["book_page"] + offset
     
-    if ":" in raw_lesson_name:
-        parts = raw_lesson_name.split(":")
-        category = parts[0].strip() 
-        lesson_name = parts[1].strip().replace(" ", "") 
+    # Find end page: Look for next lesson in ANY unit
+    all_lessons_sorted = []
+    for u in units:
+        for cat in ["prose", "poem", "supplementary", "play"]:
+            if cat in u:
+                all_lessons_sorted.append(u[cat]['page'])
+    
+    all_lessons_sorted.sort()
+    
+    # Find the next page after current
+    next_pages = [p for p in all_lessons_sorted if p > selected["book_page"]]
+    
+    if next_pages:
+        next_lesson_book_page = next_pages[0]
+        end_pdf_page = (next_lesson_book_page + offset) - 1
     else:
-        category = "Lesson"
-        lesson_name = raw_lesson_name.replace(" ", "")
+        print("⚠️ Note: This is the last lesson. Extracting till end of book.")
+        end_pdf_page = max_pages
 
-    sub_short = subject[:3] 
-    
-    final_name = f"Class-{std}-{sub_short}-{clean_unit}-{category}-{lesson_name}.pdf"
-    
-    return final_name, page_range[0], page_range[1]
+    # --- 6. RESULT ---
+    sub_short = subject[:3]
+    final_name = f"Class-{std}-{sub_short}-{selected['clean_name']}.pdf"
+
+    print(f"\n🧮 Calculated Range: PDF Pages {start_pdf_page} to {end_pdf_page}")
+    return final_name, start_pdf_page, end_pdf_page
+
 
 # ======================================================
 # 4. MAIN INTERFACE
@@ -211,26 +239,44 @@ def main():
         print(f"❌ Book not found in catalog: {book_filename}")
         return
 
-    # --- DOWNLOAD DECISION ---
+   # ... inside main() function ...
+# --- DOWNLOAD DECISION ---
     download_mode = "full"
     custom_name = book_filename
     slice_pages = None
 
-    if book_filename in unit_index:
+    # 1. SELECT THE DATA SOURCE
+    target_data = None
+    
+    # Determine the specific key to look for inside the JSON
+    if std in ["6", "7"]:
+        # Case A: Class 6 & 7 use "term1", "term2", "term3"
+        target_key = f"term{term}"
+    else:
+        # Case B: Class 8-12 use "term0" (Standard for full books)
+        target_key = "term0"
+
+    # Now check if that key exists in the loaded JSON file
+    if target_key in unit_index:
+        target_data = unit_index[target_key]
+
+    # 2. SHOW MENU (If we found valid slicing data)
+    if target_data:
         print("\n🤔 How do you want to download?")
         print("   1. Full Book")
         print("   2. Specific Unit/Lesson")
         mode = input("👉 Enter choice (1-2): ").strip()
         
         if mode == "2":
-            fname, start, end = handle_unit_selection(book_filename, unit_index[book_filename], std, subject)
+            # We pass 'target_data' which contains the specific 'meta' and 'units'
+            fname, start, end = handle_unit_selection(book_filename, target_data, std, subject)
             
             if fname:
                 download_mode = "slice"
                 custom_name = fname
                 slice_pages = (start, end)
             else:
-                return 
+                return
 
     # --- EXECUTION ---
     drive_id = catalog[book_filename]
@@ -240,14 +286,32 @@ def main():
         print(f"✅ Full Book Saved: {book_filename}")
         
     elif download_mode == "slice":
-        temp_file = ".temp_book.pdf"
-        success = download_file(drive_id, temp_file, hidden=True)
-        
-        if success:
-            slice_pdf(temp_file, custom_name, slice_pages[0], slice_pages[1])
-            if os.path.exists(temp_file):
-                os.remove(temp_file)
-                print("🧹 Cleaned up temporary files.")
+        # --- NEW SMART LOGIC ---
+        source_file = "temp_source.pdf"  # Use a visible name, not hidden
+        needs_cleanup = False
 
+        # 1. Check if you ALREADY have the full book downloaded
+        if os.path.exists(book_filename):
+            print(f"⚡ Found local full book: '{book_filename}'")
+            print("   Using local file for slicing (No download needed!)")
+            source_file = book_filename
+            success = True
+        else:
+            # 2. If not, download it to a temp file
+            # CRITICAL: Force delete any old corrupt temp file first
+            if os.path.exists(source_file):
+                os.remove(source_file)
+                
+            success = download_file(drive_id, source_file, hidden=True)
+            needs_cleanup = True
+
+        # 3. Perform the slice
+        if success:
+            slice_pdf(source_file, custom_name, slice_pages[0], slice_pages[1])
+            
+            # Only delete the source if it was a temporary download
+            if needs_cleanup and os.path.exists(source_file):
+                os.remove(source_file)
+                print("🧹 Cleaned up temporary source file.")
 if __name__ == "__main__":
     main()
