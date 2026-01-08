@@ -3,6 +3,7 @@ import os
 import json
 import PyPDF2
 import gdown
+import pdfplumber
 
 # ======================================================
 # 1. CONFIGURATION
@@ -69,14 +70,20 @@ def download_file(file_id, filename, hidden=False):
     
     try:
         url = f"https://drive.google.com/uc?id={file_id}"
-        gdown.download(url, filename, quiet=hidden, fuzzy=True)
+        
+        # Key change: Don't use quiet=True for hidden downloads
+        # Instead, we'll just show the progress bar regardless
+        gdown.download(url, filename, quiet=False, fuzzy=True)
         
         if not hidden: 
             print(f"✅ Download Success: {filename}")
+        else:
+            print(f"✅ Source file downloaded successfully")
         return True
     except Exception as e:
         print(f"❌ Download failed: {e}")
         return False
+
 
 def slice_pdf(source_pdf, output_pdf, start_page, end_page):
     print(f"✂️  Slicing from Page {start_page} to {end_page}...")
@@ -99,6 +106,41 @@ def slice_pdf(source_pdf, output_pdf, start_page, end_page):
         return True
     except Exception as e:
         print(f"❌ Slicing Error: {e}")
+        return False
+    
+def extract_text_from_pdf(pdf_file, start_page, end_page, output_txt):
+    """
+    Extract text from specific pages of a PDF and save to TXT file
+    """
+    print(f"📝 Extracting text from pages {start_page} to {end_page}...")
+    
+    try:
+        text_content = ""
+        with pdfplumber.open(pdf_file) as pdf:
+            # Check if end_page exceeds total pages
+            if end_page > len(pdf.pages):
+                print(f"⚠️ Warning: PDF only has {len(pdf.pages)} pages. Adjusting range.")
+                end_page = len(pdf.pages)
+            
+            # Extract text from each page
+            for page_num in range(start_page - 1, end_page):
+                page = pdf.pages[page_num]
+                page_text = page.extract_text()
+                
+                if page_text:
+                    text_content += page_text + "\n\n" + "="*50 + "\n\n"
+                else:
+                    text_content += f"[Page {page_num + 1} - No text found]\n\n"
+        
+        # Save to file
+        with open(output_txt, 'w', encoding='utf-8') as f:
+            f.write(text_content)
+        
+        print(f"✅ Text extraction successful: {output_txt}")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Text extraction failed: {e}")
         return False
 
 def generate_book_key(std, term, subject, medium):
@@ -194,6 +236,23 @@ def handle_unit_selection(book_key, index_data, std, subject):
     print(f"\n🧮 Calculated Range: PDF Pages {start_pdf_page} to {end_pdf_page}")
     return final_name, start_pdf_page, end_pdf_page
 
+def clean_extracted_text(text):
+    """
+    Clean up common PDF extraction artifacts
+    """
+    import re
+    
+    # Remove excessive whitespace
+    text = re.sub(r'\n\s*\n\s*\n+', '\n\n', text)  # Max 2 newlines
+    text = re.sub(r' +', ' ', text)  # Multiple spaces to single
+    
+    # Remove page numbers (adjust pattern as needed)
+    text = re.sub(r'\n\d+\n', '\n', text)
+    
+    # Fix common Tamil encoding issues (if any)
+    # Add specific fixes here if you notice patterns
+    
+    return text.strip()
 
 # ======================================================
 # 4. MAIN INTERFACE
@@ -281,37 +340,91 @@ def main():
     # --- EXECUTION ---
     drive_id = catalog[book_filename]
     
+    # 🆕 ASK FOR FORMAT PREFERENCE
+    print("\n📄 Select Output Format:")
+    print("   1. PDF")
+    print("   2. TXT (Text Only)")
+    format_choice = input("👉 Enter choice (1-2): ").strip()
+    
+    output_format = "txt" if format_choice == "2" else "pdf"
+    
     if download_mode == "full":
-        download_file(drive_id, book_filename)
-        print(f"✅ Full Book Saved: {book_filename}")
+        # Download the full book
+        success = download_file(drive_id, book_filename)
+        
+        if not success:
+            print("❌ Download failed. Cannot proceed.")
+            return
+        
+        if output_format == "txt":
+            # Extract text from entire PDF
+            txt_filename = book_filename.replace('.pdf', '.txt')
+            
+            # Get total pages from PDF
+            try:
+                with open(book_filename, 'rb') as f:
+                    reader = PyPDF2.PdfReader(f)
+                    total_pages = len(reader.pages)
+            except Exception as e:
+                print(f"⚠️ Could not read PDF page count: {e}")
+                total_pages = 999
+            
+            extract_success = extract_text_from_pdf(book_filename, 1, total_pages, txt_filename)
+            
+            if extract_success:
+                # Ask if they want to keep the PDF
+                keep_pdf = input("\n🗑️  Keep the PDF file? (y/n): ").strip().lower()
+                if keep_pdf != 'y':
+                    os.remove(book_filename)
+                    print(f"🧹 Deleted PDF: {book_filename}")
+                
+                print(f"✅ Full Book Text Saved: {txt_filename}")
+            else:
+                print(f"⚠️ Text extraction failed, but PDF is available: {book_filename}")
+        else:
+            print(f"✅ Full Book PDF Saved: {book_filename}")
         
     elif download_mode == "slice":
-        # --- NEW SMART LOGIC ---
-        source_file = "temp_source.pdf"  # Use a visible name, not hidden
+        # --- SMART SLICING LOGIC ---
+        source_file = "temp_source.pdf"
         needs_cleanup = False
 
-        # 1. Check if you ALREADY have the full book downloaded
+        # Check if full book exists locally
         if os.path.exists(book_filename):
             print(f"⚡ Found local full book: '{book_filename}'")
             print("   Using local file for slicing (No download needed!)")
             source_file = book_filename
             success = True
         else:
-            # 2. If not, download it to a temp file
-            # CRITICAL: Force delete any old corrupt temp file first
+            # Download to temp file
             if os.path.exists(source_file):
                 os.remove(source_file)
                 
             success = download_file(drive_id, source_file, hidden=True)
             needs_cleanup = True
 
-        # 3. Perform the slice
-        if success:
-            slice_pdf(source_file, custom_name, slice_pages[0], slice_pages[1])
+        # Check if download was successful
+        if not success:
+            print("❌ Download failed. Cannot proceed with extraction.")
+            return
+
+        # Perform the slice/extraction
+        if output_format == "pdf":
+            # Standard PDF slicing
+            slice_success = slice_pdf(source_file, custom_name, slice_pages[0], slice_pages[1])
+            if slice_success:
+                print(f"✅ Lesson PDF Saved: {custom_name}")
             
-            # Only delete the source if it was a temporary download
-            if needs_cleanup and os.path.exists(source_file):
-                os.remove(source_file)
-                print("🧹 Cleaned up temporary source file.")
+        else:
+            # Extract text directly from source PDF
+            txt_filename = custom_name.replace('.pdf', '.txt')
+            extract_success = extract_text_from_pdf(source_file, slice_pages[0], slice_pages[1], txt_filename)
+            if extract_success:
+                print(f"✅ Lesson Text Saved: {txt_filename}")
+        
+        # Cleanup temp file if needed
+        if needs_cleanup and os.path.exists(source_file):
+            os.remove(source_file)
+            print("🧹 Cleaned up temporary source file.")
 if __name__ == "__main__":
     main()
