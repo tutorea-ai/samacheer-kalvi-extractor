@@ -282,49 +282,11 @@ class PDFProcessor:
                     if not success:
                         return {"error": True, "message": "Text extraction failed"}
                 
-                else:  # md - FULL BOOK MARKDOWN (NEW!) ✨
-                    print(f"🤖 Converting full book to Markdown (this may take a while)...")
-                    
-                    # Step 1: Extract text first
-                    temp_txt_file = self.temp_dir / book_key.replace('.pdf', '_temp.txt')
-                    
-                    with open(cached_file, 'rb') as f:
-                        reader = PyPDF2.PdfReader(f)
-                        total_pages = len(reader.pages)
-                    
-                    success = self._extract_text(cached_file, 1, total_pages, temp_txt_file)
-                    if not success:
-                        return {"error": True, "message": "Text extraction failed"}
-                    
-                    # Step 2: Read extracted text
-                    with open(temp_txt_file, 'r', encoding='utf-8') as f:
-                        extracted_text = f.read()
-                    
-                    # Step 3: Convert to Markdown using AI
-                    from .services.ai_converter import ai_converter
-                    
-                    markdown_content = ai_converter.convert_to_markdown(
-                        text=extracted_text,
-                        metadata={
-                            'class': class_num,
-                            'subject': subject,
-                            'unit': 'Full Book',
-                            'lesson_title': book_key.replace('.pdf', '')
-                        }
-                    )
-                    
-                    if not markdown_content:
-                        # Cleanup temp file
-                        temp_txt_file.unlink(missing_ok=True)
-                        return {"error": True, "message": "AI conversion failed"}
-                    
-                    # Step 4: Save Markdown file
-                    output_file = self.temp_dir / book_key.replace('.pdf', '.md')
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        f.write(markdown_content)
-                    
-                    # Cleanup temp txt file
-                    temp_txt_file.unlink(missing_ok=True)
+                else:  # md or html - NOT SUPPORTED for full books
+                    return {
+                        "error": True,
+                        "message": "MD and HTML formats are only available for lesson mode (not full books)"
+                    }
                 
                 return {
                     "error": False,
@@ -378,21 +340,22 @@ class PDFProcessor:
                     output_file = self.temp_dir / f"{filename_base}.txt"
                     success = self._extract_text(cached_source, start_page, end_page, output_file)
                 
-                else:  # md - LESSON MARKDOWN (NEW!) ✨
+                elif output_format == "md":
+                    # MARKDOWN - LESSON ONLY ✨
                     print(f"🤖 Converting lesson to Markdown using Kimi AI...")
                     
-                    # Step 1: Extract text first
+                    # Step 1: Extract text
                     temp_txt_file = self.temp_dir / f"{filename_base}_temp.txt"
                     success = self._extract_text(cached_source, start_page, end_page, temp_txt_file)
                     
                     if not success:
                         return {"error": True, "message": "Text extraction failed"}
                     
-                    # Step 2: Read extracted text
+                    # Step 2: Read text
                     with open(temp_txt_file, 'r', encoding='utf-8') as f:
                         extracted_text = f.read()
                     
-                    # Step 3: Convert to Markdown using AI
+                    # Step 3: AI Conversion
                     from .services.ai_converter import ai_converter
                     
                     markdown_content = ai_converter.convert_to_markdown(
@@ -406,18 +369,74 @@ class PDFProcessor:
                     )
                     
                     if not markdown_content:
-                        # Cleanup temp file
                         temp_txt_file.unlink(missing_ok=True)
                         return {"error": True, "message": "AI conversion failed"}
                     
-                    # Step 4: Save Markdown file
+                    # Step 4: Save MD
                     output_file = self.temp_dir / f"{filename_base}.md"
                     with open(output_file, 'w', encoding='utf-8') as f:
                         f.write(markdown_content)
                     
-                    # Cleanup temp txt file
+                    # Cleanup
                     temp_txt_file.unlink(missing_ok=True)
+                    success = True
+                
+                else:  # html - NEW! ✨
+                    # HTML - LESSON ONLY (MD → HTML)
+                    print(f"🤖 Converting lesson to HTML via Markdown...")
                     
+                    # Step 1: Extract text
+                    temp_txt_file = self.temp_dir / f"{filename_base}_temp.txt"
+                    success = self._extract_text(cached_source, start_page, end_page, temp_txt_file)
+                    
+                    if not success:
+                        return {"error": True, "message": "Text extraction failed"}
+                    
+                    # Step 2: Read text
+                    with open(temp_txt_file, 'r', encoding='utf-8') as f:
+                        extracted_text = f.read()
+                    
+                    # Step 3: AI Convert to Markdown first
+                    from .services.ai_converter import ai_converter
+                    
+                    markdown_content = ai_converter.convert_to_markdown(
+                        text=extracted_text,
+                        metadata={
+                            'class': class_num,
+                            'subject': subject,
+                            'unit': unit_num,
+                            'lesson_title': filename_base
+                        }
+                    )
+                    
+                    if not markdown_content:
+                        temp_txt_file.unlink(missing_ok=True)
+                        return {"error": True, "message": "AI conversion to MD failed"}
+                    
+                    # Step 4: Convert MD to HTML
+                    from .services.html_converter import html_converter
+                    
+                    html_content = html_converter.convert_to_html(
+                        markdown_content=markdown_content,
+                        metadata={
+                            'class': class_num,
+                            'subject': subject,
+                            'unit': unit_num,
+                            'lesson_title': filename_base
+                        }
+                    )
+                    
+                    if not html_content:
+                        temp_txt_file.unlink(missing_ok=True)
+                        return {"error": True, "message": "HTML conversion failed"}
+                    
+                    # Step 5: Save HTML
+                    output_file = self.temp_dir / f"{filename_base}.html"
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        f.write(html_content)
+                    
+                    # Cleanup
+                    temp_txt_file.unlink(missing_ok=True)
                     success = True
                 
                 if not success:
