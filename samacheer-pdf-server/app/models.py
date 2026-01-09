@@ -47,9 +47,9 @@ class PDFRequest(BaseModel):
         description="Lesson choice number (required if mode=lesson)"
     )
     
-    output_format: Literal["pdf", "txt"] = Field(
-        "pdf",
-        description="Output format (pdf or txt). MD support coming in Phase 3"
+    output_format: Literal["pdf", "txt", "md"] = Field(
+    "pdf",
+    description="Output format: pdf, txt, or md (markdown)"
     )
     
     @field_validator('subject')

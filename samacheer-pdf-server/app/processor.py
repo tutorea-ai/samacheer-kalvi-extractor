@@ -6,8 +6,10 @@ import gdown
 import pdfplumber
 from pathlib import Path
 from typing import Dict, Tuple, Optional
+from .services.ai_converter import ai_converter
 
 from .config import settings
+
 
 class PDFProcessor:
     """
@@ -268,7 +270,7 @@ class PDFProcessor:
                     import shutil
                     shutil.copy(cached_file, output_file)
                     
-                else:  # txt
+                elif output_format == "txt":
                     # Extract text
                     output_file = self.temp_dir / book_key.replace('.pdf', '.txt')
                     
@@ -279,6 +281,50 @@ class PDFProcessor:
                     success = self._extract_text(cached_file, 1, total_pages, output_file)
                     if not success:
                         return {"error": True, "message": "Text extraction failed"}
+                
+                else:  # md - FULL BOOK MARKDOWN (NEW!) ✨
+                    print(f"🤖 Converting full book to Markdown (this may take a while)...")
+                    
+                    # Step 1: Extract text first
+                    temp_txt_file = self.temp_dir / book_key.replace('.pdf', '_temp.txt')
+                    
+                    with open(cached_file, 'rb') as f:
+                        reader = PyPDF2.PdfReader(f)
+                        total_pages = len(reader.pages)
+                    
+                    success = self._extract_text(cached_file, 1, total_pages, temp_txt_file)
+                    if not success:
+                        return {"error": True, "message": "Text extraction failed"}
+                    
+                    # Step 2: Read extracted text
+                    with open(temp_txt_file, 'r', encoding='utf-8') as f:
+                        extracted_text = f.read()
+                    
+                    # Step 3: Convert to Markdown using AI
+                    from .services.ai_converter import ai_converter
+                    
+                    markdown_content = ai_converter.convert_to_markdown(
+                        text=extracted_text,
+                        metadata={
+                            'class': class_num,
+                            'subject': subject,
+                            'unit': 'Full Book',
+                            'lesson_title': book_key.replace('.pdf', '')
+                        }
+                    )
+                    
+                    if not markdown_content:
+                        # Cleanup temp file
+                        temp_txt_file.unlink(missing_ok=True)
+                        return {"error": True, "message": "AI conversion failed"}
+                    
+                    # Step 4: Save Markdown file
+                    output_file = self.temp_dir / book_key.replace('.pdf', '.md')
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        f.write(markdown_content)
+                    
+                    # Cleanup temp txt file
+                    temp_txt_file.unlink(missing_ok=True)
                 
                 return {
                     "error": False,
@@ -327,9 +373,52 @@ class PDFProcessor:
                 if output_format == "pdf":
                     output_file = self.temp_dir / f"{filename_base}.pdf"
                     success = self._slice_pdf(cached_source, output_file, start_page, end_page)
-                else:
+                    
+                elif output_format == "txt":
                     output_file = self.temp_dir / f"{filename_base}.txt"
                     success = self._extract_text(cached_source, start_page, end_page, output_file)
+                
+                else:  # md - LESSON MARKDOWN (NEW!) ✨
+                    print(f"🤖 Converting lesson to Markdown using Kimi AI...")
+                    
+                    # Step 1: Extract text first
+                    temp_txt_file = self.temp_dir / f"{filename_base}_temp.txt"
+                    success = self._extract_text(cached_source, start_page, end_page, temp_txt_file)
+                    
+                    if not success:
+                        return {"error": True, "message": "Text extraction failed"}
+                    
+                    # Step 2: Read extracted text
+                    with open(temp_txt_file, 'r', encoding='utf-8') as f:
+                        extracted_text = f.read()
+                    
+                    # Step 3: Convert to Markdown using AI
+                    from .services.ai_converter import ai_converter
+                    
+                    markdown_content = ai_converter.convert_to_markdown(
+                        text=extracted_text,
+                        metadata={
+                            'class': class_num,
+                            'subject': subject,
+                            'unit': unit_num,
+                            'lesson_title': filename_base
+                        }
+                    )
+                    
+                    if not markdown_content:
+                        # Cleanup temp file
+                        temp_txt_file.unlink(missing_ok=True)
+                        return {"error": True, "message": "AI conversion failed"}
+                    
+                    # Step 4: Save Markdown file
+                    output_file = self.temp_dir / f"{filename_base}.md"
+                    with open(output_file, 'w', encoding='utf-8') as f:
+                        f.write(markdown_content)
+                    
+                    # Cleanup temp txt file
+                    temp_txt_file.unlink(missing_ok=True)
+                    
+                    success = True
                 
                 if not success:
                     return {"error": True, "message": "Processing failed"}
@@ -345,7 +434,9 @@ class PDFProcessor:
                 "error": True,
                 "message": f"Processing error: {str(e)}"
             }
-    # In PDFProcessor.__init__()
+
+
+# In PDFProcessor.__init__()
 def __init__(self):
     self.catalog = self._load_catalog()
     print(f"📚 Loaded catalog with {len(self.catalog)} books")  # ADD THIS

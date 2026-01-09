@@ -21,6 +21,11 @@ class Settings(BaseSettings):
     # File Management
     TEMP_FILE_RETENTION_HOURS: int = 24
     
+
+    # AI Integration - UPDATED! ✨
+    KIMI_API_KEY: str = ""  # ← NEW
+    KIMI_BASE_URL: str = "https://api.moonshot.ai/v1"  # ← NEW
+    KIMI_MODEL: str = "kimi-k2-0905-preview"  # ← NEW
     # Future AI Integration
     ANTHROPIC_API_KEY: str = ""
     OPENAI_API_KEY: str = ""
