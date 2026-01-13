@@ -4,27 +4,25 @@ import json
 import PyPDF2
 import gdown
 import pdfplumber
+import shutil
 from pathlib import Path
 from typing import Dict, Tuple, Optional
 from .services.ai_converter import ai_converter
-
 from .config import settings
-
 
 class PDFProcessor:
     """
     Core PDF processing engine
-    Refactored from book_downloader.py to work without user interaction
     """
     
     def __init__(self):
         self.catalog = self._load_catalog()
+        print(f"📚 Loaded catalog with {len(self.catalog)} books")
         self.base_path = settings.BASE_DIR
         self.cache_dir = settings.CACHE_DIR
         self.temp_dir = settings.TEMP_DIR
     
     def _load_catalog(self) -> dict:
-        """Load book catalog from GitHub"""
         try:
             response = requests.get(settings.CATALOG_URL, timeout=10)
             if response.status_code == 200:
@@ -35,61 +33,25 @@ class PDFProcessor:
             return {}
     
     def _load_unit_index(self, class_num: int, subject: str) -> dict:
-        """
-        Load unit index JSON
-        Path: data/indexes/languages/english/class-6.json
-        """
-        # Determine category
         category = "languages" if subject.lower() in ["english", "tamil"] else "subjects"
-        
-        # Build path
-        index_path = (
-            settings.DATA_DIR / 
-            "indexes" / 
-            category / 
-            subject.lower() / 
-            f"class-{class_num}.json"
-        )
+        index_path = settings.DATA_DIR / "indexes" / category / subject.lower() / f"class-{class_num}.json"
         
         if index_path.exists():
             try:
                 with open(index_path, 'r', encoding='utf-8') as f:
                     return json.load(f)
             except json.JSONDecodeError:
-                print(f"⚠️ Invalid JSON in {index_path}")
                 return {}
         return {}
     
-    def _generate_book_key(
-        self, 
-        class_num: int, 
-        term: int, 
-        subject: str, 
-        medium: str
-    ) -> str:
-        """
-        Generate catalog key
-        Example: class-12-term0-english.pdf
-        """
+    def _generate_book_key(self, class_num: int, term: int, subject: str, medium: str) -> str:
         subject = subject.lower().strip()
         medium = medium.lower().strip()
-        
-        # Auto-adjust term for classes 8-12
-        if class_num >= 8:
-            term = 0
-        
-        # Add medium suffix for non-language subjects
+        if class_num >= 8: term = 0
         suffix = "" if subject in ["english", "tamil"] else f"-{medium}-medium"
-        
         return f"class-{class_num}-term{term}-{subject}{suffix}.pdf"
     
-    def _download_file(
-        self, 
-        file_id: str, 
-        output_path: Path,
-        show_progress: bool = True
-    ) -> bool:
-        """Download file from Google Drive"""
+    def _download_file(self, file_id: str, output_path: Path, show_progress: bool = True) -> bool:
         try:
             url = f"https://drive.google.com/uc?id={file_id}"
             gdown.download(url, str(output_path), quiet=not show_progress, fuzzy=True)
@@ -98,142 +60,70 @@ class PDFProcessor:
             print(f"❌ Download failed: {e}")
             return False
     
-    def _slice_pdf(
-        self,
-        source_pdf: Path,
-        output_pdf: Path,
-        start_page: int,
-        end_page: int
-    ) -> bool:
-        """Extract specific pages from PDF"""
+    def _slice_pdf(self, source_pdf: Path, output_pdf: Path, start_page: int, end_page: int) -> bool:
         try:
             with open(source_pdf, 'rb') as infile:
                 reader = PyPDF2.PdfReader(infile)
                 writer = PyPDF2.PdfWriter()
-                
-                if end_page > len(reader.pages):
-                    print(f"⚠️ Book has only {len(reader.pages)} pages")
-                    return False
-                
+                if end_page > len(reader.pages): return False
                 for i in range(start_page - 1, end_page):
                     writer.add_page(reader.pages[i])
-                
                 with open(output_pdf, 'wb') as outfile:
                     writer.write(outfile)
-            
             return True
-        except Exception as e:
-            print(f"❌ Slicing error: {e}")
+        except Exception:
             return False
     
-    def _extract_text(
-        self,
-        pdf_file: Path,
-        start_page: int,
-        end_page: int,
-        output_txt: Path
-    ) -> bool:
-        """Extract text from PDF to TXT file"""
+    def _extract_text(self, pdf_file: Path, start_page: int, end_page: int, output_txt: Path) -> bool:
         try:
             text_content = ""
             with pdfplumber.open(pdf_file) as pdf:
-                # Adjust range if needed
-                if end_page > len(pdf.pages):
-                    end_page = len(pdf.pages)
-                
+                if end_page > len(pdf.pages): end_page = len(pdf.pages)
                 for page_num in range(start_page - 1, end_page):
                     page = pdf.pages[page_num]
-                    page_text = page.extract_text()
-                    
-                    if page_text:
-                        text_content += page_text + "\n\n" + "="*50 + "\n\n"
-                    else:
-                        text_content += f"[Page {page_num + 1} - No text found]\n\n"
-            
+                    text = page.extract_text()
+                    text_content += (text + "\n\n" + "="*50 + "\n\n") if text else ""
             with open(output_txt, 'w', encoding='utf-8') as f:
                 f.write(text_content)
-            
             return True
         except Exception as e:
-            print(f"❌ Text extraction error: {e}")
+            print(f"❌ Extraction error: {e}")
             return False
-    
-    def _get_lesson_details(
-        self,
-        index_data: dict,
-        unit_num: int,
-        lesson_choice: int,
-        class_num: int
-    ) -> Optional[Tuple[str, int, int]]:
-        """
-        Get lesson page range from index
-        Returns: (filename, start_page, end_page) or None
-        """
+
+    def _get_lesson_details(self, index_data: dict, unit_num: int, lesson_choice: int, class_num: int):
         meta = index_data.get("meta", {"prelim_pages": 0, "total_pdf_pages": 999})
         offset = meta["prelim_pages"]
-        max_pages = meta["total_pdf_pages"]
-        
         units = index_data.get("units", [])
-        if not units or unit_num > len(units):
-            return None
+        if not units or unit_num > len(units): return None
         
         selected_unit = units[unit_num - 1]
-        
-        # Build lessons list
         lessons = []
-        for category in ["prose", "poem", "supplementary", "play"]:
-            if category in selected_unit:
-                item = selected_unit[category]
-                lessons.append({
-                    "type": category,
-                    "title": item['title'],
-                    "page": item['page']
-                })
+        for cat in ["prose", "poem", "supplementary", "play"]:
+            if cat in selected_unit:
+                lessons.append({"type": cat, "title": selected_unit[cat]['title'], "page": selected_unit[cat]['page']})
         
-        if lesson_choice > len(lessons):
-            return None
-        
+        if lesson_choice > len(lessons): return None
         selected_lesson = lessons[lesson_choice - 1]
         
-        # Calculate PDF range
         start_pdf_page = selected_lesson["page"] + offset
         
-        # Find next lesson page
+        # Calculate end page
         all_pages = []
         for u in units:
             for cat in ["prose", "poem", "supplementary", "play"]:
-                if cat in u:
-                    all_pages.append(u[cat]['page'])
-        
+                if cat in u: all_pages.append(u[cat]['page'])
         all_pages.sort()
         next_pages = [p for p in all_pages if p > selected_lesson["page"]]
+        end_pdf_page = (next_pages[0] + offset - 1) if next_pages else meta["total_pdf_pages"]
         
-        if next_pages:
-            end_pdf_page = (next_pages[0] + offset) - 1
-        else:
-            end_pdf_page = max_pages
-        
-        # Generate filename
         clean_title = selected_lesson['title'].replace(' ', '').replace('(', '').replace(')', '')
         filename = f"Class{class_num}-Unit{unit_num}-{selected_lesson['type'].capitalize()}-{clean_title}"
         
         return filename, start_pdf_page, end_pdf_page
-    
+
     def process_request(self, request_data: dict) -> dict:
-        """
-        Main processing function
-        
-        Args:
-            request_data: Dictionary with keys:
-                - class_num, subject, term, medium
-                - mode, unit, lesson_choice
-                - output_format
-        
-        Returns:
-            Dictionary with file info or error
-        """
         try:
-            # Extract parameters
+            # 1. Setup Parameters
             class_num = request_data["class_num"]
             subject = request_data["subject"]
             term = request_data.get("term", 0)
@@ -241,229 +131,109 @@ class PDFProcessor:
             mode = request_data["mode"]
             output_format = request_data["output_format"]
             
-            # Generate book key
             book_key = self._generate_book_key(class_num, term, subject, medium)
-            
-            # Check catalog
             if book_key not in self.catalog:
-                return {
-                    "error": True,
-                    "message": f"Book not found in catalog: {book_key}"
-                }
+                return {"error": True, "message": f"Book not found: {book_key}"}
             
             drive_id = self.catalog[book_key]
             
+            # 2. Check/Download Cache
+            cached_file = self.cache_dir / book_key
+            if not cached_file.exists():
+                if not self._download_file(drive_id, cached_file):
+                    return {"error": True, "message": "Download failed"}
+
             # === FULL BOOK MODE ===
             if mode == "full_book":
-                # Check cache first
-                cached_file = self.cache_dir / book_key
-                
-                if not cached_file.exists():
-                    # Download to cache
-                    success = self._download_file(drive_id, cached_file)
-                    if not success:
-                        return {"error": True, "message": "Download failed"}
-                
                 if output_format == "pdf":
-                    # Copy to temp
                     output_file = self.temp_dir / book_key
-                    import shutil
                     shutil.copy(cached_file, output_file)
-                    
+                    return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
                 elif output_format == "txt":
-                    # Extract text
                     output_file = self.temp_dir / book_key.replace('.pdf', '.txt')
-                    
-                    with open(cached_file, 'rb') as f:
-                        reader = PyPDF2.PdfReader(f)
-                        total_pages = len(reader.pages)
-                    
-                    success = self._extract_text(cached_file, 1, total_pages, output_file)
-                    if not success:
-                        return {"error": True, "message": "Text extraction failed"}
-                
-                else:  # md or html - NOT SUPPORTED for full books
-                    return {
-                        "error": True,
-                        "message": "MD and HTML formats are only available for lesson mode (not full books)"
-                    }
-                
-                return {
-                    "error": False,
-                    "filename": output_file.name,
-                    "file_path": str(output_file)
-                }
-            
+                    with open(cached_file, 'rb') as f: total = len(PyPDF2.PdfReader(f).pages)
+                    self._extract_text(cached_file, 1, total, output_file)
+                    return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
+                else:
+                    return {"error": True, "message": "Full book only supports PDF/TXT"}
+
             # === LESSON MODE ===
-            else:
-                unit_num = request_data["unit"]
-                lesson_choice = request_data["lesson_choice"]
+            unit_num = request_data["unit"]
+            lesson_choice = request_data["lesson_choice"]
+            
+            # Load Index & Find Pages
+            index_data = self._load_unit_index(class_num, subject)
+            term_key = f"term{term}" if class_num in [6, 7] else "term0"
+            if term_key not in index_data: return {"error": True, "message": f"Index missing for {term_key}"}
+            
+            details = self._get_lesson_details(index_data[term_key], unit_num, lesson_choice, class_num)
+            if not details: return {"error": True, "message": "Invalid lesson selection"}
+            
+            filename_base, start_page, end_page = details
+
+            # Handle PDF/TXT requests (Simple)
+            if output_format == "pdf":
+                output_file = self.temp_dir / f"{filename_base}.pdf"
+                self._slice_pdf(cached_file, output_file, start_page, end_page)
+                return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
+            
+            elif output_format == "txt":
+                output_file = self.temp_dir / f"{filename_base}.txt"
+                self._extract_text(cached_file, start_page, end_page, output_file)
+                return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
+
+            # === 💎 THE BINGO LOGIC: DUAL DEPLOYMENT (MD + HTML) ===
+            elif output_format in ["md", "html"]:
+                print(f"🤖 AI Processing: Converting lesson...")
                 
-                # Load index
-                index_data = self._load_unit_index(class_num, subject)
+                # Step 1: Extract Text
+                temp_txt = self.temp_dir / f"{filename_base}_temp.txt"
+                if not self._extract_text(cached_file, start_page, end_page, temp_txt):
+                    return {"error": True, "message": "Text extraction failed"}
                 
-                # Get correct term key
-                term_key = f"term{term}" if class_num in [6, 7] else "term0"
-                
-                if term_key not in index_data:
-                    return {
-                        "error": True,
-                        "message": f"Index data not found for {term_key}"
-                    }
-                
-                target_data = index_data[term_key]
-                
-                # Get lesson details
-                result = self._get_lesson_details(
-                    target_data, unit_num, lesson_choice, class_num
+                with open(temp_txt, 'r', encoding='utf-8') as f: raw_text = f.read()
+                temp_txt.unlink(missing_ok=True)
+
+                # Step 2: AI Convert to Markdown
+                markdown_content = ai_converter.convert_to_markdown(
+                    text=raw_text,
+                    metadata={'class': class_num, 'subject': subject, 'unit': unit_num, 'lesson_title': filename_base}
                 )
+                if not markdown_content: return {"error": True, "message": "AI failed"}
+
+                # Step 3: ALWAYS Save & Deploy Markdown (Mango #1)
+                md_file = self.temp_dir / f"{filename_base}.md"
+                with open(md_file, 'w', encoding='utf-8') as f: f.write(markdown_content)
                 
-                if not result:
-                    return {"error": True, "message": "Invalid unit/lesson selection"}
+                # Bridge MD
+                from .services.bridge import bridge
+                bridge_meta = {"class_num": class_num, "term": term, "unit": unit_num, "lesson_choice": lesson_choice}
+                bridge.deploy_content(md_file, bridge_meta, "md")
                 
-                filename_base, start_page, end_page = result
-                
-                # Check cache for source
-                cached_source = self.cache_dir / book_key
-                
-                if not cached_source.exists():
-                    success = self._download_file(drive_id, cached_source, show_progress=False)
-                    if not success:
-                        return {"error": True, "message": "Source download failed"}
-                
-                # Process based on format
-                if output_format == "pdf":
-                    output_file = self.temp_dir / f"{filename_base}.pdf"
-                    success = self._slice_pdf(cached_source, output_file, start_page, end_page)
-                    
-                elif output_format == "txt":
-                    output_file = self.temp_dir / f"{filename_base}.txt"
-                    success = self._extract_text(cached_source, start_page, end_page, output_file)
-                
-                elif output_format == "md":
-                    # MARKDOWN - LESSON ONLY ✨
-                    print(f"🤖 Converting lesson to Markdown using Kimi AI...")
-                    
-                    # Step 1: Extract text
-                    temp_txt_file = self.temp_dir / f"{filename_base}_temp.txt"
-                    success = self._extract_text(cached_source, start_page, end_page, temp_txt_file)
-                    
-                    if not success:
-                        return {"error": True, "message": "Text extraction failed"}
-                    
-                    # Step 2: Read text
-                    with open(temp_txt_file, 'r', encoding='utf-8') as f:
-                        extracted_text = f.read()
-                    
-                    # Step 3: AI Conversion
-                    from .services.ai_converter import ai_converter
-                    
-                    markdown_content = ai_converter.convert_to_markdown(
-                        text=extracted_text,
-                        metadata={
-                            'class': class_num,
-                            'subject': subject,
-                            'unit': unit_num,
-                            'lesson_title': filename_base
-                        }
-                    )
-                    
-                    if not markdown_content:
-                        temp_txt_file.unlink(missing_ok=True)
-                        return {"error": True, "message": "AI conversion failed"}
-                    
-                    # Step 4: Save MD
-                    output_file = self.temp_dir / f"{filename_base}.md"
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        f.write(markdown_content)
-                    
-                    # Cleanup
-                    temp_txt_file.unlink(missing_ok=True)
-                    success = True
-                
-                else:  # html - NEW! ✨
-                    # HTML - LESSON ONLY (MD → HTML)
-                    print(f"🤖 Converting lesson to HTML via Markdown...")
-                    
-                    # Step 1: Extract text
-                    temp_txt_file = self.temp_dir / f"{filename_base}_temp.txt"
-                    success = self._extract_text(cached_source, start_page, end_page, temp_txt_file)
-                    
-                    if not success:
-                        return {"error": True, "message": "Text extraction failed"}
-                    
-                    # Step 2: Read text
-                    with open(temp_txt_file, 'r', encoding='utf-8') as f:
-                        extracted_text = f.read()
-                    
-                    # Step 3: AI Convert to Markdown first
-                    from .services.ai_converter import ai_converter
-                    
-                    markdown_content = ai_converter.convert_to_markdown(
-                        text=extracted_text,
-                        metadata={
-                            'class': class_num,
-                            'subject': subject,
-                            'unit': unit_num,
-                            'lesson_title': filename_base
-                        }
-                    )
-                    
-                    if not markdown_content:
-                        temp_txt_file.unlink(missing_ok=True)
-                        return {"error": True, "message": "AI conversion to MD failed"}
-                    
-                    # Step 4: Convert MD to HTML
+                final_output = md_file
+
+                # Step 4: If HTML Requested, Convert & Deploy HTML (Mango #2)
+                if output_format == "html":
+                    print(f"🎨 Converting Markdown to HTML (Server Mode)...")
                     from .services.html_converter import html_converter
                     
                     html_content = html_converter.convert_to_html(
                         markdown_content=markdown_content,
-                        metadata={
-                            'class': class_num,
-                            'subject': subject,
-                            'unit': unit_num,
-                            'lesson_title': filename_base
-                        }
+                        metadata={'class': class_num, 'lesson_title': filename_base},
+                        mode="server"
                     )
                     
-                    if not html_content:
-                        temp_txt_file.unlink(missing_ok=True)
-                        return {"error": True, "message": "HTML conversion failed"}
+                    html_file = self.temp_dir / f"{filename_base}.html"
+                    with open(html_file, 'w', encoding='utf-8') as f: f.write(html_content)
                     
-                    # Step 5: Save HTML
-                    output_file = self.temp_dir / f"{filename_base}.html"
-                    with open(output_file, 'w', encoding='utf-8') as f:
-                        f.write(html_content)
-                    
-                    # Cleanup
-                    temp_txt_file.unlink(missing_ok=True)
-                    success = True
-                
-                if not success:
-                    return {"error": True, "message": "Processing failed"}
-                
-                return {
-                    "error": False,
-                    "filename": output_file.name,
-                    "file_path": str(output_file)
-                }
-        
+                    # Bridge HTML
+                    bridge.deploy_content(html_file, bridge_meta, "html")
+                    final_output = html_file
+
+                return {"error": False, "filename": final_output.name, "file_path": str(final_output)}
+
         except Exception as e:
-            return {
-                "error": True,
-                "message": f"Processing error: {str(e)}"
-            }
+            return {"error": True, "message": f"Processing error: {str(e)}"}
 
-
-# In PDFProcessor.__init__()
-def __init__(self):
-    self.catalog = self._load_catalog()
-    print(f"📚 Loaded catalog with {len(self.catalog)} books")  # ADD THIS
-    print(f"📂 Sample keys: {list(self.catalog.keys())[:3]}")  # ADD THIS
-    self.base_path = settings.BASE_DIR
-    self.cache_dir = settings.CACHE_DIR
-    self.temp_dir = settings.TEMP_DIR
-
-
-# Create singleton instance
+# Create singleton
 processor = PDFProcessor()
