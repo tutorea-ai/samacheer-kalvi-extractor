@@ -106,10 +106,10 @@ if __name__ == "__main__":
     # Uncomment the line below corresponding to what you want to do
     
     # OPTION 1: Run EVERYTHING (Classes 6-12) - Takes a long time!
-    run_bulk_update()
+    # run_bulk_update()
     
     # OPTION 2: Run Just Class 8 (Recommended Test)
-    # run_bulk_update(target_class=8)
+    run_bulk_update(target_class=12)
     
     # OPTION 3: Run Class 6
     # run_bulk_update(target_class=6)
