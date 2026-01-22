@@ -15,29 +15,29 @@ def split_pdf(source_pdf, start_page, end_page, output_name):
 
 # ---- CONFIGURATION (EDIT ONLY THIS PART) ----
 books = {
-    "class-6-term1.pdf": {
-        "science": (5, 120),
-        "social_science": (121, 210)
+    "Class-6-term1.pdf": {
+        "science": (4, 107),
+        "social_science": (109, 216)
     },
-    "class-6-term2.pdf": {
-        "science": (6, 115),
-        "social_science": (116, 205)
+    "Class-6-term2.pdf": {
+        "science": (5, 100),
+        "social_science": (101, 200)
     },
-    "class-6-term3.pdf": {
-        "science": (7, 118),
-        "social_science": (119, 208)
+    "Class-6-term3.pdf": {
+        "science": (4, 84),
+        "social_science": (89, 224)
     },
-    "class-7-term1.pdf": {
-        "science": (8, 130),
-        "social_science": (131, 240)
+    "Class-7-term1.pdf": {
+        "science": (4, 102),
+        "social_science": (103, 200)
     },
-    "class-7-term2.pdf": {
-        "science": (9, 135),
-        "social_science": (136, 245)
+    "Class-7-term2.pdf": {
+        "science": (4, 97),
+        "social_science": (98, 182)
     },
-    "class-7-term3.pdf": {
-        "science": (10, 140),
-        "social_science": (141, 250)
+    "Class-7-term3.pdf": {
+        "science": (4, 106),
+        "social_science": (107, 224)
     }
 }
 # --------------------------------------------
