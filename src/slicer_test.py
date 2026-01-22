@@ -1,28 +1,48 @@
 import PyPDF2
 
 def split_pdf(source_pdf, start_page, end_page, output_name):
-    try:
-        # 1. Open the Big Book
-        with open(source_pdf, 'rb') as file:
-            reader = PyPDF2.PdfReader(file)
-            writer = PyPDF2.PdfWriter()
+    with open(source_pdf, 'rb') as file:
+        reader = PyPDF2.PdfReader(file)
+        writer = PyPDF2.PdfWriter()
 
-            # 2. Loop through the pages we want
-            # (Note: Python starts at 0, so we subtract 1 from user input)
-            for page_num in range(start_page - 1, end_page):
-                page = reader.pages[page_num]
-                writer.add_page(page)
+        for page_num in range(start_page - 1, end_page):
+            writer.add_page(reader.pages[page_num])
 
-            # 3. Save the Small Book
-            with open(output_name, 'wb') as output_file:
-                writer.write(output_file)
-            
-            print(f"✅ Success! Created '{output_name}' with {end_page - start_page + 1} pages.")
+        with open(output_name, 'wb') as output_file:
+            writer.write(output_file)
 
-    except Exception as e:
-        print(f"❌ Error: {e}")
+    print(f"✅ Created: {output_name}")
 
-# --- TEST IT ---
-#-------------
-# Change these numbers to test different pages!
-split_pdf("class-10-term0-english.pdf", 10, 20, "unit_test.pdf")
+# ---- CONFIGURATION (EDIT ONLY THIS PART) ----
+books = {
+    "class-6-term1.pdf": {
+        "science": (5, 120),
+        "social_science": (121, 210)
+    },
+    "class-6-term2.pdf": {
+        "science": (6, 115),
+        "social_science": (116, 205)
+    },
+    "class-6-term3.pdf": {
+        "science": (7, 118),
+        "social_science": (119, 208)
+    },
+    "class-7-term1.pdf": {
+        "science": (8, 130),
+        "social_science": (131, 240)
+    },
+    "class-7-term2.pdf": {
+        "science": (9, 135),
+        "social_science": (136, 245)
+    },
+    "class-7-term3.pdf": {
+        "science": (10, 140),
+        "social_science": (141, 250)
+    }
+}
+# --------------------------------------------
+
+for source_pdf, subjects in books.items():
+    for subject, (start, end) in subjects.items():
+        output_name = source_pdf.replace(".pdf", f"-{subject}.pdf")
+        split_pdf(source_pdf, start, end, output_name)
