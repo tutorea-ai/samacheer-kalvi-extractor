@@ -14,7 +14,13 @@ class PDFRequest(BaseModel):
     
     subject: str = Field(
         ..., 
-        description="Subject name (e.g., english, tamil, maths)"
+        description="Subject name (e.g., english, tamil, maths, socialscience)"
+    )
+    
+    # 👇 NEW FIELD ADDED HERE
+    discipline: Optional[str] = Field(
+        None,
+        description="Discipline for Social Science (history, geography, civics, economics)"
     )
     
     term: Optional[int] = Field(
@@ -37,7 +43,7 @@ class PDFRequest(BaseModel):
     unit: Optional[int] = Field(
         None,
         ge=1,
-        le=10,
+        le=30,  # Increased limit for Science/History having many units
         description="Unit number (required if mode=lesson)"
     )
     
@@ -48,8 +54,8 @@ class PDFRequest(BaseModel):
     )
     
     output_format: Literal["pdf", "txt", "md", "html"] = Field(
-    "pdf",
-    description="Output format: pdf, txt, md (markdown), or html"
+        "pdf",
+        description="Output format: pdf, txt, md (markdown), or html"
     )
     
     @field_validator('subject')
@@ -72,7 +78,8 @@ class PDFRequest(BaseModel):
     def validate_lesson_params(cls, v, info):
         """Ensure unit and lesson_choice are provided when mode=lesson"""
         mode = info.data.get('mode')
-        if mode == 'lesson' and v is None:
+        # We relax this check slightly because 'lesson_choice' is not needed for Social Science
+        if mode == 'lesson' and info.field_name == 'unit' and v is None:
             raise ValueError(f"{info.field_name} is required when mode='lesson'")
         return v
 
