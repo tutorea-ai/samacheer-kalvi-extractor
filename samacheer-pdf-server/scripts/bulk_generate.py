@@ -1,77 +1,146 @@
+"""
+Bulk Generation Script
+Automates Content + QA + LP generation for entire classes.
+
+Usage:
+    python scripts/bulk_generate.py
+
+Configuration:
+    - Set target_class to run a specific class only
+    - Set start_unit to resume from a specific unit
+    - Add class keys to SKIP_CLASSES if already completed
+    - output_format is always "html" → triggers full Content + QA + LP pipeline
+"""
+
 import requests
 import time
 import json
-import os
 from pathlib import Path
 
-# === CONFIGURATION ===
-API_URL = "http://localhost:8000/api/generate"
-# Adjust path to find curriculum.json relative to this script
-CURRICULUM_PATH = Path(__file__).parent.parent / "data" / "curriculum.json"
+# ============================================================================
+# CONFIGURATION
+# ============================================================================
 
-def load_curriculum():
+API_URL = "http://localhost:8000/api/generate"
+
+# ✅ FIXED: Updated path to new curriculum location
+CURRICULUM_PATH = Path(__file__).parent.parent / "data" / "curriculum" / "languages" / "english.json"
+
+# Classes to skip (already fully generated)
+# Add class numbers here as strings when done: e.g. "8", "9"
+SKIP_CLASSES = {
+    # "8",   # ← Uncomment when Class 8 is complete
+}
+
+# Sleep between lessons (seconds) — respect Claude API rate limits
+SLEEP_BETWEEN_LESSONS = 15
+
+
+# ============================================================================
+# HELPERS
+# ============================================================================
+
+def load_curriculum() -> dict:
     if not CURRICULUM_PATH.exists():
-        print(f"❌ Error: Could not find {CURRICULUM_PATH}")
+        print(f"❌ Error: Curriculum not found at {CURRICULUM_PATH}")
         return {}
-    with open(CURRICULUM_PATH, 'r') as f:
+    with open(CURRICULUM_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def run_bulk_update(target_class=None, start_unit=1):
-    """
-    Runs the bulk generation.
-    target_class: If set (e.g., 8), only runs for that class. If None, runs ALL.
-    """
-    data = load_curriculum()
-    print(f"🚀 Starting Bulk Update Automation...")
-    if target_class:
-        print(f"🎯 Target: Class {target_class} only")
 
-    # Iterate through Classes (6, 7, 8, etc.)
-    for class_key, class_data in data.items():
-        
-        # === 🛑 SKIP LOGIC ADDED HERE ===
-        if str(class_key) == "8":
-            print(f"⏩ Skipping Class {class_key} (Already completed)")
+def get_term_num(term_key: str) -> int:
+    """Extracts integer term number from key like 'term1' → 1"""
+    try:
+        return int(term_key.replace("term", ""))
+    except:
+        return 0
+
+
+# ============================================================================
+# MAIN BULK RUNNER
+# ============================================================================
+
+def run_bulk_update(target_class: int = None, start_unit: int = 1):
+    """
+    Runs bulk generation for all lessons in the curriculum.
+
+    Each lesson sends ONE request that generates:
+      ✅ Content HTML  (deployed to content/{term}/{lessonId}/index.html)
+      ✅ QA HTML       (deployed to qa/{term}/{lessonId}/index.html)
+      ✅ LP HTML       (deployed to lp/{term}/{lessonId}/index.html)
+      ✅ Content MD    (deployed to md-files/{class}/{lessonId}.md)
+      ✅ QA MD         (deployed to md-files/{class}/{lessonId}_qa.md)
+      ✅ LP MD         (deployed to md-files/{class}/{lessonId}_lp.md)
+
+    Args:
+        target_class: If set, only runs for this class. If None, runs all.
+        start_unit: Start from this unit number (useful for resuming).
+    """
+    curriculum = load_curriculum()
+    if not curriculum:
+        return
+
+    print(f"\n🚀 Starting Bulk Generation")
+    print(f"   Target  : {'All classes' if not target_class else f'Class {target_class}'}")
+    print(f"   From    : Unit {start_unit}")
+    print(f"   Skipping: {SKIP_CLASSES or 'None'}")
+    print(f"   Output  : Content + QA + LP (HTML + MD)")
+    print("=" * 60)
+
+    total_success = 0
+    total_failed = 0
+
+    for class_key, class_data in curriculum.items():
+
+        # Skip non-class keys (like "subject", "version" etc.)
+        if not str(class_key).isdigit():
             continue
-        # ================================
 
-        # Skip if we want a specific class and this isn't it
+        # Skip completed classes
+        if str(class_key) in SKIP_CLASSES:
+            print(f"\n⏩ Skipping Class {class_key} (marked as complete)")
+            continue
+
+        # Skip if targeting a specific class
         if target_class and str(class_key) != str(target_class):
             continue
 
-        print(f"\n📚 PROCESSING CLASS {class_key} ----------------------------")
+        print(f"\n📚 CLASS {class_key} {'─' * 40}")
 
-        # Iterate through Terms (term1, term2...)
         for term_key, term_data in class_data.items():
-            # Extract term number (default to 1 if missing)
-            term_num = 1
-            if "term" in term_key:
-                try:
-                    term_num = int(term_key.replace("term", ""))
-                except:
-                    term_num = 1
 
-            # Iterate through Units
+            # Skip metadata keys
+            if not term_key.startswith("term"):
+                continue
+
+            term_num = get_term_num(term_key)
+            print(f"\n   📅 {term_key.upper()}")
+
             for unit_key, lessons in term_data.items():
+
+                if not isinstance(lessons, list):
+                    continue
+
                 try:
                     unit_num = int(unit_key.replace("unit", ""))
                 except:
                     continue
 
-                # Skip units if we want to start later (optional)
+                # Resume from start_unit
                 if unit_num < start_unit:
                     continue
 
-                print(f"   👉 Unit {unit_num} ({len(lessons)} lessons)")
+                print(f"\n   📖 Unit {unit_num}  ({len(lessons)} lessons)")
 
-                # Iterate through Lessons
                 for i, lesson in enumerate(lessons):
                     lesson_choice = i + 1
-                    lesson_title = lesson.get('title', 'Unknown Lesson')
-                    
-                    print(f"      [{i+1}/{len(lessons)}] Generating: '{lesson_title}'...")
+                    lesson_title = lesson.get("title", "Unknown")
+                    lesson_id = lesson.get("id", "unknown")
 
-                    # PREPARE THE PAYLOAD
+                    print(f"\n      [{lesson_choice}/{len(lessons)}] {lesson_title}")
+                    print(f"            ID: {lesson_id}")
+
+                    # Build payload
                     payload = {
                         "class_num": int(class_key),
                         "subject": "english",
@@ -79,37 +148,59 @@ def run_bulk_update(target_class=None, start_unit=1):
                         "mode": "lesson",
                         "unit": unit_num,
                         "lesson_choice": lesson_choice,
-                        "output_format": "html"  # Change to 'md' if you want Markdown
+                        "output_format": "html",   # Always html → triggers full pipeline
                     }
 
-                    # SEND REQUEST
+                    # Send request
                     try:
                         start_time = time.time()
-                        # Timeout set to 700s (approx 11 mins) to handle large PDF downloads
                         response = requests.post(API_URL, json=payload, timeout=700)
-                        
-                        if response.status_code == 200:
-                            print(f"      ✅ Success! ({round(time.time() - start_time, 1)}s)")
-                        else:
-                            print(f"      ❌ Failed: {response.text}")
-                    
-                    except Exception as e:
-                        print(f"      ⚠️ Connection Error: {e}")
+                        elapsed = round(time.time() - start_time, 1)
 
-                    # === SAFETY SLEEP ===
-                    # Wait 15 seconds to keep AI happy
-                    print("      ⏳ Cooling down (15s)...")
-                    time.sleep(15)
+                        if response.status_code == 200:
+                            data = response.json()
+                            deployed = data.get("deployed", [])
+                            print(f"      ✅ Done ({elapsed}s) — Deployed: {', '.join(deployed)}")
+                            total_success += 1
+                        else:
+                            print(f"      ❌ Failed ({response.status_code}): {response.text[:100]}")
+                            total_failed += 1
+
+                    except requests.exceptions.Timeout:
+                        print(f"      ⏱️  Timeout after 700s — skipping")
+                        total_failed += 1
+                    except Exception as e:
+                        print(f"      ⚠️  Error: {e}")
+                        total_failed += 1
+
+                    # Cool down between lessons
+                    print(f"      ⏳ Cooling down ({SLEEP_BETWEEN_LESSONS}s)...")
+                    time.sleep(SLEEP_BETWEEN_LESSONS)
+
+    print("\n" + "=" * 60)
+    print(f"🏁 Bulk generation complete!")
+    print(f"   ✅ Success : {total_success}")
+    print(f"   ❌ Failed  : {total_failed}")
+    print("=" * 60)
+
+
+# ============================================================================
+# ENTRY POINT
+# ============================================================================
 
 if __name__ == "__main__":
-    # === INSTRUCTIONS ===
-    # Uncomment the line below corresponding to what you want to do
-    
-    # OPTION 1: Run EVERYTHING (Classes 6-12) - Takes a long time!
+
+    # ── OPTIONS ──────────────────────────────────────────────────────────────
+    # Uncomment the one you want to run:
+
+    # OPTION 1: Run ALL classes (long — use for full generation)
     # run_bulk_update()
-    
-    # OPTION 2: Run Just Class 8 (Recommended Test)
-    run_bulk_update(target_class=12)
-    
-    # OPTION 3: Run Class 6
+
+    # OPTION 2: Run a specific class only
+    run_bulk_update(target_class=9)
+
+    # OPTION 3: Run a specific class starting from a specific unit
+    # run_bulk_update(target_class=10, start_unit=3)
+
+    # OPTION 4: Run Class 6 Term 1 only (set start_unit and add skip logic manually)
     # run_bulk_update(target_class=6)
