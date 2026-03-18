@@ -356,35 +356,25 @@ class PDFProcessor:
                 else:
                     print(f"⚠️  Content generation failed — skipping")
 
-                # Step 4: Deploy QA HTML + MD
+                # Step 4: Deploy QA HTML only (no MD for QA)
                 if results["qa"]:
                     qa_html_file = self.temp_dir / f"{filename_base}_qa.html"
                     with open(qa_html_file, "w", encoding="utf-8") as f:
                         f.write(results["qa"])
 
-                    qa_md_file = self.temp_dir / f"{filename_base}_qa.md"
-                    with open(qa_md_file, "w", encoding="utf-8") as f:
-                        f.write(results["qa"])  # Store HTML as MD reference
-
                     bridge.deploy_content(qa_html_file, bridge_meta, "html", "qa")
-                    bridge.deploy_content(qa_md_file, bridge_meta, "md", "qa")
                     deployed.append("qa")
                     print(f"✅ QA deployed")
                 else:
                     print(f"⚠️  QA generation failed — skipping")
 
-                # Step 5: Deploy LP HTML + MD
+                # Step 5: Deploy LP HTML only (no MD for LP)
                 if results["lp"]:
                     lp_html_file = self.temp_dir / f"{filename_base}_lp.html"
                     with open(lp_html_file, "w", encoding="utf-8") as f:
                         f.write(results["lp"])
 
-                    lp_md_file = self.temp_dir / f"{filename_base}_lp.md"
-                    with open(lp_md_file, "w", encoding="utf-8") as f:
-                        f.write(results["lp"])
-
                     bridge.deploy_content(lp_html_file, bridge_meta, "html", "lp")
-                    bridge.deploy_content(lp_md_file, bridge_meta, "md", "lp")
                     deployed.append("lp")
                     print(f"✅ LP deployed")
                 else:

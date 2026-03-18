@@ -201,23 +201,19 @@ class ContentBridge:
                 print(f"⚠️  Bridge: Subject '{subject}' path not yet implemented. English only for now.")
                 return None
 
-        # ── MD paths ──────────────────────────────────────────────────────────
+        # ── MD paths — Content ONLY (QA and LP MD not needed) ───────────────
         elif fmt == "md":
             if subject in LANGUAGE_SUBJECTS:
                 md_base = self.target_base / "backend" / "data" / "languages" / subject / "md-files" / class_str
 
                 if file_type == "content":
                     return md_base / f"{lesson_id}.md"
-                elif file_type == "qa":
-                    return md_base / f"{lesson_id}_qa.md"
-                elif file_type == "lp":
-                    return md_base / f"{lesson_id}_lp.md"
                 else:
-                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    # QA and LP do not get MD files — HTML only
+                    print(f"ℹ️  Bridge: MD skipped for file_type '{file_type}' — content only")
                     return None
 
             else:
-                # TODO: MD paths for other subjects
                 print(f"⚠️  Bridge: MD path for subject '{subject}' not yet implemented.")
                 return None
 

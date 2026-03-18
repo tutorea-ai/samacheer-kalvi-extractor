@@ -69,8 +69,6 @@ def run_bulk_update(target_class: int = None, start_unit: int = 1):
       ✅ QA HTML       (deployed to qa/{term}/{lessonId}/index.html)
       ✅ LP HTML       (deployed to lp/{term}/{lessonId}/index.html)
       ✅ Content MD    (deployed to md-files/{class}/{lessonId}.md)
-      ✅ QA MD         (deployed to md-files/{class}/{lessonId}_qa.md)
-      ✅ LP MD         (deployed to md-files/{class}/{lessonId}_lp.md)
 
     Args:
         target_class: If set, only runs for this class. If None, runs all.
@@ -197,7 +195,7 @@ if __name__ == "__main__":
     # run_bulk_update()
 
     # OPTION 2: Run a specific class only
-    run_bulk_update(target_class=9)
+    run_bulk_update(target_class=10)
 
     # OPTION 3: Run a specific class starting from a specific unit
     # run_bulk_update(target_class=10, start_unit=3)
