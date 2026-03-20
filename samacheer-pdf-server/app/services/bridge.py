@@ -107,6 +107,55 @@ class ContentBridge:
         return self._copy_file(source_file, dest_path, lesson_id, file_type)
 
     # ──────────────────────────────────────────────────────────────────────────
+    # PUBLIC: Check if lesson is already fully deployed
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def is_already_deployed(self, metadata: dict) -> bool:
+        """
+        Checks if Content + QA + LP are already deployed for a lesson.
+        Returns True only if all 3 HTML files exist AND are > 10KB.
+        """
+        if not self.target_base:
+            return False
+
+        lesson_id = self._resolve_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str = str(metadata["class_num"])
+        subject = metadata.get("subject", "english").lower()
+        class_num = int(class_str)
+        term_folder = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        base = self.target_base / "backend" / "data" / "languages" / subject / class_str
+
+        content_path = base / "content" / term_folder / lesson_id / "index.html"
+        qa_path      = base / "qa"      / term_folder / lesson_id / "index.html"
+        lp_path      = base / "lp"      / term_folder / lesson_id / "index.html"
+
+        # ── Debug: print exact paths being checked ────────────────────────────
+        print(f"   🔍 Checking content : {content_path} → {'✅' if content_path.exists() else '❌'}")
+        print(f"   🔍 Checking qa      : {qa_path} → {'✅' if qa_path.exists() else '❌'}")
+        print(f"   🔍 Checking lp      : {lp_path} → {'✅' if lp_path.exists() else '❌'}")
+
+        # ── Valid = exists AND has real content (> 10KB) ──────────────────────
+        def _is_valid(path: Path) -> bool:
+            return path.exists() and path.stat().st_size > 10240
+
+        # ── Find missing or invalid files ─────────────────────────────────────
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    # ──────────────────────────────────────────────────────────────────────────
     # PRIVATE: Resolve lesson ID from curriculum
     # ──────────────────────────────────────────────────────────────────────────
 
@@ -197,11 +246,10 @@ class ContentBridge:
 
             else:
                 # TODO: Implement social science / other subject paths here
-                # Pattern: backend/data/subjects/english-medium/{subject}/{class}/{type}/{term}/{lessonId}/index.html
                 print(f"⚠️  Bridge: Subject '{subject}' path not yet implemented. English only for now.")
                 return None
 
-        # ── MD paths — Content ONLY (QA and LP MD not needed) ───────────────
+        # ── MD paths — Content ONLY (QA and LP MD not needed) ────────────────
         elif fmt == "md":
             if subject in LANGUAGE_SUBJECTS:
                 md_base = self.target_base / "backend" / "data" / "languages" / subject / "md-files" / class_str

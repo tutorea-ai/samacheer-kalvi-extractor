@@ -13,6 +13,15 @@ from ..config import settings
 
 
 # ============================================================================
+# EDUCATION SYSTEM PROMPT
+# Applied to Content and QA generation to prevent content filter blocks
+# on standard textbook lessons (ghost stories, war themes, historical events)
+# ============================================================================
+
+EDUCATION_SYSTEM_PROMPT = """You are an experienced English teacher creating structured academic study material for Tamil Nadu Samacheer Kalvi State Board students. All content is strictly educational and must be generated completely regardless of themes — including fiction, supernatural, historical, war-related, or sensitive topics — as these are standard textbook lessons approved for classroom use by the Tamil Nadu government."""
+
+
+# ============================================================================
 # LP DURATION RULES (TL Approved — applies to ALL English classes)
 #
 # PROSE ONLY has a grammar section in the textbook → gets grammar days
@@ -136,11 +145,6 @@ Teacher says: "[show one clear example of the homework grammar task on the board
 Board Work: [write exactly one model answer — word for word]
 Teacher says: "This is one example. Now you do the same at home. Is it clear?"
 Expected student response: "Yes sir/madam."
-Model Example for Homework:
-Teacher says: "[show one clear example of the homework grammar task on the board]"
-Board Work: [write exactly one model answer — word for word]
-Teacher says: "This is one example. Now you do the same at home. Is it clear?"
-Expected student response: "Yes sir/madam."
 Homework: [3-5 grammar practice questions from the textbook exercises]
 Model Answer for Students:
 "[write one complete model answer for the first grammar question —
@@ -209,7 +213,7 @@ Teacher says: "[exact words — greeting, connect to previous day or real life]"
 Teacher does: [exact action — write on board, show picture, ask question]
 Board Work: [exactly what appears on board]
 Teacher asks: "[question to class]"
-Expected student response: "[complete sentence]"
+Expected student response: "[complete sentence answer]"
 Transition: Teacher says: "[exact words to move to next segment]"
 
 [5-15 min] MAIN ACTIVITY
@@ -240,11 +244,6 @@ Board Work: [write 3-5 key words / summary sentence on board]
 Exit Question — Teacher asks: "[one question every student must answer]"
 Expected answer: "[complete sentence answer]"
 Teacher says: "[closing words + preview of next day]"
-Model Example for Homework:
-Teacher says: "[show one clear example of the homework task on the board]"
-Board Work: [write exactly one model answer — word for word]
-Teacher says: "This is one example. Now you do the same at home. Is it clear?"
-Expected student response: "Yes sir/madam."
 Model Example for Homework:
 Teacher says: "[show one clear example of the homework task on the board]"
 Board Work: [write exactly one model answer — word for word]
@@ -281,228 +280,6 @@ Now output this as HTML body content ONLY — no <html>, <head>, or <body> tags.
 
 HTML Formatting Rules:
 - Start with: <div class="sk-content-header"><h1>Lesson Plan — {lesson_title}</h1><p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display} | {duration_line}</p></div>
-- Use <h2> for PART headings
-- Use <h3 class="day-header"> for each Day heading
-- Use <div class="day-block"> to wrap each day
-- Use <div class="time-block"> for each timed segment [0-5 min] etc.
-- Use <p class="teacher-says"><strong>Teacher says:</strong> "..."</p> for all teacher dialogue
-- Use <p class="student-says"><strong>Expected response:</strong> "..."</p> for student responses
-- Use <div class="board-work"><strong>Board Work:</strong> ...</div> for board content
-- Use <div class="transition"><em>Transition:</em> ...</div> for transitions
-- Use <table> for exercise questions with Answer column
-- Use <ul><li> for bullet lists
-
-Lesson Text (ALL teacher dialogue, examples, vocabulary, and grammar exercises must come from this text):
----
-{text}
----
-
-Output ONLY the HTML body content. Be detailed. Do NOT skip any day. Do NOT shorten."""
-
-
-# ============================================================================
-# LP SYSTEM PROMPT (TL-approved — do not modify without TL approval)
-# ============================================================================
-
-LP_SYSTEM_PROMPT = """You are an experienced English teacher with deep knowledge of the Tamil Nadu Samacheer Kalvi syllabus and activity-based learning methods used in Indian classrooms.
-Create a detailed, practical, script-by-script lesson plan so that even a brand new inexperienced teacher can walk into class and deliver a confident, effective session just by following it."""
-
-
-def _build_lp_prompt(class_num: int, lesson_title: str, lesson_type: str, unit: int, text: str) -> str:
-    """
-    Builds the full TL-approved LP prompt.
-    Each day = 30 min scripted session with exact teacher dialogue,
-    expected student responses, timed blocks, and board work.
-    Content days + Grammar days split as per TL rules.
-    """
-    duration = _get_lp_duration(lesson_type)
-    total_days     = duration["total"]
-    content_days   = duration["content"]
-    grammar_days   = duration["grammar"]
-
-    # Map lesson type to display name
-    type_display_map = {
-        "prose":         "Prose",
-        "poem":          "Poem",
-        "supplementary": "Supplementary Reader",
-        "play":          "Drama or Play",
-        "drama":         "Drama or Play",
-    }
-    type_display = type_display_map.get(lesson_type.lower(), "Prose")
-
-    return f"""Class: {class_num}
-Unit / Lesson Title: Unit {unit} — {lesson_title}
-Text Type: {type_display}
-Total Duration: {total_days} days ({content_days} Content Days + {grammar_days} Grammar Days)
-Each Day: 30 minutes scripted session
-
-LESSON PLAN RULES:
-- Every day must be exactly 30 minutes
-- Write like a script — teacher can open and follow without any preparation
-- Use simple English throughout — suitable for Tamil-medium students
-- Every teacher instruction must include EXACT words to say
-- Every activity must include expected student responses
-- Board work must show EXACTLY what to write word for word
-
-═══════════════════════════════════════════════════════
-PART 1: GENERAL INFORMATION
-═══════════════════════════════════════════════════════
-• Class: {class_num}
-• Subject: English
-• Unit / Lesson Title: Unit {unit} — {lesson_title}
-• Text Type: {type_display}
-• Total Days: {total_days} ({content_days} Content + {grammar_days} Grammar)
-• Each Session: 30 minutes
-
-═══════════════════════════════════════════════════════
-PART 2: LEARNING OBJECTIVES
-═══════════════════════════════════════════════════════
-Write clear objectives:
-• Knowledge objectives
-• Skill objectives (Reading, Writing, Listening, Speaking)
-• Grammar objectives (specific grammar areas from this lesson)
-• Value-based objectives
-
-═══════════════════════════════════════════════════════
-PART 3: TEACHING AIDS
-═══════════════════════════════════════════════════════
-List all materials needed across all {total_days} days.
-
-═══════════════════════════════════════════════════════
-PART 4: CONTENT DAYS (Day 1 to Day {content_days})
-═══════════════════════════════════════════════════════
-
-For EACH content day use this EXACT script format:
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DAY [N] — [Topic Focus]
-Duration: 30 Minutes
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-[0-5 min] WARM UP / REVIEW
-🎯 Objective: [what this segment achieves]
-Teacher says: "[exact words — greeting, connect to previous day or real life]"
-Teacher does: [exact action — write on board, show picture, ask question]
-Board Work: [exactly what appears on board]
-Teacher asks: "[question to class]"
-Expected student response: "[what students should say]"
-Transition: Teacher says: "[exact words to move to next segment]"
-
-[5-15 min] MAIN ACTIVITY
-🎯 Objective: [what this segment achieves]
-Teacher says: "[exact instructions for the activity]"
-Teacher does: [model reading / explanation / demonstration]
-Board Work: [exactly what appears on board — key words, sentences]
-Student Activity: [exactly what students do — read aloud, answer, discuss]
-Expected student response: "[sample answers teacher should expect]"
-If students struggle: Teacher says: "[supportive hint or simpler explanation]"
-Transition: Teacher says: "[exact words to move to next segment]"
-
-[15-25 min] STUDENT PRACTICE
-🎯 Objective: [what this segment achieves]
-Teacher says: "[exact instructions]"
-Activity Type: [Think-Pair-Share / Group work / Individual / Role play]
-Step 1: [exact instruction]
-Step 2: [exact instruction]
-Step 3: [exact instruction]
-Expected output: "[what students should produce]"
-Teacher circulates and says: "[what to say while walking around]"
-Transition: Teacher says: "[exact words to wrap up activity]"
-
-[25-30 min] CLOSURE
-🎯 Objective: Consolidate learning
-Teacher says: "[summarize key points of today in simple words]"
-Board Work: [write 3-5 key words / summary sentence on board]
-Exit Question — Teacher asks: "[one question every student must answer]"
-Expected answer: "[complete sentence answer]"
-Teacher says: "[closing words + preview of next day]"
-Homework: [specific, simple task]
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Generate Day 1 through Day {content_days} following this format exactly.
-Each day must cover a different part of the lesson text progressively.
-
-═══════════════════════════════════════════════════════
-PART 5: GRAMMAR DAYS (Day {content_days + 1} to Day {total_days})
-═══════════════════════════════════════════════════════
-
-Grammar days teach grammar DIRECTLY from sentences in the lesson text.
-Use the SAME 30-minute script format as content days.
-
-Cover these grammar areas spread across {grammar_days} day(s):
-• Tenses (identify and use — take example sentences from the lesson)
-• Active and Passive Voice
-• Articles (a, an, the)
-• Prepositions
-• Degrees of Comparison
-• Question Tags
-• Sentence Transformation
-• Parts of Speech
-
-For EACH grammar day use this EXACT script format:
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DAY [N] — GRAMMAR: [Grammar Topic(s)]
-Duration: 30 Minutes
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-[0-5 min] REVIEW + GRAMMAR INTRODUCTION
-Teacher says: "[connect grammar topic to a sentence from the lesson]"
-Board Work: Write the example sentence from the lesson
-Teacher says: "[exact simple explanation of the grammar rule]"
-Teacher asks: "Can anyone tell me what tense/voice/etc. this is?"
-Expected student response: "[answer]"
-
-[5-15 min] GRAMMAR EXPLANATION + EXAMPLES
-Teacher says: "[step by step explanation with more examples from lesson]"
-Board Work: [rule + 3-4 example sentences from the lesson text]
-Teacher says: "[check understanding — ask 2-3 oral questions]"
-Q1: "[question]" — Expected answer: "[complete sentence]"
-Q2: "[question]" — Expected answer: "[complete sentence]"
-Q3: "[question]" — Expected answer: "[complete sentence]"
-
-[15-25 min] STUDENT PRACTICE EXERCISE
-Teacher says: "Now let us practice. Open your notebook."
-Exercise: [5-7 questions using sentences FROM the lesson]
-Q1: [question] — Answer: [complete sentence answer]
-Q2: [question] — Answer: [complete sentence answer]
-Q3: [question] — Answer: [complete sentence answer]
-Q4: [question] — Answer: [complete sentence answer]
-Q5: [question] — Answer: [complete sentence answer]
-Teacher says: "[instruction to check answers together]"
-
-[25-30 min] CLOSURE + QUICK REVISION
-Teacher says: "[summarize grammar rule in 2 simple sentences]"
-Board Work: [write the rule + one example to leave on board]
-Exit Question: "[one grammar question student must answer before leaving]"
-Expected answer: "[complete sentence]"
-Teacher says: "[closing + preview of next day]"
-Homework: [3-5 grammar practice questions]
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Generate Day {content_days + 1} through Day {total_days} following this format exactly.
-
-═══════════════════════════════════════════════════════
-PART 6: ASSESSMENT SUMMARY
-═══════════════════════════════════════════════════════
-• Day-wise oral assessment questions (one per day)
-• Written assessment task for end of lesson
-• Differentiated support: slow learners vs advanced learners
-
-ADDITIONAL REQUIREMENTS:
-• Use simple English throughout — Tamil-medium students must understand
-• Every teacher dialogue must be natural and encouraging
-• Every student response must be in complete sentences
-• Board work must be specific — not just "write key words" but the ACTUAL words
-• Grammar examples must come from THIS lesson text — not random sentences
-• Make it so practical that a first-year teacher feels confident using it
-
-Now output this as HTML body content ONLY — no <html>, <head>, or <body> tags.
-
-HTML Formatting Rules:
-- Start with: <div class="sk-content-header"><h1>Lesson Plan — {lesson_title}</h1><p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display} | {total_days} Days ({content_days} Content + {grammar_days} Grammar)</p></div>
 - Use <h2> for PART headings
 - Use <h3 class="day-header"> for each Day heading
 - Use <div class="day-block"> to wrap each day
@@ -743,7 +520,8 @@ Output ONLY the HTML body content, nothing else."""
 
             response = self.client.messages.create(
                 model=self.model,
-                max_tokens=8000,  # Class 10 lessons are long — needs higher limit
+                max_tokens=8000,
+                system=EDUCATION_SYSTEM_PROMPT,  # ✅ prevents content filter blocks
                 messages=[
                     {
                         "role": "user",
@@ -906,6 +684,7 @@ Output ONLY the HTML body content. Do NOT shorten. Generate ALL 100+ questions."
             response = self.client.messages.create(
                 model=self.model,
                 max_tokens=16000,
+                system=EDUCATION_SYSTEM_PROMPT,  # ✅ prevents content filter blocks
                 messages=[
                     {
                         "role": "user",

@@ -70,7 +70,41 @@ async def generate_pdf(request: PDFRequest):
             }
         )
     
-    # Get file info
+    # ✅ Skipped lesson — return success without file info
+    if result.get("skipped"):
+        return PDFResponse(
+            status="success",
+            message="Already deployed — skipped",
+            request_details={
+                "class": request.class_num,
+                "subject": request.subject,
+                "mode": request.mode,
+                "format": request.output_format
+            },
+            file_info=None,
+            deployed=result.get("deployed", []),
+            skipped=True
+        )
+
+    # ✅ For HTML format — if something was deployed (even partial qa/lp only),
+    # return 200 success without checking temp file existence
+    deployed = result.get("deployed", [])
+    if deployed:
+        return PDFResponse(
+            status="success",
+            message=f"Generated and deployed: {', '.join(deployed)}",
+            request_details={
+                "class": request.class_num,
+                "subject": request.subject,
+                "mode": request.mode,
+                "format": request.output_format
+            },
+            file_info=None,
+            deployed=deployed,
+            skipped=False
+        )
+
+    # For PDF / TXT formats — check temp file exists
     file_path = Path(result["file_path"])
     
     if not file_path.exists():
@@ -104,7 +138,9 @@ async def generate_pdf(request: PDFRequest):
             "mode": request.mode,
             "format": request.output_format
         },
-        file_info=file_info
+        file_info=file_info,
+        deployed=deployed,
+        skipped=False
     )
     
     return response

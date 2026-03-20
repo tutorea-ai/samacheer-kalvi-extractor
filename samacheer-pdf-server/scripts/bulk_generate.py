@@ -158,7 +158,11 @@ def run_bulk_update(target_class: int = None, start_unit: int = 1):
                         if response.status_code == 200:
                             data = response.json()
                             deployed = data.get("deployed", [])
-                            print(f"      ✅ Done ({elapsed}s) — Deployed: {', '.join(deployed)}")
+                            skipped = data.get("skipped", False)
+                            if skipped:
+                                print(f"      ⏩ Already deployed — skipped")
+                            else:
+                                print(f"      ✅ Done ({elapsed}s) — Deployed: {', '.join(deployed)}")
                             total_success += 1
                         else:
                             print(f"      ❌ Failed ({response.status_code}): {response.text[:100]}")
@@ -195,7 +199,7 @@ if __name__ == "__main__":
     # run_bulk_update()
 
     # OPTION 2: Run a specific class only
-    run_bulk_update(target_class=10)
+    run_bulk_update(target_class=10, start_unit=2)
 
     # OPTION 3: Run a specific class starting from a specific unit
     # run_bulk_update(target_class=10, start_unit=3)

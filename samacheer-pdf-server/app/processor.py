@@ -295,6 +295,26 @@ class PDFProcessor:
 
             # ── AI OUTPUT: html (Content + QA + LP) ──────────────────────────
             elif output_format == "html":
+                # Build bridge metadata
+                bridge_meta = {
+                    "class_num": class_num,
+                    "term": term,
+                    "unit": unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject": subject,
+                    "medium": medium,
+                    "discipline": discipline,
+                }
+                # ✅ SKIP CHECK — don't waste API credits if already generated
+                if bridge.is_already_deployed(bridge_meta):
+                    return {
+            "error": False,
+            "filename": f"{filename_base}.html",
+            "file_path": str(self.temp_dir / f"{filename_base}.html"),
+            "deployed": ["content", "qa", "lp"],
+            "skipped": True,
+            "message": "Already deployed — skipped"
+        }
                 print(f"🤖 Starting AI generation pipeline...")
 
                 # Step 1: Extract text
@@ -309,16 +329,7 @@ class PDFProcessor:
                 if not raw_text.strip():
                     return {"error": True, "message": "No text extracted from PDF pages"}
 
-                # Build bridge metadata
-                bridge_meta = {
-                    "class_num": class_num,
-                    "term": term,
-                    "unit": unit_num,
-                    "lesson_choice": lesson_choice,
-                    "subject": subject,
-                    "medium": medium,
-                    "discipline": discipline,
-                }
+                
 
                 # AI metadata
                 ai_metadata = {

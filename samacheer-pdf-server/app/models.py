@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, field_validator
-from typing import Literal, Optional
+from typing import Literal, Optional, List
 from datetime import datetime
 
 class PDFRequest(BaseModel):
@@ -17,7 +17,6 @@ class PDFRequest(BaseModel):
         description="Subject name (e.g., english, tamil, maths, socialscience)"
     )
     
-    # 👇 NEW FIELD ADDED HERE
     discipline: Optional[str] = Field(
         None,
         description="Discipline for Social Science (history, geography, civics, economics)"
@@ -43,7 +42,7 @@ class PDFRequest(BaseModel):
     unit: Optional[int] = Field(
         None,
         ge=1,
-        le=30,  # Increased limit for Science/History having many units
+        le=30,
         description="Unit number (required if mode=lesson)"
     )
     
@@ -78,7 +77,6 @@ class PDFRequest(BaseModel):
     def validate_lesson_params(cls, v, info):
         """Ensure unit and lesson_choice are provided when mode=lesson"""
         mode = info.data.get('mode')
-        # We relax this check slightly because 'lesson_choice' is not needed for Social Science
         if mode == 'lesson' and info.field_name == 'unit' and v is None:
             raise ValueError(f"{info.field_name} is required when mode='lesson'")
         return v
@@ -99,7 +97,9 @@ class PDFResponse(BaseModel):
     status: Literal["success"]
     message: str
     request_details: dict
-    file_info: FileInfo
+    file_info: Optional[FileInfo] = None        # ✅ Optional for skipped lessons
+    deployed: Optional[List[str]] = None        # ✅ e.g. ["content", "qa", "lp"]
+    skipped: Optional[bool] = False             # ✅ True if lesson already deployed
 
 
 class ErrorResponse(BaseModel):
