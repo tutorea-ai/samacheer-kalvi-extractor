@@ -1,7 +1,7 @@
 """
 Core PDF Processing Engine
 Handles the full pipeline:
-  Download → Slice → Extract Text → AI Generate (Content + QA + LP) → Deploy via Bridge
+  Download → Slice → Extract Text (pdf2htmlEX + w3m) → AI Generate (Content + QA + LP) → Deploy via Bridge
 """
 
 import requests
@@ -9,13 +9,17 @@ import os
 import json
 import PyPDF2
 import gdown
-import pdfplumber
 import shutil
+import subprocess
 from pathlib import Path
 from typing import Dict, Tuple, Optional
 from .services.ai_converter import ai_converter
 from .services.bridge import bridge
 from .config import settings
+
+
+# ── Docker image for pdf2htmlEX ───────────────────────────────────────────────
+PDF2HTMLEX_IMAGE = "pdf2htmlex/pdf2htmlex:0.18.8.rc1-master-20200630-Ubuntu-focal-x86_64"
 
 
 class PDFProcessor:
@@ -42,7 +46,6 @@ class PDFProcessor:
 
         if not catalog_path.exists():
             print(f"❌ Catalog not found: {catalog_path}")
-            # Legacy fallback for English
             if subject == "english" and medium == "english":
                 try:
                     response = requests.get(settings.CATALOG_URL, timeout=10)
@@ -107,8 +110,95 @@ class PDFProcessor:
         except:
             return False
 
+    # ──────────────────────────────────────────────────────────────────────────
+    # NEW: Smart Text Extraction — pdf2htmlEX + w3m
+    # Replaces old pdfplumber extraction
+    # ──────────────────────────────────────────────────────────────────────────
+
     def _extract_text(self, pdf_file: Path, start_page: int, end_page: int, output_txt: Path) -> bool:
+        """
+        Extracts clean text from PDF using pdf2htmlEX + w3m pipeline.
+
+        Steps:
+          1. pdf2htmlEX converts PDF pages → perfect HTML (correct column order)
+          2. w3m converts HTML → clean readable text
+          3. Save text to output_txt
+
+        Falls back to pdfplumber if Docker/w3m fails.
+        """
         try:
+            print(f"   🔄 Extracting pages {start_page}→{end_page} via pdf2htmlEX + w3m...")
+
+            # ── Step 1: pdf2htmlEX → HTML ─────────────────────────────────────
+            html_output_name = f"{pdf_file.stem}_p{start_page}_{end_page}.html"
+            html_output_path = self.temp_dir / html_output_name
+
+            docker_result = subprocess.run([
+                "docker", "run", "--rm",
+                "-v", f"{pdf_file.parent}:/pdf",        # mount PDF folder
+                "-v", f"{self.temp_dir}:/output",        # mount output folder
+                PDF2HTMLEX_IMAGE,
+                "--first-page", str(start_page),
+                "--last-page", str(end_page),
+                "--zoom", "1.3",
+                "--dest-dir", "/output",                 # save HTML to output folder
+                f"/pdf/{pdf_file.name}",
+                html_output_name                         # output filename
+            ], capture_output=True, text=True, timeout=120)
+
+            if docker_result.returncode != 0:
+                print(f"   ⚠️  pdf2htmlEX failed — falling back to pdfplumber")
+                print(f"   Docker error: {docker_result.stderr[:200]}")
+                return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+
+            # Fix permissions (Docker creates files as root)
+            subprocess.run(["sudo", "chmod", "644", str(html_output_path)],
+                         capture_output=True)
+
+            if not html_output_path.exists():
+                print(f"   ⚠️  HTML output not found — falling back to pdfplumber")
+                return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+
+            print(f"   ✅ pdf2htmlEX done → {html_output_name}")
+
+            # ── Step 2: w3m → clean text ──────────────────────────────────────
+            w3m_result = subprocess.run([
+                "w3m", "-dump", str(html_output_path)
+            ], capture_output=True, text=True, timeout=60)
+
+            if w3m_result.returncode != 0 or not w3m_result.stdout.strip():
+                print(f"   ⚠️  w3m failed — falling back to pdfplumber")
+                html_output_path.unlink(missing_ok=True)
+                return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+
+            clean_text = w3m_result.stdout
+
+            # ── Step 3: Save clean text ───────────────────────────────────────
+            with open(output_txt, "w", encoding="utf-8") as f:
+                f.write(clean_text)
+
+            # Cleanup HTML temp file
+            html_output_path.unlink(missing_ok=True)
+
+            print(f"   ✅ w3m done → {len(clean_text)} chars extracted")
+            return True
+
+        except subprocess.TimeoutExpired:
+            print(f"   ⚠️  Extraction timed out — falling back to pdfplumber")
+            return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+
+        except Exception as e:
+            print(f"   ⚠️  Extraction error: {e} — falling back to pdfplumber")
+            return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+
+    def _extract_text_fallback(self, pdf_file: Path, start_page: int, end_page: int, output_txt: Path) -> bool:
+        """
+        Fallback text extraction using pdfplumber.
+        Used when pdf2htmlEX or w3m fails.
+        """
+        try:
+            import pdfplumber
+            print(f"   🔄 Fallback: extracting via pdfplumber...")
             text_content = ""
             with pdfplumber.open(pdf_file) as pdf:
                 if end_page > len(pdf.pages):
@@ -119,8 +209,10 @@ class PDFProcessor:
                     text_content += (text + "\n\n" + "=" * 50 + "\n\n") if text else ""
             with open(output_txt, "w", encoding="utf-8") as f:
                 f.write(text_content)
+            print(f"   ✅ pdfplumber fallback done → {len(text_content)} chars")
             return True
-        except:
+        except Exception as e:
+            print(f"   ❌ pdfplumber fallback also failed: {e}")
             return False
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -139,7 +231,6 @@ class PDFProcessor:
         all_units_for_slicing = []
 
         if "disciplines" in index_data:
-            # Social Science structure
             if not discipline:
                 print("❌ 'discipline' parameter is required for this subject.")
                 return None
@@ -151,7 +242,6 @@ class PDFProcessor:
             for d_list in index_data["disciplines"].values():
                 all_units_for_slicing.extend(d_list)
         else:
-            # English / Science structure
             target_units = index_data.get("units", [])
             all_units_for_slicing = target_units
 
@@ -160,14 +250,11 @@ class PDFProcessor:
 
         selected_unit_obj = target_units[unit_num - 1]
 
-        # Case A: Direct page structure (Social Science)
         if "page" in selected_unit_obj:
             start_pdf_page = selected_unit_obj["page"] + offset
             clean_title = selected_unit_obj["title"].replace(" ", "")
             filename = f"Class{class_num}-{discipline or 'Unit'}-{unit_num}-{clean_title}"
             selected_page_raw = selected_unit_obj["page"]
-
-        # Case B: Nested structure (English)
         else:
             lessons = []
             for cat in ["prose", "poem", "supplementary", "play"]:
@@ -185,7 +272,6 @@ class PDFProcessor:
             filename = f"Class{class_num}-Unit{unit_num}-{selected_lesson['type'].capitalize()}-{clean_title}"
             selected_page_raw = selected_lesson["page"]
 
-        # Calculate end page
         all_start_pages = []
         for u in all_units_for_slicing:
             if "page" in u:
@@ -212,13 +298,13 @@ class PDFProcessor:
     def process_request(self, request_data: dict) -> dict:
         try:
             # 1. Extract parameters
-            class_num    = request_data["class_num"]
-            subject      = request_data["subject"]
-            term         = request_data.get("term", 0)
-            medium       = request_data.get("medium", "english")
-            mode         = request_data["mode"]
+            class_num     = request_data["class_num"]
+            subject       = request_data["subject"]
+            term          = request_data.get("term", 0)
+            medium        = request_data.get("medium", "english")
+            mode          = request_data["mode"]
             output_format = request_data["output_format"]
-            discipline   = request_data.get("discipline")
+            discipline    = request_data.get("discipline")
 
             print(f"\n📚 Processing: Class {class_num} | {subject} | {discipline or 'General'} | Format: {output_format}")
 
@@ -293,9 +379,9 @@ class PDFProcessor:
                 self._extract_text(cached_file, start_page, end_page, output_file)
                 return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
 
-            # ── AI OUTPUT: html (Content + QA + LP) ──────────────────────────
-            elif output_format == "html":
-                # Build bridge metadata
+            # ── CONTENT ONLY output ───────────────────────────────────────────
+            elif output_format == "content_only":
+
                 bridge_meta = {
                     "class_num": class_num,
                     "term": term,
@@ -305,19 +391,9 @@ class PDFProcessor:
                     "medium": medium,
                     "discipline": discipline,
                 }
-                # ✅ SKIP CHECK — don't waste API credits if already generated
-                if bridge.is_already_deployed(bridge_meta):
-                    return {
-            "error": False,
-            "filename": f"{filename_base}.html",
-            "file_path": str(self.temp_dir / f"{filename_base}.html"),
-            "deployed": ["content", "qa", "lp"],
-            "skipped": True,
-            "message": "Already deployed — skipped"
-        }
-                print(f"🤖 Starting AI generation pipeline...")
 
-                # Step 1: Extract text
+                print(f"🤖 Starting Content-only generation...")
+
                 temp_txt = self.temp_dir / f"{filename_base}_raw.txt"
                 if not self._extract_text(cached_file, start_page, end_page, temp_txt):
                     return {"error": True, "message": "Text extraction failed"}
@@ -329,9 +405,6 @@ class PDFProcessor:
                 if not raw_text.strip():
                     return {"error": True, "message": "No text extracted from PDF pages"}
 
-                
-
-                # AI metadata
                 ai_metadata = {
                     "class": class_num,
                     "subject": subject,
@@ -342,24 +415,94 @@ class PDFProcessor:
                     "discipline": discipline,
                 }
 
-                # Step 2: Generate Content + QA + LP via Claude
-                results = ai_converter.generate_all(raw_text, ai_metadata)
+                from .services.ai_converter import _wrap_html
+                content_html = ai_converter._generate_content(raw_text, ai_metadata)
 
+                if not content_html:
+                    return {"error": True, "message": "Content generation failed"}
+
+                content_html_file = self.temp_dir / f"{filename_base}.html"
+                with open(content_html_file, "w", encoding="utf-8") as f:
+                    f.write(_wrap_html(content_html, title=filename_base, content_type="content"))
+
+                content_md_file = self.temp_dir / f"{filename_base}.md"
+                with open(content_md_file, "w", encoding="utf-8") as f:
+                    f.write(f"# {filename_base}\n\n{raw_text}")
+
+                bridge.deploy_content(content_html_file, bridge_meta, "html", "content")
+                bridge.deploy_content(content_md_file, bridge_meta, "md", "content")
+                print(f"✅ Content deployed")
+
+                return {
+                    "error": False,
+                    "filename": f"{filename_base}.html",
+                    "file_path": str(content_html_file),
+                    "deployed": ["content"],
+                    "message": "Content only generated and deployed"
+                }
+
+            # ── AI OUTPUT: html (Content + QA + LP) ──────────────────────────
+            elif output_format == "html":
+
+                bridge_meta = {
+                    "class_num": class_num,
+                    "term": term,
+                    "unit": unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject": subject,
+                    "medium": medium,
+                    "discipline": discipline,
+                }
+
+                # ✅ SKIP CHECK
+                if bridge.is_already_deployed(bridge_meta):
+                    return {
+                        "error": False,
+                        "filename": f"{filename_base}.html",
+                        "file_path": str(self.temp_dir / f"{filename_base}.html"),
+                        "deployed": ["content", "qa", "lp"],
+                        "skipped": True,
+                        "message": "Already deployed — skipped"
+                    }
+
+                print(f"🤖 Starting AI generation pipeline...")
+
+                # Extract text using new pipeline
+                temp_txt = self.temp_dir / f"{filename_base}_raw.txt"
+                if not self._extract_text(cached_file, start_page, end_page, temp_txt):
+                    return {"error": True, "message": "Text extraction failed"}
+
+                with open(temp_txt, "r", encoding="utf-8") as f:
+                    raw_text = f.read()
+                temp_txt.unlink(missing_ok=True)
+
+                if not raw_text.strip():
+                    return {"error": True, "message": "No text extracted from PDF pages"}
+
+                ai_metadata = {
+                    "class": class_num,
+                    "subject": subject,
+                    "unit": unit_num,
+                    "lesson_title": filename_base,
+                    "lesson_type": self._get_lesson_type(index_data[term_key], unit_num, lesson_choice),
+                    "term": term_key,
+                    "discipline": discipline,
+                }
+
+                # Generate Content + QA + LP
+                results = ai_converter.generate_all(raw_text, ai_metadata)
                 deployed = []
 
-                # Step 3: Deploy Content HTML + MD
+                # Deploy Content HTML + MD
                 if results["content"]:
-                    # Save HTML
                     content_html_file = self.temp_dir / f"{filename_base}.html"
                     with open(content_html_file, "w", encoding="utf-8") as f:
                         f.write(results["content"])
 
-                    # Save MD (raw text as markdown placeholder for now)
                     content_md_file = self.temp_dir / f"{filename_base}.md"
                     with open(content_md_file, "w", encoding="utf-8") as f:
                         f.write(f"# {filename_base}\n\n{raw_text}")
 
-                    # Deploy both
                     bridge.deploy_content(content_html_file, bridge_meta, "html", "content")
                     bridge.deploy_content(content_md_file, bridge_meta, "md", "content")
                     deployed.append("content")
@@ -367,24 +510,22 @@ class PDFProcessor:
                 else:
                     print(f"⚠️  Content generation failed — skipping")
 
-                # Step 4: Deploy QA HTML only (no MD for QA)
+                # Deploy QA HTML
                 if results["qa"]:
                     qa_html_file = self.temp_dir / f"{filename_base}_qa.html"
                     with open(qa_html_file, "w", encoding="utf-8") as f:
                         f.write(results["qa"])
-
                     bridge.deploy_content(qa_html_file, bridge_meta, "html", "qa")
                     deployed.append("qa")
                     print(f"✅ QA deployed")
                 else:
                     print(f"⚠️  QA generation failed — skipping")
 
-                # Step 5: Deploy LP HTML only (no MD for LP)
+                # Deploy LP HTML
                 if results["lp"]:
                     lp_html_file = self.temp_dir / f"{filename_base}_lp.html"
                     with open(lp_html_file, "w", encoding="utf-8") as f:
                         f.write(results["lp"])
-
                     bridge.deploy_content(lp_html_file, bridge_meta, "html", "lp")
                     deployed.append("lp")
                     print(f"✅ LP deployed")

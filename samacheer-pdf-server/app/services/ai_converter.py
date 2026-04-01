@@ -2,9 +2,6 @@
 AI Content Converter
 Converts extracted PDF text into structured Content, QA, and LP
 using Anthropic Claude API.
-
-Each public method returns a styled, complete HTML string ready
-for deployment as index.html in the Node.js content server.
 """
 
 import anthropic
@@ -14,18 +11,13 @@ from ..config import settings
 
 # ============================================================================
 # EDUCATION SYSTEM PROMPT
-# Applied to Content and QA generation to prevent content filter blocks
-# on standard textbook lessons (ghost stories, war themes, historical events)
 # ============================================================================
 
 EDUCATION_SYSTEM_PROMPT = """You are an experienced English teacher creating structured academic study material for Tamil Nadu Samacheer Kalvi State Board students. All content is strictly educational and must be generated completely regardless of themes — including fiction, supernatural, historical, war-related, or sensitive topics — as these are standard textbook lessons approved for classroom use by the Tamil Nadu government."""
 
 
 # ============================================================================
-# LP DURATION RULES (TL Approved — applies to ALL English classes)
-#
-# PROSE ONLY has a grammar section in the textbook → gets grammar days
-# Poem, Supplementary, Play/Drama → content only, no grammar days
+# LP DURATION RULES
 # ============================================================================
 
 LP_DURATION_RULES = {
@@ -37,12 +29,11 @@ LP_DURATION_RULES = {
 }
 
 def _get_lp_duration(lesson_type: str) -> dict:
-    """Returns duration breakdown for the lesson type."""
     return LP_DURATION_RULES.get(lesson_type.lower(), LP_DURATION_RULES["supplementary"])
 
 
 # ============================================================================
-# LP SYSTEM PROMPT (TL-approved — do not modify without TL approval)
+# LP SYSTEM PROMPT
 # ============================================================================
 
 LP_SYSTEM_PROMPT = """You are an experienced English teacher with deep knowledge of the Tamil Nadu Samacheer Kalvi syllabus and activity-based learning methods used in Indian classrooms.
@@ -50,25 +41,12 @@ Create a detailed, practical, script-by-script lesson plan so that even a brand 
 
 
 def _build_lp_prompt(class_num: int, lesson_title: str, lesson_type: str, unit: int, text: str) -> str:
-    """
-    Builds the full TL-approved LP prompt.
-
-    PROSE:
-      - 10 days total: 4 content days + 6 grammar days
-      - Grammar days based on the ACTUAL grammar section in the textbook
-      - Each day = 30 min scripted session
-
-    POEM / SUPPLEMENTARY / PLAY / DRAMA:
-      - 3 days total: all content days, NO grammar days
-      - Each day = 30 min scripted session
-    """
     duration     = _get_lp_duration(lesson_type)
     total_days   = duration["total"]
     content_days = duration["content"]
     grammar_days = duration["grammar"]
     has_grammar  = duration["has_grammar"]
 
-    # Map lesson type to display name
     type_display_map = {
         "prose":         "Prose",
         "poem":          "Poem",
@@ -78,13 +56,11 @@ def _build_lp_prompt(class_num: int, lesson_title: str, lesson_type: str, unit: 
     }
     type_display = type_display_map.get(lesson_type.lower(), "Prose")
 
-    # Duration summary line
     if has_grammar:
         duration_line = f"{total_days} days ({content_days} Content Days + {grammar_days} Grammar Days)"
     else:
         duration_line = f"{total_days} days (Content Only — no grammar section for this lesson type)"
 
-    # Grammar section (only for prose)
     grammar_section = ""
     if has_grammar:
         grammar_section = f"""
@@ -95,11 +71,6 @@ PART 5: GRAMMAR DAYS (Day {content_days + 1} to Day {total_days})
 IMPORTANT: Grammar days must be based ONLY on the grammar topics and exercises
 that are actually present in the grammar section of the lesson text provided below.
 Do NOT invent grammar topics. Do NOT use random grammar unrelated to this lesson.
-Look for the grammar section at the end of the lesson text (vocabulary exercises,
-grammar exercises, practice activities) and base ALL grammar days on those.
-
-Grammar days teach grammar using examples and sentences from the lesson text.
-Use the SAME 30-minute script format as content days.
 
 For EACH grammar day use this EXACT script format:
 
@@ -125,37 +96,25 @@ Transition: Teacher says: "[exact words to move to practice]"
 
 [15-25 min] STUDENT PRACTICE EXERCISE
 Teacher says: "Now let us practice. Open your notebook and write these."
-(Use the ACTUAL exercises from the textbook grammar section if present)
-Q1: [question from textbook grammar section] — Answer: [complete sentence]
+Q1: [question] — Answer: [complete sentence]
 Q2: [question] — Answer: [complete sentence]
 Q3: [question] — Answer: [complete sentence]
 Q4: [question] — Answer: [complete sentence]
 Q5: [question] — Answer: [complete sentence]
-Teacher circulates and says: "[encouraging words while checking notebooks]"
-Transition: Teacher says: "[wrap up practice]"
+Teacher circulates and says: "[encouraging words]"
 
 [25-30 min] CLOSURE + QUICK REVISION
 Teacher says: "[summarize the grammar rule in 2 simple sentences]"
-Board Work: [write the rule + one example to leave on board]
+Board Work: [write the rule + one example]
 Exit Question: "[one grammar question every student answers before leaving]"
 Expected answer: "[complete sentence]"
 Teacher says: "[closing + preview of next day]"
-Model Example for Homework:
-Teacher says: "[show one clear example of the homework grammar task on the board]"
-Board Work: [write exactly one model answer — word for word]
-Teacher says: "This is one example. Now you do the same at home. Is it clear?"
-Expected student response: "Yes sir/madam."
-Homework: [3-5 grammar practice questions from the textbook exercises]
-Model Answer for Students:
-"[write one complete model answer for the first grammar question —
-simple and clear so students can follow the same pattern at home]"
-Teacher says: "I will write this model answer on the board. Copy it in your notebook
-and use it as a guide when you do your homework at home."
+Homework: [3-5 grammar practice questions]
+Model Answer: "[one complete model answer]"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Generate Day {content_days + 1} through Day {total_days} following this format exactly.
-Spread the grammar topics from the textbook across all {grammar_days} grammar days.
 """
 
     return f"""Class: {class_num}
@@ -185,7 +144,6 @@ PART 1: GENERAL INFORMATION
 ═══════════════════════════════════════════════════════
 PART 2: LEARNING OBJECTIVES
 ═══════════════════════════════════════════════════════
-Write clear objectives:
 • Knowledge objectives
 • Skill objectives (Reading, Writing, Listening, Speaking)
 {"• Grammar objectives (specific grammar areas from the textbook grammar section)" if has_grammar else ""}
@@ -209,8 +167,7 @@ Duration: 30 Minutes
 
 [0-5 min] WARM UP / REVIEW
 🎯 Objective: [what this segment achieves]
-Teacher says: "[exact words — greeting, connect to previous day or real life]"
-Teacher does: [exact action — write on board, show picture, ask question]
+Teacher says: "[exact words]"
 Board Work: [exactly what appears on board]
 Teacher asks: "[question to class]"
 Expected student response: "[complete sentence answer]"
@@ -218,13 +175,12 @@ Transition: Teacher says: "[exact words to move to next segment]"
 
 [5-15 min] MAIN ACTIVITY
 🎯 Objective: [what this segment achieves]
-Teacher says: "[exact instructions for the activity]"
-Teacher does: [model reading / explanation / demonstration]
-Board Work: [exactly what appears on board — key words, sentences]
-Student Activity: [exactly what students do — read aloud, answer, discuss]
-Expected student response: "[sample answers teacher should expect]"
-If students struggle: Teacher says: "[supportive hint or simpler explanation]"
-Transition: Teacher says: "[exact words to move to next segment]"
+Teacher says: "[exact instructions]"
+Board Work: [exactly what appears on board]
+Student Activity: [exactly what students do]
+Expected student response: "[sample answers]"
+If students struggle: Teacher says: "[supportive hint]"
+Transition: Teacher says: "[exact words]"
 
 [15-25 min] STUDENT PRACTICE
 🎯 Objective: [what this segment achieves]
@@ -234,32 +190,23 @@ Step 1: [exact instruction]
 Step 2: [exact instruction]
 Step 3: [exact instruction]
 Expected output: "[what students should produce]"
-Teacher circulates and says: "[what to say while walking around]"
-Transition: Teacher says: "[exact words to wrap up activity]"
+Teacher circulates and says: "[what to say]"
+Transition: Teacher says: "[exact words]"
 
 [25-30 min] CLOSURE
 🎯 Objective: Consolidate learning
-Teacher says: "[summarize key points of today in simple words]"
-Board Work: [write 3-5 key words / summary sentence on board]
-Exit Question — Teacher asks: "[one question every student must answer]"
-Expected answer: "[complete sentence answer]"
-Teacher says: "[closing words + preview of next day]"
-Model Example for Homework:
-Teacher says: "[show one clear example of the homework task on the board]"
-Board Work: [write exactly one model answer — word for word]
-Teacher says: "This is one example. Now you do the same at home. Is it clear?"
-Expected student response: "Yes sir/madam."
+Teacher says: "[summarize key points]"
+Board Work: [3-5 key words / summary sentence]
+Exit Question: "[one question every student must answer]"
+Expected answer: "[complete sentence]"
+Teacher says: "[closing + preview of next day]"
 Homework: [specific, simple task]
-Model Answer for Students:
-"[write one complete model answer for the homework task — simple sentences,
-easy English, so students can refer to this at home when they are stuck]"
-Teacher says: "I will write this model answer on the board. Copy it in your notebook
-and use it as a guide when you do your homework at home."
+Model Answer: "[one complete model answer]"
+Teacher says: "Copy this model answer in your notebook as a guide."
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Generate Day 1 through Day {content_days} following this format exactly.
-Each day must cover a different part of the lesson text progressively.
+Generate Day 1 through Day {content_days}. Each day covers a different part progressively.
 {grammar_section}
 ═══════════════════════════════════════════════════════
 PART 6: ASSESSMENT SUMMARY
@@ -268,30 +215,22 @@ PART 6: ASSESSMENT SUMMARY
 • Written assessment task for end of lesson
 • Differentiated support: slow learners vs advanced learners
 
-ADDITIONAL REQUIREMENTS:
-• Use simple English throughout — Tamil-medium students must understand
-• Every teacher dialogue must be natural and encouraging
-• Every student response must be in complete sentences
-• Board work must be specific — the ACTUAL words not just "write key words"
-• {"Grammar examples must come from the ACTUAL grammar section in the lesson text" if has_grammar else "No grammar section needed for this lesson type"}
-• Make it so practical that a first-year teacher feels confident using it
+Now output as HTML body content ONLY — no <html>, <head>, or <body> tags.
 
-Now output this as HTML body content ONLY — no <html>, <head>, or <body> tags.
+HTML Rules:
+- Start: <div class="sk-content-header"><h1>Lesson Plan — {lesson_title}</h1><p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display} | {duration_line}</p></div>
+- <h2> for PART headings
+- <h3 class="day-header"> for each Day
+- <div class="day-block"> wraps each day
+- <div class="time-block"> for each timed segment
+- <p class="teacher-says"><strong>Teacher says:</strong> "..."</p>
+- <p class="student-says"><strong>Expected response:</strong> "..."</p>
+- <div class="board-work"><strong>Board Work:</strong> ...</div>
+- <div class="transition"><em>Transition:</em> ...</div>
+- <table> for exercises
+- <ul><li> for bullet lists
 
-HTML Formatting Rules:
-- Start with: <div class="sk-content-header"><h1>Lesson Plan — {lesson_title}</h1><p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display} | {duration_line}</p></div>
-- Use <h2> for PART headings
-- Use <h3 class="day-header"> for each Day heading
-- Use <div class="day-block"> to wrap each day
-- Use <div class="time-block"> for each timed segment [0-5 min] etc.
-- Use <p class="teacher-says"><strong>Teacher says:</strong> "..."</p> for all teacher dialogue
-- Use <p class="student-says"><strong>Expected response:</strong> "..."</p> for student responses
-- Use <div class="board-work"><strong>Board Work:</strong> ...</div> for board content
-- Use <div class="transition"><em>Transition:</em> ...</div> for transitions
-- Use <table> for exercise questions with Answer column
-- Use <ul><li> for bullet lists
-
-Lesson Text (ALL teacher dialogue, examples, vocabulary, and grammar exercises must come from this text):
+Lesson Text:
 ---
 {text}
 ---
@@ -301,16 +240,9 @@ Output ONLY the HTML body content. Be detailed. Do NOT skip any day. Do NOT shor
 
 # ============================================================================
 # HTML WRAPPER
-# Wraps AI-generated HTML fragment into a complete styled page.
 # ============================================================================
 
 def _wrap_html(body_content: str, title: str, content_type: str = "content") -> str:
-    """
-    Wraps HTML body content into a full styled HTML page.
-
-    content_type: "content" | "qa" | "lp"
-    Each type gets a slightly different accent color for visual distinction.
-    """
     accent_colors = {
         "content": "#2E75B6",
         "qa":      "#27AE60",
@@ -326,7 +258,6 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
   <title>{title}</title>
   <link rel="stylesheet" href="/frontend/css/content-styles.css" />
   <style>
-    /* Scoped overrides for this content type */
     .sk-content-header {{
       border-left: 5px solid {accent};
       padding-left: 12px;
@@ -356,9 +287,7 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
       padding: 9px 14px;
       border-bottom: 1px solid #eee;
     }}
-    tr:nth-child(even) td {{
-      background: #f9f9f9;
-    }}
+    tr:nth-child(even) td {{ background: #f9f9f9; }}
     blockquote {{
       border-left: 4px solid {accent};
       margin: 16px 0;
@@ -366,12 +295,6 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
       background: #f5f5f5;
       color: #444;
       font-style: italic;
-    }}
-    .checklist li::before {{
-      content: "✅ ";
-    }}
-    .schedule-table th {{
-      background: {accent};
     }}
   </style>
 </head>
@@ -388,53 +311,20 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
 # ============================================================================
 
 class AIContentConverter:
-    """
-    Converts raw PDF text into styled HTML for Content, QA, and LP
-    using Anthropic Claude API.
-    """
 
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
         self.model = settings.ANTHROPIC_MODEL
         print(f"✅ Claude AI Converter initialized — model: {self.model}")
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # PUBLIC: Generate all three outputs in one call
-    # ──────────────────────────────────────────────────────────────────────────
-
     def generate_all(self, text: str, metadata: Dict) -> Dict[str, Optional[str]]:
-        """
-        Master method — generates Content HTML, QA HTML, and LP HTML.
-
-        Args:
-            text: Raw text extracted from the PDF lesson
-            metadata: {
-                'class': int,
-                'subject': str,
-                'unit': int,
-                'lesson_title': str,
-                'lesson_type': str,   # prose | poem | supplementary | play
-                'term': str,          # term0 | term1 | term2 | term3
-                'discipline': str     # for social science (optional)
-            }
-
-        Returns:
-            {
-                'content': <styled HTML string or None>,
-                'qa':      <styled HTML string or None>,
-                'lp':      <styled HTML string or None>,
-            }
-        """
         results = {"content": None, "qa": None, "lp": None}
-
         lesson_title = metadata.get("lesson_title", "Unknown")
-        class_num = metadata.get("class", "")
-        subject = metadata.get("subject", "english")
-        lesson_type = metadata.get("lesson_type", "prose")
+        class_num    = metadata.get("class", "")
+        subject      = metadata.get("subject", "english")
 
         print(f"🤖 Claude generating: Content + QA + LP for '{lesson_title}'")
 
-        # ── Step 1: Content ───────────────────────────────────────────────────
         print(f"   📄 Generating Content HTML...")
         content_html = self._generate_content(text, metadata)
         if content_html:
@@ -447,7 +337,6 @@ class AIContentConverter:
         else:
             print(f"   ❌ Content generation failed")
 
-        # ── Step 2: QA ────────────────────────────────────────────────────────
         print(f"   ❓ Generating QA HTML...")
         qa_html = self._generate_qa(text, metadata)
         if qa_html:
@@ -460,13 +349,12 @@ class AIContentConverter:
         else:
             print(f"   ❌ QA generation failed")
 
-        # ── Step 3: LP ────────────────────────────────────────────────────────
         print(f"   📌 Generating LP HTML...")
         lp_html = self._generate_lp(text, metadata)
         if lp_html:
             results["lp"] = _wrap_html(
                 lp_html,
-                title=f"Learning Points — {lesson_title} | Class {class_num}",
+                title=f"Lesson Plan — {lesson_title} | Class {class_num}",
                 content_type="lp"
             )
             print(f"   ✅ LP HTML ready")
@@ -476,58 +364,259 @@ class AIContentConverter:
         return results
 
     # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: Content generation
+    # PRIVATE: Content generation — split dispatcher
     # ──────────────────────────────────────────────────────────────────────────
 
     def _generate_content(self, text: str, metadata: Dict) -> Optional[str]:
-        """Converts raw text into a clean, well-structured HTML content page."""
+        lesson_type = metadata.get("lesson_type", "prose")
+        # Poems and supplementary are short — use higher threshold to avoid splitting
+        threshold = 10000 if lesson_type == "prose" else 20000
+        if len(text) <= threshold:
+            print(f"      [Content] Short text ({len(text)} chars) → single call")
+            return self._generate_single_content(text, metadata, is_continuation=False)
+        else:
+            print(f"      [Content] Long text ({len(text)} chars) → splitting into 2 parts")
+            midpoint = len(text) // 2  # ✅ define midpoint first!
+            # Split at sentence boundary (period + newline)
+            split_point = text.find('.\n', midpoint)
+            if split_point == -1:
+                split_point = text.find('\n', midpoint)
+            if split_point == -1:
+                split_point = midpoint
+            # Include the period in part 1
+            split_point += 1
+            part1 = self._generate_single_content(text[:split_point], metadata, is_continuation=False)
+            part2 = self._generate_single_content(text[split_point:], metadata, is_continuation=True)
+            if part1 and part2:
+                return part1 + "\n\n" + part2
+            elif part1:
+                return part1
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Single content API call
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _generate_single_content(self, text: str, metadata: Dict, is_continuation: bool = False) -> Optional[str]:
         try:
-            class_num = metadata.get("class", "")
-            subject = metadata.get("subject", "english")
-            unit = metadata.get("unit", "")
+            class_num    = metadata.get("class", "")
+            subject      = metadata.get("subject", "english")
+            unit         = metadata.get("unit", "")
             lesson_title = metadata.get("lesson_title", "Unknown")
-            lesson_type = metadata.get("lesson_type", "prose")
+            lesson_type  = metadata.get("lesson_type", "prose")
 
-            prompt = f"""Convert the following textbook lesson content into clean, well-structured HTML.
+            if is_continuation:
+                header_instruction = """This is the CONTINUATION of the lesson already started.
+DO NOT add any title, header, or <div class="sk-content-header"> block.
+DO NOT repeat the lesson name or meta info.
+DO NOT add a second Summary box — Summary goes ONLY at the very end of the final part.
+IMPORTANT: If the text below contains About the Author, Do You Know, or Glossary sections,
+you MUST include them — they are in this part of the text, not in Part 1.
+Continue rendering ALL content present in the text below without skipping anything.
+Start immediately with whatever content appears first in the text below."""
+            else:
+                header_instruction = f"""Start with this exact header:
+<div class="sk-content-header">
+  <h1>{lesson_title}</h1>
+  <p class="sk-meta">Class {class_num} | {subject.title()} | Unit {unit}</p>
+</div>"""
 
-Lesson Information:
-- Class: {class_num}
-- Subject: {subject.title()}
-- Unit: {unit}
-- Lesson: {lesson_title}
-- Type: {lesson_type}
+            prompt = f"""Convert the following Tamil Nadu Samacheer Kalvi Class {class_num} English textbook lesson into clean, polished, interactive HTML.
 
-Formatting Rules:
-1. Output ONLY the HTML body content — no <html>, <head>, or <body> tags
-2. Start with a header div: <div class="sk-content-header"><h1>{lesson_title}</h1><p class="sk-meta">Class {class_num} | {subject.title()} | Unit {unit}</p></div>
-3. Use proper heading hierarchy: <h2>, <h3>
-4. Wrap paragraphs in <p> tags
-5. For poetry: use <div class="poem-stanza"> with <p class="poem-line"> for each line
-6. Use <strong> for important terms, <em> for emphasis or foreign words
-7. Use <ul><li> for bullet lists where appropriate
-8. Format dialogues with <div class="dialogue"> blocks
-9. Use <blockquote class="do-you-know"> for "Do You Know?" boxes
-10. Remove page numbers and PDF artifacts
-11. Keep ALL original content — do not summarize or skip anything
-12. Make it readable and student-friendly
+Lesson: {lesson_title} | Class {class_num} | {subject.title()} | Unit {unit} | Type: {lesson_type}
 
-Original Text:
+{header_instruction}
+
+═══════════════════════════════════════════════════════
+OUTPUT STRUCTURE
+═══════════════════════════════════════════════════════
+
+1. HEADER
+{header_instruction}
+
+2. ABOUT THE AUTHOR (only if author info exists in text)
+<div class="about-author">
+  <div class="author-icon">✍️</div>
+  <div>
+    <div class="author-title">About the Author</div>
+    <div class="author-name">[Author Name]</div>
+    <p>[Author details from text]</p>
+  </div>
+</div>
+IMPORTANT: About the Author and Do You Know are ALWAYS two SEPARATE components.
+NEVER merge them into one box. Each must be its own distinct HTML block.
+
+3. LESSON CONTENT
+- <h2> for main sections, <h3> for subsections
+- <p> for all paragraphs
+- Keep ALL original content — never skip or summarize
+- For inline questions (a. b. c. labeled questions inside the story):
+  Use this format:
+  <div class="inline-question">
+    <p><strong>a. Question text here?</strong></p>
+    <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+  </div>
+
+4. POEM (only for poem type)
+<div class="poem-container">
+  <div class="poem-stanza">
+    <span class="poem-line">Line one</span>
+    <span class="poem-line">Line two</span>
+    <span class="poem-line">Line three</span>
+    <span class="poem-line">Line four</span>
+  </div>
+</div>
+
+5. DIALOGUE (for interviews/conversations)
+<div class="dialogue-block">
+  <div class="speaker">Speaker Name</div>
+  <p class="speech">Exact speech from text.</p>
+</div>
+
+6. DO YOU KNOW
+<div class="do-you-know">
+  <div class="dyk-title">Do You Know?</div>
+  <p>Content exactly as in text.</p>
+</div>
+
+7. GLOSSARY
+<div class="glossary-section">
+  <h3>Glossary</h3>
+  <div class="glossary-grid">
+    <div class="glossary-card">
+      <div class="word">word</div>
+      <span class="word-type">(n/v/adj/adv)</span>
+      <div class="word-meaning">meaning from text</div>
+    </div>
+  </div>
+</div>
+
+8. EXERCISES — MATCH THE EXACT COMPONENT TO EACH EXERCISE TYPE:
+
+FILL IN THE BLANKS:
+<div class="exercise-section">
+  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. [Title]</div>
+  <div class="help-box"><span class="help-box-label">Word Bank:</span> word1 | word2 | word3</div>
+  <div class="fill-blank-sentence">1. Sentence with <input class="blank-input" type="text" placeholder="______" /> in it.</div>
+  <div class="fill-blank-sentence">2. Another sentence with <input class="blank-input" type="text" placeholder="______" /> blank.</div>
+</div>
+
+TRUE OR FALSE:
+<div class="exercise-section">
+  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. [Title]</div>
+  <div class="true-false-item">
+    <span class="tf-number">1.</span>
+    <span class="tf-statement">Statement from the lesson.</span>
+    <div class="tf-options">
+      <button class="tf-btn true-btn">True</button>
+      <button class="tf-btn false-btn">False</button>
+    </div>
+  </div>
+  <div class="true-false-item">
+    <span class="tf-number">2.</span>
+    <span class="tf-statement">False statement needing correction.</span>
+    <div class="tf-options">
+      <button class="tf-btn true-btn">True</button>
+      <button class="tf-btn false-btn">False</button>
+    </div>
+    <div class="tf-correction">Correction: <input class="blank-input" type="text" placeholder="Write correct answer" /></div>
+  </div>
+</div>
+
+MULTIPLE CHOICE:
+<div class="exercise-section">
+  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. [Title]</div>
+  <div class="mcq-item">
+    <div class="mcq-question">1. Question from the lesson?</div>
+    <div class="mcq-options">
+      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">a.</span> Option A</label>
+      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">b.</span> Option B</label>
+      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">c.</span> Option C</label>
+      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">d.</span> Option D</label>
+    </div>
+  </div>
+</div>
+
+MATCH THE FOLLOWING:
+<div class="exercise-section">
+  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. Match the Following</div>
+  <table class="match-table">
+    <thead><tr><th>Column A</th><th>Column B</th><th>Answer</th></tr></thead>
+    <tbody>
+      <tr><td>1. item one</td><td>a. match one</td><td><input class="match-input" type="text" placeholder="__" /></td></tr>
+      <tr><td>2. item two</td><td>b. match two</td><td><input class="match-input" type="text" placeholder="__" /></td></tr>
+    </tbody>
+  </table>
+</div>
+
+SHORT ANSWER (2-5 marks):
+<div class="exercise-section">
+  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. Answer Briefly</div>
+  <div style="margin-bottom:20px;">
+    <p><strong>1. Question from the lesson?</strong></p>
+    <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+  </div>
+  <div style="margin-bottom:20px;">
+    <p><strong>2. Another question?</strong></p>
+    <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+  </div>
+</div>
+
+LONG ANSWER (8+ marks):
+<div class="exercise-section">
+  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. Answer in Detail (100-150 words)</div>
+  <div style="margin-bottom:20px;">
+    <p><strong>1. Detailed question from the lesson?</strong></p>
+    <div class="answer-box long"><textarea placeholder="Write your detailed answer here..."></textarea></div>
+  </div>
+</div>
+
+9. SUMMARY (always last)
+<div class="summary-box">
+  <div class="summary-title">📋 Summary</div>
+  <ul>
+    <li>Key point 1 from the lesson</li>
+    <li>Key point 2 from the lesson</li>
+    <li>Key point 3 from the lesson</li>
+    <li>Key point 4 from the lesson</li>
+    <li>Key point 5 from the lesson</li>
+  </ul>
+</div>
+
+═══════════════════════════════════════════════════════
+ABSOLUTE RULES — NEVER BREAK
+═══════════════════════════════════════════════════════
+✅ Output ONLY HTML body content — NO html/head/body tags
+✅ NEVER use underscores ___ for blanks — ALWAYS <input class="blank-input">
+✅ NEVER plain list items for MCQ — ALWAYS .mcq-option with radio buttons
+✅ NEVER plain paragraphs for glossary — ALWAYS .glossary-card
+✅ NEVER plain blockquote for Do You Know — ALWAYS .do-you-know div
+✅ NEVER plain text for dialogue — ALWAYS .dialogue-block
+✅ NEVER plain text for poems — ALWAYS .poem-container with .poem-stanza
+✅ Keep ALL original content — never skip, never summarize
+✅ Every exercise from the textbook must appear with correct component
+✅ EVERY table MUST have <thead> with <th> column headers — NEVER skip table headers
+✅ For Parts of Speech table use headers: Noun | Verb | Adjective | Adverb
+✅ For Match table use headers: Column A | Column B | Answer
+✅ NEVER generate a table without proper column headings
+✅ NEVER leave inline questions (a. b. c.) without an answer textarea
+✅ ALWAYS add <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div> after EVERY inline question
+✅ NEVER add a Summary box mid-lesson — Summary goes ONLY at the very end after all exercises
+✅ ALWAYS render About the Author, Do You Know, Glossary if they appear in the text — NEVER skip them
+✅ NEVER merge About the Author and Do You Know into one box — they are ALWAYS separate HTML blocks
+
+Original Lesson Text:
 ---
 {text}
 ---
 
-Output ONLY the HTML body content, nothing else."""
+Output ONLY the HTML body content. Be complete and thorough."""
 
             response = self.client.messages.create(
                 model=self.model,
-                max_tokens=8000,
-                system=EDUCATION_SYSTEM_PROMPT,  # ✅ prevents content filter blocks
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ]
+                max_tokens=16000,
+                system=EDUCATION_SYSTEM_PROMPT,
+                messages=[{"role": "user", "content": prompt}]
             )
 
             return response.content[0].text
@@ -537,27 +626,47 @@ Output ONLY the HTML body content, nothing else."""
             return None
 
     # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: QA generation (TL-approved)
-    # Prose    → 2 banks: Lesson (100+ Q) + Grammar (100+ Q, from textbook section)
-    # Others   → 1 bank:  Lesson (100+ Q) only — no grammar section in textbook
+    # PRIVATE: QA generation — split dispatcher
     # ──────────────────────────────────────────────────────────────────────────
 
     def _generate_qa(self, text: str, metadata: Dict) -> Optional[str]:
-        """
-        Generates exam-ready question bank HTML.
-        Prose → Question Bank 1 (Lesson) + Question Bank 2 (Grammar from textbook)
-        Poem / Supplementary / Play → Question Bank 1 (Lesson) only
-        All answers in complete sentences, simple English for Tamil-medium students.
-        """
+        lesson_type = metadata.get("lesson_type", "prose")
+        threshold = 10000 if lesson_type == "prose" else 20000
+        if len(text) <= threshold:
+            print(f"      [QA] Short text ({len(text)} chars) → single call")
+            return self._generate_single_qa(text, metadata, start_from=1, target=100)
+        else:
+            print(f"      [QA] Long text ({len(text)} chars) → splitting into 2 parts")
+            midpoint = len(text) // 2  # ✅ define midpoint first!
+            # Split at sentence boundary (period + newline)
+            split_point = text.find('.\n', midpoint)
+            if split_point == -1:
+                split_point = text.find('\n', midpoint)
+            if split_point == -1:
+                split_point = midpoint
+            # Include the period in part 1
+            split_point += 1
+            part1 = self._generate_single_qa(text[:split_point], metadata, start_from=1, target=50)
+            part2 = self._generate_single_qa(text[split_point:], metadata, start_from=51, target=50)
+            if part1 and part2:
+                return part1 + "\n\n" + part2
+            elif part1:
+                return part1
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Single QA API call
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _generate_single_qa(self, text: str, metadata: Dict, start_from: int = 1, target: int = 100) -> Optional[str]:
         try:
             class_num    = metadata.get("class", "")
-            subject      = metadata.get("subject", "english")
             unit         = metadata.get("unit", "")
             lesson_title = metadata.get("lesson_title", "Unknown")
             lesson_type  = metadata.get("lesson_type", "prose")
 
-            duration     = _get_lp_duration(lesson_type)
-            has_grammar  = duration["has_grammar"]
+            duration    = _get_lp_duration(lesson_type)
+            has_grammar = duration["has_grammar"]
 
             type_display_map = {
                 "prose":         "Prose",
@@ -568,129 +677,80 @@ Output ONLY the HTML body content, nothing else."""
             }
             type_display = type_display_map.get(lesson_type.lower(), "Prose")
 
-            # ── Grammar Bank section — only for Prose ─────────────────────────
+            if start_from > 1:
+                header_instruction = f"DO NOT add Question Bank header. Continue generating MORE questions directly. Start from Q{start_from} onwards."
+            else:
+                header_instruction = f"Start with: <div class=\"sk-content-header\"><h1>Question Bank — {lesson_title}</h1><p class=\"sk-meta\">Class {class_num} | English | Unit {unit} | {type_display}</p></div>"
+
+            bank_count = f"Generate EXACTLY {target} questions starting from Q{start_from}. Stop exactly at Q{start_from + target - 1}."
+
             if has_grammar:
                 grammar_bank_instruction = f"""
-2. QUESTION BANK 2: GRAMMAR (FROM THE TEXTBOOK GRAMMAR SECTION)
-
-IMPORTANT: Base ALL grammar questions on the grammar topics and exercises that are
-ACTUALLY PRESENT in the grammar section of the lesson text provided below.
-Do NOT invent grammar topics. Look for the grammar section at the end of the
-lesson text (vocabulary exercises, grammar exercises, practice activities).
-
-Cover the grammar areas found in the textbook — typically:
-* Tense (identify and use)
-* Active and Passive Voice
-* Prepositions
-* Articles
-* Degrees of Comparison
-* Question Tags
-* Sentence Transformation
-* Sentence Correction
-* Synonyms and Antonyms
-* Parts of Speech
-
-Ensure a wide variety of question types:
-* Fill in the blanks
-* Rewrite sentences
-* Identify errors
-* Convert forms
-* Create sentences
-
-This bank must also contain AT LEAST 100 questions and answers."""
-
+2. QUESTION BANK 2: GRAMMAR (FROM TEXTBOOK GRAMMAR SECTION)
+Base ALL grammar questions on grammar topics ACTUALLY in the lesson text.
+Cover: Tense, Voice, Prepositions, Articles, Degrees, Question Tags, Transformation, Parts of Speech.
+{bank_count}"""
                 output_count = "TWO COMPLETE"
-                bank_count = "Each question bank must contain AT LEAST 100 questions and answers."
-                bank_list = "1. QUESTION BANK 1: LESSON (PROSE)\n2. QUESTION BANK 2: GRAMMAR (FROM THE TEXTBOOK GRAMMAR SECTION)"
-                divider = '- Use <hr class="section-divider"> between the two question banks'
-
+                bank_list    = "1. QUESTION BANK 1: LESSON\n2. QUESTION BANK 2: GRAMMAR"
+                divider      = '- Use <hr class="section-divider"> between the two banks'
             else:
                 grammar_bank_instruction = ""
                 output_count = "ONE COMPLETE"
-                bank_count = "The question bank must contain AT LEAST 100 questions and answers."
-                bank_list = f"1. QUESTION BANK 1: LESSON ({type_display.upper()})"
-                divider = ""
+                bank_list    = f"1. QUESTION BANK 1: LESSON ({type_display.upper()})"
+                divider      = ""
 
-            prompt = f"""You are an experienced English teacher familiar with the Tamil Nadu Samacheer Kalvi Class {class_num} syllabus and the needs of students from underprivileged and Tamil-medium backgrounds.
+            prompt = f"""Create {output_count} exam-ready question bank(s) for:
+"{lesson_title}" — Class {class_num} | Unit {unit} | {type_display}
 
-Create {output_count} exam-ready question bank(s) for the lesson "{lesson_title}" (Class {class_num}, Unit {unit}, {type_display}).
-
-OUTPUT REQUIREMENTS
-You must generate:
+BANKS TO GENERATE:
 {bank_list}
-
 {bank_count}
 
-QUESTION BANK 1: LESSON ({type_display.upper()})
-Cover:
-* Comprehension (factual)
-* Character analysis (if prose/play)
-* Theme and message
-* Application and real-life connection
-* Vocabulary from the lesson
+QUESTION TYPES — distribute like this to reach the target count:
+- 1-mark questions: Fill in the blank, One word answer, True/False, Choose the correct rhyming word
+- 2-mark questions: Short answer (2-3 sentences), explain a line, find the figure of speech
+- 5-mark questions: Paragraph answer, central idea, character/theme analysis
+- 8-mark questions: Essay type, detailed explanation, appreciation of the poem/passage
 
-Structure:
-* 1-mark questions
-* 2-mark questions
-* 5-mark questions
-* 8-mark questions
-* Additional short questions (to reach 100+ total)
+TOPICS: Comprehension, Line meaning, Rhyme scheme, Figure of speech, Theme, Vocabulary, Application
+IMPORTANT: If the text is short (poem/supplementary), generate MORE 1-mark and 2-mark questions
+to reach the target. Use vocabulary, rhyme, figures of speech, true/false, fill-in-blank questions
+to pad up to the exact target count. NEVER stop before reaching Q{start_from + target - 1}.
 {grammar_bank_instruction}
 
-ANSWER STYLE (VERY IMPORTANT)
-* EVERY answer must be a COMPLETE SENTENCE.
-* NO one-word answers.
-* NO fragments.
-* Use SIMPLE ENGLISH (very easy vocabulary).
-* Use SHORT sentences.
-* Make answers easy for Tamil-medium students to understand.
-* Keep answers concise but suitable for scoring marks in exams.
+ANSWER RULES:
+- EVERY answer = complete sentence
+- NO one-word answers
+- Simple English for Tamil-medium students
+- Exam-ready format
 
-LANGUAGE LEVEL
-* Use basic and clear English.
-* Avoid complex grammar in answers.
-* Prefer clarity over sophistication.
+Output HTML body ONLY. No html/head/body tags.
 
-CONSISTENCY CHECK (MANDATORY)
-* Proper numbering (1, 2, 3... no missing numbers).
-* NO placeholders like "same pattern continues".
-* NO skipped answers.
-* ALL answers must follow full-sentence format.
-
-Do NOT shorten the response. Do NOT skip any section. Generate the COMPLETE output.
-
-Output as HTML body content ONLY — no <html>, <head>, or <body> tags.
-
-HTML Formatting Rules:
-- Start with: <div class="sk-content-header"><h1>Question Bank — {lesson_title}</h1><p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display}</p></div>
-- Use <h2> for each Question Bank heading
-- Use <h3> for sub-sections (1-mark questions, 2-mark questions etc.)
-- Use <div class="qa-item"> for each Q&A pair:
-    <div class="qa-item">
-      <p class="question"><strong>Q1. [question]</strong></p>
-      <p class="answer"><strong>Answer:</strong> [complete sentence]</p>
-    </div>
-- Use <div class="marks-badge">1 Mark</div> before each marks section
+HTML:
+- {header_instruction}
+- <h2> for each bank, <h3> for mark sections
+- Each Q&A: <div class="qa-item"><p class="question"><strong>Q{start_from}. question</strong></p><p class="answer"><strong>Answer:</strong> sentence.</p></div>
+- <div class="marks-badge">1 Mark</div> before each section
 {divider}
-- Clean, well-structured, easy for students to read and study from
 
-Lesson Text (base ALL questions on this — for grammar bank use the grammar section found at the end of the lesson):
+Lesson Text:
 ---
 {text}
 ---
 
-Output ONLY the HTML body content. Do NOT shorten. Generate ALL 100+ questions."""
+Generate EXACTLY {target} questions starting from Q{start_from}.
+You MUST reach Q{start_from + target - 1}. This is non-negotiable.
+Count every question as you go. After every 10 questions, check your count.
+If you run out of comprehension questions, add vocabulary, theme,
+value-based and creative questions to reach exactly {target}.
+Do NOT stop before Q{start_from + target - 1}.
+Do NOT add any header if this is a continuation (start_from > 1)."""
 
             response = self.client.messages.create(
                 model=self.model,
                 max_tokens=16000,
-                system=EDUCATION_SYSTEM_PROMPT,  # ✅ prevents content filter blocks
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ]
+                system=EDUCATION_SYSTEM_PROMPT,
+                messages=[{"role": "user", "content": prompt}]
             )
 
             return response.content[0].text
@@ -700,46 +760,70 @@ Output ONLY the HTML body content. Do NOT shorten. Generate ALL 100+ questions."
             return None
 
     # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: LP generation
+    # PRIVATE: LP generation — split dispatcher
     # ──────────────────────────────────────────────────────────────────────────
 
     def _generate_lp(self, text: str, metadata: Dict) -> Optional[str]:
-        """
-        Generates a full scripted day-by-day Lesson Plan HTML page.
-        TL-approved format — 30 min sessions, exact teacher dialogue,
-        student responses, board work, timed blocks.
+        lesson_type = metadata.get("lesson_type", "prose")
+        threshold = 10000 if lesson_type == "prose" else 20000
+        if len(text) <= threshold:
+            print(f"      [LP] Short text ({len(text)} chars) → single call")
+            return self._generate_single_lp(text, metadata, is_continuation=False)
+        else:
+            print(f"      [LP] Long text ({len(text)} chars) → splitting into 2 parts")
+            midpoint = len(text) // 2  # ✅ define midpoint first!
+            # Split at sentence boundary (period + newline)
+            split_point = text.find('.\n', midpoint)
+            if split_point == -1:
+                split_point = text.find('\n', midpoint)
+            if split_point == -1:
+                split_point = midpoint
+            # Include the period in part 1
+            split_point += 1
+            part1 = self._generate_single_lp(text[:split_point], metadata, is_continuation=False)
+            part2 = self._generate_single_lp(text[split_point:], metadata, is_continuation=True)
+            if part1 and part2:
+                return part1 + "\n\n" + part2
+            elif part1:
+                return part1
+            return None
 
-        Duration (TL approved — applies to ALL English classes):
-          Prose         → 10 days (4 content + 6 grammar) — grammar from textbook section
-          Poem          → 3 days  (3 content, no grammar)
-          Supplementary → 3 days  (3 content, no grammar)
-          Play/Drama    → 3 days  (3 content, no grammar)
-        """
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Single LP API call
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _generate_single_lp(self, text: str, metadata: Dict, is_continuation: bool = False) -> Optional[str]:
         try:
             class_num    = metadata.get("class", "")
-            subject      = metadata.get("subject", "english")
             unit         = metadata.get("unit", "")
             lesson_title = metadata.get("lesson_title", "Unknown")
             lesson_type  = metadata.get("lesson_type", "prose")
 
-            prompt = _build_lp_prompt(
-                class_num=class_num,
-                lesson_title=lesson_title,
-                lesson_type=lesson_type,
-                unit=unit,
-                text=text
-            )
+            if is_continuation:
+                prompt = f"""This is CONTINUATION of the lesson plan already started.
+DO NOT add General Information, Learning Objectives, or Teaching Aids sections again.
+Continue DIRECTLY from where Day content left off.
+Generate remaining days and Assessment Summary.
+Use same HTML format as before.
+
+Lesson Text (second half):
+---
+{text}
+---"""
+            else:
+                prompt = _build_lp_prompt(
+                    class_num=class_num,
+                    lesson_title=lesson_title,
+                    lesson_type=lesson_type,
+                    unit=unit,
+                    text=text
+                )
 
             response = self.client.messages.create(
                 model=self.model,
-                max_tokens=16000,  # Scripted LP is very detailed — needs high limit
+                max_tokens=16000,
                 system=LP_SYSTEM_PROMPT,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ]
+                messages=[{"role": "user", "content": prompt}]
             )
 
             return response.content[0].text
