@@ -16,6 +16,10 @@ MD LP        → backend/data/languages/{subject}/md-files/{class}/{lessonId}_lp
 NOTE: Social Science (subjects/english-medium/social-science/...) path logic
       is stubbed below — implement when English is complete.
 ─────────────────────────────────────────────────────────────
+
+FIX APPLIED (April 2026):
+  - _is_valid() now defensively checks index.html specifically,
+    even if a folder path is passed instead of full file path.
 """
 
 import json
@@ -139,8 +143,12 @@ class ContentBridge:
         print(f"   🔍 Checking lp      : {lp_path} → {'✅' if lp_path.exists() else '❌'}")
 
         # ── Valid = exists AND has real content (> 10KB) ──────────────────────
+        # FIX: Defensively check index.html specifically — handles both cases:
+        #   - path already points to index.html (normal)
+        #   - path points to the folder (edge case)
         def _is_valid(path: Path) -> bool:
-            return path.exists() and path.stat().st_size > 10240
+            index_file = path if path.name == "index.html" else path / "index.html"
+            return index_file.exists() and index_file.stat().st_size > 10240
 
         # ── Find missing or invalid files ─────────────────────────────────────
         missing = [
