@@ -1,3 +1,10 @@
+"""
+Pydantic Models for PDF Extractor API
+
+FIX APPLIED (April 2026):
+  - Added 'force' field to PDFRequest to bypass skip check on demand
+"""
+
 from pydantic import BaseModel, Field, field_validator
 from typing import Literal, Optional, List
 from datetime import datetime
@@ -53,8 +60,13 @@ class PDFRequest(BaseModel):
     )
     
     output_format: Literal["pdf", "txt", "md", "html", "content_only"] = Field(
-    "pdf",
-    description="Output format: pdf, txt, md (markdown), html (Content+QA+LP), or content_only (Content HTML only)"
+        "pdf",
+        description="Output format: pdf, txt, md (markdown), html (Content+QA+LP), or content_only (Content HTML only)"
+    )
+
+    force: Optional[bool] = Field(
+        False,
+        description="Force regenerate even if already deployed — bypasses skip check"
     )
     
     @field_validator('subject')

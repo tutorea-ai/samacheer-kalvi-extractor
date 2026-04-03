@@ -2,6 +2,10 @@
 Core PDF Processing Engine
 Handles the full pipeline:
   Download → Slice → Extract Text (pdf2htmlEX + w3m) → AI Generate (Content + QA + LP) → Deploy via Bridge
+
+FIX APPLIED (April 2026):
+  - Added 'force' flag support to bypass is_already_deployed() check
+    when force=True in request_data. Allows overwrite without deleting files.
 """
 
 import requests
@@ -305,8 +309,9 @@ class PDFProcessor:
             mode          = request_data["mode"]
             output_format = request_data["output_format"]
             discipline    = request_data.get("discipline")
+            force         = request_data.get("force", False)  # ✅ NEW: force regeneration flag
 
-            print(f"\n📚 Processing: Class {class_num} | {subject} | {discipline or 'General'} | Format: {output_format}")
+            print(f"\n📚 Processing: Class {class_num} | {subject} | {discipline or 'General'} | Format: {output_format} | Force: {force}")
 
             # 2. Load catalog
             catalog = self._load_catalog(subject, medium)
@@ -454,8 +459,8 @@ class PDFProcessor:
                     "discipline": discipline,
                 }
 
-                # ✅ SKIP CHECK
-                if bridge.is_already_deployed(bridge_meta):
+                # ✅ SKIP CHECK — bypassed when force=True
+                if not force and bridge.is_already_deployed(bridge_meta):
                     return {
                         "error": False,
                         "filename": f"{filename_base}.html",
@@ -464,6 +469,9 @@ class PDFProcessor:
                         "skipped": True,
                         "message": "Already deployed — skipped"
                     }
+
+                if force:
+                    print(f"🔄 Force mode ON — regenerating even if already deployed")
 
                 print(f"🤖 Starting AI generation pipeline...")
 

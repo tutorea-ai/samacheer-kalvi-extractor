@@ -25,7 +25,7 @@ CURRICULUM_PATH = Path(__file__).parent.parent / "data" / "curriculum" / "langua
 # Sleep between lessons (seconds) — respect Claude API rate limits
 # Each lesson now makes multiple API calls (content split + 2×50 QA + LP split)
 # 10-15 seconds is safe to avoid throttling
-SLEEP_BETWEEN_LESSONS = 10
+SLEEP_BETWEEN_LESSONS = 15
 
 
 def load_curriculum():
@@ -113,12 +113,13 @@ def run_specific_unit(target_class, target_unit):
                     "mode": "lesson",
                     "unit": int(target_unit),
                     "lesson_choice": lesson_choice,
-                    "output_format": "html"
+                    "output_format": "html",
+                    "force": True  # ✅ Always regenerate — bypass skip check
                 }
 
                 try:
                     start_time = time.time()
-                    response = requests.post(API_URL, json=payload, timeout=700)
+                    response = requests.post(API_URL, json=payload, timeout=1200)
                     elapsed = round(time.time() - start_time, 1)
 
                     if response.status_code == 200:
