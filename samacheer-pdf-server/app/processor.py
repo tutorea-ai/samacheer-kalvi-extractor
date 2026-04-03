@@ -420,11 +420,14 @@ class PDFProcessor:
                     "discipline": discipline,
                 }
 
-                from .services.ai_converter import _wrap_html
+                from .services.ai_converter import _wrap_html, _post_process_content_html
                 content_html = ai_converter._generate_content(raw_text, ai_metadata)
 
                 if not content_html:
                     return {"error": True, "message": "Content generation failed"}
+
+                # Run structural post-processing
+                content_html = _post_process_content_html(content_html, original_text=raw_text)
 
                 content_html_file = self.temp_dir / f"{filename_base}.html"
                 with open(content_html_file, "w", encoding="utf-8") as f:

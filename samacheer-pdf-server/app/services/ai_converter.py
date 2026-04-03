@@ -363,6 +363,173 @@ def _clean_ai_output(raw_output: str) -> str:
 
 
 # ============================================================================
+# POST-PROCESSING: Structural HTML fixes using BeautifulSoup
+# ============================================================================
+
+def _post_process_content_html(html_content: str, original_text: str = "") -> str:
+    """
+    Forcibly fixes structural issues in Claude's content HTML output.
+    Runs AFTER _clean_ai_output, BEFORE _wrap_html.
+
+    Fixes applied:
+      1. ICT Corner position — moves to after last exercise, before summary
+      2. About Author / Do You Know merge — splits if Do You Know text found inside about-author
+      3. Ensures about-author, do-you-know, ict-corner are separate sibling divs
+      4. Removes fake Do You Know / ICT Corner if not in original text
+    """
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        print("⚠️  BeautifulSoup not installed — skipping post-processing")
+        print("   Install with: pip install beautifulsoup4")
+        return html_content
+
+    if not html_content or not html_content.strip():
+        return html_content
+
+    soup = BeautifulSoup(html_content, 'html.parser')
+    original_lower = original_text.lower() if original_text else ""
+    changed = False
+
+    # ──────────────────────────────────────────────────────────────────────
+    # FIX 0: Remove fake sections that don't exist in original text
+    # Claude sometimes invents Do You Know or ICT Corner sections
+    # ──────────────────────────────────────────────────────────────────────
+    if original_lower:
+        do_you_know = soup.find('div', class_='do-you-know')
+        if do_you_know and 'do you know' not in original_lower:
+            do_you_know.extract()
+            print("      🔧 Post-process: Removed fake Do You Know (not in original text)")
+            changed = True
+
+        ict_corner = soup.find('div', class_='ict-corner')
+        if ict_corner and 'ict corner' not in original_lower:
+            ict_corner.extract()
+            print("      🔧 Post-process: Removed fake ICT Corner (not in original text)")
+            changed = True
+
+    # ──────────────────────────────────────────────────────────────────────
+    # FIX 1: Move ICT Corner to correct position
+    # ICT Corner should appear AFTER all exercises, BEFORE summary
+    # ──────────────────────────────────────────────────────────────────────
+    ict_corner = soup.find('div', class_='ict-corner')
+    if ict_corner:
+        summary_box = soup.find('div', class_='summary-box')
+        exercises = soup.find_all('div', class_='exercise-section')
+
+        if summary_box:
+            # Move ICT Corner to just before Summary
+            ict_corner.extract()
+            summary_box.insert_before(ict_corner)
+            print("      🔧 Post-process: Moved ICT Corner before Summary")
+            changed = True
+        elif exercises:
+            # No summary? Put after last exercise
+            last_exercise = exercises[-1]
+            ict_corner.extract()
+            last_exercise.insert_after(ict_corner)
+            print("      🔧 Post-process: Moved ICT Corner after last exercise")
+            changed = True
+
+    # ──────────────────────────────────────────────────────────────────────
+    # FIX 2: Split Do You Know from About Author if merged
+    # Detects if about-author div contains "Do You Know" text
+    # and extracts it into its own separate div
+    # ──────────────────────────────────────────────────────────────────────
+    about_author = soup.find('div', class_='about-author')
+    do_you_know = soup.find('div', class_='do-you-know')
+
+    if about_author and not do_you_know:
+        # Check if "Do You Know" text is buried inside about-author
+        author_text = about_author.get_text()
+        if 'do you know' in author_text.lower():
+            # Find the paragraph or element containing "Do You Know"
+            all_elements = about_author.find_all(['p', 'div'])
+            dyk_elements = []
+            found_dyk = False
+
+            for elem in all_elements:
+                elem_text = elem.get_text().strip().lower()
+                if 'do you know' in elem_text:
+                    found_dyk = True
+                if found_dyk:
+                    # Skip if it's the author-title or author-name divs
+                    if elem.get('class') and any(c in elem.get('class', []) for c in ['author-title', 'author-name', 'author-icon']):
+                        continue
+                    dyk_elements.append(elem)
+
+            if dyk_elements:
+                # Create new Do You Know div
+                new_dyk = soup.new_tag('div')
+                new_dyk['class'] = 'do-you-know'
+
+                dyk_title = soup.new_tag('div')
+                dyk_title['class'] = 'dyk-title'
+                dyk_title.string = 'Do You Know?'
+                new_dyk.append(dyk_title)
+
+                for elem in dyk_elements:
+                    # Move element from about-author to new do-you-know div
+                    elem_copy = elem.extract()
+                    # Skip the "Do You Know" heading text itself
+                    if elem_copy.get_text().strip().lower() == 'do you know' or elem_copy.get_text().strip().lower() == 'do you know?':
+                        continue
+                    new_dyk.append(elem_copy)
+
+                # Insert the new Do You Know div right after about-author
+                about_author.insert_after(new_dyk)
+                print("      🔧 Post-process: Split Do You Know from About Author")
+                changed = True
+
+    # ──────────────────────────────────────────────────────────────────────
+    # FIX 3: If Do You Know is somehow nested INSIDE About Author
+    # (different from text merge — this is actual HTML nesting)
+    # ──────────────────────────────────────────────────────────────────────
+    if about_author:
+        nested_dyk = about_author.find('div', class_='do-you-know')
+        if nested_dyk:
+            # Extract and place after about-author
+            nested_dyk.extract()
+            about_author.insert_after(nested_dyk)
+            print("      🔧 Post-process: Extracted nested Do You Know from About Author")
+            changed = True
+
+    # ──────────────────────────────────────────────────────────────────────
+    # FIX 4: If ICT Corner is nested inside Do You Know or About Author
+    # ──────────────────────────────────────────────────────────────────────
+    if about_author:
+        nested_ict = about_author.find('div', class_='ict-corner')
+        if nested_ict:
+            nested_ict.extract()
+            # Move to before summary
+            summary_box = soup.find('div', class_='summary-box')
+            if summary_box:
+                summary_box.insert_before(nested_ict)
+            else:
+                about_author.insert_after(nested_ict)
+            print("      🔧 Post-process: Extracted nested ICT Corner from About Author")
+            changed = True
+
+    do_you_know_final = soup.find('div', class_='do-you-know')
+    if do_you_know_final:
+        nested_ict = do_you_know_final.find('div', class_='ict-corner')
+        if nested_ict:
+            nested_ict.extract()
+            summary_box = soup.find('div', class_='summary-box')
+            if summary_box:
+                summary_box.insert_before(nested_ict)
+            else:
+                do_you_know_final.insert_after(nested_ict)
+            print("      🔧 Post-process: Extracted nested ICT Corner from Do You Know")
+            changed = True
+
+    if not changed:
+        print("      ✅ Post-process: No structural fixes needed")
+
+    return str(soup)
+
+
+# ============================================================================
 # MAIN CONVERTER CLASS
 # ============================================================================
 
@@ -384,6 +551,8 @@ class AIContentConverter:
         print(f"   📄 Generating Content HTML...")
         content_html = self._generate_content(text, metadata)
         if content_html:
+            # Run structural post-processing (ICT Corner position, section splitting)
+            content_html = _post_process_content_html(content_html, original_text=text)
             results["content"] = _wrap_html(
                 content_html,
                 title=f"{lesson_title} | Class {class_num} {subject.title()}",
@@ -527,7 +696,8 @@ OUTPUT STRUCTURE
 ⚠️ STOP HERE. Close the about-author </div> completely before moving on.
 The NEXT section MUST be a brand new separate HTML block — NOT inside about-author.
 
-3. DO YOU KNOW (only if "Do You Know" text exists — ALWAYS separate from About Author)
+3. DO YOU KNOW (ONLY if the exact words "Do You Know" appear in the lesson text below)
+⚠️ If the text does NOT contain "Do You Know" — DO NOT create this section. NEVER invent it.
 <div class="do-you-know">
   <div class="dyk-title">Do You Know?</div>
   <p>Content exactly as in text.</p>
@@ -540,7 +710,9 @@ The NEXT section MUST be a brand new separate HTML block — NOT inside about-au
 - After </div> of about-author, the very next element must NOT be part of about-author
 - If both sections exist, there MUST be a clear gap between their closing and opening tags
 
-4. ICT CORNER (only if "ICT Corner" text exists — ALWAYS separate from Do You Know)
+4. ICT CORNER (ONLY if "ICT Corner" text exists in the lesson text below)
+⚠️ If the text does NOT contain "ICT Corner" — DO NOT create this section. NEVER invent it.
+⚠️ ICT Corner MUST be placed AFTER all exercises and BEFORE the Summary — NEVER at the top of the page.
 <div class="ict-corner">
   <div class="ict-title">🖥️ ICT Corner</div>
   <p>Content exactly as in text.</p>
@@ -548,6 +720,7 @@ The NEXT section MUST be a brand new separate HTML block — NOT inside about-au
 <!-- ✅ CLOSE ict-corner completely here. -->
 
 ⚠️ ICT Corner is NEVER merged with Do You Know or About the Author.
+⚠️ ICT Corner ALWAYS appears AFTER exercises, BEFORE summary — NEVER near the top of the page.
 Each of these three sections (about-author, do-you-know, ict-corner) is its own standalone block.
 
 5. LESSON CONTENT
@@ -720,6 +893,8 @@ ABSOLUTE RULES — NEVER BREAK
 ✅ ALWAYS add <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div> after EVERY inline question
 ✅ NEVER add a Summary box mid-lesson — Summary goes ONLY at the very end after all exercises
 ✅ ALWAYS render About the Author, Do You Know, ICT Corner, Glossary if they appear in the text — NEVER skip them
+✅ NEVER create About the Author, Do You Know, or ICT Corner sections if they do NOT exist in the original text — do not invent content
+✅ ICT Corner MUST be placed AFTER all exercises and BEFORE Summary — NEVER at the top of the page near About Author
 ✅ NEVER merge About the Author and Do You Know into one box — they are ALWAYS separate HTML blocks
 ✅ NEVER merge Do You Know and ICT Corner into one box — they are ALWAYS separate HTML blocks
 ✅ NEVER merge About the Author and ICT Corner into one box — they are ALWAYS separate HTML blocks
