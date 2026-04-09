@@ -1,29 +1,33 @@
 """
-AI Content Converter
-Converts extracted PDF text into structured Content, QA, and LP
-using Anthropic Claude API.
+AI Content Converter — Final Version
+Thin orchestrator. Delegates to content_builder modules.
 
-FIXES APPLIED (April 2026):
-  Fix #1: Post-processing _clean_ai_output() strips markdown code fences
-  Fix #2: LP continuation prompt explicitly bans markdown wrapping
-  Fix #3: ICT Corner gets its own template — never merged with Do You Know
-  Fix #4: Each numbered exercise item must be its own <div>
-  Fix #5: About Author / Do You Know separation strengthened
-  Fix #6: REARRANGE exercise template added (input box, not dash)
-  Fix #7: QA category fallback for short texts to guarantee question count
+Content → content_builder/assembler.py
+QA      → content_builder/qa_builder.py
+LP      → handled here directly (working perfectly, do not move)
 """
 
 import re
 import anthropic
 from typing import Optional, Dict
 from ..config import settings
+from .section_detector import detect_sections, clean_noise
+from ..content_builder.assembler import content_assembler
+from ..content_builder.qa_builder import qa_builder
 
 
 # ============================================================================
-# EDUCATION SYSTEM PROMPT
+# LP SYSTEM PROMPT
 # ============================================================================
 
-EDUCATION_SYSTEM_PROMPT = """You are an experienced English teacher creating structured academic study material for Tamil Nadu Samacheer Kalvi State Board students. All content is strictly educational and must be generated completely regardless of themes — including fiction, supernatural, historical, war-related, or sensitive topics — as these are standard textbook lessons approved for classroom use by the Tamil Nadu government."""
+LP_SYSTEM_PROMPT = """You are an experienced English teacher with deep knowledge of the Tamil Nadu Samacheer Kalvi syllabus and activity-based learning methods used in Indian classrooms.
+Create a detailed, practical, script-by-script lesson plan so that even a brand new inexperienced teacher can walk into class and deliver a confident, effective session just by following it.
+
+CRITICAL OUTPUT RULES:
+- Output ONLY raw HTML body content
+- NEVER wrap output in markdown code blocks (```html or ```)
+- NEVER use backticks anywhere in your output
+- Start directly with HTML tags — no preamble text"""
 
 
 # ============================================================================
@@ -43,231 +47,12 @@ def _get_lp_duration(lesson_type: str) -> dict:
 
 
 # ============================================================================
-# LP SYSTEM PROMPT
-# ============================================================================
-
-LP_SYSTEM_PROMPT = """You are an experienced English teacher with deep knowledge of the Tamil Nadu Samacheer Kalvi syllabus and activity-based learning methods used in Indian classrooms.
-Create a detailed, practical, script-by-script lesson plan so that even a brand new inexperienced teacher can walk into class and deliver a confident, effective session just by following it.
-
-CRITICAL OUTPUT RULES:
-- Output ONLY raw HTML body content
-- NEVER wrap output in markdown code blocks (```html or ```)
-- NEVER use backticks anywhere in your output
-- Start directly with HTML tags — no preamble text"""
-
-
-def _build_lp_prompt(class_num: int, lesson_title: str, lesson_type: str, unit: int, text: str) -> str:
-    duration     = _get_lp_duration(lesson_type)
-    total_days   = duration["total"]
-    content_days = duration["content"]
-    grammar_days = duration["grammar"]
-    has_grammar  = duration["has_grammar"]
-
-    type_display_map = {
-        "prose":         "Prose",
-        "poem":          "Poem",
-        "supplementary": "Supplementary Reader",
-        "play":          "Drama or Play",
-        "drama":         "Drama or Play",
-    }
-    type_display = type_display_map.get(lesson_type.lower(), "Prose")
-
-    if has_grammar:
-        duration_line = f"{total_days} days ({content_days} Content Days + {grammar_days} Grammar Days)"
-    else:
-        duration_line = f"{total_days} days (Content Only — no grammar section for this lesson type)"
-
-    grammar_section = ""
-    if has_grammar:
-        grammar_section = f"""
-═══════════════════════════════════════════════════════
-PART 5: GRAMMAR DAYS (Day {content_days + 1} to Day {total_days})
-═══════════════════════════════════════════════════════
-
-IMPORTANT: Grammar days must be based ONLY on the grammar topics and exercises
-that are actually present in the grammar section of the lesson text provided below.
-Do NOT invent grammar topics. Do NOT use random grammar unrelated to this lesson.
-
-For EACH grammar day use this EXACT script format:
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DAY [N] — GRAMMAR: [Exact Grammar Topic from Textbook]
-Duration: 30 Minutes
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-[0-5 min] REVIEW + GRAMMAR INTRODUCTION
-Teacher says: "[connect today's grammar topic to a sentence from the lesson]"
-Board Work: Write the example sentence from the lesson
-Teacher says: "[exact simple explanation of the grammar rule]"
-Teacher asks: "[question to check if students recognise the pattern]"
-Expected student response: "[complete sentence answer]"
-
-[5-15 min] GRAMMAR EXPLANATION + EXAMPLES
-Teacher says: "[step by step explanation with examples from the lesson text]"
-Board Work: [grammar rule + 3-4 example sentences taken directly from the lesson]
-Teacher asks Q1: "[question]" — Expected answer: "[complete sentence]"
-Teacher asks Q2: "[question]" — Expected answer: "[complete sentence]"
-Teacher asks Q3: "[question]" — Expected answer: "[complete sentence]"
-Transition: Teacher says: "[exact words to move to practice]"
-
-[15-25 min] STUDENT PRACTICE EXERCISE
-Teacher says: "Now let us practice. Open your notebook and write these."
-Q1: [question] — Answer: [complete sentence]
-Q2: [question] — Answer: [complete sentence]
-Q3: [question] — Answer: [complete sentence]
-Q4: [question] — Answer: [complete sentence]
-Q5: [question] — Answer: [complete sentence]
-Teacher circulates and says: "[encouraging words]"
-
-[25-30 min] CLOSURE + QUICK REVISION
-Teacher says: "[summarize the grammar rule in 2 simple sentences]"
-Board Work: [write the rule + one example]
-Exit Question: "[one grammar question every student answers before leaving]"
-Expected answer: "[complete sentence]"
-Teacher says: "[closing + preview of next day]"
-Homework: [3-5 grammar practice questions]
-Model Answer: "[one complete model answer]"
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Generate Day {content_days + 1} through Day {total_days} following this format exactly.
-"""
-
-    return f"""Class: {class_num}
-Unit / Lesson Title: Unit {unit} — {lesson_title}
-Text Type: {type_display}
-Total Duration: {duration_line}
-Each Day: 30 minutes scripted session
-
-LESSON PLAN RULES:
-- Every day must be exactly 30 minutes
-- Write like a script — teacher can open and follow without any preparation
-- Use simple English throughout — suitable for Tamil-medium students
-- Every teacher instruction must include EXACT words to say
-- Every activity must include expected student responses in complete sentences
-- Board work must show EXACTLY what to write word for word
-
-═══════════════════════════════════════════════════════
-PART 1: GENERAL INFORMATION
-═══════════════════════════════════════════════════════
-• Class: {class_num}
-• Subject: English
-• Unit / Lesson Title: Unit {unit} — {lesson_title}
-• Text Type: {type_display}
-• Total Days: {duration_line}
-• Each Session: 30 minutes
-
-═══════════════════════════════════════════════════════
-PART 2: LEARNING OBJECTIVES
-═══════════════════════════════════════════════════════
-• Knowledge objectives
-• Skill objectives (Reading, Writing, Listening, Speaking)
-{"• Grammar objectives (specific grammar areas from the textbook grammar section)" if has_grammar else ""}
-• Value-based objectives
-
-═══════════════════════════════════════════════════════
-PART 3: TEACHING AIDS
-═══════════════════════════════════════════════════════
-List all materials needed across all {total_days} days.
-
-═══════════════════════════════════════════════════════
-PART 4: CONTENT DAYS (Day 1 to Day {content_days})
-═══════════════════════════════════════════════════════
-
-For EACH content day use this EXACT script format:
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DAY [N] — [Topic Focus]
-Duration: 30 Minutes
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-[0-5 min] WARM UP / REVIEW
-🎯 Objective: [what this segment achieves]
-Teacher says: "[exact words]"
-Board Work: [exactly what appears on board]
-Teacher asks: "[question to class]"
-Expected student response: "[complete sentence answer]"
-Transition: Teacher says: "[exact words to move to next segment]"
-
-[5-15 min] MAIN ACTIVITY
-🎯 Objective: [what this segment achieves]
-Teacher says: "[exact instructions]"
-Board Work: [exactly what appears on board]
-Student Activity: [exactly what students do]
-Expected student response: "[sample answers]"
-If students struggle: Teacher says: "[supportive hint]"
-Transition: Teacher says: "[exact words]"
-
-[15-25 min] STUDENT PRACTICE
-🎯 Objective: [what this segment achieves]
-Teacher says: "[exact instructions]"
-Activity Type: [Think-Pair-Share / Group work / Individual / Role play]
-Step 1: [exact instruction]
-Step 2: [exact instruction]
-Step 3: [exact instruction]
-Expected output: "[what students should produce]"
-Teacher circulates and says: "[what to say]"
-Transition: Teacher says: "[exact words]"
-
-[25-30 min] CLOSURE
-🎯 Objective: Consolidate learning
-Teacher says: "[summarize key points]"
-Board Work: [3-5 key words / summary sentence]
-Exit Question: "[one question every student must answer]"
-Expected answer: "[complete sentence]"
-Teacher says: "[closing + preview of next day]"
-Homework: [specific, simple task]
-Model Answer: "[one complete model answer]"
-Teacher says: "Copy this model answer in your notebook as a guide."
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Generate Day 1 through Day {content_days}. Each day covers a different part progressively.
-{grammar_section}
-═══════════════════════════════════════════════════════
-PART 6: ASSESSMENT SUMMARY
-═══════════════════════════════════════════════════════
-• Day-wise oral assessment questions (one per day)
-• Written assessment task for end of lesson
-• Differentiated support: slow learners vs advanced learners
-
-Now output as HTML body content ONLY — no <html>, <head>, or <body> tags.
-IMPORTANT: Do NOT wrap output in ```html or ``` code blocks. Output raw HTML directly.
-
-HTML Rules:
-- Start: <div class="sk-content-header"><h1>Lesson Plan — {lesson_title}</h1><p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display} | {duration_line}</p></div>
-- <h2> for PART headings
-- <h3 class="day-header"> for each Day
-- <div class="day-block"> wraps each day
-- <div class="time-block"> for each timed segment
-- <p class="teacher-says"><strong>Teacher says:</strong> "..."</p>
-- <p class="student-says"><strong>Expected response:</strong> "..."</p>
-- <div class="board-work"><strong>Board Work:</strong> ...</div>
-- <div class="transition"><em>Transition:</em> ...</div>
-- <table> for exercises
-- <ul><li> for bullet lists
-
-Lesson Text:
----
-{text}
----
-
-Output ONLY the HTML body content. Be detailed. Do NOT skip any day. Do NOT shorten.
-Do NOT wrap in markdown code blocks. Start directly with <div class="sk-content-header">."""
-
-
-# ============================================================================
 # HTML WRAPPER
 # ============================================================================
 
 def _wrap_html(body_content: str, title: str, content_type: str = "content") -> str:
-    accent_colors = {
-        "content": "#2E75B6",
-        "qa":      "#27AE60",
-        "lp":      "#8E44AD",
-    }
+    accent_colors = {"content": "#2E75B6", "qa": "#27AE60", "lp": "#8E44AD"}
     accent = accent_colors.get(content_type, "#2E75B6")
-
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -276,44 +61,22 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
   <title>{title}</title>
   <link rel="stylesheet" href="/frontend/css/content-styles.css" />
   <style>
-    .sk-content-header {{
-      border-left: 5px solid {accent};
-      padding-left: 12px;
-      margin-bottom: 24px;
-    }}
-    .sk-content-header h1 {{
-      color: {accent};
-      font-size: 1.6rem;
-      margin: 0 0 4px 0;
-    }}
-    .sk-content-header .sk-meta {{
-      font-size: 0.85rem;
-      color: #777;
-    }}
-    table {{
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-    }}
-    th {{
-      background: {accent};
-      color: white;
-      padding: 10px 14px;
-      text-align: left;
-    }}
-    td {{
-      padding: 9px 14px;
-      border-bottom: 1px solid #eee;
-    }}
+    .sk-content-header {{ border-left: 5px solid {accent}; padding-left: 12px; margin-bottom: 24px; }}
+    .sk-content-header h1 {{ color: {accent}; font-size: 1.6rem; margin: 0 0 4px 0; }}
+    .sk-content-header .sk-meta {{ font-size: 0.85rem; color: #777; }}
+    table {{ width: 100%; border-collapse: collapse; margin: 16px 0; }}
+    th {{ background: {accent}; color: white; padding: 10px 14px; text-align: left; }}
+    td {{ padding: 9px 14px; border-bottom: 1px solid #eee; }}
     tr:nth-child(even) td {{ background: #f9f9f9; }}
-    blockquote {{
-      border-left: 4px solid {accent};
-      margin: 16px 0;
-      padding: 10px 16px;
-      background: #f5f5f5;
-      color: #444;
-      font-style: italic;
-    }}
+    blockquote {{ border-left: 4px solid {accent}; margin: 16px 0; padding: 10px 16px; background: #f5f5f5; color: #444; font-style: italic; }}
+    .day-block {{ background: #fafafa; border: 1px solid #e8e8e8; border-radius: 8px; padding: 16px; margin-bottom: 24px; }}
+    .day-header {{ color: {accent}; border-bottom: 2px solid {accent}; padding-bottom: 8px; }}
+    .time-block {{ margin-bottom: 16px; padding: 12px; background: white; border-left: 3px solid {accent}; }}
+    .teacher-says {{ background: #f0f7ff; padding: 8px 12px; border-radius: 4px; margin: 4px 0; }}
+    .student-says {{ background: #f0fff4; padding: 8px 12px; border-radius: 4px; margin: 4px 0; }}
+    .board-work {{ background: #1a1a2e; color: #fff; padding: 8px 12px; border-radius: 4px; margin: 4px 0; font-family: monospace; }}
+    .transition {{ color: #666; font-style: italic; margin: 4px 0; }}
+    .assessment-block {{ background: #fafafa; border: 1px solid #e8e8e8; border-radius: 8px; padding: 16px; }}
   </style>
 </head>
 <body>
@@ -325,208 +88,23 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
 
 
 # ============================================================================
-# FIX #1 & #2: POST-PROCESSING — strip markdown fences, validate output
+# CLEAN AI OUTPUT
 # ============================================================================
 
-def _clean_ai_output(raw_output: str) -> str:
-    """
-    Post-processes Claude's raw output to fix common issues:
-    - Strips ```html ... ``` markdown code fences  (Fix #2)
-    - Strips leading/trailing whitespace
-    - Removes any preamble text before first HTML tag
-    """
-    if not raw_output:
-        return raw_output
-
-    text = raw_output.strip()
-
-    # Fix #2: Strip markdown code fences (```html at start, ``` at end)
-    # Pattern 1: ```html\n...\n```
-    # Pattern 2: ```\n...\n```
+def _clean_ai_output(raw: str) -> str:
+    if not raw:
+        return raw
+    text = raw.strip()
     text = re.sub(r'^```(?:html)?\s*\n', '', text)
     text = re.sub(r'\n```\s*$', '', text)
-
-    # Also handle cases where ``` appears mid-output (from continuations)
     text = re.sub(r'```(?:html)?\s*\n', '', text)
     text = re.sub(r'\n```', '', text)
-
-    # Remove any preamble text before the first HTML tag
-    # (Claude sometimes writes "Here is the HTML:" before the actual output)
     first_tag = re.search(r'<(?:div|h[1-6]|section|p|table|hr)', text)
     if first_tag and first_tag.start() > 0:
         preamble = text[:first_tag.start()].strip()
-        # Only strip if preamble looks like natural language, not HTML
         if preamble and not preamble.startswith('<'):
             text = text[first_tag.start():]
-
     return text.strip()
-
-
-# ============================================================================
-# POST-PROCESSING: Structural HTML fixes using BeautifulSoup
-# ============================================================================
-
-def _post_process_content_html(html_content: str, original_text: str = "") -> str:
-    """
-    Forcibly fixes structural issues in Claude's content HTML output.
-    Runs AFTER _clean_ai_output, BEFORE _wrap_html.
-
-    Fixes applied:
-      1. ICT Corner position — moves to after last exercise, before summary
-      2. About Author / Do You Know merge — splits if Do You Know text found inside about-author
-      3. Ensures about-author, do-you-know, ict-corner are separate sibling divs
-      4. Removes fake Do You Know / ICT Corner if not in original text
-    """
-    try:
-        from bs4 import BeautifulSoup
-    except ImportError:
-        print("⚠️  BeautifulSoup not installed — skipping post-processing")
-        print("   Install with: pip install beautifulsoup4")
-        return html_content
-
-    if not html_content or not html_content.strip():
-        return html_content
-
-    soup = BeautifulSoup(html_content, 'html.parser')
-    original_lower = original_text.lower() if original_text else ""
-    changed = False
-
-    # ──────────────────────────────────────────────────────────────────────
-    # FIX 0: Remove fake sections that don't exist in original text
-    # Claude sometimes invents Do You Know or ICT Corner sections
-    # ──────────────────────────────────────────────────────────────────────
-    if original_lower:
-        do_you_know = soup.find('div', class_='do-you-know')
-        if do_you_know and 'do you know' not in original_lower:
-            do_you_know.extract()
-            print("      🔧 Post-process: Removed fake Do You Know (not in original text)")
-            changed = True
-
-        ict_corner = soup.find('div', class_='ict-corner')
-        if ict_corner and 'ict corner' not in original_lower:
-            ict_corner.extract()
-            print("      🔧 Post-process: Removed fake ICT Corner (not in original text)")
-            changed = True
-
-    # ──────────────────────────────────────────────────────────────────────
-    # FIX 1: Move ICT Corner to correct position
-    # ICT Corner should appear AFTER all exercises, BEFORE summary
-    # ──────────────────────────────────────────────────────────────────────
-    ict_corner = soup.find('div', class_='ict-corner')
-    if ict_corner:
-        summary_box = soup.find('div', class_='summary-box')
-        exercises = soup.find_all('div', class_='exercise-section')
-
-        if summary_box:
-            # Move ICT Corner to just before Summary
-            ict_corner.extract()
-            summary_box.insert_before(ict_corner)
-            print("      🔧 Post-process: Moved ICT Corner before Summary")
-            changed = True
-        elif exercises:
-            # No summary? Put after last exercise
-            last_exercise = exercises[-1]
-            ict_corner.extract()
-            last_exercise.insert_after(ict_corner)
-            print("      🔧 Post-process: Moved ICT Corner after last exercise")
-            changed = True
-
-    # ──────────────────────────────────────────────────────────────────────
-    # FIX 2: Split Do You Know from About Author if merged
-    # Detects if about-author div contains "Do You Know" text
-    # and extracts it into its own separate div
-    # ──────────────────────────────────────────────────────────────────────
-    about_author = soup.find('div', class_='about-author')
-    do_you_know = soup.find('div', class_='do-you-know')
-
-    if about_author and not do_you_know:
-        # Check if "Do You Know" text is buried inside about-author
-        author_text = about_author.get_text()
-        if 'do you know' in author_text.lower():
-            # Find the paragraph or element containing "Do You Know"
-            all_elements = about_author.find_all(['p', 'div'])
-            dyk_elements = []
-            found_dyk = False
-
-            for elem in all_elements:
-                elem_text = elem.get_text().strip().lower()
-                if 'do you know' in elem_text:
-                    found_dyk = True
-                if found_dyk:
-                    # Skip if it's the author-title or author-name divs
-                    if elem.get('class') and any(c in elem.get('class', []) for c in ['author-title', 'author-name', 'author-icon']):
-                        continue
-                    dyk_elements.append(elem)
-
-            if dyk_elements:
-                # Create new Do You Know div
-                new_dyk = soup.new_tag('div')
-                new_dyk['class'] = 'do-you-know'
-
-                dyk_title = soup.new_tag('div')
-                dyk_title['class'] = 'dyk-title'
-                dyk_title.string = 'Do You Know?'
-                new_dyk.append(dyk_title)
-
-                for elem in dyk_elements:
-                    # Move element from about-author to new do-you-know div
-                    elem_copy = elem.extract()
-                    # Skip the "Do You Know" heading text itself
-                    if elem_copy.get_text().strip().lower() == 'do you know' or elem_copy.get_text().strip().lower() == 'do you know?':
-                        continue
-                    new_dyk.append(elem_copy)
-
-                # Insert the new Do You Know div right after about-author
-                about_author.insert_after(new_dyk)
-                print("      🔧 Post-process: Split Do You Know from About Author")
-                changed = True
-
-    # ──────────────────────────────────────────────────────────────────────
-    # FIX 3: If Do You Know is somehow nested INSIDE About Author
-    # (different from text merge — this is actual HTML nesting)
-    # ──────────────────────────────────────────────────────────────────────
-    if about_author:
-        nested_dyk = about_author.find('div', class_='do-you-know')
-        if nested_dyk:
-            # Extract and place after about-author
-            nested_dyk.extract()
-            about_author.insert_after(nested_dyk)
-            print("      🔧 Post-process: Extracted nested Do You Know from About Author")
-            changed = True
-
-    # ──────────────────────────────────────────────────────────────────────
-    # FIX 4: If ICT Corner is nested inside Do You Know or About Author
-    # ──────────────────────────────────────────────────────────────────────
-    if about_author:
-        nested_ict = about_author.find('div', class_='ict-corner')
-        if nested_ict:
-            nested_ict.extract()
-            # Move to before summary
-            summary_box = soup.find('div', class_='summary-box')
-            if summary_box:
-                summary_box.insert_before(nested_ict)
-            else:
-                about_author.insert_after(nested_ict)
-            print("      🔧 Post-process: Extracted nested ICT Corner from About Author")
-            changed = True
-
-    do_you_know_final = soup.find('div', class_='do-you-know')
-    if do_you_know_final:
-        nested_ict = do_you_know_final.find('div', class_='ict-corner')
-        if nested_ict:
-            nested_ict.extract()
-            summary_box = soup.find('div', class_='summary-box')
-            if summary_box:
-                summary_box.insert_before(nested_ict)
-            else:
-                do_you_know_final.insert_after(nested_ict)
-            print("      🔧 Post-process: Extracted nested ICT Corner from Do You Know")
-            changed = True
-
-    if not changed:
-        print("      ✅ Post-process: No structural fixes needed")
-
-    return str(soup)
 
 
 # ============================================================================
@@ -537,639 +115,511 @@ class AIContentConverter:
 
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
-        self.model = settings.ANTHROPIC_MODEL
+        self.model  = settings.ANTHROPIC_MODEL
         print(f"✅ Claude AI Converter initialized — model: {self.model}")
 
+    # ──────────────────────────────────────────────────────────────────────────
+    # PUBLIC: generate_all
+    # ──────────────────────────────────────────────────────────────────────────
+
     def generate_all(self, text: str, metadata: Dict) -> Dict[str, Optional[str]]:
-        results = {"content": None, "qa": None, "lp": None}
+        results      = {"content": None, "qa": None, "lp": None}
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
         subject      = metadata.get("subject", "english")
+        lesson_type  = metadata.get("lesson_type", "prose")
 
-        print(f"🤖 Claude generating: Content + QA + LP for '{lesson_title}'")
+        print(f"🤖 Generating: Content + QA + LP for '{lesson_title}'")
 
-        print(f"   📄 Generating Content HTML...")
-        content_html = self._generate_content(text, metadata)
-        if content_html:
-            # Run structural post-processing (ICT Corner position, section splitting)
-            content_html = _post_process_content_html(content_html, original_text=text)
-            results["content"] = _wrap_html(
-                content_html,
-                title=f"{lesson_title} | Class {class_num} {subject.title()}",
-                content_type="content"
-            )
-            print(f"   ✅ Content HTML ready ({len(content_html)} chars)")
-        else:
-            print(f"   ❌ Content generation failed")
+        # ── Clean + detect sections ONCE — used by all three generators ───────
+        print(f"   🧹 Cleaning extracted text...")
+        text = clean_noise(text)
+        print(f"   📋 Detecting sections...")
+        sections = detect_sections(text, lesson_type=lesson_type)
+        print(f"   📋 Sections: { {k:v for k,v in sections.items() if v and k != 'lesson_type'} }")
+        metadata["_sections"] = sections
 
-        print(f"   ❓ Generating QA HTML...")
-        qa_html = self._generate_qa(text, metadata)
-        if qa_html:
-            results["qa"] = _wrap_html(
-                qa_html,
-                title=f"Q&A — {lesson_title} | Class {class_num}",
-                content_type="qa"
-            )
-            print(f"   ✅ QA HTML ready ({len(qa_html)} chars)")
-        else:
-            print(f"   ❌ QA generation failed")
+        # ── CONTENT — via assembler ───────────────────────────────────────────
+        print(f"\n   📄 Generating Content HTML...")
+        try:
+            content_html = content_assembler.assemble(text, sections, metadata)
+            if content_html:
+                results["content"] = _wrap_html(
+                    content_html,
+                    title=f"{lesson_title} | Class {class_num} {subject.title()}",
+                    content_type="content"
+                )
+                print(f"   ✅ Content HTML ready ({len(content_html)} chars)")
+            else:
+                print(f"   ❌ Content generation failed")
+        except Exception as e:
+            print(f"   ❌ Content error: {e}")
 
-        print(f"   📌 Generating LP HTML...")
-        lp_html = self._generate_lp(text, metadata)
-        if lp_html:
-            results["lp"] = _wrap_html(
-                lp_html,
-                title=f"Lesson Plan — {lesson_title} | Class {class_num}",
-                content_type="lp"
-            )
-            print(f"   ✅ LP HTML ready ({len(lp_html)} chars)")
-        else:
-            print(f"   ❌ LP generation failed")
+        # ── QA — via qa_builder ───────────────────────────────────────────────
+        print(f"\n   ❓ Generating QA HTML...")
+        try:
+            qa_html = qa_builder.generate(text, metadata)
+            if qa_html:
+                results["qa"] = _wrap_html(
+                    qa_html,
+                    title=f"Q&A — {lesson_title} | Class {class_num}",
+                    content_type="qa"
+                )
+                print(f"   ✅ QA HTML ready ({len(qa_html)} chars)")
+            else:
+                print(f"   ❌ QA generation failed")
+        except Exception as e:
+            print(f"   ❌ QA error: {e}")
+
+        # ── LP — handled directly here, working perfectly, do not change ──────
+        print(f"\n   📌 Generating LP HTML...")
+        try:
+            lp_html = self._generate_lp(text, metadata)
+            if lp_html:
+                results["lp"] = _wrap_html(
+                    lp_html,
+                    title=f"Lesson Plan — {lesson_title} | Class {class_num}",
+                    content_type="lp"
+                )
+                print(f"   ✅ LP HTML ready ({len(lp_html)} chars)")
+            else:
+                print(f"   ❌ LP generation failed")
+        except Exception as e:
+            print(f"   ❌ LP error: {e}")
 
         return results
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: Content generation — split dispatcher
-    # ──────────────────────────────────────────────────────────────────────────
+    # ══════════════════════════════════════════════════════════════════════════
+    # LP GENERATION
+    # Day-by-day. One call per day. Full text context every call.
+    # This is the core of the platform. Do not modify without careful testing.
+    # ══════════════════════════════════════════════════════════════════════════
 
-    def _generate_content(self, text: str, metadata: Dict) -> Optional[str]:
-        lesson_type = metadata.get("lesson_type", "prose")
-        threshold = 20000  # same for all types
-        if len(text) <= threshold:
-            print(f"      [Content] Short text ({len(text)} chars) → single call")
-            result = self._generate_single_content(text, metadata, is_continuation=False)
-            return _clean_ai_output(result) if result else None
+    def _generate_lp(self, text: str, metadata: Dict) -> Optional[str]:
+        """
+        Generates LP day by day.
+        One API call per day — no text splitting, no continuation guessing.
+        Every call receives the full lesson text as context.
+
+        Prose:              12 calls (preamble + 10 days + assessment)
+        Poem/Supplementary:  5 calls (preamble + 3 days  + assessment)
+        Play/Drama:          5 calls (preamble + 3 days  + assessment)
+        """
+        lesson_type  = metadata.get("lesson_type", "prose").lower()
+        class_num    = metadata.get("class", "")
+        unit         = metadata.get("unit", "")
+        lesson_title = metadata.get("lesson_title", "Unknown")
+
+        duration     = _get_lp_duration(lesson_type)
+        total_days   = duration["total"]
+        content_days = duration["content"]
+        grammar_days = duration["grammar"]
+        has_grammar  = duration["has_grammar"]
+
+        type_display_map = {
+            "prose":         "Prose",
+            "poem":          "Poem",
+            "supplementary": "Supplementary Reader",
+            "play":          "Drama or Play",
+            "drama":         "Drama or Play",
+        }
+        type_display  = type_display_map.get(lesson_type, "Prose")
+        duration_line = (
+            f"{total_days} days ({content_days} Content + {grammar_days} Grammar)"
+            if has_grammar else
+            f"{total_days} days (Content Only)"
+        )
+        total_calls = total_days + 2  # preamble + days + assessment
+
+        print(f"      [LP] Day-by-day: {total_calls} API calls total")
+        print(f"      [LP] Type: {type_display} | Days: {total_days}")
+        parts = []
+
+        # ── Call 1: Preamble ──────────────────────────────────────────────────
+        print(f"      [LP] Call 1/{total_calls}: Preamble...")
+        preamble = self._lp_call_preamble(
+            text, class_num, unit, lesson_title,
+            type_display, duration_line, total_days, has_grammar
+        )
+        if preamble:
+            parts.append(_clean_ai_output(preamble))
+            print(f"         ✅ Preamble ({len(preamble)} chars)")
         else:
-            print(f"      [Content] Long text ({len(text)} chars) → splitting into 2 parts")
-            midpoint = len(text) // 2
-            # Split at sentence boundary (period + newline)
-            split_point = text.find('.\n', midpoint)
-            if split_point == -1:
-                split_point = text.find('\n', midpoint)
-            if split_point == -1:
-                split_point = midpoint
-            # Include the period in part 1
-            split_point += 1
-
-            part1_text = text[:split_point]
-            part2_text = text[split_point:]
-
-            part1 = self._generate_single_content(part1_text, metadata, is_continuation=False)
-            part1 = _clean_ai_output(part1) if part1 else None
-
-            part2 = self._generate_single_content(part2_text, metadata, is_continuation=True)
-            part2 = _clean_ai_output(part2) if part2 else None
-
-            if part1 and part2:
-                combined = part1 + "\n\n" + part2
-
-                # Fix #1: Check if content seems truncated — generate part 3 for remainder
-                # Heuristic: if part2 is significantly shorter than expected, content may be cut
-                if len(part2) < 500 and len(part2_text) > 5000:
-                    print(f"      ⚠️ Part 2 seems truncated ({len(part2)} chars for {len(part2_text)} char input) — generating Part 3")
-                    # Take the last 30% of original text to catch anything missed
-                    remaining_text = text[int(len(text) * 0.7):]
-                    part3 = self._generate_single_content(remaining_text, metadata, is_continuation=True)
-                    part3 = _clean_ai_output(part3) if part3 else None
-                    if part3:
-                        combined = combined + "\n\n" + part3
-                        print(f"      ✅ Part 3 added ({len(part3)} chars)")
-
-                return combined
-            elif part1:
-                return part1
+            print(f"         ❌ Preamble failed — aborting LP")
             return None
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: Single content API call
-    # ──────────────────────────────────────────────────────────────────────────
-
-    def _generate_single_content(self, text: str, metadata: Dict, is_continuation: bool = False) -> Optional[str]:
-        try:
-            class_num    = metadata.get("class", "")
-            subject      = metadata.get("subject", "english")
-            unit         = metadata.get("unit", "")
-            lesson_title = metadata.get("lesson_title", "Unknown")
-            lesson_type  = metadata.get("lesson_type", "prose")
-
-            if is_continuation:
-                header_instruction = """This is the CONTINUATION of the lesson already started.
-DO NOT add any title, header, or <div class="sk-content-header"> block.
-DO NOT repeat the lesson name or meta info.
-DO NOT add a second Summary box — Summary goes ONLY at the very end of the final part.
-IMPORTANT: If the text below contains About the Author, Do You Know, ICT Corner, or Glossary sections,
-you MUST include them — they are in this part of the text, not in Part 1.
-Continue rendering ALL content present in the text below without skipping anything.
-Start immediately with whatever content appears first in the text below.
-DO NOT wrap output in markdown code blocks (```html or ```). Output raw HTML only."""
-            else:
-                header_instruction = f"""Start with this exact header:
-<div class="sk-content-header">
-  <h1>{lesson_title}</h1>
-  <p class="sk-meta">Class {class_num} | {subject.title()} | Unit {unit}</p>
-</div>"""
-
-            prompt = f"""Convert the following Tamil Nadu Samacheer Kalvi Class {class_num} English textbook lesson into clean, polished, interactive HTML.
-
-Lesson: {lesson_title} | Class {class_num} | {subject.title()} | Unit {unit} | Type: {lesson_type}
-
-{header_instruction}
-
-═══════════════════════════════════════════════════════
-OUTPUT STRUCTURE
-═══════════════════════════════════════════════════════
-
-1. HEADER
-{header_instruction}
-
-2. ABOUT THE AUTHOR (only if author info exists in text)
-<div class="about-author">
-  <div class="author-icon">✍️</div>
-  <div>
-    <div class="author-title">About the Author</div>
-    <div class="author-name">[Author Name]</div>
-    <p>[Author details from text]</p>
-  </div>
-</div>
-<!-- ✅ CLOSE about-author completely here. Nothing else goes inside. -->
-
-⚠️ STOP HERE. Close the about-author </div> completely before moving on.
-The NEXT section MUST be a brand new separate HTML block — NOT inside about-author.
-
-3. DO YOU KNOW (ONLY if the exact words "Do You Know" appear in the lesson text below)
-⚠️ If the text does NOT contain "Do You Know" — DO NOT create this section. NEVER invent it.
-<div class="do-you-know">
-  <div class="dyk-title">Do You Know?</div>
-  <p>Content exactly as in text.</p>
-</div>
-<!-- ✅ CLOSE do-you-know completely here. -->
-
-⚠️ CRITICAL SEPARATION RULES:
-- about-author and do-you-know must be SIBLING divs — NEVER parent-child
-- NEVER nest do-you-know inside about-author or vice versa
-- After </div> of about-author, the very next element must NOT be part of about-author
-- If both sections exist, there MUST be a clear gap between their closing and opening tags
-
-4. ICT CORNER (ONLY if "ICT Corner" text exists in the lesson text below)
-⚠️ If the text does NOT contain "ICT Corner" — DO NOT create this section. NEVER invent it.
-⚠️ ICT Corner MUST be placed AFTER all exercises and BEFORE the Summary — NEVER at the top of the page.
-<div class="ict-corner">
-  <div class="ict-title">🖥️ ICT Corner</div>
-  <p>Content exactly as in text.</p>
-</div>
-<!-- ✅ CLOSE ict-corner completely here. -->
-
-⚠️ ICT Corner is NEVER merged with Do You Know or About the Author.
-⚠️ ICT Corner ALWAYS appears AFTER exercises, BEFORE summary — NEVER near the top of the page.
-Each of these three sections (about-author, do-you-know, ict-corner) is its own standalone block.
-
-5. LESSON CONTENT
-- <h2> for main sections, <h3> for subsections
-- <p> for all paragraphs
-- Keep ALL original content — never skip or summarize
-- For inline questions (a. b. c. labeled questions inside the story):
-  Use this format:
-  <div class="inline-question">
-    <p><strong>a. Question text here?</strong></p>
-    <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
-  </div>
-
-6. POEM (only for poem type)
-<div class="poem-container">
-  <div class="poem-stanza">
-    <span class="poem-line">Line one</span>
-    <span class="poem-line">Line two</span>
-    <span class="poem-line">Line three</span>
-    <span class="poem-line">Line four</span>
-  </div>
-</div>
-
-7. DIALOGUE (for interviews/conversations)
-<div class="dialogue-block">
-  <div class="speaker">Speaker Name</div>
-  <p class="speech">Exact speech from text.</p>
-</div>
-
-8. GLOSSARY
-<div class="glossary-section">
-  <h3>Glossary</h3>
-  <div class="glossary-grid">
-    <div class="glossary-card">
-      <div class="word">word</div>
-      <span class="word-type">(n/v/adj/adv)</span>
-      <div class="word-meaning">meaning from text</div>
-    </div>
-  </div>
-</div>
-
-9. EXERCISES — MATCH THE EXACT COMPONENT TO EACH EXERCISE TYPE:
-
-FILL IN THE BLANKS:
-<div class="exercise-section">
-  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. [Title]</div>
-  <div class="help-box"><span class="help-box-label">Word Bank:</span> word1 | word2 | word3</div>
-  <div class="fill-blank-sentence">1. Sentence with <input class="blank-input" type="text" placeholder="______" /> in it.</div>
-  <div class="fill-blank-sentence">2. Another sentence with <input class="blank-input" type="text" placeholder="______" /> blank.</div>
-</div>
-⚠️ EACH numbered fill-blank item MUST be its own <div class="fill-blank-sentence">.
-NEVER merge multiple numbered items (e.g. 7-10) into one div or paragraph.
-
-TRUE OR FALSE:
-<div class="exercise-section">
-  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. [Title]</div>
-  <div class="true-false-item">
-    <span class="tf-number">1.</span>
-    <span class="tf-statement">Statement from the lesson.</span>
-    <div class="tf-options">
-      <button class="tf-btn true-btn">True</button>
-      <button class="tf-btn false-btn">False</button>
-    </div>
-  </div>
-  <div class="true-false-item">
-    <span class="tf-number">2.</span>
-    <span class="tf-statement">False statement needing correction.</span>
-    <div class="tf-options">
-      <button class="tf-btn true-btn">True</button>
-      <button class="tf-btn false-btn">False</button>
-    </div>
-    <div class="tf-correction">Correction: <input class="blank-input" type="text" placeholder="Write correct answer" /></div>
-  </div>
-</div>
-
-MULTIPLE CHOICE:
-<div class="exercise-section">
-  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. [Title]</div>
-  <div class="mcq-item">
-    <div class="mcq-question">1. Question from the lesson?</div>
-    <div class="mcq-options">
-      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">a.</span> Option A</label>
-      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">b.</span> Option B</label>
-      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">c.</span> Option C</label>
-      <label class="mcq-option"><input type="radio" name="q1" /><span class="option-letter">d.</span> Option D</label>
-    </div>
-  </div>
-</div>
-
-MATCH THE FOLLOWING:
-<div class="exercise-section">
-  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. Match the Following</div>
-  <table class="match-table">
-    <thead><tr><th>Column A</th><th>Column B</th><th>Answer</th></tr></thead>
-    <tbody>
-      <tr><td>1. item one</td><td>a. match one</td><td><input class="match-input" type="text" placeholder="__" /></td></tr>
-      <tr><td>2. item two</td><td>b. match two</td><td><input class="match-input" type="text" placeholder="__" /></td></tr>
-    </tbody>
-  </table>
-</div>
-
-REARRANGE THE SENTENCES / PUT IN ORDER:
-<div class="exercise-section">
-  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. Rearrange the following sentences in the correct order</div>
-  <div class="rearrange-item">
-    <input class="blank-input" type="text" placeholder="__" style="width:50px;" />
-    <span>First sentence text here.</span>
-  </div>
-  <div class="rearrange-item">
-    <input class="blank-input" type="text" placeholder="__" style="width:50px;" />
-    <span>Second sentence text here.</span>
-  </div>
-</div>
-⚠️ For rearrange exercises: ALWAYS use <input> box before each sentence — NEVER use plain dashes (—).
-Each sentence MUST be in its own <div class="rearrange-item">.
-
-SHORT ANSWER (2-5 marks):
-<div class="exercise-section">
-  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. Answer Briefly</div>
-  <div style="margin-bottom:20px;">
-    <p><strong>1. Question from the lesson?</strong></p>
-    <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
-  </div>
-  <div style="margin-bottom:20px;">
-    <p><strong>2. Another question?</strong></p>
-    <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
-  </div>
-</div>
-
-LONG ANSWER (8+ marks):
-<div class="exercise-section">
-  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Exercise Letter]. Answer in Detail (100-150 words)</div>
-  <div style="margin-bottom:20px;">
-    <p><strong>1. Detailed question from the lesson?</strong></p>
-    <div class="answer-box long"><textarea placeholder="Write your detailed answer here..."></textarea></div>
-  </div>
-</div>
-
-10. SUMMARY (always last)
-<div class="summary-box">
-  <div class="summary-title">📋 Summary</div>
-  <ul>
-    <li>Key point 1 from the lesson</li>
-    <li>Key point 2 from the lesson</li>
-    <li>Key point 3 from the lesson</li>
-    <li>Key point 4 from the lesson</li>
-    <li>Key point 5 from the lesson</li>
-  </ul>
-</div>
-
-═══════════════════════════════════════════════════════
-ABSOLUTE RULES — NEVER BREAK
-═══════════════════════════════════════════════════════
-✅ Output ONLY HTML body content — NO html/head/body tags
-✅ NEVER wrap output in markdown code blocks (```html or ```) — output raw HTML only
-✅ NEVER use underscores ___ for blanks — ALWAYS <input class="blank-input">
-✅ NEVER use plain dashes — or – for rearrange exercises — ALWAYS <input class="blank-input">
-✅ NEVER plain list items for MCQ — ALWAYS .mcq-option with radio buttons
-✅ NEVER plain paragraphs for glossary — ALWAYS .glossary-card
-✅ NEVER plain blockquote for Do You Know — ALWAYS .do-you-know div
-✅ NEVER plain text for dialogue — ALWAYS .dialogue-block
-✅ NEVER plain text for poems — ALWAYS .poem-container with .poem-stanza
-✅ Keep ALL original content — never skip, never summarize
-✅ Every exercise from the textbook must appear with correct component
-✅ EVERY table MUST have <thead> with <th> column headers — NEVER skip table headers
-✅ For Parts of Speech table use headers: Noun | Verb | Adjective | Adverb
-✅ For Match table use headers: Column A | Column B | Answer
-✅ NEVER generate a table without proper column headings
-✅ NEVER leave inline questions (a. b. c.) without an answer textarea
-✅ ALWAYS add <div class="answer-box"><textarea placeholder="Write your answer here..."></textarea></div> after EVERY inline question
-✅ NEVER add a Summary box mid-lesson — Summary goes ONLY at the very end after all exercises
-✅ ALWAYS render About the Author, Do You Know, ICT Corner, Glossary if they appear in the text — NEVER skip them
-✅ NEVER create About the Author, Do You Know, or ICT Corner sections if they do NOT exist in the original text — do not invent content
-✅ ICT Corner MUST be placed AFTER all exercises and BEFORE Summary — NEVER at the top of the page near About Author
-✅ NEVER merge About the Author and Do You Know into one box — they are ALWAYS separate HTML blocks
-✅ NEVER merge Do You Know and ICT Corner into one box — they are ALWAYS separate HTML blocks
-✅ NEVER merge About the Author and ICT Corner into one box — they are ALWAYS separate HTML blocks
-✅ Each of these sections (about-author, do-you-know, ict-corner) must be standalone sibling divs
-✅ For numbered exercises: EVERY numbered item (1. 2. 3. etc.) MUST be its own separate <div> — NEVER merge multiple items into one container
-✅ Exercise items 1-6 and items 7-10 must EACH have their own individual <div> — never batch them together
-✅ NEVER output text before the first HTML tag — start directly with HTML
-
-Original Lesson Text:
----
-{text}
----
-
-Output ONLY the HTML body content. Be complete and thorough. Do NOT wrap in markdown code blocks."""
-
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=16000,
-                system=EDUCATION_SYSTEM_PROMPT,
-                messages=[{"role": "user", "content": prompt}]
+        # ── Content days ──────────────────────────────────────────────────────
+        for day_num in range(1, content_days + 1):
+            call_num = day_num + 1
+            print(f"      [LP] Call {call_num}/{total_calls}: Day {day_num} (Content)...")
+            day_html = self._lp_call_content_day(
+                text, class_num, unit, lesson_title,
+                type_display, day_num, content_days, total_days
             )
+            if day_html:
+                parts.append(_clean_ai_output(day_html))
+                print(f"         ✅ Day {day_num} ({len(day_html)} chars)")
+            else:
+                print(f"         ❌ Day {day_num} failed — continuing")
 
-            return response.content[0].text
+        # ── Grammar days (prose only) ─────────────────────────────────────────
+        if has_grammar:
+            for g_day in range(1, grammar_days + 1):
+                day_num  = content_days + g_day
+                call_num = day_num + 1
+                print(f"      [LP] Call {call_num}/{total_calls}: Day {day_num} (Grammar {g_day})...")
+                day_html = self._lp_call_grammar_day(
+                    text, class_num, unit, lesson_title,
+                    type_display, day_num, g_day, grammar_days, total_days
+                )
+                if day_html:
+                    parts.append(_clean_ai_output(day_html))
+                    print(f"         ✅ Grammar Day {g_day} ({len(day_html)} chars)")
+                else:
+                    print(f"         ❌ Grammar Day {g_day} failed — continuing")
 
-        except Exception as e:
-            print(f"❌ Content generation error: {e}")
+        # ── Assessment Summary ────────────────────────────────────────────────
+        print(f"      [LP] Call {total_calls}/{total_calls}: Assessment Summary...")
+        assessment = self._lp_call_assessment(
+            text, class_num, unit, lesson_title,
+            type_display, total_days
+        )
+        if assessment:
+            parts.append(_clean_ai_output(assessment))
+            print(f"         ✅ Assessment ({len(assessment)} chars)")
+        else:
+            print(f"         ❌ Assessment failed")
+
+        if not parts:
             return None
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: QA generation — split dispatcher
-    # ──────────────────────────────────────────────────────────────────────────
-
-    def _generate_qa(self, text: str, metadata: Dict) -> Optional[str]:
-        # Always split QA into 2 parts (2×50) for ALL lesson types
-        # to guarantee 100 questions every time.
-        # Single call with target=100 risks hitting token limits and stopping early.
-        print(f"      [QA] Splitting into 2×50 for guaranteed 100 questions ({len(text)} chars)")
-
-        midpoint = len(text) // 2
-        # Split at sentence boundary (period + newline)
-        split_point = text.find('.\n', midpoint)
-        if split_point == -1:
-            split_point = text.find('\n', midpoint)
-        if split_point == -1:
-            split_point = midpoint
-        # Include the period in part 1
-        split_point += 1
-
-        part1 = self._generate_single_qa(text[:split_point], metadata, start_from=1, target=50)
-        part1 = _clean_ai_output(part1) if part1 else None
-
-        part2 = self._generate_single_qa(text[split_point:], metadata, start_from=51, target=50)
-        part2 = _clean_ai_output(part2) if part2 else None
-
-        if part1 and part2:
-            return part1 + "\n\n" + part2
-        elif part1:
-            return part1
-        return None
+        combined = "\n\n".join(parts)
+        print(f"      [LP] ✅ Complete — {len(parts)} parts, {len(combined)} chars total")
+        return combined
 
     # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: Single QA API call
+    # LP: Preamble
     # ──────────────────────────────────────────────────────────────────────────
 
-    def _generate_single_qa(self, text: str, metadata: Dict, start_from: int = 1, target: int = 100) -> Optional[str]:
+    def _lp_call_preamble(self, text, class_num, unit, lesson_title,
+                           type_display, duration_line, total_days, has_grammar):
         try:
-            class_num    = metadata.get("class", "")
-            unit         = metadata.get("unit", "")
-            lesson_title = metadata.get("lesson_title", "Unknown")
-            lesson_type  = metadata.get("lesson_type", "prose")
+            grammar_obj = "• Grammar objectives (specific topics from this lesson's grammar section)" if has_grammar else ""
+            prompt = f"""Generate ONLY the opening section of a Samacheer Kalvi lesson plan.
+Do NOT generate any days. Stop after Teaching Aids.
 
-            duration    = _get_lp_duration(lesson_type)
-            has_grammar = duration["has_grammar"]
+Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
+Duration: {duration_line}
 
-            type_display_map = {
-                "prose":         "Prose",
-                "poem":          "Poem",
-                "supplementary": "Supplementary Reader",
-                "play":          "Drama or Play",
-                "drama":         "Drama or Play",
-            }
-            type_display = type_display_map.get(lesson_type.lower(), "Prose")
+Generate these 4 sections:
 
-            if start_from > 1:
-                header_instruction = f"DO NOT add Question Bank header. Continue generating MORE questions directly. Start from Q{start_from} onwards."
-            else:
-                header_instruction = f"Start with: <div class=\"sk-content-header\"><h1>Question Bank — {lesson_title}</h1><p class=\"sk-meta\">Class {class_num} | English | Unit {unit} | {type_display}</p></div>"
+<div class="sk-content-header">
+  <h1>Lesson Plan — {lesson_title}</h1>
+  <p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display} | {duration_line}</p>
+</div>
 
-            bank_count = f"Generate EXACTLY {target} questions starting from Q{start_from}. Stop exactly at Q{start_from + target - 1}."
+<h2>Part 1: General Information</h2>
+<table>
+  [rows for: Class, Subject, Unit/Lesson Title, Text Type, Total Days, Session Duration]
+</table>
 
-            # Fix #7: Category fallback for short texts
-            category_fallback = f"""
-MANDATORY QUESTION DISTRIBUTION TO GUARANTEE {target} QUESTIONS:
-If you cannot generate enough comprehension questions from the text, use this distribution:
-- Comprehension (read & recall): {max(target // 5, 5)} questions minimum
-- Vocabulary (word meaning, synonyms, antonyms, use in sentence): {max(target // 5, 5)} questions minimum
-- True or False: {max(target // 10, 3)} questions minimum
-- Fill in the blanks: {max(target // 10, 3)} questions minimum
-- Reference to context (who said, explain the line): {max(target // 10, 3)} questions minimum
-- Value-based questions: {max(target // 10, 3)} questions minimum
-- Creative / opinion-based questions: {max(target // 10, 3)} questions minimum
-{"- Rhyme scheme / Figure of speech: " + str(max(target // 10, 3)) + " questions minimum" if lesson_type in ("poem",) else ""}
-Adjust distribution to reach EXACTLY {target}. There is NO excuse for stopping early.
-"""
+<h2>Part 2: Learning Objectives</h2>
+<ul>
+  • Knowledge objectives (2-3 points specific to this lesson)
+  • Skill objectives — Reading, Writing, Listening, Speaking
+  {grammar_obj}
+  • Value-based objectives (from this lesson's themes)
+</ul>
 
-            if has_grammar:
-                grammar_bank_instruction = f"""
-QUESTION BANK 2: GRAMMAR (FROM TEXTBOOK GRAMMAR SECTION)
-Base ALL grammar questions on grammar topics ACTUALLY in the lesson text.
-Cover: Tense, Voice, Prepositions, Articles, Degrees, Question Tags, Transformation, Parts of Speech.
-{bank_count}"""
-                output_count = "TWO COMPLETE"
-                bank_list    = "QUESTION BANK 1: LESSON\nQUESTION BANK 2: GRAMMAR"
-                divider      = '- Use <hr class="section-divider"> between the two banks'
-            else:
-                grammar_bank_instruction = ""
-                output_count = "ONE COMPLETE"
-                bank_list    = f"QUESTION BANK 1: LESSON ({type_display.upper()})"
-                divider      = ""
+<h2>Part 3: Teaching Aids</h2>
+<ul>
+  [All materials needed across all {total_days} days]
+  [Textbook, blackboard, charts, flashcards, worksheets etc.]
+</ul>
 
-            prompt = f"""Create {output_count} exam-ready question bank(s) for:
-"{lesson_title}" — Class {class_num} | Unit {unit} | {type_display}
-
-BANKS TO GENERATE:
-{bank_list}
-{bank_count}
-{category_fallback}
-
-QUESTION TYPES — distribute like this to reach the target count:
-- 1-mark questions: Fill in the blank, One word answer, True/False, Choose the correct rhyming word
-- 2-mark questions: Short answer (2-3 sentences), explain a line, find the figure of speech
-- 5-mark questions: Paragraph answer, central idea, character/theme analysis
-- 8-mark questions: Essay type, detailed explanation, appreciation of the poem/passage
-
-TOPICS: Comprehension, Line meaning, Rhyme scheme, Figure of speech, Theme, Vocabulary, Application
-IMPORTANT: If the text is short (poem/supplementary), generate MORE 1-mark and 2-mark questions
-to reach the target. Use vocabulary, rhyme, figures of speech, true/false, fill-in-blank questions
-to pad up to the exact target count. NEVER stop before reaching Q{start_from + target - 1}.
-{grammar_bank_instruction}
-
-ANSWER RULES:
-- EVERY answer = complete sentence
-- NO one-word answers
-- Simple English for Tamil-medium students
-- Exam-ready format
-
-CRITICAL HTML RULES — NEVER USE MARKDOWN:
-- Do NOT use ## or # headings — use <h2> and <h3> tags ONLY
-- Do NOT use ** bold — use <strong> tags ONLY
-- Do NOT wrap output in markdown code blocks (```html or ```) — output raw HTML only
-- Output HTML body ONLY. No html/head/body tags.
-
-HTML:
-- {header_instruction}
-- <h2> for each Question Bank heading (e.g. <h2>Question Bank 1: Lesson</h2>)
-- <h3> for mark sections (e.g. <h3>1 Mark Questions</h3>)
-- Each Q&A: <div class="qa-item"><p class="question"><strong>Q[NUMBER]. question</strong></p><p class="answer"><strong>Answer:</strong> sentence.</p></div>
-- Replace [NUMBER] with the actual question number (Q1, Q2, Q3 ... Q{start_from + target - 1})
-- <div class="marks-badge">1 Mark</div> before each section
-{divider}
+OUTPUT RULES:
+- Raw HTML only
+- Start with <div class="sk-content-header">
+- Stop after Teaching Aids closing </ul>
+- Do NOT start any Day block
 
 Lesson Text:
 ---
 {text}
----
-
-Generate EXACTLY {target} questions starting from Q{start_from}.
-You MUST reach Q{start_from + target - 1}. This is non-negotiable.
-Count every question as you go. After every 10 questions, check your count.
-If you run out of comprehension questions, add vocabulary, theme,
-value-based and creative questions to reach exactly {target}.
-Do NOT stop before Q{start_from + target - 1}.
-Do NOT add any header if this is a continuation (start_from > 1).
-Do NOT wrap output in markdown code blocks."""
-
+---"""
             response = self.client.messages.create(
-                model=self.model,
-                max_tokens=16000,
-                system=EDUCATION_SYSTEM_PROMPT,
-                messages=[{"role": "user", "content": prompt}]
-            )
-
-            return response.content[0].text
-
-        except Exception as e:
-            print(f"❌ QA generation error: {e}")
-            return None
-
-    # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: LP generation — split dispatcher
-    # ──────────────────────────────────────────────────────────────────────────
-
-    def _generate_lp(self, text: str, metadata: Dict) -> Optional[str]:
-        lesson_type = metadata.get("lesson_type", "prose")
-        threshold = 10000 if lesson_type == "prose" else 20000
-        if len(text) <= threshold:
-            print(f"      [LP] Short text ({len(text)} chars) → single call")
-            result = self._generate_single_lp(text, metadata, is_continuation=False)
-            return _clean_ai_output(result) if result else None
-        else:
-            print(f"      [LP] Long text ({len(text)} chars) → splitting into 2 parts")
-            midpoint = len(text) // 2
-            # Split at sentence boundary (period + newline)
-            split_point = text.find('.\n', midpoint)
-            if split_point == -1:
-                split_point = text.find('\n', midpoint)
-            if split_point == -1:
-                split_point = midpoint
-            # Include the period in part 1
-            split_point += 1
-
-            part1 = self._generate_single_lp(text[:split_point], metadata, is_continuation=False)
-            part1 = _clean_ai_output(part1) if part1 else None
-
-            part2 = self._generate_single_lp(text[split_point:], metadata, is_continuation=True)
-            part2 = _clean_ai_output(part2) if part2 else None
-
-            if part1 and part2:
-                return part1 + "\n\n" + part2
-            elif part1:
-                return part1
-            return None
-
-    # ──────────────────────────────────────────────────────────────────────────
-    # PRIVATE: Single LP API call
-    # ──────────────────────────────────────────────────────────────────────────
-
-    def _generate_single_lp(self, text: str, metadata: Dict, is_continuation: bool = False) -> Optional[str]:
-        try:
-            class_num    = metadata.get("class", "")
-            unit         = metadata.get("unit", "")
-            lesson_title = metadata.get("lesson_title", "Unknown")
-            lesson_type  = metadata.get("lesson_type", "prose")
-
-            if is_continuation:
-                # Fix #2: Explicit "no markdown" in LP continuation prompt
-                prompt = f"""This is CONTINUATION of the lesson plan already started.
-DO NOT add General Information, Learning Objectives, or Teaching Aids sections again.
-Continue DIRECTLY from where Day content left off.
-Generate remaining days and Assessment Summary.
-Use same HTML format as before.
-
-CRITICAL OUTPUT RULES:
-- Output ONLY raw HTML body content
-- NEVER wrap output in markdown code blocks (```html or ```)
-- NEVER use backticks (`) anywhere in your output
-- Start DIRECTLY with <h3 class="day-header"> or <div class="day-block"> — no preamble
-- Do NOT write "Here is..." or any text before the HTML
-
-Lesson Text (second half):
----
-{text}
----
-
-Output ONLY raw HTML. Start directly with the next Day block."""
-            else:
-                prompt = _build_lp_prompt(
-                    class_num=class_num,
-                    lesson_title=lesson_title,
-                    lesson_type=lesson_type,
-                    unit=unit,
-                    text=text
-                )
-
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=16000,
+                model=self.model, max_tokens=4000,
                 system=LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
-
             return response.content[0].text
-
         except Exception as e:
-            print(f"❌ LP generation error: {e}")
+            print(f"❌ LP preamble error: {e}")
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # LP: Content Day
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _lp_call_content_day(self, text, class_num, unit, lesson_title,
+                              type_display, day_num, content_days, total_days):
+        try:
+            if content_days == 1:
+                focus = "the entire lesson"
+            elif day_num == 1:
+                focus = "introduction and first section of the lesson"
+            elif day_num == content_days:
+                focus = "final section of the lesson"
+            else:
+                focus = f"middle section (~{int((day_num/content_days)*100)}% through)"
+
+            next_preview = f"Day {day_num+1}" if day_num < total_days else "the assessment"
+
+            prompt = f"""Generate ONLY Day {day_num} of the lesson plan. Nothing else.
+Do NOT include Preamble, General Info, Objectives, or Teaching Aids.
+Do NOT generate Day {day_num+1} or any other day.
+
+Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
+Content Day {day_num} of {content_days} | Total: {total_days} days
+Focus for today: {focus}
+
+Generate Day {day_num} in this EXACT format:
+
+<h3 class="day-header">Day {day_num} — [Topic Focus for this day]</h3>
+<div class="day-block">
+
+  <div class="time-block">
+    <strong>[0–5 min] Warm Up / Review</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[exact words to say]"</p>
+    <div class="board-work"><strong>Board Work:</strong> [exactly what to write on board]</div>
+    <p class="teacher-says"><strong>Teacher asks:</strong> "[question to class]"</p>
+    <p class="student-says"><strong>Expected response:</strong> "[complete sentence answer]"</p>
+    <div class="transition"><em>Transition:</em> "[exact words to move to next segment]"</div>
+  </div>
+
+  <div class="time-block">
+    <strong>[5–15 min] Main Activity</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[exact instructions]"</p>
+    <div class="board-work"><strong>Board Work:</strong> [exactly what to write]</div>
+    <p>Student Activity: [exactly what students do]</p>
+    <p class="student-says"><strong>Expected response:</strong> "[sample complete answer]"</p>
+    <p class="teacher-says"><strong>If students struggle:</strong> "[supportive hint]"</p>
+    <div class="transition"><em>Transition:</em> "[exact words]"</div>
+  </div>
+
+  <div class="time-block">
+    <strong>[15–25 min] Student Practice</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[exact instructions]"</p>
+    <p>Activity Type: [Think-Pair-Share / Group / Individual / Role play]</p>
+    <p>Step 1: [exact instruction]</p>
+    <p>Step 2: [exact instruction]</p>
+    <p>Step 3: [exact instruction]</p>
+    <p class="student-says"><strong>Expected output:</strong> "[what students produce]"</p>
+    <div class="transition"><em>Transition:</em> "[exact words]"</div>
+  </div>
+
+  <div class="time-block">
+    <strong>[25–30 min] Closure</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[summarize key points in exact words]"</p>
+    <div class="board-work"><strong>Board Work:</strong> [3-5 key words or summary sentence]</div>
+    <p><strong>Exit Question:</strong> "[one question every student answers before leaving]"</p>
+    <p class="student-says"><strong>Expected answer:</strong> "[complete sentence]"</p>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[closing words + preview of {next_preview}]"</p>
+    <p><strong>Homework:</strong> [specific simple task based on today's lesson]</p>
+    <p><strong>Model Answer:</strong> "[one complete model answer for homework]"</p>
+  </div>
+
+</div>
+
+OUTPUT RULES:
+- Raw HTML only
+- Start directly with <h3 class="day-header">Day {day_num}
+- Be detailed and scripted — teacher reads this word for word
+- Base ALL content on the actual lesson text below
+- Do NOT start Day {day_num+1}
+
+Lesson Text:
+---
+{text}
+---"""
+            response = self.client.messages.create(
+                model=self.model, max_tokens=4000,
+                system=LP_SYSTEM_PROMPT,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return response.content[0].text
+        except Exception as e:
+            print(f"❌ LP content day {day_num} error: {e}")
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # LP: Grammar Day
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _lp_call_grammar_day(self, text, class_num, unit, lesson_title,
+                              type_display, day_num, grammar_day_num,
+                              grammar_days, total_days):
+        try:
+            next_preview = f"Day {day_num+1}" if day_num < total_days else "the assessment"
+            prompt = f"""Generate ONLY Day {day_num} of the lesson plan.
+This is Grammar Day {grammar_day_num} of {grammar_days} grammar days.
+Do NOT generate any other day.
+
+Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
+Day {day_num} of {total_days} total days.
+
+IMPORTANT: Use the ACTUAL grammar topic from the lesson text below.
+Do NOT invent grammar topics. Use only what is in the grammar section.
+
+<h3 class="day-header">Day {day_num} — Grammar: [Exact Topic from Textbook]</h3>
+<div class="day-block">
+
+  <div class="time-block">
+    <strong>[0–5 min] Review + Grammar Introduction</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[connect grammar topic to a sentence from the lesson]"</p>
+    <div class="board-work"><strong>Board Work:</strong> [example sentence from the lesson]</div>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[simple clear explanation of the grammar rule]"</p>
+    <p class="teacher-says"><strong>Teacher asks:</strong> "[question to check if students recognise the pattern]"</p>
+    <p class="student-says"><strong>Expected response:</strong> "[complete sentence]"</p>
+  </div>
+
+  <div class="time-block">
+    <strong>[5–15 min] Grammar Explanation + Examples</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[step-by-step explanation with examples from lesson]"</p>
+    <div class="board-work"><strong>Board Work:</strong> [grammar rule + 3 example sentences from lesson]</div>
+    <p><strong>Q1:</strong> [question] — <strong>Expected:</strong> [complete sentence]</p>
+    <p><strong>Q2:</strong> [question] — <strong>Expected:</strong> [complete sentence]</p>
+    <p><strong>Q3:</strong> [question] — <strong>Expected:</strong> [complete sentence]</p>
+  </div>
+
+  <div class="time-block">
+    <strong>[15–25 min] Student Practice</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "Now let us practice. Open your notebook and write these."</p>
+    <p><strong>Q1:</strong> [question] — Answer: [complete sentence]</p>
+    <p><strong>Q2:</strong> [question] — Answer: [complete sentence]</p>
+    <p><strong>Q3:</strong> [question] — Answer: [complete sentence]</p>
+    <p><strong>Q4:</strong> [question] — Answer: [complete sentence]</p>
+    <p><strong>Q5:</strong> [question] — Answer: [complete sentence]</p>
+  </div>
+
+  <div class="time-block">
+    <strong>[25–30 min] Closure</strong>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[summarize the grammar rule in 2 simple sentences]"</p>
+    <div class="board-work"><strong>Board Work:</strong> [rule + one clear example]</div>
+    <p><strong>Exit Question:</strong> "[one grammar question every student answers]"</p>
+    <p class="student-says"><strong>Expected answer:</strong> "[complete sentence]"</p>
+    <p class="teacher-says"><strong>Teacher says:</strong> "[closing + preview of {next_preview}]"</p>
+    <p><strong>Homework:</strong> [3-5 grammar practice questions]</p>
+    <p><strong>Model Answer:</strong> "[one complete model answer]"</p>
+  </div>
+
+</div>
+
+OUTPUT RULES:
+- Raw HTML only
+- Start directly with <h3 class="day-header">Day {day_num}
+- Do NOT start Day {day_num+1}
+
+Lesson Text:
+---
+{text}
+---"""
+            response = self.client.messages.create(
+                model=self.model, max_tokens=4000,
+                system=LP_SYSTEM_PROMPT,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return response.content[0].text
+        except Exception as e:
+            print(f"❌ LP grammar day {grammar_day_num} error: {e}")
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # LP: Assessment Summary
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _lp_call_assessment(self, text, class_num, unit, lesson_title,
+                             type_display, total_days):
+        try:
+            prompt = f"""Generate ONLY the Assessment Summary section. Do NOT repeat any days.
+
+Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
+Total days in this lesson plan: {total_days}
+
+<h2>Assessment Summary</h2>
+<div class="assessment-block">
+
+  <h3>Day-wise Oral Assessment Questions</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Oral Assessment Question</th>
+        <th>Expected Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      [One row for EVERY day — Day 1 through Day {total_days}]
+      [Each question tests the key learning from that specific day]
+      [Each answer is a complete sentence based on the lesson]
+    </tbody>
+  </table>
+
+  <h3>Written Assessment Task</h3>
+  <p>[One meaningful written task that covers the full lesson — character sketch, summary, paragraph, letter etc.]</p>
+  <div class="answer-box">
+    <textarea placeholder="Student writes answer here..."></textarea>
+  </div>
+
+  <h3>Differentiated Support Plan</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Learner Type</th>
+        <th>Strategy</th>
+        <th>Activity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Slow Learners</td>
+        <td>[specific support strategy]</td>
+        <td>[simpler activity with teacher support]</td>
+      </tr>
+      <tr>
+        <td>Average Learners</td>
+        <td>[standard approach]</td>
+        <td>[standard classroom activity]</td>
+      </tr>
+      <tr>
+        <td>Advanced Learners</td>
+        <td>[extension strategy]</td>
+        <td>[enrichment or creative activity]</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+OUTPUT RULES:
+- Raw HTML only
+- Start directly with <h2>Assessment Summary</h2>
+- Day-wise table MUST have exactly {total_days} rows — one per day
+- Base ALL questions on actual content from the lesson text below
+- This is the FINAL section — nothing comes after </div>
+
+Lesson Text:
+---
+{text}
+---"""
+            response = self.client.messages.create(
+                model=self.model, max_tokens=4000,
+                system=LP_SYSTEM_PROMPT,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return response.content[0].text
+        except Exception as e:
+            print(f"❌ LP assessment error: {e}")
             return None
 
 

@@ -361,89 +361,19 @@ Lesson Text:
     # LP: Content Day
     # ──────────────────────────────────────────────────────────────────────────
 
+
     def _lp_call_content_day(self, text, class_num, unit, lesson_title,
                               type_display, day_num, content_days, total_days):
         try:
-            if content_days == 1:
-                focus = "the entire lesson"
-            elif day_num == 1:
-                focus = "introduction and first section of the lesson"
-            elif day_num == content_days:
-                focus = "final section of the lesson"
-            else:
-                focus = f"middle section (~{int((day_num/content_days)*100)}% through)"
-
-            next_preview = f"Day {day_num+1}" if day_num < total_days else "the assessment"
-
-            prompt = f"""Generate ONLY Day {day_num} of the lesson plan. Nothing else.
-Do NOT include Preamble, General Info, Objectives, or Teaching Aids.
-Do NOT generate Day {day_num+1} or any other day.
-
-Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
-Content Day {day_num} of {content_days} | Total: {total_days} days
-Focus for today: {focus}
-
-Generate Day {day_num} in this EXACT format:
-
-<h3 class="day-header">Day {day_num} — [Topic Focus for this day]</h3>
-<div class="day-block">
-
-  <div class="time-block">
-    <strong>[0–5 min] Warm Up / Review</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[exact words to say]"</p>
-    <div class="board-work"><strong>Board Work:</strong> [exactly what to write on board]</div>
-    <p class="teacher-says"><strong>Teacher asks:</strong> "[question to class]"</p>
-    <p class="student-says"><strong>Expected response:</strong> "[complete sentence answer]"</p>
-    <div class="transition"><em>Transition:</em> "[exact words to move to next segment]"</div>
-  </div>
-
-  <div class="time-block">
-    <strong>[5–15 min] Main Activity</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[exact instructions]"</p>
-    <div class="board-work"><strong>Board Work:</strong> [exactly what to write]</div>
-    <p>Student Activity: [exactly what students do]</p>
-    <p class="student-says"><strong>Expected response:</strong> "[sample complete answer]"</p>
-    <p class="teacher-says"><strong>If students struggle:</strong> "[supportive hint]"</p>
-    <div class="transition"><em>Transition:</em> "[exact words]"</div>
-  </div>
-
-  <div class="time-block">
-    <strong>[15–25 min] Student Practice</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[exact instructions]"</p>
-    <p>Activity Type: [Think-Pair-Share / Group / Individual / Role play]</p>
-    <p>Step 1: [exact instruction]</p>
-    <p>Step 2: [exact instruction]</p>
-    <p>Step 3: [exact instruction]</p>
-    <p class="student-says"><strong>Expected output:</strong> "[what students produce]"</p>
-    <div class="transition"><em>Transition:</em> "[exact words]"</div>
-  </div>
-
-  <div class="time-block">
-    <strong>[25–30 min] Closure</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[summarize key points in exact words]"</p>
-    <div class="board-work"><strong>Board Work:</strong> [3-5 key words or summary sentence]</div>
-    <p><strong>Exit Question:</strong> "[one question every student answers before leaving]"</p>
-    <p class="student-says"><strong>Expected answer:</strong> "[complete sentence]"</p>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[closing words + preview of {next_preview}]"</p>
-    <p><strong>Homework:</strong> [specific simple task based on today's lesson]</p>
-    <p><strong>Model Answer:</strong> "[one complete model answer for homework]"</p>
-  </div>
-
-</div>
-
-OUTPUT RULES:
-- Raw HTML only
-- Start directly with <h3 class="day-header">Day {day_num}
-- Be detailed and scripted — teacher reads this word for word
-- Base ALL content on the actual lesson text below
-- Do NOT start Day {day_num+1}
-
-Lesson Text:
----
-{text}
----"""
+            from .lp_prompt_builder import build_content_day_prompt
+            prompt = build_content_day_prompt(
+                text=text, class_num=class_num, unit=unit,
+                lesson_title=lesson_title, type_display=type_display,
+                day_num=day_num, content_days=content_days,
+                total_days=total_days
+            )
             response = self.client.messages.create(
-                model=self.model, max_tokens=4000,
+                model=self.model, max_tokens=8000,
                 system=LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -452,80 +382,19 @@ Lesson Text:
             print(f"❌ LP content day {day_num} error: {e}")
             return None
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # LP: Grammar Day
-    # ──────────────────────────────────────────────────────────────────────────
-
     def _lp_call_grammar_day(self, text, class_num, unit, lesson_title,
                               type_display, day_num, grammar_day_num,
                               grammar_days, total_days):
         try:
-            next_preview = f"Day {day_num+1}" if day_num < total_days else "the assessment"
-            prompt = f"""Generate ONLY Day {day_num} of the lesson plan.
-This is Grammar Day {grammar_day_num} of {grammar_days} grammar days.
-Do NOT generate any other day.
-
-Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
-Day {day_num} of {total_days} total days.
-
-IMPORTANT: Use the ACTUAL grammar topic from the lesson text below.
-Do NOT invent grammar topics. Use only what is in the grammar section.
-
-<h3 class="day-header">Day {day_num} — Grammar: [Exact Topic from Textbook]</h3>
-<div class="day-block">
-
-  <div class="time-block">
-    <strong>[0–5 min] Review + Grammar Introduction</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[connect grammar topic to a sentence from the lesson]"</p>
-    <div class="board-work"><strong>Board Work:</strong> [example sentence from the lesson]</div>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[simple clear explanation of the grammar rule]"</p>
-    <p class="teacher-says"><strong>Teacher asks:</strong> "[question to check if students recognise the pattern]"</p>
-    <p class="student-says"><strong>Expected response:</strong> "[complete sentence]"</p>
-  </div>
-
-  <div class="time-block">
-    <strong>[5–15 min] Grammar Explanation + Examples</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[step-by-step explanation with examples from lesson]"</p>
-    <div class="board-work"><strong>Board Work:</strong> [grammar rule + 3 example sentences from lesson]</div>
-    <p><strong>Q1:</strong> [question] — <strong>Expected:</strong> [complete sentence]</p>
-    <p><strong>Q2:</strong> [question] — <strong>Expected:</strong> [complete sentence]</p>
-    <p><strong>Q3:</strong> [question] — <strong>Expected:</strong> [complete sentence]</p>
-  </div>
-
-  <div class="time-block">
-    <strong>[15–25 min] Student Practice</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "Now let us practice. Open your notebook and write these."</p>
-    <p><strong>Q1:</strong> [question] — Answer: [complete sentence]</p>
-    <p><strong>Q2:</strong> [question] — Answer: [complete sentence]</p>
-    <p><strong>Q3:</strong> [question] — Answer: [complete sentence]</p>
-    <p><strong>Q4:</strong> [question] — Answer: [complete sentence]</p>
-    <p><strong>Q5:</strong> [question] — Answer: [complete sentence]</p>
-  </div>
-
-  <div class="time-block">
-    <strong>[25–30 min] Closure</strong>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[summarize the grammar rule in 2 simple sentences]"</p>
-    <div class="board-work"><strong>Board Work:</strong> [rule + one clear example]</div>
-    <p><strong>Exit Question:</strong> "[one grammar question every student answers]"</p>
-    <p class="student-says"><strong>Expected answer:</strong> "[complete sentence]"</p>
-    <p class="teacher-says"><strong>Teacher says:</strong> "[closing + preview of {next_preview}]"</p>
-    <p><strong>Homework:</strong> [3-5 grammar practice questions]</p>
-    <p><strong>Model Answer:</strong> "[one complete model answer]"</p>
-  </div>
-
-</div>
-
-OUTPUT RULES:
-- Raw HTML only
-- Start directly with <h3 class="day-header">Day {day_num}
-- Do NOT start Day {day_num+1}
-
-Lesson Text:
----
-{text}
----"""
+            from .lp_prompt_builder import build_grammar_day_prompt
+            prompt = build_grammar_day_prompt(
+                text=text, class_num=class_num, unit=unit,
+                lesson_title=lesson_title, type_display=type_display,
+                day_num=day_num, grammar_day_num=grammar_day_num,
+                grammar_days=grammar_days, total_days=total_days
+            )
             response = self.client.messages.create(
-                model=self.model, max_tokens=4000,
+                model=self.model, max_tokens=8000,
                 system=LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -534,17 +403,13 @@ Lesson Text:
             print(f"❌ LP grammar day {grammar_day_num} error: {e}")
             return None
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # LP: Assessment Summary
-    # ──────────────────────────────────────────────────────────────────────────
-
     def _lp_call_assessment(self, text, class_num, unit, lesson_title,
                              type_display, total_days):
         try:
-            prompt = f"""Generate ONLY the Assessment Summary section. Do NOT repeat any days.
+            prompt = f"""Generate ONLY the Assessment Summary. Do NOT repeat any days.
 
 Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
-Total days in this lesson plan: {total_days}
+Total days: {total_days}
 
 <h2>Assessment Summary</h2>
 <div class="assessment-block">
@@ -554,66 +419,76 @@ Total days in this lesson plan: {total_days}
     <thead>
       <tr>
         <th>Day</th>
-        <th>Oral Assessment Question</th>
+        <th>Oral Question (English)</th>
         <th>Expected Answer</th>
+        <th>Tamil Prompt (தமிழ் உதவி)</th>
       </tr>
     </thead>
     <tbody>
-      [One row for EVERY day — Day 1 through Day {total_days}]
-      [Each question tests the key learning from that specific day]
-      [Each answer is a complete sentence based on the lesson]
+      [One row per day — Day 1 through Day {total_days}]
+      [Each row: day number, English question, complete sentence answer,
+       Tamil version of question for struggling students]
     </tbody>
   </table>
 
   <h3>Written Assessment Task</h3>
-  <p>[One meaningful written task that covers the full lesson — character sketch, summary, paragraph, letter etc.]</p>
-  <div class="answer-box">
-    <textarea placeholder="Student writes answer here..."></textarea>
+  <p>[One meaningful written task covering the full lesson]</p>
+  <div class="board-work">
+    <strong>Model Example (write on board before students start):</strong>
+    <p>"[Sentence 1 of model answer]"</p>
+    <p>"[Sentence 2 of model answer]"</p>
+    <p>"[Sentence 3 of model answer]"</p>
+  </div>
+  <div class="tamil-scaffold">
+    <em>மாணவர்களிடம் சொல்லுங்கள்:</em>
+    "இந்த மாதிரி வாக்கியங்களை பார்த்து உங்கள் சொந்த
+    வாக்கியங்கள் எழுதுங்கள். Copy பண்ணாதீர்கள்."
   </div>
 
-  <h3>Differentiated Support Plan</h3>
-  <table>
+  <h3>Differentiated Support</h3>
+  <table class="diff-table">
     <thead>
       <tr>
-        <th>Learner Type</th>
-        <th>Strategy</th>
-        <th>Activity</th>
+        <th>Slow Learners (கஷ்டப்படும் மாணவர்கள்)</th>
+        <th>Average Learners (சராசரி மாணவர்கள்)</th>
+        <th>Advanced Learners (திறமையான மாணவர்கள்)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Slow Learners</td>
-        <td>[specific support strategy]</td>
-        <td>[simpler activity with teacher support]</td>
-      </tr>
-      <tr>
-        <td>Average Learners</td>
-        <td>[standard approach]</td>
-        <td>[standard classroom activity]</td>
-      </tr>
-      <tr>
-        <td>Advanced Learners</td>
-        <td>[extension strategy]</td>
-        <td>[enrichment or creative activity]</td>
+        <td>
+          <p><strong>Task:</strong> Fill in the blanks</p>
+          <p><strong>Example:</strong> "[sentence] _______ (word1/word2)"</p>
+          <p><strong>Word Bank:</strong> [3-4 words from lesson]</p>
+          <p><em>ஆசிரியர் கூடவே உட்கார்ந்து உதவலாம்</em></p>
+        </td>
+        <td>
+          <p><strong>Task:</strong> Answer in 2-3 sentences</p>
+          <p><strong>Example:</strong> "[character] was _______ because _______."</p>
+        </td>
+        <td>
+          <p><strong>Task:</strong> Write a full paragraph independently</p>
+          <p><strong>Prompt:</strong> "Describe [topic] in your own words with 5 sentences."</p>
+        </td>
       </tr>
     </tbody>
   </table>
 
 </div>
 
-OUTPUT RULES:
-- Raw HTML only
-- Start directly with <h2>Assessment Summary</h2>
-- Day-wise table MUST have exactly {total_days} rows — one per day
-- Base ALL questions on actual content from the lesson text below
-- This is the FINAL section — nothing comes after </div>
+RULES:
+- Raw HTML only. Start with <h2>Assessment Summary</h2>
+- Day table MUST have exactly {total_days} rows with Tamil column
+- Differentiation MUST have actual example tasks
+- Model example MUST be on board
+- Base on lesson text below
 
 Lesson Text:
 ---
 {text}
 ---"""
             response = self.client.messages.create(
-                model=self.model, max_tokens=4000,
+                model=self.model, max_tokens=6000,
                 system=LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )

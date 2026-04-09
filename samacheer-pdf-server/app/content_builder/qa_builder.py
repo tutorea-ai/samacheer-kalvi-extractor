@@ -2,12 +2,9 @@
 content_builder/qa_builder.py
 
 Generates QA in 4 focused calls — one per mark category.
-Each call has one job. No single call gets overwhelmed.
 
-Call 1 → Header + 1-mark questions (Q1  - Q25)
-Call 2 → 2-mark questions          (Q26 - Q50)
-Call 3 → 5-mark questions          (Q51 - Q75)
-Call 4 → 8-mark questions          (Q76 - Q100)
+Fix: Added explicit word count and sentence count per mark type
+     so 5-mark and 8-mark answers are clearly different lengths.
 """
 
 import anthropic
@@ -15,10 +12,6 @@ import re
 from typing import Optional, Dict
 from ..config import settings
 
-
-# ============================================================================
-# SYSTEM PROMPT
-# ============================================================================
 
 QA_SYSTEM_PROMPT = """You are an experienced English teacher creating exam-ready question banks for Tamil Nadu Samacheer Kalvi State Board students.
 
@@ -31,10 +24,6 @@ CRITICAL OUTPUT RULES:
 - NEVER invent content not present in the text"""
 
 
-# ============================================================================
-# QA BUILDER CLASS
-# ============================================================================
-
 class QABuilder:
 
     def __init__(self):
@@ -43,8 +32,8 @@ class QABuilder:
 
     def generate(self, text: str, metadata: Dict) -> Optional[str]:
         """
-        Main method. Generates complete QA HTML
-        using 4 focused calls — one per mark category.
+        Generates complete QA HTML using 4 focused calls.
+        One call per mark category.
         """
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
@@ -65,19 +54,13 @@ class QABuilder:
 
         parts = []
 
-        # ── Call 1: Header + 1-mark questions ────────────────────────────────
+        # Call 1: 1-mark
         print(f"      [QA] Call 1/4: 1-mark questions (Q1-Q25)...")
         part1 = self._call_by_marks(
-            text=text,
-            lesson_title=lesson_title,
-            class_num=class_num,
-            unit=unit,
-            type_display=type_display,
-            has_grammar=has_grammar,
-            mark_type=1,
-            q_start=1,
-            q_end=25,
-            include_header=True
+            text=text, lesson_title=lesson_title,
+            class_num=class_num, unit=unit,
+            type_display=type_display, has_grammar=has_grammar,
+            mark_type=1, q_start=1, q_end=25, include_header=True
         )
         if part1:
             parts.append(self._clean(part1))
@@ -85,19 +68,13 @@ class QABuilder:
         else:
             print(f"         ❌ 1-mark failed")
 
-        # ── Call 2: 2-mark questions ──────────────────────────────────────────
+        # Call 2: 2-mark
         print(f"      [QA] Call 2/4: 2-mark questions (Q26-Q50)...")
         part2 = self._call_by_marks(
-            text=text,
-            lesson_title=lesson_title,
-            class_num=class_num,
-            unit=unit,
-            type_display=type_display,
-            has_grammar=has_grammar,
-            mark_type=2,
-            q_start=26,
-            q_end=50,
-            include_header=False
+            text=text, lesson_title=lesson_title,
+            class_num=class_num, unit=unit,
+            type_display=type_display, has_grammar=has_grammar,
+            mark_type=2, q_start=26, q_end=50, include_header=False
         )
         if part2:
             parts.append(self._clean(part2))
@@ -105,19 +82,13 @@ class QABuilder:
         else:
             print(f"         ❌ 2-mark failed")
 
-        # ── Call 3: 5-mark questions ──────────────────────────────────────────
+        # Call 3: 5-mark
         print(f"      [QA] Call 3/4: 5-mark questions (Q51-Q75)...")
         part3 = self._call_by_marks(
-            text=text,
-            lesson_title=lesson_title,
-            class_num=class_num,
-            unit=unit,
-            type_display=type_display,
-            has_grammar=has_grammar,
-            mark_type=5,
-            q_start=51,
-            q_end=75,
-            include_header=False
+            text=text, lesson_title=lesson_title,
+            class_num=class_num, unit=unit,
+            type_display=type_display, has_grammar=has_grammar,
+            mark_type=5, q_start=51, q_end=75, include_header=False
         )
         if part3:
             parts.append(self._clean(part3))
@@ -125,19 +96,13 @@ class QABuilder:
         else:
             print(f"         ❌ 5-mark failed")
 
-        # ── Call 4: 8-mark questions ──────────────────────────────────────────
+        # Call 4: 8-mark
         print(f"      [QA] Call 4/4: 8-mark questions (Q76-Q100)...")
         part4 = self._call_by_marks(
-            text=text,
-            lesson_title=lesson_title,
-            class_num=class_num,
-            unit=unit,
-            type_display=type_display,
-            has_grammar=has_grammar,
-            mark_type=8,
-            q_start=76,
-            q_end=100,
-            include_header=False
+            text=text, lesson_title=lesson_title,
+            class_num=class_num, unit=unit,
+            type_display=type_display, has_grammar=has_grammar,
+            mark_type=8, q_start=76, q_end=100, include_header=False
         )
         if part4:
             parts.append(self._clean(part4))
@@ -152,27 +117,14 @@ class QABuilder:
         print(f"      [QA] ✅ Complete — {len(parts)} parts, {len(combined)} chars total")
         return combined
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # SINGLE MARK CATEGORY CALL
-    # ──────────────────────────────────────────────────────────────────────────
-
     def _call_by_marks(
-        self,
-        text: str,
-        lesson_title: str,
-        class_num: int,
-        unit: int,
-        type_display: str,
-        has_grammar: bool,
-        mark_type: int,
-        q_start: int,
-        q_end: int,
-        include_header: bool
+        self, text, lesson_title, class_num, unit,
+        type_display, has_grammar, mark_type,
+        q_start, q_end, include_header
     ) -> Optional[str]:
         try:
             count = q_end - q_start + 1
 
-            # ── Header HTML ───────────────────────────────────────────────────
             header_html = ""
             if include_header:
                 header_html = f"""<div class="sk-content-header">
@@ -180,65 +132,103 @@ class QABuilder:
   <p class="sk-meta">Class {class_num} | English | Unit {unit} | {type_display}</p>
 </div>"""
 
-            # ── Question type guidance per mark ───────────────────────────────
+            # ── Mark guidance with EXPLICIT answer length ─────────────────────
             mark_guidance = {
                 1: f"""Generate EXACTLY {count} one-mark questions (Q{q_start} to Q{q_end}).
 
-Use ALL of these question types — distribute evenly:
-- Fill in the blank (one word or short phrase answer)
-- Choose the correct answer (state 4 options in the question itself)
-- True or False (state the statement clearly)
-- One-word answer / one-sentence answer
-- Who said this / who is being described
-- Name the character / identify the speaker
+ANSWER LENGTH: Maximum 1 complete sentence per answer. 10-15 words only.
 
-Every answer must be a COMPLETE SENTENCE even for 1-mark questions.
-Example: Q1. ______ was the chief of all spirits. Answer: Ariel was the chief of all spirits.""",
+Question types — distribute evenly across ALL of these:
+- Fill in the blank (one word or short phrase answer)
+- Choose the correct answer (state all 4 options in the question)
+- True or False (state the fact clearly)
+- One-word answer
+- One-sentence answer
+- Who said this / who is being described
+
+Example format:
+Q1. ______ was the chief of all spirits in the island.
+Answer: Ariel was the chief of all spirits in the island.
+
+Q2. Who released the spirits from the witch Sycorax?
+Answer: Prospero released the spirits from the witch Sycorax.""",
 
                 2: f"""Generate EXACTLY {count} two-mark questions (Q{q_start} to Q{q_end}).
 
-Use ALL of these question types — distribute evenly:
-- Short answer (2-3 complete sentences)
-- Explain a line or phrase from the text in your own words
-- Find the figure of speech or literary device
-- Vocabulary — give synonym, antonym, or meaning in context
-- Reference to context — who said it and what does it mean
-- Compare two characters or events briefly
+ANSWER LENGTH: Exactly 2-3 complete sentences per answer. 30-50 words only.
+Do NOT write more than 3 sentences. Do NOT write less than 2 sentences.
 
-Every answer must be 2-3 COMPLETE SENTENCES.""",
+Question types — distribute evenly across ALL of these:
+- Short answer (2-3 sentences explaining an event or character)
+- Explain a line or phrase from the text in your own words
+- Find the figure of speech or literary device and explain it
+- Vocabulary — give synonym, antonym, or meaning in context
+- Reference to context — who said it and what does it mean briefly
+
+Example format:
+Q26. Who was Caliban and what was his role on the island?
+Answer: Caliban was the son of the witch Sycorax. He was employed
+like a slave to fetch wood and do laborious work for Prospero.""",
 
                 5: f"""Generate EXACTLY {count} five-mark questions (Q{q_start} to Q{q_end}).
 
-Use ALL of these question types — distribute evenly:
-- Paragraph answer describing a character or event
-- Central idea or main theme of the lesson
-- Compare and contrast two characters or situations
-- Explain the significance of a key event in the story
-- Value-based question — what lesson or value does the text teach
-- Retell a specific scene or episode from the story
+ANSWER LENGTH: Exactly 5-7 complete sentences per answer. 80-120 words.
+This is a paragraph answer — more detailed than 2-mark but shorter than 8-mark.
+Do NOT write more than 7 sentences. Do NOT write less than 5 sentences.
 
-Every answer must be 5-8 COMPLETE SENTENCES.""",
+Question types — distribute evenly across ALL of these:
+- Paragraph answer describing a character or event in detail
+- Explain the central idea or main theme of the lesson
+- Compare and contrast two characters or situations from the text
+- Explain the significance of a key event in the story
+- Value-based question — what lesson or moral does the text teach
+- Retell a specific important scene from the story
+
+Example format:
+Q51. Write a paragraph about Prospero's character.
+Answer: Prospero was a wise and powerful man who had once been
+the Duke of Milan. He possessed magical powers that allowed him
+to control the winds and the sea. Using his spirits, especially
+Ariel, he managed everything on the island. Despite being wronged
+by his brother Antonio, he chose forgiveness over revenge. His love
+for his daughter Miranda was the driving force behind all his actions.""",
 
                 8: f"""Generate EXACTLY {count} eight-mark questions (Q{q_start} to Q{q_end}).
 
-Use ALL of these question types — distribute evenly:
-- Essay — detailed explanation of the full lesson or a major theme
-- Character sketch — detailed description of a main character
-- Summary — retell the entire lesson in your own words
-- Creative writing — write a letter, diary entry, or continuation
-- Critical appreciation — analyse the style, theme, and message
-{"- Grammar essay — write a paragraph using specific grammar structures from the lesson" if has_grammar else ""}
+ANSWER LENGTH: Exactly 10-14 complete sentences per answer. 180-250 words.
+This is a detailed essay answer — significantly longer than 5-mark.
+Do NOT write less than 10 sentences. Do NOT write less than 180 words.
+Every answer must be a proper essay with introduction, body, and conclusion.
 
-Every answer must be 10-15 COMPLETE SENTENCES.""",
+Question types — distribute evenly across ALL of these:
+- Essay — detailed explanation of the full lesson or a major theme
+- Character sketch — comprehensive description of a main character
+  with specific examples and quotes from the text
+- Summary — complete retelling of the entire lesson in own words
+- Creative writing — write a letter, diary entry, or continuation
+  of the story with proper detail
+- Critical appreciation — analyse the style, theme, and message
+  of the lesson in detail
+{"- Grammar essay — write a detailed paragraph using specific grammar structures" if has_grammar else ""}
+
+Example format:
+Q76. Write a detailed character sketch of Prospero.
+Answer: Prospero is the central character of this extract from
+Shakespeare's famous play The Tempest. He is portrayed as a man
+of great wisdom and extraordinary magical powers. Before coming
+to the island, he had been the rightful Duke of Milan, a position
+of great power and responsibility. His treacherous brother Antonio,
+with the help of the King of Naples, had wrongfully deprived him
+of his title and exiled him to the sea...
+[continues for 10-14 sentences total]""",
             }
 
             grammar_note = ""
             if has_grammar and mark_type in (1, 2):
-                grammar_note = f"\nAlso include {max(count // 5, 2)} grammar questions based on the grammar section of the lesson."
+                grammar_note = f"\nAlso include {max(count // 5, 2)} grammar questions from the lesson's grammar section."
 
-            # ── Build prompt ──────────────────────────────────────────────────
             prompt = f"""Generate ONLY {mark_type}-mark questions for this question bank.
-Do NOT generate any other mark type in this response.
+Do NOT generate any other mark type.
 
 Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
 
@@ -250,21 +240,21 @@ HTML FORMAT:
 <h2>{mark_type}-Mark Questions</h2>
 <div class="marks-badge">{mark_type} Mark{"s" if mark_type > 1 else ""}</div>
 
-Each question MUST follow this exact format:
+Each question MUST follow this EXACT format:
 <div class="qa-item">
   <p class="question"><strong>Q[N]. Question text here?</strong></p>
-  <p class="answer"><strong>Answer:</strong> Complete sentence answer here.</p>
+  <p class="answer"><strong>Answer:</strong> Complete answer here following the length requirement above.</p>
 </div>
 
-Replace [N] with actual number: Q{q_start}, Q{q_start+1}, Q{q_start+2}... Q{q_end}
+Replace [N] with: Q{q_start}, Q{q_start+1}... Q{q_end}
 
 STRICT RULES:
-- Raw HTML only — no markdown, no code blocks, no backticks
+- Raw HTML only — no markdown, no code blocks
 - Generate EXACTLY {count} questions: Q{q_start} through Q{q_end}
-- Count every question as you go
-- Every answer is a complete sentence — never one word only
-- Base ALL questions strictly on the lesson text below
-- Do NOT add questions from other mark categories
+- STRICTLY follow the answer length requirement above
+- Every answer must be complete sentences — never one word only
+- Base ALL questions on the lesson text below
+- Do NOT mix in questions from other mark categories
 - Do NOT stop before Q{q_end}
 
 Lesson Text:
@@ -272,7 +262,7 @@ Lesson Text:
 {text}
 ---
 
-Start with Q{q_start}. End with Q{q_end}. Count carefully."""
+Start at Q{q_start}. End at Q{q_end}. Follow answer length strictly."""
 
             response = self.client.messages.create(
                 model=self.model,
@@ -286,12 +276,7 @@ Start with Q{q_start}. End with Q{q_end}. Count carefully."""
             print(f"❌ QA {mark_type}-mark error: {e}")
             return None
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # CLEAN OUTPUT
-    # ──────────────────────────────────────────────────────────────────────────
-
     def _clean(self, raw: str) -> str:
-        """Strip markdown fences and preamble text."""
         if not raw:
             return raw
         text = raw.strip()
@@ -299,7 +284,6 @@ Start with Q{q_start}. End with Q{q_end}. Count carefully."""
         text = re.sub(r'\n```\s*$', '', text)
         text = re.sub(r'```(?:html)?\s*\n', '', text)
         text = re.sub(r'\n```', '', text)
-        # Remove preamble before first HTML tag
         first_tag = re.search(r'<(?:div|h[1-6]|section|p|table|hr)', text)
         if first_tag and first_tag.start() > 0:
             preamble = text[:first_tag.start()].strip()
