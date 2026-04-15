@@ -30,6 +30,14 @@ class Settings(BaseSettings):
     ANTHROPIC_API_KEY: str = ""
     ANTHROPIC_MODEL: str = "claude-sonnet-4-20250514"
 
+    # ── Google Document AI ─────────────────────────────────────────────────
+
+    GOOGLE_APPLICATION_CREDENTIALS: str = ""
+    DOCAI_PROJECT_ID: str = ""
+    DOCAI_LOCATION: str = "us"
+    DOCAI_PROCESSOR_ID: str = ""
+
+
     # ================================================================
     # Bridge — Path to Node.js Content Server root
     # ================================================================

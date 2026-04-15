@@ -1,13 +1,15 @@
 """
 Core PDF Processing Engine
 Handles the full pipeline:
-  Download → Slice → Extract Text (pdf2htmlEX + w3m) → AI Generate (Content + QA + LP) → Deploy via Bridge
+  Download → Slice → Extract Text (Google DocAI → pdf2htmlEX + w3m → pdfplumber) → AI Generate (Content + QA + LP) → Deploy via Bridge
 
 FIX APPLIED (April 2026):
   - Added 'force' flag support to bypass is_already_deployed() check
     when force=True in request_data. Allows overwrite without deleting files.
+  - Updated _extract_text() to use Google Document AI as primary extractor,
+    with pdf2htmlEX + w3m as fallback, and pdfplumber as last resort.
 """
-
+from .extractors.google_docai import docai_extractor
 import requests
 import os
 import json
@@ -115,90 +117,88 @@ class PDFProcessor:
             return False
 
     # ──────────────────────────────────────────────────────────────────────────
-    # NEW: Smart Text Extraction — pdf2htmlEX + w3m
-    # Replaces old pdfplumber extraction
+    # Smart Text Extraction
+    # Priority: Google Document AI → pdf2htmlEX + w3m → pdfplumber
     # ──────────────────────────────────────────────────────────────────────────
 
-    def _extract_text(self, pdf_file: Path, start_page: int, end_page: int, output_txt: Path) -> bool:
+    def _extract_text(
+        self,
+        pdf_file: Path,
+        start_page: int,
+        end_page: int,
+        output_txt: Path
+    ) -> bool:
         """
-        Extracts clean text from PDF using pdf2htmlEX + w3m pipeline.
+        Extracts clean text from PDF.
 
-        Steps:
-          1. pdf2htmlEX converts PDF pages → perfect HTML (correct column order)
-          2. w3m converts HTML → clean readable text
-          3. Save text to output_txt
+        Priority:
+          1. Google Document AI (primary) — structured, clean, accurate
+          2. pdf2htmlEX + w3m (fallback) — if Document AI unavailable
+          3. pdfplumber (last resort) — if both above fail
 
-        Falls back to pdfplumber if Docker/w3m fails.
+        This approach ensures:
+          - Best quality when Document AI is available
+          - No disruption if Document AI is down or misconfigured
+          - Always produces some output
         """
+        # ── Primary: Google Document AI ───────────────────────────────────────
+        if docai_extractor.is_available():
+            print(f"   🔄 Extracting via Google Document AI...")
+            success = docai_extractor.extract(
+                pdf_file, start_page, end_page, output_txt
+            )
+            if success:
+                return True
+            print(f"   ⚠️  Document AI failed — trying pdf2htmlEX fallback")
+
+        # ── Fallback: pdf2htmlEX + w3m ────────────────────────────────────────
         try:
-            print(f"   🔄 Extracting pages {start_page}→{end_page} via pdf2htmlEX + w3m...")
-
-            # ── Step 1: pdf2htmlEX → HTML ─────────────────────────────────────
+            print(f"   🔄 Fallback: extracting via pdf2htmlEX + w3m...")
             html_output_name = f"{pdf_file.stem}_p{start_page}_{end_page}.html"
             html_output_path = self.temp_dir / html_output_name
 
             docker_result = subprocess.run([
                 "docker", "run", "--rm",
-                "-v", f"{pdf_file.parent}:/pdf",        # mount PDF folder
-                "-v", f"{self.temp_dir}:/output",        # mount output folder
+                "-v", f"{pdf_file.parent}:/pdf",
+                "-v", f"{self.temp_dir}:/output",
                 PDF2HTMLEX_IMAGE,
                 "--first-page", str(start_page),
                 "--last-page", str(end_page),
                 "--zoom", "1.3",
-                "--dest-dir", "/output",                 # save HTML to output folder
+                "--dest-dir", "/output",
                 f"/pdf/{pdf_file.name}",
-                html_output_name                         # output filename
+                html_output_name
             ], capture_output=True, text=True, timeout=120)
 
-            if docker_result.returncode != 0:
-                print(f"   ⚠️  pdf2htmlEX failed — falling back to pdfplumber")
-                print(f"   Docker error: {docker_result.stderr[:200]}")
-                return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+            if docker_result.returncode == 0 and html_output_path.exists():
+                # Fix permissions (Docker creates files as root)
+                subprocess.run(
+                    ["sudo", "chmod", "644", str(html_output_path)],
+                    capture_output=True
+                )
 
-            # Fix permissions (Docker creates files as root)
-            subprocess.run(["sudo", "chmod", "644", str(html_output_path)],
-                         capture_output=True)
+                w3m_result = subprocess.run(
+                    ["w3m", "-dump", str(html_output_path)],
+                    capture_output=True, text=True, timeout=60
+                )
 
-            if not html_output_path.exists():
-                print(f"   ⚠️  HTML output not found — falling back to pdfplumber")
-                return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
-
-            print(f"   ✅ pdf2htmlEX done → {html_output_name}")
-
-            # ── Step 2: w3m → clean text ──────────────────────────────────────
-            w3m_result = subprocess.run([
-                "w3m", "-dump", str(html_output_path)
-            ], capture_output=True, text=True, timeout=60)
-
-            if w3m_result.returncode != 0 or not w3m_result.stdout.strip():
-                print(f"   ⚠️  w3m failed — falling back to pdfplumber")
-                html_output_path.unlink(missing_ok=True)
-                return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
-
-            clean_text = w3m_result.stdout
-
-            # ── Step 3: Save clean text ───────────────────────────────────────
-            with open(output_txt, "w", encoding="utf-8") as f:
-                f.write(clean_text)
-
-            # Cleanup HTML temp file
-            html_output_path.unlink(missing_ok=True)
-
-            print(f"   ✅ w3m done → {len(clean_text)} chars extracted")
-            return True
-
-        except subprocess.TimeoutExpired:
-            print(f"   ⚠️  Extraction timed out — falling back to pdfplumber")
-            return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+                if w3m_result.returncode == 0 and w3m_result.stdout.strip():
+                    with open(output_txt, "w", encoding="utf-8") as f:
+                        f.write(w3m_result.stdout)
+                    html_output_path.unlink(missing_ok=True)
+                    print(f"   ✅ pdf2htmlEX fallback: {len(w3m_result.stdout)} chars")
+                    return True
 
         except Exception as e:
-            print(f"   ⚠️  Extraction error: {e} — falling back to pdfplumber")
-            return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
+            print(f"   ⚠️  pdf2htmlEX fallback failed: {e}")
+
+        # ── Last resort: pdfplumber ───────────────────────────────────────────
+        return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
 
     def _extract_text_fallback(self, pdf_file: Path, start_page: int, end_page: int, output_txt: Path) -> bool:
         """
         Fallback text extraction using pdfplumber.
-        Used when pdf2htmlEX or w3m fails.
+        Used when both Google Document AI and pdf2htmlEX + w3m fail.
         """
         try:
             import pdfplumber
