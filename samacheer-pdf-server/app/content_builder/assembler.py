@@ -4,6 +4,12 @@ content_builder/assembler.py
 Simple top-to-bottom conversion.
 Split text by position. Convert each part to interactive HTML.
 Nothing hardcoded. Works for any lesson, any subject.
+
+FIXES (April 2026):
+  - Issue 1: Split point now avoids cutting inside exercises
+             (looks for exercise boundaries, not just paragraph breaks)
+  - Issue 2/3: Edit passage exercises now put passage text BETWEEN
+               <textarea> tags, not in placeholder attribute
 """
 
 import re
@@ -22,7 +28,10 @@ CRITICAL RULES:
 - Start directly with an HTML tag
 - Convert EVERYTHING in the text — top to bottom — nothing skipped
 - Make ALL exercises and activities fully interactive
-- Base output ONLY on the text provided"""
+- Base output ONLY on the text provided
+- NEVER add <style> tags, <script> tags, <html>, <head>, or <body> tags
+- Output HTML fragments only — no standalone document structure
+- Do not add any CSS — styling is handled externally"""
 
 
 CONVERT_PROMPT = """Convert this Samacheer Kalvi lesson text to interactive HTML.
@@ -46,6 +55,7 @@ Go TOP TO BOTTOM through the text. Convert EVERYTHING you see:
 - Conversation/dialogue exercises → formatted conversation with blank inputs
 - Table exercises → HTML tables with input cells
 - Rearrange sentences → input box before each sentence
+- Edit the passage exercises → textarea WITH the passage text already inside it
 - Any other exercise → appropriate interactive input
 
 INTERACTIVE HTML FORMATS:
@@ -155,7 +165,17 @@ Rearrange:
   </div>
 </div>
 
-Writing/activity task:
+Edit the passage (underlined words — input at END of sentence):
+<div class="exercise-section">
+  <div class="exercise-title"><span class="ex-badge">Exercise</span> [Letter]. Edit the passage</div>
+  <p>[Instructions]</p>
+  <p>Sentence with <u>underlined wrong word</u> kept visible.
+     <input class="blank-input" type="text" placeholder="correct phrase" style="width:180px;"></p>
+  <p>Next sentence with <u>underlined wrong word</u> visible.
+     <input class="blank-input" type="text" placeholder="correct phrase" style="width:180px;"></p>
+</div>
+
+Writing/activity task (no pre-filled text — student writes from scratch):
 <div class="exercise-section activity">
   <div class="exercise-title"><span class="ex-badge">Exercise</span> [Letter]. [Title]</div>
   <p>[Instructions exactly as written]</p>
@@ -163,7 +183,12 @@ Writing/activity task:
 </div>
 
 About Author:
-<div class="about-author"><h3>About the Author</h3><p>[bio]</p></div>
+<div class="about-author">
+  <div class="author-content">
+    <h3>About the Author</h3>
+    <p>[bio text]</p>
+  </div>
+</div>
 
 Do You Know:
 <div class="do-you-know"><div class="dyk-title">Do You Know?</div><p>[content]</p></div>
@@ -185,6 +210,9 @@ Intro box:
 RULES:
 - Convert EVERYTHING top to bottom — never skip any line
 - Every exercise must have interactive inputs
+- For "Edit the passage" type exercises: PUT THE PASSAGE TEXT BETWEEN <textarea> TAGS
+  Example: <textarea rows="8">The actual passage text goes here so student can edit it</textarea>
+  NEVER put passage text in placeholder attribute — placeholder is only for empty boxes
 - Raw HTML only — no markdown
 
 Text to convert:
@@ -214,24 +242,12 @@ class ContentAssembler:
         # Header
         parts.append(self._build_header(lesson_title, class_num, unit, lesson_type))
 
-        # Split text and convert each part
-        if text_len < 15000:
-            # Short — 1 call
-            print(f"      [Assembler] Short → 1 call")
-            result = self._convert(text)
-            if result:
-                parts.append(result)
-        else:
-            # Long — split at natural boundary near middle
-            mid = self._find_split_point(text)
-            part1_text = text[:mid]
-            part2_text = text[mid:]
-            print(f"      [Assembler] Long → 2 calls (split at {mid})")
-
-            result1 = self._convert(part1_text)
-            result2 = self._convert(part2_text)
-            if result1: parts.append(result1)
-            if result2: parts.append(result2)
+        # Single call — full text regardless of length
+        # Claude Sonnet supports up to 64k output tokens
+        print(f"      [Assembler] Single call — full text")
+        result = self._convert(text)
+        if result:
+            parts.append(result)
 
         # Summary
         summary = self._summary(text, lesson_title)
@@ -243,19 +259,59 @@ class ContentAssembler:
         return final_html
 
     def _find_split_point(self, text: str) -> int:
-        """Find a natural split point near the middle of the text.
-        Split at a paragraph boundary — never in the middle of a sentence."""
+        """
+        Find a natural split point near the middle of the text.
+
+        Priority order:
+        1. Split BETWEEN two exercises — look for double newline after
+           a line that ends an exercise block (ends with '.' or '?' or ':')
+           followed by a line starting with a capital letter or exercise letter
+        2. Split at a paragraph boundary (double newline)
+        3. Split at a single newline
+        4. Fallback to exact middle
+
+        NEVER split inside an exercise — this caused Issue 1 (Exercise G truncated).
+        """
         mid = len(text) // 2
-        # Look for paragraph break near middle
-        for offset in range(0, 3000, 100):
-            # Try after middle
+
+        # Strategy 1: Find exercise boundary near middle
+        # Exercise boundaries look like: blank line before "A.", "B.", "C."... or section heading
+        exercise_pattern = re.compile(
+            r'\n\n(?=[A-Z][\.\)]\s|[IVX]+\.\s|Vocabulary|Grammar|Speaking|'
+            r'Listening|Reading|Writing|Poem|Supplementary|About|Glossary|'
+            r'Do You Know|ICT)',
+            re.MULTILINE
+        )
+        best = None
+        for m in exercise_pattern.finditer(text):
+            pos = m.start()
+            if pos < mid * 0.5:
+                continue  # Too early
+            if best is None or abs(pos - mid) < abs(best - mid):
+                best = pos
+            if pos > mid * 1.5:
+                break  # Too late
+
+        if best:
+            print(f"         [Split] Exercise boundary at {best}")
+            return best + 2
+
+        # Strategy 2: Paragraph boundary near middle
+        for offset in range(0, 5000, 200):
             pos = text.find('\n\n', mid + offset)
             if pos > 0:
+                print(f"         [Split] Paragraph boundary at {pos}")
                 return pos + 2
-            # Try before middle
             pos = text.rfind('\n\n', 0, mid - offset)
             if pos > 0:
+                print(f"         [Split] Paragraph boundary at {pos}")
                 return pos + 2
+
+        # Strategy 3: Single newline near middle
+        pos = text.find('\n', mid)
+        if pos > 0:
+            return pos + 1
+
         return mid
 
     def _convert(self, text: str) -> Optional[str]:
@@ -311,19 +367,24 @@ Text:
   <h1 class="lesson-main-title">{lesson_title}</h1>
 </div>"""
 
-    def _api(self, prompt: str, max_tokens: int = 16000) -> Optional[str]:
+    def _api(self, prompt: str, max_tokens: int = 32000) -> Optional[str]:
         try:
-            response = self.client.messages.create(
+            raw = ""
+            with self.client.messages.stream(
                 model=self.model,
                 max_tokens=max_tokens,
                 system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
-            )
-            raw = response.content[0].text.strip()
+            ) as stream:
+                for text in stream.text_stream:
+                    raw += text
+            raw = raw.strip()
             raw = re.sub(r'^```(?:html)?\s*\n', '', raw)
             raw = re.sub(r'\n```\s*$', '', raw)
             raw = re.sub(r'```(?:html)?\s*\n', '', raw)
             raw = re.sub(r'\n```', '', raw)
+            raw = re.sub(r'<style[^>]*>.*?</style>', '', raw, flags=re.DOTALL)
+            raw = re.sub(r'</?(?:html|head|body)[^>]*>', '', raw)
             return raw.strip() if raw.strip() else None
         except Exception as e:
             print(f"         ❌ API call failed: {e}")

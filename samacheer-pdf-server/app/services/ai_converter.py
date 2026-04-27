@@ -2,7 +2,7 @@
 AI Content Converter — Final Version
 Thin orchestrator. Delegates to content_builder modules.
 
-Content → content_builder/assembler.py
+Content → content_builder/assembler.py (restored — EPUB text replaces pdf2htmlEX)
 QA      → content_builder/qa_builder.py
 LP      → handled here directly (working perfectly, do not move)
 """
@@ -12,8 +12,8 @@ import anthropic
 from typing import Optional, Dict
 from ..config import settings
 from .section_detector import detect_sections, clean_noise
-from ..content_builder.assembler import content_assembler
 from ..content_builder.qa_builder import qa_builder
+from ..content_builder.assembler import content_assembler
 
 
 # ============================================================================
@@ -139,14 +139,14 @@ class AIContentConverter:
         print(f"   📋 Sections: { {k:v for k,v in sections.items() if v and k != 'lesson_type'} }")
         metadata["_sections"] = sections
 
-        # ── CONTENT — via assembler ───────────────────────────────────────────
+        # ── CONTENT — via assembler (EPUB clean text → Claude → interactive HTML)
         print(f"\n   📄 Generating Content HTML...")
         try:
             content_html = content_assembler.assemble(text, sections, metadata)
             if content_html:
                 results["content"] = _wrap_html(
                     content_html,
-                    title=f"{lesson_title} | Class {class_num} {subject.title()}",
+                    title=f"{lesson_title} | Class {class_num}",
                     content_type="content"
                 )
                 print(f"   ✅ Content HTML ready ({len(content_html)} chars)")
@@ -360,7 +360,6 @@ Lesson Text:
     # ──────────────────────────────────────────────────────────────────────────
     # LP: Content Day
     # ──────────────────────────────────────────────────────────────────────────
-
 
     def _lp_call_content_day(self, text, class_num, unit, lesson_title,
                               type_display, day_num, content_days, total_days):

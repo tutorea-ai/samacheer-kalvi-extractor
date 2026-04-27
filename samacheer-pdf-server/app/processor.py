@@ -1,13 +1,14 @@
 """
 Core PDF Processing Engine
 Handles the full pipeline:
-  Download → Slice → Extract Text (Google DocAI → pdf2htmlEX + w3m → pdfplumber) → AI Generate (Content + QA + LP) → Deploy via Bridge
+  Download → Extract Text (EPUB or pdfplumber) → AI Generate (Content + QA + LP) → Deploy via Bridge
 
-FIX APPLIED (April 2026):
-  - Added 'force' flag support to bypass is_already_deployed() check
-    when force=True in request_data. Allows overwrite without deleting files.
-  - Updated _extract_text() to use Google Document AI as primary extractor,
-    with pdf2htmlEX + w3m as fallback, and pdfplumber as last resort.
+UPDATES (April 2026 — v6.0 EPUB):
+  - EPUB extractor replaces pdf2htmlEX entirely
+  - EPUB text feeds Content + QA + LP (all three via Claude)
+  - pdfplumber kept as fallback when EPUB not available
+  - epub_catalog.json added for EPUB Drive IDs
+  - storage/epub/ folder added for EPUB zip cache
 """
 from .extractors.google_docai import docai_extractor
 import requests
@@ -16,26 +17,24 @@ import json
 import PyPDF2
 import gdown
 import shutil
-import subprocess
 from pathlib import Path
-from typing import Dict, Tuple, Optional
+from typing import Dict, Optional
 from .services.ai_converter import ai_converter
 from .services.bridge import bridge
+from .services.epub_extractor import EpubExtractor
 from .config import settings
 
 
-# ── Docker image for pdf2htmlEX ───────────────────────────────────────────────
-PDF2HTMLEX_IMAGE = "pdf2htmlex/pdf2htmlex:0.18.8.rc1-master-20200630-Ubuntu-focal-x86_64"
-
-
 class PDFProcessor:
-    """Core PDF processing engine with multi-subject and discipline support."""
+    """Core processing engine with EPUB + PDF fallback support."""
 
     def __init__(self):
         self.catalogs_cache = {}
-        self.base_path = settings.BASE_DIR
-        self.cache_dir = settings.CACHE_DIR
-        self.temp_dir = settings.TEMP_DIR
+        self.base_path  = settings.BASE_DIR
+        self.cache_dir  = settings.CACHE_DIR
+        self.temp_dir   = settings.TEMP_DIR
+        self.epub_dir   = settings.BASE_DIR / "storage" / "epub"
+        self.epub_dir.mkdir(parents=True, exist_ok=True)
         print("🚀 PDF Processor initialized")
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -70,6 +69,18 @@ class PDFProcessor:
             print(f"❌ Error loading catalog: {e}")
             return {}
 
+    def _load_epub_catalog(self) -> dict:
+        """Load the EPUB catalog (Drive IDs for EPUB zips)."""
+        epub_catalog_path = settings.BASE_DIR / "data" / "catalogs" / "epub_catalog.json"
+        if not epub_catalog_path.exists():
+            return {}
+        try:
+            with open(epub_catalog_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"❌ Error loading EPUB catalog: {e}")
+            return {}
+
     def _load_unit_index(self, class_num: int, subject: str, medium: str = "english") -> dict:
         """Dynamic index loading."""
         index_path = settings.get_index_path(subject, class_num, medium)
@@ -87,11 +98,17 @@ class PDFProcessor:
 
     def _generate_book_key(self, class_num: int, term: int, subject: str, medium: str) -> str:
         subject = subject.lower().strip()
-        medium = medium.lower().strip()
+        medium  = medium.lower().strip()
         if class_num >= 8:
             term = 0
         suffix = "" if subject in ["english", "tamil"] else f"-{medium}-medium"
         return f"class-{class_num}-term{term}-{subject}{suffix}.pdf"
+
+    def _generate_epub_key(self, class_num: int, term: int, subject: str) -> str:
+        """Generate the key used in epub_catalog.json."""
+        if class_num >= 8:
+            term = 0
+        return f"class-{class_num}-term{term}-{subject}"
 
     def _download_file(self, file_id: str, output_path: Path) -> bool:
         try:
@@ -117,8 +134,65 @@ class PDFProcessor:
             return False
 
     # ──────────────────────────────────────────────────────────────────────────
-    # Smart Text Extraction
-    # Priority: Google Document AI → pdf2htmlEX + w3m → pdfplumber
+    # EPUB Text Extraction
+    # Primary source for Classes 8-12 English
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _get_epub_text(
+        self,
+        class_num: int,
+        term: int,
+        subject: str,
+        unit_num: int,
+        lesson_type: str
+    ) -> str | None:
+        """
+        Try to extract lesson text from EPUB.
+
+        Steps:
+          1. Check epub_catalog.json for a Drive ID
+          2. Download zip to storage/epub/ if not cached
+          3. Unzip if not already unzipped
+          4. Extract clean text for the lesson
+
+        Returns clean text string, or None if EPUB not available.
+        """
+        epub_key = self._generate_epub_key(class_num, term, subject)
+        epub_zip_path = self.epub_dir / f"{epub_key}.zip"
+        epub_folder   = self.epub_dir / epub_key
+
+        # Download zip if not already cached
+        if not epub_zip_path.exists() and not epub_folder.exists():
+            epub_catalog = self._load_epub_catalog()
+            drive_id = epub_catalog.get(epub_key)
+            if not drive_id:
+                print(f"   ℹ️  No EPUB available for {epub_key} — will use pdfplumber")
+                return None
+            print(f"   ⬇️  Downloading EPUB: {epub_key}.zip")
+            if not self._download_file(drive_id, epub_zip_path):
+                print(f"   ❌ EPUB download failed")
+                return None
+
+        # Unzip if not already done
+        if not epub_folder.exists():
+            epub_folder = EpubExtractor.prepare(epub_zip_path)
+            if not epub_folder:
+                print(f"   ❌ EPUB unzip failed")
+                return None
+
+        # Extract lesson text
+        extractor = EpubExtractor(epub_folder)
+        text = extractor.extract(unit=unit_num, lesson_type=lesson_type)
+
+        if text:
+            print(f"   ✅ EPUB extraction done → {len(text)} chars")
+        else:
+            print(f"   ⚠️  EPUB extraction returned nothing — will fallback")
+
+        return text
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # Text Extraction — EPUB first, pdfplumber fallback
     # ──────────────────────────────────────────────────────────────────────────
 
     def _extract_text(
@@ -126,97 +200,78 @@ class PDFProcessor:
         pdf_file: Path,
         start_page: int,
         end_page: int,
-        output_txt: Path
+        output_txt: Path,
+        class_num: int = None,
+        term: int = None,
+        subject: str = None,
+        unit_num: int = None,
+        lesson_type: str = None,
     ) -> bool:
         """
-        Extracts clean text from PDF.
+        Extract lesson text. EPUB is primary, pdfplumber is fallback.
 
-        Priority:
-          1. Google Document AI (primary) — structured, clean, accurate
-          2. pdf2htmlEX + w3m (fallback) — if Document AI unavailable
-          3. pdfplumber (last resort) — if both above fail
-
-        This approach ensures:
-          - Best quality when Document AI is available
-          - No disruption if Document AI is down or misconfigured
-          - Always produces some output
+        When EPUB params are provided, tries EPUB first.
+        Always falls back to pdfplumber if EPUB fails or is unavailable.
         """
-        # ── Primary: Google Document AI ───────────────────────────────────────
-        if docai_extractor.is_available():
-            print(f"   🔄 Extracting via Google Document AI...")
-            success = docai_extractor.extract(
-                pdf_file, start_page, end_page, output_txt
+        # ── Primary: EPUB ─────────────────────────────────────────────────────
+        if all([class_num, subject, unit_num, lesson_type]):
+            print(f"   🔄 Trying EPUB extraction...")
+            epub_text = self._get_epub_text(
+                class_num, term or 0, subject, unit_num, lesson_type
             )
+            if epub_text:
+                with open(output_txt, "w", encoding="utf-8") as f:
+                    f.write(epub_text)
+                return True
+
+        # ── Fallback: pdfplumber ──────────────────────────────────────────────
+        print(f"   🔄 Falling back to pdfplumber...")
+        success = self._extract_text_pdfplumber(pdf_file, start_page, end_page, output_txt)
+        if success:
+            return True
+
+        # ── Last resort: Google Document AI ──────────────────────────────────
+        if docai_extractor.is_available():
+            print(f"   🔄 pdfplumber failed — trying Document AI...")
+            success = docai_extractor.extract(pdf_file, start_page, end_page, output_txt)
             if success:
                 return True
-            print(f"   ⚠️  Document AI failed — trying pdf2htmlEX fallback")
 
-        # ── Fallback: pdf2htmlEX + w3m ────────────────────────────────────────
-        try:
-            print(f"   🔄 Fallback: extracting via pdf2htmlEX + w3m...")
-            html_output_name = f"{pdf_file.stem}_p{start_page}_{end_page}.html"
-            html_output_path = self.temp_dir / html_output_name
+        print(f"   ❌ All text extraction methods failed")
+        return False
 
-            docker_result = subprocess.run([
-                "docker", "run", "--rm",
-                "-v", f"{pdf_file.parent}:/pdf",
-                "-v", f"{self.temp_dir}:/output",
-                PDF2HTMLEX_IMAGE,
-                "--first-page", str(start_page),
-                "--last-page", str(end_page),
-                "--zoom", "1.3",
-                "--dest-dir", "/output",
-                f"/pdf/{pdf_file.name}",
-                html_output_name
-            ], capture_output=True, text=True, timeout=120)
-
-            if docker_result.returncode == 0 and html_output_path.exists():
-                # Fix permissions (Docker creates files as root)
-                subprocess.run(
-                    ["sudo", "chmod", "644", str(html_output_path)],
-                    capture_output=True
-                )
-
-                w3m_result = subprocess.run(
-                    ["w3m", "-dump", str(html_output_path)],
-                    capture_output=True, text=True, timeout=60
-                )
-
-                if w3m_result.returncode == 0 and w3m_result.stdout.strip():
-                    with open(output_txt, "w", encoding="utf-8") as f:
-                        f.write(w3m_result.stdout)
-                    html_output_path.unlink(missing_ok=True)
-                    print(f"   ✅ pdf2htmlEX fallback: {len(w3m_result.stdout)} chars")
-                    return True
-
-        except Exception as e:
-            print(f"   ⚠️  pdf2htmlEX fallback failed: {e}")
-
-        # ── Last resort: pdfplumber ───────────────────────────────────────────
-        return self._extract_text_fallback(pdf_file, start_page, end_page, output_txt)
-
-    def _extract_text_fallback(self, pdf_file: Path, start_page: int, end_page: int, output_txt: Path) -> bool:
-        """
-        Fallback text extraction using pdfplumber.
-        Used when both Google Document AI and pdf2htmlEX + w3m fail.
-        """
+    def _extract_text_pdfplumber(
+        self,
+        pdf_file: Path,
+        start_page: int,
+        end_page: int,
+        output_txt: Path
+    ) -> bool:
+        """Text extraction using pdfplumber."""
         try:
             import pdfplumber
-            print(f"   🔄 Fallback: extracting via pdfplumber...")
+            import re
+            print(f"   🔄 Extracting text via pdfplumber...")
             text_content = ""
             with pdfplumber.open(pdf_file) as pdf:
                 if end_page > len(pdf.pages):
                     end_page = len(pdf.pages)
                 for page_num in range(start_page - 1, end_page):
                     page = pdf.pages[page_num]
-                    text = page.extract_text()
-                    text_content += (text + "\n\n" + "=" * 50 + "\n\n") if text else ""
+                    text = page.extract_text() or ""
+                    if text:
+                        text_content += text + "\n\n"
+            # Clean noise
+            text_content = re.sub(r'\[[A-Za-z0-9]{4,12}\]', '', text_content)
+            text_content = re.sub(r'\d+th\s+\w+_Unit_\d+\.indd[^\n]*', '', text_content)
+            text_content = re.sub(r'^\d{1,3}\s*$', '', text_content, flags=re.MULTILINE)
+            text_content = re.sub(r'\n{3,}', '\n\n', text_content).strip()
             with open(output_txt, "w", encoding="utf-8") as f:
                 f.write(text_content)
-            print(f"   ✅ pdfplumber fallback done → {len(text_content)} chars")
+            print(f"   ✅ pdfplumber done → {len(text_content)} chars")
             return True
         except Exception as e:
-            print(f"   ❌ pdfplumber fallback also failed: {e}")
+            print(f"   ❌ pdfplumber failed: {e}")
             return False
 
     # ──────────────────────────────────────────────────────────────────────────
@@ -309,7 +364,7 @@ class PDFProcessor:
             mode          = request_data["mode"]
             output_format = request_data["output_format"]
             discipline    = request_data.get("discipline")
-            force         = request_data.get("force", False)  # ✅ NEW: force regeneration flag
+            force         = request_data.get("force", False)
 
             print(f"\n📚 Processing: Class {class_num} | {subject} | {discipline or 'General'} | Format: {output_format} | Force: {force}")
 
@@ -325,10 +380,10 @@ class PDFProcessor:
 
             drive_id = catalog[book_key]
 
-            # 4. Download / use cache
+            # 4. Download PDF / use cache
             cached_file = self.cache_dir / book_key
             if not cached_file.exists():
-                print(f"⬇️  Downloading: {book_key}")
+                print(f"⬇️  Downloading PDF: {book_key}")
                 if not self._download_file(drive_id, cached_file):
                     return {"error": True, "message": "Download failed"}
 
@@ -350,7 +405,7 @@ class PDFProcessor:
                     return {"error": True, "message": "Full book mode only supports PDF or TXT format"}
 
             # ── LESSON MODE ───────────────────────────────────────────────────
-            unit_num = request_data["unit"]
+            unit_num      = request_data["unit"]
             lesson_choice = request_data.get("lesson_choice", 1)
 
             # 5. Load index
@@ -362,7 +417,7 @@ class PDFProcessor:
             if term_key not in index_data:
                 return {"error": True, "message": f"Term key '{term_key}' not found in index"}
 
-            # 6. Get lesson page range
+            # 6. Get lesson page range (still needed for PDF fallback)
             details = self._get_lesson_details(
                 index_data[term_key], unit_num, lesson_choice, class_num, discipline
             )
@@ -370,7 +425,8 @@ class PDFProcessor:
                 return {"error": True, "message": "Invalid lesson selection"}
 
             filename_base, start_page, end_page = details
-            print(f"📄 Pages: {start_page} → {end_page}")
+            lesson_type = self._get_lesson_type(index_data[term_key], unit_num, lesson_choice)
+            print(f"📄 Pages: {start_page} → {end_page} | Type: {lesson_type}")
 
             # ── PDF output ────────────────────────────────────────────────────
             if output_format == "pdf":
@@ -381,26 +437,35 @@ class PDFProcessor:
             # ── TXT output ────────────────────────────────────────────────────
             elif output_format == "txt":
                 output_file = self.temp_dir / f"{filename_base}.txt"
-                self._extract_text(cached_file, start_page, end_page, output_file)
+                self._extract_text(
+                    cached_file, start_page, end_page, output_file,
+                    class_num=class_num, term=term, subject=subject,
+                    unit_num=unit_num, lesson_type=lesson_type
+                )
                 return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
 
             # ── CONTENT ONLY output ───────────────────────────────────────────
             elif output_format == "content_only":
 
                 bridge_meta = {
-                    "class_num": class_num,
-                    "term": term,
-                    "unit": unit_num,
+                    "class_num":     class_num,
+                    "term":          term,
+                    "unit":          unit_num,
                     "lesson_choice": lesson_choice,
-                    "subject": subject,
-                    "medium": medium,
-                    "discipline": discipline,
+                    "subject":       subject,
+                    "medium":        medium,
+                    "discipline":    discipline,
                 }
 
                 print(f"🤖 Starting Content-only generation...")
 
+                # Extract text — EPUB first, pdfplumber fallback
                 temp_txt = self.temp_dir / f"{filename_base}_raw.txt"
-                if not self._extract_text(cached_file, start_page, end_page, temp_txt):
+                if not self._extract_text(
+                    cached_file, start_page, end_page, temp_txt,
+                    class_num=class_num, term=term, subject=subject,
+                    unit_num=unit_num, lesson_type=lesson_type
+                ):
                     return {"error": True, "message": "Text extraction failed"}
 
                 with open(temp_txt, "r", encoding="utf-8") as f:
@@ -408,70 +473,78 @@ class PDFProcessor:
                 temp_txt.unlink(missing_ok=True)
 
                 if not raw_text.strip():
-                    return {"error": True, "message": "No text extracted from PDF pages"}
+                    return {"error": True, "message": "No text extracted"}
 
                 ai_metadata = {
-                    "class": class_num,
-                    "subject": subject,
-                    "unit": unit_num,
+                    "class":        class_num,
+                    "subject":      subject,
+                    "unit":         unit_num,
                     "lesson_title": filename_base,
-                    "lesson_type": self._get_lesson_type(index_data[term_key], unit_num, lesson_choice),
-                    "term": term_key,
-                    "discipline": discipline,
+                    "lesson_type":  lesson_type,
+                    "term":         term_key,
+                    "discipline":   discipline,
                 }
 
+                # Generate content only via assembler
+                from .services.section_detector import detect_sections, clean_noise
+                from .content_builder.assembler import content_assembler
                 from .services.ai_converter import _wrap_html
-                from .content_builder.assembler import content_assembler as cb_assembler
-                sections = {}
-                content_html = cb_assembler.assemble(raw_text, sections, ai_metadata)
 
+                clean_text = clean_noise(raw_text)
+                sections   = detect_sections(clean_text, lesson_type=lesson_type)
+                ai_metadata["_sections"] = sections
+
+                content_html = content_assembler.assemble(clean_text, sections, ai_metadata)
                 if not content_html:
                     return {"error": True, "message": "Content generation failed"}
 
-                # Run structural post-processing
+                wrapped = _wrap_html(
+                    content_html,
+                    title=f"{filename_base} | Class {class_num}",
+                    content_type="content"
+                )
 
                 content_html_file = self.temp_dir / f"{filename_base}.html"
                 with open(content_html_file, "w", encoding="utf-8") as f:
-                    f.write(_wrap_html(content_html, title=filename_base, content_type="content"))
+                    f.write(wrapped)
 
                 content_md_file = self.temp_dir / f"{filename_base}.md"
                 with open(content_md_file, "w", encoding="utf-8") as f:
                     f.write(f"# {filename_base}\n\n{raw_text}")
 
                 bridge.deploy_content(content_html_file, bridge_meta, "html", "content")
-                bridge.deploy_content(content_md_file, bridge_meta, "md", "content")
+                bridge.deploy_content(content_md_file,   bridge_meta, "md",   "content")
                 print(f"✅ Content deployed")
 
                 return {
-                    "error": False,
+                    "error":    False,
                     "filename": f"{filename_base}.html",
                     "file_path": str(content_html_file),
                     "deployed": ["content"],
-                    "message": "Content only generated and deployed"
+                    "message":  "Content only generated and deployed"
                 }
 
             # ── AI OUTPUT: html (Content + QA + LP) ──────────────────────────
             elif output_format == "html":
 
                 bridge_meta = {
-                    "class_num": class_num,
-                    "term": term,
-                    "unit": unit_num,
-                    "lesson_choice": lesson_choice,
-                    "subject": subject,
-                    "medium": medium,
-                    "discipline": discipline,
+                    "class_num":      class_num,
+                    "term":           term,
+                    "unit":           unit_num,
+                    "lesson_choice":  lesson_choice,
+                    "subject":        subject,
+                    "medium":         medium,
+                    "discipline":     discipline,
                 }
 
-                # ✅ SKIP CHECK — bypassed when force=True
                 if not force and bridge.is_already_deployed(bridge_meta):
                     return {
-                        "error": False,
+                        "error":    False,
                         "filename": f"{filename_base}.html",
                         "file_path": str(self.temp_dir / f"{filename_base}.html"),
                         "deployed": ["content", "qa", "lp"],
-                        "skipped": True,
-                        "message": "Already deployed — skipped"
+                        "skipped":  True,
+                        "message":  "Already deployed — skipped"
                     }
 
                 if force:
@@ -479,9 +552,13 @@ class PDFProcessor:
 
                 print(f"🤖 Starting AI generation pipeline...")
 
-                # Extract text using new pipeline
+                # ── Extract text — EPUB first, pdfplumber fallback ────────────
                 temp_txt = self.temp_dir / f"{filename_base}_raw.txt"
-                if not self._extract_text(cached_file, start_page, end_page, temp_txt):
+                if not self._extract_text(
+                    cached_file, start_page, end_page, temp_txt,
+                    class_num=class_num, term=term, subject=subject,
+                    unit_num=unit_num, lesson_type=lesson_type
+                ):
                     return {"error": True, "message": "Text extraction failed"}
 
                 with open(temp_txt, "r", encoding="utf-8") as f:
@@ -489,41 +566,39 @@ class PDFProcessor:
                 temp_txt.unlink(missing_ok=True)
 
                 if not raw_text.strip():
-                    return {"error": True, "message": "No text extracted from PDF pages"}
+                    return {"error": True, "message": "No text extracted"}
 
                 ai_metadata = {
-                    "class": class_num,
-                    "subject": subject,
-                    "unit": unit_num,
+                    "class":        class_num,
+                    "subject":      subject,
+                    "unit":         unit_num,
                     "lesson_title": filename_base,
-                    "lesson_type": self._get_lesson_type(index_data[term_key], unit_num, lesson_choice),
-                    "term": term_key,
-                    "discipline": discipline,
+                    "lesson_type":  lesson_type,
+                    "term":         term_key,
+                    "discipline":   discipline,
                 }
 
-                # Generate Content + QA + LP
-                results = ai_converter.generate_all(raw_text, ai_metadata)
+                # ── Claude generates Content + QA + LP ───────────────────────
+                results  = ai_converter.generate_all(raw_text, ai_metadata)
                 deployed = []
 
-                # Deploy Content HTML + MD
-                if results["content"]:
+                # Deploy Content HTML
+                if results.get("content"):
                     content_html_file = self.temp_dir / f"{filename_base}.html"
                     with open(content_html_file, "w", encoding="utf-8") as f:
                         f.write(results["content"])
-
                     content_md_file = self.temp_dir / f"{filename_base}.md"
                     with open(content_md_file, "w", encoding="utf-8") as f:
                         f.write(f"# {filename_base}\n\n{raw_text}")
-
                     bridge.deploy_content(content_html_file, bridge_meta, "html", "content")
-                    bridge.deploy_content(content_md_file, bridge_meta, "md", "content")
+                    bridge.deploy_content(content_md_file,   bridge_meta, "md",   "content")
                     deployed.append("content")
                     print(f"✅ Content deployed")
                 else:
                     print(f"⚠️  Content generation failed — skipping")
 
                 # Deploy QA HTML
-                if results["qa"]:
+                if results.get("qa"):
                     qa_html_file = self.temp_dir / f"{filename_base}_qa.html"
                     with open(qa_html_file, "w", encoding="utf-8") as f:
                         f.write(results["qa"])
@@ -534,7 +609,7 @@ class PDFProcessor:
                     print(f"⚠️  QA generation failed — skipping")
 
                 # Deploy LP HTML
-                if results["lp"]:
+                if results.get("lp"):
                     lp_html_file = self.temp_dir / f"{filename_base}_lp.html"
                     with open(lp_html_file, "w", encoding="utf-8") as f:
                         f.write(results["lp"])
@@ -545,14 +620,14 @@ class PDFProcessor:
                     print(f"⚠️  LP generation failed — skipping")
 
                 if not deployed:
-                    return {"error": True, "message": "All AI generations failed"}
+                    return {"error": True, "message": "All generations failed"}
 
                 return {
-                    "error": False,
-                    "filename": f"{filename_base}.html",
+                    "error":     False,
+                    "filename":  f"{filename_base}.html",
                     "file_path": str(self.temp_dir / f"{filename_base}.html"),
-                    "deployed": deployed,
-                    "message": f"Generated and deployed: {', '.join(deployed)}"
+                    "deployed":  deployed,
+                    "message":   f"Generated and deployed: {', '.join(deployed)}"
                 }
 
             return {"error": True, "message": f"Unknown output format: {output_format}"}
