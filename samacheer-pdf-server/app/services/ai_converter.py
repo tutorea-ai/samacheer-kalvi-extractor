@@ -264,13 +264,20 @@ class AIContentConverter:
 
         # ── Grammar days (prose only) ─────────────────────────────────────────
         if has_grammar:
+            print(f"      [LP] Detecting grammar topics for {grammar_days} days...")
+            grammar_topics = self._detect_grammar_topics(text, grammar_days)
+            print(f"         ✅ Topics: {grammar_topics}")
+
             for g_day in range(1, grammar_days + 1):
                 day_num  = content_days + g_day
                 call_num = day_num + 1
-                print(f"      [LP] Call {call_num}/{total_calls}: Day {day_num} (Grammar {g_day})...")
+                topic = grammar_topics[g_day - 1] if g_day <= len(grammar_topics) else f"Day {day_num}: Language Activities"
+                print(f"      [LP] Call {call_num}/{total_calls}: Day {day_num} (Grammar {g_day} — {topic})...")
                 day_html = self._lp_call_grammar_day(
                     text, class_num, unit, lesson_title,
-                    type_display, day_num, g_day, grammar_days, total_days
+                    type_display, day_num, g_day, grammar_days, total_days,
+                    topic=topic,
+                    all_topics=grammar_topics
                 )
                 if day_html:
                     parts.append(_clean_ai_output(day_html))
@@ -381,16 +388,58 @@ Lesson Text:
             print(f"❌ LP content day {day_num} error: {e}")
             return None
 
+    def _detect_grammar_topics(self, text: str, grammar_days: int) -> list:
+        prompt = f"""Read this lesson text carefully.
+
+Identify ALL language learning topics present:
+- Grammar rules (Articles, Tenses, Conjunctions etc.)
+- Vocabulary sections
+- Listening exercises
+- Speaking activities
+- Reading comprehension
+- Writing tasks
+
+Then distribute them across exactly {grammar_days} days.
+Return ONLY a JSON list like:
+["Day 5: Articles — a, an, the rules",
+ "Day 6: Prepositional Phrases",
+ "Day 7: Vocabulary and Slang Expressions",
+ "Day 8: Listening and Speaking activities",
+ "Day 9: Reading Comprehension",
+ "Day 10: Writing — Speech Writing"]
+
+Return JSON only. No explanation.
+
+Lesson text:
+---
+{text[-20000:]}
+---"""
+        try:
+            response = self.client.messages.create(
+                model=self.model, max_tokens=500,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            import json, re
+            raw = response.content[0].text.strip()
+            raw = re.sub(r'```(?:json)?', '', raw).strip()
+            return json.loads(raw)
+        except Exception as e:
+            print(f"⚠️  Topic detection failed ({e}) — using fallback topics")
+            return [f"Day {i+1}: Grammar and Language Activities"
+                    for i in range(grammar_days)]
+
     def _lp_call_grammar_day(self, text, class_num, unit, lesson_title,
                               type_display, day_num, grammar_day_num,
-                              grammar_days, total_days):
+                              grammar_days, total_days, topic: str = "",
+                              all_topics: list = None):
         try:
             from .lp_prompt_builder import build_grammar_day_prompt
             prompt = build_grammar_day_prompt(
                 text=text, class_num=class_num, unit=unit,
                 lesson_title=lesson_title, type_display=type_display,
                 day_num=day_num, grammar_day_num=grammar_day_num,
-                grammar_days=grammar_days, total_days=total_days
+                grammar_days=grammar_days, total_days=total_days,
+                topic=topic, all_topics=all_topics or []
             )
             response = self.client.messages.create(
                 model=self.model, max_tokens=8000,

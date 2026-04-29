@@ -383,10 +383,31 @@ def build_grammar_day_prompt(
     day_num: int,
     grammar_day_num: int,
     grammar_days: int,
-    total_days: int
+    total_days: int,
+    topic: str = "",
+    all_topics: list = None
 ) -> str:
 
     next_preview = f"Day {day_num+1}" if day_num < total_days else "the assessment"
+
+    all_topics = all_topics or []
+    topics_list = "\n".join(f"  - {t}" for t in all_topics) if all_topics else ""
+    valid_topics_block = f"""
+The ONLY valid grammar topics for this unit (detected from Samacheer Kalvi textbook):
+{topics_list}
+Do NOT teach any topic not in this list.
+""" if topics_list else ""
+
+    topic_line = f"""
+MANDATORY TOPIC FOR TODAY — NO EXCEPTIONS:
+Today is Grammar Day {grammar_day_num} of {grammar_days}.
+You MUST teach EXACTLY this topic: {topic}
+This topic was detected from the Samacheer Kalvi textbook exercises.
+Do NOT substitute a different topic.
+Do NOT teach literary analysis, vocabulary, past tense, comprehension, dialogue, or creative writing.
+These are NOT grammar topics for this unit.
+{valid_topics_block}The day header MUST be exactly: Day {day_num} — {topic}
+""" if topic else ""
 
     return f"""Generate ONLY Day {day_num} (Grammar Day {grammar_day_num} of {grammar_days}).
 Do NOT generate any other day.
@@ -394,7 +415,7 @@ Do NOT generate any other day.
 Lesson: {lesson_title} | Class {class_num} | Unit {unit} | {type_display}
 Day {day_num} of {total_days} total days.
 
-IMPORTANT: Use ACTUAL grammar topic from the lesson text. Do NOT invent.
+{topic_line}IMPORTANT: Use ACTUAL content from the lesson text. Do NOT invent.
 
 ═══════════════════════════════════════════════════════
 LANGUAGE RULE — SAME AS CONTENT DAYS
@@ -412,7 +433,8 @@ Not a summary — a complete translation.
 
 ═══════════════════════════════════════════════════════
 
-<h3 class="day-header">Day {day_num} — Grammar: [Exact Topic from Textbook]</h3>
+<h3 class="day-header">Day {day_num} — Grammar: {topic if topic else "[Exact Topic from Textbook]"}</h3>
+<!-- TOPIC LOCK: {topic} — do not deviate -->
 <div class="day-block">
 
   <div class="time-block">

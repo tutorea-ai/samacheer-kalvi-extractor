@@ -59,9 +59,9 @@ class PDFRequest(BaseModel):
         description="Lesson choice number (required if mode=lesson)"
     )
     
-    output_format: Literal["pdf", "txt", "md", "html", "content_only"] = Field(
+    output_format: Literal["pdf", "txt", "md", "html", "content_only", "lp_only"] = Field(
         "pdf",
-        description="Output format: pdf, txt, md (markdown), html (Content+QA+LP), or content_only (Content HTML only)"
+        description="Output format: pdf, txt, md (markdown), html (Content+QA+LP), content_only (Content HTML only), or lp_only (Lesson Plan HTML only)"
     )
 
     force: Optional[bool] = Field(

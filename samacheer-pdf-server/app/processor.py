@@ -524,6 +524,80 @@ class PDFProcessor:
                     "message":  "Content only generated and deployed"
                 }
 
+            # ── LP ONLY output ────────────────────────────────────────────────
+            elif output_format == "lp_only":
+
+                bridge_meta = {
+                    "class_num":     class_num,
+                    "term":          term,
+                    "unit":          unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject":       subject,
+                    "medium":        medium,
+                    "discipline":    discipline,
+                }
+
+                print(f"🤖 Starting LP-only generation...")
+
+                # Extract text — EPUB first, pdfplumber fallback
+                temp_txt = self.temp_dir / f"{filename_base}_raw.txt"
+                if not self._extract_text(
+                    cached_file, start_page, end_page, temp_txt,
+                    class_num=class_num, term=term, subject=subject,
+                    unit_num=unit_num, lesson_type=lesson_type
+                ):
+                    return {"error": True, "message": "Text extraction failed"}
+
+                with open(temp_txt, "r", encoding="utf-8") as f:
+                    raw_text = f.read()
+                temp_txt.unlink(missing_ok=True)
+
+                if not raw_text.strip():
+                    return {"error": True, "message": "No text extracted"}
+
+                ai_metadata = {
+                    "class":        class_num,
+                    "subject":      subject,
+                    "unit":         unit_num,
+                    "lesson_title": filename_base,
+                    "lesson_type":  lesson_type,
+                    "term":         term_key,
+                    "discipline":   discipline,
+                }
+
+                # Generate LP only
+                from .services.section_detector import detect_sections, clean_noise
+                from .services.ai_converter import _wrap_html
+
+                clean_text = clean_noise(raw_text)
+                sections   = detect_sections(clean_text, lesson_type=lesson_type)
+                ai_metadata["_sections"] = sections
+
+                lp_html = ai_converter._generate_lp(clean_text, ai_metadata)
+                if not lp_html:
+                    return {"error": True, "message": "LP generation failed"}
+
+                wrapped = _wrap_html(
+                    lp_html,
+                    title=f"Lesson Plan — {filename_base} | Class {class_num}",
+                    content_type="lp"
+                )
+
+                lp_html_file = self.temp_dir / f"{filename_base}_lp.html"
+                with open(lp_html_file, "w", encoding="utf-8") as f:
+                    f.write(wrapped)
+
+                bridge.deploy_content(lp_html_file, bridge_meta, "html", "lp")
+                print(f"✅ LP deployed")
+
+                return {
+                    "error":    False,
+                    "filename": f"{filename_base}_lp.html",
+                    "file_path": str(lp_html_file),
+                    "deployed": ["lp"],
+                    "message":  "LP only generated and deployed"
+                }
+
             # ── AI OUTPUT: html (Content + QA + LP) ──────────────────────────
             elif output_format == "html":
 
