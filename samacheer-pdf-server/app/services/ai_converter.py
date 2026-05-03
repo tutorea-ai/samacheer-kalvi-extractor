@@ -155,10 +155,15 @@ class AIContentConverter:
         except Exception as e:
             print(f"   ❌ Content error: {e}")
 
-        # ── QA — via qa_builder ───────────────────────────────────────────────
+        # ── QA ────────────────────────────────────────────────────────────────
         print(f"\n   ❓ Generating QA HTML...")
         try:
-            qa_html = qa_builder.generate(text, metadata)
+            if subject.lower() in ["socialscience", "social_science"]:
+                from ..content_builder.ss_qa_builder import ss_qa_builder
+                qa_html = ss_qa_builder.generate(text, metadata)
+            else:
+                qa_html = qa_builder.generate(text, metadata)
+
             if qa_html:
                 results["qa"] = _wrap_html(
                     qa_html,
@@ -171,10 +176,13 @@ class AIContentConverter:
         except Exception as e:
             print(f"   ❌ QA error: {e}")
 
-        # ── LP — handled directly here, working perfectly, do not change ──────
+        # ── LP ────────────────────────────────────────────────────────────────
         print(f"\n   📌 Generating LP HTML...")
         try:
-            lp_html = self._generate_lp(text, metadata)
+            if subject.lower() in ["socialscience", "social_science"]:
+                lp_html = self._generate_ss_lp(text, metadata)
+            else:
+                lp_html = self._generate_lp(text, metadata)
             if lp_html:
                 results["lp"] = _wrap_html(
                     lp_html,
@@ -544,6 +552,11 @@ Lesson Text:
         except Exception as e:
             print(f"❌ LP assessment error: {e}")
             return None
+
+    def _generate_ss_lp(self, text: str, metadata: dict) -> Optional[str]:
+        """Generate Social Science LP via ss_lp_builder."""
+        from ..content_builder.ss_lp_builder import ss_lp_builder
+        return ss_lp_builder.generate(text, metadata)
 
 
 # Singleton instance

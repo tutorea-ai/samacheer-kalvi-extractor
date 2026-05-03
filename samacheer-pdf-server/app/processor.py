@@ -22,6 +22,7 @@ from typing import Dict, Optional
 from .services.ai_converter import ai_converter
 from .services.bridge import bridge
 from .services.epub_extractor import EpubExtractor
+from .services.ss_epub_extractor import SocialScienceEpubExtractor
 from .config import settings
 
 
@@ -144,45 +145,48 @@ class PDFProcessor:
         term: int,
         subject: str,
         unit_num: int,
-        lesson_type: str
+        lesson_type: str = None,
+        discipline: str = None,
     ) -> str | None:
-        """
-        Try to extract lesson text from EPUB.
-
-        Steps:
-          1. Check epub_catalog.json for a Drive ID
-          2. Download zip to storage/epub/ if not cached
-          3. Unzip if not already unzipped
-          4. Extract clean text for the lesson
-
-        Returns clean text string, or None if EPUB not available.
-        """
         epub_key = self._generate_epub_key(class_num, term, subject)
         epub_zip_path = self.epub_dir / f"{epub_key}.zip"
         epub_folder   = self.epub_dir / epub_key
 
-        # Download zip if not already cached
+        # Download zip if not cached
         if not epub_zip_path.exists() and not epub_folder.exists():
             epub_catalog = self._load_epub_catalog()
             drive_id = epub_catalog.get(epub_key)
-            if not drive_id:
-                print(f"   ℹ️  No EPUB available for {epub_key} — will use pdfplumber")
+            if not drive_id or drive_id == "LOCAL":
+                print(f"   ℹ️  No EPUB available for {epub_key}")
                 return None
             print(f"   ⬇️  Downloading EPUB: {epub_key}.zip")
             if not self._download_file(drive_id, epub_zip_path):
                 print(f"   ❌ EPUB download failed")
                 return None
 
-        # Unzip if not already done
-        if not epub_folder.exists():
-            epub_folder = EpubExtractor.prepare(epub_zip_path)
-            if not epub_folder:
-                print(f"   ❌ EPUB unzip failed")
-                return None
+        # ── Social Science ─────────────────────────────────────────────
+        if subject.lower() in ["socialscience", "social_science", "social science"]:
+            if not epub_folder.exists():
+                epub_folder = SocialScienceEpubExtractor.prepare(epub_zip_path)
+                if not epub_folder:
+                    return None
+            extractor = SocialScienceEpubExtractor(epub_folder)
+            text = extractor.extract(
+                discipline=discipline or "history",
+                unit=unit_num
+            )
 
-        # Extract lesson text
-        extractor = EpubExtractor(epub_folder)
-        text = extractor.extract(unit=unit_num, lesson_type=lesson_type)
+        # ── English (and other language subjects) ──────────────────────
+        else:
+            if not epub_folder.exists():
+                epub_folder = EpubExtractor.prepare(epub_zip_path)
+                if not epub_folder:
+                    return None
+            extractor = EpubExtractor(epub_folder)
+            text = extractor.extract(
+                unit=unit_num,
+                lesson_type=lesson_type or "prose"
+            )
 
         if text:
             print(f"   ✅ EPUB extraction done → {len(text)} chars")
@@ -206,6 +210,7 @@ class PDFProcessor:
         subject: str = None,
         unit_num: int = None,
         lesson_type: str = None,
+        discipline: str = None,
     ) -> bool:
         """
         Extract lesson text. EPUB is primary, pdfplumber is fallback.
@@ -214,10 +219,10 @@ class PDFProcessor:
         Always falls back to pdfplumber if EPUB fails or is unavailable.
         """
         # ── Primary: EPUB ─────────────────────────────────────────────────────
-        if all([class_num, subject, unit_num, lesson_type]):
+        if all([class_num, subject, unit_num]):
             print(f"   🔄 Trying EPUB extraction...")
             epub_text = self._get_epub_text(
-                class_num, term or 0, subject, unit_num, lesson_type
+                class_num, term or 0, subject, unit_num, lesson_type, discipline
             )
             if epub_text:
                 with open(output_txt, "w", encoding="utf-8") as f:
@@ -440,7 +445,8 @@ class PDFProcessor:
                 self._extract_text(
                     cached_file, start_page, end_page, output_file,
                     class_num=class_num, term=term, subject=subject,
-                    unit_num=unit_num, lesson_type=lesson_type
+                    unit_num=unit_num, lesson_type=lesson_type,
+                    discipline=discipline
                 )
                 return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
 
@@ -464,7 +470,8 @@ class PDFProcessor:
                 if not self._extract_text(
                     cached_file, start_page, end_page, temp_txt,
                     class_num=class_num, term=term, subject=subject,
-                    unit_num=unit_num, lesson_type=lesson_type
+                    unit_num=unit_num, lesson_type=lesson_type,
+                    discipline=discipline
                 ):
                     return {"error": True, "message": "Text extraction failed"}
 
@@ -544,7 +551,8 @@ class PDFProcessor:
                 if not self._extract_text(
                     cached_file, start_page, end_page, temp_txt,
                     class_num=class_num, term=term, subject=subject,
-                    unit_num=unit_num, lesson_type=lesson_type
+                    unit_num=unit_num, lesson_type=lesson_type,
+                    discipline=discipline
                 ):
                     return {"error": True, "message": "Text extraction failed"}
 
@@ -573,7 +581,10 @@ class PDFProcessor:
                 sections   = detect_sections(clean_text, lesson_type=lesson_type)
                 ai_metadata["_sections"] = sections
 
-                lp_html = ai_converter._generate_lp(clean_text, ai_metadata)
+                if subject.lower() in ["socialscience", "social_science"]:
+                    lp_html = ai_converter._generate_ss_lp(clean_text, ai_metadata)
+                else:
+                    lp_html = ai_converter._generate_lp(clean_text, ai_metadata)
                 if not lp_html:
                     return {"error": True, "message": "LP generation failed"}
 
@@ -631,7 +642,8 @@ class PDFProcessor:
                 if not self._extract_text(
                     cached_file, start_page, end_page, temp_txt,
                     class_num=class_num, term=term, subject=subject,
-                    unit_num=unit_num, lesson_type=lesson_type
+                    unit_num=unit_num, lesson_type=lesson_type,
+                    discipline=discipline
                 ):
                     return {"error": True, "message": "Text extraction failed"}
 
