@@ -1,36 +1,38 @@
-{
-  "term0": {
-    "meta": {
-      "prelim_pages": 8,
-      "total_pdf_pages": 360
-    },
-    "units": [
-      { "unit": 1, "discipline": "physics", "title": "Laws of Motion", "page": 1 },
-      { "unit": 2, "discipline": "physics", "title": "Optics", "page": 16 },
-      { "unit": 3, "discipline": "physics", "title": "Thermal Physics", "page": 32 },
-      { "unit": 4, "discipline": "physics", "title": "Electricity", "page": 42 },
-      { "unit": 5, "discipline": "physics", "title": "Acoustics", "page": 59 },
-      { "unit": 6, "discipline": "physics", "title": "Nuclear Physics", "page": 74 },
-
-      { "unit": 7, "discipline": "chemistry", "title": "Atoms and Molecules", "page": 91 },
-      { "unit": 8, "discipline": "chemistry", "title": "Periodic Classification of Elements", "page": 106 },
-      { "unit": 9, "discipline": "chemistry", "title": "Solutions", "page": 124 },
-      { "unit": 10, "discipline": "chemistry", "title": "Types of Chemical Reactions", "page": 137 },
-      { "unit": 11, "discipline": "chemistry", "title": "Carbon and its Compounds", "page": 155 },
-
-      { "unit": 12, "discipline": "biology", "title": "Plant Anatomy and Plant Physiology", "page": 173 },
-      { "unit": 13, "discipline": "biology", "title": "Structural Organisation of Animals", "page": 187 },
-      { "unit": 14, "discipline": "biology", "title": "Transportation in Plants and Circulation in Animals", "page": 200 },
-      { "unit": 15, "discipline": "biology", "title": "Nervous System", "page": 218 },
-      { "unit": 16, "discipline": "biology", "title": "Plant and Animal Hormones", "page": 229 },
-      { "unit": 17, "discipline": "biology", "title": "Reproduction in Plants and Animals", "page": 243 },
-      { "unit": 18, "discipline": "biology", "title": "Genetics", "page": 261 },
-      { "unit": 19, "discipline": "biology", "title": "Origin and Evolution of Life", "page": 274 },
-      { "unit": 20, "discipline": "biology", "title": "Breeding and Biotechnology", "page": 286 },
-      { "unit": 21, "discipline": "biology", "title": "Health and Diseases", "page": 300 },
-      { "unit": 22, "discipline": "biology", "title": "Environmental Management", "page": 315 },
-
-      { "unit": 23, "discipline": "computer_science", "title": "Visual Communication", "page": 329 }
-    ]
+  {
+    "term0": {
+      "meta": { "prelim_pages": 8, "total_pdf_pages": 360 },
+      "disciplines": {
+        "physics": [
+          { "unit": 1, "title": "Laws of Motion",  "page": 1,   "month": "June"   },
+          { "unit": 2, "title": "Optics",           "page": 16,  "month": "June"   },
+          { "unit": 3, "title": "Thermal Physics",  "page": 32,  "month": "July"   },
+          { "unit": 4, "title": "Electricity",      "page": 42,  "month": "July"   },
+          { "unit": 5, "title": "Acoustics",        "page": 59, "month": "August" },
+          { "unit": 6, "title": "Nuclear Physics",  "page": 74, "month": "August" }
+        ],
+        "chemistry": [
+          { "unit": 7,  "title": "Atoms and Molecules",                    "page": 91, "month": "September" },
+          { "unit": 8,  "title": "Periodic Classification of Elements",     "page": 106, "month": "September" },
+          { "unit": 9,  "title": "Solutions",                              "page": 124, "month": "October"   },
+          { "unit": 10, "title": "Types of Chemical Reactions",            "page": 137, "month": "October"   },
+          { "unit": 11, "title": "Carbon and its Compounds",               "page": 155, "month": "November"  }
+        ],
+        "biology": [
+          { "unit": 12, "title": "Plant Anatomy and Plant Physiology",                  "page": 173, "month": "November" },
+          { "unit": 13, "title": "Structural Organisation of Animals",                  "page": 187, "month": "December" },
+          { "unit": 14, "title": "Transportation in Plants and Circulation in Animals", "page": 200, "month": "December" },
+          { "unit": 15, "title": "Nervous System",                                      "page": 218, "month": "January"  },
+          { "unit": 16, "title": "Plant and Animal Hormones",                           "page": 229, "month": "January"  },
+          { "unit": 17, "title": "Reproduction in Plants and Animals",                  "page": 243, "month": "February" },
+          { "unit": 18, "title": "Genetics",                                            "page": 261, "month": "February" },
+          { "unit": 19, "title": "Origin and Evolution of Life",                        "page": 274, "month": "February" },
+          { "unit": 20, "title": "Breeding and Biotechnology",                          "page": 286, "month": "March"    },
+          { "unit": 21, "title": "Health and Diseases",                                 "page": 300, "month": "March"    },
+          { "unit": 22, "title": "Environmental Management",                            "page": 315, "month": "March"    }
+        ],
+        "computer_science": [
+          { "unit": 23, "title": "Visual Communication", "page": 329, "month": "March" }
+        ]
+      }
+    }
   }
-}

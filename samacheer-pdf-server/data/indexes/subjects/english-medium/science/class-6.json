@@ -1,46 +1,61 @@
 {
-  "term1": {
-    "meta": {
-      "prelim_pages": 1,
-      "total_pdf_pages": 104
+    "term1": {
+      "meta": { "prelim_pages": 1, "total_pdf_pages": 104 },
+      "disciplines": {
+        "physics": [
+          { "unit": 1, "title": "Measurements",  "page": 1, "month": "June" },
+          { "unit": 2, "title": "Force and Motion", "page": 14, "month": "July" }
+        ],
+        "chemistry": [
+          { "unit": 3, "title": "Matter Around Us", "page": 34, "month": "August" }
+        ],
+        "biology": [
+          { "unit": 4, "title": "The World of Plants", "page": 55, "month": "June"    },
+          { "unit": 5, "title": "The World of Animals", "page": 68, "month": "July" },
+          { "unit": 6, "title": "Health and Hygiene", "page": 80, "month": "August" }
+        ],
+        "computer_science": [
+          { "unit": 7, "title": "Computer - An Introduction", "page": 96, "month": "August" }
+        ]
+      }
     },
-    "units": [
-      { "unit": 1, "discipline": "physics", "title": "Measurements", "page": 1 },
-      { "unit": 2, "discipline": "physics", "title": "Force and Motion", "page": 14 },
-      { "unit": 3, "discipline": "chemistry", "title": "Matter around Us", "page": 34 },
-      { "unit": 4, "discipline": "biology", "title": "The World of Plants", "page": 55 },
-      { "unit": 5, "discipline": "biology", "title": "The World of Animals", "page": 68 },
-      { "unit": 6, "discipline": "biology", "title": "Health and Hygiene", "page": 80 },
-      { "unit": 7, "discipline": "computer_science", "title": "Computer - An Introduction", "page": 96 }
-    ]
-  },
-  "term2": {
-    "meta": {
-      "prelim_pages": 2,
-      "total_pdf_pages": 96
+    "term2": {
+      "meta": { "prelim_pages": 2, "total_pdf_pages": 96 },
+      "disciplines": {
+        "physics": [
+          { "unit": 1, "title": "Heat", "page": 1,  "month": "October"  },
+          { "unit": 2, "title": "Electricity", "page": 16, "month": "November" }
+        ],
+        "chemistry": [
+          { "unit": 3, "title": "Changes Around Us", "page": 32, "month": "October" },
+          { "unit": 4, "title": "Air", "page": 41, "month": "November" }
+        ],
+        "biology": [
+          { "unit": 5, "title": "The Cell", "page": 57, "month": "October" },
+          { "unit": 6, "title": "Human Organ Systems", "page": 68, "month": "December"  }
+        ],
+        "computer_science": [
+          { "unit": 7, "title": "Parts of Computer", "page": 85, "month": "December" }
+        ]
+      }
     },
-    "units": [
-      { "unit": 1, "discipline": "physics", "title": "Heat", "page": 1 },
-      { "unit": 2, "discipline": "physics", "title": "Electricity", "page": 16 },
-      { "unit": 3, "discipline": "chemistry", "title": "Changes Around Us", "page": 32 },
-      { "unit": 4, "discipline": "chemistry", "title": "Air", "page": 41 },
-      { "unit": 5, "discipline": "biology", "title": "The Cell", "page": 57 },
-      { "unit": 6, "discipline": "biology", "title": "Human Organ systems", "page": 68 },
-      { "unit": 7, "discipline": "computer_science", "title": "Parts of Computer", "page": 85 }
-    ]
-  },
-  "term3": {
-    "meta": {
-      "prelim_pages": 1,
-      "total_pdf_pages": 81
-    },
-    "units": [
-      { "unit": 1, "discipline": "physics", "title": "Magnetism", "page": 1 },
-      { "unit": 2, "discipline": "chemistry", "title": "Water", "page": 14 },
-      { "unit": 3, "discipline": "chemistry", "title": "Chemistry in Everyday Life", "page": 32 },
-      { "unit": 4, "discipline": "biology", "title": "Our Environment", "page": 46 },
-      { "unit": 5, "discipline": "biology", "title": "Plants in Daily Life", "page": 66 },
-      { "unit": 6, "discipline": "computer_science", "title": "Hardware and Software", "page": 79 }
-    ]
+    "term3": {
+      "meta": { "prelim_pages": 1, "total_pdf_pages": 81 },
+      "disciplines": {
+        "physics": [
+          { "unit": 1, "title": "Magnetism", "page": 1, "month": "February" }
+        ],
+        "chemistry": [
+          { "unit": 2, "title": "Water", "page": 14, "month": "January, February" },
+          { "unit": 3, "title": "Chemistry in Everyday Life",  "page": 32, "month": "March"    }
+        ],
+        "biology": [
+          { "unit": 4, "title": "Our Environment", "page": 46, "month": "March" },
+          { "unit": 5, "title": "Plants in Daily Life", "page": 66, "month": "March" }
+        ],
+        "computer_science": [
+          { "unit": 6, "title": "Hardware and Software", "page": 79, "month": "March" }
+        ]
+      }
+    }
   }
-}
