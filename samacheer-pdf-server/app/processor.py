@@ -498,7 +498,10 @@ class PDFProcessor:
                 from .services.ai_converter import _wrap_html
 
                 clean_text = clean_noise(raw_text)
-                sections   = detect_sections(clean_text, lesson_type=lesson_type)
+                if subject.lower() not in ["socialscience", "social_science"]:
+                    sections = detect_sections(clean_text, lesson_type=lesson_type)
+                else:
+                    sections = {}
                 ai_metadata["_sections"] = sections
 
                 content_html = content_assembler.assemble(clean_text, sections, ai_metadata)
@@ -729,8 +732,12 @@ class PDFProcessor:
     # ──────────────────────────────────────────────────────────────────────────
 
     def _get_lesson_type(self, term_index: dict, unit_num: int, lesson_choice: int) -> str:
-        """Returns the lesson type (prose/poem/supplementary/play) from index data."""
+        """Returns lesson type. For Social Science (disciplines), returns 'socialscience'."""
         try:
+            # Social Science uses disciplines key — not units
+            if "disciplines" in term_index:
+                return "socialscience"
+
             units = term_index.get("units", [])
             if unit_num > len(units):
                 return "prose"

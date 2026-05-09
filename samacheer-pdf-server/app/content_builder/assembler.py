@@ -232,6 +232,7 @@ class ContentAssembler:
         lesson_type  = metadata.get("lesson_type", "prose")
         class_num    = metadata.get("class", "")
         unit         = metadata.get("unit", "")
+        subject      = metadata.get("subject", "").lower()
         text_len     = len(text)
 
         print(f"      [Assembler] Building: {lesson_title}")
@@ -242,12 +243,29 @@ class ContentAssembler:
         # Header
         parts.append(self._build_header(lesson_title, class_num, unit, lesson_type))
 
-        # Single call — full text regardless of length
-        # Claude Sonnet supports up to 64k output tokens
+        # Single call — full text
         print(f"      [Assembler] Single call — full text")
         result = self._convert(text)
         if result:
             parts.append(result)
+
+        # ── SS Book-back Answer Toggle ────────────────────────────────────────
+        if subject in ["socialscience", "social_science"]:
+            print(f"      [Assembler] Generating SS book-back answers...")
+            try:
+                from .bookback_answer_builder import bookback_answer_builder
+                bookback_html = bookback_answer_builder.generate(
+                    chapter_text=text,
+                    bookback_questions=text,  # full text — builder extracts book-back section
+                    metadata=metadata
+                )
+                if bookback_html:
+                    parts.append(bookback_html)
+                    print(f"      [Assembler] ✅ Book-back answers added ({len(bookback_html)} chars)")
+                else:
+                    print(f"      [Assembler] ⚠️  Book-back answers failed")
+            except Exception as e:
+                print(f"      [Assembler] ❌ Book-back error: {e}")
 
         # Summary
         summary = self._summary(text, lesson_title)

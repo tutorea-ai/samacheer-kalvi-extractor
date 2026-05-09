@@ -135,8 +135,10 @@ class AIContentConverter:
         print(f"   🧹 Cleaning extracted text...")
         text = clean_noise(text)
         print(f"   📋 Detecting sections...")
-        sections = detect_sections(text, lesson_type=lesson_type)
-        print(f"   📋 Sections: { {k:v for k,v in sections.items() if v and k != 'lesson_type'} }")
+        sections = {}
+        if subject.lower() not in ["socialscience", "social_science"]:
+            sections = detect_sections(text, lesson_type=lesson_type)
+            print(f"   📋 Sections: { {k:v for k,v in sections.items() if v and k != 'lesson_type'} }")
         metadata["_sections"] = sections
 
         # ── CONTENT — via assembler (EPUB clean text → Claude → interactive HTML)
@@ -159,8 +161,8 @@ class AIContentConverter:
         print(f"\n   ❓ Generating QA HTML...")
         try:
             if subject.lower() in ["socialscience", "social_science"]:
-                from ..content_builder.ss_qa_builder import ss_qa_builder
-                qa_html = ss_qa_builder.generate(text, metadata)
+                from ..content_builder.master_router import generate_qa
+                qa_html = generate_qa(text, metadata)
             else:
                 qa_html = qa_builder.generate(text, metadata)
 
@@ -554,9 +556,10 @@ Lesson Text:
             return None
 
     def _generate_ss_lp(self, text: str, metadata: dict) -> Optional[str]:
-        """Generate Social Science LP via ss_lp_builder."""
-        from ..content_builder.ss_lp_builder import ss_lp_builder
-        return ss_lp_builder.generate(text, metadata)
+        """Generate Social Science LP via master_router."""
+        from ..content_builder.master_router import generate_lp
+        metadata.setdefault("subject", "SocialScience")
+        return generate_lp(text, metadata)
 
 
 # Singleton instance
