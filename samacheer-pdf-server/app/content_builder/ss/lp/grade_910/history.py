@@ -4,33 +4,33 @@ history.py
 LP Builder for Samacheer Kalvi Social Science — History
 Class 9 & 10
 
-v8.0 — Deep Chapter Analyser + full teacher feedback fixes (May 2026)
+v9.0 — Two-pass Chapter Analyser + all teacher feedback fixes (May 2026)
 
-Changes from v7.0:
-  ✅ Call 0: Deep Chapter Analyser — reads chapter structure first
-       Returns exact main topics, subtopics, parent-child relationships
-       Day-wise topic plan based on actual chapter content
-  ✅ Each day prompt receives exact topics + subtopics from Call 0
-       No guessing, no repetition, no misplacement
-  ✅ Spark renamed → Lead Question / Opening Question
-  ✅ Student response wait time added after every question
-  ✅ Page numbers removed entirely (were wrong — better to omit)
-  ✅ Video clip + offline alternative added for Day 3
-  ✅ CFU (Check For Understanding — basic recall) added alongside CCQ
-  ✅ Continuation explicitly defined when topic carries over
-  ✅ Subtopic under wrong main topic problem fixed via Call 0
-  ✅ Missing topics problem fixed via Call 0
-  ✅ Total: 8 API calls
+Changes from v8.0:
+  ✅ Two-pass Chapter Analyser:
+       Call 0a: Strict Section Extractor — extracts EXACTLY what's in chapter
+                Every heading/subheading in order, estimated teaching time
+                Pure extraction — NO general knowledge, NO planning
+       Call 0b: Smart Day Allocator — allocates sections to days
+                Based ONLY on Call 0a output — NO general knowledge
+                Each day gets exact section list
+  ✅ Each day prompt: "Cover ONLY these sections — if not in list, DO NOT mention"
+  ✅ CFU/CCQ: minimum 3 per concept (much stronger enforcement)
+  ✅ Differentiated support: explicit timing added per level
+  ✅ Homework Day 2: poster/flowchart option added
+  ✅ Day headings: must match EXACTLY what's taught that day
+  ✅ Topic mismatch impossible — each day only sees its own section list
 
-API calls:
-  Call 0 → Chapter Analyser  (JSON — chapter structure + day plan)
-  Call 1 → Preamble
-  Call 2 → Day 1
-  Call 3 → Day 2
-  Call 4 → Day 3
-  Call 5 → Day 4
-  Call 6 → Day 5
-  Call 7 → Assessment
+API calls: 9 total
+  Call 0a → Section Extractor  (JSON — strict extraction)
+  Call 0b → Day Allocator      (JSON — day plan from extraction)
+  Call 1  → Preamble
+  Call 2  → Day 1
+  Call 3  → Day 2
+  Call 4  → Day 3
+  Call 5  → Day 4
+  Call 6  → Day 5
+  Call 7  → Assessment
 """
 
 import json
@@ -53,63 +53,77 @@ from ...base import (
 
 HISTORY_DISCIPLINE_NOTES = """
 HISTORY-SPECIFIC TEACHING NOTES:
-- Use timeline-based thinking: when → what caused it → what resulted
-- Chronology matters — always reference sequence of events clearly
-- Source analysis is a key skill — use any primary source quote in the chapter
-- Board flowcharts must show: Cause → Event → Consequence chains
-- Map references as text descriptions — do NOT give page numbers
-- Always maintain main topic → subtopic hierarchy from the chapter plan
+- Timeline-based thinking: when → what caused it → what resulted
+- Chronology matters — sequence of events must be clear
+- Source analysis: use any primary source quote from chapter
+- Board flowcharts: Cause → Event → Consequence chains
+- Map references as text descriptions — no page numbers
+- Maintain main topic → subtopic hierarchy STRICTLY from section list
+- Never introduce content not in today's section list
 """
 
 
 # ============================================================================
-# CCQ + CFU INSTRUCTION BLOCK
+# CCQ + CFU INSTRUCTION BLOCK — STRONGER ENFORCEMENT
 # ============================================================================
 
 CCQ_CFU_INSTRUCTION = """
 ═══════════════════════════════════════════════════════
-CCQ AND CFU — CONCEPT AND UNDERSTANDING CHECKS
+CFU AND CCQ — STRICT MINIMUM REQUIREMENTS
 ═══════════════════════════════════════════════════════
 
-Each day must include BOTH types — placed randomly throughout:
+MINIMUM REQUIREMENT:
+- 3 CFU blocks per concept taught (not 1 — MINIMUM 3)
+- 3 CCQ blocks per concept taught (not 1 — MINIMUM 3)
+- Total minimum: 15 CFUs + 10 CCQs across the full day
+
+WHY 3 PER CONCEPT:
+Teachers may forget one question — having 3 ensures at least 1-2 are used.
+More questions = more checking = stronger learning.
 
 ── CFU (Check For Understanding) ──────────────────────
-Basic recall question. Asked immediately after explaining something.
+Basic recall. Asked IMMEDIATELY after explaining something.
 Simple, one-word or one-sentence answer.
 No Tamil required for CFU.
 
-FORMAT:
+FORMAT — use EXACTLY this HTML:
 <div class="cfu-block">
-  <strong>🔎 CFU (Check For Understanding):</strong>
+  <strong>🔎 CFU {number}:</strong>
   <p class="teacher-says">"[Very simple factual question — under 6 words]"</p>
   <p class="student-says"><strong>Expected:</strong> "[One word or one sentence]"</p>
   <p><em>⏱ Wait 10 seconds. Call on 2-3 students before moving on.</em></p>
 </div>
 
+PLACE 3 CFUs after EACH concept explanation:
+  CFU 1 — What/Who/When question
+  CFU 2 — Which/Where question
+  CFU 3 — Name/State question
+
 ── CCQ (Concept Check Question) ───────────────────────
-Deeper conceptual question. Tests if student understood the WHY or HOW.
+Deeper conceptual question. Tests WHY or HOW.
 Tamil version mandatory.
 
-FORMAT:
+FORMAT — use EXACTLY this HTML:
 <div class="ccq-block">
-  <strong>⚡ CCQ (Concept Check):</strong>
-  <p class="teacher-says">"[Deeper question about concept just taught — under 8 words]"</p>
+  <strong>⚡ CCQ {number}:</strong>
+  <p class="teacher-says">"[Deeper question about concept — under 8 words]"</p>
   <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
   <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
   <p><em>⏱ Wait 15 seconds. Allow pair discussion before taking answers.</em></p>
 </div>
 
-⚠️ CRITICAL DIFFERENCE — CFU vs CCQ:
-❌ WRONG ICQ (never use): "Do you understand?" / "How many sentences?"
-✅ CFU example: "What year did WW1 start?"
-✅ CCQ example: "Why did the alliance system make the war spread so fast?"
+PLACE 2-3 CCQs after EACH concept — after the CFUs:
+  CCQ 1 — Why did X happen?
+  CCQ 2 — What was the effect of Y?
+  CCQ 3 — How did Z lead to W?
 
-RULES:
-- Minimum 5 CFUs and 5 CCQs per day (10 total checks)
-- Place AFTER explaining each concept — never before
-- ALWAYS include wait time instruction after each CFU and CCQ
-- CFU comes first → CCQ follows for deeper check on same concept
-- No two questions repeat
+⚠️ CRITICAL — DO NOT USE ICQs:
+❌ WRONG: "Do you understand?" / "How many sentences?" / "Which group are you in?"
+✅ RIGHT: "What triggered the assassination?" / "Why did the alliance system spread the war?"
+
+NUMBER YOUR CFUs AND CCQs:
+Use CFU 1, CFU 2, CFU 3... and CCQ 1, CCQ 2, CCQ 3...
+This helps teachers track and students follow.
 ═══════════════════════════════════════════════════════
 """
 
@@ -120,29 +134,16 @@ RULES:
 
 TAMIL_INSTRUCTION = """
 ═══════════════════════════════════════════════════════
-TAMIL SCAFFOLDING RULES — TARGETED ONLY
+TAMIL SCAFFOLDING — TARGETED ONLY
 ═══════════════════════════════════════════════════════
+Tamil appears in EXACTLY 3 places:
+✅ 1. KEY TERMS TABLE — Tamil meaning column
+✅ 2. MAIN EXPLANATION — Tamil mirror paragraph after English
+✅ 3. OPENING LEAD QUESTION — Tamil version after English
 
-Tamil appears in EXACTLY 3 places — nowhere else:
-
-✅ 1. KEY TERMS TABLE — Tamil meaning column only
-✅ 2. MAIN EXPLANATION — Tamil mirror paragraph after English paragraph
-✅ 3. OPENING LEAD QUESTION — Tamil version after English question
-
-❌ NEVER add Tamil to:
-   - Activity instructions
-   - Group task descriptions
-   - Time notes
-   - Board work headings
-   - Homework task description
-   - Student task instructions
-   - CFU blocks
-   - Closing / recap sections
-
-Tamil mirror rule (where Tamil IS used):
-- Same sentences. Same detail. Same length as English.
-- NOT a summary. Full mirror.
-- Real Tamil Unicode script only — never transliteration.
+❌ NEVER in: activity instructions, board work, CFU blocks,
+   time notes, closing, homework, differentiated support
+Tamil mirror: same sentences, same length, same detail. Real Unicode only.
 ═══════════════════════════════════════════════════════
 """
 
@@ -156,7 +157,7 @@ class HistoryLP910Builder:
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
         self.model  = settings.ANTHROPIC_MODEL
-        print(f"✅ History LP Builder (910) v8.0 initialized — model: {self.model}")
+        print(f"✅ History LP Builder (910) v9.0 initialized — model: {self.model}")
 
     # -------------------------------------------------------------------------
     # Public API
@@ -165,36 +166,48 @@ class HistoryLP910Builder:
     def generate(self, text: str, metadata: dict) -> Optional[str]:
         """
         Generate History LP for Class 9 & 10.
-        Makes 8 API calls:
-            Call 0: Chapter Analyser (JSON)
-            Call 1: Preamble
-            Calls 2-5: Day 1-4 (each receives exact topics from Call 0)
-            Call 6: Day 5
-            Call 7: Assessment
+        Makes 9 API calls:
+            Call 0a: Section Extractor (strict JSON extraction)
+            Call 0b: Day Allocator (day plan from extraction)
+            Call 1:  Preamble
+            Calls 2-5: Days 1-4
+            Call 6:  Day 5
+            Call 7:  Assessment
         """
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
         unit         = metadata.get("unit", "")
         month        = metadata.get("month", "")
 
-        total_calls = 8
-        print(f"      [History LP 910 v8] Generating: {lesson_title}")
-        print(f"      [History LP 910 v8] 8 API calls: Analyser + Preamble + Day1-4 + Day5 + Assessment")
+        total_calls = 9
+        print(f"      [History LP 910 v9] Generating: {lesson_title}")
+        print(f"      [History LP 910 v9] 9 API calls: 0a+0b+Preamble+Day1-4+Day5+Assessment")
 
         parts = []
 
-        # ── Call 0: Chapter Analyser ──────────────────────────────────────────
-        print(f"      [History LP] Call 0/{total_calls}: Chapter Analyser...")
-        chapter_plan = self._call_chapter_analyser(text, lesson_title)
-        if not chapter_plan:
-            print(f"         ❌ Chapter Analyser failed — aborting LP")
+        # ── Call 0a: Section Extractor ────────────────────────────────────────
+        print(f"      [History LP] Call 0a/9: Section Extractor...")
+        sections = self._call_section_extractor(text, lesson_title)
+        if not sections:
+            print(f"         ❌ Section Extractor failed — aborting LP")
             return None
-        print(f"         ✅ Chapter plan ready — {len(chapter_plan.get('main_topics', []))} main topics identified")
+        print(f"         ✅ Extracted {len(sections.get('chapter_sections', []))} sections")
+
+        # ── Call 0b: Day Allocator ────────────────────────────────────────────
+        print(f"      [History LP] Call 0b/9: Day Allocator...")
+        day_plan = self._call_day_allocator(sections, lesson_title)
+        if not day_plan:
+            print(f"         ❌ Day Allocator failed — aborting LP")
+            return None
+        print(f"         ✅ Day plan ready:")
+        for d in range(1, 5):
+            day_sections = day_plan.get(f"day{d}", {}).get("sections", [])
+            print(f"            Day {d}: {', '.join(day_sections)}")
 
         # ── Call 1: Preamble ──────────────────────────────────────────────────
-        print(f"      [History LP] Call 1/{total_calls}: Preamble...")
+        print(f"      [History LP] Call 1/9: Preamble...")
         preamble = self._call_preamble(
-            text, class_num, unit, lesson_title, month, chapter_plan
+            text, class_num, unit, lesson_title, month, sections, day_plan
         )
         if preamble:
             parts.append(clean(preamble))
@@ -206,11 +219,11 @@ class HistoryLP910Builder:
         # ── Calls 2-5: Content Days 1-4 ──────────────────────────────────────
         for day_num in range(1, 5):
             call_num = day_num + 1
-            print(f"      [History LP] Call {call_num}/{total_calls}: Day {day_num}...")
-            day_topics = chapter_plan.get("day_plan", {}).get(f"day{day_num}", [])
+            print(f"      [History LP] Call {call_num}/9: Day {day_num}...")
+            day_data = day_plan.get(f"day{day_num}", {})
             day_html = self._call_content_day(
                 text, class_num, unit, lesson_title,
-                day_num, day_topics, chapter_plan
+                day_num, day_data, sections, day_plan
             )
             if day_html:
                 parts.append(clean(day_html))
@@ -218,11 +231,9 @@ class HistoryLP910Builder:
             else:
                 print(f"         ❌ Day {day_num} failed — continuing")
 
-        # ── Call 6: Day 5 ────────────────────────────────────────────────────
-        print(f"      [History LP] Call 6/{total_calls}: Day 5 (Map + Book-back)...")
-        day5_html = self._call_day5(
-            text, class_num, unit, lesson_title, chapter_plan
-        )
+        # ── Call 6: Day 5 ─────────────────────────────────────────────────────
+        print(f"      [History LP] Call 6/9: Day 5 (Map + Book-back)...")
+        day5_html = self._call_day5(text, class_num, unit, lesson_title, sections)
         if day5_html:
             parts.append(clean(day5_html))
             print(f"         ✅ Day 5 ({len(day5_html)} chars)")
@@ -230,9 +241,9 @@ class HistoryLP910Builder:
             print(f"         ❌ Day 5 failed — continuing")
 
         # ── Call 7: Assessment ────────────────────────────────────────────────
-        print(f"      [History LP] Call 7/{total_calls}: Assessment...")
+        print(f"      [History LP] Call 7/9: Assessment...")
         assessment = self._call_assessment(
-            text, class_num, unit, lesson_title, chapter_plan
+            text, class_num, unit, lesson_title, sections, day_plan
         )
         if assessment:
             parts.append(clean(assessment))
@@ -244,122 +255,210 @@ class HistoryLP910Builder:
             return None
 
         combined = "\n\n".join(parts)
-        print(f"      [History LP 910 v8] ✅ Complete — {len(parts)} parts, {len(combined)} chars")
+        print(f"      [History LP 910 v9] ✅ Complete — {len(parts)} parts, {len(combined)} chars")
         return combined
 
-    # -------------------------------------------------------------------------
-    # Call 0 — Deep Chapter Analyser
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # CALL 0a — STRICT SECTION EXTRACTOR
+    # =========================================================================
 
-    def _call_chapter_analyser(self, text: str, lesson_title: str) -> Optional[dict]:
+    def _call_section_extractor(self, text: str, lesson_title: str) -> Optional[dict]:
         """
-        Reads the full chapter and returns a structured JSON plan.
-        This plan drives all subsequent day prompts — ensuring correct
-        topic placement, subtopic hierarchy, and no repetition.
+        PASS 1: Extracts EXACTLY what headings and subheadings exist in the chapter.
+        Pure extraction — NO planning, NO general knowledge, NO day allocation.
+        Returns every section in the order it appears in the text.
         """
         try:
-            prompt = f"""You are analysing a Samacheer Kalvi Social Science — History chapter.
-Read the full chapter text carefully and return a structured JSON plan.
+            prompt = f"""You are a STRICT TEXT EXTRACTOR for a Samacheer Kalvi History chapter.
+
+YOUR ONLY JOB:
+Extract EXACTLY the headings and subheadings that appear in the chapter text below.
+Do NOT add anything from your general knowledge.
+Do NOT reorganise or plan.
+Do NOT add topics that are not explicitly in the text.
+Extract ONLY what is written in the text — nothing more, nothing less.
+
+For each section found:
+1. Copy the heading EXACTLY as it appears in the text
+2. List ALL subheadings under it EXACTLY as they appear
+3. Estimate teaching time based on content length (5-15 mins per section)
+4. Note key terms that appear in that section
 
 Chapter: {lesson_title}
 
-YOUR JOB:
-1. Identify ALL main topics in the chapter (in the order they appear)
-2. For each main topic, list ALL subtopics under it
-3. Plan which topics go on which day (Day 1 to Day 4)
-   - Each day covers 25 minutes of content (5 min spark + 5 min intro = 10 min fixed)
-   - If a main topic is large, it can span 2 days — mark it as continuation
-   - Day 4 must include final consolidation
-4. Identify key terms, important dates, and map locations
+Return ONLY valid JSON. No explanation. No markdown. Raw JSON only.
 
-CRITICAL RULES:
-- Subtopics MUST be listed under their correct main topic
-- Do NOT place a subtopic under the wrong main topic
-- Do NOT skip any topic that appears in the chapter
-- Causes, Course, and Results must be treated as separate main topics
-- Each day must have a clear, distinct focus — no repetition across days
-
-Return ONLY a valid JSON object. No explanation. No markdown. Just raw JSON.
-
-JSON structure:
 {{
-  "main_topics": [
+  "chapter_sections": [
     {{
-      "title": "Main topic title exactly as in chapter",
-      "subtopics": ["subtopic 1", "subtopic 2", "subtopic 3"]
+      "heading": "EXACT heading text from chapter",
+      "subheadings": ["exact subheading 1", "exact subheading 2"],
+      "estimated_teaching_time_mins": 10,
+      "key_terms": ["term1", "term2"],
+      "has_map_content": false,
+      "has_dates": true,
+      "important_dates": ["1914 — event", "1919 — event"]
     }}
   ],
-  "day_plan": {{
-    "day1": {{
-      "main_topic": "Exact main topic title",
-      "subtopics": ["subtopic 1", "subtopic 2"],
-      "focus": "One sentence describing what Day 1 covers",
-      "continuation": false
-    }},
-    "day2": {{
-      "main_topic": "Exact main topic title",
-      "subtopics": ["subtopic 3", "subtopic 4"],
-      "focus": "One sentence describing what Day 2 covers",
-      "continuation": false
-    }},
-    "day3": {{
-      "main_topic": "Exact main topic title",
-      "subtopics": ["subtopic 1", "subtopic 2"],
-      "focus": "One sentence describing what Day 3 covers",
-      "continuation": false
-    }},
-    "day4": {{
-      "main_topic": "Exact main topic title",
-      "subtopics": ["subtopic 1", "subtopic 2"],
-      "focus": "One sentence describing what Day 4 covers and chapter consolidation",
-      "continuation": false
-    }}
-  }},
-  "key_terms": ["term1", "term2", "term3"],
-  "important_dates": ["date1 — event", "date2 — event"],
-  "map_locations": ["location1", "location2"]
+  "total_estimated_teaching_mins": 70,
+  "map_locations": ["location1", "location2"],
+  "key_personalities": ["Person 1", "Person 2"],
+  "important_dates": ["date — event"]
 }}
 
 Chapter Text:
 ---
 {text}
----"""
+---
+
+STRICT RULES:
+- Copy headings EXACTLY — do not paraphrase or rename
+- Do NOT add sections that don't exist in the text
+- Do NOT reorganise the order
+- Extract ALL sections — do not skip any
+- If no clear headings exist, use paragraph topic sentences as headings"""
 
             response = self.client.messages.create(
                 model=self.model,
                 max_tokens=3000,
-                system="""You are a precise chapter analyser. Return ONLY valid JSON.
-No explanation. No markdown. No code fences. Just raw JSON starting with {{""",
+                system="""You are a strict text extractor. Return ONLY valid JSON.
+Extract ONLY what exists in the text. Never add general knowledge.
+No markdown. No code fences. Raw JSON starting with {""",
                 messages=[{"role": "user", "content": prompt}]
             )
 
             raw = response.content[0].text.strip()
-            # Strip any accidental markdown fences
             raw = re.sub(r'```(?:json)?', '', raw).strip()
             raw = re.sub(r'```', '', raw).strip()
-
-            plan = json.loads(raw)
-            return plan
+            return json.loads(raw)
 
         except json.JSONDecodeError as e:
-            print(f"❌ Chapter Analyser JSON parse error: {e}")
+            print(f"❌ Section Extractor JSON error: {e}")
             return None
         except Exception as e:
-            print(f"❌ Chapter Analyser error: {e}")
+            print(f"❌ Section Extractor error: {e}")
             return None
 
-    # -------------------------------------------------------------------------
-    # Call 1 — Preamble
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # CALL 0b — SMART DAY ALLOCATOR
+    # =========================================================================
 
-    def _call_preamble(self, text, class_num, unit,
-                       lesson_title, month, chapter_plan: dict):
+    def _call_day_allocator(self, sections: dict, lesson_title: str) -> Optional[dict]:
+        """
+        PASS 2: Takes the extracted sections and allocates them to days.
+        Based STRICTLY on the section extractor output.
+        NO general knowledge. NO assumptions about chapter content.
+        Each day gets 20-25 mins of content (35 min session - 10 min fixed).
+        """
         try:
-            main_topics_str = "\n".join([
-                f"  - {t['title']}: {', '.join(t['subtopics'])}"
-                for t in chapter_plan.get("main_topics", [])
+            sections_str = json.dumps(sections, indent=2)
+
+            prompt = f"""You are a SMART DAY ALLOCATOR for a Samacheer Kalvi History lesson plan.
+
+YOU HAVE BEEN GIVEN the extracted sections from a chapter.
+YOUR ONLY JOB: Allocate these sections to 4 days.
+
+ALLOCATION RULES:
+- Each day has 20-25 minutes of content time (35 min session minus 10 min fixed)
+- Use estimated_teaching_time_mins from each section to fill each day
+- Do NOT split a section across two days — keep each section in ONE day
+- If a section is large (>15 mins), it gets its own day or part of a day
+- Day 4 must include the FINAL sections and chapter consolidation
+- Every section MUST appear in exactly ONE day — no section can be skipped
+- No section can appear in two days
+
+IMPORTANT:
+- Use the EXACT heading text from the extracted sections
+- Do NOT rename headings
+- Do NOT add sections that were not extracted
+- Do NOT use general knowledge about the chapter
+
+Return ONLY valid JSON. No explanation. No markdown. Raw JSON only.
+
+{{
+  "day1": {{
+    "sections": ["EXACT heading 1", "EXACT heading 2"],
+    "subheadings": ["subheading 1", "subheading 2"],
+    "focus": "One sentence describing what Day 1 covers",
+    "estimated_mins": 20,
+    "continuation_from_previous": false
+  }},
+  "day2": {{
+    "sections": ["EXACT heading 3"],
+    "subheadings": ["subheading 3", "subheading 4"],
+    "focus": "One sentence describing what Day 2 covers",
+    "estimated_mins": 22,
+    "continuation_from_previous": false
+  }},
+  "day3": {{
+    "sections": ["EXACT heading 4", "EXACT heading 5"],
+    "subheadings": ["subheading 5"],
+    "focus": "One sentence describing what Day 3 covers",
+    "estimated_mins": 20,
+    "continuation_from_previous": false
+  }},
+  "day4": {{
+    "sections": ["EXACT heading 6", "EXACT heading 7"],
+    "subheadings": ["subheading 6", "subheading 7"],
+    "focus": "One sentence describing what Day 4 covers + chapter consolidation",
+    "estimated_mins": 23,
+    "continuation_from_previous": false
+  }}
+}}
+
+Extracted Chapter Sections:
+---
+{sections_str}
+---"""
+
+            response = self.client.messages.create(
+                model=self.model,
+                max_tokens=2000,
+                system="""You are a strict day allocator. Return ONLY valid JSON.
+Use ONLY the sections provided. Never add general knowledge.
+No markdown. No code fences. Raw JSON starting with {""",
+                messages=[{"role": "user", "content": prompt}]
+            )
+
+            raw = response.content[0].text.strip()
+            raw = re.sub(r'```(?:json)?', '', raw).strip()
+            raw = re.sub(r'```', '', raw).strip()
+            return json.loads(raw)
+
+        except json.JSONDecodeError as e:
+            print(f"❌ Day Allocator JSON error: {e}")
+            return None
+        except Exception as e:
+            print(f"❌ Day Allocator error: {e}")
+            return None
+
+    # =========================================================================
+    # CALL 1 — PREAMBLE
+    # =========================================================================
+
+    def _call_preamble(self, text, class_num, unit, lesson_title,
+                       month, sections: dict, day_plan: dict):
+        try:
+            # Build section summary from extractor
+            sections_list = sections.get("chapter_sections", [])
+            sections_str  = "\n".join([
+                f"  - {s['heading']}: {', '.join(s.get('subheadings', []))}"
+                for s in sections_list
             ])
-            key_terms = ", ".join(chapter_plan.get("key_terms", []))
+
+            # Build day plan summary
+            day_summary = ""
+            for d in range(1, 5):
+                day_data    = day_plan.get(f"day{d}", {})
+                day_sections = day_data.get("sections", [])
+                day_focus    = day_data.get("focus", "")
+                day_summary += f"  Day {d}: {', '.join(day_sections)} — {day_focus}\n"
+
+            key_terms      = ", ".join([
+                t for s in sections_list for t in s.get("key_terms", [])
+            ][:10])
+            map_locations  = ", ".join(sections.get("map_locations", []))
+            personalities  = ", ".join(sections.get("key_personalities", []))
 
             prompt = f"""Generate ONLY the opening preamble section of a Samacheer Kalvi
 Social Science — History Lesson Plan. Do NOT generate any Day blocks. Stop after Teaching Aids.
@@ -371,12 +470,17 @@ Subject  : Social Science — History
 Month    : {month if month else 'As scheduled'}
 Duration : 5 Days × 35 Minutes = 175 Minutes Total
 
-CHAPTER STRUCTURE (from analyser — use this exactly):
-{main_topics_str}
+CHAPTER SECTIONS (strictly extracted from text):
+{sections_str}
+
+DAY-WISE PLAN:
+{day_summary}
 
 KEY TERMS: {key_terms}
+MAP LOCATIONS: {map_locations}
+KEY PERSONALITIES: {personalities}
 
-Generate these sections in order:
+Generate these sections:
 
 1. HEADER BLOCK
 <div class="sk-content-header">
@@ -392,36 +496,35 @@ Generate these sections in order:
 <table>
   Rows: Class | Subject | Discipline | Unit/Chapter Title |
         Month | Total Teaching Hours | Session Duration |
-        Main Topics Covered (list from analyser)
+        Main Sections Covered
 </table>
 
 3. VALUE-BASED OBJECTIVES
 <h2>Part 2: Value-Based Objectives</h2>
 <ul>
-  3-4 value objectives specific to THIS chapter
-  Each with one-line explanation tied to actual chapter content
+  3-4 value objectives — based ONLY on actual chapter sections listed above
 </ul>
 
 4. SKILL OBJECTIVES
 <h2>Part 3: Skill Objectives</h2>
 <ul>
   3-4 skill objectives: chronology, source analysis, map skills, causal reasoning
-  Each tied to actual chapter content
+  Based on actual chapter content
 </ul>
 
 5. LEARNING OBJECTIVES
 <h2>Part 4: Learning Objectives</h2>
 <ul>
-  4-5 content objectives — what students will explain/analyse after this chapter
-  Based on actual main topics and subtopics from chapter structure above
+  4-5 objectives — based ONLY on actual sections listed above
+  Use action verbs: Explain, Analyze, Identify, Evaluate
 </ul>
 
 6. TEACHING AIDS
 <h2>Part 5: Teaching Aids</h2>
 <ul>
-  All materials needed across 5 days — board, chalk, outline maps,
-  timeline strips, flowchart templates, flashcards etc.
-  Do NOT mention specific page numbers.
+  All materials needed — board, chalk, outline maps, timeline strips,
+  flowchart templates, flashcards
+  Do NOT mention page numbers
 </ul>
 
 OUTPUT RULES:
@@ -429,11 +532,11 @@ OUTPUT RULES:
 - Start with <div class="sk-content-header">
 - Stop after Teaching Aids </ul>
 - Do NOT start any Day block
-- Base all objectives on actual chapter content
+- Base ALL content on actual extracted sections only
 
-Chapter Text:
+Chapter Text (for reference):
 ---
-{text[:5000]}
+{text[:4000]}
 ---"""
 
             response = self.client.messages.create(
@@ -446,45 +549,69 @@ Chapter Text:
             print(f"❌ History LP preamble error: {e}")
             return None
 
-    # -------------------------------------------------------------------------
-    # Calls 2-5 — Content Days 1-4
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # CALLS 2-5 — CONTENT DAYS 1-4
+    # =========================================================================
 
     def _call_content_day(self, text, class_num, unit, lesson_title,
-                          day_num: int, day_topics: dict, chapter_plan: dict):
+                          day_num: int, day_data: dict,
+                          sections: dict, day_plan: dict):
         try:
-            spark      = SPARK_STYLES[day_num]
-            task       = STUDENT_TASK_STYLES[day_num]
-            activity   = ACTIVITY_MAP.get(day_num, "group discussion")
-            next_label = f"Day {day_num + 1}" if day_num < 4 else "Day 5 — Map Work and Book-back"
+            spark    = SPARK_STYLES[day_num]
+            task     = STUDENT_TASK_STYLES[day_num]
+            activity = ACTIVITY_MAP.get(day_num, "group discussion")
 
-            # Extract day plan details from analyser output
-            main_topic   = day_topics.get("main_topic", "")
-            subtopics    = day_topics.get("subtopics", [])
-            day_focus    = day_topics.get("focus", "")
-            continuation = day_topics.get("continuation", False)
+            # From day allocator — EXACT sections for this day
+            day_sections    = day_data.get("sections", [])
+            day_subheadings = day_data.get("subheadings", [])
+            day_focus       = day_data.get("focus", "")
+            continuation    = day_data.get("continuation_from_previous", False)
 
-            subtopics_str = "\n".join([f"  - {s}" for s in subtopics])
+            # Get key terms for this day's sections
+            all_sections  = sections.get("chapter_sections", [])
+            day_key_terms = []
+            for s in all_sections:
+                if s["heading"] in day_sections:
+                    day_key_terms.extend(s.get("key_terms", []))
+                    day_key_terms.extend(s.get("important_dates", []))
 
-            # Build continuation note if needed
+            sections_str    = "\n".join([f"  - {s}" for s in day_sections])
+            subheadings_str = "\n".join([f"    • {s}" for s in day_subheadings])
+            key_terms_str   = ", ".join(day_key_terms[:8])
+
+            # Day 4 closing instruction
+            closing_note = ""
+            if day_num == 4:
+                closing_note = """
+⚠️ DAY 4 CLOSING — FULL CHAPTER RECAP:
+The closing on Day 4 MUST recap the ENTIRE chapter across all 4 days.
+Rapid-fire questions must span ALL 4 days — not just Day 4.
+Write ALL main section headings on board as summary.
+"""
+            # Continuation note
             continuation_note = ""
             if continuation:
+                prev_day_data = day_plan.get(f"day{day_num-1}", {})
+                prev_sections = prev_day_data.get("sections", [])
                 continuation_note = f"""
-⚠️ CONTINUATION NOTE:
-This day starts by completing the topic carried over from Day {day_num - 1}.
-Begin with: "Yesterday we started [topic]. Today we complete it before moving on."
-Only after completing the carried-over topic, move to today's new subtopics.
+⚠️ CONTINUATION FROM DAY {day_num-1}:
+Start by completing: {', '.join(prev_sections[-1:])}
+Teacher says: "Yesterday we started [topic]. Today we complete it first."
 """
 
-            # Day 4 special closing instruction
-            closing_instruction = ""
-            if day_num == 4:
-                closing_instruction = """
-⚠️ DAY 4 CLOSING — FULL CHAPTER RECAP:
-The closing on Day 4 must recap the ENTIRE chapter across all 4 days.
-Not just Day 4 content. Cover all main topics briefly.
-Rapid-fire questions must span all 4 days.
+            # Homework style — Day 2 gets poster/flowchart option
+            homework_note = ""
+            if day_num == 2:
+                homework_note = """
+⚠️ HOMEWORK STYLE FOR DAY 2:
+Offer students a CHOICE of homework format:
+  Option A: Written answer (detail answer format)
+  Option B: Poster — draw and label key concepts visually
+  Option C: Flowchart — show cause → event → consequence chain
+Write all 3 options on board. Students choose based on their strength.
 """
+
+            next_label = f"Day {day_num + 1}" if day_num < 4 else "Day 5 — Map Work and Book-back"
 
             prompt = f"""Generate ONLY Day {day_num} of the History lesson plan. Nothing else.
 Do NOT include Preamble. Do NOT generate Day {day_num + 1} or any other day.
@@ -497,19 +624,26 @@ Day      : {day_num} of 5
 Duration : 35 minutes
 
 ═══════════════════════════════════════════════════════
-TODAY'S EXACT TOPIC PLAN — FOLLOW STRICTLY
+TODAY'S EXACT SECTIONS — STRICTLY FOLLOW THIS LIST
 ═══════════════════════════════════════════════════════
-Main Topic : {main_topic}
-Subtopics  :
-{subtopics_str}
-Day Focus  : {day_focus}
+Sections to cover today:
+{sections_str}
 
-CRITICAL: Cover ONLY the subtopics listed above.
-Do NOT introduce subtopics from other days.
-Do NOT repeat subtopics already covered in previous days.
-Subtopics must appear UNDER their correct main topic — not mixed up.
+Subheadings to cover:
+{subheadings_str if subheadings_str else '  [Cover all subheadings under today\'s sections]'}
+
+Day Focus: {day_focus}
+Key Terms/Dates for today: {key_terms_str}
+
+⛔ ABSOLUTE RULE:
+Cover ONLY the sections listed above.
+If a heading is NOT in this list — DO NOT mention it.
+DO NOT use general knowledge to add extra content.
+DO NOT introduce topics from other days.
+The day heading must match EXACTLY what sections are taught today.
 {continuation_note}
-{closing_instruction}
+{closing_note}
+{homework_note}
 ═══════════════════════════════════════════════════════
 
 {CCQ_CFU_INSTRUCTION}
@@ -517,73 +651,78 @@ Subtopics must appear UNDER their correct main topic — not mixed up.
 {TAMIL_INSTRUCTION}
 
 ═══════════════════════════════════════════════════════
-LEAD QUESTION / OPENING QUESTION STYLE — DAY {day_num}
+LEAD QUESTION / OPENING QUESTION — DAY {day_num}
 ═══════════════════════════════════════════════════════
 Style: {spark['style']}
 {spark['instruction']}
-
-IMPORTANT RENAME: This section is called "Lead Question" or "Opening Question"
-NOT "Spark" or "Analogy". Use the heading: [0-5 min] Lead Question / Opening Question
+Heading: [0-5 min] Lead Question / Opening Question
+Must connect DIRECTLY to today's sections: {', '.join(day_sections)}
+Include Big Question at end.
+Include: WHY students learn this + WHERE they use it in real life.
 ═══════════════════════════════════════════════════════
 
 ═══════════════════════════════════════════════════════
-STUDENT TASK STYLE — DAY {day_num}: {task['style']}
+STUDENT TASK — DAY {day_num}: {task['style']}
 ═══════════════════════════════════════════════════════
 {task['instruction']}
+
+DIFFERENTIATED SUPPORT TIMING (add to diff table):
+- Slow Learners: 5 minutes (fill blanks with word bank)
+- Average Learners: 4 minutes (2-3 sentence answer)
+- Advanced Learners: 5 minutes (independent writing)
+Teacher circulates to each group during their time.
 ═══════════════════════════════════════════════════════
 
 ═══════════════════════════════════════════════════════
 FLOWCHART / MODEL RULE
 ═══════════════════════════════════════════════════════
-For every concept that has a clear flow (cause→event→result):
-Include a simple text-based flowchart inside <div class="board-work">
-Label it: "Draw on Board — Model:"
-Example: Cause 1 → Event → Consequence → Result
+For every concept with a clear flow:
+Include text-based flowchart in <div class="board-work">
+Label: "Draw on Board — Model:"
+Format: Factor 1 → Event → Consequence → Result
 ═══════════════════════════════════════════════════════
 
 ═══════════════════════════════════════════════════════
-PAGE NUMBER RULE
+NO PAGE NUMBERS
 ═══════════════════════════════════════════════════════
-Do NOT include any page numbers anywhere in this lesson plan.
-Do NOT write "Page X" or "Pages X-Y" or "refer page" anywhere.
-Instead reference content by topic name only.
-═══════════════════════════════════════════════════════
-
-═══════════════════════════════════════════════════════
-STUDENT RESPONSE WAIT TIME RULE
-═══════════════════════════════════════════════════════
-After EVERY question asked by the teacher — add this line:
-<p><em>⏱ Wait [X] seconds before taking answers. Call on [N] students.</em></p>
-CFU → Wait 10 seconds, call 2-3 students
-CCQ → Wait 15 seconds, allow pair discussion first
-Opening question → Wait 20 seconds, take 3-5 responses
+Do NOT include any page numbers anywhere.
+Reference content by section/topic name only.
 ═══════════════════════════════════════════════════════
 
-DAY STRUCTURE — FOLLOW EXACTLY:
+═══════════════════════════════════════════════════════
+WAIT TIME AFTER EVERY QUESTION
+═══════════════════════════════════════════════════════
+After EVERY question:
+<p><em>⏱ Wait [X] seconds. Call on [N] students.</em></p>
+CFU → Wait 10 seconds, 2-3 students
+CCQ → Wait 15 seconds, pair discussion first
+Opening → Wait 20 seconds, 3-5 responses
+═══════════════════════════════════════════════════════
+
+DAY STRUCTURE:
 
 <h3 class="day-header">
-  Day {day_num} — {main_topic}
+  Day {day_num} — [Write EXACT section names being taught today — match sections list above]
 </h3>
 <p class="day-meta">Duration: 35 Minutes | History | {day_focus}</p>
 
 <div class="day-block">
 
-  <!-- ═══ SECTION 1: LEAD QUESTION / OPENING QUESTION (0-5 min) ═══ -->
+  <!-- ═══ SECTION 1: LEAD QUESTION (0-5 min) ═══ -->
   <div class="time-block">
     <strong>[0-5 min] Lead Question / Opening Question</strong>
 
     <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[3-4 sentences using {spark['style']} style.
-     Genuinely engaging — based on actual chapter content.
-     End with the opening question.]"</p>
+    "[3-4 sentences — {spark['style']} style.
+     Must connect to today's sections: {', '.join(day_sections)}.
+     Engaging and real-life. End with Big Question.]"</p>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same opening question. Same length.]"</p>
+      <p>"[3-4 Tamil sentences — exact same. Same length.]"</p>
     </div>
 
-    <p><em>⏱ Wait 20 seconds. Take 3-5 student responses. Large group discussion.</em></p>
-
+    <p><em>⏱ Wait 20 seconds. Take 3-5 student responses.</em></p>
   </div>
 
   <!-- ═══ SECTION 2: INTRODUCTION (5-10 min) ═══ -->
@@ -591,36 +730,37 @@ DAY STRUCTURE — FOLLOW EXACTLY:
     <strong>[5-10 min] Introduction & Context Setting</strong>
 
     <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[3-4 sentences — introduce {main_topic} clearly.
-     Connect to what students already know.
-     Tell students what subtopics they will cover today.]"</p>
+    "[3-4 sentences — introduce today's sections clearly.
+     Connect to previous day if applicable.
+     Tell students exactly what they cover today.]"</p>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same introduction.]"</p>
+      <p>"[3-4 Tamil sentences — exact same.]"</p>
     </div>
 
     <div class="board-work">
       <strong>Write on Board:</strong><br/>
-      Main Topic: {main_topic}<br/>
-      Today's Subtopics: {', '.join(subtopics)}<br/>
-      Objective: [One sentence learning objective for today]
+      Today's Sections: {' | '.join(day_sections)}<br/>
+      Objective: [One sentence learning objective matching today's sections]
     </div>
 
     <div class="vocab-block">
-      <strong>Key Terms — Write on Board Before Teaching:</strong>
+      <strong>Key Terms — Write on Board:</strong>
       <table>
         <thead>
           <tr><th>Term</th><th>English Meaning</th><th>Tamil பொருள்</th></tr>
         </thead>
         <tbody>
-          [5 key terms from TODAY'S subtopics only — with Tamil meanings]
+          [5 key terms from TODAY's sections only — with Tamil meanings]
         </tbody>
       </table>
     </div>
 
-    <!-- CFU after vocab -->
-    [CFU block here — basic question about a key term just introduced]
+    <!-- 3 CFUs after vocab -->
+    [CFU 1 — basic question about a key term]
+    [CFU 2 — who/what question about today's section]
+    [CFU 3 — when/where question about today's section]
 
   </div>
 
@@ -628,42 +768,82 @@ DAY STRUCTURE — FOLLOW EXACTLY:
   <div class="time-block">
     <strong>[10-25 min] Main Teaching & Activity</strong>
 
-    [For EACH subtopic listed in today's plan:]
+    [For EACH section in today's list — in exact order:]
 
-    <h4>[Subtopic name — exactly as listed in today's plan]</h4>
+    <h4>[Section heading — EXACTLY as in today's section list]</h4>
+
+    [For EACH subheading under this section:]
+    <h5>[Subheading — exactly as extracted]</h5>
 
     <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[4-5 sentences explaining this subtopic clearly.
-     This subtopic is UNDER {main_topic} — keep that hierarchy clear.
-     Include concrete example or scenario.]"</p>
+    "[4-5 sentences — explain this section/subheading.
+     Based ONLY on chapter text — no outside knowledge.
+     Include dates, events, causes as they appear in text.]"</p>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[4-5 Tamil sentences — exact same explanation.]"</p>
+      <p>"[4-5 Tamil sentences — exact same.]"</p>
     </div>
 
     <div class="board-work">
       <strong>Draw on Board — Model:</strong><br/>
-      [Text-based flowchart for this subtopic]
+      [Text-based flowchart: Cause → Event → Consequence → Result]
     </div>
 
-    <!-- CFU immediately after explanation -->
-    [CFU block — basic recall about this subtopic]
+    <!-- 3 CFUs after each concept -->
+    <div class="cfu-block">
+      <strong>🔎 CFU 1:</strong>
+      <p class="teacher-says">"[What/Who/When question — under 6 words]"</p>
+      <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
+      <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
+    </div>
+    <div class="cfu-block">
+      <strong>🔎 CFU 2:</strong>
+      <p class="teacher-says">"[Which/Where question — under 6 words]"</p>
+      <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
+      <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
+    </div>
+    <div class="cfu-block">
+      <strong>🔎 CFU 3:</strong>
+      <p class="teacher-says">"[Name/State question — under 6 words]"</p>
+      <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
+      <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
+    </div>
 
-    <!-- CCQ after CFU — deeper conceptual check -->
-    [CCQ block — why/how question about this subtopic]
+    <!-- 2-3 CCQs after CFUs -->
+    <div class="ccq-block">
+      <strong>⚡ CCQ 1:</strong>
+      <p class="teacher-says">"[Why did X happen? — under 8 words]"</p>
+      <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
+      <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
+      <p><em>⏱ Wait 15 seconds. Pair discussion first.</em></p>
+    </div>
+    <div class="ccq-block">
+      <strong>⚡ CCQ 2:</strong>
+      <p class="teacher-says">"[What was the effect of Y? — under 8 words]"</p>
+      <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
+      <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
+      <p><em>⏱ Wait 15 seconds. Pair discussion first.</em></p>
+    </div>
+    <div class="ccq-block">
+      <strong>⚡ CCQ 3:</strong>
+      <p class="teacher-says">"[How did Z lead to W? — under 8 words]"</p>
+      <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
+      <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
+      <p><em>⏱ Wait 15 seconds. Pair discussion first.</em></p>
+    </div>
 
-    [Repeat for each subtopic in today's plan]
+    [Repeat for each section/subheading in today's list]
 
-    <!-- Activity block in the middle of teaching -->
+    <!-- Activity -->
     <div class="activity-block">
       <strong>Activity — {activity}:</strong>
-      <p>[Step by step instructions. English only — no Tamil here.]</p>
-      <p><em>Teacher circulates and checks understanding during activity.</em></p>
+      <p>[Step by step. English only. Based on today's sections only.]</p>
+      <p><em>Teacher circulates and checks understanding.</em></p>
     </div>
 
-    <!-- CFU after activity -->
-    [CFU block about activity content]
+    <!-- 3 more CFUs after activity -->
+    [CFU 4, CFU 5, CFU 6 — about activity content]
 
   </div>
 
@@ -672,29 +852,27 @@ DAY STRUCTURE — FOLLOW EXACTLY:
     <strong>[25-30 min] Student Task — {task['style']}</strong>
 
     <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[3-4 sentences — set up task using {task['style']}.
-     Specific prompt. Clear time limit. Clear output.]"</p>
+    "[Set up task. Specific prompt from today's sections. Clear time limit.]"</p>
 
     <div class="board-work">
-      <strong>Write on Board — Task Prompt:</strong><br/>
-      [Exact task prompt — students can read from board]<br/>
-      [Model starter sentence if written task]
+      <strong>Task Prompt (write on board):</strong><br/>
+      [Exact prompt students read from board]<br/>
+      [Model starter sentence]
     </div>
 
     <p class="student-says"><strong>Sample Answer:</strong><br/>
-    "[Model answer — 2-3 sentences based on actual chapter content.]"</p>
+    "[2-3 sentences based on actual chapter content from today's sections]"</p>
 
-    <!-- CCQ here -->
-    [CCQ block]
+    [CCQ 4 here]
 
     <div class="diff-block">
       <strong>Differentiated Support:</strong>
       <table class="diff-table">
         <thead>
           <tr>
-            <th>Slow Learners<br/>(கஷ்டப்படும் மாணவர்கள்)</th>
-            <th>Average Learners<br/>(சராசரி மாணவர்கள்)</th>
-            <th>Advanced Learners<br/>(திறமையான மாணவர்கள்)</th>
+            <th>Slow Learners (5 mins)<br/>(கஷ்டப்படும் மாணவர்கள்)</th>
+            <th>Average Learners (4 mins)<br/>(சராசரி மாணவர்கள்)</th>
+            <th>Advanced Learners (5 mins)<br/>(திறமையான மாணவர்கள்)</th>
           </tr>
         </thead>
         <tbody>
@@ -702,12 +880,12 @@ DAY STRUCTURE — FOLLOW EXACTLY:
             <td>
               <p><strong>Task:</strong> Fill in the blanks</p>
               <p>"[sentence] _______ (word1 / word2)"</p>
-              <p><strong>Word Bank:</strong> [4 key terms from today]</p>
+              <p><strong>Word Bank:</strong> [4 terms from today's sections]</p>
               <p><em>ஆசிரியர் கூடவே உட்கார்ந்து உதவலாம்</em></p>
             </td>
             <td>
               <p><strong>Task:</strong> Answer in 2-3 sentences</p>
-              <p>Starter: "[Sentence starter from today's content]"</p>
+              <p>Starter: "[sentence starter from today's content]"</p>
             </td>
             <td>
               <p><strong>Task:</strong> Write independently</p>
@@ -716,6 +894,7 @@ DAY STRUCTURE — FOLLOW EXACTLY:
           </tr>
         </tbody>
       </table>
+      <p><em>⏱ Teacher circulates to each group during their allocated time.</em></p>
     </div>
   </div>
 
@@ -723,34 +902,33 @@ DAY STRUCTURE — FOLLOW EXACTLY:
   <div class="time-block">
     <strong>[30-35 min] {"Overall Chapter Recap & Closing" if day_num == 4 else "Closing & Preview"}</strong>
 
-    <p class="teacher-says"><strong>{"Full Chapter Rapid-Fire Recap" if day_num == 4 else "Rapid-Fire Recap"} (Teacher asks):</strong><br/>
-    "{"[3 rapid-fire questions covering ALL key points from ALL 4 days. Full chapter review.]" if day_num == 4 else "[3 rapid-fire questions about today's subtopics only. One word or one sentence answers.]"}"</p>
+    {"<p><em>⚠️ Day 4 Closing = FULL CHAPTER RECAP across all 4 days.</em></p>" if day_num == 4 else ""}
 
-    <p><em>⏱ Wait 5 seconds per question. Raise hands format. Keep it energetic.</em></p>
+    <p class="teacher-says"><strong>Rapid-Fire Recap:</strong><br/>
+    "{"[5 questions covering ALL sections from ALL 4 days. Full chapter sweep.]" if day_num == 4 else "[3 questions about today's sections only. One word or sentence. Hands raised.]"}"</p>
+    <p><em>⏱ Wait 5 seconds per question. Keep energetic.</em></p>
 
     <div class="board-work">
-      <strong>Key Points from {"Full Chapter" if day_num == 4 else "Today"} (write on board):</strong><br/>
-      1. [Key point 1 — one sentence]<br/>
-      2. [Key point 2 — one sentence]<br/>
-      3. [Key point 3 — one sentence]
+      <strong>Key Points {"from Full Chapter" if day_num == 4 else "from Today"} (write on board):</strong><br/>
+      1. [Key point 1]<br/>
+      2. [Key point 2]<br/>
+      3. [Key point 3]{"<br/>4. [Key point 4]<br/>5. [Key point 5]" if day_num == 4 else ""}
     </div>
 
-    <!-- Final CCQ before homework -->
-    [CCQ block — final check on today's main concept]
+    [Final CCQ 5]
 
     <div class="homework-block">
-      <p class="teacher-says"><strong>Homework:</strong><br/>
-      "[3-4 sentences — specific prompt. How many points. Own words. When to submit.]"</p>
+      {"<p class='teacher-says'><strong>Homework (choose one format):</strong><br/>Option A: Written answer — explain [key concept from today's sections] in 5 sentences.<br/>Option B: Poster — draw and label the key concepts from today visually.<br/>Option C: Flowchart — show cause → event → consequence chain for today's topic.</p><div class='board-work'><strong>Write all 3 options on board. Students choose their strength.</strong></div>" if day_num == 2 else "<p class='teacher-says'><strong>Homework:</strong><br/>'[Specific prompt from today's sections. Own words. When to submit.]'</p>"}
 
       <div class="board-work">
-        <strong>Homework Model Answer (write on board):</strong><br/>
+        <strong>Homework Model Answer:</strong><br/>
         "[1-2 sentence model]"<br/>
         <em>Write in your own words. Do not copy.</em>
       </div>
 
       <p class="teacher-says"><strong>Preview {next_label}:</strong><br/>
-      "[1-2 sentences — what tomorrow covers. If carrying over a topic, say so explicitly:
-       'Tomorrow we continue with [topic name] and then move to [next topic].']"</p>
+      "[1-2 sentences — exact sections from Day {day_num + 1 if day_num < 4 else 5} plan.
+       Name the actual sections — don't be vague.]"</p>
     </div>
 
   </div>
@@ -758,31 +936,33 @@ DAY STRUCTURE — FOLLOW EXACTLY:
 </div>
 
 ═══════════════════════════════════════════════════════
-ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
+ABSOLUTE CHECKS — CRITICAL BEFORE FINISHING
 ═══════════════════════════════════════════════════════
-✅ Covered ONLY these subtopics: {', '.join(subtopics)}
-✅ All subtopics are under main topic: {main_topic}
-✅ No subtopics from other days included
-✅ Minimum 5 CFUs and 5 CCQs placed throughout
-✅ Every CFU and CCQ has wait time instruction
-✅ Lead Question used — NOT "Spark" or "Analogy"
+✅ Day heading matches EXACTLY: {' | '.join(day_sections)}
+✅ Covered ONLY sections: {', '.join(day_sections)}
+✅ NO sections from other days mentioned
+✅ NO general knowledge added — only chapter text used
+✅ Minimum 3 CFUs per concept (numbered CFU 1, CFU 2, CFU 3)
+✅ Minimum 2 CCQs per concept (numbered CCQ 1, CCQ 2)
+✅ Every CFU and CCQ has wait time
+✅ Differentiated table has timing (5 mins / 4 mins / 5 mins)
+✅ Lead Question heading used — NOT "Spark"
 ✅ NO page numbers anywhere
 ✅ Tamil only in: Key Terms + Main explanations + Opening question
-✅ At least one flowchart model in board-work per subtopic
-✅ Student task style: {task['style']}
-✅ Activity style: {activity}
-✅ Sample answer included in student task section
-{"✅ Closing is FULL CHAPTER RECAP across all 4 days" if day_num == 4 else "✅ Preview mentions next day topics clearly"}
+✅ Flowchart model in board-work for every concept
+✅ Sample answer in student task
+{"✅ Day 2 homework has 3 format options (written/poster/flowchart)" if day_num == 2 else ""}
+{"✅ Day 4 closing = full chapter recap across all 4 days" if day_num == 4 else f"✅ Preview names exact sections from Day {day_num + 1}"}
 ✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
 ✅ Do NOT generate Day {day_num + 1}
 
-Chapter Text:
+Chapter Text (use ONLY this — no general knowledge):
 ---
 {text}
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=10000,
+                model=self.model, max_tokens=12000,
                 system=SS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -791,20 +971,20 @@ Chapter Text:
             print(f"❌ History LP Day {day_num} error: {e}")
             return None
 
-    # -------------------------------------------------------------------------
-    # Call 6 — Day 5: Map Work + Book-back
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # CALL 6 — DAY 5: MAP + BOOK-BACK
+    # =========================================================================
 
-    def _call_day5(self, text, class_num, unit,
-                   lesson_title, chapter_plan: dict):
+    def _call_day5(self, text, class_num, unit, lesson_title, sections: dict):
         try:
-            map_locations = ", ".join(chapter_plan.get("map_locations", []))
-            important_dates = chapter_plan.get("important_dates", [])
-            dates_str = "\n".join([f"  - {d}" for d in important_dates])
-            task = STUDENT_TASK_STYLES[5]
+            map_locations = ", ".join(sections.get("map_locations", []))
+            personalities = ", ".join(sections.get("key_personalities", []))
+            dates         = sections.get("important_dates", [])
+            dates_str     = "\n".join([f"  - {d}" for d in dates])
+            task          = STUDENT_TASK_STYLES[5]
 
             prompt = f"""Generate ONLY Day 5 of the History lesson plan.
-Day 5 is always: Rapid Recall Quiz → Book-back Marking → Map Work → Test Prep → Closing.
+Day 5: Rapid Recall Quiz → Book-back Marking → Map Work → Test Prep → Closing.
 Do NOT generate any other day.
 
 Chapter  : {lesson_title}
@@ -814,127 +994,113 @@ Subject  : Social Science — History
 Day      : 5 of 5
 Duration : 35 minutes
 
-MAP LOCATIONS FROM CHAPTER ANALYSER:
-{map_locations if map_locations else "Identify from chapter text"}
-
-IMPORTANT DATES FROM CHAPTER ANALYSER:
-{dates_str if dates_str else "Identify from chapter text"}
+MAP LOCATIONS: {map_locations if map_locations else 'Identify from chapter text'}
+KEY PERSONALITIES: {personalities}
+IMPORTANT DATES:
+{dates_str if dates_str else '  Identify from chapter text'}
 
 <h3 class="day-header">Day 5 — Map Work & Book-back Exercises</h3>
 <p class="day-meta">Duration: 35 Minutes | History | Evaluation Day</p>
 
 <div class="day-block">
 
-  <!-- ═══ RAPID RECALL QUIZ (0-5 min) ═══ -->
+  <!-- RAPID RECALL QUIZ (0-5 min) -->
   <div class="time-block">
     <strong>[0-5 min] Rapid Recall Quiz</strong>
-
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "5 rapid-fire questions from Days 1-4. Write answers on a slip of paper."</p>
-
+    <p class="teacher-says">"5 rapid-fire questions from Days 1-4. Write on slip of paper."</p>
     <div class="board-work">
-      <strong>5 Quiz Questions (write on board):</strong><br/>
-      1. [Factual question — Day 1 content]<br/>
-      2. [Factual question — Day 2 content]<br/>
-      3. [Factual question — Day 3 content]<br/>
-      4. [Factual question — Day 4 content]<br/>
-      5. [Key date or key term from chapter]<br/>
-      <br/>
+      <strong>5 Quiz Questions:</strong><br/>
+      1. [Factual — Day 1 section content]<br/>
+      2. [Factual — Day 2 section content]<br/>
+      3. [Factual — Day 3 section content]<br/>
+      4. [Factual — Day 4 section content]<br/>
+      5. [Key date or personality from chapter]<br/>
       <strong>Answers:</strong> 1.[A] 2.[A] 3.[A] 4.[A] 5.[A]
     </div>
-
     <p><em>Students self-mark. Teacher notes who struggled.</em></p>
   </div>
 
-  <!-- ═══ BOOK-BACK MARKING (5-20 min) ═══ -->
+  <!-- BOOK-BACK MARKING (5-20 min) -->
   <div class="time-block">
     <strong>[5-20 min] Book-back Exercise Marking</strong>
 
     <p><em>Teacher facilitates step-by-step marking.
-    Note: The platform Q&A section has all book-back questions with complete model answers.</em></p>
+    Note: Platform Q&A section has all book-back questions with model answers.</em></p>
 
     <h4>Section 1: Choose the Correct Answer</h4>
-    <p>[3-4 key MCQ answers — explain WHY each is correct. Reference topic name not page.]</p>
+    <p>[3-4 key MCQ answers — explain WHY correct. Reference section name not page.]</p>
 
     <h4>Section 2: Fill in the Blanks / Match the Following</h4>
-    <p>[3-4 key answers — explain the connection. Reference topic names.]</p>
+    <p>[3-4 key answers — explain connection. Reference section names.]</p>
 
     <h4>Section 3: Short Answer Questions</h4>
-    <p>[2-3 short answers — give model answer structure. Reference topic names.]</p>
+    <p>[2-3 model answer structures. Reference section names.]</p>
 
     <div class="board-work">
-      <strong>Write Correct Answers on Board:</strong><br/>
-      [List key answers for student verification]
+      <strong>Write Answers on Board:</strong><br/>
+      [Key answers for student verification]
     </div>
   </div>
 
-  <!-- ═══ MAP TEACHING (20-30 min) ═══ -->
+  <!-- MAP TEACHING (20-30 min) -->
   <div class="time-block">
     <strong>[20-30 min] Map Teaching Session</strong>
+    <p><em>Teacher points on wall map first. Students mark outline maps.</em></p>
 
-    <p><em>Teacher points on wall map first, then students mark outline maps.</em></p>
-
-    <h4>Map Task 1 — [Primary map task based on chapter content]</h4>
-    <p>[Exactly what to locate and mark — specific countries, cities, regions from chapter.]</p>
+    <h4>Map Task 1 — [Primary map task from chapter content]</h4>
+    <p>[Exactly what to locate — countries, cities, regions from chapter text.]</p>
 
     <div class="board-work">
       <strong>Map Tips & Memory Tricks:</strong><br/>
-      [3-5 specific memory tricks for key locations in this chapter.
-       Make them catchy and chapter-specific.]<br/>
+      [3-5 catchy chapter-specific memory tricks for key locations]<br/>
       <br/>
-      <strong>Map Checklist — Mark All of These:</strong><br/>
-      [Numbered list of all locations to mark and label]<br/>
-      <br/>
-      <em>Label all locations in CAPITAL LETTERS on outline map.</em>
+      <strong>Map Checklist — Mark All:</strong><br/>
+      {map_locations if map_locations else '[All map locations from chapter]'}<br/>
+      <em>Label all in CAPITAL LETTERS.</em>
     </div>
 
-    <h4>Map Task 2 — [Secondary map task if applicable]</h4>
-    <p>[Second set of locations based on chapter content.]</p>
-
+    <h4>Map Task 2 — [Secondary map task]</h4>
+    <p>[Second set based on actual chapter content.]</p>
   </div>
 
-  <!-- ═══ STUDENT TASK + TEST PREP (30-35 min) ═══ -->
+  <!-- TEST PREP (30-35 min) -->
   <div class="time-block">
     <strong>[30-35 min] {task['style']} + Test Prep</strong>
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "Attempt these 2 questions independently in test conditions."</p>
-
+    <p class="teacher-says">"Attempt 2 questions independently — test conditions."</p>
     <div class="board-work">
       <strong>Practice Questions:</strong><br/>
-      Q1. [1-mark or 2-mark question — different from book-back]<br/>
+      Q1. [2-mark question — different from book-back]<br/>
       Q2. [5-mark question — different from book-back]<br/>
       <br/>
       <strong>Test Series:</strong><br/>
-      <em>For more practice, attempt the online question bank for this chapter.
-      Use the timer for exam readiness.</em>
+      <em>Use online question bank for this chapter. Timer for exam readiness.</em>
     </div>
 
-    <p><em>Collect all submissions before closing.</em></p>
+    <p><em>Submit before leaving:</em></p>
     <ul>
-      <li>Completed notebook — all 5 days of notes</li>
+      <li>Completed notebook — all 5 days</li>
       <li>Book-back exercises — answered and marked</li>
-      <li>Outline map — all locations marked and labeled</li>
+      <li>Outline map — all locations labeled</li>
       <li>All homework from Days 1-4</li>
       <li>Today's practice questions</li>
     </ul>
   </div>
 
-  <!-- ═══ CLOSING ═══ -->
+  <!-- CLOSING -->
   <div class="time-block">
     <strong>Closing</strong>
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[2-3 sentences — congratulate students. Name 2-3 specific things they learned.
-     Motivate for next chapter.]"</p>
+    <p class="teacher-says">"[2-3 sentences — congratulate students.
+     Name 2-3 specific things learned. Motivate for next chapter.]"</p>
   </div>
 
 </div>
 
 RULES:
 - Raw HTML only — start with <h3 class="day-header">Day 5
-- Map tasks based on ACTUAL chapter content and locations from analyser
-- No Tamil in Day 5 — English only
-- No page numbers anywhere
+- Map tasks based on ACTUAL chapter content
+- No Tamil in Day 5
+- No page numbers
 - Do NOT generate any other day
 
 Chapter Text:
@@ -952,28 +1118,41 @@ Chapter Text:
             print(f"❌ History LP Day 5 error: {e}")
             return None
 
-    # -------------------------------------------------------------------------
-    # Call 7 — Assessment Summary
-    # -------------------------------------------------------------------------
+    # =========================================================================
+    # CALL 7 — ASSESSMENT SUMMARY
+    # =========================================================================
 
     def _call_assessment(self, text, class_num, unit,
-                         lesson_title, chapter_plan: dict):
+                         lesson_title, sections: dict, day_plan: dict):
         try:
-            main_topics_str = ", ".join([
-                t['title'] for t in chapter_plan.get("main_topics", [])
-            ])
-            key_terms = ", ".join(chapter_plan.get("key_terms", []))
+            # Build full section list
+            all_sections = sections.get("chapter_sections", [])
+            sections_str = ", ".join([s["heading"] for s in all_sections])
+            key_terms    = ", ".join([
+                t for s in all_sections for t in s.get("key_terms", [])
+            ][:10])
 
-            prompt = f"""Generate ONLY the Assessment Summary section.
+            # Day summaries
+            day_summary = ""
+            for d in range(1, 5):
+                day_data     = day_plan.get(f"day{d}", {})
+                day_sections = day_data.get("sections", [])
+                day_summary += f"  Day {d}: {', '.join(day_sections)}\n"
+
+            prompt = f"""Generate ONLY the Assessment Summary for this History chapter.
 Do NOT repeat any day content.
 
 Chapter  : {lesson_title}
 Class    : {class_num}
 Unit     : {unit}
 Subject  : Social Science — History
+Total Days: 5
 
-CHAPTER MAIN TOPICS: {main_topics_str}
+ALL CHAPTER SECTIONS (in order): {sections_str}
 KEY TERMS: {key_terms}
+
+DAY-WISE SECTIONS:
+{day_summary}
 
 <h2>Assessment Summary</h2>
 <div class="assessment-block">
@@ -983,7 +1162,7 @@ KEY TERMS: {key_terms}
     <thead>
       <tr>
         <th>Day</th>
-        <th>Main Topic Covered</th>
+        <th>Sections Covered</th>
         <th>Oral Question (English)</th>
         <th>Expected Answer</th>
         <th>Tamil Prompt</th>
@@ -991,28 +1170,32 @@ KEY TERMS: {key_terms}
     </thead>
     <tbody>
       [5 rows — Day 1 through Day 5.
-       Questions about SUBJECT MATTER only — not tasks.
-       Based on actual main topics from chapter analyser.]
+       Questions about SUBJECT MATTER only — based on actual sections.
+       Tamil version in last column.]
     </tbody>
   </table>
 
-  <h3>CFU Bank — Quick Reference</h3>
-  <p><em>10 basic recall questions for revision — one per key concept:</em></p>
+  <h3>CFU Bank — Quick Reference (3 per section)</h3>
+  <p><em>Basic recall questions — 3 per major section for teacher reference:</em></p>
   <ol>
-    [10 CFU questions with one-line answers — under 6 words each]
+    [15 CFU questions — 3 per each of the 5 major sections.
+     Under 6 words each. What/Who/When/Which/Name format.
+     Based on actual extracted sections.]
   </ol>
 
-  <h3>CCQ Bank — Quick Reference</h3>
-  <p><em>10 deeper conceptual questions for revision:</em></p>
+  <h3>CCQ Bank — Deeper Understanding</h3>
+  <p><em>10 conceptual questions for revision:</em></p>
   <ol>
-    [10 CCQ questions with 1-2 sentence answers — under 8 words each]
+    [10 CCQ questions — Why/How/What happened if format.
+     Under 8 words each. Tamil version mentioned.
+     Based on actual chapter content.]
   </ol>
 
   <h3>Written Assessment Task</h3>
   <p>[One meaningful written task covering the full chapter.]</p>
   <div class="board-work">
     <strong>Model Answer (write on board):</strong>
-    <p>"[Sentence 1]"</p>
+    <p>"[Sentence 1 — from actual chapter content]"</p>
     <p>"[Sentence 2]"</p>
     <p>"[Sentence 3]"</p>
   </div>
@@ -1021,21 +1204,21 @@ KEY TERMS: {key_terms}
   <table class="diff-table">
     <thead>
       <tr>
-        <th>Slow Learners<br/>(கஷ்டப்படும் மாணவர்கள்)</th>
-        <th>Average Learners<br/>(சராசரி மாணவர்கள்)</th>
-        <th>Advanced Learners<br/>(திறமையான மாணவர்கள்)</th>
+        <th>Slow Learners (5 mins)<br/>(கஷ்டப்படும் மாணவர்கள்)</th>
+        <th>Average Learners (4 mins)<br/>(சராசரி மாணவர்கள்)</th>
+        <th>Advanced Learners (5 mins)<br/>(திறமையான மாணவர்கள்)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>
           <p><strong>Task:</strong> Fill in blanks with word bank</p>
-          <p><strong>Word Bank:</strong> {key_terms[:5] if key_terms else '[5 key terms]'}</p>
+          <p><strong>Word Bank:</strong> [5 key terms from chapter]</p>
           <p><em>ஆசிரியர் கூடவே உட்கார்ந்து உதவலாம்</em></p>
         </td>
         <td>
           <p><strong>Task:</strong> Answer 3 questions in 2-3 sentences</p>
-          <p>Starter: "[Event] happened because _______."</p>
+          <p>Starter: "[event] happened because _______."</p>
         </td>
         <td>
           <p><strong>Task:</strong> Structured essay</p>
@@ -1050,21 +1233,21 @@ KEY TERMS: {key_terms}
     <li>☐ All 5 days of notes completed</li>
     <li>☐ All homework tasks submitted (Days 1-4)</li>
     <li>☐ Book-back exercises answered and marked (Day 5)</li>
-    <li>☐ Outline map completed with all locations (Day 5)</li>
+    <li>☐ Outline map completed (Day 5)</li>
     <li>☐ Practice questions attempted (Day 5)</li>
-    <li>☐ [Chapter-specific checklist item 1]</li>
-    <li>☐ [Chapter-specific checklist item 2]</li>
+    <li>☐ [Chapter-specific item from actual content]</li>
   </ul>
 
 </div>
 
 RULES:
 - Raw HTML only. Start with <h2>Assessment Summary</h2>
-- Day table MUST have exactly 5 rows with Tamil column
-- CFU bank: 10 questions, under 6 words each
-- CCQ bank: 10 questions, under 8 words each
-- No page numbers anywhere
-- Base everything on actual chapter content
+- Day table: exactly 5 rows with Tamil column
+- CFU bank: 15 questions (3 per section)
+- CCQ bank: 10 questions
+- Diff table has timing per level
+- No page numbers
+- Base everything on actual extracted sections
 
 Chapter Text:
 ---
@@ -1072,7 +1255,7 @@ Chapter Text:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=4000,
+                model=self.model, max_tokens=5000,
                 system=SS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )

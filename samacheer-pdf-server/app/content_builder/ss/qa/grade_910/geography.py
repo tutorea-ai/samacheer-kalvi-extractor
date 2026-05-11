@@ -27,6 +27,7 @@ from .....config import settings
 from ...base import (
     SS_QA_SYSTEM_PROMPT,
     DISCIPLINE_CONTEXT,
+    ANSWER_FORMAT_RULES,
     clean,
 )
 
@@ -114,6 +115,8 @@ class GeographyQA910Builder:
             prompt = f"""Generate ONLY MCQ questions Q1 to Q25 for this question bank.
 Do NOT generate any other question type.
 
+{ANSWER_FORMAT_RULES}
+
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
 {disc_context}
 
@@ -186,6 +189,8 @@ Start at Q1. End at Q25."""
 Do NOT generate MCQ, match, or descriptive questions.
 Do NOT repeat any fact already tested in Q1–Q25.
 
+{ANSWER_FORMAT_RULES}
+
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
 {disc_context}
 
@@ -247,6 +252,8 @@ Start at Q26. End at Q50."""
             prompt = f"""Generate two sections: Choose the Statement (Q51–Q60) and Match the Following (Q61–Q75).
 Do NOT generate MCQ, fill blanks, or descriptive questions.
 Do NOT repeat any fact already tested in Q1–Q50.
+
+{ANSWER_FORMAT_RULES}
 
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
 {disc_context}
@@ -350,6 +357,8 @@ Start at Q51. End at Q75."""
 Do NOT generate MCQ, fill blanks, or statement questions.
 Do NOT repeat facts already tested in Q1–Q75.
 
+{ANSWER_FORMAT_RULES}
+
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
 {disc_context}
 
@@ -381,7 +390,8 @@ FORMAT:
 <div class="qa-item">
   <p class="question"><strong>Q76.</strong> What were the main causes of World War I?
   <span class="mark-badge">(2 marks)</span></p>
-  <div class="answer-text">
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
     <p class="answer"><strong>Answer:</strong> The main causes of World War I were the
     rivalry between European powers, the formation of opposing alliance systems, and the
     assassination of Archduke Franz Ferdinand in 1914. Militarism, nationalism, and
@@ -414,7 +424,8 @@ FORMAT:
 <div class="qa-item">
   <p class="question"><strong>Q96.</strong> Explain the consequences of World War I for Europe.
   <span class="mark-badge">(5 marks)</span></p>
-  <div class="answer-text">
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
     <p class="answer"><strong>Answer:</strong> World War I had devastating consequences
     for Europe. The war resulted in the fall of four major empires — the German,
     Austro-Hungarian, Ottoman, and Russian empires. Millions of soldiers and civilians

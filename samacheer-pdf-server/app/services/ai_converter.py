@@ -77,6 +77,25 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
     .board-work {{ background: #1a1a2e; color: #fff; padding: 8px 12px; border-radius: 4px; margin: 4px 0; font-family: monospace; }}
     .transition {{ color: #666; font-style: italic; margin: 4px 0; }}
     .assessment-block {{ background: #fafafa; border: 1px solid #e8e8e8; border-radius: 8px; padding: 16px; }}
+    .show-answer-btn {{
+      background: #8B4513;
+      color: white;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 8px 0;
+      font-size: 0.9rem;
+    }}
+    .show-answer-btn.active {{ background: #5c4033; }}
+    .answer-reveal {{
+      display: none;
+      padding: 10px;
+      background: #f5ebe0;
+      border-left: 3px solid #8B4513;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }}
   </style>
 </head>
 <body>

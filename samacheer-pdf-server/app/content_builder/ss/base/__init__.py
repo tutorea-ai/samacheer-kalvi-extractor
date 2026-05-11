@@ -352,6 +352,99 @@ CRITICAL OUTPUT RULES:
 
 
 # ============================================================================
+# ANSWER FORMAT RULES
+# ============================================================================
+
+ANSWER_FORMAT_RULES = """
+ANSWER FORMAT RULES — STRICTLY FOLLOW:
+
+For MCQ (1 mark):
+<div class="qa-item">
+  <p class="question"><strong>1.</strong> Question?</p>
+  <div class="mcq-options">
+    <span>a) Option</span>
+    <span>b) Option ✓ (correct)</span>
+    <span>c) Option</span>
+    <span>d) Option</span>
+  </div>
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
+    <p><strong>Answer:</strong> b) [correct option text]</p>
+  </div>
+</div>
+
+For Fill in the blanks (1 mark):
+<div class="qa-item">
+  <p class="question"><strong>1.</strong> [Sentence with]
+  <span class="blank-line">__________</span> [rest].</p>
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
+    <p><strong>Answer:</strong> [word/phrase]</p>
+  </div>
+</div>
+
+For Match the following (1 mark):
+<div class="qa-item">
+  <p class="question"><strong>1.</strong> Match the following:</p>
+  <table class="match-table">
+    <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
+    <tbody>
+      <tr><td>1. [Left]</td><td>a) [Right]</td></tr>
+      <tr><td>2. [Left]</td><td>b) [Right]</td></tr>
+    </tbody>
+  </table>
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
+    <p><strong>Answers:</strong> 1-[x], 2-[x], 3-[x]</p>
+  </div>
+</div>
+
+For Choose the Statement (1 mark):
+<div class="qa-item">
+  <p class="question"><strong>1.</strong> Choose the correct statement:</p>
+  <div class="mcq-options">
+    <span>i) [Statement one]</span>
+    <span>ii) [Statement two] ✓</span>
+    <span>iii) [Statement three]</span>
+  </div>
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
+    <p><strong>Answer:</strong> ii) [correct statement]</p>
+  </div>
+</div>
+
+For 2 mark questions:
+<div class="qa-item">
+  <p class="question"><strong>1.</strong> Question?
+  <span class="mark-badge">(2 marks)</span></p>
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
+    <p><strong>Answer:</strong> [2-3 sentence answer]</p>
+  </div>
+</div>
+
+For 5 mark questions:
+<div class="qa-item">
+  <p class="question"><strong>1.</strong> Question?
+  <span class="mark-badge">(5 marks)</span></p>
+  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <div class="answer-reveal" style="display:none;">
+    <p><strong>Answer:</strong> [5-7 sentence answer]</p>
+  </div>
+</div>
+
+ABSOLUTE RULES:
+- NEVER use <textarea> anywhere
+- Answer div MUST have class="answer-reveal" and style="display:none;"
+- Button MUST have class="show-answer-btn" and onclick="toggleAnswer(this)"
+- Button MUST come immediately before the answer div
+- Answer div MUST be immediately after the button (nextElementSibling)
+- ALWAYS show actual answer inside answer-reveal div
+- Mark MCQ correct answer with ✓ in options
+"""
+
+
+# ============================================================================
 # DISCIPLINE CONTEXT
 # ============================================================================
 

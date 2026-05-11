@@ -1,7 +1,7 @@
 """
-history.py  (QA Builder)
-------------------------
-QA Generator for Samacheer Kalvi Social Science — History
+economics.py  (QA Builder)
+--------------------------
+QA Generator for Samacheer Kalvi Social Science — Economics
 Class 9 & 10
 
 v2.0 — Teacher feedback + team recommendation (May 2026)
@@ -32,12 +32,12 @@ from ...base import (
 )
 
 
-class CivicsQA910Builder:
+class EconomicsQA910Builder:
 
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
         self.model  = settings.ANTHROPIC_MODEL
-        print(f"✅ Civics QA Builder (910) v2.0 initialized — model: {self.model}")
+        print(f"✅ Economics QA Builder (910) v2.0 initialized — model: {self.model}")
 
     # -------------------------------------------------------------------------
     # Public API
@@ -55,11 +55,11 @@ class CivicsQA910Builder:
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
         unit         = metadata.get("unit", "")
-        disc_context = DISCIPLINE_CONTEXT.get("civics", "")
+        disc_context = DISCIPLINE_CONTEXT.get("economics", "")
 
         total_calls = 4
-        print(f"      [Civics QA 910 v2] Generating: {lesson_title}")
-        print(f"      [Civics QA 910 v2] 4 calls → 100 questions")
+        print(f"      [Economics QA 910 v2] Generating: {lesson_title}")
+        print(f"      [Economics QA 910 v2] 4 calls → 100 questions")
 
         parts = []
 
@@ -103,7 +103,7 @@ class CivicsQA910Builder:
             return None
 
         combined = "\n\n".join(parts)
-        print(f"      [Civics QA 910 v2] ✅ Complete — {len(parts)} parts, {len(combined)} chars")
+        print(f"      [Economics QA 910 v2] ✅ Complete — {len(parts)} parts, {len(combined)} chars")
         return combined
 
     # -------------------------------------------------------------------------
@@ -469,4 +469,4 @@ Start at Q76. End at Q100."""
 # Singleton instance
 # ============================================================================
 
-civics_qa_910_builder = CivicsQA910Builder()
+economics_qa_910_builder = EconomicsQA910Builder()
