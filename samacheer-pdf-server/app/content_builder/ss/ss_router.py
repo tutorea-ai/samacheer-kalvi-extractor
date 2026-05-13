@@ -37,9 +37,7 @@ def _get_grade_group(class_num: int) -> Optional[str]:
     """Map class number to grade group string."""
     if class_num in [6, 7]:
         return "grade_67"
-    elif class_num == 8:
-        return "grade_8"
-    elif class_num in [9, 10]:
+    elif class_num in [8, 9, 10]:
         return "grade_910"
     else:
         print(f"      [SS Router] ❌ Unknown class: {class_num}")

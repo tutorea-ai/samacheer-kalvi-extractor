@@ -50,7 +50,8 @@ def _get_lp_duration(lesson_type: str) -> dict:
 # HTML WRAPPER
 # ============================================================================
 
-def _wrap_html(body_content: str, title: str, content_type: str = "content") -> str:
+def _wrap_html(body_content: str, title: str, content_type: str = "content",
+               meta_line: str = "") -> str:
     accent_colors = {"content": "#2E75B6", "qa": "#27AE60", "lp": "#8E44AD"}
     accent = accent_colors.get(content_type, "#2E75B6")
     return f"""<!DOCTYPE html>
@@ -100,6 +101,10 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content") -> 
 </head>
 <body>
   <div class="sk-lesson-wrapper">
+    <div class="sk-content-header">
+      <h1>{title}</h1>
+      <p class="sk-meta">{meta_line}</p>
+    </div>
     {body_content}
   </div>
 </body>
@@ -145,8 +150,21 @@ class AIContentConverter:
         results      = {"content": None, "qa": None, "lp": None}
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
-        subject      = metadata.get("subject", "english")
+        unit         = metadata.get("unit", "")
+        subject      = metadata.get("subject", "english").lower()
+        discipline   = metadata.get("discipline", "")
         lesson_type  = metadata.get("lesson_type", "prose")
+
+        type_display_map = {
+            "prose":         "Prose",
+            "poem":          "Poem",
+            "supplementary": "Supplementary Reader",
+        }
+        if subject in ["socialscience", "social_science"] and discipline:
+            meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit}"
+        else:
+            type_display = type_display_map.get(lesson_type, "Prose")
+            meta_line = f"Class {class_num} | English | Unit {unit} | {type_display}"
 
         print(f"🤖 Generating: Content + QA + LP for '{lesson_title}'")
 
@@ -168,7 +186,8 @@ class AIContentConverter:
                 results["content"] = _wrap_html(
                     content_html,
                     title=f"{lesson_title} | Class {class_num}",
-                    content_type="content"
+                    content_type="content",
+                    meta_line=meta_line
                 )
                 print(f"   ✅ Content HTML ready ({len(content_html)} chars)")
             else:
@@ -179,7 +198,7 @@ class AIContentConverter:
         # ── QA ────────────────────────────────────────────────────────────────
         print(f"\n   ❓ Generating QA HTML...")
         try:
-            if subject.lower() in ["socialscience", "social_science"]:
+            if subject in ["socialscience", "social_science"]:
                 from ..content_builder.master_router import generate_qa
                 qa_html = generate_qa(text, metadata)
             else:
@@ -189,7 +208,8 @@ class AIContentConverter:
                 results["qa"] = _wrap_html(
                     qa_html,
                     title=f"Q&A — {lesson_title} | Class {class_num}",
-                    content_type="qa"
+                    content_type="qa",
+                    meta_line=meta_line
                 )
                 print(f"   ✅ QA HTML ready ({len(qa_html)} chars)")
             else:
@@ -200,7 +220,7 @@ class AIContentConverter:
         # ── LP ────────────────────────────────────────────────────────────────
         print(f"\n   📌 Generating LP HTML...")
         try:
-            if subject.lower() in ["socialscience", "social_science"]:
+            if subject in ["socialscience", "social_science"]:
                 lp_html = self._generate_ss_lp(text, metadata)
             else:
                 lp_html = self._generate_lp(text, metadata)
@@ -208,7 +228,8 @@ class AIContentConverter:
                 results["lp"] = _wrap_html(
                     lp_html,
                     title=f"Lesson Plan — {lesson_title} | Class {class_num}",
-                    content_type="lp"
+                    content_type="lp",
+                    meta_line=meta_line
                 )
                 print(f"   ✅ LP HTML ready ({len(lp_html)} chars)")
             else:

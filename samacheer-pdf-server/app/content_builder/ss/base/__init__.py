@@ -52,6 +52,21 @@ CRITICAL OUTPUT RULES:
 
 
 # ============================================================================
+# PREAMBLE HEADER INSTRUCTION
+# ============================================================================
+
+PREAMBLE_START_INSTRUCTION = """
+CRITICAL OUTPUT RULE FOR PREAMBLE:
+- Do NOT generate any <div class="sk-content-header"> block
+- Do NOT generate any <h1> title block
+- The page header is handled by the platform automatically
+- Start your output DIRECTLY with <h2>Part 1: Chapter Overview</h2>
+- First HTML tag must be <h2>
+- Do NOT generate any Day blocks
+"""
+
+
+# ============================================================================
 # CCQ INSTRUCTION BLOCK
 # ============================================================================
 
@@ -176,12 +191,21 @@ Example structure: 'Show this image: [describe clearly] → What do you see?
 What does this tell us about...?'""",
     },
     3: {
-        "style": "Video Clip Description + Discussion",
+        "style": "Video Clip Description + Discussion (with No-Tech Alternate)",
         "instruction": """Describe a short video clip (60-90 seconds) the teacher can find on YouTube
 that directly connects to today's topic. Give the search keywords.
 After the clip: ask students 2 quick reaction questions.
 Example structure: 'Play this clip: [YouTube search: "..."] →
-What did you notice? How does this connect to...?'""",
+What did you notice? How does this connect to...?'
+
+⚠️ NO-TECH ALTERNATE (for classes without video facility):
+If video is not available, use this instead:
+Teacher reads aloud a dramatic 3-4 sentence description of the key event.
+Make it vivid — dates, names, action.
+Example: 'On June 28, 1914, Archduke Franz Ferdinand stepped out of his car...
+          A young man named Gavrilo Princip raised his pistol...'
+Then ask: 'What do you think happened next? How would YOU have reacted?'
+End with the same Big Question connecting to today's sections.""",
     },
     4: {
         "style": "Historical Quote / Headline + Reaction",
@@ -356,92 +380,160 @@ CRITICAL OUTPUT RULES:
 # ============================================================================
 
 ANSWER_FORMAT_RULES = """
-ANSWER FORMAT RULES — STRICTLY FOLLOW:
+ANSWER FORMAT RULES — STRICTLY FOLLOW FOR ALL SECTIONS:
 
-For MCQ (1 mark):
+═══════════════════════════════════════════════════════
+SECTION WRAPPER — EVERY SECTION MUST USE THIS STRUCTURE
+═══════════════════════════════════════════════════════
+Every question section MUST be wrapped in a section div with a Show Answers button.
+The button reveals ALL answers in that section at once.
+NO individual show buttons per question — section button is the ONLY trigger.
+
+SECTION IDs to use:
+  MCQ (Choose Correct Answer)  → id="section-mcq"
+  Fill in the Blanks           → id="section-fill"
+  Choose the Statement         → id="section-choose"
+  Match the Following          → id="section-match"
+  2-mark (Answer Briefly)      → id="section-2mark"
+  5-mark (Answer in Detail)    → id="section-5mark"
+
+SECTION WRAPPER FORMAT — use EXACTLY this structure:
+<div class="qa-section" id="section-[id]">
+  <div class="section-header">
+    <h2>[Section Title]</h2>
+    <button class="show-section-btn"
+            onclick="toggleSectionAnswers(this, 'section-[id]')">
+      Show Answers
+    </button>
+  </div>
+  <p class="section-note"><em>[marks info]</em></p>
+
+  [questions here]
+
+</div>
+
+═══════════════════════════════════════════════════════
+ANSWER REVEAL — EVERY QUESTION MUST USE THIS STRUCTURE
+═══════════════════════════════════════════════════════
+Every answer MUST be inside an answer-reveal div.
+NEVER show the answer directly — always inside answer-reveal.
+NEVER add individual show buttons per question.
+
+ANSWER REVEAL FORMAT:
+<div class="answer-reveal" style="display:none;">
+  <p class="answer"><strong>Answer:</strong> [complete answer here]</p>
+</div>
+
+═══════════════════════════════════════════════════════
+QUESTION FORMATS — PER TYPE
+═══════════════════════════════════════════════════════
+
+── MCQ (Choose the Correct Answer) ────────────────────
+NO tick mark ✓ anywhere in options.
+Correct answer shown ONLY inside answer-reveal.
+
 <div class="qa-item">
-  <p class="question"><strong>1.</strong> Question?</p>
+  <p class="question"><strong>Q1.</strong> Question text here?</p>
   <div class="mcq-options">
-    <span>a) Option</span>
-    <span>b) Option ✓ (correct)</span>
-    <span>c) Option</span>
-    <span>d) Option</span>
+    <span>a) Option one</span>
+    <span>b) Option two</span>
+    <span>c) Option three</span>
+    <span>d) Option four</span>
   </div>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
   <div class="answer-reveal" style="display:none;">
-    <p><strong>Answer:</strong> b) [correct option text]</p>
+    <p class="answer"><strong>Answer:</strong> b) [correct option text]</p>
   </div>
 </div>
 
-For Fill in the blanks (1 mark):
+── Fill in the Blanks ──────────────────────────────────
 <div class="qa-item">
-  <p class="question"><strong>1.</strong> [Sentence with]
-  <span class="blank-line">__________</span> [rest].</p>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+  <p class="question"><strong>Q26.</strong> [Sentence with]
+  <span class="blank-line">__________</span> [rest of sentence].</p>
   <div class="answer-reveal" style="display:none;">
-    <p><strong>Answer:</strong> [word/phrase]</p>
+    <p class="answer"><strong>Answer:</strong> [word or phrase]</p>
   </div>
 </div>
 
-For Match the following (1 mark):
+── Choose the Correct Statement ────────────────────────
+NO tick mark ✓ anywhere in statements.
+Correct statement shown ONLY inside answer-reveal.
+
 <div class="qa-item">
-  <p class="question"><strong>1.</strong> Match the following:</p>
+  <p class="question"><strong>Q51.</strong> Choose the correct statement:</p>
+  <div class="mcq-options">
+    <span>i) [Statement one]</span>
+    <span>ii) [Statement two]</span>
+    <span>iii) [Statement three]</span>
+  </div>
+  <div class="answer-reveal" style="display:none;">
+    <p class="answer"><strong>Answer:</strong> ii) [correct statement text]</p>
+  </div>
+</div>
+
+── Match the Following ─────────────────────────────────
+<div class="qa-item">
+  <p class="question"><strong>Q61.</strong> Match the following:</p>
   <table class="match-table">
     <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
     <tbody>
-      <tr><td>1. [Left]</td><td>a) [Right]</td></tr>
-      <tr><td>2. [Left]</td><td>b) [Right]</td></tr>
+      <tr><td>1. [Item]</td><td>a) [Match]</td></tr>
+      <tr><td>2. [Item]</td><td>b) [Match]</td></tr>
+      <tr><td>3. [Item]</td><td>c) [Match]</td></tr>
+      <tr><td>4. [Item]</td><td>d) [Match]</td></tr>
+      <tr><td>5. [Item]</td><td>e) [Match]</td></tr>
     </tbody>
   </table>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
   <div class="answer-reveal" style="display:none;">
-    <p><strong>Answers:</strong> 1-[x], 2-[x], 3-[x]</p>
+    <p class="answer"><strong>Answers:</strong> 1-[x], 2-[x], 3-[x], 4-[x], 5-[x]</p>
   </div>
 </div>
 
-For Choose the Statement (1 mark):
+── 2-Mark Questions (Answer Briefly) ──────────────────
 <div class="qa-item">
-  <p class="question"><strong>1.</strong> Choose the correct statement:</p>
-  <div class="mcq-options">
-    <span>i) [Statement one]</span>
-    <span>ii) [Statement two] ✓</span>
-    <span>iii) [Statement three]</span>
-  </div>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
-  <div class="answer-reveal" style="display:none;">
-    <p><strong>Answer:</strong> ii) [correct statement]</p>
-  </div>
-</div>
-
-For 2 mark questions:
-<div class="qa-item">
-  <p class="question"><strong>1.</strong> Question?
+  <p class="question"><strong>Q71.</strong> Question text here?
   <span class="mark-badge">(2 marks)</span></p>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
   <div class="answer-reveal" style="display:none;">
-    <p><strong>Answer:</strong> [2-3 sentence answer]</p>
+    <p class="answer"><strong>Answer:</strong> [2-3 sentence answer — 30-50 words]</p>
   </div>
 </div>
 
-For 5 mark questions:
+── 5-Mark Questions (Answer in Detail) ────────────────
 <div class="qa-item">
-  <p class="question"><strong>1.</strong> Question?
+  <p class="question"><strong>Q91.</strong> Question text here?
   <span class="mark-badge">(5 marks)</span></p>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
   <div class="answer-reveal" style="display:none;">
-    <p><strong>Answer:</strong> [5-7 sentence answer]</p>
+    <p class="answer"><strong>Answer:</strong> [5-7 sentence answer — 80-120 words.
+    Complete paragraph — never bullet points.]</p>
   </div>
 </div>
 
-ABSOLUTE RULES:
-- NEVER use <textarea> anywhere
-- Answer div MUST have class="answer-reveal" and style="display:none;"
-- Button MUST have class="show-answer-btn" and onclick="toggleAnswer(this)"
-- Button MUST come immediately before the answer div
-- Answer div MUST be immediately after the button (nextElementSibling)
-- ALWAYS show actual answer inside answer-reveal div
-- Mark MCQ correct answer with ✓ in options
+═══════════════════════════════════════════════════════
+ABSOLUTE RULES — NEVER VIOLATE
+═══════════════════════════════════════════════════════
+❌ NEVER add tick marks ✓ anywhere in options or statements
+❌ NEVER add individual show buttons per question
+❌ NEVER show answers directly — always inside answer-reveal div
+❌ NEVER use <textarea> or <input> anywhere
+✅ ALWAYS wrap each section in qa-section div with section button
+✅ ALWAYS use style="display:none;" on every answer-reveal div
+✅ ALWAYS put complete answer inside answer-reveal
+✅ Section button is the ONLY way answers are revealed
 """
+
+
+# ============================================================================
+# QA HEADER HELPER — dynamic, used by all QA builders
+# ============================================================================
+
+def get_qa_header(lesson_title: str, class_num, unit, discipline: str) -> str:
+    """
+    Generates the QA page header dynamically.
+    Used by ALL SS QA builders — never hardcode discipline name.
+    """
+    return f"""<div class="sk-content-header">
+  <h1>Question Bank — {lesson_title}</h1>
+  <p class="sk-meta">Class {class_num} | Social Science — {discipline.title()} | Unit {unit} | 100 Questions</p>
+</div>"""
 
 
 # ============================================================================

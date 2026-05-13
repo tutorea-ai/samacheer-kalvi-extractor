@@ -44,6 +44,7 @@ from ...base import (
     STUDENT_TASK_STYLES,
     ACTIVITY_MAP,
     clean,
+    PREAMBLE_START_INSTRUCTION,
 )
 
 
@@ -482,16 +483,7 @@ KEY PERSONALITIES: {personalities}
 
 Generate these sections:
 
-1. HEADER BLOCK
-<div class="sk-content-header">
-  <h1>Lesson Plan — {lesson_title}</h1>
-  <p class="sk-meta">
-    Class {class_num} | Social Science — History |
-    Unit {unit} | 5 Days × 35 Minutes
-  </p>
-</div>
-
-2. CHAPTER OVERVIEW TABLE
+1. CHAPTER OVERVIEW TABLE (start directly here — no header block needed)
 <h2>Part 1: Chapter Overview</h2>
 <table>
   Rows: Class | Subject | Discipline | Unit/Chapter Title |
@@ -529,9 +521,8 @@ Generate these sections:
 
 OUTPUT RULES:
 - Raw HTML only
-- Start with <div class="sk-content-header">
+{PREAMBLE_START_INSTRUCTION}
 - Stop after Teaching Aids </ul>
-- Do NOT start any Day block
 - Base ALL content on actual extracted sections only
 
 Chapter Text (for reference):
@@ -588,6 +579,21 @@ The closing on Day 4 MUST recap the ENTIRE chapter across all 4 days.
 Rapid-fire questions must span ALL 4 days — not just Day 4.
 Write ALL main section headings on board as summary.
 """
+            # Day 3 missing topics enforcement
+            day3_topics_note = ""
+            if day_num == 3:
+                day3_topics_note = """
+⚠️ DAY 3 — CRITICAL MISSING TOPICS CHECK:
+The following topics MUST appear in Day 3 if they are in today's section list:
+  - Peace Conference in Paris
+  - Provisions of the Treaty of Versailles
+  - Fallout of the First World War
+  - Impact on India
+
+If ANY of these are in today's sections list — they MUST be fully taught.
+Do NOT skip or summarise them briefly — give full explanation with CFUs and CCQs.
+"""
+
             # Continuation note
             continuation_note = ""
             if continuation:
@@ -643,6 +649,7 @@ DO NOT introduce topics from other days.
 The day heading must match EXACTLY what sections are taught today.
 {continuation_note}
 {closing_note}
+{day3_topics_note}
 {homework_note}
 ═══════════════════════════════════════════════════════
 
@@ -917,8 +924,13 @@ DAY STRUCTURE:
 
     [Final CCQ 5]
 
-    <div class="homework-block">
-      {"<p class='teacher-says'><strong>Homework (choose one format):</strong><br/>Option A: Written answer — explain [key concept from today's sections] in 5 sentences.<br/>Option B: Poster — draw and label the key concepts from today visually.<br/>Option C: Flowchart — show cause → event → consequence chain for today's topic.</p><div class='board-work'><strong>Write all 3 options on board. Students choose their strength.</strong></div>" if day_num == 2 else "<p class='teacher-says'><strong>Homework:</strong><br/>'[Specific prompt from today's sections. Own words. When to submit.]'</p>"}
+    <p class="teacher-says"><strong>Closing Statement:</strong><br/>
+    "[2-3 sentences — summarise what was covered today.
+     Connect to the bigger picture of the chapter.
+     Motivate students for next day / next chapter.]"</p>
+
+    {"" if day_num == 4 else f'''<div class="homework-block">
+      {"<p class='teacher-says'><strong>Homework (choose one format):</strong><br/>Option A: Written answer — explain [key concept from today's sections] in 5 sentences.<br/>Option B: Poster — draw and label the key concepts from today visually.<br/>Option C: Flowchart — show cause → event → consequence chain for today's topic.</p><div class='board-work'><strong>Write all 3 options on board. Students choose their strength.</strong></div>" if day_num == 2 else "<p class='teacher-says'><strong>Homework:</strong><br/>[Specific prompt from today\'s sections. Own words. When to submit.]</p>"}
 
       <div class="board-work">
         <strong>Homework Model Answer:</strong><br/>
@@ -928,8 +940,8 @@ DAY STRUCTURE:
 
       <p class="teacher-says"><strong>Preview {next_label}:</strong><br/>
       "[1-2 sentences — exact sections from Day {day_num + 1 if day_num < 4 else 5} plan.
-       Name the actual sections — don't be vague.]"</p>
-    </div>
+       Name the actual sections — don\'t be vague.]"</p>
+    </div>'''}
 
   </div>
 
@@ -1004,20 +1016,25 @@ IMPORTANT DATES:
 
 <div class="day-block">
 
-  <!-- RAPID RECALL QUIZ (0-5 min) -->
+  <!-- RAPID RECALL QUIZ (0-8 min) -->
   <div class="time-block">
-    <strong>[0-5 min] Rapid Recall Quiz</strong>
-    <p class="teacher-says">"5 rapid-fire questions from Days 1-4. Write on slip of paper."</p>
+    <strong>[0-8 min] Rapid Recall Quiz — 10 Questions</strong>
+    <p class="teacher-says">"10 rapid-fire questions from Days 1-4. Write answers on slip of paper. No discussion yet."</p>
     <div class="board-work">
-      <strong>5 Quiz Questions:</strong><br/>
+      <strong>10 Quiz Questions:</strong><br/>
       1. [Factual — Day 1 section content]<br/>
-      2. [Factual — Day 2 section content]<br/>
-      3. [Factual — Day 3 section content]<br/>
-      4. [Factual — Day 4 section content]<br/>
-      5. [Key date or personality from chapter]<br/>
-      <strong>Answers:</strong> 1.[A] 2.[A] 3.[A] 4.[A] 5.[A]
+      2. [Factual — Day 1 section content]<br/>
+      3. [Factual — Day 2 section content]<br/>
+      4. [Factual — Day 2 section content]<br/>
+      5. [Factual — Day 3 section content]<br/>
+      6. [Factual — Day 3 section content]<br/>
+      7. [Factual — Day 4 section content]<br/>
+      8. [Factual — Day 4 section content]<br/>
+      9. [Key date from chapter]<br/>
+      10. [Key personality from chapter]<br/>
+      <strong>Answers:</strong> 1.[A] 2.[A] 3.[A] 4.[A] 5.[A] 6.[A] 7.[A] 8.[A] 9.[A] 10.[A]
     </div>
-    <p><em>Students self-mark. Teacher notes who struggled.</em></p>
+    <p><em>Students self-mark. Teacher notes who struggled on which days.</em></p>
   </div>
 
   <!-- BOOK-BACK MARKING (5-20 min) -->
@@ -1063,19 +1080,37 @@ IMPORTANT DATES:
     <p>[Second set based on actual chapter content.]</p>
   </div>
 
-  <!-- TEST PREP (30-35 min) -->
+  <!-- TEST PREP + 50-MARK WORKSHEET (30-35 min) -->
   <div class="time-block">
-    <strong>[30-35 min] {task['style']} + Test Prep</strong>
+    <strong>[30-35 min] {task['style']} + 50-Mark Differentiated Worksheet</strong>
 
-    <p class="teacher-says">"Attempt 2 questions independently — test conditions."</p>
+    <p class="teacher-says">"Now we do a graded worksheet. Choose your level. Attempt independently — test conditions. You have 5 minutes."</p>
+
     <div class="board-work">
-      <strong>Practice Questions:</strong><br/>
-      Q1. [2-mark question — different from book-back]<br/>
-      Q2. [5-mark question — different from book-back]<br/>
+      <strong>50-Mark Differentiated Worksheet — Choose Your Level:</strong><br/>
       <br/>
-      <strong>Test Series:</strong><br/>
-      <em>Use online question bank for this chapter. Timer for exam readiness.</em>
+      <strong>🟢 Level 1 — Slow Learners (50 marks)</strong><br/>
+      Q1-Q10: Fill in the blanks with word bank (1 mark each = 10 marks)<br/>
+      Word Bank: [10 key terms from chapter]<br/>
+      Q11-Q20: Choose the correct answer — MCQ (1 mark each = 10 marks)<br/>
+      Q21-Q25: Match the following — 2 sets (2 marks each = 10 marks)<br/>
+      Q26-Q30: Answer in ONE sentence (4 marks each = 20 marks)<br/>
+      <br/>
+      <strong>🟡 Level 2 — Average Learners (50 marks)</strong><br/>
+      Q1-Q10: Fill in the blanks (1 mark each = 10 marks)<br/>
+      Q11-Q20: Choose correct answer (1 mark each = 10 marks)<br/>
+      Q21-Q25: Answer in 2-3 sentences (4 marks each = 20 marks)<br/>
+      Q26-Q28: Answer in detail — 5 marks each (5 marks each = 10 marks)<br/>
+      <br/>
+      <strong>🔴 Level 3 — Advanced Learners (50 marks)</strong><br/>
+      Q1-Q5: Choose correct answer (1 mark each = 5 marks)<br/>
+      Q6-Q15: Answer in 2-3 sentences (2 marks each = 20 marks)<br/>
+      Q16-Q20: Answer in detail (5 marks each = 25 marks)<br/>
+      <br/>
+      <em>All questions based on actual chapter content from Days 1-4.</em>
     </div>
+
+    <p class="teacher-says">"After 5 minutes — swap papers with neighbour. I will read answers. Self-mark."</p>
 
     <p><em>Submit before leaving:</em></p>
     <ul>
@@ -1083,7 +1118,7 @@ IMPORTANT DATES:
       <li>Book-back exercises — answered and marked</li>
       <li>Outline map — all locations labeled</li>
       <li>All homework from Days 1-4</li>
-      <li>Today's practice questions</li>
+      <li>50-Mark worksheet — attempted and self-marked</li>
     </ul>
   </div>
 

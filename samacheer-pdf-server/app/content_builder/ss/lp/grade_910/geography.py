@@ -41,6 +41,7 @@ from ...base import (
     SS_LP_SYSTEM_PROMPT,
     STUDENT_TASK_STYLES,
     clean,
+    PREAMBLE_START_INSTRUCTION,
 )
 
 
@@ -155,7 +156,7 @@ class GeographyLP910Builder:
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
         self.model  = settings.ANTHROPIC_MODEL
-        print(f"✅ Geography LP Builder (910) v1.0 initialized — model: {self.model}")
+        print(f"✅ Geography LP Builder (910) v2.0 initialized — model: {self.model}")
 
     # -------------------------------------------------------------------------
     # Public API
@@ -387,16 +388,7 @@ MAP LOCATIONS TO COVER: {map_locations}
 
 Generate these sections:
 
-1. HEADER BLOCK
-<div class="sk-content-header">
-  <h1>Lesson Plan — {lesson_title}</h1>
-  <p class="sk-meta">
-    Class {class_num} | Social Science — Geography |
-    Unit {unit} | 5 Days × 35 Minutes
-  </p>
-</div>
-
-2. CHAPTER OVERVIEW TABLE
+1. CHAPTER OVERVIEW TABLE (start directly here — no header block needed)
 <h2>Part 1: Chapter Overview</h2>
 <table>
   Rows: Class | Subject | Discipline | Unit/Chapter Title |
@@ -440,9 +432,8 @@ Generate these sections:
 
 OUTPUT RULES:
 - Raw HTML only
-- Start with <div class="sk-content-header">
+{PREAMBLE_START_INSTRUCTION}
 - Stop after Teaching Aids </ul>
-- Do NOT start any Day block
 
 Chapter Text:
 ---
@@ -526,6 +517,18 @@ Main Topic   : {main_topic}
 Subtopics    :
 {subtopics_str}
 Map Features : {map_features_str}
+{('''⚠️ DAY 2 — THREE MANDATORY MAPS:
+All three maps MUST be included in Day 2 map work:
+1. India Political Map — label states, union territories, capitals
+2. India Physical Divisions Map — label all physiographic zones
+3. India Rivers Map — label major rivers (Himalayan + Peninsular)
+
+For each map:
+- Teacher points on wall map first
+- Students label on outline map in notebooks
+- Use Radio Controller format — teacher calls feature → students find and label
+- Speed mapping: set timer on board for each map (3-4 mins per map)
+''' if day_num == 2 else '')}
 Day Focus    : {day_focus}
 {comparison_note}
 {chant_note}
@@ -533,6 +536,59 @@ Day Focus    : {day_focus}
 CRITICAL: Cover ONLY the subtopics listed above.
 Do NOT introduce subtopics from other days.
 Do NOT repeat subtopics already covered in previous days.
+{('''⚠️ DAY 1 — MATH CORNER (MANDATORY):
+Add a dedicated Math Corner board-work block during the Introduction or Main Teaching section.
+This is for longitude and time calculation.
+
+FORMAT — use this exact board-work div:
+<div class='board-work'>
+  <strong>📐 Math Corner — Time and Longitude:</strong><br/>
+  Earth rotates 360° in 24 hours.<br/>
+  Therefore, 1° of longitude = 4 minutes.<br/>
+  Longitudinal difference (97°25\'E - 68°7\'E) ≈ 30°<br/>
+  30 × 4 minutes = 120 minutes (2 hours)<br/>
+  <em>Students copy this calculation in notebooks and verify with a partner.</em>
+</div>
+
+[CFU after Math Corner — formula-based: \'If longitude difference is 15°, how many minutes difference in time?\']
+''' if day_num == 1 else '')}
+{('''⚠️ DAY 4 — HIMALAYAN vs PENINSULAR RIVERS (MANDATORY):
+When explaining Himalayan Rivers and Peninsular Rivers:
+1. Reference an image comparison — teacher draws/shows both river systems side by side
+2. Explain CHARACTERISTICS of each while explaining — not just names
+
+Himalayan Rivers characteristics to cover:
+- Perennial (flow throughout year — fed by glaciers + rain)
+- Long course, large basins
+- Form deltas
+- Have gorges in upper course
+- Good for navigation and irrigation
+
+Peninsular Rivers characteristics to cover:
+- Seasonal (rain-fed only)
+- Shorter course, smaller basins
+- Flow through harder rocks
+- Form estuaries (west-flowing) or deltas (east-flowing)
+- Faster flow — good for hydel power
+
+FORMAT — use T-Chart comparison on board:
+<div class='board-work'>
+  <strong>Draw on Board — Himalayan vs Peninsular Rivers:</strong><br/>
+  [Draw simple sketch of both river systems side by side]<br/>
+  <table style='border-collapse:collapse;'>
+    <thead><tr>
+      <th style='border:1px solid #333;padding:6px;'>Himalayan Rivers</th>
+      <th style='border:1px solid #333;padding:6px;'>Peninsular Rivers</th>
+    </tr></thead>
+    <tbody>
+      <tr><td style='border:1px solid #333;padding:6px;'>Perennial — glaciers + rain</td><td style='border:1px solid #333;padding:6px;'>Seasonal — rain only</td></tr>
+      <tr><td style='border:1px solid #333;padding:6px;'>Long course, large basins</td><td style='border:1px solid #333;padding:6px;'>Short course, smaller basins</td></tr>
+      <tr><td style='border:1px solid #333;padding:6px;'>Form deltas</td><td style='border:1px solid #333;padding:6px;'>Form estuaries (west) / deltas (east)</td></tr>
+      <tr><td style='border:1px solid #333;padding:6px;'>Good for irrigation + navigation</td><td style='border:1px solid #333;padding:6px;'>Good for hydel power</td></tr>
+    </tbody>
+  </table>
+</div>
+''' if day_num == 4 else '')}
 ═══════════════════════════════════════════════════════
 
 {self._get_cfu_ccq_instruction()}
@@ -795,6 +851,7 @@ ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
 ═══════════════════════════════════════════════════════
 ✅ Covered ONLY these subtopics: {', '.join(subtopics)}
 ✅ Map work included with specific features: {map_features_str}
+{"✅ Day 2: All THREE maps included — Political, Physical Divisions, Rivers" if day_num == 2 else ""}
 ✅ Board diagram has actual shape description
 ✅ "I am..." CFU clues included throughout
 ✅ Minimum 5 CFUs + 5 CCQs with wait times

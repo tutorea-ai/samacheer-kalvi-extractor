@@ -87,6 +87,17 @@ TOGGLE_STYLE = """
   font-size: 13px;
 }
 .bookback-controls button:hover { background: #e0e0e0; }
+.bookback-section-heading {
+  margin: 24px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #006B6B;
+}
+.bookback-section-heading h3 {
+  color: #006B6B;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 700;
+}
 </style>
 """
 
@@ -196,9 +207,45 @@ WRAPPER (include this at the start):
     <button onclick="hideAllAnswers()">Hide All Answers</button>
   </div>
 
-  [All question blocks here]
+  [All question blocks here — grouped by section with headings]
 
 </div>
+
+SECTION HEADING FORMAT — CRITICAL:
+Before each group of questions, add the section heading exactly as it appears
+in the book-back section. Use this format:
+
+<div class="bookback-section-heading">
+  <h3>I. Choose the Correct Answer</h3>
+</div>
+[MCQ questions here]
+
+<div class="bookback-section-heading">
+  <h3>II. Fill in the Blanks</h3>
+</div>
+[Fill blank questions here]
+
+<div class="bookback-section-heading">
+  <h3>III. Match the Following</h3>
+</div>
+[Match questions here]
+
+<div class="bookback-section-heading">
+  <h3>IV. Answer Briefly</h3>
+</div>
+[2-mark questions here]
+
+<div class="bookback-section-heading">
+  <h3>V. Answer in Detail</h3>
+</div>
+[5-mark questions here]
+
+IMPORTANT:
+- Use the EXACT section heading text from the book-back — do not rename
+- If the book-back uses Roman numerals (I, II, III) keep them
+- If it uses letters (A, B, C) keep them
+- Every section MUST have its heading before the questions
+- Never mix questions from different sections under the same heading
 
 RULES:
 - Raw HTML only — no markdown, no code fences

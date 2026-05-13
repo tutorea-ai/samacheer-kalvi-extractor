@@ -4,7 +4,7 @@ economics.py
 LP Builder for Samacheer Kalvi Social Science — Economics
 Class 9 & 10
 
-v1.0 — Based on teacher Economics LP sample (May 2026)
+v2.0 — Teacher feedback applied (May 2026)
 
 Key differences from other discipline builders:
   - 3 days per chapter (same as Civics)
@@ -19,13 +19,14 @@ Key differences from other discipline builders:
   - Formula-based CFUs (if X happens, what is the Net/GDP/DI?)
   - Recap table in closing (Economic Term → Story meaning)
 
-API calls: 6 total
+API calls: 7 total
   Call 0 → Chapter Analyser  (JSON)
   Call 1 → Preamble
   Call 2 → Day 1
   Call 3 → Day 2
-  Call 4 → Day 3 (new_content_and_revision — always)
-  Call 5 → Assessment
+  Call 4 → Day 3
+  Call 5 → Day 4 (Revision + Notes + 50-mark worksheet)
+  Call 6 → Assessment
 """
 
 import json
@@ -36,6 +37,7 @@ from .....config import settings
 from ...base import (
     SS_LP_SYSTEM_PROMPT,
     clean,
+    PREAMBLE_START_INSTRUCTION,
 )
 
 
@@ -91,6 +93,16 @@ End with Big Question connecting the story to today's economic concept.
 Example: Tall student who can't read vs shorter student who is brilliant →
 Growth (just a number) vs Development (quality of life).""",
     },
+    4: {
+        "style": "Rapid Fire Recall Quiz",
+        "instruction": """Start with a rapid-fire keyword quiz reviewing Days 1, 2, and 3.
+Teacher shouts a keyword/formula/concept → students shout the answer.
+Example: 'GDP full form!' → 'Gross Domestic Product!'
+         'If GDP=1000, Depreciation=100, NNP=?' → '900!'
+         'Farmer → which sector?' → 'Primary!'
+7-10 rapid fire questions. Energetic. Standing format if possible.
+Then transition: 'Today we revise everything and make our notes.'""",
+    },
 }
 
 
@@ -113,15 +125,26 @@ One thing inside the shop that counts as Depreciation.""",
 Task has 3 parts: Name the person/shop → Identify the sector → Apply today's concept.
 Example: On walk home, find one person from each sector.
 Name them. Identify sector. Guess which GDP method applies.
-Connects classroom economics to students' actual daily life.""",
+Connects classroom economics to students' actual daily life.
+NOTE: This task is DIFFERENT from the Real-life Homework — task is done IN CLASS,
+homework is done OUTSIDE class tonight.""",
     },
     3: {
-        "style": "Three Tool Hunt",
-        "instruction": """Students find 3 real examples at home — one per economic tool/concept covered today.
-Example: One item from farm (Agriculture Policy) + one factory item (Industrial Policy) +
-one foreign app/brand (LPG/Globalization).
-Bonus question: which tool helped your family the most today?
-Students share answers next class — builds continuity.""",
+        "style": "Think-Pair-Share + Policy Match",
+        "instruction": """Give students a specific economic scenario.
+Step 1: Think independently (1 min) — which policy applies? Write answer.
+Step 2: Pair with neighbour (2 min) — compare and justify.
+Step 3: Share with class — 3-4 pairs share.
+Then together match: scenario → correct policy tool (Agriculture/Industrial/LPG).
+NOTE: This task is DIFFERENT from the Three Tool Hunt homework.""",
+    },
+    4: {
+        "style": "50-Mark Differentiated Written Assessment",
+        "instruction": """Full written assessment covering all 4 days.
+Students choose their level — Slow/Average/Advanced.
+Each level has 50 marks worth of questions appropriate to their ability.
+Test conditions — no discussion. 10 minutes.
+Teacher reads answers aloud after. Students self-mark.""",
     },
 }
 
@@ -131,9 +154,10 @@ Students share answers next class — builds continuity.""",
 # ============================================================================
 
 ECON_ACTIVITY_MAP = {
-    1: "Tea Shop Story (teacher narrates Kannan Anna's tea shop → students connect each GDP concept to the story) + Formula writing on board (students copy all formulas) + Quick sector/formula CFU quiz",
+    1: "Tea Shop Story (teacher narrates Kannan Anna's tea shop → students connect each GDP concept to the story) + Formula writing on board (students copy all formulas) + Quick sector/formula CFU quiz strictly from TODAY's content only",
     2: "Sector Identification Race (teacher describes a real person/job → students shout Primary/Secondary/Tertiary) + Large group discussion on GDP limitations (student ideas first, teacher consolidates on board)",
     3: "Tiffin Box Object Lesson (teacher holds closed/open tiffin box → pre/post 1991 contrast) + Three Toolkits activity (students identify which policy applies to given real-life examples)",
+    4: "Mind Map on Board (teacher draws full chapter mind map — students copy and complete gaps) + Notes Making (students write structured chapter summary in own words)",
 }
 
 
@@ -143,8 +167,9 @@ ECON_ACTIVITY_MAP = {
 
 ECON_CLOSING_STYLES = {
     1: "Recap Table — students complete a two-column table: Economic Term | What it means in the Tea Shop. Then draw shop diagram with formula labels.",
-    2: "Real-life Reflection — on walk home today, find one person working in each sector. Name, sector, and which GDP method applies.",
-    3: "Quick Quiz + Three Tool Hunt — 5 rapid-fire questions covering all 3 days, then tonight's Three Tool Hunt homework.",
+    2: "Real-life Reflection — on walk home today, find one person working in each sector. Name, sector, and which GDP method applies. NOTE: Different from in-class sector hunt task.",
+    3: "Policy Match Closing — students write one real example for each policy tool (Agriculture/Industrial/LPG) from their own life.",
+    4: "Chapter Complete — submit notebook, self-marked worksheet, Three Tool Hunt. Teacher gives final motivating message for next chapter.",
 }
 
 
@@ -157,7 +182,7 @@ class EconomicsLP910Builder:
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
         self.model  = settings.ANTHROPIC_MODEL
-        print(f"✅ Economics LP Builder (910) v1.0 initialized — model: {self.model}")
+        print(f"✅ Economics LP Builder (910) v2.0 initialized — model: {self.model}")
 
     # -------------------------------------------------------------------------
     # Public API
@@ -166,22 +191,23 @@ class EconomicsLP910Builder:
     def generate(self, text: str, metadata: dict) -> Optional[str]:
         """
         Generate Economics LP for Class 9 & 10.
-        Makes 6 API calls:
+        Makes 7 API calls:
             Call 0: Chapter Analyser (JSON)
             Call 1: Preamble
             Call 2: Day 1
             Call 3: Day 2
-            Call 4: Day 3 (always new_content_and_revision)
-            Call 5: Assessment
+            Call 4: Day 3
+            Call 5: Day 4 (Revision + Notes + 50-mark worksheet)
+            Call 6: Assessment
         """
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
         unit         = metadata.get("unit", "")
         month        = metadata.get("month", "")
 
-        total_calls = 6
-        print(f"      [Economics LP 910 v1] Generating: {lesson_title}")
-        print(f"      [Economics LP 910 v1] 6 API calls: Analyser + Preamble + Day1 + Day2 + Day3 + Assessment")
+        total_calls = 7
+        print(f"      [Economics LP 910 v2] Generating: {lesson_title}")
+        print(f"      [Economics LP 910 v2] 7 API calls: Analyser + Preamble + Day1 + Day2 + Day3 + Day4 + Assessment")
 
         parts = []
 
@@ -205,8 +231,8 @@ class EconomicsLP910Builder:
             print(f"         ❌ Preamble failed — aborting LP")
             return None
 
-        # ── Calls 2-4: Days 1-3 ──────────────────────────────────────────────
-        for day_num in range(1, 4):
+        # ── Calls 2-5: Days 1-4 ──────────────────────────────────────────────
+        for day_num in range(1, 5):
             call_num = day_num + 1
             print(f"      [Economics LP] Call {call_num}/{total_calls}: Day {day_num}...")
             day_topics = chapter_plan.get("day_plan", {}).get(f"day{day_num}", {})
@@ -220,8 +246,8 @@ class EconomicsLP910Builder:
             else:
                 print(f"         ❌ Day {day_num} failed — continuing")
 
-        # ── Call 5: Assessment ────────────────────────────────────────────────
-        print(f"      [Economics LP] Call 5/{total_calls}: Assessment...")
+        # ── Call 6: Assessment ────────────────────────────────────────────────
+        print(f"      [Economics LP] Call 6/{total_calls}: Assessment...")
         assessment = self._call_assessment(
             text, class_num, unit, lesson_title, chapter_plan
         )
@@ -252,8 +278,11 @@ Chapter: {lesson_title}
 YOUR JOB:
 1. Identify ALL main topics in the chapter (in order they appear)
 2. For each main topic, list ALL subtopics and key formulas under it
-3. Plan which topics go on which day (Day 1, 2, 3)
-   - Day 3 always has remaining content + revision/quiz
+3. Plan which topics go on which day (Day 1, 2, 3, 4)
+   - Day 1: GDP definition + introduction + formulas
+   - Day 2: Methods of GDP calculation + Composition
+   - Day 3: Economic Growth vs Development + Economic Policies
+   - Day 4: Full revision + notes making + 50-mark assessment
 4. Identify all economic formulas, key terms, local context opportunities
 5. Identify story analogies that can explain each concept simply
 
@@ -296,11 +325,20 @@ JSON structure:
       "continuation": false
     }},
     "day3": {{
-      "main_topic": "Remaining content + Revision",
+      "main_topic": "Economic Growth vs Development and Economic Policies",
       "subtopics": ["subtopic 1", "subtopic 2"],
       "formulas": [],
-      "focus": "One sentence describing Day 3 remaining content + revision",
+      "focus": "One sentence describing Day 3 content focus",
       "story_analogy": "Local story for Day 3",
+      "sector_examples": [],
+      "continuation": false
+    }},
+    "day4": {{
+      "main_topic": "Revision + Notes + Assessment",
+      "subtopics": ["Full chapter revision", "Notes making", "50-mark worksheet"],
+      "formulas": [],
+      "focus": "Full chapter revision, structured notes, and differentiated assessment",
+      "story_analogy": "",
       "sector_examples": [],
       "continuation": false
     }}
@@ -380,16 +418,7 @@ LOCAL ANALOGIES USED: {local_analogies}
 
 Generate these sections:
 
-1. HEADER BLOCK
-<div class="sk-content-header">
-  <h1>Lesson Plan — {lesson_title}</h1>
-  <p class="sk-meta">
-    Class {class_num} | Social Science — Economics |
-    Unit {unit} | 3 Days × 35 Minutes
-  </p>
-</div>
-
-2. CHAPTER OVERVIEW TABLE
+1. CHAPTER OVERVIEW TABLE (start directly here — no header block needed)
 <h2>Part 1: Chapter Overview</h2>
 <table>
   Rows: Class | Subject | Discipline | Unit/Chapter Title |
@@ -439,9 +468,8 @@ Generate these sections:
 
 OUTPUT RULES:
 - Raw HTML only
-- Start with <div class="sk-content-header">
+{PREAMBLE_START_INSTRUCTION}
 - Stop after Teaching Aids </ul>
-- Do NOT start any Day block
 - Base all objectives on actual chapter content
 
 Chapter Text:
@@ -498,13 +526,28 @@ Start by completing carried-over topic from Day {day_num - 1}.
             if day_num == 3:
                 day3_note = """
 ═══════════════════════════════════════════════════════
-DAY 3: NEW CONTENT + REVISION (always for Economics)
+DAY 3: NEW CONTENT + REVISION
 ═══════════════════════════════════════════════════════
 Structure:
 [0-5 min]   Spark — Story/Visual Metaphor
 [5-20 min]  Complete remaining new content
-[20-30 min] Three Toolkits activity (Agriculture/Industrial/LPG policies)
-[30-35 min] Quick Quiz (5 questions covering all 3 days) + Three Tool Hunt homework
+[20-30 min] Three Toolkits activity
+[30-35 min] Policy Match Closing + homework
+═══════════════════════════════════════════════════════
+"""
+
+            day4_note = ""
+            if day_num == 4:
+                day4_note = """
+═══════════════════════════════════════════════════════
+DAY 4: REVISION + NOTES + ASSESSMENT
+═══════════════════════════════════════════════════════
+Structure:
+[0-8 min]   Rapid Fire Quiz — 10 questions from ALL 4 days
+[8-18 min]  Mind Map — full chapter on board, students copy
+[18-28 min] Notes Making — structured summary in own words
+[28-35 min] 50-Mark Differentiated Worksheet (3 levels)
+No new content today.
 ═══════════════════════════════════════════════════════
 """
 
@@ -533,7 +576,7 @@ Sector Examples:
 {sectors_str if sectors_str else '  [Generate from chapter content]'}
 Real-life connections: {real_life_str}
 {continuation_note}
-{day3_note}
+{day3_note}{day4_note}
 ═══════════════════════════════════════════════════════
 
 {self._get_cfu_ccq_instruction()}
@@ -767,7 +810,7 @@ DAY STRUCTURE:
 
     {"<p class='teacher-says'><strong>Quick Quiz (5 questions covering all 3 days):</strong><br/>[5 rapid-fire questions: who said X, what happened in 1991, which policy gives Y, what does Z stand for, which index measures W]</p><p><em>⏱ Wait 5 seconds per question. Students write answers on paper. Teacher reveals.</em></p>" if day_num == 3 else "<p class='teacher-says'><strong>Rapid-Fire Recap:</strong><br/>[3 rapid-fire questions about today's key formulas and concepts]</p><p><em>⏱ Wait 5 seconds per question. Raise hands format.</em></p>"}
 
-    {"<div class='board-work'><strong>Recap Table (write on board):</strong><br/><table><thead><tr><th>Economic Term</th><th>What it means in the " + (story_analogy.split('/')[0] if story_analogy else 'Tea Shop') + "</th></tr></thead><tbody><tr><td>[Term 1]</td><td>[Story meaning 1]</td></tr><tr><td>[Term 2]</td><td>[Story meaning 2]</td></tr><tr><td>[Term 3]</td><td>[Story meaning 3]</td></tr><tr><td>[Term 4]</td><td>[Story meaning 4]</td></tr><tr><td>[Term 5]</td><td>[Story meaning 5]</td></tr></tbody></table></div>" if day_num == 1 else ""}
+    {"<div class='recap-table'><strong>Recap Table (write on board — bold text, no background colours):</strong><br/><table style='border-collapse:collapse;'><thead><tr><th style='border:1px solid #333;padding:8px;font-weight:bold;background:none;'>Economic Term</th><th style='border:1px solid #333;padding:8px;font-weight:bold;background:none;'>What it means in the " + (story_analogy.split('/')[0] if story_analogy else 'Tea Shop') + "</th></tr></thead><tbody><tr><td style='border:1px solid #333;padding:8px;font-weight:bold;'>[Term 1]</td><td style='border:1px solid #333;padding:8px;'>[Story meaning 1]</td></tr><tr><td style='border:1px solid #333;padding:8px;font-weight:bold;'>[Term 2]</td><td style='border:1px solid #333;padding:8px;'>[Story meaning 2]</td></tr><tr><td style='border:1px solid #333;padding:8px;font-weight:bold;'>[Term 3]</td><td style='border:1px solid #333;padding:8px;'>[Story meaning 3]</td></tr><tr><td style='border:1px solid #333;padding:8px;font-weight:bold;'>[Term 4]</td><td style='border:1px solid #333;padding:8px;'>[Story meaning 4]</td></tr><tr><td style='border:1px solid #333;padding:8px;font-weight:bold;'>[Term 5]</td><td style='border:1px solid #333;padding:8px;'>[Story meaning 5]</td></tr></tbody></table></div>" if day_num == 1 else ""}
 
     <div class="board-work">
       <strong>Key Points from {"Full Chapter" if day_num == 3 else "Today"} (write on board):</strong><br/>
@@ -816,6 +859,34 @@ ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
 ✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
 ✅ Do NOT generate Day {day_num + 1 if day_num < 3 else ' beyond 3'}
 
+═══════════════════════════════════════════════════════
+DAY-SPECIFIC RULES
+═══════════════════════════════════════════════════════
+{"DAY 1 RULES:" if day_num == 1 else ""}
+{"✅ Every subtopic MUST have an <h4> main heading before explanation" if day_num == 1 else ""}
+{"✅ Minimum 3 CFU + 3 CCQ per concept — NOT just 1" if day_num == 1 else ""}
+{"✅ Activity quiz MUST use ONLY today's content — NO next day topics" if day_num == 1 else ""}
+{"✅ Recap table: bold text only, NO background colours — plain white cells" if day_num == 1 else ""}
+
+{"DAY 2 RULES:" if day_num == 2 else ""}
+{"✅ Minimum 3 CFU + 3 CCQ per concept — NOT just 1" if day_num == 2 else ""}
+{"✅ Student Task (in-class) MUST be DIFFERENT from Real-life Homework (tonight)" if day_num == 2 else ""}
+{"✅ Student task = done in class NOW | Homework = done at home TONIGHT — never the same" if day_num == 2 else ""}
+
+{"DAY 3 RULES:" if day_num == 3 else ""}
+{"✅ Minimum 3 CFU + 3 CCQ per concept — NOT just 1" if day_num == 3 else ""}
+{"✅ Closing rapid-fire covers Day 3 content only — NOT full chapter revision" if day_num == 3 else ""}
+{"✅ Full chapter revision is handled in Day 4 — do NOT do it here" if day_num == 3 else ""}
+
+{"DAY 4 RULES:" if day_num == 4 else ""}
+{"✅ Day 4 is REVISION + NOTES + ASSESSMENT — no new content" if day_num == 4 else ""}
+{"✅ Start with rapid-fire quiz covering ALL 4 days" if day_num == 4 else ""}
+{"✅ Mind map on board — full chapter structure" if day_num == 4 else ""}
+{"✅ Notes making — students write structured summary in own words" if day_num == 4 else ""}
+{"✅ 50-mark differentiated worksheet — 3 levels (Slow/Average/Advanced)" if day_num == 4 else ""}
+{"✅ Written assessment — NOT oral" if day_num == 4 else ""}
+═══════════════════════════════════════════════════════
+
 Chapter Text:
 ---
 {text}
@@ -850,7 +921,7 @@ Chapter  : {lesson_title}
 Class    : {class_num}
 Unit     : {unit}
 Subject  : Social Science — Economics
-Total Days: 3
+Total Days: 4
 
 CHAPTER MAIN TOPICS: {main_topics_str}
 ALL FORMULAS:
@@ -880,7 +951,7 @@ SECTOR EXAMPLES:
       </tr>
     </thead>
     <tbody>
-      [3 rows — Day 1, 2, 3.
+      [4 rows — Day 1, 2, 3, 4.
        Mix of: formula questions, story-based questions, sector identification.
        Tamil version in last column.
        Based on actual topics from analyser.]
@@ -959,6 +1030,8 @@ SECTOR EXAMPLES:
     <li>☐ All formulas copied and memorised</li>
     <li>☐ All homework tasks submitted (Days 1-3)</li>
     <li>☐ Three Tool Hunt completed (Day 3)</li>
+    <li>☐ 50-mark worksheet completed and self-marked (Day 4)</li>
+    <li>☐ Chapter notes written in own words (Day 4)</li>
     <li>☐ Sector identification — can identify Primary/Secondary/Tertiary correctly</li>
     <li>☐ [Chapter-specific checklist item from actual content]</li>
   </ul>

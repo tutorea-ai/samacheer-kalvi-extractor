@@ -241,7 +241,11 @@ class ContentAssembler:
         parts = []
 
         # Header
-        parts.append(self._build_header(lesson_title, class_num, unit, lesson_type))
+        parts.append(self._build_header(
+            lesson_title, class_num, unit, lesson_type,
+            subject=subject,
+            discipline=metadata.get("discipline", "")
+        ))
 
         # Single call — full text
         print(f"      [Assembler] Single call — full text")
@@ -369,20 +373,26 @@ Text:
             print(f"         ✅ Summary: {len(result)} chars")
         return result
 
-    def _build_header(self, lesson_title, class_num, unit, lesson_type) -> str:
-        type_map = {
-            "prose": "Prose", "poem": "Poem",
-            "supplementary": "Supplementary Reader",
-            "play": "Drama / Play", "drama": "Drama / Play",
-        }
-        type_display = type_map.get(lesson_type.lower(), "Prose")
+    def _build_header(self, lesson_title, class_num, unit, lesson_type,
+                      subject="", discipline="") -> str:
+        # SS disciplines
+        if subject.lower() in ["socialscience", "social_science"] and discipline:
+            type_display = discipline.title()
+        else:
+            type_map = {
+                "prose": "Prose", "poem": "Poem",
+                "supplementary": "Supplementary Reader",
+                "play": "Drama / Play", "drama": "Drama / Play",
+            }
+            type_display = type_map.get(lesson_type.lower(), lesson_type.title())
+
+        # No <h1> here — platform header handles the title
         return f"""<div class="lesson-header">
   <div class="lesson-meta">
     <span class="meta-tag">Class {class_num}</span>
     <span class="meta-tag">Unit {unit}</span>
     <span class="meta-tag">{type_display}</span>
   </div>
-  <h1 class="lesson-main-title">{lesson_title}</h1>
 </div>"""
 
     def _api(self, prompt: str, max_tokens: int = 32000) -> Optional[str]:

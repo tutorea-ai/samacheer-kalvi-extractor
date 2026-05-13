@@ -29,6 +29,7 @@ from ...base import (
     DISCIPLINE_CONTEXT,
     ANSWER_FORMAT_RULES,
     clean,
+    get_qa_header,
 )
 
 
@@ -55,7 +56,8 @@ class CivicsQA910Builder:
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
         unit         = metadata.get("unit", "")
-        disc_context = DISCIPLINE_CONTEXT.get("civics", "")
+        discipline   = metadata.get("discipline", "civics")
+        disc_context = DISCIPLINE_CONTEXT.get(discipline.lower(), "")
 
         total_calls = 4
         print(f"      [Civics QA 910 v2] Generating: {lesson_title}")
@@ -65,7 +67,7 @@ class CivicsQA910Builder:
 
         # ── Call 1: MCQ Q1–Q25 ────────────────────────────────────────────────
         print(f"      [History QA] Call 1/{total_calls}: MCQ (Q1–Q25)...")
-        part1 = self._call_mcq(text, lesson_title, class_num, unit, disc_context)
+        part1 = self._call_mcq(text, lesson_title, class_num, unit, disc_context, discipline)
         if part1:
             parts.append(clean(part1))
             print(f"         ✅ MCQ done ({len(part1)} chars)")
@@ -74,7 +76,7 @@ class CivicsQA910Builder:
 
         # ── Call 2: Fill in the Blanks Q26–Q50 ───────────────────────────────
         print(f"      [History QA] Call 2/{total_calls}: Fill in the Blanks (Q26–Q50)...")
-        part2 = self._call_fill_blanks(text, lesson_title, class_num, unit, disc_context)
+        part2 = self._call_fill_blanks(text, lesson_title, class_num, unit, disc_context, discipline)
         if part2:
             parts.append(clean(part2))
             print(f"         ✅ Fill blanks done ({len(part2)} chars)")
@@ -83,7 +85,7 @@ class CivicsQA910Builder:
 
         # ── Call 3: Choose Statement + Match Q51–Q75 ──────────────────────────
         print(f"      [History QA] Call 3/{total_calls}: Statement + Match (Q51–Q75)...")
-        part3 = self._call_statement_and_match(text, lesson_title, class_num, unit, disc_context)
+        part3 = self._call_statement_and_match(text, lesson_title, class_num, unit, disc_context, discipline)
         if part3:
             parts.append(clean(part3))
             print(f"         ✅ Statement + Match done ({len(part3)} chars)")
@@ -92,7 +94,7 @@ class CivicsQA910Builder:
 
         # ── Call 4: 2-mark + 5-mark Q76–Q100 ─────────────────────────────────
         print(f"      [History QA] Call 4/{total_calls}: 2-mark + 5-mark (Q76–Q100)...")
-        part4 = self._call_descriptive(text, lesson_title, class_num, unit, disc_context)
+        part4 = self._call_descriptive(text, lesson_title, class_num, unit, disc_context, discipline)
         if part4:
             parts.append(clean(part4))
             print(f"         ✅ Descriptive done ({len(part4)} chars)")
@@ -110,14 +112,14 @@ class CivicsQA910Builder:
     # Call 1 — MCQ Q1–Q25
     # -------------------------------------------------------------------------
 
-    def _call_mcq(self, text, lesson_title, class_num, unit, disc_context) -> Optional[str]:
+    def _call_mcq(self, text, lesson_title, class_num, unit, disc_context, discipline="civics") -> Optional[str]:
         try:
             prompt = f"""Generate ONLY MCQ questions Q1 to Q25 for this question bank.
 Do NOT generate any other question type.
 
 {ANSWER_FORMAT_RULES}
 
-Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
+Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
 {disc_context}
 
 Generate EXACTLY 25 MCQ questions: Q1 to Q25
@@ -131,10 +133,7 @@ SOURCE RULE:
 - Answers strictly from the chapter text — no outside knowledge
 
 HEADER (include only here — not in other calls):
-<div class="sk-content-header">
-  <h1>Question Bank — {lesson_title}</h1>
-  <p class="sk-meta">Class {class_num} | Social Science — History | Unit {unit} | 100 Questions</p>
-</div>
+{get_qa_header(lesson_title, class_num, unit, discipline)}
 
 <h2>Section I — Choose the Correct Answer</h2>
 <p class="section-note"><em>1 Mark each | Q1–Q25</em></p>
@@ -183,7 +182,7 @@ Start at Q1. End at Q25."""
     # Call 2 — Fill in the Blanks Q26–Q50
     # -------------------------------------------------------------------------
 
-    def _call_fill_blanks(self, text, lesson_title, class_num, unit, disc_context) -> Optional[str]:
+    def _call_fill_blanks(self, text, lesson_title, class_num, unit, disc_context, discipline="civics") -> Optional[str]:
         try:
             prompt = f"""Generate ONLY Fill in the Blank questions Q26 to Q50.
 Do NOT generate MCQ, match, or descriptive questions.
@@ -191,7 +190,7 @@ Do NOT repeat any fact already tested in Q1–Q25.
 
 {ANSWER_FORMAT_RULES}
 
-Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
+Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
 {disc_context}
 
 Generate EXACTLY 25 Fill in the Blank questions: Q26 to Q50
@@ -247,7 +246,7 @@ Start at Q26. End at Q50."""
     # Call 3 — Choose the Statement (Q51–Q60) + Match (Q61–Q75)
     # -------------------------------------------------------------------------
 
-    def _call_statement_and_match(self, text, lesson_title, class_num, unit, disc_context) -> Optional[str]:
+    def _call_statement_and_match(self, text, lesson_title, class_num, unit, disc_context, discipline="civics") -> Optional[str]:
         try:
             prompt = f"""Generate two sections: Choose the Statement (Q51–Q60) and Match the Following (Q61–Q75).
 Do NOT generate MCQ, fill blanks, or descriptive questions.
@@ -255,7 +254,7 @@ Do NOT repeat any fact already tested in Q1–Q50.
 
 {ANSWER_FORMAT_RULES}
 
-Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
+Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
 {disc_context}
 
 SOURCE RULE:
@@ -351,7 +350,7 @@ Start at Q51. End at Q75."""
     # Call 4 — 2-mark (Q76–Q95) + 5-mark (Q96–Q100)
     # -------------------------------------------------------------------------
 
-    def _call_descriptive(self, text, lesson_title, class_num, unit, disc_context) -> Optional[str]:
+    def _call_descriptive(self, text, lesson_title, class_num, unit, disc_context, discipline="civics") -> Optional[str]:
         try:
             prompt = f"""Generate two sections: 2-mark questions (Q76–Q95) and 5-mark questions (Q96–Q100).
 Do NOT generate MCQ, fill blanks, or statement questions.
@@ -359,7 +358,7 @@ Do NOT repeat facts already tested in Q1–Q75.
 
 {ANSWER_FORMAT_RULES}
 
-Chapter : {lesson_title} | Class {class_num} | Unit {unit} | History
+Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
 {disc_context}
 
 SOURCE RULE:

@@ -4,7 +4,7 @@ civics.py
 LP Builder for Samacheer Kalvi Social Science — Civics
 Class 9 & 10
 
-v1.0 — Based on teacher Civics LP sample (May 2026)
+v2.0 — Teacher feedback applied (May 2026)
 
 Key differences from History builder:
   - 3 days per chapter (not 5)
@@ -17,13 +17,14 @@ Key differences from History builder:
   - Mime activities for duties/rights
   - Constitution-style concept mapping on Day 3
 
-API calls: 6 total
-  Call 0 → Chapter Analyser  (JSON — chapter structure + day plan + day3 type)
+API calls: 7 total
+  Call 0 → Chapter Analyser  (JSON — chapter structure + day plan)
   Call 1 → Preamble
   Call 2 → Day 1
   Call 3 → Day 2
-  Call 4 → Day 3 (revision or new_content_and_revision — decided by analyser)
-  Call 5 → Assessment
+  Call 4 → Day 3
+  Call 5 → Day 4 (written assessment + revision)
+  Call 6 → Assessment
 """
 
 import json
@@ -34,6 +35,7 @@ from .....config import settings
 from ...base import (
     SS_LP_SYSTEM_PROMPT,
     clean,
+    PREAMBLE_START_INSTRUCTION,
 )
 
 
@@ -67,7 +69,7 @@ CIVICS_SPARK_STYLES = {
 Make it relatable — something students experience daily (school rules, traffic rules, elections).
 End with a Big Question that connects the analogy to the constitutional concept.
 Example structure: 'Imagine [scenario] → what happens without rules? → Big Question about today's topic'
-Tell students WHY they are learning this and WHERE they will use it in real life.""",
+Tell students WHY they are learning this and WHERE they use it in real life.""",
     },
     2: {
         "style": "Object / Visual Trigger",
@@ -78,12 +80,19 @@ End with a Big Question connecting the object to today's constitutional concept.
 Example structure: 'Hold up [object] → What do you notice? → Big Question'""",
     },
     3: {
+        "style": "Newspaper Headline / Real Event",
+        "instruction": """Open with a real newspaper headline or current event that connects to today's Civics topic.
+Write it on the board. Ask students: What does this mean? How does it connect to the Constitution?
+End with a Big Question linking the headline to today's content.
+Example structure: 'Read this headline: [headline] → What right/duty is involved here? → Big Question'""",
+    },
+    4: {
         "style": "Rapid Fire Recall Quiz",
-        "instruction": """Start with a rapid-fire keyword quiz reviewing Days 1 and 2.
+        "instruction": """Start with a rapid-fire keyword quiz reviewing Days 1, 2, and 3.
 Teacher shouts a keyword/phrase → students shout the answer.
 Example: 'Father of Constitution!' → 'Ambedkar!' / 'Heart and Soul!' → 'Article 32!'
 5-7 rapid fire pairs. Energetic. Standing format if possible.
-Then transition: 'Today we put it all together.'""",
+Then transition: 'Today we put it all together and test ourselves.'""",
     },
 }
 
@@ -108,15 +117,24 @@ Keep it energetic — standing, rushing, shouting format.""",
 Example: 'Show me Fundamental Duty — protect environment' → students mime picking up litter.
 Then One-Minute Paper: students write down the most important thing they learned today.
 Specific prompt on board — not open-ended.
-Example: 'Write the most important Fundamental Duty every student should follow and WHY.'""",
+Example: 'Write the most important Fundamental Right every student should know and WHY.'""",
     },
     3: {
-        "style": "Big Unit Quiz",
-        "instruction": """5 high-impact questions covering the full chapter.
+        "style": "Think-Pair-Share + Flowchart",
+        "instruction": """Give students a specific constitutional scenario.
+Step 1: Think independently (1 min) — write answer in notebook.
+Step 2: Pair with neighbour (2 min) — compare and improve.
+Step 3: Share with class — 3-4 pairs share.
+Then together draw flowchart: Problem → Law/Article → Institution → Outcome.
+Teacher consolidates on board.""",
+    },
+    4: {
+        "style": "Written Assessment + Big Unit Quiz",
+        "instruction": """5 high-impact written questions covering the full chapter.
 Mix of types: list, name, identify, explain, distinguish.
 Students write answers independently in test conditions (5 mins).
 Teacher reads correct answers aloud — students self-mark.
-End with: students write 3-2-1 reflection (3 things learned, 2 leaders, 1 key article).""",
+End with: students write 3-2-1 reflection (3 things learned, 2 leaders/articles, 1 key right as citizen).""",
     },
 }
 
@@ -127,8 +145,9 @@ End with: students write 3-2-1 reflection (3 things learned, 2 leaders, 1 key ar
 
 CIVICS_ACTIVITY_MAP = {
     1: "Choral response (teacher points to chart → students read aloud) + Quick sorting activity (teacher gives scenario → students identify correct citizenship method/right/article)",
-    2: "Mime activity (students act out a duty) + Emergency Buzz (teacher describes scenario → students shout correct article number)",
-    3: "Constitution Tree concept map (groups label parts of the constitution on board) + Big Unit Quiz",
+    2: "Mime activity (students act out a Fundamental Right) + Emergency Buzz (teacher describes scenario → students shout correct article number)",
+    3: "Think-Pair-Share on DPSP vs Fundamental Rights + Flowchart: Problem → Law → Institution → Outcome on board",
+    4: "Constitution Tree concept map (groups label all parts covered across 4 days) + Big Unit Quiz (written, test conditions)",
 }
 
 
@@ -141,7 +160,7 @@ class CivicsLP910Builder:
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
         self.model  = settings.ANTHROPIC_MODEL
-        print(f"✅ Civics LP Builder (910) v1.0 initialized — model: {self.model}")
+        print(f"✅ Civics LP Builder (910) v2.0 initialized — model: {self.model}")
 
     # -------------------------------------------------------------------------
     # Public API
@@ -163,9 +182,9 @@ class CivicsLP910Builder:
         unit         = metadata.get("unit", "")
         month        = metadata.get("month", "")
 
-        total_calls = 6
-        print(f"      [Civics LP 910 v1] Generating: {lesson_title}")
-        print(f"      [Civics LP 910 v1] 6 API calls: Analyser + Preamble + Day1 + Day2 + Day3 + Assessment")
+        total_calls = 7
+        print(f"      [Civics LP 910 v2] Generating: {lesson_title}")
+        print(f"      [Civics LP 910 v2] 7 API calls: Analyser + Preamble + Day1 + Day2 + Day3 + Day4 + Assessment")
 
         parts = []
 
@@ -189,14 +208,14 @@ class CivicsLP910Builder:
             print(f"         ❌ Preamble failed — aborting LP")
             return None
 
-        # ── Calls 2-4: Days 1-3 ──────────────────────────────────────────────
-        for day_num in range(1, 4):
+        # ── Calls 2-5: Days 1-4 ──────────────────────────────────────────────
+        for day_num in range(1, 5):
             call_num = day_num + 1
             print(f"      [Civics LP] Call {call_num}/{total_calls}: Day {day_num}...")
             day_topics = chapter_plan.get("day_plan", {}).get(f"day{day_num}", {})
             day_html = self._call_content_day(
                 text, class_num, unit, lesson_title,
-                day_num, day_topics, chapter_plan
+                day_num, day_topics
             )
             if day_html:
                 parts.append(clean(day_html))
@@ -204,8 +223,8 @@ class CivicsLP910Builder:
             else:
                 print(f"         ❌ Day {day_num} failed — continuing")
 
-        # ── Call 5: Assessment ────────────────────────────────────────────────
-        print(f"      [Civics LP] Call 5/{total_calls}: Assessment...")
+        # ── Call 6: Assessment ────────────────────────────────────────────────
+        print(f"      [Civics LP] Call 6/{total_calls}: Assessment...")
         assessment = self._call_assessment(
             text, class_num, unit, lesson_title, chapter_plan
         )
@@ -240,10 +259,11 @@ Chapter: {lesson_title}
 YOUR JOB:
 1. Identify ALL main topics in the chapter (in order they appear)
 2. For each main topic, list ALL subtopics and key article numbers under it
-3. Plan which topics go on which day (Day 1 and Day 2 only for new content)
-4. Decide Day 3 type:
-   - "revision" → if Days 1 and 2 cover all content fully
-   - "new_content_and_revision" → if there is remaining content for Day 3
+3. Plan which topics go on which day across 4 days:
+   - Day 1: Opening context + Citizenship (Acquisition + Loss of Citizenship fully covered)
+   - Day 2: Fundamental Rights — ALL SIX explained individually + intro to DPSP
+   - Day 3: DPSP in detail + difference between Fundamental Rights and DPSP + Fundamental Duties
+   - Day 4: Full chapter revision + written assessment
 5. Identify key constitutional terms, article numbers, and important dates
 
 CRITICAL RULES:
@@ -266,31 +286,38 @@ JSON structure:
   ],
   "day_plan": {{
     "day1": {{
-      "main_topic": "Exact main topic title",
-      "subtopics": ["subtopic 1", "subtopic 2"],
-      "key_articles": ["Article X", "Article Y"],
+      "main_topic": "Citizenship",
+      "subtopics": ["Acquisition of Citizenship", "Loss of Citizenship"],
+      "key_articles": ["Article 5", "Article 11"],
       "focus": "One sentence describing Day 1 focus",
-      "visual_aids": ["Portrait of X", "Chart showing Y"],
-      "continuation": false
+      "visual_aids": ["Citizenship chart", "Timeline strip"]
     }},
     "day2": {{
-      "main_topic": "Exact main topic title",
-      "subtopics": ["subtopic 1", "subtopic 2"],
-      "key_articles": ["Article X", "Article Y"],
-      "focus": "One sentence describing Day 2 focus",
-      "visual_aids": ["Chart showing X"],
-      "continuation": false
+      "main_topic": "Fundamental Rights",
+      "subtopics": ["Right to Equality", "Right to Freedom", "Right against Exploitation",
+                    "Right to Freedom of Religion", "Cultural and Educational Rights",
+                    "Right to Constitutional Remedies"],
+      "key_articles": ["Articles 12-35"],
+      "focus": "All six Fundamental Rights explained individually",
+      "visual_aids": ["Fundamental Rights chart"]
     }},
     "day3": {{
-      "main_topic": "Revision and Assessment OR remaining topic title",
-      "subtopics": ["subtopic if new content" ],
+      "main_topic": "DPSP and Fundamental Duties",
+      "subtopics": ["Directive Principles of State Policy",
+                    "Difference between Fundamental Rights and DPSP",
+                    "Fundamental Duties"],
+      "key_articles": ["Articles 36-51", "Article 51A"],
+      "focus": "DPSP in detail + distinction from Fundamental Rights",
+      "visual_aids": ["Comparison chart: Rights vs DPSP"]
+    }},
+    "day4": {{
+      "main_topic": "Revision and Written Assessment",
+      "subtopics": ["Full chapter recap", "Written assessment", "3-2-1 reflection"],
       "key_articles": [],
-      "focus": "One sentence describing Day 3 focus",
-      "visual_aids": ["Constitution Tree diagram"],
-      "continuation": false
+      "focus": "Written assessment covering full chapter — no oral assessment",
+      "visual_aids": ["Constitution Tree diagram"]
     }}
   }},
-  "day3_type": "revision",
   "key_terms": ["term1", "term2"],
   "key_articles": ["Article 32 — Constitutional Remedies", "Article 368 — Amendments"],
   "important_dates": ["date — event"],
@@ -359,16 +386,7 @@ VISUAL AIDS NEEDED: {visual_aids}
 
 Generate these sections:
 
-1. HEADER BLOCK
-<div class="sk-content-header">
-  <h1>Lesson Plan — {lesson_title}</h1>
-  <p class="sk-meta">
-    Class {class_num} | Social Science — Civics |
-    Unit {unit} | 3 Days × 35 Minutes
-  </p>
-</div>
-
-2. CHAPTER OVERVIEW TABLE
+1. CHAPTER OVERVIEW TABLE (start directly here — no header block needed)
 <h2>Part 1: Chapter Overview</h2>
 <table>
   Rows: Class | Subject | Discipline | Unit/Chapter Title |
@@ -412,9 +430,8 @@ Generate these sections:
 
 OUTPUT RULES:
 - Raw HTML only
-- Start with <div class="sk-content-header">
+{PREAMBLE_START_INSTRUCTION}
 - Stop after Teaching Aids </ul>
-- Do NOT start any Day block
 - Base all objectives on actual chapter content
 
 Chapter Text:
@@ -433,74 +450,27 @@ Chapter Text:
             return None
 
     # -------------------------------------------------------------------------
-    # Calls 2-4 — Content Days 1-3
+    # Calls 2-5 — Content Days 1-4
     # -------------------------------------------------------------------------
 
     def _call_content_day(self, text, class_num, unit, lesson_title,
-                          day_num: int, day_topics: dict, chapter_plan: dict):
+                          day_num: int, day_topics: dict):
         try:
             spark      = CIVICS_SPARK_STYLES[day_num]
             task       = CIVICS_STUDENT_TASK_STYLES[day_num]
             activity   = CIVICS_ACTIVITY_MAP.get(day_num, "group discussion")
-            day3_type  = chapter_plan.get("day3_type", "revision")
 
             main_topic   = day_topics.get("main_topic", "")
             subtopics    = day_topics.get("subtopics", [])
             key_articles = day_topics.get("key_articles", [])
             day_focus    = day_topics.get("focus", "")
             visual_aids  = day_topics.get("visual_aids", [])
-            continuation = day_topics.get("continuation", False)
 
             subtopics_str    = "\n".join([f"  - {s}" for s in subtopics])
             key_articles_str = "\n".join([f"  - {a}" for a in key_articles])
             visual_aids_str  = ", ".join(visual_aids) if visual_aids else "Textbook, Board"
 
-            # Day 3 special instructions
-            day3_instruction = ""
-            if day_num == 3:
-                if day3_type == "revision":
-                    day3_instruction = """
-═══════════════════════════════════════════════════════
-DAY 3 TYPE: FULL REVISION + ASSESSMENT
-═══════════════════════════════════════════════════════
-All chapter content was covered in Days 1 and 2.
-Day 3 is entirely for revision and assessment.
-
-Structure:
-[0-5 min]   Rapid Fire Recall Quiz (spark)
-[5-17 min]  Constitution Tree concept map — groups label parts on board
-[17-30 min] Big Unit Quiz — 5 high-impact questions, students write independently
-[30-35 min] 3-2-1 Closing reflection + Final Assessment Questions
-
-Do NOT introduce any new content today.
-═══════════════════════════════════════════════════════
-"""
-                else:
-                    day3_instruction = """
-═══════════════════════════════════════════════════════
-DAY 3 TYPE: NEW CONTENT + REVISION
-═══════════════════════════════════════════════════════
-Day 3 has remaining new content to cover PLUS revision.
-
-Structure:
-[0-5 min]   Rapid Fire Recall Quiz (spark)
-[5-20 min]  Complete remaining new content from today's topic plan
-[20-30 min] Constitution Tree or concept map — connecting all topics
-[30-35 min] Big Quiz (3 questions) + 3-2-1 Closing reflection
-
-Cover new content FIRST, then revision.
-═══════════════════════════════════════════════════════
-"""
-
-            continuation_note = ""
-            if continuation:
-                continuation_note = f"""
-⚠️ CONTINUATION NOTE:
-This day starts by completing the topic carried over from Day {day_num - 1}.
-Begin with: "Yesterday we started [topic]. Today we complete it before moving on."
-"""
-
-            next_label = f"Day {day_num + 1}" if day_num < 3 else "end of chapter"
+            next_label = f"Day {day_num + 1}" if day_num < 4 else "end of chapter"
 
             prompt = f"""Generate ONLY Day {day_num} of the Civics lesson plan. Nothing else.
 Do NOT include Preamble. Do NOT generate Day {day_num + 1} or any other day.
@@ -522,8 +492,6 @@ Key Articles :
 {key_articles_str if key_articles_str else "  [Review all articles from Days 1-2]"}
 Day Focus    : {day_focus}
 Visual Aids  : {visual_aids_str}
-{continuation_note}
-{day3_instruction}
 ═══════════════════════════════════════════════════════
 
 {self._get_cfu_ccq_instruction()}
@@ -821,7 +789,7 @@ Chapter  : {lesson_title}
 Class    : {class_num}
 Unit     : {unit}
 Subject  : Social Science — Civics
-Total Days: 3
+Total Days: 4
 
 CHAPTER MAIN TOPICS: {main_topics_str}
 KEY TERMS: {key_terms}
@@ -842,7 +810,7 @@ KEY ARTICLES: {key_articles}
       </tr>
     </thead>
     <tbody>
-      [3 rows — Day 1, Day 2, Day 3.
+      [4 rows — Day 1, Day 2, Day 3, Day 4.
        Questions about SUBJECT MATTER — scenario-based where possible.
        Based on actual topics and articles from analyser.
        Tamil version of question in last column.]
@@ -921,9 +889,9 @@ KEY ARTICLES: {key_articles}
   <h3>Chapter Completion Checklist</h3>
   <ul>
     <li>☐ All 3 days of notes completed in classwork notebook</li>
-    <li>☐ All homework tasks submitted (Days 1-2)</li>
-    <li>☐ Big Unit Quiz attempted (Day 3)</li>
-    <li>☐ 3-2-1 Reflection written (Day 3)</li>
+    <li>☐ All homework tasks submitted (Days 1-3)</li>
+    <li>☐ Written Assessment completed (Day 4)</li>
+    <li>☐ 3-2-1 Reflection written (Day 4)</li>
     <li>☐ Key article numbers memorised: {key_articles}</li>
     <li>☐ [Chapter-specific checklist item]</li>
   </ul>
@@ -1014,6 +982,9 @@ Tamil appears in EXACTLY 3 places:
 
 ❌ NEVER in: activity instructions, board work, time notes, closing
 Tamil mirror: same sentences, same length, same detail. Real Unicode only.
+⚠️ CRITICAL — Article Tamil translations must be verified accurate.
+   Wrong Tamil for article names is a serious error — double check every article translation.
+   Example: Article 15 → சட்டத்தின் முன் சமத்துவம் (NOT a guess — must be accurate)
 ═══════════════════════════════════════════════════════
 """
 

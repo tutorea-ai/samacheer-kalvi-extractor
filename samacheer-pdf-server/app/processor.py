@@ -508,10 +508,18 @@ class PDFProcessor:
                 if not content_html:
                     return {"error": True, "message": "Content generation failed"}
 
+                if subject.lower() in ["socialscience", "social_science"] and discipline:
+                    meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
+                else:
+                    type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
+                    type_display = type_display_map.get(lesson_type, "Prose")
+                    meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display}"
+
                 wrapped = _wrap_html(
                     content_html,
                     title=f"{filename_base} | Class {class_num}",
-                    content_type="content"
+                    content_type="content",
+                    meta_line=meta_line
                 )
 
                 content_html_file = self.temp_dir / f"{filename_base}.html"
@@ -591,10 +599,18 @@ class PDFProcessor:
                 if not lp_html:
                     return {"error": True, "message": "LP generation failed"}
 
+                if subject.lower() in ["socialscience", "social_science"] and discipline:
+                    meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
+                else:
+                    type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
+                    type_display = type_display_map.get(lesson_type, "Prose")
+                    meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display}"
+
                 wrapped = _wrap_html(
                     lp_html,
                     title=f"Lesson Plan — {filename_base} | Class {class_num}",
-                    content_type="lp"
+                    content_type="lp",
+                    meta_line=meta_line
                 )
 
                 lp_html_file = self.temp_dir / f"{filename_base}_lp.html"
