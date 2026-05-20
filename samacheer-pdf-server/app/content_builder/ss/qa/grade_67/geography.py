@@ -1,16 +1,16 @@
 """
-history.py  (QA Builder)
-------------------------
-QA Generator for Samacheer Kalvi Social Science — History
-Class 9 & 10
+geography.py  (QA Builder)
+--------------------------
+QA Generator for Samacheer Kalvi Social Science — Geography
+Class 6 & 7
 
-v2.0 — Teacher feedback + team recommendation (May 2026)
+v1.0 — Adapted from grade_910 geography QA (May 2026)
 
 Split (100 questions total):
   Call 1 → Q1–Q25    MCQ (Choose the Correct Answer)
   Call 2 → Q26–Q50   Fill in the Blanks
   Call 3 → Q51–Q70   Choose the Statement (Q51-Q60) + Match the Following (Q61-Q70)
-  Call 4 → Q71–Q100  2-mark (Q71-Q90) + 5-mark (Q91-Q100)
+  Call 4 → Q71–Q100  2-mark (Q71-Q85) + 5-mark (Q86-Q100)
 
 Key rules:
   - All questions from chapter BODY content — not just book-back
@@ -18,6 +18,8 @@ Key rules:
   - Answers strictly from Samacheer textbook extracted text
   - No outside knowledge or hallucination
   - Match questions: two separate sets of 5 pairs each
+  - Age-appropriate language for Class 6/7 (11-13 years)
+  - Geography focus: physical features, locations, comparisons, map-based questions
 """
 
 import re
@@ -35,12 +37,12 @@ from ...base import (
 )
 
 
-class GeographyQA910Builder:
+class GeographyQA67Builder:
 
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
         self.model  = settings.ANTHROPIC_MODEL
-        print(f"✅ Geography QA Builder (910) v2.0 initialized — model: {self.model}")
+        print(f"✅ Geography QA Builder (67) v1.0 initialized — model: {self.model}")
 
     # -------------------------------------------------------------------------
     # Public API
@@ -48,12 +50,12 @@ class GeographyQA910Builder:
 
     def generate(self, text: str, metadata: dict) -> Optional[str]:
         """
-        Generate 100-question History QA bank using 4 API calls.
+        Generate 100-question Geography QA bank using 4 API calls.
 
         Call 1 → Q1–Q25   MCQ
         Call 2 → Q26–Q50  Fill in the Blanks
-        Call 3 → Q51–Q75  Choose Statement + Match
-        Call 4 → Q76–Q100 2-mark + 5-mark
+        Call 3 → Q51–Q70  Choose Statement + Match
+        Call 4 → Q71–Q100 2-mark + 5-mark
         """
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
@@ -62,13 +64,13 @@ class GeographyQA910Builder:
         disc_context = DISCIPLINE_CONTEXT.get(discipline.lower(), "")
 
         total_calls = 4
-        print(f"      [Geography QA 910 v2] Generating: {lesson_title}")
-        print(f"      [Geography QA 910 v2] 4 calls → 100 questions")
+        print(f"      [Geography QA 67 v1] Generating: {lesson_title}")
+        print(f"      [Geography QA 67 v1] 4 calls → 100 questions (2-mark:15, 5-mark:15)")
 
         parts = []
 
         # ── Call 1: MCQ Q1–Q25 ────────────────────────────────────────────────
-        print(f"      [History QA] Call 1/{total_calls}: MCQ (Q1–Q25)...")
+        print(f"      [Geography QA] Call 1/{total_calls}: MCQ (Q1–Q25)...")
         part1 = self._call_mcq(text, lesson_title, class_num, unit, disc_context, discipline)
         if part1:
             parts.append(clean(part1))
@@ -77,7 +79,7 @@ class GeographyQA910Builder:
             print(f"         ❌ MCQ failed")
 
         # ── Call 2: Fill in the Blanks Q26–Q50 ───────────────────────────────
-        print(f"      [History QA] Call 2/{total_calls}: Fill in the Blanks (Q26–Q50)...")
+        print(f"      [Geography QA] Call 2/{total_calls}: Fill in the Blanks (Q26–Q50)...")
         part2 = self._call_fill_blanks(text, lesson_title, class_num, unit, disc_context, discipline)
         if part2:
             parts.append(clean(part2))
@@ -85,8 +87,8 @@ class GeographyQA910Builder:
         else:
             print(f"         ❌ Fill blanks failed")
 
-        # ── Call 3: Choose Statement + Match Q51–Q75 ──────────────────────────
-        print(f"      [History QA] Call 3/{total_calls}: Statement + Match (Q51–Q75)...")
+        # ── Call 3: Choose Statement + Match Q51–Q70 ──────────────────────────
+        print(f"      [Geography QA] Call 3/{total_calls}: Statement + Match (Q51–Q70)...")
         part3 = self._call_statement_and_match(text, lesson_title, class_num, unit, disc_context, discipline)
         if part3:
             parts.append(clean(part3))
@@ -94,8 +96,8 @@ class GeographyQA910Builder:
         else:
             print(f"         ❌ Statement + Match failed")
 
-        # ── Call 4: 2-mark + 5-mark Q76–Q100 ─────────────────────────────────
-        print(f"      [History QA] Call 4/{total_calls}: 2-mark + 5-mark (Q76–Q100)...")
+        # ── Call 4: 2-mark + 5-mark Q71–Q100 ─────────────────────────────────
+        print(f"      [Geography QA] Call 4/{total_calls}: 2-mark + 5-mark (Q71–Q100)...")
         part4 = self._call_descriptive(text, lesson_title, class_num, unit, disc_context, discipline)
         if part4:
             parts.append(clean(part4))
@@ -107,7 +109,7 @@ class GeographyQA910Builder:
             return None
 
         combined = "\n\n".join(parts)
-        print(f"      [Geography QA 910 v2] ✅ Complete — {len(parts)} parts, {len(combined)} chars")
+        print(f"      [Geography QA 67 v1] ✅ Complete — {len(parts)} parts, {len(combined)} chars")
         return combined
 
     # -------------------------------------------------------------------------
@@ -122,6 +124,7 @@ Do NOT generate any other question type.
 {ANSWER_FORMAT_RULES}
 
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
+Note    : Class 6/7 — use age-appropriate, simple language for questions and answers.
 {disc_context}
 
 Generate EXACTLY 25 MCQ questions: Q1 to Q25
@@ -129,35 +132,31 @@ Generate EXACTLY 25 MCQ questions: Q1 to Q25
 ANSWER LENGTH: One complete sentence. 10-15 words only.
 
 SOURCE RULE:
-- Questions from WITHIN the chapter body — paragraphs, facts, dates, names
+- Questions from WITHIN the chapter body — paragraphs, facts, features, locations
 - NOT just from book-back exercise questions
 - Spread across the FULL chapter — beginning, middle, and end
 - Answers strictly from the chapter text — no outside knowledge
+- Simple language appropriate for Class 6/7
+
+GEOGRAPHY QUESTION TYPES — distribute evenly:
+- Location questions: Where is X located?
+- Feature questions: What is X / What are the features of Y?
+- Classification questions: Which type of landform is X?
+- Comparison questions: Which is larger/deeper/higher — X or Y?
+- Map questions: Which ocean/continent/feature borders X?
 
 HEADER (include only here — not in other calls):
 {get_qa_header(lesson_title, class_num, unit, discipline)}
 
-<h2>Section I — Choose the Correct Answer</h2>
-<p class="section-note"><em>1 Mark each | Q1–Q25</em></p>
-
-FORMAT for each MCQ:
-<div class="qa-item">
-  <p class="question"><strong>Q1.</strong> Question text here?</p>
-  <div class="mcq-options">
-    <span>a) Option one</span>
-    <span>b) Option two ✓</span>
-    <span>c) Option three</span>
-    <span>d) Option four</span>
-  </div>
-  <p class="answer"><strong>Answer:</strong> b) [correct option text — one complete sentence]</p>
-</div>
+Section: id="section-mcq" | Title: "Section I — Choose the Correct Answer" | Note: 1 Mark each | Q1–Q25
+Use MCQ format from ANSWER FORMAT RULES above.
 
 RULES:
 - Raw HTML only — no markdown, no code fences
 - EXACTLY 25 questions: Q1 through Q25
-- Every question has 4 options — mark correct with ✓
-- Every question has complete answer shown
-- Spread question types: dates, names, events, causes, results, treaties
+- Every question has 4 options — NO tick marks
+- Every question has complete answer shown inside answer-reveal
+- Simple vocabulary appropriate for Class 6/7
 - Do NOT stop before Q25
 
 Chapter Text:
@@ -177,7 +176,7 @@ Start at Q1. End at Q25."""
                     raw += chunk
             return raw.strip() or None
         except Exception as e:
-            print(f"❌ History QA MCQ error: {e}")
+            print(f"❌ Geography QA 67 MCQ error: {e}")
             return None
 
     # -------------------------------------------------------------------------
@@ -193,6 +192,7 @@ Do NOT repeat any fact already tested in Q1–Q25.
 {ANSWER_FORMAT_RULES}
 
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
+Note    : Class 6/7 — use age-appropriate, simple language for questions and answers.
 {disc_context}
 
 Generate EXACTLY 25 Fill in the Blank questions: Q26 to Q50
@@ -204,24 +204,24 @@ SOURCE RULE:
 - Different facts from Q1–Q25
 - Spread across the full chapter
 - Answers strictly from chapter text
+- Simple vocabulary appropriate for Class 6/7
 
-<h2>Section II — Fill in the Blanks</h2>
-<p class="section-note"><em>1 Mark each | Q26–Q50</em></p>
+GEOGRAPHY BLANK TYPES — vary evenly:
+- Geographical names: The [feature] is located in _______
+- Features: The [landform] is characterised by _______
+- Classifications: [Feature] belongs to the _______ order of landforms
+- Comparisons: The _______ ocean is the largest in the world
 
-FORMAT for each question:
-<div class="qa-item">
-  <p class="question"><strong>Q26.</strong> The assassination of Archduke Franz Ferdinand
-  took place in <span class="blank-line">__________</span>.</p>
-  <p class="answer"><strong>Answer:</strong> Sarajevo</p>
-</div>
+Section: id="section-fill" | Title: "Section II — Fill in the Blanks" | Note: 1 Mark each | Q26–Q50
+Use Fill in the Blanks format from ANSWER FORMAT RULES above.
 
 RULES:
 - Raw HTML only — no markdown, no code fences
 - EXACTLY 25 questions: Q26 through Q50
-- Blank must be a key word or phrase from the chapter
-- Answer shown clearly below each question
+- Blank must be a key geographical term or name from the chapter
+- Answer shown clearly inside answer-reveal
 - Vary blank positions — not always at the end
-- Cover different topics from across the chapter
+- Simple vocabulary throughout
 - Do NOT stop before Q50
 
 Chapter Text:
@@ -241,28 +241,30 @@ Start at Q26. End at Q50."""
                     raw += chunk
             return raw.strip() or None
         except Exception as e:
-            print(f"❌ History QA Fill Blanks error: {e}")
+            print(f"❌ Geography QA 67 Fill Blanks error: {e}")
             return None
 
     # -------------------------------------------------------------------------
-    # Call 3 — Choose the Statement (Q51–Q60) + Match (Q61–Q75)
+    # Call 3 — Choose the Statement (Q51–Q60) + Match (Q61–Q70)
     # -------------------------------------------------------------------------
 
     def _call_statement_and_match(self, text, lesson_title, class_num, unit, disc_context, discipline="geography") -> Optional[str]:
         try:
-            prompt = f"""Generate two sections: Choose the Statement (Q51–Q60) and Match the Following (Q61–Q75).
+            prompt = f"""Generate two sections: Choose the Statement (Q51–Q60) and Match the Following (Q61–Q70).
 Do NOT generate MCQ, fill blanks, or descriptive questions.
 Do NOT repeat any fact already tested in Q1–Q50.
 
 {ANSWER_FORMAT_RULES}
 
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
+Note    : Class 6/7 — use age-appropriate, simple language for questions and answers.
 {disc_context}
 
 SOURCE RULE:
 - Questions from WITHIN the chapter body
 - Different facts from Q1–Q50
 - Answers strictly from chapter text
+- Simple vocabulary appropriate for Class 6/7
 
 ══════════════════════════════════════
 PART A: Choose the Correct Statement Q51–Q60
@@ -272,22 +274,32 @@ Generate EXACTLY 10 questions: Q51 to Q60
 
 Each question: Give 3 statements (i, ii, iii). Only ONE is correct.
 Student must identify the correct statement.
+Keep statements simple and clear for Class 6/7.
 
-<h2>Section III — Choose the Correct Statement</h2>
-<p class="section-note"><em>1 Mark each | Q51–Q60</em></p>
+GEOGRAPHY STATEMENT TYPES:
+- Feature descriptions: "The [landform] is formed by [process]"
+- Location statements: "[Feature] is located in [place]"
+- Comparison statements: "[Feature A] is larger/deeper than [Feature B]"
 
-FORMAT:
-<div class="qa-item">
-  <p class="question"><strong>Q51.</strong> Choose the correct statement:</p>
-  <div class="mcq-options">
-    <span>i) [Statement one — incorrect]</span>
-    <span>ii) [Statement two — correct] ✓</span>
-    <span>iii) [Statement three — incorrect]</span>
-  </div>
-  <p class="answer"><strong>Answer:</strong> ii) [Correct statement text]</p>
-</div>
+Section: id="section-choose" | Title: "Section III — Choose the Correct Statement" | Note: 1 Mark each | Q51–Q60
+Use Choose the Correct Statement format from ANSWER FORMAT RULES above.
+
+══════════════════════════════════════
+PART B: Match the Following Q61–Q70
+══════════════════════════════════════
 
 {QA_MATCH_INSTRUCTION}
+
+GEOGRAPHY MATCH THEMES:
+- Set 1 (Q61): Match geographical features to their descriptions/locations
+- Set 2 (Q66): Match landform types to their examples OR oceans/continents to their features
+- Keep matching items simple for Class 6/7
+
+RULES:
+- Raw HTML only — no markdown, no code fences
+- Choose Statement: EXACTLY 10 questions Q51–Q60
+- All answers inside answer-reveal div — NO individual show buttons
+- Do NOT stop before Q70
 
 Chapter Text:
 ---
@@ -306,28 +318,37 @@ Start at Q51. End at Q70."""
                     raw += chunk
             return raw.strip() or None
         except Exception as e:
-            print(f"❌ History QA Statement + Match error: {e}")
+            print(f"❌ Geography QA 67 Statement + Match error: {e}")
             return None
 
     # -------------------------------------------------------------------------
-    # Call 4 — 2-mark (Q76–Q95) + 5-mark (Q96–Q100)
+    # Call 4 — 2-mark (Q71–Q85) + 5-mark (Q86–Q100)
     # -------------------------------------------------------------------------
 
     def _call_descriptive(self, text, lesson_title, class_num, unit, disc_context, discipline="geography") -> Optional[str]:
         try:
-            prompt = f"""Generate two sections: 2-mark questions (Q71–Q90) and 5-mark questions (Q91–Q100).
+            prompt = f"""Generate two sections: 2-mark questions (Q71–Q85) and 5-mark questions (Q86–Q100).
 Do NOT generate MCQ, fill blanks, or statement questions.
 Do NOT repeat facts already tested in Q1–Q70.
 
 {ANSWER_FORMAT_RULES}
 
 Chapter : {lesson_title} | Class {class_num} | Unit {unit} | {discipline.title()}
+Note    : Class 6/7 — use age-appropriate, simple language for questions and answers.
 {disc_context}
 
 SOURCE RULE:
 - Questions from WITHIN the chapter body
 - Each question covers a DIFFERENT major topic from the chapter
 - Answers strictly from chapter text — no outside knowledge
+- Simple, clear language appropriate for Class 6/7 students
+
+GEOGRAPHY QUESTION FOCUS:
+- Physical features and their characteristics
+- Location and spatial relationships
+- Simple cause-effect: feature → effect on people/climate
+- Comparisons between two geographical features
+- Importance/significance of a geographical feature
 
 {QA_DESCRIPTIVE_INSTRUCTION}
 
@@ -348,7 +369,7 @@ Start at Q71. End at Q100."""
                     raw += chunk
             return raw.strip() or None
         except Exception as e:
-            print(f"❌ History QA Descriptive error: {e}")
+            print(f"❌ Geography QA 67 Descriptive error: {e}")
             return None
 
 
@@ -356,4 +377,4 @@ Start at Q71. End at Q100."""
 # Singleton instance
 # ============================================================================
 
-geography_qa_910_builder = GeographyQA910Builder()
+geography_qa_67_builder = GeographyQA67Builder()

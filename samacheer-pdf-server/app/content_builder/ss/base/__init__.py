@@ -172,6 +172,14 @@ Tamil mirror rule (where Tamil IS used):
 - Same sentences. Same detail. Same length as English.
 - NOT a summary. Full mirror.
 - Real Tamil Unicode script only — never transliteration.
+
+TAMIL QUALITY RULES — STRICTLY FOLLOW:
+- Every Tamil sentence must be grammatically correct Tamil
+- NO word repetition in Tamil mirror — check each sentence
+- NO spelling errors — use standard Tamil Unicode
+- Mirror must match English sentence by sentence — same count, same length
+- If unsure of a Tamil word, use the English term — never guess
+- Read Tamil output once before finishing — check for repeated words
 ═══════════════════════════════════════════════════════
 """
 
@@ -586,3 +594,91 @@ ECONOMICS FOCUS:
 - Include data questions if statistics or figures appear in the chapter
 """,
 }
+
+
+# ============================================================================
+# QA QUESTION SPLIT — shared across all disciplines and grade groups
+# ============================================================================
+
+QA_SPLIT = {
+    "mcq":     {"start": 1,  "end": 25, "count": 25, "section": "section-mcq"},
+    "fill":    {"start": 26, "end": 50, "count": 25, "section": "section-fill"},
+    "choose":  {"start": 51, "end": 60, "count": 10, "section": "section-choose"},
+    "match":   {"start": 61, "end": 70, "count": 10, "section": "section-match",
+                "sets": 2, "pairs_per_set": 5},
+    "mark2":   {"start": 71, "end": 85, "count": 15, "section": "section-2mark"},
+    "mark5":   {"start": 86, "end": 100, "count": 15, "section": "section-5mark"},
+}
+
+# Descriptive section instruction — used by ALL QA builders in Call 4
+QA_DESCRIPTIVE_INSTRUCTION = """
+══════════════════════════════════════
+PART A: 2-Mark Questions Q71–Q85
+══════════════════════════════════════
+
+Generate EXACTLY 15 questions: Q71 to Q85
+
+ANSWER LENGTH: Exactly 2-3 complete sentences. 30-50 words only.
+Do NOT write more than 3 sentences.
+Do NOT write less than 2 sentences.
+
+Question types — distribute evenly:
+- Short explanation: Explain what/who/how about a key topic
+- Reason-based: Why did X happen / What caused Y
+- Definition + example: Define X and give one example from chapter
+- Compare briefly: One difference between X and Y
+
+Section: id="section-2mark" | Title: "Section V — Answer Briefly" | Note: 2 Marks each | Q71–Q85 | Answer in 2-3 sentences
+Use 2-Mark format from ANSWER FORMAT RULES above.
+
+══════════════════════════════════════
+PART B: 5-Mark Questions Q86–Q100
+══════════════════════════════════════
+
+Generate EXACTLY 15 questions: Q86 to Q100
+
+ANSWER LENGTH: Exactly 5-7 complete sentences. 80-120 words.
+Do NOT write more than 7 sentences.
+Do NOT write less than 5 sentences.
+Every answer must be a proper paragraph — not bullet points.
+
+Question types — distribute across 15 questions:
+- Explain in detail — full explanation of a key event or concept
+- Causes and effects — list and explain causes OR consequences
+- Significance — why was X important / what was the impact of Y
+- Compare — detailed comparison between two events or concepts
+- Evaluate — outcomes, successes, or failures of a major event
+Each type used 3 times across the 15 questions.
+
+Section: id="section-5mark" | Title: "Section VI — Answer in Detail" | Note: 5 Marks each | Q86–Q100 | Answer in 5-7 sentences
+Use 5-Mark format from ANSWER FORMAT RULES above.
+
+RULES:
+- Raw HTML only — no markdown, no code fences
+- 2-mark: EXACTLY 15 questions Q71–Q85, strictly 2-3 sentences each
+- 5-mark: EXACTLY 15 questions Q86–Q100, strictly 5-7 sentences each
+- Every answer inside answer-reveal div — NO individual show buttons
+- Every answer complete paragraph — never bullet points
+- Each question covers a different chapter topic
+- Do NOT stop before Q100
+"""
+
+# Match section instruction — used by ALL QA builders in Call 3
+QA_MATCH_INSTRUCTION = """
+Generate EXACTLY 2 match sets of 5 pairs each: Q61, Q66
+(Q61 = Match Set 1, Q66 = Match Set 2)
+Each match set counts as one question but has 5 sub-answers.
+Total = 10 questions (Q61-Q70)
+
+Section: id="section-match" | Title: "Section IV — Match the Following" | Note: 1 Mark each | Q61–Q70 | (5 pairs per set)
+Use Match the Following format from ANSWER FORMAT RULES above.
+
+IMPORTANT for match sets:
+- Each set must use DIFFERENT facts from the chapter
+- Column B items must be shuffled — not in same order as Column A
+
+RULES:
+- Match: EXACTLY 2 sets (Q61, Q66) with 5 pairs each — total Q61-Q70
+- All answers inside answer-reveal div — NO individual show buttons
+- Do NOT stop before Q70
+"""

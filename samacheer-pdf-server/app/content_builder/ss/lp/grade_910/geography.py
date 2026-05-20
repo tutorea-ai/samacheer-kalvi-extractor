@@ -268,7 +268,12 @@ DAY ALLOCATION RULES — STRICTLY FOLLOW:
 - Day 1: Location, relief, physiographic divisions introduction
 - Day 2: Himalayan Mountains — all ranges and passes
 - Day 3: Northern Plains + Peninsular Plateau + Coastal Plains + Islands
+  ⚠️ Islands MUST be in Day 3 — never skip, never move to Day 4 or 5
+  ⚠️ Coastal Plains MUST be in Day 3 — never skip
 - Day 4: Drainage system — Himalayan Rivers + Peninsular Rivers + characteristics
+  ⚠️ South Indian/Peninsular River CHARACTERISTICS MUST be in Day 4
+  ⚠️ Cover ALL characteristics — seasonal, shorter course, estuaries, hydel power
+  ⚠️ Never skip characteristics — they are exam-critical content
 - Day 5: Synthesis mapping + Book-back ONLY — NO new content
 
 ⚠️ CRITICAL:
@@ -643,6 +648,15 @@ FORMAT — use T-Chart comparison on board:
   </table>
 </div>
 ''' if day_num == 4 else '')}
+{('''⚠️ DAY 3 — MANDATORY CONTENT CHECK:
+The following topics MUST be covered in Day 3 if chapter has them:
+1. Coastal Plains — Western Coastal Plains + Eastern Coastal Plains
+   - Location, width, features, significance
+2. Islands — Andaman & Nicobar + Lakshadweep
+   - Location, formation, significance
+DO NOT skip these — they are frequently missed and exam-important.
+Give full explanation with CFUs and CCQs for each.
+''' if day_num == 3 else '')}
 ═══════════════════════════════════════════════════════
 
 {self._get_cfu_ccq_instruction()}

@@ -628,6 +628,87 @@ class PDFProcessor:
                     "message":  "LP only generated and deployed"
                 }
 
+            # ── QA ONLY output ────────────────────────────────────────────────
+            elif output_format == "qa_only":
+
+                bridge_meta = {
+                    "class_num":     class_num,
+                    "term":          term,
+                    "unit":          unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject":       subject,
+                    "medium":        medium,
+                    "discipline":    discipline,
+                }
+
+                print(f"🤖 Starting QA-only generation...")
+
+                # Extract text
+                temp_txt = self.temp_dir / f"{filename_base}_raw.txt"
+                if not self._extract_text(
+                    cached_file, start_page, end_page, temp_txt,
+                    class_num=class_num, term=term, subject=subject,
+                    unit_num=unit_num, lesson_type=lesson_type,
+                    discipline=discipline
+                ):
+                    return {"error": True, "message": "Text extraction failed"}
+
+                with open(temp_txt, "r", encoding="utf-8") as f:
+                    raw_text = f.read()
+                temp_txt.unlink(missing_ok=True)
+
+                if not raw_text.strip():
+                    return {"error": True, "message": "No text extracted"}
+
+                ai_metadata = {
+                    "class":        class_num,
+                    "subject":      subject,
+                    "unit":         unit_num,
+                    "lesson_title": filename_base,
+                    "lesson_type":  lesson_type,
+                    "term":         term_key,
+                    "discipline":   discipline,
+                }
+
+                if subject.lower() in ["socialscience", "social_science"] and discipline:
+                    meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
+                else:
+                    type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
+                    meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display_map.get(lesson_type, 'Prose')}"
+
+                from .services.ai_converter import _wrap_html
+
+                if subject.lower() in ["socialscience", "social_science"]:
+                    from .content_builder.ss.ss_router import generate_qa
+                    qa_html = generate_qa(raw_text, ai_metadata)
+                else:
+                    from .content_builder.qa_builder import qa_builder
+                    qa_html = qa_builder.generate(raw_text, ai_metadata)
+
+                if not qa_html:
+                    return {"error": True, "message": "QA generation failed"}
+
+                wrapped = _wrap_html(
+                    qa_html,
+                    title=f"Q&A — {filename_base} | Class {class_num}",
+                    content_type="qa",
+                    meta_line=meta_line
+                )
+
+                qa_html_file = self.temp_dir / f"{filename_base}_qa.html"
+                with open(qa_html_file, "w", encoding="utf-8") as f:
+                    f.write(wrapped)
+
+                bridge.deploy_content(qa_html_file, bridge_meta, "html", "qa")
+                print(f"✅ QA deployed")
+
+                return {
+                    "error":    False,
+                    "filename": f"{filename_base}_qa.html",
+                    "deployed": ["qa"],
+                    "message":  "QA only generated and deployed"
+                }
+
             # ── AI OUTPUT: html (Content + QA + LP) ──────────────────────────
             elif output_format == "html":
 

@@ -153,6 +153,12 @@ def _get_qa_builder(grade_group: str, discipline: str):
             if discipline == "history":
                 from .qa.grade_67.history import history_qa_67_builder
                 return history_qa_67_builder
+            elif discipline == "geography":
+                from .qa.grade_67.geography import geography_qa_67_builder
+                return geography_qa_67_builder
+            elif discipline == "civics":
+                from .qa.grade_67.civics import civics_qa_67_builder
+                return civics_qa_67_builder
             else:
                 print(f"      [SS Router] ⏳ QA builder not yet implemented: {grade_group}/{discipline}")
                 return None

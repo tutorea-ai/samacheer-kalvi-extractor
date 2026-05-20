@@ -424,7 +424,22 @@ class EpubPreprocessor:
             # Also:    'geography', 'Geography', 'GEOGRAPHY' (any case)
             if text_lower in SS_DISCIPLINES:
                 if text_lower in seen_disciplines:
-                    # Duplicate heading (e.g. 'geography' then 'Geography') — skip
+                    # Duplicate heading — but still scan nested ol for units we may have missed
+                    nested_ol = li.find('ol')
+                    if nested_ol:
+                        for nli in nested_ol.find_all('li', recursive=False):
+                            nl = nli.find('a')
+                            if not nl:
+                                continue
+                            nt = nl.get_text(strip=True)
+                            nh = nl.get('href', '')
+                            if nt in ['Learning Objectives', 'Summary', 'Glossary',
+                                      'Exercises', 'Internet Resources', 'ICT CORNER',
+                                      'References', '(Untitled)']:
+                                continue
+                            nested_unit = self._parse_unit_num(nt)
+                            if nested_unit:
+                                _register_unit(text_lower, nested_unit, nh, nli)
                     continue
                 seen_disciplines.add(text_lower)
                 current_discipline = text_lower

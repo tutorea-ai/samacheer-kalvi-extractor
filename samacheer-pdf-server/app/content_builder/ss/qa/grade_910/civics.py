@@ -28,6 +28,8 @@ from ...base import (
     SS_QA_SYSTEM_PROMPT,
     DISCIPLINE_CONTEXT,
     ANSWER_FORMAT_RULES,
+    QA_DESCRIPTIVE_INSTRUCTION,
+    QA_MATCH_INSTRUCTION,
     clean,
     get_qa_header,
 )
@@ -285,46 +287,7 @@ FORMAT:
   <p class="answer"><strong>Answer:</strong> ii) [Correct statement text]</p>
 </div>
 
-══════════════════════════════════════
-PART B: Match the Following Q61–Q75
-══════════════════════════════════════
-
-Generate EXACTLY 3 match sets of 5 pairs each: Q61, Q66, Q71
-(Q61 = Match Set 1, Q66 = Match Set 2, Q71 = Match Set 3)
-Each match set counts as one question but has 5 sub-answers.
-
-<h2>Section IV — Match the Following</h2>
-<p class="section-note"><em>1 Mark each | Q61–Q75 | (5 pairs per set)</em></p>
-
-FORMAT for each match set:
-<div class="qa-item">
-  <p class="question"><strong>Q61.</strong> Match the following:</p>
-  <table class="match-table">
-    <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
-    <tbody>
-      <tr><td>1. [Item]</td><td>a) [Match]</td></tr>
-      <tr><td>2. [Item]</td><td>b) [Match]</td></tr>
-      <tr><td>3. [Item]</td><td>c) [Match]</td></tr>
-      <tr><td>4. [Item]</td><td>d) [Match]</td></tr>
-      <tr><td>5. [Item]</td><td>e) [Match]</td></tr>
-    </tbody>
-  </table>
-  <p class="answer"><strong>Answers:</strong> 1-[x], 2-[x], 3-[x], 4-[x], 5-[x]</p>
-</div>
-
-IMPORTANT for match sets:
-- Set 1 (Q61): Match events to dates
-- Set 2 (Q66): Match personalities to their roles
-- Set 3 (Q71): Match treaties/agreements to their outcomes
-- Each set must use DIFFERENT facts from the chapter
-- Column B items must be shuffled — not in same order as Column A
-
-RULES:
-- Raw HTML only — no markdown, no code fences
-- Choose Statement: EXACTLY 10 questions Q51–Q60
-- Match: EXACTLY 3 sets (Q61, Q66, Q71) with 5 pairs each
-- All answers shown
-- Do NOT stop before Q75
+{QA_MATCH_INSTRUCTION}
 
 Chapter Text:
 ---
@@ -366,82 +329,7 @@ SOURCE RULE:
 - Each question covers a DIFFERENT major topic from the chapter
 - Answers strictly from chapter text — no outside knowledge
 
-══════════════════════════════════════
-PART A: 2-Mark Questions Q76–Q95
-══════════════════════════════════════
-
-Generate EXACTLY 20 questions: Q76 to Q95
-
-ANSWER LENGTH: Exactly 2-3 complete sentences. 30-50 words only.
-Do NOT write more than 3 sentences.
-Do NOT write less than 2 sentences.
-
-Question types — distribute evenly:
-- Short explanation: Explain what/who/how about a key topic
-- Reason-based: Why did X happen / What caused Y
-- Definition + example: Define X and give one example from chapter
-- Compare briefly: One difference between X and Y
-
-<h2>Section V — Answer Briefly</h2>
-<p class="section-note"><em>2 Marks each | Q76–Q95 | Answer in 2-3 sentences</em></p>
-
-FORMAT:
-<div class="qa-item">
-  <p class="question"><strong>Q76.</strong> What were the main causes of World War I?
-  <span class="mark-badge">(2 marks)</span></p>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
-  <div class="answer-reveal" style="display:none;">
-    <p class="answer"><strong>Answer:</strong> The main causes of World War I were the
-    rivalry between European powers, the formation of opposing alliance systems, and the
-    assassination of Archduke Franz Ferdinand in 1914. Militarism, nationalism, and
-    imperial competition among European nations also contributed significantly.</p>
-  </div>
-</div>
-
-══════════════════════════════════════
-PART B: 5-Mark Questions Q96–Q100
-══════════════════════════════════════
-
-Generate EXACTLY 5 questions: Q96 to Q100
-
-ANSWER LENGTH: Exactly 5-7 complete sentences. 80-120 words.
-Do NOT write more than 7 sentences.
-Do NOT write less than 5 sentences.
-Every answer must be a proper paragraph — not bullet points.
-
-Question types — one of each:
-- Q96: Explain in detail — full explanation of a key event or concept
-- Q97: Causes and effects — list and explain causes OR consequences
-- Q98: Significance — why was X important / what was the impact of Y
-- Q99: Compare — detailed comparison between two events or concepts
-- Q100: Evaluate — outcomes, successes, or failures of a major event
-
-<h2>Section VI — Answer in Detail</h2>
-<p class="section-note"><em>5 Marks each | Q96–Q100 | Answer in 5-7 sentences</em></p>
-
-FORMAT:
-<div class="qa-item">
-  <p class="question"><strong>Q96.</strong> Explain the consequences of World War I for Europe.
-  <span class="mark-badge">(5 marks)</span></p>
-  <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
-  <div class="answer-reveal" style="display:none;">
-    <p class="answer"><strong>Answer:</strong> World War I had devastating consequences
-    for Europe. The war resulted in the fall of four major empires — the German,
-    Austro-Hungarian, Ottoman, and Russian empires. Millions of soldiers and civilians
-    lost their lives, and vast areas of land were destroyed. The Treaty of Versailles
-    imposed heavy penalties on Germany, including loss of territory and massive reparations.
-    New nations emerged from the collapsed empires, redrawing the map of Europe entirely.
-    These consequences created deep resentment that eventually led to World War II.</p>
-  </div>
-</div>
-
-RULES:
-- Raw HTML only — no markdown, no code fences
-- 2-mark: EXACTLY 20 questions Q76–Q95, strictly 2-3 sentences each
-- 5-mark: EXACTLY 5 questions Q96–Q100, strictly 5-7 sentences each
-- Every answer complete paragraph — never bullet points
-- Each question covers a different chapter topic
-- Do NOT stop before Q100
+{QA_DESCRIPTIVE_INSTRUCTION}
 
 Chapter Text:
 ---

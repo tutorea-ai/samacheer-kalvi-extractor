@@ -28,6 +28,8 @@ from ...base import (
     SS_QA_SYSTEM_PROMPT,
     DISCIPLINE_CONTEXT,
     ANSWER_FORMAT_RULES,
+    QA_DESCRIPTIVE_INSTRUCTION,
+    QA_MATCH_INSTRUCTION,
     clean,
     get_qa_header,
 )
@@ -255,30 +257,7 @@ Student must identify the correct statement.
 Section: id="section-choose" | Title: "Section III — Choose the Correct Statement" | Note: 1 Mark each | Q51–Q60
 Use Choose the Correct Statement format from ANSWER FORMAT RULES above.
 
-══════════════════════════════════════
-PART B: Match the Following Q61–Q75
-══════════════════════════════════════
-
-Generate EXACTLY 2 match sets of 5 pairs each: Q61, Q66
-(Q61 = Match Set 1, Q66 = Match Set 2)
-Each match set counts as one question but has 5 sub-answers.
-Total = 10 questions (Q61-Q70)
-
-Section: id="section-match" | Title: "Section IV — Match the Following" | Note: 1 Mark each | Q61–Q70 | (5 pairs per set)
-Use Match the Following format from ANSWER FORMAT RULES above.
-
-IMPORTANT for match sets:
-- Set 1 (Q61): Match events to dates
-- Set 2 (Q66): Match personalities to their roles
-- Each set must use DIFFERENT facts from the chapter
-- Column B items must be shuffled — not in same order as Column A
-
-RULES:
-- Raw HTML only — no markdown, no code fences
-- Choose Statement: EXACTLY 10 questions Q51–Q60
-- Match: EXACTLY 2 sets (Q61, Q66) with 5 pairs each — total Q61-Q70
-- All answers inside answer-reveal div — NO individual show buttons
-- Do NOT stop before Q70
+{QA_MATCH_INSTRUCTION}
 
 Chapter Text:
 ---
@@ -320,55 +299,7 @@ SOURCE RULE:
 - Each question covers a DIFFERENT major topic from the chapter
 - Answers strictly from chapter text — no outside knowledge
 
-══════════════════════════════════════
-PART A: 2-Mark Questions Q71–Q90
-══════════════════════════════════════
-
-Generate EXACTLY 20 questions: Q71 to Q90
-
-ANSWER LENGTH: Exactly 2-3 complete sentences. 30-50 words only.
-Do NOT write more than 3 sentences.
-Do NOT write less than 2 sentences.
-
-Question types — distribute evenly:
-- Short explanation: Explain what/who/how about a key topic
-- Reason-based: Why did X happen / What caused Y
-- Definition + example: Define X and give one example from chapter
-- Compare briefly: One difference between X and Y
-
-Section: id="section-2mark" | Title: "Section V — Answer Briefly" | Note: 2 Marks each | Q71–Q90 | Answer in 2-3 sentences
-Use 2-Mark format from ANSWER FORMAT RULES above.
-
-══════════════════════════════════════
-PART B: 5-Mark Questions Q91–Q100
-══════════════════════════════════════
-
-Generate EXACTLY 10 questions: Q91 to Q100
-
-ANSWER LENGTH: Exactly 5-7 complete sentences. 80-120 words.
-Do NOT write more than 7 sentences.
-Do NOT write less than 5 sentences.
-Every answer must be a proper paragraph — not bullet points.
-
-Question types — distribute across 10 questions:
-- Explain in detail — full explanation of a key event or concept
-- Causes and effects — list and explain causes OR consequences
-- Significance — why was X important / what was the impact of Y
-- Compare — detailed comparison between two events or concepts
-- Evaluate — outcomes, successes, or failures of a major event
-Each type used TWICE across the 10 questions.
-
-Section: id="section-5mark" | Title: "Section VI — Answer in Detail" | Note: 5 Marks each | Q91–Q100 | Answer in 5-7 sentences
-Use 5-Mark format from ANSWER FORMAT RULES above.
-
-RULES:
-- Raw HTML only — no markdown, no code fences
-- 2-mark: EXACTLY 20 questions Q71–Q90, strictly 2-3 sentences each
-- 5-mark: EXACTLY 10 questions Q91–Q100, strictly 5-7 sentences each
-- Every answer inside answer-reveal div — NO individual show buttons
-- Every answer complete paragraph — never bullet points
-- Each question covers a different chapter topic
-- Do NOT stop before Q100
+{QA_DESCRIPTIVE_INSTRUCTION}
 
 Chapter Text:
 ---

@@ -64,17 +64,18 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
   <style>
     @font-face {{
       font-family: 'NotoSansTamil';
-      src: url('/fonts/NotoSansTamil-Regular.woff2') format('woff2');
+      src: url('/fonts/NotoSansTamil-Regular.ttf') format('truetype');
       font-weight: 400;
       font-display: swap;
     }}
     @font-face {{
       font-family: 'NotoSansTamil';
-      src: url('/fonts/NotoSansTamil-SemiBold.woff2') format('woff2');
+      src: url('/fonts/NotoSansTamil-SemiBold.ttf') format('truetype');
       font-weight: 600;
       font-display: swap;
     }}
-    body, p, h1, h2, h3, h4, span, div, td, li, th, textarea, input, button {{
+    body, p, h1, h2, h3, h4, span, div, td, li, th, textarea, input, button,
+    table, tr, .diff-table, .diff-table td, .diff-table th {{
       font-family: 'NotoSansTamil', 'Latha', 'Vijaya', sans-serif;
     }}
     .sk-content-header {{ border-left: 5px solid {accent}; padding-left: 12px; margin-bottom: 24px; }}
