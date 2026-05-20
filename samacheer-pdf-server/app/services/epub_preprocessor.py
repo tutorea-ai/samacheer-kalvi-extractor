@@ -52,6 +52,12 @@ ENGLISH_LESSON_TYPES = {
 # ── Discipline names for Social Science ───────────────────────────────────────
 SS_DISCIPLINES = ['history', 'geography', 'civics', 'economics']
 
+# ── Roman numeral map for unit numbers ────────────────────────────────────────
+ROMAN = {
+    'I':1,'II':2,'III':3,'IV':4,'V':5,
+    'VI':6,'VII':7,'VIII':8,'IX':9,'X':10
+}
+
 # ── Geography keywords for discipline detection ───────────────────────────────
 GEOGRAPHY_KEYWORDS = [
     'india', 'location', 'climate', 'agriculture', 'resources',
@@ -85,9 +91,15 @@ class EpubPreprocessor:
         epub_zip_path = Path(epub_zip_path)
         epub_dir = epub_zip_path.parent / epub_zip_path.stem
 
-        if epub_dir.exists() and (epub_dir / 'nav.xhtml').exists():
-            print(f"[Preprocessor] Using cached EPUB: {epub_dir.name}")
-            return epub_dir
+        if epub_dir.exists():
+            if (epub_dir / 'nav.xhtml').exists():
+                print(f"[Preprocessor] Using cached EPUB: {epub_dir.name}")
+                return epub_dir
+            # Handle double-nested zip — some EPUBs unzip into a subfolder
+            nested = epub_dir / epub_dir.name
+            if nested.exists() and (nested / 'nav.xhtml').exists():
+                print(f"[Preprocessor] Using cached EPUB (nested): {nested.name}")
+                return nested
 
         if epub_zip_path.exists():
             print(f"[Preprocessor] Unzipping {epub_zip_path.name}...")
@@ -96,6 +108,11 @@ class EpubPreprocessor:
                 with zipfile.ZipFile(epub_zip_path, 'r') as z:
                     z.extractall(epub_dir)
                 print(f"[Preprocessor] ✅ Unzipped to {epub_dir.name}")
+                # Check for double-nesting — some EPUBs unzip into a subfolder
+                nested = epub_dir / epub_dir.stem
+                if nested.exists() and (nested / 'nav.xhtml').exists():
+                    print(f"[Preprocessor] ✅ Detected nested folder — using: {nested.name}")
+                    return nested
                 return epub_dir
             except Exception as e:
                 print(f"[Preprocessor] ❌ Unzip failed: {e}")
@@ -195,12 +212,32 @@ class EpubPreprocessor:
                 break
             content_parts.append(str(sibling))
 
-        # Strip HTML → clean text
+        # Strip HTML → clean text with heading markers preserved
         full_html = ''.join(content_parts)
-        text = BeautifulSoup(full_html, 'html.parser').get_text(
-            separator=' ', strip=True
-        )
-        text = re.sub(r'\s+', ' ', text).strip()
+        content_soup = BeautifulSoup(full_html, 'html.parser')
+
+        # Mark headings BEFORE get_text() strips them
+        # h1-h4 tags → clear heading markers
+        for tag in content_soup.find_all(['h1', 'h2', 'h3', 'h4']):
+            tag.insert_before('\n\n### ')
+            tag.insert_after('\n')
+
+        # Bold tags that are standalone (short text = subheading)
+        for tag in content_soup.find_all(['b', 'strong']):
+            tag_text = tag.get_text(strip=True)
+            # Only mark as heading if short (under 10 words) and not inside a sentence
+            if tag_text and len(tag_text.split()) <= 10:
+                parent = tag.parent
+                # Check if bold tag is the primary content of its parent
+                parent_text = parent.get_text(strip=True) if parent else ""
+                if parent_text and len(parent_text.split()) <= 12:
+                    tag.insert_before('\n\n### ')
+                    tag.insert_after('\n')
+
+        text = content_soup.get_text(separator=' ', strip=True)
+        text = re.sub(r' +', ' ', text)
+        text = re.sub(r'\n +', '\n', text)
+        text = re.sub(r'\n{3,}', '\n\n', text).strip()
 
         if text:
             print(f"[Preprocessor] ✅ Extracted {len(text)} chars for {tag_value}")
@@ -274,11 +311,9 @@ class EpubPreprocessor:
                 continue
 
             unit_text = unit_link.get_text(strip=True)
-            unit_match = re.search(r'[Uu]nit\s*[-–]?\s*(\d+)', unit_text)
-            if not unit_match:
+            unit_num = self._parse_unit_num(unit_text)
+            if not unit_num:
                 continue
-
-            unit_num = int(unit_match.group(1))
             sub_ol = unit_li.find('ol')
             if not sub_ol:
                 continue
@@ -313,13 +348,66 @@ class EpubPreprocessor:
         return tag_map
 
     def _build_ss_tag_map(self, top_ol) -> dict:
-        """Build tag map for Social Science (Type B) nav structure."""
+        """
+        Build tag map for Social Science (Type B) nav structure.
+        Handles:
+          - Standard:          'Unit – 2 Title'
+          - Split entries:     'Unit – 2' then 'Title' as separate <li>
+          - Roman numerals:    'Unit I The universe...'
+          - Discipline prefix: 'Civics Unit 1 Understanding diversity'
+          - Nested units:      Unit 2 inside Unit 1's <ol>
+          - Duplicate headings:'geography' + 'Geography' (same discipline, skip second)
+          - Missing disciplines: Economics absent in Class 6 — silently skipped
+        """
         tag_map = {}
         current_discipline = 'history'
         prev_unit_num = 0
         pending_unit_num = None
         pending_unit_href = None
-        history_done = False
+        seen_disciplines = set()   # prevents double-processing duplicate headings
+
+        def _register_unit(discipline, unit_num, href, li_el=None):
+            """
+            Register one unit into tag_map.
+            After registering, scans nested <ol> inside li_el for
+            additional units (e.g. Unit 2 nested inside Unit 1's ol).
+            """
+            sf, an = self._parse_href(href)
+            if not an:
+                return
+            tag = f"{discipline}-{unit_num}"
+            if tag not in tag_map:
+                tag_map[tag] = (sf, an)
+                print(f"   [SS] Registered {tag} → {an}")
+
+            # Scan nested ol for hidden additional units
+            if li_el:
+                nested_ol = li_el.find('ol')
+                if nested_ol:
+                    for nli in nested_ol.find_all('li', recursive=False):
+                        nl = nli.find('a')
+                        if not nl:
+                            continue
+                        nt = nl.get_text(strip=True)
+                        nh = nl.get('href', '')
+
+                        # Skip sub-sections like 2.1, 3.2 etc.
+                        if re.match(r'^\d+\.\d+', nt):
+                            continue
+                        # Skip known non-unit entries
+                        if nt in ['Learning Objectives', 'Summary', 'Glossary',
+                                  'Exercises', 'Internet Resources', 'ICT CORNER',
+                                  'References', '(Untitled)']:
+                            continue
+
+                        nested_unit = self._parse_unit_num(nt)
+                        if nested_unit and nested_unit != unit_num:
+                            nsf, nan = self._parse_href(nh)
+                            if nan:
+                                nested_tag = f"{discipline}-{nested_unit}"
+                                if nested_tag not in tag_map:
+                                    tag_map[nested_tag] = (nsf, nan)
+                                    print(f"   [SS] Registered nested {nested_tag} → {nan}")
 
         for li in top_ol.find_all('li', recursive=False):
             link = li.find('a')
@@ -329,109 +417,82 @@ class EpubPreprocessor:
             text = link.get_text(strip=True)
             href = link.get('href', '')
             text_upper = text.strip().upper()
+            text_lower = text.strip().lower()
 
-            # Explicit discipline headings
-            if text_upper == 'HISTORY':
-                current_discipline = 'history'
-                pending_unit_num = None
+            # ── Explicit discipline headings ──────────────────────────────────────
+            # Matches: 'HISTORY', 'CIVICS', 'ECONOMICS'
+            # Also:    'geography', 'Geography', 'GEOGRAPHY' (any case)
+            if text_lower in SS_DISCIPLINES:
+                if text_lower in seen_disciplines:
+                    # Duplicate heading (e.g. 'geography' then 'Geography') — skip
+                    continue
+                seen_disciplines.add(text_lower)
+                current_discipline = text_lower
                 prev_unit_num = 0
-                continue
+                pending_unit_num = None
+                pending_unit_href = None
 
-            if text_upper == 'CIVICS':
-                current_discipline = 'civics'
-                history_done = True
-                pending_unit_num = None
-                prev_unit_num = 0
-                # Civics Unit 1 may be nested inside
+                # Geography heading sometimes has Unit I nested directly inside it
                 nested_ol = li.find('ol')
                 if nested_ol:
                     for nli in nested_ol.find_all('li', recursive=False):
                         nl = nli.find('a')
-                        if not nl: continue
+                        if not nl:
+                            continue
                         nt = nl.get_text(strip=True)
                         nh = nl.get('href', '')
-                        um = re.search(r'Unit\s*[-–]\s*(\d+)', nt)
-                        if um:
-                            sf, an = self._parse_href(nh)
-                            if an:
-                                tag = f"civics-{um.group(1)}"
-                                tag_map[tag] = (sf, an)
-                            break
+                        nested_unit = self._parse_unit_num(nt)
+                        if nested_unit:
+                            _register_unit(current_discipline, nested_unit, nh, nli)
+                            prev_unit_num = nested_unit
                 continue
 
-            if text_upper == 'ECONOMICS':
-                current_discipline = 'economics'
-                pending_unit_num = None
-                prev_unit_num = 0
-                continue
-
-            # Unit number only (e.g. "Unit – 2")
-            unit_num_only = re.match(r'^Unit\s*[-–]\s*(\d+)\s*$', text.strip())
+            # ── Unit number only — e.g. 'Unit – 2' ───────────────────────────────
+            text_stripped = text.strip()
+            unit_num_only = re.match(r'^Unit\s*[-–]\s*(\d+)\s*$', text_stripped)
             if unit_num_only:
                 pending_unit_num = int(unit_num_only.group(1))
                 pending_unit_href = href
                 continue
 
-            # Unit with title on same line
-            unit_with_title = re.match(r'^Unit\s*[-–]\s*(\d+)\s+(.+)', text.strip())
-            if unit_with_title:
-                unit_num = int(unit_with_title.group(1))
-                sf, an = self._parse_href(href)
-                if an:
-                    if current_discipline == 'history' and not history_done:
-                        if unit_num < prev_unit_num and self._is_geo(text):
-                            current_discipline = 'geography'
-                            prev_unit_num = 0
-                    tag = f"{current_discipline}-{unit_num}"
-                    tag_map[tag] = (sf, an)
-                    prev_unit_num = unit_num
+            # ── Unit with title — e.g. 'Unit 2 Land and Oceans' ──────────────────
+            # Also handles: 'Civics Unit 1 Understanding diversity' (discipline prefix)
+            # Also handles: 'Unit I The universe...' (Roman numeral)
+            unit_num = self._parse_unit_num(text_stripped)
+            if unit_num:
+                # Discipline-switch detection for History→Geography
+                # (unit numbers reset when discipline changes)
+                if current_discipline == 'history' and 'history' in seen_disciplines:
+                    if unit_num <= prev_unit_num and self._is_geo(text):
+                        current_discipline = 'geography'
+                        seen_disciplines.add('geography')
+                        prev_unit_num = 0
+
+                _register_unit(current_discipline, unit_num, href, li)
+                prev_unit_num = unit_num
                 pending_unit_num = None
                 pending_unit_href = None
                 continue
 
-            # Title entry following unit number entry
+            # ── Title entry following a unit-number-only entry ────────────────────
+            # e.g. 'Unit – 2' on one line, then 'The World Between Two World Wars' next
             if pending_unit_num is not None:
-                # Use pending_unit_href anchor (unit number entry) as boundary
-                if pending_unit_href:
-                    sf, an = self._parse_href(pending_unit_href)
-                else:
-                    sf, an = self._parse_href(href)
+                use_href = pending_unit_href if pending_unit_href else href
 
-                if an:
-                    if current_discipline == 'history' and not history_done:
-                        if pending_unit_num < prev_unit_num and self._is_geo(text):
-                            current_discipline = 'geography'
-                            prev_unit_num = 0
+                # Discipline-switch detection
+                if current_discipline == 'history' and 'history' in seen_disciplines:
+                    if pending_unit_num <= prev_unit_num and self._is_geo(text):
+                        current_discipline = 'geography'
+                        seen_disciplines.add('geography')
+                        prev_unit_num = 0
 
-                    tag = f"{current_discipline}-{pending_unit_num}"
-                    tag_map[tag] = (sf, an)
-                    prev_unit_num = pending_unit_num
-
-                    # Check nested ol for hidden sub-units (e.g. Unit 3 in Unit 2)
-                    nested_ol = li.find('ol')
-                    if nested_ol:
-                        existing = {t for t in tag_map if t.startswith(current_discipline)}
-                        for nli in nested_ol.find_all('li', recursive=False):
-                            nl = nli.find('a')
-                            if not nl: continue
-                            nt = nl.get_text(strip=True)
-                            nh = nl.get('href', '')
-                            if re.match(r'^\d+\.\d+', nt): continue
-                            if nt in ['Learning Objectives', 'To acquaint ourselves with']: continue
-                            if re.match(r'^\d', nt): continue
-                            nsf, nan = self._parse_href(nh)
-                            if nan:
-                                inferred = pending_unit_num + 1
-                                while f"{current_discipline}-{inferred}" in existing:
-                                    inferred += 1
-                                tag = f"{current_discipline}-{inferred}"
-                                tag_map[tag] = (nsf, nan)
-                                existing.add(tag)
-
+                _register_unit(current_discipline, pending_unit_num, use_href, li)
+                prev_unit_num = pending_unit_num
                 pending_unit_num = None
                 pending_unit_href = None
                 continue
 
+            # ── Nothing matched — reset pending ───────────────────────────────────
             pending_unit_num = None
             pending_unit_href = None
 
@@ -449,9 +510,8 @@ class EpubPreprocessor:
             text = link.get_text(strip=True)
             href = link.get('href', '')
 
-            unit_match = re.search(r'[Uu]nit\s*[-–]?\s*(\d+)', text)
-            if unit_match:
-                unit_num = int(unit_match.group(1))
+            unit_num = self._parse_unit_num(text)
+            if unit_num:
                 sf, an = self._parse_href(href)
                 if sf and an:
                     tag = f"unit-{unit_num}"
@@ -514,8 +574,13 @@ class EpubPreprocessor:
         count = 0
 
         for tag_value, (split_file, anchor) in tag_map.items():
-            # Find element with this anchor
+            # Try finding by id first
             el = soup.find(id=anchor)
+
+            # Fallback: anchor is a filename sentinel — locate first element in that split file
+            if not el and anchor and anchor.endswith('.html'):
+                el = self._find_first_element_in_file(soup, anchor)
+
             if not el:
                 print(f"   ⚠️  Anchor '{anchor}' not found for tag '{tag_value}'")
                 continue
@@ -583,10 +648,60 @@ class EpubPreprocessor:
         if '#' in href:
             parts = href.split('#', 1)
             return (parts[0], parts[1] if parts[1] else None)
+        # No anchor — use filename as fallback sentinel so _stamp_tags can locate
+        # the first element in that split file
+        if href:
+            return (href, href)
         return (href, None)
+
+    def _find_first_element_in_file(self, soup, split_file: str):
+        """
+        Find the first element in the combined soup that originates from the
+        given split file. Used when a nav href has no #anchor fragment.
+        """
+        split_path = self.epub_dir / split_file
+        if not split_path.exists():
+            return None
+        with open(split_path, 'r', encoding='utf-8') as f:
+            file_soup = BeautifulSoup(f.read(), 'html.parser')
+        body = file_soup.find('body')
+        if not body:
+            return None
+        # Prefer first element that carries an id — match it in combined soup
+        first_el = body.find(id=True)
+        if first_el:
+            return soup.find(id=first_el.get('id'))
+        # Fall back to matching by text of first heading/paragraph
+        first_block = body.find(['h1', 'h2', 'h3', 'h4', 'p'])
+        if first_block:
+            text = first_block.get_text(strip=True)[:30]
+            for el in soup.find_all(['h1', 'h2', 'h3', 'h4', 'p']):
+                if el.get_text(strip=True)[:30] == text:
+                    return el
+        return None
 
     def _is_geo(self, title: str) -> bool:
         return any(kw in title.lower() for kw in GEOGRAPHY_KEYWORDS)
+
+    def _parse_unit_num(self, text: str) -> int | None:
+        """
+        Parse unit number from text — handles both Arabic and Roman numerals.
+        Examples:
+            'Unit 1 History'         → 1
+            'Unit – 2'               → 2
+            'Unit I The universe'    → 1
+            'Civics Unit 1 ...'      → 1
+            'UNIT 2 Achieving ...'   → 2
+        """
+        # Arabic numerals first
+        m = re.search(r'[Uu]nit\s*[-–]?\s*(\d+)', text)
+        if m:
+            return int(m.group(1))
+        # Roman numerals — must be followed by space or end of string to avoid false matches
+        m = re.search(r'[Uu]nit\s*[-–]?\s*([IVX]+)(?:\s|$)', text)
+        if m and m.group(1) in ROMAN:
+            return ROMAN[m.group(1)]
+        return None
 
 
 # ──────────────────────────────────────────────────────────────────────────────

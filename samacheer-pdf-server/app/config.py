@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     # AI — Anthropic Claude (replaced Kimi)
     # ================================================================
     ANTHROPIC_API_KEY: str = ""
-    ANTHROPIC_MODEL: str = "claude-sonnet-4-20250514"
+    ANTHROPIC_MODEL: str = "claude-sonnet-4-6"
 
     # ── Google Document AI ─────────────────────────────────────────────────
 

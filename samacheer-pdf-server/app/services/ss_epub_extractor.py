@@ -26,7 +26,22 @@ from .epub_preprocessor import EpubPreprocessor
 class SocialScienceEpubExtractor:
 
     def __init__(self, epub_dir: Path):
-        self.epub_dir     = Path(epub_dir)
+        epub_dir = Path(epub_dir)
+
+        # Handle double-nested EPUBs — some ZIPs unzip into a subfolder
+        if not (epub_dir / 'nav.xhtml').exists():
+            # Look for nav.xhtml one level deeper
+            nested = epub_dir / epub_dir.name
+            if nested.exists() and (nested / 'nav.xhtml').exists():
+                epub_dir = nested
+            else:
+                # Try any subdirectory that has nav.xhtml
+                for subdir in epub_dir.iterdir():
+                    if subdir.is_dir() and (subdir / 'nav.xhtml').exists():
+                        epub_dir = subdir
+                        break
+
+        self.epub_dir     = epub_dir
         self.preprocessor = EpubPreprocessor(self.epub_dir)
 
     def extract(self, discipline: str, unit: int) -> str | None:

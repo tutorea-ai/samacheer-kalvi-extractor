@@ -472,6 +472,45 @@ Chapter Text:
 
             next_label = f"Day {day_num + 1}" if day_num < 4 else "end of chapter"
 
+            day2_note = ""
+            if day_num == 2:
+                day2_note = """
+⚠️ DAY 2 — CULTURAL & EDUCATIONAL RIGHTS EXAMPLE (MANDATORY):
+When explaining Cultural and Educational Rights (Articles 29-30):
+- Use THIS specific real-life example:
+  'Tamil schools exist in Karnataka and Telugu schools exist in Tamil Nadu
+   because of Articles 29 and 30 protecting minority rights.'
+- Article 29: Protection of minority language, script, and culture
+- Article 30: Right of minorities to establish and administer educational institutions
+- These two articles ensure minorities preserve their distinct identity
+  while being part of the larger Indian community.
+- Teacher says: 'Without Article 30, a Tamil family in Karnataka could not
+  send their child to a Tamil medium school. That is why this right matters.'
+"""
+
+            day3_note = ""
+            if day_num == 3:
+                day3_note = """
+⚠️ DAY 3 — CRITICAL RULES:
+1. DPSP FULL FORM: Always write "Directive Principles of State Policy (DPSP)"
+   in FULL the first time it appears. Never use abbreviation alone on first mention.
+   After first mention, DPSP abbreviation is acceptable.
+
+2. DAY 3 CLOSING — STRICTLY DAY 3 CONTENT ONLY:
+   The closing on Day 3 must cover ONLY what was taught on Day 3.
+   Do NOT recap Days 1 and 2 in the Day 3 closing.
+   Do NOT do a full chapter recap on Day 3 — that belongs to Day 4.
+   Day 3 closing structure:
+   - 3 rapid-fire questions about Day 3 content only
+   - Key points from Day 3 only on board
+   - Written assessment task (NOT oral) — students write independently
+   - Preview Day 4
+
+3. WRITTEN ASSESSMENT — NOT ORAL:
+   Day 3 assessment must be WRITTEN — students write answers independently.
+   No oral question-answer format for assessment.
+"""
+
             prompt = f"""Generate ONLY Day {day_num} of the Civics lesson plan. Nothing else.
 Do NOT include Preamble. Do NOT generate Day {day_num + 1} or any other day.
 
@@ -536,7 +575,7 @@ CFU → Wait 10 seconds, 2-3 students
 CCQ → Wait 15 seconds, pair discussion first
 Opening question → Wait 20 seconds, 3-5 responses
 ═══════════════════════════════════════════════════════
-
+{day2_note}{day3_note}
 DAY STRUCTURE:
 
 <h3 class="day-header">

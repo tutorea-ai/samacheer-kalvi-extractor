@@ -63,6 +63,13 @@ CRITICAL OUTPUT RULE FOR PREAMBLE:
 - Start your output DIRECTLY with <h2>Part 1: Chapter Overview</h2>
 - First HTML tag must be <h2>
 - Do NOT generate any Day blocks
+
+OBJECTIVES ORDER — STRICTLY FOLLOW THIS SEQUENCE:
+Part 1: Chapter Overview
+Part 2: Learning Objectives      ← ALWAYS FIRST among objectives
+Part 3: Value-Based Objectives   ← ALWAYS SECOND
+Part 4: Skill Objectives         ← ALWAYS THIRD
+Part 5: Teaching Aids            ← ALWAYS LAST
 """
 
 
@@ -346,12 +353,17 @@ def clean(raw: str) -> str:
     # Remove any inline style blocks Claude sometimes adds
     text = re.sub(r'<style[^>]*>.*?</style>', '', text, flags=re.DOTALL)
 
-    # Strip any leading non-HTML preamble text
+    # Strip leading non-HTML preamble
     first_tag = re.search(r'<(?:div|h[1-6]|section|p|table)', text)
     if first_tag and first_tag.start() > 0:
         preamble = text[:first_tag.start()].strip()
         if preamble and not preamble.startswith('<'):
             text = text[first_tag.start():]
+
+    # Auto-fix unclosed HTML tags
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(text, 'html.parser')
+    text = str(soup)
 
     return text.strip()
 
@@ -402,8 +414,11 @@ SECTION WRAPPER FORMAT — use EXACTLY this structure:
   <div class="section-header">
     <h2>[Section Title]</h2>
     <button class="show-section-btn"
-            onclick="toggleSectionAnswers(this, 'section-[id]')">
-      Show Answers
+            onclick="toggleSectionAnswers(this, 'section-[id]')"
+            style="background:#2563eb; color:#fff; font-weight:700;
+                   border:none; border-radius:6px; padding:6px 18px;
+                   cursor:pointer; font-size:0.95rem; letter-spacing:0.3px;">
+      📋 Show Answers
     </button>
   </div>
   <p class="section-note"><em>[marks info]</em></p>

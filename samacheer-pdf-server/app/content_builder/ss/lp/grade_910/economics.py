@@ -293,6 +293,31 @@ CRITICAL RULES:
 - Each day must have a distinct focus with formula work
 - Day 3 always includes new content AND revision
 
+MANDATORY TOPIC COVERAGE — these MUST appear if in chapter text:
+Day 1 MUST cover:
+  - Definition of GDP (with C+I+G+(X-M) formula)
+  - National Income (Section 1.1) — GNP, GDP, NNP, NDP, PCI
+  - All formulas for each measure with explanation
+  - Do NOT summarise National Income briefly — explain ALL 5 measures in detail
+
+Day 2 MUST cover:
+  - Composition of GDP / Methods of GDP calculation
+  - Sectors of economy — Primary, Secondary, Tertiary
+  - Sector content must be DETAILED — not just names
+  - DIFFERENCE BETWEEN sections:
+    * Primary vs Secondary vs Tertiary sectors
+    * GDP vs GNP vs NNP
+    * Economic Growth vs Economic Development
+  Include explicit comparison tables for each difference
+
+Day 3 MUST cover:
+  - Economic Growth vs Development
+  - Economic Policies (Agriculture, Industrial, LPG)
+  - Remaining content + revision
+
+Day 4 MUST be:
+  - Full revision + notes + 50-mark worksheet
+
 Return ONLY valid JSON. No explanation. No markdown. Just raw JSON.
 
 JSON structure:
@@ -522,6 +547,72 @@ Start by completing carried-over topic from Day {day_num - 1}.
 'Yesterday we started [topic]. Today we complete it first.'
 """
 
+            day1_note = ""
+            if day_num == 1:
+                day1_note = """
+⚠️ DAY 1 — MANDATORY CONTENT:
+1. GDP Definition — explain fully with C+I+G+(X-M) formula
+2. National Income (Section 1.1) — ALL 5 measures MUST be explained in detail:
+   - GNP = GDP + NFIA (explain what NFIA means)
+   - GDP (geographical boundary concept)
+   - NNP = GNP - Depreciation
+   - NDP = GDP - Depreciation
+   - PCI = National Income / Population
+3. Each formula MUST have:
+   - Board-work with formula written out
+   - Simple numerical example
+   - Tea shop / local analogy connecting to real life
+4. Do NOT just mention these measures briefly — each needs full explanation
+"""
+
+            day2_note = ""
+            if day_num == 2:
+                day2_note = """
+⚠️ DAY 2 — MANDATORY CONTENT:
+1. Sectors of Economy — explain ALL THREE in detail with examples:
+   - Primary Sector: farming, fishing, mining, forestry
+   - Secondary Sector: manufacturing, construction, processing
+   - Tertiary Sector: banking, transport, education, health
+   Each sector needs: definition + real examples + contribution to GDP
+
+2. DIFFERENCE BETWEEN (MANDATORY — include explicit comparison table):
+   <div class="board-work">
+     <strong>Difference Between Primary, Secondary and Tertiary Sectors:</strong>
+     <table style="border-collapse:collapse;">
+       <thead>
+         <tr>
+           <th style="border:1px solid #333;padding:8px;">Basis</th>
+           <th style="border:1px solid #333;padding:8px;">Primary Sector</th>
+           <th style="border:1px solid #333;padding:8px;">Secondary Sector</th>
+           <th style="border:1px solid #333;padding:8px;">Tertiary Sector</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td style="border:1px solid #333;padding:8px;">Definition</td>
+           <td style="border:1px solid #333;padding:8px;">Natural resources</td>
+           <td style="border:1px solid #333;padding:8px;">Manufacturing</td>
+           <td style="border:1px solid #333;padding:8px;">Services</td>
+         </tr>
+         <tr>
+           <td style="border:1px solid #333;padding:8px;">Examples</td>
+           <td style="border:1px solid #333;padding:8px;">Farming, Mining</td>
+           <td style="border:1px solid #333;padding:8px;">Factory, Construction</td>
+           <td style="border:1px solid #333;padding:8px;">Banking, Transport</td>
+         </tr>
+         <tr>
+           <td style="border:1px solid #333;padding:8px;">Workers</td>
+           <td style="border:1px solid #333;padding:8px;">Farmers, Fishermen</td>
+           <td style="border:1px solid #333;padding:8px;">Factory workers</td>
+           <td style="border:1px solid #333;padding:8px;">Teachers, Doctors</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+
+3. Student task must be DIFFERENT from real-life homework
+"""
+
             day3_note = ""
             if day_num == 3:
                 day3_note = """
@@ -576,7 +667,7 @@ Sector Examples:
 {sectors_str if sectors_str else '  [Generate from chapter content]'}
 Real-life connections: {real_life_str}
 {continuation_note}
-{day3_note}{day4_note}
+{day1_note}{day2_note}{day3_note}{day4_note}
 ═══════════════════════════════════════════════════════
 
 {self._get_cfu_ccq_instruction()}

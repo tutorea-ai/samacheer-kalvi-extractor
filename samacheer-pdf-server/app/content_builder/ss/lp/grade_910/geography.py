@@ -263,6 +263,20 @@ YOUR JOB:
 2. For each main topic, list ALL subtopics under it
 3. Plan which topics go on which day (Day 1 to Day 4 for new content)
 4. Day 5 is always Synthesis + Book-back — do NOT assign new content to Day 5
+
+DAY ALLOCATION RULES — STRICTLY FOLLOW:
+- Day 1: Location, relief, physiographic divisions introduction
+- Day 2: Himalayan Mountains — all ranges and passes
+- Day 3: Northern Plains + Peninsular Plateau + Coastal Plains + Islands
+- Day 4: Drainage system — Himalayan Rivers + Peninsular Rivers + characteristics
+- Day 5: Synthesis mapping + Book-back ONLY — NO new content
+
+⚠️ CRITICAL:
+- Himalayan Rivers and Peninsular Rivers MUST go in Day 4 — never Day 5
+- Coastal Plains and Islands MUST go in Day 3 — never Day 4
+- Day 5 must have ZERO new content — synthesis and book-back only
+- Never mix Day 4 and Day 5 content
+
 5. Identify key geographical features, map locations, and comparison pairs
 
 CRITICAL RULES:
@@ -498,6 +512,45 @@ Start by completing carried-over topic from Day {day_num - 1}.
 'Yesterday we started [topic]. Today we complete it first.'
 """
 
+            day4_note = ""
+            if day_num == 4:
+                day4_note = """
+⚠️ DAY 4 — RIVER CHARACTERISTICS (MANDATORY FLOW):
+When teaching Himalayan Rivers and Peninsular Rivers,
+follow this EXACT teaching flow:
+
+STEP 1: Introduce Himalayan Rivers
+- Name the major rivers (Ganga, Yamuna, Brahmaputra etc.)
+- Teacher draws simple sketch of Himalayan river system on board
+
+STEP 2: Explain Himalayan River CHARACTERISTICS (one by one):
+- Perennial — fed by glaciers AND monsoon rain
+- Long course, large basins
+- Form V-shaped valleys in upper course (gorges)
+- Form deltas at mouth
+- Good for irrigation and navigation
+- Carry large amount of silt
+
+STEP 3: Introduce Peninsular Rivers
+- Name the major rivers (Godavari, Krishna, Cauvery etc.)
+- Teacher draws simple sketch of Peninsular river system on board
+
+STEP 4: Explain Peninsular River CHARACTERISTICS (one by one):
+- Seasonal — fed by monsoon rain only
+- Shorter course, smaller basins
+- Flow through hard rock — form waterfalls
+- West-flowing rivers form estuaries
+- East-flowing rivers form deltas
+- Good for hydel power generation
+
+STEP 5: T-Chart Comparison on board
+Draw T-Chart comparing BOTH river systems with all characteristics.
+Students copy and complete in notebooks.
+
+This flow MUST be followed in order — do not jump to comparison before
+explaining each river system's characteristics separately first.
+"""
+
             next_label = f"Day {day_num + 1}" if day_num < 4 else "Day 5 — Synthesis and Map Building"
 
             prompt = f"""Generate ONLY Day {day_num} of the Geography lesson plan. Nothing else.
@@ -533,6 +586,7 @@ Day Focus    : {day_focus}
 {comparison_note}
 {chant_note}
 {continuation_note}
+{day4_note}
 CRITICAL: Cover ONLY the subtopics listed above.
 Do NOT introduce subtopics from other days.
 Do NOT repeat subtopics already covered in previous days.
@@ -1279,6 +1333,15 @@ Tamil appears in EXACTLY 3 places:
 ❌ NEVER in: activity instructions, board work, race activities,
    time notes, closing power sentence, map work
 Tamil mirror: same sentences, same length, same detail. Real Unicode only.
+⚠️ CRITICAL — Tamil translation must be PURE TAMIL only:
+- NO Hindi words anywhere in Tamil text
+- NO transliteration of Hindi into Tamil script
+- If a concept has no Tamil equivalent, use the English term — never Hindi
+- Examples of common mistakes to AVOID:
+  ❌ நதி (correct Tamil) vs गंगा in Tamil script (Hindi — wrong)
+  ❌ Using Hindi geographical terms transliterated into Tamil
+- Every word in the Tamil mirror must be either pure Tamil or English loanword
+- Never use Hindi loanwords in Tamil output
 ═══════════════════════════════════════════════════════
 """
 
