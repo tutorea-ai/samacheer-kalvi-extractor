@@ -743,14 +743,15 @@ DAY STRUCTURE:
   <div class="time-block">
     <strong>[5-10 min] Introduction & Context Setting</strong>
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
+    <p class="teacher-says"><strong>Teacher says (Introduction — English):</strong><br/>
     "[3-4 sentences — introduce {main_topic} clearly.
      Connect to what students saw in the spark.
      Tell students exactly what subtopics and map features they cover today.]"</p>
 
     <div class="tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same introduction.]"</p>
+      <strong>ஆசிரியருக்கு (Tamil — context-based mirror):</strong><br/>
+      <p>"[3-4 Tamil sentences — exact same introduction in Tamil.
+          Context-based — NOT word-for-word. Pure Tamil Unicode only.]"</p>
     </div>
 
     <div class="board-work">
@@ -785,15 +786,19 @@ DAY STRUCTURE:
 
     <h4>[Subtopic name — exactly as listed]</h4>
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[4-5 sentences — explain this subtopic clearly.
-     Include board diagram instruction (draw V shape / slope / cross etc.)
+    <p class="teacher-says"><strong>Teacher reads aloud and explains (English):</strong><br/>
+    "[Teacher reads this sub-point from textbook aloud.
+     Then explains in simple clear language — 3-4 sentences.
+     REAL-LIFE CONNECTION: 'Just like [Indian/relatable example]...'
      Connect physical feature → effect on climate/agriculture/people.
-     Keep {main_topic} hierarchy clear.]"</p>
+     Include specific facts and numbers from textbook.]"</p>
 
     <div class="tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[4-5 Tamil sentences — exact same explanation.]"</p>
+      <strong>ஆசிரியருக்கு (Tamil — context-based mirror):</strong><br/>
+      <p>"[3-4 Tamil sentences — exact same explanation in Tamil.
+          Same length. Same real-life connection. Same detail.
+          Context-based Tamil — NOT word-for-word translation.
+          Pure Tamil Unicode only — no Hindi words, no transliteration.]"</p>
     </div>
 
     <div class="board-work">
@@ -811,20 +816,52 @@ DAY STRUCTURE:
 
     {"<!-- T-Chart Comparison --><div class='activity-block'><strong>T-Chart Comparison — " + (comparison_pair[0] if comparison_pair else "") + " vs " + (comparison_pair[1] if comparison_pair else "") + ":</strong><p>Students draw T-Chart in notebooks. Teacher calls facts → students fill correct column. Teacher draws solid line (continuous) vs dashed line (discontinuous) on board where relevant.</p></div>" if comparison_pair else ""}
 
-    <!-- Main Activity -->
+    <!-- Activity 1 — ~8 mins -->
     <div class="activity-block">
-      <strong>Activity — {activity}:</strong>
-      <p>[Step by step instructions. English only — no Tamil here.
-         Include timer instruction where relevant.
-         Specify what students find/label/circle on map.]</p>
-      <p><em>⏱ [Time box]. Teacher circulates and checks map work.</em></p>
+      <strong>Activity 1 — [Race/Sorting/Drawing] (~8 mins):</strong>
+      <p>[Specific step-by-step instructions for Activity 1.
+         Based on today's first subtopic.
+         Students race to find / shout back / label / draw.
+         Include EXACT student action: what they say, write, or do.
+         Example: 'Teacher shouts Bangladesh! → students race to find border length → shout 4097 km!'
+         English only — no Tamil here.]</p>
+      <p><em>⏱ Set timer on board. Teacher circulates and checks.</em></p>
     </div>
 
-    [CFU after activity — "I am..." clue format]
+    [CFU after Activity 1 — "I am..." clue format]
+
+    <!-- Activity 2 — ~7 mins -->
+    <div class="activity-block">
+      <strong>Activity 2 — [Map Hunt/Radio Controller/Chanting] (~7 mins):</strong>
+      <p>[Specific step-by-step instructions for Activity 2.
+         Based on today's second subtopic.
+         Radio Controller format OR Interactive Map Hunt OR Chanting.
+         Include EXACT student action.
+         Example: 'Controller to Scouts: Find the Indus River. Find its largest branch. Over!'
+         English only — no Tamil here.]</p>
+      <p><em>⏱ Set timer. Students use fingers to trace on map.</em></p>
+    </div>
+
+    [CFU after Activity 2 — "I am..." clue format]
+
+    <!-- Activity 3 — ~7 mins -->
+    <div class="activity-block">
+      <strong>Activity 3 — [T-Chart/Comparison/Mimicking] (~7 mins):</strong>
+      <p>[Specific step-by-step instructions for Activity 3.
+         Based on today's third subtopic or comparison pair.
+         T-Chart comparison OR physical mimicking OR group sorting.
+         Include EXACT student action.
+         Example: 'Students mimic the folding action with their hands — creating a tent shape.'
+         English only — no Tamil here.]</p>
+      <p><em>⏱ Teacher circulates. Check all notebooks have the diagram.</em></p>
+    </div>
+
+    [CFU after Activity 3 — "I am..." clue format]
 
   </div>
 
-  <!-- ═══ SECTION 4: STUDENT TASK (25-30 min) ═══ -->
+  <!-- ═══ SECTION 4: STUDENT TASK — MANDATORY — NEVER SKIP ═══ -->
+  <!-- If running long — reduce CFU count but NEVER remove this section -->
   <div class="time-block">
     <strong>[25-30 min] Student Task — {task['style']}</strong>
 
@@ -927,7 +964,14 @@ ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
 ✅ NO page numbers anywhere
 ✅ Tamil only in: Key Terms + Main explanations + Opening question
 ✅ Race/Radio Controller/Speed mapping activity included
-✅ Power Sentence closing included
+✅ 3 separate activities included (Activity 1 ~8 mins, Activity 2 ~7 mins, Activity 3 ~7 mins)
+✅ Each activity has EXACT student action (what they say/write/do/shout)
+✅ Student task block is PRESENT and COMPLETE — never skipped
+✅ Closing Power Sentence included with exact frame on board
+✅ 3 students read sentences before bell rings
+✅ NEVER use religious references in examples
+✅ NEVER mention specific student names — use 'a student' or 'Student A'
+✅ All English words spelled correctly
 ✅ 3 students read sentences before bell
 ✅ Student task style: {task['style']}
 ✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
@@ -939,7 +983,7 @@ Chapter Text:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=10000,
+                model=self.model, max_tokens=14000,
                 system=SS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )

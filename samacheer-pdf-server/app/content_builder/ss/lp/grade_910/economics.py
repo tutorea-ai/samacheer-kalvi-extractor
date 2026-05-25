@@ -448,8 +448,11 @@ Generate these sections:
 <table>
   Rows: Class | Subject | Discipline | Unit/Chapter Title |
         Month | Total Teaching Hours | Session Duration |
-        Main Topics Covered | Key Formulas
+        Main Topics Covered | Key Formulas |
+        Learning Objectives
 </table>
+Add a "Learning Objectives" row at the bottom of the table.
+List 3-4 key objectives directly inside the table row — not as a separate section.
 
 3. VALUE-BASED OBJECTIVES
 <h2>Part 2: Value-Based Objectives</h2>
@@ -552,59 +555,174 @@ Start by completing carried-over topic from Day {day_num - 1}.
                 day1_note = """
 ⚠️ DAY 1 — MANDATORY CONTENT:
 1. GDP Definition — explain fully with C+I+G+(X-M) formula
-2. National Income (Section 1.1) — ALL 5 measures MUST be explained in detail:
-   - GNP = GDP + NFIA (explain what NFIA means)
-   - GDP (geographical boundary concept)
-   - NNP = GNP - Depreciation
-   - NDP = GDP - Depreciation
-   - PCI = National Income / Population
-3. Each formula MUST have:
-   - Board-work with formula written out
-   - Simple numerical example
-   - Tea shop / local analogy connecting to real life
-4. Do NOT just mention these measures briefly — each needs full explanation
+2. National Income — this is a MAJOR topic with its OWN <h4> heading
+   Under National Income, explain ALL 5 measures as SEPARATE <h5> subheadings:
+   <h5>1. GDP (Gross Domestic Product)</h5>
+   - Definition: market value of all final goods/services within country
+   - Formula: GDP = C + I + G + (X-M) — explain EACH letter
+   - Numerical example on board
+   - Tea shop analogy: everything made inside the shop walls
+
+   <h5>2. GNP (Gross National Product)</h5>
+   - Definition: GDP + income earned by nationals abroad
+   - Formula: GNP = GDP + NFIA
+   - Explain NFIA = Net Factor Income from Abroad
+   - Numerical example on board
+   - Tea shop analogy: family members working outside the shop
+
+   <h5>3. NNP (Net National Product)</h5>
+   - Definition: GNP minus depreciation
+   - Formula: NNP = GNP - Depreciation
+   - Explain Depreciation = wear and tear of capital
+   - Numerical example: if GNP=1000, Depreciation=100, NNP=900
+   - Tea shop analogy: broken glasses and rusty stove
+
+   <h5>4. NDP (Net Domestic Product)</h5>
+   - Definition: GDP minus depreciation
+   - Formula: NDP = GDP - Depreciation
+   - Numerical example on board
+
+   <h5>5. Per Capita Income (PCI)</h5>
+   - Definition: National Income divided by population
+   - Formula: PCI = National Income / Population
+   - Numerical example: if NI=2000, Population=10, PCI=200
+   - Tea shop analogy: sharing the plate equally
+
+   EACH measure MUST have:
+   - Its own <h5> subheading
+   - Full explanation (3-4 sentences minimum)
+   - Formula written on board
+   - Numerical example
+   - Tea shop analogy
+   - 1 CFU + 1 CCQ
+
+   Do NOT summarise — each measure is a separate teaching point
 """
 
             day2_note = ""
             if day_num == 2:
                 day2_note = """
 ⚠️ DAY 2 — MANDATORY CONTENT:
-1. Sectors of Economy — explain ALL THREE in detail with examples:
-   - Primary Sector: farming, fishing, mining, forestry
-   - Secondary Sector: manufacturing, construction, processing
-   - Tertiary Sector: banking, transport, education, health
-   Each sector needs: definition + real examples + contribution to GDP
+1. Sectors of Economy — explain ALL THREE as SEPARATE <h4> headings:
+
+   <h4>Primary Sector</h4>
+   - Definition: activities that directly extract from nature
+   - Examples from chapter: Agriculture, Cattle farming, Fishing,
+     Mining (Coal, Iron ore), Forestry
+   - Local example: vegetable sellers bringing produce from farms
+   - Contribution to GDP: explain percentage/rank
+   - 2 CFUs + 1 CCQ after explanation
+
+   <h4>Secondary Sector</h4>
+   - Definition: transforms raw materials into finished goods
+   - Examples from chapter: Iron and Steel, Textiles, Jute,
+     Automobiles, Engineering goods
+   - Local example: car factories in Chennai, garment units
+   - Contribution to GDP: explain percentage/rank
+   - 2 CFUs + 1 CCQ after explanation
+
+   <h4>Tertiary Sector</h4>
+   - Definition: provides services to support other sectors
+   - Examples from chapter: Teaching, Healthcare, Banking,
+     Transport, IT/Software
+   - Local example: bank manager in Ashok Nagar, IT companies
+   - Status: currently LARGEST contributor to India's GDP
+   - 2 CFUs + 1 CCQ after explanation
+
+   Each sector MUST have:
+   - Its own <h4> heading
+   - Full explanation minimum 4 sentences
+   - Real local examples (Chennai/Ashok Nagar context)
+   - Contribution to GDP mentioned
+   - 2 CFUs + 1 CCQ
 
 2. DIFFERENCE BETWEEN (MANDATORY — include explicit comparison table):
+   The table MUST use this exact style for visibility:
+   - Border: 2px solid black on all cells
+   - Header row: bold text
+   - Each row clearly separated
+   - Minimum 4 rows of differences
+   - Table must be wide enough to read clearly
+
+   Also add these TWO difference tables in Day 2:
+
+   Table 1: Primary vs Secondary vs Tertiary Sectors (3 columns)
    <div class="board-work">
      <strong>Difference Between Primary, Secondary and Tertiary Sectors:</strong>
-     <table style="border-collapse:collapse;">
+     <table style="border-collapse:collapse;width:100%;">
        <thead>
          <tr>
-           <th style="border:1px solid #333;padding:8px;">Basis</th>
-           <th style="border:1px solid #333;padding:8px;">Primary Sector</th>
-           <th style="border:1px solid #333;padding:8px;">Secondary Sector</th>
-           <th style="border:1px solid #333;padding:8px;">Tertiary Sector</th>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">Basis</th>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">Primary Sector</th>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">Secondary Sector</th>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">Tertiary Sector</th>
          </tr>
        </thead>
        <tbody>
          <tr>
-           <td style="border:1px solid #333;padding:8px;">Definition</td>
-           <td style="border:1px solid #333;padding:8px;">Natural resources</td>
-           <td style="border:1px solid #333;padding:8px;">Manufacturing</td>
-           <td style="border:1px solid #333;padding:8px;">Services</td>
+           <td style="border:2px solid black;padding:8px;">Definition</td>
+           <td style="border:2px solid black;padding:8px;">Extraction from natural resources</td>
+           <td style="border:2px solid black;padding:8px;">Manufacturing and processing</td>
+           <td style="border:2px solid black;padding:8px;">Providing services</td>
          </tr>
          <tr>
-           <td style="border:1px solid #333;padding:8px;">Examples</td>
-           <td style="border:1px solid #333;padding:8px;">Farming, Mining</td>
-           <td style="border:1px solid #333;padding:8px;">Factory, Construction</td>
-           <td style="border:1px solid #333;padding:8px;">Banking, Transport</td>
+           <td style="border:2px solid black;padding:8px;">Examples</td>
+           <td style="border:2px solid black;padding:8px;">Farming, Fishing, Mining</td>
+           <td style="border:2px solid black;padding:8px;">Factory, Construction, Processing</td>
+           <td style="border:2px solid black;padding:8px;">Banking, Transport, Education</td>
          </tr>
          <tr>
-           <td style="border:1px solid #333;padding:8px;">Workers</td>
-           <td style="border:1px solid #333;padding:8px;">Farmers, Fishermen</td>
-           <td style="border:1px solid #333;padding:8px;">Factory workers</td>
-           <td style="border:1px solid #333;padding:8px;">Teachers, Doctors</td>
+           <td style="border:2px solid black;padding:8px;">Workers</td>
+           <td style="border:2px solid black;padding:8px;">Farmers, Fishermen, Miners</td>
+           <td style="border:2px solid black;padding:8px;">Factory workers, Builders</td>
+           <td style="border:2px solid black;padding:8px;">Teachers, Doctors, Bankers</td>
+         </tr>
+         <tr>
+           <td style="border:2px solid black;padding:8px;">Contribution to GDP</td>
+           <td style="border:2px solid black;padding:8px;">~15-20% of India's GDP</td>
+           <td style="border:2px solid black;padding:8px;">~25-30% of India's GDP</td>
+           <td style="border:2px solid black;padding:8px;">~50-55% of India's GDP</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+
+   Table 2: GDP vs GNP vs NNP (3 columns)
+   <div class="board-work">
+     <strong>Difference Between GDP, GNP and NNP:</strong>
+     <table style="border-collapse:collapse;width:100%;">
+       <thead>
+         <tr>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">Basis</th>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">GDP</th>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">GNP</th>
+           <th style="border:2px solid black;padding:8px;font-weight:bold;">NNP</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td style="border:2px solid black;padding:8px;">Definition</td>
+           <td style="border:2px solid black;padding:8px;">Market value of all goods/services within country</td>
+           <td style="border:2px solid black;padding:8px;">GDP + income earned by nationals abroad</td>
+           <td style="border:2px solid black;padding:8px;">GNP minus depreciation</td>
+         </tr>
+         <tr>
+           <td style="border:2px solid black;padding:8px;">Formula</td>
+           <td style="border:2px solid black;padding:8px;">C + I + G + (X-M)</td>
+           <td style="border:2px solid black;padding:8px;">GDP + NFIA</td>
+           <td style="border:2px solid black;padding:8px;">GNP - Depreciation</td>
+         </tr>
+         <tr>
+           <td style="border:2px solid black;padding:8px;">What it measures</td>
+           <td style="border:2px solid black;padding:8px;">Output within geographical boundary</td>
+           <td style="border:2px solid black;padding:8px;">Output by nationals anywhere in world</td>
+           <td style="border:2px solid black;padding:8px;">Net output after wear and tear</td>
+         </tr>
+         <tr>
+           <td style="border:2px solid black;padding:8px;">Key difference</td>
+           <td style="border:2px solid black;padding:8px;">Includes foreigners working in India</td>
+           <td style="border:2px solid black;padding:8px;">Excludes foreigners, includes Indians abroad</td>
+           <td style="border:2px solid black;padding:8px;">Most accurate — accounts for capital loss</td>
          </tr>
        </tbody>
      </table>
@@ -624,6 +742,52 @@ Structure:
 [5-20 min]  Complete remaining new content
 [20-30 min] Three Toolkits activity
 [30-35 min] Policy Match Closing + homework
+
+MANDATORY DIFFERENCE BETWEEN TABLE FOR DAY 3:
+Economic Growth vs Economic Development — MUST include this table:
+
+<div class="board-work">
+  <strong>Difference Between Economic Growth and Economic Development:</strong>
+  <table style="border-collapse:collapse;width:100%;">
+    <thead>
+      <tr>
+        <th style="border:2px solid #333;padding:8px;">Basis</th>
+        <th style="border:2px solid #333;padding:8px;">Economic Growth</th>
+        <th style="border:2px solid #333;padding:8px;">Economic Development</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:2px solid #333;padding:8px;">Meaning</td>
+        <td style="border:2px solid #333;padding:8px;">Quantitative increase in GDP/output</td>
+        <td style="border:2px solid #333;padding:8px;">Qualitative improvement in living standards</td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #333;padding:8px;">Concept</td>
+        <td style="border:2px solid #333;padding:8px;">Narrow concept — just numbers</td>
+        <td style="border:2px solid #333;padding:8px;">Broader concept — quality of life</td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #333;padding:8px;">Measures</td>
+        <td style="border:2px solid #333;padding:8px;">GDP, GNP, NNP</td>
+        <td style="border:2px solid #333;padding:8px;">HDI, literacy, health, happiness</td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #333;padding:8px;">Example</td>
+        <td style="border:2px solid #333;padding:8px;">Factory output increases</td>
+        <td style="border:2px solid #333;padding:8px;">Children go to school, people are healthy</td>
+      </tr>
+      <tr>
+        <td style="border:2px solid #333;padding:8px;">Thinker</td>
+        <td style="border:2px solid #333;padding:8px;">Traditional economists</td>
+        <td style="border:2px solid #333;padding:8px;">Amartya Sen — capabilities approach</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+This table MUST appear after explaining Economic Growth and Development.
+Students copy this table in their notebooks.
 ═══════════════════════════════════════════════════════
 """
 
@@ -634,11 +798,59 @@ Structure:
 DAY 4: REVISION + NOTES + ASSESSMENT
 ═══════════════════════════════════════════════════════
 Structure:
-[0-8 min]   Rapid Fire Quiz — 10 questions from ALL 4 days
-[8-18 min]  Mind Map — full chapter on board, students copy
-[18-28 min] Notes Making — structured summary in own words
-[28-35 min] 50-Mark Differentiated Worksheet (3 levels)
+[0-8 min]   Rapid Fire Quiz — 10 REAL questions from ALL days
+[8-15 min]  Mind Map — full chapter on board, students copy
+[15-23 min] Notes Making — refer to Q&A section for answers
+[23-35 min] 50-Mark Differentiated Worksheet (3 levels)
 No new content today.
+
+RAPID FIRE QUIZ — MUST be REAL questions with REAL answers:
+Generate 10 actual questions — NOT placeholders like [Question here].
+Each question must be answerable in one word or one sentence.
+Example format:
+  Q1: What does GDP stand for? → Gross Domestic Product
+  Q2: Formula for NNP? → NNP = GNP - Depreciation
+  Q3: Who said growth is just one aspect of development? → Amartya Sen
+  Q4: Farmer works in which sector? → Primary
+  Q5: What does 'L' in LPG stand for? → Liberalisation
+
+NOTES MAKING — refer to Q&A section:
+Teacher says: "For detailed answers to all book-back questions,
+refer to the Q&A section of this platform — all answers are there."
+
+50-MARK WORKSHEET — MUST have REAL questions at all 3 levels:
+Generate actual questions — NOT placeholders.
+
+🟢 Level 1 — Foundation (Slow Learners) — 50 Marks:
+  Section A: Fill in the blanks (10 × 1 = 10 marks)
+  - Write 10 ACTUAL fill-in-blank sentences from chapter content
+  - Word bank provided below questions
+  Section B: Match the following (10 × 1 = 10 marks)
+  - Write 10 ACTUAL match pairs from chapter
+  Section C: Answer in one sentence (6 × 5 = 30 marks)
+  - Write 6 ACTUAL one-sentence answer questions
+
+🟡 Level 2 — Standard (Average Learners) — 50 Marks:
+  Section A: Fill in blanks (5 × 1 = 5 marks)
+  - Write 5 ACTUAL fill-in-blank sentences
+  Section B: Calculate using formula (5 × 3 = 15 marks)
+  - Write 5 ACTUAL calculation problems
+  - Example: "If GDP = 5000 and Depreciation = 500, find NNP"
+  Section C: Answer in 2-3 sentences (5 × 4 = 20 marks)
+  - Write 5 ACTUAL short answer questions
+  Section D: Answer in detail (1 × 10 = 10 marks)
+  - Write 1 ACTUAL detail question
+
+🔴 Level 3 — Advanced (Toppers) — 50 Marks:
+  Section A: Calculate and explain (5 × 4 = 20 marks)
+  - Write 5 ACTUAL calculation + explanation questions
+  Section B: Answer in detail (3 × 10 = 30 marks)
+  - Write 3 ACTUAL essay questions from chapter
+  - Example: "Evaluate India's GDP growth and explain why GDP
+    alone cannot measure development. Use examples."
+
+ALL QUESTIONS MUST BE REAL — not template placeholders.
+Base all questions on actual chapter content.
 ═══════════════════════════════════════════════════════
 """
 
@@ -766,14 +978,16 @@ DAY STRUCTURE:
   <div class="time-block">
     <strong>[5-10 min] Introduction — {story_analogy if story_analogy else 'Local Story'}</strong>
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
+    <p class="teacher-says"><strong>Teacher says (Introduction — English):</strong><br/>
     "[3-4 sentences — introduce today's topic using the story analogy.
      Start with the story FIRST — then connect to formal economic concept.
      Reference local context: school canteen / neighbourhood / family.]"</p>
 
     <div class="tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same introduction.]"</p>
+      <strong>ஆசிரியருக்கு (Tamil — context-based mirror):</strong><br/>
+      <p>"[3-4 Tamil sentences — exact same introduction in Tamil.
+          Context-based — NOT word-for-word. Pure Tamil Unicode only.
+          No Hindi words — pure Tamil only.]"</p>
     </div>
 
     <div class="board-work">
@@ -816,8 +1030,11 @@ DAY STRUCTURE:
      Use local context: tea shop / canteen / neighbourhood.]"</p>
 
     <div class="tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same story and explanation.]"</p>
+      <strong>ஆசிரியருக்கு (Tamil — context-based mirror):</strong><br/>
+      <p>"[3-4 Tamil sentences — exact same story and explanation in Tamil.
+          Translate the MEANING — not word-for-word.
+          Pure Tamil Unicode only — no Hindi words, no transliteration.
+          Same length, same story, same economic term in Tamil.]"</p>
     </div>
 
     <div class="board-work">
@@ -845,7 +1062,8 @@ DAY STRUCTURE:
 
   </div>
 
-  <!-- ═══ SECTION 4: STUDENT TASK (25-30 min) ═══ -->
+  <!-- ═══ SECTION 4: STUDENT TASK — MANDATORY — NEVER SKIP ═══ -->
+  <!-- If running long — reduce CFU count but NEVER remove this section -->
   <div class="time-block">
     <strong>[25-30 min] Student Task — {task['style']}</strong>
 
@@ -946,6 +1164,11 @@ ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
 ✅ Real-life connections throughout (pocket money, bus ticket, canteen)
 ✅ Recap table in closing (Day 1 only)
 ✅ Real-life homework assigned
+✅ Student Task block is PRESENT and COMPLETE — never skipped
+✅ Closing block is PRESENT and COMPLETE — never skipped
+✅ NEVER use religious references in examples
+✅ NEVER mention specific student names — use 'a student' only
+✅ All English words spelled correctly
 {"✅ Day 3: Quick Quiz covering all 3 days + Three Tool Hunt homework" if day_num == 3 else f"✅ Preview of Day {day_num + 1} included"}
 ✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
 ✅ Do NOT generate Day {day_num + 1 if day_num < 3 else ' beyond 3'}
@@ -957,6 +1180,11 @@ DAY-SPECIFIC RULES
 {"✅ Every subtopic MUST have an <h4> main heading before explanation" if day_num == 1 else ""}
 {"✅ Minimum 3 CFU + 3 CCQ per concept — NOT just 1" if day_num == 1 else ""}
 {"✅ Activity quiz MUST use ONLY today's content — NO next day topics" if day_num == 1 else ""}
+{"✅ Every CFU and activity question must be from TODAY's sections only" if day_num == 1 else ""}
+{"✅ If a topic appears in Day 2 plan — do NOT mention it in Day 1 activity" if day_num == 1 else ""}
+{"✅ Day 1 activity quiz covers ONLY: GDP definition, GNP, NNP, NDP, PCI formulas" if day_num == 1 else ""}
+{"✅ Day 2 activity covers ONLY: sectors, GDP methods, limitations" if day_num == 2 else ""}
+{"✅ Day 3 activity covers ONLY: growth vs development, 3 policies" if day_num == 3 else ""}
 {"✅ Recap table: bold text only, NO background colours — plain white cells" if day_num == 1 else ""}
 
 {"DAY 2 RULES:" if day_num == 2 else ""}
@@ -984,7 +1212,7 @@ Chapter Text:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=10000,
+                model=self.model, max_tokens=14000,
                 system=SS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
