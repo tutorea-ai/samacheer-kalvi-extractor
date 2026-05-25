@@ -8,8 +8,9 @@ Imported by:
     ss/lp/grade_910/civics.py
     ss/lp/grade_910/geography.py
     ss/lp/grade_910/economics.py
-    ss/lp/grade_8/history.py
-    ss/lp/grade_8/civics.py
+    ss/lp/grade_67/history.py
+    ss/lp/grade_67/civics.py
+    ss/lp/grade_67/geography.py
     ... (all grade groups, all disciplines)
 
 DO NOT add any API calls, prompt builders, or class definitions here.
@@ -26,6 +27,14 @@ Usage in each builder:
         ACTIVITY_MAP,
         clean,
     )
+
+v2.0 — May 2026
+Changes from v1.0:
+    ✅ ACTIVITY_MAP: unique activity per day — no repetition
+    ✅ TAMIL_INSTRUCTION: context-based translation rule added
+    ✅ STUDENT_TASK_STYLES: student participation increased
+    ✅ TIME_BALANCE: teacher 50% / student 50% rule added
+    ✅ All existing QA constants preserved — no breakage
 """
 
 import re
@@ -48,7 +57,13 @@ CRITICAL OUTPUT RULES:
 - NEVER wrap output in markdown code blocks
 - NEVER use backticks anywhere
 - Start directly with HTML tags — no preamble text
-- Tamil script must be real Tamil Unicode — NOT transliteration"""
+- Tamil script must be real Tamil Unicode — NOT transliteration
+
+TIME BALANCE — STRICTLY ENFORCE:
+- Teacher talk: maximum 50% of session time (17-18 minutes)
+- Student activity / discussion / writing: minimum 50% (17-18 minutes)
+- Never let teacher monologue exceed 3 minutes without a student activity
+- After every explanation: student responds, writes, discusses, or answers"""
 
 
 # ============================================================================
@@ -121,7 +136,8 @@ FORMAT — use this exact HTML block:
 
 
 # ============================================================================
-# TAMIL SCAFFOLDING INSTRUCTION
+# TAMIL SCAFFOLDING INSTRUCTION — v2.0
+# Context-based translation added (teacher feedback May 2026)
 # ============================================================================
 
 TAMIL_INSTRUCTION = """
@@ -145,41 +161,35 @@ Tamil appears in EXACTLY 3 places — nowhere else:
    - Student task instructions
    - Closing / recap sections
 
-⚠️ WRONG vs RIGHT EXAMPLE:
+⚠️ CONTEXT-BASED TRANSLATION — CRITICAL RULE (NEW):
+Translate meaning and intent — NOT word for word.
 
-❌ WRONG (Tamil added to activity instructions):
-   <div class="activity-block">
-     <strong>Activity:</strong>
-     <p>Divide into 3 groups. Each group answers one question.</p>
-     <p>குழுவாக பிரியுங்கள். ஒவ்வொரு குழுவும் ஒரு கேள்விக்கு பதில் சொல்லுங்கள்.</p>
-   </div>
+❌ WRONG (word-for-word — gives wrong meaning):
+   English: "Discuss with your pair"
+   Wrong Tamil: "உங்கள் ஜோடியோடு ஓடு" ← (means "run with your pair")
 
-✅ RIGHT (Tamil only in key terms and main explanation):
-   <div class="activity-block">
-     <strong>Activity:</strong>
-     <p>Divide into 3 groups. Each group answers one question.</p>
-     [NO Tamil here]
-   </div>
+✅ RIGHT (meaning-based — natural Tamil):
+   English: "Discuss with your pair"
+   Right Tamil: "உங்கள்짝குடன் கலந்தாலோசியுங்கள்" ← (correct meaning)
 
-   <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-   "The Triple Alliance was formed between Germany, Austria-Hungary, and Italy..."</p>
-   <div class="tamil-scaffold">
-     <strong>ஆசிரியருக்கு (Tamil):</strong>
-     <p>"ட்ரிபிள் அலையன்ஸ் என்பது ஜெர்மனி, ஆஸ்திரியா-ஹங்கேரி மற்றும் இத்தாலி இடையே..."</p>
-   </div>
+More examples:
+   English: "The war broke out in 1914"
+   ❌ Wrong: "போர் உடைந்தது 1914ல்"
+   ✅ Right: "1914ஆம் ஆண்டு போர் வெடித்தது"
 
-Tamil mirror rule (where Tamil IS used):
-- Same sentences. Same detail. Same length as English.
-- NOT a summary. Full mirror.
-- Real Tamil Unicode script only — never transliteration.
+   English: "The treaty was signed"
+   ❌ Wrong: "உடன்படிக்கை கையொப்பமிடப்பட்டது" (overly formal, confusing)
+   ✅ Right: "உடன்படிக்கை ஏற்படுத்தப்பட்டது" (natural, clear)
 
 TAMIL QUALITY RULES — STRICTLY FOLLOW:
+- Translate the MEANING — not the words
 - Every Tamil sentence must be grammatically correct Tamil
 - NO word repetition in Tamil mirror — check each sentence
 - NO spelling errors — use standard Tamil Unicode
 - Mirror must match English sentence by sentence — same count, same length
-- If unsure of a Tamil word, use the English term — never guess
+- If unsure of a Tamil word, use the English term in Tamil script — never guess
 - Read Tamil output once before finishing — check for repeated words
+- NO Hindi words ever — pure Tamil only
 ═══════════════════════════════════════════════════════
 """
 
@@ -217,8 +227,6 @@ What did you notice? How does this connect to...?'
 If video is not available, use this instead:
 Teacher reads aloud a dramatic 3-4 sentence description of the key event.
 Make it vivid — dates, names, action.
-Example: 'On June 28, 1914, Archduke Franz Ferdinand stepped out of his car...
-          A young man named Gavrilo Princip raised his pistol...'
 Then ask: 'What do you think happened next? How would YOU have reacted?'
 End with the same Big Question connecting to today's sections.""",
     },
@@ -243,47 +251,67 @@ teacher reveals → quick discussion of any gaps'""",
 
 # ============================================================================
 # STUDENT TASK STYLES — fixed per day, no consecutive repetition
+# v2.0: Student participation time increased, clearer instructions
 # ============================================================================
 
 STUDENT_TASK_STYLES = {
     1: {
         "style": "Individual Written Answer",
-        "instruction": """Students open their notebooks and write independently.
+        "instruction": """Students open their notebooks and write independently — 5 minutes.
 Give a clear specific prompt — not open-ended.
 Give a time limit. Give a model sentence starter on the board.
+Teacher circulates — does NOT explain further. Students work alone.
+After 5 minutes: 3-4 students read their answers aloud.
+Teacher gives 1-line feedback per student.
 Example: 'Write 4 sentences in your notebook: [specific prompt].
-Start with: "[starter sentence]..."'""",
+Start with: "[starter sentence]..."'
+Student talk time: minimum 8 minutes total (writing + sharing).""",
     },
     2: {
-        "style": "Group Discussion with Prompts",
-        "instruction": """Divide class into groups of 4-5. Give each group a specific discussion prompt.
-Each group discusses for 3 minutes, then one student shares with the class.
-Give written prompts on board — not open-ended.
-Example: 'Group 1: Discuss why... | Group 2: Explain how... | Group 3: Give reasons for...'
-After sharing, teacher adds key points to board.""",
+        "style": "Quiz Game — Teams Compete",
+        "instruction": """Divide class into 4 teams. Run a 6-question quiz game.
+Teacher reads question → first team to raise hand answers → correct = 1 point.
+Write scores on board after each question.
+Questions must be from today's sections only — factual, short-answer.
+After quiz: winning team gets appreciation. All teams write 1 missed answer.
+Student talk time: minimum 10 minutes total.
+Example questions: 'Which country started X?' / 'What year did Y happen?' / 'Name the leader of Z'""",
     },
     3: {
-        "style": "Think-Pair-Share",
-        "instruction": """Give students a specific question or prompt.
-Step 1: Think independently (1 min) — write one answer in notebook.
-Step 2: Pair with neighbour (2 min) — share and improve each other's answer.
-Step 3: Share with class — 3-4 pairs share their combined answer.
-Teacher consolidates on board.""",
+        "style": "Poster Making — Visual Summary",
+        "instruction": """Students make a mini-poster in their notebook — 6 minutes.
+Poster must show: Title + 3 key facts + 1 drawing/diagram + 1 key term.
+Teacher writes the structure on board:
+  Box 1: Title (today's topic)
+  Box 2: Fact 1, Fact 2, Fact 3
+  Box 3: Simple sketch or flowchart
+  Box 4: Key term + meaning
+After 6 minutes: 3 students show their poster. Class gives 1 positive comment each.
+Student activity time: minimum 10 minutes total.""",
     },
     4: {
-        "style": "Peer Assessment — Swap Notebooks",
-        "instruction": """Students write their answer to a given prompt (3 mins).
-Then swap notebook with neighbour.
-Teacher reads out model answer. Students mark their neighbour's work.
-Discuss: what was good, what was missing.
-This builds critical reading and self-correction habits.""",
+        "style": "Debate / For & Against",
+        "instruction": """Run a structured 2-minute debate on a topic from today's sections.
+Split class: Left side = FOR, Right side = AGAINST.
+Teacher gives the debate statement on board — directly from today's content.
+Round 1: FOR side — 3 students give 1 reason each (30 seconds each).
+Round 2: AGAINST side — 3 students give 1 reason each (30 seconds each).
+Round 3: Teacher summarises both sides and connects to actual historical outcome.
+Example statement: '[Key decision or event from today] — was it right or wrong?'
+Student talk time: minimum 10 minutes total.""",
     },
     5: {
         "style": "Self-Assessment Checklist + Test Prep",
         "instruction": """Students use a checklist to self-assess their chapter notes.
-Then attempt 2 unseen short-answer questions independently (test conditions).
+Then attempt 2 unseen short-answer questions independently (test conditions — 5 minutes).
 Teacher collects for checking.
-This prepares students for actual exams.""",
+Checklist on board:
+  ☐ I can name all main topics from Days 1-4
+  ☐ I can explain 2 causes in my own words
+  ☐ I can write 3 key terms with meanings
+  ☐ I completed all homework
+This prepares students for actual exams.
+Student activity time: minimum 10 minutes total.""",
     },
 }
 
@@ -321,14 +349,40 @@ FOCUS_MAP = {
 
 
 # ============================================================================
-# ACTIVITY STYLES — per day
+# ACTIVITY MAP — v2.0
+# Each day gets a DIFFERENT activity type — no repetition across days
+# Teacher feedback May 2026: "same group discussion every day — change it"
 # ============================================================================
 
 ACTIVITY_MAP = {
-    1: "Flowchart on board showing cause→event→result chain. Large group discussion after.",
-    2: "Group activity: 3 groups answer 3 different questions. Each group shares with class. Active note-taking.",
-    3: "Bucket activity: Red/Yellow/Green groups each get a different focus. Map pointing if relevant. Pair discussion.",
-    4: "Source analysis OR timeline activity. Students present their own flowchart prepared during the lesson.",
+    1: (
+        "ACTIVITY TYPE: Group Discussion (Day 1 only)\n"
+        "Divide into 3 groups. Each group gets ONE question from today's sections.\n"
+        "Groups discuss for 3 minutes. One student per group shares with class.\n"
+        "Teacher adds 2 key points to board after sharing.\n"
+        "⚠️ Group Discussion is used ONLY on Day 1 — not repeated on other days."
+    ),
+    2: (
+        "ACTIVITY TYPE: Quiz Game — Teams Compete (Day 2 only)\n"
+        "4 teams. 6 questions from today's sections. First hand raised answers.\n"
+        "Correct = 1 point. Write scores on board. Energetic and fast-paced.\n"
+        "After quiz: each team writes 1 answer they got wrong.\n"
+        "⚠️ Quiz Game is used ONLY on Day 2 — not repeated on other days."
+    ),
+    3: (
+        "ACTIVITY TYPE: Poster Making in Notebook (Day 3 only)\n"
+        "Students draw a mini-poster in notebook showing today's content visually.\n"
+        "Structure: Title + 3 facts + 1 simple sketch/flowchart + 1 key term.\n"
+        "6 minutes to make. 3 students show and explain their poster.\n"
+        "⚠️ Poster Making is used ONLY on Day 3 — not repeated on other days."
+    ),
+    4: (
+        "ACTIVITY TYPE: Structured Debate — For & Against (Day 4 only)\n"
+        "Left side = FOR, Right side = AGAINST on a statement from today's content.\n"
+        "3 students per side give 1 reason each (30 seconds each).\n"
+        "Teacher summarises both sides. Connects to actual historical outcome.\n"
+        "⚠️ Debate is used ONLY on Day 4 — not repeated on other days."
+    ),
 }
 
 
