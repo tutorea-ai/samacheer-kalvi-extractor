@@ -23,10 +23,8 @@ from pathlib import Path
 # === CONFIGURATION ===
 API_URL = "http://localhost:8000/api/generate"
 
-CURRICULUM_PATH = (
-    Path(__file__).parent.parent
-    / "data" / "curriculum" / "subjects"
-    / "english-medium" / "social-science.json"
+CURRICULUM_PATH = Path(
+    "/home/dravid/test_m1_and_m2/content-qa-lp/samacheer-kalvi/backend/data/curriculum/subjects/english-medium/social-science.json"
 )
 
 # Sleep between lessons — SS LP = 5 API calls, give enough cooldown
