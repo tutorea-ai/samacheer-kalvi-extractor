@@ -347,17 +347,15 @@ Capture ALL levels:
   Level 3: Sub-subheadings if present
 
 ABSOLUTE RULES:
-- Extract ALL headings — do NOT skip any
-- Extract ALL subheadings — do NOT skip any
-- Copy headings EXACTLY — no paraphrasing
-- Do NOT add sections not in text
-- Keep exact order from text
-- If no clear headings, use first sentence of each paragraph as heading
-- A chapter with 40,000 characters MUST have many sections — extract them all
-- Never return fewer than 8 sections for a full chapter
+- Copy EVERY heading EXACTLY as written — do NOT paraphrase
+- Do NOT skip any heading or subheading — extract ALL of them in order
 - Do NOT add anything from general knowledge
 - Estimate teaching time per section based on content length
 - Capture key terms, dates, personalities per section
+- A chapter with 40,000+ characters MUST have at least 10-15 sections
+- Every paragraph topic is a section if no clear heading exists
+- Sub-subheadings like "In the Middle East", "In the Far East", "In the Balkans"
+  must be extracted as separate subheadings — never merge them into one
 
 Chapter: {lesson_title}
 
@@ -392,7 +390,10 @@ Chapter Text:
 
             response = self.client.messages.create(
                 model=self.model, max_tokens=4000,
-                system="You are a strict text extractor. Return ONLY valid JSON. No markdown. No code fences. Raw JSON starting with {",
+                system="""You are a strict text extractor. Return ONLY valid JSON.
+Extract ALL headings at ALL levels — minimum 10 sections expected for a full chapter.
+Never skip any heading or subheading.
+Never add general knowledge. No markdown. No code fences. Raw JSON starting with {""",
                 messages=[{"role": "user", "content": prompt}]
             )
             raw = response.content[0].text.strip()
@@ -423,12 +424,16 @@ RULES:
 - Keep subheadings WITH their main section
 - EVERY section AND subheading must appear in exactly ONE day
 - Day 4 must include the FINAL sections and chapter consolidation
-- MAXIMUM 3 subheadings per day — if a section has more subheadings, split across 2 days
+- MAXIMUM 3 subheadings per day — if a section has more, split across 2 days
 - Day 3 must never have more than 3 subheadings — it is always the heaviest day
-- If total subheadings across all sections exceed 12, redistribute evenly — max 3 per day
-- Sections must follow STRICT CHRONOLOGICAL ORDER from the chapter
-- Never move a later section to an earlier day — always follow the order in the text
-- Day 1 covers ONLY the first sections of the chapter — never jump ahead
+- If total subheadings exceed 12, redistribute evenly — max 3 per day
+- Sections must follow STRICT CHRONOLOGICAL ORDER from the chapter text
+- Never move a later section to an earlier day — always follow text order
+- Day 1 covers ONLY the first sections — never jump ahead
+- NEVER assign the same section to two different days
+- NEVER leave Day 4 with more than 2 main sections
+- Every section must appear in EXACTLY one day — no duplicates, no omissions
+- If a section is large (>15 mins), give it its own day
 - Use EXACT heading text from extracted sections
 
 Return ONLY valid JSON. No explanation. No markdown. Raw JSON starting with {{
@@ -905,6 +910,21 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
 
     [REPEAT for each subheading under section 2]
 
+  </div>
+
+  <!-- ═══ [25-30 min] STUDENT TASK — MANDATORY — NEVER SKIP ═══ -->
+  <!-- If running long — reduce CFU/CCQ count but NEVER remove this block -->
+  <div class="time-block">
+    <h4>[25-30 min] Student Task (Homework)</h4>
+    <p class="teacher-says"><strong>Teacher says:</strong><br/>
+    "Write both tasks in your homework book. Submit tomorrow morning.
+     Use your own words — do not copy from textbook."</p>
+    <div class="board-work">
+      <strong>Write on Board:</strong><br/>
+      Task 1: [Specific written task from today's sections — paragraph or short answer]<br/>
+      Task 2: [Creative task — flowchart OR poster OR headline based on today's content]<br/>
+      Submit: Tomorrow morning
+    </div>
   </div>
 
   <!-- ═══ [30-35 min] CLOSING ═══ -->
