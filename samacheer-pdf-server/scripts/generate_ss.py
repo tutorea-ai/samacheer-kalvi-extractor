@@ -30,7 +30,7 @@ CURRICULUM_PATH = (
 )
 
 # Sleep between lessons — SS LP = 5 API calls, give enough cooldown
-SLEEP_BETWEEN_LESSONS = 60
+SLEEP_BETWEEN_LESSONS = 90
 
 # Discipline order — always generate in this order
 DISCIPLINE_ORDER = ["history", "geography", "civics", "economics"]
