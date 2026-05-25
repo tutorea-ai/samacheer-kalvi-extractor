@@ -731,8 +731,24 @@ IMPORTANT for match sets:
 - Each set must use DIFFERENT facts from the chapter
 - Column B items must be shuffled — not in same order as Column A
 
+AFTER the 2 match sets, generate EXACTLY 5 detail questions: Q71–Q75
+
+Section: id="section-detail" | Title: "Section V — Answer in Detail (Short)" | Note: 2 Marks each | Q71–Q75
+Each answer: 2-3 complete sentences. 30-50 words only.
+Question types: explain/define/distinguish — based on actual chapter content.
+
+FORMAT for detail questions:
+<div class="qa-item">
+  <p class="question"><strong>Q71.</strong> Question text here?
+  <span class="mark-badge">(2 marks)</span></p>
+  <div class="answer-reveal" style="display:none;">
+    <p class="answer"><strong>Answer:</strong> [2-3 sentence answer — 30-50 words]</p>
+  </div>
+</div>
+
 RULES:
 - Match: EXACTLY 2 sets (Q61, Q66) with 5 pairs each — total Q61-Q70
+- Detail: EXACTLY 5 questions Q71-Q75 — 2-3 sentences each
 - All answers inside answer-reveal div — NO individual show buttons
-- Do NOT stop before Q70
+- Do NOT stop before Q75
 """

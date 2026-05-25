@@ -294,7 +294,12 @@ Chapter Text:
 {text}
 ---
 
-Start at Q51. End at Q70."""
+Start at Q51. End at Q75.
+Structure:
+- Q51-Q60: Choose the Correct Statement (10 questions)
+- Q61-Q70: Match the Following (2 sets of 5 pairs)
+- Q71-Q75: Answer in Detail — 5 short detail questions (2 marks each)
+Do NOT stop before Q75."""
 
             raw = ""
             with self.client.messages.stream(
@@ -336,7 +341,7 @@ Chapter Text:
 {text}
 ---
 
-Start at Q71. End at Q100."""
+Start at Q76. End at Q100."""
 
             raw = ""
             with self.client.messages.stream(
