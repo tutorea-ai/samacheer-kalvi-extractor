@@ -497,7 +497,7 @@ class PDFProcessor:
                 from .content_builder.assembler import content_assembler
                 from .services.ai_converter import _wrap_html
 
-                clean_text = clean_noise(raw_text)
+                clean_text = clean_noise(raw_text, subject=subject)
                 if subject.lower() not in ["socialscience", "social_science"]:
                     sections = detect_sections(clean_text, lesson_type=lesson_type)
                 else:
@@ -588,7 +588,7 @@ class PDFProcessor:
                 from .services.section_detector import detect_sections, clean_noise
                 from .services.ai_converter import _wrap_html
 
-                clean_text = clean_noise(raw_text)
+                clean_text = clean_noise(raw_text, subject=subject)
                 sections   = detect_sections(clean_text, lesson_type=lesson_type)
                 ai_metadata["_sections"] = sections
 

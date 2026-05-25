@@ -269,24 +269,30 @@ def _find_pattern(text: str, patterns: list,
 # NOISE CLEANING
 # ============================================================================
 
-def clean_noise(text: str) -> str:
+def clean_noise(text: str, subject: str = "english") -> str:
     """Removes pdf2htmlEX noise before any processing."""
     text = re.sub(r'\[[A-Za-z0-9]{4,12}\]', '', text)
     text = re.sub(
         r'\d+th\s+English_Unit_\d+\.indd\s+\d+\s+\d{2}-\d{2}-\d{4}\s+[\d:]+',
         '', text
     )
-    overflow_patterns = [
-        r'unit\s*[-–]\s*[2-9]',
-        r'\d+th\s+English_Unit_[2-9]',
-    ]
-    earliest = len(text)
-    for pattern in overflow_patterns:
-        m = re.search(pattern, text, re.IGNORECASE)
-        if m and m.start() < earliest:
-            earliest = m.start()
-    if earliest < len(text):
-        text = text[:earliest]
+
+    # Overflow truncation — English/Tamil ONLY.
+    # SS/Science/Maths units naturally contain "Unit – 2" in headings,
+    # so running this truncation for those subjects destroys their content.
+    if subject.lower() in ["english", "tamil"]:
+        overflow_patterns = [
+            r'unit\s*[-–]\s*[2-9]',
+            r'\d+th\s+English_Unit_[2-9]',
+        ]
+        earliest = len(text)
+        for pattern in overflow_patterns:
+            m = re.search(pattern, text, re.IGNORECASE)
+            if m and m.start() < earliest:
+                earliest = m.start()
+        if earliest < len(text):
+            text = text[:earliest]
+
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
 

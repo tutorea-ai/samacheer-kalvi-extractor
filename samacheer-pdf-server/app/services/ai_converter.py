@@ -186,7 +186,7 @@ class AIContentConverter:
 
         # ── Clean + detect sections ONCE — used by all three generators ───────
         print(f"   🧹 Cleaning extracted text...")
-        text = clean_noise(text)
+        text = clean_noise(text, subject=subject)
         print(f"   📋 Detecting sections...")
         sections = {}
         if subject.lower() not in ["socialscience", "social_science"]:
