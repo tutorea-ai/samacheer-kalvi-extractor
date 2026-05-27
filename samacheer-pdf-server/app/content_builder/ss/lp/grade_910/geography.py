@@ -710,25 +710,55 @@ CCQ → Wait 15 seconds, pair discussion first
 Opening question → Wait 20 seconds, 2-3 guesses before revealing
 ═══════════════════════════════════════════════════════
 
+═══════════════════════════════════════════════════════
+TOPIC HIERARCHY AND TRANSITION RULES — STRICTLY FOLLOW
+═══════════════════════════════════════════════════════
+When teaching subtopics under a main topic:
+1. ALWAYS introduce the parent heading first with 1-2 teacher sentences
+   before explaining any subtopic under it.
+   Example:
+   <h4>The Himalayas</h4>
+   <div class="lp-teacher-says">
+     "The Himalayas are the great mountain wall that forms India's
+      northern boundary. Today we will study its three main ranges
+      one by one."
+   </div>
+   Then introduce subtopics:
+   <h5>1. The Greater Himalayas</h5>
+   ... explanation ...
+   <h5>2. The Lesser Himalayas</h5>
+   ... explanation ...
+
+2. ALWAYS add 1-2 teacher transition sentences before each new subtopic
+   using <div class="lp-teacher-says"> — never jump straight into content.
+   Example before a new subtopic:
+   <div class="lp-teacher-says">
+     "Now let us move to the second range — the Lesser Himalayas.
+      This range is lower than the Greater Himalayas but very important
+      for India's climate."
+   </div>
+
+3. NEVER explain a subtopic without its parent heading visible above it.
+═══════════════════════════════════════════════════════
+
 DAY STRUCTURE:
 
-<h3 class="day-header">
-  Day {day_num} — {main_topic}
-</h3>
-<p class="day-meta">Duration: 35 Minutes | Geography | {day_focus}</p>
+<div class="lp-day-block">
 
-<div class="day-block">
+<h3 class="lp-day-title">Day {day_num} — {main_topic}</h3>
+<p class="lp-day-meta">Duration: 35 Minutes | Geography | {day_focus}</p>
 
-  <!-- ═══ SECTION 1: LEAD QUESTION / OPENING (0-5 min) ═══ -->
-  <div class="time-block">
-    <strong>[0-5 min] Lead Question / Opening Question — {spark['style']}</strong>
+  <!-- ═══ SECTION 1: OPENING / LEAD QUESTION (0-5 min) ═══ -->
+  <div class="lp-section-opening">
+    <div class="lp-section-label">🎯 Opening / Lead Question</div>
+    <span class="lp-time">[0–5 min]</span>
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
+    <div class="lp-teacher-says"><strong>Teacher says (English):</strong><br/>
     "[3-4 sentences using {spark['style']} style.
      Genuinely surprising and engaging — based on actual chapter content.
      Allow 2-3 student guesses before revealing connection.
      Include WHY students learn this + WHERE they use it in real life.
-     End with Big Question.]"</p>
+     End with Big Question.]"</div>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
@@ -737,16 +767,17 @@ DAY STRUCTURE:
 
     <p><em>⏱ Wait 20 seconds. Allow 2-3 guesses before revealing. Take responses.</em></p>
 
-  </div>
+  </div> <!-- end lp-section-opening -->
 
   <!-- ═══ SECTION 2: INTRODUCTION (5-10 min) ═══ -->
-  <div class="time-block">
-    <strong>[5-10 min] Introduction & Context Setting</strong>
+  <div class="lp-section-intro">
+    <div class="lp-section-label">📖 Introduction & Context Setting</div>
+    <span class="lp-time">[5–10 min]</span>
 
-    <p class="teacher-says"><strong>Teacher says (Introduction — English):</strong><br/>
+    <div class="lp-teacher-says"><strong>Teacher says (Introduction — English):</strong><br/>
     "[3-4 sentences — introduce {main_topic} clearly.
      Connect to what students saw in the spark.
-     Tell students exactly what subtopics and map features they cover today.]"</p>
+     Tell students exactly what subtopics and map features they cover today.]"</div>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — context-based mirror):</strong><br/>
@@ -776,11 +807,12 @@ DAY STRUCTURE:
 
     [CFU after vocab — "I am..." clue format]
 
-  </div>
+  </div> <!-- end lp-section-intro -->
 
-  <!-- ═══ SECTION 3: MAIN TEACHING (10-25 min) ═══ -->
-  <div class="time-block">
-    <strong>[10-25 min] Main Teaching & Activity — {activity}</strong>
+  <!-- ═══ SECTION 3: MAIN TEACHING & ACTIVITIES (10–30 min) ═══ -->
+  <div class="lp-section-main">
+    <div class="lp-section-label">🏫 Main Teaching & Activities</div>
+    <span class="lp-time">[10–30 min]</span>
 
     [For EACH subtopic in today's plan:]
 
@@ -858,12 +890,13 @@ DAY STRUCTURE:
 
     [CFU after Activity 3 — "I am..." clue format]
 
-  </div>
+  </div> <!-- end lp-section-main -->
 
   <!-- ═══ SECTION 4: STUDENT TASK — MANDATORY — NEVER SKIP ═══ -->
   <!-- If running long — reduce CFU count but NEVER remove this section -->
-  <div class="time-block">
-    <strong>[25-30 min] Student Task — {task['style']}</strong>
+  <div class="lp-section-student-task">
+    <div class="lp-section-label">✏️ Student Task</div>
+    <span class="lp-time">[25–30 min]</span>
 
     <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
     "[3-4 sentences — set up {task['style']} task.
@@ -909,11 +942,12 @@ DAY STRUCTURE:
         </tbody>
       </table>
     </div>
-  </div>
+  </div> <!-- end lp-section-student-task -->
 
   <!-- ═══ SECTION 5: CLOSING (30-35 min) ═══ -->
-  <div class="time-block">
-    <strong>[30-35 min] Closing — {closing_style.split('—')[0].strip()}</strong>
+  <div class="lp-section-closing">
+    <div class="lp-section-label">🔔 Closing & Homework</div>
+    <span class="lp-time">[30–35 min]</span>
 
     <p class="teacher-says"><strong>Rapid-Fire CFU (Teacher asks):</strong><br/>
     "[4-5 'I am...' clue questions about today's key features.
@@ -947,9 +981,9 @@ DAY STRUCTURE:
        If any topic carries over, mention it explicitly.]"</p>
     </div>
 
-  </div>
+  </div> <!-- end lp-section-closing -->
 
-</div>
+</div> <!-- end lp-day-block -->
 
 ═══════════════════════════════════════════════════════
 ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
@@ -1359,10 +1393,16 @@ FORMAT:
 Deeper understanding. Tests WHY or HOW.
 Geography CCQs: feature → effect on climate/agriculture/people.
 
+CRITICAL: Every CCQ must be a COMPLETE grammatical question ending with "?".
+Never write a partial sentence or fragment as a CCQ.
+✅ Correct: "Why do Peninsular rivers dry up in summer?"
+❌ Wrong: "Why Peninsular rivers..."
+❌ Wrong: "The rivers of Peninsular India..."
+
 FORMAT:
 <div class="ccq-block">
   <strong>⚡ CCQ:</strong>
-  <p class="teacher-says">"[Why/How/What happens if question — under 8 words]"</p>
+  <p class="teacher-says">"[Complete grammatical question ending with ? — under 10 words]"</p>
   <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer explaining impact]"</p>
   <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
   <p><em>⏱ Wait 15 seconds. Allow pair discussion first.</em></p>

@@ -31,7 +31,13 @@ CRITICAL RULES:
 - Base output ONLY on the text provided
 - NEVER add <style> tags, <script> tags, <html>, <head>, or <body> tags
 - Output HTML fragments only — no standalone document structure
-- Do not add any CSS — styling is handled externally"""
+- Do not add any CSS — styling is handled externally
+
+CONTENT ACCURACY — STRICTLY ENFORCE:
+- Use ONLY facts, figures, numbers, and statistics that appear VERBATIM in the text provided
+- NEVER generate, estimate, or invent any number, measurement, area, population, date, or statistic
+- If a fact is not explicitly stated in the provided text, do NOT include it
+- This applies to all subjects: History, Geography, Civics, Economics, English, Tamil"""
 
 
 CONVERT_PROMPT = """Convert this Samacheer Kalvi lesson text to interactive HTML.

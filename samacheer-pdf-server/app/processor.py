@@ -148,6 +148,17 @@ class PDFProcessor:
         lesson_type: str = None,
         discipline: str = None,
     ) -> str | None:
+        # Units where EPUB extraction is known to be unreliable
+        # Format: (class_num, subject, discipline, unit_num)
+        EPUB_EXCLUSIONS = [
+            (10, "socialscience", "history", 2),  # bleeds into Unit 3
+            (10, "socialscience", "history", 3),  # missing from nav
+        ]
+
+        if (class_num, subject.lower(), discipline, unit_num) in EPUB_EXCLUSIONS:
+            print(f"   ⏭️  EPUB excluded for Class {class_num} {discipline} Unit {unit_num} — using pdfplumber")
+            return None
+
         epub_key = self._generate_epub_key(class_num, term, subject)
         epub_zip_path = self.epub_dir / f"{epub_key}.zip"
         epub_folder   = self.epub_dir / epub_key

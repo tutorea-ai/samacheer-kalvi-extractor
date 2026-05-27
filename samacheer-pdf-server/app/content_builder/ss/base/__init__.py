@@ -63,7 +63,13 @@ TIME BALANCE — STRICTLY ENFORCE:
 - Teacher talk: maximum 50% of session time (17-18 minutes)
 - Student activity / discussion / writing: minimum 50% (17-18 minutes)
 - Never let teacher monologue exceed 3 minutes without a student activity
-- After every explanation: student responds, writes, discusses, or answers"""
+- After every explanation: student responds, writes, discusses, or answers
+
+CONTENT ACCURACY — STRICTLY ENFORCE:
+- Use ONLY facts, figures, numbers, and statistics that appear VERBATIM in the chapter text provided
+- NEVER generate, estimate, or invent any number, measurement, area, population, date, or statistic
+- If a fact is not explicitly stated in the chapter text, do NOT include it
+- This applies to all disciplines: History, Geography, Civics, Economics"""
 
 
 # ============================================================================
@@ -667,10 +673,10 @@ QA_SPLIT = {
 # Descriptive section instruction — used by ALL QA builders in Call 4
 QA_DESCRIPTIVE_INSTRUCTION = """
 ══════════════════════════════════════
-PART A: 2-Mark Questions Q71–Q85
+PART A: 2-Mark Questions Q76–Q88
 ══════════════════════════════════════
 
-Generate EXACTLY 15 questions: Q71 to Q85
+Generate EXACTLY 13 questions: Q76 to Q88
 
 ANSWER LENGTH: Exactly 2-3 complete sentences. 30-50 words only.
 Do NOT write more than 3 sentences.
@@ -682,35 +688,35 @@ Question types — distribute evenly:
 - Definition + example: Define X and give one example from chapter
 - Compare briefly: One difference between X and Y
 
-Section: id="section-2mark" | Title: "Section V — Answer Briefly" | Note: 2 Marks each | Q71–Q85 | Answer in 2-3 sentences
+Section: id="section-2mark" | Title: "Section VI — Answer Briefly" | Note: 2 Marks each | Q76–Q88 | Answer in 2-3 sentences
 Use 2-Mark format from ANSWER FORMAT RULES above.
 
 ══════════════════════════════════════
-PART B: 5-Mark Questions Q86–Q100
+PART B: 5-Mark Questions Q89–Q100
 ══════════════════════════════════════
 
-Generate EXACTLY 15 questions: Q86 to Q100
+Generate EXACTLY 12 questions: Q89 to Q100
 
 ANSWER LENGTH: Exactly 5-7 complete sentences. 80-120 words.
 Do NOT write more than 7 sentences.
 Do NOT write less than 5 sentences.
 Every answer must be a proper paragraph — not bullet points.
 
-Question types — distribute across 15 questions:
+Question types — distribute across 12 questions:
 - Explain in detail — full explanation of a key event or concept
 - Causes and effects — list and explain causes OR consequences
 - Significance — why was X important / what was the impact of Y
 - Compare — detailed comparison between two events or concepts
 - Evaluate — outcomes, successes, or failures of a major event
-Each type used 3 times across the 15 questions.
+Each type used 3 times across the 12 questions.
 
-Section: id="section-5mark" | Title: "Section VI — Answer in Detail" | Note: 5 Marks each | Q86–Q100 | Answer in 5-7 sentences
+Section: id="section-5mark" | Title: "Section VII — Answer in Detail" | Note: 5 Marks each | Q89–Q100 | Answer in 5-7 sentences
 Use 5-Mark format from ANSWER FORMAT RULES above.
 
 RULES:
 - Raw HTML only — no markdown, no code fences
-- 2-mark: EXACTLY 15 questions Q71–Q85, strictly 2-3 sentences each
-- 5-mark: EXACTLY 15 questions Q86–Q100, strictly 5-7 sentences each
+- 2-mark: EXACTLY 13 questions Q76–Q88, strictly 2-3 sentences each
+- 5-mark: EXACTLY 12 questions Q89–Q100, strictly 5-7 sentences each
 - Every answer inside answer-reveal div — NO individual show buttons
 - Every answer complete paragraph — never bullet points
 - Each question covers a different chapter topic
@@ -719,10 +725,13 @@ RULES:
 
 # Match section instruction — used by ALL QA builders in Call 3
 QA_MATCH_INSTRUCTION = """
-Generate EXACTLY 2 match sets of 5 pairs each: Q61, Q66
-(Q61 = Match Set 1, Q66 = Match Set 2)
-Each match set counts as one question but has 5 sub-answers.
-Total = 10 questions (Q61-Q70)
+Generate EXACTLY 2 match sets of 5 pairs each.
+Match Set 1 — Q61: Contains pairs Q61–Q65 (5 pairs)
+Match Set 2 — Q66: Contains pairs Q66–Q70 (5 pairs)
+Both sets together cover Q61–Q70 = 10 questions total.
+Number the answer rows continuously: Q61, Q62, Q63, Q64, Q65 for Set 1
+and Q66, Q67, Q68, Q69, Q70 for Set 2.
+Each match set counts as one question block but has 5 individually numbered pairs.
 
 Section: id="section-match" | Title: "Section IV — Match the Following" | Note: 1 Mark each | Q61–Q70 | (5 pairs per set)
 Use Match the Following format from ANSWER FORMAT RULES above.
