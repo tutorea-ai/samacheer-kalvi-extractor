@@ -187,6 +187,16 @@ class PDFProcessor:
                 unit=unit_num
             )
 
+        # ── Science ────────────────────────────────────────────────────
+        elif subject.lower() == "science":
+            from .services.science_epub_extractor import ScienceEpubExtractor
+            if not epub_folder.exists():
+                epub_folder = ScienceEpubExtractor.prepare(epub_zip_path)
+                if not epub_folder:
+                    return None
+            extractor = ScienceEpubExtractor(epub_folder)
+            text = extractor.extract(unit=unit_num)
+
         # ── English (and other language subjects) ──────────────────────
         else:
             if not epub_folder.exists():
@@ -305,25 +315,44 @@ class PDFProcessor:
         target_units = []
         all_units_for_slicing = []
 
-        if "disciplines" in index_data:
+        # Check for disciplines — either wrapped {"disciplines": {...}} or flat {discipline: [...]}
+        flat_disciplines = all(
+            k in ["physics", "chemistry", "biology", "computer_science",
+                  "history", "geography", "civics", "economics"]
+            for k in index_data.keys() if k != "meta"
+        )
+
+        if "disciplines" in index_data or flat_disciplines:
             if not discipline:
                 print("❌ 'discipline' parameter is required for this subject.")
                 return None
             disc_key = discipline.lower()
-            if disc_key not in index_data["disciplines"]:
+
+            # Handle both structures
+            disc_data = index_data.get("disciplines", index_data)
+            if disc_key not in disc_data:
                 print(f"❌ Discipline '{disc_key}' not found.")
                 return None
-            target_units = index_data["disciplines"][disc_key]
-            for d_list in index_data["disciplines"].values():
-                all_units_for_slicing.extend(d_list)
+            target_units = disc_data[disc_key]
+            for d_list in disc_data.values():
+                if isinstance(d_list, list):
+                    all_units_for_slicing.extend(d_list)
         else:
             target_units = index_data.get("units", [])
             all_units_for_slicing = target_units
 
-        if not target_units or unit_num > len(target_units):
+        if not target_units:
             return None
 
-        selected_unit_obj = target_units[unit_num - 1]
+        # Find by unit number — supports global numbering
+        # (e.g. Chemistry starts at unit 7, not unit 1)
+        selected_unit_obj = next(
+            (u for u in target_units if u.get("unit") == unit_num),
+            None
+        )
+        if not selected_unit_obj:
+            print(f"❌ Unit {unit_num} not found in {discipline}")
+            return None
 
         if "page" in selected_unit_obj:
             start_pdf_page = selected_unit_obj["page"] + offset
@@ -441,7 +470,7 @@ class PDFProcessor:
                 return {"error": True, "message": "Invalid lesson selection"}
 
             filename_base, start_page, end_page = details
-            lesson_type = self._get_lesson_type(index_data[term_key], unit_num, lesson_choice)
+            lesson_type = self._get_lesson_type(index_data[term_key], unit_num, lesson_choice, subject=subject)
             print(f"📄 Pages: {start_page} → {end_page} | Type: {lesson_type}")
 
             # ── PDF output ────────────────────────────────────────────────────
@@ -839,12 +868,17 @@ class PDFProcessor:
     # Helper: Get lesson type from index
     # ──────────────────────────────────────────────────────────────────────────
 
-    def _get_lesson_type(self, term_index: dict, unit_num: int, lesson_choice: int) -> str:
-        """Returns lesson type. For Social Science (disciplines), returns 'socialscience'."""
+    def _get_lesson_type(self, term_index: dict, unit_num: int, lesson_choice: int, subject: str = "") -> str:
+        """Returns lesson type. For discipline-based subjects, returns subject name."""
         try:
-            # Social Science uses disciplines key — not units
-            if "disciplines" in term_index:
-                return "socialscience"
+            # Discipline-based subjects (SS, Science) use disciplines key — not units
+            flat_disciplines = all(
+                k in ["physics", "chemistry", "biology", "computer_science",
+                      "history", "geography", "civics", "economics"]
+                for k in term_index.keys() if k != "meta"
+            )
+            if "disciplines" in term_index or flat_disciplines:
+                return subject.lower() if subject else "socialscience"
 
             units = term_index.get("units", [])
             if unit_num > len(units):

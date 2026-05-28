@@ -189,7 +189,13 @@ class GeographyLP910Builder:
         if not chapter_plan:
             print(f"         ❌ Chapter Analyser failed — aborting LP")
             return None
-        print(f"         ✅ Chapter plan ready — {len(chapter_plan.get('main_topics', []))} main topics identified")
+        topic_count = len(chapter_plan.get('master_topic_list', []))
+        day_themes = [
+            chapter_plan.get('day_plan', {}).get(f'day{i}', {}).get('main_topic', '?')
+            for i in range(1, 6)
+        ]
+        print(f"         ✅ Chapter plan ready — {topic_count} topics found")
+        print(f"         ✅ Day themes: {day_themes}")
 
         # ── Call 1: Preamble ──────────────────────────────────────────────────
         print(f"      [Geography LP] Call 1/{total_calls}: Preamble...")
@@ -254,98 +260,209 @@ class GeographyLP910Builder:
     def _call_chapter_analyser(self, text: str, lesson_title: str) -> Optional[dict]:
         try:
             prompt = f"""You are analysing a Samacheer Kalvi Social Science — Geography chapter.
-Read the full chapter text carefully and return a structured JSON plan.
+Your job is to read the chapter carefully and create a 5-day teaching plan.
+This plan must work as a practical classroom guide for a teacher.
 
 Chapter: {lesson_title}
+Class: {lesson_title}
 
-YOUR JOB:
-1. Identify ALL main topics in the chapter (in the order they appear)
-2. For each main topic, list ALL subtopics under it
-3. Plan which topics go on which day (Day 1 to Day 4 for new content)
-4. Day 5 is always Synthesis + Book-back — do NOT assign new content to Day 5
+═══════════════════════════════════════════════════════
+STEP 1 — READ AND LIST ALL TOPICS
+═══════════════════════════════════════════════════════
+Read the chapter from top to bottom.
+Find EVERY main heading and EVERY subheading — in the exact order they appear.
+Write them all down as master_topic_list.
 
-DAY ALLOCATION RULES — STRICTLY FOLLOW:
-- Day 1: Location, relief, physiographic divisions introduction
-- Day 2: Himalayan Mountains — all ranges and passes
-- Day 3: Northern Plains + Peninsular Plateau + Coastal Plains + Islands
-  ⚠️ Islands MUST be in Day 3 — never skip, never move to Day 4 or 5
-  ⚠️ Coastal Plains MUST be in Day 3 — never skip
-- Day 4: Drainage system — Himalayan Rivers + Peninsular Rivers + characteristics
-  ⚠️ South Indian/Peninsular River CHARACTERISTICS MUST be in Day 4
-  ⚠️ Cover ALL characteristics — seasonal, shorter course, estuaries, hydel power
-  ⚠️ Never skip characteristics — they are exam-critical content
-- Day 5: Synthesis mapping + Book-back ONLY — NO new content
+RULES FOR LISTING:
+✅ Include every heading and subheading you find in the text
+✅ Keep original order — top to bottom as they appear in chapter
+✅ Record parent-child relationship — which subheadings belong under which heading
+✅ Do NOT skip any heading
+✅ Do NOT invent any heading not present in the text
+✅ Do NOT include exercise questions, activities, or summary sections as topics
 
-⚠️ CRITICAL:
-- Himalayan Rivers and Peninsular Rivers MUST go in Day 4 — never Day 5
-- Coastal Plains and Islands MUST go in Day 3 — never Day 4
-- Day 5 must have ZERO new content — synthesis and book-back only
-- Never mix Day 4 and Day 5 content
+═══════════════════════════════════════════════════════
+STEP 2 — CALCULATE TIME BUDGET
+═══════════════════════════════════════════════════════
+Each class = 35 minutes structured as:
+  - Opening/Hook     :  5 minutes (fixed)
+  - Introduction     :  5 minutes (fixed)
+  - Main Teaching    : 15 minutes (this is where subtopics are taught)
+  - Student Activity :  5 minutes (fixed)
+  - Closing          :  5 minutes (fixed)
 
-5. Identify key geographical features, map locations, and comparison pairs
+So each day has exactly 15 minutes for teaching content.
+Each subtopic needs minimum 5 minutes to explain properly.
+Therefore: maximum 3 subtopics per day — never more.
 
-CRITICAL RULES:
-- Subtopics MUST be under their correct main topic
-- Geography topics: mountains, plains, plateaus, coasts, rivers must be separate main topics
-- Each day must have a distinct clear focus with map work
-- Identify comparison pairs (e.g. Western Ghats vs Eastern Ghats, Himalayan vs Peninsular rivers)
-- Identify features that can be chanted as lists (mountain ranges, river names etc.)
+TIME BUDGET CALCULATION (apply to every day):
+  Count subtopics assigned to a day.
+  Multiply by 5 minutes minimum.
+  If total > 15 minutes → too many subtopics → move last one to next day.
 
-Return ONLY valid JSON. No explanation. No markdown. Just raw JSON.
+This calculation must be done for EVERY day before finalising the plan.
+
+═══════════════════════════════════════════════════════
+STEP 3 — ALLOCATE TOPICS TO 5 DAYS
+═══════════════════════════════════════════════════════
+Using your master_topic_list and time budget calculation, allocate topics to days.
+
+ALLOCATION LOGIC — apply in this order:
+
+RULE 1 — NATURAL GROUPING:
+Topics that are geographically or conceptually connected must stay together on the same day.
+Never separate a main heading from its subheadings across different days.
+Example logic: if a main heading has 3 subheadings, all 3 stay on the same day as the heading.
+If the main heading + all subheadings exceed 15 minutes — keep the heading and first 2 subheadings on one day, remaining subheadings move to next day WITH a brief recap of the parent heading.
+
+RULE 2 — CHRONOLOGICAL ORDER:
+Topics must appear in the same order as in the chapter.
+Never teach Day 3 topics on Day 2 or Day 2 topics on Day 4.
+
+RULE 3 — DEPTH OVER BREADTH:
+2 topics taught properly = better than 5 topics rushed.
+If a topic is large and detailed — give it more time, even if that means fewer topics that day.
+
+RULE 4 — DAY 5 RULE:
+Day 5 = any remaining content from chapter (if chapter is large) + mandatory revision.
+If all content fits in Days 1-4 — Day 5 is purely synthesis, mapping, and revision.
+If content remains after Day 4 — Day 5 covers remaining content first, then revision.
+Revision/synthesis must ALWAYS be present on Day 5 — never skip it.
+
+RULE 5 — NO TOPIC LEFT BEHIND:
+Every topic in master_topic_list must appear in exactly one day.
+After allocating — cross-check: is every topic from master_topic_list assigned?
+If any topic is missing — add it to the most appropriate day.
+
+═══════════════════════════════════════════════════════
+STEP 4 — FOR EACH DAY BUILD THE PLAN
+═══════════════════════════════════════════════════════
+For each day identify:
+
+main_topic:
+  The single overarching geographical theme for this day.
+  This is what the teacher writes on the board as today's topic.
+
+subtopics:
+  List of subtopics to be taught today — maximum 3.
+  These come directly from master_topic_list — never invented.
+
+parent_subtopic_map:
+  Which subtopics fall under which parent heading.
+  Example: {{"Northern Mountains": ["Trans-Himalayas", "The Himalayas", "Purvanchal"]}}
+  This ensures teacher introduces parent heading BEFORE explaining subtopics.
+  If no parent-child relationship exists — use empty dict {{}}.
+
+map_features:
+  Specific geographical features from TODAY's subtopics that students locate on map.
+  Maximum 3 features — only from today's content, not from other days.
+  Only include features explicitly mentioned in the chapter text.
+
+focus:
+  One sentence — what students will understand by end of this day.
+  Written from student perspective: "Students will be able to..."
+
+comparison_pair:
+  Two concepts from TODAY's content that the chapter explicitly compares.
+  Only if comparison exists in today's content — otherwise null.
+
+chant_list:
+  List of geographical names from today's content that students can chant together.
+  Example: list of mountain ranges, river names, states etc.
+  Only include if today's content has a list of 3+ names — otherwise empty list.
+
+time_budget:
+  Estimated minutes per subtopic for the 15-minute teaching window.
+  Must be realistic integers. Must sum to 15 or less.
+  Example: {{"subtopic 1": 7, "subtopic 2": 8}}
+
+═══════════════════════════════════════════════════════
+STEP 5 — SELF CHECK BEFORE RETURNING JSON
+═══════════════════════════════════════════════════════
+Before returning JSON, verify:
+✅ Every topic in master_topic_list appears in exactly one day
+✅ No day has more than 3 subtopics
+✅ time_budget for each day sums to 15 or less
+✅ Topics are in chronological order across days
+✅ No topic invented that is not in the chapter text
+✅ No topic from the chapter is missing from the day plan
+✅ Day 5 has revision/synthesis marked
+
+Return ONLY valid JSON. No explanation. No markdown. No code fences.
+Start directly with {{ — nothing before it.
 
 JSON structure:
 {{
-  "main_topics": [
-    {{
-      "title": "Main topic title exactly as in chapter",
-      "subtopics": ["subtopic 1", "subtopic 2"],
-      "map_features": ["feature 1 to locate on map", "feature 2"]
-    }}
+  "master_topic_list": [
+    "Every heading and subheading from chapter — in order"
   ],
   "day_plan": {{
     "day1": {{
-      "main_topic": "Exact main topic title",
+      "main_topic": "Overarching theme for Day 1",
       "subtopics": ["subtopic 1", "subtopic 2"],
-      "map_features": ["feature to locate on map"],
-      "focus": "One sentence describing Day 1 focus",
+      "parent_subtopic_map": {{}},
+      "map_features": ["feature 1", "feature 2"],
+      "focus": "Students will be able to...",
       "comparison_pair": null,
-      "chant_list": ["item1", "item2"],
+      "chant_list": [],
+      "time_budget": {{"subtopic 1": 7, "subtopic 2": 8}},
       "continuation": false
     }},
     "day2": {{
-      "main_topic": "Exact main topic title",
-      "subtopics": ["subtopic 1", "subtopic 2"],
-      "map_features": ["feature to locate"],
-      "focus": "One sentence describing Day 2 focus",
-      "comparison_pair": ["Concept A", "Concept B"],
-      "chant_list": [],
+      "main_topic": "Overarching theme for Day 2",
+      "subtopics": ["subtopic 1", "subtopic 2", "subtopic 3"],
+      "parent_subtopic_map": {{
+        "Parent heading": ["child subtopic 1", "child subtopic 2"]
+      }},
+      "map_features": ["feature 1", "feature 2", "feature 3"],
+      "focus": "Students will be able to...",
+      "comparison_pair": null,
+      "chant_list": ["name 1", "name 2", "name 3"],
+      "time_budget": {{"subtopic 1": 5, "subtopic 2": 5, "subtopic 3": 5}},
       "continuation": false
     }},
     "day3": {{
-      "main_topic": "Exact main topic title",
+      "main_topic": "Overarching theme for Day 3",
       "subtopics": ["subtopic 1", "subtopic 2"],
-      "map_features": ["feature to locate"],
-      "focus": "One sentence describing Day 3 focus",
-      "comparison_pair": null,
+      "parent_subtopic_map": {{}},
+      "map_features": ["feature 1", "feature 2"],
+      "focus": "Students will be able to...",
+      "comparison_pair": ["Concept A", "Concept B"],
       "chant_list": [],
+      "time_budget": {{"subtopic 1": 8, "subtopic 2": 7}},
       "continuation": false
     }},
     "day4": {{
-      "main_topic": "Exact main topic title",
+      "main_topic": "Overarching theme for Day 4",
       "subtopics": ["subtopic 1", "subtopic 2"],
-      "map_features": ["feature to locate"],
-      "focus": "One sentence describing Day 4 focus",
-      "comparison_pair": ["Concept A", "Concept B"],
+      "parent_subtopic_map": {{}},
+      "map_features": ["feature 1"],
+      "focus": "Students will be able to...",
+      "comparison_pair": null,
       "chant_list": [],
+      "time_budget": {{"subtopic 1": 8, "subtopic 2": 7}},
       "continuation": false
+    }},
+    "day5": {{
+      "main_topic": "Remaining content + Synthesis and Revision",
+      "subtopics": ["remaining subtopic if any", "Revision", "Map Synthesis"],
+      "parent_subtopic_map": {{}},
+      "map_features": ["key features from all days for synthesis map"],
+      "focus": "Students will be able to...",
+      "comparison_pair": null,
+      "chant_list": [],
+      "time_budget": {{"remaining content": 8, "Revision": 4, "Map Synthesis": 3}},
+      "continuation": false,
+      "has_remaining_content": true,
+      "synthesis": true
     }}
   }},
-  "key_terms": ["term1", "term2"],
-  "map_locations": ["location1", "location2"],
-  "comparison_pairs": [["Western Ghats", "Eastern Ghats"], ["Himalayan Rivers", "Peninsular Rivers"]],
-  "chant_lists": [["range1", "range2", "range3"]],
-  "map_memory_tricks": ["memory trick for location 1", "memory trick for location 2"],
-  "synthesis_markers": ["strategic feature 1 for Day 5 treasure hunt", "feature 2"]
+  "key_terms": ["term from chapter text only"],
+  "map_locations": ["location explicitly mentioned in chapter"],
+  "comparison_pairs": [["Concept A", "Concept B"]],
+  "chant_lists": [["name 1", "name 2", "name 3"]],
+  "map_memory_tricks": ["catchy memory aid based on actual chapter content"],
+  "synthesis_markers": ["strategic feature for Day 5 map activity"]
 }}
 
 Chapter Text:
@@ -356,8 +473,18 @@ Chapter Text:
             response = self.client.messages.create(
                 model=self.model,
                 max_tokens=3000,
-                system="""You are a precise chapter analyser. Return ONLY valid JSON.
-No explanation. No markdown. No code fences. Just raw JSON starting with {{""",
+                system="""You are a precise Geography chapter analyser for Samacheer Kalvi.
+You work for any Geography chapter across Class 8, 9 and 10.
+Your job: read the chapter, list all topics, calculate time budget, allocate to 5 days.
+
+ABSOLUTE RULES:
+- Return ONLY valid JSON — no explanation, no markdown, no code fences
+- Start directly with {{ — nothing before it
+- Only use topics found in the chapter text — never invent
+- Never skip a topic present in the chapter text
+- time_budget per day must sum to 15 or less
+- Maximum 3 subtopics per day — never more
+- Every topic must appear in exactly one day""",
                 messages=[{"role": "user", "content": prompt}]
             )
 
@@ -558,8 +685,8 @@ explaining each river system's characteristics separately first.
 
             next_label = f"Day {day_num + 1}" if day_num < 4 else "Day 5 — Synthesis and Map Building"
 
-            prompt = f"""Generate ONLY Day {day_num} of the Geography lesson plan. Nothing else.
-Do NOT include Preamble. Do NOT generate Day {day_num + 1} or any other day.
+            prompt = f"""Generate ONLY Day {day_num} of the Geography lesson plan.
+Do NOT generate any other day. Do NOT generate preamble.
 
 Chapter  : {lesson_title}
 Class    : {class_num}
@@ -569,447 +696,468 @@ Day      : {day_num} of 5
 Duration : 35 minutes
 
 ═══════════════════════════════════════════════════════
-TODAY'S EXACT TOPIC PLAN — FOLLOW STRICTLY
+TODAY'S TOPIC PLAN — FROM CHAPTER ANALYSER
 ═══════════════════════════════════════════════════════
-Main Topic   : {main_topic}
-Subtopics    :
+Main Topic     : {main_topic}
+Subtopics      :
 {subtopics_str}
-Map Features : {map_features_str}
-{('''⚠️ DAY 2 — THREE MANDATORY MAPS:
-All three maps MUST be included in Day 2 map work:
-1. India Political Map — label states, union territories, capitals
-2. India Physical Divisions Map — label all physiographic zones
-3. India Rivers Map — label major rivers (Himalayan + Peninsular)
-
-For each map:
-- Teacher points on wall map first
-- Students label on outline map in notebooks
-- Use Radio Controller format — teacher calls feature → students find and label
-- Speed mapping: set timer on board for each map (3-4 mins per map)
-''' if day_num == 2 else '')}
-Day Focus    : {day_focus}
+Map Feature    : ONE map feature from today's content only — {map_features_str}
+Day Focus      : {day_focus}
+Time Budget    : {day_topics.get('time_budget', {})}
 {comparison_note}
 {chant_note}
 {continuation_note}
-{day4_note}
-CRITICAL: Cover ONLY the subtopics listed above.
-Do NOT introduce subtopics from other days.
-Do NOT repeat subtopics already covered in previous days.
-{('''⚠️ DAY 1 — MATH CORNER (MANDATORY):
-Add a dedicated Math Corner board-work block during the Introduction or Main Teaching section.
-This is for longitude and time calculation.
 
-FORMAT — use this exact board-work div:
-<div class='board-work'>
-  <strong>📐 Math Corner — Time and Longitude:</strong><br/>
-  Earth rotates 360° in 24 hours.<br/>
-  Therefore, 1° of longitude = 4 minutes.<br/>
-  Longitudinal difference (97°25\'E - 68°7\'E) ≈ 30°<br/>
-  30 × 4 minutes = 120 minutes (2 hours)<br/>
-  <em>Students copy this calculation in notebooks and verify with a partner.</em>
-</div>
+CRITICAL CONTENT RULES:
+✅ Cover ONLY the subtopics listed above — nothing more
+✅ Every fact, figure, number must come VERBATIM from chapter text
+✅ Never invent statistics, measurements, or data not in the chapter text
+✅ Introduce parent heading before explaining any subtopic under it
+✅ Follow time_budget — if a subtopic is allocated 5 min, don't spend 10 min on it
+═══════════════════════════════════════════════════════
 
-[CFU after Math Corner — formula-based: \'If longitude difference is 15°, how many minutes difference in time?\']
-''' if day_num == 1 else '')}
-{('''⚠️ DAY 4 — HIMALAYAN vs PENINSULAR RIVERS (MANDATORY):
-When explaining Himalayan Rivers and Peninsular Rivers:
-1. Reference an image comparison — teacher draws/shows both river systems side by side
-2. Explain CHARACTERISTICS of each while explaining — not just names
+═══════════════════════════════════════════════════════
+TIME STRUCTURE — 35 MINUTES — STRICTLY FOLLOW
+═══════════════════════════════════════════════════════
+TEACHER TALK    : maximum 25% = 8-9 minutes total across entire class
+STUDENT ACTION  : minimum 75% = 26-27 minutes total across entire class
 
-Himalayan Rivers characteristics to cover:
-- Perennial (flow throughout year — fed by glaciers + rain)
-- Long course, large basins
-- Form deltas
-- Have gorges in upper course
-- Good for navigation and irrigation
+This means:
+- Teacher never speaks more than 2-3 sentences at a stretch
+- After every teacher explanation → immediate student response
+- Student response = writing, discussing, labelling, racing, answering, debating
+- If teacher has spoken for 2 minutes → MUST stop and give students an activity
 
-Peninsular Rivers characteristics to cover:
-- Seasonal (rain-fed only)
-- Shorter course, smaller basins
-- Flow through harder rocks
-- Form estuaries (west-flowing) or deltas (east-flowing)
-- Faster flow — good for hydel power
+MINUTE BY MINUTE RULE:
+[0-5 min]    Opening — Teacher: 3 sentences max → Students: guess/respond immediately
+[5-10 min]   Introduction — Teacher: 4 sentences max → Students: write key terms
+[10-25 min]  Main Teaching — For EACH subtopic:
+               Teacher reads 2-3 sentences from chapter → Students respond
+               Teacher explains in own words 2-3 sentences → Students activity
+               Never more than 3 minutes of teacher talk before student action
+[25-30 min]  Student Task — Students work independently — teacher circulates only
+[30-35 min]  Closing — Teacher: 3 sentences → Students: write power sentence
+═══════════════════════════════════════════════════════
 
-FORMAT — use T-Chart comparison on board:
-<div class='board-work'>
-  <strong>Draw on Board — Himalayan vs Peninsular Rivers:</strong><br/>
-  [Draw simple sketch of both river systems side by side]<br/>
-  <table style='border-collapse:collapse;'>
-    <thead><tr>
-      <th style='border:1px solid #333;padding:6px;'>Himalayan Rivers</th>
-      <th style='border:1px solid #333;padding:6px;'>Peninsular Rivers</th>
-    </tr></thead>
-    <tbody>
-      <tr><td style='border:1px solid #333;padding:6px;'>Perennial — glaciers + rain</td><td style='border:1px solid #333;padding:6px;'>Seasonal — rain only</td></tr>
-      <tr><td style='border:1px solid #333;padding:6px;'>Long course, large basins</td><td style='border:1px solid #333;padding:6px;'>Short course, smaller basins</td></tr>
-      <tr><td style='border:1px solid #333;padding:6px;'>Form deltas</td><td style='border:1px solid #333;padding:6px;'>Form estuaries (west) / deltas (east)</td></tr>
-      <tr><td style='border:1px solid #333;padding:6px;'>Good for irrigation + navigation</td><td style='border:1px solid #333;padding:6px;'>Good for hydel power</td></tr>
-    </tbody>
+═══════════════════════════════════════════════════════
+MAP RULE — ONE MAP ONLY PER DAY
+═══════════════════════════════════════════════════════
+Each day has EXACTLY ONE map activity.
+Map feature today: {map_features_str}
+- Teacher points to feature on wall map first — 1 minute
+- Students locate same feature in textbook map — 1 minute
+- Students label feature in notebook outline map — 2 minutes
+- One CFU after map work — "I am..." clue format
+Total map time: maximum 5 minutes
+Do NOT add additional maps — one is enough for quality over quantity
+═══════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════
+BOARD WORK RULE — STRUCTURED NOT SPORADIC
+═══════════════════════════════════════════════════════
+Board must be organised and purposeful — not random notes.
+Claude decides the best board layout for today's content.
+But every day MUST have ALL of these on the board:
+
+MANDATORY BOARD ELEMENTS:
+1. Today's main topic + subtopics (written at start — never erased)
+2. Key geographical terms with meanings (built during introduction)
+3. A diagram or sketch relevant to today's content
+   - Must show actual geographical shape — V shape, slope, arc, cross etc.
+   - Never a vague box or arrow — must mean something geographically
+4. One comparison or T-chart if today has a comparison pair
+5. The student task prompt (written clearly before student task begins)
+6. Power sentence frame for closing
+
+Board layout format in HTML:
+<div class="board-work">
+  <strong>📋 Board Layout — Day {day_num}:</strong><br/>
+  <table style="width:100%; border-collapse:collapse;">
+    <tr>
+      <td style="width:35%; vertical-align:top; border:1px solid #ccc; padding:8px;">
+        <strong>Left — Topic & Terms</strong><br/>
+        [Main topic + subtopics + key terms]
+      </td>
+      <td style="width:35%; vertical-align:top; border:1px solid #ccc; padding:8px;">
+        <strong>Centre — Diagram</strong><br/>
+        [Specific diagram with shape description]
+      </td>
+      <td style="width:30%; vertical-align:top; border:1px solid #ccc; padding:8px;">
+        <strong>Right — Task & Closing</strong><br/>
+        [Student task prompt + power sentence frame]
+      </td>
+    </tr>
   </table>
 </div>
-''' if day_num == 4 else '')}
-{('''⚠️ DAY 3 — MANDATORY CONTENT CHECK:
-The following topics MUST be covered in Day 3 if chapter has them:
-1. Coastal Plains — Western Coastal Plains + Eastern Coastal Plains
-   - Location, width, features, significance
-2. Islands — Andaman & Nicobar + Lakshadweep
-   - Location, formation, significance
-DO NOT skip these — they are frequently missed and exam-important.
-Give full explanation with CFUs and CCQs for each.
-''' if day_num == 3 else '')}
 ═══════════════════════════════════════════════════════
 
 {self._get_cfu_ccq_instruction()}
-
 {self._get_tamil_instruction()}
 
 ═══════════════════════════════════════════════════════
-LEAD QUESTION / OPENING QUESTION — DAY {day_num}
+TOPIC HIERARCHY RULE — ALWAYS FOLLOW
 ═══════════════════════════════════════════════════════
-Style: {spark['style']}
-{spark['instruction']}
-Heading: [0-5 min] Lead Question / Opening Question
-Include Big Question at end.
-Include: WHY students are learning this + WHERE they use it in real life.
+ALWAYS introduce parent heading before explaining subtopics under it.
+
+FORMAT:
+<h4>[Parent Heading]</h4>
+<div class="lp-teacher-says">
+  "[1-2 sentences introducing this parent topic — what it is, why students are learning it today]"
+</div>
+<h5>1. [Subtopic name]</h5>
+<div class="lp-teacher-says">
+  "[Transition sentence: Now let us look at the first part — [subtopic name]...]"
+</div>
+[explanation + student activity]
+
+<h5>2. [Next subtopic name]</h5>
+<div class="lp-teacher-says">
+  "[Transition sentence before explaining]"
+</div>
+[explanation + student activity]
+
+NEVER jump into a subtopic without the parent heading and transition sentence.
 ═══════════════════════════════════════════════════════
 
 ═══════════════════════════════════════════════════════
-STUDENT TASK — DAY {day_num}: {task['style']}
+ACTIVITY RULE — DAY {day_num}
 ═══════════════════════════════════════════════════════
-{task['instruction']}
+Activity for today: {activity}
+
+Activities must have EXACT student actions:
+- What exactly students say
+- What exactly students write
+- What exactly students do or shout
+- How long each step takes
+
+Activity time = minimum 8 minutes of student action
+Teacher role during activity = circulate and observe only — not explain
 ═══════════════════════════════════════════════════════
 
 ═══════════════════════════════════════════════════════
-CLOSING STYLE — DAY {day_num}
+CCQ RULE — MIXED DIFFICULTY
 ═══════════════════════════════════════════════════════
-{closing_style}
-Students write ONE meaningful sentence connecting today's geography to real life.
-Teacher asks 3 students to read their sentences before bell rings.
+Each day: minimum 3 CFU + minimum 3 CCQ
+
+CFU — "I am..." clue format — recall level:
+"I am the narrow sea passage between India and Sri Lanka..." → "Palk Strait!"
+
+CCQ — MIXED: half application, half analysis level — never pure recall:
+
+APPLICATION level CCQ examples:
+"If the Western Ghats did not exist, what would happen to rainfall in the Deccan?"
+"A farmer wants to settle near a river — which type of plain would you recommend and why?"
+
+ANALYSIS level CCQ examples:
+"Why do west-flowing rivers form estuaries while east-flowing rivers form deltas?"
+"The Himalayas are young fold mountains — what does this tell us about their height and rivers?"
+
+NEVER write a CCQ that students can answer by just reading one line from the textbook.
+Every CCQ must require students to THINK and CONNECT two ideas.
+Every CCQ must be a complete grammatical question ending with "?"
+
+FORMAT:
+<div class="ccq-block">
+  <strong>⚡ CCQ ({{"Application" if day_num % 2 == 1 else "Analysis"}}):</strong>
+  <p class="teacher-says">"[Complete question — requires thinking, not just recall]"</p>
+  <p class="student-says"><strong>Expected:</strong> "[2-3 sentence answer connecting two ideas]"</p>
+  <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
+  <p><em>⏱ Wait 20 seconds. Pair discussion first. Then call 2 students.</em></p>
+</div>
 ═══════════════════════════════════════════════════════
 
-═══════════════════════════════════════════════════════
-GEOGRAPHY-SPECIFIC RULES
-═══════════════════════════════════════════════════════
-- Map work MUST be included every day
-- Race activities: teacher calls feature → students race to find and shout back
-- Radio Controller: teacher calls clue → students find on map and circle
-- Board diagrams must show actual shapes (V shape, slope, cross, curved lines)
-- Speed mapping: mention using a timer on the board
-- "I am..." CFU clues: teacher gives clue → students identify the feature
-- NO page numbers anywhere
-- Chaining: Physical feature → Effect on climate → Effect on agriculture/people
-═══════════════════════════════════════════════════════
-
-═══════════════════════════════════════════════════════
-WAIT TIME RULE
-═══════════════════════════════════════════════════════
-After every question:
-<p><em>⏱ Wait [X] seconds. Call on [N] students.</em></p>
-CFU → Wait 10 seconds, 2-3 students
-CCQ → Wait 15 seconds, pair discussion first
-Opening question → Wait 20 seconds, 2-3 guesses before revealing
-═══════════════════════════════════════════════════════
-
-═══════════════════════════════════════════════════════
-TOPIC HIERARCHY AND TRANSITION RULES — STRICTLY FOLLOW
-═══════════════════════════════════════════════════════
-When teaching subtopics under a main topic:
-1. ALWAYS introduce the parent heading first with 1-2 teacher sentences
-   before explaining any subtopic under it.
-   Example:
-   <h4>The Himalayas</h4>
-   <div class="lp-teacher-says">
-     "The Himalayas are the great mountain wall that forms India's
-      northern boundary. Today we will study its three main ranges
-      one by one."
-   </div>
-   Then introduce subtopics:
-   <h5>1. The Greater Himalayas</h5>
-   ... explanation ...
-   <h5>2. The Lesser Himalayas</h5>
-   ... explanation ...
-
-2. ALWAYS add 1-2 teacher transition sentences before each new subtopic
-   using <div class="lp-teacher-says"> — never jump straight into content.
-   Example before a new subtopic:
-   <div class="lp-teacher-says">
-     "Now let us move to the second range — the Lesser Himalayas.
-      This range is lower than the Greater Himalayas but very important
-      for India's climate."
-   </div>
-
-3. NEVER explain a subtopic without its parent heading visible above it.
-═══════════════════════════════════════════════════════
-
-DAY STRUCTURE:
+NOW GENERATE DAY {day_num} USING THIS EXACT HTML STRUCTURE:
 
 <div class="lp-day-block">
 
-<h3 class="lp-day-title">Day {day_num} — {main_topic}</h3>
-<p class="lp-day-meta">Duration: 35 Minutes | Geography | {day_focus}</p>
+<h3 class="lp-day-title">Day {day_num} — {{main_topic}}</h3>
+<p class="lp-day-meta">Duration: 35 Minutes | Geography | {{day_focus}}</p>
 
-  <!-- ═══ SECTION 1: OPENING / LEAD QUESTION (0-5 min) ═══ -->
-  <div class="lp-section-opening">
-    <div class="lp-section-label">🎯 Opening / Lead Question</div>
-    <span class="lp-time">[0–5 min]</span>
+<!-- ══ SECTION 1: OPENING (0-5 min) ══ -->
+<div class="lp-section-opening">
+  <div class="lp-section-label">🎯 Opening / Lead Question</div>
+  <span class="lp-time">[0–5 min] — Teacher: max 3 sentences | Students: respond immediately</span>
 
-    <div class="lp-teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[3-4 sentences using {spark['style']} style.
-     Genuinely surprising and engaging — based on actual chapter content.
-     Allow 2-3 student guesses before revealing connection.
-     Include WHY students learn this + WHERE they use it in real life.
-     End with Big Question.]"</div>
+  <div class="lp-teacher-says">
+    <strong>Teacher says (English):</strong><br/>
+    "[{spark['style']} style opening — 3 sentences maximum.
+     Genuinely surprising. Based on actual chapter content.
+     End with one Big Question connecting to today's topic.
+     Tell students WHY they are learning this today.]"
+  </div>
 
-    <div class="tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same opening. Same length.]"</p>
-    </div>
+  <div class="lp-tamil-scaffold">
+    <strong>ஆசிரியருக்கு (Tamil):</strong><br/>
+    "[Exact same opening in Tamil — context-based translation — same length]"
+  </div>
 
-    <p><em>⏱ Wait 20 seconds. Allow 2-3 guesses before revealing. Take responses.</em></p>
+  <p><em>⏱ Wait 20 seconds. Take 2-3 student guesses before revealing.
+  Students respond — teacher listens — max 2 minute teacher talk total here.</em></p>
 
-  </div> <!-- end lp-section-opening -->
+</div><!-- end lp-section-opening -->
 
-  <!-- ═══ SECTION 2: INTRODUCTION (5-10 min) ═══ -->
-  <div class="lp-section-intro">
-    <div class="lp-section-label">📖 Introduction & Context Setting</div>
-    <span class="lp-time">[5–10 min]</span>
+<!-- ══ SECTION 2: INTRODUCTION (5-10 min) ══ -->
+<div class="lp-section-intro">
+  <div class="lp-section-label">📖 Introduction & Context Setting</div>
+  <span class="lp-time">[5–10 min] — Teacher: max 4 sentences | Students: write key terms (3 min)</span>
 
-    <div class="lp-teacher-says"><strong>Teacher says (Introduction — English):</strong><br/>
-    "[3-4 sentences — introduce {main_topic} clearly.
-     Connect to what students saw in the spark.
-     Tell students exactly what subtopics and map features they cover today.]"</div>
+  <div class="lp-teacher-says">
+    <strong>Teacher says (English):</strong><br/>
+    "[4 sentences maximum — introduce today's main topic.
+     Connect to what students saw in the opening.
+     Tell students exactly what they will cover today and why it matters.]"
+  </div>
 
-    <div class="tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — context-based mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same introduction in Tamil.
-          Context-based — NOT word-for-word. Pure Tamil Unicode only.]"</p>
-    </div>
+  <div class="lp-tamil-scaffold">
+    <strong>ஆசிரியருக்கு (Tamil):</strong><br/>
+    "[Same introduction in Tamil — context-based — same length]"
+  </div>
 
-    <div class="board-work">
-      <strong>Write on Board:</strong><br/>
-      Main Topic: {main_topic}<br/>
-      Today's Subtopics: {', '.join(subtopics)}<br/>
-      Map Features: {map_features_str}<br/>
-      Objective: [One sentence learning objective]
-    </div>
+  [BOARD WORK — write main topic and subtopics on board NOW]
 
-    <div class="vocab-block">
-      <strong>Key Geographical Terms — Write on Board:</strong>
-      <table>
-        <thead>
-          <tr><th>Term</th><th>English Meaning</th><th>Tamil பொருள்</th></tr>
-        </thead>
-        <tbody>
-          [5 key geographical terms from TODAY's subtopics with Tamil meanings]
-        </tbody>
-      </table>
-    </div>
+  <div class="board-work">
+    <strong>📋 Write on Board (left side):</strong><br/>
+    Day {day_num}: {{main_topic}}<br/>
+    Subtopics: {{subtopics listed clearly}}
+  </div>
 
-    [CFU after vocab — "I am..." clue format]
+  <div class="vocab-block">
+    <strong>Key Geographical Terms — Students write in notebooks (3 minutes):</strong>
+    <table>
+      <thead>
+        <tr><th>Term</th><th>English Meaning</th><th>Tamil பொருள்</th></tr>
+      </thead>
+      <tbody>
+        [4-5 key terms from TODAY's subtopics only — from chapter text only]
+      </tbody>
+    </table>
+  </div>
 
-  </div> <!-- end lp-section-intro -->
+  <p><em>⏱ Students write terms — teacher circulates — 3 minutes silent writing.
+  Teacher does NOT explain yet — students discover meanings first.</em></p>
 
-  <!-- ═══ SECTION 3: MAIN TEACHING & ACTIVITIES (10–30 min) ═══ -->
-  <div class="lp-section-main">
-    <div class="lp-section-label">🏫 Main Teaching & Activities</div>
-    <span class="lp-time">[10–30 min]</span>
+  [ONE CFU here — "I am..." clue about a key term just written]
 
-    [For EACH subtopic in today's plan:]
+</div><!-- end lp-section-intro -->
 
-    <h4>[Subtopic name — exactly as listed]</h4>
+<!-- ══ SECTION 3: MAIN TEACHING (10-25 min) ══ -->
+<div class="lp-section-main">
+  <div class="lp-section-label">🏫 Main Teaching & Activities</div>
+  <span class="lp-time">[10–25 min] — Teacher: max 8 min total | Students: min 7 min activity</span>
 
-    <p class="teacher-says"><strong>Teacher reads aloud and explains (English):</strong><br/>
-    "[Teacher reads this sub-point from textbook aloud.
-     Then explains in simple clear language — 3-4 sentences.
-     REAL-LIFE CONNECTION: 'Just like [Indian/relatable example]...'
-     Connect physical feature → effect on climate/agriculture/people.
-     Include specific facts and numbers from textbook.]"</p>
+  [For EACH subtopic — follow this pattern STRICTLY:]
 
-    <div class="tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — context-based mirror):</strong><br/>
-      <p>"[3-4 Tamil sentences — exact same explanation in Tamil.
-          Same length. Same real-life connection. Same detail.
-          Context-based Tamil — NOT word-for-word translation.
-          Pure Tamil Unicode only — no Hindi words, no transliteration.]"</p>
-    </div>
+  <h4>[Parent heading — introduce FIRST before any subtopics]</h4>
+  <div class="lp-teacher-says">
+    "[1-2 sentences — what this parent topic is and why we study it today]"
+  </div>
 
-    <div class="board-work">
-      <strong>Draw on Board — Diagram:</strong><br/>
-      [Specific board diagram instruction with actual shape description:
-       V shape / slope / cross / curved lines / solid vs dashed lines etc.]
-    </div>
+  <h5>1. [First subtopic name — exactly as in chapter]</h5>
 
-    {"<div class='activity-block'><strong>Chanting Activity:</strong><p>Teacher points to board → class chants together: " + chant_str + "</p><p>Repeat 2-3 times. Keep it energetic.</p></div>" if chant_list else ""}
+  <div class="lp-teacher-says">
+    <strong>Teacher transition + explanation (English):</strong><br/>
+    "[Transition: Now let us look at [subtopic]...]
+     [2-3 sentences explaining this subtopic — facts ONLY from chapter text.
+      Include ONE real-life connection students can relate to.
+      Speak max 2 minutes — then stop.]"
+  </div>
 
-    [CFU — "I am..." clue: 'I am the [clue]...' → students: '[feature name]!']
-    [CCQ — deeper: why/how question about this geographical feature]
+  <div class="lp-tamil-scaffold">
+    <strong>ஆசிரியருக்கு (Tamil):</strong><br/>
+    "[Same explanation in Tamil — context-based — same length]"
+  </div>
 
-    [Repeat for each subtopic]
+  [BOARD DIAGRAM — specific shape description]
+  <div class="board-work">
+    <strong>Draw on Board (centre):</strong><br/>
+    "[Specific diagram with actual geographical shape —
+     V shape / arc / slope / cross / layered lines etc.
+     Describe exactly what to draw — never vague]"
+  </div>
 
-    {"<!-- T-Chart Comparison --><div class='activity-block'><strong>T-Chart Comparison — " + (comparison_pair[0] if comparison_pair else "") + " vs " + (comparison_pair[1] if comparison_pair else "") + ":</strong><p>Students draw T-Chart in notebooks. Teacher calls facts → students fill correct column. Teacher draws solid line (continuous) vs dashed line (discontinuous) on board where relevant.</p></div>" if comparison_pair else ""}
+  [STUDENT ACTIVITY — immediately after teacher explanation]
+  <div class="activity-block">
+    <strong>⚡ Student Response ({{"~5 min" if day_num <= 2 else "~4 min"}}):</strong>
+    <p>[Exact student action — what they say, write, or do.
+       Example: Students open notebooks → draw the diagram from board →
+       label 3 features → share with partner → partner checks.
+       Teacher circulates — does NOT explain further.]</p>
+    <p><em>⏱ Set timer. Students work. Teacher circulates only.</em></p>
+  </div>
 
-    <!-- Activity 1 — ~8 mins -->
-    <div class="activity-block">
-      <strong>Activity 1 — [Race/Sorting/Drawing] (~8 mins):</strong>
-      <p>[Specific step-by-step instructions for Activity 1.
-         Based on today's first subtopic.
-         Students race to find / shout back / label / draw.
-         Include EXACT student action: what they say, write, or do.
-         Example: 'Teacher shouts Bangladesh! → students race to find border length → shout 4097 km!'
-         English only — no Tamil here.]</p>
-      <p><em>⏱ Set timer on board. Teacher circulates and checks.</em></p>
-    </div>
+  [CFU after student response — "I am..." clue]
 
-    [CFU after Activity 1 — "I am..." clue format]
+  <h5>2. [Second subtopic name]</h5>
 
-    <!-- Activity 2 — ~7 mins -->
-    <div class="activity-block">
-      <strong>Activity 2 — [Map Hunt/Radio Controller/Chanting] (~7 mins):</strong>
-      <p>[Specific step-by-step instructions for Activity 2.
-         Based on today's second subtopic.
-         Radio Controller format OR Interactive Map Hunt OR Chanting.
-         Include EXACT student action.
-         Example: 'Controller to Scouts: Find the Indus River. Find its largest branch. Over!'
-         English only — no Tamil here.]</p>
-      <p><em>⏱ Set timer. Students use fingers to trace on map.</em></p>
-    </div>
+  <div class="lp-teacher-says">
+    <strong>Teacher transition + explanation (English):</strong><br/>
+    "[Transition sentence. 2-3 sentences max. Facts from chapter text only.]"
+  </div>
 
-    [CFU after Activity 2 — "I am..." clue format]
+  <div class="lp-tamil-scaffold">
+    <strong>ஆசிரியருக்கு (Tamil):</strong><br/>
+    "[Same in Tamil]"
+  </div>
 
-    <!-- Activity 3 — ~7 mins -->
-    <div class="activity-block">
-      <strong>Activity 3 — [T-Chart/Comparison/Mimicking] (~7 mins):</strong>
-      <p>[Specific step-by-step instructions for Activity 3.
-         Based on today's third subtopic or comparison pair.
-         T-Chart comparison OR physical mimicking OR group sorting.
-         Include EXACT student action.
-         Example: 'Students mimic the folding action with their hands — creating a tent shape.'
-         English only — no Tamil here.]</p>
-      <p><em>⏱ Teacher circulates. Check all notebooks have the diagram.</em></p>
-    </div>
+  [STUDENT ACTIVITY]
+  <div class="activity-block">
+    <strong>⚡ {activity} (~8 min):</strong>
+    <p>[Specific step-by-step activity instructions.
+       EXACT student actions: what they say, write, shout, draw.
+       This is the main activity for today — {activity}.
+       Minimum 8 minutes of student action.
+       Teacher role: circulate and observe only.]</p>
+    <p><em>⏱ Set timer on board. Students work independently or in pairs.</em></p>
+  </div>
 
-    [CFU after Activity 3 — "I am..." clue format]
+  [CCQ after main activity — application or analysis level — never recall]
 
-  </div> <!-- end lp-section-main -->
+  {"<!-- MAP ACTIVITY (ONE MAP ONLY) -->" }
+  <div class="activity-block">
+    <strong>🗺️ Map Activity — {map_features_str} (~5 min):</strong>
+    <p>Step 1: Teacher points to {map_features_str} on wall map — 1 minute.<br/>
+    Step 2: Students find same feature in textbook map — 1 minute.<br/>
+    Step 3: Students label {map_features_str} in notebook outline map — 2 minutes.<br/>
+    Step 4: CFU — "I am..." clue about this map feature.</p>
+    <p><em>⏱ One map only today. Quality labelling — not rushed.</em></p>
+  </div>
 
-  <!-- ═══ SECTION 4: STUDENT TASK — MANDATORY — NEVER SKIP ═══ -->
-  <!-- If running long — reduce CFU count but NEVER remove this section -->
-  <div class="lp-section-student-task">
-    <div class="lp-section-label">✏️ Student Task</div>
-    <span class="lp-time">[25–30 min]</span>
+  {"<!-- T-CHART COMPARISON --><div class='activity-block'><strong>T-Chart: " + (comparison_pair[0] if comparison_pair else "") + " vs " + (comparison_pair[1] if comparison_pair else "") + ":</strong><p>Students draw T-Chart in notebooks. Teacher calls facts → students fill correct column. 5 minutes.</p></div>" if comparison_pair else ""}
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
-    "[3-4 sentences — set up {task['style']} task.
-     Specific geography prompt. Clear time limit. Clear output.]"</p>
+  [BOARD WORK — add diagram to centre of board NOW]
+  <div class="board-work">
+    <strong>📋 Full Board Layout — Day {day_num}:</strong><br/>
+    <table style="width:100%; border-collapse:collapse;">
+      <tr>
+        <td style="width:35%; vertical-align:top; border:1px solid #ccc; padding:8px;">
+          <strong>Left — Topic & Terms</strong><br/>
+          [Main topic + subtopics + key terms built during intro]
+        </td>
+        <td style="width:35%; vertical-align:top; border:1px solid #ccc; padding:8px;">
+          <strong>Centre — Diagram</strong><br/>
+          [Specific geographical diagram — actual shape — built during main teaching]
+        </td>
+        <td style="width:30%; vertical-align:top; border:1px solid #ccc; padding:8px;">
+          <strong>Right — Task & Closing</strong><br/>
+          [Student task prompt written here BEFORE student task begins]<br/>
+          [Power sentence frame written here BEFORE closing]
+        </td>
+      </tr>
+    </table>
+  </div>
 
-    <div class="board-work">
-      <strong>Write on Board — Task Prompt:</strong><br/>
-      [Exact task prompt students can read from board]<br/>
-      [Model sentence starter if written task]
-    </div>
+</div><!-- end lp-section-main -->
 
-    <p class="student-says"><strong>Sample Answer:</strong><br/>
-    "[Model answer based on actual chapter content — 2-3 sentences]"</p>
+<!-- ══ SECTION 4: STUDENT TASK (25-30 min) ══ -->
+<div class="lp-section-student-task">
+  <div class="lp-section-label">✏️ Student Task — MANDATORY — NEVER SKIP</div>
+  <span class="lp-time">[25–30 min] — Students: 5 min independent work | Teacher: circulates only</span>
 
-    [CCQ here — "I am..." clue or why/how question]
+  <div class="lp-teacher-says">
+    <strong>Teacher says (English):</strong><br/>
+    "[2-3 sentences setting up {task['style']} task.
+     Point to board — task prompt is already written there.
+     Give clear time limit. No further explanation.]"
+  </div>
 
-    <div class="diff-block">
-      <strong>Differentiated Support:</strong>
-      <table class="diff-table">
-        <thead>
-          <tr>
-            <th>Slow Learners<br/>(கஷ்டப்படும் மாணவர்கள்)</th>
-            <th>Average Learners<br/>(சராசரி மாணவர்கள்)</th>
-            <th>Advanced Learners<br/>(திறமையான மாணவர்கள்)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <p><strong>Task:</strong> Label the diagram/map with word bank</p>
-              <p><strong>Word Bank:</strong> [4 key geographical terms from today]</p>
-              <p><em>ஆசிரியர் கூடவே உட்கார்ந்து உதவலாம்</em></p>
-            </td>
-            <td>
-              <p><strong>Task:</strong> Answer in 2-3 sentences</p>
-              <p>Starter: "The [feature] is important because _______."</p>
-            </td>
-            <td>
-              <p><strong>Task:</strong> Write independently</p>
-              <p>"Explain [feature] and its impact on India's climate/agriculture/people in 5 sentences."</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div> <!-- end lp-section-student-task -->
+  <div class="board-work">
+    <strong>📋 Task Prompt (already on board — right side):</strong><br/>
+    [Exact task prompt — geography specific — based on today's content]<br/>
+    Starter: "[Model sentence frame students can use]"
+  </div>
 
-  <!-- ═══ SECTION 5: CLOSING (30-35 min) ═══ -->
-  <div class="lp-section-closing">
-    <div class="lp-section-label">🔔 Closing & Homework</div>
-    <span class="lp-time">[30–35 min]</span>
+  <div class="diff-block">
+    <strong>Differentiated Support:</strong>
+    <table class="diff-table">
+      <thead>
+        <tr>
+          <th>Slow Learners<br/>(கஷ்டப்படும் மாணவர்கள்)</th>
+          <th>Average Learners<br/>(சராசரி மாணவர்கள்)</th>
+          <th>Advanced Learners<br/>(திறமையான மாணவர்கள்)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p><strong>Task:</strong> Label diagram/map with word bank</p>
+            <p><strong>Word Bank:</strong> [4 key terms from today]</p>
+            <p><em>ஆசிரியர் கூடவே உட்கார்ந்து உதவலாம்</em></p>
+          </td>
+          <td>
+            <p><strong>Task:</strong> Answer in 2-3 sentences</p>
+            <p>Starter: "The [feature] is important because..."</p>
+          </td>
+          <td>
+            <p><strong>Task:</strong> Write independently</p>
+            <p>"Explain [feature] and its impact on India's
+            climate/agriculture/people in 5 sentences."</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <p class="teacher-says"><strong>Rapid-Fire CFU (Teacher asks):</strong><br/>
-    "[4-5 'I am...' clue questions about today's key features.
-     Students shout the answer. Keep it fast and energetic.]"</p>
+  <p><em>⏱ 5 minutes silent independent work.
+  Teacher circulates — checks notebooks — does NOT explain.
+  After 5 minutes: 2 students share answers aloud.</em></p>
 
-    <p><em>⏱ Wait 5 seconds per question. Raise hands or shout format.</em></p>
+  [ONE CCQ here — analysis level]
 
-    <div class="board-work">
-      <strong>Key Points from Today (write on board):</strong><br/>
-      1. [Key geographical fact 1]<br/>
-      2. [Key geographical fact 2]<br/>
-      3. [Key geographical fact 3]
-    </div>
+</div><!-- end lp-section-student-task -->
 
-    [Final CCQ]
+<!-- ══ SECTION 5: CLOSING (30-35 min) ══ -->
+<div class="lp-section-closing">
+  <div class="lp-section-label">🔔 Closing & Homework</div>
+  <span class="lp-time">[30–35 min] — Teacher: 2 sentences | Students: write power sentence (3 min)</span>
 
-    <div class="homework-block">
-      <p class="teacher-says"><strong>Power Sentence / Closing Reflection:</strong><br/>
-      "[Instruction using {closing_style} format.
-       Students write ONE meaningful sentence connecting today's geography to real life.
-       Specific frame given on board.]"</p>
+  <div class="lp-teacher-says">
+    <strong>Rapid-Fire CFU (Teacher asks — students shout answers):</strong><br/>
+    "[3 rapid "I am..." clue questions about today's key features.
+     Fast and energetic. Students shout answers together.]"
+  </div>
 
-      <div class="board-work">
-        <strong>Write on Board — Sentence Frame:</strong><br/>
-        "{closing_style.split('—')[0].strip()} frame here"<br/>
-        <em>Ask 3 students to read their sentences before bell rings.</em>
-      </div>
+  <p><em>⏱ 5 seconds per question. Whole class responds together.</em></p>
 
-      <p class="teacher-says"><strong>Preview {next_label}:</strong><br/>
-      "[1-2 sentences — what tomorrow covers.
-       If any topic carries over, mention it explicitly.]"</p>
-    </div>
+  <div class="board-work">
+    <strong>📋 Power Sentence Frame (already on board — right side):</strong><br/>
+    "{closing_style}"<br/>
+    <em>Students write ONE sentence. 3 minutes silent writing.</em>
+  </div>
 
-  </div> <!-- end lp-section-closing -->
+  <p class="teacher-says"><strong>Teacher says:</strong><br/>
+  "[1 sentence asking 3 students to read their power sentence.
+   1 sentence previewing tomorrow: what Day {day_num + 1 if day_num < 5 else 5} will cover.]"</p>
 
-</div> <!-- end lp-day-block -->
+  <div class="board-work">
+    <strong>📋 Homework (write on board):</strong><br/>
+    1. [Specific geography homework — based on today's content — not generic]<br/>
+    2. [One map task — label or sketch one feature from today at home]
+  </div>
+
+</div><!-- end lp-section-closing -->
+
+</div><!-- end lp-day-block -->
 
 ═══════════════════════════════════════════════════════
 ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
 ═══════════════════════════════════════════════════════
-✅ Covered ONLY these subtopics: {', '.join(subtopics)}
-✅ Map work included with specific features: {map_features_str}
-{"✅ Day 2: All THREE maps included — Political, Physical Divisions, Rivers" if day_num == 2 else ""}
-✅ Board diagram has actual shape description
-✅ "I am..." CFU clues included throughout
-✅ Minimum 5 CFUs + 5 CCQs with wait times
-✅ Lead Question used — NOT "Spark"
-✅ NO page numbers anywhere
-✅ Tamil only in: Key Terms + Main explanations + Opening question
-✅ Race/Radio Controller/Speed mapping activity included
-✅ 3 separate activities included (Activity 1 ~8 mins, Activity 2 ~7 mins, Activity 3 ~7 mins)
-✅ Each activity has EXACT student action (what they say/write/do/shout)
-✅ Student task block is PRESENT and COMPLETE — never skipped
-✅ Closing Power Sentence included with exact frame on board
-✅ 3 students read sentences before bell rings
-✅ NEVER use religious references in examples
-✅ NEVER mention specific student names — use 'a student' or 'Student A'
-✅ All English words spelled correctly
-✅ 3 students read sentences before bell
-✅ Student task style: {task['style']}
-✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
-✅ Do NOT generate Day {day_num + 1}
+✅ Teacher talk ≤ 25% — count teacher sentences — max 15 sentences total
+✅ Student action ≥ 75% — activities, writing, responding, labelling
+✅ ONE map only — {map_features_str}
+✅ Parent heading introduced before subtopics
+✅ Transition sentence before each subtopic
+✅ Board has 3 columns — left/centre/right — all filled
+✅ Diagram has actual geographical shape description
+✅ CCQs are application or analysis level — not recall
+✅ Every CCQ is a complete grammatical question ending with "?"
+✅ Student task is present and complete — never skipped
+✅ Closing power sentence frame on board
+✅ All facts from chapter text only — no invented numbers
+✅ No religious references
+✅ No specific student names — use "a student" or "Student A"
+✅ Tamil in exactly 3 places: opening + introduction + first subtopic explanation
+✅ Raw HTML only — start with <div class="lp-day-block">
+✅ Do NOT generate Day {day_num + 1 if day_num < 5 else 6}
 
 Chapter Text:
 ---
@@ -1222,14 +1370,14 @@ Chapter Text:
     def _call_assessment(self, text, class_num, unit,
                          lesson_title, chapter_plan: dict):
         try:
-            main_topics_str  = ", ".join([t['title'] for t in chapter_plan.get("main_topics", [])])
+            main_topics_str  = ", ".join(chapter_plan.get("master_topic_list", []))
             key_terms        = ", ".join(chapter_plan.get("key_terms", []))
             map_locations    = ", ".join(chapter_plan.get("map_locations", []))
             comparison_pairs = chapter_plan.get("comparison_pairs", [])
             pairs_str        = ", ".join([f"{p[0]} vs {p[1]}" for p in comparison_pairs]) if comparison_pairs else ""
 
             prompt = f"""Generate ONLY the Assessment Summary section for this Geography chapter.
-Do NOT repeat any day content.
+Do NOT repeat any day content. Do NOT generate any day blocks.
 
 Chapter  : {lesson_title}
 Class    : {class_num}
@@ -1242,113 +1390,207 @@ KEY TERMS: {key_terms}
 MAP LOCATIONS: {map_locations}
 COMPARISON PAIRS: {pairs_str}
 
+CONTENT ACCURACY RULE:
+All questions and answers must be based ONLY on chapter text.
+Never invent facts, figures, or statistics not present in the chapter.
+
+═══════════════════════════════════════════════════════
+GENERATE THESE SECTIONS IN ORDER:
+═══════════════════════════════════════════════════════
+
+<!-- ══ SECTION 1: CFU BANK ══ -->
 <h2>Assessment Summary</h2>
 <div class="assessment-block">
 
-  <h3>Day-wise Oral Assessment</h3>
-  <table>
+<h3>1. Written Assessment — Section A (Recall)</h3>
+<p><em>10 questions — students write answers in their notebooks.
+Based on actual chapter content only.</em></p>
+<table style="width:100%; border-collapse:collapse;">
+  <thead>
+    <tr>
+      <th style="border:2px solid #333; padding:8px; width:5%;">Q.No</th>
+      <th style="border:2px solid #333; padding:8px; width:55%;">Question</th>
+      <th style="border:2px solid #333; padding:8px; width:40%;">Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    [10 rows — Q1 to Q10.
+     Questions: "I am..." clue format — recall level.
+     Answer column: filled with correct answer from chapter text.
+     Each row:
+     <tr>
+       <td style="border:2px solid #333; padding:8px;">Q1</td>
+       <td style="border:2px solid #333; padding:8px;">"I am [clue]... What am I?"</td>
+       <td style="border:2px solid #333; padding:8px;">[Answer from chapter]</td>
+     </tr>]
+  </tbody>
+</table>
+
+<!-- ══ SECTION 2: CCQ BANK — MIXED DIFFICULTY ══ -->
+<h3>2. Written Assessment — Section B (Higher Order Thinking)</h3>
+<p><em>10 questions — mixed application and analysis level.
+Students write answers in notebooks. Teacher marks after collection.</em></p>
+<table style="width:100%; border-collapse:collapse;">
+  <thead>
+    <tr>
+      <th style="border:2px solid #333; padding:8px; width:5%;">Q.No</th>
+      <th style="border:2px solid #333; padding:8px; width:10%;">Type</th>
+      <th style="border:2px solid #333; padding:8px; width:50%;">Question</th>
+      <th style="border:2px solid #333; padding:8px; width:35%;">Expected Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    [10 rows — Q1 to Q10.
+     5 Application + 5 Analysis — labelled in Type column.
+     Questions require connecting two ideas — never pure recall.
+     Expected Answer: 2-3 sentence model answer from chapter text.
+     Each row:
+     <tr>
+       <td style="border:2px solid #333; padding:8px;">Q1</td>
+       <td style="border:2px solid #333; padding:8px;">Application</td>
+       <td style="border:2px solid #333; padding:8px;">[Complete question ending with ?]</td>
+       <td style="border:2px solid #333; padding:8px;">[2-3 sentence model answer]</td>
+     </tr>]
+  </tbody>
+</table>
+
+<!-- ══ SECTION 3: DISTINGUISH BETWEEN TABLES ══ -->
+<h3>3. Distinguish Between — Comparison Tables</h3>
+<p><em>Key comparison pairs from this chapter:</em></p>
+[For EACH comparison pair in: {pairs_str}
+ Generate one filled comparison table with 4-5 rows of differences.
+ All differences from chapter text only.
+ Table format:]
+<table style="border-collapse:collapse; width:100%; margin-bottom:20px;">
+  <thead>
+    <tr>
+      <th style="border:2px solid #333; padding:8px; background:#f0f0f0;">[Concept A]</th>
+      <th style="border:2px solid #333; padding:8px; background:#f0f0f0;">[Concept B]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:2px solid #333; padding:8px;">[Difference 1A]</td>
+      <td style="border:2px solid #333; padding:8px;">[Difference 1B]</td>
+    </tr>
+    [4-5 rows total]
+  </tbody>
+</table>
+
+<!-- ══ SECTION 4: MAP CHECKLIST ══ -->
+<h3>4. Map Checklist</h3>
+<p><em>All locations students must identify on an outline map.
+Based on map locations covered across all 5 days.</em></p>
+<ul>
+  [Numbered list — all map locations from chapter text only.
+   Students use this to self-check their synthesis map from Day 5.]
+</ul>
+
+<!-- ══ SECTION 5: DIFFERENTIATED WRITTEN WORKSHEET ══ -->
+<h3>5. Chapter Assessment Worksheet</h3>
+<p><em>Use after Day 5. Students attempt their own level.
+Teacher collects and marks after completion.</em></p>
+
+<div class="diff-block">
+  <table class="diff-table" style="width:100%; border-collapse:collapse;">
     <thead>
       <tr>
-        <th>Day</th>
-        <th>Main Topic Covered</th>
-        <th>Oral Question (English)</th>
-        <th>Expected Answer</th>
-        <th>Tamil Prompt</th>
+        <th style="border:2px solid #333; padding:10px; background:#ffe0e0; width:33%;">
+          🔴 Level 1 — Slow Learners<br/>
+          <small>(கஷ்டப்படும் மாணவர்கள்)</small>
+        </th>
+        <th style="border:2px solid #333; padding:10px; background:#fff3cd; width:33%;">
+          🟡 Level 2 — Average Learners<br/>
+          <small>(சராசரி மாணவர்கள்)</small>
+        </th>
+        <th style="border:2px solid #333; padding:10px; background:#d4edda; width:33%;">
+          🟢 Level 3 — Advanced Learners<br/>
+          <small>(திறமையான மாணவர்கள்)</small>
+        </th>
       </tr>
     </thead>
     <tbody>
-      [5 rows — Day 1 through Day 5.
-       Use "I am..." clue format where possible for Geography.
-       Questions about actual geographical features from chapter.
-       Tamil version in last column.]
-    </tbody>
-  </table>
-
-  <h3>CFU Bank — "I am..." Quick Reference</h3>
-  <p><em>10 "I am..." clue questions for revision — teacher gives clue, students identify feature:</em></p>
-  <ol>
-    [10 "I am..." clue questions with one-word or one-phrase answers.
-     Based on actual geographical features from chapter.
-     Example: "I am the narrow sea passage between India and Sri Lanka." → "Palk Strait!"]
-  </ol>
-
-  <h3>CCQ Bank — Why/How Questions</h3>
-  <p><em>10 deeper geography questions for revision:</em></p>
-  <ol>
-    [10 why/how/what-happens-if questions.
-     Focus on: feature → effect on climate/agriculture/people chain.
-     Based on actual chapter content.]
-  </ol>
-
-  <h3>Distinguish Between Questions</h3>
-  <p><em>Key comparison pairs from this chapter:</em></p>
-  [For each comparison pair identified by analyser, generate a filled comparison table]
-  <table class="exercise-table">
-    <thead>
-      <tr><th>[Concept A]</th><th>[Concept B]</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>[Difference 1A]</td><td>[Difference 1B]</td></tr>
-      <tr><td>[Difference 2A]</td><td>[Difference 2B]</td></tr>
-      <tr><td>[Difference 3A]</td><td>[Difference 3B]</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Map Checklist</h3>
-  <p><em>All locations students must be able to identify on an outline map:</em></p>
-  <ul>
-    [Numbered list of all map locations from analyser — students mark and label these]
-  </ul>
-
-  <h3>Differentiated Assessment</h3>
-  <table class="diff-table">
-    <thead>
       <tr>
-        <th>Slow Learners<br/>(கஷ்டப்படும் மாணவர்கள்)</th>
-        <th>Average Learners<br/>(சராசரி மாணவர்கள்)</th>
-        <th>Advanced Learners<br/>(திறமையான மாணவர்கள்)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <p><strong>Task:</strong> Label outline map with word bank</p>
-          <p><strong>Word Bank:</strong> [5 key geographical features]</p>
+        <td style="border:2px solid #333; padding:10px; vertical-align:top;">
+          <strong>Part A — Label the Map (4 marks)</strong><br/>
+          <p>Label these features on the outline map:</p>
+          <ol>
+            [4 key map features from chapter — easy, well-known ones]
+          </ol>
+          <strong>Part B — Fill in the Blanks (3 marks)</strong><br/>
+          <ol>
+            [3 fill-in-the-blank sentences — key facts from chapter]
+          </ol>
+          <strong>Part C — One sentence answer (3 marks)</strong><br/>
+          <ol>
+            [3 simple questions — one sentence answer each
+             based on chapter content]
+          </ol>
+          <p><em>Total: 10 marks</em></p>
           <p><em>ஆசிரியர் கூடவே உட்கார்ந்து உதவலாம்</em></p>
         </td>
-        <td>
-          <p><strong>Task:</strong> Answer 3 questions in 2-3 sentences</p>
-          <p>Starter: "The [feature] affects India because _______."</p>
+        <td style="border:2px solid #333; padding:10px; vertical-align:top;">
+          <strong>Part A — Label the Map (4 marks)</strong><br/>
+          <p>Label these features on the outline map:</p>
+          <ol>
+            [4 map features — mix of easy and moderate]
+          </ol>
+          <strong>Part B — Short Answer (6 marks)</strong><br/>
+          <ol>
+            [3 short answer questions — 2-3 sentences each
+             Mix of explain and distinguish questions
+             Based on chapter content]
+          </ol>
+          <p><em>Total: 10 marks</em></p>
         </td>
-        <td>
-          <p><strong>Task:</strong> Structured essay</p>
-          <p>"Explain India's physiographic divisions and their impact on climate, agriculture, and people in 8-10 sentences."</p>
+        <td style="border:2px solid #333; padding:10px; vertical-align:top;">
+          <strong>Part A — Label the Map (3 marks)</strong><br/>
+          <p>Label these features on the outline map:</p>
+          <ol>
+            [3 map features — challenging, less obvious ones]
+          </ol>
+          <strong>Part B — Paragraph Answer (4 marks)</strong><br/>
+          <ol>
+            [2 paragraph questions — 5-7 sentences each
+             Application or analysis level
+             Example: "Explain how the physiography of India
+             influences its drainage pattern"]
+          </ol>
+          <strong>Part C — Map + Reasoning (3 marks)</strong><br/>
+          <p>[One map-based reasoning question — student marks
+          a location AND explains why that location has that
+          geographical significance]</p>
+          <p><em>Total: 10 marks</em></p>
         </td>
       </tr>
     </tbody>
   </table>
+</div>
 
-  <h3>Chapter Completion Checklist</h3>
-  <ul>
-    <li>☐ All 5 days of notes completed in classwork notebook</li>
-    <li>☐ All homework tasks submitted (Days 1-4)</li>
-    <li>☐ Book-back exercises answered and marked (Day 5)</li>
-    <li>☐ Synthesis outline map completed with all features labeled (Day 5)</li>
-    <li>☐ All map locations memorised: {map_locations}</li>
-    <li>☐ [Chapter-specific checklist item]</li>
-  </ul>
+<!-- ══ SECTION 6: CHAPTER COMPLETION CHECKLIST ══ -->
+<h3>6. Chapter Completion Checklist</h3>
+<ul>
+  <li>☐ All 5 days of notes completed in classwork notebook</li>
+  <li>☐ All homework tasks submitted (Days 1-4)</li>
+  <li>☐ Book-back exercises answered and marked (Day 5)</li>
+  <li>☐ Synthesis outline map completed with all features labeled</li>
+  <li>☐ Assessment worksheet attempted and submitted</li>
+  <li>☐ All map locations memorised: {map_locations}</li>
+  [1-2 chapter-specific checklist items based on this chapter's content]
+</ul>
 
 </div>
 
 RULES:
-- Raw HTML only. Start with <h2>Assessment Summary</h2>
-- Day table MUST have exactly 5 rows with Tamil column
-- CFU bank: 10 "I am..." clue questions
-- CCQ bank: 10 why/how questions
-- Distinguish between tables: one per comparison pair from analyser
-- Map checklist: all locations from analyser
+- Raw HTML only — start with <h2>Assessment Summary</h2>
+- No oral assessment table — written worksheet only
+- CFU bank: exactly 10 "I am..." clue questions
+- CCQ bank: exactly 10 questions — 5 application + 5 analysis — labelled
+- Distinguish between: one table per comparison pair — 2px border visible
+- Worksheet: 3 levels — all worth 10 marks — questions from chapter text only
+- Map checklist: all locations from chapter text
 - No page numbers anywhere
-- Base everything on actual chapter content
+- No invented facts — chapter text only
 
 Chapter Text:
 ---

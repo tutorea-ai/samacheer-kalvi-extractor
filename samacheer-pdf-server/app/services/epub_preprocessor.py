@@ -514,23 +514,82 @@ class EpubPreprocessor:
         return tag_map
 
     def _build_linear_tag_map(self, top_ol) -> dict:
-        """Build tag map for linear subjects like Science/Maths (Type C)."""
+        """
+        Build tag map for linear subjects like Science/Maths (Type C).
+
+        Handles 3 nav patterns found in Science EPUBs:
+          Pattern 1 — Inline:  <li><a href="...#anchor">UNIT-1 LAWS OF MOTION</a></li>
+          Pattern 2 — Split A: <li><a href="...#toc_id_130">UNIT-5 ACOUSTICS</a></li>
+                               <li><a href="...#toc_id_131">(Untitled)</a>  ← real anchor
+          Pattern 3 — Split B: <li><a href="index_split_009.html">UNIT-6</a></li>
+                               <li><a href="...#toc_id_159">NUCLEAR PHYSICS</a>  ← real anchor
+        """
         tag_map = {}
 
-        for li in top_ol.find_all('li', recursive=False):
+        SKIP_TITLES = {
+            'learning objectives', 'summary', 'glossary', 'exercises',
+            'textbook evaluation', 'references', 'practicals',
+            'points to remember', 'solved problems',
+        }
+
+        all_li = top_ol.find_all('li', recursive=False)
+        i = 0
+
+        while i < len(all_li):
+            li   = all_li[i]
             link = li.find('a')
             if not link:
+                i += 1
                 continue
 
             text = link.get_text(strip=True)
             href = link.get('href', '')
 
             unit_num = self._parse_unit_num(text)
+
             if unit_num:
-                sf, an = self._parse_href(href)
-                if sf and an:
-                    tag = f"unit-{unit_num}"
-                    tag_map[tag] = (sf, an)
+                tag = f"unit-{unit_num}"
+
+                if '#' in href:
+                    # Pattern 1 — unit heading has a real anchor — use it directly
+                    sf, an = self._parse_href(href)
+                    if sf and an and tag not in tag_map:
+                        tag_map[tag] = (sf, an)
+                        print(f"   [Linear] Registered {tag} → {an} (inline)")
+
+                else:
+                    # Pattern 2 / 3 — no anchor on unit <li>
+                    # Real content anchor is on the NEXT sibling <li>
+                    # BUT only if the next <li> is NOT itself a unit heading
+                    if i + 1 < len(all_li):
+                        next_li   = all_li[i + 1]
+                        next_link = next_li.find('a')
+                        if next_link:
+                            next_href = next_link.get('href', '')
+                            next_text = next_link.get_text(strip=True)
+                            next_is_unit = self._parse_unit_num(next_text) is not None
+
+                            if next_is_unit:
+                                # Next <li> is another unit heading — use _find_first_element_in_file
+                                # to locate the first real element in the split file
+                                split_file = href.split('#')[0] if href else None
+                                if split_file:
+                                    sf = split_file
+                                    an = split_file  # sentinel — _stamp_tags will use _find_first_element_in_file
+                                    if tag not in tag_map:
+                                        tag_map[tag] = (sf, an)
+                                        print(f"   [Linear] Registered {tag} → {sf} (file-sentinel)")
+                                # do NOT consume next <li>
+
+                            elif next_text.lower() not in SKIP_TITLES and '#' in next_href:
+                                # Next <li> is content (Untitled, title, etc.) — use its anchor
+                                sf, an = self._parse_href(next_href)
+                                if sf and an and tag not in tag_map:
+                                    tag_map[tag] = (sf, an)
+                                    print(f"   [Linear] Registered {tag} → {an} (split→next)")
+                                i += 1  # consume the next <li> — already processed
+
+            i += 1
 
         return tag_map
 
@@ -709,13 +768,13 @@ class EpubPreprocessor:
             'UNIT 2 Achieving ...'   → 2
         """
         # Arabic numerals first
-        m = re.search(r'[Uu]nit\s*[-–]?\s*(\d+)', text)
+        m = re.search(r'(?i)unit\s*[-–\s]*(\d+)', text)
         if m:
             return int(m.group(1))
         # Roman numerals — must be followed by space or end of string to avoid false matches
-        m = re.search(r'[Uu]nit\s*[-–]?\s*([IVX]+)(?:\s|$)', text)
-        if m and m.group(1) in ROMAN:
-            return ROMAN[m.group(1)]
+        m = re.search(r'(?i)unit\s*[-–\s]*([IVX]+)(?:\s|$)', text)
+        if m and m.group(1).upper() in ROMAN:
+            return ROMAN[m.group(1).upper()]
         return None
 
 

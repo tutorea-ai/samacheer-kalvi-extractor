@@ -54,6 +54,51 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
                meta_line: str = "") -> str:
     accent_colors = {"content": "#2E75B6", "qa": "#27AE60", "lp": "#8E44AD"}
     accent = accent_colors.get(content_type, "#2E75B6")
+
+    # ── LP TAB BAR INJECTION (only for LP content) ────────────────
+    if content_type == "lp":
+        import re
+
+        # Step 1 — Auto-inject day IDs on lp-day-block divs
+        day_counter = [0]
+        def add_day_id(match):
+            day_counter[0] += 1
+            return f'<div id="lp-day-{day_counter[0]}" class="lp-day-block"'
+        body_content = re.sub(r'<div class="lp-day-block"', add_day_id, body_content)
+        total_days = day_counter[0]
+
+        # Step 2 — Auto-inject assessment block ID
+        body_content = body_content.replace(
+            '<div class="assessment-block"',
+            '<div id="lp-assessment" class="assessment-block"'
+        )
+
+        # Step 3 — Build tab bar dynamically based on actual day count
+        tab_items = ""
+        for d in range(1, total_days + 1):
+            active = "lp-tab-active" if d == 1 else ""
+            tab_items += f'<button class="lp-tab {active}" onclick="switchLPDay({d})" id="lp-tab-{d}">Day {d}</button>\n'
+        tab_items += '<button class="lp-tab" onclick="switchLPDay(\'assessment\')" id="lp-tab-assessment">📋 Assessment</button>'
+
+        tab_bar = f"""
+<div class="lp-tab-wrapper" id="lp-tab-wrapper">
+  <div class="lp-tab-bar">
+    {tab_items}
+  </div>
+  <div class="lp-progress" id="lp-progress">Day 1 of {total_days}</div>
+</div>"""
+
+        # Step 4 — Build prev/next stepper
+        stepper = f"""
+<div class="lp-stepper" id="lp-stepper">
+  <button class="lp-prev-btn" onclick="prevLPDay()" id="lp-prev">← Previous Day</button>
+  <span class="lp-day-counter" id="lp-day-counter">Day 1 of {total_days}</span>
+  <button class="lp-next-btn" onclick="nextLPDay()" id="lp-next">Next Day →</button>
+</div>"""
+
+        # Step 5 — Wrap all content in container
+        body_content = tab_bar + '\n<div class="lp-content-area">\n' + body_content + '\n</div>\n' + stepper
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,7 +259,7 @@ class AIContentConverter:
         # ── QA ────────────────────────────────────────────────────────────────
         print(f"\n   ❓ Generating QA HTML...")
         try:
-            if subject in ["socialscience", "social_science"]:
+            if subject in ["socialscience", "social_science", "science"]:
                 from ..content_builder.master_router import generate_qa
                 qa_html = generate_qa(text, metadata)
             else:
@@ -236,8 +281,9 @@ class AIContentConverter:
         # ── LP ────────────────────────────────────────────────────────────────
         print(f"\n   📌 Generating LP HTML...")
         try:
-            if subject in ["socialscience", "social_science"]:
-                lp_html = self._generate_ss_lp(text, metadata)
+            if subject in ["socialscience", "social_science", "science"]:
+                from ..content_builder.master_router import generate_lp
+                lp_html = generate_lp(text, metadata)
             else:
                 lp_html = self._generate_lp(text, metadata)
             if lp_html:
