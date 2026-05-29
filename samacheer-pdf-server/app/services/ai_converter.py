@@ -162,10 +162,10 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
 </head>
 <body>
   <div class="sk-lesson-wrapper">
-    <div class="sk-content-header">
+    {f'''<div class="sk-content-header">
       <h1>{title}</h1>
       <p class="sk-meta">{meta_line}</p>
-    </div>
+    </div>''' if content_type != "qa" else ""}
     {body_content}
   </div>
 </body>
@@ -223,6 +223,8 @@ class AIContentConverter:
         }
         if subject in ["socialscience", "social_science"] and discipline:
             meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit}"
+        elif subject == "science" and discipline:
+            meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit}"
         else:
             type_display = type_display_map.get(lesson_type, "Prose")
             meta_line = f"Class {class_num} | English | Unit {unit} | {type_display}"

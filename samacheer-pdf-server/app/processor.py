@@ -550,6 +550,8 @@ class PDFProcessor:
 
                 if subject.lower() in ["socialscience", "social_science"] and discipline:
                     meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
+                elif subject.lower() == "science" and discipline:
+                    meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -641,6 +643,8 @@ class PDFProcessor:
 
                 if subject.lower() in ["socialscience", "social_science"] and discipline:
                     meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
+                elif subject.lower() == "science" and discipline:
+                    meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -712,6 +716,8 @@ class PDFProcessor:
 
                 if subject.lower() in ["socialscience", "social_science"] and discipline:
                     meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
+                elif subject.lower() == "science" and discipline:
+                    meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display_map.get(lesson_type, 'Prose')}"
