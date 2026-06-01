@@ -443,7 +443,7 @@ Extracted Sections:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=2500,
+                model=self.model, max_tokens=4000,
                 system="You are a strict day allocator. Return ONLY valid JSON. No markdown. Raw JSON starting with {",
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -536,7 +536,7 @@ Chapter Text (reference):
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=3000,
+                model=self.model, max_tokens=5000,
                 system=SCIENCE_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -809,11 +809,8 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
      this means that [explanation connecting analogy to concept]...'
      Include specific terms, formulas, units from the textbook.]"</p>
 
-    [FOR FIRST SUBHEADING ONLY — include Tamil scaffold block below.
-     For ALL other subheadings — do NOT include any Tamil scaffold at all.]
-
     <div class="lp-tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — exact mirror — FIRST SUBHEADING ONLY):</strong>
+      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong>
       <p>"[EXACT same explanation in Tamil — sentence by sentence mirror.
           Same length. Same detail. Same analogy in Tamil.
           Context-based Tamil — NOT word-for-word.
@@ -869,6 +866,14 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
      Explains in simple language — 3-4 sentences.
      ANALOGY: [specific analogy for this sub-point].
      Specific facts, formulas, units from text.]"</p>
+
+    <div class="lp-tamil-scaffold">
+      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong>
+      <p>"[EXACT same explanation in Tamil — sentence by sentence mirror.
+          Same length. Same detail. Same analogy in Tamil.
+          Context-based Tamil — NOT word-for-word.
+          Pure Tamil Unicode only.]"</p>
+    </div>
 
     <div class="board-work">
       <strong>Board Work:</strong><br/>
@@ -960,8 +965,9 @@ FINAL CHECKS BEFORE FINISHING
 ✅ Final Departure Shout PRESENT with AT LEAST 3 call-and-response rounds — NEVER skip
 ✅ Student Task block PRESENT and COMPLETE — never skip
 ✅ Closing block PRESENT and COMPLETE — never skip
-✅ Tamil ONLY in: Opening Question + Introduction mirror + FIRST subheading of Topic 1 only
-✅ No Tamil in any other subheading — not in Topic 2, not in activity, not in closing
+✅ Tamil mirror present after EVERY subheading explanation — Topic 1 AND Topic 2
+✅ Tamil also in: Opening Question + Introduction + Key Terms table
+✅ NO Tamil in: activity instructions, board work, closing, homework, student task
 ✅ No page numbers anywhere
 ✅ No religious references in any analogy
 ✅ No specific student names — use "a student" or "Student A"
@@ -1129,7 +1135,6 @@ RULES:
 - Raw HTML only — start with <h3 class="lp-day-title">Day 5
 - Book-back section must have real content from chapter
 - Formula review based on actual chapter formulas
-- No Tamil in Day 5
 - No page numbers needed — reference section names only
 - Do NOT generate any other day
 

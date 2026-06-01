@@ -634,8 +634,9 @@ class PDFProcessor:
                 sections   = detect_sections(clean_text, lesson_type=lesson_type)
                 ai_metadata["_sections"] = sections
 
-                if subject.lower() in ["socialscience", "social_science"]:
-                    lp_html = ai_converter._generate_ss_lp(clean_text, ai_metadata)
+                if subject.lower() in ["socialscience", "social_science", "science"]:
+                    from .content_builder.master_router import generate_lp
+                    lp_html = generate_lp(clean_text, ai_metadata)
                 else:
                     lp_html = ai_converter._generate_lp(clean_text, ai_metadata)
                 if not lp_html:
@@ -724,8 +725,8 @@ class PDFProcessor:
 
                 from .services.ai_converter import _wrap_html
 
-                if subject.lower() in ["socialscience", "social_science"]:
-                    from .content_builder.ss.ss_router import generate_qa
+                if subject.lower() in ["socialscience", "social_science", "science"]:
+                    from .content_builder.master_router import generate_qa
                     qa_html = generate_qa(raw_text, ai_metadata)
                 else:
                     from .content_builder.qa_builder import qa_builder

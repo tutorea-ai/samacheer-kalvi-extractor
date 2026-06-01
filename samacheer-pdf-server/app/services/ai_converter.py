@@ -65,6 +65,8 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
             day_counter[0] += 1
             return f'<div id="lp-day-{day_counter[0]}" class="lp-day-block"'
         body_content = re.sub(r'<div class="lp-day-block"', add_day_id, body_content)
+        if day_counter[0] == 0:
+            body_content = re.sub(r'<div class="day-block"', add_day_id, body_content)
         total_days = day_counter[0]
 
         # Step 2 — Auto-inject assessment block ID

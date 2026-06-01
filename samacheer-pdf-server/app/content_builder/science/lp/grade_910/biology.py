@@ -460,23 +460,7 @@ class BiologyLP910Builder:
 
     def _call_section_extractor(self, text: str, lesson_title: str) -> Optional[dict]:
         try:
-            prompt = f"""You are a STRICT TEXT EXTRACTOR for a Samacheer Kalvi Biology chapter.
-
-YOUR ONLY JOB: Extract EVERY heading and subheading that appears in the chapter text.
-Capture ALL levels:
-  Level 1: Main headings (e.g. Plant Anatomy, Photosynthesis, Respiration)
-  Level 2: Subheadings under each main heading
-  Level 3: Sub-subheadings if present
-
-ABSOLUTE RULES:
-- Copy EVERY heading EXACTLY as written — do NOT paraphrase
-- Do NOT skip any heading or subheading — extract ALL of them in order
-- Do NOT add anything from general knowledge
-- Estimate teaching time per section based on content length
-- Capture key terms, diagrams, and structures per section
-- A chapter with 30,000+ characters MUST have at least 8-15 sections
-- Every paragraph topic is a section if no clear heading exists
-- Mark whether a section contains diagrams, comparisons, or processes
+            prompt = f"""Extract ALL headings and subheadings from this Biology chapter.
 
 Chapter: {lesson_title}
 
@@ -485,52 +469,51 @@ Return ONLY valid JSON. No explanation. No markdown. Raw JSON starting with {{
 {{
   "chapter_sections": [
     {{
-      "heading": "EXACT Level 1 heading",
-      "subheadings": [
-        {{
-          "title": "EXACT Level 2 subheading",
-          "sub_subheadings": ["EXACT Level 3 if present"],
-          "has_diagram": true,
-          "has_comparison": false,
-          "has_process": false
-        }}
-      ],
-      "estimated_teaching_time_mins": 10,
-      "key_terms": ["term1", "term2"],
-      "key_structures": ["structure1", "structure2"],
-      "has_diagram": true,
-      "has_comparison": false,
-      "has_process": false
+      "heading": "EXACT heading as written in text",
+      "subheadings": ["subheading 1", "subheading 2"],
+      "estimated_teaching_time_mins": 10
     }}
   ],
-  "total_estimated_teaching_mins": 70,
-  "key_structures": ["all key structures in chapter"],
-  "key_terms": ["all key terms"],
-  "diagram_sections": ["sections requiring diagrams"],
-  "comparison_sections": ["sections with Dicot vs Monocot or similar comparisons"],
-  "process_sections": ["sections with step-by-step processes"]
+  "total_estimated_teaching_mins": 70
 }}
+
+RULES:
+- Copy EVERY heading EXACTLY as written
+- Do NOT skip any heading
+- A 30000+ char chapter must have at least 8-15 sections
+- Keep JSON minimal — no extra fields
+- Return ONLY the JSON object — nothing else
 
 Chapter Text:
 ---
 {text}
 ---"""
-
             response = self.client.messages.create(
                 model=self.model, max_tokens=4000,
                 system="""You are a strict text extractor. Return ONLY valid JSON.
-Extract ALL headings at ALL levels — minimum 8 sections expected for a full chapter.
-Never skip any heading or subheading.
-Never add general knowledge. No markdown. No code fences. Raw JSON starting with {""",
+Extract ALL headings — minimum 8 sections for a full chapter.
+Keep JSON minimal and compact. No markdown. No code fences. Raw JSON starting with {""",
                 messages=[{"role": "user", "content": prompt}]
             )
             raw = response.content[0].text.strip()
             raw = re.sub(r'```(?:json)?', '', raw).strip()
             raw = re.sub(r'```', '', raw).strip()
+
+            # Safety — truncate at last valid closing bracket
+            last_bracket = raw.rfind('}')
+            if last_bracket != -1:
+                raw = raw[:last_bracket + 1]
+
             return json.loads(raw)
         except json.JSONDecodeError as e:
             print(f"❌ Section Extractor JSON error: {e}")
-            return None
+            # Return minimal fallback so LP doesn't abort
+            return {
+                "chapter_sections": [
+                    {"heading": lesson_title, "subheadings": [], "estimated_teaching_time_mins": 70}
+                ],
+                "total_estimated_teaching_mins": 70
+            }
         except Exception as e:
             print(f"❌ Section Extractor error: {e}")
             return None
@@ -606,7 +589,7 @@ Extracted Sections:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=2500,
+                model=self.model, max_tokens=4000,
                 system="You are a strict day allocator. Return ONLY valid JSON. No markdown. Raw JSON starting with {",
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -701,7 +684,7 @@ Chapter Text (reference):
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=3000,
+                model=self.model, max_tokens=5000,
                 system=SCIENCE_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -1028,11 +1011,8 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
      STRUCTURAL ANALOGY: 'Think of it like [specific structural comparison]...'
      Include specific biological terms and structures from the textbook.]"</p>
 
-    [FOR FIRST SUBHEADING ONLY — include Tamil scaffold block below.
-     For ALL other subheadings — do NOT include any Tamil scaffold.]
-
     <div class="lp-tamil-scaffold">
-      <strong>ஆசிரியருக்கு (Tamil — exact mirror — FIRST SUBHEADING ONLY):</strong>
+      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong>
       <p>"[EXACT same explanation in Tamil — sentence by sentence mirror.
           Same length. Same detail. Same analogy in Tamil.
           Context-based Tamil — NOT word-for-word.
@@ -1060,7 +1040,7 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
       <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
     </div>
 
-    [REPEAT the subheading block for each subheading under section 1 — NO Tamil after first]
+    [REPEAT the subheading block for each subheading under section 1]
 
     <!-- Embedded Activity for Topic 1 -->
     <div class="activity-block">
@@ -1079,7 +1059,7 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
 
     <p class="teacher-role"><em>Teacher Role: {strategy['topic2_strategy'].split(chr(10))[0]}</em></p>
 
-    [FOR EACH subheading under this section — in exact order — NO Tamil in Topic 2:]
+    [FOR EACH subheading under this section — in exact order:]
 
     <h5>[EXACT subheading name]</h5>
 
@@ -1088,6 +1068,14 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
      Explains in simple language — 3-4 sentences.
      STRUCTURAL ANALOGY: [specific analogy for this sub-point].
      Specific biological terms and structures from text.]"</p>
+
+    <div class="lp-tamil-scaffold">
+      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong>
+      <p>"[EXACT same explanation in Tamil — sentence by sentence mirror.
+          Same length. Same detail. Same analogy in Tamil.
+          Context-based Tamil — NOT word-for-word.
+          Pure Tamil Unicode only.]"</p>
+    </div>
 
     <div class="board-work">
       <strong>Board Work:</strong><br/>
@@ -1102,7 +1090,7 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
       <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
     </div>
 
-    [REPEAT for each subheading under section 2 — NO Tamil anywhere in Topic 2]
+    [REPEAT for each subheading under section 2]
 
   </div>
 
@@ -1181,8 +1169,9 @@ FINAL CHECKS BEFORE FINISHING
 ✅ Final Departure Shout PRESENT with at least 3 rounds — NEVER skip
 ✅ Student Task block PRESENT — diagram task + comparison/synthesis task
 ✅ Closing block PRESENT and COMPLETE — never skip
-✅ Tamil ONLY in: Opening Question + Introduction mirror + FIRST subheading of Topic 1
-✅ NO Tamil in any other subheading — not in Topic 2, not in activity, not in closing
+✅ Tamil mirror present after EVERY subheading explanation — Topic 1 AND Topic 2
+✅ Tamil also in: Opening Question + Introduction + Key Terms table
+✅ NO Tamil in: activity instructions, board work, closing, homework, student task
 ✅ No page numbers anywhere
 ✅ No religious references in any analogy
 ✅ No specific student names — use "a student" or "Student A"
@@ -1352,7 +1341,6 @@ RULES:
 - Raw HTML only — start with <h3 class="lp-day-title">Day 5
 - Book-back section must have real content from chapter
 - Diagram review based on actual chapter diagrams
-- No Tamil in Day 5
 - No page numbers needed — reference section names only
 - Do NOT generate any other day
 

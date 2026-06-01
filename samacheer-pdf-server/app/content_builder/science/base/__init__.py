@@ -158,8 +158,8 @@ TAMIL SCAFFOLDING RULES — TARGETED ONLY
 Tamil appears in EXACTLY 3 places — nowhere else:
 
 ✅ 1. KEY TERMS TABLE — Tamil meaning column only
-✅ 2. MAIN EXPLANATION — Tamil mirror paragraph after English paragraph
-       (first subtopic of each main section only — not every subtopic)
+✅ 2. MAIN EXPLANATION — Tamil mirror paragraph after EVERY English explanation paragraph
+       This applies to every subheading in Topic 1 AND Topic 2
 ✅ 3. OPENING/LEAD QUESTION — Tamil version after English question
 
 ❌ NEVER add Tamil to:

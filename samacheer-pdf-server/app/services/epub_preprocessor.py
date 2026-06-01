@@ -582,12 +582,26 @@ class EpubPreprocessor:
                                 # do NOT consume next <li>
 
                             elif next_text.lower() not in SKIP_TITLES and '#' in next_href:
-                                # Next <li> is content (Untitled, title, etc.) — use its anchor
-                                sf, an = self._parse_href(next_href)
-                                if sf and an and tag not in tag_map:
-                                    tag_map[tag] = (sf, an)
-                                    print(f"   [Linear] Registered {tag} → {an} (split→next)")
-                                i += 1  # consume the next <li> — already processed
+                                # Next <li> is content — but only use its anchor if it's
+                                # in the SAME split file as the unit heading
+                                # If different file → use file sentinel instead
+                                unit_file = href.split('#')[0] if href else None
+                                next_file = next_href.split('#')[0] if next_href else None
+
+                                if unit_file and next_file and unit_file != next_file:
+                                    # Different file — next sibling belongs to next unit
+                                    # Use file sentinel for this unit
+                                    if unit_file and tag not in tag_map:
+                                        tag_map[tag] = (unit_file, unit_file)
+                                        print(f"   [Linear] Registered {tag} → {unit_file} (file-sentinel, diff-file)")
+                                    # do NOT consume next <li>
+                                else:
+                                    # Same file — safe to use next sibling's anchor
+                                    sf, an = self._parse_href(next_href)
+                                    if sf and an and tag not in tag_map:
+                                        tag_map[tag] = (sf, an)
+                                        print(f"   [Linear] Registered {tag} → {an} (split→next)")
+                                    i += 1  # consume the next <li>
 
             i += 1
 
