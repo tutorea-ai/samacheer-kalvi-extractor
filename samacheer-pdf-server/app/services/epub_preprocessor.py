@@ -258,31 +258,35 @@ class EpubPreprocessor:
             ...
         }
         """
+        # Try nav.xhtml first (EPUB 3), fall back to toc.ncx (EPUB 2)
         nav_path = self.epub_dir / 'nav.xhtml'
-        if not nav_path.exists():
-            return None
+        ncx_path = self.epub_dir / 'toc.ncx'
 
-        with open(nav_path, 'r', encoding='utf-8') as f:
-            soup = BeautifulSoup(f.read(), 'html.parser')
+        if nav_path.exists():
+            with open(nav_path, 'r', encoding='utf-8') as f:
+                soup = BeautifulSoup(f.read(), 'html.parser')
+            nav = soup.find('nav')
+            if not nav:
+                return None
+            top_ol = nav.find('ol', recursive=False)
+            if not top_ol:
+                return None
+            subject_type = self._detect_subject_type(top_ol)
+            print(f"[Preprocessor] Detected subject type: {subject_type}")
+            if subject_type == 'english':
+                return self._build_english_tag_map(top_ol)
+            elif subject_type == 'socialscience':
+                return self._build_ss_tag_map(top_ol)
+            else:
+                return self._build_linear_tag_map(top_ol)
 
-        nav = soup.find('nav')
-        if not nav:
-            return None
+        elif ncx_path.exists():
+            print(f"[Preprocessor] nav.xhtml not found — using toc.ncx (EPUB 2)")
+            return self._build_ncx_tag_map(ncx_path)
 
-        top_ol = nav.find('ol', recursive=False)
-        if not top_ol:
-            return None
-
-        # Detect subject type from nav structure
-        subject_type = self._detect_subject_type(top_ol)
-        print(f"[Preprocessor] Detected subject type: {subject_type}")
-
-        if subject_type == 'english':
-            return self._build_english_tag_map(top_ol)
-        elif subject_type == 'socialscience':
-            return self._build_ss_tag_map(top_ol)
         else:
-            return self._build_linear_tag_map(top_ol)
+            print(f"[Preprocessor] ❌ No navigation file found (nav.xhtml or toc.ncx)")
+            return None
 
     def _detect_subject_type(self, top_ol) -> str:
         """
@@ -604,6 +608,90 @@ class EpubPreprocessor:
                                     i += 1  # consume the next <li>
 
             i += 1
+
+        return tag_map
+
+    def _build_ncx_tag_map(self, ncx_path: Path) -> dict:
+        """
+        Build tag map from toc.ncx (EPUB 2 format).
+        Used when nav.xhtml is not present.
+
+        NCX structure:
+          <navMap>
+            <navPoint>
+              <navLabel><text>UNIT 1 MEASUREMENT</text></navLabel>
+              <content src="index_split_000.html#id_UNIT_1_MEASUREMENT"/>
+            </navPoint>
+          </navMap>
+
+        Handles:
+          - Units with anchor:      index_split_000.html#id_UNIT_1
+          - Units without anchor:   index_split_002.html  (file sentinel)
+        """
+        from bs4 import XMLParsedAsHTMLWarning
+        import warnings
+        warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+
+        tag_map = {}
+
+        with open(ncx_path, 'r', encoding='utf-8') as f:
+            soup = BeautifulSoup(f.read(), 'html.parser')
+
+        # html.parser lowercases all tags
+        nav_map = soup.find('navmap')
+        if not nav_map:
+            nav_map = soup.find('navMap')  # fallback for xml parser
+        if not nav_map:
+            print(f"[Preprocessor] ❌ No navMap found in toc.ncx")
+            return {}
+
+        # Find top-level navpoints (html.parser lowercases)
+        top_nav_points = nav_map.find_all('navpoint', recursive=False)
+
+        SKIP_LABELS = {
+            'table of contents', 'learning objectives', 'summary',
+            'glossary', 'exercises', 'textbook evaluation', 'references',
+            'practicals', 'points to remember', 'solved problems',
+            '(untitled)', 'introduction', 'do you know', 'more to know'
+        }
+
+        for nav_point in top_nav_points:
+            label   = nav_point.find('navlabel')
+            content = nav_point.find('content')
+
+            if not label or not content:
+                continue
+
+            text = label.find('text') if label else None
+            if not text:
+                continue
+
+            text_str  = text.get_text(strip=True)
+            src       = content.get('src', '')
+
+            # Skip non-unit entries
+            if text_str.lower() in SKIP_LABELS:
+                continue
+
+            # Parse unit number
+            unit_num = self._parse_unit_num(text_str)
+            if not unit_num:
+                continue
+
+            # Parse href
+            sf, an = self._parse_href(src)
+            if not sf:
+                continue
+
+            tag = f"unit-{unit_num}"
+            if tag not in tag_map:
+                # If no anchor — use file sentinel
+                if not an or an == sf:
+                    tag_map[tag] = (sf, sf)
+                    print(f"   [NCX] Registered {tag} → {sf} (file-sentinel)")
+                else:
+                    tag_map[tag] = (sf, an)
+                    print(f"   [NCX] Registered {tag} → {an} (anchor)")
 
         return tag_map
 
