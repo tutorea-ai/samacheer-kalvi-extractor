@@ -92,7 +92,7 @@ def _get_lp_builder(grade_group: str, discipline: str):
                 from .lp.grade_67.biology import biology_lp_67_builder
                 return biology_lp_67_builder
             elif discipline == "computer_science":
-                from .lp.grade_67.computer_science import computer_science_lp_67_builder
+                from .lp.grade_67.computer_science import cs_lp_67_builder as computer_science_lp_67_builder
                 return computer_science_lp_67_builder
             else:
                 print(f"      [Science Router] ❌ Unknown discipline: {discipline}")
@@ -141,7 +141,7 @@ def _get_qa_builder(grade_group: str, discipline: str):
                 from .qa.grade_67.biology import biology_qa_67_builder
                 return biology_qa_67_builder
             elif discipline == "computer_science":
-                from .qa.grade_67.computer_science import computer_science_qa_67_builder
+                from .qa.grade_67.computer_science import cs_qa_67_builder as computer_science_qa_67_builder
                 return computer_science_qa_67_builder
             else:
                 print(f"      [Science Router] ❌ Unknown discipline: {discipline}")

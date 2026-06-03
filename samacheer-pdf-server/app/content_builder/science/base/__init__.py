@@ -19,6 +19,16 @@ Changes from v1.0:
     ✅ PREAMBLE_START_INSTRUCTION added — same as SS base
     ✅ CCQ_INSTRUCTION added — Science-flavored concept check questions
     ✅ All v1.0 constants preserved — no breakage
+
+v2.1 — May 2026
+Changes from v2.0:
+    ✅ TAMIL_INSTRUCTION_67 — age-appropriate Tamil, Class 6/7
+    ✅ CCQ_CFU_INSTRUCTION_67 — numbered CFU+CCQ blocks, Class 6/7
+    ✅ DAY_PLAN_STRUCTURE_67 — 4-block 35-min structure, science-flavored
+    ✅ SCIENCE_DISCIPLINE_NOTES_67 — per-discipline notes for Class 6/7
+    ✅ SCIENCE_SPARK_STYLES_67 — Predict or Perish, curiosity sparks
+    ✅ SCIENCE_ACTIVITY_MAP_67 — hands-on, experiment-based activities
+    ✅ All v2.0 constants preserved — no breakage
 """
 
 import re
@@ -158,8 +168,8 @@ TAMIL SCAFFOLDING RULES — TARGETED ONLY
 Tamil appears in EXACTLY 3 places — nowhere else:
 
 ✅ 1. KEY TERMS TABLE — Tamil meaning column only
-✅ 2. MAIN EXPLANATION — Tamil mirror paragraph after EVERY English explanation paragraph
-       This applies to every subheading in Topic 1 AND Topic 2
+✅ 2. MAIN EXPLANATION — Tamil mirror paragraph after English paragraph
+       (first subtopic of each main section only — not every subtopic)
 ✅ 3. OPENING/LEAD QUESTION — Tamil version after English question
 
 ❌ NEVER add Tamil to:
@@ -549,3 +559,331 @@ def clean(raw: str) -> str:
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(text, 'html.parser')
     return str(soup).strip()
+
+
+# ============================================================================
+# ============================================================================
+# GRADE 6/7 CONSTANTS — shared across all science grade_67 LP builders
+# Modeled on ss/base/__init__.py grade_67 pattern
+# Added v2.1 — May 2026
+# ============================================================================
+# ============================================================================
+
+
+# ============================================================================
+# TAMIL INSTRUCTION — GRADE 6/7
+# Same 3-place rule — age-appropriate Tamil for Class 6/7
+# ============================================================================
+
+TAMIL_INSTRUCTION_67 = """
+═══════════════════════════════════════════════════════
+TAMIL SCAFFOLDING — TARGETED ONLY (Class 6/7)
+═══════════════════════════════════════════════════════
+Tamil appears in EXACTLY 3 places:
+✅ 1. KEY TERMS TABLE — Tamil meaning column
+✅ 2. MAIN EXPLANATION — Tamil mirror paragraph after English paragraph
+✅ 3. OPENING LEAD QUESTION — Tamil version after English question
+
+❌ NEVER in: activity instructions, board work, CFU blocks,
+   time notes, closing, homework, assessment, differentiated support
+
+Tamil mirror rules:
+- Same sentences, same length, same detail as English
+- Real Tamil Unicode ONLY — not transliteration
+- Age-appropriate Tamil for Class 6/7 students (11-13 years)
+- Context-based translation — NOT word-for-word
+- Scientific terms with no Tamil equivalent: write in Tamil script
+  (e.g. எலக்ட்ரான், மோல், ஸ்பிரைட்)
+- NO Hindi words ever — pure Tamil only
+═══════════════════════════════════════════════════════
+"""
+
+
+# ============================================================================
+# CFU + CCQ INSTRUCTION — GRADE 6/7
+# Numbered sequentially, age-appropriate, both types required
+# ============================================================================
+
+CCQ_CFU_INSTRUCTION_67 = """
+═══════════════════════════════════════════════════════
+CFU AND CCQ — STRICT MINIMUM (Class 6/7)
+═══════════════════════════════════════════════════════
+
+MINIMUM REQUIREMENT per day:
+- 2 CFU blocks per concept taught
+- 2 CCQ blocks per concept taught
+- Total minimum: 10 CFUs + 8 CCQs across the full day
+- Number sequentially across the day (CFU 1, CFU 2... CCQ 1, CCQ 2...)
+
+── CFU (Check For Understanding) ──────────────────────
+Basic recall. Asked IMMEDIATELY after explaining something.
+Simple, one-word or one-sentence answer.
+Age-appropriate for Class 6/7. No Tamil required.
+
+FORMAT:
+<div class="cfu-block">
+  <strong>🔎 CFU [N]:</strong>
+  <p class="teacher-says">"[Very simple factual question — under 6 words]"</p>
+  <p class="student-says"><strong>Expected:</strong> "[One word or one sentence]"</p>
+  <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
+</div>
+
+── CCQ (Concept Check Question) ───────────────────────
+Deeper conceptual question. Tests WHY or HOW.
+Tamil version mandatory.
+
+FORMAT:
+<div class="ccq-block">
+  <strong>⚡ CCQ [N]:</strong>
+  <p class="teacher-says">"[Deeper question — under 8 words — age appropriate]"</p>
+  <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
+  <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
+  <p><em>⏱ Wait 15 seconds. Allow pair discussion before answers.</em></p>
+</div>
+
+⚠️ NEVER use ICQs:
+❌ WRONG: "Do you understand?" / "How many sentences?" / "Which group?"
+✅ RIGHT: "What happens when...?" / "Why did...?" / "What is the name of...?"
+═══════════════════════════════════════════════════════
+"""
+
+
+# ============================================================================
+# DAY PLAN STRUCTURE — GRADE 6/7
+# 35-minute session: 4 blocks
+# Modeled on SS grade_67 history.py DAY_PLAN_STRUCTURE_67
+# Science-flavored: experiments, observations, hands-on
+# ============================================================================
+
+DAY_PLAN_STRUCTURE_67 = """
+═══════════════════════════════════════════════════════
+DAY PLAN STRUCTURE — 35 MINUTES (Class 6/7 Science)
+═══════════════════════════════════════════════════════
+
+[0-5 min]   LEAD / SPARK / OPENING QUESTION
+            3-minute Science Spark activity + 2-minute transition
+            Include: 1 curiosity question, 1 real-world connection,
+                     30-second Predict or Perish game,
+                     1 practical superpower application,
+                     1-word student reflection
+            Science sparks: dramatic demo, household object,
+                            observation puzzle, prediction challenge
+            End with Big Question connecting to today's topic
+
+[5-20 min]  KEY LEARNING ACTIVITY
+            1. Topic Introduction (Textbook Context First)
+               - Set context for the topic and chapter
+               - Introduce from textbook with page reference
+               - CFU questions after introduction
+            2. Topic Explanation with Activity
+               - Divide into subtopics — explain using textbook
+               - Integrate hands-on activities, simple experiments,
+                 observations with household/classroom materials
+               - CFU and CCQ after each subtopic
+            3. Topic Closing — Summary
+               - Overall conclusion: flowchart on board,
+                 mind map, observation chart, diagram
+
+[20-30 min] ASSESSMENT — 3 LEVELS (EVERY DAY)
+            Differentiated:
+            - Toppers: Critical thinking, analysis, design
+            - Average: Core concept application, explanation
+            - Below-average: Basic recall with word bank + teacher support
+            Methods: writing, quiz, rapid fire, worksheet,
+                     diagram labeling, simple experiment report
+
+[30-35 min] CLOSING + STUDENT TASK
+            2-minute recap
+            Homework: poster / write answers / essay / flowchart /
+                      simple home experiment / observation log
+            Focus: curiosity, creativity, practical knowledge
+
+SCIENCE SKILLS TO DEVELOP (integrate naturally):
+- Observation: Notice and describe what they see
+- Prediction: Guess before testing — record result
+- Critical Thinking: Why does this happen?
+- Creativity: Build, draw, design from concepts
+- Communication: Explain science in own words
+- Curiosity: Ask WHY questions about everyday phenomena
+═══════════════════════════════════════════════════════
+"""
+
+
+# ============================================================================
+# DISCIPLINE NOTES — GRADE 6/7 (per discipline)
+# Science-flavored, age-appropriate, Class 6/7 specific
+# ============================================================================
+
+SCIENCE_DISCIPLINE_NOTES_67 = {
+    "physics": """
+PHYSICS CLASS 6/7 TEACHING NOTES:
+- Age-appropriate language — simple cause-effect explanations
+- Everyday examples: toys, sports, household objects, playground
+- Measurement concepts: use rulers, scales students can touch
+- Force and motion: relate to running, pushing, pulling in school
+- Simple experiments: paper balls, rubber bands, sliding objects
+- Board work: simple diagrams with arrows, force diagrams
+- Avoid complex mathematics — focus on concept and observation
+- Connect to Indian everyday life: auto-rickshaw, bullock cart, cricket
+""",
+    "chemistry": """
+CHEMISTRY CLASS 6/7 TEACHING NOTES:
+- Age-appropriate language — matter, states, properties
+- Everyday examples: water, salt, sugar, ice, steam, air
+- Simple classification: solid/liquid/gas, pure/mixture
+- Household experiments: dissolving salt, melting ice, mixing colours
+- Board work: simple classification trees, state change diagrams
+- Safety note: all experiments use safe household materials only
+- Connect to Indian kitchen chemistry: cooking, cleaning, food preservation
+- Avoid complex formulae — focus on observation and classification
+""",
+    "biology": """
+BIOLOGY CLASS 6/7 TEACHING NOTES:
+- Age-appropriate language — plants, animals, body, health
+- Everyday examples: garden plants, common animals, own body
+- Observation-based: look at leaves, flowers, insects in school garden
+- Simple diagrams: leaf, flower parts, animal classification
+- 3D models: clay models of cells, flowers, food webs
+- Health topics: connect to daily hygiene, food habits, exercise
+- Board work: classification charts, life cycle diagrams
+- Connect to Indian flora, fauna, food, and health traditions
+""",
+    "computer_science": """
+COMPUTER SCIENCE CLASS 6/7 TEACHING NOTES:
+- Age-appropriate language — simple definitions and functions
+- Everyday examples: phone, TV, calculator, ATM
+- Step-by-step procedures: break into tiny steps
+- Mime activities: students act out computer actions
+- No computer required: all activities work in classroom
+- Board work: block diagrams of computer parts, flowcharts
+- Connect to everyday tech students use: apps, games, messages
+- Avoid technical jargon — use plain language with simple analogies
+""",
+}
+
+
+# ============================================================================
+# SCIENCE SPARK STYLES — GRADE 6/7
+# Curiosity-based, age-appropriate, Predict or Perish format
+# Different from grade_910 spark styles
+# ============================================================================
+
+SCIENCE_SPARK_STYLES_67 = {
+    1: {
+        "style": "Curiosity Demo + Predict or Perish",
+        "instruction": (
+            "Teacher performs a simple demo with a household object OR asks\n"
+            "a provocative curiosity question that challenges what students assume.\n"
+            "Examples for Class 6/7:\n"
+            "  - 'If I drop a feather and a coin at the same time — which lands first?'\n"
+            "  - Hold a magnet near a paper clip: 'Why does it jump?'\n"
+            "  - Pour water into a glass slowly: 'What IS water really made of?'\n"
+            "Structure:\n"
+            "  Step 1: Show the demo or ask the question dramatically.\n"
+            "  Step 2: PREDICT OR PERISH (30 seconds):\n"
+            "          'Write ONE word prediction in your notebook — NOW!'\n"
+            "  Step 3: 3-4 students share predictions.\n"
+            "  Step 4: Real-life superpower: 'If you understand this, you can [application]'\n"
+            "  Step 5: 1-word student reflection: 'Describe your feeling in ONE word!'\n"
+            "  Step 6: 2-minute transition to textbook."
+        ),
+    },
+    2: {
+        "style": "Yesterday's Recap + New Puzzle",
+        "spark_instruction": (
+            "START with a fun 1-minute recap game from yesterday.\n"
+            "Then present a NEW puzzle connecting to today's concept.\n"
+            "Examples for Class 6/7:\n"
+            "  - 'Yesterday we learned X. Now here's a puzzle: if X is true,\n"
+            "     why does Y happen?' \n"
+            "  - Quick true/false game — 3 statements from yesterday.\n"
+            "Structure:\n"
+            "  Step 1: Recap game — 3 rapid-fire questions from Day 1.\n"
+            "  Step 2: New puzzle or observation question.\n"
+            "  Step 3: PREDICT OR PERISH — 30 seconds.\n"
+            "  Step 4: Real-life connection.\n"
+            "  Step 5: Transition."
+        ),
+    },
+    3: {
+        "style": "Observation Challenge + Why Question",
+        "spark_instruction": (
+            "Teacher presents a visual or physical observation challenge.\n"
+            "Students observe and generate WHY questions.\n"
+            "Examples for Class 6/7:\n"
+            "  - 'Look at this leaf. Count the lines on it. Why are they there?'\n"
+            "  - 'Watch what happens when I do this. Write 2 WHY questions.'\n"
+            "Structure:\n"
+            "  Step 1: Present the observation.\n"
+            "  Step 2: Students observe silently for 20 seconds.\n"
+            "  Step 3: 'Write 2 WHY questions in your notebook — 30 seconds.'\n"
+            "  Step 4: 3-4 students share their WHY questions.\n"
+            "  Step 5: Teacher reveals today's concept connection.\n"
+            "  Step 6: Transition."
+        ),
+    },
+    4: {
+        "style": "Design Challenge Preview + Recall Race",
+        "spark_instruction": (
+            "Teacher presents a mini design challenge students will solve today.\n"
+            "Then runs a rapid recall race from Days 1-3.\n"
+            "Examples for Class 6/7:\n"
+            "  - 'Today you will design a [simple thing] using what we learn!'\n"
+            "  - Recall race: 4 teams, 6 rapid questions from Days 1-3.\n"
+            "Structure:\n"
+            "  Step 1: Preview the design challenge — makes students excited.\n"
+            "  Step 2: Rapid recall race — 4 teams, 6 questions.\n"
+            "  Step 3: Quick score announcement.\n"
+            "  Step 4: 'Now let's learn what we need to complete the challenge!'\n"
+            "  Step 5: Transition."
+        ),
+    },
+}
+
+
+# ============================================================================
+# ACTIVITY MAP — GRADE 6/7 SCIENCE
+# Hands-on, experiment-based, household materials
+# One unique activity per day
+# ============================================================================
+
+SCIENCE_ACTIVITY_MAP_67 = {
+    1: (
+        "ACTIVITY TYPE: Simple Observation Experiment (Day 1)\n"
+        "Students observe a simple phenomenon using classroom/household materials.\n"
+        "No special equipment needed — safe for Class 6/7.\n"
+        "Examples: observe ice melting, paper folding, shadow making, magnet demo.\n"
+        "Steps: Observe → Record → Explain in own words.\n"
+        "Students write 2 sentences: 'I saw... / This happened because...'\n"
+        "⚠️ Observation Experiment is used ONLY on Day 1 — not repeated."
+    ),
+    2: (
+        "ACTIVITY TYPE: Group Classification Activity (Day 2)\n"
+        "Students sort and classify objects or concepts into categories.\n"
+        "Examples: sort objects by property, classify living/non-living,\n"
+        "          group materials by state, sort plants by type.\n"
+        "Use actual objects or picture cards from today's chapter.\n"
+        "Groups of 4. Each group presents their classification.\n"
+        "Teacher adds any missed categories on board.\n"
+        "⚠️ Group Classification is used ONLY on Day 2 — not repeated."
+    ),
+    3: (
+        "ACTIVITY TYPE: Draw and Label Activity (Day 3)\n"
+        "Students draw a diagram from today's content and label all parts.\n"
+        "Examples: draw a plant cell, draw force arrows, draw water cycle,\n"
+        "          draw computer parts, draw animal classification chart.\n"
+        "Teacher draws outline on board first — students complete labels.\n"
+        "After 5 minutes: one student labels the board diagram.\n"
+        "Class checks. Teacher reinforces missing labels.\n"
+        "⚠️ Draw and Label is used ONLY on Day 3 — not repeated."
+    ),
+    4: (
+        "ACTIVITY TYPE: Simple Design or Model Activity (Day 4)\n"
+        "Students create a simple model or design using available materials.\n"
+        "Examples: clay model of a cell, paper model of leaf, mind map poster,\n"
+        "          flowchart of a process, concept web of today's topic.\n"
+        "Keep it simple — 5 minutes maximum.\n"
+        "3-4 students share their model/design with class.\n"
+        "⚠️ Design/Model Activity is used ONLY on Day 4 — not repeated."
+    ),
+}

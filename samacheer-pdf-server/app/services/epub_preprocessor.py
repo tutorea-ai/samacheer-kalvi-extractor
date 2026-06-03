@@ -720,8 +720,14 @@ class EpubPreprocessor:
         )
 
         if not split_files:
-            print(f"[Preprocessor] No split files found")
-            return None
+            # Fallback — single index.html (some EPUBs don't split)
+            index_file = self.epub_dir / 'index.html'
+            if index_file.exists():
+                print(f"[Preprocessor] No split files — using single index.html")
+                split_files = [index_file]
+            else:
+                print(f"[Preprocessor] No split files found")
+                return None
 
         print(f"[Preprocessor] Combining {len(split_files)} split files...")
 

@@ -342,7 +342,7 @@ CS_DAY_STRATEGY = {
 # CS LP BUILDER CLASS
 # ============================================================================
 
-class CSLP910Builder:
+class ComputerScienceLP910Builder:
 
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
@@ -1430,4 +1430,4 @@ Chapter Text:
 # Singleton instance
 # ============================================================================
 
-cs_lp_910_builder = CSLP910Builder()
+cs_lp_910_builder = ComputerScienceLP910Builder()

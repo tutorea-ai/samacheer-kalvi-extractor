@@ -39,7 +39,7 @@ from ...base import (
 )
 
 
-class CSQA910Builder:
+class ComputerScienceQA910Builder:
 
     def __init__(self):
         self.client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
@@ -430,4 +430,4 @@ Start at Q76. End at Q100."""
 # Singleton instance
 # ============================================================================
 
-cs_qa_910_builder = CSQA910Builder()
+cs_qa_910_builder = ComputerScienceQA910Builder()
