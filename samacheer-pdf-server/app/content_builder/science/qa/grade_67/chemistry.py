@@ -108,6 +108,7 @@ Section: id="section-mcq" | Title: "Section I — Choose the Correct Answer"
 Note: 1 Mark each | Q1–Q25
 
 RULES: Raw HTML only. 25 questions. 4 options each. No tick marks. Age-appropriate.
+Every answer inside answer-reveal div with style="display:none;"
 
 Chapter Text:
 ---

@@ -691,6 +691,9 @@ DAY PLAN STRUCTURE — 35 MINUTES (Class 6/7 Science)
             - Below-average: Basic recall with word bank + teacher support
             Methods: writing, quiz, rapid fire, worksheet,
                      diagram labeling, simple experiment report
+            Note: On Day 2 or Day 4, teacher may replace worksheet with
+                  a 10-question rapid fire quiz (oral or written) —
+                  faster, more energetic, works well for Class 6/7.
 
 [30-35 min] CLOSING + STUDENT TASK
             2-minute recap
@@ -785,7 +788,9 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 3: 3-4 students share predictions.\n"
             "  Step 4: Real-life superpower: 'If you understand this, you can [application]'\n"
             "  Step 5: 1-word student reflection: 'Describe your feeling in ONE word!'\n"
-            "  Step 6: 2-minute transition to textbook."
+            "  Step 6: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
+            "          Students call out one word each. Teacher writes 3-4 on board.\n"
+            "  Step 7: 2-minute transition to textbook."
         ),
     },
     2: {
@@ -802,7 +807,9 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 2: New puzzle or observation question.\n"
             "  Step 3: PREDICT OR PERISH — 30 seconds.\n"
             "  Step 4: Real-life connection.\n"
-            "  Step 5: Transition."
+            "  Step 5: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
+            "          Students call out one word each. Teacher writes 3-4 on board.\n"
+            "  Step 6: Transition."
         ),
     },
     3: {
@@ -819,7 +826,9 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 3: 'Write 2 WHY questions in your notebook — 30 seconds.'\n"
             "  Step 4: 3-4 students share their WHY questions.\n"
             "  Step 5: Teacher reveals today's concept connection.\n"
-            "  Step 6: Transition."
+            "  Step 6: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
+            "          Students call out one word each. Teacher writes 3-4 on board.\n"
+            "  Step 7: Transition."
         ),
     },
     4: {
@@ -835,7 +844,9 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 2: Rapid recall race — 4 teams, 6 questions.\n"
             "  Step 3: Quick score announcement.\n"
             "  Step 4: 'Now let's learn what we need to complete the challenge!'\n"
-            "  Step 5: Transition."
+            "  Step 5: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
+            "          Students call out one word each. Teacher writes 3-4 on board.\n"
+            "  Step 6: Transition."
         ),
     },
 }

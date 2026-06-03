@@ -439,6 +439,12 @@ GENERATE Day {day_num} using EXACTLY this structure:
     "[Set context for the topic. Then: 'Let's look at [topic] in our textbook.'
      Page reference if applicable. 2-3 simple sentences for Class 6/7.]"</p>
 
+    <div class="lp-tamil-scaffold">
+      <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong>
+      <p>"[Same explanation in Tamil — same length, same example.
+          Age-appropriate Tamil for Class 6/7.]"</p>
+    </div>
+
     <div class="board-work">
       <strong>Write on Board:</strong><br/>
       Today's Topic: {' | '.join(day_sections)}<br/>
