@@ -557,6 +557,18 @@ class EpubPreprocessor:
                 if '#' in href:
                     # Pattern 1 — unit heading has a real anchor — use it directly
                     sf, an = self._parse_href(href)
+                    # If anchor is toc_id_ style, check if next <li> has a better id_ anchor
+                    if an and an.startswith('toc_id_') and i + 1 < len(all_li):
+                        next_li = all_li[i + 1]
+                        next_link = next_li.find('a')
+                        if next_link:
+                            next_href = next_link.get('href', '')
+                            next_sf, next_an = self._parse_href(next_href)
+                            next_is_unit = self._parse_unit_num(next_link.get_text(strip=True)) is not None
+                            if not next_is_unit and next_an and next_an.startswith('id_'):
+                                # Use the better id_ anchor and consume next <li>
+                                sf, an = next_sf, next_an
+                                i += 1
                     if sf and an and tag not in tag_map:
                         tag_map[tag] = (sf, an)
                         print(f"   [Linear] Registered {tag} → {an} (inline)")
@@ -616,6 +628,64 @@ class EpubPreprocessor:
                                     print(f"   [Linear] Registered {tag} → {unit_file} (file-sentinel, skip-fallback)")
 
             i += 1
+
+        # ── Gap filler: assign title-only entries to missing unit numbers ─────────
+        # Some EPUBs have title-only <li> entries with no "Unit N" prefix
+        # We collect all anchored <li> that weren't consumed as unit headings,
+        # then fill gaps in unit sequence order
+        if tag_map:
+            max_unit = max(int(t.split('-')[1]) for t in tag_map)
+            missing_units = [u for u in range(1, max_unit + 3) if f"unit-{u}" not in tag_map]
+
+            # Collect unused anchored li entries (not unit headings, not skip titles)
+            # Prefer entries with readable id_ anchors over toc_id_ style
+            unused_entries = []
+            for li in all_li:
+                link = li.find('a')
+                if not link:
+                    continue
+                text = link.get_text(strip=True)
+                href = link.get('href', '')
+                if self._parse_unit_num(text):
+                    continue  # already processed as unit heading
+                if text.lower() in SKIP_TITLES:
+                    continue
+                if '#' not in href:
+                    continue
+                sf, an = self._parse_href(href)
+                already_used = any(an == v[1] for v in tag_map.values())
+                if not already_used and an:
+                    # Prefer readable id_ anchors — skip toc_id_ and ALL-CAPS duplicates
+                    if an.startswith('toc_id_'):
+                        continue
+                    if text.isupper():
+                        continue
+                    # Skip if anchor is semantically duplicate of an already-registered unit
+                    # e.g. 'Universe and Space' when unit-2 anchor is toc_id_20 on same file
+                    # Detection: check if any registered unit is on the same split file
+                    # AND this entry's position in nav is right after that unit
+                    registered_anchors = {v[1] for v in tag_map.values()}
+                    # Skip entries whose title words heavily overlap with already-registered unit titles
+                    text_words = set(text.lower().split())
+                    already_covered = False
+                    for reg_tag, (reg_sf, reg_an) in tag_map.items():
+                        if reg_sf == sf:
+                            # Same file — check if this looks like a subtitle/duplicate
+                            reg_words = set(reg_an.lower().replace('_', ' ').split())
+                            overlap = text_words & reg_words - {'and', 'the', 'of', 'in', 'a'}
+                            if overlap and len(overlap) >= 2:
+                                already_covered = True
+                                break
+                    if already_covered:
+                        continue
+                    unused_entries.append((text, sf, an))
+
+            # Assign unused entries to missing units in order
+            for unit_num, (title, sf, an) in zip(missing_units, unused_entries):
+                tag = f"unit-{unit_num}"
+                if tag not in tag_map:
+                    tag_map[tag] = (sf, an)
+                    print(f"   [Linear] Registered {tag} → {an} (title-fallback: {title!r})")
 
         return tag_map
 

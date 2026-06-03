@@ -795,7 +795,7 @@ SCIENCE_SPARK_STYLES_67 = {
     },
     2: {
         "style": "Yesterday's Recap + New Puzzle",
-        "spark_instruction": (
+        "instruction": (
             "START with a fun 1-minute recap game from yesterday.\n"
             "Then present a NEW puzzle connecting to today's concept.\n"
             "Examples for Class 6/7:\n"
@@ -814,7 +814,7 @@ SCIENCE_SPARK_STYLES_67 = {
     },
     3: {
         "style": "Observation Challenge + Why Question",
-        "spark_instruction": (
+        "instruction": (
             "Teacher presents a visual or physical observation challenge.\n"
             "Students observe and generate WHY questions.\n"
             "Examples for Class 6/7:\n"
@@ -833,7 +833,7 @@ SCIENCE_SPARK_STYLES_67 = {
     },
     4: {
         "style": "Design Challenge Preview + Recall Race",
-        "spark_instruction": (
+        "instruction": (
             "Teacher presents a mini design challenge students will solve today.\n"
             "Then runs a rapid recall race from Days 1-3.\n"
             "Examples for Class 6/7:\n"
