@@ -607,6 +607,14 @@ class EpubPreprocessor:
                                         print(f"   [Linear] Registered {tag} → {an} (split→next)")
                                     i += 1  # consume the next <li>
 
+                            else:
+                                # Next sibling is in SKIP_TITLES or has no anchor
+                                # Fall back to file sentinel for current unit
+                                unit_file = href.split('#')[0] if href else None
+                                if unit_file and tag not in tag_map:
+                                    tag_map[tag] = (unit_file, unit_file)
+                                    print(f"   [Linear] Registered {tag} → {unit_file} (file-sentinel, skip-fallback)")
+
             i += 1
 
         return tag_map
