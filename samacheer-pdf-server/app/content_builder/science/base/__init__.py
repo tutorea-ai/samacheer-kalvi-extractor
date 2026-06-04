@@ -475,19 +475,43 @@ ABSOLUTE RULES:
 
 QA_MATCH_INSTRUCTION = """
 Generate EXACTLY 2 match sets of 5 pairs each.
-Match Set 1 — Q61: Contains pairs Q61–Q65 (5 pairs)
-Match Set 2 — Q66: Contains pairs Q66–Q70 (5 pairs)
-Both sets together cover Q61–Q70 = 10 questions total.
+
+MATCH SET 1 — number every pair individually:
+  Q61: Pair 1 (Column A item 1 → Column B item 1)
+  Q62: Pair 2 (Column A item 2 → Column B item 2)
+  Q63: Pair 3 (Column A item 3 → Column B item 3)
+  Q64: Pair 4 (Column A item 4 → Column B item 4)
+  Q65: Pair 5 (Column A item 5 → Column B item 5)
+
+MATCH SET 2 — number every pair individually:
+  Q66: Pair 1 (Column A item 1 → Column B item 1)
+  Q67: Pair 2 (Column A item 2 → Column B item 2)
+  Q68: Pair 3 (Column A item 3 → Column B item 3)
+  Q69: Pair 4 (Column A item 4 → Column B item 4)
+  Q70: Pair 5 (Column A item 5 → Column B item 5)
+
+Both sets together = Q61–Q70 = 10 individually numbered questions.
+Each set is presented as ONE match table with 5 rows.
+The answer shows: "1-[x], 2-[x], 3-[x], 4-[x], 5-[x]"
 
 Section: id="section-match" | Title: "Section IV — Match the Following" | Note: 1 Mark each | Q61–Q70
+
+⚠️ CRITICAL: After Q61's table (5 pairs), the NEXT question number is Q66 — NOT Q62.
+Q62–Q65 are the individual pairs INSIDE Q61's table.
+Q67–Q70 are the individual pairs INSIDE Q66's table.
+The HTML wrapper shows Q61 and Q66 as the question numbers.
+The answer key lists all 5 pair answers: 1-x, 2-x, 3-x, 4-x, 5-x.
 
 AFTER the 2 match sets, generate EXACTLY 5 detail questions: Q71–Q75
 Section: id="section-detail" | Title: "Section V — Answer in Detail (Short)" | Note: 2 Marks each | Q71–Q75
 Each answer: 2-3 complete sentences. 30-50 words only.
 
 RULES:
-- Match: EXACTLY 2 sets (Q61, Q66) with 5 pairs each — total Q61-Q70
-- Detail: EXACTLY 5 questions Q71-Q75 — 2-3 sentences each
+- Match Set 1: ONE table with 5 rows — question number Q61
+- Match Set 2: ONE table with 5 rows — question number Q66
+- Q62–Q65 are implicit pair numbers INSIDE Q61's table
+- Q67–Q70 are implicit pair numbers INSIDE Q66's table
+- Detail: EXACTLY 5 questions Q71–Q75
 - All answers inside answer-reveal div — NO individual show buttons
 - Do NOT stop before Q75
 """
