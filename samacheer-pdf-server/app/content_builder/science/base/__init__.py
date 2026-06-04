@@ -474,45 +474,151 @@ ABSOLUTE RULES:
 # ============================================================================
 
 QA_MATCH_INSTRUCTION = """
-Generate EXACTLY 2 match sets of 5 pairs each.
+═══════════════════════════════════════════════════════
+SECTION IV — MATCH THE FOLLOWING (Q61–Q70)
+═══════════════════════════════════════════════════════
 
-MATCH SET 1 — number every pair individually:
-  Q61: Pair 1 (Column A item 1 → Column B item 1)
-  Q62: Pair 2 (Column A item 2 → Column B item 2)
-  Q63: Pair 3 (Column A item 3 → Column B item 3)
-  Q64: Pair 4 (Column A item 4 → Column B item 4)
-  Q65: Pair 5 (Column A item 5 → Column B item 5)
+Generate this section using EXACTLY this HTML structure.
+Every question from Q61 to Q70 MUST appear — no skipping.
 
-MATCH SET 2 — number every pair individually:
-  Q66: Pair 1 (Column A item 1 → Column B item 1)
-  Q67: Pair 2 (Column A item 2 → Column B item 2)
-  Q68: Pair 3 (Column A item 3 → Column B item 3)
-  Q69: Pair 4 (Column A item 4 → Column B item 4)
-  Q70: Pair 5 (Column A item 5 → Column B item 5)
+<div class="qa-section" id="section-match">
+  <div class="section-header">
+    <h2>Section IV — Match the Following</h2>
+    <button class="show-section-btn"
+            onclick="toggleSectionAnswers(this, 'section-match')"
+            style="background:#2563eb; color:#fff; font-weight:700;
+                   border:none; border-radius:6px; padding:6px 18px;
+                   cursor:pointer; font-size:0.95rem;">
+      📋 Show Answers
+    </button>
+  </div>
+  <p class="section-note"><em>1 Mark each | Q61–Q70</em></p>
 
-Both sets together = Q61–Q70 = 10 individually numbered questions.
-Each set is presented as ONE match table with 5 rows.
-The answer shows: "1-[x], 2-[x], 3-[x], 4-[x], 5-[x]"
+  <!-- SET 1: Q61–Q65 -->
+  <div class="qa-item">
+    <p class="question"><strong>Q61.</strong> Match the following (Set 1):</p>
+    <table class="match-table">
+      <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
+      <tbody>
+        <tr><td>1. [Item from chapter]</td><td>a) [Match from chapter]</td></tr>
+        <tr><td>2. [Item from chapter]</td><td>b) [Match from chapter]</td></tr>
+        <tr><td>3. [Item from chapter]</td><td>c) [Match from chapter]</td></tr>
+        <tr><td>4. [Item from chapter]</td><td>d) [Match from chapter]</td></tr>
+        <tr><td>5. [Item from chapter]</td><td>e) [Match from chapter]</td></tr>
+      </tbody>
+    </table>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answers:</strong> 1-[x], 2-[x], 3-[x], 4-[x], 5-[x]</p>
+    </div>
+  </div>
 
-Section: id="section-match" | Title: "Section IV — Match the Following" | Note: 1 Mark each | Q61–Q70
+  <div class="qa-item">
+    <p class="question"><strong>Q62.</strong> From Set 1 above — what does [Column A item 1] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
 
-⚠️ CRITICAL: After Q61's table (5 pairs), the NEXT question number is Q66 — NOT Q62.
-Q62–Q65 are the individual pairs INSIDE Q61's table.
-Q67–Q70 are the individual pairs INSIDE Q66's table.
-The HTML wrapper shows Q61 and Q66 as the question numbers.
-The answer key lists all 5 pair answers: 1-x, 2-x, 3-x, 4-x, 5-x.
+  <div class="qa-item">
+    <p class="question"><strong>Q63.</strong> From Set 1 above — what does [Column A item 2] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
 
-AFTER the 2 match sets, generate EXACTLY 5 detail questions: Q71–Q75
-Section: id="section-detail" | Title: "Section V — Answer in Detail (Short)" | Note: 2 Marks each | Q71–Q75
+  <div class="qa-item">
+    <p class="question"><strong>Q64.</strong> From Set 1 above — what does [Column A item 3] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q65.</strong> From Set 1 above — what does [Column A item 4] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <!-- SET 2: Q66–Q70 -->
+  <div class="qa-item">
+    <p class="question"><strong>Q66.</strong> Match the following (Set 2):</p>
+    <table class="match-table">
+      <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
+      <tbody>
+        <tr><td>1. [Item from chapter]</td><td>a) [Match from chapter]</td></tr>
+        <tr><td>2. [Item from chapter]</td><td>b) [Match from chapter]</td></tr>
+        <tr><td>3. [Item from chapter]</td><td>c) [Match from chapter]</td></tr>
+        <tr><td>4. [Item from chapter]</td><td>d) [Match from chapter]</td></tr>
+        <tr><td>5. [Item from chapter]</td><td>e) [Match from chapter]</td></tr>
+      </tbody>
+    </table>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answers:</strong> 1-[x], 2-[x], 3-[x], 4-[x], 5-[x]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q67.</strong> From Set 2 above — what does [Column A item 1] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q68.</strong> From Set 2 above — what does [Column A item 2] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q69.</strong> From Set 2 above — what does [Column A item 3] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q70.</strong> From Set 2 above — what does [Column A item 4] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+</div>
+
+⚠️ ABSOLUTE RULES:
+- Q61 through Q70 — ALL 10 must appear in output
+- Q61 = Set 1 match table
+- Q62, Q63, Q64, Q65 = individual pair questions from Set 1
+- Q66 = Set 2 match table
+- Q67, Q68, Q69, Q70 = individual pair questions from Set 2
+- NEVER skip any question number between Q61 and Q70
+- All items from chapter text only — never invent
+
+═══════════════════════════════════════════════════════
+SECTION V — ANSWER IN DETAIL SHORT (Q71–Q75)
+═══════════════════════════════════════════════════════
+
+AFTER the match section, generate EXACTLY 5 questions: Q71–Q75
+
+Section: id="section-detail" | Title: "Section V — Answer in Detail (Short)"
+Note: 2 Marks each | Q71–Q75
 Each answer: 2-3 complete sentences. 30-50 words only.
 
+FORMAT:
+<div class="qa-item">
+  <p class="question"><strong>Q71.</strong> Question text?
+  <span class="mark-badge">(2 marks)</span></p>
+  <div class="answer-reveal" style="display:none;">
+    <p class="answer"><strong>Answer:</strong> [2-3 sentence answer]</p>
+  </div>
+</div>
+
 RULES:
-- Match Set 1: ONE table with 5 rows — question number Q61
-- Match Set 2: ONE table with 5 rows — question number Q66
-- Q62–Q65 are implicit pair numbers INSIDE Q61's table
-- Q67–Q70 are implicit pair numbers INSIDE Q66's table
-- Detail: EXACTLY 5 questions Q71–Q75
-- All answers inside answer-reveal div — NO individual show buttons
+- EXACTLY 5 questions Q71–Q75
+- All answers inside answer-reveal div
 - Do NOT stop before Q75
 """
 
@@ -715,9 +821,6 @@ DAY PLAN STRUCTURE — 35 MINUTES (Class 6/7 Science)
             - Below-average: Basic recall with word bank + teacher support
             Methods: writing, quiz, rapid fire, worksheet,
                      diagram labeling, simple experiment report
-            Note: On Day 2 or Day 4, teacher may replace worksheet with
-                  a 10-question rapid fire quiz (oral or written) —
-                  faster, more energetic, works well for Class 6/7.
 
 [30-35 min] CLOSING + STUDENT TASK
             2-minute recap
@@ -812,9 +915,7 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 3: 3-4 students share predictions.\n"
             "  Step 4: Real-life superpower: 'If you understand this, you can [application]'\n"
             "  Step 5: 1-word student reflection: 'Describe your feeling in ONE word!'\n"
-            "  Step 6: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
-            "          Students call out one word each. Teacher writes 3-4 on board.\n"
-            "  Step 7: 2-minute transition to textbook."
+            "  Step 6: 2-minute transition to textbook."
         ),
     },
     2: {
@@ -831,9 +932,7 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 2: New puzzle or observation question.\n"
             "  Step 3: PREDICT OR PERISH — 30 seconds.\n"
             "  Step 4: Real-life connection.\n"
-            "  Step 5: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
-            "          Students call out one word each. Teacher writes 3-4 on board.\n"
-            "  Step 6: Transition."
+            "  Step 5: Transition."
         ),
     },
     3: {
@@ -850,9 +949,7 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 3: 'Write 2 WHY questions in your notebook — 30 seconds.'\n"
             "  Step 4: 3-4 students share their WHY questions.\n"
             "  Step 5: Teacher reveals today's concept connection.\n"
-            "  Step 6: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
-            "          Students call out one word each. Teacher writes 3-4 on board.\n"
-            "  Step 7: Transition."
+            "  Step 6: Transition."
         ),
     },
     4: {
@@ -868,9 +965,7 @@ SCIENCE_SPARK_STYLES_67 = {
             "  Step 2: Rapid recall race — 4 teams, 6 questions.\n"
             "  Step 3: Quick score announcement.\n"
             "  Step 4: 'Now let's learn what we need to complete the challenge!'\n"
-            "  Step 5: 1-word reflection: 'In ONE word — how do you feel about [concept]?'\n"
-            "          Students call out one word each. Teacher writes 3-4 on board.\n"
-            "  Step 6: Transition."
+            "  Step 5: Transition."
         ),
     },
 }
