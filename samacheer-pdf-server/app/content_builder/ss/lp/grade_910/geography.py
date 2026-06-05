@@ -1218,10 +1218,9 @@ MAP LOCATIONS FROM ANALYSER: {map_locations}
 SYNTHESIS MARKERS: {markers_str if markers_str else 'Key features from all 4 days'}
 MAP MEMORY TRICKS: {tricks_str if tricks_str else 'Generate chapter-specific tricks'}
 
-<h3 class="day-header">Day 5 — Synthesis, Mapping & Book-back</h3>
-<p class="day-meta">Duration: 35 Minutes | Geography | Synthesis + Evaluation Day</p>
-
-<div class="day-block">
+<div class="lp-day-block">
+<h3 class="lp-day-title">Day 5 — Synthesis, Mapping & Book-back</h3>
+<p class="lp-day-meta">Duration: 35 Minutes | Geography | Synthesis + Evaluation Day</p>
 
   <!-- ═══ TEACHER'S CHOICE NOTE ═══ -->
   <div class="time-block" style="background:#fffbea; border-left: 4px solid #B8860B;">
@@ -1351,7 +1350,7 @@ MAP MEMORY TRICKS: {tricks_str if tricks_str else 'Generate chapter-specific tri
 </div>
 
 RULES:
-- Raw HTML only — start with <h3 class="day-header">Day 5
+- Raw HTML only — start with <div class="lp-day-block">
 - Teacher's Choice note MUST appear at top of Day 5
 - Synthesis mapping activities based on ACTUAL chapter content from analyser
 - Radio Controller missions based on ACTUAL features from chapter
