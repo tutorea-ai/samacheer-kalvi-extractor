@@ -725,39 +725,150 @@ RULES:
 
 # Match section instruction — used by ALL QA builders in Call 3
 QA_MATCH_INSTRUCTION = """
-Generate EXACTLY 2 match sets of 5 pairs each.
-Match Set 1 — Q61: Contains pairs Q61–Q65 (5 pairs)
-Match Set 2 — Q66: Contains pairs Q66–Q70 (5 pairs)
-Both sets together cover Q61–Q70 = 10 questions total.
-Number the answer rows continuously: Q61, Q62, Q63, Q64, Q65 for Set 1
-and Q66, Q67, Q68, Q69, Q70 for Set 2.
-Each match set counts as one question block but has 5 individually numbered pairs.
+═══════════════════════════════════════════════════════
+SECTION IV — MATCH THE FOLLOWING (Q61–Q70)
+═══════════════════════════════════════════════════════
 
-Section: id="section-match" | Title: "Section IV — Match the Following" | Note: 1 Mark each | Q61–Q70 | (5 pairs per set)
-Use Match the Following format from ANSWER FORMAT RULES above.
+Generate this section using EXACTLY this HTML structure.
+Every question from Q61 to Q70 MUST appear — no skipping.
 
-IMPORTANT for match sets:
-- Each set must use DIFFERENT facts from the chapter
-- Column B items must be shuffled — not in same order as Column A
+<div class="qa-section" id="section-match">
+  <div class="section-header">
+    <h2>Section IV — Match the Following</h2>
+    <button class="show-section-btn"
+            onclick="toggleSectionAnswers(this, 'section-match')"
+            style="background:#2563eb; color:#fff; font-weight:700;
+                   border:none; border-radius:6px; padding:6px 18px;
+                   cursor:pointer; font-size:0.95rem;">
+      📋 Show Answers
+    </button>
+  </div>
+  <p class="section-note"><em>1 Mark each | Q61–Q70</em></p>
 
-AFTER the 2 match sets, generate EXACTLY 5 detail questions: Q71–Q75
+  <!-- SET 1: Q61–Q65 -->
+  <div class="qa-item">
+    <p class="question"><strong>Q61.</strong> Match the following (Set 1):</p>
+    <table class="match-table">
+      <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
+      <tbody>
+        <tr><td>1. [Item from chapter]</td><td>a) [Match from chapter]</td></tr>
+        <tr><td>2. [Item from chapter]</td><td>b) [Match from chapter]</td></tr>
+        <tr><td>3. [Item from chapter]</td><td>c) [Match from chapter]</td></tr>
+        <tr><td>4. [Item from chapter]</td><td>d) [Match from chapter]</td></tr>
+        <tr><td>5. [Item from chapter]</td><td>e) [Match from chapter]</td></tr>
+      </tbody>
+    </table>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answers:</strong> 1-[x], 2-[x], 3-[x], 4-[x], 5-[x]</p>
+    </div>
+  </div>
 
-Section: id="section-detail" | Title: "Section V — Answer in Detail (Short)" | Note: 2 Marks each | Q71–Q75
+  <div class="qa-item">
+    <p class="question"><strong>Q62.</strong> From Set 1 above — what does [Column A item 1] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q63.</strong> From Set 1 above — what does [Column A item 2] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q64.</strong> From Set 1 above — what does [Column A item 3] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q65.</strong> From Set 1 above — what does [Column A item 4] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <!-- SET 2: Q66–Q70 -->
+  <div class="qa-item">
+    <p class="question"><strong>Q66.</strong> Match the following (Set 2):</p>
+    <table class="match-table">
+      <thead><tr><th>Column A</th><th>Column B</th></tr></thead>
+      <tbody>
+        <tr><td>1. [Item from chapter]</td><td>a) [Match from chapter]</td></tr>
+        <tr><td>2. [Item from chapter]</td><td>b) [Match from chapter]</td></tr>
+        <tr><td>3. [Item from chapter]</td><td>c) [Match from chapter]</td></tr>
+        <tr><td>4. [Item from chapter]</td><td>d) [Match from chapter]</td></tr>
+        <tr><td>5. [Item from chapter]</td><td>e) [Match from chapter]</td></tr>
+      </tbody>
+    </table>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answers:</strong> 1-[x], 2-[x], 3-[x], 4-[x], 5-[x]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q67.</strong> From Set 2 above — what does [Column A item 1] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q68.</strong> From Set 2 above — what does [Column A item 2] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q69.</strong> From Set 2 above — what does [Column A item 3] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+  <div class="qa-item">
+    <p class="question"><strong>Q70.</strong> From Set 2 above — what does [Column A item 4] match with?</p>
+    <div class="answer-reveal" style="display:none;">
+      <p class="answer"><strong>Answer:</strong> [Column B match]</p>
+    </div>
+  </div>
+
+</div>
+
+⚠️ ABSOLUTE RULES:
+- Q61 through Q70 — ALL 10 must appear in output
+- Q61 = Set 1 match table
+- Q62, Q63, Q64, Q65 = individual pair questions from Set 1
+- Q66 = Set 2 match table
+- Q67, Q68, Q69, Q70 = individual pair questions from Set 2
+- NEVER skip any question number between Q61 and Q70
+- All items from chapter text only — never invent
+
+═══════════════════════════════════════════════════════
+SECTION V — ANSWER IN DETAIL SHORT (Q71–Q75)
+═══════════════════════════════════════════════════════
+
+AFTER the match section, generate EXACTLY 5 questions: Q71–Q75
+
+Section: id="section-detail" | Title: "Section V — Answer in Detail (Short)"
+Note: 2 Marks each | Q71–Q75
 Each answer: 2-3 complete sentences. 30-50 words only.
-Question types: explain/define/distinguish — based on actual chapter content.
 
-FORMAT for detail questions:
+FORMAT:
 <div class="qa-item">
-  <p class="question"><strong>Q71.</strong> Question text here?
+  <p class="question"><strong>Q71.</strong> Question text?
   <span class="mark-badge">(2 marks)</span></p>
   <div class="answer-reveal" style="display:none;">
-    <p class="answer"><strong>Answer:</strong> [2-3 sentence answer — 30-50 words]</p>
+    <p class="answer"><strong>Answer:</strong> [2-3 sentence answer]</p>
   </div>
 </div>
 
 RULES:
-- Match: EXACTLY 2 sets (Q61, Q66) with 5 pairs each — total Q61-Q70
-- Detail: EXACTLY 5 questions Q71-Q75 — 2-3 sentences each
-- All answers inside answer-reveal div — NO individual show buttons
+- EXACTLY 5 questions Q71–Q75
+- All answers inside answer-reveal div
 - Do NOT stop before Q75
 """

@@ -68,7 +68,7 @@ class GeographyQA910Builder:
         parts = []
 
         # ── Call 1: MCQ Q1–Q25 ────────────────────────────────────────────────
-        print(f"      [History QA] Call 1/{total_calls}: MCQ (Q1–Q25)...")
+        print(f"      [Geography QA] Call 1/{total_calls}: MCQ (Q1–Q25)...")
         part1 = self._call_mcq(text, lesson_title, class_num, unit, disc_context, discipline)
         if part1:
             parts.append(clean(part1))
@@ -77,7 +77,7 @@ class GeographyQA910Builder:
             print(f"         ❌ MCQ failed")
 
         # ── Call 2: Fill in the Blanks Q26–Q50 ───────────────────────────────
-        print(f"      [History QA] Call 2/{total_calls}: Fill in the Blanks (Q26–Q50)...")
+        print(f"      [Geography QA] Call 2/{total_calls}: Fill in the Blanks (Q26–Q50)...")
         part2 = self._call_fill_blanks(text, lesson_title, class_num, unit, disc_context, discipline)
         if part2:
             parts.append(clean(part2))
@@ -86,7 +86,7 @@ class GeographyQA910Builder:
             print(f"         ❌ Fill blanks failed")
 
         # ── Call 3: Choose Statement + Match Q51–Q75 ──────────────────────────
-        print(f"      [History QA] Call 3/{total_calls}: Statement + Match (Q51–Q75)...")
+        print(f"      [Geography QA] Call 3/{total_calls}: Statement + Match (Q51–Q75)...")
         part3 = self._call_statement_and_match(text, lesson_title, class_num, unit, disc_context, discipline)
         if part3:
             parts.append(clean(part3))
@@ -95,7 +95,7 @@ class GeographyQA910Builder:
             print(f"         ❌ Statement + Match failed")
 
         # ── Call 4: 2-mark + 5-mark Q76–Q100 ─────────────────────────────────
-        print(f"      [History QA] Call 4/{total_calls}: 2-mark + 5-mark (Q76–Q100)...")
+        print(f"      [Geography QA] Call 4/{total_calls}: 2-mark + 5-mark (Q76–Q100)...")
         part4 = self._call_descriptive(text, lesson_title, class_num, unit, disc_context, discipline)
         if part4:
             parts.append(clean(part4))

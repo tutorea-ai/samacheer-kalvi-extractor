@@ -881,9 +881,22 @@ NOW GENERATE DAY {day_num} USING THIS EXACT HTML STRUCTURE:
   <div class="lp-teacher-says">
     <strong>Teacher says (English):</strong><br/>
     "[{spark['style']} style opening — 3 sentences maximum.
-     Genuinely surprising. Based on actual chapter content.
-     End with one Big Question connecting to today's topic.
-     Tell students WHY they are learning this today.]"
+
+     QUALITY STANDARD — your spark must meet this bar:
+     - Use a physical object, image, or demo that seems OUT OF PLACE
+     - The surprise must be directly connected to today's chapter content
+     - Students must be genuinely curious before teacher reveals the connection
+     - End with one Big Question that only today's lesson can answer
+     - Include WHY students are learning this + one real-life use they recognise
+
+     Example of the quality expected:
+     'Teacher holds up a seashell found at 5,000m altitude in the mountains.
+     How did an ocean creature end up on the world's highest peaks?
+     Today we discover how a giant ocean was squeezed out of existence
+     to create India's greatest mountain wall.'
+
+     Generate a spark of this quality — but based on TODAY's actual chapter content.
+     Never generic. Never textbook-sounding. Always surprising.]"
   </div>
 
   <div class="lp-tamil-scaffold">
