@@ -710,18 +710,15 @@ Use sparingly — only for key topic introductions.
 
 DAY STRUCTURE — OUTPUT THIS EXACTLY:
 
-<h3 class="day-header">
-  Day {day_num} — [Write EXACT section names being taught today]
-</h3>
-<p class="day-meta">Duration: 35 Minutes | History | Class {class_num} | {day_focus}</p>
-
-<div class="day-block">
+<div class="lp-day-block">
+<h3 class="lp-day-title">Day {day_num} — [Write EXACT section names being taught today]</h3>
+<p class="lp-day-meta">Duration: 35 Minutes | History | Class {class_num} | {day_focus}</p>
 
   <!-- ═══ SECTION 1: LEAD / SPARK / OPENING QUESTION (0-5 min) ═══ -->
-  <div class="time-block">
+  <div class="lp-section-opening">
     <strong>[0-5 min] Lead / Spark / Opening Question</strong>
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
+    <div class="lp-teacher-says"><strong>Teacher says (English):</strong><br/>
     "[3-minute curiosity-building activity — use one of:
      real-life connection / simple game / debate / group discussion /
      picture description / student reflection / role play.
@@ -738,12 +735,12 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
   </div>
 
   <!-- ═══ SECTION 2: KEY LEARNING ACTIVITY (5-20 min) ═══ -->
-  <div class="time-block">
+  <div class="lp-section-main">
     <strong>[5-20 min] Key Learning Activity</strong>
 
     <!-- 2a. Topic Introduction -->
     <h4>Topic Introduction — Textbook Context</h4>
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
+    <div class="lp-teacher-says"><strong>Teacher says (English):</strong><br/>
     "[Set context for the topic and chapter first.
      Then: 'Let's look at [topic] in our textbook.'
      Reference page number if applicable.
@@ -780,7 +777,7 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     [For EACH subheading under this section:]
     <h5>[Subheading — exactly as extracted]</h5>
 
-    <p class="teacher-says"><strong>Teacher says (English):</strong><br/>
+    <div class="lp-teacher-says"><strong>Teacher says (English):</strong><br/>
     "[3-4 sentences — explain this section/subheading.
      Simple language for Class 6/7 — use story, analogy, or real-life connection.
      Based ONLY on chapter text — no outside knowledge.
@@ -800,13 +797,13 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <!-- 2 CFUs after each concept -->
     <div class="cfu-block">
       <strong>🔎 CFU {'{n}'}:</strong>
-      <p class="teacher-says">"[Simple what/who/when question — under 6 words]"</p>
+      <div class="lp-teacher-says">"[Simple what/who/when question — under 6 words]"</p>
       <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
       <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
     </div>
     <div class="cfu-block">
       <strong>🔎 CFU {'{n+1}'}:</strong>
-      <p class="teacher-says">"[Which/where question — under 6 words]"</p>
+      <div class="lp-teacher-says">"[Which/where question — under 6 words]"</p>
       <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
       <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
     </div>
@@ -814,14 +811,14 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <!-- 2 CCQs after CFUs -->
     <div class="ccq-block">
       <strong>⚡ CCQ {'{n}'}:</strong>
-      <p class="teacher-says">"[Why did X happen? — simple, under 8 words]"</p>
+      <div class="lp-teacher-says">"[Why did X happen? — simple, under 8 words]"</p>
       <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
       <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
       <p><em>⏱ Wait 15 seconds. Allow pair discussion.</em></p>
     </div>
     <div class="ccq-block">
       <strong>⚡ CCQ {'{n+1}'}:</strong>
-      <p class="teacher-says">"[What was the result of Y? — under 8 words]"</p>
+      <div class="lp-teacher-says">"[What was the result of Y? — under 8 words]"</p>
       <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
       <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
       <p><em>⏱ Wait 15 seconds. Allow pair discussion.</em></p>
@@ -844,15 +841,15 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
       [Flowchart OR Mind Map OR Timeline strip — based on today's content]<br/>
       [Keep simple for Class 6/7]
     </div>
-    <p class="teacher-says">"[2-3 sentences summarising what was learned today.
+    <div class="lp-teacher-says">"[2-3 sentences summarising what was learned today.
      Ask students to copy the summary into their notebooks.]"</p>
   </div>
 
   <!-- ═══ SECTION 3: ASSESSMENT (20-30 min) ═══ -->
-  <div class="time-block">
+  <div class="lp-section-student-task">
     <strong>[20-30 min] Assessment — 3 Levels</strong>
 
-    <p class="teacher-says"><strong>Teacher says:</strong><br/>
+    <div class="lp-teacher-says"><strong>Teacher says:</strong><br/>
     "Now let's check what we learned today. Choose your task based on your level."</p>
 
     <div class="diff-block">
@@ -890,15 +887,15 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
       <p><em>⏱ 8 minutes. Teacher circulates to each group.</em></p>
     </div>
 
-    <p class="teacher-says"><strong>Quick Review:</strong><br/>
+    <div class="lp-teacher-says"><strong>Quick Review:</strong><br/>
     "[Take 2 minutes to hear 1-2 answers from each level. Give positive feedback.]"</p>
   </div>
 
   <!-- ═══ SECTION 4: CLOSING + STUDENT TASK (30-35 min) ═══ -->
-  <div class="time-block">
+  <div class="lp-section-closing">
     <strong>[30-35 min] {"Overall Chapter Recap & Closing" if day_num == 4 else "Closing & Student Task"}</strong>
 
-    <p class="teacher-says"><strong>2-Minute Recap:</strong><br/>
+    <div class="lp-teacher-says"><strong>2-Minute Recap:</strong><br/>
     "{'[Recap ALL sections from ALL 4 days. Write main headings on board. Rapid-fire: 5 questions spanning full chapter.]' if day_num == 4 else '[3 rapid-fire questions about today only. Hands raised. Keep energetic.]'}"</p>
     <p><em>⏱ Wait 5 seconds per question.</em></p>
 
@@ -909,13 +906,13 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
       3. [Key point 3]
     </div>
 
-    <p class="teacher-says"><strong>Closing Statement:</strong><br/>
+    <div class="lp-teacher-says"><strong>Closing Statement:</strong><br/>
     "[2-3 sentences — what was learned today. Connect to real life.
      Motivate students for next day. Age-appropriate and encouraging.]"</p>
 
     {"" if day_num == 4 else f'''
     <div class="homework-block">
-      <p class="teacher-says"><strong>Student Task / Homework:</strong><br/>
+      <div class="lp-teacher-says"><strong>Student Task / Homework:</strong><br/>
       {"Option A: Write the answers in your notebook.<br/>Option B: Make a poster — draw and label key concepts from today.<br/>Option C: Make a flowchart — show cause → event → result chain." if day_num == 2 else "[Specific homework from today's sections. Clear and simple for Class 6/7.]"}</p>
 
       <div class="board-work">
@@ -923,7 +920,7 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
         {"" if day_num == 2 else "[Exact homework task students copy from board]"}
       </div>
 
-      <p class="teacher-says"><strong>Preview — {next_label}:</strong><br/>
+      <div class="lp-teacher-says"><strong>Preview — {next_label}:</strong><br/>
       "[1-2 sentences — name the EXACT sections from Day {day_num + 1 if day_num < 4 else 5} plan.
        Build curiosity for next class.]"</p>
     </div>'''}
@@ -951,7 +948,7 @@ ABSOLUTE CHECKS — CRITICAL BEFORE FINISHING
 ✅ Age-appropriate language throughout
 {"✅ Day 2 homework has 3 format options" if day_num == 2 else ""}
 {"✅ Day 4 closing = full chapter recap across all 4 days" if day_num == 4 else f"✅ Preview names exact sections from Day {day_num + 1}"}
-✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
+✅ Raw HTML only — start with <div class="lp-day-block">
 ✅ Do NOT generate Day {day_num + 1}
 
 Chapter Text (use ONLY this — no general knowledge):
@@ -996,26 +993,25 @@ KEY PERSONALITIES: {personalities}
 IMPORTANT DATES:
 {dates_str if dates_str else '  Identify from chapter text'}
 
-<h3 class="day-header">Day 5 — Map Work & Book-back Exercises</h3>
-<p class="day-meta">Duration: 35 Minutes | History | Class {class_num} | Evaluation Day</p>
-
-<div class="day-block">
+<div class="lp-day-block">
+<h3 class="lp-day-title">Day 5 — Map Work & Book-back Exercises</h3>
+<p class="lp-day-meta">Duration: 35 Minutes | History | Class {class_num} | Evaluation Day</p>
 
   <!-- LEAD / SPARK (0-5 min) -->
-  <div class="time-block">
+  <div class="lp-section-opening">
     <strong>[0-5 min] Lead / Spark — Chapter Recap Game</strong>
-    <p class="teacher-says">"Let's play a quick recap game! I'll say a clue — you guess the answer.
+    <div class="lp-teacher-says">"Let's play a quick recap game! I'll say a clue — you guess the answer.
     [3-4 fun clue-based questions about the chapter. Age-appropriate for Class 6/7.]"</p>
     <p><em>⏱ Keep energetic. Take 4-5 responses.</em></p>
     <p><em>[2-minute transition to book-back work.]</em></p>
   </div>
 
   <!-- KEY LEARNING ACTIVITY (5-20 min) -->
-  <div class="time-block">
+  <div class="lp-section-main">
     <strong>[5-20 min] Key Learning Activity — Book-back Marking + Map Work</strong>
 
     <h4>Rapid Recall Quiz — 10 Questions (5-10 min)</h4>
-    <p class="teacher-says">"Write answers in your notebook. No discussion yet. 10 quick questions."</p>
+    <div class="lp-teacher-says">"Write answers in your notebook. No discussion yet. 10 quick questions."</p>
     <div class="board-work">
       <strong>10 Quiz Questions (write on board):</strong><br/>
       1. [Factual — Day 1 content — simple for Class 6/7]<br/>
@@ -1069,10 +1065,10 @@ IMPORTANT DATES:
   </div>
 
   <!-- ASSESSMENT (20-30 min) -->
-  <div class="time-block">
+  <div class="lp-section-student-task">
     <strong>[20-30 min] Assessment — 3 Levels (Chapter Review)</strong>
 
-    <p class="teacher-says">"Now let's do a final chapter review. Choose your level."</p>
+    <div class="lp-teacher-says">"Now let's do a final chapter review. Choose your level."</p>
 
     <div class="diff-block">
       <strong>Differentiated Assessment:</strong>
@@ -1108,10 +1104,10 @@ IMPORTANT DATES:
   </div>
 
   <!-- CLOSING (30-35 min) -->
-  <div class="time-block">
+  <div class="lp-section-closing">
     <strong>[30-35 min] Closing</strong>
 
-    <p class="teacher-says">"[2-3 sentences — congratulate students on completing the chapter.
+    <div class="lp-teacher-says">"[2-3 sentences — congratulate students on completing the chapter.
      Name 2-3 specific things learned. Use encouraging language for Class 6/7.
      Motivate for next chapter.]"</p>
 
@@ -1127,7 +1123,7 @@ IMPORTANT DATES:
 </div>
 
 RULES:
-- Raw HTML only — start with <h3 class="day-header">Day 5
+- Raw HTML only — start with <div class="lp-day-block">
 - Map tasks based on ACTUAL chapter content
 - No Tamil in Day 5
 - Page numbers may be referenced

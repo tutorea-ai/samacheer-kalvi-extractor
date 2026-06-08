@@ -340,9 +340,9 @@ Do NOT stop before Q75."""
 
     def _call_descriptive(self, text, lesson_title, class_num, unit, disc_context, discipline="civics") -> Optional[str]:
         try:
-            prompt = f"""Generate two sections: 2-mark questions (Q71–Q85) and 5-mark questions (Q86–Q100).
+            prompt = f"""Generate two sections: 2-mark questions (Q76–Q88) and 5-mark questions (Q89–Q100).
 Do NOT generate MCQ, fill blanks, or statement questions.
-Do NOT repeat facts already tested in Q1–Q70.
+Do NOT repeat facts already tested in Q1–Q75.
 
 {ANSWER_FORMAT_RULES}
 

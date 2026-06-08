@@ -110,7 +110,10 @@ class EpubPreprocessor:
                 print(f"[Preprocessor] ✅ Unzipped to {epub_dir.name}")
                 # Check for double-nesting — some EPUBs unzip into a subfolder
                 nested = epub_dir / epub_dir.stem
-                if nested.exists() and (nested / 'nav.xhtml').exists():
+                if nested.exists() and (
+                    (nested / 'nav.xhtml').exists() or
+                    (nested / 'toc.ncx').exists()
+                ):
                     print(f"[Preprocessor] ✅ Detected nested folder — using: {nested.name}")
                     return nested
                 return epub_dir
@@ -733,43 +736,58 @@ class EpubPreprocessor:
             '(untitled)', 'introduction', 'do you know', 'more to know'
         }
 
-        for nav_point in top_nav_points:
-            label   = nav_point.find('navlabel')
-            content = nav_point.find('content')
+        SS_DISCIPLINES = {'history', 'geography', 'civics', 'economics'}
 
-            if not label or not content:
-                continue
-
-            text = label.find('text') if label else None
+        def process_navpoint(nav_point, discipline=None):
+            label   = nav_point.find('navlabel', recursive=False)
+            content = nav_point.find('content', recursive=False)
+            if not label:
+                return
+            text = label.find('text')
             if not text:
-                continue
+                return
+            text_str = text.get_text(strip=True)
 
-            text_str  = text.get_text(strip=True)
-            src       = content.get('src', '')
+            # Check if this is a discipline heading
+            if text_str.lower() in SS_DISCIPLINES:
+                # Process all children with this discipline
+                child_navpoints = nav_point.find_all('navpoint', recursive=False)
+                for child in child_navpoints:
+                    process_navpoint(child, discipline=text_str.lower())
+                return
 
             # Skip non-unit entries
             if text_str.lower() in SKIP_LABELS:
-                continue
+                return
 
             # Parse unit number
             unit_num = self._parse_unit_num(text_str)
             if not unit_num:
-                continue
+                return
 
-            # Parse href
+            if not content:
+                return
+            src = content.get('src', '')
             sf, an = self._parse_href(src)
             if not sf:
-                continue
+                return
 
-            tag = f"unit-{unit_num}"
+            # Build tag — use discipline prefix if available
+            if discipline:
+                tag = f"{discipline}-{unit_num}"
+            else:
+                tag = f"unit-{unit_num}"
+
             if tag not in tag_map:
-                # If no anchor — use file sentinel
                 if not an or an == sf:
                     tag_map[tag] = (sf, sf)
                     print(f"   [NCX] Registered {tag} → {sf} (file-sentinel)")
                 else:
                     tag_map[tag] = (sf, an)
                     print(f"   [NCX] Registered {tag} → {an} (anchor)")
+
+        for nav_point in top_nav_points:
+            process_navpoint(nav_point)
 
         return tag_map
 
