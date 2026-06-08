@@ -216,6 +216,9 @@ class EconomicsLP67Builder:
 
     def _call_section_extractor(self, text: str, lesson_title: str) -> Optional[dict]:
         try:
+            # Sanitize text before injecting into JSON prompt
+            safe_text = text.replace('\\', ' ').replace('"', "'").replace('\r', ' ').replace('\x00', ' ')
+
             prompt = f"""You are a STRICT TEXT EXTRACTOR for a Samacheer Kalvi Economics chapter (Class 6/7).
 
 YOUR ONLY JOB: Extract EXACTLY the headings and subheadings that appear in the chapter text.
@@ -249,7 +252,7 @@ HOTS, Choose the correct answer, Fill in the blanks, Match the following
 
 Chapter Text:
 ---
-{text}
+{safe_text}
 ---"""
 
             response = self.client.messages.create(
@@ -275,6 +278,7 @@ Chapter Text:
                 return None
         except json.JSONDecodeError as e:
             print(f"❌ Economics 67 Section Extractor JSON error: {e}")
+            print(f"❌ Raw response (first 500 chars): {raw[:500]}")
             return None
         except Exception as e:
             print(f"❌ Economics 67 Section Extractor error: {e}")

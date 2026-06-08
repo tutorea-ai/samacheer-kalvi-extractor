@@ -309,6 +309,9 @@ class HistoryLP67Builder:
         Pure extraction — NO planning, NO general knowledge, NO day allocation.
         """
         try:
+            # Sanitize text before injecting into JSON prompt
+            safe_text = text.replace('\\', ' ').replace('"', "'").replace('\r', ' ').replace('\x00', ' ')
+
             prompt = f"""You are a STRICT TEXT EXTRACTOR for a Samacheer Kalvi History chapter (Class 6/7).
 
 YOUR ONLY JOB:
@@ -348,7 +351,7 @@ Return ONLY valid JSON. No explanation. No markdown. Raw JSON only.
 
 Chapter Text:
 ---
-{text}
+{safe_text}
 ---
 
 STRICT RULES:
@@ -403,6 +406,7 @@ No markdown. No code fences. Raw JSON starting with {""",
 
         except json.JSONDecodeError as e:
             print(f"❌ Section Extractor JSON error: {e}")
+            print(f"❌ Raw response (first 500 chars): {raw[:500]}")
             return None
         except Exception as e:
             print(f"❌ Section Extractor error: {e}")

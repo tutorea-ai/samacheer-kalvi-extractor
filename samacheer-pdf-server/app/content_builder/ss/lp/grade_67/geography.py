@@ -263,6 +263,9 @@ class GeographyLP67Builder:
 
     def _call_section_extractor(self, text: str, lesson_title: str) -> Optional[dict]:
         try:
+            # Sanitize text before injecting into JSON prompt
+            safe_text = text.replace('\\', ' ').replace('"', "'").replace('\r', ' ').replace('\x00', ' ')
+
             prompt = f"""You are a STRICT TEXT EXTRACTOR for a Samacheer Kalvi Geography chapter (Class 6/7).
 
 YOUR ONLY JOB:
@@ -303,7 +306,7 @@ Return ONLY valid JSON. No explanation. No markdown. Raw JSON only.
 
 Chapter Text:
 ---
-{text}
+{safe_text}
 ---
 
 STRICT EXCLUSION — DO NOT extract these as sections:
@@ -359,6 +362,7 @@ No markdown. No code fences. Raw JSON starting with {""",
 
         except json.JSONDecodeError as e:
             print(f"❌ Section Extractor JSON error: {e}")
+            print(f"❌ Raw response (first 500 chars): {raw[:500]}")
             return None
         except Exception as e:
             print(f"❌ Section Extractor error: {e}")
