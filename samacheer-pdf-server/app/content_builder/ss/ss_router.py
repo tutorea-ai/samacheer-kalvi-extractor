@@ -159,6 +159,9 @@ def _get_qa_builder(grade_group: str, discipline: str):
             elif discipline == "civics":
                 from .qa.grade_67.civics import civics_qa_67_builder
                 return civics_qa_67_builder
+            elif discipline == "economics":
+                from .qa.grade_67.economics import economics_qa_67_builder
+                return economics_qa_67_builder
             else:
                 print(f"      [SS Router] ⏳ QA builder not yet implemented: {grade_group}/{discipline}")
                 return None

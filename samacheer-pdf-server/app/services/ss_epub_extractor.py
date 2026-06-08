@@ -29,15 +29,18 @@ class SocialScienceEpubExtractor:
         epub_dir = Path(epub_dir)
 
         # Handle double-nested EPUBs — some ZIPs unzip into a subfolder
-        if not (epub_dir / 'nav.xhtml').exists():
-            # Look for nav.xhtml one level deeper
+        def _has_nav(d: Path) -> bool:
+            return (d / 'nav.xhtml').exists() or (d / 'toc.ncx').exists()
+
+        if not _has_nav(epub_dir):
+            # Look one level deeper — same name as parent
             nested = epub_dir / epub_dir.name
-            if nested.exists() and (nested / 'nav.xhtml').exists():
+            if nested.exists() and _has_nav(nested):
                 epub_dir = nested
             else:
-                # Try any subdirectory that has nav.xhtml
+                # Try any subdirectory that has nav.xhtml or toc.ncx
                 for subdir in epub_dir.iterdir():
-                    if subdir.is_dir() and (subdir / 'nav.xhtml').exists():
+                    if subdir.is_dir() and _has_nav(subdir):
                         epub_dir = subdir
                         break
 

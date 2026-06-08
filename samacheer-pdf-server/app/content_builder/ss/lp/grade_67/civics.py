@@ -313,7 +313,19 @@ No markdown. No code fences. Raw JSON starting with {""",
             raw = response.content[0].text.strip()
             raw = re.sub(r'```(?:json)?', '', raw).strip()
             raw = re.sub(r'```', '', raw).strip()
-            return json.loads(raw)
+            # Fix unterminated strings caused by special characters in chapter text
+            raw = re.sub(r'[\x00-\x1f\x7f]', ' ', raw)  # remove control characters
+            try:
+                return json.loads(raw)
+            except json.JSONDecodeError:
+                # Second attempt — extract just the JSON object
+                match = re.search(r'\{.*\}', raw, re.DOTALL)
+                if match:
+                    try:
+                        return json.loads(match.group())
+                    except json.JSONDecodeError:
+                        pass
+                return None
 
         except json.JSONDecodeError as e:
             print(f"❌ Section Extractor JSON error: {e}")
