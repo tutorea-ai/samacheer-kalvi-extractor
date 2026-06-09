@@ -197,6 +197,16 @@ class PDFProcessor:
             extractor = ScienceEpubExtractor(epub_folder)
             text = extractor.extract(unit=unit_num)
 
+        # ── Maths ──────────────────────────────────────────────────────
+        elif subject.lower() in ["maths", "math", "mathematics"]:
+            from .services.maths_epub_extractor import MathsEpubExtractor
+            if not epub_folder.exists():
+                epub_folder = MathsEpubExtractor.prepare(epub_zip_path)
+                if not epub_folder:
+                    return None
+            extractor = MathsEpubExtractor(epub_folder)
+            text = extractor.extract(unit=unit_num)
+
         # ── English (and other language subjects) ──────────────────────
         else:
             if not epub_folder.exists():
@@ -552,6 +562,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
                 elif subject.lower() == "science" and discipline:
                     meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit_num}"
+                elif subject.lower() in ["maths", "math", "mathematics"]:
+                    meta_line = f"Class {class_num} | Maths | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -634,7 +646,7 @@ class PDFProcessor:
                 sections   = detect_sections(clean_text, lesson_type=lesson_type)
                 ai_metadata["_sections"] = sections
 
-                if subject.lower() in ["socialscience", "social_science", "science"]:
+                if subject.lower() in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
                     from .content_builder.master_router import generate_lp
                     lp_html = generate_lp(clean_text, ai_metadata)
                 else:
@@ -646,6 +658,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
                 elif subject.lower() == "science" and discipline:
                     meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit_num}"
+                elif subject.lower() in ["maths", "math", "mathematics"]:
+                    meta_line = f"Class {class_num} | Maths | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -719,13 +733,15 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
                 elif subject.lower() == "science" and discipline:
                     meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit_num}"
+                elif subject.lower() in ["maths", "math", "mathematics"]:
+                    meta_line = f"Class {class_num} | Maths | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display_map.get(lesson_type, 'Prose')}"
 
                 from .services.ai_converter import _wrap_html
 
-                if subject.lower() in ["socialscience", "social_science", "science"]:
+                if subject.lower() in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
                     from .content_builder.master_router import generate_qa
                     qa_html = generate_qa(raw_text, ai_metadata)
                 else:

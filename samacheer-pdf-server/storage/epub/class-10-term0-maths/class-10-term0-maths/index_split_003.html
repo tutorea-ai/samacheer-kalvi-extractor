@@ -1,0 +1,1724 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+  <head>
+    <title>Unknown</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="page_styles.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+  <body class="calibre">
+<h1 class="block_4" id="toc_id_94">Chapter 2 NUMBERS AND SEQUENCES</h1>
+	<p class="block_">I know numbers are beautiful, if they aren’t beautiful, nothing is”- Paul Erdos</p>
+	<p class="block_"><img src="images/image-75.png" alt="Indian mathematician Srinivasa Ramanujan.Time : (1887 – 1920)" class="calibre86"/></p>
+	<p class="block_">Srinivasa Ramanujan was an Indian mathematical genius who was born in Erode in a poor family. He was a child prodigy and made calculations at lightning speed. He produced thousands of precious formulae, jotting them on his three notebooks which are now preserved at the University of Madras. With the help of several notable men, he became the first research scholar in the mathematics department of University of Madras. Subsequently, he went to England and collaborated with G.H. Hardy for five years from 1914 to 1919. </p>
+	<p class="block_">He possessed great interest in observing the pattern of numbers and produced several new results in Analytic Number Theory. His mathematical ability was compared to Euler and Jacobi, the two great mathematicians of the past Era. Ramanujan wrote thirty important research papers and wrote seven research papers in collaboration with G.H. Hardy. He has produced 3972 formulas and theorems in very short span of 32 years lifetime. He was awarded B.A. degree for research in 1916 by Cambridge University which is equivalent to modern day Ph.D. Degree. For his contributions to number theory, he was made Fellow of Royal Society (F.R.S.) in 1918. </p>
+	<p class="block_">His works continue to delight mathematicians worldwide even today. Many surprising connections are made in the last few years of work made by Ramanujan nearly a century ago.</p>
+	<p class="block_3"> </p>
+	<p class="block_"><img src="images/image-76.png" alt="Scan this QR CODE TOHGM" class="calibre87"/></p>
+	<h2 class="block_4" id="toc_id_95">Learning Outcomes</h2>
+	<ul class="list_">
+	<li class="block_163">To study the concept of Euclid’s Division Lemma.</li>
+	<li class="block_163">To understand Euclid’s Division Algorithm.</li>
+	<li class="block_163">To find the LCM and HCF using Euclid’s Division Algorithm.</li>
+	<li class="block_163">To understand the Fundamental Theorem of Arithmetic.</li>
+	<li class="block_163">To understand the congruence modulo ‘n’, addition modulo ‘n’ and multiplication modulo ‘n’.</li>
+	<li class="block_163">To define sequence and to understand sequence as a function.</li>
+	<li class="block_163">To define an Arithmetic Progression (A.P.) and Geometric Progression (G.P.).</li>
+	<li class="block_163">To find the nth term of an A.P. and its sum to n terms.</li>
+	<li class="block_163">To find the nth term of a G.P. and its sum to n terms.</li>
+	<li class="block_164">To determine the sum of some finite series such as sigma n sigma n square  comma sigma n cube.</li>
+</ul>
+	<h2 class="block_4" id="toc_id_96">2.1 Introduction</h2>
+	<p class="block_">The study of numbers has fascinated humans since several thousands of years. The discovery of Lebombo and Ishango bones which existed around 25000 years ago has confirmed the fact that humans made counting process for meeting various day to day needs. By making notches in the bones, they carried out counting efficiently. Most consider that these bones were used as lunar calendar for knowing the phases of moon thereby understanding the seasons. Thus, the bones were considered to be the ancient tools for counting. We have come a long way since this primitive counting method existed.</p>
+	<p class="block_"><img src="images/image-77.png" alt="Number carvings in Ishango Bone pictured" class="calibre88"/></p>
+	<p class="block_">It is very true that the patterns exhibited by numbers have fascinated almost all professional mathematicians’ right from the time of Pythagoras to current time. We will be discussing significant concepts provided by Euclid and continue our journey of studying Modular Arithmetic and knowing about Sequences and Finite Series. These ideas are most fundamental to your progress in mathematics for upcoming classes. It is time for us to begin our journey to understand the most fascinating part of mathematics, namely, the study of numbers.</p>
+	<h2 class="block_4" id="toc_id_97">2.2 Euclid’s Division Lemma</h2>
+	<p class="block_">Euclid, one of the most important mathematicians wrote an important book named “Elements” in 13 volumes. The first six volumes were devoted to Geometry and for this reason, Euclid is called the “Father of Geometry”. But in the next few volumes, he made fundamental contributions to understand the properties of numbers. One among them is the “Euclid’s Division Lemma”. This is a simplified version of the long division process that you were performing for division of numbers in earlier classes.</p>
+	<p class="block_">Let us now discuss Euclid’s Lemma and its application through an Algorithm termed as “Euclid’s Division Algorithm”.</p>
+	<p class="block_">Lemma is an auxiliary result used for proving an important theorem. It is usually considered as a mini theorem.</p>
+	<h3 class="block_16" id="toc_id_98">Theorem 1: Euclid’s Division Lemma</h3>
+	<p class="block_">Let a and b be any two positive integers. Then, there exist unique integers q and r such thata equal to b q plus r  zero less than or equal to r less than b</p>
+	<p class="block_5">Note</p>
+	<ul class="list_">
+	<li class="block_165">The remainder is always less than the divisor.</li>
+	<li class="block_166"><span class="calibre13">If r equal to 0 then a  equal to b qso b divides a.</span></li>
+	<li class="block_166">Conversely, if b divides a then a equal to bq</li>
+</ul>
+	<h3 class="block_125" id="toc_id_99"> </h3>
+	<h3 class="block_125" id="toc_id_100"> </h3>
+	<h3 class="block_16" id="toc_id_101">Example 2.1</h3>
+	<p class="block_">We have 34 cakes. Each box can hold 5 cakes only. How many boxes we need to pack and how many cakes are unpacked?</p>
+	<p class="block_">Solution We see that 6 boxes are required to pack 30 cakes with 4 cakes left over. This distribution of cakes can be understood as follows:</p>
+	<table class="table_2">
+		<tbody class="calibre5"><tr class="calibre6">
+			<td class="td_107"><p class="block_">34</p></td>
+			<td class="td_107"><p class="block_">Equal to </p></td>
+			<td class="td_107"><p class="block_">5</p></td>
+			<td class="td_107"><p class="block_">In to</p></td>
+			<td class="td_107"><p class="block_">6</p></td>
+			<td class="td_107"><p class="block_">Plus</p></td>
+			<td class="td_107"><p class="block_">4</p></td>
+		</tr>
+		<tr class="calibre6">
+			<td class="td_107"><p class="block_">Total number of cakes</p></td>
+			<td class="td_107"><p class="block_">Equal to</p></td>
+			<td class="td_107"><p class="block_">Number of cakes in each box</p></td>
+			<td class="td_107"><p class="block_">In to</p></td>
+			<td class="td_107"><p class="block_">Number of boxes</p></td>
+			<td class="td_107"><p class="block_">Plus</p></td>
+			<td class="td_107"><p class="block_">Number of cakes left over</p></td>
+		</tr>
+		<tr class="calibre6">
+			<td class="td_107"><p class="block_">↓</p></td>
+			<td class="td_107"><p class="block_3"> </p></td>
+			<td class="td_107"><p class="block_">↓</p></td>
+			<td class="td_107"><p class="block_3"> </p></td>
+			<td class="td_107"><p class="block_">↓</p></td>
+			<td class="td_107"><p class="block_3"> </p></td>
+			<td class="td_107"><p class="block_">↓</p></td>
+		</tr>
+		<tr class="calibre6">
+			<td class="td_107"><p class="block_">(Dividend) </p><p class="block_">A</p></td>
+			<td class="td_107"><p class="block_">Equal to </p></td>
+			<td class="td_107"><p class="block_">(Divisor) </p><p class="block_">b</p></td>
+			<td class="td_107"><p class="block_">In to</p></td>
+			<td class="td_107"><p class="block_">(Quotient)</p><p class="block_">q</p></td>
+			<td class="td_107"><p class="block_">plus</p></td>
+			<td class="td_107"><p class="block_">(Remainder)</p><p class="block_">r</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_5">Note</p>
+	<ul class="list_">
+	<li class="block_167">The above lemma is nothing but a restatement of the long division process, the integers q and r are called quotient and remainder respectively.</li>
+	<li class="block_167"><span class="calibre13">When a positive integer is divided by 2 the remainder is either 0 or 1. So, any positive integer will of the form 2 k comma 2 k plus 1  for some integer k.</span></li>
+</ul>
+	<p class="block_">Euclid’s Division Lemma can be generalised to any two integers.</p>
+	<h3 class="block_16" id="toc_id_102">Generalised form of Euclid’s division lemma</h3>
+	<p class="block_">If a and b areb not equal to 0 any two integers then there exist unique integers q and r such thata equal to b q plus r where 0 is less than or equal to r less than modulusb</p>
+	<h3 class="block_16" id="toc_id_103">Example 2.2</h3>
+	<p class="block_">Find the quotient and remainder when a is divided by b in the following cases</p>
+	<p class="block_35">1.a equal to minus 12 comma b equal to 5 </p>
+	<p class="block_35">2.a equal to 17 comma b equal to minus 3 </p>
+	<p class="block_35">3.a equal to minus 19 comma b equal to minus 4</p>
+	<p class="block_">Solutions</p>
+	<p class="block_35">1.a equal to minus 12 comma b equal to 5</p>
+	<p class="block_168">By Euclid’s division lemma</p>
+	<p class="block_168">A equal to b q plus r comma where 0 is less than or equal to r less than modulus b</p>
+	<p class="block_168">Minus 12 equal to 5 in to minus 3 plus 0 less than or equal to r less than modulus 5 </p>
+	<p class="block_168">Therefore, Quotient equal to minus 3 , Remainder r equal to 3</p>
+	<p class="block_168">By Euclid’s division lemma</p>
+	<p class="block_168"> a equal to b q plus r where 0 is less than or equal to r less than modulus b </p>
+	<p class="block_168">in to minus 3 into minus 5 plus 2 comma 0 is less than or equal to r less than modulus minus 3 </p>
+	<p class="block_168">Therefore, Quotient q equal to minus, Remainder r equal 2 </p>
+	<p class="block_168"><span class="calibre21">ii) a equal to 17   b equal to minus 3</span></p>
+	<p class="block_168">By Euclids division lemma</p>
+	<p class="block_168"><span class="calibre21">A equal to b q plus r where 0 less than or equal to  r l ess than modulas b</span></p>
+	<p class="block_168">17 equal to minus 3 into minus 5 plus 2 comma 0 less than or equal to modulus minus 3</p>
+	<p class="block_168"><span class="calibre21">There fore , Quotient q equal to minus 5 reminder  r equal to 3</span></p>
+	<p class="block_35">iii)<span class="calibre21">A equal to minus 19 b equal to minus 4   </span></p>
+	<p class="block_">By Euclid’s division lemma</p>
+	<p class="block_">a equal to b q plus r where 0 less than or equal to r less than modulus b </p>
+	<p class="block_">Minus 19 equal to minus 4 in to 5 plus 1 comma 0 is less than or equal to r less than modulus minus 4 </p>
+	<p class="block_168">Therefore, Quotient q equal to 5 , Remainder r equal to 1.</p>
+	<h3 class="block_16" id="toc_id_104">Thinking Corner</h3>
+	<p class="block_">When a positive integer is divided by 3</p>
+	<p class="block_35">1.What are the possible remainders?</p>
+	<p class="block_35">2.In which form can it be written?</p>
+	<h3 class="block_16" id="toc_id_105">Progress Check</h3>
+	<p class="block_">Find q and r for the following pairs of integers a and b satisfying<span class="calibre13"> a equal to  b q  plus r</span></p>
+	<p class="block_35">1.<span class="calibre21">A equal to 13     </span>b equal to </p>
+	<p class="block_35">2.<span class="calibre21">A equal to 18 comma b equal to 4   </span></p>
+	<p class="block_35">3.<span class="calibre21"> equal to 21 comma b equal to minus 4                  </span></p>
+	<p class="block_35">4.<span class="calibre21">a equal to minus 32 comma b equal to minus 12      </span></p>
+	<p class="block_35">5.<span class="calibre21">a equal to minus 31, b equal to 7                </span></p>
+	<h3 class="block_16" id="toc_id_106">Example 2.3</h3>
+	<p class="block_">Show that the square  of an odd integer is of the form 4q  plus  1, for some integer q.</p>
+	<p class="block_"><span class="calibre13">Solution Let x be any odd integer. Since any odd integer is one more than an even integer, we have x equal to 2 k plus 1  for some integers k</span></p>
+	<p class="block_">X square  equal to 2 k plus 1 whole square </p>
+	<p class="block_">Equal to 4 k square <span class="calibre13"> plus 4 k plus 1             </span></p>
+	<p class="block_"><span class="calibre13">Equal to 4 k  into k plus 1  plus 1                </span></p>
+	<p class="block_">Equal to 4 q plus 1 where q equal to k in to k plus 1 is some integer.</p>
+	<p class="block_3"> </p>
+	<h2 class="block_4" id="toc_id_107">2.3 Euclid’s Division Algorithm</h2>
+	<p class="block_">In the previous section, we have studied about Euclid’s division lemma and its applications. We now study the concept Euclid’s Division Algorithm. The word ‘algorithm’ comes from the name of 9th century Persian Mathematician Al-khwarizmi. An algorithm means a series of methodical step-by-step procedure of calculating successively on the results of earlier steps till the desired answer is obtained.</p>
+	<p class="block_">Euclid’s division algorithm provides an easier way to compute the Highest Common Factor (HCF) of two given positive integers. Let us now prove the following theorem.</p>
+	<h3 class="block_16" id="toc_id_108">Theorem 2</h3>
+	<p class="block_">If a and b are positive integers such thata equal to b q plus, then every common divisor of a and b is a common divisor of b and r and vice-versa.</p>
+	<h4 class="block_108">Euclid’s Division Algorithm</h4>
+	<p class="block_">To find Highest Common Factor of two positive integers a and b, where a greater than b </p>
+	<p class="block_"><b class="calibre10">Step1:</b> Using Euclid’s division lemmaa equal to to b q plus r comma 0 less than or equal to r less than b. where q is the quotient, r is the remainder. If r equal to 0 then b is the Highest Common Factor of a and b.</p>
+	<p class="block_"><b class="calibre10">Step 2:</b><span class="calibre13"> Otherwise applying Euclid’s division lemma divide b by r to get b equal to r q 1 plus r 1  zero less than or equal to r 1 less than r </span></p>
+	<p class="block_"><b class="calibre10">Step 3</b>: If r 1 equal to zero then r is the Highest common factor of a and b.</p>
+	<p class="block_"><b class="calibre10">Step 4:</b> Otherwise using Euclid’s division lemma, repeat the process until we get the</p>
+	<p class="block_">remainder zero. In that case, the corresponding divisor is the HCF of a and b.</p>
+	<p class="block_5">Note</p>
+	<ul class="list_">
+	<li class="block_167">The above algorithm will always produce remainder zero at some stage. Hence the algorithm should terminate.</li>
+	<li class="block_169">Euclid’s Division Algorithm is a repeated application of Division Lemma until we get zero remainder.</li>
+	<li class="block_169">Highest Common Factor (HCF) of two positive numbers is denoted by (a,b).</li>
+	<li class="block_169">Highest Common Factor (HCF) is also called as Greatest Common Divisor (GCD).</li>
+</ul>
+	<h4 class="block_108">Progress Check </h4>
+	<p class="block_35">1.<span class="calibre21">Euclid’s division algorithm is a repeated application of division lemma until we get remainder as dash        </span></p>
+	<p class="block_35">2.The HCF of two equal positive integers k, k is dash</p>
+	<h4 class="block_108">Illustration 1 </h4>
+	<p class="block_"><span class="calibre13">Using the above Algorithm, let us find HCF of two given positive integers. Leta  equal to 273 and b equal to 119 be the two given positive integers such that a greater than b </span></p>
+	<p class="block_">We start dividing 273 by 119 using Euclid’s division lemma.</p>
+	<p class="block_">we get,<span class="calibre13"> 273 equal to 119 in to 2 plus 35  </span>Equation 1</p>
+	<p class="block_">The remainder is 35 not equal to zero </p>
+	<p class="block_">Therefore, applying Euclid’s Division Algorithm to the divisor 119 and remainder 35. </p>
+	<p class="block_">we get,<span class="calibre13"> 119 equal to 35 in to 3 plus 14    </span>Equation 2</p>
+	<p class="block_"><span class="calibre13">The remainder is 14 is not equal to zero  </span></p>
+	<p class="block_">Applying Euclid’s Division Algorithm to the divisor 35 and remainder 14. </p>
+	<p class="block_">we get, 35 equal to 14 in to 2 plus 7 Equation 3 </p>
+	<p class="block_">The remainder is 7 not equal to zero. </p>
+	<p class="block_">Applying Euclid’s Division Algorithm to the divisor 14 and remainder 7.</p>
+	<p class="block_"><span class="calibre13">we get, 14 equal to 7 in to 2 plus zero      Equation 4 </span></p>
+	<p class="block_">The remainder at this stage equal to 0. </p>
+	<p class="block_">The divisor at this stage equal to 7.</p>
+	<p class="block_">Therefore, Highest Common Factor of 273, 119 equal to 7.</p>
+	<h3 class="block_16" id="toc_id_109">Example 2.4</h3>
+	<p class="block_"><span class="calibre13">If the Highest Common Factor of 210 and 55 is expressible in the form 55 x minus 325  </span></p>
+	<p class="block_">Solution Using Euclid’s Division Algorithm, let us find the HCF of given numbers </p>
+	<p class="block_">210 equal to 55 in to 3 plus 45 </p>
+	<p class="block_">55 equal to 45 in to 1 plus ten </p>
+	<p class="block_">45 equal to 10 in to 4 plus 5 </p>
+	<p class="block_">10 equal to in to 2 plus zero</p>
+	<p class="block_">The remainder is zero. </p>
+	<p class="block_">So, the last divisor 5 is the Highest Common Factor (HCF) of 210 and 55. </p>
+	<p class="block_"><span class="calibre13">HCF is expressible in the form 55 x minus 325 equal to 5       </span></p>
+	<p class="block_">Implies 55 x equal to 330</p>
+	<p class="block_"><span class="calibre13">x equal to 6          </span></p>
+	<h3 class="block_16" id="toc_id_110">Example 2.5</h3>
+	<p class="block_">Find the greatest number that will divide 445 and 572 leaving remainders 4 and 5 respectively. </p>
+	<p class="block_"><span class="calibre13">Solution Since the remainders are 4, 5 respectively the required number is the HCF of the number 445 minus 4 equal to 441   572 minus 5 equal to 567   </span></p>
+	<p class="block_">Hence, we will determine the HCF of 441 and 567. Using Euclid’s Division Algorithm, </p>
+	<p class="block_">we have, </p>
+	<p class="block_"><span class="calibre13">567 equal to 441 in to 1 plus 126        </span></p>
+	<p class="block_"><span class="calibre13">441 equal to 126 in to 3 plus 63         </span></p>
+	<p class="block_"><span class="calibre13">126 equal to 63 in to 2 plus zero       </span></p>
+	<p class="block_">Therefore, HCF of 441,567 equal to 63 and so the required number is 63.</p>
+	<h3 class="block_16" id="toc_id_111">Activity 1 </h3>
+	<p class="block_">This activity helps you to find HCF of two positive numbers. We first observe the following instructions. </p>
+	<p class="block_">1 Construct a rectangle whose length and breadth are the given numbers.</p>
+	<p class="block_">2Try to fill the rectangle using small squares. </p>
+	<p class="block_">3 Try with 1 cross 1 square semicolon Try with 2 cross 2 square semicolon Try with3 cross 3 square  and so on. </p>
+	<p class="block_">4 The side of the largest square  that can fill the whole rectangle without any gap will be HCF of the given numbers. </p>
+	<p class="block_">5 Find the HCF of</p>
+	<p class="block_">a) 12,20</p>
+	<p class="block_">b) 16,24</p>
+	<p class="block_">c) 11,9</p>
+	<h3 class="block_16" id="toc_id_112">Theorem 3 </h3>
+	<p class="block_">If a and b are two positive integers with a greater than b then G.C.D of a and b is equal to GCD of a minus b comma b </p>
+	<h3 class="block_16" id="toc_id_113">Activity 2 </h3>
+	<p class="block_">This is another activity to determine HCF of two given positive integers.</p>
+	<p class="block_">1 From the given numbers, subtract the smaller from the larger number.</p>
+	<p class="block_">2 From the remaining numbers, subtract smaller from the larger.</p>
+	<p class="block_">3 Repeat the subtraction process by subtracting smaller from the larger. </p>
+	<p class="block_">4 Stop the process when the numbers become equal. </p>
+	<p class="block_">5 The number representing equal numbers obtained in step </p>
+	<p class="block_">Using this Activity, find the HCF of </p>
+	<p class="block_"><span class="calibre13">1     90,15</span></p>
+	<p class="block_"><span class="calibre13">2    80,25</span></p>
+	<p class="block_"><span class="calibre13">3     40,16</span></p>
+	<p class="block_"><span class="calibre13">4    23,12</span></p>
+	<p class="block_"><span class="calibre13">5     93,13</span></p>
+	<p class="block_5">Highest Common Factor of three numbers </p>
+	<p class="block_">We can apply Euclid’s Division Algorithm twice to find the Highest Common Factor (HCF) of three positive integers using the following procedure. </p>
+	<p class="block_">Let a, b, c be the given positive integers. </p>
+	<p class="block_">1 Find HCF of a,b. Call it as d </p>
+	<p class="block_"><span class="calibre13">d equal to a comma b        </span></p>
+	<p class="block_">2 Find HCF of d and c.</p>
+	<p class="block_109">This will be the HCF of the three given numbers a, b, c</p>
+	<h3 class="block_16" id="toc_id_114">Example 2.6</h3>
+	<p class="block_">Find the HCF of 396, 504, 636.</p>
+	<p class="block_"><b class="calibre10">Solution</b> To find HCF of three given numbers, first we have to find HCF of the first two numbers. </p>
+	<p class="block_">To find HCF of 396 and 504 </p>
+	<p class="block_"><span class="calibre13">Using Euclid’s division algorithm, we get 504 equal to 396 in to 1 plus 108   </span></p>
+	<p class="block_">The remainder is 108 not equal to zero </p>
+	<p class="block_"><span class="calibre13">Again, applying Euclid’s division algorithm 396 equal to 108 in to 3 plus 72  </span></p>
+	<p class="block_"><span class="calibre13">The remainder is 72 not equal to zero    </span></p>
+	<p class="block_">Again, applying Euclid’s division algorithm 108 equal to 72 in to 3 plus 36</p>
+	<p class="block_"><span class="calibre13">The remainder is 36 not equal to zero    </span></p>
+	<p class="block_">Again, applying Euclid’s division algorithm 72 equal to 36 in to 2 plus zero </p>
+	<p class="block_"><span class="calibre13">Here the remainder is zero. Therefore, HCF of 396 comma 504 equal to 36  </span></p>
+	<p class="block_">To find the HCF of 636 and 36.</p>
+	<p class="block_">Using Euclid’s division algorithm, we get 636 equal to 36 in to 17 plus 24 </p>
+	<p class="block_"><span class="calibre13">The remainder is 24 not equal to zero  </span></p>
+	<p class="block_">Again, applying Euclid’s division algorithm 36 equal to 24 in to 1 plus 12 </p>
+	<p class="block_"><span class="calibre13">The remainder is 12 not equal to zero   </span></p>
+	<p class="block_"><span class="calibre13">Again, applying Euclid’s division algorithm 24 equal to 12 in to 2 plus zero  </span></p>
+	<p class="block_">Here the remainder is zero. Therefore, HCF of 636 comma 36 equal to 12 </p>
+	<p class="block_">Therefore, Highest Common Factor of 396, 504 and 636 is 12. </p>
+	<h3 class="block_16" id="toc_id_115">Do you know?</h3>
+	<p class="block_">Two positive integers are said to be relatively prime or co prime if their Highest Common Factor is 1.</p>
+	<h3 class="block_16" id="toc_id_116">Exercise 2.1</h3>
+	<p class="block_35">1.Find all positive integers, when divided by 3 leaves remainder 2. </p>
+	<p class="block_35">2.A man has 532 flowerpots. He wants to arrange them in rows such that each row contains 21 flowerpots. Find the number of completed rows and how many flowerpots are left over.</p>
+	<p class="block_35">3.Prove that the product of two consecutive positive integers is divisible by 2. </p>
+	<p class="block_35">4.When the positive integers a, b and c are divided by 13, the respective remainders are 9,7 and 10. Show that a plus b plus c is divisible by 13. </p>
+	<p class="block_35">5.Prove that square  of any integer leaves the remainder either 0 or 1 when divided by 4. </p>
+	<p class="block_35">6.Use Euclid’s Division Algorithm to find the Highest Common Factor (HCF) of </p>
+	<p class="block_"><span class="calibre13">1.   340 and 412</span></p>
+	<p class="block_"><span class="calibre13">2.    867 and 255 </span></p>
+	<p class="block_"><span class="calibre13">3.    10224 and 9648</span></p>
+	<p class="block_"><span class="calibre13">4.    84, 90 and 120 </span></p>
+	<p class="block_35">7.Find the largest number which divides 1230 and 1926 leaving remainder 12 in each case. </p>
+	<p class="block_35">8.<span class="calibre21">If d is the Highest Common Factor of 32 and 60, find x and y satisfying d equal to 32 x plus 60 y     </span></p>
+	<p class="block_35">9.A positive integer when divided by 88 gives the remainder 61. What will be the remainder when the same number is divided by 11? </p>
+	<p class="block_35">10.Prove that two consecutive positive integers are always coprime.</p>
+	<h2 class="block_4" id="toc_id_117">2.4 Fundamental Theorem of Arithmetic </h2>
+	<p class="block_">Let us consider the following conversation between a teacher and students. </p>
+	<p class="block_">Teacher: Factorise the number 240. </p>
+	<p class="block_">Malar: 24 into 10 </p>
+	<p class="block_">Raghu: 8 into 30 </p>
+	<p class="block_">Iniya:12 into 20 </p>
+	<p class="block_">Kumar: 15 into 16 </p>
+	<p class="block_">Malar: Whose answer is correct Sir? </p>
+	<p class="block_">Teacher: All the answers are correct. </p>
+	<p class="block_">Raghu: How sir? </p>
+	<p class="block_">Teacher: Split each of the factors into product of prime numbers. </p>
+	<p class="block_"><span class="calibre13">Malar:2 in to 2 in to 2 in to 3 in to 2 in to 5   </span></p>
+	<p class="block_">Raghu:<span class="calibre13">2 in to 2 in to 2 in to 2 in to 3 in to 5  </span></p>
+	<p class="block_">Iniya:<span class="calibre13"> 2 in to 2 in to 3 in to 2 in to 2 in to 5            </span></p>
+	<p class="block_">Kumar: 3 in to 5 in to 2 in to 2 in to 2 in to 2 </p>
+	<p class="block_">Teacher: Good! Now, count the number of Two’s comma three’s and five’s </p>
+	<p class="block_">Malar: I got four Two’s, one 3 and one 5. </p>
+	<p class="block_">Raghu: I got four Two’s, one 3 and one 5. </p>
+	<p class="block_">Iniya: I also got the same numbers too. </p>
+	<p class="block_">Kumar: Me too sir. </p>
+	<p class="block_">Malar: All of us got four two’s, one 3 and one 5. This is very surprising to us. </p>
+	<p class="block_">Teacher: Yes, it should be. Once any number is factorized up to a product of prime numbers, everyone should get the same collection of prime numbers. </p>
+	<p class="block_">This concept leads us to the following important theorem.</p>
+	<h3 class="block_16" id="toc_id_118">Theorem 4 (Fundamental Theorem of Arithmetic) (without proof) </h3>
+	<p class="block_">Every positive integer (except the number 1) can be represented in exactly one way apart from rearrangement as a product of one or more primes.</p>
+	<p class="block_">The fundamental theorem asserts that every composite number can be decomposed as a product of prime numbers and that the decomposition is unique. In the sense that there is one and only way to express the decomposition as product of primes. </p>
+	<p class="block_"><img src="images/image-78.png" alt="Fig 2.2 A tree like structure image. The First Box indicates a composite Number N. First row is divided into 3 boxes as second row represents 3 composite factors x1, x2 and x3. Each composite factors divided into two boxes as Third row again factorising second row. Fourth row represents the prime factors of third row. " class="calibre89"/></p>
+	<p class="block_">In general, we conclude that given a composite number N, we decompose it uniquely in the form N equal to p1 power q1 in to p2 power q2 in to p3 power q3 in to etcetera p n q power where p1 comma p2 comma p3 comma etcetera <span class="calibre13">P n  a</span>re primes and q1 comma q2 comma q3 etcetera are natural numbers.</p>
+	<p class="block_">First, we try to factorize N into its factors. If all the factors are themselves primes, then we can stop. Otherwise, we try to further split the factors which are not prime. Continue the process till we get only prime numbers. </p>
+	<h2 class="block_4" id="toc_id_119">Thinking Corner</h2>
+	<p class="block_">Is 1 a prime number?</p>
+	<h2 class="block_4" id="toc_id_120">Progress Check 1.</h2>
+	<p class="block_">1. Every natural number except dash can be expressed as dash</p>
+	<p class="block_">2. In how many ways a composite number can be written as product of power of primes? </p>
+	<p class="block_">3. The number of divisors of any prime number is dash</p>
+	<h2 class="block_4" id="toc_id_121">Illustration </h2>
+	<p class="block_">For example, if we try to factorize 32760, we get </p>
+	<p class="block_">32760 equal to  2 in to 2 in to 2 in to 3 in to 3 in to 5 in to 7 in to 13</p>
+	<p class="block_">Equal to 2 power 2 in to 3 power 2 in to 5 power 1 into 7 power 1 into 13 power 1 </p>
+	<p class="block_">Thus, in whatever way we try to factorize 32760, we should finally get three 2’s, two 3’s, one 5, one 7 and one 13. The fact that “Every composite number can be written uniquely as the product of power of primes” is called Fundamental Theorem of Arithmetic.</p>
+	<h2 class="block_15" id="toc_id_122">2.4.1 Significance of the Fundamental Theorem of Arithmetic </h2>
+	<p class="block_">The fundamental theorem about natural numbers except 1, that we have stated above has several applications, both in Mathematics and in other fields. The theorem is vastly important in Mathematics, since it highlights the fact that prime numbers are the ‘Building Blocks’ for all the positive integers. Thus, prime numbers can be compared to atoms making up a molecule.</p>
+	<h3 class="block_16" id="toc_id_123">Do you know?</h3>
+	<p class="block_35">1.If a prime number p divides a bthen either p divides a or p divides b, that is p divides at least one of them.</p>
+	<p class="block_35">2.If a composite number n divides ab, then n neither divide a nor b. For example, 6 divides 4 in to 3 but 6 neither divide 4 nor 3.</p>
+	<h3 class="block_16" id="toc_id_124">Example 2.7</h3>
+	<p class="block_">In the given factorisation, find the numbers m and n. </p>
+	<p class="block_">Solution Value of the first box from bottom equal to 5 in to 2 equal to 10 </p>
+	<p class="block_">Value of n equal to 5 in to 10 equal to 50</p>
+	<p class="block_">Value of the second box from bottom equal to 3 in to 50 equal to 150 </p>
+	<p class="block_">Value of m equal to 2 in to 150 equal to 300 </p>
+	<p class="block_">Thus, the required numbers are m equal to 300 comma n equal to 50 </p>
+	<p class="block_"><img src="images/image-79.png" alt="Fig 2.3 m is divided into two Factors  2 and one is empty box. Empty box is divided into 2 parts 3 and n .n is divided into two parts, 5 and an empty box. Empty box is divided into two parts, 3 and 2.   " class="calibre90"/></p>
+	<h3 class="block_16" id="toc_id_125">Example 2.8</h3>
+	<p class="block_">Can the number 6 power n comma n being a natural number end with the digit 5? Give reason for your answer. </p>
+	<p class="block_">Solution Since 6 power n equal to 2 in to 3 whole power n equal to 2 power n in to 3 power n, 2 is a factor of 6 power n So, 6 power n is always even. But any number whose last digit is 5 is always odd. Hence, 6 power ncannot end with the digit 5.</p>
+	<h3 class="block_16" id="toc_id_126">Progress Check </h3>
+	<p class="block_35">1.Letm divides n. Then GCD and LCM of m, n are dash and dash</p>
+	<p class="block_35">2.The HCF of numbers of the form 2 power m and 3 power n is dash</p>
+	<h3 class="block_16" id="toc_id_127">Example 2.9</h3>
+	<p class="block_"> Is 7 in to 5 in to 3 in to 2 plus 3 a composite number? Justify your answer. </p>
+	<p class="block_">Solution Yes, the given number is a composite number, because 7 in to 5 in to 3 in to 2 plus 3 equal to 3 in to whole bracket 7 in to 5 in to 2 plus 1 equal to 3 in to 71</p>
+	<p class="block_">Since the given number can be factorized in terms of two primes, it is a composite number. </p>
+	<h3 class="block_16" id="toc_id_128">Example 2.10</h3>
+	<p class="block_">‘a’ and ‘b’ are two positive integers such that a power b in to b power a equal to 800 find a and b </p>
+	<p class="block_">Solution The number 800 can be factorized as 800 equal to 2 in to 2 in to 2 in to 2 in to 2 in to 5 in to 5 equal to 2 power 5 in to 5 power 2</p>
+	<p class="block_">Hence, a power b in to b power a equal to 2 power 5 in to 5 power 2 </p>
+	<p class="block_">This implies thata equal to 2 and b equal to 5 or a equal to 5 and b equal to 2 </p>
+	<h3 class="block_16" id="toc_id_129">Thinking Corner</h3>
+	<p class="block_"> Can you think of positive integers a, b such that, a power b equal to b power a ?</p>
+	<h3 class="block_16" id="toc_id_130">Activity 3 </h3>
+	<p class="block_">Can you find the 4-digit pin number p q r s of an ATM card such that p power 2 in to q power 1 in to r power 4 in to s power 3 equal to 3,15,000? </p>
+	<p class="block_"><img src="images/image-80.png" alt="Fig 2.4 ATM Card’s Front side." class="calibre91"/></p>
+	<h3 class="block_16" id="toc_id_131">Exercise 2.2 </h3>
+	<p class="block_35">1.For what values of natural number n, 4 power n can end with the digit 6? </p>
+	<p class="block_35">2.If m, n are natural numbers, for what values of m, does 2 power n in to 5 power m ends in 5? </p>
+	<p class="block_35">3.Find the HCF of 252525 and 363636. </p>
+	<p class="block_35">4.If 13824 equal to 2 power ain to 3 power b then find a and b. </p>
+	<p class="block_35">5.<span class="calibre21">If p1 power x1 plus p2 power x2 plus p3 power x3 plus p4 power x4 equal to 1134000 where p1 comma p2 comma p3 comma p4  are primes in ascending order and x1 comma x2 comma x3 comma x4  are integers, find the value of p1 comma p2 comma p3 comma p4 and x1 comma x2 comma x3 comma x4 </span></p>
+	<p class="block_35">1.Find the LCM and HCF of 408 and 170 by applying the fundamental theorem of arithmetic. </p>
+	<p class="block_35">2.Find the greatest number consisting of 6 digits which is exactly divisible by 24,15,36? </p>
+	<p class="block_35">3.What is the smallest number that when divided by three numbers such as 35, 56 and 91 leaves remainder 7 in each case? </p>
+	<p class="block_35">4.Find the least number that is divisible by the first ten natural numbers.</p>
+	<h2 class="block_4" id="toc_id_132">2.5 Modular Arithmetic </h2>
+	<p class="block_">In a clock, we use the numbers 1 to 12 to represent the time period of 24 hours. How is it possible to represent the 24 hours of a day in a 12 number format? We use 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 and after 12, we use 1 instead of 13 and 2 instead of 14 and so on. That is after 12 we again start from 1, 2, 3, and so on. In this system the numbers wrap around 1 to 12. This type of wrapping around after hitting some value is called Modular Arithmetic.</p>
+	<p class="block_"><img src="images/image-81.png" alt="Fig 2.5 The Round analog clock." class="calibre92"/></p>
+	<p class="block_">In Mathematics, modular arithmetic is a system of arithmetic for integers where numbers wrap around a certain value. Unlike normal arithmetic, Modular Arithmetic process cyclically. The ideas of Modular arithmetic was developed by great German mathematician Carl Friedrich Gauss, who is hailed as the “Prince of mathematicians”. </p>
+	<p class="block_"><img src="images/image-82.png" alt="Scan this QR code 84M0G to visit Diksha website." class="calibre93"/></p>
+	<p class="block_5">Examples </p>
+	<p class="block_35">1.The day and night change repeatedly. </p>
+	<p class="block_35">2.The days of a week occur cyclically from Sunday to Saturday. </p>
+	<p class="block_35">3.The life cycle of a plant. </p>
+	<p class="block_35">4.The seasons of a year change cyclically. (Summer, Autumn, Winter, Spring) </p>
+	<p class="block_35">5.The railway and aero plane timings also work cyclically. The railway time starts at zero hour zero minutes and continue. After reaching 23 hours 59 minutes, the next minute will become zero hour zero minutes instead of 24 hour zero minutes.</p>
+	<p class="block_"><img src="images/image-83.png" alt="Fig 2.6 Life cycle of plant from seeds to saplings, saplings to trees, trees to flowers, flowers to fruits,fruits to seeds is shown in the circular form" class="calibre94"/></p>
+	<h2 class="block_15" id="toc_id_133">2.5.1 Congruence Modulo </h2>
+	<p class="block_">Two integers a and b are congruence modulo n if they differ by an integer multiple of n. That a minus b equal to k n for some integer k. This can also be written as a congruent b mod n </p>
+	<p class="block_">Here the number n is called modulus. In other words,  (mod n) means  is divisible by n. </p>
+	<p class="block_"><span class="calibre13">For example, 61 congruent 5 mod 7  because 61 minus 5 equal to 56 is divisible by 7.</span></p>
+	<h3 class="block_16" id="toc_id_134">Note</h3>
+	<p class="block_">When a positive integer is divided by n, then the possible remainders are 0, 1, 2, and so on till n minus 1. </p>
+	<p class="block_">Thus, when we work with modulo n, we replace all the numbers by their remainders upon division by n, given by 0,1,2,3, so on till n minus 1 </p>
+	<p class="block_">Two illustrations are provided to understand modulo concept more clearly. </p>
+	<h3 class="block_16" id="toc_id_135">Illustration 1 </h3>
+	<p class="block_">To find 8 mod 4 </p>
+	<p class="block_">With a modulus of 4 (since the possible remainders are 0, 1, 2, 3) we make a diagram like a clock with numbers 0,1,2,3. We start at 0 and go through 8 numbers in a clockwise sequence 1, 2, 3, 0, 1, 2, 3, 0. After doing so cyclically, we end at 0. </p>
+	<p class="block_"><img src="images/image-84.png" alt="Fig 2.7 A spiral in a clockwise direction numbers starts from center with 0 to 8. the numbers 8,4,0,2,6 lies on the same vertical line and number 7,3,1,5 lies on same horizontal line." class="calibre95"/></p>
+	<p class="block_">Therefore,8 congruent 0 mod 4</p>
+	<h3 class="block_16" id="toc_id_136">Illustration 2 </h3>
+	<p class="block_">To find minus 5mod 3</p>
+	<p class="block_">With a modulus of 3 (since the possible remainders are 0, 1, 2) we make a diagram like a clock with numbers 0, 1, 2. </p>
+	<p class="block_">We start at 0 and go through 5 numbers in anti-clockwise sequence 2, 1, 0, 2, 1. After doing so cyclically, we end at 1. </p>
+	<p class="block_"><span class="calibre13">Therefore, minus 5 congruent 1 mod 3  </span></p>
+	<p class="block_"><img src="images/image-85.png" alt="Fig 2.8 A spiral in an anti clockwise direction numbers starts from center with numbers 0,1,2,3,4,5" class="calibre96"/></p>
+	<h2 class="block_1" id="toc_id_137">2.5.2 Connecting Euclid’s Division lemma and Modular Arithmetic</h2>
+	<p class="block_"><span class="calibre13">Let m and n be integers, where m is positive. Then by Euclid’s division lemma, we can write n equal to m q  plus r where zero less than or equal to r less than m and q is an integer. Instead of writing equal to mq plus r we can use the congruence notation in the following way.</span></p>
+	<p class="block_">We say that n is congruent to r modulo m, if n equal to m q plus r for some integer q. </p>
+	<p class="block_">n equal to m q plus r </p>
+	<p class="block_">n minus r equal to m q</p>
+	<p class="block_">n minus r congruent zero mod m</p>
+	<p class="block_">n congruent r mod m</p>
+	<p class="block_">Thus, the equation n equal to m q plus r through Euclid’s Division lemma can also be written as n congruent r mod m </p>
+	<h3 class="block_16" id="toc_id_138">Progress Check</h3>
+	<p class="block_35">1.Two integers a and b are congruent modulo n if dash</p>
+	<p class="block_35">2.The set of all positive integers which leave remainder 5 when divided by 7 are dash</p>
+	<h3 class="block_16" id="toc_id_139">Note</h3>
+	<p class="block_">Two integers a and b are congruent modulo m, written as a congruent b modulo mif they leave the same remainder when divided by m .</p>
+	<p class="block_">Thinking Corner How many integers exist which leave a remainder of 2 when divided by 3?</p>
+	<h2 class="block_1" id="toc_id_140">2.5.3Modulo operations</h2>
+	<p class="block_">Similar to basic arithmetic operations like addition, subtraction and multiplication performed on numbers we can think of performing same operations in modulo arithmetic. The following theorem provides the information of doing this.</p>
+	<h3 class="block_16" id="toc_id_141">Theorem 5</h3>
+	<p class="block_"><span class="calibre13">a, b, c and d are integers and m is a positive integer such that if a congruent b mod m  a ≡ b (mod m) and c congruent d mod mthen</span></p>
+	<p class="block_">1 a plus c congruent b plus d mod m</p>
+	<p class="block_">2 a minus c congruent b minus d mod m</p>
+	<p class="block_">3a cross c congruent b cross d mod m </p>
+	<h3 class="block_16" id="toc_id_142">Illustration 3</h3>
+	<p class="block_"><span class="calibre13">If 17 congruent 4 mod 13    and 42 congruent 3 mod 13    then from theorem 5,</span></p>
+	<p class="block_170"><span class="text_57"><span class="calibre13">1   </span></span><span class="text_46"><span class="calibre13">17 plus 42 congruent 4 plus 3 mod 3         </span></span></p>
+	<p class="block_168"><span class="calibre21">ongruent 7 mod 13           </span></p>
+	<p class="block_35"><span class="calibre21">2    </span><span class="calibre21">17 minus 42 congruent 4 minus 3 mod 13          </span></p>
+	<p class="block_168"><span class="calibre21">Minus 25 congruent 1 mod 13              </span></p>
+	<p class="block_35"><span class="calibre21">3      </span><span class="calibre21">17 in to 42 congruent 4 in to 3 mod 13             </span></p>
+	<p class="block_168">714 congruent 12 mod </p>
+	<h3 class="block_16" id="toc_id_143">Theorem 6</h3>
+	<p class="block_">If a congruent b mod mthen</p>
+	<p class="block_"><span class="calibre13">1)  a c congruent b c mod m              </span></p>
+	<p class="block_">2) a plus or minus c congruent b plus or minus mod for any integer c</p>
+	<h3 class="block_16" id="toc_id_144">Progress Check</h3>
+	<p class="block_35">1.<span class="calibre21">The positive values of k such that k minus 3 congruent 5 mod 11  are </span>dash</p>
+	<p class="block_35">2. if 59 congruent 3 mod 7 comma 46 congruent 4 mod 7 than 105 congruent dash mod 7 </p>
+	<p class="block_109">13 Congruent dash mod 7 comma 413 congruent<span class="calibre21">  dash</span> mod 7 368 congruent dash mod 7 </p>
+	<p class="block_">3.The remainder when 7 into 13 into 23 in to 29 in to 31 is divided by 6 is dash</p>
+	<h3 class="block_16" id="toc_id_145">Example 2.11</h3>
+	<p class="block_">Find the remainders when 70004 and 778 is divided by 7.</p>
+	<p class="block_">Solution Since 70000 is divisible by 7</p>
+	<p class="block_"><span class="calibre13">70000 congruent 0 mod 7               </span></p>
+	<p class="block_"><span class="calibre13">70000 plus 4 congruent zero plus 4 mod 7         </span></p>
+	<p class="block_"><span class="calibre13">70004 congruent 4 mod 7  </span></p>
+	<p class="block_"> Therefore, the remainder when 70004 is divided by 7 is 4.</p>
+	<p class="block_"> 777 is divisible by 7</p>
+	<p class="block_"><span class="calibre13">777 congruent zero mod 7          </span></p>
+	<p class="block_"><span class="calibre13">777 plus 1 congruent zero plus 1 mod 7     </span></p>
+	<p class="block_"><span class="calibre13">778 congruent 1 mod 7    </span></p>
+	<p class="block_"> Therefore, the remainder when 778 is divided by 7 is 1.</p>
+	<h3 class="block_16" id="toc_id_146">Example 2.12</h3>
+	<p class="block_"><span class="calibre13">Determine the value of d such that 15 congruent 3 mod d    </span></p>
+	<p class="block_">Solution 15 congruent 3 mod d means 15 minus 3 equal to equal to k d for some integer k</p>
+	<p class="block_"> 12 equal to k d,</p>
+	<p class="block_"><span class="calibre13">Implies d divides 12   </span></p>
+	<p class="block_">The divisors of 12 are 1,2,3,4,6,12. But d should be larger than 3 and so the possible values for d are 4,6,12.</p>
+	<h3 class="block_16" id="toc_id_147">Example 2.13</h3>
+	<p class="block_">Find the least positive value of x such that</p>
+	<p class="block_"><span class="calibre13">1) 67 plus x congruent 1 mod 4    </span></p>
+	<p class="block_"><span class="calibre13">2) 98 congruent of x plus 4 mod 5  </span></p>
+	<p class="block_">Solution </p>
+	<p class="block_"><span class="calibre13">1) 67 plus x congruent 1 mod 4    </span></p>
+	<p class="block_">67 plus x minus 1 equal to 4 n, for some integer n</p>
+	<p class="block_"><span class="calibre13">66 plus x equal to 4 n    </span></p>
+	<p class="block_"><span class="calibre13">66 plus x  </span> is a multiple of 4.</p>
+	<p class="block_">Therefore, the least positive value of x must be 2, since 68 is the nearest multiple of 4 more than 66.</p>
+	<p class="block_"><span class="calibre13">2) 98 congruent of x plus 4 mod 5  </span></p>
+	<p class="block_">98 minus x plus 4 equal 5 n, for some integer n.</p>
+	<p class="block_">94 minus x equal to 5n </p>
+	<p class="block_">94 minus x is a multiple of 5.</p>
+	<p class="block_">Therefore, the least positive value of x must be 4</p>
+	<p class="block_">Since 94 minus 4 equal to 90 is the nearest multiple of 5 less than 94.</p>
+	<p class="block_171">Note</p>
+	<p class="block_">While solving congruent equations, we get infinitely many solutions compared to finite number of solutions in solving a polynomial equation in Algebra.</p>
+	<h3 class="block_16" id="toc_id_148">Example 2.14</h3>
+	<p class="block_">Solve 8x congruent a mod 11 </p>
+	<p class="block_">Solution 8x congruent 1 mod 11 can be written as 8x minus 1 equal to 11 k, for some integer k.</p>
+	<p class="block_">X equal to 11 k plus 1 whole divided by 8 </p>
+	<p class="block_">When we put k = 5, 13, 21, 29, and so on then11 k plus 1 is divisible by 8.</p>
+	<p class="block_">x equal to 11 into 5 plus 1 whole divided by 8 equal to 7 </p>
+	<p class="block_">x equal to 11 into 13 plus 1 whole divided by 8 equal to 18 </p>
+	<p class="block_">Therefore the solutions are 7,18,29,40, and so on</p>
+	<h3 class="block_16" id="toc_id_149">Example 2.15</h3>
+	<p class="block_">Compute x, such that 10 power 4 congruent x mod 19 </p>
+	<p class="block_">Solution 10 square  equal to 100 congruent 5 mod 19 </p>
+	<p class="block_">10power 4 equal to 10 square  whole square  congruent 5 square  mod 19 </p>
+	<p class="block_"><span class="calibre13">10 power 4 congruent 25 mod 19     </span></p>
+	<p class="block_">10 power 4 congruent 6 mod 19 because 25 congruent 6 mod 19 </p>
+	<p class="block_">Therefore x equal to 6.</p>
+	<h3 class="block_16" id="toc_id_150">Example 2.16</h3>
+	<p class="block_">Find the number of integer solutions of 3x congruent 1 mod 15.</p>
+	<p class="block_">Solution 3x congruent 1 mod 15 can be written as</p>
+	<p class="block_">3x minus 1 equal to 15k for some integer k</p>
+	<p class="block_">3x equal to 15 k plus 1 </p>
+	<p class="block_">X equal to 15 k plus 1 whole divided by 3 </p>
+	<p class="block_">X equal to 5k plus 1 divided by 3 </p>
+	<p class="block_">5k is an integer, 5k plus 1 by 3 cannot be an integer.</p>
+	<p class="block_">So, there is no integer solution.</p>
+	<h3 class="block_16" id="toc_id_151">Example 2.17</h3>
+	<p class="block_"><span class="calibre13">A man starts his journey from Chennai to Delhi by train. He starts at 22 hours 30 minutes   on Wednesday. If it takes 32 hours of travelling time and assuming that the train is not late, when will he reach Delhi?</span></p>
+	<p class="block_">Solution Starting time 22 hours 30 minutes, Travelling time 32 hours. Here we use modulo 24.</p>
+	<p class="block_"><span class="calibre13">The reaching time is 22 hours 30 minutes plus 32 mod 24 congruent 54 hours 30 minutes mod 24 congruent 6 hours 30 minutes mod 24 because  32 equal to 1 into 24 plus 8 Thursday Friday</span></p>
+	<p class="block_">Thus, he will reach Delhi on Friday at 6 hours 30 minutes. </p>
+	<h3 class="block_16" id="toc_id_152">Example 2.18</h3>
+	<p class="block_">Kala and Vani are friends. Kala says, “Today is my birthday” and she asks Vani, “When will you celebrate your birthday?” Vani replies, “Today is Monday and I celebrated my birthday 75 days ago”. Find the day when Vani celebrated her birthday.</p>
+	<p class="block_">Solution Let us associate the numbers 0, 1, 2, 3, 4, 5, 6 to represent the weekdays from Sunday to Saturday respectively. Vani says today is Monday. So, the number for Monday is 1. Since Vani’s birthday was 75 days ago, we have to subtract 75 from 1 and take the modulo 7, since a week contain 7 days.</p>
+	<p class="block_">Minus 74 mod 7 congruent minus 4 mod 7 congruent 7 minus 4 mod 7 congruent 3 mod 7 </p>
+	<p class="block_">Because 74 minus 3 equal to minus 77 is divisible by 7</p>
+	<p class="block_">Thus, 1 minus 75 congruent 3 mod 7</p>
+	<p class="block_">The day for the number 3 is Wednesday.</p>
+	<p class="block_">Therefore, Vani’s birthday must be on Wednesday.<span class="tab">      </span></p>
+	<h3 class="block_16" id="toc_id_153">Exercise 2.3</h3>
+	<p class="block_35">1.Find the least positive value of x such that</p>
+	<div class="calibre97">
+	<div class="block_172"><span class="bullet_">.71 </span><span class="calibre98">ongruent x mod 8 </span></div>
+</div>
+	<div class="calibre97">
+	<div class="block_172"><span class="bullet_">.78 </span><span class="calibre98">lus x congruent 3 mod 5 </span></div>
+</div>
+	<div class="calibre97">
+	<div class="block_172"><span class="bullet_">.89 </span><span class="calibre98">ongruent of x plus 3 mod 4</span></div>
+</div>
+	<div class="calibre97">
+	<div class="block_172"><span class="bullet_">.96 </span><span class="calibre98">ongruent x by 7 mod 5 </span></div>
+</div>
+	<p class="block_35">5.<span class="calibre21">5x congruent 4 mod 6     </span></p>
+	<p class="block_35">1.If x is congruent to 13 modulo 17 then 7x minus 3 is congruent to which number modulo 17?</p>
+	<p class="block_35">2.Solve 5x congruent 4 mod 6</p>
+	<p class="block_35">3.Solve 3x minus 2 congruent 0 mod 11 </p>
+	<p class="block_35">4.What is the time 100 hours after 7 a.m.?</p>
+	<p class="block_35">5.What is the time 15 hours before 11 p.m.?</p>
+	<p class="block_35">6.Today is Tuesday. My uncle will come after 45 days. In which day my uncle will be coming?</p>
+	<p class="block_35">7.Prove that 2 power n plus 6 into 9 power n always divisible by 7 for any positive integer n.</p>
+	<p class="block_35">8.Find the remainder when 2 power 81 is divided by 17.</p>
+	<p class="block_35">9.The duration of flight travel from Chennai to London through British Airlines is approximately 11 hours. The airplane begins its journey on Sunday at 23 hours 30 minutes. If the time at Chennai is four and 1 by 2hours ahead to that of London’s time, then find the time at London, when will the flight lands at London Airport. </p>
+	<div class="calibre99">
+	<div class="block_173" id="toc_id_154"><span class="bullet_">.6 </span><span class="calibre98">Sequences </span></div>
+</div>
+	<p class="block_"><img src="images/image-86.png" alt="QR Code 2GXY0" class="calibre100"/></p>
+	<p class="block_">Consider the following pictures. There is some pattern or arrangement in these pictures. In the first picture, the first row contains one apple, the second row contains two apples and in the third row there are three apples etc... The number of apples in each of the rows are 1, 2, 3, and so on</p>
+	<p class="block_"><img src="images/image-87.png" alt="Fig 2.9 There are three pictures. Picture 1: Apple arranged in triangular form. There is one apple in the first row. Two apples in the second row. Three apples in the third row.Four apples in the fourth row.Five apples in the fifth row.  Image 2: Upstairs steps are shown with 0.5 feet height of each steps in a sequences. Image 3: One square in the first row that is diamond shape. Three square in the second row in v shape. Five square in the third row in w shape are shown. " class="calibre101"/></p>
+	<p class="block_">In the second picture each step have 0 point 5 feet height. The total height of the steps from the base are 0 point 5 feet, 1 feet, 1 point 5 feet, In the third picture one square , 3 square s, 5 square s, These numbers belong to category called “Sequences”. </p>
+	<p class="block_5">Definition</p>
+	<p class="block_">A real valued sequence is a function defined on the set of natural numbers and taking real values. </p>
+	<p class="block_">Each element in the sequence is called a term of the sequence. The element in the first position is called the first term of the sequence. The element in the second position is called second term of the sequence and so on. </p>
+	<p class="block_">If the n thterm is denoted by  an, then a1 is the first term, a2 is the second term, and so on. A sequence can be written as a1, a2, a3 and so on till an.</p>
+	<h3 class="block_16" id="toc_id_155">Illustration </h3>
+	<p class="block_35">1.1,3,5,7, and so on is a sequence with general terman equal to 2n minus 1. When we put n equal to  1,2, 3, and so on, we get a1 equal to 1, a2 equal to3, a3 equal to 5, a4 equal to 7.</p>
+	<p class="block_35">2.1 by 2, 1 by 3, 1 by 4, 1 by 5 and so on is a sequence with general term1 by n plus 1. When we putn equal to 1 2 3 and so on we get a1 equal to 1 by 2, a2 equal to 1 by 3, a3 equal to 1 by 4, a4 equal to 1 by 5 and so on.</p>
+	<p class="block_">If the number of elements in a sequence is finite, then it is called a Finite sequence. If the number of elements in a sequence is infinite, then it is called an Infinite sequence.</p>
+	<h3 class="block_16" id="toc_id_156">Sequence as a Function </h3>
+	<p class="block_">A sequence can be considered as a function defined on the set of natural numbers . In particular, a sequence is a function f, N to N, where R is the set of all real numbers. </p>
+	<p class="block_">If the sequence is of the forma1, a2, a3 and so on. Then we can associate the function to the sequence a1, a2, a3 by f of k equal to ak, k equal to 1 2 3 </p>
+	<p class="block_"><img src="images/image-88.png" alt="Fig 2.10. The domain N is 1,2,3,4,5, so on and the co domain is a1,a2,a3,a4,a5,so on. Element 1 is related to a1, Element 2 is related to a2, Element 3 is related to a3, Element 4 is related to a4, Element 5 is related to a5." class="calibre102"/></p>
+	<h3 class="block_16" id="toc_id_157">Progress Check </h3>
+	<p class="block_35">1.Fill in the blanks for the following sequences </p>
+	<p class="block_35">Number 17,13,19, dash</p>
+	<p class="block_35">(ii)2, dash 10, 17, 26, so on </p>
+	<p class="block_35">(iii)1000, 100, 10, 1, dash so on </p>
+	<p class="block_35">1.A sequence is a function defined on the set of dash</p>
+	<p class="block_35">2.The nth term of the sequence 0,2,6,12, 20, so on can be expressed as dash</p>
+	<p class="block_35">3Say True or False </p>
+	<p class="block_35">Number 1All sequences are functions</p>
+	<p class="block_35">(ii)All functions are sequences.</p>
+	<h3 class="block_16" id="toc_id_158">Example 2.19</h3>
+	<p class="block_">Find the next three terms of the sequences </p>
+	<p class="block_">1) 1 by 2, 1 by 6, 1 by 10, 1 by 14 and so on.</p>
+	<p class="block_">2) 5, 2, minus 1, 4</p>
+	<p class="block_">3) 1, 0 point 1, 0 point 1</p>
+	<p class="block_5">Solution</p>
+	<p class="block_35">1.Sequence 1</p>
+	<p class="block_174"><img src="images/image-89.png" alt="Sequence 1: For each term in sequence, numerators are same, and the denominator is increased by 4. That is the first term is one by 2 and next term is one by six (add four to the denominator)." class="calibre103"/></p>
+	<p class="block_174">In the above sequence the numerators are same, and the denominator is increased by 4. So, the next three terms are a5 equal to 1 by 14 plus 4 equal to 1 by 18 </p>
+	<p class="block_174">a 6 equal to 1 by 18 plus 4 equal to 1 by 22 </p>
+	<p class="block_174">a 7 equal to 1 by 22 plus 4 equal to 1 by 26 </p>
+	<p class="block_"><b class="calibre10">Note </b>Though all the sequences are functions, not all the functions are sequences.</p>
+	<p class="block_35">2.Sequence 2</p>
+	<p class="block_"><img src="images/image-90.png" alt="Sequence 2: Each term in the sequence two has the difference of 3." class="calibre104"/></p>
+	<p class="block_">Here each term is decreased by 3. So, the next three terms are minus 7, minus 10, minus 13.</p>
+	<p class="block_35">3.Sequence 3</p>
+	<p class="block_"><img src="images/image-91.png" alt="Sequence 3: Each term is divided by 10 to get the next term of the sequence." class="calibre105"/></p>
+	<p class="block_">Here each term is divided by 10. Hence, the next three terms are</p>
+	<p class="block_">a 4 equal to zero point zero 1 by 10 equal to zero point zero zero one</p>
+	<p class="block_">a 5 equal to zero point zero zero one by 10 equal to zero point zero zerozero one </p>
+	<p class="block_"><span class="calibre13">a6 equal to zero point zero zerozero one by 10 equal to zero point zero zerozerozero one  </span></p>
+	<h3 class="block_16" id="toc_id_159">Example 2.20</h3>
+	<p class="block_">Find the general term for the following sequences </p>
+	<p class="block_">1) 3, 6, 9, and so on </p>
+	<p class="block_">2) 1 by 2, 2 by 3, 3 by 4 and so on</p>
+	<p class="block_">3) 5, minus 25, 125 and so on</p>
+	<p class="block_">Solution </p>
+	<p class="block_109">1) 3, 6, 9, and so on</p>
+	<p class="block_109">Here the terms are multiples of 3. So, the general term is </p>
+	<p class="block_109">an equal to 3n</p>
+	<p class="block_109">2) 1 by 2, 2 by 3, 3 by 4 and so, on</p>
+	<p class="block_109">a1 equal to 1 by 2; a2 equal to 2 by 3; a3 equal to 3 by 4</p>
+	<p class="block_109">We see that the numerator of nth term is n, and the denominator is one more than the numerator. Hence, an equal to n by n plus 1, n belongs to N</p>
+	<p class="block_109">3) 5, minus 25, 125 and so on</p>
+	<p class="block_109">The terms of the sequence have plus and minus sign alternatively and also, they are in powers of 5. </p>
+	<p class="block_109">So, the general term an equal to with in bracket minus 1 whole power n plus 1 five power n, n belongs to N</p>
+	<h3 class="block_16" id="toc_id_160">Example 2.21</h3>
+	<p class="block_">The general term of a sequence is defined as an equal to n of n plus 3; n belongs N is odd, n power 2 plus 1; n belongs to N is even</p>
+	<p class="block_">Find the eleventh and eighteenth terms.</p>
+	<p class="block_"><b class="calibre10">Solution</b> To find a 11, since 11 is odd, we putn equal to 11 in an equal to n of n plus 3 </p>
+	<p class="block_">Thus, the eleventh term  a 11 equal to with in bracket 3 equal to 154.</p>
+	<p class="block_">To find a 18, since 18 is even, we put n equal to 18 in an equal to n power 2 plus 1  Thus, the eighteenth term a 18 equal to 18 power 2 plus 1 325. </p>
+	<h3 class="block_16" id="toc_id_161">Example 2.22</h3>
+	<p class="block_">Find the first five terms of the following sequence. </p>
+	<p class="block_">a1 equal to 1, a2 equal to 1, an equal to an minus 1 by an minus 2 plus 3; n greater than or equal to 3, n belongs to N</p>
+	<p class="block_"><b class="calibre10">Solution </b>The first two terms of this sequence are given by<span class="calibre13"> a1 equal to 1, a2 equal to 1.     </span> The third term a3 depends on the first and second terms.</p>
+	<p class="block_">a1 equal to a3 minus 1 by a3 minus 2 plus 3 equal to a2 by a1 plus 3 equal to 1 by 1 plus 3 equal to 1 by 4</p>
+	<p class="block_">Similarly, the fourth term a4 depends upon a2 and a3. </p>
+	<p class="block_">a4 equal to a4 minus 1 by a4 minus 2 plus 3 equal to a3 by a2 plus 3 equal to 1 by 4 divided by 1 plus 3 equal to 1 by 4 divided by 4 equal to 1 by 4 into 1 by 4 equal to 1 by 16</p>
+	<p class="block_">In the same way, the fifth term a5 can be calculated as</p>
+	<p class="block_">a5 equal to a5 minus 1 divided by a5 minus 2 plus 3 equal to a4 by a3 plus 3 equal to 1 by 16 divided by 1 by 4 plus 3 equal 1 by 16 into 4 by 13 equal to 1 by 52 </p>
+	<p class="block_">Therefore, the first five terms of the sequence are 1, 1, 1 by 4, 1 by 16 and 1 by 52 </p>
+	<h3 class="block_16" id="toc_id_162">Exercise 2.4</h3>
+	<p class="block_35">1.Find the next three terms of the following sequence.</p>
+	<p class="block_175">Number1 8 , <span dir="rtl">24</span>, <span dir="rtl">72</span>, and so on</p>
+	<p class="block_175">(ii)5,1 minus <span dir="rtl">3</span>, and so on.</p>
+	<p class="block_175">(iii)1 by 4, 2 by 9, 3 by 16 and so on </p>
+	<p class="block_35">2.Find the first four terms of the sequences whose nth terms are given by</p>
+	<p class="block_35">Number 1 an equal to n3 minus 2 </p>
+	<p class="block_35">(ii)an equal to with in bracket minus 1 whole power of n plus 1, n of n plus 1 </p>
+	<p class="block_35">(iii) an equal to 2n power 2 minus 6 </p>
+	<p class="block_35">3.Find the nth term of the following sequences</p>
+	<p class="block_35">Number 1 <span dir="rtl" class="calibre106">2</span>,<span dir="rtl" class="calibre106"> 5</span>, <span dir="rtl" class="calibre106">10</span>, <span dir="rtl" class="calibre106">17</span>, and so on </p>
+	<p class="block_35">ii) <span dir="rtl" class="calibre106">0</span>, 1 by 2, 2 by 3 and so on</p>
+	<p class="block_35">iii) 3, 8, 13, 18 and so on</p>
+	<p class="block_35">4.Find the indicated terms of the sequences whose nth terms are given by</p>
+	<p class="block_35">Number 1 a n equal to 5n divided to n plus 2, a 6 and a 13</p>
+	<p class="block_35">ii) a n equal to minus with in bracket n power 2 minus 4; a 4 and a 11</p>
+	<p class="block_35">5.Finda 8 and a 15 whose nthterm is a n equal to <span class="calibre21">set of n power 2 minus 1 divided n plus 3; n is even n belongs to N, n power 2 divided by 2n plus 1; n is odd n belongs to N      </span></p>
+	<p class="block_35">6.If a1 equal to 1, a2 equal to 1 and a n equal to 2a n minus 1 plus a n minus 2 n greater than or equal to 3, n belongs to N then find the first six terms of the sequence.</p>
+	<h2 class="block_4" id="toc_id_163">2.7 Arithmetic Progression </h2>
+	<p class="block_">Let us begin with the following two illustrations. </p>
+	<h3 class="block_16" id="toc_id_164">Illustration 1 </h3>
+	<p class="block_">Make the following figure ures using match sticks </p>
+	<p class="block_35">Number 1 How many match sticks are required for each figure ure? 3, 5, 7 and 9. </p>
+	<p class="block_35">(ii) Can we find the difference between the successive numbers? 5 minus 3 equal to 7 minus 5 equal to 9 minus 7 equal to 2 </p>
+	<p class="block_">Therefore, the difference between successive numbers is always 2</p>
+	<p class="block_"><img src="images/image-92.png" alt="Fig 2.11 First image, three match sticks are arranged in a triangular shape. Second image, 5 match sticks are arranged in two triangle shape sharing common side. Third image, seven match sticks are arranged in three triangle shape sharing common side.  Fourth image, 4th nine match sticks are arranged four triangular shapes.  " class="calibre107"/></p>
+	<h3 class="block_16" id="toc_id_165">Illustration 2 </h3>
+	<p class="block_">A man got a job whose initial monthly salary is fixed at Rupees 10,000 with an annual increment of Rupees 2000. His salary during first, secondand third years will be Rupees 10000, Rupees 12000 and Rupees 14000 respectively. </p>
+	<p class="block_">If we now calculate the difference of the salaries for the successive years, we get 12000 minus 10000 equal to 2000; 14000 minus 12000 equal to 2000. </p>
+	<p class="block_">Thus, the difference between the successive numbers (salaries) is always 2000. </p>
+	<p class="block_">Did you observe the common property behind these two illustrations? In these two examples, the difference between successive terms always remains constant. Moreover, each term is obtained by adding a fixed number (2 and 2000 in illustrations 1 and 2 presented above) to the preceding term except the first term. This fixed number which is a constant for the differences between successive terms is called the “common difference”.</p>
+	<p class="block_5">Definition </p>
+	<p class="block_">Let a and d be real numbers. Then the numbers of the form a comma a plus d comma a plus 2 d comma a plus 4 d and so on, is said to form Arithmetic Progression denoted by A.P. The number ‘a’ is called the first term and d is called the common difference. </p>
+	<p class="block_">Simply, an Arithmetic Progression is a sequence whose successive terms differ by a constant number. Thus, for example, the set of even positive integers 2, 4, 6, 8, 10, 12, is an A.P. whose first term is a equal to 2 and common difference is also d equal to 2 since4 minus 2 equal to 2, 6 minus 2 equal to 2, 8 minus 6 equal to 2, Most of common real−life situations often produce numbers in A.P.</p>
+	<p class="block_5">Note</p>
+	<ul class="list_">
+	<li class="block_163">The difference between any two consecutive terms of an A.P. is always constant. That constant value is called the common difference.</li>
+	<li class="block_176">If there are finite numbers of terms in an A.P. then it is called Finite Arithmetic Progression. If there are infinitely many terms in an A.P. then it is called Infinite Arithmetic Progression.</li>
+</ul>
+	<div class="calibre108">
+	<div class="block_177" id="toc_id_166"><span class="bullet_">..1 </span><span class="calibre98"><b class="calibre10">Terms and Common Difference of an A.P. </b></span></div>
+</div>
+	<p class="block_35">1 The terms of an A.P. can be written as </p>
+	<p class="block_174">t1 equal to a equal to a plus with in bracket 1 minus 1 d, </p>
+	<p class="block_174">t2 equal to a plus d equal to a plus with in bracket 2 minus 1 d, </p>
+	<p class="block_174">t3 equal to a plus 2 d equal to a plus with in bracket 3 minus 1 d,</p>
+	<p class="block_174">t4 equal to a plus 3d equal to a plus with in bracket 4 minus 1 d,</p>
+	<p class="block_174">In general, the n thterm denoted by t n can be written as t n equal to a plus with in bracket n minus 1 d</p>
+	<p class="block_174">In an AP, nth term is, t n equal to a plus with in bracket n minus 1 d, here, a is the first term, d is the common difference.</p>
+	<p class="block_35">2.In general, to find the common difference of an A.P. we should subtract first term from the second term, second from the third and so on. </p>
+	<p class="block_174">For example,<span class="calibre13"> t 1 equal to a  t 2 equal to a plus d </span></p>
+	<p class="block_174">Therefore t 2 minus t 1 equal to with in bracket a plus d minus a equal to d </p>
+	<p class="block_">Similarly, t 2 equal to a plus d comma t 3 equal to a plus 2 d </p>
+	<p class="block_">Therefore t 3 minus t 2 equal to with in bracket a plus 2 d minus with in bracket a plus d equal to d</p>
+	<p class="block_">In general, d equal to t 2 minus t 1 equal to t 3 minus t 2 equal to t 4 minus t 3 equal to so on </p>
+	<p class="block_"><span class="calibre13">d equal to t n minus t n minus 1 comma for n equal to 2 3 4 so on  </span></p>
+	<h3 class="block_16" id="toc_id_167">Progress Check </h3>
+	<p class="block_35">1.The difference between any two consecutive terms of an A.P. is dash</p>
+	<p class="block_35">2.If a and d are the first term and common difference of an A.P. then the 8th term is dash</p>
+	<p class="block_35">3.If t n is the n thterm of an A.P., thent 2n minus t n is dash</p>
+	<p class="block_">Let us try to find the common differences of the following A.P.’s </p>
+	<p class="block_168">number 1 1, 4, 7, 10 and so on</p>
+	<p class="block_">d equal to 4 minus 1 equal to 7 minus 4 equal to 10 minus 7 equal to etcetera equal to 3</p>
+	<p class="block_168">(ii) 6, 2, minus 2, minus 6, and so on</p>
+	<p class="block_178">D equal to 2 minus 6 equal to minus 2 minus 2 equal to minus 6 minus with in bracket minus 2 etcetera equal to minus 4 </p>
+	<h3 class="block_16" id="toc_id_168">Do you know? </h3>
+	<p class="block_">The common difference of an A.P. can be positive, negative or zero.</p>
+	<h3 class="block_16" id="toc_id_169">Thinking Corner </h3>
+	<p class="block_">Iftnis the nth term of an A.P. then the value of t n plus 1 minus t n minus 1  isdash</p>
+	<h3 class="block_16" id="toc_id_170">Example 2.23</h3>
+	<p class="block_">Check whether the following sequences are in A.P. or not? </p>
+	<p class="block_35">Number 1 xplus2, 2x plus 3, 3x plus 4,</p>
+	<p class="block_35">(ii)2, 4, 8, 16</p>
+	<p class="block_35">(iii)3 root 2, 5 root 2, 7 root 2, 9 root 2</p>
+	<p class="block_"><b class="calibre10">Solution </b>To check that the given sequence is in A.P., it is enough to check if the differences between the consecutive terms are equal or not. </p>
+	<p class="block_35">1.t 2 minus t 1 equal to with in bracket 2 x plus 3 with in bracket x plus 2 equal to x plus 1 </p>
+	<p class="block_168">t 3 minus t 2 equal to with in bracket 3 x plus 4 with in bracket 2x plus 3 equal to x plus 1 </p>
+	<p class="block_168">t 2 minus t 1 equal to t 3 minus t 2 </p>
+	<p class="block_168">Thus, the differences between consecutive terms are equal.</p>
+	<p class="block_168">Hence the sequence x plus 2, 2x plus 3, 3x plus 4 so on is in A.P. </p>
+	<p class="block_35">2.t 2 minus t 1 equal to 4 minus 2 equal to 2 </p>
+	<p class="block_168">t 3 minus t 2 equal to 8 minus 4 equal to 4 </p>
+	<p class="block_168">t 2 minus t 1 not equal to t 3 minus t 2 </p>
+	<p class="block_168">Thus, the differences between consecutive terms are not equal. Hence the terms of the sequence 2, 4, 8, 16, so on are not in A.P.</p>
+	<p class="block_35">3.t2 minus t 1 equal to 5 root 2 minus 3 root 2 equal to 2 root 2 </p>
+	<p class="block_168">t 3 minus t 2 equal to 7 root 2 minus 5 root 2 equal to 2 root 2 </p>
+	<p class="block_168">t 4 minus t 3 equal to 9 root 2 minus 7 root 2 equal to 2 root 2 </p>
+	<p class="block_168">Thus, the differences between consecutive terms are equal. Hence the terms of the sequence 3 root 2, 5 root 2, 7 root 2, 9 root 2,so on are in A.P. </p>
+	<h3 class="block_16" id="toc_id_171">Example 2.24</h3>
+	<p class="block_">Write an A.P. whose first term is 20 and common difference is 8. </p>
+	<p class="block_"><b class="calibre10">Solution</b> First term equal to a equal to 20; common difference equal to d equal to 8 </p>
+	<p class="block_">Arithmetic Progression is a, a plus d, a plus 2d, a plus 3d, so on </p>
+	<p class="block_">In this case, we get 20, 20 plus 8, 20 plus 2 of 8, 20 plus 3 of 8, so on </p>
+	<p class="block_">So, the required A.P. is 20, 28, 36, 44, and so on</p>
+	<p class="block_5">Note</p>
+	<p class="block_">An Arithmetic progression having a common difference of zero is called a constant arithmetic progression.</p>
+	<p class="block_171">Activity 4</p>
+	<p class="block_">There are five boxes here. You have to pick one number from each box and form five Arithmetic Progressions.</p>
+	<p class="block_"><img src="images/image-93.png" alt="Five boxes with 5 numbers in each.  First box contains: 8,6,-8,12,85. Second box contains 14,1,40,-5,2. Third box contains 26,3.5,-14,7,55. Fourth box contains 20,11,-11,-3,70. Fifth box contains 32m8.5,-2,17,100." class="calibre109"/></p>
+	<h3 class="block_16" id="toc_id_172">Example 2.25</h3>
+	<p class="block_">Find the 15th<sup class="calibre37">,</sup> 24thand nthterm (general term) of an A.P. given by 3, 15, 27, 39, and so on </p>
+	<p class="block_">Solution We have, first term equal toaequal to 3 and common difference equal to d equal to 15 minus 3 equal to 12.</p>
+	<p class="block_">We know that nth term (general term) of an A.P. with first term a and common difference d is given by t n equal to a plus of n minus 1 d </p>
+	<p class="block_">t 15 equal to a plus of 15 minus 1 d equal to a plus 14 d equal to 3 plus 14 of 12 equal to 171 (Here aequal to 3 and d equal to 12) </p>
+	<p class="block_">t 24 equal to a plus of 24 minus 1 d equal to a plus 23 d equal to 3 plus 23 of 12 equal to 279 </p>
+	<p class="block_">The nth (general term) term is given by t n equal to a plus of n minus 1 d </p>
+	<p class="block_">Thus, t n equal to 3 plus of n minus 1 of 12</p>
+	<p class="block_">t n equal to 12 n minus 9 </p>
+	<p class="block_5">Note</p>
+	<p class="block_">In a finite A.P. whose first term is a and last term l, then the number of terms in the A.P. is given by I equal to a plus of n minus 1 of d implies to n equal to with in bracket I in b d plus 1 </p>
+	<h3 class="block_16" id="toc_id_173">Example 2.26</h3>
+	<p class="block_">Find the number of terms in the A.P. 3, 6, 9, 12 and so on till 111. </p>
+	<p class="block_5">Solution</p>
+	<p class="block_">First term aequal to 3; common difference d equal to 6 minus 3 equal to 3; last term I equal to 111</p>
+	<p class="block_">We know that n equal to with in bracket I minus a  divided by d plus 1 </p>
+	<p class="block_">N equal to 111 minus 3 whole divided 3 plus 1 equal to 37 </p>
+	<p class="block_">Thus the A.P. contain 37 terms.</p>
+	<h3 class="block_16" id="toc_id_174">Progress Check </h3>
+	<p class="block_">1. The common difference of a constant A.P. is dash  2. If a and l are first and last terms of an A.P. then the number of terms is dash.</p>
+	<h3 class="block_16" id="toc_id_175">Example 2.27</h3>
+	<p class="block_">Determine the general term of an A.P. whose 7thterm is minus 1 and 16thterm is 17. </p>
+	<p class="block_">Solution Let the A.P. be t 1, t 2, t 3, t 4, and so on</p>
+	<p class="block_">It is given that t 7 equal to minus 1 and t 16 equal to 17 </p>
+	<p class="block_">a plus 7 minus 1 into d equal to minus 1 and a plus 16 minus 1 into d equal to 17 </p>
+	<p class="block_">a plus 6 d equal to minus 1  Equation 1</p>
+	<p class="block_">a plus 15 d equal to 17  Equation 2</p>
+	<p class="block_">Subtracting Equation 1 from Equation 2, we get 9 d equal to 8 implies to d equal to 2  Putting d equal to 2 in equation 1, we get a plus 12 equal to minus 1 Therefore a equal to minus 13 </p>
+	<p class="block_">Hence, general term t n equal to a of n minus 1 into d </p>
+	<p class="block_">Equal to minus 13 plus n minus 1 into 2 equal to 2n minus 15 </p>
+	<h3 class="block_16" id="toc_id_176">Example 2.28</h3>
+	<p class="block_">If lth, mth and nth terms of an A.P. are x, y, z respectively, then show that </p>
+	<p class="block_">1) x of m minus n plus y of n minus I plus z of I minus m equal to 0 </p>
+	<p class="block_">2) x minus y into n plus y minus z into I plus z minus x into m equal to zero </p>
+	<p class="block_">Solution </p>
+	<p class="block_35">Number 1 Let a be the first term and d be the common difference. It is given that</p>
+	<p class="block_168">t 1 equal to x comma t m equal to y comma t n equal to Z Using the general term formula </p>
+	<p class="block_168"><span class="calibre21">a plus I minus 1 into d equal to x  </span> Equation 1</p>
+	<p class="block_168">a plus m minus 1 into d equal to y <span class="calibre21">  Equation 2</span></p>
+	<p class="block_168"><span class="calibre21">a plus n minus 1 into d z  </span> Equation 3</p>
+	<p class="block_168">We have, s of m minus n plus y of n minus I plus z of I minus m </p>
+	<p class="block_168">Equal to a into whole bracket m minus n plus n minus I plus I minus m plus d into whole bracket m minus n into I minus 1 plus n minus I into m minus 1 plus I minus m into n minus 1</p>
+	<p class="block_168">Equal to a into zero plus d into whole bracket I into m minus I into n minus m plus n plus m into n minus I into m minus n plus I plus I into n minus m into n minus I plus m </p>
+	<p class="block_168">Equal to a of 0 plus d of 0 equal to zero </p>
+	<p class="block_35">(ii)On subtracting equation 2 from equation 1, equation 3 from equation 2 and equation 1 from equation 3, we get </p>
+	<p class="block_168">x minus y equal to l minus into d</p>
+	<p class="block_168">y minus z equal to m minus n into d </p>
+	<p class="block_168">z minus x equal to n minus I into d </p>
+	<p class="block_168"><span class="calibre21">x minus y into n plus y minus z into I plus z minus x into m equal to  </span></p>
+	<p class="block_168">equal to whole bracket I minus m into n plus m minus n into I plus n minus I into m into d </p>
+	<p class="block_168">equal to whole bracket I into n minus m into n plus I into m minus n into I plus n into m minus I into m into d equal to zero</p>
+	<p class="block_5">Note</p>
+	<p class="block_"> In an Arithmetic Progression </p>
+	<ul class="list_">
+	<li class="block_20">If every term is added or subtracted by a constant, then the resulting sequence is also an A.P.</li>
+	<li class="block_21">If every term is multiplied or divided by a non-zero number, then the resulting sequence is also an A.P.</li>
+	<li class="block_21">If the sum of three consecutive terms of an A.P. is given, then they can be taken as a minus d comma a comma and a plus d. Here the common difference is d.</li>
+	<li class="block_21">If the sum of four consecutive terms of an A.P. is given then, they can be taken as a minus 3d comma a minus d comma a plus d and a plus 3d. Here common difference is 2d.</li>
+</ul>
+	<h3 class="block_16" id="toc_id_177">Example 2.29</h3>
+	<p class="block_">In an A.P., sum of four consecutive terms is 28 and their sum of their square s is 276. Find the four numbers. </p>
+	<p class="block_">Solution Let us take the four terms in the form a minus 3d comma a minus d comma a plus d and a plus 3d.</p>
+	<p class="block_">Since, sum of the four terms is 28, </p>
+	<p class="block_">a minus 3d plus a minus d plus a plus d plus a plus 3 d equal to 28 </p>
+	<p class="block_">4 a equal to 28 implies to a equal to 7 </p>
+	<p class="block_">Similarly, since sum of their square s is 276, </p>
+	<p class="block_">a minus 3 d whole square  plus a minus d whole square  plus a plus d whole square  plus a plus 3 d whole square  equal to 276 </p>
+	<p class="block_">a square  minus 6 a d plus 9 d square  plus a square  minus 2 a d plus d square  plus a square  plus 6 a d plus 9 d square  equal to 276 </p>
+	<p class="block_">4 a square  plus 20 d square  equal to 276 implies to 4 into 7 whole square  plus 20 d square  equal to 276 </p>
+	<p class="block_">d square <span class="calibre13"> equal to 4 implies to d equal to plus or minus root 4 then d equal to plus or minus 2  </span></p>
+	<p class="block_">If d equal to 2 then the four numbers are<span class="calibre13"> 7 minus 3 of 2 comma 7 minus 2 comma 7 plus 3 of 2  </span> That is the four numbers are 1, 5, 9 and 13.</p>
+	<p class="block_">If a equal to 7 comma d equal to minus 2 then the four numbers are 13, 9, 5 and 1 </p>
+	<p class="block_">Therefore, the four consecutive terms of the A.P. are 1, 5, 9 and 13. </p>
+	<h3 class="block_16" id="toc_id_178">Condition for three numbers to be in A.P. </h3>
+	<p class="block_">If a, b, c are in A.P. thena equal to a comma b equal to a plus d comma c equal to a plus 2 d soa plus c equal to 2 a plus 2 d equal to 2 of a plus b equal to 2 into b </p>
+	<p class="block_">Thus, 2b equal to a plus c </p>
+	<p class="block_">Similarly, if 2b equal to a plus c then b minus a equal to c minus b  so a, b, c are in A.P. </p>
+	<p class="block_">Thus, three non-zero numbers a, b, c are in A.P. if and only if 2 b equal to a plus c.</p>
+	<h3 class="block_16" id="toc_id_179">Example 2.30</h3>
+	<p class="block_">A mother divides Rupees 207 into three parts such that the amount are in A.P. and gives it to her three children. The product of the two least amounts that the children had Rupees 4623. Find the amount received by each child. </p>
+	<p class="block_">Solution Let the amount received by the three children be in the form of A.P. is given by </p>
+	<p class="block_">a minus d comma a comma a plus d. Since, sum of the amount is Rupees 207, we have </p>
+	<p class="block_">a minus d plus a plus d equal to 207</p>
+	<p class="block_">3 a equal to 207 implies to a equal to 69</p>
+	<p class="block_">It is given that product of the two least amounts is 4623. </p>
+	<p class="block_">a minus d into a equal to 4623</p>
+	<p class="block_">69 minus d into 69 equal to 4623 </p>
+	<p class="block_">Therefore, amount given by the mother to her three children are Rupees 69 minus 2 comma Rupees 69 comma Rupees 69 plus 2. That is, Rupees 67 comma Rupees 69 and Rupees 71.</p>
+	<p class="block_171">Progress Check 1.</p>
+	<p class="block_35">1.If every term of an A.P. is multiplied by 3, then the common difference of the new A.P. is dash</p>
+	<p class="block_35">2.Three numbers a, b and c will be in A.P. if and only if the dash</p>
+	<h3 class="block_16" id="toc_id_180">Exercise 2.5 </h3>
+	<p class="block_35">1.Check whether the following sequences are in A.P. </p>
+	<p class="block_35">1.a minus 3, a minus 5, a minus 7 <span dir="rtl" class="calibre106"> and so on</span></p>
+	<div class="calibre99">
+	<div class="block_172"><span class="bullet_">.1 </span><span class="calibre98">by 2, 1 by 3, 1 by 4, 1 by 5<span dir="rtl"> and so on</span></span></div>
+</div>
+	<p class="block_35">3.9, 13, 17, 21, 25, and so on</p>
+	<p class="block_35">4.Minus 1 by 3, zero, 1 by 3, 2 by 3 and so on</p>
+	<p class="block_35">5.1, minus 1,1, minus 1,1,minus1, and so on</p>
+	<p class="block_35">2. First term  and common difference d are given below. Find the corresponding A.P. </p>
+	<p class="block_35">1.a equal to 5, d equal to 6 </p>
+	<p class="block_35">2.a equal to 7, d equal to minus 5 </p>
+	<p class="block_35">3.a equal to 3 by 4, d equal to 1 by 2</p>
+	<p class="block_35">3 Find the first term and common difference of the Arithmetic Progressions whose n terms are given below</p>
+	<p class="block_35">Number 1 t n equal to minus 3 plus 2 </p>
+	<p class="block_35">(ii)t n equal to 4 minus 7 </p>
+	<p class="block_35">4.Find the 19th term of an A.P. minus 11, minus 15, minus 19, and so on</p>
+	<p class="block_35">5.Which term of an A.P. 16, 11, 6, 1, and so on is minus 54 ?</p>
+	<p class="block_35">6.Find the middle term(s) of an A.P. 9, 15, 21, 27, up to 183.</p>
+	<p class="block_35">7.If nine times ninth term is equal to the fifteen times fifteenth term, show that six times twenty fourth term is zero.</p>
+	<p class="block_35">8.If 3 plus k, 18 minus k, 5 k plus 1 are in A.P. then find k.</p>
+	<p class="block_35">9.Find x, y and z, given that the numbers x, 10, y, 24, z are in A.P.</p>
+	<p class="block_35">10.In a theatre, there are 20 seats in the front row and 30 rows were allotted. Each successive row contains two additional seats than its front row. How many seats are there in the last row?</p>
+	<p class="block_35">11.The sum of three consecutive terms that are in A.P. is 27 and their product is 288. Find the three terms.</p>
+	<p class="block_35">12.The ratio of 6th and 8th term of an A.P. is 7 ratio 9. Find the ratio of 9th term to 13th term.</p>
+	<p class="block_35">13.In a winter season let us take the temperature of Ooty from Monday to Friday to be in A.P. The sum of temperatures from Monday to Wednesday is 0° C and the sum of the temperatures from Wednesday to Friday is 18 degree C. Find the temperature on each of the five days.</p>
+	<p class="block_35">14.Priya earned Rupees 15,000 in the first month. Thereafter her salary increased by Rupees 1500 per year. Her expenses are Rupees 13,000 during the first year and the expenses increases by Rupees 900 per year. How long will it take for her to save Rupees 20,000 per month.</p>
+	<h2 class="block_4" id="toc_id_181">2.8 Series</h2>
+	<p class="block_">The sum of the terms of a sequence is called series. Let a 1, a 2, a 3, a 4 and so on till a n be the sequence of real numbers. Then the real number a 1 plus a 2 plus a 3 plus and so on is defined as the series of real numbers.</p>
+	<p class="block_">If a series has finite number of terms, then it is called a Finite series. If a series has infinite number of terms, then it is called an Infinite series. Let us focus our attention only on studying finite series.</p>
+	<h3 class="block_16" id="toc_id_182">2.8.1 Sum to n terms of an A.P.</h3>
+	<p class="block_">A series whose terms are in Arithmetic progression is called Arithmetic series.</p>
+	<p class="block_">Let a, a plus d, a plus 2d, a plus 3d, so onbe the Arithmetic Progression.</p>
+	<p class="block_">The sum of firstnterms of a Arithmetic Progression denoted byS n is given by, S n equal to a plus a plus d plus a plus 2d plus and so on plus a plus of n minus 1 into d 1 Equation</p>
+	<p class="block_">Rewriting the above in reverse order</p>
+	<p class="block_"><i class="calibre14"><span class="calibre13">S n equal to a plus n minus 1  into d plus a plus n minus w into d plus and so on plus a plus d plus a </span></i>Equation 2</p>
+	<p class="block_">Adding (1) and (2) we get,</p>
+	<p class="block_">2 S n equal to whole bracket a plus a plus n minus 1 into d plus whole bracket a plus d plus a plus n minus 2 into d plus and so on plus whole bracket a plus n minus 2 into d plus a plus d plus whole bracket a plus n minus 1 into d plus a </p>
+	<p class="block_"><span class="calibre13">Equal to whole bracket 2 a plus n minus 1 into d plus whole bracket 2 a plus n minus 1 into d and so on plus whole bracket 2 a plus n minus 1 into d  n terms </span></p>
+	<p class="block_">2 S n equal to n into whole bracket 2 a plus n minus 1 into d implies to S n equal to n by 2 whole bracket 2 a plus n minus 1 in to d </p>
+	<p class="block_">Note If the first term a, and the last term l (nth term) are given then </p>
+	<p class="block_">S n equal to n by 2 whole bracket 2a plus n minus 1 into d equal to n by 2 whole bracket a plus n minus 1 into d. I equal to a plus n minus 1 into d</p>
+	<p class="block_">S n equal to n by 2 with in bracket a plus I </p>
+	<h3 class="block_16" id="toc_id_183">Progress Check </h3>
+	<p class="block_35">1.The sum of terms of a sequence is called dash. </p>
+	<p class="block_35">2.If a series have finite number of terms, then it is called dash. </p>
+	<p class="block_35">3.A series whose terms are in dash  is called Arithmetic series. </p>
+	<p class="block_35">4.If the first and last terms of an A.P. are given, then the formula to find the sum is dash.</p>
+	<h3 class="block_78" id="toc_id_184">Example 2.31</h3>
+	<p class="block_">Find the sum of first 15 terms of the A. P. 8, 7 1 by 4, 6 1 by 2, 5 3 by 4 , and so on</p>
+	<p class="block_"><b class="calibre10">Solution</b> Here the first term aequal 8, common difference d equal to 7 1 by 4 minus 8 equal to minus 3 by 4, </p>
+	<p class="block_">Sum of first n terms of an A.P. S n equal to n by 2 with in bracket 2 a plus n minus 1 into d S 15 equal to 15 by 2 whole bracket 2 into 8 plus 15 minus 1 into minus 3 by 4 </p>
+	<p class="block_">S 15 equal to 15 by 2 whole bracket 16 minus 21 by 2 equal to 165 by 4 </p>
+	<h3 class="block_16" id="toc_id_185">Example 2.32</h3>
+	<p class="block_">Find the sum of  0 point 4 zero plus zero point 4 3 plus zero point 4 6 plus and so on plus 1.</p>
+	<p class="block_"><span class="calibre13">Solution Here the value of n is not given. But the last term is given. From this, we can find the value of n.  </span></p>
+	<p class="block_">Given, a equal to zero point 4 zero and I equal to 1 we find d equal to zero point 4 3 minus zero point 4 zero equal to zero point zero 3.</p>
+	<p class="block_">Therefore, n equal to with in bracket I minus a divided by d plus 1 </p>
+	<p class="block_">Equal to with in bracket 1 minus zero point 4 zero divided by zero point zero 3 plus 1 equal to 21 </p>
+	<p class="block_">Sum of first n terms of an A.P. S n equal to n by 2 with in bracket a plus I, n equal to 21 Therefore, S 21 equal to 21 by 2 with in bracket zero point 4 zero plus 1 equal to 14 point 7 </p>
+	<p class="block_">So, the sum of 21 terms of the given series is 14.7.</p>
+	<h3 class="block_16" id="toc_id_186">Example 2.33</h3>
+	<p class="block_">How many terms of the series 1 plus 5 plus 9 plus and so on must be taken so that their sum is 190? </p>
+	<p class="block_"><b class="calibre10">Solution </b><span class="calibre13">  Here we have to find the value of n, such that </span>S n equal to 190. </p>
+	<p class="block_">First term a equal to 1, common difference d equal to 5 minus 1 equal to 4 </p>
+	<p class="block_">Sum of firstnterms of an A.P. </p>
+	<p class="block_">S n equal to n by 2 whole bracket 2 a plus n minus 1 into d equal to 190</p>
+	<p class="block_">n by 2 whole bracket 2 into 1 plus n minus 1 into 4 equal to 190</p>
+	<p class="block_">n whole bracket 4 n minus 2 equal to 380 </p>
+	<p class="block_">2 n square  minus n minus 190 equal to zero </p>
+	<p class="block_">n minus 10 into 2n plus 19 equal to zero </p>
+	<p class="block_">But n equal to 10 as n equal to minus 19 by 2 is impossible. Therefore, n equal to 10. </p>
+	<h3 class="block_16" id="toc_id_187">Thinking Corner </h3>
+	<p class="block_">The value of n must be positive. Why?</p>
+	<h3 class="block_16" id="toc_id_188">Progress Check </h3>
+	<p class="block_">State True or False. Justify it. </p>
+	<p class="block_35">1.The nthterm of any A.P. is of the form p n plus q where p and q are some constants. </p>
+	<p class="block_35">2.The sum to nthterm of any A.P. is of the form p n square  plus q n plus r plus where p q r  are some constants.</p>
+	<h3 class="block_16" id="toc_id_189">Example 2.34</h3>
+	<p class="block_">The 13th term of an A.P. is 3 and the sum of first 13 terms is 234. Find the common difference and the sum of first 21 terms. </p>
+	<p class="block_"><span class="calibre13">Solution   Given, the 13th term = 3 so, </span>t 13 equal to a plus 12 d equal to 3  Equation 1</p>
+	<p class="block_">Sum of first 13 terms equal to 234 implies to S 13 equal to 13 by 2 with in bracket 2 a plus 12 d equal to 234 </p>
+	<p class="block_">2 a plus 12 d equal to 36 Equation 2</p>
+	<p class="block_">Therefore, common difference is minus 5 by 2. </p>
+	<p class="block_">Sum of first 21 terms S 21 equal to 21 by 2 whole bracket 2 into 33 plus 21 minus 1 into whole bracket minus 5 by 2 equal to 21 by 2 into 66 minus 50 equal to 168.</p>
+	<h3 class="block_16" id="toc_id_190">Example 2.35</h3>
+	<p class="block_">In an A.P. the sum of first n terms is 5 n square  by 2 plus 3 n by 2. Find the 17th term. </p>
+	<p class="block_">Solution The 17th term can be obtained by subtracting the sum of first 16 terms from the sum of first 17 terms </p>
+	<p class="block_">S 17 equal to 5 into 17 square <span class="calibre13"> by 2 plus 3 into 17 by 2 equal to 1445 by 2 plus 51 by 2 equal to 748  </span></p>
+	<p class="block_">S 16 equal to 5 into 16 square  by 2 plus 3 into 16 by 2 equal to 1280 by 2 plus 48 by 2 equal to 664 </p>
+	<p class="block_">Now, t 17 equal to S 17 minus S 16 equal to 748 minus 664 equal to 84 </p>
+	<p class="block_5">Example 2.36</p>
+	<p class="block_">Find the sum of all natural numbers between 300 and 600 which are divisible by 7.</p>
+	<p class="block_5">Solution </p>
+	<p class="block_">The natural numbers between 300 and 600 which are divisible by 7 are 301, 308, 315, and so on, 595.</p>
+	<p class="block_">The sum of all natural numbers between 300 and 600 is 301 plus 308 plus 315 plus and so on plus 595.</p>
+	<p class="block_">The terms of the above series are in A.P.</p>
+	<p class="block_">First terma equal to 301; common difference d equal to 7; Lastterm l equal to 595.</p>
+	<p class="block_">n equal to l minus a by d plus 1 equal to whole bracket 595 minus 301 by 7 plus 1 equal to 43 </p>
+	<p class="block_">S n equal to n by 2 a plus l, we have S 43 equal to 43 by 2 301 plus 595 equal to 19264.</p>
+	<h3 class="block_16" id="toc_id_191">Example 2.37</h3>
+	<p class="block_">A mosaic is designed in the shape of an equilateral triangle, 12 feet on each side. Each tile in the mosaic is in the shape of an equilateral triangle of 12-inch side. The tiles are alternate in colour as shown in the figure ure. Find the number of tiles of each colour and total number of tiles in the mosaic.</p>
+	<p class="block_"><b class="calibre10">Solution</b> Since the mosaic is in the shape of an equilateral triangle of 12 feet, and the tile is in the shape of an equilateral triangle of 12 inch (1 feet), there will be 12 rows in the mosaic.</p>
+	<p class="block_"><img src="images/image-94.png" alt="Fig 2.12 An Equilateral triangle with 12 feet of each sides. Inside that triangle at the top. A small equilateral triangle with 1 feet each side. Likewise 2nd row two triangles and so on. At last 12 equilateral triangles each side with 1 feet are shown in the figure." class="calibre110"/></p>
+	<p class="block_">From the figure ure, it is clear that number of white tiles in each row are 1, 2, 3, 4, and so on, 12 which clearly forms an Arithmetic Progression.</p>
+	<p class="block_">Similarly, the number of blue tiles in each row are 0, 1, 2, 3, and so on, 11 which is also an Arithmetic Progression.</p>
+	<p class="block_">Number of white tiles equal to 1 plus 2 plus 3 plus and so on plus 12 equal to 12 by 2 1 plus 12 equal to 78</p>
+	<p class="block_">Number of blue tiles equal to zero plus 1 plus 2 plus 3 plus and so on plus 11 equal to zero plus 1 plus 2 plus 3 plus and so on plus 11 equal to 12 by 2 whole bracket zero plus 11 equal to 66 </p>
+	<p class="block_">The total number of tiles in the mosaic equal to 78 plus 66 equal to 144 </p>
+	<h3 class="block_16" id="toc_id_192">Example 2.38</h3>
+	<p class="block_">The houses of a street are numbered from 1 to 49. Senthil’s house is numbered such that the sum of numbers of the houses prior to Senthil’s house is equal to the sum of numbers of the houses following Senthil’s house. Find Senthil’s house number? </p>
+	<p class="block_5">Solution </p>
+	<p class="block_">Let Senthil’s house number be x. </p>
+	<p class="block_">It is given that 1 plus 2 plus 3 plus and so on plus x minus 1 equal to x plus 1 plus x plus 2 plus and so on plus 49 </p>
+	<p class="block_"> 1 plus 2 plus 3 plus and so on plus x minus 1 equal to whole bracket 1 plus 2 plus e plus and so on plus 49 minus whole bracket 1 plus 2 plus 3 plus and so on plus x </p>
+	<p class="block_">x<span class="calibre13"> minus 1 by 2 whole bracket 1 plus with in in bracket x minus 1 equal to 49 by 2 whole bracket 1 plus 49 minus x by 2 with in bracket 1 plus x  </span></p>
+	<p class="block_">x of x minus 1 by 2 equal to 49 into to by x minus x of x plus 1 by 2 </p>
+	<p class="block_">xsquare  minus x equal to 2450 minus x square  minus x implies to x square  equal to 1225 implies to x equal to 35 </p>
+	<p class="block_">Therefore, Senthil’s house number is 35.</p>
+	<h3 class="block_16" id="toc_id_193">Example 2.39</h3>
+	<p class="block_">The sum of first n, 2n and 3n terms of an A.P. are S 1 S 2 and S 3 respectively. Prove that S 3 equal to 3 of S2 minus S 1 </p>
+	<p class="block_">Solution If  S 1 S 2 and S 3 are sum of first n, s2 n and 3 n terms of an A.P. respectively then </p>
+	<p class="block_">S 1 equal to n by 2 whole bracket 2 a plus n minus 1 d, S 2 equal to 2n by 2 whole bracket 2 a plus 2n minus 1 into d, S 4 equal to 3 n by 2 whole bracket 2 a plus<span class="calibre13"> 3n minus 1 into d  </span></p>
+	<p class="block_">Consider,<span class="calibre13"> S2 minus S 1 equal to 2n by 2 whole bracket 2 a plus 2 n minus 1 into d minus n by 2 whole bracket 2a plus n minus 1 into d  </span> – =  – </p>
+	<p class="block_"><span class="calibre13">Equal to n by 2 whole bracket 4 a plus 2 of 2n  minus 1 into d,- minus whole bracket 2 a plus n minus 1 into d </span></p>
+	<p class="block_">S 2 minus S 1 equal to n by 2 into whole bracket 2a plus 3n minus 1 into d </p>
+	<p class="block_">3 of S 2 minus S1 equal to 3n by 2 whole bracket 2 a plus 3n minus 1 into d </p>
+	<p class="block_">3 of S 2 minus S1 equal to S3 </p>
+	<h3 class="block_16" id="toc_id_194">Thinking Corner </h3>
+	<p class="block_35">1.What is the sum of first n odd natural numbers? </p>
+	<p class="block_35">2.What is the sum of first n even natural numbers?</p>
+	<h3 class="block_16" id="toc_id_195">Exercise 2.6</h3>
+	<p class="block_35">1.Find the sum of the following</p>
+	<p class="block_35">Number 1 3, 7, 11, up to 40 terms.</p>
+	<p class="block_35">(ii)102, 97, 92, up to 27 terms.</p>
+	<p class="block_35">(iii)6 plus 13 plus 20 plus up to plus 97</p>
+	<p class="block_35">2.How many consecutive odd integers beginning with 5 will sum to 480?</p>
+	<p class="block_35">3.Find the sum of first 28 terms of an A.P. whose n<sup class="calibre111">th</sup> term is 4n minus 3. </p>
+	<p class="block_35">4.The sum of first n terms of a certain series is given as 2 n square  minus 3n. . Show that the series is an A.P.</p>
+	<p class="block_35">5.The 104thterm and 4thterm of an A.P. are 125 and 0. Find the sum of first 35 terms.</p>
+	<p class="block_35">6.Find the sum of all odd positive integers less than 450.</p>
+	<p class="block_35">7.Find the sum of all natural numbers between 602 and 902 which are not divisible by 4.</p>
+	<p class="block_35">8.Raghu wish to buy a laptop. He can buy it by paying Rupees 40,000 cash or by giving it in 10 instalments as Rupees 4800 in the first month, Rupees 4750 in the second month, Rupees 4700 in the third month and so on. If he pays the money in this fashion, find</p>
+	<p class="block_35">Number 1 total amount paid in 10 instalments.</p>
+	<p class="block_35">(ii) how much extra amount that he has to pay than the cost?</p>
+	<p class="block_35">9.A man repays a loan of Rupees 65,000 by paying Rupees 400 in the first month and then increasing the payment by Rupees 300 every month. How long will it take for him to clear the loan?</p>
+	<p class="block_35">10.A brick staircase has a total of 30 steps. The bottom step requires 100 bricks. Each successive step requires two bricks less than the previous step.</p>
+	<p class="block_35">Number 1How many bricks are required for the topmost step?</p>
+	<p class="block_35">(ii)How many bricks are required to build the staircase?</p>
+	<p class="block_">11. If<span class="calibre13"> S 1, S 2,  S 3 and so on S m</span> are the sums of n terms of m A.P.’s whose first terms are 1, 2, 3, upto m and whose common differences are 1, 3, 5 and so on with in bracket 2m<span class="calibre13"> minus  1 </span>respectively, then show that S 1 plus S 2 plus S 3 plus and so on plus S m equal to 1 by 2 m n into m n plus 1 </p>
+	<p class="block_">12. Find the sum whole bracket a minus b by a plus b plus 3a minus 2 b by a plus b plus 5 a minus 3 b by a plus b plus and so on 12 terms </p>
+	<h2 class="block_4" id="toc_id_196">2.9 Geometric Progression</h2>
+	<p class="block_">In the diagram given in Figure .2.13, triangle DEF is formed by joining the mid points of the sides AB, BC and CA of triangle ABC. Then the size of the triangle. Triangle DEF is exactly one-fourth of the size of triangle ABC. Similarly D GHI is also one-fourth of triangle DEF and so on. In general, the successive areas are one-fourth of the previous areas.</p>
+	<p class="block_"><img src="images/image-95.png" alt=" Fig .2.13 Drawn a triangle ABC. Mid point of AB is F. Mid point of BC is D. Mid point of AC is E. Join the points DEF to form triangle. Mid point of EF is G. Mid point of AE is H. Mid point of AF is I. Join the points G,H and I to form triangle. Mid point of AH is K. Join the points J,K,L to form triangle. Ten triangles are formed within the triangle abc. " class="calibre112"/></p>
+	<p class="block_">The area of these triangles are</p>
+	<p class="block_">Triangle ABC, 1 by 4 triangle ABC, 1 by 4 into 1 by 4 triangle ABC,and so on </p>
+	<p class="block_">That is, triangleABC, 1 by 4 triangle ABC, 1 by 16 triangle ABC,and so on</p>
+	<p class="block_">In this case, we see that beginning with triangle ABC, we see that the successive triangles are formed whose areas are precisely one-fourth the area of the previous triangle. So, each term is obtained by multiplying 1 by 4 to the previous term. </p>
+	<p class="block_">As another case, let us consider that a viral disease is spreading in a way such that at any stage two new persons get affected from an affected person. At first stage, one person is affected, at second stage two persons are affected and is spreading to four persons and so on. Then, number of persons affected at each stage are 1, 2, 4, 8, and so on where except the first term, each term is precisely twice the previous term. </p>
+	<p class="block_"><img src="images/image-96.png" alt=" Fig.2.14 There are 4 rows. In a first row one person.  In second row two persons. In third row four persons. In fourth row 8 persons. Each person got by multiplying a number two to the preceding number" class="calibre113"/></p>
+	<p class="block_">From the above examples, it is clear that each term is got by multiplying a fixed number to the preceding number. </p>
+	<p class="block_">This idea leads us to the concept of Geometric Progression.</p>
+	<p class="block_5">Definition </p>
+	<p class="block_">A Geometric Progression is a sequence in which each term is obtained by multiplying a fixed non-zero number to the preceding term except the first term. The fixed number is called common ratio. The common ratio is usually denoted by r</p>
+	<h3 class="block_16" id="toc_id_197">2.9.1 General form of Geometric Progression</h3>
+	<p class="block_">Let and r not equal 0 be real numbers. Then the numbers of the form a, a r, a r square , upto a r power of n minus 2 is called a Geometric Progression. The number ‘a’ is called the first term and number ‘r’ is called the common ratio.</p>
+	<p class="block_">We note that beginning with first term a, each term is obtained by multiplied with the common ratio ‘r’ to give a r, a r square , a r cube and so on.</p>
+	<h3 class="block_16" id="toc_id_198">2.9.2 General term of Geometric Progression</h3>
+	<p class="block_">We try to find a formula for n<sup class="calibre37">th</sup> term or general term of Geometric Progression (G.P.) whose terms are in the common ratio.</p>
+	<p class="block_">A, a r, a r square , upto a r power n minus 2 where a is the first term and ‘r’ is the common ratio. Let t n be the nth term of the G.P. Then</p>
+	<p class="block_">t 1 equal to a equal to a into r power 0 equal to a into r power 1 minus 1 </p>
+	<p class="block_">t 2 equal to t 1 into r equal to a into r equal to a into r power 2 minus 1 </p>
+	<p class="block_">t 3 equal to t 2 into r equal to a r into r equal to a r power 2 equal to a r power 3 minus 1 </p>
+	<p class="block_">So on till,</p>
+	<p class="block_"><span class="calibre13">t  n equal to t n minus 1 into r equal to a r power n minus 2 into r equal to a r power n minus 2 plus 1 equal to a r power n minus 1</span></p>
+	<p class="block_">Thus, the general term or nth term of a G.P. is t n equal to a r power n minus 1 </p>
+	<p class="block_5">Note </p>
+	<p class="block_">If we consider the ratio of successive terms of the G.P. then we have </p>
+	<p class="block_">t 2 by t 1 equal to a r by a equal to r comma t 3 by t 2 equal to a r square  by a r equal to r comma t 4 by t 3 equal to a r power 3 by a r power 2 equal to r comma t 5 by t 4 equal to a r power 4 by a r power 3 equal to r so on. </p>
+	<p class="block_">Thus, the ratio between any two consecutive terms of the Geometric Progression is always constant and that constant is the common ratio of the given Progression.</p>
+	<h3 class="block_16" id="toc_id_199">Progress Check </h3>
+	<p class="block_35">1.A G.P. is obtained by multiplying dash to the preceding term. </p>
+	<p class="block_35">2.The ratio between any two consecutive terms of the G.P. is dash  and it is called dash.</p>
+	<p class="block_35">3.Fill in the blanks if the following are in G.P. </p>
+	<p class="block_35">Number 1 1 by 8, 3 by 4, 9 by 2 dash</p>
+	<p class="block_35">(ii)7, 7 by 2 ,dash</p>
+	<p class="block_35">(iii)dash,  2 root 2, 4, and so on</p>
+	<h3 class="block_78" id="toc_id_200">Example 2.40</h3>
+	<p class="block_">Which of the following sequences form a Geometric Progression?</p>
+	<p class="block_35">Number 1 7, 14, 21, 28</p>
+	<p class="block_35">(ii)1 by 2, 12, 4 </p>
+	<p class="block_35">(iii)5, 25, 50, 75,</p>
+	<p class="block_"><b class="calibre10">Solution</b> To check if a given sequence form a G.P. we have to see if the ratio between successive terms are equal.</p>
+	<p class="block_35">Number 1 7, 14, 21, 28, and so on</p>
+	<p class="block_179">t 2 by t 1 equal to 14 by 7 equal to 2</p>
+	<p class="block_179">t 3 by t 2 equal to 21 by 14 equal to 3 by 2 </p>
+	<p class="block_179"><span class="calibre13">t 4 by t 3 equal to 28 by 21 equal to 4 by 3   </span></p>
+	<p class="block_179">Since the ratios between successive terms are not equal, the sequence 7, 14, 21, 28, is not a Geometric Progression.</p>
+	<p class="block_35">(ii)1 by 2, 1, 2, 4 un so on</p>
+	<p class="block_174">t 2 by t 1 equal to 1 divided by 1 by 2 equal to 2 </p>
+	<p class="block_174">t 3 by t 2 equal to 2 by 1 equal to 2 </p>
+	<p class="block_174">t 4 by t 3 equal to 4 by 2 equal to 2 </p>
+	<p class="block_174">Here the ratios between successive terms are equal. Therefore, the sequence 1 by 2, 1, 2, 4 and so on is a Geometric Progression with common ratio r equal to 2.</p>
+	<p class="block_35">(iii)5, 25, 50, 75 un so on</p>
+	<p class="block_174">t 2 by t 1 equal to 25 by 5 equal to 5 </p>
+	<p class="block_174">t 3 by t 2 equal to 50 by 25 equal to 2 </p>
+	<p class="block_174">t 4 by t 3 equal to 75 by 50 equal to 3 by 2 </p>
+	<p class="block_174">Since the ratios between successive terms are not equal, the sequence 5, 25, 50, 75  un so on is not a Geometric Progression.</p>
+	<h3 class="block_16" id="toc_id_201">Thinking Corner</h3>
+	<p class="block_">Is the sequence 2 comma 2 square  comma 2 power 2 square  comma 2 power 2 power 2 square  etcetera is a G.P.?</p>
+	<h3 class="block_78" id="toc_id_202">Example 2.41</h3>
+	<p class="block_">Find the geometric progression whose first term and common ratios are given by </p>
+	<p class="block_35">Number 1a equal to minus 7 comma r equal to 6 </p>
+	<p class="block_35">(ii)a equal to 256 comma r equal to zero point 5 </p>
+	<p class="block_5">Solution </p>
+	<p class="block_35">Number 1The general form of Geometric progression is a comma a r comma a r square  and so on</p>
+	<p class="block_174">a equal to minus 7 a r equal to minus 7 into 6 equal to minus 42 a r square  equal to minus 7 into 62 equal to minus 252 </p>
+	<p class="block_174">Therefore, the required Geometric Progression is minus 7, minus 42, minus 252, and so on </p>
+	<p class="block_35">(ii) The general form of Geometric progression is a comma a r comma a r square </p>
+	<p class="block_">A equal to 256 a r equal to 256 into zero point 5 equal to 128, a r square  equal to 256 into zero point 5 into 2 equal to 64 </p>
+	<p class="block_">Therefore, the required Geometric progression is 256, 128, 64, and so on</p>
+	<h3 class="block_16" id="toc_id_203">Progress Check </h3>
+	<p class="block_35">1.If first term equal to a, common ratio equal to r, then find the value of t 9 and t 27.</p>
+	<p class="block_35">2.In a G.P. if t 1 equal to 1 by 5 and t 2 equal to 1 by 25 equal then the common ratio is dash.</p>
+	<h3 class="block_78" id="toc_id_204">Example 2.42</h3>
+	<p class="block_"> Find the 8th term of the G.P. 9, 3, 1</p>
+	<p class="block_"><b class="calibre10">Solution</b> To find the 8th term we have to use the nthterm formula t n equal to a r power n minus 1 </p>
+	<p class="block_">First term a equal to 9, Common ratio<span class="calibre13"> r equal to t 2  by t 1 equal to 3 by 9 equal to 1 by 3 </span></p>
+	<p class="block_">t 8 equal to 9 into 1 by 3 power 8 minus 1 equal to 9 into 1 by 3 power 7 equal to 1 by 243 </p>
+	<p class="block_">Therefore the 8th term of the G.P. is 1 by 243. </p>
+	<p class="block_171">Example 2.43</p>
+	<p class="block_"> In a Geometric progression, the 4th term is 8 by 9 and the 7th term is 64 by 243. Find the Geometric Progression. </p>
+	<p class="block_"><b class="calibre10">Solution </b>4th term,<span class="calibre13"> t 4 equal to 8 by 9 implies to a r power 3 equal to 8 by 9  Equation</span>1</p>
+	<p class="block_">7th term, t 7 equal to 64 by 243 implies to a r power 6 equal to 64 by 243 Equation 2</p>
+	<p class="block_">Dividing Equation 2 by Equation 1 we get, <span class="calibre13">a r power 6 by a r power 3 equal to 64 by 243 divided by 8 by 9      </span></p>
+	<p class="block_"><span class="calibre13">r power 3 equal to 8 by 27 implies to r equal to 2 by 3  </span></p>
+	<p class="block_">Substituting the value of r in Equation 1, we get a into 2 by 3 power 3 equal to 8 by 9 implies to a equal to 3 </p>
+	<p class="block_">Therefore, the Geometric Progression is a comma a r comma a r square  comma etcetera  that is, 3, 2, 4 by 3 and so on</p>
+	<p class="block_">Note</p>
+	<ul class="list_">
+	<li class="block_180">When the product of three consecutive terms of a G.P. are given, we can take the three terms as a by r comma a comma a r .</li>
+	<li class="block_180">When the products of four consecutive terms are given for a G.P. then we can take the four terms as a by r power 3 comma a by r comma a r comma a r power 3</li>
+	<li class="block_180">When each term of a Geometric Progression is multiplied or divided by a non– zero constant then the resulting sequence is also a Geometric Progression.</li>
+</ul>
+	<h3 class="block_16" id="toc_id_205">Example 2.44 </h3>
+	<p class="block_">The product of three consecutive terms of a Geometric Progression is 343 and their sum is 91 by 3. Find the three terms. </p>
+	<p class="block_"><b class="calibre10">Solution </b>Since the product of 3 consecutive terms is given. we can take them as a by r comma a comma a r.</p>
+	<p class="block_">Product of the terms equal to 343 </p>
+	<p class="block_"><span class="calibre13">a  by r into a into a r equal to 343 </span></p>
+	<p class="block_">a power 3 equal to 7 power 3 implies to a equal to 7 </p>
+	<p class="block_">Sum of the terms equal to 91 by 3 </p>
+	<p class="block_">Hence a of 1 by r plus 1 plus r equal to 91 by 3 implies to 7 of 1 plus r plus r square  by r equal to 91 by 3 </p>
+	<p class="block_">3 plus 3 r plus 3 r square  equal to 13 r implies to 3 r square  minus 10 r plus 3 equal to 0 </p>
+	<p class="block_">3 r minus 1 into r minus 3 equal to 0 implies to r equal to 3 or r equal to 1 by 3 </p>
+	<p class="block_">If a equal to 7, r equal to 3 then the three terms are, 7 by 3 into 7 comma 21.</p>
+	<p class="block_">Ifa equal to 7, r equal to 1 by 3 then the three terms are 21 comma 7 comma 7 by 3</p>
+	<h3 class="block_16" id="toc_id_206">Condition for three numbers to be in G.P. </h3>
+	<p class="block_">If a, b, c are in G.P. then b equal to a r comma c equal to a r square . So a c equal to a into a r square  equal to a r whole power 2 equal to b power 2. Thusb square  equal to a c</p>
+	<p class="block_">Similarly, if b square  equal to a c, then b by a equal to c by b. So a, b, c are in G.P.</p>
+	<p class="block_">Thus, three non-zero numbers a, b, c are in G.P. if and only if b square  equal to ac.</p>
+	<h3 class="block_16" id="toc_id_207">Thinking Corner </h3>
+	<p class="block_35">1.Split 64 into three parts such that the numbers are in G.P. </p>
+	<p class="block_35">2. If a, b, c, etcetera are in G.P. then<span class="calibre21"> 2 a  2 b 2 c</span>etceteraare in dash</p>
+	<p class="block_35">3.If 3 comma x comma 6 point seven five are in G.P. then x is dash </p>
+	<h3 class="block_16" id="toc_id_208">Progress Check </h3>
+	<p class="block_">Three non-zero numbers a, b, c are in G.P. if and only if dash.</p>
+	<h3 class="block_16" id="toc_id_209">Example 2.45</h3>
+	<p class="block_">The<span class="calibre13"> present value of a machine is  Rupees</span> fourty thousand and its value depreciates each year by 10 percentage. Find the estimated value of the machine in the 6th year.</p>
+	<p class="block_"><b class="calibre10">Solution </b>The value of the machine at present is Rupees fourty thousand. Since it is depreciated at the rate of 10 percentage after one year the value of the machine is 90 percentage of the initial value.</p>
+	<p class="block_">That is the value of the machine at the end of the first year is 40000 into 90 by 100</p>
+	<p class="block_">After two years, the value of the machine is 90 perc entage of the value in the first year.</p>
+	<p class="block_">Value of the machine at the end of the 2nd year is 40000 into 90 by 100 whole square </p>
+	<p class="block_">Continuing this way, the value of the machine depreciates in the following way as </p>
+	<p class="block_">40000 comma 40000 into 90 by 100 comma 40000 into 90 by 100 whole square  comma  and so on </p>
+	<p class="block_">This sequence is in the form of G.P. with first term 40,000 and common ratio 90 by 100.</p>
+	<p class="block_">For finding the value of the machine at the end of 5th year (i.e., in 6th year), we need to find the sixth term of this G.P. </p>
+	<p class="block_">Thus, n equal to 6 comma a equal to 40000 comma r equal to 90 by 100.</p>
+	<p class="block_">Using t n equal to a r power n minus 1, we have, t 6 equal to 40000 into 90 by 100 power 6 minus 1 equal to 40000 into 90 by 100 power 5 </p>
+	<p class="block_">t 6 equal to 40000 into 9 by 10 into 9 by 10 into 9 by 10 into 9 by 10 into 9 by 10 into equal to 23619 point six.</p>
+	<p class="block_">Therefore, the value of the machine in 6thyear <span class="calibre13">equal to Rupees  </span>23619 point six zero</p>
+	<h3 class="block_16" id="toc_id_210">Exercise 2.7</h3>
+	<p class="block_35">1.Which of the following sequences are in G.P.?</p>
+	<p class="block_35">Number 1 3, 9, 27, 81, and so on </p>
+	<p class="block_35">(ii)4, 44, 444, 4444 and so on </p>
+	<p class="block_35">(iii)0.5, 0.05, 0.005 and so on</p>
+	<p class="block_35">(iv)1 by 3, 1 by 6, 1 by 12 and so, on </p>
+	<p class="block_35">Number 5 1, minus <span class="calibre21">5, 25,  </span>minus125 and so on </p>
+	<p class="block_35">Number 6 120, 60, 30, 18 and so on </p>
+	<p class="block_">Number 7 16, 4, 1, 1 by 4, and so on</p>
+	<p class="block_35">2.Write the first three terms of the G.P. whose first term and the common ratio are given below. </p>
+	<p class="block_35">Number 1 a equal to 6, r equal to 3</p>
+	<p class="block_35">(ii) a equal to root 2, r equal to root 2</p>
+	<p class="block_35">(iii)a equal to 1000, r equal to 2 by 5 </p>
+	<p class="block_35">3.In a G.P. 729, 243, 81, and so on find t 7<sub class="calibre114">.</sub></p>
+	<p class="block_35">4.Find x so that x plus 6 comma x plus 12 and x plus 15 are consecutive terms of a Geometric Progression.</p>
+	<p class="block_35">5.Find the number of terms in the following G.P. </p>
+	<p class="block_35">Number 1 4, 8, 16, up to 8192?</p>
+	<p class="block_35">(ii)1 by 3 , 1 by 9, 1 by 27 up to 1 by 2187</p>
+	<p class="block_35">6.In a G.P. the 9th term is 32805 and 6thterm is 1215. Find the 12thterm.</p>
+	<p class="block_35">7.Find the 10th term of a G.P. whose 8thterm is 768 and the common ratio is 2.</p>
+	<p class="block_35">8.If a, b, c are in A.P. then show that 3 power a, 3 power b, 3 power 3 are in G.P. </p>
+	<p class="block_35">9.In a G.P. the product of three consecutive terms is 27 and the sum of the product of two terms taken at a time is 57 by 2. Find the three terms. </p>
+	<p class="block_35">10.A man joined a company as Assistant Manager. The company gave him a starting salary of  Rupees sixty thousand and agreed to increase his salary 5 percentage annually. What will be his salary after 5 years?</p>
+	<p class="block_35">11.Sivamani is attending an interview for a job and the company gave two offers to him.</p>
+	<p class="block_">Offer A: Rupees twenty thousand to start with followed by a guaranteed annual increase of 6 percentage for the first 5 years.</p>
+	<p class="block_">Offer B: Rupees twenty two thousand to start with followed by a guaranteed annual increase of 3 percentage for the first 5 years. </p>
+	<p class="block_">What is his salary in the 4th year with respect to the offers A and B?</p>
+	<p class="block_35">12.If a, b, c are three consecutive terms of an A.P. and x, y, z are three consecutive terms of a G.P. then prove that x power b minus c into y power c minus a into z power a minus b equal to 1.</p>
+	<h2 class="block_4" id="toc_id_211">2.10 Sum to n terms of a Geometric progression</h2>
+	<p class="block_">A series whose terms are in Geometric progression is called Geometric series.</p>
+	<p class="block_">Let  a, a r, a r square up to a r n minus 1 be the Geometric Progression.</p>
+	<p class="block_">The sum of first n terms of the Geometric progression is</p>
+	<p class="block_">S n equal to a plus a r plus a r square  plus upto plus a r n minus 1 Equation 1</p>
+	<p class="block_">Multiplying both sides by r, we get r S n equal to a r plus a r square  plus a r cube plus and so on plus a r power n minus 1 plus a r power n Equation 2</p>
+	<p class="block_">On Subtracting Equation 2 and Equation 1</p>
+	<p class="block_"><span class="calibre13">r S n minus S n equal to a r power n minus a  </span></p>
+	<p class="block_">S n of r minus 1 equal to a of r power n minus 1 </p>
+	<p class="block_">Thus, the sum to n terms is S n equal to a of r power n minus 1 by r minus 1 comma r not equal to 1</p>
+	<h3 class="block_16" id="toc_id_212">Note</h3>
+	<p class="block_">The above formula for sum of first n terms of a G.P. is not applicable when r equal to 1</p>
+	<p class="block_">If r equal to 1 then</p>
+	<p class="block_">S n equal to a plus a plus a plus etcetera plus a equal to n a </p>
+	<h3 class="block_16" id="toc_id_213">Progress Check </h3>
+	<p class="block_35">1.A series whose terms are in Geometric progression is called dash. </p>
+	<p class="block_35">2.When r equal to 1, the formula for finding sum to n terms of a G.P. is dash. </p>
+	<p class="block_35">3.When r not equal to 1, the formula for finding sum to n terms of a G.P. is dash.</p>
+	<h2 class="block_1" id="toc_id_214">2.10.1 Sum to infinite terms of a G.P. </h2>
+	<p class="block_">The sum of infinite terms of a G.P. is given by S infinitive equal to a plus a r plus a r square  plus a r cube etcetera a by 1 minus r, minus 1less than r less than 1</p>
+	<h3 class="block_16" id="toc_id_215">Example 2.46</h3>
+	<p class="block_">Find the sum of 8 terms of the G.P. 1,minus3, 9, minus 27 etcetera</p>
+	<p class="block_"><b class="calibre10">Solutions </b>Here, the first term a equal to 1, common ratio r equal to minus 3 by 1 equal to minus 3 less than 1 Here,  n equal to 8.</p>
+	<p class="block_">Sum to n terms of a G.P. is S n equal to a of r power n minus 1 by r minus 1 comma r not equal to 1 </p>
+	<p class="block_">Hence,  S 8 equal to 1 of minus 3 power 8 minus 1 by minus 3 minus 1 equal to 6561 minus 1 by minus 4 equal to minus 1640 </p>
+	<h3 class="block_16" id="toc_id_216">Example 2.47</h3>
+	<p class="block_">Find the first term of a G.P. in which S 6 equal to 4095 and r equal to 4.</p>
+	<p class="block_">Solution Common ratio equal to 4 greater than 1, Sum of first 6 terms S 6 equal to 4095</p>
+	<p class="block_">Hence, S 6 equal to a of r power n minus 1 by r minus 1 equal to 4095 </p>
+	<p class="block_"><span class="calibre13">R equal to 4, a of 4 power 6 minus 1 by 4 minus 1 equal to 4095 implies to a into 4095 by 3 equal to 4095  </span></p>
+	<p class="block_">First term a equal to 3.</p>
+	<h3 class="block_16" id="toc_id_217">Example 2.48</h3>
+	<p class="block_">How many terms of the series 1 plus 4 plus 16 plus and so on make the sum 1365? </p>
+	<p class="block_5">Solution</p>
+	<p class="block_"> Let n be the number of terms to be added to get the sum 1365</p>
+	<p class="block_">a equal to 1 comma r equal 4 by 1 equal to 4 greater than 1 </p>
+	<p class="block_">S n equal to 1365 implies to a of r power n minus 1 by r minus 1 equal to 1365 </p>
+	<p class="block_">1 into <span class="calibre13">f 4 power n minus 1 by 4 minus 1 equal to 1365  so, 4 power n minus 1 equal to 4095 </span></p>
+	<p class="block_"><span class="calibre13">4 power n equal to 4096 implies to 4 power n equal to 4 power 6  </span></p>
+	<p class="block_">n equal to 6 </p>
+	<h3 class="block_16" id="toc_id_218">Progress Check </h3>
+	<p class="block_35">1.Sum to infinite number of terms of a G.P. is dash. </p>
+	<p class="block_35">2.For what values of r, does the formula for infinite G.P. valid?</p>
+	<h3 class="block_16" id="toc_id_219">Example 2.49</h3>
+	<p class="block_">Find the sum 3 plus 1 plus 1 by 3 plus etcetera infinity</p>
+	<p class="block_"><b class="calibre10">Solution </b>Here a equal to 3 r equal to t 2 by t 1 equal to 1 by 3 </p>
+	<p class="block_">Sum of infinite terms S infinity equal to a by 1 minus r equal to 3 by 1 minus 1 by 3 equal to 9 by 2 </p>
+	<h3 class="block_16" id="toc_id_220">Example 2.50 </h3>
+	<p class="block_">Find the rational form of the number zero point six sixsixsix etcetera </p>
+	<p class="block_5">Solution </p>
+	<p class="block_">We can express the number zero point six sixsixsixetceteraas follows </p>
+	<p class="block_">zero point six sixsixsix etcetera equal to zero point 6 plus zero point zero six plus 0 point zero zero six plus 0 point zero zerozero six plus and so on</p>
+	<p class="block_">We now see that numbers 0 point 6, 0 point zero six, 0 point zero zero six form a G.P. whose first terma equal to 0 point six and common ratio r equal to zero point zero six by zero point six equal to zero point one.Also<span class="calibre13">minus 1 less than  r equal to zero point 1 less than 1  </span></p>
+	<p class="block_">Using the infinite G.P. formula, we have </p>
+	<p class="block_"><span class="calibre13">0 point six sixsixsix etcetera equal to 0 point six plus 0 point zero six plus  0 point zero zero six plus 0 point zero zerozero six plus etcetera equal to 0 point 6 by 1 inus 0 point 1 equal to 0 point six by 0 point nine equal to 2 by 3   </span></p>
+	<p class="block_">Thus, the rational number equivalent of 0 point six sixsixsixis 2 by 3</p>
+	<h3 class="block_16" id="toc_id_221">Activity 5 </h3>
+	<p class="block_">The sides of a given square  is 10 cm. The mid points of its sides are joined to form a new square . Again, the mid points of the sides of this new square  are joined to form another square . This process is continued indefinitely. Find the sum of the areas and the sum of the perimeters of the square s formed through this process.</p>
+	<p class="block_"><img src="images/image-97.png" alt="Fig .2.15 Sum to infinite terms of a G.P. Drawn a 10 cm square joint the mid points get 1 square, likewise 2 get squares. " class="calibre115"/></p>
+	<h3 class="block_16" id="toc_id_222">Example 2.51 </h3>
+	<p class="block_">Find the sum to n terms of the series  and so on</p>
+	<p class="block_"><b class="calibre10">Solution</b> The series is neither Arithmetic nor Geometric series. So, it can be split into two series and then find the sum. </p>
+	<p class="block_"><span class="calibre13">5 plus 55 plus 555 plus etcetera n terms equal to 5 into 1 plus 11 plus 111 plus etcetera n terms       </span></p>
+	<p class="block_">Equal to 5 by 9 into 9 plus 99 plus 999 plus etcetera n terms </p>
+	<p class="block_">equal to 5 by 9 in to 10 minus 1 plus 100 minus 1 plus 1000 minus 1 plus etcetera n terms</p>
+	<p class="block_">equal to 5 by 9 into 10 plus 100 plus 1000 plus etcetera n terms minus n </p>
+	<p class="block_">equal to 5 by 9 into 10 of 10 power n minus 1 by 10 minus 1 minus n equal to 50 into 10 power n minus 1 by 81 minus 5n by 9 </p>
+	<h3 class="block_16" id="toc_id_223">Progress Check </h3>
+	<p class="block_35">1.Is the series 3 plus 33 plus 333 plus and so on a Geometric series? </p>
+	<p class="block_35">2.The value of r, such that 1 plus r plus r square  plus r cube and so on equal to 3 by 4 is dash</p>
+	<h3 class="block_16" id="toc_id_224">Example 2.52 </h3>
+	<p class="block_">Find the least positive integer n such that 1 plus 6 plus 62 plus etcetera plus 6 power n greater than 5000</p>
+	<p class="block_">Solution We have to find the least number of terms for which the sum must be greater than 5000. </p>
+	<p class="block_">That is, to find the least value of n. such that S n greater than 5000</p>
+	<p class="block_">We have, S n equal to a into r power n minus 1 by r minus 1 equal to 1 into 6 power n minus 1 by 6 minus 1 equal to 6 power n minus 1 by 5 </p>
+	<p class="block_">S n greater than 5000 implies to 6 power n minus 1 by 5 greater than 5000 </p>
+	<p class="block_">6 power n minus 1 greater than 25000 implies to 6 power n greater than 25001</p>
+	<p class="block_">6 power 5 equal to 7776 and 6 power 6 equal to 46656 </p>
+	<p class="block_">The least positive value of n is 6 such that 1 plus 6 plus 62 plus etcetera plus 6 power n greater than 5000</p>
+	<h3 class="block_16" id="toc_id_225">Example 2.53</h3>
+	<p class="block_">A person saved money every year, 1 by 2as much as he could in the previous year. If he had totally saved Rupees 7875 in 6 years then how much did he save in the first year? </p>
+	<p class="block_">Solution Total amount saved in 6 years is S 6 equal to 7875 </p>
+	<p class="block_">Since he saved 1 by 2as much money as every year he saved in the previous year, </p>
+	<p class="block_">We have r equal to 1 by 2 less than 1 </p>
+	<p class="block_">a with in bracket 1 minus r power n by 1 minus r equal to a with in bracket 1 minus 1 by 2 whole power 6 divided by 1 minus 1 by 2 equal to 7875 </p>
+	<p class="block_">a with in bracket 1 minus 1 by 64 divided by 1 by 2 equal to 7875 implies to a into 63 by 32 equal to 7875 </p>
+	<p class="block_">a equal to 7875 into 32 by 63</p>
+	<p class="block_">a equal to 4000</p>
+	<p class="block_">The amount saved in the first year is Rupees 4000.</p>
+	<h3 class="block_16" id="toc_id_226">Exercise 2.8</h3>
+	<p class="block_35">1.Find the sum of first n terms of the G.P.</p>
+	<p class="block_35">Number 1 5comma minus 3 comma 9 by 5 comma 27 by 25 and so on </p>
+	<p class="block_35">(ii)256 comma 64 comma 16 comma and so on </p>
+	<p class="block_35">2.Find the sum of first six terms of the G.P. 5 comma 15 comma 45 comma and so on </p>
+	<p class="block_35">3.Find the first term of the G.P. whose common ratio 5 and whose sum to first 6 terms is 46872.</p>
+	<p class="block_35">4. Find the sum to infinity of</p>
+	<p class="block_168">Number 19 plus 3 plus 1 plus and so on</p>
+	<p class="block_35">(ii)21 plus 14 plus 28 by 3 plus and so on</p>
+	<p class="block_35">5.If the first term of an infinite G.P. is 8 and its sum to infinity is 32 by 3 then find the common ratio. </p>
+	<p class="block_35">6.Find the sum to n terms of the series </p>
+	<p class="block_35">Number 1 0 point 4 plus 0 point four four plus 0 point four fourfour plus etcetera n terms</p>
+	<p class="block_35">(ii) 3 plus 33 plus 333 plus etcetera n terms </p>
+	<p class="block_35">7.Find the sum of the Geometric series  3 plus 6 plus 12 plus etcetera plus 1536 </p>
+	<p class="block_35">8.Kumar writes a letter to four of his friends. He asks each one of them to copy the letter and mail to four different persons with the instruction that they continue the process similarly. Assuming that the process is unaltered, and it costs Rupees 2 to mail one letter, find the amount spent on postage when 8th set of letters is mailed.</p>
+	<p class="block_35">9.Find the rational form of the numberzero point 123 whole bar</p>
+	<p class="block_35">10.If S n equal to x plus y plus x square  plus xy plus y square  plus x cube plus x square  y plus x y square  plus y cube plus upto n terms then prove that with in bracket x minus y S n equal to whole bracket x square  into x poer n minus 1 by x minus a minus y square  into y power n minus 1 by y minus 1 </p>
+	<h2 class="block_4" id="toc_id_227">2.11 Special Series </h2>
+	<p class="block_">There are some series whose sum can be expressed by explicit formulae. Such series are called special series.</p>
+	<p class="block_">Here we study some common special series like </p>
+	<p class="block_35">Number 1 Sum of first ‘n’ natural numbers </p>
+	<p class="block_35">(ii)Sum of first ‘n’ odd natural numbers. </p>
+	<p class="block_35">(iii)Sum of square s of first ‘n’ natural numbers. </p>
+	<p class="block_35">(iv)Sum of cubes of first ‘n’ natural numbers. </p>
+	<p class="block_">We can derive the formula for sum of any powers of first n natural numbers using the expression with in bracket x plus 1 power k minus x power k plus 1. That is to find 1 power k plus 2 power k plus 3 power k plus etcetera plus n power k we can use the expression with in bracket x plus 1 power k plus 1 minus x power k plus 1</p>
+	<h3 class="block_16" id="toc_id_228">2.11.1 Sum of first n natural numbers </h3>
+	<p class="block_">To find  plus 2 plus e plus etcetera plus n let us consider the identity with in bracket x plus 1 whole square  minus x square  equal to 2 x plus 1 </p>
+	<p class="block_">Where x equal to 1 2 3 etcetera n minus 1 comma n </p>
+	<p class="block_">x equal to 1 implies to 2 square  minus 1 square  equal to 2 of 1 plus 1 </p>
+	<p class="block_">x equal to 2 implies to 3 square ujare minus 2 square  equal to 2 of 2 plus 1 </p>
+	<p class="block_">x equal to 3 implies to 4 square  minus 3 square  equal to 2 of 3 plus 1 </p>
+	<p class="block_">Goes on till. </p>
+	<p class="block_">x equal to n minus 1 implies to n square  minus n minus 1 whole square  equal to 2 into n minus 1 plus 1</p>
+	<p class="block_">x equal to n comma n plus 1 whole square  minus n square  equal to 2 into n plus 1</p>
+	<p class="block_">Adding all these equations and cancelling the terms on the Left-Hand side, we get, </p>
+	<p class="block_">N plus 1 whole square  minus 1 square  equal to 2 with in bracket 1 plus 2 plus 3 plus etcetera plus n plus n </p>
+	<p class="block_">N square  plus 2 n equal to 2 with in bracket 1 plus 2 plus 3 plus etcetera plus n plus n</p>
+	<p class="block_">2 with in bracket 1 plus 2 plus 3 plus etcetera plus n equal to n square <span class="calibre13"> plus n equal to n of n plus 1  </span></p>
+	<p class="block_">1 plus 2 plus 3 plus etcetera plus n equal to n of n plus 1 by 2 </p>
+	<h3 class="block_16" id="toc_id_229">2.11.2 Sum of first n odd natural numbers </h3>
+	<p class="block_">1 plus 3 plus 5 plus etcetera plus 2n minus 1 </p>
+	<p class="block_">It is an A.P. witha equal to 1 comma d equal to 2 and l equal to 2n minus 1 </p>
+	<p class="block_">S n equal to n by 2 with in bracket a plus l </p>
+	<p class="block_">Equal to n by 2 with in bracket 1 plus 2 n minus 1 </p>
+	<p class="block_">S n equal to n by 2 into 2n equal to n square </p>
+	<h3 class="block_16" id="toc_id_230">2.11.3 Sum of square s of first n natural numbers </h3>
+	<p class="block_">To find 1 square  plus 2 square  plus 3 square  plus etcetera plus n square  let us consider the identity x plus 1 whole cube minus x cube equal to 3 x square  plus 3 x plus 1 </p>
+	<p class="block_">Where x equal to 1 2 3 etcetera minus 1 comma n </p>
+	<p class="block_">x equal to 1 implies to 2 cube minus 1 cube equal to 3 of 1 square  plus 3 of 1 plus 1</p>
+	<p class="block_">x equal to 2 implies to 3 cube minus 2 cube equal to 3 of 2 square  plus 3 of 2 plus 1</p>
+	<p class="block_">x equal to 3 implies to 4 cube minus 3 cube equal to 3 of 3 square  plus 3 of 3 plus 1</p>
+	<p class="block_">Goes on till. </p>
+	<p class="block_">x equal to n minus 1 implies to n cube minus n minus 1 whole cube equal to 3 into n minus 1 whole square <span class="calibre13"> plus 3 into n minus 1 plus 1  </span></p>
+	<p class="block_">x equal to n implies to n plus 1 whole cube minus n cube equal to 3 n square  plus 3 n plus 1 </p>
+	<p class="block_">Adding all these equations and cancelling the terms on the Left-Hand side, we get, </p>
+	<p class="block_">n plus 1 whole cube minus 1 cube equal to 3 with in bracket 1 square  plus 2 square  plus 3 square  plus etcetera n square  plus 3 with in bracket 1 plus 2 plus 3 plus etcetera plus n</p>
+	<p class="block_">n cube plus 3 n square  plus 3 n equal to 3 with in bracket 1 square  plus 2 square  plus 3 square  plus etcetera n square  plus 3 n into n plus 1 by 2 plus n </p>
+	<p class="block_">3 with in bracket 1 square  plus 2 square  plus 3 square  plus etcetera plus n square  equal to n cube plus 3 n square  plus 2 n minus 3 n into n plus 1 by 2 equal to 2 n cube plus 6 n square  plus 4 n minus 3 n square  minus 3 n by 2 </p>
+	<p class="block_">3 with in bracket 1 square  plus 2 square  plus 3 square  plus etcetera plus n square  equal to 2n cube plus 3 n square  plus n by 2 equal to n with in bracket 2 n square  plus 3 n plus 1 by 2 equal to n into n plus 1 into 2 n plus 1 by 2 </p>
+	<p class="block_">1 square  plus 2 square  plus 3 square  plus etcetera plus n square  equal to n into n plus 1 into 2 n plus 1 by 6</p>
+	<h3 class="block_16" id="toc_id_231">2.11.4 Sum of cubes of first n natural numbers </h3>
+	<p class="block_">To find13 plus 23 plus 33 plus etcetera plus n 3, let us consider the identity x plus 1 into 4 minus x power 4 equal to 4 x cube plus 6 x square  4 x plus 1</p>
+	<p class="block_">Where x equal to 1 2 3 etcetera n minus 1 comma n </p>
+	<p class="block_">x equal to 1 implies to 2 power 4 minus 1 power 4 equal to 4 into 1 cube plus 6 into 1 square  plus 4 into a plus 1 </p>
+	<p class="block_">x equal to 2 implies to 3 power 4 minus 2 power 4 equal to 4 into 2 cube plus 6 into 2 square uare plus 4 into 2 plus 1 </p>
+	<p class="block_">x equal to 3 implies to 4 power 4 minus 3 power 4 equal to 4 into 3 cube plus 6 into3 square  plus 4 into 3 plus 1 </p>
+	<p class="block_">Goes on till. </p>
+	<p class="block_">x equal to n minus 1 implies to n power 4 minus with in bracket n minus 1 whole power 4 equal to 4 with in bracket n minus 1 whole power 3 plus 6 with in bracket n minus 1 whole square  plus 4 with in bracket n minus 1 plus 1 </p>
+	<p class="block_">x equal to n implies to with in bracket n plus 1 whole power 4 minus n power 4 equal to 4 n power 3 plus 6 n square  plus 4 n plus 1 </p>
+	<p class="block_">Adding all these equations and cancelling the terms on the Left-Hand side, we get, </p>
+	<p class="block_">n plus 1 whole power 4 minus 1 power 4 equal to 4 with in bracket 1 cube plus 2 cube plus 3 cube plus etcetera plus n cube plus 6 with in bracket 1 square  plus 2 square  plus 3 square  plus etcetera n square <span class="calibre13"> plus 4 with in bracket 1 plus 2 plus e plus etcetera plus n plus n  </span></p>
+	<p class="block_">n power 4 plus 4 n cube plus 6 n square  plus 4 n equal to 4 with in bracket 1 cube plus 2 cube plus 3 cube plus etcetera plus n cube plus 6 into n of n plus 1 2n plus 1 by 6 plus 4 into n of n plus 1 by 2 plus n </p>
+	<p class="block_">4 with in bracket 1 cube plus 2 cube plus 3 cube plus etcetera plus n cube equal to n power 4 plus 4 n power 3 plus 6 n square  plus 4 n minus 2 n cube minus n square  minus 2 n square  minus n minus 2 n square  minus 2 n minus n </p>
+	<p class="block_">4 with in bracket 1 cube plus 2 cube plus 3 cube etcetera plus n cube equal to n power 4 plus 2 n cube plus n square  equal to n square  with in bracket n square  plus 2 n plus 1 equal to n square  with in bracket n plus 1 whole square </p>
+	<p class="block_">1 cube plus 2 cube plus 3 cube plus etcetera plus n cube equal to n cube equal to with in bracket n of n plus 1 by 2 whole square </p>
+	<h3 class="block_16" id="toc_id_232">Do you know? </h3>
+	<p class="block_5">Ideal Friendship</p>
+	<p class="block_">Consider the numbers 220 and 284. </p>
+	<p class="block_">Sum of the divisors of 220 (excluding 220) equal to 1 plus 2 plus 4 plus 5 plus 10 plus 11 plus 20 plus 22 plus 44 plus 55 plus 110 equal to 284 Sum of the divisors of 284 (excluding 284) equal to 1 plus 2 plus 4 plus 71 plus 142 equal to 220 </p>
+	<p class="block_">Thus, sum of divisors of one number excluding itself is the other. Such pair of numbers is called <b class="calibre10">Amicable Numbers or Friendly Numbers</b></p>
+	<p class="block_">220 and 284 are least pair of Amicable Numbers. They were discovered by Pythagoras. We now know more than 12 million amicable pair of Numbers.</p>
+	<h3 class="block_16" id="toc_id_233">Activity 6</h3>
+	<p class="block_"><img src="images/image-98.png" alt=" Fig.2.16 Ball arranged in right-angled triangle with four rows. First row has one ball, second row has two balls, third row has three balls and fourth row has four ball. Summing all the balls 1+2+3+4 equals  10." class="calibre74"/></p>
+	<p class="block_"><img src="images/image-99.png" alt="Fig 2.17 Triangle having four rows. First row has 4 balls, second row has 3 balls, third row has 2 balls and fourth row has 1 ball. Therefore on adding all the balls 4 + 3 + 2 + 1 equals 10." class="calibre116"/></p>
+	<p class="block_"><img src="images/image-100.png" alt="Fig.2.18 Both triangle Fig 2.16 and Fig 2.17 joined to get rectangle of 4 rows 5 columns." class="calibre117"/></p>
+	<p class="block_">Thus, two copies of 1 plus 2 plus 3 plus 4 provide a rectangle of size 4 cross 5. </p>
+	<p class="block_">We can write in numbers, what we did with pictures. Let us write, </p>
+	<p class="block_">with in bracket 4 plus 3 plus 2 plus 1 plus with in bracket 1 plus 2 plus 3 plus 4 equal to 4 cross 5</p>
+	<p class="block_">2 with in bracket 1 plus 2 plus 3 plus 4 equal to 4 cross 5 </p>
+	<p class="block_">Therefore,<span class="calibre13">1 plus 2 plus 3 plus 4 equal to 4 into 5 by 2 equal to 10   </span></p>
+	<p class="block_">In a similar, fashion, try to find the sum of first 5 natural numbers. Can you relate these answers to any of the known formula?</p>
+	<h3 class="block_16" id="toc_id_234">Do you know?</h3>
+	<p class="block_35">1.The sum of first n natural numbers are also called Triangular Numbers because they form triangle shapes. </p>
+	<p class="block_35">2.The sum of square s of first n natural numbers are also called Square  Pyramidal Numbers because they form pyramid shapes with square  base.</p>
+	<h3 class="block_16" id="toc_id_235">Thinking Corner </h3>
+	<p class="block_35">1.How many square s are there in a standard chess board? </p>
+	<p class="block_35">2.How many rectangles are there in a standard chess board?</p>
+	<p class="block_">Here is a summary of list of some useful summation formulae which we discussed. These formulae are used in solving summation problems with finite terms. </p>
+	<p class="block_">Sigma limit k equal to 1 to n k equal to 1 plus 2 plus 3 plus etcetera plus n equal to n into n plus 1 by 2 </p>
+	<p class="block_">Sigma limit k equal to 1 to n with in bracket 2 k minus 1 equal to 1 plus 2 plus 3 plus etcetera plus within bracket 2 n minus 1 equal to n square </p>
+	<p class="block_">Sigma limit k equal to 1 to n k square  equal to 1 square  plus 2 square  plus 3 square  plus etcetera plus n square  equal to n into n plus 1 into 2 n plus 1 by 6 </p>
+	<p class="block_">Sigma limit k equal to 1 to n k cube equal to 1 cube plus 2 cube plus 3 cube plus etcetera plus n cube equal to n into n plus 1 by 2 whole square </p>
+	<h3 class="block_78" id="toc_id_236">Example 2.54</h3>
+	<p class="block_"> Find the value of </p>
+	<p class="block_35">Number 1 1 plus 2 plus 3 plus etcetera plus 50 </p>
+	<p class="block_35">(ii)16 plus 17 plus 18 plus etcetera plus 75 </p>
+	<p class="block_5">Solution </p>
+	<p class="block_35">Number 1 1 plus 2 plus 3 plus etcetera plus 50 </p>
+	<p class="block_178">Using, 1 plus 2 plus 3 etcetera plus n equal to n into n plus 1 by 2</p>
+	<p class="block_178">1 plus 2 plus 3 plus etcetera plus 50 equal to 50 into 50plus 1 by 2 equal to 1275 </p>
+	<p class="block_178"><span class="calibre13">16 plus 17 plus 18 plus etcetera plus 75 equal to within bracket 1 plus 2 plus 3 plus etcetera plus 75 minus within bracket 1 plus 2 plus 3 plus etcetera plus 15  </span></p>
+	<p class="block_178">Equal to 75 into 75 plus 1 by 2 minus 15 into 15 plus 1 by 2 </p>
+	<p class="block_178">Equal to 2850 minus 120 equal to 2730 </p>
+	<h3 class="block_181" id="toc_id_237">Progress Check </h3>
+	<p class="block_">1. The sum of cubes of first n natural numbers is dash of the first n natural numbers. </p>
+	<p class="block_">2. The average of first 100 natural numbers is dash.</p>
+	<h3 class="block_16" id="toc_id_238">Example 2.55</h3>
+	<p class="block_">Find the sum of </p>
+	<p class="block_35">Number 1 1 plus 3 plus 5 plus etcetera tp 40 terms</p>
+	<p class="block_35">(ii)2 plus 4 plus 6 plus etcetera plus 80 </p>
+	<p class="block_35">(iii)1 plus 3 plus 5 plus etcetera plus 55 </p>
+	<p class="block_">Solution</p>
+	<p class="block_35">Number 1 1 plus 3 plus 5 plus etcetera 40 terms equal to 40square  equal to 1600</p>
+	<p class="block_35">(ii)2 plus 4 plus 6 plus etcetera plus 80 equal to 2 with in bracket 1 plus 2 plus 3 plus etcetera plus 40 equal to 2 into 40 into 40 plus 1 by 2 equal to 1640</p>
+	<p class="block_35">(iii) 1 plus 3 plus 5 plus etcetera plus 55 </p>
+	<p class="block_">Here the number of terms is not given. Now we have to find the number of terms using the formula, n equal to l minus a by d plus 1 equal to n equal to 55 minus 1 by 2 plus 1 equal to 28 </p>
+	<p class="block_">Therefore, 1 plus 3 plus 5 plus etcetera plus 55 equal to 28 square  equal to 784 </p>
+	<h3 class="block_16" id="toc_id_239">Example 2.56 </h3>
+	<p class="block_">Find the sum of </p>
+	<p class="block_35">Number 1 1 square  plus 2 square  plus etcetera plus 19 square </p>
+	<p class="block_35">(ii)5 square  plus 10 square  plus 15 square  plus etcetera plus 105 square </p>
+	<p class="block_35">(iii)15 square  plus 16 square  plus 17 square  plus etcetera plus 28 square </p>
+	<p class="block_5">Solution</p>
+	<p class="block_35">Number 1 1 square  plus 2 square  plus etcetera plus 19 square <span class="calibre21"> equal to 19 into 19 plus 1 into with in bracket 2 into 19 plus 1 by 6 equal to 19 into 20 into 39 by 6 equal to 2470  </span></p>
+	<p class="block_35">(ii)5 square  plus 10 square  plus 15 square  plus etcetera plus 105 square  equal to 5 square  with in bracket 1 square  plus 2 square  plus 3 square  plus etcetera plus 21 square </p>
+	<p class="block_182">Equal to 25 into 21 into with in bracket 21 plus 1 with in bracket 2 into 21 plus 1 by 6</p>
+	<p class="block_182">Equal to 25 into 21 into 22 into 43 by 6 equal to 82775</p>
+	<p class="block_35">(iii)15 square  plus 16 square  plus 17 square  plus etcetera plus 28 square  equal to with in bracket 1 square  plus 2 square  plus 3 square  plus etcetera 28 square  minus within bracket 1 square  plus 2 square  plus 3 square  plus etcetera 14 square </p>
+	<p class="block_">Equal to 28 into 29 into 57 by 6 minus 14 into 15 into 29 by 6 equal to 7714 minus 1015 equal to 6699</p>
+	<h3 class="block_16" id="toc_id_240">Example 2.57</h3>
+	<p class="block_">Find the sum of </p>
+	<p class="block_35">Number 1 1 cube plus 2 cube plus 3 cube plus etcetera plus 16 cube </p>
+	<p class="block_35">(ii)9 cube plus 10 cube plus etcetera plus 21 cube </p>
+	<p class="block_5">Solution</p>
+	<p class="block_35">Number 1 1 cube plus 2 cube plus 3 cube plus etcetera plus 16 cube equal to within bracket 16 into 16 plus 1 by 2 whole square  equal to 136 square  equal to 18496</p>
+	<p class="block_35">(ii) <span class="calibre21">9 cube plus 10 cube plus etcetera plus 21 cube equal to with in bracket 1 cube plus 2 cube plus 3 cube plus etcetera plus 21cube minus with in bracket 1 cube plus 2 cube plus 3 cube plus etcetera plus  8 cube </span></p>
+	<p class="block_">Equal to with in bracket 21 into with in bracket 21 plus 1 by 2 whole square  minus with in bracket 8 into with in bracket 8 plus 1 by 2 whole square  equal to 231 square  minus 36 square  equal to 52065</p>
+	<p class="block_171">Example 2.58</p>
+	<p class="block_">If 1 plus 2 plus 3 plus etcetera plus n equal to 666 then find n. </p>
+	<p class="block_"><b class="calibre10">Solution </b>Since, 1 plus 2 plus 3 plus etcetera plus n equal to n of n plus 1 by 2 we have <span class="calibre13">n of n plus 1 by 2  equal to 666</span></p>
+	<p class="block_">n square  plus n minus 1332 equal to 0 implies to with in bracket n plus 37 into n minus 36 equal to 0</p>
+	<p class="block_">So, n equal to minus 37 or n equal to 36 But n not equal to minus 37 (n is a natural number) Hence n equal to 36</p>
+	<h3 class="block_16" id="toc_id_241">Progress Check </h3>
+	<p class="block_">Say True or False. Justify them. </p>
+	<p class="block_35">1.The sum of first n odd natural numbers is always an odd number. </p>
+	<p class="block_35">2.The sum of consecutive even numbers is always an even number. </p>
+	<p class="block_35">3.The difference between the sum of square s of first n natural numbers and the sum of first n natural numbers is always divisible by 2. </p>
+	<p class="block_35">4.The sum of cubes of the first n natural numbers is always a square  number.</p>
+	<h3 class="block_16" id="toc_id_242">Exercise 2.9</h3>
+	<p class="block_35">1.Find the sum of the following series </p>
+	<p class="block_35">Number 1 <span class="calibre21">1 plus 2 plus 3 plus etcetera  plus 60 </span></p>
+	<p class="block_35">(ii)3 plus 6 plus 9 plus etcetera plus 96 </p>
+	<p class="block_35">(iii)51 plus 52 plus 53 plus etcetera plus 92 </p>
+	<p class="block_35">(iv)1 plus 4 plus 9 plus 16 plus etcetera plus 225 </p>
+	<p class="block_35">Number 5 60 square  plus 7 square  plus 8 square  plus etcetera plus 21 square </p>
+	<p class="block_35">Number 6 103 plus 113 plus 123 plus etcetera plus 203 </p>
+	<p class="block_35">Number 71 plus 3 plus 5 plus etcetera plus 71 </p>
+	<p class="block_35">2.If 1 plus 2 plus 3 plus etcetera plus k equal to 325 then find 1 cube plus 2 cube plus 3 cube plus etcetera plus k 3</p>
+	<p class="block_35">3.If  1 cube plus 2 cube plus 3 cube plus etcetera plus k 3 equal to 44100 then find 1 plus 2 plus 3 plus etcetera plus k </p>
+	<p class="block_35">4.How many terms of the series 1 cube plus 2 cube plus 3 cube plus and so on should be taken to get the sum 14400? </p>
+	<p class="block_35">5.The sum of the cubes of the first n natural numbers is 2025, then find the value of n. </p>
+	<p class="block_35">6.Rekha has 15 square  colour papers of sizes 10-centimeter, 11-centimeter, 12-centimeter, up to 24-centimeter. How much area can be decorated with these colour papers? </p>
+	<p class="block_35">7.Find the sum of the series within bracket 2 cube minus 1 cube plus 4 cube minus 3 cube plus 6 cube minus 5 cube plus to</p>
+	<p class="block_35">Number 1 n terms</p>
+	<p class="block_35">(ii)8 terms</p>
+	<h3 class="block_16" id="toc_id_243">Exercise 2.10</h3>
+	<h3 class="block_125" id="toc_id_244"> </h3>
+	<p class="block_"><img src="images/image-101.png" alt="Scan this QR CODE UMQCA to visit diksha website" class="calibre87"/></p>
+	<p class="block_">Multiple choice questions</p>
+	<p class="block_35">1.Euclid’s division lemma states that for positive integers a and b, there exist unique integers q and r such thata equal to bq plus r where r must satisfy. </p>
+	<p class="block_178">(A)1 less than r less than b </p>
+	<p class="block_178">(B)0 less than r less than </p>
+	<p class="block_178">(C)0 less than or equal to r less than b </p>
+	<p class="block_178">(D)0 less than r less than or equal to b</p>
+	<p class="block_168">2.Using Euclid’s division lemma, if the cube of any positive integer is divided by 9 then the possible remainders are </p>
+	<p class="block_183">(A)0, 1, 8</p>
+	<p class="block_183">(B)1, 4, 8</p>
+	<p class="block_183">(C)0, 1, 3</p>
+	<p class="block_183">(D)1, 3, 5 </p>
+	<p class="block_168">3.If the HCF of 65 and 117 is expressible in the form of 65 m minus 117, then the value of m is </p>
+	<p class="block_178">(A)4</p>
+	<p class="block_178">(B)2</p>
+	<p class="block_178">(C)1</p>
+	<p class="block_178">(D)3 </p>
+	<p class="block_178">4.The sum of the exponents of the prime factors in the prime factorization of 1729 is </p>
+	<p class="block_184">(A)1</p>
+	<p class="block_185"><span class="calibre21">      (B)</span>2</p>
+	<p class="block_168">(C)3</p>
+	<p class="block_168">(D)4 </p>
+	<p class="block_168">5.The least number that is divisible by all the numbers from 1 to 10 (both inclusive) is </p>
+	<p class="block_186">(A)2025</p>
+	<p class="block_186">(B)5220</p>
+	<p class="block_187"><span class="calibre21">                      (C)</span>5025</p>
+	<p class="block_186">(D)2520 </p>
+	<p class="block_168">6.7 power 4k congruent dash mod 100</p>
+	<p class="block_188">(A)1</p>
+	<p class="block_188">(B)2</p>
+	<p class="block_188">(C)3</p>
+	<p class="block_188">(D)4 </p>
+	<p class="block_168">7.Given F 1 equla to 1 , F 2 equal to 3 and F n equal to F n minus 1 plus F n minus 2 then F 5 is  ,  and  then  is </p>
+	<p class="block_35">(A)3</p>
+	<p class="block_168">(B)5</p>
+	<p class="block_168">(C)8</p>
+	<p class="block_168">(D)11 </p>
+	<p class="block_168">8.The first term of an arithmetic progression is unity, and the common difference is 4. Which of the following will be a term of this A.P.</p>
+	<p class="block_186">(A)4551</p>
+	<p class="block_186">(B)10091</p>
+	<p class="block_186">(C)7881</p>
+	<p class="block_186">(D)13531 </p>
+	<p class="block_168">9.If 6 times of 6th term of an A.P. is equal to 7 times the 7th term, then the 13thterm of the A.P. is</p>
+	<p class="block_">(A)0</p>
+	<p class="block_">(B)6</p>
+	<p class="block_">(C)7</p>
+	<p class="block_">(D)13 </p>
+	<p class="block_168">10.An A.P. consists of 31 terms. If its 16th term is m, then the sum of all the terms of this A.P. is </p>
+	<p class="block_">(A)16 m</p>
+	<p class="block_">(B)62 m</p>
+	<p class="block_">(C)31 m</p>
+	<p class="block_">(D)31 by 2 m </p>
+	<p class="block_168">11.In an A.P., the first term is 1 and the common difference is 4. How many terms of the A.P. must be taken for their sum to be equal to 120?</p>
+	<p class="block_">(A)6</p>
+	<p class="block_">(B)7</p>
+	<p class="block_">(C)8</p>
+	<p class="block_">(D)9 </p>
+	<p class="block_168">12.If A equal to 2 power 65 and B equal to 2 power 64 plus 2 power 63 plus 2 power 62 plus etcetera plus 2 power 0 which of the following is true? </p>
+	<p class="block_168">(A)B is 2 power 64 more than A</p>
+	<p class="block_168">(B)A and B are equal</p>
+	<p class="block_168">(C)B is larger than A by 1</p>
+	<p class="block_168">(D)A is larger than B by 1</p>
+	<p class="block_168">13.The next term of the sequence 3 by 16 comma 1 by 8, 1 by 12 comma 1 by 18 etcetera is</p>
+	<p class="block_168">(A)1 by 24 </p>
+	<p class="block_168">(B)1 by 27</p>
+	<p class="block_168">(C)2 by 3</p>
+	<p class="block_35">(D)1 by 81</p>
+	<p class="block_168">14.If the sequence t 1 comma t 2 comma t 3 and so on are in A.P. then the sequence t 6 comma t 12 comma t 18 comma and so on is</p>
+	<p class="block_168">(A)Geometric Progression</p>
+	<p class="block_168">(B)an Arithmetic Progression</p>
+	<p class="block_168">(C)neither an Arithmetic Progression nor a Geometric Progression</p>
+	<p class="block_168">(D)a constant sequence </p>
+	<p class="block_168">15.The value of with in bracket 1 cube plus 2 cube plus 3 cube plus etcetera plus 15 cube minus with in bracket 1 plus 2 plus 3 plus etcetera plus 15 is</p>
+	<p class="block_168">(A)14400</p>
+	<p class="block_168">(B)14200</p>
+	<p class="block_168">(C)14280</p>
+	<p class="block_168">(D)14520</p>
+	<h3 class="block_16" id="toc_id_245">Unit Exercise – 2</h3>
+	<p class="block_35">1.Prove that n power 2 minus n divisible by 2 for every positive integer n.</p>
+	<p class="block_35">2.A milk man has 175 litres of cow’s milk and 105 litres of buffalow’s milk. He wishes to sell the milk by filling the two types of milk in cans of equal capacity. Calculate the following </p>
+	<p class="block_35">Number 1Capacity of a can</p>
+	<p class="block_35">(ii)Number of cans of cow’s milk</p>
+	<p class="block_35">(iii)Number of cans of buffa low’s milk. </p>
+	<p class="block_35">3.When the positive integers a, b and c are divided by 13 the respective remainders are 9, 7 and 10. Find the remainder when a plus 2 b plus 3 c is divided by 13. </p>
+	<p class="block_35">4.Show that 107 is of the form 4q plus 3 for any integer q. </p>
+	<p class="block_35">5.If with in bracket m plus 1 thterm of an A.P. is twice the n plus 1 thterm, then prove that with in bracket 3m plus 1 th term is twice the with in bracket m plus n plus n plus thterm.</p>
+	<p class="block_35">6.Find the 12thterm from the last term of the A. P minus 2 comma minus 4 comma minus 6 comma etcetera minus 100</p>
+	<p class="block_35">7.Two A.P.’s have the same common difference. The first term of one A.P. is 2 and that of the other is 7. Show that the difference between their 10thterms is the same as the difference between their 21stterms, which is the same as the difference between any two corresponding terms. </p>
+	<p class="block_35">8.A man saved Rupees 16500 in ten years. In each year after the first he saved Rupees 100 more than he did in the preceding year. How much did he save in the first year? </p>
+	<p class="block_35">9.Find the G.P. in which the 2ndterm is root 6 and the 6th term is 9 root 6</p>
+	<p class="block_35">10.The value of a motorcycle depreciates at the rate of 15 percentage per year. What will be the value of the motorcycle 3 year hence, which is now purchased for Rupees  45,000?</p>
+	<h3 class="block_16" id="toc_id_246">Points to Remember</h3>
+	<ul class="list_">
+	<li class="block_20">Euclid’s division lemma </li>
+</ul>
+	<p class="block_174">If a and b are two positive integers, then there exist unique integers q and r such that a equal to bq plus r comma 0 less than or equal to r less than modulus b</p>
+	<ul class="list_">
+	<li class="block_20">Fundamental theorem of arithmetic </li>
+</ul>
+	<p class="block_174">Every composite number can be expressed as a product of primes and this factorization is unique except for the order in which the prime factors occur.</p>
+	<ul class="list_">
+	<li class="block_20">Arithmetic Progression </li>
+</ul>
+	<p class="block_">Number 1Arithmetic Progression is a comma a plus d comma a plus 2 d comma a plus 3 d comma till nthterm is given by t n equal to a plus within bracket n minus 1 into d </p>
+	<p class="block_">(ii)Sum to first n terms of an A.P. isS n equal to n by 2 with in bracket 2 a plus with in bracket n minus 1 into d </p>
+	<p class="block_">(iii)If the last term l (nth term) is given, then S n equal to n by 2 with in bracket a plus l </p>
+	<ul class="list_">
+	<li class="block_20"><b class="calibre10">Geometric Progression </b></li>
+</ul>
+	<p class="block_35">Number 1 Geometric Progression is a comma a r comma a r square  comma etcetera a r power n minus 1. N thterm is given by t n equal to a r power n minus 1 </p>
+	<p class="block_35">(ii)Sum to first n terms of an G.P. is S n equal to a into r power n minus 1 by r minus 1 if comma r not equal to 1 </p>
+	<p class="block_35">(iii)Suppose r equal to 1 then S n equal to n a </p>
+	<p class="block_35">(iv)Sum to infinite terms of a G.P. a a plus a r plus a r square  plus and so on isS infinity equal to a by 1 minus r comma where minus 1 less than r less than 1</p>
+	<ul class="list_">
+	<li class="block_20"><b class="calibre10">Special Series </b></li>
+</ul>
+	<p class="block_35">Number 1The sum of first n natural numbers 1 plus 2 plus 3 plus etcetera plus n equal to n of n plus 1 by 2</p>
+	<p class="block_35">(ii)The sum of square s of first n natural numbers 1 square  plus 2 square  plus 3 square  plus etcetera plus n square  equal to n of n plus 1 into 2n plus 1 by 6</p>
+	<p class="block_35">(iii)The sum of cubes of first n natural numbers 1 cube plus 2 cube plus 3 cube etcetera plus n cube equal to with in bracket n of n plus 1 by 2 whole square </p>
+	<p class="block_35">(iv)The sum of first n odd natural numbers 1 plus 3 plus 5 plus etcetera plus with in bracket 2 n minus 1 equal to n square </p>
+	<p class="block_189"> </p>
+	<p class="block_189"> </p>
+	<p class="block_"><img src="images/image-102.png" alt="Image" class="calibre118"/></p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_3"> </p>
+	<p class="block_5">Chapter 3 ALGEBRA</p>
+	<p class="block_"><img src="images/image-103.png" alt="Niccolo Fontana Tartaglia  Period 1499/1500-1557 AD(CE) " class="calibre119"/></p>
+	<p class="block_">“A person who can, within a year, solve x square  minus 92 y square  equal to 1 is a mathematician” - Brahmagupta</p>
+	<p class="block_">Niccolo Fontana Tartaglia was an Italian mathematician, engineer, surveyor and bookkeeper from then Republic of Venice (now Italy). He published many books, including the first Italian translations of Archimedes and Euclid, and an acclaimed compilation of mathematics. Tartaglia was the first to apply mathematics to the investigation of the paths of cannonballs; his work was later validated by Galileo’s studies on falling bodies. </p>
+	<p class="block_">Tartaglia along with Cardano were credited for finding methods to solve any third-degree polynomials called cubic equations. He also provided a nice formula for calculating volume of any tetrahedron using distance between pairs of its four vertices. </p>
+	<h2 class="block_4" id="toc_id_247">Learning Outcomes </h2>
+	<ul class="list_">
+	<li class="block_180">To solve system of linear equations in three variables by the method of elimination </li>
+	<li class="block_190">To find GCD and LCM of polynomials </li>
+	<li class="block_190">To simplify algebraic rational expressions </li>
+	<li class="block_190">To understand and compute the square  root of polynomials </li>
+	<li class="block_190">To learn about quadratic equations </li>
+	<li class="block_190">To draw quadratic graphs </li>
+	<li class="block_190">To learn about matrix, its types and operations on matrices </li>
+</ul>
+	<p class="block_"><img src="images/image-104.png" alt="QR CODE DCRBL" class="calibre120"/></p>
+	<h2 class="block_191" id="toc_id_248">3.1 Introduction</h2>
+	<p class="block_">Algebra can be thought of as the next level of study of numbers. If we need to determine anything subject to certain specific conditions, then we need Algebra. In that sense, the study of Algebra is considered as “Science of determining unknowns”. During third century AD(CE) Diophantus of Alexandria wrote a monumental book titled “Arithmetica” in thirteen volumes of which only six has survived. This book is the first source where the conditions of the problems are stated as equations and they are eventually solved. Diophantus realized that for many real-life situation problems, the variables considered are usually positive integers.</p>
+	<p class="block_">The term “Algebra” has evolved as a misspelling of the word ‘al-jabr’ from one of the important work titled Al-Kitāb al-mukhtaşarfīhisāb al-jabrwa’l-muqābala (“The Compendious Book on Calculation by Completion and Balancing”) written by Persian Mathematician <b class="calibre10">Al-Khwarizmi</b> of 9<sup class="calibre37">th</sup> Century AD(CE) Since Al-Khwarizmi’s Al-Jabr book provided the most appropriate methods of solving equations, he is hailed as <b class="calibre10">“Father of Algebra”. </b></p>
+	<p class="block_">In the earlier classes, we had studied several important concepts in Algebra. In this class, we will continue our journey to understand other important concepts which will be of much help in solving problems of greater scope. Real understanding of these ideas will benefit much in learning higher mathematics in future classes. </p>
+	<p class="block_5">Simultaneous Linear Equations in Two Variables </p>
+	<p class="block_">Let us recall solving a pair of linear equations in two variables. </p>
+	<p class="block_5">Definition </p>
+	<h2 class="block_191" id="toc_id_249">Linear Equation in two variables </h2>
+	<p class="block_">Any first-degree equation containing two variables x and y is called a linear equation in two variables. The general form of linear equation in two variables x and y is axplus by plus c equal to zero, where at least one of a, b is non-zero and a, b, c are real numbers. Note that linear equations are first degree equations in the given variables. </p>
+	<h3 class="block_16" id="toc_id_250">Note </h3>
+	<ul class="list_">
+	<li class="block_180">X y minus 7 equal to 3 is not a linear equation in two variables since the term xy is of degree 2. </li>
+	<li class="block_190">A linear equation in two variables represent a straight line in xy plane</li>
+</ul>
+	<h3 class="block_16" id="toc_id_251">Example 3.1</h3>
+	<p class="block_">The father’s age is six times his son’s age. Six years hence the age of father will be four times his son’s age. Find the present ages (in years) of the son and father. </p>
+	<p class="block_">Solution Let the present age of father be x years and the present age of son be y years </p>
+	<p class="block_">Given,x equal to 6 y  Equation 1</p>
+	<p class="block_"><span class="calibre13">x plus y equal to 4 into y plus 6  Equation 2</span></p>
+	<p class="block_">Substituting Equation 1 in Equation 2,6 y plus 6 equal to 4 into y plus 6</p>
+	<p class="block_">6 into y plus 6 equal to 4 into y plus 24 implies y equal to 9</p>
+	<p class="block_">Therefore, son’s age equal to 9 years and father’s age equal to 54 years. </p>
+	<h3 class="block_16" id="toc_id_252">Example 3.2</h3>
+	<p class="block_">Solve2 into x minus 3 into y equal to 6 comma x plus y equal to 1</p>
+	<p class="block_">Solution2 into x minus 3 into y equal to 6 Equation 1</p>
+	<p class="block_">x plus y equal to 1 Equation 2</p>
+	<p class="block_">Multiple Equation 1 by1 implies 2 into x plus 3 into y equal to 6</p>
+	<p class="block_">Multiple  Equation 2 by 2Implies 2 into x plus two into y equal to 2</p>
+	<p class="block_">On Subtracting Equation 1 and 2</p>
+	<p class="block_">minus 5 into y equal to 4 implies y equal to minus 4 by 5</p>
+	<p class="block_">substitutingy equal to minus 4 by 5 in Equation 2, </p>
+	<p class="block_"><span class="calibre13">x minus 4 by 5 equal to 1  </span>weget,x equal to 9 by 5</p>
+	<p class="block_">Therefore,x equal to 9 by 5 comma y equal to minus 4 by 5</p>
+	<p class="block_3"> </p>
+	<p class="block_"><img src="images/image-105.png" alt="Fig 3.1 XY plane graph with x axis ranges from -3 to 7 with scale 1 centimeter = 1unit and y axis from 3 to -4 with scale 1 centimeter = 1unit. The following coordinates are plotted: (0,1) , (0,3) ,  (1.8,-0.8) that is 9 divided by 5 and -4 divided by 5, and (0,-2). Draw straight line joining the points (0,1) and (1.8,-0.8) and another straight line joining (0,3) and (0,-2)." class="calibre121"/>s</p>
+	<h2 class="block_4" id="toc_id_253">3.2 Simultaneous Linear Equations in Three Variables </h2>
+	<p class="block_109">Right from the primitive needs of calculating amount spent for various items in a supermarket, finding ages of people under specific conditions, finding path of an object when it is thrown upwards at an angle, Algebra plays a vital role in our daily life. <br class="calibre122"/>Any point in the space can be determined uniquely by knowing its latitude, longitude and altitude. Hence to locate the position of an object at a particular place situated on the Earth, three satellites are positioned to arrive three equations. Among these three equations, we get two linear equations and one quadratic (second degree) equation. Hence, we can solve for the variables latitude, longitude and altitude to uniquely fix the position of any object at a given point of time. This is the basis of <b class="calibre123">Global Positioning System</b> (GPS). Hence the concept of linear equations in three variables is used in GPS systems. </p>
+	<p class="block_"><img src="images/image-106.png" alt="Fig 3.2 Different points in the space determined uniquely by knowing its latitude, longitude and altitude using three satellites are positioned to arrive three equations." class="calibre124"/></p>
+	<h3 class="block_16" id="toc_id_254">3.2.1 System of Linear Equations in Three Variables </h3>
+	<p class="block_">In earlier classes, we have learnt different methods of solving <b class="calibre10">Simultaneous Linear Equations</b> in two variables. Here we shall learn to solve the system of linear equations in three variables namely, x, y and z. The general form of a linear equation in three variables x, y and z is axplus by plusczplus d equal to zero where a, b, c, d are real numbers, and atleast one of a, b, c is non-zero.</p>
+	<p class="block_5">Note </p>
+	<table class="table_2">
+		<tbody class="calibre5"><tr class="calibre6">
+			<td class="td_108"><p class="block_">A linear equation in two variables of the forma into x plus b into y plus c equal to zero, represents a straight line.</p><p class="block_"><img src="images/image-107.png" alt="The figure 3.3 (i) represents a model graph. In this graph O is origin. Draw X axis and Y axis that are taken as X’X and Y’Y. The system of linear equations in two variables namely X and Y of the form ax + by + c = 0, represents a straight line. A straight line drawn from Y axis to X axis representing ax+by+c=0." class="calibre125"/></p><p class="block_3"> </p></td>
+			<td class="td_108"><p class="block_">A linear equation in three variables of the forma into x plus b into y plus c into z plus d equal to zero represents a plane.</p><p class="block_"><img src="images/image-108.png" alt="The figure 3.3 (ii) represents a model graph. In this graph O is origin. Draw X axis, Y axis and Z axis that are taken as OX, OY and OZ. A linear equation in three variables of the form ax + by + cz + d = 0, represents a plane.                                       " class="calibre126"/></p></td>
+		</tr>
+	</tbody></table>
+	<h4 class="block_192">General Form</h4>
+	<p class="block_">A system of linear equations in three variables x, y, z has the general form </p>
+	<p class="block_"><span class="calibre13">a one x plus b one y plus  c one z plus d one equal to zero</span></p>
+	<p class="block_">a two x plus b two y plus c two z plus d two equal to zero</p>
+	<p class="block_">a three x plus b three y plus c three plus z plus d three equal to zero</p>
+	<p class="block_">Each equation in the system represents a plane in three dimensional space and solution of the system of equations is precisely the point of intersection of the three planes defined by the three linear equations of the system. The system may have only one solution, infinitely many solutions or no solution depending on how the planes intersect one another. </p>
+	<p class="block_">The figure ures presented below illustrate each of these possibilities </p>
+	<p class="block_"><img src="images/image-109.png" alt="In the figure 3.4 Depending on the intersection of the planes we will obtain a solution. There are three images. The first image represents a system of three planes. If these three planes intersect only once then the system has only one solution.  In the figure 3.4 second image represents a system of three planes. If these three planes intersect more than once then the system has infinitely many solutions.  In the figure 3.4 third image represents a system of three planes. If these three planes doesn’t intersect each other then the system has no solution. " class="calibre127"/></p>
+	<h4 class="block_108">Procedure for solving system of linear equations in three variables </h4>
+	<p class="block_">Step 1: By taking any two equations from the given three, first multiply by some suitable non-zero constant to make the co-efficient of one variable (either x or y or z) numerically equal. </p>
+	<p class="block_">Step 2: Eliminate one of the variables whose co-efficient are numerically equal from the equations.</p>
+	<p class="block_">Step 3: Eliminate the same variable from another pair. </p>
+	<p class="block_">Step 4: Now we have two equations in two variables. </p>
+	<p class="block_">Step 5: Solve them using any method studied in earlier classes. </p>
+	<p class="block_">Step 6: The remaining variable is then found by substituting in any one of the given equations. </p>
+	<h4 class="block_108">Note</h4>
+	<ul class="list_">
+	<li class="block_180">If you obtain a false equation such as zero equal to 1, in any of the steps then the system has no solution. </li>
+	<li class="block_190">If you do not obtain a false solution, but obtain an identity, such as zero equal to then the system has infinitely many solutions.</li>
+</ul>
+	<h3 class="block_16" id="toc_id_255">Example 3.3</h3>
+	<p class="block_">Solve the following system of linear equations in three variables </p>
+	<p class="block_">3 into x minus 2 into y plus z equal to 2 comma 2 into x plus three y minus z equal to 5 comma x plus y plus z equal to 6</p>
+	<p class="block_">Solution3 into x minus 2 into y plus z equal to 2 Equation 1</p>
+	<p class="block_">2 into x plus 3 into y minus z equal to 5 Equation 2</p>
+	<p class="block_">x plus y plus z equal to 6 Equation 3 </p>
+	<p class="block_">Adding Equation 1 and <span dir="rtl">Equation 2</span>,</p>
+	<p class="block_">3 into x minus 2 into y plus z equal to 2 plus 2 into x plus 3 into y minus z equal to 5 equal to 5 into x plus y equal to 7Equation 4 is 5 into x plus y equal to 7</p>
+	<p class="block_">Adding Equation 2 and <span dir="rtl">Equation 3</span></p>
+	<p class="block_">2 into x plus 3 into y minus z equal to 5 plus x plus y plus z equal to 6 equal to 3 into x plus 4 into y equal to 11 Equation 5</p>
+	<p class="block_">Multiply Equation 4 by value 4 and Subtract the Equation 4 and 5</p>
+	<p class="block_">20 into x plus 4 into y equal to 28 minus 3 into x plus 4 into y equal to 11 equal to 17 into x equal to 17</p>
+	<p class="block_">Implies x equal to 1</p>
+	<p class="block_">Substitutingx equal to 1 in <span dir="rtl">Equation 4</span>,5 plus y equal to 7 implies y equal to 2</p>
+	<p class="block_">Substitutingx equal to 1 comma y equal to 2 in <span dir="rtl">Equation 3</span>, <span class="calibre13">1 plus 2 plus z equal to 6 we get   z equal to 3</span></p>
+	<p class="block_">Therefore, x equal to 1 comma y equal to 2 comma z equal to 3</p>
+	<h3 class="block_16" id="toc_id_256">Example 3.4</h3>
+	<p class="block_">In an interschool athletic meet, with total of 24 individual prices, securing a total of 56 points, a first place secures 5 points, a second place secures 3 points, and a third place secures 1 point. Having as many third-place finishers as first and second place finishers, find how many athletes finished in each place. </p>
+	<p class="block_">Solution Let the number of number 1, II and III place finishers be x, y and z respectively. </p>
+	<p class="block_">Total number of events equal to 24; Total number of points equal to  56. </p>
+	<p class="block_">Hence, the linear equations in three variables are </p>
+	<p class="block_">x plus y plus z equal to 24 Equation 1</p>
+	<p class="block_">5 into x plus 3 into y plus z equal to 56 Equation 2</p>
+	<p class="block_">x plus y equal to z Equation 3</p>
+	<p class="block_">Substituting Equation 3 in Equation 1 we get, z plus z equal to 24 implies z equal to 12</p>
+	<p class="block_">Therefore, Equation 3 will be,x plus y equal to 12</p>
+	<p class="block_">Multiply the Equation 3 by value 3 and subtract Equation 2 and 3.</p>
+	<p class="block_">5 into x plus 3 into y equal to 44 Equation 2</p>
+	<p class="block_">minus 3 into x plus 3 into y equal to 36Equation 3 multiplied by value 3</p>
+	<p class="block_">On subtracting both we get,</p>
+	<p class="block_">2 into x equal to 8</p>
+	<p class="block_">x equal to 4</p>
+	<p class="block_">Substitutingx equal to 4 comma z equal to 12 in Equation 3 </p>
+	<p class="block_">we get,y equal to 12 minus 4 equal to 8</p>
+	<p class="block_">Therefore, Number of first place finishers is 4 </p>
+	<p class="block_">Number of second place finishers is 8 </p>
+	<p class="block_">Number of third place finishers is 12. </p>
+	<h3 class="block_16" id="toc_id_257">Example 3.5</h3>
+	<p class="block_">Solvex plus 2 into y minus z equal to 5 semicolon x minus y plus z equal to minus 2n semicolon minus 5 into x minus 4 into y plus z equal to minus 11</p>
+	<p class="block_5">Solution </p>
+	<p class="block_">x plus 2 into y minus z equal to 5 Equation 1</p>
+	<p class="block_">x minus y plus z equal to minus 2 Equation 2</p>
+	<p class="block_">minus 5 into x minus 4 into y plus z equal to minus 11Equation 3</p>
+	<p class="block_">Adding Equation<span class="calibre13">  1x plus 2 into y minus z equal to 5 </span>and Equation 2</p>
+	<p class="block_">x minus y plus z equal to minus 2 we get,</p>
+	<p class="block_">2 into x plus y equal to 3 Equation 4</p>
+	<p class="block_">Subtracting Equation 2x minus y plus z equal to minus 2 and 3 equation minus 5 into x minus 4 into y plus z equal to minus 11</p>
+	<p class="block_">We get,</p>
+	<p class="block_">6 into x plus 3 into y equal to 9</p>
+	<p class="block_">On Dividing the result by 3, we get2 into x plus y equal to 3 Equation 5 </p>
+	<p class="block_">Subtracting Equation 4 </p>
+	<p class="block_">2 into x plus y equal to 3and Equation 5 </p>
+	<p class="block_">2 into x plus y equal to 3 we get,zero equal to zero</p>
+	<p class="block_">Here we arrive at an identity zero equal to zero. </p>
+	<p class="block_">Hence the system has an infinite number of solutions. </p>
+	<h3 class="block_16" id="toc_id_258">Example 3.6</h3>
+	<p class="block_">Solve 3 into x plus 3 into y minus 3 into z equal to 1 comma minus 2 into x minus 2 into y plus 2 into z equal to 1 comma minus x minus y plus z equal to 2.</p>
+	<p class="block_5">Solution </p>
+	<p class="block_">3 x plus y minus 3 z equal to 1 Equation 1</p>
+	<p class="block_">minus 2 x minus y plus 2 z equal to 1Equation 2</p>
+	<p class="block_">minus x minus y plus z equal to 2 Equation 3</p>
+	<p class="block_">On adding Equation13x plus y minus 3z equal to 1 and </p>
+	<p class="block_">Equation 2 minus 2x minus y plus 2z equal to 1</p>
+	<p class="block_">We get Equation 4, x minus z equal to 2 </p>
+	<p class="block_">Adding Equation 1 3 x plus y minus 3 z equal to 1 and Equation 3 minus x minus y plus z equal to 2</p>
+	<p class="block_">We get Equation 5, 2 x minus 2 z equal to 3</p>
+	<p class="block_">Multiply Equation 4,x minus z equal to 2 by 2 and subtract from Equation 5 2 x minus 2 z equal to 3. That is,</p>
+	<p class="block_">2x minus 2z equal to 3 minus 2x minus 2z equal to 4</p>
+	<p class="block_">We get, zero equal to 1 </p>
+	<p class="block_">Here we arrive at a contradiction as zero not equal to minus 1</p>
+	<p class="block_">This means that the system is inconsistent and has no solution. </p>
+	<h3 class="block_16" id="toc_id_259">Example 3.7</h3>
+	<p class="block_">Solve x by 2 minus 1 equal to y by 6 plus 1 equal to z by 7 plus 2 semicolon y by 3 plus z by 2 equal to 13</p>
+	<p class="block_5">Solution</p>
+	<p class="block_">Consideringx by 2 minus 1 equal to y by 6 plus 1</p>
+	<p class="block_">x by 2 minus y by 6 equal to 1 plus 1 implies 6x minus 2y by 12 equal to 2 </p>
+	<p class="block_">we get 3x minus y equal to 12 Equation 1</p>
+	<p class="block_">Considering,x by 2 minus 1 equal to z by 7 plus 2</p>
+	<p class="block_">x by 2 minus z by 7 equal to 1 plus 2 implies 7x minus 2z by 14 equal to 3</p>
+	<p class="block_">we get, 7x minus 2z equal to 42 Equation 2</p>
+	<p class="block_">Also, fromy by 3 plus z by z equal to 13 implies 2y plus 3z by 6 equal to 13 implies 2y plus 3z equal to 78 Equation 3</p>
+	<p class="block_">Eliminating z from Equation 2 and Equation 3 </p>
+	<p class="block_">Multiply Equation 27x minus 2z equal to 42 by 3 and Equation 3 2y plus 3z equal to 78 by 2</p>
+	<p class="block_">Subtract both Equation 2 and 3</p>
+	<p class="block_">21 x minus 6 z equal to 126 minus 4 y plus 6 z equal to 156</p>
+	<p class="block_">We get, <span id="id_Hlk168649865">21 x plus 4 y equal to 282 </span></p>
+	<p class="block_">Multiply equation 1 by 4 and subtract from the result21 x plus 4y equal to 282</p>
+	<p class="block_">That is, </p>
+	<p class="block_">21x plus 4y equal to 282 minus 12x minus 4y equal to 48</p>
+	<p class="block_">We get, 33x equal to 330 x equal to 10</p>
+	<p class="block_">Substitutingx equal to 10in Equation 130 minus y equal to 12 we get, y equal to 18 </p>
+	<p class="block_">Substitutingx equal to 10 in Equation 2 70 minus 2z equal to 42 then z equal to 14</p>
+	<p class="block_">Therefore, x equal to 10 comma y equal to18 comma z equal to 14. </p>
+	<h3 class="block_16" id="toc_id_260">Example 3.8</h3>
+	<p class="block_">Solve: <span id="id_Hlk168703213">1 by 2x plus 1 by 4y minus 1 by 3z equal to 1 by 4 semicolon 1 by x equal to 1 by 3y semicolon 1 by x minus 1 by 5y plus 4 by z equal to 2 into 2 by 15</span></p>
+	<p class="block_5">Solution</p>
+	<p class="block_">Let1 by x equal to p comma 1 by y equal to q comma 1 by z equal to r</p>
+	<p class="block_">The given equations are written as </p>
+	<p class="block_">p by 2 plus q by 4 minus r by 3 equal to 1 by 4</p>
+	<p class="block_">p equal to q by 3</p>
+	<p class="block_">p minus q by 5 plus 4 into r equal to 2 into2 by 15 equal to 32 by 15</p>
+	<p class="block_">By simplifying we get, </p>
+	<p class="block_">6p plus 3q minus 4 into r equal to 3 Equation 1 </p>
+	<p class="block_">3 into p equal to q  Equation 2 </p>
+	<p class="block_"><span class="calibre13">  Equation 3 </span></p>
+	<p class="block_">Substituting Equation 2 in Equation 1 and Equation 3 we get,</p>
+	<p class="block_">15p minus 3q plus 60r equal to 32 Equation 3</p>
+	<p class="block_">6p plus 60r equal to 32 reduces to3p plus 30r equal to 16 Equation 4</p>
+	<p class="block_">Solving Equation 415p minus 4r equal to 3and equation 5 15p plus 150r equal to 80</p>
+	<p class="block_">We get,minus 154 r equal to minus 77</p>
+	<p class="block_">r equal to 1 by 2 </p>
+	<p class="block_">Substituting r equal to 1 by 2 in Equation 4 we get, 15p minus 2 equal to 3 implies p equal to 1 by 3</p>
+	<p class="block_">From Equation 2, q equal to 3p we get q equal to 1</p>
+	<p class="block_">Therefore, x equal to 1 by p equal to 3 comma y equal to 1 by q equal to 1 comma z equal to 1 by r equal to 2 that isx equal to 3 comma y equal to 1 comma z equal to 2</p>
+	<h3 class="block_16" id="toc_id_261">Example 3.9</h3>
+	<p class="block_">The sum of thrice the first number, second number and twice the third number is 5. If thrice the second number is subtracted from the sum of first number and thrice the third, we get 2. If the third number is subtracted from the sum of twice the first, thrice the second, we get 1. Find the numbers. </p>
+	<p class="block_"><b class="calibre10">Solution</b> Let the three numbers be x, y, z </p>
+	<p class="block_">From the given data we get the following equations, </p>
+	<p class="block_">3x plus y plus 2z equal to 5 Equation 1</p>
+	<p class="block_">x plus 3z minus 3y equal to 2 Equation 2</p>
+	<p class="block_">2x plus 3y minus z equal to 1 Equation 3</p>
+	<p class="block_">Multiply Equation 2 by value 3 and Equation 1 by value 1 and subtract both, we get</p>
+	<p class="block_">3 x plus y plus 2 z equal to 5 minus3 x minus 9y plus 9z equal to 6</p>
+	<p class="block_">10y minus 7z equal to minus 1 Equation 4 </p>
+	<p class="block_">Multiply Equation 1 by value 2 and Equation 3 by value 3 and subtract both. We get,</p>
+	<p class="block_">6x plus 2y plus 4z equal to 10 minus 6x plus 9y minus 3z equal to 3</p>
+	<p class="block_">minus 7y plus 7z equal to 7 Equation 5</p>
+	<p class="block_">Adding Equation 4 <span id="id_Hlk168711480">10y minus 7z equal to minus 1 and Equation5 minus 7y plus 7 z equal to 7  We get,</span></p>
+	<p class="block_">3y equal to 6 implies y equal to 2</p>
+	<p class="block_">Substituting y equal to 2 in Equation minus 14 plus 7z equal to 7 implies z equal to 3</p>
+	<p class="block_">Substituting y equal to 2 and<span class="tab">      </span>z equal to3 in Equation 1 </p>
+	<p class="block_">3x plus 2 plus 6 equal to 5 we get x equal to minus 1</p>
+	<p class="block_">Therefore, x equal to minus 1 comma y equal to 2 comma z equal to 3</p>
+	<h3 class="block_16" id="toc_id_262">Thinking Corner </h3>
+	<p class="block_35">1.The number of possible solutions when solving system of linear equations in three variables are dash.</p>
+	<p class="block_35">2.If three planes are parallel, then the number of possible point(s) of intersection is/are dash.</p>
+	<h3 class="block_16" id="toc_id_263">Progress Check </h3>
+	<p class="block_35">1.For a system of linear equations in three variables the minimum number of equations required to get unique solution is dash. </p>
+	<p class="block_35">2.A system with dash will reduce to identity. </p>
+	<p class="block_35">3.A system with dash will provide absurd equation. </p>
+	</body></html>

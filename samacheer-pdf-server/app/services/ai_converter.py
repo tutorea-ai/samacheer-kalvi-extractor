@@ -227,6 +227,8 @@ class AIContentConverter:
             meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit}"
         elif subject == "science" and discipline:
             meta_line = f"Class {class_num} | Science — {discipline.title()} | Unit {unit}"
+        elif subject in ["maths", "math", "mathematics"]:
+            meta_line = f"Class {class_num} | Maths | Unit {unit}"
         else:
             type_display = type_display_map.get(lesson_type, "Prose")
             meta_line = f"Class {class_num} | English | Unit {unit} | {type_display}"
@@ -263,7 +265,7 @@ class AIContentConverter:
         # ── QA ────────────────────────────────────────────────────────────────
         print(f"\n   ❓ Generating QA HTML...")
         try:
-            if subject in ["socialscience", "social_science", "science"]:
+            if subject in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
                 from ..content_builder.master_router import generate_qa
                 qa_html = generate_qa(text, metadata)
             else:
@@ -285,7 +287,7 @@ class AIContentConverter:
         # ── LP ────────────────────────────────────────────────────────────────
         print(f"\n   📌 Generating LP HTML...")
         try:
-            if subject in ["socialscience", "social_science", "science"]:
+            if subject in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
                 from ..content_builder.master_router import generate_lp
                 lp_html = generate_lp(text, metadata)
             else:
