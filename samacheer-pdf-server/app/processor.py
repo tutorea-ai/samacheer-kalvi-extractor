@@ -332,7 +332,31 @@ class PDFProcessor:
             for k in index_data.keys() if k != "meta"
         )
 
-        if "disciplines" in index_data or flat_disciplines:
+        if "chapters" in index_data:
+            # Index JSON: term → "chapters" → "maths" → [{chapter, title, page, month}]
+            chapters = index_data["chapters"]
+            target_units = chapters.get("maths", [])
+            all_units_for_slicing = target_units
+            if not target_units:
+                print(f"❌ No maths chapters found in index")
+                return None
+            selected_unit_obj = next(
+                (u for u in target_units if u.get("chapter") == unit_num),
+                None
+            )
+            if not selected_unit_obj:
+                print(f"❌ Chapter {unit_num} not found in maths index")
+                return None
+            start_pdf_page = selected_unit_obj["page"] + offset
+            clean_title = selected_unit_obj["title"].replace(" ", "")
+            filename = f"Class{class_num}-maths-{unit_num}-{clean_title}"
+            selected_page_raw = selected_unit_obj["page"]
+            all_start_pages = sorted([u["page"] for u in all_units_for_slicing])
+            next_pages = [p for p in all_start_pages if p > selected_page_raw]
+            end_pdf_page = next_pages[0] + offset - 1 if next_pages else meta["total_pdf_pages"]
+            return filename, start_pdf_page, end_pdf_page
+
+        elif "disciplines" in index_data or flat_disciplines:
             if not discipline:
                 print("❌ 'discipline' parameter is required for this subject.")
                 return None
@@ -894,6 +918,10 @@ class PDFProcessor:
     def _get_lesson_type(self, term_index: dict, unit_num: int, lesson_choice: int, subject: str = "") -> str:
         """Returns lesson type. For discipline-based subjects, returns subject name."""
         try:
+            # Maths uses chapters key
+            if "chapters" in term_index:
+                return "maths"
+
             # Discipline-based subjects (SS, Science) use disciplines key — not units
             flat_disciplines = all(
                 k in ["physics", "chemistry", "biology", "computer_science",

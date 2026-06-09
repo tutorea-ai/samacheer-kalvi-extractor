@@ -497,9 +497,10 @@ class ContentBridge:
                 print(f"❌ Bridge Maths: '{term_key}' not found for class {class_str}")
                 return None
 
-            units = term_data.get("units", [])
+            # Curriculum JSON: term → "maths" → [{chapter, id, title, type}]
+            units = term_data.get("maths", [])
             lesson_data = next(
-                (u for u in units if u.get("unit") == unit_num),
+                (u for u in units if u.get("chapter") == unit_num),
                 None
             )
             if not lesson_data:
