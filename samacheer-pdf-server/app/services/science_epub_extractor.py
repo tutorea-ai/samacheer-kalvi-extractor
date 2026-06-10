@@ -28,14 +28,18 @@ class ScienceEpubExtractor:
     def __init__(self, epub_dir: Path):
         epub_dir = Path(epub_dir)
 
-        # Handle double-nested EPUBs
-        if not (epub_dir / 'nav.xhtml').exists():
+        # Handle double-nested EPUBs — check both nav.xhtml and toc.ncx
+        if not (epub_dir / 'nav.xhtml').exists() and not (epub_dir / 'toc.ncx').exists():
             nested = epub_dir / epub_dir.name
-            if nested.exists() and (nested / 'nav.xhtml').exists():
+            if nested.exists() and (
+                (nested / 'nav.xhtml').exists() or (nested / 'toc.ncx').exists()
+            ):
                 epub_dir = nested
             else:
                 for subdir in epub_dir.iterdir():
-                    if subdir.is_dir() and (subdir / 'nav.xhtml').exists():
+                    if subdir.is_dir() and (
+                        (subdir / 'nav.xhtml').exists() or (subdir / 'toc.ncx').exists()
+                    ):
                         epub_dir = subdir
                         break
 

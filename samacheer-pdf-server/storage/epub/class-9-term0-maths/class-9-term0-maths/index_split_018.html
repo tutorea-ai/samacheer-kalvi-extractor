@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>Unknown</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+<link rel="stylesheet" type="text/css" href="page_styles.css"/>
+</head>
+  <body class="calibre">
+<p class="block_14">
+</p>
+	<h1 class="block_22" id="toc_id_146"><img src="images/image513.png" alt="Image" class="calibre543"/> </h1>
+	<h1 id="id_9PROBABILITY" class="block_22">9.PROBABILITY</h1>
+	<p class="block_14">Probability theory is nothing more than common sense reduced to calculation. <i class="calibre4">- Pierre Simon Laplace.</i></p>
+	<p class="block_15"><img src="images/image-279.png" alt="QR CODE NUMBER OSPOC" class="calibre544"/></p>
+	<p class="block_"><img src="images/image-280.png" alt="Richard Von Mises -image&#10; The notion of sample space comes from  R.Von Mises.&#10;" class="calibre545"/></p>
+	<p class="block_10"> </p>
+	<p class="block_182">Richard Von Mises</p>
+	<p class="block_182">(AD (CE) 1883-1953)</p>
+	<p class="block_24">The statistical or empirical, attitude towards probability has been developed mainly by R.F.Fisher and R.Von Mises. The notion of sample space comes from R.Von Mises. This notion made it possible to build up a strictly mathematical theory of probability based on measure theory. Such an approach emerged gradually in the last century under the influence of many authors.</p>
+	<p class="block_105">Learning Outcomes </p>
+	<p class="block_10"> </p>
+	<p class="block_105">•<span class="tab">      </span>To understand the basic concepts of probability. </p>
+	<p class="block_105">•<span class="tab">      </span>To understand the classical and empirical approach of probability. </p>
+	<p class="block_105">•<span class="tab">      </span>To familiarise the types of events in probability. <span class="tab">      </span></p>
+	<p class="block_10"> </p>
+	<h2 class="block_28" id="toc_id_147">9.1 Introduction </h2>
+	<p class="block_18">To understand the notion of probability, we look into some real-life situations that involve some traits of uncertainty. </p>
+	<p class="block_14">A life-saving drug is administered to a patient admitted in a hospital. The patient’s relatives may like to know the probability with which the drug will work; they will be happy if the doctor tells that out of 100 patients treated with the drug, it worked well with more than 80 patients. This percentage of success is illustrative of the concept of probability; it is based on the frequency of occurrence. It helps one to arrive at a conclusion under uncertain conditions. Probability is thus a way of quantifying or measuring uncertainty.</p>
+	<p class="block_10"> </p>
+	<p class="block_13"><span class="text_3">You should be familiar with the usual complete pack of 52 playing cards. It has 4 suits(Hearts </span><span class="text_100">♥</span><span class="text_3">, Clubs </span><span class="text_100">♣</span><span class="text_3">, Diamonds </span><span class="text_100">♦</span><span class="text_3">, Spades</span><span class="text_100">♠</span><span class="text_3">), each with 13 cards. Choose one of the suits or cards, say spades. Keep these 13 cards facing downwards on the table. Shuffle them well and pick up any one card. What is the chance that it will be a King? Will the chances vary if you do not want a King but an Ace? You will be quick to see that in either case, the chances are 1 in 13 (Why?). It will be the same whatever single card you choose to pick up. The word ‘Probability’ means precisely the same thing as ‘chances’ and has the same value, but instead of saying 1 in 13 we write it as a fraction 1 13. (It would be easy to manipulate with fractions when we combine probabilities). It is ‘the ratio of the favourable cases to the total number of possible cases’.</span></p>
+	<p class="block_14"><img src="images/image-281.png" alt="An image of playing cards spade 2  to  10&#10;and Ace, Joker, King and Queen&#10;13 Cards&#10;" class="calibre546"/></p>
+	<p class="block_10"> </p>
+	<p class="block_14">Have you seen a ‘dice’ ? (Some people use the word ‘die’ for a single ‘dice’; we use ‘dice’ here, both for the singular and plural cases). A standard dice is a cube, with each side having a different number of spots on it, ranging from one to six, rolled and used in gambling and other games involving chance.</p>
+	<p class="block_14">NOTE</p>
+	<p class="block_14">In a fair die the sum of the numbers turning on the opposite sides will always be equal to 7.</p>
+	<p class="block_11"> </p>
+	<p class="block_4">If you throw a dice, what is the probability of getting a five? a two? a seven? </p>
+	<p class="block_18">In all the answers you got for the questions raised above, did you notice anything special about the concept of probability? Could there be a maximum value for probability? or the least value? If you are sure of a certain occurrence what could be its probability? For a better clarity, we will try to formalize the notions in the following paragraphs. </p>
+	<p class="block_191"> </p>
+	<h2 class="block_28" id="toc_id_148">9.2 Basic Ideas </h2>
+	<p class="block_18">When we carry out experiments in science repeatedly under identical conditions, we get almost the same result. Such experiments are known as <i class="calibre4">deterministic</i>. For example, the experiments to verify Archimedes principle or to verify Ohm’s law are <i class="calibre4">deterministic</i>. The outcomes of the experiments can be predicted well in advance. </p>
+	<p class="block_14">But there are experiments in which the outcomes may be different even when performed under identical conditions. For example, when a fair dice is rolled, a fair coin is flipped or while selecting the balls from an urn, we cannot predict the exact outcome</p>
+	<p class="block_4"><i class="calibre4">{H,T</i>}</p>
+	<p class="block_4">of these experiments; these are <i class="calibre4">random experiments</i>. Each performance of a random experiment is called a trial and the result of each trial is called an outcome. (<i class="calibre4">Note: Many statisticians use the words ‘experiment’ and ‘trial’ synonymously.</i>) </p>
+	<p class="block_14">Now let us see some of the important terms related to probability. </p>
+	<p class="block_14">Trial : Rolling a dice and flipping a coin are trials. A trial is an action which results in one or several outcomes. </p>
+	<p class="block_14">Outcome : While flipping a coin we get Head or Tail. Head and Tail are called outcomes. The result of the trial is called an outcome. </p>
+	<p class="block_14">Sample point : While flipping a coin, each outcome H or T are the sample points. Each outcome of a random experiment is called a sample point. </p>
+	<p class="block_14">Sample space :<span class="calibre3"> In a single flip of a coin, the collection of sample points is given by S  </span></p>
+	<p class="block_14">If two coins are tossed the collection of sample points S={HH,HT,TH,TT}. S is equal to set of HH comma HT comma TH comma TT</p>
+	<p class="block_14">The set of all possible outcomes  bracket open or Sample points close bracket of a random experiment is called the Sample space. It is denoted by S. The number of elements in it are denoted by n(S). </p>
+	<p class="block_14">Event : If a dice is rolled, it shows 4 which is called an outcome open bracket since, it is a result of a single trial close bracket . In the same experiment the event of getting an even number is {2,4,6}. So, any subset of a sample space is called an event. Hence an event can be one or more than one outcome.</p>
+	<p class="block_14"><img src="images/image314.png" alt="Random experiment : Flipping a coin   &#10;An image of 5 Rupee coin&#10;Head and tail image&#10;" class="calibre547"/></p>
+	<p class="block_736">For example </p>
+	<p class="block_18">(i) Random experiment: Flipping a coin </p>
+	<p class="block_18">Possible outcomes: Head<span class="calibre3">   </span>( <i class="calibre4">H </i>) or Tail(<i class="calibre4">T </i>) </p>
+	<p class="block_49">Sample space : <i class="calibre13">S </i>= {<i class="calibre13">H,T</i>} <span class="calibre14">S  is equal to  set of {H,T}.</span></p>
+	<p class="block_18">Subset of <i class="calibre4">S </i>: <i class="calibre4">A</i>={<i class="calibre4">H</i>} or <i class="calibre4">A</i>={<i class="calibre4">T</i>} <span class="calibre3">A is equal to   set of {H} or A is equal to  set of  {T}</span></p>
+	<p class="block_361">Thus, in this example <i class="calibre4">A </i>is an event. </p>
+	<p class="block_14">(ii) When we roll a single dice, the collection of all sample points is <i class="calibre4">S </i>= {1,2,3,4,5,6}. (iii) When we select a day in a week the collection of sample points is <i class="calibre4">S </i>= {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}.</p>
+	<p class="block_10"> </p>
+	<p class="block_94">Activity – 1</p>
+	<p class="block_10"> </p>
+	<table class="table_16">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_544"><p class="block_53">Perform the experiment of tossing two coins at a time. List out the following in the above experiment. </p></td>
+			<td class="td_545"><p class="block_53"> Perform the experiment of throwing two dice at a time. List out the following in this experiment also. </p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_546"><p class="block_36"> <span class="text_20">Random experiment: </span></p><p class="block_107">Possible outcomes: </p><p class="block_107">Sample space: </p><p class="block_107">Any three subsets of <i class="calibre4">S </i>: </p><p class="block_103">Open bracket or any 3 events close bracket </p></td>
+			<td class="td_547"><p class="block_107"> Random experiment: </p><p class="block_107">Possible outcomes: </p><p class="block_107">Sample space: </p><p class="block_107">Any three subsets of <i class="calibre4">S </i>: </p><p class="block_103">Open bracket or any 3 events close bracket</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_10"> </p>
+	<p class="block_737">Activity – 2</p>
+	<p class="block_287">Each student is asked to flip a coin 10 times and tabulate the number of heads and tails obtained in the following table.</p>
+	<p class="block_14">Number of tosses <span class="tab1">      </span> Number of times head comes up <span class="tab1">      </span> Number of times tail comes up <span class="tab1">      </span> </p>
+	<p class="block_14">Romen letter 1  Fraction 1 : </p>
+	<p class="block_14">Number of times head comes up/ Total number of times the coin is tossed</p>
+	<p class="block_14">Romen letter 2 Fraction 2 : </p>
+	<p class="block_14">Number of times tail comes up  by Total number of times the coin is tossed </p>
+	<p class="block_11"> </p>
+	<p class="block_14">Repeat it by tossing the coin 20, 30, 40, 50 times and find the fractions.</p>
+	<p class="block_14">Group <span class="tab1">      </span> Number of times head comes up <span class="tab1">      </span></p>
+	<p class="block_14">Number of times tail comes up <span class="tab1">      </span> Number of times head comes up</p>
+	<p class="block_14">Total Number of times the coin is tossed<span class="tab1">      </span></p>
+	<p class="block_14">Number of times tail comes up by</p>
+	<p class="block_14">Total Number of times the coin is tossed</p>
+	<h2 class="block_28" id="toc_id_149">9.3 Classical Approach</h2>
+	<p class="block_">The chance of an event happening when expressed qualitatively is probability.</p>
+	<p class="block_"><img src="images/image-282.png" alt="Classical Approach &#10;An image of Urn&#10;choose a ball at random from the urn. &#10;" class="calibre548"/></p>
+	<p class="block_94">For example,</p>
+	<p class="block_105">An urn contains 4 Red balls and 6 Blue balls. You choose a ball at random from the urn. What is the probability of choosing a Red ball?</p>
+	<p class="block_10"> </p>
+	<p class="block_105">The phrase ‘at random’ assures you that each one of the 10 balls has the same chance (that is, probability) of getting chosen. You may be blindfolded and the balls may be mixed up for a “fair” experiment. This makes the outcomes “equally likely.”</p>
+	<p class="block_10"> </p>
+	<p class="block_105">The probability that the Red Bakk us chosen is 4 by10 open bracket You may also give it as 2/5<span class="calibre14">  2</span><span class="calibre14">  by 5</span> or o point 4 close bracket</p>
+	<p class="block_105">What would be the probability for choosing a Blue Ball? It is 6 by1 0 open 0r 3by5 or 0point close bracket</p>
+	<p class="block_10"> </p>
+	<p class="block_105">Note that the sum of the two probabilities is 1. This means that no other outcome is possible.</p>
+	<p class="block_10"> </p>
+	<p class="block_105">The approach we adopted in the above example is classical. It is calculating a <i class="calibre13">priori probability</i>. open bracket he Latin phrase a <i class="calibre13">priori </i>means ‘<i class="calibre13">without investigation or sensory experience</i> ‘close bracket. Note that the above treatment is possible only when the outcomes are equally likely.</p>
+	<p class="block_10"> </p>
+	<p class="block_18">Classical probability is so named, because it was the first type of probability studied formally by mathematicians during the 17th and 18th centuries. </p>
+	<p class="block_18">Let <i class="calibre4">S </i>be the set of all equally likely outcomes of a random experiment. (<i class="calibre4">S </i>is called the sample space for the experiment.) </p>
+	<p class="block_4">Let <i class="calibre4">E </i>be some particular outcome or combination of outcomes of an experiment. (<i class="calibre4">E </i>is called an event.) </p>
+	<p class="block_4">The probability of an event <i class="calibre4">E </i>is denoted as <i class="calibre4">P</i>(<i class="calibre4">E</i>). </p>
+	<p class="block_4"><span class="calibre3">Number of favourable outcomes   denoted by </span><i class="calibre4"><span class="calibre3">n  of</span></i><i class="calibre4"> E</i></p>
+	<p class="block_4">Total number of outcomes denoted by <i class="calibre4">n of s</i></p>
+	<p class="block_223"><i class="calibre4">P</i>(<i class="calibre4">E</i>) = Number of favourable outcomes by Total number of outcomes =<i class="calibre4">n (E)/ n (S) </i>n of (E) by n of (S)</p>
+	<p class="block_14">The empirical approach (relative frequency theory) of probability holds that if an experiment is repeated for an extremely large number of times and a particular outcome occurs at a percentage of the time, then that particular percentage is close to the probability of that outcome.</p>
+	<p class="block_14"><img src="images/image-283.png" alt="QR CODE NUMBER NXK3E" class="calibre549"/></p>
+	<h2 class="block_28" id="toc_id_150">9.4 Empirical Approach </h2>
+	<p class="block_353"><span class="text_17">For example</span><b class="calibre12">, </b>A manufacturer produces 10,000 electric switches every month and1,000 of them are found to be defective. What is the probability of the manufacturer producing a defective switch every month? </p>
+	<p class="block_353">Note </p>
+	<p class="block_353">The number of trials has to be large to decide this probability. The larger the number of trials, the better will be the estimate of probability.</p>
+	<p class="block_738"> </p>
+	<p class="block_18">The required probability, according to relative frequency concept, is nearly 1000 out of 10000, which is 0 point 1</p>
+	<p class="block_14">Let us formalize the definition: “If, the total number of trials, say <i class="calibre4">n</i>, we find r of the outcomes in an event <i class="calibre4">E</i>, then the probability of event <i class="calibre4">E</i>, denoted by <i class="calibre4">P</i>(<i class="calibre4">E</i>), is given by</p>
+	<p class="block_353"><i class="calibre4">P (E)= r/n</i>  p  of  E is equal to r by n</p>
+	<p class="block_4">Is there a guarantee that this value will settle down to a constant value when the number of trials gets larger and larger? One cannot say, the concept being experimental, it is quite possible to get distinct relative frequency each time the experiment is repeated. </p>
+	<p class="block_4">Thinking Corner </p>
+	<p class="block_4">For a question on probability the student’s answer was 32. </p>
+	<p class="block_4">The teacher told that </p>
+	<p class="block_4">the answer was wrong. Why question mark</p>
+	<p class="block_4">However, there is a security range: the value of probability can at the least take the value 0 and at the most take the value 1. We can state this mathematically as </p>
+	<p class="block_14">Let us look at this in a little detail.</p>
+	<p class="block_4"><i class="calibre4">r<sub class="calibre144">n</sub> </i>&lt;1. r down n less than 1 that is probability of an event less than 1</p>
+	<p class="block_4">First, we know that r cannot be larger than n. </p>
+	<p class="block_4">This means <i class="calibre4">r by  n<span class="calibre3">  </span></i> less than 1. That is <i class="calibre4">P</i>(<i class="calibre4">E</i>) &lt; 1. … (1) P of (E) less than 1.  Equation 1</p>
+	<p class="block_4">Next, if <i class="calibre4">r </i>= 0, it means either the event cannot happen or has not occurred in a large number of trials. (Can you get a 7, when you roll a dice?). </p>
+	<p class="block_4">Thus, in this case <i class="calibre4">r by n equal to  n by 0 </i> equal to 0<span class="calibre3">   equation </span>2 </p>
+	<p class="block_18">Lastly, if <i class="calibre4">r </i>= <i class="calibre4">n</i>, the event must occur  open bracket in every trial or in a large number of trials close bracket</p>
+	<p class="block_36">In such a situation<i class="calibre4"> r by n equal <span class="calibre3">to  n</span></i><i class="calibre4"> by n </i><span class="calibre3"> equal to 1  equation 3</span></p>
+	<p class="block_14">(getting any number from 1 to 6 when you roll a dice) </p>
+	<p class="block_14">From (1), (2) and (3) we find 0 less than equal to probability of an event E less than equal to 1</p>
+	<p class="block_14"><b class="calibre12">Progress Check </b>A random experiment was conducted. Which of these cannot be considered as a probability of an outcome? </p>
+	<p class="block_14">1/5 (ii) - 1/7 (iii) 0.40 (iv) - 0.52 (v) 0 (vi) 1.3 (vii) 1 (viii) 72% (ix) 107%</p>
+	<p class="block_739">i. 1 by 5 (ii<span class="calibre14">)  minus</span><span class="calibre14">  1 by 7 (iii)  0.40 (iv)  minus  0.52 (v)  0 (vi)  1.3 (vii)  1 (viii)  72% percentage  (ix)  107 percentage </span></p>
+	<p class="block_740"> </p>
+	<p class="block_14"><b class="calibre12">Example 9.1 </b>When a dice is rolled, find the probability to get the number which is greater than 4? </p>
+	<p class="block_11"> </p>
+	<p class="block_388">Solution </p>
+	<p class="block_14">Sample space <i class="calibre4">S </i>= {1,2,3,4,5,6} </p>
+	<p class="block_14"><span class="calibre3">S  is</span><span class="calibre3"> equal to   set bracket of  1,2,3,4,5,6</span></p>
+	<p class="block_14">Let <i class="calibre4">E </i>be the event of getting a number greater than 4 </p>
+	<p class="block_14"><i class="calibre4">E </i>= {5,6} </p>
+	<p class="block_49"><span class="calibre14">E  is</span><span class="calibre14"> equal to  set bracket of  {5,6}</span></p>
+	<p class="block_14"><i class="calibre4">P</i>(<i class="calibre4">E</i>) equal Number of favourable outcomes byTotal number of outcomes</p>
+	<p class="block_14"><i class="calibre4">P</i>(<i class="calibre4">E</i>) equal <i class="calibre4">n (E) by n (S)</i> equal2</p>
+	<p class="block_49"><span class="calibre14">P of probability of an event E is equal to    n </span><span class="calibre14">of  probability</span><span class="calibre14"> of an event E by  n of S  is equal to 2 by 6  is equal to    0.333…</span></p>
+	<p class="block_14"><b class="calibre12">Example 9.2 </b>In an office, where 42 staff members work, 7 staff members use cars, 20 staff members use two-wheelers and the remaining 15 staff members use cycles. Find the relative frequencies. </p>
+	<p class="block_388">Solution </p>
+	<p class="block_14">Total number of staff members is equal to 42. </p>
+	<p class="block_14">The relative frequencies: </p>
+	<p class="block_14">Car users equal 7  by 42 equal 1 by 6 </p>
+	<p class="block_14"> Two-wheeler users equal 20 by 42 equal 10 by21 </p>
+	<p class="block_14"> Cycle users equal 15 by 42 equal 5 by 14</p>
+	<p class="block_14">In this example note that the total probability does not exceed 1 that is, 1 by 6 plus 10 by 21 plus 5by 14 equal 7 by 42plus 20 by 42plus 15 by 42 equal1 </p>
+	<p class="block_14"><b class="calibre12">Example 9.3 </b>Team I and Team II play 10 cricket matches each of 20 overs. Their total scores in each match are tabulated in the table as follows:</p>
+	<p class="block_10"> </p>
+	<table class="table_17">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_389"><p class="block_53">Match numbers </p></td>
+			<td class="td_548"><p class="block_6">1 </p></td>
+			<td class="td_345"><p class="block_6">2 </p></td>
+			<td class="td_345"><p class="block_6">3 </p></td>
+			<td class="td_345"><p class="block_6">4 </p></td>
+			<td class="td_345"><p class="block_6">5 </p></td>
+			<td class="td_345"><p class="block_6">6 </p></td>
+			<td class="td_345"><p class="block_6">7 </p></td>
+			<td class="td_345"><p class="block_6">8 </p></td>
+			<td class="td_345"><p class="block_6">9 </p></td>
+			<td class="td_549"><p class="block_6">10 </p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_392"><p class="block_53">Team I </p></td>
+			<td class="td_550"><p class="block_6">200 </p></td>
+			<td class="td_350"><p class="block_6">122 </p></td>
+			<td class="td_350"><p class="block_6">111 </p></td>
+			<td class="td_350"><p class="block_6">88 </p></td>
+			<td class="td_350"><p class="block_6">156 </p></td>
+			<td class="td_350"><p class="block_6">184 </p></td>
+			<td class="td_350"><p class="block_6">99 </p></td>
+			<td class="td_350"><p class="block_6">199 </p></td>
+			<td class="td_350"><p class="block_6">121 </p></td>
+			<td class="td_551"><p class="block_6">156 </p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_395"><p class="block_53">Team II </p></td>
+			<td class="td_552"><p class="block_6">143 </p></td>
+			<td class="td_357"><p class="block_6">123 </p></td>
+			<td class="td_357"><p class="block_6">156 </p></td>
+			<td class="td_357"><p class="block_6">92 </p></td>
+			<td class="td_357"><p class="block_6">164 </p></td>
+			<td class="td_357"><p class="block_6">72 </p></td>
+			<td class="td_357"><p class="block_6">100 </p></td>
+			<td class="td_357"><p class="block_6">201 </p></td>
+			<td class="td_357"><p class="block_6">98 </p></td>
+			<td class="td_553"><p class="block_6">157 </p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_18">What is the relative frequency of Team I winning question mark </p>
+	<p class="block_5"> </p>
+	<p class="block_168">Solution </p>
+	<p class="block_18">In this experiment, each trial is a match where Team one faces Team two</p>
+	<p class="block_18">We are concerned about the winning status of Team one</p>
+	<p class="block_18">There are 10 trials in total; out of which Team one wins in the 1st, 6th and 9th matches. </p>
+	<p class="block_18">The relative frequency of Team one winning the matches = 3/10 or 0.3. 3 by 10 or o point 3</p>
+	<p class="block_14">(<b class="calibre12">Note: </b>The relative frequency depends on the sequence of outcomes that we observe during the course of the experiment).</p>
+	<p class="block_11"> </p>
+	<p class="block_741">Exercise 9.1 </p>
+	<ol class="list_1">
+	<li class="block_742">You are walking along a street. If you just choose a stranger crossing you, what is the probability that his next birthday will fall on a Sunday? </li>
+	<li class="block_742">What is the probability of drawing a King or a Queen or a Jack from a deck of cards? </li>
+	<li class="block_742">What is the probability of throwing an even number with a single standard dice of six faces? </li>
+	<li class="block_742">There are 24 balls in a pot. If 3 of them are Red, 5 of them are Blue and the remaining are Green then, what is the probability of picking out  1 comma a Blue ball 2 commaa Red ball and 3 comma a Green ball? </li>
+	<li class="block_742">When two coins are tossed, what is the probability that two heads are obtained question mark </li>
+	<li class="block_315">Two dice are rolled, find the probability that the sum is </li>
+</ol>
+	<p class="block_10"> </p>
+	<p class="block_4">1 camma equal to 1 2 comma equal to 4  3 comma less than 13 </p>
+	<p class="block_105">7.A manufacturer tested 7000 LED lights at random and found that 25 of them were defective. If a LED light is selected at random, what is the probability that the selected LED light is a defective one. </p>
+	<p class="block_10"> </p>
+	<p class="block_743">8.In a football match, a goalkeeper of a team can stop the goal, 32 times out of 40 attempts tried by a team. Find the probability that the opponent team can convert the attempt into a goal. </p>
+	<p class="block_743">9.What is the probability that the spinner will not land on a multiple of 3? </p>
+	<p class="block_105">10.Frame two problems in calculating probability, based on the spinner shown here. </p>
+	<ol class="list_1">
+	<li class="block_315"><b class="calibre21">Probability</b></li>
+</ol>
+	<p class="block_73">Exercise 9.1 ANSWER</p>
+	<p class="block_256">1. 1/7 <span class="tab1">      </span></p>
+	<p class="block_256">2. 3 /13 <span class="tab1">      </span></p>
+	<p class="block_256">3. ½<span class="tab1">      </span><span class="tab1">      </span></p>
+	<p class="block_256">4. (i) 5/ 24 </p>
+	<p class="block_744">(ii) 1/8<span class="tab1">      </span> (iii) 2/3 <span class="tab1">      </span></p>
+	<p class="block_744">5. 1/4 <span class="tab1">      </span></p>
+	<p class="block_744">6. (i) 0 </p>
+	<p class="block_256">(ii) 1 /12 <span class="tab1">      </span>(iii) 1 <span class="tab1">      </span></p>
+	<p class="block_256">7. 1/ 280 <span class="tab1">      </span></p>
+	<p class="block_256">8. 1/5 </p>
+	<p class="block_36">9. 3/4 </p>
+	<p class="block_10"> </p>
+	<p class="block_745"><img src="images/image-284.png" alt="An image of Spinner " class="calibre550"/></p>
+	<h2 class="block_28" id="toc_id_151">9.5 Types of Events </h2>
+	<p class="block_18">We have seen some important cases of events already. </p>
+	<p class="block_18">When the likelihood of happening of two events are same, they are known as equally likely events. </p>
+	<p class="block_254">If we toss a coin, getting a head or a tail are equally likely events. </p>
+	<p class="block_105">If a dice is rolled, then getting an odd number and getting an even number are equally likely events, whereas getting an even number and getting 1 are not equally likely events. </p>
+	<p class="block_10"> </p>
+	<p class="block_18">When probability is 1, the event is sure to happen. Such an event is called a sure or certain event. The other extreme case is when the probability is 0, which is known as an impossible event. _ <i class="calibre4">E</i></p>
+	<p class="block_18">If <i class="calibre4">P</i>(<i class="calibre4">E</i>) = 1<span class="calibre3">  </span>P of an event(E) is equal to1  then <i class="calibre4">E </i>is called Certain event or Sure event. </p>
+	<p class="block_18">If <i class="calibre4">P</i>(<i class="calibre4">E’</i>) = 0  Probability of an event E dash is equal to 0 then <i class="calibre4">E </i>is known is an Impossible event. </p>
+	<p class="block_18">Consider a “coin flip”. When you flip a coin, you cannot get both heads and tails simultaneously. (Of course, the coin must be fair; it should not have heads or tails on both sides!). If two events cannot occur simultaneously (at the same time), in a single trial they are said to be mutually exclusive events. Are rain and sunshine mutually exclusive? What about choosing Kings and Hearts from a pack of 52 cards? </p>
+	<p class="block_105">A dice is thrown. Let <i class="calibre13">E </i>be the event of getting an “even face”. That is getting 2, 4 or 6. Then the event of getting an “odd face” is complementary to <i class="calibre13">E </i>and is denoted by <i class="calibre13">E<sup class="calibre5">c</sup> </i>or <i class="calibre13">E</i>’. In the above sense <i class="calibre13">E </i>and are complementary events.</p>
+	<p class="block_10"> </p>
+	<p class="block_105"><img src="images/image-285.png" alt="An image of coin flip" class="calibre551"/></p>
+	<p class="block_10"> </p>
+	<p class="block_2">Note</p>
+	<ul class="list_">
+	<li class="block_562">The events <i class="calibre4">E </i>and E’ are mutually exclusive.  Open bracket how question mark close bracket </li>
+	<li class="block_563">The probability of <i class="calibre4">E </i> plus the probability of E<i class="calibre4">’</i>=1<span class="calibre3"> complement of E  equal 1</span> Also, <i class="calibre4">E </i>and _<i class="calibre4">E’ </i><span class="calibre3">are mutually exclusive and exhaustive.  </span></li>
+</ul>
+	<p class="block_746">Since <i class="calibre4">P (E)+P(E’)</i> = 1, .<span class="calibre3">  Probability of an event E plus Probability of an event E complement is equal to 1</span></p>
+	<ul class="list_">
+	<li class="block_732"> if you know any one of them, you can find the other.</li>
+</ul>
+	<p class="block_11"> </p>
+	<p class="block_30">Progress Check</p>
+	<p class="block_14">Which among the following are mutually exclusive?</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_554"><p class="block_182">S.No. </p></td>
+			<td class="td_555"><p class="block_182">Trial</p></td>
+			<td class="td_153"><p class="block_182">Event 1</p></td>
+			<td class="td_128"><p class="block_182">Event 2</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_556"><p class="block_182">1</p></td>
+			<td class="td_557"><p class="block_105">Roll a dice</p></td>
+			<td class="td_155"><p class="block_105">getting a 5</p></td>
+			<td class="td_131"><p class="block_105">getting an odd number</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_556"><p class="block_182">2</p></td>
+			<td class="td_557"><p class="block_105">Roll a dice</p></td>
+			<td class="td_155"><p class="block_105">getting a 5</p></td>
+			<td class="td_131"><p class="block_105">getting an even number</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_556"><p class="block_182">3</p></td>
+			<td class="td_557"><p class="block_105">Draw a card from a standard pack</p></td>
+			<td class="td_155"><p class="block_105">getting a Spade Card</p></td>
+			<td class="td_131"><p class="block_105">getting a black</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_556"><p class="block_182">4</p></td>
+			<td class="td_557"><p class="block_105">Draw a card from a standard pack</p></td>
+			<td class="td_155"><p class="block_105">getting a Picture Card</p></td>
+			<td class="td_131"><p class="block_105">getting a 5</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_558"><p class="block_182">5</p></td>
+			<td class="td_559"><p class="block_105">Draw a card from a standard pack</p></td>
+			<td class="td_220"><p class="block_105">getting a Heart Card</p></td>
+			<td class="td_134"><p class="block_105">getting a 7</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_11"> </p>
+	<p class="block_2">Example 9.4 </p>
+	<p class="block_14">The probability that it will rain tomorrow is 91 by 100. What is the probability that it will not rain tomorrow question mark</p>
+	<p class="block_14"><span class="text_17">Solution </span>Let <i class="calibre4">E </i>be the event that it will rain tomorrow. Then <i class="calibre4">E’ </i>is the event that it will not rain tomorrow. </p>
+	<p class="block_49">Since <i class="calibre13">P</i>(<i class="calibre13">E</i>) = 0.91 probability of an event <span class="calibre14">E  equal</span> to 0.91  we have <i class="calibre13">Probability of an event (E</i>’) = 1−0.91 <span class="calibre14">P(Edash ’) is equal to    1 minus 0</span> point91</p>
+	<p class="block_14">(how?)  </p>
+	<p class="block_14">Probability of an event E Equal 0point 91 we have 1minus o point nine one in bracket question mark how</p>
+	<p class="block_747"><span class="calibre3">         </span>Equal 0 point09 </p>
+	<p class="block_14">Therefore, the probability that it will not rain tomorrow equal 0.09</p>
+	<p class="block_49">P of probability of an event E is equal <span class="calibre14">to  91</span><span class="calibre14"> by  100</span></p>
+	<p class="block_49"><span class="calibre14">P of probability of an event E is equal to    0.</span> Point 1</p>
+	<p class="block_49">P probability of an event E <span class="calibre14">dash  is</span><span class="calibre14"> equal to    1 minus 0</span> point91</p>
+	<p class="block_49"><span class="calibre14">is equal to    0</span> point09</p>
+	<p class="block_11"> </p>
+	<p class="block_14"><b class="calibre12">Example 9.5 </b>In a recent year, of the 1184 centum scorers in various subjects in tenth standard public exams, 233 were in mathematics. 125 in social science and 106 in science. If one of the student is selected at random, find the probability of that selected student, (i) is a centum scorer in Mathematics (ii) is not a centum scorer in Science </p>
+	<p class="block_388">Solution</p>
+	<p class="block_14"><span class="text_17"> </span>Total number of centum scorers =1184 </p>
+	<p class="block_14">Therefore <i class="calibre4">n </i>= 1184 </p>
+	<div class="calibre18">
+	<div class="block_78"><span class="bullet_">(iv) </span><span class="calibre16">Let <i class="calibre4">E</i>1 be the event of getting a centum scorer in Mathematics. Therefore </span></div>
+</div>
+	<p class="block_8"><i class="calibre4">n(E<sub class="calibre144">1</sub></i>) = 233 That is, <i class="calibre4">r</i><sub class="calibre144">1</sub>= 233 </p>
+	<p class="block_14"><i class="calibre4">P</i>(<i class="calibre4">E</i><sub class="calibre144">1</sub>) = r<i class="calibre4"><sub class="calibre144">1</sub>/ n </i>= 233/ 1184 </p>
+	<p class="block_49">n probability of an event E<span class="calibre14">1  is</span><span class="calibre14"> equal to 233, that is r1  is equal to    233</span></p>
+	<p class="block_49">P probability of an event E1 <span class="calibre14">is  equal</span><span class="calibre14"> to  r1 by n  is equal to   233 by 1184</span></p>
+	<div class="calibre18">
+	<div class="block_78"><span class="bullet_">(v) </span><span class="calibre16">Let <i class="calibre4">E</i><sub class="calibre144">2</sub> be the event of getting a centum scorer in Science. Therefore <i class="calibre4">n(E</i><sub class="calibre144">2</sub>) = 106</span></div>
+</div>
+	<p class="block_8">That is, <i class="calibre4">r</i><sub class="calibre144">2</sub> =106 P(<i class="calibre4">E</i>2’) <span class="calibre3">=  </span><i class="calibre4">r2/ n </i>= 106/ 1184 </p>
+	<p class="block_14"><i class="calibre4">P (</i>E<sub class="calibre144">2</sub>’) = 1 -<i class="calibre4">P(E<sub class="calibre144">2</sub></i>) =1 − 1106 /1184 = 1078 /1184</p>
+	<p class="block_49">n probability of an event E<span class="calibre14">1  is</span><span class="calibre14"> equal to 233, that is r1  is equal to    233</span></p>
+	<p class="block_49">P probability of an event E1 <span class="calibre14">is  equal</span><span class="calibre14"> to    r1 by n  is equal to    233 by 1184</span></p>
+	<p class="block_49"><span class="calibre14">(ii)  </span>probability of an event E2 event of getting a centum scorer in science.</p>
+	<p class="block_49"> n of probability of an event E<span class="calibre14">2  is</span><span class="calibre14"> equal to    106, </span>if<span class="calibre14">, r2  is equal to    106</span></p>
+	<p class="block_49">P of probability of an event <span class="calibre14">E2 is equal to    r2 </span>by <span class="calibre14">n  is</span><span class="calibre14"> equal to    106 </span>by<span class="calibre14">  1184</span></p>
+	<p class="block_49">event of getting a centum scorer in science.P of probability of an event Dash<span class="calibre14"> 2 is equal to    1 minus  P of </span>probability of an event <span class="calibre14">E2  is equal to    1 minus  106 </span>by<span class="calibre14"> 1184  is equal to    1078 </span>by<span class="calibre14">  1184</span></p>
+	<p class="block_2">Exercise 9.2 </p>
+	<p class="block_14">1. A company manufactures 10000 Laptops in 6 months. Out of which 25 of them are found to be defective. When you choose one Laptop from the manufactured, what is the probability that selected Laptop is a good one. </p>
+	<p class="block_14">2. In a survey of 400 youngsters aged 16 to 20 years, it was found that 191 have their voter ID card. If a youngster is selected at random, find the probability that the youngster does not have their voter ID card. </p>
+	<p class="block_14">3. The probability of guessing the correct answer to a certain question is <i class="calibre4">x/</i>3. X by 3  If the probability of not guessing the correct answer is <i class="calibre4">x/</i>5, x by 5 camma  then find the value of <i class="calibre4">x.</i></p>
+	<p class="block_14">4. If a probability of a player winning a particular tennis match is 0 point72. 0 point  seven two What is the probability of the player loosing the match? </p>
+	<p class="block_14">5. 1500 families were surveyed and following data was recorded about their maids at homes</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_560"><p class="block_182">Type of maids</p></td>
+			<td class="td_561"><p class="block_105">Only part time</p></td>
+			<td class="td_561"><p class="block_105">Only full time</p></td>
+			<td class="td_143"><p class="block_105">Both</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_381"><p class="block_182">Number of families</p></td>
+			<td class="td_562"><p class="block_105">860</p></td>
+			<td class="td_562"><p class="block_105">370</p></td>
+			<td class="td_151"><p class="block_105">250</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_11"> </p>
+	<p class="block_14">A family is selected at random. Find the probability that the family selected has Romen letter 1Both types of maids <span class="calibre3">  Romen letter </span>2 Part time maids Romen letter 3 No maids</p>
+	<p class="block_73">ANSWERS Exercise 9.2 </p>
+	<p class="block_18">1. 09975.</p>
+	<p class="block_18">2. 209 /400 </p>
+	<p class="block_18">3. 15 /8 </p>
+	<p class="block_18">4. 0.28 </p>
+	<p class="block_744">5.(i) 1/6 (ii) 43 /75 (iii) 1 /75 </p>
+	<p class="block_11"> </p>
+	<p class="block_2">Exercise 9.3 </p>
+	<p class="block_2"><img src="images/image-286.png" alt="QR CODE NUMBER DOXHQ" class="calibre552"/></p>
+	<p class="block_2">Multiple choice questions </p>
+	<p class="block_14">1. A number between 0 and 1 that is used to measure uncertainty is called</p>
+	<p class="block_209">1.  Random variable</p>
+	<p class="block_209"> 2. Trial</p>
+	<p class="block_209"> 3 .Simple event</p>
+	<p class="block_209"> 4 .Probability </p>
+	<p class="block_14">2. Probability lies between </p>
+	<p class="block_209">1. −1 and +1  )<span class="calibre3"> minus 1 and plus 1     </span></p>
+	<p class="block_209">2 . 0 and 1 </p>
+	<p class="block_209">3. 0 and n </p>
+	<p class="block_209">4. 0 and ∞ infinity</p>
+	<p class="block_14">3. The probability based on the concept of relative frequency theory is called </p>
+	<p class="block_209">1. Empirical probability </p>
+	<p class="block_209">2 .Classical probability </p>
+	<p class="block_209">3. Both (1) and (2) </p>
+	<p class="block_209">4 .Neither (1) nor (2) </p>
+	<p class="block_14">4. The probability of an event cannot be </p>
+	<p class="block_209">1. Equal to zero </p>
+	<p class="block_209">2. Greater than zero </p>
+	<p class="block_209">3. Equal to one </p>
+	<p class="block_209">4. Less than zero </p>
+	<p class="block_14"><span class="calibre3">5. The probability of all possible outcomes of a random experiment is always equal to     </span></p>
+	<p class="block_209">1. One</p>
+	<p class="block_209"> 2. Zero</p>
+	<p class="block_209"> 3. Infinity </p>
+	<p class="block_209">4 .Less than one </p>
+	<p class="block_14">6. If <i class="calibre4">A </i>is any event in <i class="calibre4">S </i>and its complement is <i class="calibre4">A’ </i>then, <i class="calibre4">PA</i> () _is equal to </p>
+	<p class="block_209">1.1 </p>
+	<p class="block_209">2. 0 </p>
+	<p class="block_209">3. 1−<i class="calibre4">A  1 minus A</i></p>
+	<p class="block_209">4. 1 -P(<i class="calibre4">A</i>) 1 minus probability of an event A</p>
+	<p class="block_14">7. Which of the following cannot be taken as probability of an event? </p>
+	<p class="block_209">1. 0 </p>
+	<p class="block_209">2. 0.5 </p>
+	<p class="block_209">3. 1 </p>
+	<p class="block_209">4. −1</p>
+	<p class="block_105">8.A particular result of an experiment is called </p>
+	<p class="block_151">1. Trial </p>
+	<p class="block_151">2. Simple event </p>
+	<p class="block_151">3. Compound event </p>
+	<p class="block_151">4. Outcome </p>
+	<p class="block_105">9.A collection of one or more outcomes of an experiment is called </p>
+	<p class="block_10"> </p>
+	<p class="block_151">1. Event </p>
+	<p class="block_151">2. Outcome </p>
+	<p class="block_151">3. Sample point </p>
+	<p class="block_151">4. None of the above </p>
+	<p class="block_105">10.The six faces of the dice are called equally likely if the dice is </p>
+	<p class="block_10"> </p>
+	<p class="block_209">1. Small</p>
+	<p class="block_209"> 2. Fair</p>
+	<p class="block_209"> 3. Six-faced </p>
+	<p class="block_209">4. Round</p>
+	<p class="block_73">ANSWERS Exercise 9.3 </p>
+	<p class="block_105">1.(4) 2. (2) 3. (1) 4. (4) 5. (1) <i class="calibre13">6. </i>(4) 7. (4) 8. (4) 9. (1) 10. (2)</p>
+	<p class="block_27"> </p>
+	<p class="block_2">Points to Remember </p>
+	<ul class="list_">
+	<li class="block_748">If we are able to predict the exact outcome of an experiment, then it is called deterministic experiment. </li>
+	<li class="block_749">If we cannot predict the exact outcome of an experiment, then it is called random experiment. </li>
+	<li class="block_749">Sample space S for a random experiment is the set of all possible outcomes of a random experiment. </li>
+	<li class="block_749">An event is a particular outcome or combination of outcomes of an experiment. </li>
+	<li class="block_749">Empirical probability states that probability of an outcome is close to the percentage of occurrence of the outcome. </li>
+</ul>
+	<ul class="list_">
+	<li class="block_749">If the likelihood of happening of two events are same, then they are known as equally likely events. </li>
+	<li class="block_749">If two events cannot occur simultaneously in single trial, then they are said to be mutually exclusive events. </li>
+	<li class="block_749">Two events E and E’ are said to be complementary events if </li>
+</ul>
+	<p class="block_746"> P(E) +P(E)= 1.  Probability of an event E plus Probability of an event E complement is equal to 1</p>
+	<ul class="list_">
+	<li class="block_749">An event which is sure to happen is called certain or sure event. The probability of a sure event is always one. </li>
+	<li class="block_749">An event which never happen is called impossible event. The probability of an impossible event is always zero. </li>
+	<li class="block_750"><img src="images/image-287.png" alt="ICT CORNER" class="calibre553"/></li>
+</ul>
+	<p class="block_14"><img src="images/image-288.png" alt="ICT CORNER QR CODE NUMBER 20651" class="calibre554"/></p>
+	<p class="block_11"> </p>
+	<p class="block_11"> </p>
+	<p class="block_11"> </p>
+	<p class="block_209"><img src="images/image525.png" alt="Image" class="calibre555"/></p>
+	<p class="block_2">ANSWERS</p>
+	<p class="block_182">Set Language</p>
+	<p class="block_73">Exercise 1.1 </p>
+	<ol class="list_1">
+	<li value="2" class="block_74">(i) set (ii) not a set (iii) Set (iv) not a set </li>
+</ol>
+	<p class="block_75"> </p>
+	<p class="block_14">2. (i) {I, N, D, A} (ii) {P, A, R, L, E, O, G, M} (iii) {M, I, S, P} (iv) {C, Z, E, H, O, S, L, V, A, K, I} </p>
+	<p class="block_75"> </p>
+	<p class="block_14">3. (a) (i) True (ii) True (iii) False (iv) True (v) False (vi) False (b) (i) <i class="calibre4">A </i>(ii) <i class="calibre4">C </i>(iii) g (iv)! </p>
+	<p class="block_76"> </p>
+	<p class="block_14">4. (i) <i class="calibre4">A </i>= {2, 4, 6, 8, 10, 12, 14, 16, 18} (ii) <i class="calibre4">B </i>= {1/2, 1/4 , 1/6 , 1/8 , 1/10 } (iii) <i class="calibre4">C </i>= {64, 125} (iv) <i class="calibre4">D = { -</i>4,-3,-2,-1, 0,1, 2} </p>
+	<p class="block_76"> </p>
+	<p class="block_14">5. (i) <i class="calibre4">B </i>= {<i class="calibre4">x:</i> <i class="calibre4">x </i>is an Indian player who scored double centuries in One Day International} </p>
+	<p class="block_77"><span class="text_3">(ii) </span><span class="text_16">C </span><span class="text_3">=: {</span><span class="text_16"> x </span><span class="text_3">: </span><span class="text_16">x= n/ n + </span><span class="text_3">1, n</span><span class="text_7">∊</span><span class="text_3">N. (iii) </span><span class="text_16">D </span><span class="text_3">= {</span><span class="text_16">x </span><span class="text_3">: </span><span class="text_16">x </span><span class="text_3">is a Tamil month in a year} </span></p>
+	<div class="calibre15">
+	<div class="block_78"><span class="bullet_">(vi) </span><span class="calibre16"><i class="calibre4">E </i>= {<i class="calibre4">x:</i> <i class="calibre4">x </i>is an odd whole number less than 9} </span></div>
+</div>
+	<p class="block_79"> </p>
+	<p class="block_14">6. (i) <i class="calibre4">P </i>= The set of English months starting with letter ‘<i class="calibre4">J</i>’ </p>
+	<p class="block_80">(ii) <i class="calibre4">Q </i>= The set of Prime numbers between 5 and 31 </p>
+	<p class="block_80">(iii) <i class="calibre4">R </i>= The set of natural numbers less than 5 </p>
+	<div class="calibre17">
+	<div class="block_81"><span class="bullet_">(vii) </span><span class="calibre16"><i class="calibre4">S </i>= The set of English consonants</span></div>
+</div>
+	<p class="block_12" id="calibre_pb_18"> </p>
+</body></html>

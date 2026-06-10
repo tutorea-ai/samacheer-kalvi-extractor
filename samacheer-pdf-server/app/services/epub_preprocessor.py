@@ -630,6 +630,14 @@ class EpubPreprocessor:
                                     tag_map[tag] = (unit_file, unit_file)
                                     print(f"   [Linear] Registered {tag} → {unit_file} (file-sentinel, skip-fallback)")
 
+                    else:
+                        # No next sibling at all — last unit in book
+                        # Use file sentinel directly
+                        unit_file = href.split('#')[0] if href else None
+                        if unit_file and tag not in tag_map:
+                            tag_map[tag] = (unit_file, unit_file)
+                            print(f"   [Linear] Registered {tag} → {unit_file} (file-sentinel, last-unit)")
+
             i += 1
 
         # ── Gap filler: assign title-only entries to missing unit numbers ─────────

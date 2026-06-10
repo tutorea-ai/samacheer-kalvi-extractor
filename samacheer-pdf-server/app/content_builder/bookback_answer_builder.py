@@ -49,6 +49,29 @@ CRITICAL RULES:
 # ============================================================================
 
 TOGGLE_STYLE = """
+<script>
+function toggleAnswer(btn) {
+  const reveal = btn.nextElementSibling;
+  const isVisible = reveal.style.display === 'block';
+  reveal.style.display = isVisible ? 'none' : 'block';
+  btn.textContent = isVisible ? 'Show Answer' : 'Hide Answer';
+  btn.classList.toggle('active', !isVisible);
+}
+function showAllAnswers() {
+  document.querySelectorAll('.answer-reveal').forEach(el => el.style.display = 'block');
+  document.querySelectorAll('.show-answer-btn').forEach(btn => {
+    btn.textContent = 'Hide Answer';
+    btn.classList.add('active');
+  });
+}
+function hideAllAnswers() {
+  document.querySelectorAll('.answer-reveal').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.show-answer-btn').forEach(btn => {
+    btn.textContent = 'Show Answer';
+    btn.classList.remove('active');
+  });
+}
+</script>
 <style>
 .show-answer-btn {
   background: #006B6B;

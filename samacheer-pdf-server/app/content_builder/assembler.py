@@ -259,23 +259,22 @@ class ContentAssembler:
         if result:
             parts.append(result)
 
-        # ── SS Book-back Answer Toggle ────────────────────────────────────────
-        if subject in ["socialscience", "social_science"]:
-            print(f"      [Assembler] Generating SS book-back answers...")
-            try:
-                from .bookback_answer_builder import bookback_answer_builder
-                bookback_html = bookback_answer_builder.generate(
-                    chapter_text=text,
-                    bookback_questions=text,  # full text — builder extracts book-back section
-                    metadata=metadata
-                )
-                if bookback_html:
-                    parts.append(bookback_html)
-                    print(f"      [Assembler] ✅ Book-back answers added ({len(bookback_html)} chars)")
-                else:
-                    print(f"      [Assembler] ⚠️  Book-back answers failed")
-            except Exception as e:
-                print(f"      [Assembler] ❌ Book-back error: {e}")
+        # ── Book-back Answer Toggle (all subjects) ─────────────────────────────
+        print(f"      [Assembler] Generating book-back answers...")
+        try:
+            from .bookback_answer_builder import bookback_answer_builder
+            bookback_html = bookback_answer_builder.generate(
+                chapter_text=text,
+                bookback_questions=text,  # full text — builder extracts book-back section
+                metadata=metadata
+            )
+            if bookback_html:
+                parts.append(bookback_html)
+                print(f"      [Assembler] ✅ Book-back answers added ({len(bookback_html)} chars)")
+            else:
+                print(f"      [Assembler] ⚠️  Book-back answers failed")
+        except Exception as e:
+            print(f"      [Assembler] ❌ Book-back error: {e}")
 
         # Summary
         summary = self._summary(text, lesson_title)

@@ -566,6 +566,33 @@ class PDFProcessor:
                     "discipline":   discipline,
                 }
 
+                # For Maths — add chapter month info for LP day calculation
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            month = selected.get("month", "")
+                            month_chapters = [c for c in chapters if c.get("month") == month]
+                            ai_metadata["chapters_in_month"] = len(month_chapters)
+                            ai_metadata["month_chapters"] = [c["title"] for c in month_chapters]
+                            ai_metadata["month"] = month
+                            print(f"   📅 Month: {month} | Chapters this month: {len(month_chapters)}")
+                    except Exception as e:
+                        print(f"   ⚠️  Could not load month info: {e}")
+                        ai_metadata["chapters_in_month"] = 1
+                        ai_metadata["month_chapters"] = [unit_num]
+
+                # Add clean display title for Maths
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            ai_metadata["display_title"] = selected.get("title", filename_base)
+                    except:
+                        ai_metadata["display_title"] = filename_base
+
                 # Generate content only via assembler
                 from .services.section_detector import detect_sections, clean_noise
                 from .content_builder.assembler import content_assembler
@@ -662,6 +689,33 @@ class PDFProcessor:
                     "discipline":   discipline,
                 }
 
+                # For Maths — add chapter month info for LP day calculation
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            month = selected.get("month", "")
+                            month_chapters = [c for c in chapters if c.get("month") == month]
+                            ai_metadata["chapters_in_month"] = len(month_chapters)
+                            ai_metadata["month_chapters"] = [c["title"] for c in month_chapters]
+                            ai_metadata["month"] = month
+                            print(f"   📅 Month: {month} | Chapters this month: {len(month_chapters)}")
+                    except Exception as e:
+                        print(f"   ⚠️  Could not load month info: {e}")
+                        ai_metadata["chapters_in_month"] = 1
+                        ai_metadata["month_chapters"] = [unit_num]
+
+                # Add clean display title for Maths
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            ai_metadata["display_title"] = selected.get("title", filename_base)
+                    except:
+                        ai_metadata["display_title"] = filename_base
+
                 # Generate LP only
                 from .services.section_detector import detect_sections, clean_noise
                 from .services.ai_converter import _wrap_html
@@ -752,6 +806,33 @@ class PDFProcessor:
                     "term":         term_key,
                     "discipline":   discipline,
                 }
+
+                # For Maths — add chapter month info for LP day calculation
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            month = selected.get("month", "")
+                            month_chapters = [c for c in chapters if c.get("month") == month]
+                            ai_metadata["chapters_in_month"] = len(month_chapters)
+                            ai_metadata["month_chapters"] = [c["title"] for c in month_chapters]
+                            ai_metadata["month"] = month
+                            print(f"   📅 Month: {month} | Chapters this month: {len(month_chapters)}")
+                    except Exception as e:
+                        print(f"   ⚠️  Could not load month info: {e}")
+                        ai_metadata["chapters_in_month"] = 1
+                        ai_metadata["month_chapters"] = [unit_num]
+
+                # Add clean display title for Maths
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            ai_metadata["display_title"] = selected.get("title", filename_base)
+                    except:
+                        ai_metadata["display_title"] = filename_base
 
                 if subject.lower() in ["socialscience", "social_science"] and discipline:
                     meta_line = f"Class {class_num} | Social Science — {discipline.title()} | Unit {unit_num}"
@@ -850,6 +931,33 @@ class PDFProcessor:
                     "term":         term_key,
                     "discipline":   discipline,
                 }
+
+                # For Maths — add chapter month info for LP day calculation
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            month = selected.get("month", "")
+                            month_chapters = [c for c in chapters if c.get("month") == month]
+                            ai_metadata["chapters_in_month"] = len(month_chapters)
+                            ai_metadata["month_chapters"] = [c["title"] for c in month_chapters]
+                            ai_metadata["month"] = month
+                            print(f"   📅 Month: {month} | Chapters this month: {len(month_chapters)}")
+                    except Exception as e:
+                        print(f"   ⚠️  Could not load month info: {e}")
+                        ai_metadata["chapters_in_month"] = 1
+                        ai_metadata["month_chapters"] = [unit_num]
+
+                # Add clean display title for Maths
+                if subject.lower() in ["maths", "math", "mathematics"]:
+                    try:
+                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
+                        if selected:
+                            ai_metadata["display_title"] = selected.get("title", filename_base)
+                    except:
+                        ai_metadata["display_title"] = filename_base
 
                 # ── Claude generates Content + QA + LP ───────────────────────
                 results  = ai_converter.generate_all(raw_text, ai_metadata)
