@@ -643,7 +643,7 @@ OUTPUT THIS EXACT STRUCTURE:
        பெரிய கேள்வி: [Big Question in Tamil]"
     </div>
 
-    <p><em>⏱ Wait 20 seconds. Take 3–4 student responses. Keep energetic.</em></p>
+    <p><em>⏱ Wait 20 seconds. Take 3–4 student responses. Stay energetic!</em></p>
     <p><em>[2-minute transition: "Now let's open our textbooks and explore this."]</em></p>
   </div>
 
@@ -796,6 +796,11 @@ OUTPUT THIS EXACT STRUCTURE:
     <div class="lp-teacher-says">
       "[Students, copy the summary and the key rule into your notebooks.]"
     </div>
+
+    <div class="lp-tamil-scaffold">
+      <strong>ஆசிரியருக்கு (Tamil):</strong><br/>
+      "[Tamil mirror — same content, same length as the summary instruction above]"
+    </div>
   </div>
 
   <!-- ═══ SECTION 3: SHOWCASE OF LEARNING (22-30 min) ═══ -->
@@ -878,6 +883,11 @@ OUTPUT THIS EXACT STRUCTURE:
        Relatable for Class 6/7 — market, cricket, distance, measurement etc.]"
     </div>
 
+    <div class="lp-tamil-scaffold">
+      <strong>ஆசிரியருக்கு (Tamil):</strong><br/>
+      "[Tamil mirror — same content, same length as the Real-Life Connection above]"
+    </div>
+
     <div class="homework-block">
       <div class="lp-teacher-says">
         <strong>Homework:</strong><br/>
@@ -912,7 +922,9 @@ ABSOLUTE CHECKS — CRITICAL BEFORE FINISHING
 ✅ Minimum 2 CCQs per concept (numbered sequentially)
 ✅ Every CFU and CCQ has wait time
 ✅ Differentiated assessment has 3 levels
-✅ Tamil only in: Key Terms + Main explanation + Spark
+✅ Tamil mirrors in: Spark, Concept Intro, each subtopic explanation, Concept Summary, Real-Life Connection
+✅ Every CFU has Tamil question; every CCQ has Tamil statement
+✅ CCQs are closed (True/False or two-option) — NOT "Why/How" questions
 ✅ Closing + Homework included
 ✅ Page numbers may be referenced (Class 6/7 allowed)
 ✅ Age-appropriate language throughout
@@ -927,7 +939,7 @@ Chapter Text (use ONLY this — no general knowledge):
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=12000,
+                model=self.model, max_tokens=16000,
                 system=MATHS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )

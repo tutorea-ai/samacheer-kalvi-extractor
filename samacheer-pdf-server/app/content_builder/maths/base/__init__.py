@@ -73,41 +73,56 @@ MINIMUM REQUIREMENT PER DAY:
 - Total minimum: 8 CFUs + 6 CCQs across the full day
 
 ── CFU (Check For Understanding) ──────────────────────
-Basic recall or simple calculation. Asked IMMEDIATELY after explaining.
-One-step answer. Age-appropriate for Class 6/7.
+OPEN question — basic recall or simple calculation. Asked IMMEDIATELY after explaining.
+One-step answer. Age-appropriate for Class 6/7. Tamil version of the question included.
 
 FORMAT — use EXACTLY this HTML:
 <div class="cfu-block">
   <strong>🔎 CFU {number}:</strong>
   <p class="teacher-says">"[Simple factual or one-step calculation question]"</p>
+  <p class="cfu-tamil"><em>தமிழில்:</em> "[Same question in Tamil — natural meaning-based translation]"</p>
   <p class="student-says"><strong>Expected:</strong> "[Single number or one sentence]"</p>
   <p><em>⏱ Wait 10 seconds. Call on 2-3 students before moving on.</em></p>
 </div>
 
 ── CCQ (Concept Check Question) ───────────────────────
-Deeper question — tests WHY the method works or WHEN to use it.
-Tamil version mandatory.
+CLOSED question ONLY — True/False or two-option ("Is it A or B?").
+Tests WHETHER STUDENTS UNDERSTAND THE REASONING — not recall of facts.
+Never ask "Why...?" or "How...?" as a CCQ — those are CFUs.
 
-FORMAT — use EXACTLY this HTML:
+FORMAT — True/False variant — use EXACTLY this HTML:
 <div class="ccq-block">
   <strong>⚡ CCQ {number}:</strong>
-  <p class="teacher-says">"[Why/When/What if question — under 8 words]"</p>
-  <p class="student-says"><strong>Expected:</strong> "[1-2 sentence conceptual answer]"</p>
-  <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
+  <p class="teacher-says">"[Statement about today's reasoning/concept] — True or False?"</p>
+  <p class="ccq-tamil"><em>தமிழில்:</em> "[Same statement in Tamil] — சரியா, தவறா?"</p>
+  <p class="student-says"><strong>Expected:</strong> "[True/False — followed by one-sentence reason]"</p>
   <p><em>⏱ Wait 15 seconds. Allow pair discussion before taking answers.</em></p>
 </div>
 
-MATHS-SPECIFIC CCQ TYPES (use variety):
-- "Why do we use this method here?"
-- "When would this rule NOT work?"
-- "What would happen if we changed [number/operation]?"
-- "Can you estimate the answer before solving?"
-- "How is this connected to what we learned yesterday?"
-- "Can you think of a real-life situation where we use this?"
+FORMAT — Two-option variant — use EXACTLY this HTML:
+<div class="ccq-block">
+  <strong>⚡ CCQ {number}:</strong>
+  <p class="teacher-says">"[Question with exactly two options — e.g. 'Is X because of A or because of B?']"</p>
+  <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil with two options]"</p>
+  <p class="student-says"><strong>Expected:</strong> "[Correct option — followed by one-sentence reason]"</p>
+  <p><em>⏱ Wait 15 seconds. Allow pair discussion before taking answers.</em></p>
+</div>
 
-⚠️ NEVER USE ICQs:
+MIX both CCQ variants across the day — not all the same type.
+
+EXAMPLES OF GOOD CCQs (closed, reasoning-based):
+✅ "Our place value system is based on 10 — True or False?"
+✅ "Because our system is based on 10, we multiply by 10 each time — True or False?"
+✅ "When we move one place to the left, does the value become 10 times bigger or 10 times smaller?"
+✅ "The predecessor of a number is always smaller than the number — True or False?"
+
+EXAMPLES OF WRONG CCQs (these are CFUs — open recall — DO NOT label as CCQ):
+❌ "Why do we multiply by 10 each time?"
+❌ "What is the place value of 8 in 98,47,056?"
+❌ "How do we find the predecessor of a number?"
+
+⚠️ NEVER USE ICQs (instruction-check questions):
 ❌ WRONG: "Do you understand?" / "Is it clear?" / "Okay?"
-✅ RIGHT: "What is the next step?" / "Why did we divide here?"
 
 NUMBER CFUs AND CCQs sequentially across the full day.
 ═══════════════════════════════════════════════════════
@@ -120,20 +135,40 @@ NUMBER CFUs AND CCQs sequentially across the full day.
 
 MATHS_TAMIL_INSTRUCTION_67 = """
 ═══════════════════════════════════════════════════════
-TAMIL SCAFFOLDING — TARGETED ONLY (Maths 6/7)
+TAMIL SCAFFOLDING — FULL BILINGUAL SCRIPT (Maths 6/7)
 ═══════════════════════════════════════════════════════
-Tamil appears in EXACTLY 3 places per day:
-✅ 1. KEY TERMS TABLE — Tamil meaning column
-✅ 2. MAIN CONCEPT EXPLANATION — Tamil mirror paragraph after English
-✅ 3. OPENING SPARK / BIG QUESTION — Tamil version after English
+Every "Teacher says (English):" block in the following sections MUST be
+immediately followed by a Tamil mirror block:
+  ✅ Spark / Big Question
+  ✅ Concept Introduction
+  ✅ Each subtopic explanation
+  ✅ Concept Summary
+  ✅ Real-Life Connection (in Closing)
 
-❌ NEVER in: formula box, board work, worked examples, CFU blocks,
-   time notes, closing, homework, assessment, differentiated support,
-   step-by-step calculations
+Tamil mirror format:
+<div class="lp-tamil-scaffold">
+  <strong>ஆசிரியருக்கு (Tamil):</strong><br/>
+  "[Tamil mirror — same content, same length, same number of sentences as English]"
+</div>
 
-Tamil mirror: same sentences, same length, same detail. Real Unicode only.
-Maths Tamil terms: use standard Tamil mathematical vocabulary.
-Age-appropriate Tamil for Class 6/7 students.
+Additionally:
+  ✅ Every CFU includes a Tamil version of the question (see CFU format)
+  ✅ Every CCQ includes a Tamil version of the statement (see CCQ format)
+
+❌ NEVER add Tamil to:
+   - Formula Box
+   - Board work / worked example steps
+   - Activity-block instructions (student practice steps)
+   - Homework block
+   - Differentiated assessment table (existing Tamil labels stay as-is — do not add more)
+   - Practice Day and Evaluation Day (remain English-only)
+
+TAMIL QUALITY RULES:
+- Translate MEANING, not word-for-word
+- Real Tamil Unicode only — no transliteration
+- Same sentence count and similar length as the English version
+- Age-appropriate Tamil for Class 6/7 students
+- Use standard Tamil mathematical vocabulary for terms
 ═══════════════════════════════════════════════════════
 """
 

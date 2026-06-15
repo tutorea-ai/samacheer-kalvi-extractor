@@ -154,7 +154,7 @@ class BookbackAnswerBuilder:
         lesson_title = metadata.get("lesson_title", "Unknown")
         class_num    = metadata.get("class", "")
         unit         = metadata.get("unit", "")
-        discipline   = metadata.get("discipline", "").title()
+        discipline   = (metadata.get("discipline") or "").title()
 
         print(f"      [Bookback] Generating answers: {lesson_title}")
 
