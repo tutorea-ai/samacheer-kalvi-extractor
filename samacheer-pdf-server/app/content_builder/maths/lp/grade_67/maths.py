@@ -141,6 +141,22 @@ class MathsLP67Builder:
         if not day_plan:
             print(f"         ❌ Day Allocator failed — aborting LP")
             return None
+        for d in range(1, content_days + 1):
+            day_data = day_plan.get(f"day{d}", {})
+            if not day_data.get("topics"):
+                for prev in range(d - 1, 0, -1):
+                    prev_data = day_plan.get(f"day{prev}", {})
+                    if prev_data.get("topics"):
+                        day_plan[f"day{d}"] = {
+                            "topics": prev_data.get("topics", []),
+                            "subtopics": prev_data.get("subtopics", []),
+                            "formulas": prev_data.get("formulas", []),
+                            "focus": f"Continued practice and deeper coverage — {prev_data.get('focus', '')}",
+                            "has_formula_box": prev_data.get("has_formula_box", False),
+                            "estimated_mins": 15
+                        }
+                        break
+
         print(f"         ✅ Day plan ready:")
         for d in range(1, content_days + 1):
             day_topics = day_plan.get(f"day{d}", {}).get("topics", [])
@@ -359,7 +375,13 @@ ALLOCATION RULES:
 - Do NOT split a topic across two days — keep each topic in ONE day
 - Formula-heavy topics (is_formula_heavy: true) get their own day
 - Maximum 2 subtopics per day — do not overload one day
-- Every topic MUST appear in exactly ONE day — no topic skipped
+- Every topic MUST appear in exactly ONE day — no topic can be skipped
+- If topics run out before all {content_days} days are filled:
+  DO NOT leave days empty — instead distribute topics across fewer days
+  with deeper coverage (more worked examples, more practice problems per day)
+- NEVER return empty topic lists for any day
+- If chapter has fewer topics than days: reduce day count to match topics,
+  remaining days become additional practice days automatically
 - Keep allocation logical — simpler concepts before complex ones
 - Final 2 days are RESERVED for Practice and Evaluation — do NOT allocate content there
 
