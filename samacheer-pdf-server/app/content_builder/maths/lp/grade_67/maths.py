@@ -222,7 +222,10 @@ class MathsLP67Builder:
             total_days, content_days, topics, day_plan
         )
         if assessment:
-            parts.append(clean(assessment))
+            cleaned = clean(assessment)
+            if '<div class="assessment-block"' in cleaned and not cleaned.rstrip().endswith('</div>'):
+                cleaned = cleaned.rstrip() + '\n</div>'
+            parts.append(cleaned)
             print(f"         ✅ Assessment ({len(assessment)} chars)")
         else:
             print(f"         ❌ Assessment failed")
@@ -1430,6 +1433,11 @@ RULES:
 - Completion checklist: day references correct
 - Base everything on actual extracted topics and formulas
 - No page numbers in Assessment Summary
+- CRITICAL: The assessment-block div MUST be explicitly closed
+- Your output MUST end with exactly: </div> closing the assessment-block
+- Final two lines of output must always be:
+  </ul>
+  </div>
 
 Chapter Text:
 ---
@@ -1437,7 +1445,7 @@ Chapter Text:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=6000,
+                model=self.model, max_tokens=12000,
                 system=MATHS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
