@@ -50,6 +50,24 @@ def _get_lp_duration(lesson_type: str) -> dict:
 # HTML WRAPPER
 # ============================================================================
 
+def balance_divs(html_block: str) -> str:
+    """Auto-close unclosed divs in a day block."""
+    from html.parser import HTMLParser
+    class DivCounter(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.count = 0
+        def handle_starttag(self, tag, attrs):
+            if tag == 'div': self.count += 1
+        def handle_endtag(self, tag):
+            if tag == 'div': self.count -= 1
+    counter = DivCounter()
+    counter.feed(html_block)
+    if counter.count > 0:
+        html_block += '</div>' * counter.count
+        print(f'⚠️ Auto-closed {counter.count} unclosed divs')
+    return html_block
+
 def _wrap_html(body_content: str, title: str, content_type: str = "content",
                meta_line: str = "") -> str:
     accent_colors = {"content": "#2E75B6", "qa": "#27AE60", "lp": "#8E44AD"}
@@ -75,6 +93,18 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
             '<div id="lp-assessment" class="assessment-block"'
         )
 
+        # Step 2b — Balance divs per day block
+        import re as _re
+        day_pattern = _re.compile(
+            r'(<div id="lp-day-\d+" class="lp-day-block">)(.*?)(?=<div id="lp-day-|<div id="lp-assessment"|$)',
+            _re.DOTALL
+        )
+        def fix_day_block(match):
+            opening = match.group(1)
+            content = match.group(2)
+            return opening + balance_divs(content)
+        body_content = day_pattern.sub(fix_day_block, body_content)
+
         # Step 3 — Build tab bar dynamically based on actual day count
         tab_items = ""
         for d in range(1, total_days + 1):
@@ -98,8 +128,9 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
   <button class="lp-next-btn" onclick="nextLPDay()" id="lp-next">Next Day →</button>
 </div>"""
 
-        # Step 5 — Wrap all content in container
-        body_content = tab_bar + '\n<div class="lp-content-area">\n' + body_content + '\n</div>\n' + stepper
+        # Step 5 — Wrap content area, stepper outside
+        content_area = '<div class="lp-content-area">\n' + body_content + '\n</div>'
+        body_content = tab_bar + '\n' + content_area + '\n' + stepper
 
     return f"""<!DOCTYPE html>
 <html lang="en">

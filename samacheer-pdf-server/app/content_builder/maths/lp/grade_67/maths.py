@@ -186,7 +186,14 @@ class MathsLP67Builder:
                 day_num, content_days, total_days, day_data, topics, day_plan
             )
             if day_html:
-                parts.append(clean(day_html))
+                cleaned = clean(day_html)
+                open_divs = cleaned.count('<div')
+                close_divs = cleaned.count('</div>')
+                missing = open_divs - close_divs
+                if missing > 0:
+                    print(f"         ⚠️ Day {day_num} — fixing {missing} unclosed divs")
+                    cleaned = cleaned.rstrip() + '\n' + ('</div>' * missing)
+                parts.append(cleaned)
                 print(f"         ✅ Day {day_num} ({len(day_html)} chars)")
             else:
                 print(f"         ❌ Day {day_num} failed — continuing")
@@ -198,7 +205,14 @@ class MathsLP67Builder:
             practice_day, total_days, topics, day_plan
         )
         if practice_html:
-            parts.append(clean(practice_html))
+            cleaned = clean(practice_html)
+            open_divs = cleaned.count('<div')
+            close_divs = cleaned.count('</div>')
+            missing = open_divs - close_divs
+            if missing > 0:
+                print(f"         ⚠️ Practice Day — fixing {missing} unclosed divs")
+                cleaned = cleaned.rstrip() + '\n' + ('</div>' * missing)
+            parts.append(cleaned)
             print(f"         ✅ Practice Day ({len(practice_html)} chars)")
         else:
             print(f"         ❌ Practice Day failed — continuing")
@@ -210,7 +224,14 @@ class MathsLP67Builder:
             eval_day, total_days, topics
         )
         if eval_html:
-            parts.append(clean(eval_html))
+            cleaned = clean(eval_html)
+            open_divs = cleaned.count('<div')
+            close_divs = cleaned.count('</div>')
+            missing = open_divs - close_divs
+            if missing > 0:
+                print(f"         ⚠️ Eval Day — fixing {missing} unclosed divs")
+                cleaned = cleaned.rstrip() + '\n' + ('</div>' * missing)
+            parts.append(cleaned)
             print(f"         ✅ Evaluation Day ({len(eval_html)} chars)")
         else:
             print(f"         ❌ Evaluation Day failed — continuing")
@@ -223,7 +244,7 @@ class MathsLP67Builder:
         )
         if assessment:
             cleaned = clean(assessment)
-            if '<div class="assessment-block"' in cleaned and not cleaned.rstrip().endswith('</div>'):
+            if 'assessment-block' in cleaned and not cleaned.rstrip().endswith('</div>'):
                 cleaned = cleaned.rstrip() + '\n</div>'
             parts.append(cleaned)
             print(f"         ✅ Assessment ({len(assessment)} chars)")
