@@ -34,7 +34,18 @@ CRITICAL OUTPUT RULES:
 - Output ONLY raw HTML body content
 - NEVER wrap output in markdown code blocks (```html or ```)
 - NEVER use backticks anywhere in your output
-- Start directly with HTML tags — no preamble text"""
+- Start directly with HTML tags — no preamble text
+
+CSS CLASS DISCIPLINE — STRICTLY ENFORCE:
+- NEVER invent new inline styles for div/p/span elements
+- ONLY use these exact pre-approved patterns for board content:
+  <div class="board-work"> (no inline style — CSS class handles all styling)
+- NEVER add style="background:..." or style="color:..." on board-work,
+  teacher-says, student-says, or any other already-defined CSS class
+- If content needs a new visual block not covered by existing classes,
+  use plain <div> with no styling — do NOT invent custom inline styles
+- All text inside board-work, teacher-says, ccq-block, cfu-block must
+  rely on the platform's existing CSS — never override with inline styles"""
 
 
 # ============================================================================
