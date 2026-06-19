@@ -521,6 +521,294 @@ Spread across ALL topics of the chapter — not just the first topic.
 """
 
 
+# ============================================================================
+# SYSTEM PROMPT — GRADE 8-10 (inherits CSS discipline rule from 67 design)
+# ============================================================================
+
+MATHS_LP_SYSTEM_PROMPT_910 = """You are an experienced Maths teacher with deep knowledge of the
+Tamil Nadu Samacheer Kalvi syllabus (Grades 8-10) and exam-focused teaching methods used in
+Indian classrooms.
+
+Create a detailed, practical, script-by-script lesson plan so that even a brand new inexperienced
+teacher can walk into class and deliver a confident, effective Maths session just by following it.
+Students at this level (13-16 years) need LESS hand-holding and MORE independent problem-solving
+than younger grades — favor focused practice over games and group activities.
+
+CONTENT ACCURACY — STRICTLY ENFORCE:
+- Use ONLY concepts, formulas, examples, and problems that appear in the chapter text provided
+- NEVER generate, invent, or assume any formula, rule, or worked example not in the text
+- If a formula or fact is not explicitly stated in the provided text, do NOT include it
+- All worked examples must use numbers and problems from the chapter text only
+- For geometric constructions: describe EXACT compass/ruler/protractor steps — no vague instructions
+
+CRITICAL OUTPUT RULES:
+- Output ONLY raw HTML body content
+- NEVER wrap output in markdown code blocks (```html or ```)
+- NEVER use backticks anywhere in your output
+- Start directly with HTML tags — no preamble text
+
+CSS CLASS DISCIPLINE — STRICTLY ENFORCE:
+- NEVER invent new inline styles for div/p/span elements
+- ONLY use these exact pre-approved patterns for board content:
+  <div class="board-work"> (no inline style — CSS class handles all styling)
+- NEVER add style="background:..." or style="color:..." on board-work,
+  teacher-says, student-says, or any other already-defined CSS class
+- If content needs a new visual block not covered by existing classes,
+  use plain <div> with no styling — do NOT invent custom inline styles
+- All text inside board-work, teacher-says, ccq-block, cfu-block must
+  rely on the platform's existing CSS — never override with inline styles"""
+
+
+# ============================================================================
+# DISCIPLINE NOTES — GRADE 8-10
+# ============================================================================
+
+MATHS_DISCIPLINE_NOTES_910 = """
+MATHS-SPECIFIC TEACHING NOTES (Class 8-10):
+- Exam-focused, independent-learning approach — minimal games/group activities
+- Always teach concept BEFORE procedure — understand why, then how
+- Worked examples: teacher solves step-by-step on board, then students solve independently
+- Formula Box: write ALL formulas/rules for the day on board BEFORE teaching begins
+- Geometric constructions: exact step-by-step instructions — compass, ruler, protractor
+  with precise measurements; students replicate construction in their notebooks
+- Property verification becomes property PROOF at this level — show full reasoning
+- Multi-step word problems are the norm — 3-4 operations, not 1-2
+- Board layout: left side = formula/rule, right side = worked example steps
+- Brief, focused practice after every new concept — not extended games
+- Estimation and mental math checks built into problem-solving, not separate activities
+- Error analysis: common mistakes pointed out proactively, especially in BODMAS and signs
+- Cross-topic connections highlighted — link to algebra, geometry as relevant
+- Real-Life Connect is its own distinct block — not folded into Spark
+"""
+
+
+# ============================================================================
+# CCQ + CFU — GRADE 8-10 (same closed-CCQ design as 67, more rigorous)
+# ============================================================================
+
+MATHS_CCQ_CFU_INSTRUCTION_910 = """
+═══════════════════════════════════════════════════════
+CFU AND CCQ — STRICT MINIMUM REQUIREMENTS (Maths 8-10)
+═══════════════════════════════════════════════════════
+
+MINIMUM REQUIREMENT PER DAY:
+- 2 CFU blocks per concept taught
+- 2 CCQ blocks per concept taught
+- Total minimum: 8 CFUs + 6 CCQs across the full day
+
+── CFU (Check For Understanding) ──────────────────────
+OPEN question — recall, calculation, or construction step check.
+Asked IMMEDIATELY after explaining. Age-appropriate for Class 8-10 — can be
+more demanding than grade 6/7 (multi-step recall acceptable).
+
+FORMAT — use EXACTLY this HTML:
+<div class="cfu-block">
+  <strong>🔎 CFU {number}:</strong>
+  <p class="teacher-says">"[Factual, calculation, or construction-step question]"</p>
+  <p class="student-says"><strong>Expected:</strong> "[Answer — number, term, or short step]"</p>
+  <p><em>⏱ Wait 10 seconds. Call on 2-3 students before moving on.</em></p>
+</div>
+
+── CCQ (Concept Check Question) ───────────────────────
+CLOSED question ONLY — True/False or two-option ("Is it A or B?").
+Tests WHETHER STUDENTS UNDERSTAND THE REASONING — not recall of facts.
+Never ask "Why...?" or "How...?" as a CCQ — those are CFUs.
+
+FORMAT — True/False variant:
+<div class="ccq-block">
+  <strong>⚡ CCQ {number}:</strong>
+  <p class="teacher-says">"[Statement about today's reasoning/concept] — True or False?"</p>
+  <p class="student-says"><strong>Expected:</strong> "[True/False — followed by one-sentence reason]"</p>
+  <p><em>⏱ Wait 15 seconds. Allow pair discussion before taking answers.</em></p>
+</div>
+
+FORMAT — Two-option variant:
+<div class="ccq-block">
+  <strong>⚡ CCQ {number}:</strong>
+  <p class="teacher-says">"[Question with exactly two options]"</p>
+  <p class="student-says"><strong>Expected:</strong> "[Correct option — followed by one-sentence reason]"</p>
+  <p><em>⏱ Wait 15 seconds. Allow pair discussion before taking answers.</em></p>
+</div>
+
+MIX both CCQ variants across the day.
+
+⚠️ NEVER USE ICQs:
+❌ WRONG: "Do you understand?" / "Is it clear?" / "Okay?"
+
+NUMBER CFUs AND CCQs sequentially across the full day.
+
+NOTE: Grade 8-10 does NOT require Tamil mirrors on CFU/CCQ by default
+(see MATHS_TAMIL_INSTRUCTION_910 below — Tamil scope is reduced at this level).
+═══════════════════════════════════════════════════════
+"""
+
+
+# ============================================================================
+# TAMIL INSTRUCTION — GRADE 8-10 (reduced scope vs grade 67)
+# ============================================================================
+
+MATHS_TAMIL_INSTRUCTION_910 = """
+═══════════════════════════════════════════════════════
+TAMIL SCAFFOLDING — MINIMAL, TARGETED ONLY (Maths 8-10)
+═══════════════════════════════════════════════════════
+At Grade 8-10 level, students are expected to follow English instruction
+directly. Tamil appears in EXACTLY 2 places — nowhere else:
+
+✅ 1. KEY TERMS TABLE — Tamil meaning column only
+✅ 2. SPARK / BIG QUESTION — Tamil version after English question
+
+❌ NEVER add Tamil to:
+   - Concept explanations
+   - Worked examples / construction steps
+   - CFU or CCQ blocks
+   - Board work
+   - Activity instructions
+   - Homework
+   - Closing / Real-Life Connect
+   - Practice Day and Evaluation Day (English-only)
+
+TAMIL QUALITY RULES:
+- Translate MEANING, not word-for-word
+- Real Tamil Unicode only — no transliteration
+- Age-appropriate Tamil for Class 8-10 students
+- Use standard Tamil mathematical vocabulary for terms
+═══════════════════════════════════════════════════════
+"""
+
+
+# ============================================================================
+# DAY PLAN STRUCTURE — GRADE 8-10 (45 MINUTES)
+# ============================================================================
+
+MATHS_DAY_PLAN_STRUCTURE_910 = """
+═══════════════════════════════════════════════════════
+DAY PLAN STRUCTURE — 45 MINUTES (Maths 8-10)
+═══════════════════════════════════════════════════════
+
+[0-5 min]   SPARK / BIG QUESTION
+            3-5 minute hook — number puzzle, contradiction, or provocative question
+            End with a Big Question connecting to today's concept
+            Tamil version of Big Question included
+
+[5-10 min]  REAL-LIFE CONNECT (own distinct block — not folded into Spark)
+            1-2 concrete real-world scenarios where today's concept applies
+            Brief — sets purpose, not a discussion
+
+[10-32 min] KEY LEARNING ACTIVITIES (22 minutes)
+            1. Formula Box (if formulas present today)
+               - Write ALL formulas/rules on board BEFORE teaching
+               - Students copy into notebooks
+
+            2. Concept Introduction
+               - Connect to prior knowledge (explicitly reference earlier grade/chapter)
+               - Key terms table (with Tamil column)
+               - CFU questions after introduction
+
+            3. Worked Example (Teacher-led, step-by-step)
+               - Solve step-by-step on board, narrate every step
+               - For constructions: exact compass/ruler/protractor steps
+               - Common mistake warning after each example (inside board-work)
+               - CFU and CCQ after each example
+
+            4. Brief Independent Practice
+               - Students attempt 1-2 similar problems INDEPENDENTLY (not group activity)
+               - Teacher circulates, checks, calls 1-2 students to board for verification
+               - Keep brief — 5-7 minutes max, exam-style focus
+
+            5. Concept Summary
+               - Key rule/property restated precisely
+               - Connection to upcoming topics if relevant
+
+[32-42 min] SHOWCASE OF LEARNING (10 minutes)
+            Exit slip: 2 problems from today's concept — written independently
+            Include answer key for teacher reference
+            CFU questions for quick oral check
+
+[42-45 min] CLOSING (3 minutes)
+            Brief recap — 2-3 rapid-fire questions
+            Homework: specific textbook exercise problems
+            Preview of tomorrow's concept
+
+ACTIVITY POLICY — REDUCED FROM GRADE 6/7:
+- NO group games, posters, or debates by default
+- Independent practice and brief pair-verification only
+- Focus time on problem-solving depth, not activity variety
+═══════════════════════════════════════════════════════
+"""
+
+
+# ============================================================================
+# PREAMBLE START INSTRUCTION — GRADE 8-10 (same pattern as 67)
+# ============================================================================
+
+MATHS_PREAMBLE_START_INSTRUCTION_910 = """
+OUTPUT RULES:
+- Raw HTML only
+- Start directly with the Chapter Overview table — no title header needed
+- Stop after Teaching Aids section
+- Do NOT start any Day block
+- Base ALL objectives on actual chapter content provided
+"""
+
+
+# ============================================================================
+# QA SYSTEM PROMPT — GRADE 8-10
+# ============================================================================
+
+MATHS_QA_SYSTEM_PROMPT_910 = """You are an experienced Samacheer Kalvi Maths teacher (Grades 8-10)
+creating a comprehensive question bank WITH ANSWERS AND WORKING for Tamil Nadu state board students.
+
+CRITICAL OUTPUT RULES:
+- Output ONLY raw HTML body content
+- NEVER wrap output in markdown code blocks
+- NEVER use backticks anywhere
+- Start directly with HTML tags — no preamble text
+- Generate questions AND complete answers based ONLY on the chapter text provided
+- Never invent formulas, numbers, or facts not present in the text
+- EVERY question must have a clear complete answer shown below it
+- For 3-mark and 5-mark: show full step-by-step working — not just final answer
+- For geometric construction questions: show exact construction steps as the answer
+  (Step 1: Draw line AB = X cm. Step 2: Open compass to Y cm. etc.)
+- NEVER use textarea or input boxes — this is a question bank with answers
+- Base questions on the CHAPTER BODY content — not just book-back exercises
+- You MUST generate the EXACT question count requested — do not stop early"""
+
+
+# ============================================================================
+# QUESTION TYPE DISTRIBUTION — Section A VSA (Q1–Q30) — GRADE 8-10
+# ============================================================================
+
+MATHS_VSA_DISTRIBUTION_910 = """
+SECTION A — VSA 1-MARK QUESTIONS (Q1–Q30): distribute EXACTLY as:
+  Q1–Q10  : MCQ — 4 options each (a/b/c/d) — 10 questions
+  Q11–Q18 : Fill in the Blanks — key term, formula, or number — 8 questions
+  Q19–Q23 : True or False — with one-sentence reason in answer — 5 questions
+  Q24–Q27 : Match — one term to one definition/value — 4 questions
+  Q28–Q30 : One-word / one-line answer — single term or value — 3 questions
+
+Total: exactly 30 questions Q1–Q30.
+Spread across ALL topics of the chapter — not just the first topic.
+"""
+
+
+# ============================================================================
+# QA HEADER HELPER — GRADE 8-10
+# ============================================================================
+
+def get_maths_qa_header_910(lesson_title: str, class_num, unit) -> str:
+    """Generates the QA page header for Maths Grade 8-10."""
+    return f"""<div class="sk-content-header">
+  <h1>Question Bank — {lesson_title}</h1>
+  <p class="sk-meta">Class {class_num} | Maths | Unit {unit} | 100 Questions | 3 Sections + HOTS</p>
+  <p class="sk-meta" style="font-size:0.85rem;color:#555;">
+    Section A: 1-mark (Q1–Q30) + 2-mark (Q31–Q55) |
+    Section B: 3-mark incl. Constructions (Q56–Q75) |
+    Section C: 5-mark incl. Constructions + Data Handling (Q76–Q95) |
+    HOTS Bonus (Q96–Q100)
+  </p>
+</div>"""
+
+
 def clean(raw: str) -> str:
     """Strip markdown fences and leading/trailing whitespace from AI output."""
     if not raw:
