@@ -36,16 +36,40 @@ CRITICAL OUTPUT RULES:
 - NEVER use backticks anywhere in your output
 - Start directly with HTML tags — no preamble text
 
-CSS CLASS DISCIPLINE — STRICTLY ENFORCE:
-- NEVER invent new inline styles for div/p/span elements
-- ONLY use these exact pre-approved patterns for board content:
-  <div class="board-work"> (no inline style — CSS class handles all styling)
-- NEVER add style="background:..." or style="color:..." on board-work,
-  teacher-says, student-says, or any other already-defined CSS class
-- If content needs a new visual block not covered by existing classes,
-  use plain <div> with no styling — do NOT invent custom inline styles
-- All text inside board-work, teacher-says, ccq-block, cfu-block must
-  rely on the platform's existing CSS — never override with inline styles"""
+CSS CLASS DISCIPLINE — ABSOLUTE RULE — NEVER VIOLATE:
+The platform has a COMPLETE CSS class system already built.
+Your ONLY job is to put content into the correct existing class.
+ALL visual styling is already handled — you must NEVER add any styling.
+
+AVAILABLE CLASSES — use ONLY these, exactly as written:
+  <div class="lp-day-block">        — day wrapper
+  <div class="lp-section-opening">  — spark/opening section
+  <div class="lp-section-intro">    — introduction section
+  <div class="lp-section-main">     — main teaching section
+  <div class="lp-section-student-task"> — student task section
+  <div class="lp-section-closing">  — closing section
+  <div class="lp-teacher-says">     — teacher script block
+  <div class="lp-tamil-scaffold">   — Tamil mirror block
+  <div class="board-work">          — board/blackboard content
+  <div class="cfu-block">           — CFU question block
+  <div class="ccq-block">           — CCQ question block
+  <div class="activity-block">      — student activity block
+  <div class="homework-block">      — homework block
+  <div class="formula-box">         — formula reference box
+  <div class="diff-block">          — differentiated assessment block
+  <div class="vocab-block">         — key terms/vocabulary block
+
+ABSOLUTE PROHIBITIONS — these will break the platform:
+❌ NEVER add style="background:..." on any element
+❌ NEVER add style="color:..." on any element
+❌ NEVER add style="border:..." on any element
+❌ NEVER add style="padding:..." on any element
+❌ NEVER create a new div with any inline style attribute
+❌ NEVER use pink, purple, grey, yellow, or any colored backgrounds
+❌ NEVER override existing CSS classes with inline styles
+
+If content doesn't fit an existing class — use plain <div> with NO style attribute.
+The CSS team has already handled all visual design. Trust the classes."""
 
 
 # ============================================================================
@@ -547,16 +571,40 @@ CRITICAL OUTPUT RULES:
 - NEVER use backticks anywhere in your output
 - Start directly with HTML tags — no preamble text
 
-CSS CLASS DISCIPLINE — STRICTLY ENFORCE:
-- NEVER invent new inline styles for div/p/span elements
-- ONLY use these exact pre-approved patterns for board content:
-  <div class="board-work"> (no inline style — CSS class handles all styling)
-- NEVER add style="background:..." or style="color:..." on board-work,
-  teacher-says, student-says, or any other already-defined CSS class
-- If content needs a new visual block not covered by existing classes,
-  use plain <div> with no styling — do NOT invent custom inline styles
-- All text inside board-work, teacher-says, ccq-block, cfu-block must
-  rely on the platform's existing CSS — never override with inline styles"""
+CSS CLASS DISCIPLINE — ABSOLUTE RULE — NEVER VIOLATE:
+The platform has a COMPLETE CSS class system already built.
+Your ONLY job is to put content into the correct existing class.
+ALL visual styling is already handled — you must NEVER add any styling.
+
+AVAILABLE CLASSES — use ONLY these, exactly as written:
+  <div class="lp-day-block">        — day wrapper
+  <div class="lp-section-opening">  — spark/opening section
+  <div class="lp-section-intro">    — introduction section
+  <div class="lp-section-main">     — main teaching section
+  <div class="lp-section-student-task"> — student task section
+  <div class="lp-section-closing">  — closing section
+  <div class="lp-teacher-says">     — teacher script block
+  <div class="lp-tamil-scaffold">   — Tamil mirror block
+  <div class="board-work">          — board/blackboard content
+  <div class="cfu-block">           — CFU question block
+  <div class="ccq-block">           — CCQ question block
+  <div class="activity-block">      — student activity block
+  <div class="homework-block">      — homework block
+  <div class="formula-box">         — formula reference box
+  <div class="diff-block">          — differentiated assessment block
+  <div class="vocab-block">         — key terms/vocabulary block
+
+ABSOLUTE PROHIBITIONS — these will break the platform:
+❌ NEVER add style="background:..." on any element
+❌ NEVER add style="color:..." on any element
+❌ NEVER add style="border:..." on any element
+❌ NEVER add style="padding:..." on any element
+❌ NEVER create a new div with any inline style attribute
+❌ NEVER use pink, purple, grey, yellow, or any colored backgrounds
+❌ NEVER override existing CSS classes with inline styles
+
+If content doesn't fit an existing class — use plain <div> with NO style attribute.
+The CSS team has already handled all visual design. Trust the classes."""
 
 
 # ============================================================================
