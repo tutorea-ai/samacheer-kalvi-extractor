@@ -12,7 +12,6 @@ import anthropic
 from typing import Optional, Dict
 from ..config import settings
 from .section_detector import detect_sections, clean_noise
-from ..content_builder.qa_builder import qa_builder
 from ..content_builder.assembler import content_assembler
 
 
@@ -296,11 +295,8 @@ class AIContentConverter:
         # ── QA ────────────────────────────────────────────────────────────────
         print(f"\n   ❓ Generating QA HTML...")
         try:
-            if subject in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
-                from ..content_builder.master_router import generate_qa
-                qa_html = generate_qa(text, metadata)
-            else:
-                qa_html = qa_builder.generate(text, metadata)
+            from ..content_builder.master_router import generate_qa
+            qa_html = generate_qa(text, metadata)
 
             if qa_html:
                 results["qa"] = _wrap_html(
@@ -318,11 +314,8 @@ class AIContentConverter:
         # ── LP ────────────────────────────────────────────────────────────────
         print(f"\n   📌 Generating LP HTML...")
         try:
-            if subject in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
-                from ..content_builder.master_router import generate_lp
-                lp_html = generate_lp(text, metadata)
-            else:
-                lp_html = self._generate_lp(text, metadata)
+            from ..content_builder.master_router import generate_lp
+            lp_html = generate_lp(text, metadata)
             if lp_html:
                 results["lp"] = _wrap_html(
                     lp_html,
