@@ -190,6 +190,22 @@ Start at Q1. End at Q30."""
             return raw.strip() or None
         except Exception as e:
             print(f"❌ Maths QA 910 VSA error: {e}")
+            if 'overloaded' in str(e).lower():
+                import time
+                print(f"         ⏳ API overloaded — waiting 30 seconds and retrying...")
+                time.sleep(30)
+                try:
+                    raw = ""
+                    with self.client.messages.stream(
+                        model=self.model, max_tokens=10000,
+                        system=MATHS_QA_SYSTEM_PROMPT_910,
+                        messages=[{"role": "user", "content": prompt}]
+                    ) as stream:
+                        for chunk in stream.text_stream:
+                            raw += chunk
+                    return raw.strip() or None
+                except Exception as e2:
+                    print(f"❌ Maths QA 910 VSA retry failed: {e2}")
             return None
 
     # -------------------------------------------------------------------------
@@ -271,6 +287,22 @@ Start at Q31. End at Q55."""
             return raw.strip() or None
         except Exception as e:
             print(f"❌ Maths QA 910 SA-I error: {e}")
+            if 'overloaded' in str(e).lower():
+                import time
+                print(f"         ⏳ API overloaded — waiting 30 seconds and retrying...")
+                time.sleep(30)
+                try:
+                    raw = ""
+                    with self.client.messages.stream(
+                        model=self.model, max_tokens=12000,
+                        system=MATHS_QA_SYSTEM_PROMPT_910,
+                        messages=[{"role": "user", "content": prompt}]
+                    ) as stream:
+                        for chunk in stream.text_stream:
+                            raw += chunk
+                    return raw.strip() or None
+                except Exception as e2:
+                    print(f"❌ Maths QA 910 SA-I retry failed: {e2}")
             return None
 
     # -------------------------------------------------------------------------
@@ -363,6 +395,22 @@ Start at Q56. End at Q75."""
             return raw.strip() or None
         except Exception as e:
             print(f"❌ Maths QA 910 SA-II error: {e}")
+            if 'overloaded' in str(e).lower():
+                import time
+                print(f"         ⏳ API overloaded — waiting 30 seconds and retrying...")
+                time.sleep(30)
+                try:
+                    raw = ""
+                    with self.client.messages.stream(
+                        model=self.model, max_tokens=16000,
+                        system=MATHS_QA_SYSTEM_PROMPT_910,
+                        messages=[{"role": "user", "content": prompt}]
+                    ) as stream:
+                        for chunk in stream.text_stream:
+                            raw += chunk
+                    return raw.strip() or None
+                except Exception as e2:
+                    print(f"❌ Maths QA 910 SA-II retry failed: {e2}")
             return None
 
     # -------------------------------------------------------------------------
@@ -456,6 +504,22 @@ Start at Q76. End at Q95."""
             return raw.strip() or None
         except Exception as e:
             print(f"❌ Maths QA 910 LA error: {e}")
+            if 'overloaded' in str(e).lower():
+                import time
+                print(f"         ⏳ API overloaded — waiting 30 seconds and retrying...")
+                time.sleep(30)
+                try:
+                    raw = ""
+                    with self.client.messages.stream(
+                        model=self.model, max_tokens=18000,
+                        system=MATHS_QA_SYSTEM_PROMPT_910,
+                        messages=[{"role": "user", "content": prompt}]
+                    ) as stream:
+                        for chunk in stream.text_stream:
+                            raw += chunk
+                    return raw.strip() or None
+                except Exception as e2:
+                    print(f"❌ Maths QA 910 LA retry failed: {e2}")
             return None
 
     # -------------------------------------------------------------------------
@@ -541,6 +605,22 @@ Start at Q96. End at Q100."""
             return raw.strip() or None
         except Exception as e:
             print(f"❌ Maths QA 910 HOTS error: {e}")
+            if 'overloaded' in str(e).lower():
+                import time
+                print(f"         ⏳ API overloaded — waiting 30 seconds and retrying...")
+                time.sleep(30)
+                try:
+                    raw = ""
+                    with self.client.messages.stream(
+                        model=self.model, max_tokens=8000,
+                        system=MATHS_QA_SYSTEM_PROMPT_910,
+                        messages=[{"role": "user", "content": prompt}]
+                    ) as stream:
+                        for chunk in stream.text_stream:
+                            raw += chunk
+                    return raw.strip() or None
+                except Exception as e2:
+                    print(f"❌ Maths QA 910 HOTS retry failed: {e2}")
             return None
 
 

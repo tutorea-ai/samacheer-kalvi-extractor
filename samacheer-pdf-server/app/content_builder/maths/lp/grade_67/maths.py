@@ -992,6 +992,19 @@ Chapter Text (use ONLY this — no general knowledge):
             return response.content[0].text
         except Exception as e:
             print(f"❌ Maths LP 67 Day {day_num} error: {e}")
+            if 'overloaded' in str(e).lower():
+                import time
+                print(f"         ⏳ API overloaded — waiting 30 seconds and retrying...")
+                time.sleep(30)
+                try:
+                    response = self.client.messages.create(
+                        model=self.model, max_tokens=16000,
+                        system=MATHS_LP_SYSTEM_PROMPT,
+                        messages=[{"role": "user", "content": prompt}]
+                    )
+                    return response.content[0].text
+                except Exception as e2:
+                    print(f"❌ Maths LP 67 Day {day_num} retry failed: {e2}")
             return None
 
     # =========================================================================
