@@ -341,16 +341,21 @@ class EpubPreprocessor:
                 if not lesson_type:
                     continue
 
-                # Get first lesson anchor inside
+                # Get lesson anchor — directly on item or inside nested ol
                 inner_ol = item_li.find('ol')
                 if inner_ol:
+                    # Nested structure — anchor inside inner ol
                     first_link = inner_ol.find('a')
-                    if first_link:
-                        href = first_link.get('href', '')
-                        sf, anchor = self._parse_href(href)
-                        if sf and anchor:
-                            tag = f"{lesson_type}-{unit_num}"
-                            tag_map[tag] = (sf, anchor)
+                else:
+                    # Flat structure — anchor directly on item link
+                    first_link = item_link
+
+                if first_link:
+                    href = first_link.get('href', '')
+                    sf, anchor = self._parse_href(href)
+                    if sf and anchor:
+                        tag = f"{lesson_type}-{unit_num}"
+                        tag_map[tag] = (sf, anchor)
 
         return tag_map
 
