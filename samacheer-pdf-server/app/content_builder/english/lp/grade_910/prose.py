@@ -474,7 +474,7 @@ Tamil appears ONLY in Spark/Opening + Key Terms table.
 GENERATE Day {day_num} using EXACTLY this structure:
 ═══════════════════════════════════════════════════════
 
-<div id="lp-day-{day_num}" class="lp-day-block">
+<div class="lp-day-block">
 <h3 class="lp-day-title">Day {day_num} — [Today's prose section names]</h3>
 <p class="lp-day-meta">Content Day {day_num} of 4 | 45 minutes | Prose: {lesson_title}</p>
 
@@ -645,7 +645,10 @@ FINAL CHECKS
 ✅ Differentiation has real example tasks
 ✅ Tamil ONLY in Spark + Key Terms table
 ✅ NO inline styles on any div or p tag
-✅ Raw HTML only — start with <div id="lp-day-{day_num}"
+✅ Raw HTML only — start with <div class="lp-day-block">
+❌ NEVER add <style> blocks anywhere in your output
+❌ NEVER add inline color styles on any element — no style="color:..." anywhere
+❌ NEVER add inline style attributes of any kind inside board-work divs
 ✅ Do NOT generate Day {day_num + 1}
 ✅ All content from lesson text only — no invented facts
 
@@ -721,7 +724,7 @@ Tamil appears ONLY in Spark/Opening and Key Terms table.
 GENERATE Grammar Day {grammar_day_num} using EXACTLY this structure:
 ═══════════════════════════════════════════════════════
 
-<div id="lp-day-{day_num}" class="lp-day-block">
+<div class="lp-day-block">
 <h3 class="lp-day-title">Day {day_num} — Grammar: {topic}</h3>
 <p class="lp-day-meta">Grammar Day {grammar_day_num} of 6 | 45 minutes | {lesson_title}</p>
 
@@ -877,7 +880,10 @@ FINAL CHECKS
 ✅ Homework is specific with model example
 ✅ Differentiation has real example sentences for each level
 ✅ NO inline styles on any div or p tag
-✅ Raw HTML only — start with <div id="lp-day-{day_num}"
+✅ Raw HTML only — start with <div class="lp-day-block">
+❌ NEVER add <style> blocks anywhere in your output
+❌ NEVER add inline color styles on any element — no style="color:..." anywhere
+❌ NEVER add inline style attributes of any kind inside board-work divs
 ✅ Do NOT generate Day {day_num + 1}
 
 Lesson Text (use ONLY this for grammar examples):

@@ -724,7 +724,8 @@ class PDFProcessor:
                 sections   = detect_sections(clean_text, lesson_type=lesson_type)
                 ai_metadata["_sections"] = sections
 
-                if subject.lower() in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
+                if subject.lower() in ["socialscience", "social_science", "science",
+                                        "maths", "math", "mathematics", "english"]:
                     from .content_builder.master_router import generate_lp
                     lp_html = generate_lp(clean_text, ai_metadata)
                 else:
@@ -846,19 +847,8 @@ class PDFProcessor:
 
                 from .services.ai_converter import _wrap_html
 
-                if subject.lower() == "english":
-                    epub_key    = self._generate_epub_key(class_num, term, subject)
-                    epub_folder = self.epub_dir / epub_key
-                    extractor_obj = EpubExtractor(epub_folder)
-                    prose_text = extractor_obj.extract(unit=unit_num, lesson_type="prose")
-                    poem_text  = extractor_obj.extract(unit=unit_num, lesson_type="poem")
-                    supp_text  = extractor_obj.extract(unit=unit_num, lesson_type="supplementary")
-                    ai_metadata["prose_text"]         = prose_text or ""
-                    ai_metadata["poem_text"]          = poem_text  or ""
-                    ai_metadata["supplementary_text"] = supp_text  or ""
-                    from .content_builder.master_router import generate_qa
-                    qa_html = generate_qa(raw_text, ai_metadata)
-                elif subject.lower() in ["socialscience", "social_science", "science", "maths", "math", "mathematics"]:
+                if subject.lower() in ["socialscience", "social_science", "science",
+                                        "maths", "math", "mathematics", "english"]:
                     from .content_builder.master_router import generate_qa
                     qa_html = generate_qa(raw_text, ai_metadata)
                 else:

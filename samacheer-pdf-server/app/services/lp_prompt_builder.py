@@ -106,8 +106,8 @@ must match this level of detail in BOTH languages.
 DAY FORMAT
 ═══════════════════════════════════════════════════════
 
-<h3 class="day-header">Day {day_num} — [Topic Focus for this day]</h3>
 <div class="day-block">
+<h3 class="day-header">Day {day_num} — [Topic Focus for this day]</h3>
 
   <div class="time-block">
     <strong>[0–5 min] Warm Up / Review</strong>
@@ -357,7 +357,7 @@ DAY FORMAT
 ═══════════════════════════════════════════════════════
 ABSOLUTE RULES — NEVER BREAK
 ═══════════════════════════════════════════════════════
-✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
+✅ Raw HTML only — start with <div class="day-block">
 ✅ EVERY English instruction: minimum 3-4 complete sentences
 ✅ EVERY Tamil instruction: exact mirror of English — same length, same detail
 ✅ Vocabulary table: 5 words with Tamil meanings every day
@@ -367,6 +367,9 @@ ABSOLUTE RULES — NEVER BREAK
 ✅ Tamil must be real Tamil script — not transliteration
 ✅ Base ALL content on actual lesson text below
 ✅ Do NOT start Day {day_num+1}
+❌ NEVER add <style> blocks anywhere in your output
+❌ NEVER add inline color styles on any element — no style="color:..." anywhere
+❌ NEVER add inline style attributes of any kind inside board-work divs
 
 Lesson Text:
 ---
@@ -433,9 +436,9 @@ Not a summary — a complete translation.
 
 ═══════════════════════════════════════════════════════
 
+<div class="day-block">
 <h3 class="day-header">Day {day_num} — Grammar: {topic if topic else "[Exact Topic from Textbook]"}</h3>
 <!-- TOPIC LOCK: {topic} — do not deviate -->
-<div class="day-block">
 
   <div class="time-block">
     <strong>[0–5 min] Review + Grammar Introduction</strong>
@@ -659,7 +662,7 @@ Not a summary — a complete translation.
 </div>
 
 ABSOLUTE RULES:
-✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
+✅ Raw HTML only — start with <div class="day-block">
 ✅ EVERY English instruction: minimum 3-4 complete sentences
 ✅ EVERY Tamil instruction: exact mirror — same length, same detail
 ✅ Grammar rule explained fully in Tamil for teacher's understanding
@@ -668,6 +671,9 @@ ABSOLUTE RULES:
 ✅ Differentiation: real example sentences for each level
 ✅ Tamil must be real Tamil script — not transliteration
 ✅ Do NOT start Day {day_num+1}
+❌ NEVER add <style> blocks anywhere in your output
+❌ NEVER add inline color styles on any element — no style="color:..." anywhere
+❌ NEVER add inline style attributes of any kind inside board-work divs
 
 Lesson Text:
 ---

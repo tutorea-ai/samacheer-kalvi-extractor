@@ -363,7 +363,7 @@ Key Vocabulary Today: {vocab_str}
 
 GENERATE Day {day_num} using this structure:
 
-<div id="lp-day-{day_num}" class="lp-day-block">
+<div class="lp-day-block">
 <h3 class="lp-day-title">Day {day_num} — {lesson_title}: {day_focus}</h3>
 <p class="lp-day-meta">Supplementary Day {day_num} of 3 | 45 minutes | {lesson_title}</p>
 
@@ -489,7 +489,10 @@ FINAL CHECKS:
 ✅ Activity is specific and step-by-step
 ✅ Tamil ONLY in Spark + Key Terms table
 ✅ NO inline styles
-✅ Raw HTML only — start with <div id="lp-day-{day_num}"
+✅ Raw HTML only — start with <div class="lp-day-block">
+❌ NEVER add <style> blocks anywhere in your output
+❌ NEVER add inline color styles on any element — no style="color:..." anywhere
+❌ NEVER add inline style attributes of any kind inside board-work divs
 ✅ Do NOT generate Day {day_num + 1}
 ✅ All content from story text only — no invented events
 
