@@ -885,6 +885,12 @@ FINAL CHECKS
 ❌ NEVER add inline color styles on any element — no style="color:..." anywhere
 ❌ NEVER add inline style attributes of any kind inside board-work divs
 ✅ Do NOT generate Day {day_num + 1}
+✅ Every example sentence must be grammatically 100% correct
+✅ Check subject-verb agreement in EVERY sentence before finishing
+✅ NEVER use a grammatically incorrect sentence as an example
+✅ CFU questions on grammar days = identification only (one word answer)
+✅ NEVER ask transformation questions as CFU — those are practice questions
+✅ All grammar examples taken from lesson text only — never invented
 
 Lesson Text (use ONLY this for grammar examples):
 ---

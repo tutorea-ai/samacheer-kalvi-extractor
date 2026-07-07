@@ -285,23 +285,38 @@ ENGLISH_CCQ_CFU_INSTRUCTION_910 = """
 CFU AND CCQ RULES — GRADE 8, 9 & 10
 ═══════════════════════════════════════════════════════
 
-CFU = Comprehension check immediately after reading/explanation.
+CFU = Simple recall check — one word or one short phrase answer only.
 CCQ = Higher-order thinking — inference, theme, author intent.
 
-❌ NEVER use ICQs.
+❌ NEVER use ICQs — "Do you understand?" is forbidden.
+
+CFU STRICT RULES:
+- CFU questions must have ONE correct answer — no ambiguity
+- Answer must be findable directly in the text just read
+- Question must be under 8 words
+- Expected answer must be ONE word or ONE short phrase
+- NEVER ask a transformation or analytical question as CFU
+- NEVER ask "What voice is this?" or "Convert this sentence" as CFU
+  — those are CCQ or practice questions, NOT CFU
+
+FOR GRAMMAR DAYS SPECIFICALLY:
+- CFU = identify only (e.g. "Is this sentence active or passive?")
+- CFU expected answer = one word only (e.g. "Passive")
+- NEVER ask students to transform or rewrite as a CFU
+- NEVER use CFU to test complex grammar application
 
 CFU FORMAT:
 <div class="cfu-block">
   <strong>🔎 CFU:</strong>
-  <p class="teacher-says">"[Recall question — under 8 words]"</p>
-  <p class="student-says"><strong>Expected:</strong> "[One sentence]"</p>
+  <p class="lp-teacher-says">"[Simple identification question — under 8 words]"</p>
+  <p class="student-says"><strong>Expected:</strong> "[One word or one short phrase only]"</p>
   <p><em>⏱ Wait 10 seconds. Call on 2 students.</em></p>
 </div>
 
 CCQ FORMAT:
 <div class="ccq-block">
   <strong>⚡ CCQ:</strong>
-  <p class="teacher-says">"[Why/How/What does this reveal — under 10 words]"</p>
+  <p class="lp-teacher-says">"[Why/How/What does this reveal — under 10 words]"</p>
   <p class="student-says"><strong>Expected:</strong> "[2-3 sentence analytical answer]"</p>
   <p><em>⏱ Wait 20 seconds. Think-pair-share.</em></p>
 </div>

@@ -903,23 +903,32 @@ class EpubPreprocessor:
         english_order = ['prose', 'poem', 'supplementary']
         ss_order      = ['history', 'geography', 'civics', 'economics']
 
-        # Try next units of same type — skip gaps
-        for next_unit in range(unit + 1, unit + 10):
-            el = soup.find(attrs={"data-sk-unit": f"{lesson_type}-{next_unit}"})
-            if el:
-                return el
-
-        # For English — try next lesson type in same unit
+        # For English — try next lesson type in same unit FIRST
         if lesson_type in english_order:
             idx = english_order.index(lesson_type)
             for next_type in english_order[idx + 1:]:
                 el = soup.find(attrs={"data-sk-unit": f"{next_type}-{unit}"})
                 if el:
                     return el
+
+            # Then try next units of same type
+            for next_unit in range(unit + 1, unit + 10):
+                el = soup.find(attrs={"data-sk-unit": f"{lesson_type}-{next_unit}"})
+                if el:
+                    return el
+
             for next_unit in range(unit + 1, unit + 10):
                 el = soup.find(attrs={"data-sk-unit": f"prose-{next_unit}"})
                 if el:
                     return el
+
+            return None  # Last lesson in book
+
+        # Try next units of same type — skip gaps
+        for next_unit in range(unit + 1, unit + 10):
+            el = soup.find(attrs={"data-sk-unit": f"{lesson_type}-{next_unit}"})
+            if el:
+                return el
 
         # For Social Science — try next discipline
         if lesson_type in ss_order:
