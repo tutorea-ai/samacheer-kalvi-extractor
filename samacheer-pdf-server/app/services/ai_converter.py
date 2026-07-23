@@ -193,13 +193,13 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
   </style>
 </head>
 <body>
-  <div class="sk-lesson-wrapper">
+  {"<div class='sk-lesson-wrapper'>" if content_type != "lp" else ""}
     {f'''<div class="sk-content-header">
       <h1>{title}</h1>
       <p class="sk-meta">{meta_line}</p>
     </div>''' if content_type != "qa" else ""}
     {body_content}
-  </div>
+  {"</div>" if content_type != "lp" else ""}
 </body>
 </html>"""
 

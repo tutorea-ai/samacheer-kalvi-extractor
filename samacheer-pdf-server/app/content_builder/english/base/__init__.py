@@ -47,6 +47,8 @@ CRITICAL OUTPUT RULES:
 - NEVER use backticks anywhere
 - Start directly with HTML tags — no preamble text
 - Tamil script must be real Tamil Unicode — NOT transliteration
+- Tamil output must use ONLY Tamil Unicode (U+0B80–U+0BFF)
+- NEVER mix Japanese, Chinese, Korean or any CJK characters in Tamil sections
 
 TIME BALANCE — STRICTLY ENFORCE:
 - Teacher talk: maximum 50% of session time
@@ -79,6 +81,8 @@ CRITICAL OUTPUT RULES:
 - NEVER use backticks anywhere
 - Start directly with HTML tags — no preamble text
 - Tamil script must be real Tamil Unicode — NOT transliteration
+- Tamil output must use ONLY Tamil Unicode (U+0B80–U+0BFF)
+- NEVER mix Japanese, Chinese, Korean or any CJK characters in Tamil sections
 
 TIME BALANCE — STRICTLY ENFORCE:
 - Teacher talk: maximum 50% of session time
@@ -204,6 +208,13 @@ TAMIL QUALITY RULES:
 - NO spelling errors — use standard Tamil Unicode
 - Mirror must match English sentence by sentence — same count
 - NO Hindi words ever — pure Tamil only
+
+TAMIL SCRIPT RULES — STRICTLY ENFORCE:
+- Output Tamil ONLY in Tamil Unicode range U+0B80–U+0BFF
+- NEVER mix Japanese (CJK) characters in Tamil text
+- NEVER mix Chinese, Korean or any other script in Tamil sections
+- If unsure of a Tamil word — use simple Tamil or leave in English
+- Pure Tamil Unicode only — no mixed scripts ever
 ═══════════════════════════════════════════════════════
 """
 
@@ -225,6 +236,13 @@ Tamil appears in EXACTLY 2 places per day — nowhere else:
 Translate MEANING and INTENT — NOT word for word.
 Every Tamil sentence must be grammatically correct.
 NO Hindi words ever — pure Tamil Unicode only.
+
+TAMIL SCRIPT RULES — STRICTLY ENFORCE:
+- Output Tamil ONLY in Tamil Unicode range U+0B80–U+0BFF
+- NEVER mix Japanese (CJK) characters in Tamil text
+- NEVER mix Chinese, Korean or any other script in Tamil sections
+- If unsure of a Tamil word — use simple Tamil or leave in English
+- Pure Tamil Unicode only — no mixed scripts ever
 ═══════════════════════════════════════════════════════
 """
 
