@@ -158,10 +158,10 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
     .sk-content-header {{ border-left: 5px solid {accent}; padding-left: 12px; margin-bottom: 24px; }}
     .sk-content-header h1 {{ color: {accent}; font-size: 1.6rem; margin: 0 0 4px 0; }}
     .sk-content-header .sk-meta {{ font-size: 0.85rem; color: #777; }}
-    table {{ width: 100%; border-collapse: collapse; margin: 16px 0; }}
-    th {{ background: {accent}; color: white; padding: 10px 14px; text-align: left; }}
-    td {{ padding: 9px 14px; border-bottom: 1px solid #eee; }}
-    tr:nth-child(even) td {{ background: #f9f9f9; }}
+    .sk-lesson-wrapper table {{ width: 100%; border-collapse: collapse; margin: 16px 0; }}
+    .sk-lesson-wrapper th {{ background: {accent}; color: white; padding: 10px 14px; text-align: left; }}
+    .sk-lesson-wrapper td {{ padding: 9px 14px; border-bottom: 1px solid #eee; }}
+    .sk-lesson-wrapper tr:nth-child(even) td {{ background: #f9f9f9; }}
     blockquote {{ border-left: 4px solid {accent}; margin: 16px 0; padding: 10px 16px; background: #f5f5f5; color: #444; font-style: italic; }}
     .day-block {{ background: #fafafa; border: 1px solid #e8e8e8; border-radius: 8px; padding: 16px; margin-bottom: 24px; }}
     .day-header {{ color: {accent}; border-bottom: 2px solid {accent}; padding-bottom: 8px; }}
