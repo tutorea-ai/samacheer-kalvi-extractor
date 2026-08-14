@@ -42,6 +42,11 @@ brand-new inexperienced teacher can walk into class and deliver a confident,
 effective 35-minute session just by following it.
 
 CRITICAL OUTPUT RULES:
+- ⚠️ ABSOLUTE RULE: NEVER output Japanese, Chinese, Korean or ANY CJK characters
+- Characters like 声に出して, 遠足, 自成生动 are STRICTLY FORBIDDEN
+- Tamil sections: ONLY Tamil Unicode (U+0B80–U+0BFF) + English + numbers + punctuation
+- If you detect yourself writing any CJK character — DELETE it and rewrite in Tamil or English
+- Violation of this rule makes the entire output unusable
 - Output ONLY raw HTML body content
 - NEVER wrap output in markdown code blocks
 - NEVER use backticks anywhere
@@ -76,6 +81,11 @@ Create a detailed, practical lesson plan so that even an inexperienced teacher
 can deliver an effective session just by following it.
 
 CRITICAL OUTPUT RULES:
+- ⚠️ ABSOLUTE RULE: NEVER output Japanese, Chinese, Korean or ANY CJK characters
+- Characters like 声に出して, 遠足, 自成生动 are STRICTLY FORBIDDEN
+- Tamil sections: ONLY Tamil Unicode (U+0B80–U+0BFF) + English + numbers + punctuation
+- If you detect yourself writing any CJK character — DELETE it and rewrite in Tamil or English
+- Violation of this rule makes the entire output unusable
 - Output ONLY raw HTML body content
 - NEVER wrap output in markdown code blocks
 - NEVER use backticks anywhere

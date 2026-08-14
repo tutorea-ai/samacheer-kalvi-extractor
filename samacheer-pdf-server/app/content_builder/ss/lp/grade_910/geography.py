@@ -1170,6 +1170,12 @@ ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
 ✅ No specific student names — use "a student" or "Student A"
 ✅ Tamil in exactly 3 places: opening + introduction + first subtopic explanation
 ✅ Raw HTML only — start with <div class="lp-day-block">
+✅ Every <div> opened is closed with </div> — never with </p>
+✅ Every lp-teacher-says closed with </div> before next subheading
+✅ Every tamil-scaffold closed with </div> before moving on
+✅ Every cfu-block inner lp-teacher-says closed with </div>
+✅ Every ccq-block inner lp-teacher-says closed with </div>
+✅ Homework block: ALL inner divs closed before outer </div>
 ✅ Do NOT generate Day {day_num + 1 if day_num < 5 else 6}
 
 Chapter Text:

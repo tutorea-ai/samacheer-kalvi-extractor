@@ -640,7 +640,8 @@ Total minimum: 8 CFUs + 6 CCQs across the full day.
 CFU — simple recall or scenario-based:
 <div class="cfu-block">
   <strong>🔎 CFU:</strong>
-  <div class="lp-teacher-says">"[Simple question or scenario — under 6 words]"</p>
+  <div class="lp-teacher-says">"[Simple question or scenario — under 6 words]"
+  </div>
   <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
   <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
 </div>
@@ -648,7 +649,8 @@ CFU — simple recall or scenario-based:
 CCQ — deeper reflection question with Tamil:
 <div class="ccq-block">
   <strong>⚡ CCQ:</strong>
-  <div class="lp-teacher-says">"[Why/How question — simple, under 8 words]"</p>
+  <div class="lp-teacher-says">"[Why/How question — simple, under 8 words]"
+  </div>
   <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
   <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
   <p><em>⏱ Wait 15 seconds. Allow pair discussion.</em></p>
@@ -698,7 +700,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     "[3-minute curiosity-building activity — {spark['style']} style.
      Simple, relatable, engaging for Class 6/7.
      Must connect to today's sections: {', '.join(day_sections)}.
-     End with Big Question about today's topic.]"</p>
+     End with Big Question about today's topic.]"
+  </div>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
@@ -719,7 +722,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     "[Set context for the topic. Then: 'Let's look at [topic] in our textbook.'
      Reference page number if applicable.
      2-3 simple sentences for Class 6/7.
-     Connect to students' daily life immediately.]"</p>
+     Connect to students' daily life immediately.]"
+  </div>
 
     <div class="board-work">
       <strong>Write on Board:</strong><br/>
@@ -756,7 +760,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     "[3-4 sentences — explain this section simply.
      Use story, real example, or student's daily life connection.
      Simple language for Class 6/7.
-     Based ONLY on chapter text — no outside knowledge.]"</p>
+     Based ONLY on chapter text — no outside knowledge.]"
+  </div>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
@@ -792,7 +797,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
       [Keep very simple for Class 6/7]
     </div>
     <div class="lp-teacher-says">"[2 sentences summarising what was learned today.
-     Ask students to copy the summary into their notebooks.]"</p>
+     Ask students to copy the summary into their notebooks.]"
+  </div>
   </div>
 
   <!-- ═══ SECTION 3: ASSESSMENT (20-30 min) ═══ -->
@@ -800,7 +806,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <strong>[20-30 min] Assessment — 3 Levels</strong>
 
     <div class="lp-teacher-says"><strong>Teacher says:</strong><br/>
-    "Now let's check what we learned today. Choose your task based on your level."</p>
+    "Now let's check what we learned today. Choose your task based on your level."
+  </div>
 
     <div class="diff-block">
       <strong>Differentiated Assessment:</strong>
@@ -839,7 +846,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     </div>
 
     <div class="lp-teacher-says"><strong>Quick Review:</strong><br/>
-    "[Take 2 minutes — hear 1 answer from each level. Give positive feedback.]"</p>
+    "[Take 2 minutes — hear 1 answer from each level. Give positive feedback.]"
+  </div>
   </div>
 
   <!-- ═══ SECTION 4: CLOSING + STUDENT TASK (30-35 min) ═══ -->
@@ -847,7 +855,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <strong>[30-35 min] {"Full Chapter Recap & Closing" if day_num == 4 else "Closing & Student Task"}</strong>
 
     <div class="lp-teacher-says"><strong>2-Minute Recap:</strong><br/>
-    "{'[Recap ALL sections from ALL 4 days. 3-2-1 Reflection: 3 things learned, 2 examples of diversity, 1 way to celebrate differences. Class Constitution: students write 3 rules for respecting diversity.]' if day_num == 4 else '[3 rapid-fire questions about today only. Students call out answers. Keep energetic.]'}"</p>
+    "{'[Recap ALL sections from ALL 4 days. 3-2-1 Reflection: 3 things learned, 2 examples of diversity, 1 way to celebrate differences. Class Constitution: students write 3 rules for respecting diversity.]' if day_num == 4 else '[3 rapid-fire questions about today only. Students call out answers. Keep energetic.]'}"
+  </div>
     <p><em>⏱ Wait 5 seconds per question.</em></p>
 
     <div class="board-work">
@@ -859,7 +868,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
 
     <div class="lp-teacher-says"><strong>Closing Reflection:</strong><br/>
     "[{closing_style} — students write ONE meaningful sentence.
-     Give sentence frame on board. Age-appropriate for Class 6/7.]"</p>
+     Give sentence frame on board. Age-appropriate for Class 6/7.]"
+  </div>
 
     <div class="board-work">
       <strong>Sentence Frame (write on board):</strong><br/>
@@ -870,7 +880,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     {"" if day_num == 4 else f'''
     <div class="homework-block">
       <div class="lp-teacher-says"><strong>Student Task / Homework:</strong><br/>
-      {"Option A: Write a short paragraph about a time you appreciated someone different from you.<br/>Option B: Draw a picture showing diversity in your community.<br/>Option C: Make a list of 5 things that make your class diverse." if day_num == 2 else "[Specific simple homework from today's sections. Clear for Class 6/7.]"}</p>
+      {"Option A: Write a short paragraph about a time you appreciated someone different from you.<br/>Option B: Draw a picture showing diversity in your community.<br/>Option C: Make a list of 5 things that make your class diverse." if day_num == 2 else "[Specific simple homework from today's sections. Clear for Class 6/7.]"}
+  </div>
 
       <div class="board-work">
         <strong>{"Write all 3 options on board." if day_num == 2 else "Homework (write on board):"}</strong><br/>
@@ -879,7 +890,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
 
       <div class="lp-teacher-says"><strong>Preview — {next_label}:</strong><br/>
       "[1-2 sentences — name the EXACT sections from Day {day_num + 1 if day_num < 4 else 4}.
-       Build curiosity for next class.]"</p>
+       Build curiosity for next class.]"
+  </div>
     </div>'''}
 
   </div>
@@ -903,6 +915,12 @@ ABSOLUTE CHECKS — CRITICAL BEFORE FINISHING
 ✅ Real-life examples and student connections included
 {"✅ Day 4: 3-2-1 Reflection + Class Constitution included" if day_num == 4 else f"✅ Preview names exact sections from Day {day_num + 1}"}
 ✅ Raw HTML only — start with <div class="lp-day-block">
+✅ Every <div> opened is closed with </div> — never with </p>
+✅ Every lp-teacher-says closed with </div> before next subheading
+✅ Every tamil-scaffold closed with </div> before moving on
+✅ Every cfu-block inner lp-teacher-says closed with </div>
+✅ Every ccq-block inner lp-teacher-says closed with </div>
+✅ Homework block: ALL inner divs closed before outer </div>
 ✅ Do NOT generate Day {day_num + 1}
 
 Chapter Text (use ONLY this — no general knowledge):

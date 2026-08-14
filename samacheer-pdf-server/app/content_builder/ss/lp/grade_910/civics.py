@@ -791,6 +791,12 @@ ABSOLUTE CHECKS BEFORE FINISHING DAY {day_num}
 ✅ Sample answer in student task
 {"✅ Day 3: Revision/quiz structure followed" if day_num == 3 else f"✅ Preview of Day {day_num + 1} included"}
 ✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
+✅ Every <div> opened is closed with </div> — never with </p>
+✅ Every lp-teacher-says closed with </div> before next subheading
+✅ Every tamil-scaffold closed with </div> before moving on
+✅ Every cfu-block inner lp-teacher-says closed with </div>
+✅ Every ccq-block inner lp-teacher-says closed with </div>
+✅ Homework block: ALL inner divs closed before outer </div>
 ✅ Do NOT generate Day {day_num + 1 if day_num < 3 else 'beyond 3'}
 
 Chapter Text:

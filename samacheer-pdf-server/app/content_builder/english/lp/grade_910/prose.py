@@ -390,6 +390,12 @@ OUTPUT RULES:
 {ENGLISH_PREAMBLE_INSTRUCTION}
 - Stop after Teaching Aids — do NOT generate any Day content
 
+ABSOLUTE RULES:
+✅ Stop COMPLETELY after Teaching Aids closing tag
+✅ Do NOT generate any <div class="lp-day-block"> in the preamble
+✅ Do NOT generate any Day content in the preamble
+❌ NEVER continue beyond Teaching Aids
+
 Lesson Text (reference):
 ---
 {text[:3000]}
@@ -473,6 +479,9 @@ Tamil appears ONLY in Spark/Opening + Key Terms table.
 ═══════════════════════════════════════════════════════
 GENERATE Day {day_num} using EXACTLY this structure:
 ═══════════════════════════════════════════════════════
+
+✅ Start with <div class="lp-day-block"> as the FIRST tag
+✅ Never nest lp-day-block inside any table or th element
 
 <div class="lp-day-block">
 <h3 class="lp-day-title">Day {day_num} — [Today's prose section names]</h3>

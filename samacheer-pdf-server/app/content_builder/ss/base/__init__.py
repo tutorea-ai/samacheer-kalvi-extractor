@@ -53,6 +53,11 @@ brand-new inexperienced teacher can walk into class and deliver a confident,
 effective 35-minute session just by following it.
 
 CRITICAL OUTPUT RULES:
+- ⚠️ ABSOLUTE RULE: NEVER output Japanese, Chinese, Korean or ANY CJK characters
+- Characters like 声に出して, 遠足, 自成生动 are STRICTLY FORBIDDEN
+- Tamil sections: ONLY Tamil Unicode (U+0B80–U+0BFF) + English + numbers + punctuation
+- If you detect yourself writing any CJK character — DELETE it and rewrite in Tamil or English
+- Violation of this rule makes the entire output unusable
 - Output ONLY raw HTML body content
 - NEVER wrap output in markdown code blocks
 - NEVER use backticks anywhere
@@ -69,7 +74,19 @@ CONTENT ACCURACY — STRICTLY ENFORCE:
 - Use ONLY facts, figures, numbers, and statistics that appear VERBATIM in the chapter text provided
 - NEVER generate, estimate, or invent any number, measurement, area, population, date, or statistic
 - If a fact is not explicitly stated in the chapter text, do NOT include it
-- This applies to all disciplines: History, Geography, Civics, Economics"""
+- This applies to all disciplines: History, Geography, Civics, Economics
+
+⚠️ HTML DIV RULES — STRICTLY FOLLOW — NEVER VIOLATE:
+- Every <div> you open MUST be closed with </div> — never with </p>
+- Every lp-teacher-says div MUST close with </div> before the next subheading starts
+- Every tamil-scaffold div MUST close with </div> before moving on
+- Every cfu-block div MUST close with </div> immediately after the wait time line
+- Every ccq-block div MUST close with </div> immediately after the wait time line
+- Every activity-block div MUST close with </div> after the activity instructions
+- Every homework-block div MUST close with </div> after all homework content
+- Each subheading block MUST be fully self-contained and fully closed before repeating
+- NEVER leave a div open when moving to the next subheading or section
+- After writing any div — count: opened divs must equal closed divs in that block"""
 
 
 # ============================================================================

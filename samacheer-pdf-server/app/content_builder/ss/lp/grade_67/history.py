@@ -409,7 +409,9 @@ No markdown. No code fences. Raw JSON starting with {""",
             print(f"❌ Raw response (first 500 chars): {raw[:500]}")
             return None
         except Exception as e:
+            import traceback
             print(f"❌ Section Extractor error: {e}")
+            traceback.print_exc()
             return None
 
     # =========================================================================
@@ -739,7 +741,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
      real-life connection / simple game / debate / group discussion /
      picture description / student reflection / role play.
      Must connect to today's sections: {', '.join(day_sections)}.
-     Age-appropriate for Class 6/7. End with Big Question.]"</p>
+     Age-appropriate for Class 6/7. End with Big Question.]"
+  </div>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
@@ -760,7 +763,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     "[Set context for the topic and chapter first.
      Then: 'Let's look at [topic] in our textbook.'
      Reference page number if applicable.
-     2-3 sentences — simple and clear for Class 6/7.]"</p>
+     2-3 sentences — simple and clear for Class 6/7.]"
+  </div>
 
     <div class="board-work">
       <strong>Write on Board:</strong><br/>
@@ -797,7 +801,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     "[3-4 sentences — explain this section/subheading.
      Simple language for Class 6/7 — use story, analogy, or real-life connection.
      Based ONLY on chapter text — no outside knowledge.
-     Include dates, events as they appear in text.]"</p>
+     Include dates, events as they appear in text.]"
+  </div>
 
     <div class="tamil-scaffold">
       <strong>ஆசிரியருக்கு (Tamil — exact mirror):</strong><br/>
@@ -813,13 +818,15 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <!-- 2 CFUs after each concept -->
     <div class="cfu-block">
       <strong>🔎 CFU {'{n}'}:</strong>
-      <div class="lp-teacher-says">"[Simple what/who/when question — under 6 words]"</p>
+      <div class="lp-teacher-says">"[Simple what/who/when question — under 6 words]"
+      </div>
       <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
       <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
     </div>
     <div class="cfu-block">
       <strong>🔎 CFU {'{n+1}'}:</strong>
-      <div class="lp-teacher-says">"[Which/where question — under 6 words]"</p>
+      <div class="lp-teacher-says">"[Which/where question — under 6 words]"
+      </div>
       <p class="student-says"><strong>Expected:</strong> "[One word or sentence]"</p>
       <p><em>⏱ Wait 10 seconds. Call on 2-3 students.</em></p>
     </div>
@@ -827,14 +834,16 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <!-- 2 CCQs after CFUs -->
     <div class="ccq-block">
       <strong>⚡ CCQ {'{n}'}:</strong>
-      <div class="lp-teacher-says">"[Why did X happen? — simple, under 8 words]"</p>
+      <div class="lp-teacher-says">"[Why did X happen? — simple, under 8 words]"
+      </div>
       <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
       <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
       <p><em>⏱ Wait 15 seconds. Allow pair discussion.</em></p>
     </div>
     <div class="ccq-block">
       <strong>⚡ CCQ {'{n+1}'}:</strong>
-      <div class="lp-teacher-says">"[What was the result of Y? — under 8 words]"</p>
+      <div class="lp-teacher-says">"[What was the result of Y? — under 8 words]"
+      </div>
       <p class="student-says"><strong>Expected:</strong> "[1-2 sentence answer]"</p>
       <p class="ccq-tamil"><em>தமிழில்:</em> "[Same question in Tamil]"</p>
       <p><em>⏱ Wait 15 seconds. Allow pair discussion.</em></p>
@@ -858,7 +867,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
       [Keep simple for Class 6/7]
     </div>
     <div class="lp-teacher-says">"[2-3 sentences summarising what was learned today.
-     Ask students to copy the summary into their notebooks.]"</p>
+     Ask students to copy the summary into their notebooks.]"
+  </div>
   </div>
 
   <!-- ═══ SECTION 3: ASSESSMENT (20-30 min) ═══ -->
@@ -866,7 +876,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <strong>[20-30 min] Assessment — 3 Levels</strong>
 
     <div class="lp-teacher-says"><strong>Teacher says:</strong><br/>
-    "Now let's check what we learned today. Choose your task based on your level."</p>
+    "Now let's check what we learned today. Choose your task based on your level."
+  </div>
 
     <div class="diff-block">
       <strong>Differentiated Assessment:</strong>
@@ -904,7 +915,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     </div>
 
     <div class="lp-teacher-says"><strong>Quick Review:</strong><br/>
-    "[Take 2 minutes to hear 1-2 answers from each level. Give positive feedback.]"</p>
+    "[Take 2 minutes to hear 1-2 answers from each level. Give positive feedback.]"
+  </div>
   </div>
 
   <!-- ═══ SECTION 4: CLOSING + STUDENT TASK (30-35 min) ═══ -->
@@ -912,7 +924,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
     <strong>[30-35 min] {"Overall Chapter Recap & Closing" if day_num == 4 else "Closing & Student Task"}</strong>
 
     <div class="lp-teacher-says"><strong>2-Minute Recap:</strong><br/>
-    "{'[Recap ALL sections from ALL 4 days. Write main headings on board. Rapid-fire: 5 questions spanning full chapter.]' if day_num == 4 else '[3 rapid-fire questions about today only. Hands raised. Keep energetic.]'}"</p>
+    "{'[Recap ALL sections from ALL 4 days. Write main headings on board. Rapid-fire: 5 questions spanning full chapter.]' if day_num == 4 else '[3 rapid-fire questions about today only. Hands raised. Keep energetic.]'}"
+  </div>
     <p><em>⏱ Wait 5 seconds per question.</em></p>
 
     <div class="board-work">
@@ -924,12 +937,14 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
 
     <div class="lp-teacher-says"><strong>Closing Statement:</strong><br/>
     "[2-3 sentences — what was learned today. Connect to real life.
-     Motivate students for next day. Age-appropriate and encouraging.]"</p>
+     Motivate students for next day. Age-appropriate and encouraging.]"
+  </div>
 
     {"" if day_num == 4 else f'''
     <div class="homework-block">
       <div class="lp-teacher-says"><strong>Student Task / Homework:</strong><br/>
-      {"Option A: Write the answers in your notebook.<br/>Option B: Make a poster — draw and label key concepts from today.<br/>Option C: Make a flowchart — show cause → event → result chain." if day_num == 2 else "[Specific homework from today's sections. Clear and simple for Class 6/7.]"}</p>
+      {"Option A: Write the answers in your notebook.<br/>Option B: Make a poster — draw and label key concepts from today.<br/>Option C: Make a flowchart — show cause → event → result chain." if day_num == 2 else "[Specific homework from today's sections. Clear and simple for Class 6/7.]"}
+  </div>
 
       <div class="board-work">
         <strong>{"Write all 3 options on board — students choose their strength." if day_num == 2 else "Homework (write on board):"}</strong><br/>
@@ -938,7 +953,8 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
 
       <div class="lp-teacher-says"><strong>Preview — {next_label}:</strong><br/>
       "[1-2 sentences — name the EXACT sections from Day {day_num + 1 if day_num < 4 else 5} plan.
-       Build curiosity for next class.]"</p>
+       Build curiosity for next class.]"
+  </div>
     </div>'''}
 
   </div>
@@ -965,6 +981,12 @@ ABSOLUTE CHECKS — CRITICAL BEFORE FINISHING
 {"✅ Day 2 homework has 3 format options" if day_num == 2 else ""}
 {"✅ Day 4 closing = full chapter recap across all 4 days" if day_num == 4 else f"✅ Preview names exact sections from Day {day_num + 1}"}
 ✅ Raw HTML only — start with <div class="lp-day-block">
+✅ Every <div> opened is closed with </div> — never with </p>
+✅ Every lp-teacher-says closed with </div> before next subheading
+✅ Every tamil-scaffold closed with </div> before moving on
+✅ Every cfu-block inner lp-teacher-says closed with </div>
+✅ Every ccq-block inner lp-teacher-says closed with </div>
+✅ Homework block: ALL inner divs closed before outer </div>
 ✅ Do NOT generate Day {day_num + 1}
 
 Chapter Text (use ONLY this — no general knowledge):
@@ -973,7 +995,7 @@ Chapter Text (use ONLY this — no general knowledge):
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=12000,
+                model=self.model, max_tokens=16000,
                 system=SS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -1017,7 +1039,8 @@ IMPORTANT DATES:
   <div class="lp-section-opening">
     <strong>[0-5 min] Lead / Spark — Chapter Recap Game</strong>
     <div class="lp-teacher-says">"Let's play a quick recap game! I'll say a clue — you guess the answer.
-    [3-4 fun clue-based questions about the chapter. Age-appropriate for Class 6/7.]"</p>
+    [3-4 fun clue-based questions about the chapter. Age-appropriate for Class 6/7.]"
+  </div>
     <p><em>⏱ Keep energetic. Take 4-5 responses.</em></p>
     <p><em>[2-minute transition to book-back work.]</em></p>
   </div>
@@ -1027,7 +1050,8 @@ IMPORTANT DATES:
     <strong>[5-20 min] Key Learning Activity — Book-back Marking + Map Work</strong>
 
     <h4>Rapid Recall Quiz — 10 Questions (5-10 min)</h4>
-    <div class="lp-teacher-says">"Write answers in your notebook. No discussion yet. 10 quick questions."</p>
+    <div class="lp-teacher-says">"Write answers in your notebook. No discussion yet. 10 quick questions."
+  </div>
     <div class="board-work">
       <strong>10 Quiz Questions (write on board):</strong><br/>
       1. [Factual — Day 1 content — simple for Class 6/7]<br/>
@@ -1084,7 +1108,8 @@ IMPORTANT DATES:
   <div class="lp-section-student-task">
     <strong>[20-30 min] Assessment — 3 Levels (Chapter Review)</strong>
 
-    <div class="lp-teacher-says">"Now let's do a final chapter review. Choose your level."</p>
+    <div class="lp-teacher-says">"Now let's do a final chapter review. Choose your level."
+  </div>
 
     <div class="diff-block">
       <strong>Differentiated Assessment:</strong>
@@ -1125,7 +1150,8 @@ IMPORTANT DATES:
 
     <div class="lp-teacher-says">"[2-3 sentences — congratulate students on completing the chapter.
      Name 2-3 specific things learned. Use encouraging language for Class 6/7.
-     Motivate for next chapter.]"</p>
+     Motivate for next chapter.]"
+  </div>
 
     <div class="board-work">
       <strong>Submit before leaving:</strong><br/>
@@ -1152,7 +1178,7 @@ Chapter Text:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=5000,
+                model=self.model, max_tokens=8000,
                 system=SS_LP_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
             )

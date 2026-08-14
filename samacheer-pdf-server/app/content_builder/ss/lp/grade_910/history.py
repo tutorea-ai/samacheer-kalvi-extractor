@@ -988,6 +988,12 @@ FINAL CHECKS BEFORE FINISHING
 ✅ Student Task block is PRESENT and COMPLETE — never skip this section
 ✅ Closing block is PRESENT and COMPLETE — never skip this section
 ✅ Raw HTML only — start with <h3 class="day-header">Day {day_num}
+✅ Every <div> opened is closed with </div> — never with </p>
+✅ Every lp-teacher-says closed with </div> before next subheading
+✅ Every tamil-scaffold closed with </div> before moving on
+✅ Every cfu-block inner lp-teacher-says closed with </div>
+✅ Every ccq-block inner lp-teacher-says closed with </div>
+✅ Homework block: ALL inner divs closed before outer </div>
 ✅ Do NOT generate Day {day_num+1}
 
 Chapter Text (use ONLY this — no general knowledge):

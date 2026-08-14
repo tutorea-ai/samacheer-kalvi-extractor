@@ -31,6 +31,11 @@ CONTENT ACCURACY — STRICTLY ENFORCE:
 - All worked examples must use numbers and problems from the chapter text only
 
 CRITICAL OUTPUT RULES:
+- ⚠️ ABSOLUTE RULE: NEVER output Japanese, Chinese, Korean or ANY CJK characters
+- Characters like 声に出して, 遠足, 自成生动 are STRICTLY FORBIDDEN
+- Tamil sections: ONLY Tamil Unicode (U+0B80–U+0BFF) + English + numbers + punctuation
+- If you detect yourself writing any CJK character — DELETE it and rewrite in Tamil or English
+- Violation of this rule makes the entire output unusable
 - Output ONLY raw HTML body content
 - NEVER wrap output in markdown code blocks (```html or ```)
 - NEVER use backticks anywhere in your output
@@ -566,6 +571,11 @@ CONTENT ACCURACY — STRICTLY ENFORCE:
 - For geometric constructions: describe EXACT compass/ruler/protractor steps — no vague instructions
 
 CRITICAL OUTPUT RULES:
+- ⚠️ ABSOLUTE RULE: NEVER output Japanese, Chinese, Korean or ANY CJK characters
+- Characters like 声に出して, 遠足, 自成生动 are STRICTLY FORBIDDEN
+- Tamil sections: ONLY Tamil Unicode (U+0B80–U+0BFF) + English + numbers + punctuation
+- If you detect yourself writing any CJK character — DELETE it and rewrite in Tamil or English
+- Violation of this rule makes the entire output unusable
 - Output ONLY raw HTML body content
 - NEVER wrap output in markdown code blocks (```html or ```)
 - NEVER use backticks anywhere in your output

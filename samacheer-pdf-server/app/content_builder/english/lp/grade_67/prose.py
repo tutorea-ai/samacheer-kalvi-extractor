@@ -376,13 +376,15 @@ Table: Class | Subject | Unit/Lesson Title | Lesson Type | Total Days |
        Session Duration | Content Days | Grammar Days
 
 <h2>Part 2: Learning Objectives</h2>
-4 simple objectives with action verbs (Read, Say, Find, Write)
-Use simple language suitable for Class 6-7 students.
-Based ONLY on this prose's actual content.
+Generate a simple <ul> list — 4 bullet points only.
+Each bullet: one sentence starting with action verb (Read, Say, Find, Write).
+NO tables. NO Tamil. Plain English bullet points only.
+Example: <li>Read the lesson aloud with correct pronunciation.</li>
 
 <h2>Part 3: Language Objectives</h2>
-3 objectives — new words, simple grammar, short written sentences
-Match the simple grammar topics found in this unit.
+Generate a simple <ul> list — 3 bullet points only.
+Each bullet: one sentence in English only.
+NO tables. NO Tamil column. Plain English only.
 
 <h2>Part 4: Teaching Aids</h2>
 Board, chalk, textbook, notebooks, vocabulary cards, picture cards if relevant.
@@ -392,6 +394,12 @@ OUTPUT RULES:
 {ENGLISH_PREAMBLE_INSTRUCTION}
 - Stop after Teaching Aids — do NOT generate any Day content
 - Keep language simple — suitable for Class 6-7
+
+ABSOLUTE RULES:
+✅ Stop COMPLETELY after Teaching Aids closing tag
+✅ Do NOT generate any <div class="lp-day-block"> in the preamble
+✅ Do NOT generate any Day content in the preamble
+❌ NEVER continue beyond Teaching Aids
 
 Lesson Text:
 ---
@@ -487,6 +495,9 @@ Tamil appears in 3 places: Spark + Key Terms table + one CFU/CCQ touch.
 ═══════════════════════════════════════════════════════
 GENERATE Day {day_num} using EXACTLY this structure:
 ═══════════════════════════════════════════════════════
+
+✅ Start with <div class="lp-day-block"> as the FIRST tag
+✅ Never nest lp-day-block inside any table or th element
 
 <div class="lp-day-block">
 <h3 class="lp-day-title">Day {day_num} — {lesson_title}: {day_focus}</h3>
