@@ -691,6 +691,14 @@ OUTPUT THIS EXACT STRUCTURE:
 
     <p><em>⏱ Wait 20 seconds. Take 3–4 student responses. Stay energetic!</em></p>
     <p><em>[2-minute transition: "Now let's open our textbooks and explore this."]</em></p>
+
+    <div class="lp-teacher-says">
+      <strong>Teacher says — Why We Learn This:</strong><br/>
+      "[Explain specifically WHY students learn today's topic.
+       Give a concrete real-life example from Tamil Nadu daily life.
+       Tell them exactly where they will use this knowledge.
+       Must be specific to today's sections — not generic.]"
+    </div>
   </div>
 
   <!-- ═══ SECTION 2: KEY LEARNING ACTIVITY (5-22 min) ═══ -->

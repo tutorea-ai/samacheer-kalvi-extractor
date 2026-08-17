@@ -972,6 +972,14 @@ DAY STRUCTURE:
 
     <p><em>⏱ Wait 20 seconds. Allow 2 students to briefly explain their choice.</em></p>
 
+    <div class="lp-teacher-says">
+      <strong>Teacher says — Why We Learn This:</strong><br/>
+      "[Explain specifically WHY students learn today's topic.
+       Give a concrete real-life example from Tamil Nadu daily life.
+       Tell them exactly where they will use this knowledge.
+       Must be specific to today's sections — not generic.]"
+    </div>
+
   </div>
 
   <!-- ═══ SECTION 2: INTRODUCTION + FORMULA BOX (5-10 min) ═══ -->

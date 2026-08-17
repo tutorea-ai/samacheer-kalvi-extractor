@@ -427,6 +427,14 @@ GENERATE Day {day_num} using EXACTLY this structure:
      playground, sports, kitchen, travel. Age-appropriate for Class 6/7.]"</p>
 
     <p><em>⏱ Take 3-5 student responses. 2-minute transition to textbook.</em></p>
+
+    <div class="lp-teacher-says">
+      <strong>Teacher says — Why We Learn This:</strong><br/>
+      "[Explain specifically WHY students learn today's topic.
+       Give a concrete real-life example from Tamil Nadu daily life.
+       Tell them exactly where they will use this knowledge.
+       Must be specific to today's sections — not generic.]"
+    </div>
   </div>
 
   <!-- [5-20 min] KEY LEARNING ACTIVITY -->

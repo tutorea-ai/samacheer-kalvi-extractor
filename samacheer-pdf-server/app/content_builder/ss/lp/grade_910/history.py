@@ -389,7 +389,7 @@ Chapter Text:
 ---"""
 
             response = self.client.messages.create(
-                model=self.model, max_tokens=4000,
+                model=self.model, max_tokens=6000,
                 system="""You are a strict text extractor. Return ONLY valid JSON.
 Extract ALL headings at ALL levels — minimum 10 sections expected for a full chapter.
 Never skip any heading or subheading.
@@ -770,6 +770,14 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
 
     <p class="student-response"><em>3-5 students share their opinions in large group.
     Teacher acknowledges each response without correcting — builds curiosity.</em></p>
+
+    <div class="lp-teacher-says">
+      <strong>Teacher says — Why We Learn This:</strong><br/>
+      "[Explain specifically WHY students learn today's topic.
+       Give a concrete real-life example from Tamil Nadu daily life.
+       Tell them exactly where they will use this knowledge.
+       Must be specific to today's sections — not generic.]"
+    </div>
   </div>
 
   <!-- ═══ [5-10 min] INTRODUCTION ═══ -->

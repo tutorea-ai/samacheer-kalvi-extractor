@@ -747,6 +747,14 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
      NASA uses isotope ratios to detect water on other planets.
      Use the application most relevant to today's actual sections.
      Keep it to 2-3 sentences — make students feel the importance.]"</p>
+
+    <div class="lp-teacher-says">
+      <strong>Teacher says — Why We Learn This:</strong><br/>
+      "[Explain specifically WHY students learn today's topic.
+       Give a concrete real-life example from Tamil Nadu daily life.
+       Tell them exactly where they will use this knowledge.
+       Must be specific to today's sections — not generic.]"
+    </div>
   </div>
 
   <!-- ═══ [5-10 min] INTRODUCTION ═══ -->

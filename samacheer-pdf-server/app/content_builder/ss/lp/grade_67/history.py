@@ -380,7 +380,7 @@ STRICT EXCLUSION — DO NOT extract these as sections (they are book-back, not t
 
             response = self.client.messages.create(
                 model=self.model,
-                max_tokens=3000,
+                max_tokens=5000,
                 system="""You are a strict text extractor. Return ONLY valid JSON.
 Extract ONLY what exists in the text. Never add general knowledge.
 No markdown. No code fences. Raw JSON starting with {""",
@@ -751,6 +751,15 @@ DAY STRUCTURE — OUTPUT THIS EXACTLY:
 
     <p><em>⏱ Wait 20 seconds. Take 3-5 student responses.</em></p>
     <p><em>[2-minute transition: "Now let's open our textbooks and explore this topic."]</em></p>
+
+    <div class="lp-teacher-says">
+      <strong>Teacher says — Why We Learn This:</strong><br/>
+      "[Explain specifically WHY students learn today's topic.
+       Give a concrete real-life example from Tamil Nadu daily life.
+       Tell them exactly where they will use this knowledge.
+       Must be specific to today's sections — not generic.]"
+    </div>
+
   </div>
 
   <!-- ═══ SECTION 2: KEY LEARNING ACTIVITY (5-20 min) ═══ -->

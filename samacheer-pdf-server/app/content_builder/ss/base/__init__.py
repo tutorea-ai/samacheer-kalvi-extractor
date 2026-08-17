@@ -70,6 +70,25 @@ TIME BALANCE — STRICTLY ENFORCE:
 - Never let teacher monologue exceed 3 minutes without a student activity
 - After every explanation: student responds, writes, discusses, or answers
 
+WHY WE LEARN THIS — MANDATORY IN EVERY DAY:
+Inside the Opening/Spark block, ALWAYS include a teacher script explaining
+why students are learning today's topic. Use this exact HTML block:
+
+<div class="lp-teacher-says">
+  <strong>Teacher says — Why We Learn This:</strong><br/>
+  "We are learning [today's topic] because [specific real reason].
+   You will use this in real life when [concrete daily life example
+   relevant to Tamil Nadu students — school, family, local context].
+   This helps you [specific skill or understanding it builds]."
+</div>
+
+RULES for this block:
+- Must appear inside every day's Opening/Spark section
+- Must be specific to TODAY's topic — not generic
+- Real life example must be relatable to Class [X] students in Tamil Nadu
+- Never say "we learn this for exams" — always give real world reason
+- Teacher reads this aloud — students listen and connect
+
 CONTENT ACCURACY — STRICTLY ENFORCE:
 - Use ONLY facts, figures, numbers, and statistics that appear VERBATIM in the chapter text provided
 - NEVER generate, estimate, or invent any number, measurement, area, population, date, or statistic

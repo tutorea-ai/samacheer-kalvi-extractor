@@ -936,6 +936,14 @@ GENERATE Day {day_num} using EXACTLY this HTML structure:
      Keep it to 2-3 sentences. Make students feel the importance.]"</p>
 
     <p><em>Allow 2-3 student predictions/answers. Teacher acknowledges without revealing yet.</em></p>
+
+    <div class="lp-teacher-says">
+      <strong>Teacher says — Why We Learn This:</strong><br/>
+      "[Explain specifically WHY students learn today's topic.
+       Give a concrete real-life example from Tamil Nadu daily life.
+       Tell them exactly where they will use this knowledge.
+       Must be specific to today's sections — not generic.]"
+    </div>
   </div>
 
   <!-- ═══ [5-10 min] INTRODUCTION ═══ -->
