@@ -47,6 +47,7 @@ SUBJECT_MAP = {
     "maths":          "maths",
     "math":           "maths",
     "mathematics":    "maths",
+    "biology":        "biology",
 }
 
 
@@ -114,6 +115,14 @@ def generate_lp(text: str, metadata: dict) -> Optional[str]:
             print(f"   [Master Router] ⏳ Maths LP builder not yet implemented")
             return None
 
+    elif subject == "biology":
+        try:
+            from .biology.biology_router import generate_lp as biology_generate_lp
+            return biology_generate_lp(text, metadata)
+        except ImportError:
+            print(f"   [Master Router] ⏳ Biology LP builder not yet implemented")
+            return None
+
     else:
         print(f"   [Master Router] ❌ No LP router for subject: {subject}")
         return None
@@ -172,6 +181,14 @@ def generate_qa(text: str, metadata: dict) -> Optional[str]:
             return maths_generate_qa(text, metadata)
         except ImportError:
             print(f"   [Master Router] ⏳ Maths QA builder not yet implemented")
+            return None
+
+    elif subject == "biology":
+        try:
+            from .biology.biology_router import generate_qa as biology_generate_qa
+            return biology_generate_qa(text, metadata)
+        except ImportError:
+            print(f"   [Master Router] ⏳ Biology QA builder not yet implemented")
             return None
 
     else:

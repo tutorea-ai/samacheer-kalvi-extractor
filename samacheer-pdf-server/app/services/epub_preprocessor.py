@@ -992,13 +992,14 @@ class EpubPreprocessor:
             'Unit I The universe'    → 1
             'Civics Unit 1 ...'      → 1
             'UNIT 2 Achieving ...'   → 2
+            'Chapter 3 Botany'       → 3
         """
         # Arabic numerals first
-        m = re.search(r'(?i)unit\s*[-–\s]*(\d+)', text)
+        m = re.search(r'(?i)(?:unit|chapter)\s*[-–\s]*(\d+)', text)
         if m:
             return int(m.group(1))
         # Roman numerals — must be followed by space or end of string to avoid false matches
-        m = re.search(r'(?i)unit\s*[-–\s]*([IVX]+)(?:\s|$)', text)
+        m = re.search(r'(?i)(?:unit|chapter)\s*[-–\s]*([IVX]+)(?:\s|$)', text)
         if m and m.group(1).upper() in ROMAN:
             return ROMAN[m.group(1).upper()]
         return None
