@@ -218,7 +218,7 @@ def generate_qa(text: str, metadata: dict) -> Optional[str]:
 
     Returns:
         Combined QA HTML string, or None on failure.
-    """
+     """
     class_num  = int(metadata.get("class", 0))
     discipline = metadata.get("discipline", "").lower().strip()
 
