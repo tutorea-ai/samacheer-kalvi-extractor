@@ -315,7 +315,11 @@ Extracted Sections:
             raw = response.content[0].text.strip()
             raw = re.sub(r'```(?:json)?', '', raw).strip()
             raw = re.sub(r'```', '', raw).strip()
-            parsed = json.loads(raw)
+            try:
+                parsed = json.loads(raw)
+            except json.JSONDecodeError as e:
+                print(f"❌ RAW AROUND ERROR: {raw[max(0, e.pos-100):e.pos+100]}")
+                raise
 
             days_out = parsed.get("days", {})
             unmapped = parsed.get("unmapped_content", [])
