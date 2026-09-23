@@ -43,6 +43,9 @@ MATHS_NAMES = ["maths", "math", "mathematics"]
 # Biology subject names
 BIOLOGY_NAMES = ["biology"]
 
+# Pure Science subject names
+PURE_SCIENCE_NAMES = ["pure_science"]
+
 
 class ContentBridge:
 
@@ -70,6 +73,7 @@ class ContentBridge:
 
         # ── Load Biology curriculum ───────────────────────────────────────────
         self.biology_curriculum = self._load_biology_curriculum()
+        self.pure_science_curriculum = self._load_pure_science_curriculum()
 
     def _load_curriculum(self, subject: str) -> dict:
         """Load English curriculum from the PDF extractor's data directory."""
@@ -154,6 +158,21 @@ class ContentBridge:
             print(f"❌ Bridge Error loading Biology curriculum: {e}")
             return {}
 
+    def _load_pure_science_curriculum(self) -> dict:
+        """Load Pure Science curriculum JSON."""
+        try:
+            ps_path = settings.BASE_DIR / "data" / "curriculum" / "subjects" / "english-medium" / "pure_science.json"
+            with open(ps_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge Pure Science curriculum loaded: {ps_path}")
+            return data
+        except FileNotFoundError:
+            print(f"⚠️  Bridge: Pure Science curriculum not found")
+            return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading Pure Science curriculum: {e}")
+            return {}
+
     # ──────────────────────────────────────────────────────────────────────────
     # PUBLIC: Deploy a single file to the Node server
     # ──────────────────────────────────────────────────────────────────────────
@@ -195,6 +214,8 @@ class ContentBridge:
             lesson_id = self._resolve_maths_lesson_id(metadata)
         elif subject in BIOLOGY_NAMES:
             lesson_id = self._resolve_biology_lesson_id(metadata)
+        elif subject in PURE_SCIENCE_NAMES:
+            lesson_id = self._resolve_pure_science_lesson_id(metadata)
         else:
             if not self.curriculum:
                 print("❌ Bridge Error: Curriculum not loaded.")
@@ -234,6 +255,8 @@ class ContentBridge:
             return self._is_maths_deployed(metadata)
         elif subject in BIOLOGY_NAMES:
             return self._is_biology_deployed(metadata)
+        elif subject in PURE_SCIENCE_NAMES:
+            return self._is_pure_science_deployed(metadata)
         else:
             return self._is_english_deployed(metadata)
 
@@ -386,6 +409,36 @@ class ContentBridge:
         discipline = metadata.get("discipline", "botany").lower()
         base = (self.target_base / "backend" / "data" / "subjects" /
                 "english-medium" / "biology" / class_str)
+
+        content_path = base / "content" / "term0" / discipline / lesson_id / "index.html"
+        qa_path      = base / "qa"      / "term0" / discipline / lesson_id / "index.html"
+        lp_path      = base / "lp"      / "term0" / discipline / lesson_id / "index.html"
+
+        def _is_valid(path: Path) -> bool:
+            return path.exists() and path.stat().st_size > 10240
+
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    def _is_pure_science_deployed(self, metadata: dict) -> bool:
+        """Check deployment status for Pure Science lessons."""
+        lesson_id = self._resolve_pure_science_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "botany").lower()
+        base = (self.target_base / "backend" / "data" / "subjects" /
+                "english-medium" / "pure-science" / class_str)
 
         content_path = base / "content" / "term0" / discipline / lesson_id / "index.html"
         qa_path      = base / "qa"      / "term0" / discipline / lesson_id / "index.html"
@@ -609,6 +662,44 @@ class ContentBridge:
             print(f"❌ Bridge Biology: Lesson ID resolution failed: {e}")
             return None
 
+    def _resolve_pure_science_lesson_id(self, metadata: dict) -> str | None:
+        """Maps (class, term, discipline, chapter) → lesson_id for Pure Science."""
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "botany").lower().strip()
+        unit_num   = metadata.get("unit", 1)
+        term_key   = "term0"
+
+        try:
+            if class_str not in self.pure_science_curriculum:
+                print(f"❌ Bridge Pure Science: Class '{class_str}' not in curriculum")
+                return None
+
+            term_data = self.pure_science_curriculum[class_str].get(term_key)
+            if not term_data:
+                print(f"❌ Bridge Pure Science: '{term_key}' not found for class {class_str}")
+                return None
+
+            disc_lessons = term_data.get(discipline)
+            if not disc_lessons:
+                print(f"❌ Bridge Pure Science: Discipline '{discipline}' not found")
+                return None
+
+            lesson_data = next(
+                (l for l in disc_lessons if l.get("chapter") == unit_num),
+                None
+            )
+            if not lesson_data:
+                print(f"❌ Bridge Pure Science: Chapter {unit_num} not found in {discipline}")
+                return None
+
+            lesson_id = lesson_data["id"]
+            print(f"🌉 Bridge Pure Science: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except Exception as e:
+            print(f"❌ Bridge Pure Science: Lesson ID resolution failed: {e}")
+            return None
+
     # ──────────────────────────────────────────────────────────────────────────
     # PRIVATE: Build destination path
     # ──────────────────────────────────────────────────────────────────────────
@@ -768,6 +859,36 @@ class ContentBridge:
                 if file_type == "content":
                     md_base = (self.target_base / "backend" / "data" / "subjects" /
                                "english-medium" / "biology" /
+                               "md-files" / class_str / discipline)
+                    return md_base / f"{lesson_id}.md"
+                else:
+                    return None
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        # ── Pure Science paths ────────────────────────────────────────────────
+        elif subject in PURE_SCIENCE_NAMES:
+            discipline = metadata.get("discipline", "botany").lower()
+            base = (self.target_base / "backend" / "data" / "subjects" /
+                    "english-medium" / "pure-science" / class_str)
+
+            if fmt == "html":
+                if file_type == "content":
+                    folder = base / "content" / term_folder / discipline / lesson_id
+                elif file_type == "qa":
+                    folder = base / "qa" / term_folder / discipline / lesson_id
+                elif file_type == "lp":
+                    folder = base / "lp" / term_folder / discipline / lesson_id
+                else:
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return folder / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" / "subjects" /
+                               "english-medium" / "pure-science" /
                                "md-files" / class_str / discipline)
                     return md_base / f"{lesson_id}.md"
                 else:

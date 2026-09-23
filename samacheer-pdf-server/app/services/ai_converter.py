@@ -261,6 +261,8 @@ class AIContentConverter:
             meta_line = f"Class {class_num} | Maths | Unit {unit}"
         elif subject == "biology" and discipline:
             meta_line = f"Class {class_num} | Biology — {discipline.title()} | Chapter {unit}"
+        elif subject == "pure_science" and discipline:
+            meta_line = f"Class {class_num} | Pure Science — {discipline.title()} | Chapter {unit}"
         else:
             type_display = type_display_map.get(lesson_type, "Prose")
             meta_line = f"Class {class_num} | English | Unit {unit} | {type_display}"

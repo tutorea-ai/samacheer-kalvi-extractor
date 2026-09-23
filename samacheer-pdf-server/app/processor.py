@@ -159,8 +159,31 @@ class PDFProcessor:
             print(f"   ⏭️  EPUB excluded for Class {class_num} {discipline} Unit {unit_num} — using pdfplumber")
             return None
 
+        # ── Pure Science (Class 11, 12) — discipline-specific EPUBs ───────────
+        if subject.lower() == "pure_science":
+            from .services.pure_science_epub_extractor import PureScienceEpubExtractor
+            epub_key_with_disc = f"class-{class_num}-term{term}-pure_science-english-{discipline}"
+            epub_zip_path = self.epub_dir / f"{epub_key_with_disc}.zip"
+            epub_folder   = self.epub_dir / epub_key_with_disc
+            if not epub_zip_path.exists() and not epub_folder.exists():
+                epub_catalog = self._load_epub_catalog()
+                drive_id = epub_catalog.get(epub_key_with_disc)
+                if not drive_id or drive_id == "LOCAL":
+                    print(f"   ℹ️  No EPUB available for {epub_key_with_disc}")
+                    return None
+                print(f"   ⬇️  Downloading EPUB: {epub_key_with_disc}.zip")
+                if not self._download_file(drive_id, epub_zip_path):
+                    print(f"   ❌ EPUB download failed")
+                    return None
+            if not epub_folder.exists():
+                epub_folder = PureScienceEpubExtractor.prepare(epub_zip_path)
+                if not epub_folder:
+                    return None
+            extractor = PureScienceEpubExtractor(epub_folder)
+            return extractor.extract(unit=unit_num)
+
         # ── Biology (Class 11, 12) — discipline-specific EPUBs ────────────────
-        if subject.lower() == "biology":
+        elif subject.lower() == "biology":
             from .services.biology_epub_extractor import BiologyEpubExtractor
             epub_key_with_disc = f"class-{class_num}-term{term}-biology-english-{discipline}"
             epub_zip_path = self.epub_dir / f"{epub_key_with_disc}.zip"
@@ -379,7 +402,7 @@ class PDFProcessor:
                 return None
             start_pdf_page = selected_unit_obj["page"] + offset
             clean_title = selected_unit_obj["title"].replace(" ", "")
-            if subject.lower() == "biology" and discipline:
+            if subject.lower() in ["biology", "pure_science"] and discipline:
                 filename = f"Class{class_num}-{discipline}-{unit_num}-{clean_title}"
             else:
                 filename = f"Class{class_num}-maths-{unit_num}-{clean_title}"
@@ -481,7 +504,7 @@ class PDFProcessor:
             print(f"\n📚 Processing: Class {class_num} | {subject} | {discipline or 'General'} | Format: {output_format} | Force: {force}")
 
             # EPUB-only subjects (Biology 11/12) skip PDF catalog + download
-            EPUB_ONLY_SUBJECTS = ["biology"]
+            EPUB_ONLY_SUBJECTS = ["biology", "pure_science"]
             is_epub_only = subject.lower() in EPUB_ONLY_SUBJECTS
 
             if not is_epub_only:
@@ -662,6 +685,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Maths | Unit {unit_num}"
                 elif subject.lower() == "biology" and discipline:
                     meta_line = f"Class {class_num} | Biology — {discipline.title()} | Chapter {unit_num}"
+                elif subject.lower() == "pure_science" and discipline:
+                    meta_line = f"Class {class_num} | Pure Science — {discipline.title()} | Chapter {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -772,7 +797,7 @@ class PDFProcessor:
                 ai_metadata["_sections"] = sections
 
                 if subject.lower() in ["socialscience", "social_science", "science",
-                                        "maths", "math", "mathematics", "english", "biology"]:
+                                        "maths", "math", "mathematics", "english", "biology", "pure_science"]:
                     from .content_builder.master_router import generate_lp
                     lp_html = generate_lp(clean_text, ai_metadata)
                 else:
@@ -788,6 +813,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Maths | Unit {unit_num}"
                 elif subject.lower() == "biology" and discipline:
                     meta_line = f"Class {class_num} | Biology — {discipline.title()} | Chapter {unit_num}"
+                elif subject.lower() == "pure_science" and discipline:
+                    meta_line = f"Class {class_num} | Pure Science — {discipline.title()} | Chapter {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -892,6 +919,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Maths | Unit {unit_num}"
                 elif subject.lower() == "biology" and discipline:
                     meta_line = f"Class {class_num} | Biology — {discipline.title()} | Chapter {unit_num}"
+                elif subject.lower() == "pure_science" and discipline:
+                    meta_line = f"Class {class_num} | Pure Science — {discipline.title()} | Chapter {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display_map.get(lesson_type, 'Prose')}"
@@ -899,7 +928,7 @@ class PDFProcessor:
                 from .services.ai_converter import _wrap_html
 
                 if subject.lower() in ["socialscience", "social_science", "science",
-                                        "maths", "math", "mathematics", "english", "biology"]:
+                                        "maths", "math", "mathematics", "english", "biology", "pure_science"]:
                     from .content_builder.master_router import generate_qa
                     qa_html = generate_qa(raw_text, ai_metadata)
                 else:
