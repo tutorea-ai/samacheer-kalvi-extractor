@@ -97,13 +97,33 @@ class PDFProcessor:
     # PDF Utilities
     # ──────────────────────────────────────────────────────────────────────────
 
-    def _generate_book_key(self, class_num: int, term: int, subject: str, medium: str) -> str:
+    def _generate_book_key(self, class_num: int, term: int, subject: str, medium: str,
+                           volume: int = None) -> str:
         subject = subject.lower().strip()
         medium  = medium.lower().strip()
         if class_num >= 8:
             term = 0
-        suffix = "" if subject in ["english", "tamil"] else f"-{medium}-medium"
-        return f"class-{class_num}-term{term}-{subject}{suffix}.pdf"
+        suffix     = "" if subject in ["english", "tamil"] else f"-{medium}-medium"
+        vol_suffix = f"-vol{volume}" if volume else ""
+        return f"class-{class_num}-term{term}-{subject}{suffix}{vol_suffix}.pdf"
+
+    @staticmethod
+    def _get_chapter_volume(term_index: dict, unit_num: int, discipline: str = None,
+                            subject: str = "") -> int | None:
+        """
+        Returns the 'volume' of a chapter from the term-level index, or None.
+        Only index files whose chapters carry a 'volume' field (split-volume
+        books, e.g. Physics 11-12) return a value. Every other subject → None,
+        so existing behaviour is unchanged.
+        """
+        if not isinstance(term_index, dict):
+            return None
+        chapters = term_index.get("chapters", {})
+        key = discipline if discipline and discipline in chapters else subject.lower()
+        for ch in chapters.get(key, []):
+            if ch.get("chapter") == unit_num:
+                return ch.get("volume")
+        return None
 
     def _generate_epub_key(self, class_num: int, term: int, subject: str) -> str:
         """Generate the key used in epub_catalog.json."""
@@ -203,6 +223,31 @@ class PDFProcessor:
                 if not epub_folder:
                     return None
             extractor = BiologyEpubExtractor(epub_folder)
+            return extractor.extract(unit=unit_num)
+
+        # ── Single-discipline 11-12 subjects (Physics, ...) — one EPUB per class
+        # Linear like Maths: unit-1 … unit-N inside one EPUB.
+        # Key: class-{N}-term0-{subject}-english  (no discipline suffix)
+        elif subject.lower() in ["physics"]:
+            from .services.pure_science_epub_extractor import PureScienceEpubExtractor
+            epub_key_flat = f"class-{class_num}-term{term}-{subject.lower()}-english"
+            epub_zip_path = self.epub_dir / f"{epub_key_flat}.zip"
+            epub_folder   = self.epub_dir / epub_key_flat
+            if not epub_zip_path.exists() and not epub_folder.exists():
+                epub_catalog = self._load_epub_catalog()
+                drive_id = epub_catalog.get(epub_key_flat)
+                if not drive_id or drive_id == "LOCAL":
+                    print(f"   ℹ️  No EPUB available for {epub_key_flat}")
+                    return None
+                print(f"   ⬇️  Downloading EPUB: {epub_key_flat}.zip")
+                if not self._download_file(drive_id, epub_zip_path):
+                    print(f"   ❌ EPUB download failed")
+                    return None
+            if not epub_folder.exists():
+                epub_folder = PureScienceEpubExtractor.prepare(epub_zip_path)
+                if not epub_folder:
+                    return None
+            extractor = PureScienceEpubExtractor(epub_folder)
             return extractor.extract(unit=unit_num)
 
         epub_key = self._generate_epub_key(class_num, term, subject)
@@ -307,6 +352,9 @@ class PDFProcessor:
                 return True
 
         # ── Fallback: pdfplumber ──────────────────────────────────────────────
+        if pdf_file is None:
+            print(f"   ❌ EPUB unavailable and no PDF to fall back to")
+            return False
         print(f"   🔄 Falling back to pdfplumber...")
         success = self._extract_text_pdfplumber(pdf_file, start_page, end_page, output_txt)
         if success:
@@ -370,6 +418,11 @@ class PDFProcessor:
             meta = meta_raw[discipline]
         else:
             meta = meta_raw if "prelim_pages" in meta_raw else {"prelim_pages": 0, "total_pdf_pages": 999}
+
+        # Split-volume books: use this chapter's volume meta (e.g. meta.physics.volume2)
+        volume = self._get_chapter_volume(index_data, unit_num, discipline, subject)
+        if volume and isinstance(meta.get(f"volume{volume}"), dict):
+            meta = meta[f"volume{volume}"]
         offset = meta.get("prelim_pages", 0)
 
         target_units = []
@@ -390,6 +443,10 @@ class PDFProcessor:
             else:
                 target_units = chapters.get("maths", [])
             all_units_for_slicing = target_units
+            # Split-volume books: page numbers restart per volume, so only
+            # chapters from the same volume decide where this chapter ends
+            if volume:
+                all_units_for_slicing = [u for u in target_units if u.get("volume") == volume]
             if not target_units:
                 print(f"❌ No maths chapters found in index")
                 return None
@@ -402,7 +459,7 @@ class PDFProcessor:
                 return None
             start_pdf_page = selected_unit_obj["page"] + offset
             clean_title = selected_unit_obj["title"].replace(" ", "")
-            if subject.lower() in ["biology", "pure_science"] and discipline:
+            if subject.lower() in ["biology", "pure_science", "physics"] and discipline:
                 filename = f"Class{class_num}-{discipline}-{unit_num}-{clean_title}"
             else:
                 filename = f"Class{class_num}-maths-{unit_num}-{clean_title}"
@@ -513,22 +570,47 @@ class PDFProcessor:
                 if not catalog:
                     return {"error": True, "message": "Catalog not found"}
 
+                # 2b. Volume for split-volume books (e.g. Physics 11-12).
+                #     Lesson mode reads it from the index; full_book needs it in the request.
+                #     Subjects without a 'volume' field in their index → None (unchanged).
+                if mode == "full_book":
+                    volume = request_data.get("volume")
+                else:
+                    _idx      = self._load_unit_index(class_num, subject, medium)
+                    _term_key = f"term{term}" if class_num in [6, 7] else "term0"
+                    volume    = self._get_chapter_volume(
+                        _idx.get(_term_key, {}), request_data.get("unit"), discipline, subject
+                    )
+                if volume:
+                    print(f"📚 Split-volume book → Volume {volume}")
+
                 # 3. Get Drive ID
-                book_key = self._generate_book_key(class_num, term, subject, medium)
+                book_key = self._generate_book_key(class_num, term, subject, medium, volume)
                 if book_key not in catalog:
-                    return {"error": True, "message": f"Book not found in catalog: {book_key}"}
+                    hint = ""
+                    if mode == "full_book" and not volume and any("-vol" in k for k in catalog):
+                        hint = " — this is a split-volume book, pass 'volume' (1 or 2)"
+                    return {"error": True, "message": f"Book not found in catalog: {book_key}{hint}"}
 
                 drive_id = catalog[book_key]
 
                 # 4. Download PDF / use cache
                 cached_file = self.cache_dir / book_key
                 if not cached_file.exists():
-                    print(f"⬇️  Downloading PDF: {book_key}")
-                    if not self._download_file(drive_id, cached_file):
-                        return {"error": True, "message": "Download failed"}
+                    if not drive_id or drive_id == "LOCAL" or str(drive_id).startswith("<"):
+                        # No downloadable PDF yet (empty / LOCAL / placeholder entry).
+                        # Lesson mode can still run from EPUB — PDF is only the fallback.
+                        print(f"   ℹ️  No PDF available for {book_key} — EPUB only for this run")
+                        cached_file = None
+                    else:
+                        print(f"⬇️  Downloading PDF: {book_key}")
+                        if not self._download_file(drive_id, cached_file):
+                            return {"error": True, "message": "Download failed"}
 
                 # ── FULL BOOK MODE ────────────────────────────────────────────
                 if mode == "full_book":
+                    if cached_file is None:
+                        return {"error": True, "message": f"No PDF available for {book_key}"}
                     if output_format == "pdf":
                         output_file = self.temp_dir / book_key
                         shutil.copy(cached_file, output_file)
@@ -687,6 +769,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Biology — {discipline.title()} | Chapter {unit_num}"
                 elif subject.lower() == "pure_science" and discipline:
                     meta_line = f"Class {class_num} | Pure Science — {discipline.title()} | Chapter {unit_num}"
+                elif subject.lower() == "physics":
+                    meta_line = f"Class {class_num} | Physics | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -797,7 +881,7 @@ class PDFProcessor:
                 ai_metadata["_sections"] = sections
 
                 if subject.lower() in ["socialscience", "social_science", "science",
-                                        "maths", "math", "mathematics", "english", "biology", "pure_science"]:
+                                        "maths", "math", "mathematics", "english", "biology", "pure_science", "physics"]:
                     from .content_builder.master_router import generate_lp
                     lp_html = generate_lp(clean_text, ai_metadata)
                 else:
@@ -815,6 +899,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Biology — {discipline.title()} | Chapter {unit_num}"
                 elif subject.lower() == "pure_science" and discipline:
                     meta_line = f"Class {class_num} | Pure Science — {discipline.title()} | Chapter {unit_num}"
+                elif subject.lower() == "physics":
+                    meta_line = f"Class {class_num} | Physics | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     type_display = type_display_map.get(lesson_type, "Prose")
@@ -921,6 +1007,8 @@ class PDFProcessor:
                     meta_line = f"Class {class_num} | Biology — {discipline.title()} | Chapter {unit_num}"
                 elif subject.lower() == "pure_science" and discipline:
                     meta_line = f"Class {class_num} | Pure Science — {discipline.title()} | Chapter {unit_num}"
+                elif subject.lower() == "physics":
+                    meta_line = f"Class {class_num} | Physics | Unit {unit_num}"
                 else:
                     type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
                     meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display_map.get(lesson_type, 'Prose')}"
@@ -928,7 +1016,7 @@ class PDFProcessor:
                 from .services.ai_converter import _wrap_html
 
                 if subject.lower() in ["socialscience", "social_science", "science",
-                                        "maths", "math", "mathematics", "english", "biology", "pure_science"]:
+                                        "maths", "math", "mathematics", "english", "biology", "pure_science", "physics"]:
                     from .content_builder.master_router import generate_qa
                     qa_html = generate_qa(raw_text, ai_metadata)
                 else:

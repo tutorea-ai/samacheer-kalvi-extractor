@@ -21,6 +21,7 @@ Subject mapping:
     "Science"        → science_router  (future)
     "Tamil"          → tamil_router    (future)
     "Maths"          → maths_router    (future)
+    "Physics"        → physics_router
 """
 
 from typing import Optional
@@ -50,6 +51,7 @@ SUBJECT_MAP = {
     "biology":        "biology",
     "pure_science":   "pure_science",
     "pure science":   "pure_science",
+    "physics":        "physics",
 }
 
 
@@ -133,6 +135,14 @@ def generate_lp(text: str, metadata: dict) -> Optional[str]:
             print(f"   [Master Router] ⏳ Pure Science LP builder not yet implemented")
             return None
 
+    elif subject == "physics":
+        try:
+            from .physics.physics_router import generate_lp as physics_generate_lp
+            return physics_generate_lp(text, metadata)
+        except ImportError:
+            print(f"   [Master Router] ⏳ Physics LP router not yet implemented")
+            return None
+
     else:
         print(f"   [Master Router] ❌ No LP router for subject: {subject}")
         return None
@@ -207,6 +217,14 @@ def generate_qa(text: str, metadata: dict) -> Optional[str]:
             return ps_generate_qa(text, metadata)
         except ImportError:
             print(f"   [Master Router] ⏳ Pure Science QA builder not yet implemented")
+            return None
+
+    elif subject == "physics":
+        try:
+            from .physics.physics_router import generate_qa as physics_generate_qa
+            return physics_generate_qa(text, metadata)
+        except ImportError:
+            print(f"   [Master Router] ⏳ Physics QA router not yet implemented")
             return None
 
     else:
