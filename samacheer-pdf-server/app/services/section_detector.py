@@ -269,9 +269,24 @@ def _find_pattern(text: str, patterns: list,
 # NOISE CLEANING
 # ============================================================================
 
+# [hash] codes left by pdf2htmlEX, e.g. [a8Fk2Qz9].
+# Dimensional formulae ([M0L0T0], [MLT2], [ML2T2]) look similar but are real
+# Physics content — anything made only of dimension letters + digits is kept.
+_HASH_CODE_RE = re.compile(r'\[([A-Za-z0-9]{4,12})\]')
+_DIMENSION_RE = re.compile(r'(?:[MLTIKAJN]\d*)+')
+
+
+def strip_hash_codes(text: str) -> str:
+    """Remove [hash] noise codes but keep dimensional formulae."""
+    return _HASH_CODE_RE.sub(
+        lambda m: m.group(0) if _DIMENSION_RE.fullmatch(m.group(1)) else '',
+        text
+    )
+
+
 def clean_noise(text: str, subject: str = "english") -> str:
     """Removes pdf2htmlEX noise before any processing."""
-    text = re.sub(r'\[[A-Za-z0-9]{4,12}\]', '', text)
+    text = strip_hash_codes(text)
     text = re.sub(
         r'\d+th\s+English_Unit_\d+\.indd\s+\d+\s+\d{2}-\d{2}-\d{4}\s+[\d:]+',
         '', text

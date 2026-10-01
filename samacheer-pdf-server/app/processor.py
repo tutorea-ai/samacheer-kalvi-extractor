@@ -392,7 +392,9 @@ class PDFProcessor:
                     if text:
                         text_content += text + "\n\n"
             # Clean noise
-            text_content = re.sub(r'\[[A-Za-z0-9]{4,12}\]', '', text_content)
+            # Strip [hash] codes but keep dimensional formulae — shared helper
+            from .services.section_detector import strip_hash_codes
+            text_content = strip_hash_codes(text_content)
             text_content = re.sub(r'\d+th\s+\w+_Unit_\d+\.indd[^\n]*', '', text_content)
             text_content = re.sub(r'^\d{1,3}\s*$', '', text_content, flags=re.MULTILINE)
             text_content = re.sub(r'\n{3,}', '\n\n', text_content).strip()
@@ -733,10 +735,13 @@ class PDFProcessor:
                         ai_metadata["chapters_in_month"] = 1
                         ai_metadata["month_chapters"] = [unit_num]
 
-                # Add clean display title for Maths
-                if subject.lower() in ["maths", "math", "mathematics"]:
+                # Add clean display title — chapter-based subjects (Maths, Physics, ...)
+                if subject.lower() in ["maths", "math", "mathematics", "physics"]:
                     try:
-                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        _all_ch  = index_data[term_key].get("chapters", {})
+                        _maths_key = "maths" if subject.lower() in ["maths", "math", "mathematics"] else subject.lower()
+                        _ch_key  = discipline if discipline and discipline in _all_ch else _maths_key
+                        chapters = _all_ch.get(_ch_key, [])
                         selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
                         if selected:
                             ai_metadata["display_title"] = selected.get("title", filename_base)
@@ -862,10 +867,13 @@ class PDFProcessor:
                         ai_metadata["chapters_in_month"] = 1
                         ai_metadata["month_chapters"] = [unit_num]
 
-                # Add clean display title for Maths
-                if subject.lower() in ["maths", "math", "mathematics"]:
+                # Add clean display title — chapter-based subjects (Maths, Physics, ...)
+                if subject.lower() in ["maths", "math", "mathematics", "physics"]:
                     try:
-                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        _all_ch  = index_data[term_key].get("chapters", {})
+                        _maths_key = "maths" if subject.lower() in ["maths", "math", "mathematics"] else subject.lower()
+                        _ch_key  = discipline if discipline and discipline in _all_ch else _maths_key
+                        chapters = _all_ch.get(_ch_key, [])
                         selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
                         if selected:
                             ai_metadata["display_title"] = selected.get("title", filename_base)
@@ -987,10 +995,13 @@ class PDFProcessor:
                         ai_metadata["chapters_in_month"] = 1
                         ai_metadata["month_chapters"] = [unit_num]
 
-                # Add clean display title for Maths
-                if subject.lower() in ["maths", "math", "mathematics"]:
+                # Add clean display title — chapter-based subjects (Maths, Physics, ...)
+                if subject.lower() in ["maths", "math", "mathematics", "physics"]:
                     try:
-                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        _all_ch  = index_data[term_key].get("chapters", {})
+                        _maths_key = "maths" if subject.lower() in ["maths", "math", "mathematics"] else subject.lower()
+                        _ch_key  = discipline if discipline and discipline in _all_ch else _maths_key
+                        chapters = _all_ch.get(_ch_key, [])
                         selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
                         if selected:
                             ai_metadata["display_title"] = selected.get("title", filename_base)
@@ -1119,10 +1130,13 @@ class PDFProcessor:
                         ai_metadata["chapters_in_month"] = 1
                         ai_metadata["month_chapters"] = [unit_num]
 
-                # Add clean display title for Maths
-                if subject.lower() in ["maths", "math", "mathematics"]:
+                # Add clean display title — chapter-based subjects (Maths, Physics, ...)
+                if subject.lower() in ["maths", "math", "mathematics", "physics"]:
                     try:
-                        chapters = index_data[term_key].get("chapters", {}).get("maths", [])
+                        _all_ch  = index_data[term_key].get("chapters", {})
+                        _maths_key = "maths" if subject.lower() in ["maths", "math", "mathematics"] else subject.lower()
+                        _ch_key  = discipline if discipline and discipline in _all_ch else _maths_key
+                        chapters = _all_ch.get(_ch_key, [])
                         selected = next((c for c in chapters if c.get("chapter") == unit_num), None)
                         if selected:
                             ai_metadata["display_title"] = selected.get("title", filename_base)
