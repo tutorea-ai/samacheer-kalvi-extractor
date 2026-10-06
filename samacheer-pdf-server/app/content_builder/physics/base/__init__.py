@@ -844,3 +844,283 @@ def get_display_title(metadata: dict) -> str:
         if not split_done:
             fixed.append(w)
     return " ".join(fixed).strip() or "Physics Chapter"
+
+
+# ############################################################################
+#
+#   QA (QUESTION BANK) — shared constants and helpers
+#   Used by physics/qa/grade_1112/physics.py
+#
+#   Pattern confirmed with the teachers (Oct 2026):
+#     Part I   — MCQ                  1 mark   × 40   Q1–Q40
+#     Part II  — Very short answers   2 marks  × 25   Q41–Q65
+#     Part III — Short answers        3 marks  × 20   Q66–Q85
+#     Part IV  — Long answers         5 marks  × 15   Q86–Q100
+#   Total 100 questions — MUST be exactly 100 (Biology bulk run left lessons
+#   at 96/98; the Physics builder returns None rather than ship a short bank).
+#
+# ############################################################################
+
+QA_TOTAL_QUESTIONS = 100
+
+QA_PARTS = [
+    {
+        "key": "mcq", "section_id": "section-mcq", "kind": "mcq",
+        "title": "Part I — Choose the Correct Answer",
+        "marks": 1, "start": 1, "count": 40,
+        "batches": [20, 20], "max_tokens": 12000,
+        "note": "1 Mark each | Q1–Q40",
+        "guidance": (
+            "Mix: conceptual understanding, laws and definitions, SI units and "
+            "dimensions, formula recognition, proportional reasoning "
+            "('if r doubles, F becomes...'), graphs/direction questions, and "
+            "simple one-step numerical MCQs. About a quarter numerical. "
+            "Exactly 4 options, ONE correct, plausible distractors built from "
+            "common mistakes. Vary the position of the correct option across "
+            "a, b, c, d. No 'all of the above' / 'none of the above'."
+        ),
+        "answer_rule": "Correct option letter + a one-line explanation of why.",
+        "min_numerical": 0,
+    },
+    {
+        "key": "mark2", "section_id": "section-2mark", "kind": "descriptive",
+        "title": "Part II — Very Short Answers",
+        "marks": 2, "start": 41, "count": 25,
+        "batches": [13, 12], "max_tokens": 12000,
+        "note": "2 Marks each | Q41–Q65 | Answer in 2–3 sentences",
+        "guidance": (
+            "Define / state a law / give the SI unit and dimension / state a "
+            "property / give a reason / short one-step numerical."
+        ),
+        "answer_rule": (
+            "2–3 complete sentences (30–50 words). For a numerical: Given, "
+            "Formula, Substitution, Answer with unit — one line each."
+        ),
+        "min_numerical": 3,      # per batch
+    },
+    {
+        "key": "mark3", "section_id": "section-3mark", "kind": "descriptive",
+        "title": "Part III — Short Answers",
+        "marks": 3, "start": 66, "count": 20,
+        "batches": [10, 10], "max_tokens": 16000,
+        "note": "3 Marks each | Q66–Q85 | Answer in about 5–7 lines",
+        "guidance": (
+            "Explain a concept or principle / distinguish between two "
+            "quantities (a 2-3 column table is fine) / short derivation / "
+            "explain why / two-step numerical."
+        ),
+        "answer_rule": (
+            "About 5–7 lines (60–100 words), or a short derivation in numbered "
+            "steps, or a numerical with the five steps Given / Find / Formula "
+            "/ Substitute / Answer with unit."
+        ),
+        "min_numerical": 3,      # per batch
+    },
+    {
+        "key": "mark5", "section_id": "section-5mark", "kind": "descriptive",
+        "title": "Part IV — Long Answers",
+        "marks": 5, "start": 86, "count": 15,
+        "batches": [5, 5, 5], "max_tokens": 16000,
+        "note": "5 Marks each | Q86–Q100 | Detailed answer, diagram where needed",
+        "guidance": (
+            "Long derivations from the chapter, the working/principle of a "
+            "device or experiment described in the chapter, detailed "
+            "explanations, and multi-step numericals. These are the questions "
+            "most likely to appear as 5-mark board-exam questions."
+        ),
+        "answer_rule": (
+            "Detailed answer: derivations in numbered steps with a one-line "
+            "reason where needed and the final result clearly stated; "
+            "working/principle answers with labelled stages; numericals with "
+            "the five steps. 150–250 words."
+        ),
+        "min_numerical": 1,      # per batch
+    },
+]
+
+
+PHYS_QA_SYSTEM_PROMPT = """You are an experienced Samacheer Kalvi Physics teacher for Class 11 and 12
+creating a question bank WITH ANSWERS for Tamil Nadu state board students.
+
+CONTENT ACCURACY — STRICTLY ENFORCE:
+- Every question and answer comes from THIS chapter's content. No outside topics.
+- Textbook data, historical facts and worked-example numbers: use them exactly
+  as in the text. Never invent a fact, date, name or experimental value.
+- Standard physical constants (e, k = 1/4πε₀, ε₀, μ₀, g, G, c, h, mₑ) may be
+  used at their standard textbook values.
+- New numericals you create: choose simple realistic values and CALCULATE THE
+  ANSWER CAREFULLY — check the arithmetic and powers of ten twice, and always
+  give the unit.
+- Derivations follow the chapter's own method and symbols.
+
+FORMULA FORMAT — PLAIN HTML ONLY (the platform has no math renderer):
+- Use <sup> and <sub>: r<sup>2</sup>, q<sub>1</sub>, 10<sup>−19</sup>
+- Unicode symbols: × − ± ≈ ∝ → √ ∞ ° Δ λ θ ω φ Φ ε₀ μ₀ π ρ σ τ Ω
+- Use the true minus sign (−). Fractions inline: E = (1/4πε₀) × (2p/r<sup>3</sup>)
+- Vectors: symbol in <strong>, e.g. <strong>F</strong>
+- FORBIDDEN: LaTeX, $...$, \\frac, MathML, images of formulas
+
+OUTPUT:
+- Return ONLY one valid JSON object exactly as the user message specifies.
+- No markdown, no code fences, no text before or after the JSON.
+- Inside JSON strings use only these HTML tags: <sup> <sub> <strong> <em> <br/>
+  <ol> <ul> <li> <table> <thead> <tbody> <tr> <th> <td> <p> — nothing else
+  (diagrams go in their own "diagram_svg" field).
+- Escape double quotes inside strings as \\" . No line breaks inside strings —
+  use <br/> instead.
+- NEVER output Japanese, Chinese, Korean or any CJK character.
+- No page numbers, no student names, no religious references.
+"""
+
+
+def get_qa_header(lesson_title: str, class_num, unit) -> str:
+    """QA page header (the wrapper adds none for QA)."""
+    safe = re.sub(r"[<>]", "", str(lesson_title or ""))
+    return (
+        '<div class="sk-content-header">\n'
+        f"  <h1>Question Bank — {safe}</h1>\n"
+        f'  <p class="sk-meta">Class {class_num} | Physics | Unit {unit} | '
+        f"{QA_TOTAL_QUESTIONS} Questions</p>\n"
+        "</div>"
+    )
+
+
+# ----------------------------------------------------------------------------
+# JSON salvage — keeps every COMPLETE question even if the output was cut off
+# ----------------------------------------------------------------------------
+
+def extract_question_objects(raw: str) -> List[dict]:
+    """
+    Pull question objects out of model output of the form
+        {"questions": [ {...}, {...}, ... ]}
+    Works on truncated or slightly malformed output: every object that parses
+    on its own is kept, in order. Returns [] if nothing usable.
+    """
+    if not raw:
+        return []
+    text = re.sub(r"```(?:json|JSON)?", "", raw)
+    text, _ = strip_cjk(text)
+
+    # Fast path — the whole thing is valid
+    try:
+        data = parse_json_response(text)
+        qs = data.get("questions") if isinstance(data, dict) else None
+        if isinstance(qs, list):
+            return [q for q in qs if isinstance(q, dict)]
+    except (json.JSONDecodeError, ValueError):
+        pass
+
+    # Salvage path — decode objects one by one after the array opens
+    key = text.find('"questions"')
+    start = text.find("[", key if key != -1 else 0)
+    if start == -1:
+        return []
+    decoder = json.JSONDecoder()
+    out, i, n = [], start + 1, len(text)
+    while i < n:
+        while i < n and text[i] in " \r\n\t,":
+            i += 1
+        if i >= n or text[i] != "{":
+            break
+        try:
+            obj, end = decoder.raw_decode(text, i)
+        except json.JSONDecodeError:
+            # skip to the next object start and keep trying
+            nxt = text.find("{", i + 1)
+            if nxt == -1:
+                break
+            # only resync at an object that begins a new array element
+            j = nxt - 1
+            while j > i and text[j] in " \r\n\t":
+                j -= 1
+            if text[j] != ",":
+                break
+            i = nxt
+            continue
+        if isinstance(obj, dict):
+            out.append(obj)
+        i = end
+    return out
+
+
+# ----------------------------------------------------------------------------
+# Sanitizers for model-supplied HTML fragments
+# ----------------------------------------------------------------------------
+
+_QA_ALLOWED_TAGS = {"sup", "sub", "strong", "em", "b", "i", "br", "p",
+                    "ol", "ul", "li", "table", "thead", "tbody", "tr", "th", "td"}
+
+
+def sanitize_answer_html(s) -> str:
+    """
+    Keep only safe formatting tags (attributes stripped); escape everything
+    else. Balances the allowed block tags with BeautifulSoup.
+    """
+    import html as _html
+    text = str(s or "").strip()
+    if not text:
+        return ""
+    text = text.replace("\r", "").replace("\n", "<br/>")
+    text = _html.escape(_html.unescape(text), quote=False)
+
+    def _restore(m):
+        slash, tag = m.group(1), m.group(2).lower()
+        if tag not in _QA_ALLOWED_TAGS:
+            return m.group(0)
+        if tag == "br":
+            return "<br/>"
+        return f"<{slash}{tag}>"
+
+    text = re.sub(r"&lt;(/?)([a-zA-Z0-9]+)(?:\s[^&]*?)?\s*/?&gt;", _restore, text)
+    text, _ = strip_cjk(text)
+    from bs4 import BeautifulSoup
+    return str(BeautifulSoup(text, "html.parser")).strip()
+
+
+def sanitize_svg(s, max_len: int = 20000) -> str:
+    """
+    Accept an inline <svg> diagram, removing anything executable.
+    Returns "" if it does not look like a usable SVG.
+    """
+    svg = str(s or "").strip()
+    if not svg or len(svg) > max_len:
+        return ""
+    m = re.search(r"<svg\b.*?</svg>", svg, flags=re.DOTALL | re.IGNORECASE)
+    if not m:
+        return ""
+    svg = m.group(0)
+    svg = re.sub(r"<script\b.*?</script>", "", svg, flags=re.DOTALL | re.IGNORECASE)
+    svg = re.sub(r"<foreignObject\b.*?</foreignObject>", "", svg, flags=re.DOTALL | re.IGNORECASE)
+    svg = re.sub(r"\son[a-zA-Z]+\s*=\s*(\"[^\"]*\"|'[^']*')", "", svg)
+    svg = re.sub(r"(href\s*=\s*[\"'])\s*javascript:[^\"']*", r"\1#", svg, flags=re.IGNORECASE)
+    svg, _ = strip_cjk(svg)
+    if "viewbox" not in svg[:300].lower():
+        svg = re.sub(r"<svg\b", '<svg viewBox="0 0 400 260"', svg, count=1, flags=re.IGNORECASE)
+    # responsive: never wider than its container
+    svg = re.sub(r"<svg\b", '<svg style="max-width:100%;height:auto"', svg, count=1, flags=re.IGNORECASE)
+    return svg
+
+
+def normalize_stem(s: str) -> str:
+    """Comparable form of a question stem (for duplicate detection)."""
+    t = re.sub(r"<[^>]+>", " ", str(s or "")).lower()
+    t = re.sub(r"[^a-z0-9]+", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def is_near_duplicate(a: str, b: str, threshold: float = 0.85) -> bool:
+    """
+    True for an exact repeat, or a near-repeat: word-set Jaccard >= threshold
+    when both stems have at least 6 words. Kept deliberately conservative —
+    an over-eager filter would stop a part from ever reaching its count, and
+    the "already asked" list in the prompt is the main guard against repeats.
+    """
+    na, nb = normalize_stem(a), normalize_stem(b)
+    if not na or not nb:
+        return False
+    if na == nb:
+        return True
+    wa, wb = set(na.split()), set(nb.split())
+    if len(wa) < 6 or len(wb) < 6:
+        return False
+    return len(wa & wb) / len(wa | wb) >= threshold
