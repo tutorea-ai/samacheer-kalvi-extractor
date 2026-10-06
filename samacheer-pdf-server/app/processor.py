@@ -13,6 +13,7 @@ UPDATES (April 2026 — v6.0 EPUB):
 from .extractors.google_docai import docai_extractor
 import requests
 import os
+import re
 import json
 import PyPDF2
 import gdown
@@ -124,6 +125,29 @@ class PDFProcessor:
             if ch.get("chapter") == unit_num:
                 return ch.get("volume")
         return None
+
+    # Back matter after the LAST chapter of a volume (practicals, glossary,
+    # log/trig tables, credits) is not in nav.xhtml, so the preprocessor runs
+    # the last unit to the end of the file. Cut it — but only AFTER the
+    # chapter's own final section, so mid-chapter words never trigger it.
+    _CHAPTER_END_RE = re.compile(r"###\s*(?:BOOKS?\s+FOR\s+REFERENCES?|EVALUATION)", re.IGNORECASE)
+    _BACK_MATTER_RE = re.compile(
+        r"###\s*(?:PRACTICALS?\b|GLOSSARY\b|ANTI\s+LOGARITHM\s+TABLE|LOGARITHM\s+TABLE|NATURAL\s+SINES|APPENDIX\b)"
+    )
+
+    @classmethod
+    def _trim_back_matter(cls, text: str) -> str:
+        ends = list(cls._CHAPTER_END_RE.finditer(text))
+        if not ends:
+            return text
+        m = cls._BACK_MATTER_RE.search(text, ends[-1].end())
+        if not m:
+            return text
+        trimmed = text[:m.start()].rstrip()
+        # drop the running page header that sits right before the back matter
+        trimmed = re.sub(r"Higher Secondary (?:First|Second) Year [A-Z ]+$", "", trimmed).rstrip()
+        print(f"   ✂️  Trimmed back matter: {len(text):,} → {len(trimmed):,} chars")
+        return trimmed
 
     def _generate_epub_key(self, class_num: int, term: int, subject: str) -> str:
         """Generate the key used in epub_catalog.json."""
@@ -271,7 +295,7 @@ class PDFProcessor:
                     local_unit = unit_num - offset
                     print(f"   🔁 Retrying as volume-local unit-{local_unit} (Vol {volume})")
                     text = extractor.extract(unit=local_unit)
-            return text
+            return self._trim_back_matter(text) if text else text
 
         epub_key = self._generate_epub_key(class_num, term, subject)
         epub_zip_path = self.epub_dir / f"{epub_key}.zip"
