@@ -225,21 +225,31 @@ class PDFProcessor:
             extractor = BiologyEpubExtractor(epub_folder)
             return extractor.extract(unit=unit_num)
 
-        # ── Single-discipline 11-12 subjects (Physics, ...) — one EPUB per class
-        # Linear like Maths: unit-1 … unit-N inside one EPUB.
-        # Key: class-{N}-term0-{subject}-english  (no discipline suffix)
+        # ── Single-discipline 11-12 subjects (Physics, ...) ───────────────────
+        # Split-volume books ship one EPUB per volume:
+        #   class-{N}-term0-{subject}-english-vol{V}
+        # Books without volumes use one EPUB per class:
+        #   class-{N}-term0-{subject}-english
+        # Volume comes from the index 'volume' field — nothing hardcoded.
         elif subject.lower() in ["physics"]:
             from .services.pure_science_epub_extractor import PureScienceEpubExtractor
-            epub_key_flat = f"class-{class_num}-term{term}-{subject.lower()}-english"
-            epub_zip_path = self.epub_dir / f"{epub_key_flat}.zip"
-            epub_folder   = self.epub_dir / epub_key_flat
+            subj     = subject.lower()
+            term_idx = self._load_unit_index(class_num, subj).get("term0", {})
+            volume   = self._get_chapter_volume(term_idx, unit_num, discipline, subj)
+            base_key = f"class-{class_num}-term{term}-{subj}-english"
+            epub_key = f"{base_key}-vol{volume}" if volume else base_key
+            if volume:
+                print(f"   📚 Chapter {unit_num} → Volume {volume} EPUB ({epub_key})")
+
+            epub_zip_path = self.epub_dir / f"{epub_key}.zip"
+            epub_folder   = self.epub_dir / epub_key
             if not epub_zip_path.exists() and not epub_folder.exists():
                 epub_catalog = self._load_epub_catalog()
-                drive_id = epub_catalog.get(epub_key_flat)
+                drive_id = epub_catalog.get(epub_key)
                 if not drive_id or drive_id == "LOCAL":
-                    print(f"   ℹ️  No EPUB available for {epub_key_flat}")
+                    print(f"   ℹ️  No EPUB available for {epub_key}")
                     return None
-                print(f"   ⬇️  Downloading EPUB: {epub_key_flat}.zip")
+                print(f"   ⬇️  Downloading EPUB: {epub_key}.zip")
                 if not self._download_file(drive_id, epub_zip_path):
                     print(f"   ❌ EPUB download failed")
                     return None
@@ -248,7 +258,20 @@ class PDFProcessor:
                 if not epub_folder:
                     return None
             extractor = PureScienceEpubExtractor(epub_folder)
-            return extractor.extract(unit=unit_num)
+
+            # The preprocessor stamps the textbook's own unit number
+            # (e.g. Physics Vol 2 → unit-6 … unit-11), so try the chapter
+            # number first. If a book restarts numbering in each volume,
+            # fall back to the volume-local number.
+            text = extractor.extract(unit=unit_num)
+            if text is None and volume:
+                chapters = term_idx.get("chapters", {}).get(discipline or subj, [])
+                offset   = sum(1 for c in chapters if (c.get("volume") or 0) < volume)
+                if offset:
+                    local_unit = unit_num - offset
+                    print(f"   🔁 Retrying as volume-local unit-{local_unit} (Vol {volume})")
+                    text = extractor.extract(unit=local_unit)
+            return text
 
         epub_key = self._generate_epub_key(class_num, term, subject)
         epub_zip_path = self.epub_dir / f"{epub_key}.zip"

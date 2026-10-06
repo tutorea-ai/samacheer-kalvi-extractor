@@ -1,0 +1,1849 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+  <head>
+    <title>Unknown</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="page_styles.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+  <body class="calibre">
+<p class="block_1"> </p>
+	<h1 id="id_UNIT__10" class="block_13">UNIT – 10 ELECTRONICS AND COMMUNICATION</h1>
+	<p class="block_7">Electronics is clearly the winner of the day – John Ford</p>
+	<p class="block_1"> </p>
+	<h2 class="block_13" id="toc_id_172">Learning Objectives</h2>
+	<p class="block_7">In this unit, the students are exposed to </p>
+	<ol class="list_">
+	<li class="block_51">Energy band diagram in semiconductors </li>
+	<li class="block_52">Types of semiconductors </li>
+	<li class="block_52">Formation of p-n junction diode and its V-I characteristics </li>
+	<li class="block_52">Rectification process </li>
+	<li class="block_52">Special purpose diodes </li>
+	<li class="block_52">Transistors and their immediate applications </li>
+	<li class="block_52">Digital and analog signals </li>
+	<li class="block_52">Logic gates, Boolean algebra and De Morgan’s theorem </li>
+	<li class="block_52">Modulation and its types </li>
+	<li class="block_52">Basic elements of communication system </li>
+	<li class="block_52">Propagation of electromagnetic waves through space </li>
+	<li class="block_53">Some important communication systems</li>
+</ol>
+	<p class="block_1"> </p>
+	<p class="block_7"><img src="images/image770.png" alt="The given picture is Electronics and communication lesson introduction QR code and the code is S 8 V 4 B." class="calibre754"/></p>
+	<p class="block_1"> </p>
+	<h2 class="block_13" id="toc_id_173">10 point 1 INTRODUCTION</h2>
+	<p class="block_7">Electronics has become a part of our daily life. All gadgets like mobile phones, computers, televisions, music systems etc work on the electronic principles. Electronic circuits are used to perform various operations in devices like air conditioners, microwave oven, dish washers and washing machines. Besides this, its applications are widespread in all fields like communication systems, medical diagnosis and treatments and even handling money through A, T, M, s</p>
+	<p class="block_1"> </p>
+	<p class="block_3">Evolution of Electronics: </p>
+	<p class="block_7">The history of electronics began with the invention of vacuum diode by J, A, Fleming in 1897. This was followed by a vacuum triode implemented by Lee De Forest to control electrical signals. This led to the introduction of tetrode and pentode tubes. </p>
+	<p class="block_7">Subsequently, the transistor era began with the invention of bipolar junction transistor by Bardeen, Brattain and Shockley in 1948 for which they received Nobel prize in 1956. The emergence of germanium and silicon semiconductor materials made this transistor gain popularity, in turn its application in different electronic circuits</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The following years witnessed the invention of the integrated circuits (I, C, s) that helped to integrate the entire electronic circuit on a single chip which is small in size and cost-effective. Since 1958, I, C, s, capable of holding several thousand electronic components on a single chip such as small scale, medium-scale, large-scale, and very large scale integration started coming into existence. Digital integrated circuits became another robust I, C development that enhanced the architecture of computers. All these radical changes led to the introduction of microprocessor in 1969 by Intel.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The electronics revolution, in due course of time, accelerated the computer revolution. Now the world is on its way towards small particles of nano-size, far too small to see. This helps in the miniaturization to an unimaginable size. A room-size computer during its invention has now emerged as a laptop, palmtop, iPad, etc. In the recent past, IBM has released the smallest computer whose size is comparable to the tip of the rice grain, measuring just 0.33 mm on each side.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">Electronics is the branch of physics which incorporates technology to design electrical circuits using transistors and microchips. It depicts the behaviour and movement of electrons and holes in a semiconductor, electrons and ions in vacuum or gas. Electronics deals with electrical circuits that involve active components such as transistors, diodes, integrated circuits and sensors, associated with the passive components like resistors, inductors, capacitors and transformers</p>
+	<p class="block_1"> </p>
+	<p class="block_7">This chapter deals with semiconductor devices like p-n junction diodes, bipolar junction transistors and logic circuits.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">Note</p>
+	<p class="block_7">Passive components: components that cannot generate power in a circuit. Active components: components that can generate power in a circuit.</p>
+	<p class="block_7"><img src="images/image-650.png" alt="Image, Figure 10.1 Evolution of computers (a) One of the world’s first computers " class="calibre755"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7"><img src="images/image-651.png" alt="Image, Figure 10.1 (b) Desktop computer Figure 10.1 (c) Laptop computer is shown" class="calibre756"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7"><img src="images/image-652.png" alt="Image, Figure 10.1 (d) Palmtop computer Figure 10.1 (e) Smallest computer by IBM kept near the tip of the rice grain is shown" class="calibre757"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7">Do you know</p>
+	<p class="block_7">The world’s first computer ‘ENIAC’ was invented by J. Presper Eckert and John Mauchly at the University of Pennsylvania. The construction work started in 1943 and got over in 1946. It occupied an area of around 1800 square feet. It had 18,000 vacuum tubes and it weighed around 50 tons.</p>
+	<h3 class="block_13" id="toc_id_174">10 point 1 point 1 Energy band diagram of solids</h3>
+	<p class="block_7"> In an isolated atom, the electronic energy levels are widely separated and are far apart and the energy of the electron is decided by the orbit in which it revolves around the nucleus. However, in the case of a solid, the atoms are closely spaced and hence the electrons in the outermost energy levels of nearby atoms influence each other. This changes the nature of the electron motion in a solid from that in an isolated atom to a large extent. </p>
+	<p class="block_1"> </p>
+	<p class="block_7">The valence electrons in an atom are responsible for the bonding nature. Let us consider an atom with one electron in the outermost orbit. It means that the number of valence electrons is one. When two such atoms are brought close to each other, the valence orbitals are split up into two. Similarly the unoccupied orbitals of each atom will also split up into two. The electrons have the choice of choosing any one of the orbitals as the energy of both the orbitals is the same. When the third atom of the same element is brought to this system, the valence orbitals of all the three atoms are split into three. The unoccupied orbitals also will split into three.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">In reality, a solid is made up of millions of atoms. When millions of atoms are brought close to each other, the valence orbitals and the unoccupied orbitals are split according to the number of atoms. In this case, the energy levels will be closely spaced and will be difficult to differentiate the orbitals of one atom from the other and they look like a band as shown in Figure 10.2. This band of very large number of closely spaced energy levels in a very small energy range is known as energy band.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The energy band formed due to the valence orbitals is called valence band (V B) and that formed due to the unoccupied orbitals to which electrons can jump when energised is called the conduction band (C B). The energy gap between the valence band and the conduction band is called forbidden energy gap (E g ). Electrons cannot exist in the forbidden energy gap.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">A simple pictorial representation of the valence band and conduction band is shown in Figure 10.2(a). E V represents the maximum energy of the valence band and E C represents minimum energy of the conduction band. The forbidden energy gap, E g equal to E C minus E v .  We know that the coulomb force of attracted between the orbiting electron and the nucleus is inversely proportional to the distance between them. Therefore, the electrons in the orbitals closer to the nucleus are strongly bound to it. Hence, the electrons closer to nucleus require a lot of energy to be excited. The electrons in the valence band are loosely bound to the nucleus and can be easily excited to become free electrons.</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-653.png" alt="Image, Figure 10.2 (a) Schematic representation of valence band, conduction band and forbidden energy gap. Energy band structure of (b) Insulator (c) Conductor (d) Semiconductor is shown" class="calibre758"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3">Note</p>
+	<p class="block_7">The energy of the orbiting electrons is measured in electron volts (e, V).</p>
+	<h3 class="block_13" id="toc_id_175">10 point 1 point 2 Classification of materials</h3>
+	<p class="block_7">The classification of solids into insulators, metals, and semiconductors can be explained with the help of the energy band diagram.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">1)Insulators</p>
+	<p class="block_7">The energy band structure of insulators is shown in Figure 10.2(b). The valence band and the conduction band are separated by a large energy gap. The forbidden energy gap is approximately 6 electron Volt in insulators. The gap is very large that electrons from valence band cannot move into conduction band even on the application of strong external electric field or the increase in temperature. Therefore, the electrical conduction is not possible as the free electrons are not available for conduction and hence these materials are called insulators. Its resistivity is in the range of 10<span class="calibre7"> power 11  minus </span>10 power 19 ohm meter.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">2) Conductors </p>
+	<p class="block_7">In conductors, the valence band and conduction band overlap as shown in Figure 10.2(c). Hence, electrons can move freely into the conduction band which results in a large number of free electrons available in the conduction band. Therefore, conduction becomes possible even at low temperatures. The application of electric field provides sufficient energy to the electrons to drift in a particular direction to constitute a current. For conductors, the resistivity value lies between 10 power minus 2 ohm meter and 10 power minus 8 ohm meter.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">3) Semiconductors </p>
+	<p class="block_7">In semiconductors, there exists a narrow forbidden energy gap (E g less than 3 electron volt) between the valence band and the conduction band<b class="calibre6"> </b>(Figure 10.2(d)). At a finite temperature, thermal agitations in the solid can break the covalent bond between the atoms (covalent bond is formed due to the sharing of electrons to attain stable electronic configuration). This releases some electrons from valence band to conduction band. Since free electrons are small in number, the conductivity of the semiconductors is not as high as that of the conductors. The resistivity value of semiconductors is from 10 power minus 5 ohm meter to 10 power 6 ohm meter.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">Note</p>
+	<p class="block_7">In semiconductors, electrons in the valence band are bound electrons which cannot move. Hence, they cannot contribute for conduction.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">When the temperature is increased further, more number of electrons are promoted to the conduction band and they increase the conduction. Thus, we can say that the electrical conduction increases with the increase in temperature. In other words, resistance decreases with increase in temperature. Hence, semiconductors are said to have negative temperature coefficient of resistance. The most important commonly used elemental semiconducting materials are silicon (Si) and germanium (Ge). The values of forbidden energy gap for Si and Ge at room temperature are 1.1 electron Volt and 0.7 electron Volt respectively</p>
+	<h2 class="block_13" id="toc_id_176">10 point 2 TYPES OF SEMICONDUCTRORS</h2>
+	<h3 class="block_13" id="toc_id_177">10 point 2 point 1 Intrinsic semiconductors</h3>
+	<p class="block_7">A semiconductor in its pure form without any impurity is called an intrinsic semiconductor. Here, impurity means presence of any other foreign atom in the crystal lattice. The silicon lattice is shown in Figure 10.3 (a). Each silicon atom has four electrons in the outermost orbit and is covalently bonded with four neighbouring atoms to form the lattice. The band diagram for this case is shown in Figure 10.3 (b)</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-654.png" alt="Image, Figure 10.3 (a) Two dimensional crystal lattice of silicon were covalent bond and valence electron is shown" class="calibre759"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-655.png" alt="Image, Figure 10.3 (b) Valence band and conduction band of intrinsic semiconductor" class="calibre760"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7">A small increase in temperature is sufficient enough to break some of the covalent bonds and release the electrons free from the lattice (10.4 (a)). As a result, some states in the valence band become empty and the same number of states in the conduction band will be occupied by electrons as shown in Figure 10.4 (b). The vacancies produced in the valence band are called holes. As the holes are deficiency of electrons, they are treated to possess positive charges. Hence, electrons and holes are the two charge carriers in semiconductors. </p>
+	<p class="block_1"> </p>
+	<p class="block_7">In intrinsic semiconductors, the number of electrons in the conduction band is equal to the number of holes in the valence band. The electrical conduction is due to the electrons in the conduction band and holes in the valence band. The corresponding currents are represented as I<sub class="calibre16">e</sub> and I<sub class="calibre16">h </sub>respectively.</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-656.png" alt="Image, Figure 10.4 (a)  (a) The presence of free electron, hole and broken covalent bond in the intrinsic silicon crystal is shown " class="calibre761"/></p>
+	<p class="block_3"><img src="images/image-657.png" alt="Image, (b) Presence of electrons in the conduction band and holes in the valence band at room temperature is shown " class="calibre760"/></p>
+	<p class="block_1"> </p>
+	<p class="block_1"> </p>
+	<p class="block_3">Note</p>
+	<p class="block_7">Definition of a hole: When an electron is excited, covalent bond is broken. Now octet rule will not be satisfied. Thus each excited electron leaves a vacancy to complete bonding. This ‘deficiency’ of electron is termed as a ‘hole’.</p>
+	<p class="block_1"> </p>
+	<p class="block_17"><span class="text_2">The total current I is always the sum of the electron current and the hole current. That is</span><span class="text_13"> I equal to I e plus I h</span><span class="text_10">.</span></p>
+	<p class="block_1"> </p>
+	<p class="block_7">An intrinsic semiconductor behaves like an insulator at 0 Kelvin. The increase in temperature increases the number of charge carriers (electrons and holes). The schematic diagram of the intrinsic semiconductor in band diagram is shown in Figure 10.4 (b). The intrinsic carrier concentration is the number of electrons in the conduction band or the number of holes in the valence band in an intrinsic semiconductor.</p>
+	<p class="block_1"> </p>
+	<h3 class="block_13" id="toc_id_178">10 point 2 point 2 Extrinsic semiconductors </h3>
+	<p class="block_7">The carrier concentration in an intrinsic semiconductor is not sufficient enough to develop efficient electronic devices. Another way of increasing the carrier concentration in an intrinsic semiconductor is by adding impurity atoms.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The process of adding impurities to the intrinsic semiconductor is called doping. It increases the concentration of charge carriers (electrons and holes) in the semiconductor and in turn, its electrical conductivity. The impurity atoms are called dopants and its order is approximately 100 ppm (parts per million).</p>
+	<p class="block_1"> </p>
+	<p class="block_7">On the basis of the type of impurity added, extrinsic semiconductors are classified into:</p>
+	<p class="block_7">1) n type semiconductor </p>
+	<p class="block_7">2) p type semiconductor</p>
+	<p class="block_1"> </p>
+	<p class="block_3">1) n type semiconductor</p>
+	<p class="block_7">A n-type semiconductor is obtained by doping a pure silicon (or germanium) crystal with pentavalent impurity atoms (from 5 th  group of periodic table) such as phosphorus, arsenic and antimony as shown in Figure 10.5(a). The dopant has five valence electrons while the silicon atom has four valence electrons. During the process of doping, a few of the silicon atoms are replaced by pentavalent dopants. Four of the five valence electrons of the impurity atom form covalent bonds with four silicon atoms. The fifth valence electron of the impurity atom is loosely attached with the nucleus as it is not used in the formation of the covalent bond.</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-658.png" alt="Image, Figure 10.5 n-type extrinsic semiconductor: (a) Free electron which is loosely attached to the lattice is shown" class="calibre762"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-659.png" alt="Image, Figure 10.5 n-type extrinsic semiconductor: (b) Representation of donor energy level is shown" class="calibre763"/></p>
+	<p class="block_1"> </p>
+	<p class="block_1"> </p>
+	<p class="block_7">The energy level of the loosely attached fifth electron from the dopant is found just below the conduction band edge and is called the donor energy level as shown in Figure 10.5(b). At room temperature, these electrons can easily move to the conduction band with the absorption of thermal energy. It is shown in the Figure 10.6. Besides, an external electric field also can set free the loosely bound electrons and lead to conduction.</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-660.png" alt="Image, Figure 10.6 Thermally generated holes in the valence band and the free electrons generated by the dopants in the conduction band (n-type semiconductor) is shown" class="calibre764"/></p>
+	<p class="block_7">It is important to note that the energy required for an electron to jump from the valence band to the conduction band in an intrinsic semiconductor is 0.7 electron Volt for Ge and 1.1 electron Volt for Silicon, while the energy required to set free a donor electron is only 0.01 electron Volt for Ge and 0.05 electron Volt for Silicon.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The 5 th group pentavalent impurity atoms donate electrons to the conduction band and are called donor impurities. Therefore, each impurity atom provides one extra electron to the conduction band in addition to the thermally generated electrons. These thermally generated electrons leave holes in valence band. Hence, the majority carriers of current in an n-type semiconductor are electrons and the minority carriers are holes. Such a semiconductor doped with a pentavalent impurity is called an n-type semiconductor.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">2) p type semiconductor</p>
+	<p class="block_7">In p-type semiconductor, trivalent impurity atoms (from 3 rd group of periodic table) such as boron, aluminium, gallium and indium are added to the silicon (or germanium) crystal. The dopant with three valence electrons can form three covalent bonds with three silicon atoms. Of the four covalent bonds, three bonds are complete and the remaining one bond is incomplete with one electron. This electron vacancy present in the fourth covalent bond is represented as a hole.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">To make complete covalent bonding with all four neighbouring atoms, the dopant is in need of one more electron. These dopants can accept electrons from the neighbouring atoms. Therefore, this impurity is called an acceptor impurity. The energy level of the hole created by each impurity atom is just above the valence band and is called the acceptor energy level, as shown in Figure 10.7(b).</p>
+	<p class="block_1"> </p>
+	<p class="block_7">For each acceptor atom, there will be a hole in the valence band; this is in addition to the holes left by the thermally generated electrons. In such an extrinsic semiconductor, holes are the majority carriers and thermally generated electrons are minority carriers as shown in Figure 10.8. The extrinsic semiconductor thus formed is called a p-type semiconductor.</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-661.png" alt="Image, Figure 10.7 p-type extrinsic semiconductor (a) Hole generated by the dopant is shown " class="calibre765"/></p>
+	<p class="block_3"><img src="images/image-662.png" alt="Image, Figure 10.7 (b) Representation of acceptor energy level is shown" class="calibre766"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-663.png" alt="Image, Figure 10.8 Thermally generated electron in the conduction band and the holes generated by the dopants in the valence band (p-type semiconductor) is shown" class="calibre767"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3">Do You Know?</p>
+	<p class="block_7">The n-type and p-type semiconductors are neutral because only neutral atoms are doped to the intrinsic semiconductors.</p>
+	<p class="block_1"> </p>
+	<h2 class="block_13" id="toc_id_179">10 point 3 DIODES</h2>
+	<h3 class="block_13" id="toc_id_180">10 point 3 point 1 P N Junction formation</h3>
+	<p class="block_3">1) Formation of depletion layer</p>
+	<p class="block_7">A single piece of semiconductor crystal is suitably doped such that its one side is p type semiconductor and the other side is n-type semiconductor. The contact surface between the two sides is called p n junction. Whenever p n junction is formed, some of the free electrons diffuse from the n side to the p side while the holes from the p-side to the n-side. The diffusion of charge carriers happens due to the fact that the n side has higher electron concentration and the p side has higher hole concentration. The diffusion of the majority charge carriers across the junction gives rise to an electric current, called diffusion current.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">When an electron leaves the n side, a pentavalent atom in the n side becomes a positive ion. The free electron migrating into p side recombines with a hole present in a trivalent atom near the junction and the trivalent atom becomes a negative ion. Since such ions are bonded to the neighbouring atoms in the crystal lattice, they are unable to move. As the diffusion process continues, a layer of positive ions and a layer of negative ions are created on either side of the junction accordingly. The thin region near the junction which is free from charge carriers (free electrons and holes) is called depletion region (Figure 10.9).</p>
+	<p class="block_7">An electric field is set up between the positively charged layer in the n side and the negatively charged layer in the p side in the depletion region as shown in the Figure 10.9. This electric field makes electrons in the p side drift into the n side and the holes in the n side into the p side. The electric current produced due to the motion of the minority charge carriers by the electric field is known as drift current. The diffusion current and drift current flow in opposite directions.</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-664.png" alt="Image, Figure 10.9 Formation of p–n junction is shown were the thin region near the junction which is free from charge carriers (free electrons and holes) is called depletion region " class="calibre768"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7">Though drift current is less than diffusion current initially, equilibrium is reached between them at a particular time. With each electron (or hole) diffusing across the junction, the strength of the electric field increases thereby increasing the drift current till the two currents become equal. Hence at equilibrium, there is no net electric current across the junction. Thus, a, p n junction is formed.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">2) Junction potential or barrier potential</p>
+	<p class="block_7">The movement of charge carriers across the junction takes place only to a certain point beyond which the depletion layer acts like a barrier to further diffusion of free charges across the junction. This is due to the fact that the immobile ions on both sides establish an electric potential difference across the junction. </p>
+	<p class="block_1"> </p>
+	<p class="block_7"><img src="images/image-665.png" alt="Image, Figure 10.10 Barrier potential formed across the junction is shown were an electron trying to diffuse into the interior of the depletion region encounters a wall of negative ions repelling it backwards. If the free electron has enough energy, it can break through the wall and enter into the p-region" class="calibre759"/></p>
+	<p class="block_1"> </p>
+	<p class="block_1"> </p>
+	<p class="block_7">This difference in potential across the depletion layer is called the barrier potential (V b ) as shown in Figure 10.10. At 25 degree Celsius, this barrier potential is approximately 0.7 Volt for silicon and 0.3 Volt for germanium.</p>
+	<p class="block_1"> </p>
+	<h3 class="block_13" id="toc_id_181">10 point 3 point 2 P N Junction diode</h3>
+	<p class="block_7">A p n junction diode is formed when a p type semiconductor is fused with an n type semiconductor. It is a device with single p n junction as shown in Figure 10.11 (a) and its circuit symbol is shown in Figure 10.11 (b).</p>
+	<p class="block_3"><img src="images/image-666.png" alt="Image, Figure 10.11 p-n junction diode (a) Schematic representation is given were it is a device with single p-n junction is shown (b) Circuit symbol is shown " class="calibre769"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3">Biasing a diode </p>
+	<p class="block_7">Biasing means providing external energy to charge carriers to overcome the barrier potential and make them move in a particular direction. The charge carriers can either move towards the junction or away from the junction. The external voltage applied to the p n junction is called bias voltage. Depending on the polarity of the external source to the p n junction, we have two types of biasing:</p>
+	<p class="block_7">1) Forward bias </p>
+	<p class="block_7">2) Reverse bias</p>
+	<p class="block_1"> </p>
+	<p class="block_3">1) Forward bias </p>
+	<p class="block_7">If the positive terminal of the external voltage source is connected to the p-side and the negative terminal to the n side, it is called forward bias as shown in Figure 10 point 1, 2. The application of a forward bias potential pushes electrons in the n-side and the holes in the p side towards the junction. This initiates the recombination with the ions near the junction which in turn reduces the width of the depletion region and hence the barrier potential.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The electron from the n side is now accelerated towards the p side as it experiences a reduced barrier potential at the junction. In addition, the accelerated electrons experience a strong attraction by the positive potential applied to the p-side. This results in the movement of electrons in the n side towards the p side and similarly, holes in the p side towards the n-side. When the applied voltage is increased, the width of the depletion region and hence the barrier potential are further reduced. This results in a large number of electrons passing through the junction resulting in an exponential rise in current through the junction.</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-667.png" alt="Image, Figure 10.12 Schematic representation of a p-n junction diode under forward bias is shown " class="calibre770"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3">2) Reverse bias </p>
+	<p class="block_7">If the positive terminal of the battery is connected to the n-side and the negative terminal to the p side, the junction is said to be reverse biased as shown in Figure 10.13.</p>
+	<p class="block_3"><img src="images/image-668.png" alt="Image, Figure 10.13 Schematic representation of a p-n junction diode under reverse bias is shown " class="calibre771"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7">As the positive terminal is connected to the n-type material, the electrons in the n-side are attracted towards the positive terminal and the holes in the p-side are attracted by the negative terminal. This increases the immobile ion concentration at the junction. The net effect is the widening of the depletion region leading to an increase in the barrier potential. Consequently, the majority charge carriers from both sides experience a great potential barrier to cross the junction. This reduces the diffusion current across the junction drastically.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">Yet, a small current flows across the junction due to the minority charge carriers in both regions. The reverse bias for majority charge carriers serves as the forward bias for minority charge carriers. The current that flows under a reverse bias is called the reverse saturation current. It is represented as I, s.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The reverse saturation current is independent of the applied voltage and it depends only on the concentration of the thermally generated minority charge carriers. Even a small voltage is sufficient enough to drive the minority charge carriers across the junction.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">Note</p>
+	<p class="block_7">The reverse saturation current of a silicon diode doubles for every 10 degree Celsius rise in temperature.</p>
+	<p class="block_1"> </p>
+	<h3 class="block_8" id="toc_id_182">10 point 3 point 3 Characteristics of a junction diode</h3>
+	<p class="block_1"> </p>
+	<p class="block_3">1) Forward characteristics</p>
+	<p class="block_7">It is the study of the variation in current through the diode with respect to the applied voltage across the diode when it is forward biased.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">The p-n junction diode is forward biased as shown in Figure 10.14(a). An external resistance (R) is used to limit the flow of current through the diode. The voltage across the diode is varied by varying the biasing voltage across the D C power supply. The forward bias voltage and the corresponding forward bias current are noted. A graph is plotted by taking the forward bias voltage (V f) along the x axis and the current (I f) through the diode along the y axis. This graph is called the forward V-I characteristics of the p n junction diode and is shown in Figure 10.14(b). Four inferences can be brought out from the graph:</p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-669.png" alt="Image, Figure 10.14 p-n junction diode  (a) Diode under forward bias is shown" class="calibre772"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3"><img src="images/image-670.png" alt="Image, Figure 10.14 p-n junction diode (b) Forward characteristics is shown" class="calibre773"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7">(1) At room temperature, a potential difference equal to the barrier potential is required before a reasonable forward current starts flowing across the diode. This voltage is known as threshold voltage or cut-in voltage or knee voltage (V knee). It is approximately 0.3 Volt for germanium and 0.7 Volt for silicon. The current flow is negligible when the applied voltage is less than the threshold voltage. Beyond the threshold voltage, increase in current is significant even for a small increase in voltage.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">(2)The graph clearly infers that the current flow is not linear and is exponential. Hence it does not obey Ohm’s la</p>
+	<p class="block_1"> </p>
+	<p class="block_7">(3)The forward resistance (r f) of the diode is the ratio of the small change in voltage ( del V f) to the small change in current delta I, F. that is r, F equal to del V f divided by del I F</p>
+	<p class="block_1"> </p>
+	<p class="block_7"> (4)Thus the diode behaves as a conductor when it is forward biased.</p>
+	<p class="block_1"> </p>
+	<p class="block_7">However, if the applied voltage is increased beyond a rated value, it will produce an extremely large current which may destroy the junction due to overheating. This is called as the breakdown of the diode and the voltage at which the diode breaks down is called the breakdown voltage. Thus, it is safe to operate a diode between the threshold voltage and the breakdown voltage.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">2) Reverse characteristics</p>
+	<p class="block_7">The circuit to study the reverse characteristics is shown in Figure 10.15(a). In the reverse bias, the p-side of the diode is connected to the negative terminal and n-side to the positive terminal of the dc power supply</p>
+	<p class="block_65">A graph drawn between the reverse bias voltage and the current across the junction is called the reverse characteristics of a p-n junction diode. It is shown in Figure 10.15(b). Under this bias, a very small current in micro Amps flows across the junction. This is due to the flow of the minority charge carriers and is called the leakage current or reverse saturation current. This reverse current is independent of the voltage up to a certain voltage, known as breakdown voltage. </p>
+	<p class="block_66"><img src="images/image-671.png" alt="Image, Figure 10.15 p-n junction diode (a) Diode under reverse bias is shown" class="calibre598"/></p>
+	<p class="block_1"> </p>
+	<p class="block_65"><img src="images/image-672.png" alt="Image, Figure 10.15 (b) Reverse characteristics is shown" class="calibre774"/></p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">Ideal diode: It acts like a conductor when it is forward biased. When it is reverse biased, it acts like an insulator. For ideal diodes, the forward resistance is zero and barrier potential is considered negligible.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">The forward and reverse charactristics are given in one graph as shown in Figure 10.16.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-673.png" alt="Image, Figure 10.16 Forward and reverse charactristics of a diode is shown " class="calibre775"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 1</b></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image795.png" alt="The given picture is content QR code and the code is J Y Q 6 B." class="calibre776"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">An ideal diode and a 5 Ω resistor are connected in series with a 15 V power supply as shown in figure below. Calculate the current that flows through the diode.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-674.png" alt="Image, An ideal diode and a 5 Ω resistor are connected in series with a 15 V power supply is shown " class="calibre777"/></p>
+	<p class="block_47"> </p>
+	<p class="block_67">Solution</p>
+	<p class="block_69">The diode is forward biased and it is an ideal one. Hence, it acts like a closed switch with no barrier voltage. Therefore, current that flows through the diode can be calculated using Ohm’s law.</p>
+	<p class="block_49">V equal to I R </p>
+	<p class="block_49">I equal to V by R equal to 15 by 5 equal to 3 a</p>
+	<p class="block_70"> </p>
+	<p class="block_68"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 2</b></p>
+	<p class="block_47"> </p>
+	<p class="block_68">A silicon diode is connected with one k ohm resistor as shown. Find the value of current flowing through A B.</p>
+	<p class="block_68"><img src="images/image-675.png" alt="Image, A silicon diode is connected with 1kΩ resistor is shown" class="calibre778"/></p>
+	<p class="block_47"> </p>
+	<p class="block_71">Solution</p>
+	<p class="block_7">The P, D. between A and B is given by</p>
+	<p class="block_7">V equal to V a minus V b into minus V B silicon</p>
+	<p class="block_7">Equal to 3.3 minus into minus 7.4 minus 0.7</p>
+	<p class="block_7">Equal to 10.7 minus 0.7 equal to 10 volt </p>
+	<p class="block_70"> </p>
+	<p class="block_68">The value of current flowing through AB can be obtained using Ohm’s law.</p>
+	<p class="block_72"><img src="images/image-676.png" alt="I equal to V by R equal to 10 divided by 1 into 10 power 3 equal to 10 power minus 2 , A equal to 10 milli amps" class="calibre779"/></p>
+	<p class="block_48"> </p>
+	<h3 class="block_13" id="toc_id_183">10 point 3 point 4 Rectification</h3>
+	<p class="block_7">The process in which alternating voltage or alternating current is converted into direct voltage or direct current is known as rectification. The device used for this process is called as rectifier. In this section, we will discuss two types of rectifiers namely, half wave rectifier and full wave rectifier</p>
+	<p class="block_1"> </p>
+	<p class="block_3">(1) Half wave rectifier circuit</p>
+	<p class="block_65">The half wave rectifier circuit consists of a transformer, a p-n junction diode and a resistor (Figure 10.17 (a)). In a half wave rectifier circuit, either a positive half or the negative half of the A C input is passed through by the diode while the other half is blocked. Only one half of the input wave is rectified. Therefore, it is called half wave rectifier. Here, a p-n junction diode acts as a rectifier diode</p>
+	<p class="block_47"> </p>
+	<p class="block_67">During the positive half cycle</p>
+	<p class="block_68">When the positive half cycle of the A C input signal passes through the circuit, terminal A becomes positive with respect to terminal B. The diode is forward biased and hence it conducts. The current flows through the load resistor R L and the A C voltage developed across R L constitutes the output voltage V not and the waveform of the output voltage is shown in Figure 10.17(b).</p>
+	<p class="block_47"> </p>
+	<p class="block_67">During the negative half cycle </p>
+	<p class="block_68">When the negative half cycle of the A C input signal passes through the circuit, terminal A is negative with respect to terminal B. Now the diode is reverse biased and does not conduct. Hence no current passes through R L. The reverse saturation current in a diode is negligible. Since there is no voltage drop across R L, the negative half cycle of A C supply is suppressed at the output.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-677.png" alt="Image, Figure 10.17 (a) Half wave rectifier circuit is shown" class="calibre780"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-678.png" alt="Image, Figure 10.17 (b) Input and output waveforms is shown" class="calibre781"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">The output of the half wave rectifier is not a steady DC voltage but a pulsating wave. This pulsating voltage cannot be used for electronic equipment. A constant or a steady voltage is required which can be obtained with the help of filter circuits and voltage regulator circuits.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">Efficiency (eta) is the ratio of the output D C power to the A C input power supplied to the circuit. Its value for half wave rectifier is 40.6 percentage.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">If the direction of the diode is reversed, the negative half of the A, C signal is passed through and the positive half is blocked.</p>
+	<p class="block_48"> </p>
+	<p class="block_3">2) Full wave rectifier</p>
+	<p class="block_7">The positive and negative half cycles of the A,C input signal are rectified in this circuit and hence it is called the full wave rectifier. The circuit is shown in Figure 10.18(a). It consists of two p-n junction diodes, a centre tap transformer and a load resistor R, L. The centre is usually taken as the ground or zero voltage reference point. With the help of the centre tap transformer, each diode rectifies one half of the total secondary voltage.</p>
+	<p class="block_1"> </p>
+	<p class="block_73">During positive half cycle</p>
+	<p class="block_68">When the positive half cycle of the A C input signal passes through the circuit, terminal M is positive, C is at zero potential and N is at negative potential. This forward bias diode D one and reverse biases diode D two. Hence, being forward biased, diode D one conducts and current flows along the path M D one A B C.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">During negative half cycle</p>
+	<p class="block_68">When the negative half cycle of the A, C input signal passes through the circuit, terminal N becomes positive, C is at zero potential and M is at negative potential. This forward biases diode D two and reverse biases diode D one. Hence, being forward biased, diode D two conducts and current flows along the path N D two A B C.</p>
+	<p class="block_47"> </p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-679.png" alt="Image, Figure 10.18 a) Full wave rectifier circuit  is shown" class="calibre782"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-680.png" alt="Image, Figure 10.18 b)Input and output waveforms is shown" class="calibre783"/></p>
+	<p class="block_47"> </p>
+	<p class="block_47"> </p>
+	<p class="block_68">During both positive and negative half cycles of the input signal, the current flows through the load in the same direction. The output signal corresponding to the input signal is shown in Figure 10.18(b). Though both half cycles of A C input are rectified, the output is still pulsating in nature.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">The efficiency (neta) of full wave rectifier is twice that of a half wave rectifier and is found to be 81.2 percentage. It is because of power losses in the winding, the diode and the load resistance.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">Centre tap transformer: There is a facility to tap at halfway point in the secondary windings. This helps to measure the induced voltage from one end of the secondary to the centre point. If the centre tap point is grounded, then the voltage across the secondary will be divided into two halves. For example, if the voltage across the secondary is 240 Volt, then the voltage across one end and the centre tap point is plus 120 Volt and at the other end it is minus 120 Volt.</p>
+	<p class="block_48"> </p>
+	<h3 class="block_13" id="toc_id_184">10 point 3 point 5 Breakdown mechanism</h3>
+	<p class="block_65">The reverse current or the reverse saturation current due to the minority charge carriers is small. If the reverse bias applied to a p n junction is increased beyond a point, the junction breaks down and the reverse current rises sharply. The voltage at which breakdown happens is called the breakdown voltage and it depends on the width of the depletion region, which in turn depends on the doping level.</p>
+	<p class="block_48"> </p>
+	<p class="block_7">A normal p n junction diode gets damaged at this point. Specially designed diodes like Zener diode can be operated at this region and can be used for the purpose of voltage regulation in circuits. There are two mechanisms that are responsible for breakdown under increasing reverse voltage.<b class="calibre6"> </b></p>
+	<p class="block_3">1) Avalanche breakdown</p>
+	<p class="block_65">Avalanche breakdown occurs in lightly doped junctions which have wide depletion layers. In this case, the electric field is not strong enough to produce breakdown. Alternatively, the thermally generated minority charge carriers accelerated by the electric field gain sufficient kinetic energy and they collide with the semiconductor atoms while passing through the depletion region. This leads to the breaking up of covalent bonds generating electron-hole pairs. </p>
+	<p class="block_47"> </p>
+	<p class="block_68">The newly generated charge carriers are also accelerated by the reverse voltage resulting in more collisions and further production of charge carriers. This cumulative process leads to an avalanche (uncontrollably large number) of charge carriers across the junction. This causes diode current to rise abruptly and breakdown takes place. This breakdown is called avalanche breakdown.</p>
+	<p class="block_48"> </p>
+	<p class="block_3">2) Zener breakdown</p>
+	<p class="block_65">Heavily doped p n junctions have narrow depletion layers whose width is of the order of less than 10<span class="calibre7"> power  minus 6 </span>meter When a reverse voltage across this junction is increased to the breakdown limit, a very strong electric field of strength 3 into 10 power 7 V meter minus 1 is set up across the narrow layer. This electric field is strong enough to break or rupture the covalent bonds in the lattice and thereby generating electron-hole pairs. This effect is called Zener effect.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">Even a small further increase in reverse voltage produces a large number of charge carriers which move across the junction through the thin depletion region. This process gives rise to a large amount reverse current or breakdown current and this breakdown is called Zener breakdown</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">In Avalanche breakdown, the minority charge carriers gain sufficient energy from excessive reverse bias voltage to break covalent bond in order to produce new charge carriers. But Zener breakdown occurs due to the direct rupture of covalent bonds because of the existence of the strong electric field. Since depletion region is thin, Zener breakdown occurs usually at lesser reverse bias voltage compared to Avalanche breakdown voltage.</p>
+	<p class="block_48"> </p>
+	<h3 class="block_13" id="toc_id_185">10 point 3 point 6 Zener diode</h3>
+	<p class="block_65">Zener diode is a heavily doped silicon diode used in reverse biased condition and is named after its inventor Clarence Melvin Zener. It is specially designed to be operated in the breakdown region. The doping level of the silicon diode can be varied to have a wide range of breakdown voltages from 2 Volt to over 1000 Volt. </p>
+	<p class="block_47"> </p>
+	<p class="block_68">As explained in the previous section, Zener breakdown occurs due to the breaking up of covalent bonds by the strong electric field set up in the depletion region by the reverse voltage. It produces an extremely large number of electrons and holes which constitute the reverse saturation current. The current is limited by both external resistance and power dissipation of the diode. A Zener diode is shown in Figure 10.19 (a) and its circuit symbol is given in Figure 10.19 (b). </p>
+	<p class="block_47"> </p>
+	<p class="block_68">It looks like an ordinary p-n junction diode except that n-side lead resembles the shape of the letter (ejet). The arrow head points the direction of conventional current. In Figure 10.19 (a)</p>
+	<p class="block_68">black ring indicates the n-side lead.</p>
+	<p class="block_47"> </p>
+	<p class="block_69"><img src="images/image-681.png" alt="Image, Figure 10.19 Zener diode (a) Commercial picture is shown were looks like an ordinary p-n junction diode except that n-side lead resembles the shape of the letter ‘z’ (b) Circuit symbol is shown " class="calibre784"/></p>
+	<p class="block_1"> </p>
+	<p class="block_73">V-I Characteristics of Zener diode</p>
+	<p class="block_68">The circuit to study the forward and reverse characteristics of a Zener diode is shown in Figure 10.20(a) and Figure 10.20 (b). The V to I characteristics of a Zener diode is shown in Figure 10.20 (c). The forward characteristic of a Zener diode is similar to that of an ordinary p-n junction diode. It starts conducting approximately around 0.7 Volt. However, the reverse characteristics is highly significant in Zener diode. The increase in reverse voltage normally generates very small reverse current. While in Zener diode, when the reverse voltage is increased to the breakdown voltage (V ejet), the increase in current is very sharp. The voltage remains almost constant throughout the breakdown region. In Figure 10.20 (c), I ejet (max) represents the maximum reverse current. If the reverse current is increased further, the diode will be damaged. The important parameters of the reverse characteristics are </p>
+	<p class="block_68">• Zener breakdown voltage, V ejet </p>
+	<p class="block_68">• Minimum current to sustain breakdown, I ejet (minimum)</p>
+	<p class="block_47"> </p>
+	<p class="block_68">• Maximum current limited by maximum power dissipation, I ejet <sub class="calibre16">(</sub>maximum)</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-682.png" alt="Image, Figure 10.20 Zener diode circuit is shown were (a) Forward bias circuit is given (b) Reverse bias circuit is given " class="calibre785"/></p>
+	<p class="block_68"><img src="images/image-683.png" alt="Image, Figure 10.20 (c) V-I characteristics is shown" class="calibre786"/></p>
+	<p class="block_47"> </p>
+	<p class="block_47"> </p>
+	<p class="block_68">The Zener diode is operated in the reverse bias condition with the voltage greater than V z and current less than I, ejet (maximum). The reverse characteristic is not exactly vertical which means that the diode possesses some small resistance called Zener dynamic impedance. Zener resistance is the inverse of the slope of the curve in the breakdown region. It means an increase in the Zener current produces only a very small increase in the reverse voltage. However this can be neglected. The voltage of an ideal Zener diode does not change once it goes into breakdown. In other words, V ejet<sub class="calibre16"> </sub>remains almost constant even when I ejet increases considerably.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">The maximum reverse bias that can be applied before entering into the Zener region is called the peak inverse voltage, commercially referred as P I V rating.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Applications</p>
+	<p class="block_68">The zener diode can be used</p>
+	<p class="block_68">• as voltage regulator </p>
+	<p class="block_68">• for calibrating voltages </p>
+	<p class="block_68">• to provide fixed reference voltage in a network for biasing </p>
+	<p class="block_68">• to protect of any gadget against damage from accidental application of excessive voltage.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Zener diode as a voltage regulator</p>
+	<p class="block_68">Zener diode working in the breakdown region can serve as a voltage regulator whose circuit diagram is given in Figure 10.21. A series resistance Rs of suitable value is used to limit the Zener current to avoid any damage to the diode. This resistance also plays a role in voltage regulation. The fluctuating D, C input voltage is applied to the circuit and constant output voltage V zero is taken across the load resistance R L<sub class="calibre16"> </sub>which is connected in parallel with Zener diode. The output voltage is maintained constant as long as the input voltage is greater than V ejet.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-684.png" alt="Image, Figure 10.21 Circuit to study voltage regulation by Zener diode is shown were the breakdown region served as a voltage regulator " class="calibre787"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">If the input D, C voltage is increased, the Zener current increases thereby increasing current through R<sub class="calibre16">s</sub> and the voltage drop across Rs is also increased. The increased current flows through the diode without affecting the I l. Since Zener diode is operated in the breakdown region, the Zener breakdown voltage across the diode is nearly constant even though the reverse bias current through the diode increases considerably. The increase in input voltage is dropped across R s and hence it is also called dropping resistance. Because of the parallel connection, the voltage across R l is also equal to Zener breakdown voltage which is taken as constant output voltage V zero.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">If the input D, C voltage is decreased, the diode takes a smaller current and the voltage drop across Rs is reduced. Thus, the output voltage V zero remains constant. To sum up, if there is any change in input voltage, the voltage drop across R<sub class="calibre16"> </sub>l changes accordingly. But the voltage across Zener diode or voltage across R L remains constant. Thus the Zener diode acts as a voltage regulator.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 3</b></p>
+	<p class="block_68">Find the current through the Zener diode when the load resistance is 2 kilo ohm. Use diode approximation.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-685.png" alt="Image, Zener diode circuit is shown were the load resistance 2 kΩ" class="calibre788"/></p>
+	<p class="block_47"> </p>
+	<p class="block_67">Solution</p>
+	<p class="block_68">Voltage across A B, V ejet equal to 9 Volt</p>
+	<p class="block_68">Voltage drop across R s equal to 15 minus 9 equal to 6 Volt</p>
+	<p class="block_47"> </p>
+	<p class="block_68">Therefore current through the resistor R s,</p>
+	<p class="block_72"><img src="images/image-686.png" alt="Current I equals to  six  divided by one into ten to the power of three that is equal to six milli amps" class="calibre789"/></p>
+	<p class="block_68">Voltage across the load resistor, V A B equal to 9 Volt</p>
+	<p class="block_47"> </p>
+	<p class="block_68">Current through load resistor,</p>
+	<p class="block_74"><img src="images/image-687.png" alt="Load current I, L is equal to Voltage AE  divided by load resistance that is equal to nine divided by two into ten power three that is equal to four point five milli amps" class="calibre790"/></p>
+	<p class="block_7">The current through the Zener diode</p>
+	<p class="block_49"><img src="images/image-688.png" alt="I, ejet equal to current I minus current load I, L is equal to six milli amps minus four point five milli amps is equal to one point five milli amps" class="calibre199"/></p>
+	<p class="block_7"> </p>
+	<h3 class="block_13" id="toc_id_186">10 point 3 point 7 Optoelectronic devices</h3>
+	<p class="block_65">Optoelectronics deals with devices which convert electrical energy into light and light into electrical energy using semiconductors. Optoelectronic device is an electronic device which utilizes light for useful applications. We will discuss some important optoelectronic devices namely, light emitting diodes, photo diodes and solar cells.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">1) Light Emitting Diode (L E D)</p>
+	<p class="block_68">L E D is a p n junction diode which emits visible or invisible light when it is forward biased. Since electrical energy is converted into light energy, this process is also called electroluminescence. The circuit symbol of L E D is shown in Figure 10.22(a). The direction of arrows indicates that light is emitted from the diode.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-689.png" alt="Image, Figure 10.22 (a) Circuit symbol of LED is shown" class="calibre791"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-690.png" alt="Image, Figure 10.22 (b) Schematic diagram to explain recombination process is shown" class="calibre792"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">When the p n junction is forward biased, the conduction band electrons on n-side and valence band holes on p-side diffuse across the junction. When they cross the junction, they become excess minority carriers (electrons in p-side and holes in n-side). These excess minority carriers recombine with oppositely charged majority carriers in the respective regions, that is. the electrons in the conduction band recombine with holes in the valence band as shown in the Figure 10.22(b).</p>
+	<p class="block_47"> </p>
+	<p class="block_68">During recombination process, energy is released in the form of light (radiative) or heat (non-radiative). For radiative recombination, a photon of energy h nu is emitted. For non-radiative recombination, energy is liberated in the form of heat.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">The colour of the light is determined by the energy band gap of the material. Therefore, L E Ds are available in a wide range of colours such as blue (Silicon Carbon), green (Aluminium Gallium Phosphate) and red (Gallium arsenide Phosphate). Now a days, L E D which emits white light (Gallium Indium Nitrate) is also available.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Applications</p>
+	<p class="block_68">The light emitting diodes are used in</p>
+	<ul class="list_1">
+	<li class="block_75">indicator lamps on the front panel of the scientific and laboratory equipment.</li>
+	<li class="block_75">seven-segment displays.</li>
+	<li class="block_75">traffic signals, emergency vehicle lighting etc.</li>
+	<li class="block_75">remote control of television, air conditioner etc.</li>
+</ul>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image813.png" alt="The given picture is content QR code and the code is QSZAI." class="calibre793"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 4</b></p>
+	<p class="block_68">Determine the wavelength of light emitted from L E D which is made up of Gallium arsenide Phosphate semiconductor whose forbidden energy gap is 1.875 electron Volt. Mention the colour of the light emitted (Take h equal to 6.6 into 10 power minus 34 Joule second).</p>
+	<p class="block_47"> </p>
+	<p class="block_71">Solution</p>
+	<p class="block_50">E 8 equal to h c by lambda</p>
+	<p class="block_65">Therefore,</p>
+	<p class="block_72"><img src="images/95C5C8D.png" alt="Wave length  into velocity of light divided by energy at zero level Six point six into ten to the power of minus thirty four into three into ten to the power of eight divided by one point eight seven five into one point six into ten to the power of minus nineteen that is equal to six hundred and sixty nano meter " class="calibre794"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">The wavelength 660 nano meter corresponds to red colour light.</p>
+	<p class="block_48"> </p>
+	<p class="block_3">2) Photodiodes</p>
+	<p class="block_65">A p n junction diode which converts an optical signal into electric signal is known as photodiode. Thus, the operation of photodiode is exactly inverse to that of an L E D. Photodiode works in reverse bias condition. Its circuit symbol is shown in Figure 10.23 (a). The direction of arrows indicates that the light is incident on the photodiode</p>
+	<p class="block_47"> </p>
+	<p class="block_68">The device consists of a p-n junction semiconductor made of photosensitive material kept safely inside a plastic case as shown in Figure 10.23 (b). It has a small transparent window that allows light to be incident on the p n junction. Photodiodes can generate current when the p n junction is exposed to light and hence are called as light sensors.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-691.png" alt="Image, Figure 10.23 (a) Circuit symbol is shown" class="calibre795"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-692.png" alt="Image, Figure 10.23 (b) Schematic view of photodiode is shown" class="calibre796"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">When a photon of sufficient energy (h nu) strikes the depletion region of the diode, some of the valence band electrons are elevated into conduction band, in turn holes are developed in the valence band. This creates electron-hole pairs. The amount of electron-hole pairs generated depends on the intensity of light incident on the p, n junction.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">These electrons and holes are swept across the p, n junction by the electric field created by reverse voltage before recombination takes place. Thus, holes move towards the p-side and electrons towards the n side. When the external circuit is made, the electrons flow through the external circuit and constitute the photocurrent.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">When there is no incident light, there exists a reverse current which is negligible.</p>
+	<p class="block_68">This reverse current in the absence of any incident light is called dark current and is due to the thermally generated minority carriers.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Applications</p>
+	<p class="block_68">The photodiodes are used in </p>
+	<p class="block_68">· alarm system </p>
+	<p class="block_68">· count items on a conveyor belt </p>
+	<p class="block_68">· photoconductors </p>
+	<p class="block_68">· compact disc players, smoke detectors </p>
+	<p class="block_69">· medical applications such as detectors for computed tomography etc.</p>
+	<p class="block_1"> </p>
+	<p class="block_3">3) Solar cell</p>
+	<p class="block_65">A solar cell, also known as photovoltaic cell, works on the principle of photovoltaic effect. Accordingly, the p, n junction of the solar cell generates emf when solar radiation falls on it. The construction details and cross-sectional view are shown in Figure 10.24.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">In a solar cell, electron–hole pairs are generated due to the absorption of light photons near the junction. Then the charge carriers are separated due to the electric field of the depletion region. Electrons move towards n type silicon layer and holes move towards p type silicon layer. The electrons reaching the n-side are collected by the front contact (metal finger contact) and holes reaching p-side are collected by the back electrical contact. Thus a potential difference is developed across solar cell. When an external load is connected to the solar cell, photocurrent flows through the load.</p>
+	<p class="block_47"> </p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-693.png" alt="Image, Figure 10.24 Cross-sectional view of a solar cell is shown" class="calibre797"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">Many solar cells are connected together either in series or in parallel combination to form a solar panel. Many solar panels are connected with each other to form solar arrays. For high power applications, solar panels and solar arrays are used.</p>
+	<p class="block_47"> </p>
+	<p class="block_71">Applications:</p>
+	<p class="block_7">1) Solar cells are widely used in calculators, watches, toys, portable power supplies, etc.</p>
+	<p class="block_7">2) Solar cells are used in satellites and space applications. </p>
+	<p class="block_7">3) Solar panels are used for commercial production of electricity.</p>
+	<p class="block_1"> </p>
+	<h2 class="block_13" id="toc_id_187">10 point 4 THE BIPOLAR JUNCTION TRANSISTOR [B J T]</h2>
+	<p class="block_73">Introduction</p>
+	<p class="block_68">In 1951, William Schockley invented the modern version of transistor. It is a semiconductor device that led to a technological revolution in the twentieth century. The heat loss in transistor is very less. This has laid the foundation for integrated chips which contain thousands of miniaturized transistors. The emergence of the integrated chips led to increasing applications in the fast developing electronics industry.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Bipolar Junction Transistor (B J T)</p>
+	<p class="block_68">The B J T consists of a semiconductor (silicon or germanium) crystal in which an n type material is sandwiched between two p type materials (P N P transistor) or a p-type material sandwiched between two n type materials (N P N transistor). To protect it against moisture, it is sealed inside a metal or a plastic case. The two types of transistors with their circuit symbols are shown in Figure 10.25.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-694.png" alt="Image, Figure 10.25 Schematic Diagram of (a) NPN transistor and circuit symbol is shown" class="calibre798"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-695.png" alt="Image, Figure 10.25 Schematic Diagram of (b) PNP transistor and circuit symbol is shown" class="calibre799"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">The three regions formed are called as emitter, base and collector which are provided with terminals or ohmic contacts labeled as E, B, and C. As a <b class="calibre6">Bipolar Junction Transistor </b>has two p-n junctions, two depletion layers are formed across the emitter-base junction (J subscript E B) and collector-base junction (J subscript C B) respectively. The circuit symbol carries an arrowhead at the emitter lead pointing from p to n indicating the direction of conventional current.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Emitter:</p>
+	<p class="block_68">The main function of the emitter is to supply majority charge carriers to the collector region through the base region. Hence, emitter is more heavily doped than the other two regions.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Base: </p>
+	<p class="block_68">Base is very thin (10 minus 6 meter) and very lightly doped region when compared to the other two regions.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Collector: </p>
+	<p class="block_68">The main function of collector is to collect the majority charge carriers supplied by the emitter through the base. Hence, collector is made physically larger than the other two as it has to dissipate more power. It is moderately doped.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">Because of the differing size and the amount of doping, the emitter and collector cannot be interchanged.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Transistor Biasing</p>
+	<p class="block_68">The application of suitable DC voltages across the transistor terminals is called biasing. The transistor biasing is done differently for different uses. The different modes of transistor biasing are given below.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Forward Active:</p>
+	<p class="block_68">In this bias, the emitter-base junction is forward biased and the collector-base junction is reverse biased. The transistor is in the active mode of operation. In this mode, the transistor functions as an amplifier</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Saturation:</p>
+	<p class="block_68">Here, the emitter-base junction and collector-base junction are forward biased. The transistor has a very large flow of currents across the junctions. In this mode, transistor is used as a closed switch.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Cut-off: </p>
+	<p class="block_68">In this bias, the emitter-base junction and collector-base junction are reverse biased. Transistor in this mode acts an open switch.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">In a PNP transistor, base and collector will be negative with respect to emitter indicated by the middle letter N whereas base and collector will be positive in an NPN transistor indicated by the middle letter P.</p>
+	<p class="block_48"> </p>
+	<h3 class="block_13" id="toc_id_188">10 point 4 point 1 Transistor circuit configurations</h3>
+	<p class="block_65">There are three types of circuit connections for operating a transistor based on the terminal that is used in common to both input and output circuits.</p>
+	<p class="block_48"> </p>
+	<p class="block_7">1)Common-Base (C B) configuration</p>
+	<p class="block_7">The base is common to both the input and output circuits. The schematic and circuit symbol are shown in Figure 10.26 (a) and 10.26 (b). The input current is the emitter current I E and the output current is the collector current I C. The input signal is applied between emitter and base while the output is measured between collector and base.</p>
+	<p class="block_1"> </p>
+	<p class="block_7"><img src="images/image-696.png" alt="Image, Figure 10.26 NPN transistor in common base configuration (a) Schematic circuit diagram  (b) Circuit symbol is shown" class="calibre800"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3">2) Common-Emitter (C E) configuration </p>
+	<p class="block_7">In this configuration, the emitter is common to both the input and output circuits as shown in Figure 10.27. The base current I B is the input current and the collector current I C is the output current. The input signal is applied between emitter and base while the output is measured between collector and emitter.</p>
+	<p class="block_1"> </p>
+	<p class="block_7"><img src="images/image-697.png" alt="Image, Figure 10.27 NPN transistor in common emitter configuration  (a) Schematic circuit diagram is shown" class="calibre801"/></p>
+	<p class="block_1"> </p>
+	<p class="block_7"><img src="images/image-698.png" alt="Image, Figure 10.27 (b) Circuit symbol is shown" class="calibre802"/></p>
+	<p class="block_1"> </p>
+	<p class="block_3">3) Common-Collector (C C) configuration</p>
+	<p class="block_65">Here, the collector is common to both the input and output circuits as shown in Figure 10.28. The base current I<sub class="calibre16">B</sub> is the input current and the emitter current I<sub class="calibre16">E</sub> is the output current. The input signal is applied between base and collector while the output is measured between emitter and collector</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Note</p>
+	<p class="block_68">As the output is taken from the emitter in common collector configuration, it is called an emitter follower.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-699.png" alt="Image, Figure 10.28 NPN transistor in common collector configuration (a) Schematic circuit diagram is shown" class="calibre803"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-700.png" alt="Image, Figure 10.28 NPN transistor in common collector configuration (b) Circuit symbol is shown" class="calibre804"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">NPN transistor in common collector configuration (a) Schematic circuit diagram (b) Circuit symbol</p>
+	<p class="block_48"> </p>
+	<h3 class="block_13" id="toc_id_189">10 point 4 point 2 Transistor action in the common base mode</h3>
+	<p class="block_65">The operation of an N P N transistor in the common base mode is explained below. The current flow in a common base N P N transistor in the forward active mode is shown in Figure 10.29.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-701.png" alt="Image, Figure 10.29  Flow of current in a NPN transistor is shown" class="calibre805"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">Basically, a B J T can be considered as two p-n junction diodes connected back to-back. In the forward active bias of the transistor, the emitter-base junction is forward biased by a D C power supply V E, B and the collector-base junction is reverse biased by the bias power supply V subscript C B. The forward bias decreases the depletion region across the emitter-base junction and the reverse bias increases the depletion region across the collector-base junction. Hence, the barrier potential across the emitter-base junction is decreased and that across the collector-base junction is increased. The voltage across the emitter base junction is represented as V subscript E B and that across the collector-base junction as V subscript<sub class="calibre16"> </sub>C B</p>
+	<p class="block_47"> </p>
+	<p class="block_68">In an N P N transistor, the majority charge carriers in the emitter are electrons. As it is heavily doped, it has a large number of electrons. The forward bias across the emitter-base junction causes the electrons in the emitter region to flow towards the base region and constitutes the emitter current (I, E)<sub class="calibre16">.</sub> The electrons after reaching the base region recombine with the holes in the base region. Since the base region is very narrow and lightly doped, the number of holes in it is not sufficient to recombine with electrons from emitter. Hence most of the electrons reach the collector region.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">Eventually, the electrons that reach the collector region will be attracted by the collector terminal as it has positive potential and flow through the external circuit. This constitutes the collector current (I c). The holes that are lost due to recombination in the base region are replaced by the positive potential of the bias voltage V b e and constitute the base current (I b). The magnitude of the base current will be in microamperes as against milliamperes for emitter and collector currents</p>
+	<p class="block_47"> </p>
+	<p class="block_68">It is to be noted that if the emitter current is zero, then the collector current is almost zero. It is therefore imperative that a BJT is called a current controlled device. Applying Kirchoff’s law, we can write the emitter current as the sum of the collector current and the base current.</p>
+	<p class="block_72"><img src="images/image-702.png" alt="I, E equal to I, B plus I, C equation 10 point 1" class="calibre806"/></p>
+	<p class="block_47"> </p>
+	<p class="block_68">Since the base current is very small, we can write I E equivalance I C. There is another component of collector current due to the thermally generated electrons called reverse saturation current, denoted as I C O. This factor is temperature sensitive. Therefore, care must be taken towards the stability of the system at high temperatures.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">The ratio of the collector current to the emitter current is called the forward current gain (alpha) alpha of a transistor.</p>
+	<p class="block_72"><img src="images/image-703.png" alt="alpha equal to I, C divided by I, E equation 10 point 2" class="calibre807"/></p>
+	<p class="block_68">The alpha of a transistor is a measure of the quality of a transistor. Higher the value of alpha, better is the quality of the transistor. It means that the collector current is closer to the emitter current. The value of alpha is less than unity and it ranges from 0.95 to 0.99. This indicates that the collector current is 95% to 99% of the emitter current.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Working of a P N P transistor</p>
+	<p class="block_68"> The working of a PNP transistor is similar to that of the NPN transistor except for the fact that the emitter current I<sub class="calibre16">E</sub> is due to holes and the base current I<sub class="calibre16">B</sub> is due to electrons. However, the current through the external circuit is due to the flow of electrons.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 5</b></p>
+	<p class="block_68">In a transistor connected in the common base configuration, alpha equal to 0 95., I E equal to 1 milli amps. Calculate the values of I c and I b.</p>
+	<p class="block_47"> </p>
+	<p class="block_67">Solution</p>
+	<p class="block_76"><img src="images/image-704.png" alt="alpha equal to I, C divided by I, E I c equal to alpha I, E equal to 0 point 9, 5 into 1 equal to 0 point 9, 5 milli amps I, E equal to I, B plus I, c  Since I, b equal to I, E minus I, c equal to 1 minus 0 point 9, 5 equal to 0 point 0, 5 milli amps " class="calibre229"/></p>
+	<p class="block_7"> </p>
+	<h3 class="block_13" id="toc_id_190">10 point 4 point 3 Static Characteristics of Transistor in Common Emitter Mode</h3>
+	<p class="block_65">The know-how of certain parameters like the input resistance, output resistance, and current gain of a transistor are very important for the effective use of transistors in circuits. The circuit to study the static characteristics of an N P N transistor in the common emitter mode is given in Figure 10.30. The bias supply voltages V B B and V C C bias the base-emitter junction and collector-emitter junction respectively. The junction potential at the base-emitter is represented as V B E<sub class="calibre16"> </sub>and that at the collector-emitter as V C E. The rheostats R<sub class="calibre16">1</sub> and R<sub class="calibre16">2 </sub>are used to vary the base current and collector current respectively.</p>
+	<p class="block_68">The static characteristics of the B J T are </p>
+	<ol class="list_">
+	<li class="block_15">Input characteristics </li>
+	<li class="block_15">Output characteristics </li>
+	<li class="block_16">Transfer characteristics</li>
+</ol>
+	<p class="block_3">Input characteristics</p>
+	<p class="block_65">Input characteristic curves give the relationship between the base current (I B) and base to emitter voltage (V B E) at constant collector to emitter voltage (V C E) and are shown in Figure 10.31.</p>
+	<p class="block_47"> </p>
+	<p class="block_68">Initially, the collector to emitter voltage is set to a particular value (above 0.7 Volt to reverse bias the junction). Then the base-emitter voltage is increased in suitable steps and the corresponding base-current is recorded. A graph is plotted with V B E along the x-axis and I B along the y-axis. The procedure is repeated for different values of V C E.</p>
+	<p class="block_47"> </p>
+	<p class="block_68"><img src="images/image-705.png" alt="Image, Figure 10.30 NPN transistor in common emitter configuration is shown via circuit" class="calibre808"/></p>
+	<p class="block_48"> </p>
+	<p class="block_24"><img src="images/image-706.png" alt="Image, Figure 10.31 Input Characteristics is shown via graph " class="calibre809"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">The following observations are made from the graph. </p>
+	<ol class="list_">
+	<li class="block_78">The curve looks like the forward characteristics of an ordinary p-n junction diode. </li>
+	<li class="block_79">There exists a threshold voltage or knee voltage (V knee) below which the base current is very small. This value is 0.7 Volt for silicon and 0.3 Volt for germanium transistors. Beyond the knee voltage, the base current increases with the increase in base-emitter voltage. </li>
+	<li class="block_80">It is also noted that the increase in the collector-emitter voltage decreases the base current. This shifts the curve outward. This is because the increase in collector-emitter voltage increases the width of the depletion region which in turn, reduces the effective base width and thereby the base current</li>
+</ol>
+	<p class="block_77"> </p>
+	<p class="block_40">1) Input impedance </p>
+	<p class="block_24">The ratio of the change in base-emitter voltage (del V B E) to the corresponding change in base current (delta I b) at a constant collector emitter voltage (V C E) is called the input impedance (r one). The input impedance is not constant in the lower region of the curve.</p>
+	<p class="block_81"><img src="images/image-707.png" alt="r one equal to del V B E divided by del I B at constant V C E equation 10.3" class="calibre810"/></p>
+	<p class="block_24">The input impedance is high for a transistor in common emitter configuration.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">2) Output characteristics</p>
+	<p class="block_24">The output characteristics give the relationship between the collector current (I C) and the collector to emitter voltage (V C E) at constant input current (I B) and are shown in Figure 10.32. </p>
+	<p class="block_77"> </p>
+	<p class="block_24">Initially, the base current is set to a particular value. Then collector-emitter voltage is increased in suitable steps and the corresponding collector current is recorded. A graph is plotted with V C E along the x-axis and I C along the y-axis. This procedure is repeated for different values of I B. The four important regions in the output characteristics are:</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-708.png" alt="Image, Figure 10.32 Output characteristics were the relationship between the collector current (I C) and the collector to emitter voltage (VCE) at constant input current (IB ) is shown via graph " class="calibre811"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">1) Saturation region</p>
+	<p class="block_24">When V C E is increased above 0 Volt, the I<sub class="calibre16">C</sub> increases rapidly and reaches a saturation value at a particular value of V C E, called knee voltage. The initial part of the curve O A (the ohmic region) between the origin 0 and the knee point A is called saturation region. Transistors are always operated above this knee voltage.</p>
+	<p class="block_82"> </p>
+	<p class="block_40">2) Cut-off region</p>
+	<p class="block_24">A small collector current exists even after the base current is reduced to zero. This region below the curve for I B equal to 0 is called cut-off region because the main collector current is cut-off.</p>
+	<p class="block_82"> </p>
+	<p class="block_40">3) Active region</p>
+	<p class="block_24">The central region of the curves is called active region. In this region, the base emitter junction is forward biased and the collector-base junction is reverse biased. The transistor in this region can be used for voltage, current and power amplification.</p>
+	<p class="block_82"> </p>
+	<p class="block_40">4) Breakdown region</p>
+	<p class="block_24">If the collector-emitter voltage is increased beyond the rated value given by the manufacturer, the collector current increases enormously leading to the junction breakdown of the transistor. This avalanche breakdown can damage the transistor.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Output impedance</p>
+	<p class="block_24">The ratio of the change in the collector emitter voltage (del V C E) to the corresponding change in the collector current (del I c) at constant base current (I b) is called output impedance (r not).</p>
+	<p class="block_81"><img src="images/image-709.png" alt="r not equal to square brachit of del V, c, e divided by del I c  at  costant I B equation 10 point 4" class="calibre812"/></p>
+	<p class="block_7">The output impedance for transistor in common emitter configuration is very low.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">3) Current transfer characteristics</p>
+	<p class="block_24">This gives the relationship between the collector current (I C) and the base current (I B) at constant collector-emitter voltage (V C E) and is shown in Figure 10.33. It is seen that a small I C flows even when I B is zero. This current is called the common emitter leakage current (I C E O), which is due to the flow of minority charge carriers.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Forward current gain</p>
+	<p class="block_24">The ratio of the change in collector current (del I c) to the corresponding change in base current (del I B) at constant collector-emitter voltage (V C E) is called forward current gain (beeta). </p>
+	<p class="block_81"><img src="images/image-710.png" alt="beeta equal to del I, C divided by del I B at constant V C Eequation 10.5" class="calibre813"/></p>
+	<p class="block_24">Its value is very high and it generally ranges from 50 to 200.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-711.png" alt="Image, Figure 10.33 Current transfer characteristics is shown via graph" class="calibre814"/></p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_191">10 point 4 point 3 Relation between alpha and beeta</h3>
+	<p class="block_24">There is a relation between current gain in the common base configuration alpha and current gain in the common emitter configuration beeta which is given below.</p>
+	<p class="block_83"><img src="images/image-712.png" alt="Alpha equal to beeta divided by 1 plus beeta or beeta equal to alpha divided by 1 minus  alpha equation 10.6" class="calibre531"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Note</p>
+	<p class="block_24">The collector current is independent of the collector emitter voltage in the active region.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 6</b></p>
+	<p class="block_24">In the circuit shown in the figure, the input voltage V i is 20 Volt, V B E equal to 0 Volt and V C E equal to 0 Volt. What are the values of I B, I C, beeta?</p>
+	<p class="block_24"><img src="images/image-713.png" alt="Image, A circuit is shown were the input voltage Vi is 20 V, VBE = 0 V and VCE = 0 V" class="calibre815"/></p>
+	<p class="block_81"><img src="images/image-714.png" alt="I B equal to V i divided by R B equal to 20 volt divided by 500 kilo ohm equal to 40 micro amps since V B E equal to zero volt I, C equal to V c C divided by R C equal to 20 volt divided by 4 kilo ohm equal to 5 milliamps since V c e equal to zero volt Beeta equal to I c divided by I b equal to 5 milli amps divided by 40 micro amps equal to 125 " class="calibre816"/></p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_192">10 point 4 point 5 Operating Point</h3>
+	<p class="block_24">The operating point is a point where the transistor can be operated efficiently. A straight line drawn by joining the points A (V C C, 0) and B (0, V C C by R C) is called the D C load line. The D C load line superimposed on the output characteristics of a transistor is used to learn the concept of operating point of the transistor as shown in Figure 10.34.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-715.png" alt="Image, Figure 10.34 Output characteristics of a transistor in common emitter mode with the DC load line is shown" class="calibre817"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">In Figure 10.34, the points P, Q, R are called Q points or quiescent points which determine the operating point or the working point of a transistor. If the operating point is chosen at the middle of the DC load line (point Q), the transistor can effectively work as an amplifier. The operating point determines the maximum signal that can be obtained without being distorted. </p>
+	<p class="block_24">For a transistor to work as a open switch, the Q point can be chosen at the cut-off region and to work as a closed switch, the Q point can be chosen in the saturation region.</p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_193">10 point 4 point 6 Transistor as a switch</h3>
+	<p class="block_24">A transistor in saturation region acts as a closed switch while in cut-off region; it acts as an open switch. It functions like an electronic switch that helps to turn ON or OFF a given circuit by a small control signal which keeps the transistor either in saturation region or in cut-off region. The circuit is shown in Figure 10.35.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-716.png" alt="Image, Figure 10.35 Transistor as a switch is shown in the circuit" class="calibre818"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">When the input is low:</p>
+	<p class="block_24">When the input is low (say 0 V), the base current is zero and transistor is not properly forward biased. It is in cut off region. As a result, the collector current is zero and correspondingly the voltage drop across R C also becomes nearly zero. The output voltage is high and is equal to V C C. It means that the no current flows through the transistor and it is said to be switched off. The transistor acts as an open switch.</p>
+	<p class="block_40">When the input is high:</p>
+	<p class="block_24">When the input voltage is increased to a certain high value (say plus 5 Volt), the base current (I B ) increases and in turn increases the collector current to its maximum. The transistor will move into the saturation region. The increase in collector current (I<sub class="calibre16"> </sub>C) increases the voltage drop across RC, thereby lowering the output voltage, close to zero (since V not equal to V C C minus I C<sub class="calibre16"> </sub>R C). It means that maximum current flows through the transistor and it is said to be switched on. The transistor acts as a closed switch.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">It is manifested that a high input to the transistor gives a low output and a low input gives a high output. In addition, we can say that the output voltage is opposite to the applied input voltage. Therefore, a transistor can be used as an inverter (NOT gate) in computer logic circuitry.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 7</b></p>
+	<p class="block_24">The current gain of a common emitter transistor circuit shown in figure is 120. Draw the D C load line and mark the Q point on it. (V B E to be ignored).</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-717.png" alt="Image, current gain of a common emitter transistor circuit is shown " class="calibre819"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Solution</p>
+	<p class="block_84"><img src="images/image-718.png" alt="Current gain beta equals to one hundred and twenty. Base current I B equals to twenty five volt divided by one mega ohm equal to 25 divided by 1 into 10 power 6 equal to 25 micro amps" class="calibre820"/></p>
+	<p class="block_49"><img src="images/image-719.png" alt="we know that  beeta equal to I, C divided  by I, B or  I, C equal to beeta I, B equal to 120 into 25 micro amps equal to 3000 micro amps equal to 3 milli amps V c e equal to V C C minus I c into R C  equal to 25 minus 3 milli amps into 5 kelvin equal to 10 volt  " class="calibre821"/></p>
+	<p class="block_24"><img src="images/image-720.png" alt="Image, Graph is shown" class="calibre822"/></p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_194">10 point 4 point 6 Transistor as an amplifier</h3>
+	<p class="block_24">A transistor operating in the active region has the capability to amplify weak signals. Amplification is the process of increasing the signal strength (increase in the amplitude). If a large amplification is required, the transistors are cascaded with coupling elements like resistors, capacitors, and transformers and they are called multistage amplifiers.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Here, the amplification of an electrical signal is explained with a single stage transistor amplifier which is shown in Figure 10.36 (a). Single stage indicates that the circuit consists of one transistor with the allied components. An N P N transistor is connected in the common emitter configuration.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-721.png" alt="Image, Figure 10.36 (a) Transistor as an amplifier (b) Input and output waveforms showing 1800 phase reversal is shown" class="calibre823"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">To start with, the Q point or the operating point of the transistor is fixed so as to get the maximum signal swing at the output (neither towards saturation point nor towards cut-off).</p>
+	<p class="block_24">A load resistance R c is connected in series with the collector circuit to measure the output voltage. The resistance R one, R two and R E form the biasing and stabilization circuit. The capacitor C one allows only the A C signal to pass through. The emitter bypass capacitor C E provides a low reactance path to the amplified A C signal. The coupling capacitor C C is used to couple one stage of the amplifier with the next stage while constructing multistage amplifiers.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">V s is the sinusoidal input signal source applied across the base-emitter. The output is taken across the collector-emitter.</p>
+	<p class="block_81"><img src="images/image-722.png" alt="collector current I c equals to beeta I, B since beeta equal to I c divided by I B " class="calibre824"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">Applying Kirchhoff ’s voltage law to the output loop, the collector-emitter voltage is given by</p>
+	<p class="block_83"><img src="images/image-723.png" alt="V, ce equal to V C C minus  I c  into R c equation 10.7" class="calibre825"/></p>
+	<p class="block_40">Working of the amplifier</p>
+	<p class="block_24">During the positive half cycle</p>
+	<p class="block_24">Input signal (V s) increases the forward voltage across the emitter-base. As a result, the base current (I B in micro Amps) increases. Consequently, the collector current (I c in milli Amps) increases β times. This increases the voltage drop across R c (I c, R c) which in turn decreases the collector-emitter voltage (V C E). Therefore, the input signal during the positive half cycle produces negative half cycle of the amplified signal at the output. Hence, the output signal is reversed by 180° as shown in Figure 10.36(b).</p>
+	<p class="block_77"> </p>
+	<p class="block_24">During the negative half cycle</p>
+	<p class="block_24">Input signal (VS) decreases the forward voltage across the emitter-base. As a result, base current (I B in micro Amps) decreases and in turn decreases the collector current (I C in milli Amps). The decrease in collector current (I C) decreases the potential drop across RC which in turn increases the collector-emitter voltage (V C E). Thus, the input signal during the negative half cycle produces positive half cycle of the amplified signal at the output. Therefore, 180 degree phase reversal is observed during the negative half cycle of the input signal also as shown in Figure 10 point 3, 6 (b).</p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_195">10 point 4 point 8 Transistor as an oscillator</h3>
+	<p class="block_24">An electronic oscillator basically converts D C energy into A C energy of frequency ranging from a few Hz to several Mega Hertz. Hence, it is a source of alternating current or voltage. Unlike an amplifier, oscillator does not require any external signal source. </p>
+	<p class="block_77"> </p>
+	<p class="block_24">Basically, there are two types of oscillators: Sinusoidal and non-sinusoidal. Sinusoidal oscillators generate oscillations in the form of sine waves at constant amplitude and frequency as shown in Figure 10 point 3, 7 (a). Non sinusoidal oscillators generate complex, non-sinusoidal waveforms like square wave, triangular-wave and sawtooth-wave as shown in Figure 10.36 (b), (c), (d).</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-724.png" alt="Image, Figure 10.37 (a) Sinusoidal waveform were sine waves at constant amplitude and frequency is shown (b) Square waveform is x were square wave is shown (c) Triangular waveform were triangular-wave is shown (d)Sawtooth waveform is shown" class="calibre826"/></p>
+	<p class="block_24">Sinusoidal oscillations are of two types: Damped and undamped. If the amplitude of the electrical oscillations decreases with time due to energy loss, it is called damped oscillations as shown in Figure 10.38(a). On the other hand, the amplitude of the electrical oscillations remains constant with time in undamped oscillations as shown in Figure 10.38(b).</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-725.png" alt="Image, Figure 10.38 (a) Damped oscillations is shown" class="calibre827"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-726.png" alt="Image, Figure 10.38 (b) Undamped oscillations is shown" class="calibre828"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Transistor oscillator</p>
+	<p class="block_24">An oscillator circuit consists of three components. They are i) tank circuit ii) amplifier and iii) feedback network. The block diagram is shown in Figure 10.39(a).</p>
+	<p class="block_77"> </p>
+	<p class="block_40">1) Tank circuit</p>
+	<p class="block_24">The LC tank circuit consists of an inductance L and a capacitor C connected in parallel as shown in Figure 10.39(b). Whenever energy is supplied to the tank circuit from a D C source, the energy is stored in inductor and capacitor alternatively. This produces electrical oscillations of definite frequency.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">2) Amplifier</p>
+	<p class="block_24">This is a single stage amplifier which amplifies the weak signal produced by the tank circuit. The required output is supplied by this amplifier.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-727.png" alt="Image, Figure 10.39 (a) Block diagram of an oscillator with Amplifier, Tank circuit and Feedback network is shown(b) Tank circuit is shown" class="calibre829"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">3) Feedback Network</p>
+	<p class="block_24">The circuit used to feed a portion of the output back to the input is called the feedback network. If the portion of the output fed to the input is in phase with the input, then the magnitude of the input signal increases. This process is called positive feedback which is necessary for sustained oscillations.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Working</p>
+	<p class="block_24">The tank circuit generates electrical oscillations and acts as the AC input source to the transistor amplifier. Amplifier amplifies the input AC signal. In practical oscillator circuits, there is loss of some energy in inductor coils and capacitors due to electrical resistance. A small amount of energy is used up in overcoming these losses during every cycle of charging and discharging of the capacitor. Due to this, the amplitude of the oscillations decreases gradually. Hence, the tank circuit produces damped electrical oscillations. </p>
+	<p class="block_77"> </p>
+	<p class="block_24">In order to produce undamped oscillations, a positive feedback is provided from output to input by feedback network. This compensates energy loss in tank circuit. The frequency of oscillations is determined by the values of L and C and is given by</p>
+	<p class="block_81"><img src="images/image-728.png" alt="Frequency equal to one  divided by two pi into root o fL c equation 10.8" class="calibre716"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Barkhausen conditions for sustained oscillations</p>
+	<p class="block_24">The following conditions called Barkhausen conditions should be satisfied for sustained oscillations in the oscillator.</p>
+	<ol class="list_">
+	<li class="block_85">There should be positive feedback. </li>
+	<li class="block_86">The loop phase shift must be zero degree or integral multiples of two pai. </li>
+	<li class="block_87">The loop gain must be unity. That is, modulus A beeta equal to one.</li>
+</ol>
+	<p class="block_24">Here, A is the voltage gain of the amplifier, b is the feedback ratio (the fraction of the output that is fed back to the input).</p>
+	<p class="block_24">There are different types of oscillator circuits based on the different types of tank circuits. Examples: Hartley oscillator, Colpitts oscillator, Phase shift oscillator and Crystal oscillator.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Applications of oscillators</p>
+	<p class="block_24">Transistor oscillators are used</p>
+	<p class="block_24">to generate periodic sinusoidal or non sinusoidal wave forms</p>
+	<p class="block_24">to generate R F carriers</p>
+	<p class="block_24">to generate audio tones </p>
+	<p class="block_24">to generate clock signal in digital circuits</p>
+	<p class="block_24">as sweep circuits in T V sets and C R O</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 8</b></p>
+	<p class="block_24">Calculate the range of the variable capacitor that is to be used in a tuned-collector oscillator which has a fixed inductance of 150 mew H. The frequency band is from 500 kilo hertz to 1500 kilo hertz.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Solution </p>
+	<p class="block_24">Resonant frequency,</p>
+	<p class="block_81"><img src="images/95C4842.png" alt="Frequency is equal to one divided by two pi square root of I into c" class="calibre830"/></p>
+	<p class="block_24">On simplifying, we get</p>
+	<p class="block_81"><img src="images/image-729.png" alt="Capacitance C equals to one divided by four pai square into f  square into L" class="calibre831"/></p>
+	<p class="block_24"> </p>
+	<p class="block_81"><img src="images/image-730.png" alt="When frequency is equal to five hundred kilo hertz C equal to One divided by four into square of three point one four into bracket of five hundred into ten ten to the power of three square into one hundred and fifty into ten to the power of minus six equal to 676 Pico Fared" class="calibre832"/></p>
+	<p class="block_7"> </p>
+	<p class="block_7">2)When frequency equal to 1500 kilo Hertz,</p>
+	<p class="block_49"><img src="images/image-731.png" alt="C equal to one by 4 into 3.14 square into 1500 into 10 cube whole square into 150 into 10 power minus 6  equal to 75 Pico Fared" class="calibre833"/></p>
+	<p class="block_7"> <br class="calibre46"/>Therefore, the capacitor range is from 75 to 676 p F.</p>
+	<p class="block_1"> </p>
+	<h2 class="block_13" id="toc_id_196">10 point 5 DIGITAL ELECTRONICS</h2>
+	<p class="block_24">Digital Electronics is the branch of electronics which deals with digital signals. It is increasingly used in numerous applications ranging from high end processor circuits to miniature circuits for signal processing, communication etc. Digital signals are preferred over analog signals due to their better performance, accuracy, speed, flexibility and immunity to noise.</p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_197">10 point 5 point 1 Analog and Digital Signals</h3>
+	<p class="block_24">There are 2 different types of signals used in Electronics. They are (1) Analog signals and (2) Digital signals. An analog signal is a continuously varying voltage or current with respect to time. Such signals are employed in rectifying circuits and transistor amplifier circuits</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Digital signals are signals which contain only discrete values of voltages. Digital signals need two states: switch ON and OFF. ON is considered as one state and OFF is considered as the other state. It can also be defined as high (ON) or low (OFF) state, closed (ON) or open (OFF). These high and low states are defined using binary numbers 1 or 0 in Boolean Algebra. The state 1 represents the terms: circuit on, high voltage, a closed switch. Similarly a 0 state represents circuit off, low voltage or an open switch.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Positive and Negative Logic</p>
+	<p class="block_24">In digital systems, there exists two voltage levels: 5 Volt (high) and 0 Volt (low). In a positive logic system; a binary 1 stands for 5 Volt and 0 stands for 0 Volt while in negative logic system, 1 stands for 0 Volt and 0 stands for 5 Volt as shown in Figure 10.40.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-732.png" alt="Image, Figure 10.40 (a) Positive logic (b) Negative logic is shown via graph" class="calibre834"/></p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_198">10 point 5 point 2 Logic gates</h3>
+	<p class="block_24">A logic gate is an electronic circuit whose function is based on digital signals. They are binary in nature. The logic gates are considered as the basic building blocks of most of the digital systems. They have one output with one or more inputs. There are three types of basic logic gates: AND, OR, and NOT. The other logic gates are Ex-OR, NAND, and NOR. They can be constructed from the basic logic gates.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Digital electronics deals with logical operations. The variables are called logical variables. The operators like logical addition (plus) and logical multiplication (dot) are called logical operators. When the logical operators (plus, dot) operate on logical variables (A, B), they give logical constant (Y). The equation that represents this operation is called logical statement.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">For example,</p>
+	<p class="block_24">Logical operator: Plus </p>
+	<p class="block_24">Logical variable: A, B </p>
+	<p class="block_24">Logical constant: Y </p>
+	<p class="block_24">Logical statement: Y equal to A Plus B</p>
+	<p class="block_24">The possible combinations of inputs and the corresponding output are given in the form of a table called truth table. The circuits which perform the basic logical operations such as logical addition, multiplication and inversion are discussed below.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">AND gate</p>
+	<p class="block_24">Circuit symbol</p>
+	<p class="block_24">The circuit symbol of a two input AND gate is shown in Figure 10.41(a). A and B are inputs and Y is the output. It is a logic gate and hence A, B, and Y can have the value of either 1 or 0.</p>
+	<p class="block_24"><img src="images/image-733.png" alt="Image, Figure 10.41 (a) Two input AND gate is shown via circuit" class="calibre835"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">Truth Table:</p>
+	<table class="table_6">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_110"><p class="block_4"> Inputs</p></td>
+			<td class="td_111"><p class="block_4">Inputs</p></td>
+			<td class="td_112"><p class="block_4">Output</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_113"><p class="block_64">A</p></td>
+			<td class="td_114"><p class="block_64">B</p></td>
+			<td class="td_115"><p class="block_64">Y equal to A dot B</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_113"><p class="block_64">0</p></td>
+			<td class="td_114"><p class="block_64">0</p></td>
+			<td class="td_115"><p class="block_64">0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_113"><p class="block_64">0</p></td>
+			<td class="td_114"><p class="block_64">1</p></td>
+			<td class="td_115"><p class="block_64">0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_113"><p class="block_64">1</p></td>
+			<td class="td_114"><p class="block_64">0</p></td>
+			<td class="td_115"><p class="block_64">0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_116"><p class="block_64">1</p></td>
+			<td class="td_117"><p class="block_64">1</p></td>
+			<td class="td_118"><p class="block_64">1</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_40">Boolean equation:</p>
+	<p class="block_24"> Y equal to A dot B</p>
+	<p class="block_24">It performs logical multiplication and is different from arithmetic multiplication.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Logic operation</p>
+	<p class="block_24">The output of AND gate is high only when all the inputs are high. In the rest of the cases, the output is low. It is represented in the truth table (Figure 10 point 4 1 (b)).</p>
+	<p class="block_77"> </p>
+	<p class="block_40">OR gate</p>
+	<p class="block_24">Circuit Symbol</p>
+	<p class="block_24">The circuit symbol of a two input OR gate is shown in Figure 10.42(a). A and B are inputs and Y is the output.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-734.png" alt="Image, Figure 10.42 (a) Two input OR gate is shown" class="calibre836"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Truth Table:</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_119"><p class="block_4">Inputs</p></td>
+			<td class="td_120"><p class="block_4">Inputs</p></td>
+			<td class="td_121"><p class="block_4">Output</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">A</p></td>
+			<td class="td_123"><p class="block_64">B</p></td>
+			<td class="td_124"><p class="block_64">Y equal to A plus B</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">0</p></td>
+			<td class="td_123"><p class="block_64">0</p></td>
+			<td class="td_124"><p class="block_64">0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">0</p></td>
+			<td class="td_123"><p class="block_64">1</p></td>
+			<td class="td_124"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">1</p></td>
+			<td class="td_123"><p class="block_64">0</p></td>
+			<td class="td_124"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_125"><p class="block_64">1</p></td>
+			<td class="td_126"><p class="block_64">1</p></td>
+			<td class="td_127"><p class="block_64">1</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">Boolean equation</b>:</p>
+	<p class="block_24"> Y equal to A plus B</p>
+	<p class="block_24">It performs logical addition and is different from arithmetic addition.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Logic operation</p>
+	<p class="block_24">The output of O R gate is high (logic 1 state) when either of the inputs or both are high. The truth table of O R gate is shown in Figure 10.42(b).</p>
+	<p class="block_77"> </p>
+	<p class="block_40">NOT gate</p>
+	<p class="block_24">Circuit symbol</p>
+	<p class="block_24">The circuit symbol of NOT gate is shown in Figure 10.43(a). A is the input and Y is the output.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-735.png" alt="Image, Figure 10.43 NOT gate is shown with circuit symbol" class="calibre837"/></p>
+	<p class="block_77"> </p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_128"><p class="block_88">Inputs</p></td>
+			<td class="td_129"><p class="block_88">Output</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_130"><p class="block_88">A</p></td>
+			<td class="td_131"><p class="block_88">Y equal to A bar</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_130"><p class="block_88">0</p></td>
+			<td class="td_131"><p class="block_88">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_132"><p class="block_88">1</p></td>
+			<td class="td_133"><p class="block_88">0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_77"> </p>
+	<p class="block_40">Boolean equation:</p>
+	<p class="block_24"> Y equal to A bar</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Logic operation </p>
+	<p class="block_24">The output is the complement of the input. It is represented with an overbar. It is also called as inverter. The truth table infers that the output Y is 1 when input A is 0 and vice versa. The truth table of NOT is shown in Figure 10.43(b).</p>
+	<p class="block_77"> </p>
+	<p class="block_40">NAND gate </p>
+	<p class="block_24">Circuit symbol</p>
+	<p class="block_24">The circuit symbol of NAND gate is shown in Figure 10.44(a). A and B are inputs and Y is the output.</p>
+	<p class="block_77"> </p>
+	<p class="block_40"><img src="images/image-736.png" alt="Image, Figure 10.44 circuit symbol of NAND gate is shown " class="calibre838"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Truth Table:</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_134"><p class="block_4">Inputs</p></td>
+			<td class="td_135"><p class="block_4">Inputs</p></td>
+			<td class="td_136"><p class="block_4">Output (AND)</p></td>
+			<td class="td_137"><p class="block_4">Output (NAND)</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">A</p></td>
+			<td class="td_139"><p class="block_64">B</p></td>
+			<td class="td_140"><p class="block_64">Z equal to A dot B</p></td>
+			<td class="td_141"><p class="block_64">Y equal to A dot B bar</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">0</p></td>
+			<td class="td_139"><p class="block_64">0</p></td>
+			<td class="td_140"><p class="block_64">0</p></td>
+			<td class="td_141"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">0</p></td>
+			<td class="td_139"><p class="block_64">1</p></td>
+			<td class="td_140"><p class="block_64">0</p></td>
+			<td class="td_141"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">1</p></td>
+			<td class="td_139"><p class="block_64">0</p></td>
+			<td class="td_140"><p class="block_64">0</p></td>
+			<td class="td_141"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_142"><p class="block_64">1</p></td>
+			<td class="td_143"><p class="block_64">1</p></td>
+			<td class="td_144"><p class="block_64">1</p></td>
+			<td class="td_145"><p class="block_64">0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_40">Boolean equation:</p>
+	<p class="block_24"> Y equal to A dot B whole bar</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Logic operation</p>
+	<p class="block_24">The output Y equals the complement of AND operation. The circuit is an AND gate followed by a NOT gate. Therefore, it is summarized as NAND. The output is at logic zero only when all the inputs are high. The rest of the cases, the output is high (Logic 1 state). The truth table of NAND gate is shown in Figure 10.44 (b).</p>
+	<p class="block_77"> </p>
+	<p class="block_40">NOR gate </p>
+	<p class="block_40">Circuit symbol</p>
+	<p class="block_24">The circuit symbol of NOR gate is shown in Figure 10.45(a). A and B are inputs and Y is the output.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Boolean equation:</p>
+	<p class="block_24"> Y equal to (A plus B) whole bar</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Logic operation</p>
+	<p class="block_24">The output Y equals the complement of OR operation (A OR B). The circuit is an OR gate followed by a NOT gate and is summarized as NOR. The output is high when all the inputs are low. The output is low for all other combinations of inputs. The truth table of NOR gate is shown in Figure 10.45(b).</p>
+	<p class="block_40"><img src="images/image-737.png" alt="Image, Figure 10.45 The circuit symbol of NOR gate is shown" class="calibre839"/></p>
+	<p class="block_77"> </p>
+	<p class="block_89"> </p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_134"><p class="block_4">Inputs</p></td>
+			<td class="td_135"><p class="block_4">Inputs</p></td>
+			<td class="td_136"><p class="block_4">Output (OR)</p></td>
+			<td class="td_137"><p class="block_59"><span class="text_17">Output</span><span class="text_18"> NOR</span></p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">A</p></td>
+			<td class="td_139"><p class="block_64">B</p></td>
+			<td class="td_140"><p class="block_64">ejet equal to A plus B</p></td>
+			<td class="td_141"><p class="block_64">Y equal to A plus B bar</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">0</p></td>
+			<td class="td_139"><p class="block_64">0</p></td>
+			<td class="td_140"><p class="block_64">0</p></td>
+			<td class="td_141"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">0</p></td>
+			<td class="td_139"><p class="block_64">1</p></td>
+			<td class="td_140"><p class="block_64">0</p></td>
+			<td class="td_141"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">1</p></td>
+			<td class="td_139"><p class="block_64">0</p></td>
+			<td class="td_140"><p class="block_64">0</p></td>
+			<td class="td_141"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_142"><p class="block_64">1</p></td>
+			<td class="td_143"><p class="block_64">1</p></td>
+			<td class="td_144"><p class="block_64">1</p></td>
+			<td class="td_145"><p class="block_64">0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_89"> </p>
+	<p class="block_40">Ex-OR gate</p>
+	<p class="block_24">Circuit symbol</p>
+	<p class="block_90"><span class="text_2">The circuit symbol of Ex-OR gate is shown in Figure 10.46(a). A and B are inputs and Y is the output. The Ex-OR operation is denoted as </span><span class="text_3">⊕</span><span class="text_2">.</span></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Boolean equation</p>
+	<p class="block_40">Y equal to A dot b bar plus A bar dot B</p>
+	<p class="block_40">Y equal to A direct sum of B</p>
+	<p class="block_40">Logic operation</p>
+	<p class="block_24">The output is high only when either of the two inputs is high. In the case of an Ex-OR gate with more than two inputs, the output will be high when odd number of inputs are high. The truth table of Ex-OR gate is shown in Figure 10.46(b).</p>
+	<p class="block_24"><img src="images/image-738.png" alt="Image, Figure 10.46 The circuit symbol of Ex-OR gate is shown" class="calibre840"/></p>
+	<p class="block_77"> </p>
+	<p class="block_91">Truth Table:</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_134"><p class="block_4">Inputs</p></td>
+			<td class="td_135"><p class="block_4">Inputs</p></td>
+			<td class="td_146"><p class="block_4">Output (Ex-OR)</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">A</p></td>
+			<td class="td_139"><p class="block_64">B</p></td>
+			<td class="td_147"><p class="block_64">Y equal to A Direct sum B</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">0</p></td>
+			<td class="td_139"><p class="block_64">0</p></td>
+			<td class="td_147"><p class="block_64">0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">0</p></td>
+			<td class="td_139"><p class="block_64">1</p></td>
+			<td class="td_147"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_138"><p class="block_64">1</p></td>
+			<td class="td_139"><p class="block_64">0</p></td>
+			<td class="td_147"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_142"><p class="block_64">1</p></td>
+			<td class="td_143"><p class="block_64">1</p></td>
+			<td class="td_148"><p class="block_64">0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_40">Note</p>
+	<p class="block_24">NAND and NOR gates are 10.6 known as universal gates because any other logic gate can be made from NAND or NOR gates.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 9</b></p>
+	<p class="block_24">What is the output Y in the following circuit, when all the three inputs A, B, and C are first 0 and then 1?</p>
+	<p class="block_77"> </p>
+	<p class="block_40"><img src="images/image-739.png" alt="Image, Circuit is shown" class="calibre841"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Solution</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_149"><p class="block_64">A</p></td>
+			<td class="td_150"><p class="block_64">B</p></td>
+			<td class="td_150"><p class="block_64">C</p></td>
+			<td class="td_150"><p class="block_64">X equal to A dot B</p></td>
+			<td class="td_151"><p class="block_64">Y equal to X dot C bar</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_152"><p class="block_64">0</p></td>
+			<td class="td_153"><p class="block_64">0</p></td>
+			<td class="td_153"><p class="block_64">0</p></td>
+			<td class="td_153"><p class="block_64">0</p></td>
+			<td class="td_154"><p class="block_64">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_155"><p class="block_64">1</p></td>
+			<td class="td_156"><p class="block_64">1</p></td>
+			<td class="td_156"><p class="block_64">1</p></td>
+			<td class="td_156"><p class="block_64">1</p></td>
+			<td class="td_157"><p class="block_64">0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 10</b></p>
+	<p class="block_24">In the combination of the following gates, write the Boolean equation for output Y in terms of inputs A and B.</p>
+	<p class="block_77"> </p>
+	<p class="block_40"><img src="images/image-740.png" alt="Image, combination of the following gates A and B is shown " class="calibre842"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Solution</p>
+	<p class="block_17"><span class="text_2">The output at the 1 st AND gate: </span><span class="text_10">A, B bar</span><span class="text_2"><br class="calibre46"/>The output at the 2 nd AND gate: </span><span class="text_10">A bar, B </span><span class="text_2"><br class="calibre46"/>The output at the OR gate: </span><span class="text_10">Y equal to A dot B bar plus A bar dot B</span></p>
+	<p class="block_1"> </p>
+	<h2 class="block_13" id="toc_id_199">10 point 6 BOOLEAN ALGEBRA</h2>
+	<p class="block_24">Boolean Algebra is basically a choice between two options (1) yes or no (2) high or low. These two options in Boolean algebra are represented by binary numbers 0 or 1. It is a concept that relates logic and mathematics which is a century old, made up by George Boole in 1854. Later the importance of Boolean algebra was realized in the design of computer circuits. Today we are in a digital world and most of the comforts that we experience is due to digitization with the foundation based on Boolean algebra.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Do You Know?</p>
+	<p class="block_24">The concept of high (1) and low (0) is not a new one. In fact, it was applied in telephone switching circuits by Shannon in 1938.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Laws of Boolean Algebra</p>
+	<p class="block_24">The NOT, OR and AND operations discussed in section 10.5.2 are the Boolean operations. The results of these operations can be summarised as:</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Complement law</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_158"><p class="block_92">A</p></td>
+			<td class="td_159"><p class="block_92">Y equal to A bar</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_160"><p class="block_92">0</p></td>
+			<td class="td_161"><p class="block_92">Y equal to zero bar equal to 1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_162"><p class="block_92">1</p></td>
+			<td class="td_163"><p class="block_92">Y equal to one bar equal to zero</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_24">The complement law can be realised as A bar equal to A</p>
+	<p class="block_24">OR laws</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_119"><p class="block_64">A</p></td>
+			<td class="td_120"><p class="block_64">B</p></td>
+			<td class="td_121"><p class="block_64">Y equal to A plus B</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">0</p></td>
+			<td class="td_123"><p class="block_64">0</p></td>
+			<td class="td_124"><p class="block_64">Y equal to 0 plus 0 equal to 0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">0</p></td>
+			<td class="td_123"><p class="block_64">1</p></td>
+			<td class="td_124"><p class="block_64">Y equal to 0 plus 1 equal to 1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">1</p></td>
+			<td class="td_123"><p class="block_64">0</p></td>
+			<td class="td_124"><p class="block_64">Y equal to 1 plus 0 equal to 1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_125"><p class="block_64">1</p></td>
+			<td class="td_126"><p class="block_64">1</p></td>
+			<td class="td_127"><p class="block_64">Y equal to 1 plus 1 equal to 1</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_77"> </p>
+	<p class="block_93">The OR laws can be realised as</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_158"><p class="block_6"> </p></td>
+			<td class="td_159"><p class="block_64">A plus 0 equal to A</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_160"><p class="block_64">First Law </p></td>
+			<td class="td_161"><p class="block_64">A plus 1 equal to 1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_160"><p class="block_64">Second Law </p></td>
+			<td class="td_161"><p class="block_64">A plus A equal to A</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_162"><p class="block_64">Third law </p></td>
+			<td class="td_163"><p class="block_64">A plus A bar equal to 1</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_94"> </p>
+	<p class="block_1"> </p>
+	<p class="block_95">AND laws</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_119"><p class="block_64">A</p></td>
+			<td class="td_120"><p class="block_64">B</p></td>
+			<td class="td_121"><p class="block_64">Y equal to A dot B</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">0</p></td>
+			<td class="td_123"><p class="block_64">0</p></td>
+			<td class="td_124"><p class="block_64">Y equal to 0 dot 0 equal to 0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">0</p></td>
+			<td class="td_123"><p class="block_64">1</p></td>
+			<td class="td_124"><p class="block_64">Y equal to 0 dot 1 equal to 0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_122"><p class="block_64">1</p></td>
+			<td class="td_123"><p class="block_64">0</p></td>
+			<td class="td_124"><p class="block_64">Y equal to 1 dot 0 equal to 0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_125"><p class="block_64">1</p></td>
+			<td class="td_126"><p class="block_64">1</p></td>
+			<td class="td_127"><p class="block_64">Y equal to 1 dot 1 equal to 1</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_96"> </p>
+	<p class="block_24">The AND laws can be realised as</p>
+	<table class="table_3">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_164"><p class="block_64">First Law</p></td>
+			<td class="td_129"><p class="block_64">A dot 0 equal to 0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_165"><p class="block_64">Second Law </p></td>
+			<td class="td_131"><p class="block_64">A dot 1 equal to A</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_165"><p class="block_64">Third law </p></td>
+			<td class="td_131"><p class="block_64">A dot A equal to A</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_166"><p class="block_64">Fourth law</p></td>
+			<td class="td_133"><p class="block_64">A dot A bar equal to 0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_1"> </p>
+	<p class="block_24">The Boolean operations obey the following laws.</p>
+	<p class="block_24">Commutative laws</p>
+	<p class="block_7">A plus B equal to B plus A</p>
+	<p class="block_7">A dot B equal to B dot A</p>
+	<p class="block_77"> </p>
+	<p class="block_7">Associative laws</p>
+	<p class="block_7">A plus B plus C equal to A plus B into Plus C</p>
+	<p class="block_7">A dot B dot C equal to A dot B dot C<br class="calibre46"/> </p>
+	<p class="block_7">Distributive laws</p>
+	<p class="block_7">A into B plus C equal to A B plus A C</p>
+	<p class="block_7">A plus B C equal to A plus B into A plus C<br class="calibre46"/><br class="calibre46"/>The above laws are used to simplify complicated expressions and to simplify the logic circuitry.</p>
+	<p class="block_77"> </p>
+	<h2 class="block_13" id="toc_id_200">10 point 7 DE MORGAN’S THEOREM</h2>
+	<h3 class="block_13" id="toc_id_201">10 point 7 point 1 De Morgan’s First Theorem</h3>
+	<p class="block_77"> </p>
+	<p class="block_40">Statement </p>
+	<p class="block_24">The first theorem states that the complement of the sum of two logical inputs is equal to the product of its complements</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Proof </p>
+	<p class="block_7">The Boolean equation for NOR gate is Y equal to A plus B whole bar</p>
+	<p class="block_7">The Boolean equation for a bubbled AND gate is Y equal to A bar dot B bar</p>
+	<p class="block_24">Both cases generate same outputs for same inputs. It can be verified using the following truth table.</p>
+	<table class="table_7">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_167"><p class="block_5">A</p></td>
+			<td class="td_168"><p class="block_5">B</p></td>
+			<td class="td_168"><p class="block_5">A plus B</p></td>
+			<td class="td_168"><p class="block_5">A plus B whole bar</p></td>
+			<td class="td_168"><p class="block_5">A bar</p></td>
+			<td class="td_168"><p class="block_5">B bar</p></td>
+			<td class="td_169"><p class="block_5">A bar dot B bar</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_170"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_172"><p class="block_5">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_170"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_172"><p class="block_5">0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_170"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_172"><p class="block_5">0</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_173"><p class="block_5">1</p></td>
+			<td class="td_174"><p class="block_5">1</p></td>
+			<td class="td_174"><p class="block_5">1</p></td>
+			<td class="td_174"><p class="block_5">0</p></td>
+			<td class="td_174"><p class="block_5">0</p></td>
+			<td class="td_174"><p class="block_5">0</p></td>
+			<td class="td_175"><p class="block_5">0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_7">From the above truth table, we can conclude A plus B whole bar equal to A bar dot B bar</p>
+	<p class="block_24">Thus De Morgan’s first theorem is proved. Hence, a NOR gate is equal to a bubbled AND gate.</p>
+	<p class="block_24">The corresponding logic circuit diagram is shown in Figure 10.47.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-741.png" alt="Image, Figure 10.47 NOR gate equals bubbled AND gate is shown" class="calibre838"/></p>
+	<p class="block_10"> </p>
+	<h3 class="block_13" id="toc_id_202">10 point 7 point 2 De Morgan’s Second Theorem</h3>
+	<p class="block_40">Statement </p>
+	<p class="block_24">The second theorem states that the complement of the product of two inputs is equal to the sum of its complements.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Proof </p>
+	<p class="block_7">The Boolean equation for NAND gate is Y equal to A dot B whole bar</p>
+	<p class="block_7">The Boolean equation for bubbled OR gate is Y equal to A bar plus B bar</p>
+	<p class="block_24">A and B are the inputs and Y is the output. The above two equations produces the same output for the same inputs. It can be verified by using the truth table</p>
+	<table class="table_7">
+		<tbody class="calibre1"><tr class="calibre2">
+			<td class="td_167"><p class="block_5">A</p></td>
+			<td class="td_168"><p class="block_5">B</p></td>
+			<td class="td_168"><p class="block_5">A dot B</p></td>
+			<td class="td_168"><p class="block_5">A dot B whole bar</p></td>
+			<td class="td_168"><p class="block_5">A bar</p></td>
+			<td class="td_168"><p class="block_5">B bar</p></td>
+			<td class="td_169"><p class="block_5">A bar plus B bar</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_170"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_172"><p class="block_5">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_170"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_172"><p class="block_5">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_170"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_171"><p class="block_5">0</p></td>
+			<td class="td_171"><p class="block_5">1</p></td>
+			<td class="td_172"><p class="block_5">1</p></td>
+		</tr>
+		<tr class="calibre2">
+			<td class="td_173"><p class="block_5">1</p></td>
+			<td class="td_174"><p class="block_5">1</p></td>
+			<td class="td_174"><p class="block_5">1</p></td>
+			<td class="td_174"><p class="block_5">0</p></td>
+			<td class="td_174"><p class="block_5">0</p></td>
+			<td class="td_174"><p class="block_5">0</p></td>
+			<td class="td_175"><p class="block_5">0</p></td>
+		</tr>
+	</tbody></table>
+	<p class="block_77"> </p>
+	<p class="block_7">From the above truth table we can conclude A dot B whole bar equal to A bar plus B bar</p>
+	<p class="block_24">Thus De Morgan’s second theorem is proved. Hence, a NAND gate is equal to a bubbled OR gate.</p>
+	<p class="block_97"> </p>
+	<p class="block_98">The corresponding logic circuit diagram is shown in Figure 10.48</p>
+	<p class="block_98"><img src="images/image-742.png" alt="Image, Figure 10.48 NAND gate equals bubbled OR gate is shown" class="calibre843"/></p>
+	<p class="block_97"> </p>
+	<p class="block_98"><b class="calibre6">EXAMPLE 10 </b>point<b class="calibre6"> 11</b></p>
+	<p class="block_99"><span class="text_2">Prove the Boolean identity </span><span class="text_13">A C plus A B C equal to A C</span><span class="text_2"> and give its circuit description.</span></p>
+	<p class="block_97"> </p>
+	<p class="block_100">Solution </p>
+	<p class="block_98">Step 1: A C (1 plus B) equal to A C dot 1 [OR law-2] </p>
+	<p class="block_98">Step 2: A C dot 1 equal to A C [AND law – 2]</p>
+	<p class="block_98">Therefore A C plus A B C equal to A C</p>
+	<p class="block_98">Thus the Boolean identity is proved.</p>
+	<p class="block_100">Circuit description:</p>
+	<p class="block_98"><img src="images/image-743.png" alt="Image, Circuit description is shown to prove boolean identity " class="calibre844"/></p>
+	<p class="block_97"> </p>
+	<h3 class="block_101" id="toc_id_203">10 point 7 point 3 Integrated Chips</h3>
+	<p class="block_24">An integrated circuit is also referred as an IC or a chip or a microchip (Figure 10.49). It consists of thousands to millions of transistors, resistors, capacitors, etc. integrated on a small flat piece of semiconductor material that is normally silicon.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Integrated circuits (I C s) are the keystone of modern electronics. With the advancement in technology and the emergence of Very Large Scale Integration (V L S I) era it is possible to fit more and more transistors on chips of same piece</p>
+	<p class="block_77"> </p>
+	<p class="block_24">I C s have two main advantages over ordinary circuits: cost and performance. The size, speed, and capacity of chips have progressed enormously with the advancement in technology. Computers, mobile phones, and other digital home appliances are now made possible by the small size and low cost of I C s. I C s can function as an amplifier, oscillator, timer, microprocessor and computer memory</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-744.png" alt="Image, Figure 10.49 Circuits with integrated chips is shown" class="calibre845"/></p>
+	<p class="block_77"> </p>
+	<p class="block_95"><img src="images/image-745.png" alt="Image, Circuits with integrated chips is shown" class="calibre846"/></p>
+	<p class="block_77"> </p>
+	<p class="block_77"> </p>
+	<p class="block_24">These extremely small I C s can perform calculations and store data using either digital or analog technology. Digital I, C, s use logic gates, which work only with values of ones and zeros. A low signal sent to a component on a digital I C will result in a value of 0, while a high signal creates a value of 1.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Digital I, C, s usually find their applications in computers, networking equipment, and most consumer electronics. Analog I, C, s or linear I, C, s work with continuous values. This means a component on a linear I C can take any value and output another value. Linear I, C, s are typically used in audio and radio frequency amplification.</p>
+	<p class="block_1"> </p>
+	<h2 class="block_13" id="toc_id_204">10 point 8 COMMUNICATION SYSTEMS</h2>
+	<p class="block_40">Introduction</p>
+	<p class="block_24">Communication is the process of exchanging information by speaking, writing or using some other medium</p>
+	<p class="block_24">Communication has existed since the dawn of life in this world. Growth in science and technology removed the locational disadvantage effectively. Information can be exchanged from one person to another anywhere on this Earth. Right from the researches done in communication by great scientists like J, C. Bose, G. Marconi and Alexander Graham Bell, communication has witnessed development by leaps and bounds. The communication industry is one of the largest in size and is the oldest since communication through telegraph (1844), telephone (1876), and Radio (1887) started centuries back.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">The intensive research in the midland late nineteenth century has led to the development of long-distance transmission in the shortest possible time. However, the 20th century witnessed a leap over the development of communication, meeting the demands of speed and secured transfer of data. This section provides a glimpse of the basic concepts of electronic communication, some important communication systems and their applications.</p>
+	<p class="block_77"> </p>
+	<h2 class="block_13" id="toc_id_205">10 point 9 MODULATION</h2>
+	<p class="block_24">The transmission of information through short distances does not require complicated techniques. The energy of the information signal is sufficient enough to be sent directly. However if the information in the audio frequency range (20 to 20,000 Hz) needs to be transmitted to long distances across the world, certain techniques are required to transmit the information without any loss</p>
+	<p class="block_77"> </p>
+	<p class="block_24">For long distance transmission, the low frequency baseband signal (input signal) is superimposed onto a high frequency radio signal by a process called modulation. In the modulation process, a very high frequency signal called carrier signal (radio signal) is used to carry the baseband signal.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">As the frequency of the carrier signal is very high, it can be transmitted to long distances with less attenuation. The carrier signal is usually a sine wave signal.</p>
+	<p class="block_24">A sinusoidal carrier wave can be represented as e c equal to E c sin (2 pai ν c t plus phi), where E c is the amplitude, ν c<sub class="calibre16"> </sub>is the frequency and pai is the initial phase of the carrier wave at any instant of time t.</p>
+	<p class="block_24">Three characteristics in the carrier signal can be modified by the baseband signal during the process of modulation: amplitude, frequency and phase of the carrier signal.</p>
+	<p class="block_24">Accordingly, we have (1) amplitude modulation, (2) frequency modulation and (3) phase modulation.</p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_206">10 point 9 point 1 AMPLITUDE MODULATION (AM)</h3>
+	<p class="block_24">If the amplitude of the carrier signal is modified in proportion to the instantaneous amplitude of the baseband signal, then it is called amplitude modulation. Here the frequency and the phase of the carrier signal remain constant. Amplitude modulation is used in radio and TV broadcasting.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">The signal shown in Figure 10.50(a) is the baseband signal that carries information. Figure 10.50(b) shows the high-frequency carrier signal and Figure 10.50(c) gives amplitude modulated signal. We can see that amplitude of the carrier wave is modified in proportion to the amplitude of the baseband signal.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-746.png" alt="Image, Figure 10.50 Amplitude Modulation (a) Baseband signal (b) Carrier signal (c) Modulated signal" class="calibre847"/></p>
+	<p class="block_40">Advantages of AM </p>
+	<p class="block_102">Easy transmission and reception </p>
+	<p class="block_103">Lesser bandwidth requirements </p>
+	<p class="block_103">Low cost</p>
+	<p class="block_104"> </p>
+	<p class="block_24"><img src="images/image872.png" alt="The given picture is content QR code and the code is CVSF6." class="calibre581"/> </p>
+	<p class="block_77"> </p>
+	<p class="block_40">Limitations of A M</p>
+	<p class="block_102">Noise level is high </p>
+	<p class="block_103">Low efficiency </p>
+	<p class="block_105">Small operating range</p>
+	<h3 class="block_13" id="toc_id_207">10 point 9 point 2 FREQUENCY MODULATION (F M)</h3>
+	<p class="block_24">The frequency of the carrier signal is modified in proportion to the instantaneous amplitude of the baseband signal in frequency modulation. Here the amplitude and the phase of the carrier signal remain constant.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">The increase in the amplitude of the baseband signal increases the frequency of the carrier signal and vice versa. This leads to compressions and rarefactions in the frequency spectrum of the modulated wave as shown in Figure 10.51. Louder signal leads to compressions and relatively weaker signals to rarefactions.</p>
+	<p class="block_24"><img src="images/image-747.png" alt="Image, Figure 10.51 Frequency Modulation (a) Baseband signal (b) Carrier signal (c) Frequency modulated signal" class="calibre848"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">When the amplitude of the baseband signal is zero in Figure 10.51(a), the frequency of the modulated signal is the same as the carrier signal. The frequency of the modulated wave increases when the amplitude of the baseband signal increases in the positive direction (A, C). The increase in amplitude in the negative half cycle (B, D) reduces the frequency of the modulated wave (Figure 10.51(c)).</p>
+	<p class="block_77"> </p>
+	<p class="block_24">When the frequency of the baseband signal is zero (no input signal), there is no change in the frequency of the carrier wave. It is at its normal frequency and is called as centre frequency or resting frequency. Practically this is the allotted frequency of the FM transmitter.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Advantages of F M</p>
+	<p class="block_24">1) In FM, there is a large decrease in noise. This leads to an increase in signalnoise ratio.</p>
+	<p class="block_24">2) The operating range is quite large. </p>
+	<p class="block_24">3) The transmission efficiency is very high as all the transmitted power is useful.</p>
+	<p class="block_24">4) FM bandwidth covers the entire frequency range which humans can hear. Due to this, FM radio has better quality compared to AM radio.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Limitations of F M</p>
+	<p class="block_102">FM requires a much wider channel. </p>
+	<p class="block_103">FM transmitters and receivers are more complex and costly. </p>
+	<p class="block_105">In FM reception, less area is covered compared to AM.</p>
+	<p class="block_82"> </p>
+	<h3 class="block_13" id="toc_id_208">10 point 9 point 3 PHASE MODULATION (PM)</h3>
+	<p class="block_24">In phase modulation, the instantaneous amplitude of the baseband signal modifies the phase of the carrier signal keeping its amplitude and frequency constant. This modulation is used to generate frequency modulated signals. It is similar to frequency modulation except that the phase of the carrier is varied instead of varying frequency.</p>
+	<p class="block_77"> </p>
+	<h2 class="block_13" id="toc_id_209">10 point 10 THE ELEMENTS OF AN ELECTRONIC COMMUNICATION SYSTEM</h2>
+	<p class="block_24">Electronics plays a major role in communication. Electronic communication is nothing but the transmission of sound, text, pictures, or data through a medium. Long distance transmission uses free space as a medium.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">The elements of the basic communication system are explained with the block diagram shown in Figure 10.52.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">1) Information (Baseband or input signal)</p>
+	<p class="block_24">Information can be in the form of speech, music, pictures or computer data. This information is given as input to the input transducer.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">2) Input transducer </p>
+	<p class="block_24">In communication system, the transducer converts the information (in the form of sound, music, pictures or computer data) into corresponding electrical signals. The electrical equivalent of the original information is called the baseband signal. </p>
+	<p class="block_77"> </p>
+	<p class="block_24">The best example for the transducer is the microphone that converts sound energy into electrical energy</p>
+	<p class="block_77"> </p>
+	<p class="block_40">3) Transmitter</p>
+	<p class="block_24">It feeds the electrical signal from the transducer to the communication channel. It consists of circuits such as amplifier, oscillator, modulator and power amplifier. The transmitter is located at the broadcasting station.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">Amplifier:</b> The transducer output is very weak and is amplified by the amplifier.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-748.png" alt="Image, Figure 10.52 Block diagram of transmission and reception of voice signals is shown" class="calibre849"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image875.png" alt="The given picture is content QR code and the code is N E 0 K O." class="calibre850"/> </p>
+	<p class="block_24"><b class="calibre6">Oscillator</b>: It generates high-frequency carrier wave (a sinusoidal wave) for long distance transmission into space. As the energy of a wave is proportional to its frequency, the carrier wave has very high energy.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">Modulator:</b> It superimposes the baseband signal onto the carrier signal and generates the modulated signal.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">Power amplifier:</b> It increases the power level of the electrical signal in order to cover a large distance.</p>
+	<p class="block_82"> </p>
+	<p class="block_40">4) Transmitting antenna </p>
+	<p class="block_24">It radiates the radio signal into space in all directions. It travels in the form of electromagnetic waves with the speed of light.</p>
+	<p class="block_82"> </p>
+	<p class="block_40">5) Communication channel </p>
+	<p class="block_24">Communication channel is used to carry the electrical signal from transmitter to receiver with less noise or distortion. The examples for communication medium are wires, cables, optical fibres in wireline communication and free space in wireless communication.</p>
+	<p class="block_82"> </p>
+	<p class="block_40">6) Receiver</p>
+	<p class="block_24">The signals that are transmitted through the communication medium are received by a receiving antenna which converts EM waves into RF signals and are fed into the receiver. </p>
+	<p class="block_24">The receiver consists of electronic circuits like demodulator, amplifier etc. The demodulator extracts the baseband signal from the modulated signal. Then the baseband signal is amplified using amplifier. Finally, it is fed to the output transducer.</p>
+	<p class="block_82"> </p>
+	<p class="block_40">7) Repeaters</p>
+	<p class="block_24">Repeaters are used to increase the range or distance through which the signals are sent. It is a combination of transmitter and receiver. The signals are received, amplified and retransmitted with a carrier signal of different frequency to the destination. The best example is the communication satellite in space.</p>
+	<p class="block_106"> </p>
+	<p class="block_107">8) Output transducer</p>
+	<p class="block_24">It converts the electrical signal back to its original form such as sound, music, pictures or data. Examples of output transducers are loudspeakers, picture tubes, computer monitor etc.</p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_210">10 point 10 point 1 BASIC DEFINITIONS IN ELECTRONIC COMMUNICATION SYSTEM</h3>
+	<p class="block_24">For better understanding of the communication systems, it is essential to know about the following terms.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">1) Range</p>
+	<p class="block_102">It is the maximum distance between the source and the destination up to which the signal is received with sufficient strength.</p>
+	<p class="block_107">2) Noise</p>
+	<p class="block_24">It is the undesirable electrical signal that interferes with the transmitted signal. Noise attenuates or reduces the quality of the transmitted signal. It may be manmade (automobiles, welding machines, electric motors etc.) or natural (lightning, environmental effects, radiation from sun and stars). Noise cannot be completely eliminated. However, it can be reduced using various techniques.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">3) Attenuation</p>
+	<p class="block_24">The loss of strength of a signal while propagating through a medium is known as attenuation</p>
+	<p class="block_77"> </p>
+	<p class="block_40">4) Bandwidth</p>
+	<p class="block_24">The frequency range over which the baseband signals or the information signals such as voice, music, picture etc are transmitted is known as bandwidth. If ν<sub class="calibre16">1</sub> and ν<sub class="calibre16">2</sub> are the lower and upper-frequency limits of a signal, then the bandwidth, B W equal to ν 2 minus ν 1.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">5) Bandwidth of transmission system</p>
+	<p class="block_24">The range of frequencies required to transmit a piece of specified information in a particular channel is called channel bandwidth or the bandwidth of the transmission system.</p>
+	<p class="block_77"> </p>
+	<h2 class="block_13" id="toc_id_211">10 point 11 PROPAGATION OF ELECTROMAGNETIC WAVES</h2>
+	<p class="block_24">The electromagnetic wave transmitted by the transmitter travels in three different modes to reach the receiver according to its frequency range. They are</p>
+	<p class="block_24">• Ground wave propagation (or) surface wave propagation (nearly 2 kiloHertz to 2 MegaHertz) </p>
+	<p class="block_24">• Sky wave propagation (or) ionospheric propagation (nearly 3 MegaHertz to 30 MegaHertz) </p>
+	<p class="block_24">• Space wave propagation (nearly 30 MegaHertz to 400 GigaHertz)</p>
+	<p class="block_77"> </p>
+	<p class="block_40">1) Ground wave propagation </p>
+	<p class="block_24">If the electromagnetic waves transmitted by the transmitter glide over the surface of the Earth to reach the receiver, then the propagation is called ground wave propagation. The corresponding waves are called ground waves or surface waves. The pictorial representation is shown in Figure 10.53(a). Here both transmitting and receiving antennas must be close to the Earth's surface.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">It is mainly used in local broadcasting, radio navigation, for ship-to-ship, ship to-shore communication and mobile communication.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">2) Sky wave propagation </p>
+	<p class="block_24">The mode of propagation in which the electromagnetic waves radiated from an antenna, directed upwards at large angles, gets reflected by the ionosphere back to Earth is called sky wave propagation or ionospheric propagation. The corresponding waves are called sky waves (Figure 10.53(b)).</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Ionosphere acts as a reflecting surface. It is at a distance of approximately 50 kilometer and spreads up to 400 kilometer above the Earth's surface. Due to the absorption of ultraviolet rays, cosmic ray, and other high energy radiations like alpha, beeta rays from sun, the air molecules in the ionosphere get ionized. This produces charged ions and these ions provide a reflecting medium for the reflection of radio waves or communication waves back to Earth within the permitted frequency range. The phenomenon of bending the radio waves back to Earth is nothing but the total internal reflection.</p>
+	<p class="block_77"> </p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-749.png" alt="Image, Figure 10.53 Propagation of EM waves (a) Ground wave is shown" class="calibre851"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-750.png" alt="Image, Figure 10.53 Propagation of EM waves (b) Sky wave is shown " class="calibre852"/></p>
+	<p class="block_77"> </p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-751.png" alt="Image, Figure 10.53 Propagation of EM waves (c) Space wave is shown" class="calibre853"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">When the angle of incidence at the ionosphere is large, the sky wave returns to the ground at a long distance from the transmitter. As this angle is reduced, the wave returns closer and closer to the transmitter. If the angle of incidence is reduced further, the radio waves penetrate through the ionosphere. For a particular angle of incidence, the point of reception (B) is at the minimum distance from transmitter. The shortest distance between the transmitter and the point of reception of the sky wave along the surface is called as the skip distance.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">The ground waves get attenuated as they move away from the transmitter. At a particular point (A), there is no reception ground wave. The zone (in between A and B) where there is no reception of electromagnetic waves neither ground nor sky is known as skip zone or skip area (Figure 10.53(b)).</p>
+	<p class="block_77"> </p>
+	<p class="block_40">3) Space wave propagation</p>
+	<p class="block_24"> The process of sending and receiving information signal through space is called space wave communication (Figure  10.53 (c)). The electromagnetic waves of very high frequencies above 30 MHz are called as space waves. These waves travel in a straight line from the transmitter to the receiver. Hence, it is used for a line of sight communication (L O S).</p>
+	<p class="block_24">The communication systems like television telecast, satellite communication and RADAR are based on space wave propagation.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">The range or distance (d) of coverage of the propagation depends on the height (h) of the antenna given by the equation,</p>
+	<p class="block_49">D equal to route of two R H equation 10.9</p>
+	<p class="block_24">where R is the radius of the Earth. The distance of coverage is shown pictorially in Figure 10.54.</p>
+	<p class="block_24"><img src="images/image-752.png" alt="Image, Figure 10.54 Distance of coverage is shown" class="calibre761"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">EXAMPLE 10</b> point<b class="calibre6"> 12</b></p>
+	<p class="block_24">A transmitting antenna has a height of 40 m and the height of the receiving antenna is 30 m. What is the maximum distance between them for line-of-sight communication? The radius of the earth is 6.4 into 10 power 6 m.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-753.png" alt="Image, Antenna is shown were a transmitting antenna has a height of 40 m and the height of the receiving antenna is 30 m" class="calibre854"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Solution: </p>
+	<p class="block_24">The total distance d between the transmitting and receiving antennas will be the sum of the individual distances of coverage.</p>
+	<p class="block_81"><img src="images/image-754.png" alt="d equal to d one plus d two  square root of  two R h one plus square route of  two R h two. equal to square root of two R into route of h one plus route of h two  equal to square root of two into six point four into ten to the power of six into sum of square root of forty plus square route of thirty. equal to 16 into 10 power 2 into route of 5 into 6 point 3, 2 plus 5 point 4, 8  equal to 42217 meter equal to Forty two point two one seven killo meter " class="calibre855"/></p>
+	<p class="block_7"> </p>
+	<h2 class="block_13" id="toc_id_212">10 point 12 SOME IMPORTANT COMMUNICATION SYSTEMS</h2>
+	<p class="block_24">There are a large number of communication systems available in the market for varied purposes. Here some of the important communication systems are introduced and their applications are briefly discussed.</p>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_213">10 point 12 point 1 SATELLITE AND ITS COMMUNICATION</h3>
+	<p class="block_24">The satellite communication is a mode of transmission of the signal between transmitter and receiver via satellite. The message signal from the Earth station is transmitted to the satellite on board via an uplink (frequency band 6 GigaHertz), amplified by a transponder and then retransmitted to another Earth station via a downlink (frequency band 4 GigaHertz) (Figure 10.55).<b class="calibre6"><span class="tab">      </span></b></p>
+	<p class="block_40">Applications</p>
+	<p class="block_24">Satellites are classified into different types based on their applications</p>
+	<p class="block_24"><img src="images/image-755.png" alt="Image, Figure 10.55 Satellite communication system were earth and a satellite transmitting happens is shown " class="calibre856"/></p>
+	<p class="block_24"><img src="images/image-756.png" alt="Image, Lively earth Satellite communication system is shown" class="calibre857"/></p>
+	<p class="block_24">Satellite communication system</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><b class="calibre6">1) Weather satellites:</b> They are used to monitor the weather and climate of Earth. By measuring cloud mass, these satellites enable us to predict rain and dangerous storms like hurricanes, cyclones etc. </p>
+	<p class="block_82"> </p>
+	<p class="block_24"><b class="calibre6">2) Communication satellites</b>: They are used to transmit television, radio, internet signals etc. Multiple satellites are used for long distance communication. </p>
+	<p class="block_24"><b class="calibre6">3) Navigation satellites:</b> These are employed to determine the geographic location of ships, aircrafts or any other object.<span class="tab">      </span></p>
+	<p class="block_82"> </p>
+	<h3 class="block_13" id="toc_id_214">10 point 12 point 2 FIBRE OPTIC COMMUNICATION</h3>
+	<p class="block_24">The method of transmitting information from one place to another in terms of light pulses through an optical fiber is called fiber optic communication. It works on the principle of total internal reflection.</p>
+	<p class="block_77"> </p>
+	<p class="block_24"><img src="images/image-757.png" alt="Image, Figure 10.56 Optical fibers picture is shown" class="calibre858"/></p>
+	<p class="block_77"> </p>
+	<p class="block_40">Applications</p>
+	<p class="block_24">Optical fiber system has a number of applications namely, international communication, inter-city communication, data links, plant and traffic control and defense applications</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Merits </p>
+	<p class="block_24">1) Fiber cables are very thin and weigh less than copper cables. </p>
+	<p class="block_24">2) This system has much larger band width. This means that its information carrying capacity is larger. </p>
+	<p class="block_24">3) Fiber optic system is immune to electrical interferences. </p>
+	<p class="block_24">4) Fiber optic cables are cheaper than copper cables.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Demerits </p>
+	<p class="block_24">1) Fiber optic cables are more fragile when compared to copper wires. </p>
+	<p class="block_24">2) It is an expensive technology.</p>
+	<p class="block_82"> </p>
+	<h3 class="block_13" id="toc_id_215">10 point 12 point 3 RADAR AND APPLICATIONS</h3>
+	<p class="block_24">Radar basically stands for Radio Detection and Ranging System. It is one of the important applications of communication systems and is mainly used to sense, detect, and locate distant objects like aircraft, ships, spacecraft, etc. The angle, range or velocity of the objects that are invisible to the human eye can be determined.</p>
+	<p class="block_77"> </p>
+	<p class="block_24">Radar uses electromagnetic waves for communication. The electromagnetic signal is initially radiated into space by an antenna in all directions. When this signal strikes the targeted object, it gets reflected or reradiated in many directions. This reflected (echo) signal is received by the radar antenna which in turn is delivered to the receiver. Then, it is processed and amplified to determine the geographical statistics of the object. The range is determined by calculating the time taken by the signal to travel from RADAR to the target and back.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Applications</p>
+	<p class="block_24">Radars find extensive applications in many fields.</p>
+	<ol class="list_">
+	<li class="block_85">In military, it is used for locating and detecting the targets.</li>
+	<li class="block_86">It is used in navigation systems such as ship borne surface search, air search and missile guidance systems</li>
+	<li class="block_86">Radars are used to measure precipitation rate and wind speed in meteorological observations.</li>
+	<li class="block_87">It is employed to locate and rescue people in emergency situations.</li>
+</ol>
+	<p class="block_82"> </p>
+	<h3 class="block_13" id="toc_id_216">10 point 12 point 4 MOBILE COMMUNICATION</h3>
+	<p class="block_24">Mobile communication is used to communicate with others in different locations without the use of any physical connection like wires or cables. It allows the transmission over a wide range of area without the use of the physical link. It enables the people to communicate with each other regardless of a particular location like office, house etc. It also provides communication access to remote areas.</p>
+	<p class="block_24"><img src="images/image-758.png" alt="Image, Figure 10.57 Mobile communication is shown" class="calibre859"/></p>
+	<p class="block_24">It provides the facility of roaming – that is, the user may move from one place to another without the need of compromising on the communication. The maintenance and cost of installation of this communication network are also cheap.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Applications </p>
+	<ol class="list_">
+	<li class="block_85">It is used for personal communication and cellular phones offer voice and data connectivity with high speed. </li>
+	<li class="block_86">Transmission of news across the globe is done within a few seconds. </li>
+	<li class="block_86">Using Internet of Things (I o T), it is made possible to control various devices from a single device. Example: home automation using a mobile phone.</li>
+	<li class="block_87">It enables smart classrooms, online availability of notes, monitoring student activities etc. in the field of education.</li>
+</ol>
+	<p class="block_77"> </p>
+	<h3 class="block_13" id="toc_id_217">10 point 12 point 5 INTERNET</h3>
+	<p class="block_24">Internet is a fast growing technology in the field of communication system with multifaceted tools. It provides new ways and means to interact and connect with people. Internet is the largest computer network recognized globally that connects millions of people through computers. It finds extensive applications in all walks of life.</p>
+	<p class="block_77"> </p>
+	<p class="block_40">Applications: </p>
+	<p class="block_24"><b class="calibre6">Search engine:</b> The search engine is basically a web-based service tool used to search for information on World Wide Web.</p>
+	<p class="block_82"> </p>
+	<p class="block_24"><b class="calibre6">Communication:</b> It helps millions of people to connect with the use of social networking: emails, instant messaging services and social networking tools.</p>
+	<p class="block_82"> </p>
+	<p class="block_24"><b class="calibre6">E-Commerce:</b> Buying and selling of goods and services, transfer of funds are done over an electronic network.</p>
+	<p class="block_77"> </p>
+	<h2 class="block_8" id="toc_id_218">SUMMARY</h2>
+	<ol class="list_">
+	<li class="block_108">Energy bands in solids are used to classify them into metals, insulators, and semiconductors </li>
+	<li class="block_109">In a N-type semiconductor, electrons are the majority charge carriers and holes are the minority carriers. </li>
+	<li class="block_109">In P-type semiconductor, holes are the majority charge carriers and electrons are the minority charge carriers. </li>
+	<li class="block_109">The thin region near the junction which is free from charge carriers (free electrons and holes) is called depletion region. </li>
+	<li class="block_109">When (a) P N junction diode is forward biased, the width of the depletion region decreases and the diode conducts. </li>
+	<li class="block_109">A PN junction diode in reverse biased condition functions as a open switch as it does not conduct. The width of the depletion region increases in this case. </li>
+	<li class="block_109">A forward biased P N junction diode functions as a rectifier. The process in which alternating voltage or alternating current is converted into direct voltage or direct current is known as rectification. „ The half wave rectifier rectifies one half of the input signal and produces a pulsating D C output. </li>
+	<li class="block_109">Full wave rectifier rectifies both halves of the input signal. </li>
+	<li class="block_109">Zener breakdown happens in a heavily doped P N junction diode when a strong electric field is applied. </li>
+	<li class="block_109">Avalanche breakdown occurs in lightly doped junctions which have wide depletion layers. It is due to the breaking of covalent bonds by the thermally generated minority charge carriers. </li>
+	<li class="block_109">Zener diode is a heavily doped P N junction diode which works in the reverse biased condition. </li>
+	<li class="block_109">Light emitting diode is a forward biased semiconductor device that emits emits visible or invisible light when energized. The recombination of minority charge carriers with the majority charge carriers in the respective regions release energy in the form of photons. „ A P N junction diode which converts an optical signal into electric signal is called a photodiode. </li>
+	<li class="block_109">When a photon of sufficient energy strikes the diode, it creates an electron-hole pair. These electrons and holes are swept across the p-n junction by the electric field created by reverse voltage before recombination takes place and in turn generates photo current. „ A solar cell, also known as photovoltaic cell, works on the principle of photovoltaic effect. Accordingly, the p-n junction of the solar cell generates emf when solar radiation falls on it. . </li>
+	<li class="block_109">A bipolar junction transistor (B J T) is a semiconductor device and there are two types in that: N P N and P N P.</li>
+	<li class="block_109">A, Bipolar Junction Transistor can be operated in three different configurations: Common base, common emitter, common collector. </li>
+	<li class="block_109">The forward current gain in common base configuration α gives the ratio of the collector current to emitter current. </li>
+	<li class="block_109">The forward current gain in common emitter configuration beeta gives the ratio of the collector current to the base current </li>
+	<li class="block_109">The BJT connected in common emitter configuration can be used as an amplifier. There exists a phase reversal of 180 degree between the input signal and the amplified output signal.</li>
+	<li class="block_109">A transistor amplifier combined with a tank circuit and positive feedback acts as an oscillator </li>
+	<li class="block_109">The logic gates are logical circuits providing output only for a combination of inputs. </li>
+	<li class="block_109">De Morgan’s First theorem states that the complement of the sum of two inputs is equal to the product of its complements.</li>
+	<li class="block_109">The second theorem states that the complement of the product of two inputs is equal to the sum of its complements. </li>
+	<li class="block_109">The basic elements required for the transmission and reception of a signal through long distance communication using electromagnetic waves are transducer, amplifier, carrier signal, modulator, power amplifier, medium of transmission, transmitting and receiving antenna, demodulator, detector. </li>
+	<li class="block_109">For long-distance transmission, the baseband signal is modulated with the carrier wave. </li>
+	<li class="block_109">If the amplitude of the carrier signal is modified with the instantaneous amplitude of the baseband signal then it is called amplitude modulation.</li>
+	<li class="block_109">The frequency of the carrier signal is modified with the instantaneous amplitude of the baseband signal in frequency modulation.</li>
+	<li class="block_109">The instantaneous amplitude of the baseband signal modifies the phase of the carrier signal keeping the amplitude and frequency constant in phase modulation </li>
+	<li class="block_109">If the E, M waves transmitted by the transmitter glide over the surface of the earth to reach the receiver, then the propagation of E, M waves is called ground wave propagation. „ The mode of propagation in which electromagnetic waves radiated from an antenna, directed upwards at large angles gets reflected by the ionosphere back to earth is called sky wave propagation. </li>
+	<li class="block_109">The process of sending and receiving information signal through space is called space wave communication. </li>
+	<li class="block_109">The satellite communication is a mode of communication of signal between transmitter and receiver via satellite. </li>
+	<li class="block_109">Fiber-optic communication is a method of transmitting information by sending pulses of light through an optical fiber. </li>
+	<li class="block_109">Radar basically stands for Radio Detection and Ranging System. It is one of the important applications of communication systems for remote sensing. </li>
+	<li class="block_110">Mobile Communication is used to communicate with others in different locations without the use of any physical connection like wires or cables.</li>
+</ol>
+	<p class="block_77"> </p>
+	<h2 class="block_8" id="toc_id_219">CONCEPT MAP</h2>
+	<p class="block_24"><img src="images/image-759.png" alt="Image, Concept map is shown" class="calibre860"/></p>
+	<p class="block_77"> </p>
+	<h2 class="block_8" id="toc_id_220">EVALUATION</h2>
+	<p class="block_9"><img src="images/image887.png" alt="The given picture is assessment QR code and the code is N 0 U F A." class="calibre861"/></p>
+	<p class="block_40">I. Multiple choice questions </p>
+	<p class="block_24">1. The barrier potential of a silicon diode is approximately, </p>
+	<p class="block_24">a) 0.7 Volt </p>
+	<p class="block_24">b) 0.3 Volt </p>
+	<p class="block_24">c) 2.0 Volt </p>
+	<p class="block_24">d) 2.2 Volt</p>
+	<p class="block_24">Answer: a) 0.7 Volt </p>
+	<p class="block_77"> </p>
+	<p class="block_24">2 If a small amount of antimony (Sb) is added to germanium crystal, (AIPMT 2011) </p>
+	<p class="block_24">a) it becomes a p-type semiconductor </p>
+	<p class="block_24">b) the antimony becomes an acceptor atom </p>
+	<p class="block_24">c) there will be more free electrons than hole in the semiconductor </p>
+	<p class="block_24">d) its resistance is increased </p>
+	<p class="block_24">Answer: c) there will be more free electrons than hole in the semiconductor </p>
+	<p class="block_77"> </p>
+	<p class="block_24">3. In an unbiased p-n junction, the majority charge carriers (that is, holes) in the p-region diffuse into n-region because of </p>
+	<p class="block_24">a) the potential difference across the p-n junction </p>
+	<p class="block_24">b) the higher hole concentration in p-region than that in n-region </p>
+	<p class="block_24">c) the attraction of free electrons of n-region </p>
+	<p class="block_24">d) All the above </p>
+	<p class="block_24">Answer: b) the higher hole concentration in p-region than that in n-region </p>
+	<p class="block_77"> </p>
+	<p class="block_24">4. If a positive half –wave rectified voltage is fed to a load resistor, for which part of a cycle there will be current flow through the load? </p>
+	<p class="block_24">a) 0 degree to 90 degree </p>
+	<p class="block_24">b) 90 degree to 180 degree </p>
+	<p class="block_24">c) 0 degree to 180 degree </p>
+	<p class="block_24">d) 0 degree to 360 degree </p>
+	<p class="block_24">Answer: c) 0 degree to 180 degree </p>
+	<p class="block_77"> </p>
+	<p class="block_24">5. The zener diode is primarily used as </p>
+	<p class="block_24">a) Rectifier </p>
+	<p class="block_24">b) Amplifier </p>
+	<p class="block_24">c) Oscillator </p>
+	<p class="block_24">d) Voltage regulator </p>
+	<p class="block_24">Answer: d) Voltage regulator </p>
+	<p class="block_77"> </p>
+	<p class="block_24">6. The principle based on which a solar cell operates is</p>
+	<p class="block_24">a) Diffusion </p>
+	<p class="block_24">b) Recombination </p>
+	<p class="block_24">c) Photovoltaic action </p>
+	<p class="block_24">d) Carrier flow</p>
+	<p class="block_24">Answer: c) Photovoltaic action </p>
+	<p class="block_77"> </p>
+	<p class="block_24">7. The light emitted in an L E D is due to </p>
+	<p class="block_24">a) Recombination of charge carriers </p>
+	<p class="block_24">b) Reflection of light due to lens action </p>
+	<p class="block_24">c) Amplification of light falling at the junction </p>
+	<p class="block_24">d) Large current capacity. </p>
+	<p class="block_24">Answer: a) Recombination of charge carriers </p>
+	<p class="block_77"> </p>
+	<p class="block_24">8. The barrier potential of a p n junction depends on 1) type of semiconductor material 2) amount of doping 3) temperature. Which one of the following is correct? (NEET) </p>
+	<p class="block_24">a) (1) and (2) only </p>
+	<p class="block_24">b) (2) only </p>
+	<p class="block_24">c) (2) and (3) only </p>
+	<p class="block_24">d) (1) (2) and (3) </p>
+	<p class="block_24">Answer: d) (1) (2) and (3) </p>
+	<p class="block_77"> </p>
+	<p class="block_24">9. To obtain sustained oscillation in an oscillator, </p>
+	<p class="block_24">a) Feedback should be positive </p>
+	<p class="block_24">b) Feedback factor must be unity </p>
+	<p class="block_24">c) Phase shift must be zero or two pai </p>
+	<p class="block_24">d) All the above </p>
+	<p class="block_24">Answer: d) All the above </p>
+	<p class="block_77"> </p>
+	<p class="block_24">10. If the input to the NOT gate is </p>
+	<p class="block_24">A equal to 1011, its output is </p>
+	<p class="block_24">a) 0100 </p>
+	<p class="block_24">b) 1000 </p>
+	<p class="block_24">c) 1100 </p>
+	<p class="block_24">d) 0011 </p>
+	<p class="block_24">Answer: a) 0100 </p>
+	<p class="block_77"> </p>
+	<p class="block_24">11. Which one of the following represents forward bias diode? (NEET)</p>
+	<p class="block_24"><img src="images/image-760.png" alt="Image, Circuits images is shown with  a) 0 Volt and minus 2 Volt, b) minus 4Volt and minus 3 Volt c) minus 2 Volt and plus 2 Volt d) minus 3 Volt and minus 3 Volt is shown" class="calibre862"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">12. The given electrical network is equivalent to (NEET)</p>
+	<p class="block_24"><img src="images/image-761.png" alt="Image, A electrical network circuit with A and B gates is shown" class="calibre863"/></p>
+	<div class="calibre584">
+	<div class="block_111"><span class="bullet_">a) </span><span class="calibre585">A N D gate </span></div>
+</div>
+	<p class="block_103">b) O R gate </p>
+	<p class="block_103">c) N O R gate </p>
+	<p class="block_103">d) N O T gate</p>
+	<p class="block_112"> </p>
+	<p class="block_105">Answer: c) N O R gate</p>
+	<p class="block_24">13. The output of the following circuit is 1 when the input ABC is (NEET)</p>
+	<p class="block_24"><img src="images/image-762.png" alt="Image, Circuit is shown with input ABC is shown" class="calibre864"/></p>
+	<div class="calibre584">
+	<div class="block_111"><span class="bullet_">a) </span><span class="calibre585">One zero one<span class="tab">      </span></span></div>
+	<div class="block_113"><span class="bullet_">b) </span><span class="calibre585">One zero zero</span></div>
+	<div class="block_113"><span class="bullet_">c) </span><span class="calibre585">One one zero</span></div>
+	<div class="block_113"><span class="bullet_">d) </span><span class="calibre585">Zero one zero</span></div>
+</div>
+	<p class="block_114"> </p>
+	<p class="block_24">Answer: a. one zero one</p>
+	<p class="block_77"> </p>
+	<p class="block_24">14. The variation of frequency of carrier wave with respect to the amplitude of the modulating signal is called </p>
+	<p class="block_24">a) Amplitude modulation </p>
+	<p class="block_24">b) Frequency modulation </p>
+	<p class="block_24">c) Phase modulation </p>
+	<p class="block_24">d) Pulse width modulation </p>
+	<p class="block_24">Answer: b) Frequency modulation </p>
+	<p class="block_77"> </p>
+	<p class="block_24">15. The frequency range of 3 MHz to 30 MHz is used for </p>
+	<p class="block_24">a) Ground wave propagation </p>
+	<p class="block_24">b) Space wave propagation</p>
+	<p class="block_24">c) Sky wave propagation </p>
+	<p class="block_24">d) Satellite communication</p>
+	<p class="block_24">Answer: c) Sky wave propagation</p>
+	<p class="block_77"> </p>
+	<p class="block_40">2  Short Answer Questions </p>
+	<p class="block_24">1. Define forbidden energy gap. </p>
+	<p class="block_24">2. Why is temperature co-efficient of resistance negative for semiconductor? </p>
+	<p class="block_24">3. What do you mean by doping? </p>
+	<p class="block_24">4. Distinguish between intrinsic and extrinsic semiconductors. </p>
+	<p class="block_24">5. A diode is called as a unidirectional device. Explain. </p>
+	<p class="block_24">6. What do you mean by leakage current in a diode? </p>
+	<p class="block_24">7. Draw the input and output waveforms of a full wave rectifier. </p>
+	<p class="block_24">8. Distinguish between avalanche breakdown and Zener breakdown. </p>
+	<p class="block_24">9. Give the Barkhausen conditions for sustained oscillations. </p>
+	<p class="block_24">10. Explain the current flow in a NPN transistor</p>
+	<p class="block_24">11. What are logic gates? </p>
+	<p class="block_24">12. Explain the need for a feedback circuit in a transistor oscillator. </p>
+	<p class="block_24">13. Write a short note on diffusion current across p-n junction. </p>
+	<p class="block_24">14. What is meant by biasing? Mention its types. </p>
+	<p class="block_24">15. Why can’t we interchange the emitter and collector even though they are made up of the same type of semiconductor material?</p>
+	<p class="block_24">16. Why are NOR and NAND gates called universal gates? </p>
+	<p class="block_24">17. Define barrier potential. </p>
+	<p class="block_24">18. What is rectification? </p>
+	<p class="block_24">19. List the applications of light emitting diode. </p>
+	<p class="block_24">20. Give the principle of solar cells. </p>
+	<p class="block_24">21. What is an integrated circuit? </p>
+	<p class="block_24">22. What is modulation?. </p>
+	<p class="block_24">23. Define bandwidth of transmission system. </p>
+	<p class="block_24">24. What do you mean by skip distance? </p>
+	<p class="block_24">25. Give applications of RADAR. </p>
+	<p class="block_24">26. What is mobile communication?</p>
+	<p class="block_24">27. Explain centre frequency or resting frequency in frequency modulation. </p>
+	<p class="block_24">28. What does RADAR stand for?</p>
+	<p class="block_24">29. Fiber optic communication is gaining popularity among the various transmission media -justify.</p>
+	<p class="block_40">3 Long Answer Questions </p>
+	<p class="block_24">1. Elucidate the formation of n-type extrinsic semiconductors. </p>
+	<p class="block_24">2. Explain the formation of depletion region and barrier potential in P N junction diode. 3. Draw the circuit diagram of a half wave rectifier and explain its working </p>
+	<p class="block_24">4. Explain the construction and working of a full wave rectifier. </p>
+	<p class="block_24">5. What is an L E D? Give the principle of its operation with a diagram. </p>
+	<p class="block_24">6. Write notes on photodiode. </p>
+	<p class="block_24">7. Explain the working principle of a solar cell. Mention its applications.</p>
+	<p class="block_24">8. Sketch the static characteristics of a common emitter transistor and bring out the essential features of input and output characteristics. </p>
+	<p class="block_24">9. Transistor functions as a switch. Explain. </p>
+	<p class="block_24">10. Describe the function of a transistor as an amplifier with the neat circuit diagram. Sketch the input and output wave forms. </p>
+	<p class="block_24">11. Give circuit symbol, logical operation, truth table, and Boolean expression of </p>
+	<p class="block_24">1) AND gate </p>
+	<p class="block_24">2) OR gate </p>
+	<p class="block_24">3) NOT gate </p>
+	<p class="block_24">4) NAND gate </p>
+	<p class="block_24">5) NOR gate and </p>
+	<p class="block_24">6) EX-OR gate. </p>
+	<p class="block_24">12. State and prove De Morgan’s first and second theorem. </p>
+	<p class="block_24">13. Explain the amplitude modulation with necessary diagrams. </p>
+	<p class="block_24">14. Explain the basic elements of communication system with the necessary block diagram. </p>
+	<p class="block_24">15. Explain the ground wave propagation and space wave propagation of electromagnetic waves through space.</p>
+	<p class="block_24">16. List out the advantages and limitations of frequency modulation. </p>
+	<p class="block_24">17. What is meant by satellite communication? Give its applications</p>
+	<p class="block_77"> </p>
+	<p class="block_40">IV. Numerical Problems </p>
+	<p class="block_24">1. The given circuit has two ideal diodes connected as shown in figure below. Calculate the current flowing through the resistance R<sub class="calibre16">1</sub> . [Answer: 2.5 Amps]</p>
+	<p class="block_24"><img src="images/image-763.png" alt="Image, circuit has two ideal diodes connected is shown were the R 2 is 2 ohm, R1 is 3 ohm, RE is 2 ohm and 10 Volt" class="calibre865"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">2. Four silicon diodes and a 10 ohm resistor are connected as shown in figure below. Each diode has a resistance of 1ohm. Find the current flows through the 10 ohm resistor. [Ans: 0.13 A]</p>
+	<p class="block_24"><img src="images/image-764.png" alt="Image, Four silicon diodes and a 10 ohm resistor are connected is shown " class="calibre866"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">3. Assuming V C E sat equal to 0.2 Volt and beeta equal to 50, find the minimum base current (I B) required to drive the transistor given in the figure to saturation. [Answer: 56 mew Amps]</p>
+	<p class="block_24"><img src="images/image-765.png" alt="Image, Circuit is shown with the transisitor is shown were VCEsat = 0.2V and β = 50" class="calibre867"/></p>
+	<p class="block_77"> </p>
+	<p class="block_77"> </p>
+	<p class="block_24">4. In the circuit shown in the figure, the B J T has a current gain (beeta) of 50. For an emitter – base voltage V E B<sub class="calibre16"> </sub>equal to 600 m V, calculate the emitter – collector voltage V E C (in volts). [Answer: 2 V]</p>
+	<p class="block_24"><img src="images/image-766.png" alt="Image, Circuit is with the BJT has a current gain (β) of 50. For an emitter – base voltage VEB = 600 milliVolt is shown " class="calibre868"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">5. Determine the current flowing through 3 ohm and 4 ohm resistors of the circuit given below. Assume that diodes D one and D two are ideal diodes. [Ans: 0 and two A]</p>
+	<p class="block_24"><img src="images/image-767.png" alt="Image, Circuit is shown with D1 and D2 ideal diodes and 3Ω and 4Ω resistors" class="calibre869"/></p>
+	<p class="block_24">6. Prove the following Boolean expressions using the laws and theorems of Boolean algebra.</p>
+	<p class="block_24"> 1) (A plus B) into (A plus B) equal to A </p>
+	<p class="block_24">2) A into (A bar plus B) equal to A B </p>
+	<p class="block_24">3) (A plus B) into  (A plus C) equal to A plus B C</p>
+	<p class="block_77"> </p>
+	<p class="block_24">7. Verify the given Boolean equation <span class="calibre7">A  plus A</span> bar <span class="calibre7">B equal to  A plus B</span> using truth table.</p>
+	<p class="block_24">8. In the given figure of a voltage regulator, a Zener diode of breakdown voltage 10 V is employed. Determine the current through the load resistance, the total current and the current through the diode. Use diode approximation. [Answer: 5 milli Ampere; 20 milli Ampere; 15 milli Ampere]</p>
+	<p class="block_24"><img src="images/image-768.png" alt="Image,  Circuit is shown with voltage regulator and a zener diode of breakdown voltage 10V is employed" class="calibre870"/></p>
+	<p class="block_77"> </p>
+	<p class="block_24">9. Write down Boolean equation for the output Y of the given circuit and give its truth table. </p>
+	<p class="block_24">Answer: y equal to A into B plus A plus B whole bar</p>
+	<p class="block_24"><img src="images/image-769.png" alt="Image, Circuit is shown with output Y and its truth table " class="calibre871"/></p>
+	<p class="block_1"> </p>
+	<div class="calibre564" id="calibre_pb_9"></div>
+</body></html>
