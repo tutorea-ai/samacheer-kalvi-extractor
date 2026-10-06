@@ -275,6 +275,14 @@ def _find_pattern(text: str, patterns: list,
 _HASH_CODE_RE = re.compile(r'\[([A-Za-z0-9]{4,12})\]')
 _DIMENSION_RE = re.compile(r'(?:[MLTIKAJN]\d*)+')
 
+# ICT / QR-corner boilerplate at the end of almost every chapter, e.g.
+# "*If browser requires, allow Flash Player or Java Script to load the page."
+_ICT_BOILERPLATE_RE = re.compile(
+    r'\*?\s*(?:if\s+)?browser\s+requires,?\s+allow\s+flash\s+player\s+or\s+'
+    r'java\s*script\s+to\s+load\s+the\s+page\.?',
+    re.IGNORECASE
+)
+
 
 def strip_hash_codes(text: str) -> str:
     """Remove [hash] noise codes but keep dimensional formulae."""
@@ -287,6 +295,7 @@ def strip_hash_codes(text: str) -> str:
 def clean_noise(text: str, subject: str = "english") -> str:
     """Removes pdf2htmlEX noise before any processing."""
     text = strip_hash_codes(text)
+    text = _ICT_BOILERPLATE_RE.sub('', text)
     text = re.sub(
         r'\d+th\s+English_Unit_\d+\.indd\s+\d+\s+\d{2}-\d{2}-\d{4}\s+[\d:]+',
         '', text
