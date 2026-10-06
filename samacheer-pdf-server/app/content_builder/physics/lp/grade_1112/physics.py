@@ -47,6 +47,7 @@ import time
 from typing import Any, Dict, List, Optional, Tuple
 
 import anthropic
+import httpx                    # installed with the anthropic SDK
 
 from .....config import settings
 from ...base import (
@@ -102,7 +103,8 @@ MAX_FAILED_DAYS = 1             # backend rule: >1 failed day → return None
                                 # (TL to confirm; may become a ratio)
 
 REQUEST_TIMEOUT_S = 900.0       # per streamed request
-SDK_MAX_RETRIES   = 3           # connection errors / 429 / 5xx / overload
+SDK_MAX_RETRIES   = 3           # connection errors / 429 / 5xx BEFORE the stream starts
+STREAM_RETRY_BACKOFF_S = (10, 30, 60)   # our retries for drops DURING a stream
 
 DAY_TEXT_MIN_CHARS = 800        # smaller slice than this → send full chapter
 DAY_TEXT_MAX_CHARS = 90000
@@ -254,6 +256,39 @@ class PhysicsLP1112Builder:
 
     def _call(self, system: str, prompt: str, max_tokens: int,
               label: str) -> Tuple[Optional[str], Optional[str]]:
+        """
+        Streamed call with retries for MID-STREAM failures.
+
+        The SDK's max_retries only covers failures before the stream starts.
+        A connection dropped during streaming (httpx.RemoteProtocolError
+        "incomplete chunked read"), a read timeout, or an overloaded / 5xx
+        error event mid-stream is NOT retried by the SDK — so we retry here,
+        with backoff. Permanent errors (400/401/403/404/413/422) fail at once.
+        """
+        attempts = len(STREAM_RETRY_BACKOFF_S) + 1
+        for attempt in range(1, attempts + 1):
+            text, stop, retryable = self._call_once(system, prompt, max_tokens, label)
+            if text is not None or not retryable:
+                return text, stop
+            if attempt < attempts:
+                wait = STREAM_RETRY_BACKOFF_S[attempt - 1]
+                print(f"         ↻ {label}: transient failure — retry {attempt}/{attempts - 1} in {wait}s")
+                time.sleep(wait)
+        print(f"❌ [Physics LP] {label}: still failing after {attempts - 1} retries")
+        return None, None
+
+    @staticmethod
+    def _is_transient(e: Exception) -> bool:
+        if isinstance(e, (anthropic.APIConnectionError, httpx.TransportError)):
+            return True                       # dropped connection, read timeout, DNS blip
+        if isinstance(e, anthropic.APIStatusError):
+            code = getattr(e, "status_code", 0) or 0
+            return code == 429 or code >= 500 or "overloaded" in str(e).lower()
+        return False
+
+    def _call_once(self, system: str, prompt: str, max_tokens: int,
+                   label: str) -> Tuple[Optional[str], Optional[str], bool]:
+        """Returns (text, stop_reason, retryable)."""
         try:
             with self.client.messages.stream(
                 model=self.model,
@@ -274,13 +309,12 @@ class PhysicsLP1112Builder:
             if usage is not None:
                 print(f"         · {label}: in={getattr(usage, 'input_tokens', '?')} "
                       f"out={getattr(usage, 'output_tokens', '?')} stop={msg.stop_reason}")
-            return text, msg.stop_reason
-        except anthropic.APIError as e:
-            print(f"❌ [Physics LP] {label} API error: {type(e).__name__}: {e}")
-            return None, None
+            return text, msg.stop_reason, False
         except Exception as e:
-            print(f"❌ [Physics LP] {label} error: {type(e).__name__}: {e}")
-            return None, None
+            transient = self._is_transient(e)
+            print(f"❌ [Physics LP] {label} {'transient ' if transient else ''}error: "
+                  f"{type(e).__name__}: {e}")
+            return None, None, transient
 
     def _call_json(self, system: str, prompt: str, max_tokens: int,
                    label: str) -> Optional[dict]:
@@ -289,7 +323,7 @@ class PhysicsLP1112Builder:
         for attempt in (1, 2):
             raw, stop = self._call(system, prompt + feedback, max_tokens, f"{label} #{attempt}")
             if raw is None:
-                return None          # network-level failure already retried by SDK
+                return None          # network failure already retried in _call()
             if stop == "max_tokens":
                 print(f"         ⚠️ {label}: output cut off at max_tokens")
                 feedback = ("\n\nIMPORTANT: Your previous answer was cut off. Keep every "
@@ -464,7 +498,8 @@ RULES:
 {day_types}
   Choose by what the day mainly teaches. A day with a textbook derivation is
   "derivation" unless the derivation is trivial.
-- title: short day title built from the section headings.
+- title: short day title built ONLY from THIS day's own section headings
+  (never mention a topic that belongs to another day).
 - focus: one sentence — the day's main outcome.
 - learning_objectives: 3-4 items, each starting with an action verb
   (State, Explain, Derive, Calculate, Distinguish, Apply, Predict).
@@ -972,11 +1007,23 @@ Chapter text (opening part, for tone and context only):
             run["_section_positions"] = positions
 
         ids = [s["id"] for s in day["sections"]]
-        if any(positions.get(i) is None for i in ids):
+        if all(positions.get(i) is None for i in positions):
             return text, True
 
-        start = positions[ids[0]]
-        last_idx = run["section_index"][ids[-1]]
+        idx = run["section_index"]
+        first_idx, last_idx = idx[ids[0]], idx[ids[-1]]
+
+        # Start: today's first heading; if it wasn't located, widen back to the
+        # nearest earlier heading that was (a little extra text, nothing missing)
+        start = positions.get(ids[0])
+        if start is None:
+            start = 0
+            for s in reversed(run["sections"][:first_idx]):
+                if positions.get(s["id"]) is not None:
+                    start = positions[s["id"]]
+                    break
+
+        # End: the next located heading after today's last section
         end = len(text)
         for s in run["sections"][last_idx + 1:]:
             p = positions.get(s["id"])
@@ -989,33 +1036,99 @@ Chapter text (opening part, for tone and context only):
         return chunk[:DAY_TEXT_MAX_CHARS], False
 
     @staticmethod
-    def _locate_sections(text: str, sections: List[dict]) -> Dict[str, Optional[int]]:
-        """Find each section heading in order (monotonic search from the last hit)."""
-        positions: Dict[str, Optional[int]] = {}
-        cursor = 0
-        for s in sections:
-            words = re.findall(r"\w+", s["heading"])[:4]
-            head_pat = r"\W+".join(map(re.escape, words)) if words else None
-            pats = []
-            if s["number"] and head_pat:
-                pats.append(re.escape(s["number"]) + r"[\s.:)\-–]*" + head_pat)
-            if s["number"]:
-                pats.append(r"(?m)^\s*" + re.escape(s["number"]) + r"(?![\d.])")
-            if head_pat:
-                pats.append(r"(?m)^\s*" + head_pat)
-            found = None
-            for p in pats:
-                m = re.compile(p, re.IGNORECASE).search(text, cursor)
-                if m:
-                    found = m.start()
-                    break
-            positions[s["id"]] = found
-            if found is not None:
-                cursor = found + 1
-        # If everything landed in the first few percent, we probably hit a contents list
-        hits = [p for p in positions.values() if p is not None]
-        if len(hits) >= 3 and max(hits) < len(text) * 0.05:
+    def _norm_heading(s: str) -> str:
+        """Lower-case, straighten quotes, drop leading numbering and punctuation."""
+        s = (s or "").lower()
+        s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
+        # Section-number prefixes: "1.2.1 ", "1.2) " and the EPUB's spoken form
+        # "1 point 9 point 3 " (screen-reader text for 1.9.3)
+        s = re.sub(r"^\s*\d+(?:\s*(?:\.|point)\s*\d+)*\s*[.:)\-–]?\s*", "", s)
+        s = re.sub(r"^[\s\d.:)\-–]+", "", s)
+        s = s.replace("'", "")                        # coulomb's → coulombs
+        s = re.sub(r"[^a-z0-9]+", " ", s)
+        return re.sub(r"\s+", " ", s).strip()
+
+    @classmethod
+    def _locate_sections(cls, text: str, sections: List[dict]) -> Dict[str, Optional[int]]:
+        """
+        Find where each section heading starts in the chapter text.
+
+        Samacheer EPUB text carries NO section numbers (they come from CSS), so
+        matching is on heading TEXT only:
+          1. candidates = every line whose normalized text equals the normalized
+             heading (also a heading split over two lines, or a line that is the
+             heading plus a few trailing characters)
+          2. pick ONE candidate per section so positions strictly increase and as
+             many sections as possible are matched (DP over candidates); ties go
+             to the chain with more well-separated headings — a contents list or
+             objectives box puts headings right next to each other, real
+             sections have body text between them
+          3. if under half the sections are found, give up (→ full text)
+        """
+        # Line index: (start offset, normalized line, normalized line+next line)
+        lines = text.split("\n")
+        offs, pos = [], 0
+        for ln in lines:
+            offs.append(pos)
+            pos += len(ln) + 1
+        norm = [cls._norm_heading(ln) for ln in lines]
+        nonempty = [i for i, n in enumerate(norm) if n]
+
+        def candidates(heading: str) -> List[int]:
+            h = cls._norm_heading(heading)
+            if not h:
+                return []
+            out = []
+            for k, i in enumerate(nonempty):
+                n = norm[i]
+                if n == h or (n.startswith(h) and len(n) - len(h) <= 12):
+                    out.append(offs[i])
+                elif k + 1 < len(nonempty) and h.startswith(n) and len(n) >= 4:
+                    joined = (n + " " + norm[nonempty[k + 1]]).strip()
+                    if joined == h or (joined.startswith(h) and len(joined) - len(h) <= 12):
+                        out.append(offs[i])
+            return out[:12]
+
+        cands = [candidates(s["heading"]) for s in sections]
+
+        # DP: best chain ending at (section i, candidate position p)
+        #     score = (matched count, well-separated gaps)
+        GAP = 300
+        best: List[Dict[int, Tuple[Tuple[int, int], Optional[Tuple[int, int]]]]] = []
+        for i, cl in enumerate(cands):
+            row: Dict[int, Tuple[Tuple[int, int], Optional[Tuple[int, int]]]] = {}
+            for p in cl:
+                score, back = (1, 0), None
+                for j in range(i):
+                    for q, (sc, _) in best[j].items():
+                        if q < p:
+                            cand = (sc[0] + 1, sc[1] + (1 if p - q >= GAP else 0))
+                            # ties → the LATER predecessor (the body heading
+                            # just before, not an early contents-list entry)
+                            if cand > score or (cand == score and back is not None and q > back[1]):
+                                score, back = cand, (j, q)
+                row[p] = (score, back)
+            best.append(row)
+
+        end, end_score = None, (0, 0)
+        for i, row in enumerate(best):
+            for p, (sc, _) in row.items():
+                if sc > end_score:
+                    end_score, end = sc, (i, p)
+
+        positions: Dict[str, Optional[int]] = {s["id"]: None for s in sections}
+        node = end
+        while node is not None:
+            i, p = node
+            positions[sections[i]["id"]] = p
+            node = best[i][p][1]
+
+        found = sum(1 for v in positions.values() if v is not None)
+        if found < max(2, len(sections) // 2):
+            print(f"         · text slicing: only {found}/{len(sections)} headings located "
+                  f"— days will use the full chapter")
             return {k: None for k in positions}
+        print(f"         · text slicing: located {found}/{len(sections)} section headings")
         return positions
 
     # ---------- day prompt ----------
@@ -1024,8 +1137,10 @@ Chapter text (opening part, for tone and context only):
         n, total = day["num"], run["total_days"]
         st = day["strategy"]
         prev_day = run["days"][n - 2] if n > 1 else None
-        next_title = (run["days"][n]["title"] if n < len(run["days"])
-                      else PHYSICS_REVISION_DAY_STRATEGY["title"])
+        # Built from the next day's own section headings (not the allocator's
+        # free-text title, which once named another day's topic)
+        next_title = (" + ".join(s["heading"] for s in run["days"][n]["sections"])
+                      if n < len(run["days"]) else PHYSICS_REVISION_DAY_STRATEGY["title"])
         objectives = "\n".join(f"  - {o}" for o in day["learning_objectives"]) \
             or "  (write 3-4 objectives with action verbs from today's sections)"
         timing = "\n".join(f"  {t:<10} {cls:<26} {purpose}"
@@ -1075,9 +1190,30 @@ Exit ticket     : {st['exit_ticket_style']}
 {"Numerical day  : model the five-step routine in a worked example (use the textbook's solved example if listed above)." if has_numerical else ""}
 {"Derivation day : follow the DERIVATION rules — numbered steps in board-work, reasons in teacher script, result in formula-box." if has_derivation else ""}
 
-DEFAULT TIMING (resize blocks if a topic needs more board time — total must be
-exactly 35 minutes, contiguous, no overlaps):
+DEFAULT TIMING (resize blocks if a topic needs more board time):
 {timing}
+
+TIME LABELS — STRICT:
+- Every lp-time label is a range "A–B min". Labels appear in order and are
+  CONTIGUOUS: the opening starts at 0, each label starts exactly where the
+  previous one ended, and the closing ends at 35. No gaps, no overlaps.
+  ✅ 0–5, 5–12, 12–18, 18–24, 24–31, 31–35      ❌ ...13–20 then 23–30 (gap)
+- If the main section gets more minutes, the student task and closing start
+  later — move their labels; never squeeze them out.
+
+REALISTIC PACING — A NEW TEACHER MUST BE ABLE TO DELIVER THIS IN 35 MINUTES:
+- A teacher speaks about 120 words a minute. Each block's teacher script and
+  board work must fit inside that block's minutes.
+- Fully work AT MOST TWO examples in the whole day: one modelled by the
+  teacher (main section) and one solved by students (student task).
+  Any other textbook solved examples: do NOT solve them in class — list them in
+  the closing as "Also practise from the textbook: Example x.y" for students.
+- At most ONE long derivation is written out in full in class. If today has a
+  second long derivation, derive its key steps on the board, and keep the
+  student task to one short activity with no extra numerical.
+- Prefer depth on the core idea over covering side remarks. Every listed
+  section and sub-heading is still TAUGHT — but side points get one or two
+  sentences, not a full block.
 
 ═══════════════════════════════════════════════════════
 GENERATE Day {n} using EXACTLY this HTML structure
@@ -1091,7 +1227,7 @@ GENERATE Day {n} using EXACTLY this HTML structure
 
 <div class="lp-section-opening">
   <p class="lp-section-label">Opening — {st['opening_style']}</p>
-  <span class="lp-time">0–5 min</span>
+  <span class="lp-time">0–[A] min</span>
   <div class="lp-teacher-says">[recall line if Day 2+, then the hook question — exact words the teacher says]</div>
   <div class="lp-tamil-scaffold"><strong>தமிழில்:</strong> [the hook question in code-mixed Tamil]</div>
   [cfu-block — whole-class check on the hook]
@@ -1099,7 +1235,7 @@ GENERATE Day {n} using EXACTLY this HTML structure
 
 <div class="lp-section-intro">
   <p class="lp-section-label">Introduction — [first idea of today]</p>
-  <span class="lp-time">5–13 min</span>
+  <span class="lp-time">[A]–[B] min</span>
   <div class="lp-teacher-says">[familiar experience → simple English explanation]</div>
   [formula-box with the key statement or law]
   <div class="lp-tamil-scaffold"><strong>தமிழில்:</strong> [one code-mixed Tamil line]</div>
@@ -1110,7 +1246,7 @@ GENERATE Day {n} using EXACTLY this HTML structure
 <div class="lp-section-main">
   <p class="lp-section-label">Main Teaching — Board Work</p>
   [ONE OR MORE teaching blocks, one per remaining idea / sub-heading, each:]
-  <h4><span class="lp-time">13–20 min</span> [sub-topic name]</h4>
+  <h4><span class="lp-time">[B]–[C] min</span> [sub-topic name]</h4>   (next block starts at [C], and so on)
   <div class="lp-teacher-says">[explanation in simple English, then scientific English]</div>
   [board-work: diagram description / derivation steps / worked example (five steps)]
   [formula-box for each key formula]
@@ -1122,7 +1258,7 @@ GENERATE Day {n} using EXACTLY this HTML structure
 
 <div class="lp-section-student-task">
   <p class="lp-section-label">Student Task — {st['activity_style']}</p>
-  <span class="lp-time">23–30 min</span>
+  <span class="lp-time">[D]–[E] min</span>   ([D] = where the last main block ended)
   <div class="lp-teacher-says">[exact instructions to students, grounded in today's content]</div>
   [board-work with the task items / numerical; give the expected answers for the teacher]
   [cfu-block]
@@ -1130,10 +1266,11 @@ GENERATE Day {n} using EXACTLY this HTML structure
 
 <div class="lp-section-closing">
   <p class="lp-section-label">Closing</p>
-  <span class="lp-time">30–35 min</span>
+  <span class="lp-time">[E]–35 min</span>
   <div class="lp-teacher-says"><strong>Exam-oriented question:</strong> [one exam-style question on today's content]<br/><strong>Model answer:</strong> [short model answer in exam English]</div>
   [cfu-block]
   <div class="board-work"><strong>Exit Ticket:</strong><br/>[{st['exit_ticket_style']} — on today's content; include the answers in brackets for the teacher]</div>
+  [if other textbook solved examples exist for today: <p><strong>Also practise from the textbook:</strong> Example x.y, ...</p>]
   <p><em>Next lesson: {self._esc(next_title)}</em></p>
 </div>
 
@@ -1151,7 +1288,8 @@ FINAL CHECKS BEFORE FINISHING
 ✅ At least one common-mistakes box
 ✅ Formulas in plain HTML (<sup>/<sub>/Unicode) — no LaTeX
 ✅ Textbook numbers used exactly; practice-problem answers calculated correctly with units
-✅ Times add up to exactly 35 minutes
+✅ Time labels run 0 → 35 with no gaps or overlaps (each starts where the previous ended)
+✅ Pacing is realistic: at most 2 fully worked examples, at most 1 full long derivation
 ✅ Exit Ticket present; NO homework
 ✅ No page numbers, no student names, no religious references
 ✅ Do NOT generate Day {n + 1}

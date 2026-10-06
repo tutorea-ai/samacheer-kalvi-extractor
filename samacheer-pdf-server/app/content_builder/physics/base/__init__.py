@@ -702,10 +702,35 @@ def check_day_structure(html: str, is_revision_day: bool = False) -> List[str]:
     if not re.search(r"exit\s*ticket", html, re.IGNORECASE):
         problems.append("missing exit ticket")
 
+    timing = check_time_labels(html)
+    if timing:
+        problems.append(timing)
+
     if re.search(r"\$[^$\n]{1,80}\$|\\frac|<math\b", html):
         problems.append("LaTeX / MathML found — formulas must be plain HTML")
 
     return problems
+
+
+def check_time_labels(html: str) -> Optional[str]:
+    """
+    Time labels must run 0 → 35 contiguously, in order.
+    Returns a problem string, or None when the sequence is clean.
+    (Minor problem — logged, does not trigger a retry.)
+    """
+    ranges = [(int(a), int(b)) for a, b in re.findall(
+        r'class="lp-time">\s*(\d+)\s*[–—-]\s*(\d+)', html or "")]
+    if not ranges:
+        return None
+    issues = []
+    if ranges[0][0] != 0:
+        issues.append(f"starts at {ranges[0][0]}")
+    if ranges[-1][1] != 35:
+        issues.append(f"ends at {ranges[-1][1]}")
+    for (a1, b1), (a2, b2) in zip(ranges, ranges[1:]):
+        if a2 != b1:
+            issues.append(f"{a1}–{b1} then {a2}–{b2}")
+    return ("time labels not contiguous (" + "; ".join(issues[:4]) + ")") if issues else None
 
 
 def is_critical(problems: List[str]) -> bool:
