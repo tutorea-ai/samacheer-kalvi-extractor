@@ -178,7 +178,39 @@ class PhysicsQA1112Builder:
 
         # Book-back questions first, then the rest, capped at the part count
         accepted.sort(key=lambda q: 0 if q.get("book_back") else 1)
-        return accepted[: part["count"]]
+        accepted = accepted[: part["count"]]
+        if part["kind"] == "mcq":
+            self._balance_mcq_answers(accepted)
+        return accepted
+
+    # Options that refer to other options must keep their order
+    _OPTION_REF_RE = re.compile(
+        r"\b(both|neither|all|none|above)\b|\(\s*[a-d]\s*\)|\b[a-d]\s*(and|&|or)\s*[a-d]\b",
+        re.IGNORECASE)
+
+    @classmethod
+    def _balance_mcq_answers(cls, questions: List[dict]) -> None:
+        """
+        Spread correct answers evenly over a/b/c/d. Models favour one letter
+        (Unit 2 first run: b was correct 23/40 times). For each eligible MCQ,
+        the correct option is swapped into the least-used position so far.
+        Book-back MCQs keep the textbook order; MCQs whose options refer to
+        each other ("both (a) and (b)") are left untouched.
+        """
+        counts = {l: 0 for l in "abcd"}
+        eligible = []
+        for q in questions:
+            if q.get("book_back") or any(cls._OPTION_REF_RE.search(o) for o in q["options"]):
+                counts[q["answer"]] += 1
+            else:
+                eligible.append(q)
+        for q in eligible:
+            target = min("abcd", key=lambda l: (counts[l], "abcd".index(l)))
+            i, j = "abcd".index(q["answer"]), "abcd".index(target)
+            q["options"][i], q["options"][j] = q["options"][j], q["options"][i]
+            q["answer"] = target
+            counts[target] += 1
+        print(f"         · MCQ answer spread: " + " ".join(f"{l}={counts[l]}" for l in "abcd"))
 
     def _accept(self, run: dict, part: dict, new: List[dict],
                 accepted: List[dict], limit: int) -> int:
@@ -199,6 +231,15 @@ class PhysicsQA1112Builder:
         return added
 
     # ---------- validators ----------
+
+    _STEM_LABEL_RE = re.compile(
+        r"\s*[\(\[]\s*(book[\s-]*back|textbook|evaluation)[^\)\]]{0,40}[\)\]]\s*",
+        re.IGNORECASE)
+
+    @classmethod
+    def _clean_stem(cls, stem: str) -> str:
+        """Remove '(Book-back Long Answer 1)'-style labels — the badge already shows it."""
+        return re.sub(r"\s{2,}", " ", cls._STEM_LABEL_RE.sub(" ", stem)).strip()
 
     @staticmethod
     def _validate_mcq(raw: dict) -> Optional[dict]:
@@ -222,7 +263,7 @@ class PhysicsQA1112Builder:
         if any(normalize_stem(o) in bad for o in opts):
             return None
         return {
-            "q": stem,
+            "q": PhysicsQA1112Builder._clean_stem(stem),
             "options": opts,
             "answer": ans,
             "explanation": str(raw.get("explanation", "")).strip(),
@@ -239,7 +280,7 @@ class PhysicsQA1112Builder:
         if not stem or len(re.sub(r"<[^>]+>", "", ans)) < min_len:
             return None
         return {
-            "q": stem,
+            "q": PhysicsQA1112Builder._clean_stem(stem),
             "answer_html": ans,
             "diagram_svg": str(raw.get("diagram_svg", "") or ""),
             "type": str(raw.get("type", "")).strip().lower(),
