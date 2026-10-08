@@ -14,8 +14,42 @@ FIXES (April 2026):
 
 import re
 import anthropic
+from html.parser import HTMLParser
 from typing import Optional
 from ..config import settings
+
+
+# ── Safety net: close tags a part left open ──────────────────────────────────
+# Each part (content, book-back answers, summary) is generated separately and
+# joined. If one part is cut off (e.g. the model hits its output limit), its
+# open tags would swallow every part after it. Close them per part, and warn.
+_VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input",
+              "link", "meta", "source", "track", "wbr"}
+
+
+class _OpenTagTracker(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag not in _VOID_TAGS:
+            self.stack.append(tag)
+
+    def handle_endtag(self, tag):
+        if tag in self.stack:
+            while self.stack and self.stack.pop() != tag:
+                pass
+
+
+def _close_open_tags(html: str, label: str) -> str:
+    tracker = _OpenTagTracker()
+    tracker.feed(html)
+    if not tracker.stack:
+        return html
+    print(f"         ⚠️  [Assembler] {label}: closing {len(tracker.stack)} unclosed tag(s) "
+          f"{tracker.stack[::-1]} — output was likely cut off")
+    return html + "".join(f"</{t}>" for t in reversed(tracker.stack))
 
 
 SYSTEM_PROMPT = """You are converting a Samacheer Kalvi Tamil Nadu State Board academic
@@ -257,7 +291,7 @@ class ContentAssembler:
         print(f"      [Assembler] Single call — full text")
         result = self._convert(text)
         if result:
-            parts.append(result)
+            parts.append(_close_open_tags(result, "Content"))
 
         # ── Book-back Answer Toggle (all subjects) ─────────────────────────────
         print(f"      [Assembler] Generating book-back answers...")
@@ -269,7 +303,7 @@ class ContentAssembler:
                 metadata=metadata
             )
             if bookback_html:
-                parts.append(bookback_html)
+                parts.append(_close_open_tags(bookback_html, "Book-back"))
                 print(f"      [Assembler] ✅ Book-back answers added ({len(bookback_html)} chars)")
             else:
                 print(f"      [Assembler] ⚠️  Book-back answers failed")
@@ -279,7 +313,7 @@ class ContentAssembler:
         # Summary
         summary = self._summary(text, lesson_title)
         if summary:
-            parts.append(summary)
+            parts.append(_close_open_tags(summary, "Summary"))
 
         final_html = "\n\n".join(p for p in parts if p)
         print(f"      [Assembler] ✅ Complete — {len(parts)} parts, {len(final_html)} chars")
