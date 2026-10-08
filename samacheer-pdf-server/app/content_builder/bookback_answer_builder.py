@@ -156,6 +156,18 @@ class BookbackAnswerBuilder:
         unit         = metadata.get("unit", "")
         discipline   = (metadata.get("discipline") or "").title()
 
+        # Real subject label (was hardcoded "Social Science" for every subject).
+        # Known keys get a clean label; any new subject falls back to title case.
+        subject_raw = (metadata.get("subject") or "").lower().strip()
+        SUBJECT_LABELS = {
+            "socialscience": "Social Science", "social_science": "Social Science",
+            "maths": "Mathematics", "math": "Mathematics", "mathematics": "Mathematics",
+            "pure_science": "Pure Science",
+        }
+        subject_label = SUBJECT_LABELS.get(subject_raw, subject_raw.replace("_", " ").title())
+        subject_line  = (f"{subject_label} — {discipline}"
+                         if discipline and discipline.lower() != subject_raw else subject_label)
+
         print(f"      [Bookback] Generating answers: {lesson_title}")
 
         try:
@@ -165,12 +177,12 @@ from this Samacheer Kalvi chapter.
 Chapter  : {lesson_title}
 Class    : {class_num}
 Unit     : {unit}
-Subject  : Social Science — {discipline}
+Subject  : {subject_line}
 
 CRITICAL SOURCE RULE:
 - Answers MUST come STRICTLY from the chapter text provided below
 - Do NOT use any outside knowledge
-- Do NOT use general historical facts not mentioned in the chapter
+- Do NOT use general facts not mentioned in the chapter
 - Every answer must be directly supported by the chapter text
 - If a question cannot be answered from the chapter text alone,
   say: "Refer to the chapter text for this answer."
@@ -179,6 +191,7 @@ ANSWER LENGTH RULES:
 - 1-mark (MCQ / Fill blank / Match): One word, phrase, or one sentence max
 - 2-mark (Brief answer): 2-3 sentences, 30-50 words
 - 5-mark (Detail answer): 5-6 sentences, 80-120 words
+- Numerical / problem-solving: key steps and the final answer only — no lengthy working
 
 OUTPUT FORMAT:
 For each question, generate this exact HTML structure:
@@ -288,14 +301,28 @@ Chapter Text:
 {chapter_text}
 ---"""
 
-            response = self.client.messages.create(
+            # Stream with a large output budget. Long book-back sets (Maths
+            # step-by-step answers, 30+ question Biology sets) used to hit the
+            # old 8000-token limit and get cut off mid-answer.
+            raw = ""
+            with self.client.messages.stream(
                 model=self.model,
-                max_tokens=8000,
+                max_tokens=32000,
                 system=BOOKBACK_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": prompt}]
-            )
+            ) as stream:
+                for chunk in stream.text_stream:
+                    raw += chunk
+                final = stream.get_final_message()
 
-            raw = response.content[0].text.strip()
+            answered = raw.count('class="bookback-qa-item"')
+            if final.stop_reason == "max_tokens":
+                print(f"      [Bookback] ⚠️  OUTPUT CUT OFF at max_tokens — {answered} questions "
+                      f"answered; remaining answers missing for: {lesson_title}")
+            else:
+                print(f"      [Bookback] {answered} questions answered (stop: {final.stop_reason})")
+
+            raw = raw.strip()
             raw = re.sub(r'```(?:html)?', '', raw).strip()
             raw = re.sub(r'```', '', raw).strip()
             raw = re.sub(r'<style[^>]*>.*?</style>', '', raw, flags=re.DOTALL)
