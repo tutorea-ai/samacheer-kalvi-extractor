@@ -1008,6 +1008,15 @@ Chapter text (opening part, for tone and context only):
 
         ids = [s["id"] for s in day["sections"]]
         if all(positions.get(i) is None for i in positions):
+            if not run.get("_text_dumped"):
+                run["_text_dumped"] = True
+                try:   # debug aid: the exact text the builder received
+                    dump = f"/tmp/physics_lp_text_unit{run.get('unit', 'x')}.txt"
+                    with open(dump, "w", encoding="utf-8") as fh:
+                        fh.write(text)
+                    print(f"         · text slicing failed — chapter text saved to {dump}")
+                except OSError:
+                    pass
             return text, True
 
         idx = run["section_index"]
@@ -1048,79 +1057,132 @@ Chapter text (opening part, for tone and context only):
         s = re.sub(r"[^a-z0-9]+", " ", s)
         return re.sub(r"\s+", " ", s).strip()
 
+    @staticmethod
+    def _normalize_with_map(text: str) -> Tuple[str, List[int]]:
+        """
+        Same normalization as _norm_heading (lower-case ASCII letters/digits,
+        apostrophes dropped, everything else → single space), applied to the
+        whole chapter, plus a map from each normalized char to its offset in
+        the original text.
+        """
+        out: List[str] = []
+        idx: List[int] = []
+        prev_space = True
+        for i, ch in enumerate(text):
+            c = ch.lower()
+            if c in "'’‘":
+                continue
+            if c.isascii() and c.isalnum():
+                out.append(c)
+                idx.append(i)
+                prev_space = False
+            elif not prev_space:
+                out.append(" ")
+                idx.append(i)
+                prev_space = True
+        return "".join(out), idx
+
     @classmethod
     def _locate_sections(cls, text: str, sections: List[dict]) -> Dict[str, Optional[int]]:
         """
         Find where each section heading starts in the chapter text.
 
-        Samacheer EPUB text carries NO section numbers (they come from CSS), so
-        matching is on heading TEXT only:
-          1. candidates = every line whose normalized text equals the normalized
-             heading (also a heading split over two lines, or a line that is the
-             heading plus a few trailing characters)
-          2. pick ONE candidate per section so positions strictly increase and as
-             many sections as possible are matched (DP over candidates); ties go
-             to the chain with more well-separated headings — a contents list or
-             objectives box puts headings right next to each other, real
-             sections have body text between them
-          3. if under half the sections are found, give up (→ full text)
+        The preprocessor's text layout varies (headings may or may not sit on
+        their own lines; section numbers may appear as "3.8.1", as the EPUB's
+        spoken form "3 point 8 point 1", or not at all), so:
+          1. candidates = EVERY occurrence of the normalized heading text,
+             anywhere in the chapter
+          2. each candidate gets a "heading-likeness" score:
+               +3  this section's own number right before it (3.8.1 / 3 point 8 point 1)
+               +2  some other section-style number right before it
+               +1  a line break right before it,  +1 a line break right after it
+             plain mentions inside body text score 0
+          3. pick ONE candidate per section so positions strictly increase,
+             maximizing (sections matched, total heading-likeness, well-
+             separated gaps) — dynamic programming over the candidates
+          4. give up (→ full chapter) if under half the sections are found, or
+             if most matches are only plain mentions (not trustworthy)
         """
-        # Line index: (start offset, normalized line, normalized line+next line)
-        lines = text.split("\n")
-        offs, pos = [], 0
-        for ln in lines:
-            offs.append(pos)
-            pos += len(ln) + 1
-        norm = [cls._norm_heading(ln) for ln in lines]
-        nonempty = [i for i, n in enumerate(norm) if n]
+        norm, nmap = cls._normalize_with_map(text)
+        n_text = len(text)
+        number_tail = re.compile(r"\d+(?: (?:point )?\d+){1,3} ?$")
 
-        def candidates(heading: str) -> List[int]:
-            h = cls._norm_heading(heading)
-            if not h:
+        def number_forms(num: str) -> List[str]:
+            parts = re.findall(r"\d+", num or "")
+            if len(parts) < 2:
                 return []
-            out = []
-            for k, i in enumerate(nonempty):
-                n = norm[i]
-                if n == h or (n.startswith(h) and len(n) - len(h) <= 12):
-                    out.append(offs[i])
-                elif k + 1 < len(nonempty) and h.startswith(n) and len(n) >= 4:
-                    joined = (n + " " + norm[nonempty[k + 1]]).strip()
-                    if joined == h or (joined.startswith(h) and len(joined) - len(h) <= 12):
-                        out.append(offs[i])
-            return out[:12]
+            return [" ".join(parts), " point ".join(parts)]
 
-        cands = [candidates(s["heading"]) for s in sections]
+        def line_break_before(orig: int) -> bool:
+            j = orig - 1
+            while j >= 0 and text[j] in " \t\r":
+                j -= 1
+            return j < 0 or text[j] == "\n"
 
-        # DP: best chain ending at (section i, candidate position p)
-        #     score = (matched count, well-separated gaps)
+        def line_break_after(orig_end: int) -> bool:
+            j = orig_end
+            while j < n_text and text[j] in " \t\r.:":
+                j += 1
+            return j >= n_text or text[j] == "\n"
+
+        cands: List[Dict[int, int]] = []          # per section: {orig_pos: quality}
+        for sec in sections:
+            h = cls._norm_heading(sec["heading"])
+            found: Dict[int, int] = {}
+            if h:
+                forms = number_forms(sec.get("number", ""))
+                pat = re.compile(r"(?<![a-z0-9])" + re.escape(h) + r"(?![a-z0-9])")
+                for m in pat.finditer(norm):
+                    st, en = m.start(), m.end()
+                    before = norm[max(0, st - 30):st].rstrip()
+                    q = 0
+                    if forms and any(before.endswith(f) for f in forms):
+                        q += 3
+                    elif number_tail.search(before + " "):
+                        q += 2
+                    orig_st, orig_en = nmap[st], nmap[en - 1] + 1
+                    if line_break_before(orig_st):
+                        q += 1
+                    if line_break_after(orig_en):
+                        q += 1
+                    found[orig_st] = q
+            # keep the most heading-like occurrences (bounded for speed)
+            keep = sorted(found.items(), key=lambda kv: (-kv[1], kv[0]))[:25]
+            cands.append(dict(keep))
+
+        # DP: best chain ending at (section i, position p)
+        #     score = (matched count, heading-likeness sum, well-separated gaps)
         GAP = 300
-        best: List[Dict[int, Tuple[Tuple[int, int], Optional[Tuple[int, int]]]]] = []
+        best: List[Dict[int, Tuple[Tuple[int, int, int], Optional[Tuple[int, int]]]]] = []
         for i, cl in enumerate(cands):
-            row: Dict[int, Tuple[Tuple[int, int], Optional[Tuple[int, int]]]] = {}
-            for p in cl:
-                score, back = (1, 0), None
+            row: Dict[int, Tuple[Tuple[int, int, int], Optional[Tuple[int, int]]]] = {}
+            for p, q in cl.items():
+                score, back = (1, q, 0), None
                 for j in range(i):
-                    for q, (sc, _) in best[j].items():
-                        if q < p:
-                            cand = (sc[0] + 1, sc[1] + (1 if p - q >= GAP else 0))
-                            # ties → the LATER predecessor (the body heading
-                            # just before, not an early contents-list entry)
-                            if cand > score or (cand == score and back is not None and q > back[1]):
-                                score, back = cand, (j, q)
+                    for prev, (sc, _) in best[j].items():
+                        if prev < p:
+                            cand = (sc[0] + 1, sc[1] + q, sc[2] + (1 if p - prev >= GAP else 0))
+                            # ties → the LATER predecessor (body heading just
+                            # before, not an early contents-list entry)
+                            if cand > score or (cand == score and back is not None and prev > back[1]):
+                                score, back = cand, (j, prev)
                 row[p] = (score, back)
             best.append(row)
 
-        end, end_score = None, (0, 0)
+        end, end_score = None, (0, 0, 0)
         for i, row in enumerate(best):
             for p, (sc, _) in row.items():
                 if sc > end_score:
                     end_score, end = sc, (i, p)
 
         positions: Dict[str, Optional[int]] = {s["id"]: None for s in sections}
+        heading_like = 0
         node = end
         while node is not None:
             i, p = node
             positions[sections[i]["id"]] = p
+            if cands[i].get(p, 0) > 0:
+                heading_like += 1
             node = best[i][p][1]
 
         found = sum(1 for v in positions.values() if v is not None)
@@ -1128,7 +1190,12 @@ Chapter text (opening part, for tone and context only):
             print(f"         · text slicing: only {found}/{len(sections)} headings located "
                   f"— days will use the full chapter")
             return {k: None for k in positions}
-        print(f"         · text slicing: located {found}/{len(sections)} section headings")
+        if heading_like < found / 2:
+            print(f"         · text slicing: {found}/{len(sections)} matched but only "
+                  f"{heading_like} look like headings — not trusted, days will use the full chapter")
+            return {k: None for k in positions}
+        print(f"         · text slicing: located {found}/{len(sections)} section headings "
+              f"({heading_like} heading-like)")
         return positions
 
     # ---------- day prompt ----------
