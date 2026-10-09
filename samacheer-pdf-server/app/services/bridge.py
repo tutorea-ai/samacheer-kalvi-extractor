@@ -53,6 +53,9 @@ FLAT_1112_SUBJECTS = {
     "physics": "physics",
 }
 
+# Flash Cards live beside the LP: same path with the "lp" folder swapped for this
+FLASHCARDS_FOLDER = "flashcards"
+
 
 class ContentBridge:
 
@@ -230,27 +233,7 @@ class ContentBridge:
             print("❌ Bridge Error: CONTENT_SERVER_PATH not configured.")
             return False
 
-        subject = metadata.get("subject", "english").lower().strip()
-
-        # ── Route to correct resolver ─────────────────────────────────────────
-        if subject in SOCIAL_SCIENCE_NAMES:
-            lesson_id = self._resolve_ss_lesson_id(metadata)
-        elif subject in SCIENCE_NAMES:
-            lesson_id = self._resolve_science_lesson_id(metadata)
-        elif subject in MATHS_NAMES:
-            lesson_id = self._resolve_maths_lesson_id(metadata)
-        elif subject in BIOLOGY_NAMES:
-            lesson_id = self._resolve_biology_lesson_id(metadata)
-        elif subject in PURE_SCIENCE_NAMES:
-            lesson_id = self._resolve_pure_science_lesson_id(metadata)
-        elif subject in FLAT_1112_SUBJECTS:
-            lesson_id = self._resolve_flat_1112_lesson_id(metadata)
-        else:
-            if not self.curriculum:
-                print("❌ Bridge Error: Curriculum not loaded.")
-                return False
-            lesson_id = self._resolve_lesson_id(metadata)
-
+        lesson_id = self._resolve_any_lesson_id(metadata)
         if not lesson_id:
             return False
 
@@ -261,6 +244,31 @@ class ContentBridge:
 
         # ── Copy file ─────────────────────────────────────────────────────────
         return self._copy_file(source_file, dest_path, lesson_id, file_type)
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Route to the right lesson-ID resolver for any subject
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _resolve_any_lesson_id(self, metadata: dict) -> str | None:
+        subject = metadata.get("subject", "english").lower().strip()
+
+        if subject in SOCIAL_SCIENCE_NAMES:
+            return self._resolve_ss_lesson_id(metadata)
+        if subject in SCIENCE_NAMES:
+            return self._resolve_science_lesson_id(metadata)
+        if subject in MATHS_NAMES:
+            return self._resolve_maths_lesson_id(metadata)
+        if subject in BIOLOGY_NAMES:
+            return self._resolve_biology_lesson_id(metadata)
+        if subject in PURE_SCIENCE_NAMES:
+            return self._resolve_pure_science_lesson_id(metadata)
+        if subject in FLAT_1112_SUBJECTS:
+            return self._resolve_flat_1112_lesson_id(metadata)
+
+        if not self.curriculum:
+            print("❌ Bridge Error: Curriculum not loaded.")
+            return None
+        return self._resolve_lesson_id(metadata)
 
     # ──────────────────────────────────────────────────────────────────────────
     # PUBLIC: Check if lesson is already fully deployed
@@ -1021,6 +1029,62 @@ class ContentBridge:
         else:
             print(f"⚠️  Bridge: Subject '{subject}' path not yet implemented.")
             return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PUBLIC: Flash Cards — find LP, check, deploy
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def find_deployed(self, metadata: dict, file_type: str = "lp") -> Path | None:
+        """Path of a deployed HTML file (content/qa/lp) if it exists and is > 10KB."""
+        if not self.target_base:
+            print("❌ Bridge Error: CONTENT_SERVER_PATH not configured.")
+            return None
+        lesson_id = self._resolve_any_lesson_id(metadata)
+        if not lesson_id:
+            return None
+        path = self._build_dest_path(metadata, lesson_id, "html", file_type)
+        if path and path.exists() and path.stat().st_size > 10240:
+            return path
+        print(f"🔍 Bridge: no deployed {file_type.upper()} for '{lesson_id}' → {path}")
+        return None
+
+    def _flashcards_dir(self, metadata: dict) -> tuple[Path, str] | tuple[None, None]:
+        """Flash Cards folder = the LP folder with the 'lp' segment swapped."""
+        if not self.target_base:
+            return None, None
+        lesson_id = self._resolve_any_lesson_id(metadata)
+        if not lesson_id:
+            return None, None
+        lp_path = self._build_dest_path(metadata, lesson_id, "html", "lp")
+        if not lp_path:
+            return None, None
+        parts = list(lp_path.parts)
+        if "lp" not in parts:
+            print(f"❌ Bridge: cannot derive Flash Cards path from {lp_path}")
+            return None, None
+        i = len(parts) - 1 - parts[::-1].index("lp")
+        parts[i] = FLASHCARDS_FOLDER
+        return Path(*parts).parent, lesson_id
+
+    def is_flashcards_deployed(self, metadata: dict) -> bool:
+        folder, lesson_id = self._flashcards_dir(metadata)
+        if not folder:
+            return False
+        html_ok = (folder / "index.html").exists() and (folder / "index.html").stat().st_size > 10240
+        json_ok = (folder / "cards.json").exists()
+        if html_ok and json_ok:
+            print(f"⏭️  Bridge: Flash Cards for '{lesson_id}' already deployed — skipping")
+            return True
+        return False
+
+    def deploy_flashcards(self, html_file: Path, json_file: Path, metadata: dict) -> list | bool:
+        """Writes {flashcards folder}/index.html and cards.json."""
+        folder, lesson_id = self._flashcards_dir(metadata)
+        if not folder:
+            return False
+        html_dest = self._copy_file(html_file, folder / "index.html", lesson_id, "flashcards")
+        json_dest = self._copy_file(json_file, folder / "cards.json", lesson_id, "flashcards")
+        return [html_dest, json_dest] if html_dest and json_dest else False
 
     # ──────────────────────────────────────────────────────────────────────────
     # PRIVATE: Copy file to destination

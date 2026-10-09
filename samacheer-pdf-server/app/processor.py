@@ -486,32 +486,34 @@ class PDFProcessor:
 
         if "chapters" in index_data:
             chapters = index_data["chapters"]
-            # Biology uses discipline key, Maths uses "maths" key
+            # Biology uses discipline key, Maths uses "maths" key, Physics uses "physics" key
             if discipline and discipline in chapters:
                 target_units = chapters.get(discipline, [])
             else:
-                target_units = chapters.get("maths", [])
+                _fallback_key = "maths" if subject.lower() in ["maths", "math", "mathematics"] else subject.lower()
+                target_units = chapters.get(_fallback_key, [])
             all_units_for_slicing = target_units
             # Split-volume books: page numbers restart per volume, so only
             # chapters from the same volume decide where this chapter ends
             if volume:
                 all_units_for_slicing = [u for u in target_units if u.get("volume") == volume]
             if not target_units:
-                print(f"❌ No maths chapters found in index")
+                print(f"❌ No chapters found in index for subject '{subject}'")
                 return None
             selected_unit_obj = next(
                 (u for u in target_units if u.get("chapter") == unit_num),
                 None
             )
             if not selected_unit_obj:
-                print(f"❌ Chapter {unit_num} not found in maths index")
+                print(f"❌ Chapter {unit_num} not found in index for subject '{subject}'")
                 return None
             start_pdf_page = selected_unit_obj["page"] + offset
             clean_title = selected_unit_obj["title"].replace(" ", "")
             if subject.lower() in ["biology", "pure_science", "physics"] and discipline:
                 filename = f"Class{class_num}-{discipline}-{unit_num}-{clean_title}"
             else:
-                filename = f"Class{class_num}-maths-{unit_num}-{clean_title}"
+                _label = "maths" if subject.lower() in ["maths", "math", "mathematics"] else subject.lower()
+                filename = f"Class{class_num}-{_label}-{unit_num}-{clean_title}"
             selected_page_raw = selected_unit_obj["page"]
             all_start_pages = sorted([u["page"] for u in all_units_for_slicing])
             next_pages = [p for p in all_start_pages if p > selected_page_raw]
@@ -856,6 +858,92 @@ class PDFProcessor:
                 }
 
             # ── LP ONLY output ────────────────────────────────────────────────
+            elif output_format == "flashcards_only":
+
+                bridge_meta = {
+                    "class_num":     class_num,
+                    "term":          term,
+                    "unit":          unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject":       subject,
+                    "medium":        medium,
+                    "discipline":    discipline,
+                }
+
+                print(f"🃏 Starting Flash Cards generation...")
+
+                # Flash Cards are built from the DEPLOYED LP — no textbook extraction needed
+                lp_path = bridge.find_deployed(bridge_meta, "lp")
+                if not lp_path:
+                    return {
+                        "error":   True,
+                        "message": "No Lesson Plan deployed for this lesson yet — generate the LP first (output_format=lp_only)"
+                    }
+                print(f"   📄 Using LP: {lp_path}")
+
+                if not force and bridge.is_flashcards_deployed(bridge_meta):
+                    return {
+                        "error":    False,
+                        "filename": f"{filename_base}_flashcards.html",
+                        "file_path": "",
+                        "deployed": ["flashcards"],
+                        "skipped":  True,
+                        "message":  "Flash Cards already deployed — skipped (send force=true to rebuild)"
+                    }
+
+                # Clean chapter title from the index; falls back to filename_base
+                fc_title = filename_base
+                try:
+                    _all_ch = index_data[term_key].get("chapters", {})
+                    _keys = [discipline, subject.lower()]
+                    if subject.lower() in ["maths", "math", "mathematics"]:
+                        _keys.append("maths")
+                    for _k in _keys:
+                        if _k and _k in _all_ch:
+                            _sel = next((c for c in _all_ch[_k] if c.get("chapter") == unit_num), None)
+                            if _sel and _sel.get("title"):
+                                fc_title = _sel["title"]
+                                break
+                except Exception as e:
+                    print(f"   ⚠️  Could not read chapter title: {e}")
+
+                from .content_builder.flashcards.builder import flashcard_builder
+                from .content_builder.flashcards.renderer import render_deck
+
+                deck = flashcard_builder.generate(lp_path, {
+                    "class":      class_num,
+                    "subject":    subject,
+                    "unit":       unit_num,
+                    "title":      fc_title,
+                    "discipline": discipline,
+                })
+                if not deck or not deck.get("cards"):
+                    return {"error": True, "message": "Flash Cards generation failed"}
+
+                fc_json_file = self.temp_dir / f"{filename_base}_cards.json"
+                fc_html_file = self.temp_dir / f"{filename_base}_flashcards.html"
+                with open(fc_json_file, "w", encoding="utf-8") as f:
+                    json.dump(deck, f, ensure_ascii=False, indent=2)
+                with open(fc_html_file, "w", encoding="utf-8") as f:
+                    f.write(render_deck(deck))
+
+                if not bridge.deploy_flashcards(fc_html_file, fc_json_file, bridge_meta):
+                    return {"error": True, "message": "Flash Cards built but deploy failed — see bridge log"}
+
+                skipped = deck.get("skipped_days") or []
+                msg = f"Flash Cards generated and deployed — {len(deck['cards'])} cards"
+                msg += " + recap" if deck.get("recap") else ""
+                msg += f" (skipped days {skipped})" if skipped else ""
+                print(f"✅ {msg}")
+
+                return {
+                    "error":     False,
+                    "filename":  f"{filename_base}_flashcards.html",
+                    "file_path": str(fc_html_file),
+                    "deployed":  ["flashcards"],
+                    "message":   msg
+                }
+
             elif output_format == "lp_only":
 
                 bridge_meta = {
