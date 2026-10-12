@@ -276,7 +276,7 @@ h1{margin:0;font-family:'Noto Serif',Georgia,serif;font-size:clamp(28px,4.5vw,38
 .count-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;font-size:14px;font-weight:600;color:var(--ink-2)}
 .count-row .soft{font-weight:500;color:var(--ink-3)}
 .card{perspective:1600px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
-.card-inner{display:grid;transition:transform .5s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.card-inner{display:grid;grid-template-columns:minmax(0,1fr);transition:transform .5s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
 .card.flipped .card-inner{transform:rotateY(180deg)}
 .face{grid-area:1/1;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;min-height:420px;padding:24px}
 .front{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;text-align:left;width:100%}
@@ -353,6 +353,28 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
   .keys{display:none}
   .grid{grid-template-columns:1fr}
 }
+/* narrow iframes (site puts the page inside its own padded panel on phones) */
+@media (max-width:640px){
+  .seg button{white-space:nowrap}
+  .embed .wrap{padding:8px 0 24px}
+  .embed .filters{margin:0 0 16px;padding:0 0 2px}
+}
+@media (max-width:400px){
+  .seg button{font-size:13.5px;padding:0 6px}
+  .tools .icon-btn{height:42px;width:42px}
+  .chip-btn{height:34px;padding:0 12px;font-size:13px}
+  .intro h2{font-size:16px}
+  .seg{min-width:0}
+  #print-btn{display:none}          /* printing from a small phone is rare; Quick read covers it */
+  .count-row{font-size:13px;gap:6px}
+  .answer-actions .btn{padding:0 8px;font-size:14px;gap:6px;white-space:normal;line-height:1.2}
+  .face{padding:18px}
+  .card-title{font-size:22px}
+  .prompt{font-size:16.5px}
+  .bullets li{font-size:15px}
+  .formula span{white-space:normal;max-width:100%;font-size:17px}
+}
+@media (max-width:360px){ .count-row .soft{display:none} }
 @media (prefers-reduced-motion: reduce){.card-inner,.bar > i{transition:none}}
 
 @media print{
