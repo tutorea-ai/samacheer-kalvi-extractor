@@ -184,42 +184,64 @@ _TEMPLATE = r"""<!doctype html>
   --recap-bg:#1F2A2E; --recap-ink:#FBF4E2;
   color-scheme:light;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#13191B; --surface:#1B2326; --surface-2:#1B2326; --back:#16211F;
-    --ink:#ECE6D6; --ink-2:#C4BCA6; --ink-3:#9D9581;
-    --line:#2C3639; --line-2:#36423F; --line-back:#24413D; --track:#2A3335; --seg:#222B2E;
-    --accent:#3FB8AE; --accent-ink:#7FD6CD; --on-accent:#0E1A19;
-    --tip-bg:#2C2414; --tip-ink:#F1D9A6; --tip-icon:#E8B85C;
-    --formula-ink:#D6F0EC;
-    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
-    --t0-bg:#163A37; --t0-ink:#8FDCD3;
-    --t1-bg:#3A2C12; --t1-ink:#F3CB86;
-    --t2-bg:#1F2748; --t2-ink:#AFBDF3;
-    --t3-bg:#3B1C2A; --t3-ink:#F0AECB;
-    --t4-bg:#1D3519; --t4-ink:#A9DB9B;
-    --t5-bg:#2C2142; --t5-ink:#CDB6F2;
-    --recap-bg:#ECE6D6; --recap-ink:#13191B;
-    color-scheme:dark;
-  }
+/* ── Card themes: Dawn (default) and Dusk ──────────────────────────────
+   Only the flash cards change; the page around them stays caramel.
+   Each card face redefines the colour variables for everything inside it. */
+.front,.read-card{                                   /* Dawn · question side: sunrise */
+  --card-bg:
+    radial-gradient(circle at 88% -6%, rgba(255,226,140,.95) 0, rgba(255,214,120,.45) 16%, rgba(255,214,120,0) 42%),
+    linear-gradient(160deg,#FFF3E2 0%,#FFE0BF 48%,#FFCB98 100%);
+  --card-border:#F6BC9C;
+  --card-shadow:0 2px 4px rgba(190,90,40,.08),0 14px 34px rgba(214,110,60,.20);
+  --surface:#FFFFFF; --ink:#3A1E14; --ink-2:#6A3D2C; --ink-3:#97624B;
+  --line:#F3C3A6; --line-2:#EFB797; --line-back:#F3C3A6;
+  --accent:#D2482A; --accent-ink:#B23A1F; --on-accent:#FFFFFF;
+  --btn-primary:linear-gradient(135deg,#F47A45 0%,#F5A623 100%);
+  --formula-ink:#4A2414;
+  --card-stripe:linear-gradient(90deg,#F47A45,#F8C14F 55%,#F5A623);
 }
-:root[data-theme="dark"]{
-  --bg:#13191B; --surface:#1B2326; --surface-2:#1B2326; --back:#16211F;
-  --ink:#ECE6D6; --ink-2:#C4BCA6; --ink-3:#9D9581;
-  --line:#2C3639; --line-2:#36423F; --line-back:#24413D; --track:#2A3335; --seg:#222B2E;
-  --accent:#3FB8AE; --accent-ink:#7FD6CD; --on-accent:#0E1A19;
-  --tip-bg:#2C2414; --tip-ink:#F1D9A6; --tip-icon:#E8B85C;
-  --formula-ink:#D6F0EC;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
-  --t0-bg:#163A37; --t0-ink:#8FDCD3;
-  --t1-bg:#3A2C12; --t1-ink:#F3CB86;
-  --t2-bg:#1F2748; --t2-ink:#AFBDF3;
-  --t3-bg:#3B1C2A; --t3-ink:#F0AECB;
-  --t4-bg:#1D3519; --t4-ink:#A9DB9B;
-  --t5-bg:#2C2142; --t5-ink:#CDB6F2;
-  --recap-bg:#ECE6D6; --recap-ink:#13191B;
+.back{                                               /* Dawn · answer side: morning sunlight */
+  --card-bg:
+    radial-gradient(circle at 10% 0%, rgba(255,236,170,.85) 0, rgba(255,236,170,0) 42%),
+    linear-gradient(165deg,#FFFBEA 0%,#FFF1C9 55%,#FFE3A8 100%);
+  --card-border:#F5D58A;
+  --card-shadow:0 2px 4px rgba(180,120,20,.08),0 14px 34px rgba(214,150,40,.20);
+  --surface:#FFFFFF; --ink:#33240E; --ink-2:#5E4520; --ink-3:#8A6A36;
+  --line:#F2DCA0; --line-2:#EBCD85; --line-back:#F2D58F;
+  --accent:#D9731E; --accent-ink:#B85E12; --on-accent:#FFFFFF;
+  --btn-primary:linear-gradient(135deg,#F47A45 0%,#F5A623 100%);
+  --tip-bg:#FFE7D2; --tip-ink:#6A3412; --tip-icon:#D2582A;
+  --formula-ink:#4A3010;
+  --card-stripe:linear-gradient(90deg,#F5A623,#F8C14F 50%,#F47A45);
+}
+body[data-card="dusk"] .front, body[data-card="dusk"] .read-card{   /* Dusk · question */
+  --card-bg:linear-gradient(165deg,#252C4E 0%,#161B33 100%); --card-border:#343D66;
+  --surface:#2A3256; --ink:#EEF0FA; --ink-2:#C5CAE2; --ink-3:#959CC0;
+  --line:#343D66; --line-2:#414B7A; --line-back:#414B7A;
+  --accent:#F2C46D; --accent-ink:#F5CF85; --on-accent:#1A1F36;
+  --tip-bg:#3A3220; --tip-ink:#F6E2B4; --tip-icon:#F2C46D; --formula-ink:#F7F1E1;
+  --t0-bg:#163A37; --t0-ink:#8FDCD3; --t1-bg:#3A2C12; --t1-ink:#F3CB86;
+  --t2-bg:#232B52; --t2-ink:#B4C1F5; --t3-bg:#3B1C2A; --t3-ink:#F0AECB;
+  --t4-bg:#1D3519; --t4-ink:#A9DB9B; --t5-bg:#2E2348; --t5-ink:#CDB6F2;
+  --recap-bg:#F2C46D; --recap-ink:#1A1F36;
+  --btn-primary:var(--accent); --card-shadow:0 2px 4px rgba(0,0,0,.25),0 14px 34px rgba(10,14,40,.35);
+  --card-stripe:linear-gradient(90deg,#F2C46D,#9A8CF5);
   color-scheme:dark;
 }
+body[data-card="dusk"] .back{                                       /* Dusk · answer */
+  --card-bg:linear-gradient(165deg,#1B2E43 0%,#111C2C 100%); --card-border:#2D4762;
+  --surface:#1F3349; --ink:#E8F2F7; --ink-2:#BFD3DD; --ink-3:#8BA4B2;
+  --line:#2D4762; --line-2:#37567A; --line-back:#37567A;
+  --accent:#5FD0C5; --accent-ink:#7EDBD2; --on-accent:#0D1C1B;
+  --tip-bg:#35311D; --tip-ink:#F3E2B0; --tip-icon:#F2C46D; --formula-ink:#E4F4FF;
+  --btn-primary:var(--accent); --card-shadow:0 2px 4px rgba(0,0,0,.25),0 14px 34px rgba(10,14,40,.35);
+  --card-stripe:linear-gradient(90deg,#5FD0C5,#4A86E0);
+  color-scheme:dark;
+}
+/* thin coloured stripe along the top of every card */
+.face,.read-card{position:relative;overflow:hidden}
+.face::before,.read-card::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--card-stripe)}
+
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink)}
 body{font-family:'Noto Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.5;-webkit-text-size-adjust:100%}
@@ -278,9 +300,9 @@ h1{margin:0;font-family:'Noto Serif',Georgia,serif;font-size:clamp(28px,4.5vw,38
 .card{perspective:1600px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
 .card-inner{display:grid;grid-template-columns:minmax(0,1fr);transition:transform .5s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
 .card.flipped .card-inner{transform:rotateY(180deg)}
-.face{grid-area:1/1;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;min-height:420px;padding:24px}
-.front{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;text-align:left;width:100%}
-.back{background:var(--back);border:1px solid var(--line-back);box-shadow:var(--shadow);transform:rotateY(180deg)}
+.face{grid-area:1/1;color:var(--ink);border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;min-height:420px;padding:24px}
+.front{background:var(--card-bg);border:1px solid var(--card-border);box-shadow:var(--card-shadow,var(--shadow));cursor:pointer;text-align:left;width:100%}
+.back{background:var(--card-bg);border:1px solid var(--card-border);box-shadow:var(--card-shadow,var(--shadow));transform:rotateY(180deg)}
 .face-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .day{font-size:13px;font-weight:600;color:var(--ink-3);white-space:nowrap}
 .card-title{margin:22px 0 0;font-family:'Noto Serif',Georgia,serif;font-size:clamp(23px,3.4vw,28px);line-height:1.22;font-weight:600}
@@ -299,7 +321,7 @@ h1{margin:0;font-family:'Noto Serif',Georgia,serif;font-size:clamp(28px,4.5vw,38
 .tip svg{flex:none;margin-top:2px;color:var(--tip-icon)}
 .answer-actions{margin-top:auto;padding-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .btn{height:46px;padding:0 16px;white-space:nowrap;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink)}
-.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn-primary{background:var(--btn-primary,var(--accent));border-color:transparent;color:var(--on-accent)}
 .btn-primary[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--on-accent)}
 .nav{margin-top:14px;display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
 .nav .btn{background:transparent}
@@ -317,7 +339,7 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
 
 /* ── Quick read: all answers open ────────────────────────────────────── */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.read-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.read-card{color:var(--ink);background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:20px;display:flex;flex-direction:column;box-shadow:var(--card-shadow,var(--shadow))}
 .read-card .card-title{margin-top:14px;font-size:21px}
 .read-card .prompt{margin-top:6px;font-size:14.5px;color:var(--ink-2);font-style:italic}
 .read-card .bullets li{font-size:14.5px}
@@ -342,8 +364,9 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
   .filters{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px 16px;padding:0 16px 2px;scrollbar-width:none}
   .filters::-webkit-scrollbar{display:none}
   .chip-btn{flex:none}
-  .tools .txt{display:none}
+  #print-btn .txt{display:none}
   .tools .icon-btn{height:46px;width:46px;padding:0}
+  .tools #theme-btn{width:auto;padding:0 12px}
   .btn{font-size:14.5px;padding:0 12px}
   .nav{grid-template-columns:52px 1fr 52px}
   .nav .btn .navtxt{display:none}
@@ -362,6 +385,7 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
 @media (max-width:400px){
   .seg button{font-size:13.5px;padding:0 6px}
   .tools .icon-btn{height:42px;width:42px}
+  .tools #theme-btn{width:auto;padding:0 10px}
   .chip-btn{height:34px;padding:0 12px;font-size:13px}
   .intro h2{font-size:16px}
   .seg{min-width:0}
@@ -384,7 +408,10 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
   .wrap{max-width:none;padding:0}
   .intro,.toolbar,.notice,#app{display:none !important}
   #print-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  #print-list .read-card{break-inside:avoid;page-break-inside:avoid;padding:12px;border-radius:8px}
+  #print-list .read-card::before{display:none}
+  #print-list .read-card{break-inside:avoid;page-break-inside:avoid;padding:12px;border-radius:8px;
+    --card-bg:#fff;--card-border:#bbb;--surface:#fff;--ink:#000;--ink-2:#222;--ink-3:#444;--line-back:#bbb;
+    --accent:#000;--accent-ink:#000;--btn-primary:#000;--card-shadow:none;--tip-bg:#f3f3f3;--tip-ink:#000;--tip-icon:#000;--formula-ink:#000;color:#000}
   #print-list .read-foot{display:none}
   #print-list .card-title{font-size:15px;margin-top:6px}
   #print-list .bullets li,#print-list .tip{font-size:11.5px}
@@ -414,14 +441,11 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
 
   <div class="toolbar">
     <div class="seg" role="group" aria-label="How to revise">
-      <button type="button" data-mode="test">Test myself</button>
       <button type="button" data-mode="read">Quick read</button>
+      <button type="button" data-mode="test">Test myself</button>
     </div>
     <div class="tools">
-      <button type="button" class="icon-btn" id="theme-btn" aria-label="Switch to night mode">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <span class="txt" id="theme-txt">Night</span>
-      </button>
+      <button type="button" class="icon-btn" id="theme-btn" aria-label="Switch cards to Night"></button>
       <button type="button" class="icon-btn" id="print-btn" aria-label="Print all cards">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
         <span class="txt">Print</span>
@@ -450,8 +474,6 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
   var QS = new URLSearchParams(location.search);
   var EMBED = QS.get("embed") === "1" && window.parent !== window;
   if (QS.get("embed") === "1") document.body.classList.add("embed");
-  // ?theme=light|dark|caramel = default theme from the site; a student's own Night/Day choice wins
-  var THEME_PARAM = ({light:"light", caramel:"light", dark:"dark"})[(QS.get("theme") || "").toLowerCase()] || null;
 
   // Auto-height for the parent iframe: {type:"sk-fc-height", height}
   // Sent only to our own origin (same-origin iframe).
@@ -469,14 +491,16 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
 
   // ── storage (optional: page works without it) ───────────────────────
   function load(){ try { return JSON.parse(localStorage.getItem(D.storageKey) || "null"); } catch(e){ return null; } }
-  function save(){ try { localStorage.setItem(D.storageKey, JSON.stringify({got:S.got, mode:S.mode, filter:S.filter, pos:currentId(), reviseOnly:S.reviseOnly})); } catch(e){} }
-  function loadTheme(){ try { return localStorage.getItem("sk-fc:theme"); } catch(e){ return null; } }
-  function saveTheme(v){ try { localStorage.setItem("sk-fc:theme", v); } catch(e){} }
+  function save(){ try { localStorage.setItem(D.storageKey, JSON.stringify({got:S.got, mode:S.mode, modePicked:S.modePicked, filter:S.filter, pos:currentId(), reviseOnly:S.reviseOnly})); } catch(e){} }
+  function loadCardTheme(){ try { return localStorage.getItem("sk-fc:card-theme"); } catch(e){ return null; } }
+  function saveCardTheme(v){ try { localStorage.setItem("sk-fc:card-theme", v); } catch(e){} }
 
   var saved = load() || {};
   var S = {
     got: saved.got && typeof saved.got === "object" ? saved.got : {},
-    mode: saved.mode === "read" ? "read" : "test",
+    // Opens in Quick read; Test myself only if the student picked it before
+    mode: saved.modePicked && saved.mode === "test" ? "test" : "read",
+    modePicked: !!saved.modePicked,
     filter: saved.filter || "all",
     reviseOnly: !!saved.reviseOnly,
     idx: 0, flipped: false, finished: false, queue: []
@@ -655,7 +679,7 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
   document.addEventListener("click", function(e){
     var t = e.target.closest("button"); if (!t) return;
     if (t.id === "front"){ if (!swipe.moved) flip(); return; }
-    if (t.dataset.mode){ S.mode = t.dataset.mode; S.finished = false; S.flipped = false; render(); return; }
+    if (t.dataset.mode){ S.mode = t.dataset.mode; S.modePicked = true; S.finished = false; S.flipped = false; render(); return; }
     if (t.dataset.filter){ S.filter = t.dataset.filter; S.reviseOnly = false; S.idx = 0; S.finished = false; S.flipped = false; buildQueue(); render(); return; }
     switch (t.dataset.act){
       case "flip": flip(); break;
@@ -696,20 +720,21 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
   }
 
   // ── night mode ──────────────────────────────────────────────────────
-  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-  function isDark(){ var t = document.documentElement.getAttribute("data-theme"); return t ? t === "dark" : !!(mq && mq.matches); }
-  function paintThemeBtn(){
-    var dark = isDark();
-    document.getElementById("theme-txt").textContent = dark ? "Day" : "Night";
-    document.getElementById("theme-btn").setAttribute("aria-label", dark ? "Switch to day mode" : "Switch to night mode");
+  // ── card theme: Dawn (default) / Dusk — changes only the cards ────────
+  var ICON_MOON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  var ICON_SUN  = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  function setCardTheme(v){
+    document.body.setAttribute("data-card", v);
+    var toDusk = v !== "dusk";      // the button offers the OTHER theme
+    var btn = document.getElementById("theme-btn");
+    btn.innerHTML = (toDusk ? ICON_MOON : ICON_SUN) + '<span class="txt">' + (toDusk ? "Night" : "Day") + '</span>';
+    btn.setAttribute("aria-label", toDusk ? "Switch cards to Night (dark)" : "Switch cards to Day (light)");
   }
-  var th = loadTheme() || THEME_PARAM; if (th === "dark" || th === "light") document.documentElement.setAttribute("data-theme", th);
+  setCardTheme(loadCardTheme() === "dusk" ? "dusk" : "dawn");
   document.getElementById("theme-btn").addEventListener("click", function(){
-    var next = isDark() ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next); saveTheme(next); paintThemeBtn();
+    var next = document.body.getAttribute("data-card") === "dusk" ? "dawn" : "dusk";
+    setCardTheme(next); saveCardTheme(next);
   });
-  if (mq && mq.addEventListener) mq.addEventListener("change", paintThemeBtn);
-  paintThemeBtn();
 
   document.getElementById("print-btn").addEventListener("click", function(){ renderPrint(); window.print(); });
 
@@ -719,6 +744,8 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
     var i = S.queue.findIndex(function(c){ return c.id === saved.pos; });
     if (i > 0){
       S.idx = i;
+    }
+    if (i > 0 && S.mode === "test"){
       document.getElementById("notice-text").textContent = "Welcome back — you're on card " + (i + 1) + " of " + S.queue.length + ".";
       document.getElementById("notice").classList.add("show");
     }
