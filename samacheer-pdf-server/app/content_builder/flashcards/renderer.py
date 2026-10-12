@@ -19,7 +19,7 @@ import html
 import json
 import re
 import sys
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 # ── Notation ──────────────────────────────────────────────────────────────────
 # base_sub   : v_d, R_eq, I_G, l_AJ, ε_eq, R_{total}
@@ -111,9 +111,16 @@ def _view_model(deck: dict) -> dict:
     if lesson.get("unit"):
         meta_bits.append(f"Unit {lesson['unit']}")
 
+    # Progress key: subject + class + lessonId + LP hash.
+    # lessonId = the LP's folder name (same id the bridge deploys under), so
+    # lessons never collide across disciplines/units; a regenerated LP (new
+    # hash) starts students on a fresh deck.
     src = deck.get("source_lp") or {}
-    key_bits = [str(lesson.get("class", "")), str(lesson.get("subject", "")),
-                str(lesson.get("unit", "")), str(src.get("hash", ""))]
+    lesson_id = PurePosixPath(str(src.get("path", "")).replace("\\", "/")).parent.name
+    if not lesson_id:
+        lesson_id = "-".join(str(x) for x in (lesson.get("discipline"), lesson.get("unit")) if x)
+    key_bits = [str(lesson.get("subject", "")), str(lesson.get("class", "")),
+                lesson_id, str(src.get("hash", ""))]
 
     return {
         "title": fmt(lesson.get("title", "Flash Cards")),
@@ -418,7 +425,25 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
   var TONE = {}; D.types.forEach(function(t){ TONE[t.key] = "tone-" + t.tone; });
   TONE.recap = "tone-recap";
 
-  if (/[?&]embed=1\b/.test(location.search)) document.body.classList.add("embed");
+  var QS = new URLSearchParams(location.search);
+  var EMBED = QS.get("embed") === "1" && window.parent !== window;
+  if (QS.get("embed") === "1") document.body.classList.add("embed");
+  // ?theme=light|dark|caramel = default theme from the site; a student's own Night/Day choice wins
+  var THEME_PARAM = ({light:"light", caramel:"light", dark:"dark"})[(QS.get("theme") || "").toLowerCase()] || null;
+
+  // Auto-height for the parent iframe: {type:"sk-fc-height", height}
+  // Sent only to our own origin (same-origin iframe).
+  var lastH = 0, hQueued = false;
+  function postHeight(){
+    hQueued = false;
+    if (!EMBED) return;
+    var wrap = document.querySelector(".wrap");
+    var h = Math.ceil(wrap ? wrap.getBoundingClientRect().height : document.documentElement.scrollHeight);
+    if (h === lastH) return;
+    lastH = h;
+    try { window.parent.postMessage({type:"sk-fc-height", height:h}, location.origin); } catch(e){}
+  }
+  function queueHeight(){ if (!hQueued){ hQueued = true; requestAnimationFrame(postHeight); } }
 
   // ── storage (optional: page works without it) ───────────────────────
   function load(){ try { return JSON.parse(localStorage.getItem(D.storageKey) || "null"); } catch(e){ return null; } }
@@ -656,7 +681,7 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
     document.getElementById("theme-txt").textContent = dark ? "Day" : "Night";
     document.getElementById("theme-btn").setAttribute("aria-label", dark ? "Switch to day mode" : "Switch to night mode");
   }
-  var th = loadTheme(); if (th === "dark" || th === "light") document.documentElement.setAttribute("data-theme", th);
+  var th = loadTheme() || THEME_PARAM; if (th === "dark" || th === "light") document.documentElement.setAttribute("data-theme", th);
   document.getElementById("theme-btn").addEventListener("click", function(){
     var next = isDark() ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next); saveTheme(next); paintThemeBtn();
@@ -683,6 +708,13 @@ kbd{font-family:inherit;font-size:11.5px;border:1px solid var(--line-2);border-b
 
   renderFilters();
   render();
+
+  if (EMBED){
+    if (window.ResizeObserver) new ResizeObserver(queueHeight).observe(document.querySelector(".wrap"));
+    window.addEventListener("load", queueHeight);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(queueHeight);
+    queueHeight();
+  }
 })();
 </script>
 </body>

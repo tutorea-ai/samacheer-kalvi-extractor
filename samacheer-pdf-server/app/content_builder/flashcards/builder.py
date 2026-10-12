@@ -38,6 +38,13 @@ MAX_RECAP_BACK_CHARS = 720     # recap has 5–6 bullets, so it needs more room
 CARD_RETRIES      = 2
 API_RETRIES       = 2
 
+# Last-attempt repair: a day is never skipped just for wording.
+# The model is still ASKED for the targets above; after the final retry a card
+# is repaired in code and accepted if it passes these looser hard limits.
+HARD_BULLET_WORDS = 25
+HARD_TIP_WORDS    = 35
+REPAIR_BACK_SLACK = 1.2    # allow 20% more back text after repair
+
 # A question word that STARTS a clause: at the start, after , or ;, or after and/or.
 # Two or more of these means two or more questions.
 # which/when/where are excluded — they're common as relative pronouns inside
@@ -58,7 +65,8 @@ The student is revising, often the night before an exam, and may be tired and an
 Write calm, clear, exam-ready points. Every fact must come from the material given.
 
 English only. Plain text only: no HTML, no LaTeX, no markdown.
-Notation: use Unicode where it exists (×, ÷, ², ³, ⁻¹, ₀, ₁, ₂, √, π, ε, μ, Ω, Δ, →, q₁, ε₀, 10⁻¹⁹).
+Notation: use Unicode where it exists (×, ², ³, ⁻¹, ₀, ₁, ₂, √, π, ε, μ, Ω, Δ, →, q₁, ε₀, 10⁻¹⁹).
+Write fractions and division with "/" exactly as the textbook does (R = ρl/A, I = V/R) — never "÷".
 For a subscript with no Unicode form write an underscore: v_d, R_eq, ε_eq, I_g, r_min.
 For a superscript with no Unicode form write a caret: x^n."""
 
@@ -211,13 +219,18 @@ class FlashcardBuilder:
                 if not bad:
                     break
                 if attempt < CARD_RETRIES:
-                    print(f"         🔁 Retry {attempt + 1}: days {[d['day'] for d, _ in bad]}")
-                    pending  = [d for d, _ in bad]
-                    feedback = "\n".join(f"Day {d['day']}: {why}" for d, why in bad)
+                    print(f"         🔁 Retry {attempt + 1}: days {[d['day'] for d, _, _ in bad]}")
+                    pending  = [d for d, _, _ in bad]
+                    feedback = "\n".join(f"Day {d['day']}: {why}" for d, why, _ in bad)
                 else:
-                    for d, why in bad:
-                        skipped.append(d["day"])
-                        print(f"         ⚠️  Day {d['day']} skipped — {why}")
+                    for d, why, c in bad:
+                        fixed = self._repair(c, d["title"])
+                        if fixed:
+                            cards[d["day"]] = fixed
+                            print(f"         🩹 Day {d['day']} repaired — was: {why}")
+                        else:
+                            skipped.append(d["day"])
+                            print(f"         ⚠️  Day {d['day']} skipped — {why}")
 
         ordered = []
         for d in content_days:
@@ -269,7 +282,7 @@ class FlashcardBuilder:
             c   = by_day.get(d["day"])
             why = self._validate(c) if c else "missing from response"
             if why:
-                bad.append((d, why))
+                bad.append((d, why, c))
             else:
                 got[d["day"]] = self._tidy(c)
         return got, bad
@@ -292,6 +305,11 @@ class FlashcardBuilder:
                 return {"title": "Chapter Recap", **self._tidy(r)}
             print(f"         ⚠️  Recap attempt {attempt + 1} invalid — {why}")
             prompt = base + f"\n\nYour previous attempt had this problem — fix it: {why}"
+        fixed = self._repair(r, "this chapter", min_b=5, max_b=6, check_prompt=False,
+                             max_back=MAX_RECAP_BACK_CHARS) if r else None
+        if fixed:
+            print(f"         🩹 Recap repaired — was: {why}")
+            return {"title": "Chapter Recap", **fixed}
         return None
 
     # ── helpers ───────────────────────────────────────────────────────────────
@@ -308,7 +326,8 @@ class FlashcardBuilder:
         return "\n".join(parts)
 
     @staticmethod
-    def _validate(c, min_b=4, max_b=5, check_prompt=True, max_back=MAX_BACK_CHARS) -> str:
+    def _validate(c, min_b=4, max_b=5, check_prompt=True, max_back=MAX_BACK_CHARS,
+                  max_bullet=MAX_BULLET_WORDS, max_tip=MAX_TIP_WORDS, check_overlap=True) -> str:
         if not isinstance(c, dict):
             return "not an object"
         prompt  = (c.get("prompt") or "").strip()
@@ -331,13 +350,13 @@ class FlashcardBuilder:
         for b in bullets:
             if not isinstance(b, str) or not b.strip():
                 return "empty bullet"
-            if _words(b) > MAX_BULLET_WORDS:
-                return f"bullet too long ({_words(b)} words, max {MAX_BULLET_WORDS}): '{b[:50]}…'"
+            if _words(b) > max_bullet:
+                return f"bullet too long ({_words(b)} words, max {max_bullet}): '{b[:50]}…'"
         if not tip:
             return "empty exam_tip"
-        if _words(tip) > MAX_TIP_WORDS:
-            return f"exam_tip too long ({_words(tip)} words, max {MAX_TIP_WORDS}) — one sentence"
-        if any(_overlap(tip, b) > 0.7 for b in bullets):
+        if _words(tip) > max_tip:
+            return f"exam_tip too long ({_words(tip)} words, max {max_tip}) — one sentence"
+        if check_overlap and any(_overlap(tip, b) > 0.7 for b in bullets):
             return "exam_tip repeats a bullet — make the tip different advice"
         back = sum(len(b) for b in bullets) + len(formula) + len(tip)
         if back > max_back:
@@ -348,6 +367,44 @@ class FlashcardBuilder:
         if re.search(r"<[a-z/][^>]*>|\\\(|\\\[|\$\$|\*\*", joined):
             return "contains HTML, LaTeX or markdown"
         return ""
+
+    @classmethod
+    def _repair(cls, c, title, min_b=4, max_b=5, check_prompt=True,
+                max_back=MAX_BACK_CHARS) -> Optional[dict]:
+        """
+        Fix wording problems in code after the final retry, instead of
+        skipping the day. Content problems (Tamil, HTML/LaTeX, too few
+        bullets, empty fields) are NOT repaired — those days are still skipped.
+        """
+        if not isinstance(c, dict):
+            return None
+        c = dict(c)
+        bullets = [b.strip() for b in (c.get("bullets") or [])
+                   if isinstance(b, str) and b.strip()]
+        bullets = bullets[:max_b]                              # too many → keep first max_b
+
+        tip = (c.get("exam_tip") or "").strip()
+        if _words(tip) > MAX_TIP_WORDS:                        # long tip → first sentence
+            m = re.match(r"(.+?[.!?])(?:\s|$)", tip)
+            if m:
+                tip = m.group(1)
+
+        if check_prompt:                                        # bad question → safe template
+            p = (c.get("prompt") or "").strip()
+            if p.count("?") != 1 or _is_compound(p) or _words(p) > MAX_PROMPT_WORDS:
+                c["prompt"] = f"What are the key facts about {title}?"
+
+        limit   = int(max_back * REPAIR_BACK_SLACK)
+        formula = (c.get("formula") or "").strip()
+        while (sum(len(b) for b in bullets) + len(formula) + len(tip) > limit
+               and len(bullets) > min_b):                       # still too long → drop last bullet
+            bullets.pop()
+
+        c["bullets"], c["exam_tip"] = bullets, tip
+        why = cls._validate(c, min_b, max_b, check_prompt, limit,
+                            max_bullet=HARD_BULLET_WORDS, max_tip=HARD_TIP_WORDS,
+                            check_overlap=False)
+        return None if why else cls._tidy(c)
 
     @staticmethod
     def _tidy(c) -> dict:
