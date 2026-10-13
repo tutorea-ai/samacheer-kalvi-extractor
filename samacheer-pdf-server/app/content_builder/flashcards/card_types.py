@@ -6,26 +6,15 @@ The renderer shows only the types actually present in a deck.
 Add a subject only after reviewing its LP day types.
 """
 
-CARD_TYPES = {
-    "physics": [
-        ("concept",     "Concepts"),
-        ("formula",     "Formulas"),
-        ("derivation",  "Derivations"),
-        ("device",      "Devices & Experiments"),
-        ("application", "Applications"),
-    ],
-}
+from .subjects import PROFILES, DEFAULT, get_profile
 
-# Used for any subject not listed yet
-DEFAULT_TYPES = [
-    ("concept", "Concepts"),
-    ("fact",    "Key Facts"),
-    ("term",    "Key Terms"),
-]
+# Kept for older imports — the real lists live in subjects/<subject>.py
+CARD_TYPES    = {key: p.card_types for key, p in PROFILES.items()}
+DEFAULT_TYPES = DEFAULT.card_types
 
 
 def types_for(subject: str) -> list[tuple[str, str]]:
-    return CARD_TYPES.get((subject or "").lower().strip(), DEFAULT_TYPES)
+    return get_profile(subject).card_types
 
 
 def allowed_keys(subject: str) -> set[str]:

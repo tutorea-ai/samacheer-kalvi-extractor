@@ -7,7 +7,7 @@ the model writes only: recall prompt, 4-5 bullets, formula, exam tip.
 
 Output is enforced through tool use (JSON schema), so responses are always
 valid JSON. Cards are validated; invalid ones get up to 2 retries with
-feedback, then are skipped with a warning.
+feedback, then are repaired in code; only real content problems are skipped.
 
 Notation: Unicode where it exists (q₁, r², ε₀, 10⁻¹⁹); otherwise "_" for
 subscripts (v_d, R_eq) and "^" for superscripts — the renderer converts
@@ -24,7 +24,8 @@ import httpx
 
 from ...config import settings
 from .lp_parser import load_lp, TAMIL_RE
-from .card_types import types_for, allowed_keys
+from .card_types import types_for
+from .subjects import get_profile, SubjectProfile
 
 
 BATCH_SIZE        = 6
@@ -58,27 +59,17 @@ QWORD_CLAUSE_RE = re.compile(
 def _is_compound(prompt: str) -> bool:
     return len(QWORD_CLAUSE_RE.findall(prompt.strip())) > 1
 
-SYSTEM_PROMPT = """You write revision flash cards for Tamil Nadu State Board (Samacheer Kalvi)
-students preparing for SSLC / HSC board examinations.
+# Shared system prompt; {audience} and {notation} come from the subject profile
+SYSTEM_TEMPLATE = """You write revision flash cards for Tamil Nadu State Board (Samacheer Kalvi)
+students preparing for {audience}.
 
 The student is revising, often the night before an exam, and may be tired and anxious.
 Write calm, clear, exam-ready points. Every fact must come from the material given.
 
 English only. Plain text only: no HTML, no LaTeX, no markdown.
-Notation: use Unicode where it exists (×, ², ³, ⁻¹, ₀, ₁, ₂, √, π, ε, μ, Ω, Δ, →, q₁, ε₀, 10⁻¹⁹).
-Write fractions and division with "/" exactly as the textbook does (R = ρl/A, I = V/R) — never "÷".
-For a subscript with no Unicode form write an underscore: v_d, R_eq, ε_eq, I_g, r_min.
-For a superscript with no Unicode form write a caret: x^n."""
+{notation}"""
 
-TYPE_GUIDE = {
-    "concept":     "definitions, properties, key statements, important distinctions",
-    "formula":     "the law or relation, what each symbol means with SI units, the common numerical trick",
-    "derivation":  "the starting idea, the key steps in order, and the final result",
-    "device":      "principle, key parts / construction, how it works, what it is used for",
-    "application": "where and how it is used, with the reason",
-    "fact":        "key facts most likely to be asked",
-    "term":        "key terms with one-line meanings",
-}
+# TYPE_GUIDE now lives in subjects/<subject>.py (profile.type_guide)
 
 CARD_PROMPT = """Create one flash card for EACH lesson-plan day below.
 Class {class_num} {subject_label} — {lesson_title}
@@ -86,16 +77,15 @@ Class {class_num} {subject_label} — {lesson_title}
 For each day:
 - prompt: ONE short question about ONE thing only. Never join questions
   with commas or "and" (bad: "What is X, what is its unit, and how does Y…?";
-  good: "How does drift velocity depend on the electric field?").
+  good: {example_one}).
 - The question must cover the day's WHOLE main idea, so that every bullet
   helps answer it. If the day teaches two linked things, name both in one
-  question (good: "What are the key facts about electric current and drift
-  velocity?"). Never ask about one detail while the bullets cover more.
+  question (good: {example_two}). Never ask about one detail while the bullets cover more.
 - bullets: 4 or 5 facts (aim for 10-12 words each, never more than {max_words}).
   Bullets are FACTS only — no exam advice in bullets.
-- formula: the single most important formula for that day, or "" if none.
-- exam_tip: ONE sentence of board-exam advice (max {max_tip} words) — what to state first,
-  a unit to convert, a diagram to draw, a common mistake. It must NOT repeat a bullet.
+{formula_rule}
+- exam_tip: ONE sentence of board-exam advice (max {max_tip} words) — {tip_ideas}.
+  It must NOT repeat a bullet.
 
 Focus by card type:
 {type_guide}
@@ -105,9 +95,7 @@ Rules:
 - Ignore classroom instructions (teacher says, activities, timings, checks for understanding).
 - Keep each card's bullets + formula + exam_tip under about {max_back} characters.
 - Every bullet must be about THIS day's topic only. If a fact belongs to a
-  different day's lesson, leave it out, even if it appears in the text.
-- For a derivation card: the bullets are the derivation steps in order, and
-  the last bullet is the final result. No side facts or extra formulas.
+  different day's lesson, leave it out, even if it appears in the text.{extra_rules}
 
 Save the cards with the save_flashcards tool.
 
@@ -119,7 +107,7 @@ It must help a student revise the WHOLE chapter in two minutes.
 
 - prompt: "Can you explain the whole chapter in two minutes?"
 - bullets: 5 or 6 points, ONE idea per bullet — never merge different topics into one bullet
-  (aim for 10-12 words each, never more than {max_words}). Include the key formula where one exists.
+  (aim for 10-12 words each, never more than {max_words}).{recap_formula_note}
 - formula: ""
 - exam_tip: ONE sentence of board-exam advice for this chapter (max {max_tip} words).
 
@@ -184,6 +172,14 @@ def _overlap(a: str, b: str) -> float:
     return len(wa & wb) / max(1, min(len(wa), len(wb)))
 
 
+def _subject_label(profile: SubjectProfile, meta: dict) -> str:
+    return profile.display_name or (meta.get("subject") or "").replace("_", " ").title()
+
+
+def _system_prompt(profile: SubjectProfile) -> str:
+    return SYSTEM_TEMPLATE.format(audience=profile.audience, notation=profile.notation)
+
+
 class FlashcardBuilder:
 
     def __init__(self):
@@ -198,12 +194,13 @@ class FlashcardBuilder:
         meta: {"class": 12, "subject": "physics", "unit": 2, "title": "Current Electricity"}
         Returns the deck dict (Phase 0 schema) or None on failure.
         """
-        lp = load_lp(lp_path)
+        subject = (meta.get("subject") or "").lower()
+        profile = get_profile(subject)
+
+        lp = load_lp(lp_path, subject)
         if not lp["days"]:
             print(f"      [Flashcards] ❌ No LP days found in {lp_path}")
             return None
-
-        subject      = (meta.get("subject") or "").lower()
         content_days = [d for d in lp["days"] if not d["is_recap"]]
         recap_day    = next((d for d in lp["days"] if d["is_recap"]), None)
 
@@ -214,7 +211,7 @@ class FlashcardBuilder:
         for i in range(0, len(content_days), BATCH_SIZE):
             pending, feedback = content_days[i:i + BATCH_SIZE], ""
             for attempt in range(CARD_RETRIES + 1):
-                got, bad = self._batch(pending, meta, feedback)
+                got, bad = self._batch(pending, meta, feedback, profile)
                 cards.update(got)
                 if not bad:
                     break
@@ -241,7 +238,7 @@ class FlashcardBuilder:
                     "title": d["title"], **c,
                 })
 
-        recap = self._recap(ordered, recap_day, meta) if recap_day else None
+        recap = self._recap(ordered, recap_day, meta, profile) if recap_day else None
 
         print(f"      [Flashcards] ✅ {len(ordered)} cards"
               f"{' + recap' if recap else ''}"
@@ -263,19 +260,23 @@ class FlashcardBuilder:
 
     # ── batches ───────────────────────────────────────────────────────────────
 
-    def _batch(self, days, meta, feedback: str = ""):
+    def _batch(self, days, meta, feedback: str = "", profile: SubjectProfile = None):
+        profile = profile or get_profile(meta.get("subject"))
         types_in_batch = sorted({d["card_type"] for d in days if d["card_type"]})
         prompt = CARD_PROMPT.format(
-            class_num=meta.get("class"), subject_label=(meta.get("subject") or "").title(),
+            class_num=meta.get("class"), subject_label=_subject_label(profile, meta),
             lesson_title=meta.get("title"), max_words=MAX_BULLET_WORDS,
             max_prompt=MAX_PROMPT_WORDS, max_tip=MAX_TIP_WORDS, max_back=MAX_BACK_CHARS,
-            type_guide="\n".join(f"- {t}: {TYPE_GUIDE.get(t, '')}" for t in types_in_batch),
+            type_guide="\n".join(f"- {t}: {profile.type_guide.get(t, '')}" for t in types_in_batch),
             days_block="\n\n".join(self._day_block(d) for d in days),
+            example_one=profile.example_one, example_two=profile.example_two,
+            formula_rule=profile.formula_rule, tip_ideas=profile.tip_ideas,
+            extra_rules=profile.extra_rules,
         )
         if feedback:
             prompt += f"\n\nYour previous attempt had these problems — fix them:\n{feedback}"
 
-        data   = self._call_tool(prompt, CARD_TOOL, max_tokens=4000)
+        data   = self._call_tool(prompt, CARD_TOOL, max_tokens=4000, system=_system_prompt(profile))
         by_day = {c.get("day"): c for c in (data or {}).get("cards", []) if isinstance(c, dict)}
         got, bad = {}, []
         for d in days:
@@ -287,18 +288,20 @@ class FlashcardBuilder:
                 got[d["day"]] = self._tidy(c)
         return got, bad
 
-    def _recap(self, cards, recap_day, meta) -> Optional[dict]:
+    def _recap(self, cards, recap_day, meta, profile: SubjectProfile = None) -> Optional[dict]:
+        profile = profile or get_profile(meta.get("subject"))
         index    = "\n".join(f"- {c['title']} — {c['formula'] or '—'}" for c in cards)
         material = ("\n".join(recap_day["objectives"]) + "\n" +
                     "\n".join(recap_day["board_work"]))[:MAX_BOARD_PER_DAY + 1500]
         base = RECAP_PROMPT.format(
-            class_num=meta.get("class"), subject_label=(meta.get("subject") or "").title(),
+            class_num=meta.get("class"), subject_label=_subject_label(profile, meta),
             lesson_title=meta.get("title"), max_words=MAX_BULLET_WORDS, max_tip=MAX_TIP_WORDS,
             card_index=index, recap_material=material,
+            recap_formula_note=profile.recap_formula_note,
         )
         prompt = base
         for attempt in range(CARD_RETRIES + 1):
-            data = self._call_tool(prompt, RECAP_TOOL, max_tokens=1500)
+            data = self._call_tool(prompt, RECAP_TOOL, max_tokens=1500, system=_system_prompt(profile))
             r    = (data or {}).get("recap")
             why  = self._validate(r, min_b=5, max_b=6, check_prompt=False, max_back=MAX_RECAP_BACK_CHARS) if r else "missing recap"
             if not why:
@@ -415,11 +418,12 @@ class FlashcardBuilder:
             "exam_tip": c["exam_tip"].strip(),
         }
 
-    def _call_tool(self, prompt: str, tool: dict, max_tokens: int) -> Optional[dict]:
+    def _call_tool(self, prompt: str, tool: dict, max_tokens: int, system: str = "") -> Optional[dict]:
+        system = system or _system_prompt(get_profile(None))
         for attempt in range(API_RETRIES + 1):
             try:
                 resp = self.client.messages.create(
-                    model=self.model, max_tokens=max_tokens, system=SYSTEM_PROMPT,
+                    model=self.model, max_tokens=max_tokens, system=system,
                     tools=[tool], tool_choice={"type": "tool", "name": tool["name"]},
                     messages=[{"role": "user", "content": prompt}],
                 )

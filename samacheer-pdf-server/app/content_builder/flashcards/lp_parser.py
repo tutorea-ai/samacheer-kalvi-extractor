@@ -23,6 +23,8 @@ from datetime import datetime
 from pathlib import Path
 from bs4 import BeautifulSoup
 
+from .subjects import get_profile
+
 
 # Teacher-only or Tamil blocks — removed before anything reaches the AI
 DROP_CLASSES = ["lp-tamil-scaffold", "tamil-scaffold", "cfu-block",
@@ -32,26 +34,17 @@ TAMIL_RE      = re.compile(r"[\u0B80-\u0BFF]")
 DAY_TITLE_RE  = re.compile(r"^\s*Day\s+\d+\s*(?:of\s+\d+)?\s*[—–:\-]\s*(.+)$", re.IGNORECASE)
 META_FIELD_RE = re.compile(r"(Textbook|Day type|Technique)\s*:\s*([^|]+)", re.IGNORECASE)
 
-# LP "Day type" text → card type (keyword match, order matters)
-TYPE_KEYWORDS = [
-    ("revision",    "recap"),
-    ("derivation",  "derivation"),      # also "Derivation + Numerical"
-    ("process",     "device"),          # "Process / Working": instruments & experiments
-    ("working",     "device"),
-    ("formula",     "formula"),
-    ("numerical",   "formula"),
-    ("application", "application"),
-    ("comparison",  "concept"),
-    ("concept",     "concept"),
-]
+# Day-type keywords live in each subject profile (subjects/<subject>.py).
+# This is the default list, used when no subject is given.
+TYPE_KEYWORDS = get_profile(None).type_keywords
 
 
-def normalise_type(day_type: str | None) -> str | None:
+def normalise_type(day_type: str | None, keywords=None) -> str | None:
     """Map the LP's free-text day type to a card type; None if unknown."""
     if not day_type:
         return None
     low = day_type.lower()
-    for keyword, card_type in TYPE_KEYWORDS:
+    for keyword, card_type in (keywords or TYPE_KEYWORDS):
         if keyword in low:
             return card_type
     return None
@@ -86,7 +79,7 @@ def _clean_lines(text: str) -> list[str]:
     return lines
 
 
-def parse_lp(html: str) -> dict:
+def parse_lp(html: str, keywords=None) -> dict:
     soup   = BeautifulSoup(html, "html.parser")
     blocks = soup.select('div.lp-day-block[id^="lp-day-"]')
     days   = []
@@ -109,7 +102,7 @@ def parse_lp(html: str) -> dict:
 
         section   = meta.get("textbook", "")
         day_type  = meta.get("day type")
-        card_type = normalise_type(day_type)
+        card_type = normalise_type(day_type, keywords)
         if card_type is None and "revision" in title.lower():
             card_type = "recap"
 
@@ -137,11 +130,12 @@ def parse_lp(html: str) -> dict:
     return {"day_count": len(days), "days": days}
 
 
-def load_lp(path: str | Path) -> dict:
-    """Read a deployed LP file and parse it, with source info for staleness checks."""
+def load_lp(path: str | Path, subject: str | None = None) -> dict:
+    """Read a deployed LP file and parse it, with source info for staleness checks.
+    subject picks that subject's Day-type keywords; None uses the default list."""
     path = Path(path)
     html = path.read_text(encoding="utf-8")
-    parsed = parse_lp(html)
+    parsed = parse_lp(html, get_profile(subject).type_keywords)
     parsed["source_lp"] = {
         "path":         str(path),
         "hash":         fingerprint(html),
