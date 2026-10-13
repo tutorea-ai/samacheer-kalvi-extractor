@@ -7,7 +7,11 @@ the model writes only: recall prompt, 4-5 bullets, formula, exam tip.
 
 Output is enforced through tool use (JSON schema), so responses are always
 valid JSON. Cards are validated; invalid ones get up to 2 retries with
-feedback, then are repaired in code; only real content problems are skipped.
+feedback, then wording problems are repaired in code. Only real content
+problems (Tamil, HTML/LaTeX, too few bullets, empty fields) skip a day.
+
+Subject-specific values (card types, keywords, focus guide, prompt pieces)
+come from subjects/<subject>.py via get_profile().
 
 Notation: Unicode where it exists (q₁, r², ε₀, 10⁻¹⁹); otherwise "_" for
 subscripts (v_d, R_eq) and "^" for superscripts — the renderer converts
