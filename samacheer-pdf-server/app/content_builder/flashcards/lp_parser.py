@@ -65,11 +65,28 @@ def _objectives(block) -> list[str]:
     return []
 
 
-def _clean_lines(text: str) -> list[str]:
+INLINE_TAGS = ["strong", "b", "em", "i", "u", "span", "a", "mark", "code"]
+
+
+def _flatten(soup) -> None:
+    """Make each table row and each sentence read as one line. LPs put bold words in
+    their own tags, which get_text('\\n') would otherwise split onto separate lines."""
+    for tr in soup.find_all("tr"):
+        cells = [td.get_text(" ", strip=True) for td in tr.find_all(["td", "th"])]
+        cells = [c for c in cells if c and not TAMIL_RE.search(c)]
+        tr.replace_with(soup.new_string(" — ".join(cells)))
+    for tag in soup.find_all(INLINE_TAGS):
+        tag.unwrap()
+    soup.smooth()
+
+
+def _clean_lines(text: str, drop_prefixes: tuple = ()) -> list[str]:
     lines = []
     for line in text.split("\n"):
         line = line.strip()
         if not line:
+            continue
+        if drop_prefixes and line.lower().startswith(drop_prefixes):
             continue
         if TAMIL_RE.search(line):
             continue
@@ -79,7 +96,10 @@ def _clean_lines(text: str) -> list[str]:
     return lines
 
 
-def parse_lp(html: str, keywords=None) -> dict:
+def parse_lp(html: str, profile=None, lesson_hint: str = "") -> dict:
+    """profile: the subject's options (keywords, drops, title cleanup); None = default.
+    lesson_hint: the LP folder name (e.g. his_first_flight_prose), used by type_from_meta."""
+    profile = profile or get_profile(None)
     soup   = BeautifulSoup(html, "html.parser")
     blocks = soup.select('div.lp-day-block[id^="lp-day-"]')
     days   = []
@@ -92,6 +112,8 @@ def parse_lp(html: str, keywords=None) -> dict:
         raw_title = title_el.get_text(" ", strip=True) if title_el else f"Day {num}"
         m         = DAY_TITLE_RE.match(raw_title)
         title     = m.group(1).strip() if m else raw_title
+        for pat in profile.title_strip:
+            title = re.sub(pat, "", title).strip()
 
         # Meta line: Textbook / Day type / Technique
         meta    = {}
@@ -102,18 +124,25 @@ def parse_lp(html: str, keywords=None) -> dict:
 
         section   = meta.get("textbook", "")
         day_type  = meta.get("day type")
-        card_type = normalise_type(day_type, keywords)
+        card_type = normalise_type(day_type, profile.type_keywords)
+        if day_type is None and profile.type_from_meta and meta_el:
+            meta_line = meta_el.get_text(" ", strip=True)
+            day_type  = meta_line.split("|")[0].strip() or None          # e.g. "Grammar Day 1 of 6"
+            card_type = normalise_type(f"{meta_line} | {title} | {lesson_hint}", profile.type_keywords)
         if card_type is None and "revision" in title.lower():
             card_type = "recap"
 
         # Cleaned copy: drop teacher-only / Tamil blocks, title and meta
         clean = BeautifulSoup(str(block), "html.parser")
-        for sel in [f".{c}" for c in DROP_CLASSES] + [".lp-day-title", ".lp-day-meta"]:
+        for sel in [f".{c}" for c in (*DROP_CLASSES, *profile.drop_classes)] + [".lp-day-title", ".lp-day-meta"]:
             for el in clean.select(sel):
                 el.decompose()
 
-        board_work = [_clean_lines(bw.get_text("\n", strip=True)) for bw in clean.select(".board-work")]
-        lines      = _clean_lines(clean.get_text("\n", strip=True))
+        if profile.flatten_inline:
+            _flatten(clean)
+        drop_pre   = profile.drop_line_prefixes
+        board_work = [_clean_lines(bw.get_text("\n", strip=True), drop_pre) for bw in clean.select(".board-work")]
+        lines      = _clean_lines(clean.get_text("\n", strip=True), drop_pre)
 
         days.append({
             "day":        num,
@@ -135,7 +164,7 @@ def load_lp(path: str | Path, subject: str | None = None) -> dict:
     subject picks that subject's Day-type keywords; None uses the default list."""
     path = Path(path)
     html = path.read_text(encoding="utf-8")
-    parsed = parse_lp(html, get_profile(subject).type_keywords)
+    parsed = parse_lp(html, get_profile(subject), lesson_hint=path.parent.name)
     parsed["source_lp"] = {
         "path":         str(path),
         "hash":         fingerprint(html),

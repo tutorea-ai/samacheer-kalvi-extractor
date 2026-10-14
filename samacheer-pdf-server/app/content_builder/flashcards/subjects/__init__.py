@@ -12,9 +12,10 @@ from dataclasses import replace
 
 from .base import SubjectProfile
 from .physics import PHYSICS
+from .english import ENGLISH
 
 
-PROFILES = {p.key: p for p in (PHYSICS,)}
+PROFILES = {p.key: p for p in (PHYSICS, ENGLISH)}
 
 # Any subject without a profile gets exactly today's behaviour:
 # Physics prompts and Day-type keywords, generic chips, and the full focus guide.

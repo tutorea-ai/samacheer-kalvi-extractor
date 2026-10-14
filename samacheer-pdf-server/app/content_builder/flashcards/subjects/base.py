@@ -30,3 +30,13 @@ class SubjectProfile:
     tip_ideas: str            # kinds of exam advice to suggest in exam_tip
     extra_rules: str = ""     # extra card rules, each starting with "\n- "
     recap_formula_note: str = ""   # appended to the recap "bullets" line
+    tip_kind: str = "board-exam"   # "exam_tip: ONE sentence of {tip_kind} advice"
+
+    # Parsing / input options — the defaults are today's (Physics) behaviour
+    type_from_meta: bool = False    # no "Day type:" label → match keywords against meta line + title + LP folder name
+    title_strip: tuple = ()         # regexes removed from day titles (after "Day N —")
+    drop_classes: tuple = ()        # extra LP classes to drop, on top of lp_parser.DROP_CLASSES
+    max_text_per_day: int = 0       # chars of day text sent to Claude; 0 = builder default (3,500)
+    recap_from_cards: bool = False  # no revision day → build the Chapter Recap from the cards
+    flatten_inline: bool = False    # join bold/italic words and table rows into single lines
+    drop_line_prefixes: tuple = ()  # lines starting with these (lower-case) are removed, e.g. "preview:"

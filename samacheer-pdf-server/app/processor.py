@@ -904,6 +904,15 @@ class PDFProcessor:
                             if _sel and _sel.get("title"):
                                 fc_title = _sel["title"]
                                 break
+                    # English-style index: units → {prose|poem|supplementary|play: {title}}.
+                    # Same category order as _get_lesson_details, so lesson_choice picks the same lesson.
+                    if fc_title == filename_base:
+                        _u = next((u for u in index_data[term_key].get("units", [])
+                                   if u.get("unit") == unit_num), None)
+                        if _u:
+                            _lessons = [_u[c] for c in ("prose", "poem", "supplementary", "play") if c in _u]
+                            if lesson_choice and 0 < lesson_choice <= len(_lessons) and _lessons[lesson_choice - 1].get("title"):
+                                fc_title = _lessons[lesson_choice - 1]["title"]
                 except Exception as e:
                     print(f"   ⚠️  Could not read chapter title: {e}")
 

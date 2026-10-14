@@ -88,7 +88,7 @@ For each day:
 - bullets: 4 or 5 facts (aim for 10-12 words each, never more than {max_words}).
   Bullets are FACTS only — no exam advice in bullets.
 {formula_rule}
-- exam_tip: ONE sentence of board-exam advice (max {max_tip} words) — {tip_ideas}.
+- exam_tip: ONE sentence of {tip_kind} advice (max {max_tip} words) — {tip_ideas}.
   It must NOT repeat a bullet.
 
 Focus by card type:
@@ -113,7 +113,7 @@ It must help a student revise the WHOLE chapter in two minutes.
 - bullets: 5 or 6 points, ONE idea per bullet — never merge different topics into one bullet
   (aim for 10-12 words each, never more than {max_words}).{recap_formula_note}
 - formula: ""
-- exam_tip: ONE sentence of board-exam advice for this chapter (max {max_tip} words).
+- exam_tip: ONE sentence of {tip_kind} advice for this chapter (max {max_tip} words).
 
 Use ONLY the material below. Save it with the save_recap tool.
 
@@ -220,7 +220,8 @@ class FlashcardBuilder:
                 if not bad:
                     break
                 if attempt < CARD_RETRIES:
-                    print(f"         🔁 Retry {attempt + 1}: days {[d['day'] for d, _, _ in bad]}")
+                    print(f"         🔁 Retry {attempt + 1}: " +
+                          "; ".join(f"day {d['day']} — {why}" for d, why, _ in bad))
                     pending  = [d for d, _, _ in bad]
                     feedback = "\n".join(f"Day {d['day']}: {why}" for d, why, _ in bad)
                 else:
@@ -242,7 +243,8 @@ class FlashcardBuilder:
                     "title": d["title"], **c,
                 })
 
-        recap = self._recap(ordered, recap_day, meta, profile) if recap_day else None
+        use_recap = recap_day or (profile.recap_from_cards and ordered)
+        recap = self._recap(ordered, recap_day, meta, profile) if use_recap else None
 
         print(f"      [Flashcards] ✅ {len(ordered)} cards"
               f"{' + recap' if recap else ''}"
@@ -272,10 +274,10 @@ class FlashcardBuilder:
             lesson_title=meta.get("title"), max_words=MAX_BULLET_WORDS,
             max_prompt=MAX_PROMPT_WORDS, max_tip=MAX_TIP_WORDS, max_back=MAX_BACK_CHARS,
             type_guide="\n".join(f"- {t}: {profile.type_guide.get(t, '')}" for t in types_in_batch),
-            days_block="\n\n".join(self._day_block(d) for d in days),
+            days_block="\n\n".join(self._day_block(d, profile.max_text_per_day or MAX_TEXT_PER_DAY) for d in days),
             example_one=profile.example_one, example_two=profile.example_two,
             formula_rule=profile.formula_rule, tip_ideas=profile.tip_ideas,
-            extra_rules=profile.extra_rules,
+            extra_rules=profile.extra_rules, tip_kind=profile.tip_kind,
         )
         if feedback:
             prompt += f"\n\nYour previous attempt had these problems — fix them:\n{feedback}"
@@ -295,13 +297,17 @@ class FlashcardBuilder:
     def _recap(self, cards, recap_day, meta, profile: SubjectProfile = None) -> Optional[dict]:
         profile = profile or get_profile(meta.get("subject"))
         index    = "\n".join(f"- {c['title']} — {c['formula'] or '—'}" for c in cards)
-        material = ("\n".join(recap_day["objectives"]) + "\n" +
-                    "\n".join(recap_day["board_work"]))[:MAX_BOARD_PER_DAY + 1500]
+        if recap_day:
+            material = ("\n".join(recap_day["objectives"]) + "\n" +
+                        "\n".join(recap_day["board_work"]))[:MAX_BOARD_PER_DAY + 1500]
+        else:   # no revision day (profile.recap_from_cards): revise from the cards themselves
+            material = "\n".join(f"{c['title']}: " + " ".join(c["bullets"])
+                                 for c in cards)[:MAX_BOARD_PER_DAY + 1500]
         base = RECAP_PROMPT.format(
             class_num=meta.get("class"), subject_label=_subject_label(profile, meta),
             lesson_title=meta.get("title"), max_words=MAX_BULLET_WORDS, max_tip=MAX_TIP_WORDS,
             card_index=index, recap_material=material,
-            recap_formula_note=profile.recap_formula_note,
+            recap_formula_note=profile.recap_formula_note, tip_kind=profile.tip_kind,
         )
         prompt = base
         for attempt in range(CARD_RETRIES + 1):
@@ -322,14 +328,14 @@ class FlashcardBuilder:
     # ── helpers ───────────────────────────────────────────────────────────────
 
     @staticmethod
-    def _day_block(d) -> str:
+    def _day_block(d, max_text: int = MAX_TEXT_PER_DAY) -> str:
         parts = [f"### Day {d['day']} — {d['title']}",
                  f"Textbook section: {d['section'] or '—'} | Card type: {d['card_type']}"]
         if d["objectives"]:
             parts.append("Learning objectives:\n" + "\n".join(f"- {o}" for o in d["objectives"]))
         if d["board_work"]:
             parts.append("Board work:\n" + "\n---\n".join(d["board_work"])[:MAX_BOARD_PER_DAY])
-        parts.append("Lesson explanation (excerpt):\n" + d["text"][:MAX_TEXT_PER_DAY])
+        parts.append("Lesson explanation (excerpt):\n" + d["text"][:max_text])
         return "\n".join(parts)
 
     @staticmethod
@@ -399,7 +405,10 @@ class FlashcardBuilder:
         if check_prompt:                                        # bad question → safe template
             p = (c.get("prompt") or "").strip()
             if p.count("?") != 1 or _is_compound(p) or _words(p) > MAX_PROMPT_WORDS:
-                c["prompt"] = f"What are the key facts about {title}?"
+                q = f"What are the key facts about {title}?"
+                if q.count("?") != 1 or _is_compound(q) or _words(q) > MAX_PROMPT_WORDS:
+                    q = "What are the key facts about this part of the lesson?"   # long/odd titles only
+                c["prompt"] = q
 
         limit   = int(max_back * REPAIR_BACK_SLACK)
         formula = (c.get("formula") or "").strip()
