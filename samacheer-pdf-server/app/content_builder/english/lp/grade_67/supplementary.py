@@ -289,12 +289,15 @@ Table: Class | Subject | Unit | Story Title | Total Days |
        Session Duration | Theme | Setting | Moral
 
 <h2>Part 2: Learning Objectives</h2>
-4 simple objectives — read story, name characters,
-say what happened, learn the moral
-Simple language for Class 6-7.
+Generate a simple <ul> list — 4 bullet points only.
+Each bullet: one sentence in English only, starting with action verb (Read, Say, Find, Enjoy).
+NO tables. NO Tamil. Plain English bullet points only.
+Example: <li>Read the poem aloud with correct rhythm and expression.</li>
 
 <h2>Part 3: Language Objectives</h2>
-3 objectives — new words, simple sentences, short written response
+Generate a simple <ul> list — 3 bullet points only.
+Each bullet: one sentence in English only.
+NO tables. NO Tamil. Plain English only.
 
 <h2>Part 4: Teaching Aids</h2>
 Board, chalk, textbook, notebooks, vocabulary cards
@@ -304,6 +307,12 @@ OUTPUT RULES:
 {ENGLISH_PREAMBLE_INSTRUCTION}
 - Stop after Teaching Aids
 - Simple language — Class 6-7 level
+{ENGLISH_CSS_RULES}
+
+ABSOLUTE RULES:
+❌ NEVER add Tamil text in the preamble — English only throughout
+❌ NEVER add style= attributes on any element
+❌ NEVER add border=, cellpadding=, cellspacing= on tables
 
 Story Text:
 ---

@@ -200,8 +200,13 @@ Poem Text:
 
     def _call_day_allocator(self, sections: dict, lesson_title: str) -> Optional[dict]:
         try:
+            stanza_count = len(sections.get("stanzas", []))
             sections_str = json.dumps(sections, indent=2)
             prompt = f"""Allocate the poem stanzas to EXACTLY 3 days for Class 6-7 students.
+
+This poem has {stanza_count} stanzas total.
+Distribute them across 3 days — some days may share one stanza or review.
+Day 3 must always include full poem recap even if stanzas are already covered.
 
 RULES:
 - Day 1: Introduce poem + poet + first stanzas + read aloud + basic meaning
@@ -243,6 +248,8 @@ Extracted Sections:
             raw = response.content[0].text.strip()
             raw = re.sub(r'```(?:json)?', '', raw).strip()
             raw = re.sub(r'```', '', raw).strip()
+            raw = re.sub(r',\s*}', '}', raw)   # trailing comma before }
+            raw = re.sub(r',\s*]', ']', raw)   # trailing comma before ]
             return json.loads(raw)
         except json.JSONDecodeError as e:
             print(f"❌ Poem Day Allocator JSON error: {e}")
@@ -291,12 +298,15 @@ Table: Class | Subject | Unit | Poem Title | Poet | Total Days |
        Session Duration | Rhyme Scheme | Theme
 
 <h2>Part 2: Learning Objectives</h2>
-4 simple objectives — read aloud, find rhyming words,
-say meaning, enjoy the poem
-Simple language for Class 6-7.
+Generate a simple <ul> list — 4 bullet points only.
+Each bullet: one sentence in English only, starting with action verb (Read, Say, Find, Enjoy).
+NO tables. NO Tamil. Plain English bullet points only.
+Example: <li>Read the poem aloud with correct rhythm and expression.</li>
 
 <h2>Part 3: Language Objectives</h2>
-3 objectives — new words, rhyme awareness, short written response
+Generate a simple <ul> list — 3 bullet points only.
+Each bullet: one sentence in English only.
+NO tables. NO Tamil. Plain English only.
 
 <h2>Part 4: Teaching Aids</h2>
 Board, chalk, textbook, notebooks, coloured chalk for rhyme marking
@@ -306,6 +316,12 @@ OUTPUT RULES:
 {ENGLISH_PREAMBLE_INSTRUCTION}
 - Stop after Teaching Aids
 - Simple language — Class 6-7 level
+{ENGLISH_CSS_RULES}
+
+ABSOLUTE RULES:
+❌ NEVER add Tamil text in the preamble — English only throughout
+❌ NEVER add style= attributes on any element
+❌ NEVER add border=, cellpadding=, cellspacing= on tables
 
 Poem Text:
 ---

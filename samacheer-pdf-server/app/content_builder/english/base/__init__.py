@@ -655,7 +655,11 @@ APPROVED LP CLASSES — use ONLY these:
 ❌ NEVER add style="background:..." on any element
 ❌ NEVER add style="color:..." on any element
 ❌ NEVER add style="border:..." on any element
+❌ NEVER add style= attributes on any table, tr, td, or th element
+❌ NEVER add border=, cellpadding=, cellspacing= attributes on tables
+❌ NEVER add font-family, font-size, background-color inline styles anywhere
 ❌ NEVER invent new div variants with colored backgrounds
+✅ Use only class names — no inline styles anywhere
 ✅ If content doesn't fit a class — use plain <div> with NO style attribute
 
 EXCEPTION: The show-section-btn button in QA sections uses inline style
