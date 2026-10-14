@@ -14,9 +14,10 @@ from .base import SubjectProfile
 from .physics import PHYSICS
 from .english import ENGLISH
 from .socialscience import SOCIALSCIENCE
+from .maths import MATHS
 
 
-PROFILES = {p.key: p for p in (PHYSICS, ENGLISH, SOCIALSCIENCE)}
+PROFILES = {p.key: p for p in (PHYSICS, ENGLISH, SOCIALSCIENCE, MATHS)}
 
 # Alias → key lookup, e.g. "social_science" / "ss" → "socialscience".
 _ALIAS_TO_KEY = {alias: p.key for p in PROFILES.values() for alias in p.aliases}

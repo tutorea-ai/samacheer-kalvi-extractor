@@ -8,7 +8,7 @@ values. To add a subject: copy physics.py, change the values, and register
 it in subjects/__init__.py.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass(frozen=True)
@@ -41,3 +41,4 @@ class SubjectProfile:
     flatten_inline: bool = False    # join bold/italic words and table rows into single lines
     drop_line_prefixes: tuple = ()  # lines starting with these (lower-case) are removed, e.g. "preview:"
     aliases: tuple = ()             # other request values for the same subject, e.g. ("social_science", "ss")
+    limits: dict = field(default_factory=dict)  # overrides of builder limits, e.g. {"MAX_BULLET_WORDS": 24}

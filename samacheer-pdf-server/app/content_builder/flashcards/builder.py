@@ -184,6 +184,18 @@ def _system_prompt(profile: SubjectProfile) -> str:
     return SYSTEM_TEMPLATE.format(audience=profile.audience, notation=profile.notation)
 
 
+LIMIT_NAMES = ("MAX_BULLET_WORDS", "MAX_PROMPT_WORDS", "MAX_TIP_WORDS", "MAX_BACK_CHARS",
+               "MAX_RECAP_BACK_CHARS", "HARD_BULLET_WORDS", "HARD_TIP_WORDS")
+
+
+def _limits(profile: SubjectProfile) -> dict:
+    """The builder's limits, with this subject's overrides (profile.limits) on top."""
+    unknown = set(profile.limits) - set(LIMIT_NAMES)
+    if unknown:
+        raise ValueError(f"Unknown limit(s) in subject profile '{profile.key}': {sorted(unknown)}")
+    return {**{n: globals()[n] for n in LIMIT_NAMES}, **profile.limits}
+
+
 class FlashcardBuilder:
 
     def __init__(self):
@@ -226,7 +238,7 @@ class FlashcardBuilder:
                     feedback = "\n".join(f"Day {d['day']}: {why}" for d, why, _ in bad)
                 else:
                     for d, why, c in bad:
-                        fixed = self._repair(c, d["title"])
+                        fixed = self._repair(c, d["title"], L=_limits(profile))
                         if fixed:
                             cards[d["day"]] = fixed
                             print(f"         🩹 Day {d['day']} repaired — was: {why}")
@@ -268,11 +280,12 @@ class FlashcardBuilder:
 
     def _batch(self, days, meta, feedback: str = "", profile: SubjectProfile = None):
         profile = profile or get_profile(meta.get("subject"))
+        L = _limits(profile)
         types_in_batch = sorted({d["card_type"] for d in days if d["card_type"]})
         prompt = CARD_PROMPT.format(
             class_num=meta.get("class"), subject_label=_subject_label(profile, meta),
-            lesson_title=meta.get("title"), max_words=MAX_BULLET_WORDS,
-            max_prompt=MAX_PROMPT_WORDS, max_tip=MAX_TIP_WORDS, max_back=MAX_BACK_CHARS,
+            lesson_title=meta.get("title"), max_words=L["MAX_BULLET_WORDS"],
+            max_prompt=L["MAX_PROMPT_WORDS"], max_tip=L["MAX_TIP_WORDS"], max_back=L["MAX_BACK_CHARS"],
             type_guide="\n".join(f"- {t}: {profile.type_guide.get(t, '')}" for t in types_in_batch),
             days_block="\n\n".join(self._day_block(d, profile.max_text_per_day or MAX_TEXT_PER_DAY) for d in days),
             example_one=profile.example_one, example_two=profile.example_two,
@@ -287,7 +300,8 @@ class FlashcardBuilder:
         got, bad = {}, []
         for d in days:
             c   = by_day.get(d["day"])
-            why = self._validate(c) if c else "missing from response"
+            why = self._validate(c, max_back=L["MAX_BACK_CHARS"], max_bullet=L["MAX_BULLET_WORDS"],
+                                 max_tip=L["MAX_TIP_WORDS"], max_prompt=L["MAX_PROMPT_WORDS"]) if c else "missing from response"
             if why:
                 bad.append((d, why, c))
             else:
@@ -296,6 +310,7 @@ class FlashcardBuilder:
 
     def _recap(self, cards, recap_day, meta, profile: SubjectProfile = None) -> Optional[dict]:
         profile = profile or get_profile(meta.get("subject"))
+        L = _limits(profile)
         index    = "\n".join(f"- {c['title']} — {c['formula'] or '—'}" for c in cards)
         if recap_day:
             material = ("\n".join(recap_day["objectives"]) + "\n" +
@@ -305,7 +320,7 @@ class FlashcardBuilder:
                                  for c in cards)[:MAX_BOARD_PER_DAY + 1500]
         base = RECAP_PROMPT.format(
             class_num=meta.get("class"), subject_label=_subject_label(profile, meta),
-            lesson_title=meta.get("title"), max_words=MAX_BULLET_WORDS, max_tip=MAX_TIP_WORDS,
+            lesson_title=meta.get("title"), max_words=L["MAX_BULLET_WORDS"], max_tip=L["MAX_TIP_WORDS"],
             card_index=index, recap_material=material,
             recap_formula_note=profile.recap_formula_note, tip_kind=profile.tip_kind,
         )
@@ -313,13 +328,14 @@ class FlashcardBuilder:
         for attempt in range(CARD_RETRIES + 1):
             data = self._call_tool(prompt, RECAP_TOOL, max_tokens=1500, system=_system_prompt(profile))
             r    = (data or {}).get("recap")
-            why  = self._validate(r, min_b=5, max_b=6, check_prompt=False, max_back=MAX_RECAP_BACK_CHARS) if r else "missing recap"
+            why  = self._validate(r, min_b=5, max_b=6, check_prompt=False, max_back=L["MAX_RECAP_BACK_CHARS"],
+                                  max_bullet=L["MAX_BULLET_WORDS"], max_tip=L["MAX_TIP_WORDS"]) if r else "missing recap"
             if not why:
                 return {"title": "Chapter Recap", **self._tidy(r)}
             print(f"         ⚠️  Recap attempt {attempt + 1} invalid — {why}")
             prompt = base + f"\n\nYour previous attempt had this problem — fix it: {why}"
         fixed = self._repair(r, "this chapter", min_b=5, max_b=6, check_prompt=False,
-                             max_back=MAX_RECAP_BACK_CHARS) if r else None
+                             max_back=L["MAX_RECAP_BACK_CHARS"], L=L) if r else None
         if fixed:
             print(f"         🩹 Recap repaired — was: {why}")
             return {"title": "Chapter Recap", **fixed}
@@ -340,9 +356,11 @@ class FlashcardBuilder:
 
     @staticmethod
     def _validate(c, min_b=4, max_b=5, check_prompt=True, max_back=MAX_BACK_CHARS,
-                  max_bullet=MAX_BULLET_WORDS, max_tip=MAX_TIP_WORDS, check_overlap=True) -> str:
+                  max_bullet=MAX_BULLET_WORDS, max_tip=MAX_TIP_WORDS, check_overlap=True,
+                  max_prompt=MAX_PROMPT_WORDS) -> str:
         if not isinstance(c, dict):
             return "not an object"
+        MAX_PROMPT_WORDS = max_prompt   # this subject's limit (local name shadows the module constant)
         prompt  = (c.get("prompt") or "").strip()
         bullets = c.get("bullets")
         tip     = (c.get("exam_tip") or "").strip()
@@ -383,7 +401,7 @@ class FlashcardBuilder:
 
     @classmethod
     def _repair(cls, c, title, min_b=4, max_b=5, check_prompt=True,
-                max_back=MAX_BACK_CHARS) -> Optional[dict]:
+                max_back=MAX_BACK_CHARS, L=None) -> Optional[dict]:
         """
         Fix wording problems in code after the final retry, instead of
         skipping the day. Content problems (Tamil, HTML/LaTeX, too few
@@ -391,6 +409,10 @@ class FlashcardBuilder:
         """
         if not isinstance(c, dict):
             return None
+        # This subject's limits; the local names below shadow the module constants in this method
+        L = L or _limits(get_profile(None))
+        MAX_TIP_WORDS, MAX_PROMPT_WORDS = L["MAX_TIP_WORDS"], L["MAX_PROMPT_WORDS"]
+        HARD_BULLET_WORDS, HARD_TIP_WORDS = L["HARD_BULLET_WORDS"], L["HARD_TIP_WORDS"]
         c = dict(c)
         bullets = [b.strip() for b in (c.get("bullets") or [])
                    if isinstance(b, str) and b.strip()]
@@ -418,7 +440,7 @@ class FlashcardBuilder:
 
         c["bullets"], c["exam_tip"] = bullets, tip
         why = cls._validate(c, min_b, max_b, check_prompt, limit,
-                            max_bullet=HARD_BULLET_WORDS, max_tip=HARD_TIP_WORDS,
+                            max_bullet=HARD_BULLET_WORDS, max_tip=HARD_TIP_WORDS, max_prompt=MAX_PROMPT_WORDS,
                             check_overlap=False)
         return None if why else cls._tidy(c)
 
