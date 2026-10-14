@@ -40,3 +40,4 @@ class SubjectProfile:
     recap_from_cards: bool = False  # no revision day → build the Chapter Recap from the cards
     flatten_inline: bool = False    # join bold/italic words and table rows into single lines
     drop_line_prefixes: tuple = ()  # lines starting with these (lower-case) are removed, e.g. "preview:"
+    aliases: tuple = ()             # other request values for the same subject, e.g. ("social_science", "ss")

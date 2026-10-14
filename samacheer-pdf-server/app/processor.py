@@ -913,6 +913,15 @@ class PDFProcessor:
                             _lessons = [_u[c] for c in ("prose", "poem", "supplementary", "play") if c in _u]
                             if lesson_choice and 0 < lesson_choice <= len(_lessons) and _lessons[lesson_choice - 1].get("title"):
                                 fc_title = _lessons[lesson_choice - 1]["title"]
+                    # Discipline-style index (Social Science): disciplines → {history: [{unit, title}]}.
+                    # Also accepts the flat form without the "disciplines" wrapper, like _get_lesson_details.
+                    if fc_title == filename_base and discipline:
+                        _tdata = index_data[term_key]
+                        _disc = _tdata.get("disciplines", _tdata).get(discipline.lower(), [])
+                        if isinstance(_disc, list):
+                            _sel = next((u for u in _disc if u.get("unit") == unit_num), None)
+                            if _sel and _sel.get("title"):
+                                fc_title = _sel["title"]
                 except Exception as e:
                     print(f"   ⚠️  Could not read chapter title: {e}")
 

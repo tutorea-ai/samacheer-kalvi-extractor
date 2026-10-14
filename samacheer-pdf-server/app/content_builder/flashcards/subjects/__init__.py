@@ -13,9 +13,13 @@ from dataclasses import replace
 from .base import SubjectProfile
 from .physics import PHYSICS
 from .english import ENGLISH
+from .socialscience import SOCIALSCIENCE
 
 
-PROFILES = {p.key: p for p in (PHYSICS, ENGLISH)}
+PROFILES = {p.key: p for p in (PHYSICS, ENGLISH, SOCIALSCIENCE)}
+
+# Alias → key lookup, e.g. "social_science" / "ss" → "socialscience".
+_ALIAS_TO_KEY = {alias: p.key for p in PROFILES.values() for alias in p.aliases}
 
 # Any subject without a profile gets exactly today's behaviour:
 # Physics prompts and Day-type keywords, generic chips, and the full focus guide.
@@ -37,7 +41,9 @@ DEFAULT = replace(
 
 
 def get_profile(subject) -> SubjectProfile:
-    return PROFILES.get((subject or "").lower().strip(), DEFAULT)
+    key = (subject or "").lower().strip()
+    key = _ALIAS_TO_KEY.get(key, key)
+    return PROFILES.get(key, DEFAULT)
 
 
 __all__ = ["SubjectProfile", "PROFILES", "DEFAULT", "get_profile"]
