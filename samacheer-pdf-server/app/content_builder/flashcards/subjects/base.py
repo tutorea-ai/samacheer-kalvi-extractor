@@ -42,3 +42,7 @@ class SubjectProfile:
     drop_line_prefixes: tuple = ()  # lines starting with these (lower-case) are removed, e.g. "preview:"
     aliases: tuple = ()             # other request values for the same subject, e.g. ("social_science", "ss")
     limits: dict = field(default_factory=dict)  # overrides of builder limits, e.g. {"MAX_BULLET_WORDS": 24}
+    recap_day: str = "first"        # several revision days: which one feeds the Chapter Recap ("first" / "last")
+    board_classes: tuple = ("board-work",)   # class names that hold board notes (Biology 12 also: "lp-board-work")
+    recap_from_text: bool = False   # recap reads the revision day's text, not just its objectives + board work
+    title_from_focus: tuple = ()    # titles (regex, full match) replaced by the meta table's Focus

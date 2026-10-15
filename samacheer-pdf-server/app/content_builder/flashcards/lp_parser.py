@@ -96,11 +96,22 @@ def _clean_lines(text: str, drop_prefixes: tuple = ()) -> list[str]:
     return lines
 
 
+def _before(block, cls: str):
+    """The element with class `cls` placed just BEFORE this day block (Biology 12 LPs put the
+    day title and meta table outside the block). Only if no other day block sits in between."""
+    el = block.find_previous_sibling(class_=cls)
+    if el is not None and el.find_next_sibling(class_="lp-day-block") is block:
+        return el
+    return None
+
+
 def parse_lp(html: str, profile=None, lesson_hint: str = "") -> dict:
     """profile: the subject's options (keywords, drops, title cleanup); None = default.
     lesson_hint: the LP folder name (e.g. his_first_flight_prose), used by type_from_meta."""
     profile = profile or get_profile(None)
-    soup   = BeautifulSoup(html, "html.parser")
+    # on_duplicate_attribute="ignore": keep the FIRST value when a tag repeats an attribute
+    # (Biology 12 writes id="lp-day-1" ... id="day-1" on the same div)
+    soup   = BeautifulSoup(html, "html.parser", on_duplicate_attribute="ignore")
     blocks = soup.select('div.lp-day-block[id^="lp-day-"]')
     days   = []
 
@@ -108,7 +119,9 @@ def parse_lp(html: str, profile=None, lesson_hint: str = "") -> dict:
         num = int(block["id"].rsplit("-", 1)[-1])
 
         # Title
-        title_el  = block.select_one(".lp-day-title") or block.find(["h2", "h3", "h4"])
+        title_el  = (block.select_one(".lp-day-title")
+                     or _before(block, "lp-day-title")       # Biology 12: title before the block
+                     or block.find(["h2", "h3", "h4"]))
         raw_title = title_el.get_text(" ", strip=True) if title_el else f"Day {num}"
         m         = DAY_TITLE_RE.match(raw_title)
         title     = m.group(1).strip() if m else raw_title
@@ -121,13 +134,23 @@ def parse_lp(html: str, profile=None, lesson_hint: str = "") -> dict:
         if meta_el:
             for key, val in META_FIELD_RE.findall(meta_el.get_text(" ", strip=True)):
                 meta[key.lower()] = val.strip()
+        else:
+            meta_el = _before(block, "lp-day-meta-table")   # Biology 12: table of Focus / Day / Key Ratios
+            if meta_el:
+                for tr in meta_el.find_all("tr"):
+                    th, td = tr.find("th"), tr.find("td")
+                    if th and td:
+                        meta[th.get_text(" ", strip=True).lower()] = td.get_text(" ", strip=True)
 
+        # Generic LP title ("Revision and Assessment") → use the day's Focus instead
+        if meta.get("focus") and any(re.fullmatch(p, title, re.I) for p in profile.title_from_focus):
+            title = meta["focus"]
         section   = meta.get("textbook", "")
         day_type  = meta.get("day type")
         card_type = normalise_type(day_type, profile.type_keywords)
         if day_type is None and profile.type_from_meta and meta_el:
             meta_line = meta_el.get_text(" ", strip=True)
-            day_type  = meta_line.split("|")[0].strip() or None          # e.g. "Grammar Day 1 of 6"
+            day_type  = meta.get("focus") or meta_line.split("|")[0].strip() or None   # "Grammar Day 1 of 6" / Biology Focus
             card_type = normalise_type(f"{meta_line} | {title} | {lesson_hint}", profile.type_keywords)
         if card_type is None and "revision" in title.lower():
             card_type = "recap"
@@ -141,7 +164,8 @@ def parse_lp(html: str, profile=None, lesson_hint: str = "") -> dict:
         if profile.flatten_inline:
             _flatten(clean)
         drop_pre   = profile.drop_line_prefixes
-        board_work = [_clean_lines(bw.get_text("\n", strip=True), drop_pre) for bw in clean.select(".board-work")]
+        board_sel  = ", ".join(f".{c}" for c in profile.board_classes)      # default ".board-work"
+        board_work = [_clean_lines(bw.get_text("\n", strip=True), drop_pre) for bw in clean.select(board_sel)]
         lines      = _clean_lines(clean.get_text("\n", strip=True), drop_pre)
 
         days.append({

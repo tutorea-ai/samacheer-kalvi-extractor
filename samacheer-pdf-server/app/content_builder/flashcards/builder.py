@@ -218,7 +218,8 @@ class FlashcardBuilder:
             print(f"      [Flashcards] ❌ No LP days found in {lp_path}")
             return None
         content_days = [d for d in lp["days"] if not d["is_recap"]]
-        recap_day    = next((d for d in lp["days"] if d["is_recap"]), None)
+        recaps       = [d for d in lp["days"] if d["is_recap"]]
+        recap_day    = (recaps[-1] if profile.recap_day == "last" else recaps[0]) if recaps else None
 
         print(f"      [Flashcards] {meta.get('title')} — {len(content_days)} days"
               f"{' + recap' if recap_day else ''}, batches of {BATCH_SIZE}")
@@ -312,7 +313,10 @@ class FlashcardBuilder:
         profile = profile or get_profile(meta.get("subject"))
         L = _limits(profile)
         index    = "\n".join(f"- {c['title']} — {c['formula'] or '—'}" for c in cards)
-        if recap_day:
+        if recap_day and profile.recap_from_text:   # revision explained in the day's text (Biology 12)
+            material = ("\n".join(recap_day["board_work"]) + "\n" +
+                        recap_day["text"])[:profile.max_text_per_day or MAX_TEXT_PER_DAY]
+        elif recap_day:
             material = ("\n".join(recap_day["objectives"]) + "\n" +
                         "\n".join(recap_day["board_work"]))[:MAX_BOARD_PER_DAY + 1500]
         else:   # no revision day (profile.recap_from_cards): revise from the cards themselves
