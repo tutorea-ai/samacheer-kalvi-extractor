@@ -260,7 +260,18 @@ class EpubPreprocessor:
                     tag.insert_before('\n\n### ')
                     tag.insert_after('\n')
 
-        text = content_soup.get_text(separator=' ', strip=True)
+        if lesson:
+            # Lesson-list books (Tamil): keep one line per book line, so poem
+            # and kural lines arrive exactly as printed
+            for br in content_soup.find_all('br'):
+                br.replace_with('\n')
+            for tag in content_soup.find_all(['p', 'div', 'li', 'tr', 'h1', 'h2', 'h3', 'h4']):
+                tag.append('\n')
+            lines = [re.sub(r'[ \t ]+', ' ', ln).strip()
+                     for ln in content_soup.get_text().split('\n')]
+            text = '\n'.join(lines)
+        else:
+            text = content_soup.get_text(separator=' ', strip=True)
         text = re.sub(r' +', ' ', text)
         text = re.sub(r'\n +', '\n', text)
         text = re.sub(r'\n{3,}', '\n\n', text).strip()
