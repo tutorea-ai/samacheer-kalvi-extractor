@@ -100,6 +100,31 @@ LABELS: Dict[str, str] = {
     "minutes":         "நிமி",
     "cfu_wait":        "முடிவு செய்யுங்கள்: அடுத்த பாடவேளைக்குச் செல்லலாமா, மீண்டும் கற்பிக்கலாமா?",
     "ccq_wait":        "தவறாக இருந்தால்: இந்த ஒரு கருத்தை உடனே மீண்டும் விளக்குங்கள்.",
+    "next_period":     "அடுத்த பாடவேளை",
+    "part":            "பகுதி",
+}
+
+# Preamble part titles (PROPOSED, awaiting TL "ok")
+PREAMBLE_TITLES: Dict[str, str] = {
+    "overview":  "பாடம் ஒரு பார்வை",
+    "objectives": LABELS["objectives"],
+    "word_wall":  LABELS["word_wall"],
+    "plan":       "பாடவேளை வாரியான திட்டம்",
+    "approach":   "கற்பிக்கும் முறை",
+    "materials":  LABELS["materials"],
+}
+
+# Assessment block headings (PROPOSED, awaiting TL "ok")
+ASSESSMENT_TITLES: Dict[str, str] = {
+    "answers":      "சரியான விடைகள்",
+    "short":        "குறுவினா — மாதிரி விடைகள்",
+    "thinking":     "சிந்தனை வினா — ஏற்கத்தக்க விடைகள்",
+    "recitation":   "ஒப்புவித்தல் சரிபார்ப்பு",
+    "rule_example": "விதிக்கு ஓர் எடுத்துக்காட்டு",
+    "diff":         "வேறுபடுத்திக் கற்பித்தல்",
+    "diff_support": "கூடுதல் உதவி தேவைப்படுவோர்",
+    "diff_stretch": "கூடுதல் சவால்",
+    "check_note":   "ஆசிரியர் கையேட்டுடன் சரிபார்க்கவும்.",
 }
 
 
