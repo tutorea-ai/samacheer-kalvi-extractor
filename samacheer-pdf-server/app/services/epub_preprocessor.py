@@ -52,6 +52,9 @@ ENGLISH_LESSON_TYPES = {
 # ── Discipline names for Social Science ───────────────────────────────────────
 SS_DISCIPLINES = ['history', 'geography', 'civics', 'economics']
 
+# ── Unit label for lesson-list books (Tamil: "இயல் 1 — தமிழ்த்தேன்") ─────────
+UNIT_LABEL_RE = re.compile(r'இயல்\s*(\d+)')
+
 # ── Roman numeral map for unit numbers ────────────────────────────────────────
 ROMAN = {
     'I':1,'II':2,'III':3,'IV':4,'V':5,
@@ -174,7 +177,7 @@ class EpubPreprocessor:
     # Public: extract lesson text
     # ──────────────────────────────────────────────────────────────────────────
 
-    def extract(self, lesson_type: str, unit: int) -> str | None:
+    def extract(self, lesson_type: str, unit: int, lesson: int = None) -> str | None:
         """
         Extract clean text for a lesson.
 
@@ -191,7 +194,8 @@ class EpubPreprocessor:
             print(f"[Preprocessor] combined_tagged.html not found — run prepare() first")
             return None
 
-        tag_value = f"{lesson_type}-{unit}"
+        # Lesson-list books (Tamil) tag lessons by position: lesson-{unit}-{n}
+        tag_value = f"{lesson_type}-{unit}-{lesson}" if lesson else f"{lesson_type}-{unit}"
 
         with open(self.combined_tagged_path, 'r', encoding='utf-8') as f:
             soup = BeautifulSoup(f.read(), 'html.parser')
@@ -203,7 +207,11 @@ class EpubPreprocessor:
             return None
 
         # Find stop element — next lesson tag
-        stop_el = self._find_next_tag(soup, lesson_type, unit)
+        if lesson:
+            # Lesson-list books: stop at the next stamped element (next lesson or next unit heading)
+            stop_el = start_el.find_next(attrs={"data-sk-unit": True})
+        else:
+            stop_el = self._find_next_tag(soup, lesson_type, unit)
 
         # Collect content between start and stop
         content_parts = [str(start_el)]
@@ -276,6 +284,8 @@ class EpubPreprocessor:
                 return None
             subject_type = self._detect_subject_type(top_ol)
             print(f"[Preprocessor] Detected subject type: {subject_type}")
+            if subject_type == 'lesson_list':
+                return self._build_lesson_list_tag_map(top_ol)
             if subject_type == 'english':
                 return self._build_english_tag_map(top_ol)
             elif subject_type == 'socialscience':
@@ -296,6 +306,13 @@ class EpubPreprocessor:
         Detect whether this is English, Social Science, or Linear (Science/Maths).
         """
         all_text = top_ol.get_text().lower()
+
+        # Lesson-list books (Tamil): top-level "இயல் N" entries, each with an
+        # <ol> of lessons in textbook order. Lessons are tagged by position.
+        for li in top_ol.find_all('li', recursive=False):
+            link = li.find('a')
+            if link and UNIT_LABEL_RE.search(link.get_text(strip=True)) and li.find('ol'):
+                return 'lesson_list'
 
         # Social Science has discipline headings
         if 'history' in all_text and 'geography' in all_text:
@@ -357,6 +374,39 @@ class EpubPreprocessor:
                         tag = f"{lesson_type}-{unit_num}"
                         tag_map[tag] = (sf, anchor)
 
+        return tag_map
+
+    def _build_lesson_list_tag_map(self, top_ol) -> dict:
+        """
+        Build tag map for lesson-list books (Tamil).
+        nav: level 1 = unit ("இயல் 1 — ..."), level 2 = lessons in textbook order.
+        Tags:
+          unit-{u}       → unit heading (stop point only)
+          lesson-{u}-{n} → n-th lesson of unit u (n = lesson_choice, 1-based)
+        """
+        tag_map = {}
+        for unit_li in top_ol.find_all('li', recursive=False):
+            unit_link = unit_li.find('a')
+            if not unit_link:
+                continue
+            m = UNIT_LABEL_RE.search(unit_link.get_text(strip=True))
+            if not m:
+                continue
+            unit_num = int(m.group(1))
+            sf, an = self._parse_href(unit_link.get('href', ''))
+            if sf and an:
+                tag_map[f"unit-{unit_num}"] = (sf, an)
+            sub_ol = unit_li.find('ol')
+            if not sub_ol:
+                continue
+            # Position counts every lesson entry, so n always matches lesson_choice
+            for n, lesson_li in enumerate(sub_ol.find_all('li', recursive=False), start=1):
+                link = lesson_li.find('a')
+                if not link:
+                    continue
+                sf, an = self._parse_href(link.get('href', ''))
+                if sf and an:
+                    tag_map[f"lesson-{unit_num}-{n}"] = (sf, an)
         return tag_map
 
     def _build_ss_tag_map(self, top_ol) -> dict:
