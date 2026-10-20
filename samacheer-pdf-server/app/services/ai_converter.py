@@ -46,6 +46,75 @@ def _get_lp_duration(lesson_type: str) -> dict:
 
 
 # ============================================================================
+# PAGE LABELS PER SUBJECT
+# Subjects not listed use "default" (English), so existing pages are unchanged.
+# Add a language here to give its pages their own labels.
+# ============================================================================
+
+PAGE_LABELS = {
+    "default": {
+        "lang":       "en",
+        "day":        "Day",
+        "assessment": "Assessment",
+        "progress":   "Day {n} of {total}",
+        "prev":       "← Previous Day",
+        "next":       "Next Day →",
+        "titles": {
+            "content": "{title} | Class {cls}",
+            "qa":      "Q&A — {title} | Class {cls}",
+            "lp":      "Lesson Plan — {title} | Class {cls}",
+        },
+    },
+    "tamil": {
+        "lang":       "ta",
+        "day":        "பாடவேளை",
+        "assessment": "மதிப்பீடு",
+        "progress":   "பாடவேளை {n} / {total}",
+        "prev":       "← முந்தைய பாடவேளை",
+        "next":       "அடுத்த பாடவேளை →",
+        "titles": {
+            "content": "{title} | வகுப்பு {cls}",
+            "qa":      "வினா – விடை — {title} | வகுப்பு {cls}",
+            "lp":      "பாடக்குறிப்பு — {title} | வகுப்பு {cls}",
+        },
+        # Meta line in the book's own words: lesson type → printed section name
+        "meta": {
+            "class": "வகுப்பு", "subject": "தமிழ்", "unit": "இயல்",
+            "types": {
+                "poem":          "கவிதைப்பேழை",
+                "prose":         "உரைநடை உலகம்",
+                "supplementary": "விரிவானம்",
+                "grammar":       "கற்கண்டு",
+                "thirukural":    "வாழ்வியல்",
+            },
+        },
+    },
+}
+
+
+def _page_labels(subject: str = "") -> dict:
+    return PAGE_LABELS.get((subject or "").lower().strip(), PAGE_LABELS["default"])
+
+
+def page_title(subject: str, content_type: str, title: str, class_num) -> str:
+    """Page <title>/<h1> in the subject's own labels (default: English, unchanged)."""
+    tpl = _page_labels(subject)["titles"].get(content_type, "{title} | Class {cls}")
+    return tpl.format(title=title, cls=class_num)
+
+
+def language_meta_line(subject: str, class_num, unit, lesson_type: str) -> Optional[str]:
+    """Meta line for subjects with their own labels (e.g. Tamil). None → caller keeps its own line."""
+    meta = _page_labels(subject).get("meta")
+    if not meta:
+        return None
+    parts = [f"{meta['class']} {class_num}", meta["subject"], f"{meta['unit']} {unit}"]
+    type_label = meta["types"].get((lesson_type or "").lower().strip())
+    if type_label:
+        parts.append(type_label)
+    return " | ".join(parts)
+
+
+# ============================================================================
 # HTML WRAPPER
 # ============================================================================
 
@@ -68,7 +137,8 @@ def balance_divs(html_block: str) -> str:
     return html_block
 
 def _wrap_html(body_content: str, title: str, content_type: str = "content",
-               meta_line: str = "") -> str:
+               meta_line: str = "", subject: str = "") -> str:
+    labels = _page_labels(subject)
     accent_colors = {"content": "#2E75B6", "qa": "#27AE60", "lp": "#8E44AD"}
     accent = accent_colors.get(content_type, "#2E75B6")
 
@@ -105,26 +175,34 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
         body_content = day_pattern.sub(fix_day_block, body_content)
 
         # Step 3 — Build tab bar dynamically based on actual day count
+        day_label    = labels["day"]
+        assess_label = labels["assessment"]
+        progress_fmt = labels["progress"]
+        progress_1   = progress_fmt.format(n=1, total=total_days)
+        prev_label   = labels["prev"]
+        next_label   = labels["next"]
         tab_items = ""
         for d in range(1, total_days + 1):
             active = "lp-tab-active" if d == 1 else ""
-            tab_items += f'<button class="lp-tab {active}" onclick="switchLPDay({d})" id="lp-tab-{d}">Day {d}</button>\n'
-        tab_items += '<button class="lp-tab" onclick="switchLPDay(\'assessment\')" id="lp-tab-assessment">📋 Assessment</button>'
+            tab_items += f'<button class="lp-tab {active}" onclick="switchLPDay({d})" id="lp-tab-{d}">{day_label} {d}</button>\n'
+        tab_items += f'<button class="lp-tab" onclick="switchLPDay(\'assessment\')" id="lp-tab-assessment">📋 {assess_label}</button>'
 
+        # Labels also go on the wrapper as data- attributes, so the site's JS keeps
+        # them when switching days (the JS falls back to English when they're absent)
         tab_bar = f"""
-<div class="lp-tab-wrapper" id="lp-tab-wrapper">
+<div class="lp-tab-wrapper" id="lp-tab-wrapper" data-day-label="{day_label}" data-progress-format="{progress_fmt}" data-assessment-label="{assess_label}">
   <div class="lp-tab-bar">
     {tab_items}
   </div>
-  <div class="lp-progress" id="lp-progress">Day 1 of {total_days}</div>
+  <div class="lp-progress" id="lp-progress">{progress_1}</div>
 </div>"""
 
         # Step 4 — Build prev/next stepper
         stepper = f"""
 <div class="lp-stepper" id="lp-stepper">
-  <button class="lp-prev-btn" onclick="prevLPDay()" id="lp-prev">← Previous Day</button>
-  <span class="lp-day-counter" id="lp-day-counter">Day 1 of {total_days}</span>
-  <button class="lp-next-btn" onclick="nextLPDay()" id="lp-next">Next Day →</button>
+  <button class="lp-prev-btn" onclick="prevLPDay()" id="lp-prev">{prev_label}</button>
+  <span class="lp-day-counter" id="lp-day-counter">{progress_1}</span>
+  <button class="lp-next-btn" onclick="nextLPDay()" id="lp-next">{next_label}</button>
 </div>"""
 
         # Step 5 — Wrap content area, stepper outside
@@ -132,7 +210,7 @@ def _wrap_html(body_content: str, title: str, content_type: str = "content",
         body_content = tab_bar + '\n' + content_area + '\n' + stepper
 
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="{labels['lang']}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -242,6 +320,8 @@ class AIContentConverter:
     def generate_all(self, text: str, metadata: Dict) -> Dict[str, Optional[str]]:
         results      = {"content": None, "qa": None, "lp": None}
         lesson_title = metadata.get("lesson_title", "Unknown")
+        # Clean display name for page titles when the processor provides one (lesson-list subjects)
+        page_name    = metadata.get("page_title") or lesson_title
         class_num    = metadata.get("class", "")
         unit         = metadata.get("unit", "")
         subject      = metadata.get("subject", "english").lower()
@@ -266,8 +346,10 @@ class AIContentConverter:
         elif subject == "physics":
             meta_line = f"Class {class_num} | Physics | Unit {unit}"
         else:
-            type_display = type_display_map.get(lesson_type, "Prose")
-            meta_line = f"Class {class_num} | English | Unit {unit} | {type_display}"
+            meta_line = language_meta_line(subject, class_num, unit, lesson_type)
+            if not meta_line:
+                type_display = type_display_map.get(lesson_type, "Prose")
+                meta_line = f"Class {class_num} | English | Unit {unit} | {type_display}"
 
         print(f"🤖 Generating: Content + QA + LP for '{lesson_title}'")
 
@@ -288,9 +370,10 @@ class AIContentConverter:
             if content_html:
                 results["content"] = _wrap_html(
                     content_html,
-                    title=f"{lesson_title} | Class {class_num}",
+                    title=page_title(subject, "content", page_name, class_num),
                     content_type="content",
-                    meta_line=meta_line
+                    meta_line=meta_line,
+                    subject=subject
                 )
                 print(f"   ✅ Content HTML ready ({len(content_html)} chars)")
             else:
@@ -307,9 +390,10 @@ class AIContentConverter:
             if qa_html:
                 results["qa"] = _wrap_html(
                     qa_html,
-                    title=f"Q&A — {lesson_title} | Class {class_num}",
+                    title=page_title(subject, "qa", page_name, class_num),
                     content_type="qa",
-                    meta_line=meta_line
+                    meta_line=meta_line,
+                    subject=subject
                 )
                 print(f"   ✅ QA HTML ready ({len(qa_html)} chars)")
             else:
@@ -325,9 +409,10 @@ class AIContentConverter:
             if lp_html:
                 results["lp"] = _wrap_html(
                     lp_html,
-                    title=f"Lesson Plan — {lesson_title} | Class {class_num}",
+                    title=page_title(subject, "lp", page_name, class_num),
                     content_type="lp",
-                    meta_line=meta_line
+                    meta_line=meta_line,
+                    subject=subject
                 )
                 print(f"   ✅ LP HTML ready ({len(lp_html)} chars)")
             else:
