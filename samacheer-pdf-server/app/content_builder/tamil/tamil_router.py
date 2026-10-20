@@ -1,7 +1,7 @@
 """
 tamil/tamil_router.py
 ---------------------
-Subject-level router for Tamil (language subject) LP and QA builders.
+Subject-level router for Tamil (language subject) LP, QA and Content builders.
 
 Reads:
     metadata["class"]        → grade group (grade_67 / grade_910 / grade_1112)
@@ -80,4 +80,9 @@ def generate_lp(text: str, metadata: dict) -> Optional[str]:
 
 def generate_qa(text: str, metadata: dict) -> Optional[str]:
     builder = _find_builder("qa", metadata)
+    return builder.generate(text, metadata) if builder else None
+
+
+def generate_content(text: str, metadata: dict) -> Optional[str]:
+    builder = _find_builder("content", metadata)
     return builder.generate(text, metadata) if builder else None

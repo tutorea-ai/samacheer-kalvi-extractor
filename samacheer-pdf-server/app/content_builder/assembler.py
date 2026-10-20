@@ -13,6 +13,7 @@ FIXES (April 2026):
 """
 
 import re
+import importlib
 import anthropic
 from html.parser import HTMLParser
 from typing import Optional
@@ -50,6 +51,27 @@ def _close_open_tags(html: str, label: str) -> str:
     print(f"         ⚠️  [Assembler] {label}: closing {len(tracker.stack)} unclosed tag(s) "
           f"{tracker.stack[::-1]} — output was likely cut off")
     return html + "".join(f"</{t}>" for t in reversed(tracker.stack))
+
+
+def _subject_content_fn(subject: str):
+    """
+    generate_content from content_builder/<subject>/<subject>_router.py, or None.
+    Subjects whose router has no generate_content (all existing ones) keep the
+    generic path in assemble().
+    """
+    key = (subject or "").lower().strip().replace("-", "_").replace(" ", "_")
+    if not key:
+        return None
+    full = f"{__package__}.{key}.{key}_router"
+    try:
+        module = importlib.import_module(full)
+    except ModuleNotFoundError as e:
+        # No router for this subject → generic path. A missing dependency
+        # INSIDE an existing router must surface as a real error.
+        if e.name and full.startswith(e.name):
+            return None
+        raise
+    return getattr(module, "generate_content", None)
 
 
 SYSTEM_PROMPT = """You are converting a Samacheer Kalvi Tamil Nadu State Board academic
@@ -277,6 +299,14 @@ class ContentAssembler:
 
         print(f"      [Assembler] Building: {lesson_title}")
         print(f"      [Assembler] Text: {text_len} chars")
+
+        # Subject-specific Content builder (e.g. Tamil): if the subject's router
+        # exposes generate_content, it owns the whole Content body. No generic fallback.
+        subject_content = _subject_content_fn(subject)
+        if subject_content:
+            print(f"      [Assembler] Using {subject} router for Content")
+            html = subject_content(text, metadata)
+            return _close_open_tags(html, "Content") if html else None
 
         parts = []
 
