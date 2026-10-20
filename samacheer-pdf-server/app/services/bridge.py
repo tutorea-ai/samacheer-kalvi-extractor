@@ -69,8 +69,11 @@ class ContentBridge:
             self.target_base = Path(target_root).resolve()
             print(f"🌉 Bridge initialized → {self.target_base}")
 
-        # ── Load English curriculum ───────────────────────────────────────────
-        self.curriculum = self._load_curriculum("english")
+        # ── Load language curricula (English, Tamil, ...) ─────────────────────
+        # One file per language subject. self.curriculum stays as the English
+        # alias so existing callers keep working.
+        self.language_curricula = {s: self._load_curriculum(s) for s in LANGUAGE_SUBJECTS}
+        self.curriculum = self.language_curricula.get("english", {})
 
         # ── Load Social Science curriculum ────────────────────────────────────
         self.ss_curriculum = self._load_ss_curriculum()
@@ -265,8 +268,8 @@ class ContentBridge:
         if subject in FLAT_1112_SUBJECTS:
             return self._resolve_flat_1112_lesson_id(metadata)
 
-        if not self.curriculum:
-            print("❌ Bridge Error: Curriculum not loaded.")
+        if not self.language_curricula.get(subject):
+            print(f"❌ Bridge Error: Curriculum not loaded for '{subject}'.")
             return None
         return self._resolve_lesson_id(metadata)
 
@@ -309,7 +312,8 @@ class ContentBridge:
         class_num  = int(class_str)
         term_folder = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
 
-        base = self.target_base / "backend" / "data" / "languages" / "english" / class_str
+        subject = metadata.get("subject", "english").lower().strip()
+        base = self.target_base / "backend" / "data" / "languages" / subject / class_str
 
         content_path = base / "content" / term_folder / lesson_id / "index.html"
         qa_path      = base / "qa"      / term_folder / lesson_id / "index.html"
@@ -539,13 +543,15 @@ class ContentBridge:
         lesson_idx  = metadata["lesson_choice"] - 1
         class_num   = int(class_str)
         term_key    = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+        subject     = metadata.get("subject", "english").lower().strip()
+        curriculum  = self.language_curricula.get(subject, {})
 
         try:
-            if class_str not in self.curriculum:
-                print(f"❌ Bridge: Class '{class_str}' not in curriculum")
+            if class_str not in curriculum:
+                print(f"❌ Bridge: Class '{class_str}' not in {subject} curriculum")
                 return None
 
-            term_data = self.curriculum[class_str].get(term_key)
+            term_data = curriculum[class_str].get(term_key)
             if not term_data:
                 print(f"❌ Bridge: '{term_key}' not found for class {class_str}")
                 return None

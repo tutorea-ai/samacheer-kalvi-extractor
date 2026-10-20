@@ -1,0 +1,1107 @@
+"""
+Content Bridge
+Deploys generated files (HTML + MD) to the correct locations
+in the Node.js Content Server.
+
+Destination structure (Node.js server):
+
+ENGLISH (Language subject):
+  HTML → backend/data/languages/english/{class}/content/{term}/{lessonId}/index.html
+  HTML → backend/data/languages/english/{class}/qa/{term}/{lessonId}/index.html
+  HTML → backend/data/languages/english/{class}/lp/{term}/{lessonId}/index.html
+  MD   → backend/data/languages/english/md-files/{class}/{lessonId}.md
+
+SOCIAL SCIENCE (Subject):
+  HTML → backend/data/subjects/english-medium/social_science/{class}/content/{term}/{discipline}/{lessonId}/index.html
+  HTML → backend/data/subjects/english-medium/social_science/{class}/qa/{term}/{discipline}/{lessonId}/index.html
+  HTML → backend/data/subjects/english-medium/social_science/{class}/lp/{term}/{discipline}/{lessonId}/index.html
+
+FIX APPLIED (April 2026):
+  - Social Science path fully implemented
+  - SS curriculum loaded separately from English curriculum
+  - _resolve_lesson_id() handles both English and Social Science
+  - _is_already_deployed() handles both path structures
+"""
+
+import json
+import shutil
+from pathlib import Path
+from ..config import settings
+
+# Language subjects — use languages/ folder
+LANGUAGE_SUBJECTS = ["english", "tamil"]
+
+# Social Science subject names (various casings from API)
+SOCIAL_SCIENCE_NAMES = ["socialscience", "social_science", "social science", "ss"]
+
+# Science subject names
+SCIENCE_NAMES = ["science"]
+
+# Maths subject names
+MATHS_NAMES = ["maths", "math", "mathematics"]
+
+# Biology subject names
+BIOLOGY_NAMES = ["biology"]
+
+# Pure Science subject names
+PURE_SCIENCE_NAMES = ["pure_science"]
+
+# Single-discipline Class 11-12 subjects — stored FLAT (no discipline
+# subfolder), same as Maths. Map: subject_key → deployed folder name.
+# To add Chemistry / Computer Science later, add one line here.
+FLAT_1112_SUBJECTS = {
+    "physics": "physics",
+}
+
+# Flash Cards live beside the LP: same path with the "lp" folder swapped for this
+FLASHCARDS_FOLDER = "flashcards"
+
+
+class ContentBridge:
+
+    def __init__(self):
+        # ── Load Node server target root ──────────────────────────────────────
+        target_root = settings.CONTENT_SERVER_PATH
+        if not target_root:
+            print("⚠️  Bridge Warning: CONTENT_SERVER_PATH is not set in .env")
+            self.target_base = None
+        else:
+            self.target_base = Path(target_root).resolve()
+            print(f"🌉 Bridge initialized → {self.target_base}")
+
+        # ── Load English curriculum ───────────────────────────────────────────
+        self.curriculum = self._load_curriculum("english")
+
+        # ── Load Social Science curriculum ────────────────────────────────────
+        self.ss_curriculum = self._load_ss_curriculum()
+
+        # ── Load Science curriculum ───────────────────────────────────────────
+        self.science_curriculum = self._load_science_curriculum()
+
+        # ── Load Maths curriculum ─────────────────────────────────────────────
+        self.maths_curriculum = self._load_maths_curriculum()
+
+        # ── Load Biology curriculum ───────────────────────────────────────────
+        self.biology_curriculum = self._load_biology_curriculum()
+        self.pure_science_curriculum = self._load_pure_science_curriculum()
+
+        # ── Load single-discipline 11-12 curricula (Physics, ...) ─────────────
+        self.flat_1112_curricula = {
+            s: self._load_flat_1112_curriculum(s) for s in FLAT_1112_SUBJECTS
+        }
+
+    def _load_curriculum(self, subject: str) -> dict:
+        """Load English curriculum from the PDF extractor's data directory."""
+        curriculum_path = settings.get_curriculum_path(subject)
+        try:
+            with open(curriculum_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge curriculum loaded: {curriculum_path}")
+            return data
+        except FileNotFoundError:
+            print(f"❌ Bridge Error: curriculum not found at {curriculum_path}")
+            return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading curriculum: {e}")
+            return {}
+
+    def _load_ss_curriculum(self) -> dict:
+        """Load Social Science curriculum JSON."""
+        try:
+            ss_curriculum_path = settings.get_curriculum_path("socialscience")
+            with open(ss_curriculum_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge SS curriculum loaded: {ss_curriculum_path}")
+            return data
+        except FileNotFoundError:
+            # Try alternate path
+            try:
+                alt_path = settings.BASE_DIR / "data" / "curriculum" / "subjects" / "english-medium" / "social-science.json"
+                with open(alt_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                print(f"✅ Bridge SS curriculum loaded (alt): {alt_path}")
+                return data
+            except Exception:
+                print(f"⚠️  Bridge: SS curriculum not found — SS deployment will fail")
+                return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading SS curriculum: {e}")
+            return {}
+
+    def _load_science_curriculum(self) -> dict:
+        """Load Science curriculum JSON."""
+        try:
+            science_path = settings.BASE_DIR / "data" / "curriculum" / "subjects" / "english-medium" / "science.json"
+            with open(science_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge Science curriculum loaded: {science_path}")
+            return data
+        except FileNotFoundError:
+            print(f"⚠️  Bridge: Science curriculum not found — Science deployment will fail")
+            return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading Science curriculum: {e}")
+            return {}
+
+    def _load_maths_curriculum(self) -> dict:
+        """Load Maths curriculum JSON."""
+        try:
+            maths_path = settings.BASE_DIR / "data" / "curriculum" / "subjects" / "english-medium" / "maths.json"
+            with open(maths_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge Maths curriculum loaded: {maths_path}")
+            return data
+        except FileNotFoundError:
+            print(f"⚠️  Bridge: Maths curriculum not found — Maths deployment will fail")
+            return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading Maths curriculum: {e}")
+            return {}
+
+    def _load_biology_curriculum(self) -> dict:
+        """Load Biology curriculum JSON."""
+        try:
+            biology_path = settings.BASE_DIR / "data" / "curriculum" / "subjects" / "english-medium" / "biology.json"
+            with open(biology_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge Biology curriculum loaded: {biology_path}")
+            return data
+        except FileNotFoundError:
+            print(f"⚠️  Bridge: Biology curriculum not found — Biology deployment will fail")
+            return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading Biology curriculum: {e}")
+            return {}
+
+    def _load_pure_science_curriculum(self) -> dict:
+        """Load Pure Science curriculum JSON."""
+        try:
+            ps_path = settings.BASE_DIR / "data" / "curriculum" / "subjects" / "english-medium" / "pure_science.json"
+            with open(ps_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge Pure Science curriculum loaded: {ps_path}")
+            return data
+        except FileNotFoundError:
+            print(f"⚠️  Bridge: Pure Science curriculum not found")
+            return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading Pure Science curriculum: {e}")
+            return {}
+
+    def _load_flat_1112_curriculum(self, subject: str) -> dict:
+        """Load curriculum for a single-discipline 11-12 subject (Physics, ...)."""
+        path = settings.get_curriculum_path(subject)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print(f"✅ Bridge {subject.title()} curriculum loaded: {path}")
+            return data
+        except FileNotFoundError:
+            print(f"⚠️  Bridge: {subject} curriculum not found at {path}")
+            return {}
+        except Exception as e:
+            print(f"❌ Bridge Error loading {subject} curriculum: {e}")
+            return {}
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PUBLIC: Deploy a single file to the Node server
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def deploy_content(self, source_file: Path, metadata: dict,
+                       fmt: str, file_type: str = "content") -> str | bool:
+        """
+        Copies a generated file to the correct Node.js server location.
+
+        Args:
+            source_file: Path to the generated file (in temp/)
+            metadata: {
+                'class_num': int,
+                'term': int,
+                'unit': int,
+                'lesson_choice': int,
+                'subject': str,
+                'medium': str,
+                'discipline': str (required for social science)
+            }
+            fmt: "html" or "md"
+            file_type: "content" | "qa" | "lp"
+
+        Returns:
+            Destination path string if successful, False otherwise.
+        """
+        if not self.target_base:
+            print("❌ Bridge Error: CONTENT_SERVER_PATH not configured.")
+            return False
+
+        lesson_id = self._resolve_any_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        # ── Build destination path ────────────────────────────────────────────
+        dest_path = self._build_dest_path(metadata, lesson_id, fmt, file_type)
+        if not dest_path:
+            return False
+
+        # ── Copy file ─────────────────────────────────────────────────────────
+        return self._copy_file(source_file, dest_path, lesson_id, file_type)
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Route to the right lesson-ID resolver for any subject
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _resolve_any_lesson_id(self, metadata: dict) -> str | None:
+        subject = metadata.get("subject", "english").lower().strip()
+
+        if subject in SOCIAL_SCIENCE_NAMES:
+            return self._resolve_ss_lesson_id(metadata)
+        if subject in SCIENCE_NAMES:
+            return self._resolve_science_lesson_id(metadata)
+        if subject in MATHS_NAMES:
+            return self._resolve_maths_lesson_id(metadata)
+        if subject in BIOLOGY_NAMES:
+            return self._resolve_biology_lesson_id(metadata)
+        if subject in PURE_SCIENCE_NAMES:
+            return self._resolve_pure_science_lesson_id(metadata)
+        if subject in FLAT_1112_SUBJECTS:
+            return self._resolve_flat_1112_lesson_id(metadata)
+
+        if not self.curriculum:
+            print("❌ Bridge Error: Curriculum not loaded.")
+            return None
+        return self._resolve_lesson_id(metadata)
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PUBLIC: Check if lesson is already fully deployed
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def is_already_deployed(self, metadata: dict) -> bool:
+        """
+        Checks if Content + QA + LP are already deployed for a lesson.
+        Returns True only if all 3 HTML files exist AND are > 10KB.
+        """
+        if not self.target_base:
+            return False
+
+        subject = metadata.get("subject", "english").lower().strip()
+
+        if subject in SOCIAL_SCIENCE_NAMES:
+            return self._is_ss_deployed(metadata)
+        elif subject in SCIENCE_NAMES:
+            return self._is_science_deployed(metadata)
+        elif subject in MATHS_NAMES:
+            return self._is_maths_deployed(metadata)
+        elif subject in BIOLOGY_NAMES:
+            return self._is_biology_deployed(metadata)
+        elif subject in PURE_SCIENCE_NAMES:
+            return self._is_pure_science_deployed(metadata)
+        elif subject in FLAT_1112_SUBJECTS:
+            return self._is_flat_1112_deployed(metadata)
+        else:
+            return self._is_english_deployed(metadata)
+
+    def _is_english_deployed(self, metadata: dict) -> bool:
+        """Check deployment status for English lessons."""
+        lesson_id = self._resolve_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str  = str(metadata["class_num"])
+        class_num  = int(class_str)
+        term_folder = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        base = self.target_base / "backend" / "data" / "languages" / "english" / class_str
+
+        content_path = base / "content" / term_folder / lesson_id / "index.html"
+        qa_path      = base / "qa"      / term_folder / lesson_id / "index.html"
+        lp_path      = base / "lp"      / term_folder / lesson_id / "index.html"
+
+        print(f"   🔍 Checking content : {content_path} → {'✅' if content_path.exists() else '❌'}")
+        print(f"   🔍 Checking qa      : {qa_path} → {'✅' if qa_path.exists() else '❌'}")
+        print(f"   🔍 Checking lp      : {lp_path} → {'✅' if lp_path.exists() else '❌'}")
+
+        def _is_valid(path: Path) -> bool:
+            index_file = path if path.name == "index.html" else path / "index.html"
+            return index_file.exists() and index_file.stat().st_size > 10240
+
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    def _is_ss_deployed(self, metadata: dict) -> bool:
+        """Check deployment status for Social Science lessons."""
+        lesson_id  = self._resolve_ss_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str   = str(metadata["class_num"])
+        class_num   = int(class_str)
+        discipline  = metadata.get("discipline", "history").lower()
+        term_folder = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        base = (self.target_base / "backend" / "data" / "subjects" /
+                "english-medium" / "social-science" / class_str)
+
+        content_path = base / "content" / term_folder / discipline / lesson_id / "index.html"
+        qa_path      = base / "qa"      / term_folder / discipline / lesson_id / "index.html"
+        lp_path      = base / "lp"      / term_folder / discipline / lesson_id / "index.html"
+
+        print(f"   🔍 Checking content : {content_path} → {'✅' if content_path.exists() else '❌'}")
+        print(f"   🔍 Checking qa      : {qa_path} → {'✅' if qa_path.exists() else '❌'}")
+        print(f"   🔍 Checking lp      : {lp_path} → {'✅' if lp_path.exists() else '❌'}")
+
+        def _is_valid(path: Path) -> bool:
+            index_file = path if path.name == "index.html" else path / "index.html"
+            return index_file.exists() and index_file.stat().st_size > 10240
+
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    def _is_science_deployed(self, metadata: dict) -> bool:
+        """Check deployment status for Science lessons."""
+        lesson_id = self._resolve_science_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str   = str(metadata["class_num"])
+        class_num   = int(class_str)
+        discipline  = metadata.get("discipline", "physics").lower()
+        term_folder = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        base = (self.target_base / "backend" / "data" / "subjects" /
+                "english-medium" / "science" / class_str)
+
+        content_path = base / "content" / term_folder / discipline / lesson_id / "index.html"
+        qa_path      = base / "qa"      / term_folder / discipline / lesson_id / "index.html"
+        lp_path      = base / "lp"      / term_folder / discipline / lesson_id / "index.html"
+
+        def _is_valid(path: Path) -> bool:
+            return path.exists() and path.stat().st_size > 10240
+
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    def _is_maths_deployed(self, metadata: dict) -> bool:
+        """Check deployment status for Maths lessons."""
+        lesson_id = self._resolve_maths_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str   = str(metadata["class_num"])
+        class_num   = int(class_str)
+        term_folder = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        base = (self.target_base / "backend" / "data" / "subjects" /
+                "english-medium" / "maths" / class_str)
+
+        content_path = base / "content" / term_folder / lesson_id / "index.html"
+        qa_path      = base / "qa"      / term_folder / lesson_id / "index.html"
+        lp_path      = base / "lp"      / term_folder / lesson_id / "index.html"
+
+        def _is_valid(path: Path) -> bool:
+            return path.exists() and path.stat().st_size > 10240
+
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    def _is_biology_deployed(self, metadata: dict) -> bool:
+        """Check deployment status for Biology lessons."""
+        lesson_id = self._resolve_biology_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "botany").lower()
+        base = (self.target_base / "backend" / "data" / "subjects" /
+                "english-medium" / "biology" / class_str)
+
+        content_path = base / "content" / "term0" / discipline / lesson_id / "index.html"
+        qa_path      = base / "qa"      / "term0" / discipline / lesson_id / "index.html"
+        lp_path      = base / "lp"      / "term0" / discipline / lesson_id / "index.html"
+
+        def _is_valid(path: Path) -> bool:
+            return path.exists() and path.stat().st_size > 10240
+
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    def _is_pure_science_deployed(self, metadata: dict) -> bool:
+        """Check deployment status for Pure Science lessons."""
+        lesson_id = self._resolve_pure_science_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "botany").lower()
+        base = (self.target_base / "backend" / "data" / "subjects" /
+                "english-medium" / "pure-science" / class_str)
+
+        content_path = base / "content" / "term0" / discipline / lesson_id / "index.html"
+        qa_path      = base / "qa"      / "term0" / discipline / lesson_id / "index.html"
+        lp_path      = base / "lp"      / "term0" / discipline / lesson_id / "index.html"
+
+        def _is_valid(path: Path) -> bool:
+            return path.exists() and path.stat().st_size > 10240
+
+        missing = [
+            t for t, p in [("content", content_path), ("qa", qa_path), ("lp", lp_path)]
+            if not _is_valid(p)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        else:
+            print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+            return True
+
+    def _is_flat_1112_deployed(self, metadata: dict) -> bool:
+        """Check deployment for single-discipline 11-12 subjects (flat, like Maths)."""
+        lesson_id = self._resolve_flat_1112_lesson_id(metadata)
+        if not lesson_id:
+            return False
+
+        subject   = metadata.get("subject", "").lower().strip()
+        class_str = str(metadata["class_num"])
+        base = (self.target_base / "backend" / "data" / "subjects" /
+                "english-medium" / FLAT_1112_SUBJECTS[subject] / class_str)
+
+        paths = {
+            t: base / t / "term0" / lesson_id / "index.html"
+            for t in ("content", "qa", "lp")
+        }
+
+        missing = [
+            t for t, p in paths.items()
+            if not (p.exists() and p.stat().st_size > 10240)
+        ]
+
+        if missing:
+            print(f"🔄  Bridge: '{lesson_id}' missing/invalid → {missing}")
+            return False
+        print(f"⏭️  Bridge: '{lesson_id}' already fully deployed — skipping")
+        return True
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Resolve lesson ID — English
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _resolve_lesson_id(self, metadata: dict) -> str | None:
+        """
+        Maps (class, term, unit, lesson_choice) → lesson_id for English.
+        e.g. class=10, unit=2, lesson_choice=1 → 'the_night_the_ghost_got_in_prose'
+        """
+        class_str   = str(metadata["class_num"])
+        unit_key    = f"unit{metadata['unit']}"
+        lesson_idx  = metadata["lesson_choice"] - 1
+        class_num   = int(class_str)
+        term_key    = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        try:
+            if class_str not in self.curriculum:
+                print(f"❌ Bridge: Class '{class_str}' not in curriculum")
+                return None
+
+            term_data = self.curriculum[class_str].get(term_key)
+            if not term_data:
+                print(f"❌ Bridge: '{term_key}' not found for class {class_str}")
+                return None
+
+            unit_lessons = term_data.get(unit_key)
+            if not unit_lessons:
+                print(f"❌ Bridge: '{unit_key}' not found in {term_key}")
+                return None
+
+            lesson_data = unit_lessons[lesson_idx]
+            lesson_id   = lesson_data["id"]
+            print(f"🌉 Bridge: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except (KeyError, IndexError) as e:
+            print(f"❌ Bridge: Lesson ID resolution failed: {e}")
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Resolve lesson ID — Social Science
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _resolve_ss_lesson_id(self, metadata: dict) -> str | None:
+        """
+        Maps (class, term, discipline, unit) → lesson_id for Social Science.
+        e.g. class=10, discipline=history, unit=1
+             → 'outbreak_of_world_war_i_and_its_aftermath_history'
+        """
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "history").lower().strip()
+        unit_num   = metadata.get("unit", 1)
+        class_num  = int(class_str)
+        term_key   = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        try:
+            if class_str not in self.ss_curriculum:
+                print(f"❌ Bridge SS: Class '{class_str}' not in SS curriculum")
+                return None
+
+            term_data = self.ss_curriculum[class_str].get(term_key)
+            if not term_data:
+                print(f"❌ Bridge SS: '{term_key}' not found for class {class_str}")
+                return None
+
+            disc_lessons = term_data.get(discipline)
+            if not disc_lessons:
+                print(f"❌ Bridge SS: Discipline '{discipline}' not found in {term_key}")
+                return None
+
+            # Find lesson by unit number
+            lesson_data = next(
+                (l for l in disc_lessons if l.get("unit") == unit_num),
+                None
+            )
+            if not lesson_data:
+                print(f"❌ Bridge SS: Unit {unit_num} not found in {discipline}")
+                return None
+
+            lesson_id = lesson_data["id"]
+            print(f"🌉 Bridge: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except Exception as e:
+            print(f"❌ Bridge SS: Lesson ID resolution failed: {e}")
+            return None
+
+    def _resolve_science_lesson_id(self, metadata: dict) -> str | None:
+        """
+        Maps (class, term, discipline, unit) → lesson_id for Science.
+        e.g. class=10, discipline=physics, unit=1 → 'laws_of_motion_physics'
+        """
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "physics").lower().strip()
+        unit_num   = metadata.get("unit", 1)
+        class_num  = int(class_str)
+        term_key   = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        try:
+            if class_str not in self.science_curriculum:
+                print(f"❌ Bridge Science: Class '{class_str}' not in Science curriculum")
+                return None
+
+            term_data = self.science_curriculum[class_str].get(term_key)
+            if not term_data:
+                print(f"❌ Bridge Science: '{term_key}' not found for class {class_str}")
+                return None
+
+            disc_lessons = term_data.get(discipline)
+            if not disc_lessons:
+                print(f"❌ Bridge Science: Discipline '{discipline}' not found in {term_key}")
+                return None
+
+            lesson_data = next(
+                (l for l in disc_lessons if l.get("unit") == unit_num),
+                None
+            )
+            if not lesson_data:
+                print(f"❌ Bridge Science: Unit {unit_num} not found in {discipline}")
+                return None
+
+            lesson_id = lesson_data["id"]
+            print(f"🌉 Bridge Science: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except Exception as e:
+            print(f"❌ Bridge Science: Lesson ID resolution failed: {e}")
+            return None
+
+    def _resolve_maths_lesson_id(self, metadata: dict) -> str | None:
+        """Maps (class, term, unit) → lesson_id for Maths."""
+        class_str = str(metadata["class_num"])
+        unit_num  = metadata.get("unit", 1)
+        class_num = int(class_str)
+        term_key  = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        try:
+            if class_str not in self.maths_curriculum:
+                print(f"❌ Bridge Maths: Class '{class_str}' not in Maths curriculum")
+                return None
+
+            term_data = self.maths_curriculum[class_str].get(term_key)
+            if not term_data:
+                print(f"❌ Bridge Maths: '{term_key}' not found for class {class_str}")
+                return None
+
+            # Curriculum JSON: term → "maths" → [{chapter, id, title, type}]
+            units = term_data.get("maths", [])
+            lesson_data = next(
+                (u for u in units if u.get("chapter") == unit_num),
+                None
+            )
+            if not lesson_data:
+                print(f"❌ Bridge Maths: Unit {unit_num} not found")
+                return None
+
+            lesson_id = lesson_data["id"]
+            print(f"🌉 Bridge Maths: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except Exception as e:
+            print(f"❌ Bridge Maths: Lesson ID resolution failed: {e}")
+            return None
+
+    def _resolve_biology_lesson_id(self, metadata: dict) -> str | None:
+        """Maps (class, term, discipline, chapter) → lesson_id for Biology."""
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "botany").lower().strip()
+        unit_num   = metadata.get("unit", 1)
+        class_num  = int(class_str)
+        term_key   = "term0"
+
+        try:
+            if class_str not in self.biology_curriculum:
+                print(f"❌ Bridge Biology: Class '{class_str}' not in Biology curriculum")
+                return None
+
+            term_data = self.biology_curriculum[class_str].get(term_key)
+            if not term_data:
+                print(f"❌ Bridge Biology: '{term_key}' not found for class {class_str}")
+                return None
+
+            disc_lessons = term_data.get(discipline)
+            if not disc_lessons:
+                print(f"❌ Bridge Biology: Discipline '{discipline}' not found")
+                return None
+
+            lesson_data = next(
+                (l for l in disc_lessons if l.get("chapter") == unit_num),
+                None
+            )
+            if not lesson_data:
+                print(f"❌ Bridge Biology: Chapter {unit_num} not found in {discipline}")
+                return None
+
+            lesson_id = lesson_data["id"]
+            print(f"🌉 Bridge Biology: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except Exception as e:
+            print(f"❌ Bridge Biology: Lesson ID resolution failed: {e}")
+            return None
+
+    def _resolve_pure_science_lesson_id(self, metadata: dict) -> str | None:
+        """Maps (class, term, discipline, chapter) → lesson_id for Pure Science."""
+        class_str  = str(metadata["class_num"])
+        discipline = metadata.get("discipline", "botany").lower().strip()
+        unit_num   = metadata.get("unit", 1)
+        term_key   = "term0"
+
+        try:
+            if class_str not in self.pure_science_curriculum:
+                print(f"❌ Bridge Pure Science: Class '{class_str}' not in curriculum")
+                return None
+
+            term_data = self.pure_science_curriculum[class_str].get(term_key)
+            if not term_data:
+                print(f"❌ Bridge Pure Science: '{term_key}' not found for class {class_str}")
+                return None
+
+            disc_lessons = term_data.get(discipline)
+            if not disc_lessons:
+                print(f"❌ Bridge Pure Science: Discipline '{discipline}' not found")
+                return None
+
+            lesson_data = next(
+                (l for l in disc_lessons if l.get("chapter") == unit_num),
+                None
+            )
+            if not lesson_data:
+                print(f"❌ Bridge Pure Science: Chapter {unit_num} not found in {discipline}")
+                return None
+
+            lesson_id = lesson_data["id"]
+            print(f"🌉 Bridge Pure Science: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except Exception as e:
+            print(f"❌ Bridge Pure Science: Lesson ID resolution failed: {e}")
+            return None
+
+    def _resolve_flat_1112_lesson_id(self, metadata: dict) -> str | None:
+        """
+        Maps (class, chapter) → lesson_id for single-discipline 11-12 subjects.
+        Curriculum: {class} → term0 → {subject} → [{chapter, volume, id, ...}]
+        e.g. physics, class=12, unit=6 → 'ray_optics_physics'
+        """
+        subject    = metadata.get("subject", "").lower().strip()
+        class_str  = str(metadata["class_num"])
+        unit_num   = metadata.get("unit", 1)
+        curriculum = self.flat_1112_curricula.get(subject, {})
+        tag        = f"Bridge {subject.title()}"
+
+        try:
+            if class_str not in curriculum:
+                print(f"❌ {tag}: Class '{class_str}' not in curriculum")
+                return None
+
+            term_data = curriculum[class_str].get("term0")
+            if not term_data:
+                print(f"❌ {tag}: 'term0' not found for class {class_str}")
+                return None
+
+            lessons = term_data.get(subject, [])
+            lesson_data = next(
+                (l for l in lessons if l.get("chapter") == unit_num),
+                None
+            )
+            if not lesson_data:
+                print(f"❌ {tag}: Chapter {unit_num} not found")
+                return None
+
+            lesson_id = lesson_data["id"]
+            print(f"🌉 {tag}: Resolved → '{lesson_id}'")
+            return lesson_id
+
+        except Exception as e:
+            print(f"❌ {tag}: Lesson ID resolution failed: {e}")
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Build destination path
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _build_dest_path(self, metadata: dict, lesson_id: str,
+                         fmt: str, file_type: str) -> Path | None:
+        """
+        Constructs the full destination path for the file.
+        Routes to English or Social Science path based on subject.
+        """
+        subject   = metadata.get("subject", "english").lower().strip()
+        class_str = str(metadata["class_num"])
+        class_num = int(class_str)
+        term_folder = "term0" if class_num >= 8 else f"term{metadata.get('term', 1)}"
+
+        # ── Social Science paths ──────────────────────────────────────────────
+        if subject in SOCIAL_SCIENCE_NAMES:
+            discipline = metadata.get("discipline", "history").lower()
+            base = (self.target_base / "backend" / "data" / "subjects" /
+                    "english-medium" / "social-science" / class_str)
+
+            if fmt == "html":
+                if file_type == "content":
+                    folder = base / "content" / term_folder / discipline / lesson_id
+                elif file_type == "qa":
+                    folder = base / "qa" / term_folder / discipline / lesson_id
+                elif file_type == "lp":
+                    folder = base / "lp" / term_folder / discipline / lesson_id
+                else:
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return folder / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" / "subjects" /
+                               "english-medium" / "social-science" /
+                               "md-files" / class_str / discipline)
+                    return md_base / f"{lesson_id}.md"
+                else:
+                    print(f"ℹ️  Bridge: MD skipped for file_type '{file_type}'")
+                    return None
+
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        # ── English (Language subject) paths ──────────────────────────────────
+        elif subject in LANGUAGE_SUBJECTS:
+            base = self.target_base / "backend" / "data" / "languages" / subject / class_str
+
+            if fmt == "html":
+                if file_type == "content":
+                    folder = base / "content" / term_folder / lesson_id
+                elif file_type == "qa":
+                    folder = base / "qa" / term_folder / lesson_id
+                elif file_type == "lp":
+                    folder = base / "lp" / term_folder / lesson_id
+                else:
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return folder / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" /
+                               "languages" / subject / "md-files" / class_str)
+                    return md_base / f"{lesson_id}.md"
+                else:
+                    print(f"ℹ️  Bridge: MD skipped for file_type '{file_type}'")
+                    return None
+
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        # ── Science paths ─────────────────────────────────────────────────────
+        elif subject in SCIENCE_NAMES:
+            discipline = metadata.get("discipline", "physics").lower()
+            base = (self.target_base / "backend" / "data" / "subjects" /
+                    "english-medium" / "science" / class_str)
+
+            if fmt == "html":
+                if file_type == "content":
+                    folder = base / "content" / term_folder / discipline / lesson_id
+                elif file_type == "qa":
+                    folder = base / "qa" / term_folder / discipline / lesson_id
+                elif file_type == "lp":
+                    folder = base / "lp" / term_folder / discipline / lesson_id
+                else:
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return folder / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" / "subjects" /
+                               "english-medium" / "science" /
+                               "md-files" / class_str / discipline)
+                    return md_base / f"{lesson_id}.md"
+                else:
+                    return None
+
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        # ── Maths paths ───────────────────────────────────────────────────────
+        elif subject in MATHS_NAMES:
+            base = (self.target_base / "backend" / "data" / "subjects" /
+                    "english-medium" / "maths" / class_str)
+
+            if fmt == "html":
+                if file_type == "content":
+                    folder = base / "content" / term_folder / lesson_id
+                elif file_type == "qa":
+                    folder = base / "qa" / term_folder / lesson_id
+                elif file_type == "lp":
+                    folder = base / "lp" / term_folder / lesson_id
+                else:
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return folder / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" / "subjects" /
+                               "english-medium" / "maths" /
+                               "md-files" / class_str)
+                    return md_base / f"{lesson_id}.md"
+                else:
+                    return None
+
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        # ── Biology paths ─────────────────────────────────────────────────────
+        elif subject in BIOLOGY_NAMES:
+            discipline = metadata.get("discipline", "botany").lower()
+            base = (self.target_base / "backend" / "data" / "subjects" /
+                    "english-medium" / "biology" / class_str)
+
+            if fmt == "html":
+                if file_type == "content":
+                    folder = base / "content" / term_folder / discipline / lesson_id
+                elif file_type == "qa":
+                    folder = base / "qa" / term_folder / discipline / lesson_id
+                elif file_type == "lp":
+                    folder = base / "lp" / term_folder / discipline / lesson_id
+                else:
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return folder / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" / "subjects" /
+                               "english-medium" / "biology" /
+                               "md-files" / class_str / discipline)
+                    return md_base / f"{lesson_id}.md"
+                else:
+                    return None
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        # ── Pure Science paths ────────────────────────────────────────────────
+        elif subject in PURE_SCIENCE_NAMES:
+            discipline = metadata.get("discipline", "botany").lower()
+            base = (self.target_base / "backend" / "data" / "subjects" /
+                    "english-medium" / "pure-science" / class_str)
+
+            if fmt == "html":
+                if file_type == "content":
+                    folder = base / "content" / term_folder / discipline / lesson_id
+                elif file_type == "qa":
+                    folder = base / "qa" / term_folder / discipline / lesson_id
+                elif file_type == "lp":
+                    folder = base / "lp" / term_folder / discipline / lesson_id
+                else:
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return folder / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" / "subjects" /
+                               "english-medium" / "pure-science" /
+                               "md-files" / class_str / discipline)
+                    return md_base / f"{lesson_id}.md"
+                else:
+                    return None
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        # ── Single-discipline 11-12 paths (Physics, ...) — FLAT like Maths ────
+        elif subject in FLAT_1112_SUBJECTS:
+            folder_name = FLAT_1112_SUBJECTS[subject]
+            base = (self.target_base / "backend" / "data" / "subjects" /
+                    "english-medium" / folder_name / class_str)
+
+            if fmt == "html":
+                if file_type not in ("content", "qa", "lp"):
+                    print(f"❌ Bridge: Unknown file_type '{file_type}'")
+                    return None
+                return base / file_type / term_folder / lesson_id / "index.html"
+
+            elif fmt == "md":
+                if file_type == "content":
+                    md_base = (self.target_base / "backend" / "data" / "subjects" /
+                               "english-medium" / folder_name /
+                               "md-files" / class_str)
+                    return md_base / f"{lesson_id}.md"
+                return None
+
+            else:
+                print(f"❌ Bridge: Unknown format '{fmt}'")
+                return None
+
+        else:
+            print(f"⚠️  Bridge: Subject '{subject}' path not yet implemented.")
+            return None
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PUBLIC: Flash Cards — find LP, check, deploy
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def find_deployed(self, metadata: dict, file_type: str = "lp") -> Path | None:
+        """Path of a deployed HTML file (content/qa/lp) if it exists and is > 10KB."""
+        if not self.target_base:
+            print("❌ Bridge Error: CONTENT_SERVER_PATH not configured.")
+            return None
+        lesson_id = self._resolve_any_lesson_id(metadata)
+        if not lesson_id:
+            return None
+        path = self._build_dest_path(metadata, lesson_id, "html", file_type)
+        if path and path.exists() and path.stat().st_size > 10240:
+            return path
+        print(f"🔍 Bridge: no deployed {file_type.upper()} for '{lesson_id}' → {path}")
+        return None
+
+    def _flashcards_dir(self, metadata: dict) -> tuple[Path, str] | tuple[None, None]:
+        """Flash Cards folder = the LP folder with the 'lp' segment swapped."""
+        if not self.target_base:
+            return None, None
+        lesson_id = self._resolve_any_lesson_id(metadata)
+        if not lesson_id:
+            return None, None
+        lp_path = self._build_dest_path(metadata, lesson_id, "html", "lp")
+        if not lp_path:
+            return None, None
+        parts = list(lp_path.parts)
+        if "lp" not in parts:
+            print(f"❌ Bridge: cannot derive Flash Cards path from {lp_path}")
+            return None, None
+        i = len(parts) - 1 - parts[::-1].index("lp")
+        parts[i] = FLASHCARDS_FOLDER
+        return Path(*parts).parent, lesson_id
+
+    def is_flashcards_deployed(self, metadata: dict) -> bool:
+        folder, lesson_id = self._flashcards_dir(metadata)
+        if not folder:
+            return False
+        html_ok = (folder / "index.html").exists() and (folder / "index.html").stat().st_size > 10240
+        json_ok = (folder / "cards.json").exists()
+        if html_ok and json_ok:
+            print(f"⏭️  Bridge: Flash Cards for '{lesson_id}' already deployed — skipping")
+            return True
+        return False
+
+    def deploy_flashcards(self, html_file: Path, json_file: Path, metadata: dict) -> list | bool:
+        """Writes {flashcards folder}/index.html and cards.json."""
+        folder, lesson_id = self._flashcards_dir(metadata)
+        if not folder:
+            return False
+        html_dest = self._copy_file(html_file, folder / "index.html", lesson_id, "flashcards")
+        json_dest = self._copy_file(json_file, folder / "cards.json", lesson_id, "flashcards")
+        return [html_dest, json_dest] if html_dest and json_dest else False
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PRIVATE: Copy file to destination
+    # ──────────────────────────────────────────────────────────────────────────
+
+    def _copy_file(self, source_file: Path, dest_path: Path,
+                   lesson_id: str, file_type: str) -> str | bool:
+        """Creates destination folder and copies file."""
+        try:
+            dest_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source_file, dest_path)
+            print(f"🚀 Bridge SUCCESS [{file_type.upper()}]: {dest_path}")
+            return str(dest_path)
+        except Exception as e:
+            print(f"❌ Bridge FAILED [{file_type.upper()}] → {dest_path}: {e}")
+            return False
+
+
+# Singleton instance
+bridge = ContentBridge()
