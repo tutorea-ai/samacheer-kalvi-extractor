@@ -55,6 +55,10 @@ SS_DISCIPLINES = ['history', 'geography', 'civics', 'economics']
 # ── Unit label for lesson-list books (Tamil: "இயல் 1 — தமிழ்த்தேன்") ─────────
 UNIT_LABEL_RE = re.compile(r'இயல்\s*(\d+)')
 
+# Back matter after the last lesson of a lesson-list book (not in nav):
+# the Thirukkural appendix ("திருக்குறள் / எளிய உரை") and the credits pages
+LESSON_LIST_BACK_MATTER_RE = re.compile(r'###\s*(?:திருக்குறள்\s*###\s*எளிய உரை|ஆலோசனைக் குழு)')
+
 # ── Roman numeral map for unit numbers ────────────────────────────────────────
 ROMAN = {
     'I':1,'II':2,'III':3,'IV':4,'V':5,
@@ -249,6 +253,14 @@ class EpubPreprocessor:
         text = re.sub(r' +', ' ', text)
         text = re.sub(r'\n +', '\n', text)
         text = re.sub(r'\n{3,}', '\n\n', text).strip()
+
+        # Lesson-list books: the last lesson runs to the end of the book,
+        # so cut the appendix / credits that follow it
+        if lesson and stop_el is None:
+            m = LESSON_LIST_BACK_MATTER_RE.search(text)
+            if m:
+                print(f"[Preprocessor] ✂️  Trimmed back matter: {len(text):,} → {m.start():,} chars")
+                text = text[:m.start()].rstrip()
 
         if text:
             print(f"[Preprocessor] ✅ Extracted {len(text)} chars for {tag_value}")
