@@ -59,6 +59,17 @@ UNIT_LABEL_RE = re.compile(r'இயல்\s*(\d+)')
 # the Thirukkural appendix ("திருக்குறள் / எளிய உரை") and the credits pages
 LESSON_LIST_BACK_MATTER_RE = re.compile(r'###\s*(?:திருக்குறள்\s*###\s*எளிய உரை|ஆலோசனைக் குழு)')
 
+# Strays at the END of a lesson-list lesson that belong to what comes next:
+#   the next lesson's section label (கவிதைப்பேழை, உரைநடை உலகம், விரிவானம், கற்கண்டு, வாழ்வியல்)
+#   the next unit's opener ("### இயல் இரண்டு, ... ### கற்றல் நோக்கங்கள் ...")
+LESSON_LIST_TRAILING_LABEL_RE = re.compile(
+    r'\s*(?:###\s*)?(?:கவிதை\s*(?:ப்)?\s*பேழை|உரைநடை\s*உலகம்|விரிவானம்|கற்கண்டு|வாழ்வியல்)\s*$'
+)
+LESSON_LIST_TRAILING_UNIT_RE = re.compile(
+    r'\s*###\s*இயல்\s*(?:ஒன்று|இரண்டு|மூன்று|நான்கு|ஐந்து|ஆறு|ஏழு|எட்டு|ஒன்பது)(?=[\s,]|$)[^#]*'
+    r'(?:###\s*கற்றல்\s*நோக்கங்கள்[^#]*)?$'
+)
+
 # ── Roman numeral map for unit numbers ────────────────────────────────────────
 ROMAN = {
     'I':1,'II':2,'III':3,'IV':4,'V':5,
@@ -261,6 +272,16 @@ class EpubPreprocessor:
             if m:
                 print(f"[Preprocessor] ✂️  Trimmed back matter: {len(text):,} → {m.start():,} chars")
                 text = text[:m.start()].rstrip()
+
+        # Lesson-list books: drop the next lesson's section label / next unit's
+        # opener that sit just before the stop tag
+        if lesson:
+            prev = None
+            while prev != text:
+                prev = text
+                text = LESSON_LIST_TRAILING_UNIT_RE.sub('', text)
+                text = LESSON_LIST_TRAILING_LABEL_RE.sub('', text).rstrip()
+                text = re.sub(r'\s*###\s*$', '', text)
 
         if text:
             print(f"[Preprocessor] ✅ Extracted {len(text)} chars for {tag_value}")
