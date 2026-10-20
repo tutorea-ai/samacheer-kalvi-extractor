@@ -215,7 +215,15 @@ _NUM_SYM_RE = re.compile(rf"(\d)\s*({_SYM_ALT})\s*(?=\d)")
 _TOKEN = r"[^\s()\[\]{}.,;:!?\"'“”‘’]+"
 _CHAIN_RE = re.compile(
     rf"(?<![^\s(\[]){_TOKEN}(?:\s+(?:{_SYM_ALT})\s+{_TOKEN})+(?![^\s)\].,;:!?])")
-_LIST_MARK_RE = re.compile(rf"^\s*(?:\d{{1,2}}[.)]|[அஆஇஈ]\)|[-•*])\s*")
+_LIST_MARK_RE = re.compile(rf"^\s*(?:\d{{1,2}}[.),]?|[அஆஇஈ][),.]|[-•*])\s+")
+# read-aloud MCQ option labels: "அ, அமுது + என்று" is printed "அ) அமுது + என்று"
+_OPTION_LABEL_RE = re.compile(r"(?m)^([ \t]*)([அஆஇஈ]),(?=[ \t])")
+# a chain followed by என்பதனை/என்பதை is always a symbol chain
+# ("நிலவு கூட்டல் என்று என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல்")
+_CHAIN_FOLLOWER_RE = re.compile(r"^\s*என்பத(?:னை|ை)")
+# read-aloud spelling of a pulli consonant inside a symbol chain:
+# "இக் + அ = க" is printed "க் + அ = க"
+_PULLI_READ_RE = re.compile(rf"(?<![^\s(\[])இ([க-ஹ]்)(?![{_TA}])")
 
 MEMORISE_LABEL = "மனப்பாடப் பகுதி"
 _MEMORISE_RE = re.compile(r"\s*[\(\[]?\s*மனப்பாடப்\s*பகுதி\s*[\)\]]?\s*[.:]?\s*$")
@@ -232,7 +240,7 @@ _LINE_NUM_COMMA_RE = re.compile(r"(?m)^([ \t]*(?:#{1,6}[ \t]*)?\d{1,2}),(?=\s)")
 def _convert_chain(chain: str) -> str:
     for w, s in SYMBOL_WORDS.items():
         chain = re.sub(rf"(?<!\S){re.escape(w)}(?!\S)", s, chain)
-    return chain
+    return _PULLI_READ_RE.sub(r"\1", chain)
 
 
 def _chain_is_symbolic(line: str, m: "re.Match") -> bool:
@@ -240,9 +248,15 @@ def _chain_is_symbolic(line: str, m: "re.Match") -> bool:
     A chain like 'அ கூட்டல் மு கூட்டல் து சமம் அமுது' is a symbol chain when:
       - it is the whole line (ignoring list markers, brackets, end punctuation), or
       - it sits inside brackets, or
+      - it is followed by என்பதனை / என்பதை (book-back "join the words" stems), or
+      - it has two or more symbol words (பாகு + அல் + காய்), or
       - it contains சமம் after another symbol word (an equation)
     """
     chain = m.group(0)
+    if _CHAIN_FOLLOWER_RE.match(line[m.end():]):
+        return True
+    if sum(1 for t in chain.split() if t in SYMBOL_WORDS) >= 2:
+        return True
     rest = (line[: m.start()] + line[m.end():])
     rest = _LIST_MARK_RE.sub("", rest)
     if not re.sub(r"[\s()\[\].,;:!?\"'“”‘’=+×−÷-]", "", rest):
@@ -264,8 +278,8 @@ def normalize_source_text(text: str) -> Tuple[str, dict]:
     """
     report = {
         "dash": 0, "symbols_number": 0, "symbols_chain": 0,
-        "symbol_ambiguous": [], "memorise_lines": [], "boxes": 0,
-        "line_numbers": 0,
+        "symbol_ambiguous": [], "memorise_lines": [], "memorise_blocks": [],
+        "boxes": 0, "line_numbers": 0, "option_labels": 0,
     }
     if not text:
         return text or "", report
@@ -282,19 +296,26 @@ def normalize_source_text(text: str) -> Tuple[str, dict]:
     t, n = _LINE_NUM_COMMA_RE.subn(r"\1.", t)
     report["line_numbers"] = n
 
+    t, n = _OPTION_LABEL_RE.subn(r"\1\2)", t)
+    report["option_labels"] = n
+
     out_lines: List[str] = []
     for line in t.split("\n"):
-        # memorisation label: same line, or alone on the next line
+        # memorisation label: same line, or alone on the next line.
+        # In the real lessons it follows the SECOND line of a couplet / kural,
+        # so the memorised unit is that line plus the line before it.
         if _MEMORISE_RE.search(line):
             stripped = _MEMORISE_RE.sub("", line).rstrip()
+            prev = [l.strip() for l in out_lines if l.strip()]
             if stripped.strip():
-                report["memorise_lines"].append(stripped.strip())
+                end, before = stripped.strip(), (prev[-1] if prev else "")
                 line = stripped
             else:
-                for k in range(len(out_lines) - 1, -1, -1):
-                    if out_lines[k].strip():
-                        report["memorise_lines"].append(out_lines[k].strip())
-                        break
+                end, before = (prev[-1] if prev else ""), (prev[-2] if len(prev) > 1 else "")
+            if end:
+                report["memorise_lines"].append(end)
+                report["memorise_blocks"].append([b for b in (before, end) if b])
+            if not stripped.strip():
                 continue
 
         # numbers on both sides: always a symbol
@@ -409,9 +430,18 @@ def lp_source_text(text: str) -> Tuple[str, dict]:
 
 
 def list_hash_headings(text: str) -> List[str]:
-    """Every ### line (headings AND short bold lines — not all are sub-headings)."""
-    return [re.sub(r"^\s*#{1,6}\s*", "", l).strip()
-            for l in (text or "").split("\n") if re.match(r"^\s*#{1,6}\s*\S", l)]
+    """
+    Every non-empty ### line (headings AND short bold lines — not all are
+    sub-headings, and some real sub-headings arrive WITHOUT ###, e.g.
+    புதுமை மொழி in வளர்தமிழ். Never count periods from this list alone.)
+    """
+    out = []
+    for l in (text or "").split("\n"):
+        if re.match(r"^\s*#{1,6}", l):
+            h = re.sub(r"^\s*#{1,6}\s*", "", l).strip().strip("*").strip()
+            if h:
+                out.append(h)
+    return out
 
 
 # ============================================================================

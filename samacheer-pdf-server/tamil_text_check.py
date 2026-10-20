@@ -59,6 +59,7 @@ def main(paths):
             print(f"     * {short(l, 66)}")
 
         print(f"  boxes={rep['boxes']}  dash={rep['dash']}  '1,'→'1.'={rep['line_numbers']}  "
+              f"'அ,'→'அ)'={rep.get('option_labels', 0)}  "
               f"symbols: numbers={rep['symbols_number']} chains={rep['symbols_chain']} "
               f"ambiguous={len(rep['symbol_ambiguous'])}")
         for l in rep["symbol_ambiguous"][:10]:
