@@ -20,7 +20,7 @@ import gdown
 import shutil
 from pathlib import Path
 from typing import Dict, Optional
-from .services.ai_converter import ai_converter
+from .services.ai_converter import ai_converter, language_meta_line, page_title
 from .services.bridge import bridge
 from .services.epub_extractor import EpubExtractor
 from .services.ss_epub_extractor import SocialScienceEpubExtractor
@@ -742,6 +742,7 @@ class PDFProcessor:
 
             filename_base, start_page, end_page = details
             lesson_type = self._get_lesson_type(index_data[term_key], unit_num, lesson_choice, subject=subject)
+            lesson_page_title = self._get_lesson_list_title(index_data[term_key], unit_num, lesson_choice)
             print(f"📄 Pages: {start_page} → {end_page} | Type: {lesson_type}")
 
             # ── PDF output ────────────────────────────────────────────────────
@@ -804,6 +805,10 @@ class PDFProcessor:
                     "term":         term_key,
                     "discipline":   discipline,
                 }
+                # Lesson-list subjects (Tamil): clean lesson title from the index
+                if lesson_page_title:
+                    ai_metadata["page_title"]    = lesson_page_title
+                    ai_metadata["display_title"] = lesson_page_title
 
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
@@ -864,15 +869,18 @@ class PDFProcessor:
                 elif subject.lower() == "physics":
                     meta_line = f"Class {class_num} | Physics | Unit {unit_num}"
                 else:
-                    type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
-                    type_display = type_display_map.get(lesson_type, "Prose")
-                    meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display}"
+                    meta_line = language_meta_line(subject, class_num, unit_num, lesson_type)
+                    if not meta_line:
+                        type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
+                        type_display = type_display_map.get(lesson_type, "Prose")
+                        meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display}"
 
                 wrapped = _wrap_html(
                     content_html,
-                    title=f"{filename_base} | Class {class_num}",
+                    title=page_title(subject, "content", ai_metadata.get("page_title") or filename_base, class_num),
                     content_type="content",
-                    meta_line=meta_line
+                    meta_line=meta_line,
+                    subject=subject
                 )
 
                 content_html_file = self.temp_dir / f"{filename_base}.html"
@@ -1040,6 +1048,10 @@ class PDFProcessor:
                     "term":         term_key,
                     "discipline":   discipline,
                 }
+                # Lesson-list subjects (Tamil): clean lesson title from the index
+                if lesson_page_title:
+                    ai_metadata["page_title"]    = lesson_page_title
+                    ai_metadata["display_title"] = lesson_page_title
 
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
@@ -1080,7 +1092,7 @@ class PDFProcessor:
                 ai_metadata["_sections"] = sections
 
                 if subject.lower() in ["socialscience", "social_science", "science",
-                                        "maths", "math", "mathematics", "english", "biology", "pure_science", "physics"]:
+                                        "maths", "math", "mathematics", "english", "biology", "pure_science", "physics", "tamil"]:
                     from .content_builder.master_router import generate_lp
                     lp_html = generate_lp(clean_text, ai_metadata)
                 else:
@@ -1101,15 +1113,18 @@ class PDFProcessor:
                 elif subject.lower() == "physics":
                     meta_line = f"Class {class_num} | Physics | Unit {unit_num}"
                 else:
-                    type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
-                    type_display = type_display_map.get(lesson_type, "Prose")
-                    meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display}"
+                    meta_line = language_meta_line(subject, class_num, unit_num, lesson_type)
+                    if not meta_line:
+                        type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
+                        type_display = type_display_map.get(lesson_type, "Prose")
+                        meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display}"
 
                 wrapped = _wrap_html(
                     lp_html,
-                    title=f"Lesson Plan — {filename_base} | Class {class_num}",
+                    title=page_title(subject, "lp", ai_metadata.get("page_title") or filename_base, class_num),
                     content_type="lp",
-                    meta_line=meta_line
+                    meta_line=meta_line,
+                    subject=subject
                 )
 
                 lp_html_file = self.temp_dir / f"{filename_base}_lp.html"
@@ -1168,6 +1183,10 @@ class PDFProcessor:
                     "term":         term_key,
                     "discipline":   discipline,
                 }
+                # Lesson-list subjects (Tamil): clean lesson title from the index
+                if lesson_page_title:
+                    ai_metadata["page_title"]    = lesson_page_title
+                    ai_metadata["display_title"] = lesson_page_title
 
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
@@ -1212,13 +1231,15 @@ class PDFProcessor:
                 elif subject.lower() == "physics":
                     meta_line = f"Class {class_num} | Physics | Unit {unit_num}"
                 else:
-                    type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
-                    meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display_map.get(lesson_type, 'Prose')}"
+                    meta_line = language_meta_line(subject, class_num, unit_num, lesson_type)
+                    if not meta_line:
+                        type_display_map = {"prose": "Prose", "poem": "Poem", "supplementary": "Supplementary Reader"}
+                        meta_line = f"Class {class_num} | English | Unit {unit_num} | {type_display_map.get(lesson_type, 'Prose')}"
 
                 from .services.ai_converter import _wrap_html
 
                 if subject.lower() in ["socialscience", "social_science", "science",
-                                        "maths", "math", "mathematics", "english", "biology", "pure_science", "physics"]:
+                                        "maths", "math", "mathematics", "english", "biology", "pure_science", "physics", "tamil"]:
                     from .content_builder.master_router import generate_qa
                     qa_html = generate_qa(raw_text, ai_metadata)
                 else:
@@ -1230,9 +1251,10 @@ class PDFProcessor:
 
                 wrapped = _wrap_html(
                     qa_html,
-                    title=f"Q&A — {filename_base} | Class {class_num}",
+                    title=page_title(subject, "qa", ai_metadata.get("page_title") or filename_base, class_num),
                     content_type="qa",
-                    meta_line=meta_line
+                    meta_line=meta_line,
+                    subject=subject
                 )
 
                 qa_html_file = self.temp_dir / f"{filename_base}_qa.html"
@@ -1303,6 +1325,10 @@ class PDFProcessor:
                     "term":         term_key,
                     "discipline":   discipline,
                 }
+                # Lesson-list subjects (Tamil): clean lesson title from the index
+                if lesson_page_title:
+                    ai_metadata["page_title"]    = lesson_page_title
+                    ai_metadata["display_title"] = lesson_page_title
 
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
@@ -1397,6 +1423,17 @@ class PDFProcessor:
     # ──────────────────────────────────────────────────────────────────────────
     # Helper: Get lesson type from index
     # ──────────────────────────────────────────────────────────────────────────
+
+    def _get_lesson_list_title(self, term_index: dict, unit_num: int, lesson_choice: int) -> str | None:
+        """Clean lesson title for lesson-list indexes (units[].lessons[], e.g. Tamil). None otherwise."""
+        try:
+            unit_obj = next((u for u in term_index.get("units", []) if u.get("unit") == unit_num), None)
+            lessons = unit_obj.get("lessons") if isinstance(unit_obj, dict) else None
+            if isinstance(lessons, list) and 1 <= lesson_choice <= len(lessons):
+                return lessons[lesson_choice - 1].get("title")
+        except Exception:
+            pass
+        return None
 
     def _get_lesson_type(self, term_index: dict, unit_num: int, lesson_choice: int, subject: str = "") -> str:
         """Returns lesson type. For discipline-based subjects, returns subject name."""
