@@ -43,7 +43,7 @@ class EpubExtractor:
         self.epub_dir    = epub_dir
         self.preprocessor = EpubPreprocessor(self.epub_dir)
 
-    def extract(self, unit: int, lesson_type: str) -> str | None:
+    def extract(self, unit: int, lesson_type: str, lesson: int = None) -> str | None:
         """
         Extract clean text for the given unit and lesson type.
 
@@ -68,7 +68,7 @@ class EpubExtractor:
                 print(f"[EpubExtractor] ❌ Preprocessing failed")
                 return None
 
-        return self.preprocessor.extract(lesson_type, unit)
+        return self.preprocessor.extract(lesson_type, unit, lesson=lesson)
 
     @staticmethod
     def prepare(epub_zip_path: Path) -> Path | None:

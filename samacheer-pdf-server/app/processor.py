@@ -149,6 +149,23 @@ class PDFProcessor:
         print(f"   ✂️  Trimmed back matter: {len(text):,} → {len(trimmed):,} chars")
         return trimmed
 
+    def _lesson_list_position(self, class_num: int, term: int, subject: str,
+                              unit_num: int, lesson_choice: int) -> int | None:
+        """
+        For lesson-list indexes (units[].lessons[], e.g. Tamil) returns the
+        1-based lesson position used by the EPUB tags (lesson-{unit}-{n}).
+        Every other index shape → None, so existing subjects are unchanged.
+        """
+        if not lesson_choice:
+            return None
+        term_key = f"term{term}" if class_num in [6, 7] else "term0"
+        term_idx = self._load_unit_index(class_num, subject).get(term_key, {})
+        unit_obj = next((u for u in term_idx.get("units", []) if u.get("unit") == unit_num), None)
+        lessons = unit_obj.get("lessons") if isinstance(unit_obj, dict) else None
+        if isinstance(lessons, list) and 1 <= lesson_choice <= len(lessons):
+            return lesson_choice
+        return None
+
     def _generate_epub_key(self, class_num: int, term: int, subject: str) -> str:
         """Generate the key used in epub_catalog.json."""
         if class_num >= 8:
@@ -191,6 +208,7 @@ class PDFProcessor:
         unit_num: int,
         lesson_type: str = None,
         discipline: str = None,
+        lesson_choice: int = None,
     ) -> str | None:
         # Units where EPUB extraction is known to be unreliable
         # Format: (class_num, subject, discipline, unit_num)
@@ -352,10 +370,15 @@ class PDFProcessor:
                 if not epub_folder:
                     return None
             extractor = EpubExtractor(epub_folder)
-            text = extractor.extract(
-                unit=unit_num,
-                lesson_type=lesson_type or "prose"
-            )
+            lesson_pos = self._lesson_list_position(class_num, term, subject, unit_num, lesson_choice)
+            if lesson_pos:
+                # Lesson-list books (Tamil): lessons are tagged by position in the unit
+                text = extractor.extract(unit=unit_num, lesson_type="lesson", lesson=lesson_pos)
+            else:
+                text = extractor.extract(
+                    unit=unit_num,
+                    lesson_type=lesson_type or "prose"
+                )
 
         if text:
             print(f"   ✅ EPUB extraction done → {len(text)} chars")
@@ -380,6 +403,7 @@ class PDFProcessor:
         unit_num: int = None,
         lesson_type: str = None,
         discipline: str = None,
+        lesson_choice: int = None,
     ) -> bool:
         """
         Extract lesson text. EPUB is primary, pdfplumber is fallback.
@@ -391,7 +415,8 @@ class PDFProcessor:
         if all([class_num, subject, unit_num]):
             print(f"   🔄 Trying EPUB extraction...")
             epub_text = self._get_epub_text(
-                class_num, term or 0, subject, unit_num, lesson_type, discipline
+                class_num, term or 0, subject, unit_num, lesson_type, discipline,
+                lesson_choice=lesson_choice
             )
             if epub_text:
                 with open(output_txt, "w", encoding="utf-8") as f:
@@ -552,7 +577,18 @@ class PDFProcessor:
             print(f"❌ Unit {unit_num} not found in {discipline}")
             return None
 
-        if "page" in selected_unit_obj:
+        if isinstance(selected_unit_obj.get("lessons"), list):
+            # Lesson-list index (e.g. Tamil): units[].lessons[] in textbook order
+            lessons = selected_unit_obj["lessons"]
+            if not 1 <= lesson_choice <= len(lessons):
+                print(f"❌ Lesson {lesson_choice} not found in unit {unit_num}")
+                return None
+            selected_lesson = lessons[lesson_choice - 1]
+            start_pdf_page = selected_lesson.get("page", 0) + offset
+            clean_title = selected_lesson["title"].replace(" ", "")
+            filename = f"Class{class_num}-Unit{unit_num}-{selected_lesson['type'].capitalize()}-{clean_title}"
+            selected_page_raw = selected_lesson.get("page", 0)
+        elif "page" in selected_unit_obj:
             start_pdf_page = selected_unit_obj["page"] + offset
             clean_title = selected_unit_obj["title"].replace(" ", "")
             filename = f"Class{class_num}-{discipline or 'Unit'}-{unit_num}-{clean_title}"
@@ -576,7 +612,9 @@ class PDFProcessor:
 
         all_start_pages = []
         for u in all_units_for_slicing:
-            if "page" in u:
+            if isinstance(u.get("lessons"), list):
+                all_start_pages.extend(l.get("page", 0) for l in u["lessons"])
+            elif "page" in u:
                 all_start_pages.append(u["page"])
             else:
                 for cat in ["prose", "poem", "supplementary", "play"]:
@@ -612,7 +650,7 @@ class PDFProcessor:
             print(f"\n📚 Processing: Class {class_num} | {subject} | {discipline or 'General'} | Format: {output_format} | Force: {force}")
 
             # EPUB-only subjects (Biology 11/12) skip PDF catalog + download
-            EPUB_ONLY_SUBJECTS = ["biology", "pure_science"]
+            EPUB_ONLY_SUBJECTS = ["biology", "pure_science", "tamil"]
             is_epub_only = subject.lower() in EPUB_ONLY_SUBJECTS
 
             if not is_epub_only:
@@ -721,7 +759,7 @@ class PDFProcessor:
                     cached_file, start_page, end_page, output_file,
                     class_num=class_num, term=term, subject=subject,
                     unit_num=unit_num, lesson_type=lesson_type,
-                    discipline=discipline
+                    discipline=discipline, lesson_choice=lesson_choice
                 )
                 return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
 
@@ -746,7 +784,7 @@ class PDFProcessor:
                     cached_file, start_page, end_page, temp_txt,
                     class_num=class_num, term=term, subject=subject,
                     unit_num=unit_num, lesson_type=lesson_type,
-                    discipline=discipline
+                    discipline=discipline, lesson_choice=lesson_choice
                 ):
                     return {"error": True, "message": "Text extraction failed"}
 
@@ -982,7 +1020,7 @@ class PDFProcessor:
                     cached_file, start_page, end_page, temp_txt,
                     class_num=class_num, term=term, subject=subject,
                     unit_num=unit_num, lesson_type=lesson_type,
-                    discipline=discipline
+                    discipline=discipline, lesson_choice=lesson_choice
                 ):
                     return {"error": True, "message": "Text extraction failed"}
 
@@ -1110,7 +1148,7 @@ class PDFProcessor:
                     cached_file, start_page, end_page, temp_txt,
                     class_num=class_num, term=term, subject=subject,
                     unit_num=unit_num, lesson_type=lesson_type,
-                    discipline=discipline
+                    discipline=discipline, lesson_choice=lesson_choice
                 ):
                     return {"error": True, "message": "Text extraction failed"}
 
@@ -1245,7 +1283,7 @@ class PDFProcessor:
                     cached_file, start_page, end_page, temp_txt,
                     class_num=class_num, term=term, subject=subject,
                     unit_num=unit_num, lesson_type=lesson_type,
-                    discipline=discipline
+                    discipline=discipline, lesson_choice=lesson_choice
                 ):
                     return {"error": True, "message": "Text extraction failed"}
 
@@ -1380,6 +1418,12 @@ class PDFProcessor:
             if unit_num > len(units):
                 return "prose"
             unit_obj = units[unit_num - 1]
+            # Lesson-list index (e.g. Tamil): type comes from the lesson entry itself
+            if isinstance(unit_obj.get("lessons"), list):
+                _ls = unit_obj["lessons"]
+                if 1 <= lesson_choice <= len(_ls):
+                    return _ls[lesson_choice - 1].get("type", "prose")
+                return "prose"
             lessons = []
             for cat in ["prose", "poem", "supplementary", "play"]:
                 if cat in unit_obj:
