@@ -59,12 +59,13 @@ _NUM_SYM_RE = re.compile(rf"(\d)\s*({_SYM_ALT})\s*(?=\d)")
 _TOKEN = r"[^\s()\[\]{}.,;:!?\"'“”‘’]+"
 _CHAIN_RE = re.compile(
     rf"(?<![^\s(\[]){_TOKEN}(?:\s+(?:{_SYM_ALT})\s+{_TOKEN})+(?![^\s)\].,;:!?])")
-_LIST_MARK_RE = re.compile(rf"^\s*(?:\d{{1,2}}[.),]?|[அஆஇஈ][),.]|[-•*])\s+")
+_LIST_MARK_RE = re.compile(rf"^\s*(?:#{{1,6}}\s*)?(?:\d{{1,2}}[.),]?|[அஆஇஈ][),.]|[-•*])\s+")
 # read-aloud MCQ option labels: "அ, அமுது + என்று" is printed "அ) அமுது + என்று"
-_OPTION_LABEL_RE = re.compile(r"(?m)^([ \t]*)([அஆஇஈ]),(?=[ \t])")
+_OPTION_LABEL_RE = re.compile(r"(?m)^([ \t]*(?:#{1,6}[ \t]*)?)([அஆஇஈ]),(?=[ \t])")
 # a chain followed by என்பதனை/என்பதை is always a symbol chain
 # ("நிலவு கூட்டல் என்று என்பதனைச் சேர்த்தெழுதக் கிடைக்கும் சொல்")
-_CHAIN_FOLLOWER_RE = re.compile(r"^\s*என்பத(?:னை|ை)")
+# …and "X + Y என்று பெயர்" (word-origin sentences: "தால் + ஆட்டு என்று பெயர் பெற்றது")
+_CHAIN_FOLLOWER_RE = re.compile(r"^\s*(?:என்பத(?:னை|ை)|என்று\s+பெயர்)")
 # read-aloud spelling of a pulli consonant inside a symbol chain:
 # "இக் + அ = க" is printed "க் + அ = க"
 _PULLI_READ_RE = re.compile(rf"(?<![^\s(\[])இ([க-ஹ]்)(?![{_TA}])")
@@ -98,6 +99,9 @@ def _chain_is_symbolic(line: str, m: "re.Match") -> bool:
     """
     chain = m.group(0)
     if _CHAIN_FOLLOWER_RE.match(line[m.end():]):
+        return True
+    # MCQ option running on the question line: "… கிடைப்பது ________ அ, பொறுமை கூட்டல் உடமை"
+    if re.search(r"(?:^|\s)[அஆஇஈ][,)]\s*$", line[: m.start()]):
         return True
     if sum(1 for t in chain.split() if t in SYMBOL_WORDS) >= 2:
         return True

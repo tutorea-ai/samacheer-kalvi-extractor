@@ -9,7 +9,7 @@ Returns (text, extra_metadata). extra_metadata is merged into ai_metadata.
 """
 from typing import Callable, Dict, Tuple
 
-TAMIL_TEXT_VERSION = 1   # bump when a Tamil normalisation rule changes
+TAMIL_TEXT_VERSION = 2   # bump when a Tamil normalisation rule changes
 
 
 def _tamil(text: str) -> Tuple[str, dict]:
