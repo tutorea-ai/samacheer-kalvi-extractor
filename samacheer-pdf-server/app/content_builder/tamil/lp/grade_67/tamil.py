@@ -3,7 +3,9 @@ tamil.py (LP)
 -------------
 LP Builder for Samacheer Kalvi Tamil — Class 6 (grade_67)
 
-v0.1 — Oct 2026
+v0.2 — Oct 2026  (first real run review: next-period line built in Python;
+                  நூல்வெளி only in the last period; no mythology in meanings;
+                  poetic features from the book's own definition)
 
 TEMPLATE: Manual LP "Class 6 Tamil · Term 1 · Unit 1 தமிழ்த்தேன்" (26 periods),
 used as a content-agnostic teaching template for every Class 6 lesson
@@ -81,6 +83,7 @@ from ...base import (
     failed_day_block,
     mark_truncated,
     parse_json_response,
+    _matching_close_index,
 )
 from ...base.day_structures import (
     TAMIL_PERIOD_TIMING,
@@ -130,7 +133,7 @@ class TamilLP67Builder:
             timeout=REQUEST_TIMEOUT_S,
         )
         self.model = settings.ANTHROPIC_MODEL
-        print(f"✅ Tamil LP Builder (67) v0.1 initialized — model: {self.model}")
+        print(f"✅ Tamil LP Builder (67) v0.2 initialized — model: {self.model}")
 
     # ------------------------------------------------------------------
     # Public API
@@ -281,6 +284,7 @@ class TamilLP67Builder:
             usage = getattr(msg, "usage", None)
             if usage is not None:
                 print(f"         · {label}: in={getattr(usage, 'input_tokens', '?')} "
+                      f"cache_write={getattr(usage, 'cache_creation_input_tokens', 0) or 0} "
                       f"cached={getattr(usage, 'cache_read_input_tokens', 0) or 0} "
                       f"out={getattr(usage, 'output_tokens', '?')} stop={msg.stop_reason}")
             return text, msg.stop_reason, False
@@ -402,6 +406,9 @@ FOR EVERY LESSON:
 
 RULES:
 - Copy every book line and heading exactly. Never correct spellings.
+- Meanings ("spoken_meaning", key_content) come from the book's own
+  சொல்லும் பொருளும் / பாடலின் பொருள் / explanations — no outside background,
+  no gods, devas or myths unless the book itself says so.
 - Keep every string you write yourself short (under 15 words).
 - No CJK characters. No Tamil written in English letters.
 
@@ -796,8 +803,7 @@ Return ONLY this JSON:
         ltype = run["lesson_type"]
         prev = run["periods"][n - 2] if n > 1 else None
         nxt = run["periods"][n] if n < total else None
-        next_line = (f"{L['next_period']}: {nxt['title']}" if nxt
-                     else f"{L['next_period']}: அடுத்த பாடம்")
+        next_line = self._next_line(run, p)
         recall = ("This is the FIRST period — no recall; go straight to the hook."
                   if prev is None else
                   f"Open with a one-minute recall of the last period (“{prev['title']}”), then the hook.")
@@ -810,6 +816,10 @@ Return ONLY this JSON:
                    "EXERCISES below, copied exactly." if p["is_last"]
                    else f"{L['homework']}: NOT in this period.")
         exercises = run["info"]["parts"]["exercises"]
+        nool_rule = ""
+        if ltype in ("poem", "thirukural") and not p["is_last"]:
+            nool_rule = ("\nநூல்வெளி: NOT in this period — the poet / book facts are taught "
+                         "only in the last period. At most name the poet in one line.")
         ex_block = ""
         if p["is_last"] and exercises:
             ex_block = f"\nBOOK EXERCISES (exactly as in the lesson text):\n---\n{exercises}\n---\n"
@@ -847,7 +857,7 @@ Recall     : {recall}
 {L['do']:<10} : {st['do_style']} — {st['do_instruction']}
 {L['close']:<10} : {st['close_instruction']}{last_note}
 {ccq_rule}
-{hw_rule}
+{hw_rule}{nool_rule}
 
 TIMING (minutes; contiguous 0 → {PERIOD_MINUTES}; boundaries may move a little):
 {timing}
@@ -910,6 +920,30 @@ FINAL CHECKS BEFORE FINISHING
 ✅ Only facts from the lesson text; no religious examples added; no page numbers
 ✅ Do NOT write {L['period']} {n + 1}"""
 
+    LESSON_END_LINE = "இந்தப் பாடம் நிறைவு."
+    _NEXT_P_RE = re.compile(r"<p>\s*(?:<em>)?[^<]*?" + re.escape(LABELS["next_period"])
+                            + r".*?</p>", re.DOTALL)
+
+    def _next_line(self, run: dict, p: dict) -> str:
+        """Built from the real plan — the model once named a lesson that does not follow."""
+        n = p["num"]
+        if n < run["total"]:
+            return f"{L['next_period']}: {run['periods'][n]['title']}"
+        return self.LESSON_END_LINE
+
+    def _set_next_line(self, run: dict, p: dict, html: str) -> str:
+        """Remove whatever next-period line the model wrote; put ours at the end of the closing block."""
+        html = self._NEXT_P_RE.sub("", html)
+        html = html.replace(f"<p><em>{self.LESSON_END_LINE}</em></p>", "")
+        line = f"<p><em>{self._esc(self._next_line(run, p))}</em></p>"
+        m = re.search(r'<div class="lp-section-closing">', html)
+        if not m:
+            return html
+        close = _matching_close_index(html, m.end())
+        if not close:
+            return html
+        return html[: close[0]] + line + "\n" + html[close[0]:]
+
     def _generate_period(self, run: dict, p: dict) -> Optional[str]:
         ltype = run["lesson_type"]
         prompt = self._build_period_prompt(run, p)
@@ -921,7 +955,7 @@ FINAL CHECKS BEFORE FINISHING
                                    MAX_TOKENS_PERIOD, f"Period {p['num']} #{attempt}")
             if not raw or not raw.strip():
                 continue
-            html = normalize_day_html(clean(raw), ltype)
+            html = self._set_next_line(run, p, normalize_day_html(clean(raw), ltype))
             truncated = stop == "max_tokens"
             problems = check_day_structure(html, ltype, is_last_period=p["is_last"])
 

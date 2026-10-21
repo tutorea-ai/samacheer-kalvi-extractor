@@ -284,7 +284,10 @@ def _chain_is_symbolic(line: str, m: "re.Match") -> bool:
         return True
     rest = (line[: m.start()] + line[m.end():])
     rest = _LIST_MARK_RE.sub("", rest)
-    if not re.sub(r"[\s()\[\].,;:!?\"'“”‘’=+×−÷-]", "", rest):
+    # whole-line rule: MCQ option lines ("அ, அமுது கூட்டல் தென்று") never end in
+    # . ! ? — a short SENTENCE does ("எண்களைக் கூட்டல் செய்."), so skip those
+    ends_sentence = bool(re.search(r"[.!?]\s*$", line))
+    if not ends_sentence and not re.sub(r"[\s()\[\].,;:!?\"'“”‘’=+×−÷-]", "", rest):
         return True
     before, after = line[: m.start()], line[m.end():]
     if before.rstrip().endswith(("(", "[")) and after.lstrip().startswith((")", "]")):
@@ -526,6 +529,9 @@ LANGUAGE — THREE LAYERS (approved by the TL; never break this)
    Tamil Nadu classroom: இருக்கு, புரிஞ்சுதா, சொல்லுங்க, பாருங்க.
    Neutral classroom Tamil only: no strong regional dialect, no slang, and
    NEVER Tamil written in English letters (no "sollunga", no "puriyudha").
+   An English word used inside a Tamil sentence is written in TAMIL script
+   (கிரிக்கெட், போன், டீச்சர்) — Latin letters appear ONLY inside the
+   bracketed English glosses.
 2. BOOK CONTENT = WRITTEN TAMIL, EXACTLY AS IN THE LESSON TEXT. Poem lines,
    kural lines, grammar terms, headings and the answers children write are
    copied character for character from the lesson text given to you.
@@ -565,10 +571,17 @@ CONTENT ACCURACY — STRICTLY ENFORCE
   extra poems, no extra kurals, no invented author details or dates.
 - Names, numbers and facts (authors, books, counts such as 12, 18, 216):
   only as they appear in the lesson text.
-- RELIGION: teach textbook content as printed, explained by its meaning.
-  The teacher adds NO religious examples, stories, rituals or comparisons
-  between religions of their own. Festivals are taught as the book presents
-  them, as culture.
+- WORD MEANINGS come from the book's own சொல்லும் பொருளும் and பாடலின் பொருள்
+  (or the lesson's own explanation). Say them in spoken Tamil; do not add
+  your own background to a word.
+- RELIGION AND MYTHOLOGY: teach textbook content as printed, explained by its
+  meaning. The teacher adds NO religious examples, stories, rituals, gods,
+  devas, heaven or myths of their own (e.g. never "அமுது = தேவர்கள் குடிக்கும்
+  பானம்" unless the book says so), and no comparisons between religions.
+  Festivals are taught as the book presents them, as culture.
+- GRAMMAR AND POETIC FEATURES (இயைபு, எதுகை, மோனை, மாத்திரை …): use the book's
+  own definition and the book's / the lines' own examples. Never state a
+  general rule of your own (e.g. "they all end in ல் or ன்").
 - No page numbers. Refer to content by its heading in the lesson text.
 - No real student names. Use "ஒரு மாணவர்", "இணை", "குழு". Names of people
   that appear in the lesson text itself may be used.
