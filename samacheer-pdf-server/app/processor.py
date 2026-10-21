@@ -21,6 +21,7 @@ import shutil
 from pathlib import Path
 from typing import Dict, Optional
 from .services.ai_converter import ai_converter, language_meta_line, page_title
+from .services.text_normalisers import normalise_lesson_text
 from .services.bridge import bridge
 from .services.epub_extractor import EpubExtractor
 from .services.ss_epub_extractor import SocialScienceEpubExtractor
@@ -762,6 +763,9 @@ class PDFProcessor:
                     unit_num=unit_num, lesson_type=lesson_type,
                     discipline=discipline, lesson_choice=lesson_choice
                 )
+                if output_file.exists():
+                    _txt, _ = normalise_lesson_text(subject, output_file.read_text(encoding="utf-8"))
+                    output_file.write_text(_txt, encoding="utf-8")
                 return {"error": False, "filename": output_file.name, "file_path": str(output_file)}
 
             # ── CONTENT ONLY output ───────────────────────────────────────────
@@ -809,6 +813,11 @@ class PDFProcessor:
                 if lesson_page_title:
                     ai_metadata["page_title"]    = lesson_page_title
                     ai_metadata["display_title"] = lesson_page_title
+
+                # Subject text normaliser (Tamil: read-aloud spellings → print,
+                # memorisation lines → metadata). Other subjects: unchanged.
+                raw_text, _text_meta = normalise_lesson_text(subject, raw_text)
+                ai_metadata.update(_text_meta)
 
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
@@ -1053,6 +1062,11 @@ class PDFProcessor:
                     ai_metadata["page_title"]    = lesson_page_title
                     ai_metadata["display_title"] = lesson_page_title
 
+                # Subject text normaliser (Tamil: read-aloud spellings → print,
+                # memorisation lines → metadata). Other subjects: unchanged.
+                raw_text, _text_meta = normalise_lesson_text(subject, raw_text)
+                ai_metadata.update(_text_meta)
+
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
                     try:
@@ -1187,6 +1201,11 @@ class PDFProcessor:
                 if lesson_page_title:
                     ai_metadata["page_title"]    = lesson_page_title
                     ai_metadata["display_title"] = lesson_page_title
+
+                # Subject text normaliser (Tamil: read-aloud spellings → print,
+                # memorisation lines → metadata). Other subjects: unchanged.
+                raw_text, _text_meta = normalise_lesson_text(subject, raw_text)
+                ai_metadata.update(_text_meta)
 
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
@@ -1329,6 +1348,11 @@ class PDFProcessor:
                 if lesson_page_title:
                     ai_metadata["page_title"]    = lesson_page_title
                     ai_metadata["display_title"] = lesson_page_title
+
+                # Subject text normaliser (Tamil: read-aloud spellings → print,
+                # memorisation lines → metadata). Other subjects: unchanged.
+                raw_text, _text_meta = normalise_lesson_text(subject, raw_text)
+                ai_metadata.update(_text_meta)
 
                 # For Maths — add chapter month info for LP day calculation
                 if subject.lower() in ["maths", "math", "mathematics"]:
