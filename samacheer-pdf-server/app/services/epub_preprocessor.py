@@ -52,23 +52,9 @@ ENGLISH_LESSON_TYPES = {
 # ── Discipline names for Social Science ───────────────────────────────────────
 SS_DISCIPLINES = ['history', 'geography', 'civics', 'economics']
 
-# ── Unit label for lesson-list books (Tamil: "இயல் 1 — தமிழ்த்தேன்") ─────────
-UNIT_LABEL_RE = re.compile(r'இயல்\s*(\d+)')
+# ── Lesson-list books (e.g. Tamil): words come from data/language_rules/*.json ─
+from .language_rules import match_lesson_list
 
-# Back matter after the last lesson of a lesson-list book (not in nav):
-# the Thirukkural appendix ("திருக்குறள் / எளிய உரை") and the credits pages
-LESSON_LIST_BACK_MATTER_RE = re.compile(r'###\s*(?:திருக்குறள்\s*###\s*எளிய உரை|ஆலோசனைக் குழு)')
-
-# Strays at the END of a lesson-list lesson that belong to what comes next:
-#   the next lesson's section label (கவிதைப்பேழை, உரைநடை உலகம், விரிவானம், கற்கண்டு, வாழ்வியல்)
-#   the next unit's opener ("### இயல் இரண்டு, ... ### கற்றல் நோக்கங்கள் ...")
-LESSON_LIST_TRAILING_LABEL_RE = re.compile(
-    r'\s*(?:###\s*)?(?:கவிதை\s*(?:ப்)?\s*பேழை|உரைநடை\s*உலகம்|விரிவானம்|கற்கண்டு|வாழ்வியல்)\s*$'
-)
-LESSON_LIST_TRAILING_UNIT_RE = re.compile(
-    r'\s*###\s*இயல்\s*(?:ஒன்று|இரண்டு|மூன்று|நான்கு|ஐந்து|ஆறு|ஏழு|எட்டு|ஒன்பது)(?=[\s,]|$)[^#]*'
-    r'(?:###\s*கற்றல்\s*நோக்கங்கள்[^#]*)?$'
-)
 
 # ── Roman numeral map for unit numbers ────────────────────────────────────────
 ROMAN = {
@@ -278,20 +264,21 @@ class EpubPreprocessor:
 
         # Lesson-list books: the last lesson runs to the end of the book,
         # so cut the appendix / credits that follow it
-        if lesson and stop_el is None:
-            m = LESSON_LIST_BACK_MATTER_RE.search(text)
+        rules = self._lesson_rules() if lesson else None
+        if rules and stop_el is None:
+            m = rules.back_matter_re.search(text)
             if m:
                 print(f"[Preprocessor] ✂️  Trimmed back matter: {len(text):,} → {m.start():,} chars")
                 text = text[:m.start()].rstrip()
 
         # Lesson-list books: drop the next lesson's section label / next unit's
         # opener that sit just before the stop tag
-        if lesson:
+        if rules:
             prev = None
             while prev != text:
                 prev = text
-                text = LESSON_LIST_TRAILING_UNIT_RE.sub('', text)
-                text = LESSON_LIST_TRAILING_LABEL_RE.sub('', text).rstrip()
+                text = rules.trailing_unit_re.sub('', text)
+                text = rules.trailing_label_re.sub('', text).rstrip()
                 text = re.sub(r'\s*###\s*$', '', text)
 
         if text:
@@ -345,18 +332,34 @@ class EpubPreprocessor:
             print(f"[Preprocessor] ❌ No navigation file found (nav.xhtml or toc.ncx)")
             return None
 
+    def _lesson_rules(self, top_ol=None):
+        """
+        Language rules for this EPUB if it is a lesson-list book, else None.
+        Decided from nav.xhtml once per instance (prepare and extract both use it).
+        """
+        if top_ol is None and getattr(self, "_lr_checked", False):
+            return self._lr
+        if top_ol is None:
+            nav_path = self.epub_dir / 'nav.xhtml'
+            nav = None
+            if nav_path.exists():
+                nav = BeautifulSoup(nav_path.read_text(encoding='utf-8'), 'html.parser').find('nav')
+            top_ol = nav.find('ol', recursive=False) if nav else None
+        self._lr = match_lesson_list(top_ol) if top_ol else None
+        self._lr_checked = True
+        return self._lr
+
     def _detect_subject_type(self, top_ol) -> str:
         """
         Detect whether this is English, Social Science, or Linear (Science/Maths).
         """
         all_text = top_ol.get_text().lower()
 
-        # Lesson-list books (Tamil): top-level "இயல் N" entries, each with an
-        # <ol> of lessons in textbook order. Lessons are tagged by position.
-        for li in top_ol.find_all('li', recursive=False):
-            link = li.find('a')
-            if link and UNIT_LABEL_RE.search(link.get_text(strip=True)) and li.find('ol'):
-                return 'lesson_list'
+        # Lesson-list books (e.g. Tamil): top-level "<unit label> N" entries, each
+        # with an <ol> of lessons in textbook order. Lessons are tagged by position.
+        # The unit label comes from data/language_rules/*.json.
+        if self._lesson_rules(top_ol):
+            return 'lesson_list'
 
         # Social Science has discipline headings
         if 'history' in all_text and 'geography' in all_text:
@@ -428,12 +431,13 @@ class EpubPreprocessor:
           unit-{u}       → unit heading (stop point only)
           lesson-{u}-{n} → n-th lesson of unit u (n = lesson_choice, 1-based)
         """
+        rules = self._lesson_rules(top_ol)
         tag_map = {}
         for unit_li in top_ol.find_all('li', recursive=False):
             unit_link = unit_li.find('a')
             if not unit_link:
                 continue
-            m = UNIT_LABEL_RE.search(unit_link.get_text(strip=True))
+            m = rules.unit_re.search(unit_link.get_text(strip=True))
             if not m:
                 continue
             unit_num = int(m.group(1))
