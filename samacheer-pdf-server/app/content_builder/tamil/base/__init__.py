@@ -114,6 +114,27 @@ PREAMBLE_TITLES: Dict[str, str] = {
     "materials":  LABELS["materials"],
 }
 
+# Content page labels (PROPOSED, awaiting TL "ok"). Visible text only — the
+# class names stay the shared assembler's, because the site CSS/JS read them.
+CONTENT_LABELS: Dict[str, str] = {
+    "exercise_badge":  "பயிற்சி",
+    "activity_badge":  "செயல்பாடு",
+    "true":            "சரி",
+    "false":           "தவறு",
+    "show_answer":     "விடையைக் காண்க",
+    "show_all":        "எல்லா விடைகளையும் காண்க",
+    "hide_all":        "எல்லா விடைகளையும் மறை",
+    "answer":          "விடை",
+    "write_here":      "இங்கே எழுதுக...",
+    "write_long":      "விரிவாக இங்கே எழுதுக...",
+    "match_here":      "பொருத்துக...",
+    "blank":           "______",
+    "memorise":        "மனப்பாடப் பகுதி",
+    "answers_note":    "முதலில் நீங்களே முயன்று பாருங்கள்; பிறகு விடையைக் காண்க.",
+    "glossary_ta":     "தமிழ்",
+    "glossary_en":     "English",
+}
+
 # Assessment block headings (PROPOSED, awaiting TL "ok")
 ASSESSMENT_TITLES: Dict[str, str] = {
     "answers":      "சரியான விடைகள்",
