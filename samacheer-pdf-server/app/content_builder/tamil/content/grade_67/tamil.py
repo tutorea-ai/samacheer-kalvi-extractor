@@ -1,9 +1,12 @@
 """
 tamil.py (Content)
 ------------------
-Content Builder for Samacheer Kalvi Tamil — Class 6 (grade_67)
+Content Builder for Samacheer Kalvi Tamil — Classes 6–7 (grade_67)
 
-v0.1 — Oct 2026
+v0.2 — Oct 2026  (first real page: poem lines grouped across blank lines, split prose
+                  lines joined, empty boxes dropped, exact match for short items,
+                  "1 " numbering stripped, stems that repeat a heading hidden,
+                  memorise source logged)
 
 ONE SHARED BUILDER for all five lesson types (branches on
 metadata["lesson_type"]); a type-specific file next to this one would
@@ -105,7 +108,7 @@ class TamilContent67Builder:
             timeout=REQUEST_TIMEOUT_S,
         )
         self.model = settings.ANTHROPIC_MODEL
-        print(f"✅ Tamil Content Builder (67) v0.1 initialized — model: {self.model}")
+        print(f"✅ Tamil Content Builder (67) v0.2 initialized — model: {self.model}")
 
     # ------------------------------------------------------------------
     # Public API
@@ -127,7 +130,13 @@ class TamilContent67Builder:
 
         norm, report = normalize_source_text(text)        # idempotent safety net
         parts = split_lesson_parts(norm)
-        memorise = metadata.get("memorise_blocks") or report["memorise_blocks"]
+        memorise, mem_src = metadata.get("memorise_blocks"), "metadata"
+        if not memorise:
+            memorise, mem_src = report["memorise_blocks"], "own detection"
+        if memorise and not all(isinstance(b, (list, tuple)) for b in memorise):
+            print(f"      ⚠️ [Tamil Content] memorise_blocks has an unexpected shape "
+                  f"({type(memorise[0]).__name__}) — expected [[line, line], …]; ignoring")
+            memorise = []
         run: Dict[str, Any] = {
             "lesson_type": normalize_lesson_type(metadata.get("lesson_type")),
             "title": get_display_title(metadata),
@@ -142,6 +151,8 @@ class TamilContent67Builder:
               f"(teaching {len(parts['teaching'])}, exercises {len(parts['exercises'])}, "
               f"unit-end {len(parts['unit_end'])} chars; text v{metadata.get('tamil_text_version', '?')}, "
               f"{len(report['symbol_ambiguous'])} ambiguous)")
+        print(f"         · memorise: {len(run['memorise'])} unit(s) from {mem_src if run['memorise'] else 'nowhere'}"
+              f" | metadata keys: {sorted(k for k in metadata if not k.startswith('_'))}")
 
         html_parts = [self._render_teaching(run, parts["teaching"])]
 
@@ -226,63 +237,90 @@ class TamilContent67Builder:
             out.append(l)
         return out
 
+    _SENTENCE_END = (".", "?", "!", ":", "”", "\"", "’", "'", ")", "]", "।")
+
     def _render_teaching(self, run: dict, text: str) -> str:
+        """
+        Render the lesson text line by line. Real text (v2) has blank lines
+        between almost every line, and the EPUB breaks prose lines mid-sentence,
+        so: blank lines never end a block; a long prose line without a sentence
+        end continues into the next line; poem lines are grouped into one block.
+        """
         lines = self._drop_title_lines(run, (text or "").split("\n"))
-        mem_lines = {normalize_tamil(l) for b in run["memorise"] for l in b}
         mem_ends = {normalize_tamil(b[-1]) for b in run["memorise"] if b}
-        verse_ok = run["lesson_type"] in ("poem", "thirukural")
+        ltype = run["lesson_type"]
 
         out: List[str] = []
-        box: Optional[str] = None          # open content-note / do-you-know / activity
-        intro_open = False
+        box: Optional[str] = None      # "intro" | "dyk" | "activity" | "note"
+        box_start = 0
         verse: List[str] = []
+        para: List[str] = []
+        poem_region = ltype == "poem"  # the poem comes before the first heading/box
+        pending_box_title = False
+
+        def mark(line: str) -> str:
+            t = self._esc(line)
+            if normalize_tamil(line) in mem_ends:
+                t += f" <em>({C['memorise']})</em>"
+            return t
+
+        def flush_para():
+            nonlocal para
+            if para:
+                out.append("<p>" + mark(" ".join(para)) + "</p>")
+                para = []
 
         def flush_verse():
             nonlocal verse
-            if not verse:
-                return
-            if len(verse) == 1:
-                out.append(f"<p>{self._esc(verse[0])}</p>")
-            else:
-                rendered = []
-                for v in verse:
-                    t = self._esc(v)
-                    if normalize_tamil(v) in mem_ends:
-                        t += f" <em>({C['memorise']})</em>"
-                    rendered.append(t)
-                out.append('<div class="content-note"><p>' + "<br/>".join(rendered) + "</p></div>")
-            verse = []
+            if verse:
+                if len(verse) == 1:
+                    out.append(f"<p>{mark(verse[0])}</p>")
+                else:
+                    out.append('<div class="content-note"><p>'
+                               + "<br/>".join(mark(v) for v in verse) + "</p></div>")
+                verse = []
+
+        def flush():
+            flush_verse()
+            flush_para()
+
+        def open_box(kind: str, html: str):
+            nonlocal box, box_start
+            close_box()
+            box, box_start = kind, len(out)
+            out.append(html)
 
         def close_box():
-            nonlocal box, intro_open
-            flush_verse()
-            if box == "activity":
-                out.append(self._textarea(run, long=True, rows=6))
-            if box or intro_open:
+            nonlocal box
+            flush()
+            if box is None:
+                return
+            if len(out) == box_start + 1:          # nothing inside → drop the empty box
+                out.pop()
+            else:
+                if box == "activity":
+                    out.append(self._textarea(run, long=True, rows=6))
                 out.append("</div>")
-            box, intro_open = None, False
+            box = None
 
-        pending_box_title = False
         for raw in lines:
             line = raw.strip()
             if not line:
-                flush_verse()
-                continue
+                continue                            # blank lines never end a block
             is_h, h = self._is_heading_line(line)
             if is_h and not h:
                 continue
 
             # box tags from the normaliser
-            if line in ("[பெட்டிச் செய்தி]", "[செயல்பாடு]"):
-                close_box()
-                if line == "[செயல்பாடு]":
-                    box = "activity"
-                    out.append('<div class="exercise-section activity"><div class="exercise-title">'
-                               f'<span class="ex-badge">{C["activity_badge"]}</span></div>')
-                else:
-                    box = "dyk"
-                    out.append('<div class="do-you-know">')
-                    pending_box_title = True
+            if line == "[செயல்பாடு]":
+                poem_region = False
+                open_box("activity", '<div class="exercise-section activity"><div class="exercise-title">'
+                                     f'<span class="ex-badge">{C["activity_badge"]}</span></div>')
+                continue
+            if line == "[பெட்டிச் செய்தி]":
+                poem_region = False
+                open_box("dyk", '<div class="do-you-know">')
+                pending_box_title = True
                 continue
             if line in ("[/பெட்டிச் செய்தி]", "[/செயல்பாடு]"):
                 close_box()
@@ -296,47 +334,67 @@ class TamilContent67Builder:
 
             # headings
             if self._matches(h, INTRO_HEADINGS):
-                close_box()
-                out.append(f'<div class="intro-box"><p><strong>{self._esc(h)}</strong></p>')
-                intro_open = True
+                open_box("intro", f'<div class="intro-box"><p><strong>{self._esc(h)}</strong></p>')
                 continue
             if self._matches(h, BOX_HEADINGS):
-                close_box()
-                out.append(f'<div class="content-note"><h3>{self._esc(h)}</h3>')
-                box = "note"
+                poem_region = False
+                open_box("note", f'<div class="content-note"><h3>{self._esc(h)}</h3>')
                 continue
             if is_h or self._matches(h, SECTION_HEADINGS):
                 if box in ("dyk", "activity"):
-                    flush_verse()
+                    flush()
                     out.append(f"<p><strong>{self._esc(h)}</strong></p>")
                     continue
+                poem_region = False
                 close_box()
                 out.append(f'<div class="section-heading"><h2>{self._esc(h)}</h2></div>')
                 continue
 
-            # body lines
-            if verse_ok and self._is_verse_line(line) and box is None and not intro_open:
+            # poem lines: every line of the poem region goes into one block
+            if poem_region and box is None:
+                flush_para()
                 verse.append(line)
                 continue
+            # kural lines: short lines outside boxes
+            if ltype == "thirukural" and box is None and self._is_verse_line(line):
+                flush_para()
+                verse.append(line)
+                continue
+
+            # prose: join a long line that does not end a sentence with the next one.
+            # A SHORT line joins only when it ENDS that sentence ("…நீர் போன்றது.");
+            # otherwise it is a label or heading that must stand alone — e.g. the
+            # dialogue speaker "அப்துல் கலாம்," after a question printed without "?",
+            # or a box heading such as "ஒலித்துப் பார்த்து உணர்வோம்".
             flush_verse()
-            p = self._esc(line)
-            if normalize_tamil(line) in mem_lines and normalize_tamil(line) in mem_ends:
-                p += f" <em>({C['memorise']})</em>"
-            out.append(f"<p>{p}</p>")
-            if intro_open and box is None:
-                # intro box holds the நுழையும் முன் paragraph only
-                out.append("</div>")
-                intro_open = False
+            short = len(line) <= 40
+            ends = line.endswith(self._SENTENCE_END)
+            if short and not ends:
+                flush_para()
+                if re.search(r"[,:]$", line) and len(line.split()) <= 3:
+                    out.append(f"<p><strong>{mark(line)}</strong></p>")    # speaker label
+                else:
+                    out.append(f"<p>{mark(line)}</p>")
+                continue
+            para.append(line)
+            if ends or short:
+                flush_para()
+                if box == "intro":
+                    close_box()                     # the intro box holds one paragraph
+                    if ltype == "poem":
+                        poem_region = True
 
         close_box()
+        flush()
         return "\n".join(out)
+
 
     # ==================================================================
     # EXERCISES — model classifies and answers, Python renders
     # ==================================================================
 
     _EX_SYSTEM = (
-        "You convert Samacheer Kalvi Class 6 Tamil book exercises into structured JSON. "
+        "You convert Samacheer Kalvi Class 6–7 Tamil book exercises into structured JSON. "
         "Copy every heading, question, option and item EXACTLY as in the text — never "
         "correct spellings, never paraphrase, never skip an item, never add one. Answers "
         "are in book (written) Tamil and come only from the lesson text. Return ONLY valid "
@@ -467,14 +525,23 @@ TEXT TO CONVERT:
         if not text:
             return text
         n = normalize_tamil(text)
-        cores = [re.sub(r"^(\d{1,2}[.)]|[அஆஇஈ]\))\s*", "",
-                        re.sub(r"^#{1,6}\s*", "", s).strip("*").strip())
+        # real lines are numbered "1." / "1)" / "1," / "1 " — strip the number
+        # unless the model's text itself starts with one
+        num_re = (r"^(\d{1,2}[.),]?\s+|[அஆஇஈ]\)\s*)" if not re.match(r"^\d", text)
+                  else r"^([அஆஇஈ]\)\s*)")
+        cores = [re.sub(num_re, "", re.sub(r"^#{1,6}\s*", "", s).strip("*").strip())
                  for s in src_lines]
         for core in cores:
             if normalize_tamil(core) == n:
                 return core
+        # fuzzy only for LONG text: on short items ("விளைவுக்கு") a near match
+        # attaches the wrong line ("விளைவுக்கு பால்")
+        if len(text) < 25:
+            return text
         best = difflib.get_close_matches(text, cores, n=1, cutoff=SNAP_MIN_RATIO)
-        return best[0] if best else text
+        if best and 0.8 <= len(best[0]) / len(text) <= 1.25:
+            return best[0]
+        return text
 
     _TYPES = {"mcq", "fill", "word", "match", "truefalse", "short", "long",
               "thinking", "activity", "text", "glossary"}
@@ -670,6 +737,11 @@ TEXT TO CONVERT:
             badge = C["activity_badge"] if is_activity else C["exercise_badge"]
             cls = "exercise-section activity" if is_activity else "exercise-section"
             title = self._esc(s["heading"]) if s["heading"] and s["heading"] != group else ""
+            for it in s["items"]:                   # a stem that only repeats its heading
+                if it["q"] and normalize_tamil(it["q"]) in (normalize_tamil(s["heading"]),
+                                                            normalize_tamil(group or "")):
+                    it["q"] = ""
+                    it["num"] = ""
             out.append(f'<div class="{cls}">\n<div class="exercise-title">'
                        f'<span class="ex-badge">{badge}</span> {title}</div>\n'
                        + "\n".join(self._render_item(run, it) for it in s["items"])

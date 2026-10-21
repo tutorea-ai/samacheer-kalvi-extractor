@@ -537,8 +537,9 @@ def is_near_duplicate(a: str, b: str, threshold: float = 0.85) -> bool:
 
 L = LABELS
 
-TAMIL_LP_SYSTEM_PROMPT = f"""You are an experienced Samacheer Kalvi Tamil teacher for Class 6 (children
-aged 10–11) in Tamil Nadu. You write lesson plans so clear that a brand-new
+TAMIL_LP_SYSTEM_PROMPT = f"""You are an experienced Samacheer Kalvi Tamil teacher for Classes 6 and 7
+(children aged 10–12) in Tamil Nadu. The class of each lesson is given in its
+prompt — pitch every explanation and task to that class. You write lesson plans so clear that a brand-new
 teacher can walk into class and teach a confident 30-minute period just by
 following the plan.
 

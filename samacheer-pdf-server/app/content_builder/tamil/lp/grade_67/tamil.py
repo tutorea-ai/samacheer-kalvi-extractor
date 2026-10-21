@@ -1,7 +1,7 @@
 """
 tamil.py (LP)
 -------------
-LP Builder for Samacheer Kalvi Tamil — Class 6 (grade_67)
+LP Builder for Samacheer Kalvi Tamil — Classes 6–7 (grade_67)
 
 v0.2 — Oct 2026  (first real run review: next-period line built in Python;
                   நூல்வெளி only in the last period; no mythology in meanings;
@@ -322,7 +322,7 @@ class TamilLP67Builder:
     # ==================================================================
 
     _EXTRACTOR_SYSTEM = (
-        "You are a strict text extractor for Samacheer Kalvi Class 6 Tamil lessons. "
+        "You are a strict text extractor for Samacheer Kalvi Class 6–7 Tamil lessons. "
         "Return ONLY valid JSON. Copy book lines and headings character for character "
         "from the lesson text. Never invent lines, names, facts or numbers. No markdown, "
         "no code fences. Raw JSON starting with {"
@@ -399,7 +399,7 @@ FOR EVERY LESSON:
 - "nool_veli": facts from நூல்வெளி / author notes, ONLY as printed (short lines).
 - "objectives": 3-5 "I can" lines in spoken Tamil, first person, e.g.
   "பாட்டை ராகத்தோட பாடுவேன்." — no English.
-- "difficulty_points": 2-3 short Tamil lines: what children of 10-11 may find
+- "difficulty_points": 2-3 short Tamil lines: what children of Class {run['class_num']} may find
   hard in THIS lesson.
 - "materials": 4-8 short Tamil items: pictures, objects, cards, chart paper
   that THIS lesson's periods will need. No internet, no page numbers.
@@ -835,7 +835,7 @@ Return ONLY this JSON:
         hw_tpl = (f'\n  <div class="board-work"><strong>{L["homework"]}:</strong><br/>[one book item, copied exactly]</div>'
                   if p["is_last"] else "")
 
-        return f"""Write {L['period']} {n} of {total} of a Class 6 Tamil lesson plan.
+        return f"""Write {L['period']} {n} of {total} of a Class {run['class_num']} Tamil lesson plan.
 
 Lesson  : {run['title']}
 Meta    : {run['meta_line']}
@@ -1013,7 +1013,7 @@ FINAL CHECKS BEFORE FINISHING
             extra += f"\n  <h3>{A['rule_example']}</h3>\n  [one worked example of the main rule, from the book, in a board-work div]"
         mem = (" || ".join(" / ".join(b) for b in run["memorise"])) or "(none marked)"
 
-        prompt = f"""Write ONLY the assessment pointers for this Class 6 Tamil lesson plan.
+        prompt = f"""Write ONLY the assessment pointers for this Class {run['class_num']} Tamil lesson plan.
 They appear in their own tab after the last period.
 
 Lesson : {run['title']}
