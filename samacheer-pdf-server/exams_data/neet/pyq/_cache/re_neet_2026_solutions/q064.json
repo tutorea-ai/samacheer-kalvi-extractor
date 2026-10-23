@@ -1,0 +1,16 @@
+{
+  "key_concept": "In the Arrhenius plot, $\\ln k = \\ln A - \\dfrac{E_a}{RT}$, so the y-intercept of $\\ln k$ vs $1/T$ gives $\\ln A$ and the slope is $-E_a/R$.",
+  "steps": [
+    "Write the linear form of the Arrhenius equation: $\\ln k = \\ln A - \\dfrac{E_a}{R}\\cdot\\dfrac{1}{T}$.",
+    "From the graph, the line meets the $\\ln k$ axis at 6, so $\\ln A = 6$.",
+    "For $k = e^2\\ \\text{min}^{-1}$, $\\ln k = 2$. Substituting gives $2 = 6 - \\dfrac{E_a}{RT}$, so $\\dfrac{E_a}{RT} = 4$.",
+    "Solve for $T$: $T = \\dfrac{E_a}{4R} = \\dfrac{6640}{4 \\times 8.3} = \\dfrac{6640}{33.2} = 200\\ \\text{K}$."
+  ],
+  "final_answer": "Option (3): 200 K",
+  "why_not_others": "$125$ K or $150$ K follow from using a wrong intercept or a wrong $\\ln k$ difference (for example $E_a/RT = 6$ or $2$ instead of $4$). $250$ K results from arithmetic slips such as dividing by $3.2R$.",
+  "common_trap": "Students forget to convert $E_a$ from kJ to J ($6.64$ kJ $= 6640$ J), or they take $\\ln k = e^2$ instead of $\\ln k = 2$.",
+  "time_saving_tip": "Read $\\ln A$ directly from the intercept. Then $T = E_a / [R(\\ln A - \\ln k)]$, which here is $6640/(8.3 \\times 4) = 200$ K in one line.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

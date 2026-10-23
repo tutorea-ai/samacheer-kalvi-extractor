@@ -1,0 +1,17 @@
+{
+  "key_concept": "Mole-to-mole stoichiometry from a balanced combustion equation: each mole of $\\mathrm{C_4H_{10}}$ gives 4 moles of $\\mathrm{CO_2}$ (conservation of carbon atoms).",
+  "steps": [
+    "Write the balanced equation: $2\\,\\mathrm{C_4H_{10}} + 13\\,\\mathrm{O_2} \\rightarrow 8\\,\\mathrm{CO_2} + 10\\,\\mathrm{H_2O}$.",
+    "Find the molar mass of n-butane: $M(\\mathrm{C_4H_{10}}) = 4(12) + 10(1) = 58\\ \\mathrm{g\\,mol^{-1}}$.",
+    "Find the moles of butane: $n = \\dfrac{116}{58} = 2\\ \\mathrm{mol}$.",
+    "Apply the mole ratio $\\mathrm{C_4H_{10}} : \\mathrm{CO_2} = 1 : 4$. This gives $n(\\mathrm{CO_2}) = 2 \\times 4 = 8\\ \\mathrm{mol}$.",
+    "Find the mass of $\\mathrm{CO_2}$, using $M(\\mathrm{CO_2}) = 44\\ \\mathrm{g\\,mol^{-1}}$: $m = 8 \\times 44 = 352\\ \\mathrm{g}$."
+  ],
+  "final_answer": "Option (1): 352 g",
+  "why_not_others": "176 g results from using the wrong ratio, for example 1 mol butane giving 4 mol $\\mathrm{CO_2}$ while treating 116 g as only 1 mol, or halving the answer by misreading the coefficients 2 : 8. The values 322 g and 362 g do not correspond to any whole-number mole count of $\\mathrm{CO_2}$ ($44n$), so they are distractors.",
+  "common_trap": "Reading the coefficients of the balanced equation (2 : 8) as a 1 : 8 ratio, or forgetting to convert grams to moles before applying the ratio.",
+  "time_saving_tip": "Skip balancing the full equation and use carbon conservation: each $\\mathrm{C_4H_{10}}$ gives 4 $\\mathrm{CO_2}$. So the mass of $\\mathrm{CO_2}$ is $\\frac{116}{58} \\times 4 \\times 44 = 352\\ \\mathrm{g}$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

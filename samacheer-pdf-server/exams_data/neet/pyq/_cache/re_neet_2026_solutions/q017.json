@@ -1,0 +1,17 @@
+{
+  "key_concept": "In an adiabatic process $Q = 0$, so the work done by the gas equals the drop in internal energy: $W = \\dfrac{nR(T_1 - T_2)}{\\gamma - 1} = nC_V(T_1 - T_2)$.",
+  "steps": [
+    "Apply the first law with $Q = 0$ for an adiabatic process: $W = -\\Delta U = nC_V(T_1 - T_2)$.",
+    "For an ideal gas, $C_V = \\dfrac{R}{\\gamma - 1}$. With $\\gamma = \\dfrac{5}{3}$, this gives $C_V = \\dfrac{R}{2/3} = \\dfrac{3R}{2}$.",
+    "The temperature drop is $T_1 - T_2 = 60 - 50 = 10\\,\\text{K}$, and $n = 1$.",
+    "Substitute: $W = 1 \\times \\dfrac{3}{2} \\times 8.3 \\times 10 = 1.5 \\times 83$.",
+    "So $W = 124.5\\,\\text{J}$. The work is positive because the gas expands and does work at the cost of its internal energy."
+  ],
+  "final_answer": "Option (3): 124.5 J",
+  "why_not_others": "Option (2), 83 J, is $nR\\Delta T$: it forgets to divide by $(\\gamma - 1)$, which is the isobaric-type expression. Option (4), 166 J, is $2nR\\Delta T$, and option (1), 41.5 J, is $\\dfrac{1}{2}nR\\Delta T$; both use the wrong factor in place of $\\dfrac{1}{\\gamma - 1} = \\dfrac{3}{2}$.",
+  "common_trap": "Writing $W = nR\\Delta T$ (giving 83 J) instead of $W = \\dfrac{nR\\Delta T}{\\gamma - 1}$, or multiplying by $(\\gamma - 1)$ instead of dividing by it.",
+  "time_saving_tip": "For a monatomic gas, adiabatic work is simply $\\dfrac{3}{2}nR\\Delta T$. Here $nR\\Delta T = 83$, so $W = 1.5 \\times 83 = 124.5\\,\\text{J}$ directly.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

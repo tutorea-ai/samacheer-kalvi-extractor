@@ -1,0 +1,17 @@
+{
+  "key_concept": "The induced emf across an inductor is $E = L\\,\\frac{dI}{dt}$, where $I$ is the current through that inductor (or the combination) between the two chosen points.",
+  "steps": [
+    "Let each inductor have self-inductance $L$. Mutual inductance is neglected.",
+    "Configuration P: points $a$ and $b$ lie across only the upper inductor. The full current $I(t)$ flows through it, so $E_P = L\\frac{dI}{dt}$.",
+    "Configuration Q: the two identical inductors are in parallel between $a$ and $b$. The equivalent inductance is $L_{eq} = \\frac{L \\cdot L}{L+L} = \\frac{L}{2}$.",
+    "Check: each branch carries $I/2$, so $E_Q = L\\frac{d(I/2)}{dt} = \\frac{L}{2}\\frac{dI}{dt}$.",
+    "Ratio: $\\frac{E_P}{E_Q} = \\frac{L\\,dI/dt}{(L/2)\\,dI/dt} = 2$."
+  ],
+  "final_answer": "Option (4): 2",
+  "why_not_others": "Option (1) $1/4$ comes from wrongly placing $a$ and $b$ across both series inductors ($2L$ vs $L/2$) and inverting the ratio. Option (3) $1$ comes from ignoring the current split in the parallel branches.",
+  "common_trap": "Assuming $a$ and $b$ in P span both inductors (giving $2L$ and a ratio of 4) instead of noticing they span only the upper one.",
+  "time_saving_tip": "Compare only the inductances between $a$ and $b$: $L$ in P and $L/2$ in Q, since $dI/dt$ is common, so the ratio is $2$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

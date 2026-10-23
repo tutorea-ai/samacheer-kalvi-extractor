@@ -1,0 +1,17 @@
+{
+  "key_concept": "For a zero-order reaction $2A \\rightarrow B$, the rate is $-\\frac{1}{2}\\frac{d[A]}{dt} = k$. So A is consumed at $2k$, and the integrated form is $[A]_0 - [A] = 2kt$.",
+  "steps": [
+    "Write the rate law with the stoichiometric coefficient included: $\\text{Rate} = -\\frac{1}{2}\\frac{d[A]}{dt} = k$, so $-\\frac{d[A]}{dt} = 2k$.",
+    "Integrate for zero order: $[A]_0 - [A]_t = 2kt$.",
+    "75% of A reacts, so the amount consumed is $0.75 \\times 2 = 1.5$ M, which leaves $[A]_t = 0.5$ M.",
+    "Substitute: $2 - 0.5 = 2 \\times 1.0 \\times t \\Rightarrow 1.5 = 2t$.",
+    "Solve: $t = 0.75$ min."
+  ],
+  "final_answer": "Option (2): 0.75 min",
+  "why_not_others": "Option (1), 1.5 min, comes from ignoring the factor 2 and using $[A]_0 - [A] = kt$. Options (3) and (4) are the times for 50% and 100% completion if that same factor is ignored.",
+  "common_trap": "Students write $[A]_0 - [A] = kt$ and forget that the rate constant is defined per the reaction rate, so A disappears at $2k$ because of its coefficient 2.",
+  "time_saving_tip": "For $nA \\rightarrow$ products at zero order, use $t = \\frac{\\Delta[A]}{nk}$ directly: $t = \\frac{1.5}{2 \\times 1} = 0.75$ min.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

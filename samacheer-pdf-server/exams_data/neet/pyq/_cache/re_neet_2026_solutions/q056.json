@@ -1,0 +1,18 @@
+{
+  "key_concept": "Electrode potentials are intensive and cannot be added or subtracted directly; combine half-reactions through $\\Delta G^\\circ = -nFE^\\circ$, which is additive.",
+  "steps": [
+    "Write the given couples: (i) $Fe^{3+} + 3e^- \\rightarrow Fe$, $E_1^\\circ = -0.04$ V, $n_1 = 3$; (ii) $Fe^{2+} + 2e^- \\rightarrow Fe$, $E_2^\\circ = -0.44$ V, $n_2 = 2$.",
+    "Target: $Fe^{3+} + e^- \\rightarrow Fe^{2+}$ = (i) $-$ (ii), with $n = 1$.",
+    "$\\Delta G_1^\\circ = -3F(-0.04) = +0.12F$ and $\\Delta G_2^\\circ = -2F(-0.44) = +0.88F$.",
+    "$\\Delta G^\\circ = \\Delta G_1^\\circ - \\Delta G_2^\\circ = 0.12F - 0.88F = -0.76F$.",
+    "$E^\\circ = -\\dfrac{\\Delta G^\\circ}{nF} = -\\dfrac{-0.76F}{1 \\cdot F} = +0.76$ V.",
+    "Shortcut form: $E^\\circ = n_1E_1^\\circ - n_2E_2^\\circ = 3(-0.04) - 2(-0.44) = -0.12 + 0.88 = +0.76$ V."
+  ],
+  "final_answer": "Option (2): $+0.76$ V",
+  "why_not_others": "$+0.40$ V comes from directly subtracting potentials, $(-0.04) - (-0.44)$, while ignoring the number of electrons. $-0.48$ V comes from simply adding the potentials, and $+0.92$ V comes from mixing up the electron-weighting terms. None of these accounts correctly for $nE^\\circ$.",
+  "common_trap": "Students subtract the two $E^\\circ$ values directly and get $+0.40$ V, forgetting that only $nE^\\circ$ (i.e. $\\Delta G^\\circ$) is additive.",
+  "time_saving_tip": "Use $n_3E_3^\\circ = n_1E_1^\\circ - n_2E_2^\\circ$ directly: $1 \\cdot E^\\circ = 3(-0.04) - 2(-0.44) = 0.76$ V.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

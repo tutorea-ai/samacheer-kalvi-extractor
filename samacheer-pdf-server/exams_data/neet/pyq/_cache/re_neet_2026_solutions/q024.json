@@ -1,0 +1,17 @@
+{
+  "key_concept": "For small temperature changes, the volume coefficient of a solid is $\\gamma = 3\\alpha$, so $\\Delta V = V\\,(3\\alpha)\\,\\Delta T$.",
+  "steps": [
+    "Initial volume of the sphere: $V = \\frac{4}{3}\\pi R^3$.",
+    "For an isotropic solid, the coefficient of volume expansion is $\\gamma = 3\\alpha$.",
+    "Increase in volume: $\\Delta V = V\\gamma\\Delta T = \\frac{4}{3}\\pi R^3 \\times 3\\alpha \\times \\Delta T$.",
+    "Simplify: $\\Delta V = 4\\pi R^3 \\alpha \\Delta T$.",
+    "Check by differentiation: $dV = 4\\pi R^2\\,dR$ and $dR = R\\alpha\\Delta T$, so $dV = 4\\pi R^3\\alpha\\Delta T$. Both methods agree."
+  ],
+  "final_answer": "Option (3): $4\\pi R^3 \\alpha \\Delta T$",
+  "why_not_others": "Option (1) results from wrongly taking $\\gamma = 2\\alpha$, which is the area coefficient. Options (2) and (4) come from mishandling the $\\frac{4}{3}$ factor, for example dropping it or applying $3\\alpha$ twice.",
+  "common_trap": "Students often use $\\alpha$ or $2\\alpha$ in place of $3\\alpha$ for volume expansion, or forget the $\\frac{4}{3}$ factor in the sphere's volume.",
+  "time_saving_tip": "Write $\\Delta V = 3\\alpha V\\Delta T$ directly. The 3 cancels the $\\frac{4}{3}$ and gives $4\\pi R^3\\alpha\\Delta T$ in one line.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

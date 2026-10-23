@@ -1,0 +1,18 @@
+{
+  "key_concept": "Photocurrent is proportional to the intensity (power) of the incident light, while the stopping potential depends only on the frequency of light and the work function: $e|V_0| = h\\nu - \\phi$.",
+  "steps": [
+    "The source power falls linearly with time, $P(t) = P_0 - kt$, but its frequency $\\nu$ does not change.",
+    "Number of photons per second $= \\dfrac{P}{h\\nu}$. Each absorbed photon can eject at most one electron, so the number of photoelectrons per second is proportional to $P$.",
+    "Hence the saturation photocurrent $I \\propto P(t)$. It decreases linearly with time and reaches zero when $P = 0$.",
+    "By Einstein's equation, $K_{max} = h\\nu - \\phi = e|V_0|$. This depends only on $\\nu$ and $\\phi$, not on intensity.",
+    "Since $\\nu$ is unchanged, $|V_0|$ stays constant (a horizontal line) for as long as photoemission occurs.",
+    "Option (1) matches: $I$ falls linearly and $|V|$ is constant."
+  ],
+  "final_answer": "Option (1): I vs t: straight line decreasing linearly from a positive value to zero; |V| vs t: horizontal line (constant)",
+  "why_not_others": "Options (2) and (3) wrongly make the stopping potential depend on intensity. Options (3) and (4) wrongly keep the photocurrent constant even though fewer photons arrive each second.",
+  "common_trap": "Thinking that lower light power means less energetic photoelectrons, and so a smaller stopping potential. In fact power changes only the number of photons, not the energy $h\\nu$ of each photon.",
+  "time_saving_tip": "Remember the pairing: intensity controls current, frequency controls stopping potential. Here only intensity changes, so $I$ varies and $V$ is constant.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

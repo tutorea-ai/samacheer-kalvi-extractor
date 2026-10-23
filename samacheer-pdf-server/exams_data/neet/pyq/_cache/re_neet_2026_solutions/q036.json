@@ -1,0 +1,18 @@
+{
+  "key_concept": "With $R = R_0(1 \\pm \\alpha\\Delta T)$, the opposite changes cancel in series, but in parallel the equivalent resistance depends on the product $R_1R_2$, which falls with temperature.",
+  "steps": [
+    "Let $x = \\alpha\\Delta T$. The two resistors are $R_1 = R_0(1-x)$ and $R_2 = R_0(1+x)$.",
+    "Circuit (A), series: $R_A = R_0(1-x) + R_0(1+x) = 2R_0$. This does not depend on $\\Delta T$.",
+    "So $I_A = \\dfrac{V}{2R_0}$, which stays constant as the temperature rises.",
+    "Circuit (B), parallel: $R_B = \\dfrac{R_1R_2}{R_1+R_2} = \\dfrac{R_0^2(1-x^2)}{2R_0} = \\dfrac{R_0}{2}(1-x^2)$.",
+    "As $\\Delta T$ increases, $x^2$ increases, so $R_B$ decreases below $\\dfrac{R_0}{2}$.",
+    "So $I_B = \\dfrac{2V}{R_0(1-x^2)}$ increases."
+  ],
+  "final_answer": "Option (1): $I_A$ remains constant while $I_B$ increases",
+  "why_not_others": "Option (4) assumes the changes also cancel in parallel, but there the product $R_0^2(1-x^2)$ falls while the sum $2R_0$ stays fixed. Options (2) and (3) wrongly predict a change in the series current, whose total resistance is exactly $2R_0$.",
+  "common_trap": "Students assume the $+\\alpha$ and $-\\alpha$ effects cancel in both circuits and choose 'both constant', overlooking the $(1-x^2)$ factor in the parallel combination.",
+  "time_saving_tip": "Note that the sum $R_1+R_2$ is fixed while the product $R_1R_2$ falls as $(1-x^2)$. So the series current is unchanged and the parallel resistance drops, giving option (1) immediately.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

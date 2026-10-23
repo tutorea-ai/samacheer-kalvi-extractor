@@ -1,0 +1,17 @@
+{
+  "key_concept": "In the Bohr model, the Coulomb attraction supplies the centripetal force, $\\frac{mv^2}{r}=\\frac{1}{4\\pi\\epsilon_0}\\frac{e^2}{r^2}$, which gives $r=\\frac{ke^2}{mv^2}$.",
+  "steps": [
+    "Equate the electrostatic force to the centripetal force for hydrogen ($Z=1$): $\\frac{mv^2}{r}=\\frac{ke^2}{r^2}$. This gives $r=\\frac{ke^2}{mv^2}$.",
+    "Numerator: $ke^2=9\\times10^{9}\\times(1.6\\times10^{-19})^2=9\\times10^{9}\\times2.56\\times10^{-38}=2.304\\times10^{-28}$ $\\text{N m}^2$.",
+    "Denominator: $v^2=25.6\\times10^{10}\\ \\text{m}^2\\text{s}^{-2}$, so $mv^2=9\\times10^{-31}\\times25.6\\times10^{10}=2.304\\times10^{-19}$ $\\text{J}$.",
+    "Divide: $r=\\frac{2.304\\times10^{-28}}{2.304\\times10^{-19}}=1\\times10^{-9}$ m.",
+    "Compare with $r=x\\times10^{-9}$ m to get $x=1$."
+  ],
+  "final_answer": "Option (4): 1",
+  "why_not_others": "Option (3), $x=2$, results from forgetting to square $v$ properly or from mishandling a factor of 2. Options (1) and (2) come from errors in the powers of ten or from using $r\\propto n^2$ with a guessed $n$.",
+  "common_trap": "Students substitute $v=25.6\\times10^{5}$ instead of $\\sqrt{25.6}\\times10^{5}$, or square the factor $25.6$ again, which wrecks the powers of ten.",
+  "time_saving_tip": "Notice that $9\\times2.56=2.304$ appears in both the numerator ($ke^2$) and the denominator ($mv^2$). The mantissas cancel, so only the powers of ten remain: $10^{-28}/10^{-19}=10^{-9}$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

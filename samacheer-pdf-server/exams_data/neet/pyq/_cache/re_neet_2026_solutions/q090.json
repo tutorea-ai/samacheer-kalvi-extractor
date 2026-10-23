@@ -1,0 +1,17 @@
+{
+  "key_concept": "For $O_2$, $F_2$ and $Ne_2$ ($>14$ electrons), molecular orbitals fill in the order $\\sigma 2s < \\sigma^*2s < \\sigma 2p_z < \\pi 2p_x = \\pi 2p_y < \\pi^*2p_x = \\pi^*2p_y < \\sigma^*2p_z$, so the last electrons decide the HOMO.",
+  "steps": [
+    "Total electrons in $Ne_2$ $= 2 \\times 10 = 20$.",
+    "For more than 14 electrons, use the order with $\\sigma 2p_z$ below the $\\pi 2p$ orbitals, because $s$–$p$ mixing is negligible here.",
+    "Fill the orbitals: $\\sigma 1s^2\\, \\sigma^*1s^2\\, \\sigma 2s^2\\, \\sigma^*2s^2\\, \\sigma 2p_z^2\\, \\pi 2p_x^2 = \\pi 2p_y^2\\, \\pi^*2p_x^2 = \\pi^*2p_y^2\\, \\sigma^*2p_z^2$. This accounts for $2+2+2+2+2+4+4+2 = 20$ electrons.",
+    "The last two electrons go into $\\sigma^*2p_z$, so the HOMO is $\\sigma^*_{2p}$.",
+    "Check: bond order $= \\frac{N_b - N_a}{2} = \\frac{10 - 10}{2} = 0$. This is consistent with $Ne_2$ not existing as a stable molecule."
+  ],
+  "final_answer": "Option (4): $\\sigma^*_{2p}$",
+  "why_not_others": "$\\pi_{2p}$ is the HOMO only for $B_2$/$C_2$-type molecules, $\\pi^*_{2p}$ is the HOMO for $O_2$ and $F_2$, and $\\sigma_{2p}$ is the HOMO for $N_2$. In $Ne_2$ all of these are completely filled, and electrons go further up into $\\sigma^*_{2p}$.",
+  "common_trap": "Students stop at $\\pi^*_{2p}$, as in $O_2$/$F_2$, forgetting that the 2 extra electrons of $Ne_2$ occupy the highest antibonding orbital $\\sigma^*_{2p}$.",
+  "time_saving_tip": "$Ne_2$ has 20 electrons, which fills every MO of the $n=1$ and $n=2$ levels; the HOMO is therefore always the topmost orbital, $\\sigma^*_{2p}$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

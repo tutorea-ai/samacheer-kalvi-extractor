@@ -1,0 +1,16 @@
+{
+  "key_concept": "Escape speed from a planet's surface is $v_e = \\sqrt{\\frac{2GM}{R}}$, so for equal masses $v_e \\propto \\frac{1}{\\sqrt{R}}$.",
+  "steps": [
+    "Escape speed from the surface: $v_e = \\sqrt{\\frac{2GM}{R}}$.",
+    "Both planets have the same mass $M$, so $\\frac{v_2}{v_1} = \\sqrt{\\frac{R_1}{R_2}}$.",
+    "Substitute $R_2 = \\frac{R_1}{2}$: $\\frac{v_2}{v_1} = \\sqrt{\\frac{R_1}{R_1/2}} = \\sqrt{2}$.",
+    "This makes sense: the smaller planet $P_2$ has a deeper potential well at its surface, so its escape speed is larger."
+  ],
+  "final_answer": "Option (3): $\\sqrt{2}$",
+  "why_not_others": "Option (4) comes from taking $v_e \\propto \\frac{1}{R}$ without the square root. Option (1) inverts the ratio. Option (2) wrongly assumes escape speed depends only on mass.",
+  "common_trap": "Forgetting the square root (giving 2) or inverting the ratio (giving $\\frac{1}{\\sqrt{2}}$).",
+  "time_saving_tip": "For equal mass, $v_e \\propto R^{-1/2}$. Halving $R$ multiplies $v_e$ by $\\sqrt{2}$, so you can answer directly.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

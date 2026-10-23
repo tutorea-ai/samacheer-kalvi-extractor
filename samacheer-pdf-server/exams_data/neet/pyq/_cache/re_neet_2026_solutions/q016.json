@@ -1,0 +1,17 @@
+{
+  "key_concept": "An ideal Zener diode in reverse breakdown holds a fixed voltage $|V_Z|$ across itself, and the series resistor drops the rest: $V_R = |V_i| - |V_Z|$.",
+  "steps": [
+    "The circuit is a single series loop: battery → Zener diode (C–B) → resistor R (B–A) → back to the battery. The same current flows through every element.",
+    "The diode is reverse biased with $|V_i| = 5\\ \\text{V}$, which exceeds the breakdown magnitude $|V_Z| = 3\\ \\text{V}$. So the Zener is in breakdown.",
+    "An ideal Zener in breakdown keeps a constant voltage across itself: $|V_{CB}| = 3\\ \\text{V}$.",
+    "Apply KVL around the loop: $|V_i| = |V_Z| + |V_R|$, so $|V_R| = 5 - 3 = 2\\ \\text{V}$.",
+    "Points B and A are the two ends of the resistor. Hence $|V_B - V_A| = 2\\ \\text{V}$."
+  ],
+  "final_answer": "Option (2): 2 V",
+  "why_not_others": "3 V is the voltage across the Zener (C to B), not across the resistor (B to A). 0 V would be correct only if the Zener were not conducting, but $5\\ \\text{V} > 3\\ \\text{V}$, so breakdown occurs and current flows.",
+  "common_trap": "Students often take the voltage between B and A as the Zener voltage (3 V) without checking which element actually lies between those two points.",
+  "time_saving_tip": "Check $|V_i| > |V_Z|$. If true, the resistor voltage is simply $|V_i| - |V_Z|$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

@@ -1,0 +1,16 @@
+{
+  "key_concept": "The mean free path of a gas molecule is $\\lambda = \\dfrac{1}{\\sqrt{2}\\,\\pi d^2 n}$, so $\\lambda \\propto \\dfrac{1}{d^2 n}$.",
+  "steps": [
+    "Write the mean free path: $\\lambda = \\dfrac{1}{\\sqrt{2}\\,\\pi d^2 n}$. For two gases this gives $\\dfrac{\\lambda_A}{\\lambda_B} = \\dfrac{d_B^2\\, n_B}{d_A^2\\, n_A}$.",
+    "Use the given data: $\\lambda_A = \\dfrac{1}{2}\\lambda_B$ and $d_A = 2d_B$.",
+    "Substitute: $\\dfrac{1}{2} = \\dfrac{d_B^2\\, n_B}{(2d_B)^2\\, n_A} = \\dfrac{n_B}{4n_A}$.",
+    "Cross-multiply: $4n_A = 2n_B$, so $n_A = \\dfrac{1}{2}n_B$."
+  ],
+  "final_answer": "Option (4): $n_A = \\frac{1}{2} n_B$",
+  "why_not_others": "Option (3), $n_A = \\frac{1}{4}n_B$, comes from using only the $d^2$ factor and ignoring the given ratio of mean free paths. Option (2) comes from inverting the ratio. Option (1) assumes the larger diameter alone accounts for the halved mean free path, but a doubled $d$ would quarter $\\lambda$, not halve it.",
+  "common_trap": "Students often take $\\lambda \\propto d$ instead of $d^2$, or flip the ratio while cross-multiplying.",
+  "time_saving_tip": "Since $\\lambda \\propto \\dfrac{1}{d^2 n}$, the product $\\lambda d^2 n$ is the same for both gases. Write $\\left(\\tfrac{1}{2}\\right)(4)\\,n_A = (1)(1)\\,n_B$, which gives $n_A = \\tfrac{n_B}{2}$ at once.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

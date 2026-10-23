@@ -1,0 +1,17 @@
+{
+  "key_concept": "For a complete cycle $\\Delta U = 0$, so by the first law the net heat supplied equals the net work done, which is the area enclosed by the cycle on the $p$-$V$ diagram.",
+  "steps": [
+    "The gas returns to its initial state, so $\\Delta U_{\\text{cycle}} = 0$. The first law $Q = \\Delta U + W$ then gives $Q_{\\text{net}} = W_{\\text{net}}$.",
+    "The work done in the cycle equals the area of the rectangle $abcd$: $W = (V_b - V_a)(p_a - p_d)$.",
+    "Substituting the values: $W = (5 - 2)\\,\\text{m}^3 \\times (300 - 100)\\,\\text{N/m}^2 = 3 \\times 200 = 600\\ \\text{J}$.",
+    "The cycle runs clockwise ($a \\to b \\to c \\to d$), so the net work is done by the gas and is positive: $W = +600\\ \\text{J}$.",
+    "Therefore the total (net) heat supplied is $Q = W = 600\\ \\text{J}$."
+  ],
+  "final_answer": "Option (3): 600 J",
+  "why_not_others": "400 J and 500 J come from misreading the rectangle's sides. 800 J results from wrongly using $p = 300 + 100$ or similar. Only the enclosed area $3 \\times 200 = 600$ J is the net heat.",
+  "common_trap": "Students often add only the heat absorbed in the steps $d \\to a$ and $a \\to b$, which gives $600 + 2250 = 2850$ J, instead of the net heat over the cycle, or they treat the cycle as anticlockwise and change the sign.",
+  "time_saving_tip": "For any closed cycle, the net heat equals the enclosed area on the $p$-$V$ graph. Just multiply the rectangle's sides ($\\Delta V \\times \\Delta p$), and the 'monatomic' detail is not needed.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

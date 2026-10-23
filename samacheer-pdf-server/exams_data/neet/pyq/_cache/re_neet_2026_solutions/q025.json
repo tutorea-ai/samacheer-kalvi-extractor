@@ -1,0 +1,18 @@
+{
+  "key_concept": "For a floating body pushed down slightly, the extra buoyant force gives a restoring constant $k = \\rho A g$, so $T = 2\\pi\\sqrt{\\dfrac{m}{\\rho A g}}$ and therefore $T \\propto \\dfrac{1}{\\sqrt{\\rho}}$.",
+  "steps": [
+    "Let the cork have mass $m$ and cross-sectional area $A$. Push it down by a small extra depth $x$ in a liquid of density $\\rho$.",
+    "The extra buoyant force acts upward: $F = -(\\rho A g)x$. This is SHM with $k = \\rho A g$.",
+    "The time period is $T = 2\\pi\\sqrt{\\dfrac{m}{k}} = 2\\pi\\sqrt{\\dfrac{m}{\\rho A g}}$. Since $m$, $A$ and $g$ are the same in both liquids, $T \\propto \\rho^{-1/2}$.",
+    "Take the ratio for the two liquids: $\\dfrac{T_2}{T_1} = \\sqrt{\\dfrac{\\rho_1}{\\rho_2}}$.",
+    "Substitute $T_2 = 2T$ and $T_1 = T$: $2 = \\sqrt{\\dfrac{\\rho_1}{\\rho_2}}$, so $\\dfrac{\\rho_1}{\\rho_2} = 4$.",
+    "Therefore $\\dfrac{\\rho_2}{\\rho_1} = \\dfrac{1}{4}$."
+  ],
+  "final_answer": "Option (4): $\\frac{1}{4}$",
+  "why_not_others": "Option (1), $4$, comes from inverting the ratio, i.e. assuming $T \\propto \\sqrt{\\rho}$. Options (2) and (3) come from treating $T$ as linearly related to $\\rho$ and forgetting the square root.",
+  "common_trap": "Students forget that a denser liquid gives a stiffer restoring force and hence a shorter period, so they write $T \\propto \\sqrt{\\rho}$ and pick 4.",
+  "time_saving_tip": "Use $T = 2\\pi\\sqrt{h/g}$, where $h$ is the submerged depth. Since $h \\propto 1/\\rho$, doubling $T$ means $h$ becomes 4 times larger, so $\\rho$ becomes $\\tfrac{1}{4}$ of its value.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

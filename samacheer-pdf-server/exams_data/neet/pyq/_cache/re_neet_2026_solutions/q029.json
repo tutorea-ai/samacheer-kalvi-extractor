@@ -1,0 +1,18 @@
+{
+  "key_concept": "For separated lenses, apply the lens formula $\\frac{1}{v}-\\frac{1}{u}=\\frac{1}{f}$ to each lens in turn; the image formed by the first lens is the object for the second.",
+  "steps": [
+    "Use the Cartesian sign convention with light travelling left to right. The two lenses are 3 cm apart, so they are not in contact and must be treated one at a time.",
+    "Lens $L_1$: $u_1=-30$ cm and $f_1=+10$ cm. Then $\\frac{1}{v_1}=\\frac{1}{f_1}+\\frac{1}{u_1}=\\frac{1}{10}-\\frac{1}{30}=\\frac{2}{30}$, so $v_1=+15$ cm, i.e. 15 cm to the right of $L_1$.",
+    "$L_2$ is only 3 cm to the right of $L_1$. The rays are intercepted before they converge, so the image $I_1$ acts as a virtual object for $L_2$.",
+    "This virtual object lies $15-3=12$ cm to the right of $L_2$, so $u_2=+12$ cm.",
+    "Lens $L_2$: $f_2=-10$ cm. Then $\\frac{1}{v_2}=\\frac{1}{f_2}+\\frac{1}{u_2}=-\\frac{1}{10}+\\frac{1}{12}=\\frac{-6+5}{60}=-\\frac{1}{60}$, so $v_2=-60$ cm.",
+    "The negative sign means the final image is 60 cm to the left of the concave lens, and it is virtual."
+  ],
+  "final_answer": "Option (2): 60 cm to the left of the concave lens",
+  "why_not_others": "Option (4) comes from taking $u_2=-12$ (treating the virtual object as real) or dropping the sign of $v_2$. Option (3) comes from wrongly using the contact formula ($P=0$) or mishandling the 3 cm gap.",
+  "common_trap": "Students often use $\\frac{1}{F}=\\frac{1}{f_1}+\\frac{1}{f_2}$, which gives zero power, or forget that the intermediate image beyond $L_2$ is a virtual object with positive $u$.",
+  "time_saving_tip": "Find $v_1$ quickly (object at $3f$ gives the image at $1.5f=15$ cm). Then $u_2=+12$, and $\\frac{1}{12}-\\frac{1}{10}=-\\frac{1}{60}$ gives the answer at once.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

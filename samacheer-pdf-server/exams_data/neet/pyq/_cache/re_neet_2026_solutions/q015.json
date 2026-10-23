@@ -1,0 +1,17 @@
+{
+  "key_concept": "The force per unit length between two long parallel wires is $\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$; it is attractive for currents in the same direction.",
+  "steps": [
+    "Currents in $A$ and $B$ flow in the same direction, so the wires attract. $B$ is above $A$, so the magnetic force on $A$ points upward.",
+    "Magnetic force per unit length on $A$: $\\frac{F}{L} = \\frac{\\mu_0 (I)(2I)}{2\\pi h} = \\frac{\\mu_0 I^2}{\\pi h}$.",
+    "Weight per unit length of $A$ is $\\lambda g$, acting downward.",
+    "Wire $A$ does not rise if the upward pull does not exceed its weight: $\\frac{\\mu_0 I^2}{\\pi h} \\le \\lambda g$.",
+    "Solving, $h \\ge \\frac{\\mu_0 I^2}{\\pi \\lambda g}$. So the minimum height is $h_{min} = \\frac{\\mu_0 I^2}{\\pi \\lambda g}$."
+  ],
+  "final_answer": "Option (2): $\\frac{\\mu_0 I^2}{\\pi\\lambda g}$",
+  "why_not_others": "Option (1) comes from forgetting the factor 2 in the current $2I$. Options (3) and (4) come from wrongly cancelling or multiplying the $2$ and $2\\pi$ factors.",
+  "common_trap": "Students often use $I^2$ instead of $I \\times 2I$, or forget that the magnetic force falls as $h$ increases. That second slip leads them to treat the condition as a maximum height instead of a minimum.",
+  "time_saving_tip": "Write $\\frac{\\mu_0 I_1 I_2}{2\\pi h} = \\lambda g$ directly. Here $I_1 I_2 = 2I^2$ cancels the $2$ in $2\\pi$, giving $h = \\frac{\\mu_0 I^2}{\\pi\\lambda g}$ in one line.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

@@ -1,0 +1,18 @@
+{
+  "key_concept": "A $Ln^{3+}$ ion has the configuration $[Xe]4f^{n}$ with $n = Z - 57$, and its unpaired electrons follow from Hund's rule over the seven $4f$ orbitals.",
+  "steps": [
+    "Forming $Ln^{3+}$ removes the two $6s$ electrons and one $4f$ or $5d$ electron. This leaves $[Xe]4f^{n}$, where $n = Z - 57$.",
+    "$Ce^{3+}$: $n = 58 - 57 = 1$, so $4f^{1}$ gives 1 unpaired electron.",
+    "$Nd^{3+}$: $n = 60 - 57 = 3$, so $4f^{3}$ gives 3 unpaired electrons.",
+    "$Tb^{3+}$: $n = 65 - 57 = 8$, so $4f^{8}$ has 7 singly filled orbitals and 1 paired, giving $7 - 1 = 6$ unpaired electrons.",
+    "$Ho^{3+}$: $n = 67 - 57 = 10$, so $4f^{10}$ has 7 singly filled orbitals and 3 paired, giving $7 - 3 = 4$ unpaired electrons.",
+    "Only $Ho^{3+}$ has 4 unpaired electrons."
+  ],
+  "final_answer": "Option (4): $Ho^{3+}$",
+  "why_not_others": "$Ce^{3+}$ ($4f^1$) has 1 and $Nd^{3+}$ ($4f^3$) has 3 unpaired electrons. $Tb^{3+}$ ($4f^8$) has 6, not 4, because only one electron pairs up after the half-filled $4f^7$.",
+  "common_trap": "Students often miscount the $f$ electrons, for example taking $Ho^{3+}$ as $4f^{11}$ by forgetting that three electrons are removed. Others count $4f^{8}$ as having 8 unpaired electrons, ignoring that there are only 7 $f$ orbitals.",
+  "time_saving_tip": "For $4f^{n}$, unpaired electrons $= n$ if $n \\le 7$, and $= 14 - n$ if $n > 7$. For $Ho^{3+}$: $14 - 10 = 4$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}
