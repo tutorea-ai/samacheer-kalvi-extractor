@@ -1178,3 +1178,217 @@ def parse_json_response(raw: str) -> dict:
         raise json.JSONDecodeError("no JSON object found", text, 0)
     text, _ = strip_cjk(unicodedata.normalize("NFC", text[start: end + 1]))
     return json.loads(text)
+
+
+# ############################################################################
+#
+#   QA (QUESTION BANK) — shared constants and helpers
+#   Used by tamil/qa/grade_67/tamil.py
+#
+#   Pattern (Class 6, agreed 21 Oct 2026) — EXACTLY 100 questions:
+#     with memorisation units   : I MCQ 1m × 40 | II 2m × 30 | III 3m × 20 | IV மனப்பாடம் × 10
+#     without (prose, grammar,  : I MCQ 1m × 45 | II 2m × 35 | III 3m × 20
+#     supplementary, Term 2)
+#   Part IV is built in Python from the printed lines only; if it cannot
+#   reach 10, the shortfall moves to Part I so the total stays 100.
+#
+# ############################################################################
+
+QA_TOTAL_QUESTIONS = 100
+QA_MEMORISE_COUNT = 10
+
+QA_LABELS: Dict[str, str] = {           # PROPOSED, awaiting TL "ok"
+    "header":       "வினா வங்கி",
+    "questions":    "வினாக்கள்",
+    "mark":         "மதிப்பெண்",
+    "book_back":    "பாடநூல் வினா",
+    "answer":       "விடை",
+    "show_answers": "📋 விடைகளைக் காண்க",
+    "memorise":     "மனப்பாடம்",
+    "write_lines":  "பின்வரும் சொற்களில் தொடங்கும் மனப்பாடப் பகுதியை எழுதுக:",
+    "complete":     "அடியை நிறைவு செய்க:",
+    "fill_word":    "விடுபட்ட சொல்லை நிரப்புக:",
+    "next_line":    "இந்த அடியைத் தொடர்ந்து வரும் அடியை எழுதுக:",
+}
+
+_QA_PART_BASE = {
+    "mcq": {
+        "key": "mcq", "section_id": "section-mcq", "kind": "mcq", "marks": 1,
+        "title": "பகுதி I — சரியான விடையைத் தேர்ந்தெடுக்க",
+        "max_tokens": 12000,
+        "guidance": (
+            "Mix: word meanings (the lesson's சொல்லும் பொருளும்), joining and splitting "
+            "words (சேர்த்து / பிரித்து எழுதுக), opposite words, which word completes a "
+            "printed line, facts from the lesson and from நூல்வெளி, grammar terms "
+            "with the book's examples, the main idea of a part of the lesson. "
+            "Exactly 4 options, ONE correct, plausible distractors (look-alike "
+            "spellings for join/split items, other words from the lesson for "
+            "meanings). No 'அனைத்தும்' / 'எதுவுமில்லை' style options."
+        ),
+        "answer_rule": "The correct option letter (அ / ஆ / இ / ஈ) + a one-line reason in book Tamil.",
+    },
+    "mark2": {
+        "key": "mark2", "section_id": "section-2mark", "kind": "descriptive", "marks": 2,
+        "title": "பகுதி II — குறுவினாக்கள்",
+        "max_tokens": 12000,
+        "guidance": (
+            "Short questions on the lesson: what / who / why in one idea, a word's "
+            "meaning used in a sentence of your own (சொந்தத் தொடரில் அமைத்து எழுதுக), "
+            "join or split two words and say the result, name two things the lesson "
+            "lists, a line of the poem / kural explained in brief."
+        ),
+        "answer_rule": "1-2 complete sentences in book Tamil (about 15-35 words).",
+    },
+    "mark3": {
+        "key": "mark3", "section_id": "section-3mark", "kind": "descriptive", "marks": 3,
+        "title": "பகுதி III — சிறுவினாக்கள்",
+        "max_tokens": 14000,
+        "guidance": (
+            "Questions that need 3-4 sentences: explain an idea of the lesson with its "
+            "example, explain a comparison or image in the poem, what a character did "
+            "and why, a grammar rule with two of the book's examples, the message of "
+            "a kural, the book's சிந்தனை வினா style (reasoned answer)."
+        ),
+        "answer_rule": "3-4 complete sentences in book Tamil (about 35-70 words).",
+    },
+}
+
+
+def get_qa_parts(memorise_count: int) -> List[dict]:
+    """
+    The four parts with exact counts and Q-numbers for this lesson.
+    memorise_count = how many Part IV items Python could build (0..10).
+    """
+    mem = max(0, min(QA_MEMORISE_COUNT, memorise_count))
+    if mem:
+        counts = {"mcq": 40 + (QA_MEMORISE_COUNT - mem), "mark2": 30, "mark3": 20}
+    else:
+        counts = {"mcq": 45, "mark2": 35, "mark3": 20}
+    parts, start = [], 1
+    for key in ("mcq", "mark2", "mark3"):
+        p = dict(_QA_PART_BASE[key])
+        n = counts[key]
+        size = 15 if key == "mcq" else (12 if key == "mark2" else 10)
+        nb = -(-n // size)                         # ceil: number of batches
+        b = [n // nb + (1 if i < n % nb else 0) for i in range(nb)]   # even split
+        p.update(count=n, start=start, batches=b,
+                 note=f"ஒவ்வொன்றும் {p['marks']} {QA_LABELS['mark']} | {start}–{start + n - 1}")
+        parts.append(p)
+        start += n
+    if mem:
+        parts.append({
+            "key": "memorise", "section_id": "section-memorise", "kind": "memorise",
+            "marks": 0, "title": "பகுதி IV — மனப்பாடப் பகுதி", "count": mem,
+            "start": start, "batches": [],
+            "note": f"{QA_LABELS['memorise']} | {start}–{start + mem - 1}",
+        })
+    assert sum(p["count"] for p in parts) == QA_TOTAL_QUESTIONS
+    return parts
+
+
+TAMIL_QA_SYSTEM_PROMPT = """You are an experienced Samacheer Kalvi Tamil teacher for Classes 6 and 7
+creating a question bank WITH ANSWERS for Tamil Nadu state board students.
+The class of each lesson is given in its prompt.
+
+LANGUAGE (approved by the TL):
+- Questions and answers in BOOK (written) Tamil. Book lines, words and examples
+  copied exactly as in the lesson text — never correct a spelling.
+- English only as a rare key-term support. Never Tamil in English letters.
+
+CONTENT ACCURACY — STRICTLY ENFORCE:
+- Every question and answer comes from THIS lesson's text (including its
+  exercises and unit-end sections). No outside facts, poems, kurals or names.
+- Word meanings come from the book's own சொல்லும் பொருளும் / explanations.
+- No religious examples, myths or comparisons of your own; textbook content
+  is used as printed.
+- If the lesson text does not settle an answer, do not ask that question.
+
+OUTPUT:
+- Return ONLY one valid JSON object exactly as the user message specifies.
+- No markdown, no code fences, no text before or after the JSON.
+- Inside JSON strings use only these HTML tags: <strong> <em> <br/> — nothing else.
+- Escape double quotes inside strings as \\" . No line breaks inside strings.
+- NEVER output Japanese, Chinese, Korean or any CJK character.
+- No page numbers, no student names except those printed in the lesson.
+"""
+
+
+def get_qa_header(title: str, metadata: dict) -> str:
+    """QA page header (the builder writes its own, as in the other subjects)."""
+    safe = re.sub(r"[<>]", "", str(title or ""))
+    return (
+        '<div class="sk-content-header">\n'
+        f"  <h1>{QA_LABELS['header']} — {safe}</h1>\n"
+        f'  <p class="sk-meta">{get_meta_line(metadata)} | {QA_TOTAL_QUESTIONS} {QA_LABELS["questions"]}</p>\n'
+        "</div>"
+    )
+
+
+def extract_question_objects(raw: str) -> List[dict]:
+    """
+    Question objects from {"questions": [ {...}, ... ]} — works on truncated or
+    slightly malformed output: every object that parses on its own is kept.
+    """
+    if not raw:
+        return []
+    text = re.sub(r"```(?:json|JSON)?", "", raw)
+    text, _ = strip_cjk(unicodedata.normalize("NFC", text))
+    try:
+        data = parse_json_response(text)
+        qs = data.get("questions") if isinstance(data, dict) else None
+        if isinstance(qs, list):
+            return [q for q in qs if isinstance(q, dict)]
+    except (json.JSONDecodeError, ValueError):
+        pass
+    key = text.find('"questions"')
+    start = text.find("[", key if key != -1 else 0)
+    if start == -1:
+        return []
+    decoder = json.JSONDecoder()
+    out, i, n = [], start + 1, len(text)
+    while i < n:
+        while i < n and text[i] in " \r\n\t,":
+            i += 1
+        if i >= n or text[i] != "{":
+            break
+        try:
+            obj, end = decoder.raw_decode(text, i)
+        except json.JSONDecodeError:
+            nxt = text.find("{", i + 1)
+            if nxt == -1:
+                break
+            j = nxt - 1
+            while j > i and text[j] in " \r\n\t":
+                j -= 1
+            if text[j] != ",":
+                break
+            i = nxt
+            continue
+        if isinstance(obj, dict):
+            out.append(obj)
+        i = end
+    return out
+
+
+_QA_ALLOWED_TAGS = {"strong", "em", "b", "i", "br"}
+
+
+def sanitize_answer_html(s) -> str:
+    """Keep only a few inline tags (attributes stripped); escape everything else."""
+    import html as _html
+    text = str(s or "").strip()
+    if not text:
+        return ""
+    text = text.replace("\r", "").replace("\n", "<br/>")
+    text = _html.escape(_html.unescape(text), quote=False)
+
+    def _restore(m):
+        slash, tag = m.group(1), m.group(2).lower()
+        if tag not in _QA_ALLOWED_TAGS:
+            return m.group(0)
+        return "<br/>" if tag == "br" else f"<{slash}{tag}>"
+
+    text = re.sub(r"&lt;(/?)([a-zA-Z0-9]+)(?:\s[^&]*?)?\s*/?&gt;", _restore, text)
+    text, _ = strip_cjk(text)
+    from bs4 import BeautifulSoup
+    return str(BeautifulSoup(text, "html.parser")).strip()
