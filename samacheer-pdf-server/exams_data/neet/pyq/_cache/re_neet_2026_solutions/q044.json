@@ -1,0 +1,17 @@
+{
+  "key_concept": "In a 1-D elastic collision between equal masses with one at rest, the velocities are exchanged, and the struck bob converts its kinetic energy into height: $h = \\frac{v^2}{2g}$.",
+  "steps": [
+    "Masses are equal ($m_A = m_B = m$) and B is initially at rest, so in a head-on elastic collision the velocities are exchanged.",
+    "After the collision $v_A = 0$ and $v_B = 10\\ ms^{-1}$, horizontally.",
+    "Tension in the string is always perpendicular to B's velocity, so it does no work and mechanical energy of B is conserved: $\\frac{1}{2}mv_B^2 = mgh$.",
+    "Substituting: $h = \\frac{v_B^2}{2g} = \\frac{(10)^2}{2 \\times 10} = 5\\ m$.",
+    "Check: $h = 5\\ m < L = 10\\ m$, so B swings up only to below the horizontal level of the support. The string stays taut and B momentarily comes to rest at that height. Hence $h = 5\\ m$."
+  ],
+  "final_answer": "Option (3): 5",
+  "why_not_others": "Options (1) 8 and (2) 7 would need B to leave with more than $10\\ ms^{-1}$, which is impossible since A's entire velocity is only transferred, never amplified. Option (4) 2.5 comes from wrongly halving the energy, e.g. using $\\frac{v^2}{4g}$ or assuming B gets only part of A's kinetic energy.",
+  "common_trap": "Students often treat the collision as perfectly inelastic or share the kinetic energy between A and B, giving a smaller $h$ instead of using full velocity exchange.",
+  "time_saving_tip": "Equal masses with an elastic collision means B leaves with $10\\ ms^{-1}$, so directly write $h = \\frac{v^2}{2g} = 5\\ m$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

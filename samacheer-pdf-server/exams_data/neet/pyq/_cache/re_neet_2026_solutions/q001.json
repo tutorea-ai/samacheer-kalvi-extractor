@@ -1,0 +1,18 @@
+{
+  "key_concept": "For a position-dependent force, work is $W = \\int F(x)\\,dx$; here kinetic friction is $f(x) = \\mu_k(x)Mg$, so its work must be integrated over the path.",
+  "steps": [
+    "Use the condition $\\mu_k(L) = 0$: $\\mu_0 - \\alpha L = 0 \\Rightarrow \\alpha = \\dfrac{\\mu_0}{L}$.",
+    "On a horizontal surface $N = Mg$, so the friction magnitude is $f(x) = \\mu_k(x)Mg = \\mu_0 Mg\\left(1 - \\dfrac{x}{L}\\right)$. It opposes the motion.",
+    "Work by friction: $W = -\\int_0^L \\mu_0 Mg\\left(1 - \\dfrac{x}{L}\\right)dx$.",
+    "Evaluate the integral: $\\int_0^L \\left(1 - \\dfrac{x}{L}\\right)dx = L - \\dfrac{L^2}{2L} = \\dfrac{L}{2}$.",
+    "So $W = -\\dfrac{1}{2}\\mu_0 MgL$. The friction force falls linearly from $\\mu_0 Mg$ to $0$, so the work equals the area of a triangle, $\\tfrac{1}{2}(\\mu_0 Mg)(L)$.",
+    "Strictly, friction does negative work, which gives $n = -\\tfrac{1}{2}$. The question asks for the amount of work, so its magnitude gives $n = \\dfrac{1}{2}$."
+  ],
+  "final_answer": "Option (4): $\\frac{1}{2}$",
+  "why_not_others": "Option (2) $n=1$ comes from wrongly treating $\\mu_0$ as constant over the whole path. Option (3) $\\tfrac{1}{3}$ comes from mistaking the linear variation for a quadratic one. Option (1) $n=3$ has no physical basis.",
+  "common_trap": "Using $W = \\mu_0 MgL$ as if friction were constant, instead of integrating the varying friction force.",
+  "time_saving_tip": "Because friction varies linearly, take the average force $\\tfrac{\\mu_0 Mg + 0}{2}$ and multiply by $L$ to get $\\tfrac{1}{2}\\mu_0 MgL$ instantly.",
+  "agrees_with_key": true,
+  "key_check_note": "Agrees with the key in magnitude. Friction's work is actually $-\\tfrac{1}{2}\\mu_0 MgL$, so the key's $n = \\tfrac{1}{2}$ refers to the magnitude of the work done.",
+  "_model": "claude-opus-5-5"
+}

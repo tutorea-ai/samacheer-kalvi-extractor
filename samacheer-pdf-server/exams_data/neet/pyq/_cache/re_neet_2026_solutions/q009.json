@@ -1,0 +1,19 @@
+{
+  "key_concept": "Energy stored in a capacitor is $U = \\frac{1}{2}CV^2$; identical capacitors in series share the voltage equally, and a parallel branch gets the full battery voltage.",
+  "steps": [
+    "From the figure, P and Q are in series in one branch, and S is in a separate branch. Both branches are connected directly across the battery $V$.",
+    "P and Q are identical and in series, so they share the voltage equally: $V_P = V_Q = \\frac{V}{2}$.",
+    "S is directly across the battery, so $V_S = V$.",
+    "Energy in P: $U_P = \\frac{1}{2}C\\left(\\frac{V}{2}\\right)^2 = \\frac{CV^2}{8}$. Similarly, $U_Q = \\frac{CV^2}{8}$.",
+    "Energy in S: $U_S = \\frac{1}{2}CV^2 = \\frac{4CV^2}{8}$.",
+    "Total energy: $U_t = \\frac{CV^2}{8} + \\frac{CV^2}{8} + \\frac{4CV^2}{8} = \\frac{6CV^2}{8} = \\frac{3CV^2}{4}$.",
+    "Ratio: $\\frac{U_P}{U_t} = \\frac{CV^2/8}{6CV^2/8} = \\frac{1}{6}$."
+  ],
+  "final_answer": "Option (4): $1/6$",
+  "why_not_others": "$1/3$ comes from assuming all three capacitors store equal energy. $1/2$ or $2/3$ come from wrongly giving P the full voltage $V$ or from comparing branch energies instead of P alone.",
+  "common_trap": "Taking the voltage across P as the full $V$ instead of $V/2$, or treating all three capacitors as sharing energy equally.",
+  "time_saving_tip": "Since $U \\propto V^2$ for equal $C$, assign relative energies directly: P : Q : S $= (1/2)^2 : (1/2)^2 : 1^2 = 1 : 1 : 4$. The ratio is then $1/6$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

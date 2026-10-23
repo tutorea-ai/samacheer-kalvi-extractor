@@ -1,0 +1,18 @@
+{
+  "key_concept": "For a rigid body whose centre of mass is at rest (pure rotation about a fixed axis through the CM), the angular momentum is the same about every point: $\\vec L_P = \\vec L_{cm} + \\vec r_{P\\to cm} \\times M\\vec v_{cm}$ with $\\vec v_{cm}=0$.",
+  "steps": [
+    "Angular momentum about any point $P$ splits into two parts: $\\vec L_P = \\vec L_{\\text{about CM}} + \\vec r_{P\\to cm}\\times M\\vec v_{cm}$.",
+    "The disc rotates about the vertical axis through its fixed centre $O$, which is also its centre of mass. So $\\vec v_{cm}=0$.",
+    "The second (orbital) term therefore vanishes for every point $P$: $\\vec r_{P\\to cm}\\times M\\cdot 0 = 0$.",
+    "Hence $\\vec L_A = \\vec L_B = \\vec L_O = I\\omega\\,\\hat k$, where $I=\\tfrac12 MR^2$. This holds irrespective of the distances $OA$ and $OB$.",
+    "Alternative check: the total linear momentum is $\\vec p=\\sum m_i\\vec v_i = M\\vec v_{cm}=0$. So $\\vec L_A-\\vec L_O = \\vec r_{A\\to O}\\times\\vec p = 0$.",
+    "Therefore $\\dfrac{L_A}{L_B}=1$."
+  ],
+  "final_answer": "Option (3): 1",
+  "why_not_others": "Options (1), (2) and (4) assume that $L$ depends on the distance of the point, through factors like $r^2$ or $r$. That dependence appears only through the term $\\vec r\\times M\\vec v_{cm}$, and this term is zero because the CM is at rest.",
+  "common_trap": "Students apply the parallel-axis theorem ($I+Md^2$) for the points $A$ and $B$. But the disc does not rotate about axes through $A$ or $B$; it rotates about $O$, so its angular momentum is simply $I_O\\omega$ about every point.",
+  "time_saving_tip": "Zero total linear momentum means angular momentum is independent of the reference point. For pure rotation about the CM, answer 'same about all points' immediately.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

@@ -1,0 +1,17 @@
+{
+  "key_concept": "In a series LCR circuit $I_0 = \\frac{V_0}{Z}$ with $Z=\\sqrt{R^2+(X_L-X_C)^2}$, and at resonance ($X_L=X_C$) the impedance reduces to $Z=R$.",
+  "steps": [
+    "Compare with $V=V_0\\sin\\omega t$: $V_0=220$ V and $\\omega=2\\times10^3$ rad/s.",
+    "Inductive reactance: $X_L=\\omega L=(2\\times10^3)(10\\times10^{-3})=20\\ \\Omega$.",
+    "Capacitive reactance: $X_C=\\frac{1}{\\omega C}=\\frac{1}{(2\\times10^3)(25\\times10^{-6})}=\\frac{1}{0.05}=20\\ \\Omega$.",
+    "Since $X_L=X_C$, the circuit is at resonance, so $Z=\\sqrt{100^2+(20-20)^2}=100\\ \\Omega$.",
+    "Current amplitude: $I_0=\\frac{V_0}{Z}=\\frac{220}{100}=2.2$ A."
+  ],
+  "final_answer": "Option (1): 2.2 A",
+  "why_not_others": "11.0 A comes from using a single $20\\ \\Omega$ reactance as $Z$. 5.5 A comes from adding $X_L+X_C=40\\ \\Omega$. 22.0 A is a power-of-ten slip in $L$ or $C$. At resonance the reactances cancel and only $R$ limits the current.",
+  "common_trap": "Adding $X_L$ and $X_C$ (or ignoring $R$) instead of using $|X_L-X_C|$ inside the impedance formula.",
+  "time_saving_tip": "Check resonance first: $\\omega_0=\\frac{1}{\\sqrt{LC}}=\\frac{1}{\\sqrt{10^{-2}\\times25\\times10^{-6}}}=2\\times10^3$ rad/s, which equals the source $\\omega$. So $I_0=\\frac{V_0}{R}$ directly.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

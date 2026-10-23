@@ -1,0 +1,17 @@
+{
+  "key_concept": "At the end point, milliequivalents of oxidant equal milliequivalents of reductant ($N_1V_1 = N_2V_2$ with $N = M \\times n$-factor). In acidic medium, $KMnO_4$ has $n = 5$ and oxalic acid has $n = 2$.",
+  "steps": [
+    "Find the n-factor of $KMnO_4$ in acidic medium: $MnO_4^- + 8H^+ + 5e^- \\rightarrow Mn^{2+} + 4H_2O$. Mn goes from $+7$ to $+2$, so $n = 5$.",
+    "Find the n-factor of oxalic acid: $C_2O_4^{2-} \\rightarrow 2CO_2 + 2e^-$. Each C goes from $+3$ to $+4$, and there are 2 C atoms, so $n = 2$.",
+    "Equate milliequivalents: $M_1 n_1 V_1 = M_2 n_2 V_2$.",
+    "Substitute: $0.25 \\times 2 \\times 10 = M \\times 5 \\times 10$, which gives $5 = 50M$.",
+    "Solve: $M = 0.10$ M. (Check with the balanced equation: $2MnO_4^- + 5C_2O_4^{2-} + 16H^+ \\rightarrow 2Mn^{2+} + 10CO_2 + 8H_2O$. Moles of $KMnO_4$ = $\\frac{2}{5} \\times 2.5$ mmol = $1$ mmol, and $1$ mmol in $10$ mL is $0.10$ M.)"
+  ],
+  "final_answer": "Option (1): 0.10 M",
+  "why_not_others": "0.25 M comes from assuming a 1:1 mole ratio, which ignores the n-factors. 0.20 M and 0.15 M come from using wrong n-factors, such as $n = 3$ for $KMnO_4$, which applies only in neutral medium.",
+  "common_trap": "Writing $M_1V_1 = M_2V_2$ directly, without multiplying by the n-factors (5 for $KMnO_4$ in acid, 2 for oxalic acid).",
+  "time_saving_tip": "Remember the fixed ratio: in acidic medium, 2 mol $KMnO_4$ react with 5 mol oxalic acid. With equal volumes, $M_{KMnO_4} = \\frac{2}{5} \\times 0.25 = 0.10$ M.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

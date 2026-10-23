@@ -1,0 +1,17 @@
+{
+  "key_concept": "At equilibrium with $K = 1$, $\\Delta G^\\circ = -RT\\ln K = 0$, so $\\Delta H^\\circ = T\\Delta S^\\circ$ and $\\Delta S^\\circ = \\dfrac{\\Delta H^\\circ}{T}$ (with $T$ in kelvin).",
+  "steps": [
+    "For $N \\rightleftharpoons D$, $[N] = [D]$ at equilibrium, so $K = \\dfrac{[D]}{[N]} = 1$.",
+    "Then $\\Delta G^\\circ = -RT\\ln K = -RT\\ln 1 = 0$.",
+    "From $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ = 0$, we get $\\Delta S^\\circ = \\dfrac{\\Delta H^\\circ}{T}$.",
+    "Convert the temperature to kelvin: $T = 60 + 273 = 333\\ K$.",
+    "Substitute: $\\Delta S^\\circ = \\dfrac{666\\ kJ\\ mol^{-1}}{333\\ K} = 2.0\\ kJ\\ K^{-1}\\ mol^{-1}$."
+  ],
+  "final_answer": "Option (1): 2.0",
+  "why_not_others": "Option (4), $11.1$, comes from dividing by $60$ (Celsius) instead of $333\\ K$. Option (2), $2000$, is the correct value in $J\\ K^{-1}\\ mol^{-1}$ but the question asks for $kJ$. Option (3), $333$, is just the temperature in kelvin.",
+  "common_trap": "Using the temperature in °C ($60$) instead of kelvin ($333\\ K$), or reporting the answer in $J$ when $kJ$ is asked.",
+  "time_saving_tip": "Equal concentrations at equilibrium means $K = 1$ and $\\Delta G^\\circ = 0$, so directly compute $\\Delta S^\\circ = \\Delta H^\\circ / T = 666/333 = 2$.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

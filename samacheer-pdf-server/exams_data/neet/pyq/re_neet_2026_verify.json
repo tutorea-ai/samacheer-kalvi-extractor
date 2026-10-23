@@ -1,0 +1,1074 @@
+{
+  "paper_id": "re_neet_2026",
+  "model": "claude-opus-5-5",
+  "results": {
+    "1": {
+      "working": "Since μk(L) = 0, α = μ0/L. The friction force is μk(x)Mg = μ0Mg(1 − x/L), opposing the motion. Work = −∫₀ᴸ μ0Mg(1 − x/L) dx = −μ0Mg(L − L/2) = −μ0MgL/2. All options are positive, so the question means the magnitude: n = 1/2.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "2": {
+      "working": "Mean free path λ = 1/(√2 π d² n). So λA/λB = (dB² nB)/(dA² nA). Substituting dA = 2dB gives λA/λB = nB/(4nA). Setting this equal to 1/2 gives 4nA = 2nB, so nA = nB/2.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "3": {
+      "working": "In P, points a and b lie across only the upper inductor, which carries the full current, so E_P = L dI/dt. In Q, a and b lie across the two inductors in parallel, giving L_eq = L/2. Each inductor carries I/2, so E_Q = (L/2) dI/dt. Therefore E_P/E_Q = 2.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "4": {
+      "working": "Open pipe, 5th harmonic: L = 5λ/2 with antinodes at both ends, so there are 5 displacement nodes (n = 5). Closed pipe, 9th harmonic: L = 9λ/4, so 2k−1 = 9 and k = 5. That gives 5 nodes including the closed end (m = 5). Hence n/m = 1.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "5": {
+      "working": "For a long solenoid the field inside is B = μ0 n I. The flux through one turn is μ0 n I · πr². With N = n l turns, the total flux linkage is N·Φ = μ0 n² I π r² l. Inductance is flux linkage divided by current, so L = μ0 π n² r² l, which is option (1).",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "6": {
+      "working": "s(t) = t^2 - 6t + 5, so v = 2t - 6, which is zero at t = 3 s (the particle turns back). s(0) = 5, s(3) = -4, s(6) = 5. Distance = |-4 - 5| + |5 - (-4)| = 9 + 9 = 18 m. Average speed = 18/6 = 3 m/s. The displacement is zero, so option (4) would be the average velocity, not the average speed.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "7": {
+      "working": "Mass defect Δm = 238.050 − (234.043 + 4.003) = 0.004 u. Q = Δm × 931.5 MeV/u = 0.004 × 931.5 = 3.726 MeV = 3726 keV.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "8": {
+      "working": "The photocurrent is proportional to the intensity (power) of the light, so as the power falls linearly with time, the current I also falls linearly. The stopping potential depends only on the frequency of the light (eV₀ = hν − φ), not on its intensity. Since the frequency is unchanged, |V| stays constant. This matches option (1).",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "9": {
+      "working": "P and Q are in series, so each gets V/2: U_P = ½C(V/2)² = CV²/8. S takes the full V: U_S = ½CV². Total U_t = 2·(CV²/8) + ½CV² = ¾CV². Ratio U_P/U_t = (1/8)/(3/4) = 1/6.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "10": {
+      "working": "Continuity: A_P v_P = A_Q v_Q, so v_Q = 2v_P. Bernoulli: ΔP = ½ρ(v_Q² − v_P²) = ½(1000)(3v_P²) = 1500 v_P² = 15, giving v_P = 0.1 m/s. Q = A_P v_P = 40×10⁻⁴ × 0.1 = 4×10⁻⁴ m³/s = 400 cm³/s.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "11": {
+      "working": "ABC and ADC are both semicircles. Since R_ABC = R_ADC/2, the current divides as I_ABC = 2I0/3 and I_ADC = I0/3. Each semicircle gives a field of μ0I/(4r) at O. The two fields are in opposite directions, so B = μ0(2I0/3 − I0/3)/(4r) = μ0I0/(12r). The straight wires lie along the line through O, so they add no field.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "12": {
+      "working": "Terminal velocity v = (2r²g/9η)(σ−ρ) = (2r²gρ/9η)(σ/ρ − 1). So v is linear in σ/ρ with zero at σ/ρ = 1. For σ/ρ < 1 the ball rises rather than falls, so the downward terminal velocity is zero. The graph is a straight line starting from (1, 0), which matches graph (1).",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "13": {
+      "working": "Escape speed v = sqrt(2GM/R). With equal masses, v ∝ 1/sqrt(R). So v2/v1 = sqrt(R1/R2) = sqrt(2).",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "14": {
+      "working": "For a circular orbit, gravity supplies the centripetal force: GMm/R^2 = m(2π/T)^2 R. This gives T^2 = 4π^2 R^3/(GM), which is Kepler's third law. So T ∝ R^{3/2}.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "15": {
+      "working": "Parallel currents in the same direction attract, so B pulls A upward. Force per unit length on A = μ0·I·(2I)/(2πh) = μ0 I²/(πh). For A not to rise, this must not exceed its weight per unit length: μ0 I²/(πh) ≤ λg, so h ≥ μ0 I²/(πλg). The minimum h is μ0 I²/(πλg).",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "16": {
+      "working": "The diode is stated to be reverse biased. The 5 V input exceeds the 3 V breakdown voltage, so the ideal Zener conducts in breakdown and holds a 3 V drop. The remaining 5 − 3 = 2 V appears across R, which lies between B and A, so |V_B − V_A| = 2 V.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "17": {
+      "working": "For an adiabatic process, the work done by the gas is W = nR(T1 − T2)/(γ − 1). Substituting n = 1, R = 8.3, T1 − T2 = 60 − 50 = 10 K and γ − 1 = 2/3 gives W = 1 × 8.3 × 10 / (2/3) = 124.5 J.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "18": {
+      "working": "Emission requires λ < λ_threshold. For cell 1, λ1 < λ, so there is no emission and V1 = 0. For cells 2 and 3, eV = hc(1/λ − 1/λ_th). A larger threshold wavelength gives a larger stopping potential. Since λ3 >> λ2, V3 > V2. So V1 = 0 and V2 < V3.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "19": {
+      "working": "Treat the 20 eV electron non-relativistically, since 20 eV is much less than its rest energy of 511 keV.\nE = 20 × 1.6e-19 = 3.2e-18 J.\nElectron: p_e = √(2mE) = √(2 × 9e-31 × 3.2e-18) = √(5.76e-48) = 2.4e-24 kg·m/s.\nPhoton: p_ph = E/c = 3.2e-18 / 3e8 = 1.067e-26 kg·m/s.\nRatio: p_e/p_ph = 2.4e-24 / 1.067e-26 = 225.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "20": {
+      "working": "Index correction is the correction for the difference between the actual distance between two optical elements (for example, a pin tip and the lens centre) and the separation read from their uprights on the optical bench scale. It is found using an index rod and applied to object and image distances when measuring focal length. A meter bridge needs end correction, and a resonance tube also needs end correction. A simple pendulum has no index correction.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "21": {
+      "working": "The potential depends only on the start and end points, so the path through the tube does not matter. Outside the sphere, V = Q/(4πε0 r), where Q = (4/3)πR³ρ. The work magnitude for a unit charge is |V_A − V_B| = (Q/4πε0)(1/(2R) − 1/(3R)) = (ρR³/(3ε0))·(1/(6R)) = ρR²/(18ε0). This is the work by the field (equivalently the external agent's work). The literal net work on a slowly moved charge would be zero, which is not an option. So n = 18.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "22": {
+      "working": "The object is 2.5 cm from each interface. For near-normal viewing, apparent depth = real depth × (n_observer/n_object). From P: h1 = 2.5 × (1/1.25) = 2 cm. From R: h2 = 2.5 × (1.5/1.25) = 3 cm. So |h1 − h2| = 1 cm.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "23": {
+      "working": "By symmetry, particle 1 is at angle θ and particle 2 is at π−θ. Their velocities are ω(sinθ, −cosθ) and ω(−sinθ, −cosθ). The horizontal components cancel, so P = 2ω|cosθ|. This is zero at θ = π/2 and θ = −π/2 and largest at θ = 0, which is the dome-shaped curve.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "24": {
+      "working": "The volume of the sphere is V = (4/3)πR^3. The volume expansion coefficient is γ = 3α, so ΔV = γVΔT = 3α · (4/3)πR^3 · ΔT = 4πR^3 αΔT. This matches option 3.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "25": {
+      "working": "For a floating cylinder of mass m and cross-section A, a small depression x gives a restoring force ρAgx, so T = 2π√(m/(ρAg)). Since m and A are the same in both liquids, T ∝ 1/√ρ. Then T₂/T₁ = 2 = √(ρ₁/ρ₂), which gives ρ₂/ρ₁ = 1/4.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "27": {
+      "working": "Centres are d = R + r apart. About A's centre: I_A = (2/5)MR^2 + (2/5)mr^2 + m(R+r)^2. About B's centre: I_B = (2/5)mr^2 + (2/5)MR^2 + M(R+r)^2. The self terms cancel, so I_A - I_B = (m - M)(R+r)^2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "28": {
+      "working": "Energy conservation gives (1/2)kx^2 + (1/2)mv^2 = E, so kx^2 + mv^2 = 2E. In general this is an ellipse in the x-v plane. It is a circle only when the coefficients of x^2 and v^2 are equal, i.e. k = m numerically.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "29": {
+      "working": "For L1: u = -30 cm and f = +10 cm. 1/v = 1/10 - 1/30 = 1/15, so v = +15 cm, which is 15 cm right of L1. This lies 12 cm right of L2, so it acts as a virtual object for L2 with u = +12 cm. For L2: f = -10 cm. 1/v = -1/10 + 1/12 = -1/60, so v = -60 cm. The final image is 60 cm to the left of the concave lens.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "30": {
+      "working": "ω = 2000 rad/s. X_L = ωL = 2000 × 0.01 = 20 Ω. X_C = 1/(ωC) = 1/(2000 × 25×10⁻⁶) = 20 Ω. Since X_L = X_C, the circuit is at resonance, so Z = R = 100 Ω. Current amplitude I₀ = V₀/Z = 220/100 = 2.2 A.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "31": {
+      "working": "The disc rotates about its fixed centre O, so its centre of mass is at rest (v_cm = 0). About any point P, L_P = L_cm + r_P × M v_cm = L_cm. The angular momentum is therefore the same about A and B, so L_A/L_B = 1.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "32": {
+      "working": "Flux Φ = B·A0(1 + sin t), so the induced emf is ε = −dΦ/dt = −B·A0·cos t. The dissipated power is P = ε²/R = (B²A0²/R)·cos²t. P is maximum at t = 0, falls to zero at t = π/2, then rises again. Graph (2) is the only option with this shape.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "33": {
+      "working": "Point A lies inside the cavity, where the field of Q is present, so E_A ≠ 0. Outside the conductor, the charge induced on the outer surface (+Q) spreads uniformly, because the conductor screens the cavity from the outside. So the outside field is that of a point charge Q at the sphere's centre. B and C are equidistant from the centre, so E_B = E_C.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "34": {
+      "working": "Outside the sphere, the field is the same as that of a point charge Q at the centre. By energy conservation, the kinetic energy gained equals the loss in potential energy: (1/2)mv² = kQq(1/R − 1/3R) = 2kQq/(3R). So v² = 4kQq/(3mR). With k = 1/(4πε0), v² = Qq/(3πε0 mR), giving v = √(Qq/(3πε0 mR)).",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "35": {
+      "working": "Rutherford scattering gives N(θ) ∝ 1/sin⁴(θ/2). The count is very large at small angles and falls steeply as θ increases. Beyond about 90° it flattens to a small, nearly constant value up to 180°. This is the standard NCERT plot: a steep decline from about 10^7 that levels off near 10^2. Option 3 matches this shape; option 2 falls too gradually and stays flat at small angles.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "36": {
+      "working": "Let x = αΔT. In series (A), R_A = R0(1−x) + R0(1+x) = 2R0, which does not depend on temperature, so I_A stays constant. In parallel (B), R_B = R0²(1−x²)/(2R0) = R0(1−x²)/2. This decreases as ΔT rises, so I_B increases.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "37": {
+      "working": "Write each constant in base dimensions. [σ_s] = W m⁻² K⁻⁴ = [M T⁻³ K⁻⁴]. [k_B] = J K⁻¹ = [M L² T⁻² K⁻¹]. [b] = m K = [L K]. Dividing, σ_s/k_B = [L⁻² T⁻¹ K⁻³]. Multiplying by b gives [L⁻¹ T⁻¹ K⁻²], which is option (1).",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "38": {
+      "working": "Assuming μr = 1, v = c/√εr = 3×10^8/3 = 10^8 m/s, so (1) is correct. Since ω = 2π×10^6, f = 10^6 Hz and λ = v/f = 100 m, not 300 m. So (2) is incorrect. The phase (kz − ωt) means the wave travels along +z, so (4) is correct. For E along x and propagation along +z, B lies along y with amplitude E0/v. (3) as printed says B0/v, which looks like a typo for E0/v; read that way it is correct. Option 2 is the clearly intended incorrect statement.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "39": {
+      "working": "Over a full cycle ΔU = 0, so the net heat supplied equals the net work done, which is the area enclosed by the loop. The cycle runs clockwise, so this work is positive. W = (300 − 100) N/m² × (5 − 2) m³ = 200 × 3 = 600 J. As a check, heat absorbed only on d→a and a→b is 600 + 2250 = 2850 J, which is not an option. So 'total heat' here means the net heat, 600 J.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "40": {
+      "working": "For a circular orbit, the Coulomb force provides the centripetal force: mv² / r = ke² / r². So r = ke² / (mv²). Numerator: ke² = 9×10⁹ × (1.6×10⁻¹⁹)² = 9×10⁹ × 2.56×10⁻³⁸ = 2.304×10⁻²⁸. Denominator: mv² = 9×10⁻³¹ × 25.6×10¹⁰ = 2.304×10⁻¹⁹. Hence r = 1×10⁻⁹ m, so x = 1.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "41": {
+      "working": "Wear and tear on the tyres is least when no friction is needed, i.e. at the optimum banking speed. Then tanθ = v²/(rg) = 10²/(50×10) = 100/500 = 1/5, so θ = tan⁻¹(1/5).",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "42": {
+      "working": "D2's branch is open, so no current flows and D2 is unbiased; its depletion width W2 is the equilibrium value. D1 and D3 point in opposite directions, so one is forward biased (narrower depletion region) and the other reverse biased (wider). I could not clearly read the battery polarity in the figure, so this is the uncertain step. Assuming the left node is positive, current flows left to right through the top branch. Then D1 is forward biased (W1 < W2) and D3 is reverse biased (W3 > W2), giving W3 > W2 > W1. If the polarity were the other way, option 1 would be correct instead.",
+      "answer": 3,
+      "confidence": "low",
+      "_model": "claude-opus-5-5"
+    },
+    "43": {
+      "working": "Microwaves are used for warming food (P-II). UV rays are used for purifying water (Q-I). Gamma rays are used for treating cancer cells (R-IV). Radio waves are used for AM and FM communication (S-III). This matches option 3.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "44": {
+      "working": "In an elastic collision between equal masses the velocities exchange, so B leaves with v = 10 m/s. Since v² = 100 < 2gL = 200, B stays below the horizontal and the string remains taut. By energy conservation, h = v²/(2g) = 100/20 = 5 m.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "45": {
+      "working": "Translational modes give (3/2)R, rotational modes give (3/2)R, and each vibrational mode gives R (two quadratic terms). So Cv = (3+f)R and Cp = (4+f)R. Then gamma = (4+f)/(3+f) = 8/7. Cross-multiplying: 28+7f = 24+8f, so f = 4.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "46": {
+      "working": "Friedel–Crafts acylation of benzene with CH3COCl/AlCl3 gives acetophenone, C6H5COCH3. NaOCl then gives the haloform reaction, forming sodium benzoate (P) and CHCl3 (Q). Acidifying P gives benzoic acid. Chloroform oxidises in air and light to poisonous phosgene (COCl2), so option 3 is correct. Q is not an alcohol, so (1) fails. Chloroform is neither aromatic nor a carbonyl compound, so (2) and (4) fail.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "47": {
+      "working": "[Fe(ox)3]3- is a tris(bidentate) octahedral complex of type [M(AA)3]. It has D3 symmetry with no mirror plane, so it exists as Δ and Λ enantiomers and is chiral. Statement I is correct. In trans-[Cr(H2O)2(ox)2]-, the two oxalate ligands lie in one plane and the two water ligands are trans to each other. That equatorial plane is a mirror plane, so the complex is achiral. Statement II is incorrect.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "48": {
+      "working": "In the 1-phenylethyl cation, the empty p orbital on C+ accepts electron density in two ways. It overlaps with the filled C–H σ orbitals of the CH3 group (hyperconjugation). It also overlaps with the filled π orbitals of the benzene ring (resonance). Both donors are filled orbitals, so option 1 is correct.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "49": {
+      "working": "Potash alum is KAl(SO4)2·12H2O, equivalently K2SO4·Al2(SO4)3·24H2O. Per formula unit there is 1 K+ and 2 SO4^2- ions, so K+ : SO4^2- = 1:2.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "50": {
+      "working": "(1) is wrong: having two or more polypeptide subunits defines quaternary structure, not tertiary structure. (2) is wrong: many single-chain proteins with only a tertiary structure, such as myoglobin, are biologically active. (3) is correct: in a beta-pleated sheet, neighbouring peptide chains lie side by side and are held together by hydrogen bonds between chains, which the NCERT text calls intermolecular hydrogen bonds. (4) is wrong: the alpha-helix is a right-handed helix, not left-handed.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "51": {
+      "working": "This uses the NCERT significant-figure rule: when the digit dropped is exactly 5, leave the preceding digit unchanged if it is even, and increase it by 1 if it is odd. For 17.0145, the digit before the dropped 5 is 4, which is even, so it stays: 17.014. For 21.0235, the digit before the dropped 5 is 3, which is odd, so it becomes 4: 21.024.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "52": {
+      "working": "AgBr (1:1): s = √(5.0×10⁻¹³) ≈ 7.1×10⁻⁷ M. Zn(OH)₂ (1:2): 4s³ = 1.0×10⁻¹⁵, so s ≈ 6.3×10⁻⁶ M. Hg₂Cl₂ → Hg₂²⁺ + 2Cl⁻: 4s³ = 1.3×10⁻¹⁸, so s ≈ 6.9×10⁻⁷ M. Order of solubility: Zn(OH)₂ > AgBr > Hg₂Cl₂.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "53": {
+      "working": "The negative electron gain enthalpies (in kJ/mol) are approximately Cl −349, F −328, Br −325 and I −295. Chlorine is highest because fluorine's very small 2p shell causes strong repulsion between electrons, which reduces its value. Taking magnitude (negative electron gain enthalpy), the order is Cl > F > Br > I. Read as signed numbers, the order would be I > Br > F > Cl, which is not offered, so the magnitude reading is clearly intended.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "54": {
+      "working": "For an ideal solution, ΔmixH = 0 and ΔmixV = 0, so A is correct. In an ideal solution, P–Q interactions still exist. They are of the same strength as the P–P and Q–Q interactions; it is not that no interactions occur. So R is incorrect.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "55": {
+      "working": "Sodium fusion converts sulfur in an organic compound to Na2S (or NaSCN if nitrogen is also present). Na2S gives a coloured complex with sodium nitroprusside. The usual textbook colour is violet/purple; a blood-red colour is more typical of NaSCN with Fe3+. Either way, the test identifies a sulfur-containing amino acid. Methionine, CH3SCH2CH2CH(NH2)COOH, is the only option that contains sulfur. Leucine, threonine and serine have none.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "56": {
+      "working": "Use ΔG° = -nFE°, since E° values themselves are not additive but ΔG° values are. For Fe3+ + 3e- → Fe: ΔG° = -3F(-0.04) = +0.12F. For Fe2+ + 2e- → Fe: ΔG° = -2F(-0.44) = +0.88F. Subtracting the second from the first gives Fe3+ + e- → Fe2+, with ΔG° = 0.12F - 0.88F = -0.76F. With n = 1, E° = -ΔG°/F = +0.76 V.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "57": {
+      "working": "In acidic medium, oxalic acid has n-factor 2 (C2O4^2- → 2CO2) and KMnO4 has n-factor 5 (MnO4^- → Mn^2+). Equating milliequivalents: 10 × 0.25 × 2 = 10 × M × 5, so 5 = 50M and M = 0.10 M.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "58": {
+      "working": "The spectrochemical series in decreasing order of field strength is CO > CN⁻ > en > NH₃ > H₂O > OH⁻ > F⁻ > Cl⁻ > Br⁻ > I⁻. CO is the strongest because it is a π-acceptor, and NH₃ is stronger than H₂O. Restricting to the four ligands gives CO > NH₃ > H₂O > Cl⁻, which is option 1.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "59": {
+      "working": "Entropy is a state function, so use a reversible isothermal path: ΔS_sys = nR ln(V2/V1) = 2R ln(100/10) = 2R × 2.303 = 4.606R. Free expansion exchanges no heat with the surroundings (q = 0), so ΔS_surr = 0. Option (4).",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "60": {
+      "working": "For 2A → B, the rate of reaction is r = -(1/2) d[A]/dt = k (zero order), so d[A]/dt = -2k = -2 mol L^-1 min^-1. For 75% completion, A consumed = 0.75 × 2 = 1.5 M. Then t = 1.5/2 = 0.75 min. If k were instead defined directly as -d[A]/dt, t would be 1.5 min; the standard convention gives 0.75 min.",
+      "answer": 2,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "61": {
+      "working": "3d transition metals generally have high melting points (Zn, Cd and Hg are exceptions). This is because both (n-1)d electrons and ns electrons take part in interatomic metallic bonding, which makes the bonding strong. So A is true, R is true, and R correctly explains A.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "62": {
+      "working": "By Kohlrausch's law, Λm = Λ°m − A√c, where A = 90.0. At c = 0.01 M, √c = 0.1, so 145.0 = Λ°m − 90.0 × 0.1 = Λ°m − 9.0, giving Λ°m = 154.0 S cm² mol⁻¹. Then λ°(Y⁻) = Λ°m − λ°(X⁺) = 154.0 − 74.0 = 80.0 S cm² mol⁻¹.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "63": {
+      "working": "n-Butane is C4H10 with molar mass 4(12) + 10(1) = 58 g/mol, so 116 g = 2 mol. Combustion: 2C4H10 + 13O2 → 8CO2 + 10H2O, so 2 mol butane gives 8 mol CO2. Mass of CO2 = 8 × 44 = 352 g.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "64": {
+      "working": "From the plot, ln k = ln A − Ea/(RT) with intercept ln A = 6. For k = e² min⁻¹, ln k = 2. So Ea/(RT) = 6 − 2 = 4. Then T = 6640/(8.3 × 4) = 6640/33.2 = 200 K.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "65": {
+      "working": "With NaCl, MnO2 and conc. H2SO4, MnO2 oxidises Cl⁻ to Cl2 and is itself reduced (Mn +4 → +2, as MnSO4). So Mn is reduced, not oxidised, and Statement I is incorrect. With NaI, the same reaction gives I2 and MnSO4, so Mn is again reduced from +4 to +2. Statement II is correct.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "66": {
+      "working": "Mn3+ d4 low spin t2g4: 2 unpaired, μ≈2.83 BM. Fe3+ d5 low spin t2g5: 1 unpaired, 1.73 BM. Co3+ d6 low spin t2g6: 0 unpaired. Ti3+ d1: 1 unpaired, 1.73 BM. Highest is [Mn(CN)6]3-.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "67": {
+      "working": "Find each ion's 4f configuration and count unpaired electrons using Hund's rule (7 f orbitals).\n- Nd3+ (Z=60) is [Xe]4f3, so 3 unpaired.\n- Ce3+ (Z=58) is [Xe]4f1, so 1 unpaired.\n- Tb3+ (Z=65) is [Xe]4f8, so 8 - 2 = 6 unpaired.\n- Ho3+ (Z=67) is [Xe]4f10, so 14 - 10 = 4 unpaired.\nHo3+ is the only ion with four unpaired electrons.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "68": {
+      "working": "The name gives the ligands as tetraammine (4 NH3, neutral), aqua (1 H2O, neutral) and chlorido (1 Cl-). Cobalt is in the +3 state, so the complex ion charge is +3 + 4(0) + 0 + (-1) = +2. Two Cl- counter-ions are needed to balance it, giving [Co(NH3)4(H2O)Cl]Cl2, which is option 4.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "69": {
+      "working": "This is a Carnot cycle. Processes 1 and 3 are isothermal, and processes 2 and 4 are adiabatic. Work is taken as done on the gas, w = -∫p dV. For the isothermal steps: w1 = -RT1 ln(V2/V1) = -2T1 ln(V2/V1), and w3 = -2T2 ln(V4/V3). Option (1) is therefore correct. For the adiabatic steps q = 0, so w2 = ΔU2 and w4 = ΔU4 = -ΔU2. That gives w2 + w4 = 0, but ΔU2 - ΔU4 = 2ΔU2 ≠ 0, so (2) fails. Option (3) wrongly omits w2. Option (4) fails because the net work of a cycle equals the enclosed area, which is not zero.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "70": {
+      "working": "IE1 values: N ~1402, O ~1314, F ~1681 kJ/mol, so A is correct. O (2p4) loses one electron to give O+ (2p3), a stable half-filled p subshell; paired-electron repulsion in O is the same idea. So R is correct and explains why O's IE is lower than N's and F's.",
+      "answer": 1,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "71": {
+      "working": "A is true: an ideal solution obeys Raoult's law over the entire composition range. B is true: chloroform and acetone form H-bonds (Cl3C–H···O=C), so vapour pressure is lower than expected, giving negative deviation. C is false: phenol and aniline also form strong H-bonds (O–H···N), which also gives negative deviation, not positive. So A and B only are correct.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "72": {
+      "working": "A Grignard reagent is a strong base. It removes the acidic N–H proton of cyclohexylamine: C6H11MgBr + C6H11NH2 → C6H12 (cyclohexane) + C6H11NHMgBr. So one product is cyclohexane.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "73": {
+      "working": "B has only 2s and 2p valence orbitals (4 orbitals) and no d orbitals, so its maximum covalency is 4, as in [BF4]-. This makes (1) true. (2) is false: Be has 2s + 2p = 4 valence orbitals, not 3. (3) is false: Mg has 3d orbitals available, so its covalency can exceed 4 (up to 6). (4) is false: Al has 3s + 3p + 3d = 9 valence orbitals, not 5.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "74": {
+      "working": "Equal [N] and [D] at equilibrium means K = 1, so ΔG° = −RT ln K = 0. Then ΔH° = TΔS°. T = 60 + 273 = 333 K, so ΔS° = 666 kJ mol⁻¹ / 333 K = 2.0 kJ K⁻¹ mol⁻¹.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "75": {
+      "working": "PCl5 has 5 bond pairs and no lone pairs (sp3d), so it is trigonal bipyramidal (III). BrF5 has 5 bond pairs and 1 lone pair (sp3d2), so it is square pyramidal (IV). BF4- has 4 bond pairs on sp3 boron, so it is tetrahedral (I). [Ni(CN)4]2- is Ni2+ (d8) with strong-field CN-, giving dsp2 hybridisation, so it is square planar (II). Hence A-III, B-IV, C-I, D-II, which is option 2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "76": {
+      "working": "I: Br2 adds anti to trans-but-2-ene, so the product is meso-2,3-dibromobutane. In the drawn Br-anti conformation, H is anti to Me rather than to H. There is no centre of symmetry, so it shows the (±) chiral form and Statement I is incorrect. II: alkaline KMnO4 gives syn dihydroxylation of cis-but-2-ene, so the product is the meso diol. Rotating the back carbon of the drawn projection to make OH anti to OH puts H anti H and Me anti Me. That conformation is centrosymmetric, so the drawing is the meso diol and Statement II is correct.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "77": {
+      "working": "Na/liq. NH3 reduces the alkyne to the trans-alkene, so L is trans-PhCH=CHCH3. Lindlar's catalyst gives the cis-alkene, so K is cis-PhCH=CHCH3. K and L are therefore geometrical isomers. Ionic HBr addition to K goes through the benzylic carbocation, giving M = PhCHBrCH2CH3. Peroxide (radical) HBr addition to L goes through the benzylic radical, giving N = PhCH2CHBrCH3. M and N are position isomers, not stereoisomers or geometrical isomers. Only option 1 is correct.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "78": {
+      "working": "Facial and meridional isomerism occurs in octahedral complexes of the type MA3B3. [Cr(py)3Cl3] is of this type, so it shows fac and mer isomers. [Cr(H2O)6]3+ is MA6 and has no geometrical isomers. [Co(NH3)4(H2O)2]3+ is MA4B2 and shows only cis/trans isomerism. [Ni(en)2(H2O)2]2+ is M(AA)2B2 and also shows only cis/trans isomerism.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "79": {
+      "working": "A: LiAlH4 reduces PhCN to benzylamine (PhCH2NH2), not aniline. B: Hofmann bromamide degradation converts PhCONH2 to PhNH2 (aniline). C: NaBH4 does not reduce the nitro group to an amine. D: Acid hydrolysis of acetanilide gives aniline (as anilinium chloride, which gives aniline on workup). So B and D give aniline.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "80": {
+      "working": "Vitamin A comes from carrots (IV). Vitamin B12 comes from meat (I). Vitamin E comes from sunflower oil (II). Vitamin K comes from green leafy vegetables (III). So the matching is A-IV, B-I, C-II, D-III, which is option 2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "81": {
+      "working": "Option 1: P in P4O10 is +5 and S in SO3 is +6, so the order is not decreasing. Option 2: N in N2O5 is +5, Al in Al2O3 is +3 and S in H2S is -2, so +5 > +3 > -2 is a correct decreasing order. Option 3: Pb in PbO2 is +4, N in N2O3 is +3 and S in SO3 is +6, so it is not decreasing. Option 4: P in P4O6 is +3 and Cl in Cl2O7 is +7, so it is not decreasing.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "82": {
+      "working": "2,2-Dimethylcyclopentanone has α-H only at C-5. Crossed aldol with PhCHO gives the 5-benzylidene ketone. Both geometric isomers (E and Z, options 2 and 4) are possible products, though E is favoured. Self-aldol occurs when the C-5 enolate attacks a second ketone. Normal E1cB dehydration removes the α-H at C-5, giving the exocyclic, conjugated α,β-unsaturated product (option 3). Option 1 has its C=C inside the second ring, away from the carbonyl, so it is β,γ-unsaturated and unconjugated. That is not a product of aldol condensation. Option 4 (the Z-isomer) is the competing reading if 'cannot' means geometrically disfavoured.",
+      "answer": 1,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "83": {
+      "working": "Conjugated double bonds alternate with a single bond, so they sit at positions n and n+2. In hepta-1,3-diene the bonds are C1=C2 and C3=C4, separated by one single bond (C2–C3), so they are conjugated. The 1,4-, 1,5- and 1,6-dienes have one or more sp3 carbons between the double bonds, so they are isolated.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "84": {
+      "working": "I: Acidic KMnO4 oxidises the CH3 group, giving p-nitrobenzoic acid. Its pKa (~3.4) is lower than benzoic acid's (~4.2) because the -NO2 group withdraws electrons by -I and -M effects. So I is correct. II: Sn/HCl reduces -NO2 to -NH2, giving p-toluidine. The CH3 group donates electrons by +I and hyperconjugation, so p-toluidine (pKb ~8.9) is more basic than aniline (pKb ~9.4). So II is correct.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "85": {
+      "working": "On heating at 513 K, 2KMnO4 → K2MnO4 + MnO2 + O2. K2MnO4 (manganate) is green. It is paramagnetic because Mn(+6) is d1 with one unpaired electron. Mn3O4 is brownish-black, MnO is green-grey, and KO2 is yellow; none of these is the decomposition product.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "86": {
+      "working": "The Etard reaction (toluene + CrO2Cl2 in CS2, then H3O+) gives benzaldehyde, so P = PhCHO. Checking each option: (1) benzaldehyde is not an acid, so no effervescence with NaHCO3. (2) Friedel–Crafts acylation with CH3COCl gives acetophenone, not benzaldehyde. (3) The white precipitate with bromine water is characteristic of phenol, not benzaldehyde. (4) Rosenmund reduction of benzoyl chloride (H2, Pd/BaSO4) gives benzaldehyde, which is correct.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "87": {
+      "working": "Count the ionisable Cl⁻ outside the coordination sphere. (1) [CoCl2(NH3)4]Cl gives 1 cation + 1 Cl⁻, so it is 1:1. (2) [CoCl(NH3)5]Cl2 gives 1 cation + 2 Cl⁻, so it is 1:2. (3) [Co(NH3)6]Cl3 gives [Co(NH3)6]³⁺ + 3 Cl⁻, so it is 1:3. (4) [Co(NH3)3(NO2)3] is neutral and a non-electrolyte.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "88": {
+      "working": "Radial nodes are where Ψ crosses zero at r > 0. A (1s) never crosses, so it has 0 nodes. B (2s) crosses once, so 1 node. C (3s) goes positive, then negative, then positive, crossing zero twice, so 2 nodes. D (3p) starts at zero at r = 0, which is not a radial node, then crosses once, so 1 node. Only C has two radial nodes.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "89": {
+      "working": "Polarity is judged on the usual solvent-polarity (eluotropic) scale, which reflects hydrogen bonding and overall solvent polarity rather than dipole moment alone. Diethyl ether has only a weakly polar C–O–C group and is the least polar. Acetone has a polar C=O group but cannot donate hydrogen bonds. Ethanol has an O–H group and forms hydrogen bonds. Acetic acid has a –COOH group with strong hydrogen bonding and is the most polar. So the order is A < C < B < D, which is option 4. Caveat: by gas-phase dipole moment alone, acetone (about 2.9 D) exceeds ethanol (about 1.7 D). The question presumably intends the solvent-polarity scale.",
+      "answer": 4,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "90": {
+      "working": "Ne2 has 20 electrons in total, 16 of them valence (2s, 2p). For O2 onward the MO order is σ2s < σ*2s < σ2p < π2p < π*2p < σ*2p. The 16 valence electrons fill every one of these orbitals, so the last orbital filled, the HOMO, is σ*2p. Bond order = (8 − 8)/2 = 0.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "91": {
+      "working": "The adult human vertebral column has 26 vertebrae: 7 cervical, 12 thoracic, 5 lumbar, 1 sacrum (5 fused) and 1 coccyx (4 fused). The other options are distractors: 7 is the cervical count, 12 is the thoracic count, and 206 is the total number of bones in the skeleton.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "92": {
+      "working": "A lichen is a symbiotic association between a fungus (the mycobiont) and an alga (the phycobiont). Mycorrhiza is an association between a fungus and plant roots, not algae. Sponges are animals, and chrysophytes are a group of protists, so neither fits.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "93": {
+      "working": "Schleiden (1838, plants) and Schwann (1839, animals) jointly formulated the cell theory. Robert Brown discovered the nucleus. Singer and Nicolson proposed the fluid mosaic model of the membrane. Leeuwenhoek first observed live cells.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "94": {
+      "working": "Prokaryotes have 70S ribosomes made of 50S and 30S subunits, so (a) is true. Many bacteria carry plasmids, so (b) is true. Mesosomes are infoldings of the plasma membrane in prokaryotes, so (c) is true. Peroxisomes are membrane-bound organelles found only in eukaryotes, so (d) is false. The correct set is a, b and c.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "95": {
+      "working": "The meninges covering the brain and spinal cord (the CNS) are the dura mater, arachnoid and pia mater. The pericardium is the membrane around the heart, so it is not part of the central neural system.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "96": {
+      "working": "The mitochondrion has two membranes. The inner membrane is folded into cristae and encloses the matrix, which holds the TCA-cycle enzymes, mtDNA and ribosomes. Cytosol lies outside the organelle. Mucus and aqueous humor are extracellular fluids, so they do not fit.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "97": {
+      "working": "Cristae are the infoldings of the inner mitochondrial membrane (A-II). Cisternae are the flat, disc-shaped sacs of the Golgi apparatus (B-IV). Thylakoids are the flat membrane sacs in the stroma of the chloroplast (C-I). Phospholipids are the main lipid component of the cell membrane (D-III). This matches option 2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "98": {
+      "working": "Chromoplasts contain fat-soluble carotenoid pigments such as carotene and xanthophyll, which give yellow, orange or red colours. Chloroplasts mainly contain chlorophyll, aleuroplasts store protein, and amyloplasts store starch.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "99": {
+      "working": "(a) Correct: the pituitary is divided anatomically into the adenohypophysis and the neurohypophysis. (b) Correct: the anterior pituitary secretes FSH. (c) Correct: the pars intermedia secretes MSH. (d) Wrong: the pituitary does secrete prolactin. So a, b and c are correct.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "100": {
+      "working": "In photorespiration, RuBisCO acts as an oxygenase and adds O2 to RuBP (a 5C compound). This splits it into one molecule of 3-phosphoglycerate (3C) and one molecule of 2-phosphoglycolate (2C). PEP, oxaloacetate and malate belong to C4/CAM carbon fixation, not to this reaction. So X is 2-phosphoglycolate.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "101": {
+      "working": "Mad cow disease (bovine spongiform encephalopathy) is caused by prions, which are misfolded infectious proteins. Viroids are naked RNA that infect plants. Aspergillus is a fungus and Mycoplasma is a bacterium, so neither causes BSE.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "102": {
+      "working": "The reaction centre of PS I is P700, a specialised chlorophyll a molecule (a dimer) that absorbs maximally at 700 nm. Chlorophyll b, xanthophylls and carotenoids are accessory pigments that only harvest light and pass the energy on to the reaction centre.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "103": {
+      "working": "Frogs respire through the skin when in water (cutaneous respiration). On land, they use the buccal cavity, skin and lungs. Trachea is found in insects, not frogs. So the answer is skin.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "104": {
+      "working": "Going from proximal to distal in the human lower limb: the femur (thigh) comes first. The patella (kneecap) lies at the knee joint, in front of the femur–tibia articulation. Below the knee is the tibia (with the fibula), followed by the tarsals of the ankle, then metatarsals and phalanges. This gives the order femur → patella → tibia → tarsal, which matches option 3.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "105": {
+      "working": "Phyllotaxy (Greek phyllon = leaf, taxis = arrangement) is the pattern in which leaves are arranged on the stem or branch: alternate, opposite or whorled. Flowers on the floral axis are described by inflorescence. Sepals are described by aestivation, which is the arrangement of floral parts in the bud.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "106": {
+      "working": "Starch is a storage polysaccharide (II). Antibodies fight infection (I). Concanavalin A is a lectin (IV). GLUT-4 is the insulin-responsive glucose transporter (III). So A-II, B-I, C-IV, D-III, which is option 2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "107": {
+      "working": "Statement I matches the NCERT definition of radial symmetry: any plane through the central axis divides the body into identical halves, so it is correct. Statement II is wrong because echinoderm adults are radially symmetrical but their larvae are bilaterally symmetrical. So I is correct and II is incorrect.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "108": {
+      "working": "The endomembrane system is the set of organelles whose functions are coordinated: endoplasmic reticulum, Golgi complex, lysosomes and vacuoles. Mitochondria, chloroplasts and peroxisomes are not part of it because their functions are not coordinated with these organelles. Every option except (1) includes one of these excluded organelles, so (1) is the answer.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "109": {
+      "working": "In glycolysis, one glucose molecule (6C) is split into two pyruvic acid molecules (3C each). So 206 glucose molecules give 206 × 2 = 412 pyruvic acid molecules.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "110": {
+      "working": "2,4-D (2,4-dichlorophenoxyacetic acid) is a synthetic auxin. It is used widely to kill dicotyledonous weeds and does not affect mature monocot crops. Kinetin is a cytokinin, ABA is a growth inhibitor, and gibberellin promotes growth. None of these three is used as a herbicide.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "111": {
+      "working": "Statement I matches NCERT: in gymnosperms the male and female gametophytes have no independent free-living existence and remain within the sporangia retained on the sporophyte. Statement II is also true: gymnosperm ovules are not enclosed in an ovary, so the seeds are naked. Both statements are correct.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "112": {
+      "working": "Spherical bacteria are cocci (A-II). Rod-shaped bacteria are bacilli (B-IV). Comma-shaped bacteria are vibrio (C-I). Spiral bacteria are spirilla (D-III). This matches option 4.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "113": {
+      "working": "In Solanaceae the flowers are bisexual and actinomorphic, so (a) is true. The calyx has five united sepals and is persistent, so (b) is true. The androecium has five epipetalous stamens, so (c) is true. The ovary is bicarpellary, syncarpous and superior, not inferior, so (d) is false. The correct statements are (a), (b) and (c), which is option 1.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "114": {
+      "working": "The order follows the historical experiments. Priestley (1770s) used a bell jar, candle and mouse to show the role of air. Ingenhousz showed that green parts release oxygen in sunlight. Sachs (1854) showed glucose is produced, stored as starch. Engelmann's prism experiment was the forerunner of the absorption/action spectra for chlorophyll a and b, which came later. So: role of air → release of oxygen → production of glucose → absorption spectra.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "115": {
+      "working": "The SA node is the pacemaker. Per NCERT, it generates the maximum number of action potentials, about 70-75 per minute. This sets the normal heart rate of about 72 beats per minute.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "116": {
+      "working": "Each turn of the Calvin cycle fixes one CO2. One glucose has 6 carbons, so it needs 6 turns. Three glucose molecules therefore need 3 × 6 = 18 turns.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "117": {
+      "working": "Injury triggers coagulation (1 is correct). A clot is a mesh of fibrin threads trapping blood cells (2 is correct). Thrombin converts soluble fibrinogen into insoluble fibrin (3 is correct). Statement 4 reverses this direction, since fibrinogen is the precursor of fibrin and is made in the liver, so 4 is incorrect.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "118": {
+      "working": "Mango taxonomy: Family = Anacardiaceae (III), Genus = Mangifera (V), Class = Dicotyledonae (II), Division/Phylum = Angiospermae (IV), Order = Sapindales (I). This gives A-III, B-V, C-II, D-IV, E-I, which is option 4.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "119": {
+      "working": "Ascending order means from the lowest to the highest taxonomic rank: Species → Genus → Family → Order → Class → Phylum → Kingdom. In letters this is g, a, e, c, b, d, f, which matches option 1.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "120": {
+      "working": "Marginal placentation is seen in pea (A-IV). Axile placentation is seen in tomato (B-II). Parietal placentation is seen in Argemone (C-I). Free central placentation is seen in primrose (D-III). This combination matches option 4.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "121": {
+      "working": "NCERT divides pteridophytes into four classes: Psilopsida, Lycopsida, Sphenopsida (e.g., Equisetum) and Pteropsida. So Sphenopsida is a class of pteridophytes.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "122": {
+      "working": "Photorespiration does occur in C3 plants, so (a) is false. During photorespiration O2 is consumed and CO2 is released, which is the reverse of (b), so (b) is false. RuBisCO acting as an oxygenase forms phosphoglycolate, so (c) is true. Photorespiration produces no ATP or NADPH, so (d) is true. The correct statements are (c) and (d), which is option 2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "123": {
+      "working": "Smooth ER has no ribosomes on its surface, so option 1 is wrong. Protein synthesis takes place on the rough ER, so option 3 is wrong. Carbohydrate synthesis is not its main role (glycosylation occurs in the Golgi), so option 4 is wrong. Smooth ER is the major site of lipid synthesis, including steroidal hormones in animal cells.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "124": {
+      "working": "Glucagon is secreted by the alpha cells of the pancreatic islets, and it stimulates glycogenolysis. Insulin is secreted by the beta cells. So statements 1, 3 and 4 are correct. Statement 2 says alpha cells secrete insulin, which is false.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "125": {
+      "working": "In the taxonomic hierarchy, a genus is a group of closely related species that share many common features, e.g. Panthera includes leo and tigris. Option 1 describes an organism and option 2 a population, so neither is a genus. Option 4 describes an order, since an order groups related families.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "126": {
+      "working": "Bacteria, blue-green algae (cyanobacteria) and Mycoplasma are all prokaryotes, since they lack a membrane-bound nucleus. Fungi have a true nucleus and membrane-bound organelles, so they are eukaryotes.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "127": {
+      "working": "Bolting is the elongation of internodes just before flowering in rosette plants such as cabbage and beet. It is promoted by gibberellins (GA). ABA is a growth inhibitor, IBA is an auxin used for rooting, and ethephon releases ethylene.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "128": {
+      "working": "The cell cycle order is G1 (growth), then S (DNA synthesis), then G2 (preparation for division), then M (mitosis). This sequence is G1-S-G2-M, which matches option 3.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "129": {
+      "working": "Fusion of the protoplasms of two gametes is plasmogamy (A-II). Fusion of the two nuclei is karyogamy (B-III). Haploid spores are produced by meiosis (C-I). This gives A-II, B-III, C-I, which is option 1.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "130": {
+      "working": "Reptilia derives from Latin 'repere' meaning to creep/crawl, so Statement I is correct. Reptiles usually have a three-chambered heart, but crocodiles have a four-chambered heart, so 'all' makes Statement II incorrect.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "131": {
+      "working": "Statement I is true: in diakinesis, the last stage of prophase I, chiasmata terminalise and chromosomes become fully condensed as the spindle assembles (NCERT). Statement II is false: meiosis II resembles mitosis. Meiosis I is the reductional division, in which homologous chromosomes pair, cross over and separate.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "132": {
+      "working": "The fundamental chordate features are a notochord, a dorsal hollow nerve cord, paired pharyngeal gill slits and a post-anal tail. Options 1, 2 and 4 are therefore true chordate characters. Gill slits are present at least in the embryo, so 'absence of gills' is not a chordate characteristic.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "133": {
+      "working": "Arithmetic growth: Lt = L0 + r·t. With L0 = 20 cm, r = 30 cm/day and t = 7 days: Lt = 20 + 30 × 7 = 20 + 210 = 230 cm.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "134": {
+      "working": "By percentage of body weight, oxygen is about 65% (mostly in water) and carbon about 18.5%. Hydrogen is about 9.5% and nitrogen about 3.3%. Descending order: O > C > H > N, which matches option 1. Caveat: the NCERT table lists hydrogen as 0.5%, which would give O > C > N > H, but no option has that order. The real value is about 9.5%.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "135": {
+      "working": "Frogs, like fishes and other amphibians, have 10 pairs of cranial nerves arising from the brain, as stated in NCERT. Reptiles, birds and mammals have 12 pairs.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "136": {
+      "working": "Streptokinase, produced by Streptococcus, is a 'clot buster': it dissolves blood clots in patients with myocardial infarction. Penicillin is an antibiotic. Cyclosporin A is an immunosuppressant used in organ transplants. Statins are blood-cholesterol-lowering agents.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "137": {
+      "working": "NCERT says Bt protoxin crystals are inactive. In the insect gut, the alkaline pH solubilises the crystals and converts them to the active toxin. The toxin then binds midgut epithelial cells and creates pores, causing lysis and death. Gut proteases also help in reality, but the NCERT-based answer is alkaline pH.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "138": {
+      "working": "Down's syndrome is trisomy 21, an extra copy of chromosome 21, not the absence of an X chromosome, so Statement I is incorrect. Turner's syndrome is 45,X0, the absence of one X chromosome, not an additional copy, so Statement II is incorrect. Both statements are incorrect.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "139": {
+      "working": "Syphilis (Treponema pallidum), gonorrhoea (Neisseria gonorrhoeae) and genital warts (human papillomavirus) are all sexually transmitted infections. Tuberculosis (Mycobacterium tuberculosis) spreads by airborne droplets, so it is not an STD.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "140": {
+      "working": "Sperm cells swim by beating their tail. The tail is a flagellum with a 9+2 axoneme, driven by ATP-powered dynein arms, so sperm motility is flagellar movement. Ciliary movement belongs to cells such as those lining the fallopian tube. Amoeboid movement is seen in macrophages and leucocytes.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "141": {
+      "working": "Natural selection can act in three ways: stabilising, directional, and disruptive. Genetic drift is a chance change in allele frequencies, not a result of natural selection. So the correct statements are (a), (c) and (d).",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "142": {
+      "working": "ICSI is the technique in which a single sperm is injected directly into the cytoplasm of the ovum to form an embryo in the lab. GIFT transfers gametes into the fallopian tube, ZIFT transfers the zygote into the fallopian tube, and ET is the general transfer of an embryo. None of these involve injecting sperm into the ovum.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "143": {
+      "working": "Rete testis, vasa efferentia and epididymis are all male accessory ducts. The infundibulum is the funnel-shaped part of the fallopian tube near the ovary, so it belongs to the female reproductive system.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "144": {
+      "working": "NCERT figures for the Amazon: invertebrates ~1,25,000 species, plants ~40,000, fishes ~3,000, birds ~1,300 and mammals ~427. So the descending order is d > a > c > b > e, which is option 2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "145": {
+      "working": "Statement I is correct: the mid-cycle LH surge induces rupture of the Graafian follicle and release of the secondary oocyte. Statement II is incorrect: the remaining follicle does become the corpus luteum, but per NCERT it secretes large amounts of progesterone, not estrogen. Progesterone maintains the endometrium.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "146": {
+      "working": "Primary consumers feed directly on producers (plants), so they are herbivores. Predators and carnivores feed on other animals, which makes them secondary or higher consumers. Parasites can live at any trophic level. The answer is option 3, Herbivores.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "147": {
+      "working": "In Hardy-Weinberg equilibrium the AA genotype frequency is p^2. With p = 0.1, p^2 = 0.1 × 0.1 = 0.01, which is option 1.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "148": {
+      "working": "Excess growth hormone in adults causes acromegaly (A-III). LH induces ovulation (B-IV). Vasopressin (ADH) promotes reabsorption of water and electrolytes in the kidney (C-I). Oxytocin causes contraction of the uterus during childbirth (D-II). This matches option 2.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "149": {
+      "working": "The opening between the right atrium and right ventricle is guarded by the tricuspid valve, which has three cusps. The bicuspid (mitral) valve guards the left atrioventricular opening. Semilunar valves sit at the bases of the aorta and pulmonary artery. The SA node is the pacemaker, not a valve.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "150": {
+      "working": "Sponges (phylum Porifera) are lower invertebrates with no specialised respiratory structures. Water flowing through the canal system carries dissolved O2, which diffuses into body cells, while CO2 diffuses out. Gas exchange therefore happens by simple diffusion over the entire body surface. Moist cuticle is used by earthworms, tracheal tubes by insects, and gills by aquatic arthropods, molluscs and fishes.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "151": {
+      "working": "A typical angiosperm anther is bilobed, and each lobe is dithecous, meaning it has two theca. So there are 2 theca per lobe (4 microsporangia per anther). The other options (6, 8, 12) look like totals from a different version of the question.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "152": {
+      "working": "Muscle contraction begins when a motor neuron from the CNS reaches the neuromuscular junction. There it releases the neurotransmitter acetylcholine, which depolarises the sarcolemma. Acetyl CoA is a metabolic intermediate, and cGMP and cAMP are second messengers, so none of them is the initiating signal.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "153": {
+      "working": "The i gene has its own promoter and is expressed constitutively, so the repressor is always being made, which makes (1) correct. Lactose (as allolactose) inactivates the repressor rather than activating it, so (2) is wrong. The i gene has a separate promoter, so z, y and a do not share one promoter with i, and (3) is wrong. The inducer is lactose/allolactose, not galactose, so (4) is wrong.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "154": {
+      "working": "Synergids have a cellular thickening at the micropylar tip called the filiform apparatus. It secretes chemoattractants that guide the pollen tube into the synergid, so the sperm can reach the egg. Antipodals, the central cell and the polar nuclei have no role in guiding the pollen tube.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "155": {
+      "working": "Non-albuminous (exalbuminous) seeds have no residual endosperm because the cotyledons absorb it during development. Pea is a legume with this kind of seed. Wheat, maize and barley are cereals, and their seeds keep the endosperm, so they are albuminous.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "156": {
+      "working": "In a typical angiosperm the endosperm is triploid (3n), formed when one male gamete (n) fuses with two polar nuclei (n + n). Diploid 2n = 36 gives n = 18, so the endosperm has 3n = 3 × 18 = 54 chromosomes.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "157": {
+      "working": "Per NCERT, the descending limb is permeable to water but almost impermeable to electrolytes, so (a) is correct. Water leaves the descending limb, so the filtrate becomes concentrated as it moves down; the key treats (b) as correct. The ascending limb transports electrolytes actively or passively, so (d) is correct. NCERT says reabsorption in Henle's loop is minimal, which is why (c) is likely meant to be excluded. Only option 4 contains (a), (b) and (d).",
+      "answer": 4,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "158": {
+      "working": "Going from head to toe, the vertebral column runs: cervical (7), then thoracic (12), then lumbar (5), then sacrum (fused), then coccyx. Option 4 is the only one that lists these in that order.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "159": {
+      "working": "Fossil records (paleontology), homologous forelimbs (divergent evolution) and analogous wings (convergent evolution) are all accepted evidence for evolution. Haeckel's embryological support, based on his recapitulation idea, was disapproved by Karl Ernst von Baer, as stated in NCERT. So option 3 is not accepted evidence.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "160": {
+      "working": "Per NCERT, Homo sapiens arose in Africa, not Australia, and then moved across continents, so Statement I is incorrect. NCERT also states that modern Homo sapiens arose during the ice age, between 75,000 and 10,000 years ago, so Statement II is correct. Statement II omits the word 'modern', which leaves a small ambiguity, but it matches the NCERT line closely.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "161": {
+      "working": "Intrinsic rate r = b − d = 0.002 − 0.002 = 0. So dN/dt = rN = 0 and the population stays constant. After 10 generations N = 10 million.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "162": {
+      "working": "PCR has three steps: denaturation (about 94°C) separates the two DNA strands, annealing (about 50–65°C) lets the primers bind to complementary sequences on the single strands, and extension (72°C) is where Taq polymerase lengthens the primers. Ligation is not a PCR step. So primer binding happens during annealing.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "163": {
+      "working": "Per NCERT, DNA lies inside membranes, so cells must be broken open to release it. Lysozyme digests the bacterial cell wall, cellulase digests the plant cell wall and chitinase digests the fungal cell wall, so A is correct. R is also correct, since isolating genetic material requires disrupting cells. R explains why these enzymes are used, which points to option 1. This also matches my recollection of the answer key, though I am not certain of it.",
+      "answer": 1,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "164": {
+      "working": "Adaptive radiation happens within each group, which is divergent evolution. The question, however, asks about the similarity between distantly related species: placental mammals and Australian marsupials evolved similar forms (e.g., placental wolf and Tasmanian wolf) in similar habitats. Unrelated lineages becoming alike is convergent evolution.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "165": {
+      "working": "Primary lymphoid organs are the bone marrow and thymus, where lymphocytes are formed and mature. Secondary lymphoid organs are the spleen, tonsils, lymph nodes, Peyer's patches and MALT, where mature lymphocytes meet antigens. So (b) tonsils and (c) spleen are secondary.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "166": {
+      "working": "The human placenta secretes hCG, hPL, estrogens, progesterone and relaxin. LH comes from the anterior pituitary, not the placenta.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "167": {
+      "working": "In eukaryotes, RNA polymerase I transcribes rRNAs (28S, 18S, 5.8S). RNA polymerase III transcribes tRNA, 5S rRNA and snRNAs. RNA polymerase II transcribes the precursor of mRNA, called heterogeneous nuclear RNA (hnRNA). DNA polymerase makes DNA, not RNA.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "168": {
+      "working": "Plasmids are circular, extrachromosomal DNA molecules found in bacteria. They carry their own origin of replication (ori), so they replicate autonomously, independently of the chromosomal DNA. Statement I is therefore correct, and Statement II is also correct.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "169": {
+      "working": "Blood group O requires genotype ii, so each parent must pass on an i allele. In option 4 the father is I^A I^B and carries no i, so he cannot contribute one and an O child is impossible. In options 1, 2 and 3 both parents carry i, so each cross can produce ii (probability 1/4).",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "170": {
+      "working": "Human and bat forelimbs are homologous: they share the same basic bone plan (humerus, radius-ulna, carpals, metacarpals, phalanges) and the same developmental origin, but serve different functions. So A is true. R is also true. Similar anatomical structure is the basis on which organs are called homologous. In the NCERT framing, R therefore explains A, though strictly homology also rests on common ancestry.",
+      "answer": 1,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "171": {
+      "working": "Colostrum is the yellowish milk secreted in the first few days of lactation. Per NCERT, it carries abundant antibodies, mainly IgA, which give the newborn passive immunity. IgG is the class that crosses the placenta, not the one enriched in colostrum.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "172": {
+      "working": "NCERT (Organisms and Populations, competition) states that the Abingdon tortoise in the Galapagos Islands became extinct within a decade after goats were introduced, apparently because the goats browsed more efficiently. A is correct and R is correct. R explains A, since this is a case of interspecific competition for food.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "173": {
+      "working": "At ovulation the released secondary oocyte is enclosed by its glycoprotein coat, the zona pellucida, with corona radiata cells outside it. The endometrium lines the uterus, and the chorion is an extra-embryonic membrane formed after fertilisation, so neither fits. 'Zona radiata' is sometimes used as a synonym for the zona pellucida, which causes some ambiguity. The standard intended answer is zona pellucida.",
+      "answer": 3,
+      "confidence": "medium",
+      "_model": "claude-opus-5-5"
+    },
+    "174": {
+      "working": "A: both harmed (-/-) = Competition (III). B: one harmed, other benefited (+/-) = Predation (I). C: both benefited (+/+) = Mutualism (II). D: one benefited, other unaffected (+/0) = Commensalism (IV). So A-III, B-I, C-II, D-IV, which is option 4.",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "175": {
+      "working": "In Mendel's monohybrid cross, true-breeding tall (TT) × dwarf (tt) gives an F1 that is all Tt. All F1 plants are tall because tall (T) is dominant and masks the recessive dwarf allele (t). So A is correct, R is correct, and R explains A.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "177": {
+      "working": "Morphine is an opioid obtained from the latex of the poppy (Papaver somniferum). It acts as an effective sedative and painkiller and is used for patients after surgery. Interferons are antiviral proteins, antibiotics act against bacteria, and anti-retroviral drugs are used against HIV, so none of these is a sedative or painkiller.",
+      "answer": 3,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "178": {
+      "working": "(a) Correct: energy flows one way, from producers to consumers, and is not recycled. (b) Correct: some energy is lost as heat at each trophic level, so the energy pyramid is always upright and can never be inverted. (c) Incorrect: transfer between trophic levels follows Lindeman's 10% law, not a 1% law. So (a) and (b) only.",
+      "answer": 2,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "179": {
+      "working": "In humans, Plasmodium multiplies only asexually: schizogony occurs in liver cells and in RBCs. Gametocytes form inside human RBCs, not in the mosquito, so options 1–3 are wrong. Gametes form and fuse to give a zygote in the female Anopheles gut (stomach).",
+      "answer": 4,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    },
+    "180": {
+      "working": "Transformation is the transfer of DNA into a host bacterium (A-II). A cloning site is a recognition site for a restriction enzyme (B-I). Selection of transformants uses an antibiotic resistance marker (C-IV). Ori is the origin of replication (D-III). This matches option 1.",
+      "answer": 1,
+      "confidence": "high",
+      "_model": "claude-opus-5-5"
+    }
+  }
+}

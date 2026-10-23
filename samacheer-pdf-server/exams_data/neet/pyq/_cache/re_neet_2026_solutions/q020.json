@@ -1,0 +1,19 @@
+{
+  "key_concept": "Index correction (index error) arises when the actual distance between two uprights on an optical bench, as measured with a separate scale or index rod, differs from the distance read off the bench scale. It is applied to object and image distances when measuring focal length.",
+  "steps": [
+    "On an optical bench, the positions of the object needle, lens/mirror and image needle are read from the bench scale using the index marks on the uprights.",
+    "The index marks may not line up with the actual tips of the needles or the pole/optical centre. The bench reading $x_{bench}$ then differs from the true separation $x_{true}$, measured directly with a knitting needle (index rod).",
+    "Index correction $= x_{true} - x_{bench}$. It is added algebraically to every observed $u$ and $v$ before using $\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u}$ (lens) or $\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}$ (mirror).",
+    "Meter bridge: the error there is end error, from the extra resistance at the ends of the wire. It is removed by interchanging the resistances, not by index correction.",
+    "Simple pendulum: corrections there concern the effective length (adding the bob radius) and zero error of the vernier, not index correction.",
+    "Resonance tube: the correction there is the end correction $e = 0.3d$ (or $0.6r$), applied at the open end of the air column.",
+    "Hence only the optical bench experiment needs index correction."
+  ],
+  "final_answer": "Option (3): Measurement of focal length of lenses using optical bench",
+  "why_not_others": "The resonance tube needs end correction and the meter bridge has end error. Both sound similar to 'index correction' but are different corrections. The simple pendulum needs only length and zero-error corrections.",
+  "common_trap": "Students confuse 'end correction' in the resonance tube, or 'end error' in the meter bridge, with 'index correction' and pick option (4) or (1).",
+  "time_saving_tip": "Remember the pairing: optical bench → index correction, resonance tube → end correction, meter bridge → end error.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

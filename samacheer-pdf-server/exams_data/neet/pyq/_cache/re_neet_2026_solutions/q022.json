@@ -1,0 +1,16 @@
+{
+  "key_concept": "For near-normal viewing across a single plane surface, apparent depth $= \\text{real depth} \\times \\dfrac{n_{\\text{observer}}}{n_{\\text{object}}}$.",
+  "steps": [
+    "The object $O$ is at the centre of the 5 cm slab $Q$. Its real distance from each face is $\\dfrac{5}{2} = 2.5$ cm.",
+    "Viewing from $P$ means one refraction at the $Q$–$P$ face: $h_1 = 2.5 \\times \\dfrac{n_P}{n_Q} = 2.5 \\times \\dfrac{1}{1.25} = 2$ cm. The image appears closer, since light goes into a rarer medium.",
+    "Viewing from $R$ means one refraction at the $Q$–$R$ face: $h_2 = 2.5 \\times \\dfrac{n_R}{n_Q} = 2.5 \\times \\dfrac{1.5}{1.25} = 3$ cm. The image appears farther, since light goes into a denser medium.",
+    "Therefore $|h_1 - h_2| = |2 - 3| = 1$ cm."
+  ],
+  "final_answer": "Option (2): 1",
+  "why_not_others": "Option (1) comes from using real/n for both sides, which ignores that viewing from the denser medium $R$ increases the apparent depth. Option (3) or (4) comes from using the full 5 cm thickness instead of 2.5 cm, or from comparing with the real depth.",
+  "common_trap": "Students often apply the formula $\\text{apparent} = \\text{real}/n$ blindly from both sides. Doing so gives a smaller depth even when viewing from the denser medium $R$, where the depth should actually look larger.",
+  "time_saving_tip": "Use $h_1 - h_2 = d\\,\\dfrac{n_P - n_R}{n_Q}$ directly: $|2.5 \\times (1 - 1.5)/1.25| = 1$ cm.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

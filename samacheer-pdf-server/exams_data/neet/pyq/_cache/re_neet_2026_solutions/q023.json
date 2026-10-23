@@ -1,0 +1,19 @@
+{
+  "key_concept": "Total linear momentum is the vector sum $\\vec P = m\\vec v_1 + m\\vec v_2$; for symmetric motion the components along one axis cancel and the others add.",
+  "steps": [
+    "Take the particle moving clockwise at angle $\\theta$. Its position is $(\\cos\\theta, \\sin\\theta)$ and $\\theta$ decreases with angular speed $\\omega$. Its velocity is $\\vec v_1 = \\omega(\\sin\\theta,\\,-\\cos\\theta)$ (radius $=1$).",
+    "By symmetry the other particle is at angle $\\pi-\\theta$, with position $(-\\cos\\theta, \\sin\\theta)$. Its velocity is $\\vec v_2 = \\omega(-\\sin\\theta,\\,-\\cos\\theta)$.",
+    "With $m=1$, $\\vec P = \\vec v_1 + \\vec v_2 = (0,\\,-2\\omega\\cos\\theta)$. The horizontal components cancel and the vertical components add.",
+    "So $|\\vec P| = 2\\omega\\cos\\theta$ for $\\theta$ from $\\pi/2$ to $-\\pi/2$.",
+    "At $\\theta = \\pi/2$ (point A), $P = 0$ because the velocities are equal and opposite.",
+    "At $\\theta = 0$, $P = 2\\omega$, which is the maximum because both velocities point straight down.",
+    "At $\\theta = -\\pi/2$ (point B), $P = 0$ again. The curve is a cosine dome, which is graph (3)."
+  ],
+  "final_answer": "Option (3): $P$ starts at zero at $\\pi/2$, rises in a dome-like arc to a maximum in the middle, and returns to zero at $-\\pi/2$.",
+  "why_not_others": "Option (1) adds speeds rather than velocity vectors, and option (2) inverts the result because at A and B the velocities are antiparallel, so $P=0$ there. Option (4) is linear and nonzero at A, but $P\\propto\\cos\\theta$ is zero at both ends.",
+  "common_trap": "Adding the magnitudes of the momenta ($2m\\omega R$, constant) instead of adding the vectors, which leads to option (1).",
+  "time_saving_tip": "Check just three points. At A and B the velocities are opposite, so $P=0$. At $\\theta=0$ both velocities point downward, so $P$ is maximum. Only graph (3) fits.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}

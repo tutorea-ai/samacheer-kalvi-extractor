@@ -1,0 +1,18 @@
+{
+  "key_concept": "Find each constant's dimensions from its defining law ($E=\\sigma T^4$, $E=k_BT$, $\\lambda_mT=b$) and then combine the powers.",
+  "steps": [
+    "Stefan–Boltzmann law: $\\dfrac{P}{A}=\\sigma_s T^4$. So $[\\sigma_s]=\\dfrac{[ML^2T^{-3}]}{[L^2][K^4]}=[MT^{-3}K^{-4}]$.",
+    "Boltzmann constant: energy $=k_BT$. So $[k_B]=\\dfrac{[ML^2T^{-2}]}{[K]}=[ML^2T^{-2}K^{-1}]$, which gives $[k_B^{-1}]=[M^{-1}L^{-2}T^{2}K]$.",
+    "Wien's law: $\\lambda_m T=b$. So $[b]=[LK]$.",
+    "Multiply the three: $[\\sigma_s k_B^{-1} b]=[MT^{-3}K^{-4}]\\,[M^{-1}L^{-2}T^{2}K]\\,[LK]$.",
+    "Add the powers of each base quantity: $M^{1-1}=M^0$, $L^{-2+1}=L^{-1}$, $T^{-3+2}=T^{-1}$, $K^{-4+1+1}=K^{-2}$.",
+    "Result: $[L^{-1}T^{-1}K^{-2}]$."
+  ],
+  "final_answer": "Option (1): $[L^{-1}T^{-1}K^{-2}]$",
+  "why_not_others": "Option (3) comes from forgetting the $K$ supplied by $b$, and option (4) from treating $k_B^{-1}$ as if it carried no temperature. Option (2) drops the $T^{-1}$, which appears when $\\sigma_s$ is wrongly taken as energy per area instead of power per area.",
+  "common_trap": "Students often write $[\\sigma_s]$ using energy instead of power per unit area, or forget that $k_B^{-1}$ contributes $K^{+1}$.",
+  "time_saving_tip": "Track only $L$, $T$ and $K$. Mass cancels between $\\sigma_s$ and $k_B$, so for $K$ just compute $-4+1+1=-2$ and then match the option.",
+  "agrees_with_key": true,
+  "key_check_note": null,
+  "_model": "claude-opus-5-5"
+}
