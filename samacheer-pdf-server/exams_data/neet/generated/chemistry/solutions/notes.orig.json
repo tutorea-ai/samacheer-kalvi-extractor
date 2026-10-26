@@ -1,0 +1,385 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u05",
+  "unit_no": 5,
+  "unit_name": "Solutions",
+  "slug": "solutions",
+  "overview": "This unit covers how to express solution concentration, how a solute changes the vapour pressure of a solvent (Raoult's law), and how real solutions deviate from ideal behaviour. It then treats colligative properties and their use in finding molar masses, including abnormal values explained by the van't Hoff factor. NEET asks 2-3 questions from it almost every year, usually short numericals on $\\Delta T_f$, $\\Delta T_b$, $\\pi$ and $i$, plus conceptual statement or assertion questions on ideal and non-ideal solutions.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Concentration tells how much solute is present in a given amount of solution or solvent. Molarity ($M$) is moles of solute per litre of solution. It changes with temperature because volume expands or contracts on heating. Molality ($m$) is moles of solute per kilogram of solvent. Mole fraction ($x$) is the ratio of moles of one component to total moles. Mass percentage is grams of solute per 100 g of solution. Molality, mole fraction, mass percentage and ppm (parts per million, used for trace amounts) all depend only on mass or moles, so they are temperature independent. This is why colligative property expressions use molality. To convert between molarity and molality you need the density of the solution. In a binary mixture the mole fractions always add up to 1.",
+      "key_points": [
+        "Molarity depends on temperature; molality, mole fraction, mass percent and ppm do not",
+        "The sum of mole fractions of all components equals 1",
+        "Molality uses mass of solvent only, not mass of solution",
+        "Volume percent and mass by volume percent depend on temperature",
+        "Converting molarity to molality requires the solution density"
+      ],
+      "formulas": [
+        {
+          "formula": "$M = \\frac{n_B}{V_{solution}(L)}$",
+          "meaning": "Molarity in mol $L^{-1}$"
+        },
+        {
+          "formula": "$m = \\frac{n_B \\times 1000}{w_A(g)}$",
+          "meaning": "Molality in mol $kg^{-1}$, where $w_A$ is the mass of solvent"
+        },
+        {
+          "formula": "$x_A = \\frac{n_A}{n_A + n_B}$, $x_A + x_B = 1$",
+          "meaning": "Mole fraction of component A in a binary solution"
+        },
+        {
+          "formula": "$\\text{mass \\%} = \\frac{w_B}{w_A + w_B} \\times 100$",
+          "meaning": "Mass percentage of solute"
+        },
+        {
+          "formula": "$m = \\frac{1000\\,M}{1000\\,d - M \\times M_B}$",
+          "meaning": "Molality from molarity; $d$ is density in g $mL^{-1}$ and $M_B$ is solute molar mass"
+        },
+        {
+          "formula": "$\\text{ppm} = \\frac{w_B}{w_{total}} \\times 10^6$",
+          "meaning": "Concentration of trace components"
+        }
+      ],
+      "neet_tip": "NEET asks which concentration term is temperature independent and gives quick conversions such as molarity to molality using density, or mass percent to mole fraction.",
+      "topic": "Concentration terms: molality, molarity, mole fraction and percentage"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "In a closed vessel, a liquid's vapour reaches equilibrium with the liquid and exerts a vapour pressure. When a non-volatile solute is added, part of the surface is occupied by solute particles. Fewer solvent molecules can escape, so the vapour pressure falls. Raoult's law states that, for a solution of volatile liquids, the partial vapour pressure of each component equals its mole fraction in the solution multiplied by the vapour pressure of the pure component. By Dalton's law, the total vapour pressure is the sum of the partial pressures. Total pressure varies linearly with the mole fraction of either component. In the vapour phase, the more volatile component (the one with higher $p^0$) is richer than in the liquid. For a non-volatile solute, only the solvent contributes, so $p = p_A^0 x_A$. Raoult's law can be seen as a special case of Henry's law where $K_H = p^0$.",
+      "key_points": [
+        "Vapour pressure depends on the nature of the liquid and on temperature, not on the amount of liquid",
+        "A non-volatile solute lowers the vapour pressure of the solvent",
+        "Partial pressure is proportional to mole fraction in the liquid phase",
+        "Vapour phase composition is found using Dalton's law: $y_A = p_A/p_{total}$",
+        "The vapour is richer in the more volatile component"
+      ],
+      "formulas": [
+        {
+          "formula": "$p_A = p_A^0 x_A$",
+          "meaning": "Raoult's law for component A"
+        },
+        {
+          "formula": "$p_{total} = p_A^0 x_A + p_B^0 x_B$",
+          "meaning": "Total vapour pressure of a solution of two volatile liquids"
+        },
+        {
+          "formula": "$p_{total} = p_A^0 + (p_B^0 - p_A^0) x_B$",
+          "meaning": "Linear dependence of total pressure on $x_B$"
+        },
+        {
+          "formula": "$y_A = \\frac{p_A}{p_{total}}$",
+          "meaning": "Mole fraction of A in the vapour phase"
+        },
+        {
+          "formula": "$\\frac{1}{p_{total}} = \\frac{y_A}{p_A^0} + \\frac{y_B}{p_B^0}$",
+          "meaning": "Total pressure from vapour phase composition"
+        }
+      ],
+      "neet_tip": "Expect numericals that ask for total vapour pressure, or for the vapour phase mole fraction, from given $p^0$ values and liquid composition.",
+      "topic": "Vapour pressure of solutions and Raoult's law"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "An ideal solution obeys Raoult's law over the entire composition range, with $\\Delta_{mix}H = 0$ and $\\Delta_{mix}V = 0$. This happens because A-B interactions are nearly equal in strength to A-A and B-B interactions. Interactions are present; they are simply similar in magnitude, not absent. Examples are n-hexane + n-heptane, bromoethane + chloroethane, and benzene + toluene.\n\nNon-ideal solutions deviate from Raoult's law.\n\nPositive deviation: A-B interactions are weaker than A-A and B-B. Molecules escape more easily, so vapour pressure is higher than predicted, with $\\Delta_{mix}H > 0$ and $\\Delta_{mix}V > 0$. Examples are ethanol + acetone, ethanol + water, and carbon disulphide + acetone. Such solutions form minimum boiling azeotropes, such as about 95% ethanol by volume in water.\n\nNegative deviation: A-B interactions are stronger, often through hydrogen bonding. Vapour pressure is lower than predicted, with $\\Delta_{mix}H < 0$ and $\\Delta_{mix}V < 0$. Examples are chloroform + acetone, phenol + aniline, $HNO_3$ + water and $HCl$ + water. Such solutions form maximum boiling azeotropes, such as 68% $HNO_3$.",
+      "key_points": [
+        "Ideal solution: $\\Delta_{mix}H = 0$, $\\Delta_{mix}V = 0$, $\\Delta_{mix}S > 0$, $\\Delta_{mix}G < 0$",
+        "In an ideal solution, A-B interactions are similar to A-A and B-B, not absent",
+        "Positive deviation: weaker A-B forces, $\\Delta_{mix}H > 0$, volume expansion, minimum boiling azeotrope",
+        "Negative deviation: stronger A-B forces, $\\Delta_{mix}H < 0$, volume contraction, maximum boiling azeotrope",
+        "Chloroform + acetone shows negative deviation due to H-bonding between $CHCl_3$ H and acetone $C=O$",
+        "Phenol + aniline shows negative deviation due to H-bonding between phenolic $-OH$ and the $-NH_2$ nitrogen",
+        "Ethanol + water shows positive deviation because ethanol breaks some water-water H-bonds",
+        "Azeotropes boil at constant composition and cannot be separated by fractional distillation"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta_{mix}H = 0,\\ \\Delta_{mix}V = 0$",
+          "meaning": "Conditions for an ideal solution"
+        },
+        {
+          "formula": "$p_A > p_A^0 x_A$",
+          "meaning": "Positive deviation from Raoult's law"
+        },
+        {
+          "formula": "$p_A < p_A^0 x_A$",
+          "meaning": "Negative deviation from Raoult's law"
+        }
+      ],
+      "neet_tip": "This is the most frequently tested area, through statement-based and assertion-reason questions on the sign of deviation for named pairs, the sign of $\\Delta_{mix}H$ and $\\Delta_{mix}V$, and azeotrope type.",
+      "topic": "Ideal and non-ideal solutions"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Vapour pressure-composition plots show $p_A$, $p_B$ and $p_{total}$ against mole fraction at constant temperature.\n\nIdeal solution: all three plots are straight lines. The total pressure line joins $p_A^0$ (at $x_A = 1$) to $p_B^0$ (at $x_B = 1$) and always lies between the two pure-component vapour pressures.\n\nPositive deviation: the curves bulge above the ideal straight lines. If the deviation is large, the total pressure curve passes through a maximum. A maximum vapour pressure means a minimum boiling point, which corresponds to a minimum boiling azeotrope.\n\nNegative deviation: the curves sag below the ideal lines. A large deviation gives a minimum in total pressure, which corresponds to a maximum boiling azeotrope.\n\nAt the azeotropic composition, the liquid and vapour have identical composition. For a non-volatile solute, the plot of solution vapour pressure against $x_{solvent}$ is a straight line through the origin with slope $p_A^0$.",
+      "key_points": [
+        "Ideal solution: partial and total pressure plots are linear",
+        "Positive deviation: plots lie above the ideal lines; a maximum in $p_{total}$ gives a minimum boiling azeotrope",
+        "Negative deviation: plots lie below the ideal lines; a minimum in $p_{total}$ gives a maximum boiling azeotrope",
+        "Higher vapour pressure means a lower boiling point",
+        "At the azeotropic point, $x_A$ (liquid) $= y_A$ (vapour)"
+      ],
+      "formulas": [
+        {
+          "formula": "$p_{total} = p_A^0 + (p_B^0 - p_A^0) x_B$",
+          "meaning": "Equation of the straight-line total pressure plot for an ideal solution"
+        }
+      ],
+      "neet_tip": "NEET shows or describes a graph and asks you to identify ideal, positive or negative deviation, or the azeotrope type it produces.",
+      "topic": "Vapour pressure-composition plots"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Colligative properties depend only on the number of solute particles in a dilute solution, not on their nature. There are four.\n\nRelative lowering of vapour pressure: equals the mole fraction of the solute.\n\nElevation of boiling point: the solution boils at a higher temperature because its vapour pressure is lower. Here $\\Delta T_b = K_b m$.\n\nDepression of freezing point: the solution freezes at a lower temperature. Here $\\Delta T_f = K_f m$.\n\n$K_b$ and $K_f$ (in K kg $mol^{-1}$) depend only on the solvent. For water, $K_b = 0.52$ and $K_f = 1.86$.\n\nOsmotic pressure ($\\pi$): the extra pressure that must be applied to the solution side to stop solvent from flowing through a semipermeable membrane. Here $\\pi = CRT$.\n\nSolutions with equal osmotic pressure are isotonic. For example, 0.9% NaCl (normal saline) is isotonic with blood. Placed in a hypertonic solution, cells shrink (plasmolysis). Placed in a hypotonic solution, cells swell. Applying pressure greater than $\\pi$ reverses the flow; this reverse osmosis is used for desalination.",
+      "key_points": [
+        "Colligative properties depend on the number of solute particles only",
+        "Relative lowering of vapour pressure equals the solute mole fraction",
+        "$K_b$ and $K_f$ are characteristic of the solvent, not the solute",
+        "For water, $K_f = 1.86$ K kg $mol^{-1}$ and $K_b = 0.52$ K kg $mol^{-1}$",
+        "Osmosis is the flow of solvent from lower to higher solute concentration through a semipermeable membrane",
+        "0.9% NaCl is isotonic with blood; cells shrink in hypertonic and swell in hypotonic solutions",
+        "Reverse osmosis requires an applied pressure greater than $\\pi$ and is used for desalination",
+        "Of the same solutions, the one with the most particles has the lowest freezing point and the highest boiling point"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{p_A^0 - p_A}{p_A^0} = x_B$",
+          "meaning": "Relative lowering of vapour pressure"
+        },
+        {
+          "formula": "$\\frac{p_A^0 - p_A}{p_A^0} \\approx \\frac{n_B}{n_A}$",
+          "meaning": "Approximation for dilute solutions"
+        },
+        {
+          "formula": "$\\Delta T_b = K_b m$",
+          "meaning": "Elevation of boiling point"
+        },
+        {
+          "formula": "$\\Delta T_f = K_f m$",
+          "meaning": "Depression of freezing point"
+        },
+        {
+          "formula": "$K_b = \\frac{R M_A T_b^2}{1000\\,\\Delta_{vap}H}$",
+          "meaning": "Ebullioscopic constant in terms of solvent properties ($M_A$ in g $mol^{-1}$)"
+        },
+        {
+          "formula": "$K_f = \\frac{R M_A T_f^2}{1000\\,\\Delta_{fus}H}$",
+          "meaning": "Cryoscopic constant in terms of solvent properties ($M_A$ in g $mol^{-1}$)"
+        },
+        {
+          "formula": "$\\pi = CRT = \\frac{n_B}{V} RT$",
+          "meaning": "Osmotic pressure of a dilute solution"
+        }
+      ],
+      "neet_tip": "NEET often asks you to rank solutions by freezing point or boiling point using $i \\times m$, and sets single-step numericals on $\\Delta T_f$ or $\\pi$.",
+      "topic": "Colligative properties: relative lowering of vapour pressure, depression of freezing point, elevation of boiling point, osmotic pressure"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Each colligative property is proportional to the moles of solute, so measuring it gives the molar mass of the solute. Substitute $n_B = w_B / M_B$ into the expression and rearrange.\n\nOsmotic pressure is preferred for polymers, proteins and other biomolecules. It is measured at room temperature, which avoids denaturation. Even dilute solutions give a measurable $\\pi$, whereas $\\Delta T_f$ or $\\Delta T_b$ would be too small to measure accurately for such large molecules.\n\nFreezing point depression is generally preferred over boiling point elevation because $K_f$ is larger, giving a bigger, more measurable change.\n\nAlways use consistent units:\n\n• masses in grams with the factor 1000 for molality\n• $R = 0.083$ L bar $mol^{-1}$ $K^{-1}$ (or 0.0821 L atm $mol^{-1}$ $K^{-1}$) for $\\pi$ in bar (or atm) with $V$ in litres",
+      "key_points": [
+        "Molar mass is obtained by substituting $n_B = w_B/M_B$ into the colligative equation",
+        "Osmotic pressure is the best method for macromolecules: measured at room temperature with a large measurable magnitude",
+        "$w_A$ is the mass of solvent and $w_B$ is the mass of solute",
+        "Units of $R$ must match the units of pressure and volume"
+      ],
+      "formulas": [
+        {
+          "formula": "$M_B = \\frac{w_B M_A\\, p_A^0}{w_A (p_A^0 - p_A)}$",
+          "meaning": "Molar mass from relative lowering of vapour pressure (dilute solution)"
+        },
+        {
+          "formula": "$M_B = \\frac{1000\\, K_b\\, w_B}{\\Delta T_b\\, w_A}$",
+          "meaning": "Molar mass from elevation of boiling point"
+        },
+        {
+          "formula": "$M_B = \\frac{1000\\, K_f\\, w_B}{\\Delta T_f\\, w_A}$",
+          "meaning": "Molar mass from depression of freezing point"
+        },
+        {
+          "formula": "$M_B = \\frac{w_B R T}{\\pi V}$",
+          "meaning": "Molar mass from osmotic pressure"
+        }
+      ],
+      "neet_tip": "Typical questions give mass of solute, mass of solvent and $\\Delta T_f$ (or $\\pi$) and ask for molar mass; questions on why osmotic pressure is chosen for proteins are also common.",
+      "topic": "Determination of molecular mass using colligative properties"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "When a solute dissociates or associates in solution, the number of particles changes. The measured colligative property then differs from the expected value, giving an abnormal molar mass.\n\nDissociation (for example KCl or $K_2SO_4$ in water) increases the number of particles. The observed colligative property is larger, so the calculated molar mass is lower than the true value.\n\nAssociation (for example ethanoic acid or benzoic acid dimerising through H-bonds in benzene) decreases the number of particles. The observed colligative property is smaller, so the calculated molar mass is higher.\n\nThe van't Hoff factor $i$ corrects for this. For dissociation, $i > 1$; for association, $i < 1$; for non-electrolytes such as glucose or urea, $i = 1$. For complete dissociation, $i$ equals the number of ions: 2 for NaCl, 3 for $K_2SO_4$ and $CaCl_2$, and 4 for $K_3[Fe(CN)_6]$. For complete dimerisation, $i = 0.5$. The modified equations simply multiply by $i$.",
+      "key_points": [
+        "$i > 1$ for dissociation, $i < 1$ for association, $i = 1$ for non-electrolytes",
+        "Dissociation lowers the observed molar mass; association raises it",
+        "Ethanoic acid dimerises in benzene, so $i$ approaches 0.5",
+        "For complete dissociation, $i$ equals the number of ions formed",
+        "Effective particle concentration equals $i \\times m$; use this to compare $\\Delta T_f$ or $\\Delta T_b$",
+        "$i$ can be used to find the degree of dissociation or association"
+      ],
+      "formulas": [
+        {
+          "formula": "$i = \\frac{\\text{normal molar mass}}{\\text{abnormal molar mass}}$",
+          "meaning": "Definition of $i$ via molar mass"
+        },
+        {
+          "formula": "$i = \\frac{\\text{observed colligative property}}{\\text{calculated colligative property}}$",
+          "meaning": "Definition of $i$ via colligative property"
+        },
+        {
+          "formula": "$i = 1 + (n-1)\\alpha$",
+          "meaning": "Dissociation into $n$ particles with degree $\\alpha$"
+        },
+        {
+          "formula": "$i = 1 - \\left(1 - \\frac{1}{n}\\right)\\alpha$",
+          "meaning": "Association of $n$ molecules with degree $\\alpha$"
+        },
+        {
+          "formula": "$\\Delta T_f = i K_f m$, $\\Delta T_b = i K_b m$, $\\pi = iCRT$",
+          "meaning": "Modified colligative equations"
+        },
+        {
+          "formula": "$\\frac{p_A^0 - p_A}{p_A^0} = i\\, x_B$",
+          "meaning": "Modified relative lowering of vapour pressure"
+        }
+      ],
+      "neet_tip": "NEET frequently asks you to find $i$ or $\\alpha$ from $\\Delta T_f$ data, or to rank electrolytes by freezing point or osmotic pressure.",
+      "topic": "Abnormal molar mass and van't Hoff factor"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$M = \\frac{n_B}{V(L)}$",
+      "meaning": "Molarity (temperature dependent)"
+    },
+    {
+      "formula": "$m = \\frac{n_B \\times 1000}{w_A(g)}$",
+      "meaning": "Molality (temperature independent)"
+    },
+    {
+      "formula": "$x_A = \\frac{n_A}{n_A + n_B}$",
+      "meaning": "Mole fraction"
+    },
+    {
+      "formula": "$m = \\frac{1000M}{1000d - M M_B}$",
+      "meaning": "Molarity to molality conversion"
+    },
+    {
+      "formula": "$p_A = p_A^0 x_A$",
+      "meaning": "Raoult's law"
+    },
+    {
+      "formula": "$p_{total} = p_A^0 + (p_B^0 - p_A^0)x_B$",
+      "meaning": "Total vapour pressure of an ideal binary solution"
+    },
+    {
+      "formula": "$y_A = \\frac{p_A}{p_{total}}$",
+      "meaning": "Vapour phase mole fraction"
+    },
+    {
+      "formula": "$\\Delta_{mix}H = 0,\\ \\Delta_{mix}V = 0$",
+      "meaning": "Ideal solution conditions"
+    },
+    {
+      "formula": "$\\frac{p_A^0 - p_A}{p_A^0} = i\\,x_B$",
+      "meaning": "Relative lowering of vapour pressure"
+    },
+    {
+      "formula": "$\\Delta T_b = iK_b m$",
+      "meaning": "Elevation of boiling point"
+    },
+    {
+      "formula": "$\\Delta T_f = iK_f m$",
+      "meaning": "Depression of freezing point"
+    },
+    {
+      "formula": "$\\pi = iCRT$",
+      "meaning": "Osmotic pressure"
+    },
+    {
+      "formula": "$K_b = \\frac{RM_A T_b^2}{1000\\Delta_{vap}H}$",
+      "meaning": "Ebullioscopic constant"
+    },
+    {
+      "formula": "$K_f = \\frac{RM_A T_f^2}{1000\\Delta_{fus}H}$",
+      "meaning": "Cryoscopic constant"
+    },
+    {
+      "formula": "$M_B = \\frac{1000K_f w_B}{\\Delta T_f w_A}$",
+      "meaning": "Molar mass from freezing point depression"
+    },
+    {
+      "formula": "$M_B = \\frac{1000K_b w_B}{\\Delta T_b w_A}$",
+      "meaning": "Molar mass from boiling point elevation"
+    },
+    {
+      "formula": "$M_B = \\frac{w_B RT}{\\pi V}$",
+      "meaning": "Molar mass from osmotic pressure"
+    },
+    {
+      "formula": "$i = 1 + (n-1)\\alpha$",
+      "meaning": "van't Hoff factor for dissociation"
+    },
+    {
+      "formula": "$i = 1 - (1 - \\frac{1}{n})\\alpha$",
+      "meaning": "van't Hoff factor for association"
+    },
+    {
+      "formula": "$i = \\frac{M_{normal}}{M_{observed}}$",
+      "meaning": "van't Hoff factor from molar masses"
+    },
+    {
+      "formula": "$K_f(H_2O) = 1.86$, $K_b(H_2O) = 0.52$ K kg $mol^{-1}$",
+      "meaning": "Standard constants for water"
+    },
+    {
+      "formula": "Positive deviation: $\\Delta_{mix}H > 0$, $\\Delta_{mix}V > 0$; Negative deviation: $\\Delta_{mix}H < 0$, $\\Delta_{mix}V < 0$",
+      "meaning": "Signs for non-ideal solutions"
+    }
+  ],
+  "common_traps": [
+    "Thinking that no interactions exist between components of an ideal solution; in fact A-B interactions are present and similar in strength to A-A and B-B interactions.",
+    "Assigning positive deviation to phenol + aniline or chloroform + acetone; both show negative deviation because of strong A-B hydrogen bonding.",
+    "Using mass of solution instead of mass of solvent when calculating molality.",
+    "Calling molarity temperature independent; molarity changes with temperature because volume does, while molality and mole fraction do not.",
+    "Forgetting the van't Hoff factor when comparing electrolytes; for example, 0.1 m $CaCl_2$ ($i = 3$) has a lower freezing point than 0.1 m NaCl ($i = 2$) or 0.1 m glucose ($i = 1$).",
+    "Linking positive deviation to a maximum boiling azeotrope; positive deviation gives a minimum boiling azeotrope and negative deviation gives a maximum boiling azeotrope.",
+    "Assuming dissociation increases the observed molar mass; it decreases the observed molar mass, while association increases it.",
+    "Mixing units of $R$ in osmotic pressure problems; use $R = 0.083$ L bar $mol^{-1}$ $K^{-1}$ with $V$ in litres and $T$ in kelvin."
+  ],
+  "quick_revision": [
+    "Molality, mole fraction and mass percent are temperature independent; molarity is not.",
+    "Raoult's law: $p_A = p_A^0 x_A$; the vapour is richer in the more volatile component.",
+    "Ideal solution: obeys Raoult's law at all compositions, with $\\Delta_{mix}H = 0$ and $\\Delta_{mix}V = 0$; example: benzene + toluene.",
+    "Positive deviation pairs: ethanol + water, ethanol + acetone, $CS_2$ + acetone; these form minimum boiling azeotropes.",
+    "Negative deviation pairs: chloroform + acetone, phenol + aniline, $HNO_3$ + water; these form maximum boiling azeotropes.",
+    "Relative lowering of vapour pressure equals the mole fraction of the solute.",
+    "$\\Delta T_b = iK_b m$, $\\Delta T_f = iK_f m$, $\\pi = iCRT$.",
+    "For water, $K_f = 1.86$ and $K_b = 0.52$ K kg $mol^{-1}$; these constants depend only on the solvent.",
+    "Osmotic pressure is the best method for finding molar masses of proteins and polymers.",
+    "0.9% NaCl is isotonic with blood; reverse osmosis is used for desalination.",
+    "$i > 1$ for dissociation, $i < 1$ for association (ethanoic acid in benzene, $i \\approx 0.5$), $i = 1$ for non-electrolytes.",
+    "Rank colligative effects by $i \\times m$: more particles mean a lower freezing point, a higher boiling point and a higher osmotic pressure."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q054",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q54"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q071",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q71"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

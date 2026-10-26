@@ -1,0 +1,44 @@
+[
+  {
+    "path": "topics[11].explanation",
+    "old": "A projectile launched with speed $u$ at angle $\\theta$, neglecting air resistance, has constant horizontal velocity $u\\cos\\theta$ and constant vertical acceleration $g$ downward. Its path is a parabola. The time of flight is $T = \\frac{2u\\sin\\theta}{g}$, the maximum height is $H = \\frac{u^2\\sin^2\\theta}{2g}$ and the range is $R = \\frac{u^2\\sin 2\\theta}{g}$. Maximum range, $\\frac{u^2}{g}$, occurs at $45^\\circ$. Complementary angles ($\\theta$ and $90^\\circ - \\theta$) give the same range. At the top, the velocity is $u\\cos\\theta$ (horizontal, minimum, but not zero) and the acceleration is still $g$. Two useful relations are $\\frac{H}{R} = \\frac{\\tan\\theta}{4}$ and $R = 4H$ at $\\theta = 76^\\circ$ approximately. For horizontal projection from height $h$, the time is $\\sqrt{\\frac{2h}{g}}$ (independent of $u$) and the range is $u\\sqrt{\\frac{2h}{g}}$.",
+    "new": "A projectile launched with speed $u$ at angle $\\theta$, neglecting air resistance, has constant horizontal velocity $u\\cos\\theta$ and constant vertical acceleration $g$ downward. Its path is a parabola. The time of flight is $T = \\frac{2u\\sin\\theta}{g}$, the maximum height is $H = \\frac{u^2\\sin^2\\theta}{2g}$ and the range is $R = \\frac{u^2\\sin 2\\theta}{g}$. Maximum range, $\\frac{u^2}{g}$, occurs at $45^\\circ$. Complementary angles ($\\theta$ and $90^\\circ - \\theta$) give the same range. At the top, the velocity is $u\\cos\\theta$ (horizontal, minimum, but not zero) and the acceleration is still $g$. Two useful relations are $\\frac{H}{R} = \\frac{\\tan\\theta}{4}$ and $R = 4H$ at $\\theta = 45^\\circ$; $R = H$ when $\\tan\\theta = 4$, i.e. $\\theta \\approx 76^\\circ$. For horizontal projection from height $h$, the time is $\\sqrt{\\frac{2h}{g}}$ (independent of $u$) and the range is $u\\sqrt{\\frac{2h}{g}}$.",
+    "fixes": "R = 4H occurs at 45°, not 76°; R = H at tanθ = 4 (≈76°)"
+  },
+  {
+    "path": "topics[8].explanation",
+    "old": "A unit vector has magnitude 1 and only specifies direction: $\\hat{A} = \\frac{\\vec{A}}{A}$. It has no units. The unit vectors $\\hat{i}$, $\\hat{j}$ and $\\hat{k}$ point along the x, y and z axes. Resolving a vector means splitting it into components along chosen directions, usually perpendicular axes. A vector of magnitude $A$ at angle $\\theta$ to the x-axis has components $A_x = A\\cos\\theta$ and $A_y = A\\sin\\theta$. Conversely, $A = \\sqrt{A_x^2+A_y^2}$ and $\\tan\\theta = \\frac{A_y}{A_x}$. In 3D, $\\vec{A} = A_x\\hat{i}+A_y\\hat{j}+A_z\\hat{k}$. The direction cosines are $\\cos\\alpha = \\frac{A_x}{A}$, $\\cos\\beta = \\frac{A_y}{A}$ and $\\cos\\gamma = \\frac{A_z}{A}$, and the squares of the three sum to 1. A component of a vector can never exceed the vector's magnitude.",
+    "new": "A unit vector has magnitude 1 and only specifies direction: $\\hat{A} = \\frac{\\vec{A}}{A}$. It has no units. The unit vectors $\\hat{i}$, $\\hat{j}$ and $\\hat{k}$ point along the x, y and z axes. Resolving a vector means splitting it into components along chosen directions, usually perpendicular axes. A vector of magnitude $A$ at angle $\\theta$ to the x-axis has components $A_x = A\\cos\\theta$ and $A_y = A\\sin\\theta$. Conversely, $A = \\sqrt{A_x^2+A_y^2}$ and $\\tan\\theta = \\frac{A_y}{A_x}$. In 3D, $\\vec{A} = A_x\\hat{i}+A_y\\hat{j}+A_z\\hat{k}$. The direction cosines are $\\cos\\alpha = \\frac{A_x}{A}$, $\\cos\\beta = \\frac{A_y}{A}$ and $\\cos\\gamma = \\frac{A_z}{A}$, and the squares of the three sum to 1. A rectangular (perpendicular) component of a vector can never exceed the vector's magnitude.",
+    "fixes": "Restrict 'component never exceeds magnitude' to rectangular components"
+  },
+  {
+    "path": "topics[11].key_points[3]",
+    "old": "The range is maximum at $45^\\circ$, where $H_{max} = \\frac{R_{max}}{4}$",
+    "new": "The range is maximum at $45^\\circ$, where the height reached is $H = \\frac{u^2}{4g} = \\frac{R_{max}}{4}$; the greatest possible height for a given $u$ is $\\frac{u^2}{2g} = \\frac{R_{max}}{2}$, reached at $90^\\circ$",
+    "fixes": "Height at 45° mislabelled as H_max"
+  },
+  {
+    "path": "topics[9].explanation",
+    "old": "The velocity of A relative to B is $\\vec{v}_{AB} = \\vec{v}_A - \\vec{v}_B$, which is A's velocity as seen by an observer moving with B. In 1D, bodies moving in the same direction have a relative speed equal to the difference of their speeds. Bodies moving in opposite directions have a relative speed equal to the sum. For rain and a moving person, the rain's velocity relative to the person is $\\vec{v}_r - \\vec{v}_m$, and the umbrella should be held along this relative velocity. For river crossing with swimmer speed $v$ in still water and river speed $u$, the shortest time comes from swimming perpendicular to the flow. That gives $t = \\frac{d}{v}$ with drift $\\frac{ud}{v}$. The shortest path (zero drift) comes from heading upstream at angle $\\theta$ with $\\sin\\theta = \\frac{u}{v}$, which requires $v > u$, giving $t = \\frac{d}{\\sqrt{v^2-u^2}}$.",
+    "new": "The velocity of A relative to B is $\\vec{v}_{AB} = \\vec{v}_A - \\vec{v}_B$, which is A's velocity as seen by an observer moving with B. In 1D, bodies moving in the same direction have a relative speed equal to the difference of their speeds. Bodies moving in opposite directions have a relative speed equal to the sum. For rain and a moving person, the rain's velocity relative to the person is $\\vec{v}_r - \\vec{v}_m$, and the umbrella should be held along this relative velocity. For river crossing with swimmer speed $v$ in still water and river speed $u$, the shortest time comes from swimming perpendicular to the flow. That gives $t = \\frac{d}{v}$ with drift $\\frac{ud}{v}$. The shortest path (zero drift) comes from heading upstream at angle $\\theta$ to the perpendicular to the river flow, with $\\sin\\theta = \\frac{u}{v}$ (equivalently, at $90^\\circ + \\theta$ to the direction of flow), which requires $v > u$, giving $t = \\frac{d}{\\sqrt{v^2-u^2}}$.",
+    "fixes": "River-crossing angle reference unspecified"
+  },
+  {
+    "path": "topics[9].formulas[2].meaning",
+    "old": "Upstream heading angle and time for crossing along the shortest path",
+    "new": "Upstream heading angle (measured from the perpendicular to the flow) and time for crossing along the shortest path",
+    "fixes": "River-crossing angle reference unspecified"
+  },
+  {
+    "path": "formula_sheet[14].meaning",
+    "old": "River crossing: minimum time, and upstream angle for zero drift ($d$ width, $v$ swimmer speed, $u$ river speed)",
+    "new": "River crossing: minimum time, and upstream angle to the perpendicular to the flow for zero drift ($d$ width, $v$ swimmer speed, $u$ river speed)",
+    "fixes": "River-crossing angle reference unspecified"
+  },
+  {
+    "path": "quick_revision[7]",
+    "old": "Relative velocity: $\\vec{v}_{AB} = \\vec{v}_A-\\vec{v}_B$; for minimum crossing time head perpendicular to the flow, for zero drift head upstream with $\\sin\\theta = \\frac{u}{v}$.",
+    "new": "Relative velocity: $\\vec{v}_{AB} = \\vec{v}_A-\\vec{v}_B$; for minimum crossing time head perpendicular to the flow, for zero drift head upstream at $\\theta$ to the perpendicular to the flow with $\\sin\\theta = \\frac{u}{v}$.",
+    "fixes": "River-crossing angle reference unspecified"
+  }
+]

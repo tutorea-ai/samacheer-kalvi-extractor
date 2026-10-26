@@ -1,0 +1,14 @@
+{
+  "unit_id": "bio_u01",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[9].explanation",
+      "quote": "organ in Platyhelminthes and organ system in the others",
+      "problem": "This wording places Ctenophora at the organ-system level. NCERT puts ctenophores, like cnidarians, at the tissue level of organisation. The notes also list Ctenophora as diploblastic in the same paragraph, so the error stands out.",
+      "correction": "Level of organisation: cellular in Porifera; tissue in Cnidaria and Ctenophora; organ in Platyhelminthes; organ system from Aschelminthes onwards.",
+      "severity": "error"
+    }
+  ],
+  "status": "fixed"
+}

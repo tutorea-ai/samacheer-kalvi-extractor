@@ -1,0 +1,293 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u16",
+  "unit_no": 16,
+  "unit_name": "Organic Compounds Containing Halogens",
+  "slug": "organic-compounds-containing-halogens",
+  "overview": "This unit covers haloalkanes and haloarenes: how they are prepared, how the polar C–X bond controls their physical and chemical behaviour, and how they react by nucleophilic substitution (SN1/SN2), elimination and with metals. NEET regularly asks about reagent-based conversions, SN1 versus SN2 reactivity order, stereochemistry, Grignard reagents with active-hydrogen compounds, and the uses and environmental effects of polyhalogen compounds.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Haloalkanes are made from alcohols using $HX$ ($ZnCl_2$ catalyst for $HCl$), $PCl_3$, $PCl_5$ or $SOCl_2$. With $SOCl_2$ the by-products $SO_2$ and $HCl$ escape as gases, so the product is pure. They are also made from alkenes by $HX$ addition (Markovnikov; anti-Markovnikov only for $HBr$ with peroxide) and by halogen exchange (Finkelstein, Swarts). Haloarenes are made by electrophilic halogenation with a Lewis acid, or from diazonium salts (Sandmeyer, Gattermann, $KI$ for iodides). Boiling points follow $RI > RBr > RCl > RF$ and fall with branching. Haloalkanes undergo nucleophilic substitution and β-elimination (alcoholic $KOH$, Saytzeff product). They also react with metals: Wurtz coupling, and Grignard reagent formation in dry ether. Grignard reagents are destroyed by any compound with an active H ($H_2O$, $ROH$, $RNH_2$, $RCOOH$, terminal alkynes), giving the alkane $RH$. Haloarenes are o,p-directing but deactivating in electrophilic substitution.",
+      "key_points": [
+        "Alcohol reactivity towards $HX$: $3^\\circ > 2^\\circ > 1^\\circ$; $HX$ reactivity: $HI > HBr > HCl$",
+        "$SOCl_2$ is preferred because both by-products are gases",
+        "Peroxide (Kharasch) effect is shown by $HBr$ only, not by $HCl$ or $HI$",
+        "Finkelstein: $NaI$ in dry acetone; $NaCl$ or $NaBr$ precipitates and drives the reaction forward",
+        "Swarts: $AgF$, $Hg_2F_2$, $CoF_2$ or $SbF_3$ give alkyl fluorides",
+        "$KCN$ gives nitriles, $AgCN$ gives isocyanides; $KNO_2$ gives alkyl nitrites, $AgNO_2$ gives nitroalkanes",
+        "p-Dichlorobenzene melts higher than its o- and m-isomers because its symmetry gives better crystal packing",
+        "$RMgX$ with $R'NH_2$, $H_2O$ or $ROH$ gives the alkane $RH$",
+        "Wurtz–Fittig: $ArX + RX + Na$ gives $Ar-R$; Fittig: $2ArX + 2Na$ gives $Ar-Ar$"
+      ],
+      "formulas": [
+        {
+          "formula": "$ROH + SOCl_2 \\rightarrow RCl + SO_2\\uparrow + HCl\\uparrow$",
+          "meaning": "Best method for alkyl chlorides"
+        },
+        {
+          "formula": "$RCl + NaI \\xrightarrow{\\text{dry acetone}} RI + NaCl\\downarrow$",
+          "meaning": "Finkelstein reaction for alkyl iodides"
+        },
+        {
+          "formula": "$CH_3Br + AgF \\rightarrow CH_3F + AgBr$",
+          "meaning": "Swarts reaction for alkyl fluorides"
+        },
+        {
+          "formula": "$2RX + 2Na \\xrightarrow{\\text{dry ether}} R-R + 2NaX$",
+          "meaning": "Wurtz reaction, giving a higher alkane"
+        },
+        {
+          "formula": "$RMgX + R'NH_2 \\rightarrow RH + R'NHMgX$",
+          "meaning": "Grignard reagent is protonated by an active-H compound, giving an alkane"
+        },
+        {
+          "formula": "$ArN_2^+Cl^- \\xrightarrow{Cu_2Cl_2/HCl} ArCl + N_2$",
+          "meaning": "Sandmeyer reaction"
+        }
+      ],
+      "neet_tip": "Expect reagent-to-product matching ($KCN$ vs $AgCN$, $SOCl_2$, Finkelstein, Swarts) and Grignard reagents reacting with acidic-H compounds to give the alkane.",
+      "topic": "General methods of preparation, properties and reactions"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Halogens are more electronegative than carbon, so the C–X bond is polar: the carbon carries $\\delta+$ and the halogen $\\delta-$. This makes the carbon an electrophilic site for nucleophiles. Down the group the halogen gets larger, so C–X bond length increases ($C-F < C-Cl < C-Br < C-I$) and bond enthalpy decreases. C–I is therefore the weakest bond, and iodides are the most reactive alkyl halides. Dipole moment order is $CH_3Cl > CH_3F > CH_3Br > CH_3I$; $CH_3F$ is lower than $CH_3Cl$ because its very short bond outweighs its higher charge separation. The C–X bond in haloarenes is shorter and stronger because of $sp^2$ hybridisation of carbon and partial double-bond character from resonance. Haloarenes are less reactive towards nucleophilic substitution for four reasons: resonance, $sp^2$ hybridisation, instability of the phenyl cation, and repulsion of the nucleophile by the electron-rich ring. Haloarenes therefore resist nucleophilic substitution unless electron-withdrawing groups such as $-NO_2$ sit at the ortho or para positions.",
+      "key_points": [
+        "C–X bond enthalpy: $C-F > C-Cl > C-Br > C-I$",
+        "Reactivity of RX towards substitution: $RI > RBr > RCl > RF$",
+        "Dipole moment: $CH_3Cl > CH_3F > CH_3Br > CH_3I$",
+        "Chlorobenzene has a smaller dipole moment than cyclohexyl chloride",
+        "Haloarene C–X has partial double-bond character from resonance",
+        "o/p-$NO_2$ groups activate haloarenes towards nucleophilic substitution; m-$NO_2$ has little effect",
+        "Halogen is deactivating by $-I$ effect but o,p-directing by $+R$ effect"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\overset{\\delta+}{C}-\\overset{\\delta-}{X}$",
+          "meaning": "Polarity of the C–X bond; the carbon is the electrophilic centre"
+        }
+      ],
+      "neet_tip": "NEET asks for orders of bond enthalpy, bond length and dipole moment, and the reasons haloarenes are less reactive towards nucleophiles.",
+      "topic": "Nature of the C-X bond"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "SN2 is a single concerted step: the nucleophile attacks from the side opposite the leaving group, passes through a pentacoordinate transition state, and the configuration inverts (Walden inversion). The rate depends on both reactants, so the reaction is second order. Steric hindrance controls SN2 reactivity, giving $CH_3X > 1^\\circ > 2^\\circ > 3^\\circ$. SN1 occurs in two steps. The slow ionisation forms a planar carbocation, which the nucleophile then attacks from either face. This gives racemisation, usually with some excess of the inverted product. The rate depends only on the substrate, so the reaction is first order. Carbocation stability controls SN1 reactivity, giving $3^\\circ > 2^\\circ > 1^\\circ > CH_3X$. Polar protic solvents favour SN1. Allylic and benzylic halides react fast by SN1 because their carbocations are resonance-stabilised. For both mechanisms the leaving-group order is $I^- > Br^- > Cl^- > F^-$. A chiral carbon gives optical activity; retention, inversion and racemisation describe what happens to its configuration.",
+      "key_points": [
+        "SN2: one step, second order, inversion, favoured by primary substrates and strong nucleophiles",
+        "SN1: carbocation intermediate, first order, racemisation, favoured by tertiary substrates and polar protic solvents",
+        "SN2 reactivity: $CH_3X > 1^\\circ > 2^\\circ > 3^\\circ$",
+        "SN1 reactivity: $3^\\circ > 2^\\circ > 1^\\circ > CH_3X$",
+        "Benzylic and allylic halides are highly reactive in SN1",
+        "Elimination competes with substitution; bulky bases and alcoholic $KOH$ favour elimination",
+        "Saytzeff rule: the more substituted alkene is the major elimination product",
+        "Haloarenes undergo nucleophilic substitution only under drastic conditions (Dow's process) or when activated by o/p-$NO_2$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{Rate} = k[RX][Nu^-]$",
+          "meaning": "SN2 rate law (second order)"
+        },
+        {
+          "formula": "$\\text{Rate} = k[RX]$",
+          "meaning": "SN1 rate law (first order)"
+        },
+        {
+          "formula": "$C_6H_5Cl \\xrightarrow{(i)\\ NaOH,\\ 623\\ K,\\ 300\\ atm;\\ (ii)\\ H^+} C_6H_5OH$",
+          "meaning": "Dow's process: nucleophilic substitution of a haloarene under drastic conditions"
+        }
+      ],
+      "neet_tip": "Frequent questions: arrange halides in order of SN1 or SN2 reactivity, and predict the stereochemical outcome (inversion vs racemisation).",
+      "topic": "Mechanisms of substitution reactions"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Polyhalogen compounds have many industrial, agricultural and medical uses. Dichloromethane is a solvent, paint remover, aerosol propellant and metal-cleaning agent. Chloroform is a solvent for fats, alkaloids and iodine, and is used to make the refrigerant freon R-22; it was once a general anaesthetic. Iodoform was used as an antiseptic because it releases free iodine, not because of its own action. Carbon tetrachloride is used to manufacture refrigerants and propellants, as a cleaning fluid and as a solvent; it was formerly used in fire extinguishers. Freons such as $CCl_2F_2$ (freon-12) are refrigerants, air-conditioner coolants and aerosol propellants. DDT was the first chlorinated organic insecticide and was used against malaria-carrying mosquitoes and typhus-carrying lice. Among haloarenes, chlorobenzene is used to make phenol and DDT, and p-dichlorobenzene is a moth repellent.",
+      "key_points": [
+        "$CH_2Cl_2$: solvent, paint remover, propellant",
+        "$CHCl_3$: solvent and starting material for freon R-22; former anaesthetic",
+        "$CHI_3$: antiseptic action is due to liberated $I_2$",
+        "$CCl_4$: manufacture of refrigerants and propellants; formerly a fire extinguisher",
+        "Freon-12 is $CCl_2F_2$: refrigerant and aerosol propellant",
+        "DDT is p,p'-dichlorodiphenyltrichloroethane, an insecticide",
+        "Chlorobenzene is the starting material for phenol and DDT"
+      ],
+      "formulas": [
+        {
+          "formula": "$CH_3COR + 3I_2 + 4NaOH \\rightarrow CHI_3 + RCOONa + 3NaI + 3H_2O$",
+          "meaning": "Iodoform reaction: gives yellow $CHI_3$ from methyl ketones (and ethanol and some secondary alcohols)"
+        }
+      ],
+      "neet_tip": "Match-the-column questions pair each compound with its use, for example iodoform with antiseptic and freon with refrigerant.",
+      "topic": "Uses of haloalkanes and haloarenes"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Chloroform vapour depresses the central nervous system, causing dizziness, fatigue and headache. Chronic exposure damages the liver and kidneys. In air and light chloroform is slowly oxidised to highly poisonous phosgene ($COCl_2$). It is therefore stored in closed, dark-coloured bottles filled to the brim, and a small amount of ethanol is added to convert any phosgene into harmless ethyl carbonate. Iodoform has an objectionable smell and has been replaced by other iodine-containing formulations. Freons are very stable and unreactive, so they drift into the stratosphere. There UV light splits off chlorine free radicals, which destroy ozone in a chain reaction, thinning the ozone layer and increasing UV exposure (skin cancer, cataract). Carbon tetrachloride also depletes ozone and can cause liver cancer. DDT is not biodegradable. Because it is fat-soluble, it is stored in fatty tissue and builds up along food chains (biomagnification). Many insects have also become resistant to it, and it was banned in many countries.",
+      "key_points": [
+        "$CHCl_3$ in air and light gives poisonous phosgene, $COCl_2$",
+        "Chloroform is stored in dark bottles, filled completely, with about 1% ethanol added",
+        "Freons cause ozone depletion through chlorine free radicals",
+        "One chlorine radical can destroy many $O_3$ molecules because the radical is regenerated (chain reaction)",
+        "DDT is non-biodegradable and fat-soluble, so it biomagnifies; insects developed resistance; banned in the USA in 1973",
+        "$CCl_4$ depletes ozone and is linked to liver damage and cancer",
+        "Iodoform was discontinued mainly because of its objectionable smell"
+      ],
+      "formulas": [
+        {
+          "formula": "$2CHCl_3 + O_2 \\xrightarrow{\\text{light}} 2COCl_2 + 2HCl$",
+          "meaning": "Formation of poisonous phosgene from chloroform"
+        },
+        {
+          "formula": "$CF_2Cl_2 \\xrightarrow{h\\nu} \\dot{C}l + \\dot{C}F_2Cl$",
+          "meaning": "Freon releases a chlorine radical in the stratosphere"
+        },
+        {
+          "formula": "$\\dot{C}l + O_3 \\rightarrow Cl\\dot{O} + O_2$",
+          "meaning": "First step of ozone destruction"
+        },
+        {
+          "formula": "$Cl\\dot{O} + O \\rightarrow \\dot{C}l + O_2$",
+          "meaning": "The chlorine radical is regenerated, so the chain continues"
+        }
+      ],
+      "neet_tip": "NEET asks why chloroform is stored in dark bottles, which compound forms phosgene, and why DDT and freons are environmentally harmful.",
+      "topic": "Environmental effects of chloroform, iodoform, freons and DDT"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$ROH + SOCl_2 \\rightarrow RCl + SO_2 + HCl$",
+      "meaning": "Darzens method; gives pure alkyl chloride"
+    },
+    {
+      "formula": "$3ROH + PCl_3 \\rightarrow 3RCl + H_3PO_3$",
+      "meaning": "Alkyl chloride from an alcohol"
+    },
+    {
+      "formula": "$ROH + PCl_5 \\rightarrow RCl + POCl_3 + HCl$",
+      "meaning": "Alkyl chloride from an alcohol"
+    },
+    {
+      "formula": "$RCl + NaI \\xrightarrow{\\text{acetone}} RI + NaCl$",
+      "meaning": "Finkelstein reaction"
+    },
+    {
+      "formula": "$RBr + AgF \\rightarrow RF + AgBr$",
+      "meaning": "Swarts reaction"
+    },
+    {
+      "formula": "$CH_3CH=CH_2 + HBr \\xrightarrow{\\text{peroxide}} CH_3CH_2CH_2Br$",
+      "meaning": "Anti-Markovnikov (Kharasch) addition, shown only by $HBr$"
+    },
+    {
+      "formula": "$ArN_2^+X^- \\xrightarrow{Cu_2X_2/HX} ArX + N_2$",
+      "meaning": "Sandmeyer reaction ($X = Cl, Br$)"
+    },
+    {
+      "formula": "$ArN_2^+X^- \\xrightarrow{Cu/HX} ArX + N_2$",
+      "meaning": "Gattermann reaction"
+    },
+    {
+      "formula": "$ArN_2^+Cl^- + KI \\rightarrow ArI + KCl + N_2$",
+      "meaning": "Preparation of iodoarene"
+    },
+    {
+      "formula": "$2RX + 2Na \\xrightarrow{\\text{dry ether}} R-R + 2NaX$",
+      "meaning": "Wurtz reaction"
+    },
+    {
+      "formula": "$ArX + RX + 2Na \\xrightarrow{\\text{dry ether}} Ar-R + 2NaX$",
+      "meaning": "Wurtz–Fittig reaction"
+    },
+    {
+      "formula": "$2ArX + 2Na \\xrightarrow{\\text{dry ether}} Ar-Ar + 2NaX$",
+      "meaning": "Fittig reaction"
+    },
+    {
+      "formula": "$RX + Mg \\xrightarrow{\\text{dry ether}} RMgX$",
+      "meaning": "Grignard reagent formation"
+    },
+    {
+      "formula": "$RMgX + HZ \\rightarrow RH + Mg(Z)X$",
+      "meaning": "Any active-H compound ($H_2O$, $ROH$, $RNH_2$, $RCOOH$, terminal alkyne) gives the alkane"
+    },
+    {
+      "formula": "$RX \\xrightarrow{\\text{alc. } KOH} \\text{alkene}$",
+      "meaning": "Dehydrohalogenation (β-elimination); follows Saytzeff rule"
+    },
+    {
+      "formula": "$RX + KCN \\rightarrow RCN$; $RX + AgCN \\rightarrow RNC$",
+      "meaning": "Ambident nucleophile: $KCN$ gives nitrile, $AgCN$ gives isocyanide"
+    },
+    {
+      "formula": "$RX + KNO_2 \\rightarrow R-O-N=O$; $RX + AgNO_2 \\rightarrow R-NO_2$",
+      "meaning": "$KNO_2$ gives alkyl nitrite, $AgNO_2$ gives nitroalkane"
+    },
+    {
+      "formula": "$\\text{Rate}_{S_N2} = k[RX][Nu^-]$; $\\text{Rate}_{S_N1} = k[RX]$",
+      "meaning": "Kinetics of the two substitution mechanisms"
+    },
+    {
+      "formula": "$S_N2: CH_3X > 1^\\circ > 2^\\circ > 3^\\circ$; $S_N1: 3^\\circ > 2^\\circ > 1^\\circ > CH_3X$",
+      "meaning": "Substrate reactivity orders"
+    },
+    {
+      "formula": "$RI > RBr > RCl > RF$",
+      "meaning": "Order of reactivity and boiling point of alkyl halides"
+    },
+    {
+      "formula": "$CH_3Cl > CH_3F > CH_3Br > CH_3I$",
+      "meaning": "Dipole moment order"
+    },
+    {
+      "formula": "$2CHCl_3 + O_2 \\xrightarrow{\\text{light}} 2COCl_2 + 2HCl$",
+      "meaning": "Phosgene formation from chloroform"
+    },
+    {
+      "formula": "$\\dot{C}l + O_3 \\rightarrow Cl\\dot{O} + O_2$",
+      "meaning": "Ozone depletion by freons"
+    }
+  ],
+  "common_traps": [
+    "Assuming $CH_3F$ has the highest dipole moment: $CH_3Cl$ is highest, because the C–F bond is very short.",
+    "Writing a nitrile for $AgCN$: the bond in $AgCN$ is largely covalent, so attack occurs through N and the product is an isocyanide; ionic $KCN$ gives the nitrile.",
+    "Treating a Grignard reagent with an amine and expecting a C–N coupled product: the amine N–H protonates $RMgX$, so the product is simply the alkane $RH$.",
+    "Applying the peroxide effect to $HCl$ or $HI$: only $HBr$ shows anti-Markovnikov addition with peroxide.",
+    "Thinking SN1 gives 100% racemisation: usually partial racemisation occurs with some excess of the inverted product.",
+    "Assuming chlorobenzene undergoes SN reactions as easily as alkyl chlorides: its partial double-bond character and $sp^2$ carbon make it unreactive unless conditions are drastic or o/p-$NO_2$ groups are present.",
+    "Calling halogens meta-directing because they deactivate the ring: they are deactivating but ortho/para-directing.",
+    "Thinking iodoform itself is the antiseptic: its antiseptic action comes from liberated iodine."
+  ],
+  "quick_revision": [
+    "$SOCl_2$ gives pure alkyl chlorides because its by-products $SO_2$ and $HCl$ are gases.",
+    "Finkelstein uses $NaI$ in acetone; Swarts uses $AgF$, $Hg_2F_2$, $CoF_2$ or $SbF_3$.",
+    "C–X bond enthalpy falls from F to I, so reactivity rises from F to I.",
+    "SN2 is one step, second order and gives inversion; reactivity is highest for methyl halides.",
+    "SN1 goes through a carbocation, is first order and gives racemisation; reactivity is highest for tertiary, allylic and benzylic halides.",
+    "Boiling point rises with molecular mass and falls with branching; p-dichlorobenzene has the highest melting point of the three isomers.",
+    "Grignard reagents give the alkane with water, alcohols, amines, acids and terminal alkynes.",
+    "Alcoholic $KOH$ favours elimination (Saytzeff); aqueous $KOH$ favours substitution to the alcohol.",
+    "Haloarenes are o,p-directing but deactivating; they are converted to phenol by Dow's process at 623 K and 300 atm.",
+    "Chloroform forms phosgene in light, so it is stored in dark, full bottles with ethanol added.",
+    "Freons release chlorine radicals that destroy ozone in a chain reaction.",
+    "DDT is non-biodegradable and fat-soluble, so it biomagnifies along food chains."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q072",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q72"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

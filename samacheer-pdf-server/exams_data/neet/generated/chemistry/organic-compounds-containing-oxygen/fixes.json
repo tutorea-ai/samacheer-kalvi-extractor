@@ -1,0 +1,32 @@
+[
+  {
+    "path": "topics[10].key_points[4]",
+    "old": "Always count α-H carefully: a carbon bearing two methyl groups beside C=O has no α-H",
+    "new": "Always count α-H carefully: an α-carbon bearing three alkyl groups, such as $(CH_3)_3C-$ (tert-butyl), has no α-H; an isopropyl α-carbon still has one α-H",
+    "fixes": "A carbon bearing two methyl groups (isopropyl) still has one α-H; only a quaternary α-carbon such as (CH3)3C– has none"
+  },
+  {
+    "path": "common_traps[6]",
+    "old": "Counting α-hydrogens wrongly. A carbon adjacent to C=O that carries two methyl groups has no α-H, so condensation can occur only at the other α-carbon.",
+    "new": "Counting α-hydrogens wrongly. A carbon adjacent to C=O that carries three alkyl groups, as in (CH3)3C–, has no α-H, so condensation can occur only at the other α-carbon.",
+    "fixes": "Same α-H error: a carbon with two methyls has one α-H; only a carbon with three alkyl groups, such as (CH3)3C–, has none"
+  },
+  {
+    "path": "topics[2].explanation",
+    "old": "Phenol ($pK_a \\approx 10$) is far more acidic than ethanol ($pK_a \\approx 15.9$) and water. There are two reasons. First, the OH is attached to an sp2 carbon, which is more electronegative and polarises the O–H bond. Second, and more important, the phenoxide ion is stabilised by delocalisation of its negative charge over the ring. This delocalisation is more effective than in phenol itself, where resonance requires charge separation. Phenol reacts with $Na$ and $NaOH$ but not with $NaHCO_3$, since it is weaker than carbonic acid. Electron-withdrawing groups (EWG) at the ortho or para positions, such as $-NO_2$, increase acidity strongly through the -R effect. Electron-donating groups ($-CH_3$, $-OCH_3$) decrease acidity. A meta EWG acts only through the -I effect, so its influence is smaller. Picric acid ($pK_a$ 0.38) is very strongly acidic.",
+    "new": "Phenol ($pK_a \\approx 10$) is far more acidic than ethanol ($pK_a \\approx 15.9$) and water. There are two reasons. First, the OH is attached to an sp2 carbon, which is more electronegative and polarises the O–H bond. Second, and more important, the phenoxide ion is stabilised by delocalisation of its negative charge over the ring. This delocalisation is more effective than in phenol itself, where resonance requires charge separation. Phenol reacts with $Na$ and $NaOH$ but not with $NaHCO_3$, since it is weaker than carbonic acid. Electron-withdrawing groups (EWG) at the ortho or para positions, such as $-NO_2$, increase acidity strongly through the -R effect. Electron-donating groups ($-CH_3$, $-OCH_3$) decrease acidity. A meta EWG acts only through the -I effect, so its influence is smaller. Picric acid (2,4,6-trinitrophenol, $pK_a \\approx 0.71$ as per NCERT) is very strongly acidic.",
+    "fixes": "Picric acid pKa 0.38 → 0.71 (NCERT)"
+  },
+  {
+    "path": "topics[12].key_points[3]",
+    "old": "Iodoform test is positive for $CH_3CO-$ compounds, $CH_3CHO$, $C_2H_5OH$ and $CH_3CH(OH)R$",
+    "new": "Iodoform test is positive for methyl ketones $CH_3COR$, $CH_3CHO$, $C_2H_5OH$ and $CH_3CH(OH)R$, but not for $CH_3COOH$ or its esters and amides",
+    "fixes": "Iodoform test: methyl ketones, not every CH3CO– compound"
+  },
+  {
+    "path": "quick_revision[9]",
+    "old": "Aldol condensation needs an α-H and dilute base. Cannizzaro needs no α-H and conc. base. The haloform reaction needs a CH3CO– group and gives CHX3 plus RCOO–.",
+    "new": "Aldol condensation needs an α-H and dilute base. Cannizzaro needs no α-H and conc. base. The haloform reaction needs a methyl ketone (CH3CO–R) group and gives CHX3 plus RCOO–.",
+    "fixes": "Iodoform/haloform: methyl ketones, not every CH3CO– compound"
+  }
+]

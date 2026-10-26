@@ -1,0 +1,457 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u02",
+  "unit_no": 2,
+  "unit_name": "Atomic Structure",
+  "slug": "atomic-structure",
+  "overview": "This unit explains how electrons are arranged and how they behave inside atoms. It builds from the wave and particle nature of light and matter, through the Bohr and quantum mechanical models, to quantum numbers, orbital shapes and electronic configurations. NEET asks numerical questions on Bohr relations, spectral lines, de Broglie and uncertainty, and conceptual questions on nodes, quantum numbers and configurations every year.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Electromagnetic radiation consists of oscillating electric and magnetic fields perpendicular to each other and to the direction of propagation. In vacuum all such waves travel at speed c. The electromagnetic spectrum, in order of increasing wavelength, is gamma, X-rays, UV, visible, IR, microwave and radio. Wave theory could not explain black-body radiation or the photoelectric effect. Planck proposed that energy is emitted or absorbed in discrete packets called quanta, with $E = h\\nu$. In the photoelectric effect, electrons are ejected from a metal surface only if the frequency of light is at least the threshold frequency $\\nu_0$. Ejection is instantaneous. The kinetic energy of the ejected electrons increases with frequency but does not depend on intensity. The number of electrons ejected is proportional to intensity. Einstein explained this by treating light as photons.",
+      "key_points": [
+        "$c = 3 \\times 10^8$ m $s^{-1}$ for all EM waves in vacuum",
+        "Wavenumber $\\bar{\\nu} = 1/\\lambda$, usually in $cm^{-1}$ or $m^{-1}$",
+        "Below $\\nu_0$ no electron is emitted, however intense the light",
+        "Intensity controls the number of photoelectrons; frequency controls their kinetic energy",
+        "Work function $W_0 = h\\nu_0$ is lowest for alkali metals such as Cs and K",
+        "Energy of 1 mole of photons is $N_A h\\nu$"
+      ],
+      "formulas": [
+        {
+          "formula": "$c = \\nu\\lambda$",
+          "meaning": "Relates frequency and wavelength of radiation"
+        },
+        {
+          "formula": "$E = h\\nu = \\frac{hc}{\\lambda}$",
+          "meaning": "Energy of one photon, with $h = 6.626 \\times 10^{-34}$ J s"
+        },
+        {
+          "formula": "$h\\nu = h\\nu_0 + \\frac{1}{2}m_e v^2$",
+          "meaning": "Einstein photoelectric equation"
+        },
+        {
+          "formula": "$KE_{max} = h(\\nu - \\nu_0) = eV_0$",
+          "meaning": "Maximum kinetic energy of photoelectrons; $V_0$ is the stopping potential"
+        }
+      ],
+      "neet_tip": "Expect numericals on photon energy, number of photons emitted by a lamp of given power, and the kinetic energy of photoelectrons from a given work function.",
+      "topic": "Nature of electromagnetic radiation; photoelectric effect"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "When hydrogen gas is excited by an electric discharge, it emits a line emission spectrum rather than a continuous one. Each line comes from an electron falling from a higher level $n_2$ to a lower level $n_1$. The lines are grouped into series according to the final level $n_1$. Lyman series ($n_1 = 1$) lies in the UV region. Balmer series ($n_1 = 2$) is the only one in the visible region. Paschen ($n_1 = 3$), Brackett ($n_1 = 4$) and Pfund ($n_1 = 5$) lie in the IR region. All wavelengths obey the Rydberg formula. Within a series, the first line ($n_2 = n_1 + 1$) has the longest wavelength. The series limit ($n_2 = \\infty$) has the shortest wavelength. The formula also applies to hydrogen-like species such as $He^+$ and $Li^{2+}$ when multiplied by $Z^2$.",
+      "key_points": [
+        "Atomic spectra are line spectra and act as a fingerprint of each element",
+        "Lyman is UV, Balmer is visible, Paschen, Brackett and Pfund are IR",
+        "The first line of a series has the lowest energy and longest wavelength",
+        "The series limit has the highest energy and shortest wavelength",
+        "Maximum number of lines when an electron falls from level n to the ground state is $\\frac{n(n-1)}{2}$",
+        "The longest-wavelength line of Lyman corresponds to $2 \\rightarrow 1$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\bar{\\nu} = 109677\\, Z^2 \\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right) cm^{-1}$",
+          "meaning": "Rydberg formula for H-like species, with $n_2 > n_1$"
+        },
+        {
+          "formula": "$N = \\frac{(n_2 - n_1)(n_2 - n_1 + 1)}{2}$",
+          "meaning": "Number of spectral lines for a transition from $n_2$ down to $n_1$"
+        }
+      ],
+      "neet_tip": "NEET often asks which transition gives a line of the same wavelength in $He^+$ as a given line in H, or the region or count of spectral lines.",
+      "topic": "Spectrum of the hydrogen atom"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Bohr's model of the hydrogen atom has four main postulates. First, the electron moves in circular orbits (stationary states) of fixed energy around the nucleus. Second, the energy of an orbit does not change with time while the electron stays in it. Third, energy is absorbed or emitted only when the electron jumps between orbits, with $\\Delta E = h\\nu$. Fourth, angular momentum is quantised, $mvr = \\frac{nh}{2\\pi}$. From these postulates, the radius, energy and velocity of each orbit follow for hydrogen and H-like ions. Energy is negative, meaning the electron is bound and is more stable than a free electron at infinity. The model has clear limitations. It fails for multi-electron atoms. It cannot explain fine structure, the Zeeman effect (magnetic field) or the Stark effect (electric field). It does not account for the dual nature of the electron or the uncertainty principle, and it cannot explain the ability of atoms to form molecules.",
+      "key_points": [
+        "Radius varies as $n^2/Z$; energy varies as $-Z^2/n^2$; velocity varies as $Z/n$",
+        "Energy gap between successive levels decreases as n increases",
+        "Ionisation energy of H is 13.6 eV, or $2.18 \\times 10^{-18}$ J per atom",
+        "In an orbit, KE equals $-E$ and PE equals $2E$",
+        "Bohr's model applies only to one-electron species: H, $He^+$, $Li^{2+}$, $Be^{3+}$",
+        "It violates the Heisenberg principle because it assigns a definite path to the electron"
+      ],
+      "formulas": [
+        {
+          "formula": "$mvr = \\frac{nh}{2\\pi}$",
+          "meaning": "Quantisation of angular momentum"
+        },
+        {
+          "formula": "$r_n = 52.9 \\frac{n^2}{Z}$ pm",
+          "meaning": "Radius of the nth Bohr orbit"
+        },
+        {
+          "formula": "$E_n = -2.18 \\times 10^{-18} \\frac{Z^2}{n^2}$ J $= -13.6 \\frac{Z^2}{n^2}$ eV",
+          "meaning": "Energy of the nth orbit"
+        },
+        {
+          "formula": "$v_n = 2.18 \\times 10^6 \\frac{Z}{n}$ m $s^{-1}$",
+          "meaning": "Velocity of the electron in the nth orbit"
+        },
+        {
+          "formula": "$\\Delta E = h\\nu = 2.18 \\times 10^{-18} Z^2 \\left(\\frac{1}{n_i^2} - \\frac{1}{n_f^2}\\right)$ J",
+          "meaning": "Energy of the photon for a transition between levels"
+        }
+      ],
+      "neet_tip": "Ratio-based questions are common, for example the radius or energy of $Li^{2+}$ or $He^+$ in a given orbit compared with H, and the KE:PE:TE relationship.",
+      "topic": "Bohr model: postulates, energy and radii relations, limitations"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "De Broglie proposed that matter, like radiation, has a dual nature: every moving particle has a wave associated with it. Its wavelength is $\\lambda = h/mv$. For macroscopic objects the mass is so large that the wavelength is negligibly small, so wave behaviour cannot be observed. For electrons the wavelength is significant. Electron diffraction confirmed this, and the electron microscope is based on the wave nature of electrons. Applying de Broglie's idea to Bohr's model, a stable orbit is one in which a whole number of electron wavelengths fits around the circumference. This leads directly to Bohr's quantisation of angular momentum.",
+      "key_points": [
+        "Wave nature is significant only for microscopic particles",
+        "Wavelength is inversely proportional to momentum",
+        "Orbit condition $2\\pi r = n\\lambda$ gives $mvr = nh/2\\pi$",
+        "Electron microscope uses electron waves; electron diffraction is the experimental proof",
+        "For the same kinetic energy, a lighter particle has a longer wavelength"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\lambda = \\frac{h}{mv} = \\frac{h}{p}$",
+          "meaning": "de Broglie wavelength"
+        },
+        {
+          "formula": "$\\lambda = \\frac{h}{\\sqrt{2m\\,KE}}$",
+          "meaning": "Wavelength from kinetic energy"
+        },
+        {
+          "formula": "$\\lambda = \\frac{h}{\\sqrt{2meV}} \\approx \\frac{12.27}{\\sqrt{V}}$ Å",
+          "meaning": "Wavelength of an electron accelerated through potential V"
+        },
+        {
+          "formula": "$2\\pi r = n\\lambda$",
+          "meaning": "Number of waves fitting in the nth Bohr orbit"
+        }
+      ],
+      "neet_tip": "Expect a direct calculation of $\\lambda$ for an electron or a ball, or a comparison of wavelengths of particles with equal KE or equal velocity.",
+      "topic": "Dual nature of matter; de Broglie relationship"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Heisenberg's uncertainty principle states that it is impossible to determine both the exact position and the exact momentum (or velocity) of a microscopic particle such as an electron at the same time. The product of the uncertainties is at least $h/4\\pi$. The reason is that measuring an electron requires light of wavelength comparable to its size, and photons of such light disturb the electron's momentum. The principle rules out definite orbits with fixed paths, which is a major failure of Bohr's model. Instead, we can only describe the probability of finding the electron. For macroscopic objects the uncertainties are negligible, so the principle has no practical effect on them.",
+      "key_points": [
+        "The more precisely position is known, the less precisely momentum is known",
+        "The principle is significant only for microscopic particles",
+        "It rejects the concept of a fixed orbit and leads to the concept of probability",
+        "The same form applies to energy and time: $\\Delta E \\cdot \\Delta t \\geq h/4\\pi$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta x \\cdot \\Delta p \\geq \\frac{h}{4\\pi}$",
+          "meaning": "Uncertainty relation between position and momentum"
+        },
+        {
+          "formula": "$\\Delta x \\cdot \\Delta v \\geq \\frac{h}{4\\pi m}$",
+          "meaning": "Uncertainty in velocity for a particle of mass m"
+        }
+      ],
+      "neet_tip": "NEET asks for $\\Delta v$ or $\\Delta x$ from given data, or for the case when $\\Delta x = \\Delta p$ so that $\\Delta p = \\sqrt{h/4\\pi}$.",
+      "topic": "Heisenberg uncertainty principle"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "The quantum mechanical model treats the electron as a wave and describes it with the Schrödinger wave equation, $\\hat{H}\\psi = E\\psi$, where $\\hat{H}$ is the Hamiltonian (total energy operator). Solving this equation for an atom gives only certain allowed energies (quantised energy levels) and the corresponding wave functions $\\psi$. These solutions automatically introduce the quantum numbers n, l and $m_l$. Main features of the model: electron energy is quantised; the exact path of an electron cannot be determined; an orbital is the region where the probability of finding the electron is maximum; and $|\\psi|^2$ gives probability density. For hydrogen, energy depends only on n. For multi-electron atoms, energy depends on both n and l.",
+      "key_points": [
+        "Based on wave-particle duality and the uncertainty principle",
+        "$\\psi$ has no physical meaning; $\\psi^2$ gives probability density",
+        "An orbital is a probability region, not a fixed path",
+        "In H, orbitals of the same n are degenerate (e.g. 2s and 2p)",
+        "In multi-electron atoms 2s is lower in energy than 2p because of shielding and penetration"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\hat{H}\\psi = E\\psi$",
+          "meaning": "Schrödinger wave equation in operator form"
+        }
+      ],
+      "neet_tip": "Statement-based questions test the differences between an orbit and an orbital and the dependence of energy on n alone (H) versus on n + l (multi-electron atoms).",
+      "topic": "Quantum mechanical model of the atom"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "An atomic orbital is a one-electron wave function $\\psi$ obtained by solving the Schrödinger equation for an electron in an atom. Each orbital is specified by a set of three quantum numbers n, l and $m_l$, and can hold at most two electrons. $\\psi$ itself can be positive or negative and has no direct physical significance. Its square, $|\\psi|^2$, gives the probability density of finding the electron at a point. A node is a region where $\\psi$, and hence $\\psi^2$, is zero. Radial nodes are spherical surfaces. Angular nodes are planes or cones. Boundary surface diagrams enclose about 90% of the probability and are used to represent orbital shapes.",
+      "key_points": [
+        "Radial nodes $= n - l - 1$",
+        "Angular nodes $= l$",
+        "Total nodes $= n - 1$",
+        "Each orbital is defined by n, l and $m_l$ and holds a maximum of 2 electrons",
+        "Boundary surface diagrams represent about 90% probability of finding the electron"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{radial nodes} = n - l - 1$",
+          "meaning": "Number of spherical nodes"
+        },
+        {
+          "formula": "$\\text{angular nodes} = l$",
+          "meaning": "Number of nodal planes or cones"
+        }
+      ],
+      "neet_tip": "Counting radial and angular nodes for orbitals like 3p, 4d or 5s is a near-certain one-mark question.",
+      "topic": "Atomic orbitals as one-electron wave functions"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "For a 1s orbital, $\\psi$ is maximum at the nucleus and decreases steadily with r, never becoming zero at finite r, so it has no node. $\\psi^2$ also is maximum at the nucleus. For 2s, $\\psi$ starts positive at r = 0, falls, becomes zero at one value of r (one radial node), turns negative and then approaches zero. $\\psi^2$ is maximum at the nucleus, drops to zero at the node and rises to a second, smaller maximum. For 3s, $\\psi$ crosses zero twice (two radial nodes). For s orbitals $\\psi$ is non-zero at the nucleus, but for p and d orbitals $\\psi$ starts from zero at r = 0. The radial probability function $4\\pi r^2 \\psi^2$ is zero at the nucleus. For 1s it peaks at 52.9 pm, which equals the Bohr radius.",
+      "key_points": [
+        "Number of times $\\psi$ crosses zero (excluding r = 0) equals the number of radial nodes",
+        "1s has 0 radial nodes, 2s has 1, 3s has 2",
+        "A plot starting at a non-zero value at r = 0 indicates an s orbital",
+        "A plot starting at zero at r = 0 indicates a p or d orbital",
+        "$\\psi^2$ is never negative",
+        "Radial probability for 1s peaks at $a_0 = 52.9$ pm"
+      ],
+      "formulas": [
+        {
+          "formula": "$P(r) = 4\\pi r^2 \\psi^2$",
+          "meaning": "Radial probability density at distance r"
+        }
+      ],
+      "neet_tip": "NEET shows $\\psi$ vs r plots and asks for the number of radial nodes. Count the zero crossings and check whether the curve starts at zero (p, d) or not (s).",
+      "topic": "Variation of psi and psi-squared with r for 1s and 2s orbitals"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Four quantum numbers completely describe an electron in an atom. The principal quantum number n (1, 2, 3, and so on) gives the shell, the size of the orbital and its main energy. The azimuthal quantum number l (0 to n−1) gives the subshell and the orbital shape: s, p, d and f for l = 0, 1, 2 and 3. The magnetic quantum number $m_l$ (−l to +l, including 0) gives the spatial orientation of the orbital. The spin quantum number $m_s$ (+1/2 or −1/2) gives the spin orientation of the electron. A shell n contains $n^2$ orbitals and up to $2n^2$ electrons. A subshell contains $2l + 1$ orbitals.",
+      "key_points": [
+        "n determines size and energy (energy depends only on n in H)",
+        "l determines shape and orbital angular momentum",
+        "$m_l$ determines orientation; there are $2l+1$ values",
+        "Number of subshells in shell n equals n",
+        "Invalid sets such as n = 2, l = 2 or l = 1, $m_l$ = 2 are common distractors"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{orbitals in shell} = n^2$; $\\text{electrons} = 2n^2$",
+          "meaning": "Capacity of a shell"
+        },
+        {
+          "formula": "$\\text{orbitals in subshell} = 2l + 1$; $\\text{electrons} = 2(2l+1)$",
+          "meaning": "Capacity of a subshell"
+        },
+        {
+          "formula": "$L = \\sqrt{l(l+1)}\\frac{h}{2\\pi}$",
+          "meaning": "Orbital angular momentum"
+        }
+      ],
+      "neet_tip": "Questions test identifying a valid or invalid set of quantum numbers, or counting electrons with a given n, l or $m_l$.",
+      "topic": "Quantum numbers and their significance"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "s orbitals (l = 0) are spherically symmetric and have no angular node. Their size increases from 1s to 2s to 3s. p orbitals (l = 1) are dumbbell shaped and come in three orientations: $p_x$, $p_y$ and $p_z$. Each p orbital has one nodal plane passing through the nucleus. For example, $p_z$ has the xy-plane as its nodal plane. d orbitals (l = 2) are five in number. $d_{xy}$, $d_{yz}$ and $d_{zx}$ have lobes between the axes. $d_{x^2-y^2}$ has lobes along the x and y axes. $d_{z^2}$ has two lobes along the z-axis with a doughnut-shaped ring in the xy-plane. Four d orbitals have two nodal planes each, while $d_{z^2}$ has two conical nodal surfaces. All five 3d orbitals are equivalent in energy in an isolated atom.",
+      "key_points": [
+        "s is spherical, p is dumbbell, d is mostly cloverleaf",
+        "Each p orbital has 1 nodal plane; each d orbital has 2 angular nodes",
+        "$d_{x^2-y^2}$ and $d_{z^2}$ have lobes along the axes",
+        "$d_{xy}$, $d_{yz}$ and $d_{zx}$ have lobes between the axes",
+        "$d_{z^2}$ has no nodal plane; its angular nodes are conical",
+        "The orbitals within each p or d set are degenerate in an isolated atom"
+      ],
+      "formulas": [],
+      "neet_tip": "Identify nodal planes, for example that the xy-plane is the nodal plane of $p_z$, $d_{xz}$ and $d_{yz}$, or which d orbital has lobes along the axes.",
+      "topic": "Shapes of s, p and d orbitals"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "Uhlenbeck and Goudsmit proposed that an electron spins about its own axis, much like the earth. This gives the electron an intrinsic spin angular momentum and a magnetic moment. The spin can have only two orientations relative to a chosen axis, described by $m_s = +1/2$ (clockwise, $\\uparrow$) and $m_s = -1/2$ (anticlockwise, $\\downarrow$). An orbital can hold at most two electrons, and they must have opposite spins. Unpaired electrons make a species paramagnetic, while species with all electrons paired are diamagnetic.",
+      "key_points": [
+        "Spin quantum number s = 1/2 for every electron; $m_s = \\pm 1/2$",
+        "The spin quantum number does not come from the Schrödinger equation",
+        "Two electrons in one orbital have opposite spins",
+        "More unpaired electrons give a greater magnetic moment",
+        "Total spin $= n \\times \\frac{1}{2}$ for n unpaired electrons; spin multiplicity $= 2S + 1$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{spin angular momentum} = \\sqrt{s(s+1)}\\frac{h}{2\\pi}$",
+          "meaning": "With s = 1/2 this equals $\\frac{\\sqrt{3}}{2}\\frac{h}{2\\pi}$"
+        },
+        {
+          "formula": "$\\mu = \\sqrt{n(n+2)}$ BM",
+          "meaning": "Spin-only magnetic moment for n unpaired electrons"
+        }
+      ],
+      "neet_tip": "Count unpaired electrons in an ion such as $Fe^{3+}$ or $Mn^{2+}$ to find its magnetic moment or total spin.",
+      "topic": "Electron spin and spin quantum number"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "The Aufbau principle states that electrons fill orbitals in increasing order of energy. The (n + l) rule decides this order: the lower the value of n + l, the lower the energy. If two orbitals have the same n + l, the one with lower n is filled first. This gives the order 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d, 6p, 7s, 5f, 6d, 7p. Pauli's exclusion principle states that no two electrons in an atom can have the same set of all four quantum numbers, so an orbital holds at most two electrons, with opposite spins. Hund's rule of maximum multiplicity states that pairing of electrons in degenerate orbitals (p, d, f) does not begin until each orbital in that subshell is singly occupied with parallel spins.",
+      "key_points": [
+        "Lower (n + l) means lower energy; for a tie, lower n means lower energy",
+        "4s (n + l = 4) fills before 3d (n + l = 5)",
+        "Pauli's principle limits each orbital to 2 electrons",
+        "Hund's rule applies only to degenerate orbitals",
+        "Pairing in p starts with the 4th electron, in d with the 6th, in f with the 8th"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{energy order} \\propto (n + l)$",
+          "meaning": "Aufbau rule for multi-electron atoms"
+        }
+      ],
+      "neet_tip": "NEET asks which principle is violated by a given orbital diagram, or asks you to rank orbitals by energy using the n + l rule.",
+      "topic": "Aufbau principle, Pauli's exclusion principle and Hund's rule"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Electronic configuration shows how the electrons of an atom are distributed among its orbitals, written as $nl^x$, for example $1s^2 2s^2 2p^6$. A noble-gas core can be used as shorthand, such as [Ar] $3d^5 4s^1$ for Cr. Valence electrons determine chemical properties. When forming cations of transition elements, electrons are removed from the outermost ns orbital before (n−1)d. For example, $Fe^{2+}$ is [Ar] $3d^6$, not [Ar] $3d^4 4s^2$. Important exceptions in the 3d series are Cr ([Ar] $3d^5 4s^1$) and Cu ([Ar] $3d^{10} 4s^1$). Similar exceptions occur in heavier elements such as Mo, Ag and Au.",
+      "key_points": [
+        "K and Ca: the 4s orbital fills before 3d",
+        "Cr is $3d^5 4s^1$ and Cu is $3d^{10} 4s^1$",
+        "Transition metal cations lose 4s electrons first",
+        "Isoelectronic species have the same number of electrons (e.g. $N^{3-}$, $O^{2-}$, $F^-$, Ne, $Na^+$)",
+        "Unpaired electrons: Cr has 6, Mn has 5, Fe has 4, Cu has 1"
+      ],
+      "formulas": [],
+      "neet_tip": "Typical questions ask for the configuration of ions such as $Cu^{2+}$ or $Cr^{3+}$, the number of unpaired electrons, or the number of electrons with l = 1 or l = 2.",
+      "topic": "Electronic configuration of elements"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "Half-filled ($p^3$, $d^5$, $f^7$) and completely filled ($p^6$, $d^{10}$, $f^{14}$) subshells have extra stability for two reasons. The first is symmetrical distribution of electrons, which leads to more uniform shielding and a symmetrical charge cloud. The second, and more important, is exchange energy. Electrons with parallel spins in degenerate orbitals can exchange positions, and each such exchange releases energy and stabilises the atom. The number of possible exchanges is greatest for half-filled and fully filled arrangements. This explains why Cr is $3d^5 4s^1$ rather than $3d^4 4s^2$, and why Cu is $3d^{10} 4s^1$. It also explains why N has a higher first ionisation energy than O.",
+      "key_points": [
+        "Exchange energy is the main reason for extra stability",
+        "Number of exchanges for n parallel electrons is $\\frac{n(n-1)}{2}$",
+        "$d^5$ has 10 exchanges; $d^4$ has only 6",
+        "This explains higher IE of N than O, and of P than S",
+        "$Mn^{2+}$ ($d^5$) and $Fe^{3+}$ ($d^5$) are especially stable"
+      ],
+      "formulas": [
+        {
+          "formula": "$N_{exchange} = \\frac{n(n-1)}{2}$",
+          "meaning": "Number of exchange pairs for n parallel-spin electrons in a subshell"
+        }
+      ],
+      "neet_tip": "NEET tests the reason for the Cr and Cu exceptions and comparisons of ionisation energy or stability involving half-filled configurations.",
+      "topic": "Extra stability of half-filled and completely filled orbitals"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$E = h\\nu = \\frac{hc}{\\lambda}$",
+      "meaning": "Photon energy"
+    },
+    {
+      "formula": "$c = \\nu\\lambda$, $\\bar{\\nu} = \\frac{1}{\\lambda}$",
+      "meaning": "Wave relations"
+    },
+    {
+      "formula": "$h\\nu = h\\nu_0 + \\frac{1}{2}mv^2$",
+      "meaning": "Photoelectric equation"
+    },
+    {
+      "formula": "$\\bar{\\nu} = R_H Z^2\\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right)$, $R_H = 109677\\ cm^{-1}$",
+      "meaning": "Rydberg formula"
+    },
+    {
+      "formula": "$\\frac{n(n-1)}{2}$",
+      "meaning": "Maximum number of spectral lines from level n to the ground state"
+    },
+    {
+      "formula": "$mvr = \\frac{nh}{2\\pi}$",
+      "meaning": "Bohr quantisation of angular momentum"
+    },
+    {
+      "formula": "$r_n = 52.9\\frac{n^2}{Z}$ pm",
+      "meaning": "Bohr radius of the nth orbit"
+    },
+    {
+      "formula": "$E_n = -13.6\\frac{Z^2}{n^2}$ eV $= -2.18 \\times 10^{-18}\\frac{Z^2}{n^2}$ J",
+      "meaning": "Bohr energy of the nth orbit"
+    },
+    {
+      "formula": "$v_n = 2.18 \\times 10^6 \\frac{Z}{n}$ m $s^{-1}$",
+      "meaning": "Electron velocity in the nth orbit"
+    },
+    {
+      "formula": "$KE = -E_n$, $PE = 2E_n$",
+      "meaning": "Energy relations in a Bohr orbit"
+    },
+    {
+      "formula": "$\\lambda = \\frac{h}{mv} = \\frac{h}{\\sqrt{2m\\,KE}}$",
+      "meaning": "de Broglie wavelength"
+    },
+    {
+      "formula": "$\\lambda = \\frac{12.27}{\\sqrt{V}}$ Å",
+      "meaning": "Wavelength of an electron accelerated through V volts"
+    },
+    {
+      "formula": "$\\Delta x \\cdot \\Delta p \\geq \\frac{h}{4\\pi}$",
+      "meaning": "Heisenberg uncertainty principle"
+    },
+    {
+      "formula": "$\\hat{H}\\psi = E\\psi$",
+      "meaning": "Schrödinger equation"
+    },
+    {
+      "formula": "$\\text{radial nodes} = n - l - 1$, $\\text{angular nodes} = l$, $\\text{total nodes} = n - 1$",
+      "meaning": "Node counting"
+    },
+    {
+      "formula": "$n^2$ orbitals and $2n^2$ electrons per shell; $2l+1$ orbitals per subshell",
+      "meaning": "Shell and subshell capacity"
+    },
+    {
+      "formula": "$L = \\sqrt{l(l+1)}\\frac{h}{2\\pi}$",
+      "meaning": "Orbital angular momentum"
+    },
+    {
+      "formula": "$\\mu = \\sqrt{n(n+2)}$ BM",
+      "meaning": "Spin-only magnetic moment"
+    },
+    {
+      "formula": "$(n + l)$ rule",
+      "meaning": "Order of filling of orbitals (Aufbau)"
+    },
+    {
+      "formula": "$\\frac{n(n-1)}{2}$ exchanges",
+      "meaning": "Exchange energy count for n parallel spins"
+    }
+  ],
+  "common_traps": [
+    "Assuming that increasing light intensity increases the kinetic energy of photoelectrons. Intensity increases only the number of electrons; KE depends on frequency.",
+    "Forgetting the $Z^2$ factor in the Rydberg formula for $He^+$ or $Li^{2+}$, or using $Z$ in place of $Z^2$ for energy. Radius varies as $n^2/Z$ and energy as $Z^2/n^2$.",
+    "Counting the origin r = 0 as a radial node for p or d orbitals. Only zero crossings at finite r count as radial nodes.",
+    "Writing $Fe^{2+}$ as [Ar] $3d^4 4s^2$. Electrons leave the 4s orbital first, so it is [Ar] $3d^6$.",
+    "Thinking 2s and 2p differ in energy in the hydrogen atom. In H, energy depends only on n, so they are degenerate.",
+    "Assuming the series limit has the longest wavelength. The series limit has the shortest wavelength and the first line has the longest.",
+    "Thinking $d_{z^2}$ has nodal planes like the other d orbitals. Its two angular nodes are conical surfaces.",
+    "Applying Bohr's formulas to multi-electron species such as He or $Li^+$. They are valid only for one-electron species."
+  ],
+  "quick_revision": [
+    "$E = h\\nu$; photoemission occurs only if $\\nu \\geq \\nu_0$; $KE_{max} = h(\\nu - \\nu_0)$.",
+    "Spectral series by $n_1$: Lyman 1 (UV), Balmer 2 (visible), Paschen 3, Brackett 4, Pfund 5 (all IR).",
+    "Bohr relations: $r \\propto n^2/Z$, $E \\propto -Z^2/n^2$, $v \\propto Z/n$; ionisation energy of H is 13.6 eV.",
+    "de Broglie: $\\lambda = h/mv$; Bohr orbit condition $2\\pi r = n\\lambda$.",
+    "Heisenberg: $\\Delta x \\cdot \\Delta p \\geq h/4\\pi$; this rules out fixed orbits.",
+    "$\\psi^2$ gives probability density; an orbital is a one-electron wave function.",
+    "Radial nodes $= n-l-1$; angular nodes $= l$; 1s, 2s and 3s have 0, 1 and 2 radial nodes.",
+    "s-orbital $\\psi$ is non-zero at the nucleus; p and d $\\psi$ start at zero.",
+    "Allowed values: l from 0 to n−1; $m_l$ from −l to +l; $m_s = \\pm 1/2$; shell capacity $2n^2$.",
+    "Filling order uses the n + l rule; Pauli allows 2 electrons per orbital; Hund's rule requires single occupancy first.",
+    "Exceptions: Cr is [Ar] $3d^5 4s^1$ and Cu is [Ar] $3d^{10} 4s^1$, due to exchange energy and symmetry.",
+    "Spin-only magnetic moment $\\mu = \\sqrt{n(n+2)}$ BM; $Mn^{2+}$ and $Fe^{3+}$ have 5 unpaired electrons, giving 5.92 BM."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q088",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q88"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u19",
+  "unit_no": 19,
+  "unit_name": "Electronic Devices",
+  "slug": "electronic-devices",
+  "overview": "This unit covers semiconductor materials and the p-n junction devices built from them: rectifier diodes, LEDs, photodiodes, solar cells and Zener diodes. It ends with digital logic gates. NEET usually asks 1-2 questions from here, mostly on biasing and depletion width, Zener regulator circuits, rectifier output frequency, photon energy and band gap, and truth tables of combined gates.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "In solids, atomic energy levels form a valence band (VB) and a conduction band (CB) separated by an energy gap $E_g$. Metals have overlapping bands. Insulators have a large gap ($E_g > 3$ eV). Semiconductors have a small gap: Si about 1.1 eV and Ge about 0.7 eV. In a pure (intrinsic) semiconductor, thermal energy breaks covalent bonds and creates equal numbers of free electrons and holes, so $n_e = n_h = n_i$. Doping gives extrinsic semiconductors. Adding a pentavalent impurity (P, As, Sb) gives n-type, where the donor level lies just below the CB and electrons are the majority carriers. Adding a trivalent impurity (B, Al, Ga, In) gives p-type, where the acceptor level lies just above the VB and holes are the majority carriers. A doped crystal remains electrically neutral. Resistivity of a semiconductor decreases as temperature rises, i.e. it has a negative temperature coefficient of resistance.",
+      "key_points": [
+        "Si and Ge are tetravalent and form covalent bonds in a diamond-like lattice",
+        "At 0 K an intrinsic semiconductor behaves as an insulator",
+        "Holes act as positive charge carriers; total current is $I = I_e + I_h$",
+        "n-type: $n_e \\gg n_h$; p-type: $n_h \\gg n_e$",
+        "Mass action law $n_e n_h = n_i^2$ holds in thermal equilibrium",
+        "Both n-type and p-type materials are electrically neutral",
+        "Electron mobility is greater than hole mobility"
+      ],
+      "formulas": [
+        {
+          "formula": "$n_e n_h = n_i^2$",
+          "meaning": "Mass action law; use it to find minority carrier density after doping"
+        },
+        {
+          "formula": "$\\sigma = \\frac{1}{\\rho} = e(n_e \\mu_e + n_h \\mu_h)$",
+          "meaning": "Conductivity of a semiconductor in terms of carrier densities and mobilities"
+        },
+        {
+          "formula": "$n_e \\approx N_D$ (n-type), $n_h \\approx N_A$ (p-type)",
+          "meaning": "The majority carrier density is approximately equal to the dopant concentration when $N_D$ (or $N_A$) is much greater than $n_i$."
+        }
+      ],
+      "neet_tip": "Expect numericals on $n_e n_h = n_i^2$ to find minority carrier density, and conceptual questions on dopant type, band diagrams and the temperature dependence of resistance.",
+      "topic": "Semiconductors"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "When p- and n-regions are joined, majority carriers diffuse across the junction. They leave behind immobile ions, which form the depletion region, and set up a barrier potential (about 0.7 V for Si and 0.3 V for Ge). At equilibrium, diffusion current equals drift current. In forward bias (p connected to +), the barrier height and depletion width decrease. Current is negligible until the threshold (knee) voltage, then rises exponentially, and the current is due to majority carriers. In reverse bias (p connected to -), the barrier and depletion width increase. Only a tiny, almost voltage-independent reverse saturation current flows, in the microampere range, due to minority carriers. At the breakdown voltage the reverse current rises sharply. Dynamic resistance is $r_d = \\Delta V/\\Delta I$. An ideal diode has zero resistance in forward bias and infinite resistance in reverse bias.",
+      "key_points": [
+        "Depletion region contains immobile ions and no free carriers",
+        "Electric field in the depletion region points from the n side to the p side",
+        "Depletion width order: reverse bias > unbiased (or open circuit) > forward bias",
+        "A diode in an open branch carries no current and behaves as an unbiased diode",
+        "Forward current comes from majority carriers; reverse current from minority carriers",
+        "Reverse saturation current increases with temperature",
+        "The I-V graph is non-linear, so a diode is a non-ohmic device"
+      ],
+      "formulas": [
+        {
+          "formula": "$r_d = \\frac{\\Delta V}{\\Delta I}$",
+          "meaning": "Dynamic (AC) resistance of a diode from the slope of its I-V curve"
+        },
+        {
+          "formula": "$I = \\frac{V - V_0}{R}$",
+          "meaning": "Current in a series diode-resistor circuit, where $V_0$ is the barrier (knee) voltage; take $V_0 = 0$ for an ideal diode"
+        }
+      ],
+      "neet_tip": "NEET checks whether you can identify the bias state of diodes in a circuit (including open branches) and rank depletion widths or currents, or use $r_d = \\Delta V/\\Delta I$ from a graph.",
+      "topic": "Semiconductor diode: I-V characteristics in forward and reverse bias"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "A rectifier converts AC to pulsating DC using the one-way conduction of a diode. A half-wave rectifier uses one diode. It conducts only during the half cycle in which it is forward biased, so the output appears only in alternate half cycles and has the same frequency as the input. A full-wave rectifier uses two diodes with a centre-tap transformer. Each diode conducts in alternate half cycles, and current through the load always flows in the same direction. As a result, the output ripple frequency is twice the input frequency. The pulsating output is smoothed with a capacitor filter placed in parallel with the load. The capacitor charges near the peaks and discharges slowly through the load, giving a nearly steady DC. A larger RC gives smaller ripple. Full-wave rectification is more efficient than half-wave.",
+      "key_points": [
+        "Half-wave: output frequency = $f$; full-wave: output frequency = $2f$",
+        "For 50 Hz mains, full-wave ripple frequency is 100 Hz",
+        "In a centre-tap circuit, each diode receives half of the secondary voltage",
+        "The filter capacitor is connected in parallel with the load resistor",
+        "Larger time constant $R_L C$ gives a smoother output",
+        "Maximum efficiency is 40.6% for half-wave and 81.2% for full-wave"
+      ],
+      "formulas": [
+        {
+          "formula": "$V_{dc} = \\frac{V_m}{\\pi}$, $V_{rms} = \\frac{V_m}{2}$",
+          "meaning": "Average and rms output of a half-wave rectifier, where $V_m$ is the peak voltage"
+        },
+        {
+          "formula": "$V_{dc} = \\frac{2V_m}{\\pi}$, $V_{rms} = \\frac{V_m}{\\sqrt{2}}$",
+          "meaning": "Average and rms output of a full-wave rectifier"
+        },
+        {
+          "formula": "$f_{out} = 2 f_{in}$",
+          "meaning": "Output (ripple) frequency of a full-wave rectifier"
+        }
+      ],
+      "neet_tip": "Questions focus on output frequency, identifying input-output waveforms, and the role of the filter capacitor.",
+      "topic": "Diode as a rectifier"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "A light emitting diode (LED) is a heavily doped p-n junction operated in forward bias. Injected minority carriers recombine with majority carriers near the junction and release energy as photons of energy roughly equal to $E_g$. Visible LEDs use a band gap of about 1.8 eV to 3 eV, for example GaAsP for red, yellow or orange light. The I-V characteristic resembles that of an ordinary diode, but the threshold voltage is higher and depends on colour. It is about 1.8 V for red and about 3 V for blue, so a shorter wavelength needs a higher threshold voltage. Light intensity increases with forward current up to a limit. The reverse breakdown voltage of an LED is low (about 5 V), so it must not be reverse biased carelessly. Compared with incandescent lamps, LEDs offer low operating voltage, low power consumption, fast switching, long life and nearly monochromatic light.",
+      "key_points": [
+        "Operated in forward bias; light comes from radiative recombination",
+        "Photon energy is approximately $E_g$, so colour is set by the band gap",
+        "Si and Ge are not used for visible LEDs: their gaps are too small and they are indirect band gap materials",
+        "Threshold voltage order: red < yellow < green < blue",
+        "Reverse breakdown voltage is low, about 5 V"
+      ],
+      "formulas": [
+        {
+          "formula": "$E_g \\approx h\\nu = \\frac{hc}{\\lambda}$",
+          "meaning": "Relates band gap to emitted wavelength"
+        },
+        {
+          "formula": "$\\lambda(\\text{nm}) \\approx \\frac{1240}{E_g(\\text{eV})}$",
+          "meaning": "Quick conversion between wavelength and photon energy"
+        }
+      ],
+      "neet_tip": "Typical questions ask for the wavelength or colour from the band gap, the biasing mode of an LED, or a comparison of threshold voltages of LEDs of different colours.",
+      "topic": "I-V characteristics of LED"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "A photodiode is a p-n junction operated in reverse bias with a window that admits light. Photons with $h\\nu > E_g$ create electron-hole pairs near the depletion region. The junction field separates them, so the reverse current increases in proportion to light intensity. Reverse bias is used because the fractional change in the small minority-carrier current is large, which makes the device sensitive; it is used as a light detector. A solar cell is a large-area p-n junction that needs no external bias. Its operation has three steps: generation of electron-hole pairs, separation of the carriers by the junction field, and collection at the electrodes. This produces a photo-voltage (emf). Its I-V curve lies in the fourth quadrant and gives the open-circuit voltage $V_{oc}$ and the short-circuit current $I_{sc}$. Ideal materials have $E_g$ near 1.5 eV, high absorption and high conductivity, for example Si, GaAs, CdTe and CuInSe$_2$.",
+      "key_points": [
+        "Photodiode: reverse biased; solar cell: unbiased (acts as a source)",
+        "Photocurrent in a photodiode is proportional to light intensity",
+        "A photon can generate a carrier only if $h\\nu \\ge E_g$",
+        "Solar cell I-V curve is drawn in the fourth quadrant",
+        "Solar spectrum peaks near 1.5 eV, so materials with $E_g \\approx 1$ to $1.8$ eV are preferred",
+        "Solar cells are used in satellites, calculators and power supplies for remote areas"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\lambda_{max} = \\frac{hc}{E_g}$",
+          "meaning": "Longest wavelength that a photodiode or solar cell can detect or absorb"
+        },
+        {
+          "formula": "$P_{max} = (V I)_{max}$, fill factor $= \\frac{V_m I_m}{V_{oc} I_{sc}}$",
+          "meaning": "Maximum power output of a solar cell and a measure of its quality"
+        }
+      ],
+      "neet_tip": "NEET asks why a photodiode is reverse biased, for the cutoff wavelength from $E_g$, and for the quadrant or shape of the solar cell I-V curve.",
+      "topic": "Photodiode and solar cell"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "A Zener diode is heavily doped on both sides, which gives a very thin depletion layer and a very strong junction field (about $5 \\times 10^6$ V/m). It is designed to operate in reverse breakdown. At the Zener voltage $V_Z$, the field pulls electrons out of covalent bonds (internal field emission), and the current rises sharply while the voltage stays nearly constant at $V_Z$. In a voltage regulator, the Zener is reverse biased and connected in parallel with the load, with a series resistor $R_s$. If the input voltage or the load changes, the Zener current adjusts and the extra voltage drops across $R_s$. The load voltage therefore stays at $V_Z$. The drop across the series resistor is $V_{in} - V_Z$. If the voltage across the Zener without it, $V_{in}R_L/(R_s+R_L)$, is below $V_Z$, the Zener does not conduct and behaves like an open circuit.",
+      "key_points": [
+        "Zener is used in reverse bias; in forward bias it acts like an ordinary diode",
+        "Heavier doping gives a lower breakdown voltage",
+        "Load is connected in parallel with the Zener; the resistor is in series with the input",
+        "Voltage across $R_s$ is $V_{in} - V_Z$; current through $R_s$ is $I = I_Z + I_L$",
+        "Breakdown is not destructive if the current is limited by $R_s$",
+        "Before assuming regulation, check that the voltage across the Zener without it, $V_{in}R_L/(R_s+R_L)$, is at least $V_Z$. If it is less, treat the Zener as an open circuit."
+      ],
+      "formulas": [
+        {
+          "formula": "$I_s = \\frac{V_{in} - V_Z}{R_s}$",
+          "meaning": "Current through the series resistor"
+        },
+        {
+          "formula": "$I_L = \\frac{V_Z}{R_L}$",
+          "meaning": "Load current, since the load voltage is fixed at $V_Z$"
+        },
+        {
+          "formula": "$I_Z = I_s - I_L$",
+          "meaning": "Current through the Zener diode"
+        },
+        {
+          "formula": "$P_Z = V_Z I_Z$",
+          "meaning": "Power dissipated in the Zener; must stay below its rated value"
+        }
+      ],
+      "neet_tip": "Expect Zener regulator numericals: voltage across the series resistor, Zener current or power, and checks on whether the Zener is actually in breakdown.",
+      "topic": "Zener diode and Zener diode as a voltage regulator"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Logic gates process binary signals (0 and 1). In the truth tables below, inputs are written in the order 00, 01, 10, 11. OR gate: $Y = A + B$; output is 1 if at least one input is 1 (outputs 0, 1, 1, 1). AND gate: $Y = A \\cdot B$; output is 1 only if both inputs are 1 (outputs 0, 0, 0, 1). NOT gate: $Y = \\overline{A}$; it inverts the single input. NAND gate is AND followed by NOT: $Y = \\overline{A \\cdot B}$ (outputs 1, 1, 1, 0). NOR gate is OR followed by NOT: $Y = \\overline{A + B}$ (outputs 1, 0, 0, 0). NAND and NOR are universal gates because each can be used to build any other gate. Shorting both inputs of a NAND or a NOR gives a NOT gate. To find the output of a combination of gates, write the Boolean expression stage by stage and simplify it using De Morgan's theorems.",
+      "key_points": [
+        "OR: any input 1 gives output 1",
+        "AND: all inputs 1 gives output 1",
+        "NAND: output 0 only when all inputs are 1",
+        "NOR: output 1 only when all inputs are 0",
+        "NAND and NOR are universal gates",
+        "NAND with inputs shorted gives NOT; NAND followed by NOT gives AND",
+        "NOR followed by NOT gives OR; NOT on both inputs of a NOR gives AND"
+      ],
+      "formulas": [
+        {
+          "formula": "$Y = A + B$, $Y = A \\cdot B$, $Y = \\overline{A}$",
+          "meaning": "Boolean expressions for OR, AND and NOT"
+        },
+        {
+          "formula": "$Y = \\overline{A \\cdot B}$, $Y = \\overline{A + B}$",
+          "meaning": "Boolean expressions for NAND and NOR"
+        },
+        {
+          "formula": "$\\overline{A + B} = \\overline{A} \\cdot \\overline{B}$, $\\overline{A \\cdot B} = \\overline{A} + \\overline{B}$",
+          "meaning": "De Morgan's theorems for simplifying gate combinations"
+        }
+      ],
+      "neet_tip": "Almost every year NEET gives a combination of gates and asks for the equivalent single gate or the truth table, so practise writing Boolean expressions step by step.",
+      "topic": "Logic gates: OR, AND, NOT, NAND and NOR"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$n_e n_h = n_i^2$",
+      "meaning": "Mass action law; $n_e$ = electron density, $n_h$ = hole density, $n_i$ = intrinsic carrier density"
+    },
+    {
+      "formula": "$n_e = n_h = n_i$",
+      "meaning": "Carrier densities in an intrinsic semiconductor"
+    },
+    {
+      "formula": "$\\sigma = e(n_e \\mu_e + n_h \\mu_h)$",
+      "meaning": "Conductivity; $\\mu_e$ and $\\mu_h$ are electron and hole mobilities, $e$ is the electronic charge"
+    },
+    {
+      "formula": "$\\rho = \\frac{1}{e(n_e \\mu_e + n_h \\mu_h)}$",
+      "meaning": "Resistivity of a semiconductor"
+    },
+    {
+      "formula": "$I = I_e + I_h$",
+      "meaning": "Total current is the sum of electron and hole currents"
+    },
+    {
+      "formula": "$r_d = \\frac{\\Delta V}{\\Delta I}$",
+      "meaning": "Dynamic resistance of a diode from the I-V curve"
+    },
+    {
+      "formula": "$I = \\frac{V - V_0}{R}$",
+      "meaning": "Current in a forward-biased diode-resistor series circuit; $V_0$ = knee voltage (0.7 V Si, 0.3 V Ge, 0 for ideal)"
+    },
+    {
+      "formula": "$V_{dc} = \\frac{V_m}{\\pi}$",
+      "meaning": "Average output of a half-wave rectifier; $V_m$ = peak voltage"
+    },
+    {
+      "formula": "$V_{dc} = \\frac{2V_m}{\\pi}$",
+      "meaning": "Average output of a full-wave rectifier"
+    },
+    {
+      "formula": "$V_{rms} = \\frac{V_m}{2}$ (half-wave), $\\frac{V_m}{\\sqrt{2}}$ (full-wave)",
+      "meaning": "rms value of rectified output"
+    },
+    {
+      "formula": "$f_{out} = f_{in}$ (half-wave), $f_{out} = 2f_{in}$ (full-wave)",
+      "meaning": "Output ripple frequency of rectifiers"
+    },
+    {
+      "formula": "$\\eta_{max} = 40.6\\%$ (half-wave), $81.2\\%$ (full-wave)",
+      "meaning": "Maximum rectification efficiency"
+    },
+    {
+      "formula": "$E_g = \\frac{hc}{\\lambda}$",
+      "meaning": "Band gap related to the emitted (LED) or absorbed (photodiode, solar cell) wavelength"
+    },
+    {
+      "formula": "$\\lambda(\\text{nm}) \\approx \\frac{1240}{E(\\text{eV})}$",
+      "meaning": "Quick photon wavelength-energy conversion"
+    },
+    {
+      "formula": "$\\lambda_{max} = \\frac{hc}{E_g}$",
+      "meaning": "Cutoff wavelength for photo-detection or absorption"
+    },
+    {
+      "formula": "$I_s = \\frac{V_{in} - V_Z}{R_s}$",
+      "meaning": "Current through the series resistor in a Zener regulator"
+    },
+    {
+      "formula": "$I_L = \\frac{V_Z}{R_L}$, $I_Z = I_s - I_L$",
+      "meaning": "Load current and Zener current in a regulator"
+    },
+    {
+      "formula": "$P_Z = V_Z I_Z$",
+      "meaning": "Power dissipated in the Zener diode"
+    },
+    {
+      "formula": "$Y = A + B$, $Y = A \\cdot B$, $Y = \\overline{A}$",
+      "meaning": "OR, AND, NOT gates"
+    },
+    {
+      "formula": "$Y = \\overline{A \\cdot B}$, $Y = \\overline{A + B}$",
+      "meaning": "NAND and NOR (universal gates)"
+    },
+    {
+      "formula": "$\\overline{A + B} = \\overline{A} \\cdot \\overline{B}$, $\\overline{A \\cdot B} = \\overline{A} + \\overline{B}$",
+      "meaning": "De Morgan's theorems"
+    }
+  ],
+  "common_traps": [
+    "Thinking an n-type semiconductor is negatively charged. Every doped semiconductor is electrically neutral; only the majority carrier type changes.",
+    "Assuming a diode in an open (broken) branch is forward biased. With no current it behaves as an unbiased diode, so its depletion width lies between the forward- and reverse-biased cases.",
+    "Taking full-wave output frequency equal to input frequency. It is $2f$; for example, 50 Hz input gives 100 Hz ripple.",
+    "Saying a photodiode works in forward bias. It works in reverse bias, because the fractional change in reverse current due to light is significant.",
+    "Assuming the Zener always regulates. It conducts in breakdown only if the reverse voltage across it reaches $V_Z$; otherwise treat it as an open circuit.",
+    "Using the full input voltage across the series resistor of a Zener circuit. The drop across it is $V_{in} - V_Z$.",
+    "Confusing NAND with NOR outputs. NAND gives 0 only for input 11; NOR gives 1 only for input 00.",
+    "Believing semiconductor resistance increases with temperature as in metals. It decreases, because more carriers are generated."
+  ],
+  "quick_revision": [
+    "Band gaps: Si about 1.1 eV, Ge about 0.7 eV; insulators above 3 eV.",
+    "Pentavalent dopant gives n-type with a donor level near the CB; trivalent dopant gives p-type with an acceptor level near the VB.",
+    "Use $n_e n_h = n_i^2$ to get the minority carrier density.",
+    "Depletion width: reverse bias > unbiased > forward bias.",
+    "Barrier potential: about 0.7 V for Si and 0.3 V for Ge; reverse current is a small minority-carrier current.",
+    "Half-wave output frequency is $f$; full-wave is $2f$; the filter capacitor goes in parallel with the load.",
+    "LED: forward bias, photon energy about $E_g$, $\\lambda(\\text{nm}) = 1240/E_g(\\text{eV})$; threshold voltage rises from red to blue.",
+    "Photodiode is reverse biased; solar cell is unbiased with its I-V curve in the fourth quadrant.",
+    "Solar cell action: generation, separation, collection; ideal $E_g$ is near 1.5 eV.",
+    "Zener: heavily doped, used in reverse breakdown, load in parallel; $I_s = I_Z + I_L$.",
+    "NAND and NOR are universal gates; shorting their inputs gives NOT.",
+    "Solve gate combinations by writing Boolean expressions stage by stage and applying De Morgan's theorems."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q016",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q16"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q042",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q42"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

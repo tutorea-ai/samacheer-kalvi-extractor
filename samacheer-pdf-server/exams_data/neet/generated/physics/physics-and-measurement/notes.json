@@ -1,0 +1,337 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u01",
+  "unit_no": 1,
+  "unit_name": "Physics and Measurement",
+  "slug": "physics-and-measurement",
+  "overview": "This unit sets up the language of physics: how physical quantities are measured, expressed in standard units, reported with correct precision, and checked for consistency using dimensions. In NEET it reliably gives 1 to 2 quick questions, mostly on dimensions of constants, error propagation, significant figures and instrument least count. Its tools are also reused in every other unit.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Measuring a physical quantity means comparing it with a fixed, internationally accepted reference standard called a unit. Every measured quantity is written as a numerical value times a unit, $Q = nu$. Because the quantity itself does not change, the numerical value is inversely proportional to the size of the unit, so a bigger unit gives a smaller number. A system of units is a complete set of base units plus the units derived from them. The common systems are CGS (centimetre, gram, second), FPS (foot, pound, second), MKS (metre, kilogram, second) and SI, the modern extension of MKS with seven base units. Some practical units are used for very large or very small lengths and masses. Astronomical distances use the light year, the astronomical unit and the parsec. Atomic scales use the angstrom, the fermi and the atomic mass unit.",
+      "key_points": [
+        "Physical quantity = numerical value times unit; $n \\propto \\frac{1}{u}$",
+        "CGS, FPS and MKS are older systems; SI is the internationally accepted system",
+        "A good unit is well defined, reproducible, invariable and easily accessible",
+        "1 light year $= 9.46 \\times 10^{15}$ m",
+        "1 AU $\\approx 1.496 \\times 10^{11}$ m",
+        "1 parsec $\\approx 3.08 \\times 10^{16}$ m $\\approx 3.26$ light years",
+        "1 angstrom $= 10^{-10}$ m and 1 fermi $= 10^{-15}$ m",
+        "1 u $= 1.66 \\times 10^{-27}$ kg and 1 barn $= 10^{-28}$ $m^2$",
+        "Light year and parsec are units of distance, not time"
+      ],
+      "formulas": [
+        {
+          "formula": "$Q = n_1 u_1 = n_2 u_2$",
+          "meaning": "Magnitude of a quantity is the same in any unit system; use it to convert numerical values"
+        },
+        {
+          "formula": "$1\\ \\text{parsec} = \\frac{1\\ \\text{AU}}{1''}$",
+          "meaning": "Distance at which 1 AU subtends an angle of one arcsecond"
+        }
+      ],
+      "neet_tip": "Expect direct conversions or ordering questions on practical units such as light year, parsec, AU and fermi.",
+      "topic": "Units of measurement and systems of units"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "SI has seven base (fundamental) units, which are mutually independent. They are the metre (length), the kilogram (mass), the second (time), the ampere (electric current), the kelvin (thermodynamic temperature), the mole (amount of substance) and the candela (luminous intensity). The radian (plane angle) and the steradian (solid angle) were earlier called supplementary units and are dimensionless. All other units are derived units, obtained by multiplying or dividing base units. Examples are the newton ($kg\\,m\\,s^{-2}$), joule, watt, pascal, coulomb ($A\\,s$), volt, ohm, farad, weber, tesla and henry. When writing SI units, a unit named after a person has a capital symbol (N, J, W) but a lowercase full name (newton). Symbols are never pluralised and are not followed by a full stop. Standard prefixes scale units in powers of ten, such as milli $10^{-3}$, micro $10^{-6}$, nano $10^{-9}$, pico $10^{-12}$, kilo $10^{3}$, mega $10^{6}$ and giga $10^{9}$.",
+      "key_points": [
+        "7 base units: m, kg, s, A, K, mol, cd",
+        "Radian and steradian are dimensionless; the full sphere subtends $4\\pi$ sr",
+        "The kilogram is the only base unit that carries a prefix",
+        "Derived units come from base units through defining equations",
+        "$1\\,N = 1\\,kg\\,m\\,s^{-2}$, $1\\,J = 1\\,N\\,m$, $1\\,W = 1\\,J\\,s^{-1}$ and $1\\,Pa = 1\\,N\\,m^{-2}$",
+        "$1\\,T = 1\\,Wb\\,m^{-2}$, $1\\,V = 1\\,J\\,C^{-1}$ and $1\\,\\Omega = 1\\,V\\,A^{-1}$",
+        "Write 10 kg, not 10 kgs or 10 Kg"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\theta = \\frac{l}{r}$",
+          "meaning": "Plane angle in radian: arc length $l$ divided by radius $r$"
+        },
+        {
+          "formula": "$d\\Omega = \\frac{dA}{r^2}$",
+          "meaning": "Solid angle in steradian: area $dA$ on a sphere divided by the square of the radius $r$"
+        }
+      ],
+      "neet_tip": "NEET asks which unit is fundamental or derived, which units are equivalent, or the SI unit of a given constant.",
+      "topic": "SI units, fundamental and derived units"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Least count (LC) is the smallest value an instrument can measure. A metre scale has LC 1 mm. A vernier caliper has $LC = 1\\,MSD - 1\\,VSD$, where MSD and VSD are the values of one main scale division and one vernier scale division. A screw gauge has LC equal to the pitch divided by the number of circular scale divisions. Zero error must be subtracted from the observed reading, with its sign. Significant figures are the reliable digits plus the first uncertain digit. All non-zero digits are significant. Zeros between non-zero digits are significant. Leading zeros are never significant. Trailing zeros after a decimal point are significant. In addition and subtraction, keep the least number of decimal places. In multiplication and division, keep the least number of significant figures. When rounding, a dropped digit greater than 5 raises the preceding digit and one less than 5 leaves it unchanged. A dropped digit of exactly 5 raises the preceding digit only if that digit is odd.",
+      "key_points": [
+        "Smaller least count means a more precise instrument",
+        "A zero error is positive when the zero of the vernier or circular scale lies ahead of the main scale zero",
+        "0.00450 has 3 significant figures; 4.050 has 4",
+        "Changing units does not change the number of significant figures: 2.30 m = $2.30 \\times 10^{2}$ cm (or 230. cm). Writing 230 cm without a decimal point is ambiguous about the trailing zero.",
+        "Exact numbers such as the 2 in $2\\pi r$ have infinite significant figures",
+        "In scientific notation $a \\times 10^{b}$, only the digits of $a$ count",
+        "Order of magnitude is the power of 10 when the number is written as $a \\times 10^b$ with $a$ between 0.5 and 5"
+      ],
+      "formulas": [
+        {
+          "formula": "$LC_{vernier} = 1\\,MSD - 1\\,VSD = \\frac{s}{n}$",
+          "meaning": "Vernier least count when $n$ VSD equal $(n-1)$ MSD, where $s$ is the value of one MSD"
+        },
+        {
+          "formula": "$LC_{screw} = \\frac{\\text{pitch}}{N}$",
+          "meaning": "Screw gauge least count, where $N$ is the number of circular scale divisions"
+        },
+        {
+          "formula": "$\\text{Reading} = MSR + (VSR \\times LC) - \\text{zero error}$",
+          "meaning": "Corrected reading for a vernier or screw gauge; MSR is the main scale reading and VSR is the coinciding vernier or circular scale division"
+        }
+      ],
+      "neet_tip": "Typical questions ask you to count significant figures, round off the result of an operation, or find a corrected vernier or screw gauge reading.",
+      "topic": "Least count and significant figures"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Error is the difference between the measured value and the true value. Systematic errors act in one direction and come from the instrument (such as zero error), from the method or from personal habits. They can be reduced by better technique. Random errors fluctuate irregularly and are reduced by taking the mean of many readings. Gross errors come from carelessness. Accuracy is closeness to the true value, while precision is the resolution or repeatability of a measurement. For readings $a_1, a_2, \\dots, a_n$, the mean is taken as the true value. The absolute error of each reading is $|a_{mean} - a_i|$, and their average is the mean absolute error. Relative error is the mean absolute error divided by the mean, and multiplying it by 100 gives percentage error. When quantities are combined, absolute errors add in sums and differences. Relative errors add in products and quotients, and a power $n$ multiplies the relative error by $n$.",
+      "key_points": [
+        "Errors always add, never subtract, even when the quantities are subtracted",
+        "In $Z = \\frac{A^p B^q}{C^r}$ the percentage error is $p\\%A + q\\%B + r\\%C$",
+        "The contribution of each quantity is (power) × (its relative error). For similar relative errors, the quantity with the highest power contributes the most.",
+        "Random error is reduced by repeating observations; systematic error is not",
+        "Without other information, the maximum error in a single reading is taken as the least count",
+        "A measurement can be precise but not accurate, and the reverse is also possible"
+      ],
+      "formulas": [
+        {
+          "formula": "$a_{mean} = \\frac{1}{n}\\sum a_i$",
+          "meaning": "Mean value of $n$ readings, taken as the true value"
+        },
+        {
+          "formula": "$\\Delta a_{mean} = \\frac{1}{n}\\sum |\\Delta a_i|$",
+          "meaning": "Mean absolute error, where $\\Delta a_i = a_{mean} - a_i$"
+        },
+        {
+          "formula": "$\\delta a = \\frac{\\Delta a_{mean}}{a_{mean}}$",
+          "meaning": "Relative (fractional) error; multiply by 100 for percentage error"
+        },
+        {
+          "formula": "$\\Delta Z = \\Delta A + \\Delta B$",
+          "meaning": "Maximum absolute error for $Z = A + B$ or $Z = A - B$"
+        },
+        {
+          "formula": "$\\frac{\\Delta Z}{Z} = \\frac{\\Delta A}{A} + \\frac{\\Delta B}{B}$",
+          "meaning": "Maximum relative error for $Z = AB$ or $Z = \\frac{A}{B}$"
+        },
+        {
+          "formula": "$\\frac{\\Delta Z}{Z} = n\\frac{\\Delta A}{A}$",
+          "meaning": "Relative error for $Z = A^n$"
+        }
+      ],
+      "neet_tip": "The most common question gives a formula with powers, such as $g = \\frac{4\\pi^2 l}{T^2}$, and asks for the maximum percentage error.",
+      "topic": "Errors in measurements"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "The dimensions of a physical quantity are the powers to which the base quantities must be raised to represent it. The base quantities are mass [M], length [L], time [T], current [A], temperature [K], amount of substance [mol] and luminous intensity [cd]. The expression, for example $[MLT^{-2}]$ for force, is the dimensional formula. Pure numbers, ratios of similar quantities, angles, strain, refractive index, relative density and the arguments of $\\sin$, $\\log$ and $\\exp$ are dimensionless. Several different quantities share the same dimensions. Work, energy and torque are one such group. Impulse and momentum are another. Pressure, stress, modulus of elasticity and energy density form a third, and Planck's constant and angular momentum a fourth. A quick way to find the dimensions of a constant is to start from a defining relation. For example, $\\sigma$ comes from $P/A = \\sigma T^4$, $k_B$ from $E = k_B T$ and $b$ from $\\lambda_m T = b$.",
+      "key_points": [
+        "Force $[MLT^{-2}]$, energy $[ML^2T^{-2}]$ and power $[ML^2T^{-3}]$",
+        "Pressure, stress and Young's modulus all have dimensions $[ML^{-1}T^{-2}]$",
+        "Surface tension and spring constant share $[MT^{-2}]$",
+        "Frequency, angular velocity and velocity gradient share $[T^{-1}]$",
+        "Planck constant and angular momentum share $[ML^2T^{-1}]$",
+        "Charge $[AT]$, potential $[ML^2T^{-3}A^{-1}]$ and resistance $[ML^2T^{-3}A^{-2}]$",
+        "Magnetic field B $[MT^{-2}A^{-1}]$ and magnetic flux $[ML^2T^{-2}A^{-1}]$",
+        "$\\frac{L}{R}$, $RC$ and $\\sqrt{LC}$ all have dimensions of time",
+        "A dimensionless quantity may still have a unit, for example the radian"
+      ],
+      "formulas": [
+        {
+          "formula": "$[G] = [M^{-1}L^3T^{-2}]$",
+          "meaning": "Gravitational constant, from $F = \\frac{Gm_1m_2}{r^2}$"
+        },
+        {
+          "formula": "$[\\sigma] = [MT^{-3}K^{-4}]$",
+          "meaning": "Stefan-Boltzmann constant, from power per area $= \\sigma T^4$"
+        },
+        {
+          "formula": "$[k_B] = [ML^2T^{-2}K^{-1}]$",
+          "meaning": "Boltzmann constant (energy per kelvin); the gas constant R has $[ML^2T^{-2}K^{-1}mol^{-1}]$"
+        },
+        {
+          "formula": "$[b] = [LK]$",
+          "meaning": "Wien constant, from $\\lambda_m T = b$"
+        },
+        {
+          "formula": "$[\\epsilon_0] = [M^{-1}L^{-3}T^4A^2]$",
+          "meaning": "Permittivity of free space, from Coulomb's law"
+        },
+        {
+          "formula": "$[\\mu_0] = [MLT^{-2}A^{-2}]$",
+          "meaning": "Permeability of free space"
+        },
+        {
+          "formula": "$\\frac{1}{\\sqrt{\\mu_0\\epsilon_0}} = c$",
+          "meaning": "The combination has the dimensions of velocity $[LT^{-1}]$"
+        }
+      ],
+      "neet_tip": "NEET often combines two or three constants, such as $\\sigma$, $k_B$, $b$, $h$ or $G$, and asks for the dimensions of the product or ratio.",
+      "topic": "Dimensions of physical quantities"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Dimensional analysis uses the principle of homogeneity: every term in a physically valid equation must have the same dimensions. It has three main applications. First, it checks whether an equation is dimensionally correct. A correct equation passes this check, but passing does not prove the equation is right, because dimensionless factors are not tested. Second, it converts a numerical value from one system of units to another using $n_2 = n_1 [M_1/M_2]^a [L_1/L_2]^b [T_1/T_2]^c$. Third, it derives the form of a relation, for example $T \\propto \\sqrt{l/g}$ for a simple pendulum, by equating the powers of M, L and T. The method has limits. It cannot find dimensionless constants such as $2\\pi$. It cannot derive relations with more than three unknown dependencies in mechanics. It cannot handle relations involving $\\sin$, $\\log$ or exponential functions, or relations that are sums of terms. It also cannot tell whether a quantity is a scalar or a vector.",
+      "key_points": [
+        "Only quantities with the same dimensions can be added, subtracted or equated",
+        "In $y = A\\sin(\\omega t - kx)$ both $\\omega t$ and $kx$ are dimensionless, so $[k] = [L^{-1}]$",
+        "In $P = \\frac{a}{b}e^{-bx}$, the product $bx$ is dimensionless",
+        "In $(P + \\frac{a}{V^2})$, the term $\\frac{a}{V^2}$ must have the dimensions of P",
+        "A dimensionally correct equation may still be physically wrong",
+        "For derivations, write $Q = k\\,x^a y^b z^c$, equate powers of M, L and T, then solve for a, b and c"
+      ],
+      "formulas": [
+        {
+          "formula": "$n_2 = n_1\\left[\\frac{M_1}{M_2}\\right]^a\\left[\\frac{L_1}{L_2}\\right]^b\\left[\\frac{T_1}{T_2}\\right]^c$",
+          "meaning": "Converts the numerical value of a quantity with dimensions $[M^aL^bT^c]$ from system 1 to system 2"
+        },
+        {
+          "formula": "$T = k\\sqrt{\\frac{l}{g}}$",
+          "meaning": "Simple pendulum time period derived dimensionally; $k$ ($= 2\\pi$) cannot be found this way"
+        }
+      ],
+      "neet_tip": "Questions ask you to find the dimensions of unknown constants in a given equation, to convert units such as $1\\,J$ into a new system, or to identify the dimensionally correct option.",
+      "topic": "Dimensional analysis and its applications"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$Q = n_1u_1 = n_2u_2$",
+      "meaning": "Numerical value $n$ is inversely proportional to the size of unit $u$"
+    },
+    {
+      "formula": "$LC_{vernier} = 1\\,MSD - 1\\,VSD$",
+      "meaning": "Vernier least count from one main scale division (MSD) and one vernier scale division (VSD)"
+    },
+    {
+      "formula": "$LC_{screw} = \\frac{\\text{pitch}}{N}$",
+      "meaning": "Screw gauge least count; $N$ is the number of circular scale divisions"
+    },
+    {
+      "formula": "$\\text{True reading} = \\text{observed reading} - \\text{zero error}$",
+      "meaning": "Zero error correction, applied with sign"
+    },
+    {
+      "formula": "$a_{mean} = \\frac{1}{n}\\sum a_i$",
+      "meaning": "Mean of $n$ readings $a_i$"
+    },
+    {
+      "formula": "$\\Delta a_{mean} = \\frac{1}{n}\\sum|a_{mean} - a_i|$",
+      "meaning": "Mean absolute error"
+    },
+    {
+      "formula": "$\\text{Percentage error} = \\frac{\\Delta a_{mean}}{a_{mean}} \\times 100$",
+      "meaning": "Relative error expressed as a percentage"
+    },
+    {
+      "formula": "$Z = A \\pm B \\Rightarrow \\Delta Z = \\Delta A + \\Delta B$",
+      "meaning": "Absolute errors add for sum and difference"
+    },
+    {
+      "formula": "$Z = AB \\text{ or } \\frac{A}{B} \\Rightarrow \\frac{\\Delta Z}{Z} = \\frac{\\Delta A}{A} + \\frac{\\Delta B}{B}$",
+      "meaning": "Relative errors add for product and quotient"
+    },
+    {
+      "formula": "$Z = \\frac{A^pB^q}{C^r} \\Rightarrow \\frac{\\Delta Z}{Z} = p\\frac{\\Delta A}{A} + q\\frac{\\Delta B}{B} + r\\frac{\\Delta C}{C}$",
+      "meaning": "General error rule for powers; each relative error is multiplied by its power"
+    },
+    {
+      "formula": "$\\theta = \\frac{l}{r},\\ d\\Omega = \\frac{dA}{r^2}$",
+      "meaning": "Radian (arc length $l$ over radius $r$) and steradian (area $dA$ over $r^2$)"
+    },
+    {
+      "formula": "$1\\,\\text{ly} = 9.46 \\times 10^{15}\\,m,\\ 1\\,\\text{pc} = 3.08 \\times 10^{16}\\,m$",
+      "meaning": "Light year (ly) and parsec (pc), both units of distance"
+    },
+    {
+      "formula": "$[F] = [MLT^{-2}],\\ [E] = [ML^2T^{-2}],\\ [P] = [ML^2T^{-3}]$",
+      "meaning": "Force, energy and power"
+    },
+    {
+      "formula": "$[p] = [ML^{-1}T^{-2}]$",
+      "meaning": "Pressure, stress, Young's modulus and energy density"
+    },
+    {
+      "formula": "$[h] = [ML^2T^{-1}]$",
+      "meaning": "Planck constant, same as angular momentum"
+    },
+    {
+      "formula": "$[G] = [M^{-1}L^3T^{-2}]$",
+      "meaning": "Universal gravitational constant"
+    },
+    {
+      "formula": "$[\\sigma] = [MT^{-3}K^{-4}]$",
+      "meaning": "Stefan-Boltzmann constant"
+    },
+    {
+      "formula": "$[k_B] = [ML^2T^{-2}K^{-1}]$",
+      "meaning": "Boltzmann constant"
+    },
+    {
+      "formula": "$[b] = [LK]$",
+      "meaning": "Wien displacement constant"
+    },
+    {
+      "formula": "$[\\epsilon_0] = [M^{-1}L^{-3}T^4A^2],\\ [\\mu_0] = [MLT^{-2}A^{-2}]$",
+      "meaning": "Permittivity and permeability of free space"
+    },
+    {
+      "formula": "$\\frac{1}{\\sqrt{\\mu_0\\epsilon_0}} = c$",
+      "meaning": "Speed of light; the combination has dimensions $[LT^{-1}]$"
+    },
+    {
+      "formula": "$[\\frac{L}{R}] = [RC] = [\\sqrt{LC}] = [T]$",
+      "meaning": "Time constants of RL and RC circuits, and the inverse of the LC angular frequency"
+    },
+    {
+      "formula": "$n_2 = n_1\\left[\\frac{M_1}{M_2}\\right]^a\\left[\\frac{L_1}{L_2}\\right]^b\\left[\\frac{T_1}{T_2}\\right]^c$",
+      "meaning": "Unit conversion by dimensional analysis"
+    }
+  ],
+  "common_traps": [
+    "Subtracting errors when the quantities are subtracted: in $Z = A - B$ the maximum error is $\\Delta A + \\Delta B$.",
+    "Counting leading zeros as significant: 0.0025 has only 2 significant figures, while 2.500 has 4.",
+    "Applying the significant figure rule to addition: in addition and subtraction, the answer keeps the least number of decimal places, not the least number of significant figures.",
+    "Adding zero error instead of subtracting it: corrected reading = observed reading minus zero error, so a negative zero error effectively adds.",
+    "Treating light year as a unit of time: light year and parsec are units of distance.",
+    "Assuming a dimensionally correct equation is correct: dimensional analysis cannot detect wrong numerical factors such as $\\frac{1}{2}$ or $2\\pi$.",
+    "Confusing Boltzmann constant with the gas constant: $k_B$ has $[ML^2T^{-2}K^{-1}]$, while R has an extra $mol^{-1}$.",
+    "Calling dimensionless quantities unitless: angle has the unit radian but no dimensions, and strain has neither."
+  ],
+  "quick_revision": [
+    "SI base units are m, kg, s, A, K, mol and cd; radian and steradian are dimensionless.",
+    "The numerical value of a quantity is inversely proportional to the size of its unit.",
+    "Vernier LC = 1 MSD minus 1 VSD; screw gauge LC = pitch divided by circular divisions.",
+    "Leading zeros are never significant; trailing zeros after a decimal point always are.",
+    "Use the least decimal places for addition and subtraction, and the least significant figures for multiplication and division.",
+    "When rounding off a dropped digit of exactly 5, round up only if the preceding digit is odd.",
+    "Absolute errors add in sums and differences; relative errors add in products and quotients.",
+    "A power n on a quantity multiplies its percentage error by n.",
+    "Arguments of sin, log and exp must be dimensionless.",
+    "$[\\sigma] = [MT^{-3}K^{-4}]$, $[k_B] = [ML^2T^{-2}K^{-1}]$, $[b] = [LK]$ and $[G] = [M^{-1}L^3T^{-2}]$.",
+    "Same dimensions: work and torque; Planck constant and angular momentum; pressure and energy density.",
+    "Dimensional analysis cannot find numerical constants or handle trigonometric and exponential relations."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q037",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q37"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

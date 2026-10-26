@@ -1,0 +1,280 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u17",
+  "unit_no": 17,
+  "unit_name": "Dual Nature of Matter and Radiation",
+  "slug": "dual-nature-of-matter-and-radiation",
+  "overview": "This unit explains how light and matter both show wave and particle behaviour. Light behaves as a stream of photons in the photoelectric effect, and moving particles such as electrons have an associated de Broglie wavelength. NEET asks 1 to 2 questions almost every year from this unit, mostly on the photoelectric equation, stopping potential, photocurrent–potential and stopping potential–frequency graphs, photon momentum and de Broglie wavelength comparisons.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Classical physics treated light as an electromagnetic wave. This explained interference, diffraction and polarisation. Experiments on the interaction of light with matter, such as the photoelectric effect, could only be explained if light is made of discrete energy packets called photons, each of energy $h\\nu$. So radiation has a dual nature. It shows wave character during propagation (interference, diffraction) and particle character during interaction with matter (photoelectric effect, Compton scattering). The two aspects never appear together in a single experiment. Each photon has energy $E = h\\nu = hc/\\lambda$ and momentum $p = h/\\lambda = E/c$. Its rest mass is zero and it always travels at speed $c$ in vacuum. Photons are electrically neutral, so electric and magnetic fields do not deflect them. In photon-particle collisions, total energy and total momentum are conserved, but the number of photons need not be conserved.",
+      "key_points": [
+        "Wave nature of light: interference, diffraction, polarisation",
+        "Particle nature of light: photoelectric effect, Compton effect",
+        "Photon energy depends only on frequency, not on intensity",
+        "A photon has zero rest mass, speed $c$ in vacuum and no charge",
+        "Higher intensity at the same frequency means more photons per second, not more energy per photon",
+        "Photon number may change (photons are absorbed or emitted), but energy and momentum are conserved in collisions"
+      ],
+      "formulas": [
+        {
+          "formula": "$E = h\\nu = \\frac{hc}{\\lambda}$",
+          "meaning": "Energy of one photon of frequency $\\nu$ or wavelength $\\lambda$"
+        },
+        {
+          "formula": "$p = \\frac{h}{\\lambda} = \\frac{E}{c}$",
+          "meaning": "Momentum of a photon"
+        },
+        {
+          "formula": "$E(\\text{eV}) = \\frac{1240}{\\lambda(\\text{nm})}$",
+          "meaning": "Quick conversion of photon energy using $hc \\approx 1240$ eV nm"
+        },
+        {
+          "formula": "$N = \\frac{P}{h\\nu} = \\frac{P\\lambda}{hc}$",
+          "meaning": "Number of photons emitted per second by a source of power $P$"
+        }
+      ],
+      "neet_tip": "Expect direct calculations of photon energy, momentum or the number of photons per second from source power, often expressed in eV.",
+      "topic": "Dual nature of radiation"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "The photoelectric effect is the emission of electrons from a metal surface when light of suitable frequency falls on it. Hertz (1887) observed that ultraviolet light falling on the electrodes of a spark gap made sparks easier to produce. Hallwachs and Lenard studied the effect quantitatively using an evacuated tube with an emitter and a collector. Their main observations were these. Photocurrent is proportional to intensity at a fixed frequency. The saturation current depends on intensity. The stopping potential $V_0$ depends on frequency and on the metal, not on intensity. Below a threshold frequency $\\nu_0$ there is no emission, however intense the light. Above $\\nu_0$, emission is instantaneous (within about $10^{-9}$ s), even for very dim light. Wave theory fails on three counts. It predicts that kinetic energy should depend on intensity, that there should be no threshold, and that emission should be delayed for weak light.",
+      "key_points": [
+        "Photocurrent is proportional to intensity, i.e. to the number of photons per second, at constant frequency",
+        "Saturation current increases with intensity; stopping potential stays the same for different intensities at the same frequency",
+        "Stopping potential increases linearly with frequency above $\\nu_0$",
+        "For a given metal, current vs potential curves at the same frequency but different intensities meet the axis at the same $-V_0$",
+        "Curves at the same intensity but higher frequency have a larger $|V_0|$; the saturation current is about the same",
+        "There is no time lag between incidence of light and emission",
+        "Threshold frequency $\\nu_0$ and threshold wavelength $\\lambda_0$ are characteristic of the metal",
+        "Alkali metals (Li, Na, K, Cs) show the effect even with visible light; zinc, cadmium and magnesium need ultraviolet"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_{max} = eV_0$",
+          "meaning": "Maximum kinetic energy of photoelectrons measured by the stopping potential $V_0$"
+        },
+        {
+          "formula": "$I \\propto \\text{intensity}$",
+          "meaning": "Photocurrent at fixed frequency above threshold"
+        }
+      ],
+      "neet_tip": "NEET frequently tests graphs: photocurrent vs potential for different intensities and frequencies, and the effect of changing source power on current versus stopping potential.",
+      "topic": "Photoelectric effect; Hertz and Lenard's observations"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Einstein (1905) explained the photoelectric effect using photons. A photon of energy $h\\nu$ is absorbed completely by a single electron, a one photon one electron interaction. Part of this energy, the work function $\\phi_0$, is used to free the electron from the metal. The rest appears as the maximum kinetic energy: $K_{max} = h\\nu - \\phi_0$. Emission is possible only when $h\\nu \\ge \\phi_0$, which gives the threshold frequency $\\nu_0 = \\phi_0/h$. Since $eV_0 = h\\nu - \\phi_0$, a graph of $V_0$ against $\\nu$ is a straight line. Its slope is $h/e$, the same for all metals, and its intercept on the frequency axis is $\\nu_0$. Intensity changes only the number of photons, so it changes the current but not $K_{max}$. The instantaneous emission is explained because each photon delivers its energy at once. Millikan verified the equation experimentally and measured $h$.",
+      "key_points": [
+        "One photon is absorbed by only one electron",
+        "$K_{max}$ depends linearly on $\\nu$, but $K_{max}$ is not proportional to $\\nu$",
+        "Slope of the $V_0$ vs $\\nu$ graph is $h/e$, the same for every metal; the lines for different metals are parallel",
+        "The intercept on the frequency axis gives $\\nu_0$; the intercept on the $V_0$ axis gives $-\\phi_0/e$",
+        "If $\\lambda > \\lambda_0$ (i.e. $\\nu < \\nu_0$), there is no emission and the stopping potential is zero",
+        "A smaller work function means a larger stopping potential for the same light",
+        "Most emitted electrons have less than $K_{max}$ because they lose energy inside the metal"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_{max} = h\\nu - \\phi_0$",
+          "meaning": "Einstein's photoelectric equation"
+        },
+        {
+          "formula": "$eV_0 = h\\nu - \\phi_0 = h(\\nu - \\nu_0)$",
+          "meaning": "Stopping potential in terms of frequency"
+        },
+        {
+          "formula": "$eV_0 = hc\\left(\\frac{1}{\\lambda} - \\frac{1}{\\lambda_0}\\right)$",
+          "meaning": "Stopping potential in terms of incident wavelength $\\lambda$ and threshold wavelength $\\lambda_0$"
+        },
+        {
+          "formula": "$\\phi_0 = h\\nu_0 = \\frac{hc}{\\lambda_0}$",
+          "meaning": "Work function from threshold frequency or threshold wavelength"
+        },
+        {
+          "formula": "$V_0 = \\frac{h}{e}\\nu - \\frac{\\phi_0}{e}$",
+          "meaning": "Straight-line form; slope $h/e$"
+        },
+        {
+          "formula": "$v_{max} = \\sqrt{\\frac{2(h\\nu - \\phi_0)}{m}}$",
+          "meaning": "Maximum speed of the emitted photoelectrons"
+        }
+      ],
+      "neet_tip": "Typical questions compare stopping potentials of metals with different threshold wavelengths, ask how $V_0$ changes when frequency changes, or apply $eV_0 = h\\nu - \\phi_0$ with values in eV.",
+      "topic": "Einstein's photoelectric equation; particle nature of light"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "De Broglie (1924) proposed that nature is symmetric. If waves (light) can behave as particles, then moving material particles should behave as waves. The wavelength associated with a particle of momentum $p$ is $\\lambda = h/p = h/mv$. For a particle of kinetic energy $K$, $p = \\sqrt{2mK}$, so $\\lambda = h/\\sqrt{2mK}$. For a charge $q$ accelerated from rest through a potential $V$, $\\lambda = h/\\sqrt{2mqV}$. For an electron this gives $\\lambda \\approx 1.227/\\sqrt{V}$ nm. Matter waves are not electromagnetic waves. They are noticeable only for microscopic particles, because $h$ is very small. For a cricket ball, $\\lambda$ is far too small to detect. The wave nature of electrons was confirmed by electron diffraction experiments (Davisson and Germer), and it is the basis of the electron microscope. The de Broglie wavelength is independent of the charge on the particle.",
+      "key_points": [
+        "$\\lambda = h/p$ holds for both photons and material particles",
+        "Same momentum means the same de Broglie wavelength, whatever the mass or charge",
+        "Same kinetic energy: $\\lambda \\propto 1/\\sqrt{m}$, so an electron has a longer $\\lambda$ than a proton",
+        "Same accelerating potential: $\\lambda \\propto 1/\\sqrt{mq}$",
+        "If a particle's speed doubles, its $\\lambda$ halves (non-relativistic case)",
+        "Matter waves are associated with moving particles; a particle at rest has an infinite (undefined) $\\lambda$",
+        "For the same energy $E$, an electron has a much larger momentum than a photon: $p_e = \\sqrt{2mE}$ versus $p_{ph} = E/c$",
+        "Thermal neutrons: $\\lambda = h/\\sqrt{3mk_BT}$, using $K = \\frac{3}{2}k_BT$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\lambda = \\frac{h}{p} = \\frac{h}{mv}$",
+          "meaning": "de Broglie wavelength of a particle of mass $m$ moving with speed $v$"
+        },
+        {
+          "formula": "$\\lambda = \\frac{h}{\\sqrt{2mK}}$",
+          "meaning": "de Broglie wavelength in terms of kinetic energy $K$"
+        },
+        {
+          "formula": "$\\lambda = \\frac{h}{\\sqrt{2mqV}}$",
+          "meaning": "For a charge $q$ accelerated from rest through potential difference $V$"
+        },
+        {
+          "formula": "$\\lambda_e = \\frac{1.227}{\\sqrt{V}}\\ \\text{nm}$",
+          "meaning": "Electron accelerated through $V$ volts"
+        },
+        {
+          "formula": "$\\lambda = \\frac{h}{\\sqrt{3mk_BT}}$",
+          "meaning": "Particle in thermal equilibrium at absolute temperature $T$"
+        }
+      ],
+      "neet_tip": "NEET asks ratio-type questions: de Broglie wavelength or momentum ratios for electron, proton and alpha particle, or photon versus electron at the same energy or potential.",
+      "topic": "Matter waves and de Broglie relation"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$E = h\\nu = \\frac{hc}{\\lambda}$",
+      "meaning": "Photon energy; $h$ is Planck's constant ($6.63 \\times 10^{-34}$ J s), $\\nu$ is frequency, $\\lambda$ is wavelength"
+    },
+    {
+      "formula": "$E(\\text{eV}) \\approx \\frac{1240}{\\lambda(\\text{nm})}$",
+      "meaning": "Quick photon energy in eV, using $hc \\approx 1240$ eV nm"
+    },
+    {
+      "formula": "$p = \\frac{h}{\\lambda} = \\frac{E}{c}$",
+      "meaning": "Photon momentum; $c$ is the speed of light"
+    },
+    {
+      "formula": "$m_{dyn} = \\frac{E}{c^2} = \\frac{h\\nu}{c^2}$",
+      "meaning": "Effective (dynamic) mass of a photon; its rest mass is zero"
+    },
+    {
+      "formula": "$N = \\frac{P}{h\\nu} = \\frac{P\\lambda}{hc}$",
+      "meaning": "Photons emitted per second by a source of power $P$"
+    },
+    {
+      "formula": "$I = \\frac{P}{A}$",
+      "meaning": "Intensity: power per unit area; it decides the photon flux"
+    },
+    {
+      "formula": "$\\phi_0 = h\\nu_0 = \\frac{hc}{\\lambda_0}$",
+      "meaning": "Work function; $\\nu_0$ is threshold frequency, $\\lambda_0$ is threshold wavelength"
+    },
+    {
+      "formula": "$K_{max} = h\\nu - \\phi_0$",
+      "meaning": "Einstein's photoelectric equation; $K_{max}$ is the maximum kinetic energy of photoelectrons"
+    },
+    {
+      "formula": "$K_{max} = eV_0$",
+      "meaning": "Relation between $K_{max}$ and stopping potential $V_0$; $e$ is the electronic charge"
+    },
+    {
+      "formula": "$eV_0 = h(\\nu - \\nu_0)$",
+      "meaning": "Stopping potential in terms of incident and threshold frequencies"
+    },
+    {
+      "formula": "$eV_0 = hc\\left(\\frac{1}{\\lambda} - \\frac{1}{\\lambda_0}\\right)$",
+      "meaning": "Stopping potential in terms of incident and threshold wavelengths"
+    },
+    {
+      "formula": "$\\text{slope of } V_0 \\text{ vs } \\nu = \\frac{h}{e}$",
+      "meaning": "Same for all metals; used to determine $h$"
+    },
+    {
+      "formula": "$\\frac{1}{2}mv_{max}^2 = h\\nu - \\phi_0$",
+      "meaning": "Maximum speed of photoelectrons; $m$ is electron mass"
+    },
+    {
+      "formula": "$\\lambda = \\frac{h}{mv} = \\frac{h}{p}$",
+      "meaning": "de Broglie wavelength; $m$ is mass, $v$ is speed, $p$ is momentum"
+    },
+    {
+      "formula": "$p = \\sqrt{2mK}$",
+      "meaning": "Momentum of a non-relativistic particle of kinetic energy $K$"
+    },
+    {
+      "formula": "$\\lambda = \\frac{h}{\\sqrt{2mK}}$",
+      "meaning": "de Broglie wavelength from kinetic energy"
+    },
+    {
+      "formula": "$\\lambda = \\frac{h}{\\sqrt{2mqV}}$",
+      "meaning": "Charge $q$ of mass $m$ accelerated from rest through potential $V$"
+    },
+    {
+      "formula": "$\\lambda_e = \\frac{1.227}{\\sqrt{V}}\\ \\text{nm}$",
+      "meaning": "Electron accelerated through $V$ volts"
+    },
+    {
+      "formula": "$\\lambda = \\frac{h}{\\sqrt{3mk_BT}}$",
+      "meaning": "Thermal particle at temperature $T$; $k_B$ is Boltzmann's constant"
+    },
+    {
+      "formula": "$\\frac{p_e}{p_{ph}} = c\\sqrt{\\frac{2m}{E}}$",
+      "meaning": "Electron to photon momentum ratio for the same energy $E$ (non-relativistic electron)"
+    }
+  ],
+  "common_traps": [
+    "Thinking that increasing intensity increases the stopping potential or $K_{max}$. Correct idea: intensity changes only the photocurrent; $V_0$ depends only on frequency and work function.",
+    "Assuming $K_{max}$ is directly proportional to frequency. Correct idea: $K_{max} = h\\nu - \\phi_0$ is linear with a negative intercept, so doubling $\\nu$ more than doubles $K_{max}$.",
+    "Forgetting the threshold condition. Correct idea: if $\\lambda > \\lambda_0$ (or $\\nu < \\nu_0$), there is no emission at all, the current and stopping potential are zero, and very intense light does not help.",
+    "Using $\\lambda = h/\\sqrt{2mE}$ for a photon. Correct idea: for a photon $p = E/c$, so $\\lambda = hc/E$; the $\\sqrt{2mK}$ form applies only to particles with mass.",
+    "Believing a heavier particle always has a smaller de Broglie wavelength. Correct idea: at equal momentum the wavelengths are equal; $\\lambda \\propto 1/\\sqrt{m}$ only at equal kinetic energy.",
+    "Ignoring charge when comparing particles accelerated through the same potential. Correct idea: $K = qV$, so for an alpha particle use $q = 2e$ and $m \\approx 4m_p$.",
+    "Mixing units of energy. Correct idea: convert carefully between eV and J using $1$ eV $= 1.6 \\times 10^{-19}$ J; with $\\phi_0$ in eV, $V_0$ in volts equals $K_{max}$ in eV.",
+    "Thinking the slope of the $V_0$ vs $\\nu$ graph depends on the metal. Correct idea: the slope is $h/e$ for every metal; only the intercept $\\nu_0$ changes."
+  ],
+  "quick_revision": [
+    "Radiation shows wave nature in propagation and particle nature in interaction; photon energy is $E = h\\nu$ and momentum is $p = h/\\lambda$.",
+    "Use $hc \\approx 1240$ eV nm for fast photon energy calculations.",
+    "Hertz observed the photoelectric effect with ultraviolet light on a spark gap; Hallwachs and Lenard studied it quantitatively.",
+    "Photocurrent is proportional to intensity; the saturation current rises with intensity, but $V_0$ is unchanged.",
+    "Stopping potential rises linearly with frequency; there is no emission below the threshold $\\nu_0$, and emission is instantaneous.",
+    "Einstein: $K_{max} = eV_0 = h\\nu - \\phi_0$; one photon ejects at most one electron.",
+    "Graph of $V_0$ vs $\\nu$: slope $h/e$ (same for all metals), frequency-axis intercept $\\nu_0$.",
+    "A smaller work function means a larger threshold wavelength and a larger $V_0$ for the same light.",
+    "de Broglie: $\\lambda = h/p = h/\\sqrt{2mK} = h/\\sqrt{2mqV}$; for an electron $\\lambda = 1.227/\\sqrt{V}$ nm.",
+    "At equal kinetic energy, $\\lambda_e > \\lambda_p > \\lambda_\\alpha$; at equal momentum, all wavelengths are equal.",
+    "For equal energy, an electron's momentum far exceeds a photon's because $p_e = \\sqrt{2mE}$ while $p_{ph} = E/c$.",
+    "Matter waves are not electromagnetic waves and are significant only for microscopic particles; electron diffraction confirmed them."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q008",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q8"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q018",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q18"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q019",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q19"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

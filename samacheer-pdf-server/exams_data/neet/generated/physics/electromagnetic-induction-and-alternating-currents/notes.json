@@ -1,0 +1,447 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u14",
+  "unit_no": 14,
+  "unit_name": "Electromagnetic Induction and Alternating Currents",
+  "slug": "electromagnetic-induction-and-alternating-currents",
+  "overview": "This unit covers how a changing magnetic flux produces an emf (Faraday's and Lenz's laws), how coils store energy and couple through self and mutual inductance, and how alternating currents behave in resistors, inductors and capacitors, including resonance, power, generators and transformers. NEET usually sets 2-3 questions from it. The common types are direct formula applications (solenoid inductance, LCR current amplitude, transformer ratios), conceptual questions on Lenz's law and eddy currents, and graph-based questions on induced emf and power.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Magnetic flux through a surface measures how many field lines pass through it: $\\Phi_B = \\vec{B}\\cdot\\vec{A} = BA\\cos\\theta$, where $\\theta$ is the angle between $\\vec{B}$ and the area vector (the normal). Its SI unit is the weber ($1\\,Wb = 1\\,T\\,m^2$). Faraday's law states that an emf is induced in a circuit whenever the flux linked with it changes. The magnitude of this emf equals the rate of change of flux linkage: $\\varepsilon = -N\\frac{d\\Phi_B}{dt}$. The flux can change in three ways: by changing $B$, by changing the area $A$, or by changing the orientation $\\theta$, for example by rotating the coil. What matters is the rate of change, not the value of flux. A huge but constant flux induces no emf. If $\\Phi$ versus $t$ is plotted, the emf is the negative of the slope of that graph.",
+      "key_points": [
+        "Emf depends on the rate of change of flux, not on the flux itself",
+        "Flux can change through B, through A, or through the angle $\\theta$",
+        "For N tightly wound turns the flux linkage is $N\\Phi$",
+        "The minus sign expresses Lenz's law (direction of the emf)",
+        "Flux is a scalar; its SI unit is the weber ($Wb$)",
+        "The induced emf exists even if the circuit is open; a current needs a closed path"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Phi_B = BA\\cos\\theta$",
+          "meaning": "Flux through a plane area A in a uniform field B; $\\theta$ is the angle between B and the normal"
+        },
+        {
+          "formula": "$\\varepsilon = -N\\frac{d\\Phi_B}{dt}$",
+          "meaning": "Faraday's law: induced emf in a coil of N turns"
+        },
+        {
+          "formula": "$\\varepsilon_{avg} = -N\\frac{\\Delta\\Phi}{\\Delta t}$",
+          "meaning": "Average emf over a finite time interval"
+        }
+      ],
+      "neet_tip": "Expect $\\Phi = f(t)$ given as a polynomial or trigonometric function and a question asking for the emf at an instant, obtained by differentiating; or a $\\Phi$-t graph whose slope gives the emf.",
+      "topic": "Faraday's law of electromagnetic induction"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Lenz's law says the induced current flows in the direction that opposes the change in flux that produces it. It is a statement of energy conservation: work must be done against the opposing force, and that work appears as electrical energy. When a magnet's north pole approaches a coil, the near face of the coil becomes a north pole and repels it. A rod of length $l$ moving with speed $v$ perpendicular to $B$ develops a motional emf $Blv$. A rod rotating about one end develops $\\frac{1}{2}B\\omega l^2$. In a closed circuit of resistance $R$, the induced current is $I=\\varepsilon/R$ and the power dissipated is $\\varepsilon^2/R$. The charge that flows depends only on the total flux change, not on how fast it happens. A sliding rod experiences a retarding force $B^2l^2v/R$, so an external agent must keep pushing to maintain constant speed.",
+      "key_points": [
+        "Lenz's law follows from conservation of energy",
+        "Approaching magnet is repelled; receding magnet is attracted",
+        "Motional emf: $\\varepsilon = Blv$ when B, l and v are mutually perpendicular",
+        "Induced charge $Q = N\\Delta\\Phi/R$ is independent of time taken",
+        "Dissipated power $P = \\varepsilon^2/R$; if $\\varepsilon \\propto \\cos t$, then $P \\propto \\cos^2 t$",
+        "Use Fleming's right-hand rule for the direction of the induced current in a moving conductor"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\varepsilon = Blv$",
+          "meaning": "Motional emf in a straight conductor moving perpendicular to B"
+        },
+        {
+          "formula": "$\\varepsilon = \\frac{1}{2}B\\omega l^2$",
+          "meaning": "Emf across a rod of length l rotating with angular speed $\\omega$ about one end, perpendicular to B"
+        },
+        {
+          "formula": "$I = \\frac{\\varepsilon}{R},\\ Q = \\frac{N\\Delta\\Phi}{R}$",
+          "meaning": "Induced current and total induced charge in a circuit of resistance R"
+        },
+        {
+          "formula": "$F = \\frac{B^2l^2v}{R},\\ P = \\frac{B^2l^2v^2}{R}$",
+          "meaning": "Retarding force on a sliding rod and the power needed to keep it at constant speed"
+        }
+      ],
+      "neet_tip": "NEET asks for the direction of induced current using Lenz's law, power-versus-time graphs (find emf, then square it), and rotating rod or sliding rod emf calculations.",
+      "topic": "Induced emf and current; Lenz's law"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Eddy currents (Foucault currents) are loops of induced current that circulate inside the bulk of a conductor when the flux through it changes. By Lenz's law they oppose the motion or the change that causes them, producing damping and heating. Their useful applications include:\n\n- electromagnetic damping in moving-coil galvanometers, which makes the pointer dead-beat;\n- magnetic braking in electric trains;\n- induction furnaces, which melt metals by heating;\n- electric power meters.\n\nTheir harmful effect is energy lost as heat in transformer cores and motor armatures. This loss is reduced by using laminated cores, or cores with slots, which increase the resistance of the eddy-current paths. A magnet dropped through a vertical copper tube falls with an acceleration less than $g$ and can reach a terminal speed. Similarly, a metal plate swinging between magnet poles is damped quickly, while a slotted plate swings much more freely.",
+      "key_points": [
+        "Eddy currents oppose the change in flux (Lenz's law)",
+        "They cause heating and damping",
+        "They are reduced by laminating cores or cutting slots",
+        "Applications: magnetic braking, dead-beat galvanometer, induction furnace, power meters",
+        "A magnet falling through a metal tube has acceleration less than g",
+        "A slotted metal plate is damped less than a solid plate"
+      ],
+      "formulas": [],
+      "neet_tip": "Usually tested as a statement-based conceptual question on applications, on reducing eddy-current loss by lamination, or on a magnet falling through a conducting ring or tube with $a<g$.",
+      "topic": "Eddy currents"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Self-inductance $L$ is the property of a coil that opposes changes in its own current, much as inertia opposes changes in motion. It is defined by $N\\Phi = LI$, and the self-induced emf is $\\varepsilon = -L\\frac{dI}{dt}$. For a long solenoid, $L = \\mu_0 n^2 A l = \\mu_0 \\pi n^2 r^2 l$, where $n$ is the number of turns per unit length. Inserting a core of relative permeability $\\mu_r$ multiplies $L$ by $\\mu_r$. The energy stored in an inductor is $\\frac{1}{2}LI^2$. Mutual inductance $M$ links two coils: $N_2\\Phi_2 = MI_1$ and $\\varepsilon_2 = -M\\frac{dI_1}{dt}$. For two coaxial solenoids, $M = \\mu_0 n_1 n_2 \\pi r_1^2 l$, with $r_1$ the radius of the inner one, and $M_{12}=M_{21}$. Ignoring mutual inductance, inductors in series add ($L_1+L_2$) and in parallel combine like resistors. The SI unit of inductance is the henry.",
+      "key_points": [
+        "L depends only on geometry and the core material, not on the current",
+        "Solenoid: $L \\propto n^2$, $L \\propto N^2$, $L \\propto A$",
+        "Energy stored in an inductor: $\\frac{1}{2}LI^2$; magnetic energy density $\\frac{B^2}{2\\mu_0}$",
+        "$M_{12} = M_{21}$; coupling coefficient $k \\le 1$",
+        "Series inductors: $L_1+L_2$; parallel: $\\frac{L_1L_2}{L_1+L_2}$ (no mutual coupling)",
+        "Voltage across an inductor is $L\\,dI/dt$; in parallel each inductor has the same voltage across it, so $L_1\\,dI_1/dt = L_2\\,dI_2/dt$ and the current divides inversely as $L$ (each carries $I/2$ only if $L_1 = L_2$)"
+      ],
+      "formulas": [
+        {
+          "formula": "$L = \\frac{N\\Phi}{I},\\ \\varepsilon = -L\\frac{dI}{dt}$",
+          "meaning": "Definition of self-inductance and the self-induced emf"
+        },
+        {
+          "formula": "$L = \\mu_0 n^2 \\pi r^2 l = \\frac{\\mu_0 N^2 A}{l}$",
+          "meaning": "Self-inductance of a long solenoid (multiply by $\\mu_r$ for a core)"
+        },
+        {
+          "formula": "$M = \\mu_0 n_1 n_2 \\pi r_1^2 l$",
+          "meaning": "Mutual inductance of coaxial solenoids, $r_1$ = inner radius"
+        },
+        {
+          "formula": "$U = \\frac{1}{2}LI^2$",
+          "meaning": "Magnetic energy stored in an inductor"
+        },
+        {
+          "formula": "$M = k\\sqrt{L_1L_2}$",
+          "meaning": "Mutual inductance in terms of the coupling coefficient $0\\le k\\le 1$"
+        }
+      ],
+      "neet_tip": "Direct formula recall (solenoid L or M), energy stored, and series/parallel inductor emf ratios are frequent single-step questions.",
+      "topic": "Self and mutual inductance"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "An alternating current varies sinusoidally: $I = I_0\\sin\\omega t$, with $\\omega = 2\\pi f$. Its average over a full cycle is zero. Its average over a half cycle is $\\frac{2I_0}{\\pi} \\approx 0.637I_0$. The root mean square (rms), or effective, value is the steady DC that would produce the same heat in a resistor in the same time. For a sinusoid, $I_{rms} = \\frac{I_0}{\\sqrt{2}} \\approx 0.707I_0$, and similarly $V_{rms}=\\frac{V_0}{\\sqrt{2}}$. AC ammeters and voltmeters read rms values. Indian domestic supply is 220 V rms at 50 Hz, so the peak voltage is about 311 V. The form factor is $\\frac{I_{rms}}{I_{avg}} = \\frac{\\pi}{2\\sqrt{2}} \\approx 1.11$. For non-sinusoidal waveforms, compute $\\sqrt{\\langle I^2\\rangle}$ directly. For example, a square wave of height $I_0$ has $I_{rms}=I_0$.",
+      "key_points": [
+        "The full-cycle average of sinusoidal AC is zero",
+        "Half-cycle average $= 2I_0/\\pi$",
+        "rms $= I_0/\\sqrt{2}$ for a sine wave only",
+        "AC meters read rms values",
+        "220 V mains is rms; peak $\\approx 311$ V",
+        "In $\\omega = 2\\pi f$, the 2000 in $\\sin(2000t)$ is $\\omega$, not f"
+      ],
+      "formulas": [
+        {
+          "formula": "$I = I_0\\sin\\omega t,\\ \\omega = 2\\pi f$",
+          "meaning": "Instantaneous alternating current, $I_0$ = peak value"
+        },
+        {
+          "formula": "$I_{rms} = \\frac{I_0}{\\sqrt{2}},\\ V_{rms} = \\frac{V_0}{\\sqrt{2}}$",
+          "meaning": "Effective (rms) values for sinusoidal AC"
+        },
+        {
+          "formula": "$I_{avg,\\,half} = \\frac{2I_0}{\\pi}$",
+          "meaning": "Mean current over a half cycle"
+        },
+        {
+          "formula": "$I_{rms} = \\sqrt{\\langle I^2 \\rangle}$",
+          "meaning": "General definition of rms for any waveform"
+        }
+      ],
+      "neet_tip": "Watch whether the question gives or asks for peak or rms values; reading $\\omega$ and $V_0$ directly from $V=V_0\\sin\\omega t$ is a must.",
+      "topic": "Alternating current: peak and RMS values"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "In a pure resistor, voltage and current are in phase. In a pure inductor, the voltage leads the current by $\\pi/2$, and the opposition offered is the inductive reactance $X_L = \\omega L$. In a pure capacitor, the current leads the voltage by $\\pi/2$, and the opposition is the capacitive reactance $X_C = \\frac{1}{\\omega C}$. Reactances are measured in ohms. $X_L$ grows with frequency, so an inductor blocks high frequencies. $X_C$ falls with frequency, so a capacitor blocks DC ($\\omega = 0$) and passes high frequencies. Impedance $Z$ is the total opposition of an AC circuit. For a series RLC circuit it is found from phasors as $Z = \\sqrt{R^2 + (X_L-X_C)^2}$, and the peak current is $I_0 = \\frac{V_0}{Z}$. Phasors are rotating vectors whose projections give the instantaneous values. Adding voltage phasors vectorially, not arithmetically, is essential.",
+      "key_points": [
+        "Resistor: V and I in phase",
+        "Inductor: V leads I by $90^\\circ$ (mnemonic ELI)",
+        "Capacitor: I leads V by $90^\\circ$ (mnemonic ICE)",
+        "$X_L \\propto f$, $X_C \\propto 1/f$",
+        "For DC, an inductor acts as a plain wire and a capacitor as an open circuit",
+        "Voltages in an AC series circuit add as phasors"
+      ],
+      "formulas": [
+        {
+          "formula": "$X_L = \\omega L = 2\\pi fL$",
+          "meaning": "Inductive reactance in ohm"
+        },
+        {
+          "formula": "$X_C = \\frac{1}{\\omega C} = \\frac{1}{2\\pi fC}$",
+          "meaning": "Capacitive reactance in ohm"
+        },
+        {
+          "formula": "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$",
+          "meaning": "Impedance of a series LCR circuit"
+        },
+        {
+          "formula": "$I_0 = \\frac{V_0}{Z},\\ I_{rms} = \\frac{V_{rms}}{Z}$",
+          "meaning": "Ohm's law form for AC circuits"
+        }
+      ],
+      "neet_tip": "Compute $X_L$ and $X_C$ first; if they are equal, Z = R immediately, which is a common shortcut in current-amplitude questions.",
+      "topic": "Reactance and impedance"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "In a series LCR circuit driven by $V = V_0\\sin\\omega t$, the current is $I = I_0\\sin(\\omega t - \\phi)$, where $\\tan\\phi = \\frac{X_L - X_C}{R}$. The circuit is inductive if $X_L > X_C$ (current lags) and capacitive if $X_C > X_L$ (current leads). Resonance occurs when $X_L = X_C$, that is $\\omega_0 = \\frac{1}{\\sqrt{LC}}$. At resonance Z is minimum and equal to R, the current is maximum ($V_0/R$), $\\phi = 0$ and the power factor is 1. $V_L$ and $V_C$ are equal and opposite, cancelling each other, and each may be much larger than the source voltage. Sharpness of resonance is measured by the quality factor $Q = \\frac{\\omega_0 L}{R} = \\frac{1}{R}\\sqrt{\\frac{L}{C}}$. The bandwidth is $2\\Delta\\omega = R/L$, so $Q = \\omega_0/(2\\Delta\\omega)$. A smaller R gives a sharper resonance. Resonance is used in radio and TV tuning circuits. It needs both L and C to be present.",
+      "key_points": [
+        "Resonance condition: $X_L = X_C$, $\\omega_0 = 1/\\sqrt{LC}$",
+        "At resonance: $Z_{min} = R$, $I_{max} = V/R$, $\\phi=0$",
+        "$V_L = V_C$ at resonance, in antiphase; each can exceed the source voltage",
+        "Below $\\omega_0$ the circuit is capacitive; above $\\omega_0$ it is inductive",
+        "Q factor $= \\omega_0/\\text{bandwidth}$; low R gives sharp resonance",
+        "Resonant frequency is independent of R"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\tan\\phi = \\frac{X_L - X_C}{R}$",
+          "meaning": "Phase angle between source voltage and current"
+        },
+        {
+          "formula": "$\\omega_0 = \\frac{1}{\\sqrt{LC}},\\ f_0 = \\frac{1}{2\\pi\\sqrt{LC}}$",
+          "meaning": "Resonant angular frequency and frequency"
+        },
+        {
+          "formula": "$Q = \\frac{\\omega_0 L}{R} = \\frac{1}{R}\\sqrt{\\frac{L}{C}}$",
+          "meaning": "Quality factor (sharpness of resonance)"
+        },
+        {
+          "formula": "$2\\Delta\\omega = \\frac{R}{L}$",
+          "meaning": "Bandwidth, the separation of the half-power frequencies"
+        }
+      ],
+      "neet_tip": "NEET often gives L, C, R and $\\omega$ that satisfy resonance; recognising $X_L = X_C$ quickly gives $I_0 = V_0/R$.",
+      "topic": "LCR series circuit and resonance"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "The average power in an AC circuit is $P = V_{rms}I_{rms}\\cos\\phi$. Here $\\cos\\phi$ is the power factor, equal to $\\frac{R}{Z}$. Only the resistor dissipates power, so equivalently $P = I_{rms}^2R$. For a pure resistor $\\cos\\phi = 1$. For a pure inductor or a pure capacitor $\\phi = 90^\\circ$, so the average power is zero: energy is stored and returned every cycle. At resonance the power factor is 1 and the power is maximum. Resolve $I_{rms}$ into two parts. The component $I_{rms}\\cos\\phi$, in phase with the voltage, does the work. The component $I_{rms}\\sin\\phi$, in quadrature, consumes no power and is called wattless current. A low power factor means a larger current is needed for the same power, which raises transmission losses. Capacitors are therefore used to improve the power factor in industrial loads.",
+      "key_points": [
+        "Average power $= V_{rms}I_{rms}\\cos\\phi$",
+        "Power factor $\\cos\\phi = R/Z$",
+        "Pure L or C: zero average power",
+        "Wattless current $= I_{rms}\\sin\\phi$",
+        "Power is maximum at resonance",
+        "Only the resistance dissipates energy: $P = I_{rms}^2R$"
+      ],
+      "formulas": [
+        {
+          "formula": "$P_{avg} = V_{rms}I_{rms}\\cos\\phi$",
+          "meaning": "True (average) power in an AC circuit"
+        },
+        {
+          "formula": "$\\cos\\phi = \\frac{R}{Z}$",
+          "meaning": "Power factor of a series LCR circuit"
+        },
+        {
+          "formula": "$P_{avg} = I_{rms}^2 R$",
+          "meaning": "Power dissipated, all in the resistor"
+        },
+        {
+          "formula": "$I_{wattless} = I_{rms}\\sin\\phi$",
+          "meaning": "Current component $90^\\circ$ out of phase that does no work"
+        }
+      ],
+      "neet_tip": "Typical questions find power from $V = V_0\\sin\\omega t$ and $I = I_0\\sin(\\omega t-\\phi)$ using $\\frac{V_0I_0}{2}\\cos\\phi$, or identify the zero-power case.",
+      "topic": "Power in AC circuits; wattless current"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "An AC generator converts mechanical energy into electrical energy by electromagnetic induction. A coil of N turns and area A rotates with angular speed $\\omega$ in a uniform field B. The flux linked is $\\Phi = NBA\\cos\\omega t$, so the emf is $\\varepsilon = NBA\\omega\\sin\\omega t$, and its peak value is $\\varepsilon_0 = NBA\\omega$. The emf is maximum when the plane of the coil is parallel to B, where flux is zero but changing fastest. The emf is zero when the plane is perpendicular to B, where flux is maximum. The main parts are the armature coil, the field magnets, slip rings and carbon brushes. Doubling $\\omega$ doubles both the peak emf and the frequency. Commercial generators in India produce 50 Hz. The mechanical energy is supplied by turbines driven by water, steam or wind.",
+      "key_points": [
+        "Works on electromagnetic induction",
+        "Peak emf $\\varepsilon_0 = NBA\\omega$",
+        "Flux maximum means emf zero; flux zero means emf maximum",
+        "Slip rings and brushes connect the rotating coil to the external circuit",
+        "Peak emf is proportional to $\\omega$, N, B and A",
+        "Converts mechanical energy into electrical energy"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\varepsilon = NBA\\omega\\sin\\omega t$",
+          "meaning": "Instantaneous emf of the AC generator"
+        },
+        {
+          "formula": "$\\varepsilon_0 = NBA\\omega = NBA(2\\pi f)$",
+          "meaning": "Peak emf; f is the rotation frequency"
+        }
+      ],
+      "neet_tip": "Expect direct calculation of peak emf from N, B, A and rpm (convert rpm to rad/s), or the phase relation between flux and emf.",
+      "topic": "AC generator"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "A transformer changes alternating voltage using mutual induction between primary and secondary coils wound on a common soft-iron core. For an ideal transformer, $\\frac{V_s}{V_p} = \\frac{N_s}{N_p} = \\frac{I_p}{I_s}$, so $V_pI_p = V_sI_s$. A step-up transformer has $N_s > N_p$ and increases voltage while decreasing current. A step-down transformer does the reverse. Power and frequency are not changed. Transformers do not work on steady DC, because a constant flux induces no emf. Real transformers have four main losses, each with its own remedy:\n\n- flux leakage, reduced by winding the coils one over the other;\n- copper (joule) loss, reduced by using thick wires;\n- eddy-current loss, reduced by a laminated core;\n- hysteresis loss, reduced by a soft-iron core with a narrow hysteresis loop.\n\nEfficiency is $\\eta = \\frac{P_{out}}{P_{in}}$. Power is transmitted over long distances at high voltage and low current to reduce $I^2R$ line losses.",
+      "key_points": [
+        "Works on mutual induction; AC only",
+        "Step-up: voltage increases, current decreases",
+        "Frequency is unchanged by a transformer",
+        "Losses: copper, eddy current, hysteresis, flux leakage",
+        "A laminated soft-iron core reduces eddy-current and hysteresis losses",
+        "High-voltage transmission minimises $I^2R$ loss"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{V_s}{V_p} = \\frac{N_s}{N_p} = \\frac{I_p}{I_s}$",
+          "meaning": "Ideal transformer relations (turns ratio)"
+        },
+        {
+          "formula": "$\\eta = \\frac{V_sI_s}{V_pI_p}\\times 100\\%$",
+          "meaning": "Efficiency of a real transformer"
+        },
+        {
+          "formula": "$P_{loss} = I^2R_{line}$",
+          "meaning": "Power lost in transmission lines; reduced by stepping up voltage"
+        }
+      ],
+      "neet_tip": "Questions use the turns ratio to find secondary current or voltage, include efficiency, or ask which loss is reduced by which design feature.",
+      "topic": "Transformer"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\Phi = BA\\cos\\theta$",
+      "meaning": "Magnetic flux; B = field, A = area, $\\theta$ = angle between B and the normal"
+    },
+    {
+      "formula": "$\\varepsilon = -N\\frac{d\\Phi}{dt}$",
+      "meaning": "Faraday's law; N = number of turns"
+    },
+    {
+      "formula": "$\\varepsilon = Blv$",
+      "meaning": "Motional emf; l = rod length, v = speed perpendicular to B"
+    },
+    {
+      "formula": "$\\varepsilon = \\frac{1}{2}B\\omega l^2$",
+      "meaning": "Emf of a rod of length l rotating about one end with angular speed $\\omega$"
+    },
+    {
+      "formula": "$Q = \\frac{N\\Delta\\Phi}{R}$",
+      "meaning": "Charge induced; R = circuit resistance"
+    },
+    {
+      "formula": "$\\varepsilon = -L\\frac{dI}{dt}$",
+      "meaning": "Self-induced emf; L = self-inductance"
+    },
+    {
+      "formula": "$L = \\mu_0 n^2 \\pi r^2 l$",
+      "meaning": "Solenoid inductance; n = turns per length, r = radius, l = length"
+    },
+    {
+      "formula": "$M = \\mu_0 n_1 n_2 \\pi r_1^2 l$",
+      "meaning": "Mutual inductance of coaxial solenoids; $r_1$ = inner radius"
+    },
+    {
+      "formula": "$U = \\frac{1}{2}LI^2$",
+      "meaning": "Energy stored in an inductor carrying current I"
+    },
+    {
+      "formula": "$u_B = \\frac{B^2}{2\\mu_0}$",
+      "meaning": "Magnetic energy density"
+    },
+    {
+      "formula": "$I_{rms} = \\frac{I_0}{\\sqrt{2}}$",
+      "meaning": "rms current from peak current $I_0$ (sinusoidal)"
+    },
+    {
+      "formula": "$I_{avg} = \\frac{2I_0}{\\pi}$",
+      "meaning": "Half-cycle average of sinusoidal current"
+    },
+    {
+      "formula": "$X_L = \\omega L$",
+      "meaning": "Inductive reactance; $\\omega$ = angular frequency"
+    },
+    {
+      "formula": "$X_C = \\frac{1}{\\omega C}$",
+      "meaning": "Capacitive reactance; C = capacitance"
+    },
+    {
+      "formula": "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$",
+      "meaning": "Impedance of series LCR circuit"
+    },
+    {
+      "formula": "$\\tan\\phi = \\frac{X_L - X_C}{R}$",
+      "meaning": "Phase angle between voltage and current"
+    },
+    {
+      "formula": "$\\omega_0 = \\frac{1}{\\sqrt{LC}}$",
+      "meaning": "Resonant angular frequency"
+    },
+    {
+      "formula": "$Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}}$",
+      "meaning": "Quality factor of series resonance"
+    },
+    {
+      "formula": "$P = V_{rms}I_{rms}\\cos\\phi$",
+      "meaning": "Average power; $\\cos\\phi$ = power factor = R/Z"
+    },
+    {
+      "formula": "$I_{wattless} = I_{rms}\\sin\\phi$",
+      "meaning": "Wattless component of current"
+    },
+    {
+      "formula": "$\\varepsilon_0 = NBA\\omega$",
+      "meaning": "Peak emf of AC generator"
+    },
+    {
+      "formula": "$\\frac{V_s}{V_p} = \\frac{N_s}{N_p} = \\frac{I_p}{I_s}$",
+      "meaning": "Ideal transformer; s = secondary, p = primary"
+    }
+  ],
+  "common_traps": [
+    "Thinking a large flux means a large emf: emf depends on the rate of change of flux, so a constant flux, however big, induces zero emf.",
+    "Taking $\\omega$ in $V = V_0\\sin(2000t)$ as the frequency f: here 2000 rad/s is $\\omega$, and $f = \\omega/2\\pi$.",
+    "Adding $V_R$, $V_L$ and $V_C$ arithmetically: in AC series circuits $V = \\sqrt{V_R^2 + (V_L - V_C)^2}$.",
+    "Assuming a transformer increases power: an ideal transformer conserves power; stepping up voltage steps down current, and the frequency is unchanged.",
+    "Believing pure inductors or capacitors consume power: their average power is zero because the power factor is $\\cos 90^\\circ = 0$.",
+    "Confusing the coil orientation in a generator: emf is maximum when the coil plane is parallel to B (flux zero), not when flux is maximum.",
+    "For induced power, plotting P like the emf: $P = \\varepsilon^2/R$ is never negative and varies as the square of the emf.",
+    "Forgetting how current and emf divide between inductors: in parallel, all inductors have the same emf across them, and the currents divide inversely as $L$. In series, all carry the same current, and the emfs divide in proportion to $L$."
+  ],
+  "quick_revision": [
+    "Emf $= -N\\,d\\Phi/dt$; flux changes through B, A or $\\theta$.",
+    "Lenz's law opposes the cause and follows from energy conservation.",
+    "Motional emf is $Blv$; a rotating rod gives $\\frac{1}{2}B\\omega l^2$; induced charge is $N\\Delta\\Phi/R$, independent of time.",
+    "Eddy currents cause damping and heating; laminated cores reduce them; uses are braking, induction furnaces and dead-beat galvanometers.",
+    "Solenoid $L = \\mu_0 n^2 \\pi r^2 l$; stored energy $\\frac{1}{2}LI^2$; $M_{12} = M_{21}$.",
+    "$I_{rms} = I_0/\\sqrt{2}$; full-cycle average is zero; meters read rms; 220 V mains is rms.",
+    "$X_L = \\omega L$ with V leading I; $X_C = 1/\\omega C$ with I leading V; a capacitor blocks DC.",
+    "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$ and $\\tan\\phi = (X_L - X_C)/R$.",
+    "Resonance at $\\omega_0 = 1/\\sqrt{LC}$: Z = R, current maximum, power factor 1, and $V_L = V_C$.",
+    "$P = V_{rms}I_{rms}\\cos\\phi$; wattless current is $I_{rms}\\sin\\phi$; pure L or C gives zero power.",
+    "Generator peak emf is $NBA\\omega$; emf is zero when flux is maximum.",
+    "Transformer: $V_s/V_p = N_s/N_p = I_p/I_s$; works on AC only; high-voltage transmission cuts $I^2R$ loss."
+  ],
+  "pyq": {
+    "count": 4,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q003",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q3"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q005",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q5"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q030",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q30"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q032",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q32"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

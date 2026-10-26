@@ -1,0 +1,473 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u15",
+  "unit_no": 15,
+  "unit_name": "Hydrocarbons",
+  "slug": "hydrocarbons",
+  "overview": "Hydrocarbons is the foundation of organic chemistry. It covers the classification, nomenclature, preparation and reactions of alkanes, alkenes, alkynes and benzene, with emphasis on reaction mechanisms and stereochemistry. NEET regularly asks about stereochemical outcomes (syn vs anti addition, cis/trans), Markovnikov vs anti-Markovnikov products, conjugation, ozonolysis-based structure deduction, acidity of alkynes and directive effects in benzene, so precise mechanistic understanding scores directly.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Hydrocarbons contain only C and H. They are classified as open-chain (aliphatic) or cyclic. Aliphatic hydrocarbons are saturated (alkanes, $C_nH_{2n+2}$) or unsaturated (alkenes $C_nH_{2n}$, alkynes $C_nH_{2n-2}$). Cyclic hydrocarbons are alicyclic (e.g. cyclohexane) or aromatic (benzenoid). Alkanes show chain isomerism from $C_4$ onwards. Alkenes and alkynes also show position isomerism, and alkenes show geometrical isomerism. IUPAC naming follows these rules: choose the longest chain containing the maximum number of multiple bonds, give the multiple bonds the lowest locants, then cite substituents alphabetically. If a double and a triple bond would get equal locants, the double bond gets the lower number. Dienes are classified by the spacing of their double bonds. In conjugated dienes the double bonds alternate with one single bond (1,3-type). In isolated dienes they are separated by two or more single bonds (1,4-type and beyond). Cumulated dienes (allenes) have adjacent double bonds.",
+      "key_points": [
+        "Number of structural isomers: $C_4H_{10}$ = 2, $C_5H_{12}$ = 3, $C_6H_{14}$ = 5",
+        "Conjugated diene: $C=C-C=C$ pattern, e.g. buta-1,3-diene, hepta-1,3-diene",
+        "Hepta-1,4-, 1,5- and 1,6-dienes are isolated (non-conjugated)",
+        "Suffixes: -ane, -ene, -yne; for both double and triple bonds use -en-yne, e.g. pent-1-en-4-yne",
+        "Alicyclic compounds behave like aliphatic ones; aromatic compounds follow Huckel's rule"
+      ],
+      "formulas": [
+        {
+          "formula": "$DU = \\frac{2C + 2 + N - H - X}{2}$",
+          "meaning": "Degree of unsaturation (rings + $\\pi$ bonds) from a molecular formula"
+        },
+        {
+          "formula": "$C_nH_{2n+2},\\ C_nH_{2n},\\ C_nH_{2n-2}$",
+          "meaning": "General formulas of alkanes, alkenes (or cycloalkanes) and alkynes (or dienes)"
+        }
+      ],
+      "neet_tip": "Expect conjugated vs isolated diene identification, isomer counting, and IUPAC naming of branched or en-yne compounds.",
+      "topic": "Classification, isomerism and IUPAC nomenclature"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Alkanes are prepared in four main ways. Catalytic hydrogenation of alkenes or alkynes uses $Pt$, $Pd$ or $Ni$. Alkyl halides can be reduced with $Zn/H^+$. The Wurtz reaction ($2RX + 2Na$ in dry ether) gives symmetrical alkanes with an even number of carbons. Decarboxylation of sodium carboxylates with soda lime gives an alkane with one carbon fewer, while Kolbe's electrolysis gives $R-R$. Physically, boiling point rises with molecular mass and falls with branching. Alkanes undergo substitution, combustion, controlled oxidation, isomerisation, aromatisation and pyrolysis. Alkenes are prepared by partial reduction of alkynes, by dehydrohalogenation with alcoholic $KOH$ (Saytzeff product), by dehalogenation of vicinal dihalides with $Zn$, and by acidic dehydration of alcohols. Ethyne is made from $CaC_2$ and water, or from vicinal dihalides by double dehydrohalogenation. Oxidation of alkenes is also important. Cold, dilute alkaline $KMnO_4$ (Baeyer's reagent) gives a vicinal diol by syn addition. Hot acidic $KMnO_4$ cleaves the double bond to give ketones or acids.",
+      "key_points": [
+        "Wurtz reaction is unsuitable for odd-carbon alkanes (it gives a mixture); methane cannot be made by it",
+        "Soda lime decarboxylation: $RCOONa + NaOH \\xrightarrow{CaO,\\ \\Delta} RH + Na_2CO_3$",
+        "Aromatisation: n-hexane gives benzene with $Cr_2O_3/V_2O_5/Mo_2O_3$ at 773 K and 10-20 atm",
+        "Dehydrohalogenation follows Saytzeff's rule: the more substituted alkene is the major product",
+        "Baeyer's reagent is decolourised by alkenes; a cis alkene gives the meso diol and a trans alkene gives the racemic diol",
+        "Isomerisation: n-alkanes give branched alkanes with anhydrous $AlCl_3/HCl$"
+      ],
+      "formulas": [
+        {
+          "formula": "$2RX + 2Na \\xrightarrow{dry\\ ether} R-R + 2NaX$",
+          "meaning": "Wurtz reaction; doubles the carbon chain"
+        },
+        {
+          "formula": "$CaC_2 + 2H_2O \\rightarrow C_2H_2 + Ca(OH)_2$",
+          "meaning": "Laboratory/industrial preparation of ethyne"
+        },
+        {
+          "formula": "$C_2H_5OH \\xrightarrow{conc.\\ H_2SO_4,\\ 443\\ K} CH_2=CH_2 + H_2O$",
+          "meaning": "Acidic dehydration of alcohol to an alkene"
+        },
+        {
+          "formula": "$C_nH_{2n+2} + \\frac{3n+1}{2}O_2 \\rightarrow nCO_2 + (n+1)H_2O$",
+          "meaning": "Complete combustion of an alkane"
+        }
+      ],
+      "neet_tip": "NEET tests reagent-product matching (Wurtz, soda lime, Kolbe, Lindlar, Baeyer's) and boiling-point order among isomeric alkanes.",
+      "topic": "General methods of preparation, properties and reactions"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Free rotation about the $C-C$ sigma bond in ethane produces infinitely many spatial arrangements called conformations. The two extremes are staggered (dihedral angle 60 degrees, hydrogens farthest apart, minimum energy) and eclipsed (dihedral angle 0 degrees, maximum torsional strain). All other arrangements are skew forms. The energy difference in ethane is only about 12.5 kJ/mol, so the conformers interconvert rapidly at room temperature and cannot be isolated. In a Sawhorse projection the $C-C$ bond is drawn as a slanted line, with the front carbon at the lower left and the rear carbon at the upper right. In a Newman projection the molecule is viewed along the $C-C$ bond. The front carbon is a point with three bonds radiating from it, and the rear carbon is a circle with bonds emerging from its edge. Torsional strain arises from repulsion between the electron clouds of bonds on adjacent carbons.",
+      "key_points": [
+        "Stability order: staggered > skew > eclipsed",
+        "Conformers have the same bond lengths and bond angles; they differ only in rotation about the sigma bond",
+        "Conformers are not separable; the rotational barrier is about 12.5 kJ/mol for ethane",
+        "Newman projection: front carbon is a dot, rear carbon is a circle",
+        "Rotating one carbon by 60 degrees interconverts the staggered and eclipsed forms"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta E_{eclipsed - staggered} \\approx 12.5\\ kJ\\ mol^{-1}$",
+          "meaning": "Torsional energy barrier in ethane"
+        }
+      ],
+      "neet_tip": "Questions ask which conformation is more stable, or to read Newman projections to identify relative positions of groups (often mixed with stereochemistry of addition products).",
+      "topic": "Alkanes: conformations, Sawhorse and Newman projections of ethane"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Halogenation of alkanes in diffused sunlight, UV light or at high temperature proceeds by a free radical chain mechanism with three steps. In initiation, homolysis of $Cl-Cl$ (the weaker bond compared with $C-H$) produces chlorine free radicals. In propagation, $Cl^\\bullet$ abstracts a hydrogen from methane to form $CH_3^\\bullet$ and $HCl$. The methyl radical then attacks $Cl_2$ to give $CH_3Cl$ and regenerate $Cl^\\bullet$, which continues the chain. In termination, any two radicals combine, for example $CH_3^\\bullet + CH_3^\\bullet \\rightarrow C_2H_6$. Formation of ethane as a by-product supports the radical mechanism. With excess chlorine the reaction continues to $CH_2Cl_2$, $CHCl_3$ and $CCl_4$. Reactivity of halogens is $F_2 > Cl_2 > Br_2 > I_2$. Fluorination is explosive, and iodination is reversible, so it needs an oxidant such as $HIO_3$ or $HNO_3$.",
+      "key_points": [
+        "Ease of hydrogen abstraction: $3^\\circ > 2^\\circ > 1^\\circ > CH_4$, because radical stability follows the same order",
+        "Bromination is more selective than chlorination",
+        "Ethane formed during chlorination of methane is evidence for the free radical mechanism",
+        "Excess halogen leads to polyhalogenation"
+      ],
+      "formulas": [
+        {
+          "formula": "$Cl_2 \\xrightarrow{h\\nu} 2Cl^\\bullet$",
+          "meaning": "Initiation by homolytic fission"
+        },
+        {
+          "formula": "$CH_4 + Cl^\\bullet \\rightarrow CH_3^\\bullet + HCl;\\ CH_3^\\bullet + Cl_2 \\rightarrow CH_3Cl + Cl^\\bullet$",
+          "meaning": "Chain propagation steps"
+        },
+        {
+          "formula": "$CH_4 + I_2 \\rightleftharpoons CH_3I + HI;\\ 5HI + HIO_3 \\rightarrow 3I_2 + 3H_2O$",
+          "meaning": "Iodination is reversible; an oxidant removes HI"
+        }
+      ],
+      "neet_tip": "NEET asks to identify initiation, propagation or termination steps, the by-product ethane, and the relative reactivity of halogens or of $1^\\circ/2^\\circ/3^\\circ$ hydrogens.",
+      "topic": "Mechanism of halogenation of alkanes"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "The $C=C$ double bond (one sigma and one pi bond) does not allow free rotation, because rotation would break pi overlap. Geometrical (cis-trans) isomerism therefore arises when each doubly bonded carbon carries two different groups. In the cis isomer, similar groups lie on the same side; in the trans isomer, they lie on opposite sides. For example, but-2-ene exists as cis and trans forms, whereas but-1-ene and propene do not, because one carbon carries two hydrogens. Cis isomers are generally more polar and have higher boiling points. For example, cis-but-2-ene boils at about 277 K and trans-but-2-ene at about 274 K, and trans-but-2-ene has zero dipole moment. Trans isomers pack better in the crystal lattice and usually have higher melting points. Geometrical isomers are diastereomers with different physical and chemical properties.",
+      "key_points": [
+        "Condition: $abC=Cab$ or $abC=Cde$ type, i.e. $a \\neq b$ on each carbon",
+        "Cis: higher dipole moment and higher boiling point; trans: higher melting point and greater stability",
+        "trans-But-2-ene and trans-1,2-dichloroethene have zero dipole moment",
+        "Lindlar's catalyst gives the cis alkene; $Na$/liquid $NH_3$ gives the trans alkene",
+        "Interconversion requires breaking the pi bond (heat or light)"
+      ],
+      "formulas": [],
+      "neet_tip": "Identify which alkene shows cis-trans isomerism, compare dipole moments or boiling points, and relate alkyne reduction method to cis or trans product.",
+      "topic": "Alkenes: geometrical isomerism"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Pi electrons make alkenes nucleophilic, so they undergo electrophilic addition. Hydrogen adds in the presence of $Pt$, $Pd$ or $Ni$ on the metal surface by syn addition to give the alkane. Halogens add through a cyclic halonium ion; the halide ion then attacks from the opposite face, so the overall addition is anti. Decolourisation of red-brown $Br_2$ in $CCl_4$ is a test for unsaturation. Anti addition means trans-but-2-ene gives meso-2,3-dibromobutane, while cis-but-2-ene gives racemic (±)-2,3-dibromobutane. Hydrogen halides add in two steps. $H^+$ adds first to form the more stable carbocation (the rate-determining step), and then $X^-$ attacks. Reactivity is $HI > HBr > HCl$. Water adds only in the presence of an acid catalyst (dilute $H_2SO_4$). Protonation forms a carbocation, water attacks, and deprotonation gives an alcohol with Markovnikov orientation. Rearrangement of the carbocation is possible.",
+      "key_points": [
+        "Halogen addition is anti (via a bromonium ion); catalytic hydrogenation and $KMnO_4$ dihydroxylation are syn",
+        "trans-alkene + anti addition gives the meso product; cis-alkene + anti addition gives the racemic product",
+        "HX reactivity: $HI > HBr > HCl > HF$ (follows bond weakness)",
+        "Carbocation intermediates may undergo hydride or methyl shifts to more stable cations",
+        "Acid-catalysed hydration gives the Markovnikov alcohol (OH on the more substituted carbon); unsymmetrical alkenes usually give $2^\\circ$ or $3^\\circ$ alcohols, but ethene gives ethanol ($1^\\circ$)"
+      ],
+      "formulas": [
+        {
+          "formula": "$CH_2=CH_2 + Br_2 \\xrightarrow{CCl_4} BrCH_2CH_2Br$",
+          "meaning": "Bromine water / $Br_2$ in $CCl_4$ test for unsaturation (anti addition)"
+        },
+        {
+          "formula": "$CH_3CH=CH_2 + H_2O \\xrightarrow{H^+} CH_3CH(OH)CH_3$",
+          "meaning": "Acid-catalysed hydration (Markovnikov)"
+        },
+        {
+          "formula": "$RCH=CH_2 + H_2 \\xrightarrow{Pt/Pd/Ni} RCH_2CH_3$",
+          "meaning": "Catalytic hydrogenation (syn)"
+        }
+      ],
+      "neet_tip": "Statement-type questions test stereochemistry of $Br_2$ addition (meso vs racemic) via Newman or Fischer projections; know syn vs anti for each reagent.",
+      "topic": "Mechanism of electrophilic addition: hydrogen, halogens, water and hydrogen halides"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Markovnikov's rule states that when an unsymmetrical reagent adds to an unsymmetrical alkene, the negative part goes to the carbon carrying fewer hydrogens. The rule follows from carbocation stability ($3^\\circ > 2^\\circ > 1^\\circ$; benzylic and allylic cations are especially stable). For example, propene with $HBr$ gives 2-bromopropane. In the presence of peroxides such as benzoyl peroxide, $HBr$ adds in the anti-Markovnikov manner (peroxide or Kharasch effect) by a free radical mechanism. The peroxide forms radicals, which generate $Br^\\bullet$ from $HBr$. $Br^\\bullet$ adds to the terminal carbon to give the more stable carbon radical, which then abstracts $H$ from $HBr$. Propene therefore gives 1-bromopropane. The peroxide effect is shown only by $HBr$. The $H-Cl$ bond is too strong to be cleaved by radicals. With $HI$, the weak $H-I$ bond breaks easily, but iodine radicals combine to form $I_2$ instead of adding to the double bond.",
+      "key_points": [
+        "Markovnikov orientation is controlled by carbocation stability; anti-Markovnikov orientation by radical stability",
+        "Peroxide effect: only $HBr$, not $HCl$ or $HI$",
+        "In both cases the more stable intermediate forms; only the attacking species differs ($H^+$ vs $Br^\\bullet$)",
+        "For $Ph-CH=CH-CH_3$, $HBr$ puts Br on the benzylic carbon, while $HBr$/peroxide puts Br on the carbon next to $CH_3$",
+        "Symmetrical alkenes give the same product either way"
+      ],
+      "formulas": [
+        {
+          "formula": "$CH_3CH=CH_2 + HBr \\rightarrow CH_3CHBrCH_3$",
+          "meaning": "Markovnikov addition (ionic)"
+        },
+        {
+          "formula": "$CH_3CH=CH_2 + HBr \\xrightarrow{(C_6H_5CO)_2O_2} CH_3CH_2CH_2Br$",
+          "meaning": "Anti-Markovnikov addition (Kharasch/peroxide effect)"
+        },
+        {
+          "formula": "$(C_6H_5COO)_2 \\rightarrow 2C_6H_5COO^\\bullet \\rightarrow 2C_6H_5^\\bullet + 2CO_2$",
+          "meaning": "Radical generation from benzoyl peroxide"
+        }
+      ],
+      "neet_tip": "Multi-step sequences combine alkyne reduction with HBr or HBr/peroxide; decide the product from the stability of the intermediate, then classify the products as position or stereo isomers.",
+      "topic": "Markownikoff's rule and peroxide effect"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Ozonolysis is the addition of ozone to an alkene to form an ozonide, followed by cleavage with $Zn$/$H_2O$ to give aldehydes and/or ketones. Each $C=C$ is replaced by two $C=O$ groups. This makes ozonolysis a tool for locating the double bond: join the carbonyl carbons of the products back with a double bond to rebuild the alkene. $Zn$ dust prevents the $H_2O_2$ formed from oxidising aldehydes to acids. For example, propene gives methanal and ethanal, and but-2-ene gives two molecules of ethanal. Polymerization is the joining of many alkene molecules under high temperature, high pressure and a catalyst or initiator. Ethene gives polythene, used for polythene bags and films. Propene gives polypropene, used for pipes, toys and bottles.",
+      "key_points": [
+        "Terminal $=CH_2$ gives $HCHO$; internal $=CHR$ gives an aldehyde $RCHO$; $=CR_2$ gives a ketone",
+        "A symmetrical alkene gives one carbonyl product only",
+        "Number of carbons is conserved overall in reductive ozonolysis",
+        "Polymerisation of ethene uses high T and P with a trace of $O_2$ or peroxide initiator, or Ziegler-Natta catalyst",
+        "Polymers of alkenes are addition polymers; the monomer formula equals the repeat unit"
+      ],
+      "formulas": [
+        {
+          "formula": "$CH_3CH=CH_2 \\xrightarrow{(i)\\ O_3\\ (ii)\\ Zn/H_2O} CH_3CHO + HCHO$",
+          "meaning": "Reductive ozonolysis of propene"
+        },
+        {
+          "formula": "$n\\,CH_2=CH_2 \\xrightarrow{high\\ T,\\ P,\\ catalyst} \\left(CH_2-CH_2\\right)_n$",
+          "meaning": "Polymerisation of ethene to polythene"
+        },
+        {
+          "formula": "$n\\,CH_3CH=CH_2 \\rightarrow \\left(CH(CH_3)-CH_2\\right)_n$",
+          "meaning": "Polypropene formation"
+        }
+      ],
+      "neet_tip": "Given ozonolysis products, deduce the alkene (or vice versa), including dienes giving dicarbonyl compounds.",
+      "topic": "Ozonolysis and polymerization of alkenes"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "In terminal alkynes, the hydrogen on the sp carbon (50% s character) is acidic, because the conjugate base carbanion is held close to the nucleus. Ethyne therefore reacts with $Na$ to form sodium acetylide and liberate $H_2$, and with $NaNH_2$ to form sodium acetylide and $NH_3$, which alkenes and alkanes cannot do. Terminal alkynes also give a white precipitate with ammoniacal $AgNO_3$ and a red precipitate with ammoniacal $Cu_2Cl_2$. Internal alkynes have no acidic hydrogen. Alkynes undergo addition reactions in which two molecules of reagent can add. They take up $H_2$ (Lindlar's catalyst gives a cis alkene, $Na$/liquid $NH_3$ gives a trans alkene, and $Pt$/$Ni$ goes all the way to the alkane). They decolourise $Br_2$ and add $HX$ by Markovnikov's rule to give gem-dihalides. Hydration with $HgSO_4$/dil. $H_2SO_4$ at 333 K proceeds via an enol to give a carbonyl compound. Linear polymerisation of ethyne gives polyacetylene, a conducting polymer. Cyclic polymerisation (red-hot iron tube, 873 K) gives benzene.",
+      "key_points": [
+        "Acidity: $HC\\equiv CH > H_2C=CH_2 > H_3C-CH_3$",
+        "Among alkynes: $HC\\equiv CH > CH_3C\\equiv CH \\gg CH_3C\\equiv CCH_3$ (no acidic H)",
+        "Hydration of ethyne gives ethanal; all other alkynes give ketones (propyne gives propanone)",
+        "Alkynes are less reactive than alkenes toward electrophilic addition, because the vinylic cation is less stable",
+        "3 molecules of $HC\\equiv CH$ give benzene (cyclic trimerisation)"
+      ],
+      "formulas": [
+        {
+          "formula": "$HC\\equiv CH + NaNH_2 \\rightarrow HC\\equiv C^-Na^+ + NH_3$",
+          "meaning": "Acidic nature of terminal alkyne"
+        },
+        {
+          "formula": "$HC\\equiv CH + H_2O \\xrightarrow{Hg^{2+},\\ H_2SO_4,\\ 333\\ K} CH_3CHO$",
+          "meaning": "Hydration of alkyne via enol tautomerism"
+        },
+        {
+          "formula": "$3HC\\equiv CH \\xrightarrow{red\\ hot\\ Fe\\ tube,\\ 873\\ K} C_6H_6$",
+          "meaning": "Cyclic polymerisation to benzene"
+        },
+        {
+          "formula": "$CH_3C\\equiv CH + 2HBr \\rightarrow CH_3CBr_2CH_3$",
+          "meaning": "Markovnikov addition giving gem-dihalide"
+        }
+      ],
+      "neet_tip": "Typical questions: acidity order based on s-character, which alkyne reacts with $NaNH_2$ or ammoniacal $AgNO_3$, and the product of hydration or partial reduction.",
+      "topic": "Alkynes: acidic character, addition reactions and polymerization"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Benzene, $C_6H_6$, was proposed by Kekulé as a cyclic structure with alternating single and double bonds. Its true structure is a resonance hybrid of two Kekulé forms. All six carbons are $sp^2$ hybridised and lie in a planar regular hexagon, with all $C-C$ bonds equal at 139 pm (between $C-C$ 154 pm and $C=C$ 134 pm). The unhybridised p orbitals overlap sideways to form a delocalised cloud of six pi electrons above and below the ring. This delocalisation gives extra stability (resonance energy), so benzene prefers substitution over addition despite its high unsaturation. Aromaticity is defined by Huckel's rule. A compound is aromatic if it is cyclic, planar and fully conjugated, and has $(4n+2)$ pi electrons ($n$ = 0, 1, 2...). Examples are benzene (6), naphthalene (10), the cyclopentadienyl anion and the tropylium cation (6 each).",
+      "key_points": [
+        "All $C-C$ bonds in benzene are 139 pm; bond angle is 120 degrees",
+        "Benzene shows no isomeric 1,2-disubstituted forms, consistent with resonance",
+        "Huckel: $4n+2$ pi electrons with $n = 1$ gives 6 (benzene)",
+        "Cyclooctatetraene (8 pi electrons, non-planar tub shape) is not aromatic",
+        "Cyclopentadiene (with an $sp^3$ carbon) is not aromatic, but its anion is"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\pi\\ electrons = 4n + 2$",
+          "meaning": "Huckel's rule for aromaticity (planar, cyclic, fully conjugated)"
+        }
+      ],
+      "neet_tip": "NEET asks which species is aromatic, why benzene prefers substitution, and the $C-C$ bond length or hybridisation in benzene.",
+      "topic": "Benzene: structure and aromaticity"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "Benzene undergoes electrophilic aromatic substitution in three steps. First, an electrophile is generated, usually with the help of a Lewis or Brønsted acid. Second, the electrophile attacks the pi system to form a resonance-stabilised arenium ion (sigma complex), in which one carbon becomes $sp^3$. This step is slow and rate determining because aromaticity is temporarily lost. Third, a proton is removed by a base such as $AlCl_4^-$ or $HSO_4^-$, restoring aromaticity. In halogenation, benzene reacts with $Cl_2$ or $Br_2$ in the presence of anhydrous $FeCl_3$, $FeBr_3$ or $AlCl_3$ in the dark to give halobenzene. The Lewis acid polarises the halogen to generate $Cl^+$. In nitration, benzene is heated with the nitrating mixture (conc. $HNO_3$ + conc. $H_2SO_4$) at 323-333 K. $H_2SO_4$ protonates $HNO_3$, which loses water to give the nitronium ion $NO_2^+$, the electrophile. The product is nitrobenzene.",
+      "key_points": [
+        "The arenium ion (sigma complex) is a carbocation and is non-aromatic",
+        "Halogenation needs a Lewis acid; in UV light benzene instead adds $Cl_2$",
+        "Nitronium ion $NO_2^+$ is the electrophile in nitration; $H_2SO_4$ acts as an acid",
+        "Excess nitrating mixture at higher temperature gives m-dinitrobenzene",
+        "Anhydrous conditions are essential for halogenation"
+      ],
+      "formulas": [
+        {
+          "formula": "$Cl_2 + AlCl_3 \\rightarrow Cl^+ + AlCl_4^-$",
+          "meaning": "Generation of chloronium electrophile"
+        },
+        {
+          "formula": "$HNO_3 + 2H_2SO_4 \\rightleftharpoons NO_2^+ + H_3O^+ + 2HSO_4^-$",
+          "meaning": "Formation of nitronium ion"
+        },
+        {
+          "formula": "$C_6H_6 + HNO_3 \\xrightarrow{conc.\\ H_2SO_4,\\ 323-333\\ K} C_6H_5NO_2 + H_2O$",
+          "meaning": "Nitration of benzene"
+        }
+      ],
+      "neet_tip": "Identify the electrophile in a given reaction, the rate-determining step, or the role of $H_2SO_4$ and $FeCl_3$.",
+      "topic": "Electrophilic substitution: halogenation and nitration"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "In Friedel-Crafts alkylation, benzene is treated with an alkyl halide and anhydrous $AlCl_3$, which generates the carbocation $R^+$ as electrophile; for example, $CH_3Cl$ gives toluene. Alkylation has two drawbacks. The alkyl group activates the ring, causing polyalkylation, and the carbocation can rearrange, so n-propyl chloride gives mainly isopropylbenzene (cumene). In Friedel-Crafts acylation, an acyl chloride or acid anhydride with anhydrous $AlCl_3$ forms the resonance-stabilised acylium ion $RC\\equiv O^+$; for example, $CH_3COCl$ gives acetophenone. The acyl group deactivates the ring, so only monoacylation occurs, and acylium ions do not rearrange. Neither reaction works on strongly deactivated rings such as nitrobenzene (which is even used as a solvent) or on rings bearing $-NH_2$. In aniline, the $-NH_2$ group forms a complex with $AlCl_3$, converting it into a deactivating group.",
+      "key_points": [
+        "Electrophile: $R^+$ in alkylation and $RCO^+$ (acylium) in acylation",
+        "$AlCl_3$ must be anhydrous; in acylation it is needed in more than catalytic amount",
+        "Alkylation suffers polysubstitution and rearrangement; acylation suffers neither",
+        "Aryl and vinyl halides cannot be used as the alkylating agent",
+        "Nitrobenzene and aniline do not undergo Friedel-Crafts reactions"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_6H_6 + CH_3Cl \\xrightarrow{anhyd.\\ AlCl_3} C_6H_5CH_3 + HCl$",
+          "meaning": "Friedel-Crafts alkylation"
+        },
+        {
+          "formula": "$C_6H_6 + CH_3COCl \\xrightarrow{anhyd.\\ AlCl_3} C_6H_5COCH_3 + HCl$",
+          "meaning": "Friedel-Crafts acylation (acetophenone)"
+        },
+        {
+          "formula": "$CH_3COCl + AlCl_3 \\rightarrow CH_3CO^+ + AlCl_4^-$",
+          "meaning": "Acylium ion generation"
+        }
+      ],
+      "neet_tip": "Expect rearranged products (n-propyl to isopropyl), identification of the electrophile, and which substrates fail Friedel-Crafts.",
+      "topic": "Friedel-Crafts alkylation and acylation"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "An existing substituent decides both where a second group enters the ring and how fast. Ortho/para-directing activating groups donate electron density by +R or +I/hyperconjugation, raising electron density at the ortho and para positions. Examples are $-OH$, $-NH_2$, $-NHR$, $-NHCOCH_3$, $-OCH_3$, $-CH_3$ and $-C_2H_5$. Halogens are ortho/para directing but deactivating: their strong -I effect lowers overall reactivity, while +R still favours ortho and para attack. Meta-directing deactivating groups withdraw electrons by -R/-I, making the ortho and para positions most electron-deficient, so meta attack is least disfavoured. Examples are $-NO_2$, $-CN$, $-CHO$, $-COR$, $-COOH$, $-COOR$, $-SO_3H$ and $-NR_3^+$. For example, nitration of toluene gives o- and p-nitrotoluene, while nitration of nitrobenzene gives m-dinitrobenzene. The para product often exceeds the ortho product because of steric hindrance.",
+      "key_points": [
+        "Activating groups are o/p directing; deactivating groups are m directing, except halogens (o/p but deactivating)",
+        "Reactivity: phenol > toluene > benzene > chlorobenzene > nitrobenzene",
+        "Groups with a lone pair on the atom attached to the ring are generally o/p directors",
+        "Groups with a pi bond to an electronegative atom, or a positive charge, on the attached atom are m directors",
+        "In strongly acidic nitration, aniline forms anilinium ($-NH_3^+$, meta directing), so substantial meta product forms"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_6H_5CH_3 \\xrightarrow{HNO_3/H_2SO_4} o\\text{-} + p\\text{-}NO_2C_6H_4CH_3$",
+          "meaning": "Methyl is o/p directing and activating"
+        },
+        {
+          "formula": "$C_6H_5NO_2 \\xrightarrow{HNO_3/H_2SO_4,\\ \\Delta} m\\text{-}C_6H_4(NO_2)_2$",
+          "meaning": "Nitro is meta directing and deactivating"
+        }
+      ],
+      "neet_tip": "NEET asks you to rank compounds by reactivity toward electrophilic substitution or to predict the major product of a second substitution.",
+      "topic": "Directive influence of functional groups in monosubstituted benzene"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$C_nH_{2n+2},\\ C_nH_{2n},\\ C_nH_{2n-2}$",
+      "meaning": "General formulas: alkane, alkene, alkyne"
+    },
+    {
+      "formula": "$DU = \\frac{2C+2+N-H-X}{2}$",
+      "meaning": "Degree of unsaturation"
+    },
+    {
+      "formula": "$2RX + 2Na \\xrightarrow{dry\\ ether} R-R + 2NaX$",
+      "meaning": "Wurtz reaction"
+    },
+    {
+      "formula": "$RCOONa \\xrightarrow{NaOH/CaO,\\ \\Delta} RH + Na_2CO_3$",
+      "meaning": "Decarboxylation (one carbon less)"
+    },
+    {
+      "formula": "$2RCOOK + 2H_2O \\xrightarrow{electrolysis} R-R + 2CO_2 + H_2 + 2KOH$",
+      "meaning": "Kolbe's electrolysis (alkane at anode)"
+    },
+    {
+      "formula": "$\\Delta E \\approx 12.5\\ kJ\\ mol^{-1}$",
+      "meaning": "Staggered vs eclipsed energy difference in ethane"
+    },
+    {
+      "formula": "$Cl_2 \\xrightarrow{h\\nu} 2Cl^\\bullet$",
+      "meaning": "Initiation in free-radical halogenation"
+    },
+    {
+      "formula": "$F_2 > Cl_2 > Br_2 > I_2$",
+      "meaning": "Reactivity of halogens toward alkanes"
+    },
+    {
+      "formula": "$RC\\equiv CR' \\xrightarrow{H_2,\\ Pd/C,\\ quinoline\\ (Lindlar)} cis\\text{-}alkene$",
+      "meaning": "Syn partial reduction of alkyne"
+    },
+    {
+      "formula": "$RC\\equiv CR' \\xrightarrow{Na/liq.\\ NH_3} trans\\text{-}alkene$",
+      "meaning": "Anti partial reduction of alkyne"
+    },
+    {
+      "formula": "$HI > HBr > HCl$",
+      "meaning": "Reactivity of HX toward alkenes"
+    },
+    {
+      "formula": "$CH_3CH=CH_2 \\xrightarrow{HBr,\\ (C_6H_5CO)_2O_2} CH_3CH_2CH_2Br$",
+      "meaning": "Peroxide (Kharasch) effect, HBr only"
+    },
+    {
+      "formula": "$C=C \\xrightarrow{(i)\\ O_3\\ (ii)\\ Zn/H_2O} C=O + O=C$",
+      "meaning": "Reductive ozonolysis"
+    },
+    {
+      "formula": "$C=C \\xrightarrow{cold\\ dil.\\ alk.\\ KMnO_4} HO-C-C-OH$",
+      "meaning": "Baeyer's test; syn dihydroxylation"
+    },
+    {
+      "formula": "$HC\\equiv CH + H_2O \\xrightarrow{HgSO_4/H_2SO_4,\\ 333\\ K} CH_3CHO$",
+      "meaning": "Hydration of ethyne"
+    },
+    {
+      "formula": "$3HC\\equiv CH \\xrightarrow{Fe,\\ 873\\ K} C_6H_6$",
+      "meaning": "Cyclic trimerisation"
+    },
+    {
+      "formula": "$HC\\equiv CH > CH_2=CH_2 > CH_3CH_3$",
+      "meaning": "Acidity order (s-character 50%, 33%, 25%)"
+    },
+    {
+      "formula": "$\\pi\\ electrons = 4n+2$",
+      "meaning": "Huckel's rule for aromaticity"
+    },
+    {
+      "formula": "$HNO_3 + 2H_2SO_4 \\rightleftharpoons NO_2^+ + H_3O^+ + 2HSO_4^-$",
+      "meaning": "Nitronium ion formation"
+    },
+    {
+      "formula": "$C_6H_6 + RCl \\xrightarrow{anhyd.\\ AlCl_3} C_6H_5R + HCl$",
+      "meaning": "Friedel-Crafts alkylation"
+    },
+    {
+      "formula": "$C_6H_6 + RCOCl \\xrightarrow{anhyd.\\ AlCl_3} C_6H_5COR + HCl$",
+      "meaning": "Friedel-Crafts acylation"
+    },
+    {
+      "formula": "$C_6H_{14} \\xrightarrow{Cr_2O_3/V_2O_5,\\ 773\\ K} C_6H_6 + 4H_2$",
+      "meaning": "Aromatisation of n-hexane"
+    }
+  ],
+  "common_traps": [
+    "Assuming every dihalide addition is syn. $Br_2$ adds anti: a trans-alkene gives the meso dibromide and a cis-alkene the racemic one. Cold alkaline $KMnO_4$ adds syn, so a cis-alkene gives the meso diol.",
+    "Applying the peroxide effect to HCl or HI. Only HBr shows anti-Markovnikov addition with peroxides.",
+    "Calling hepta-1,4-diene conjugated. Conjugation needs exactly one single bond between the double bonds (1,3-pattern).",
+    "Thinking the products of HBr and HBr/peroxide on $Ph-CH=CH-CH_3$ are stereoisomers. They are position (structural) isomers, with Br on the benzylic carbon vs the carbon next to $CH_3$.",
+    "Writing n-propylbenzene as the major product of benzene + n-propyl chloride/$AlCl_3$. The carbocation rearranges, so isopropylbenzene is major.",
+    "Treating halogens as activating because they are o/p directing. They are deactivating (-I dominates) but o/p directing (+R).",
+    "Expecting internal alkynes such as but-2-yne to react with $NaNH_2$ or ammoniacal $AgNO_3$. Only terminal alkynes have an acidic hydrogen.",
+    "Believing staggered and eclipsed ethane can be separated. The barrier is only about 12.5 kJ/mol, so they interconvert freely."
+  ],
+  "quick_revision": [
+    "Alkane boiling point rises with chain length and falls with branching; n-pentane > isopentane > neopentane.",
+    "Free-radical halogenation goes through initiation, propagation and termination; ethane by-product proves the radical path.",
+    "Staggered ethane is the most stable conformer (60 degree dihedral angle); eclipsed is the least stable.",
+    "Geometrical isomerism needs restricted rotation and two different groups on each doubly bonded carbon.",
+    "Lindlar's catalyst gives the cis-alkene; Na/liq. $NH_3$ gives the trans-alkene.",
+    "Markovnikov addition goes via the more stable carbocation; the peroxide effect (HBr only) goes via the more stable radical.",
+    "Ozonolysis: replace each $C=C$ with two $C=O$; terminal $=CH_2$ gives $HCHO$.",
+    "Terminal alkynes are acidic because of the 50% s-character carbon; hydration gives ethanal from ethyne and ketones from others.",
+    "Benzene has all $C-C$ bonds at 139 pm, is $sp^2$ and planar with 6 delocalised pi electrons; aromaticity requires $4n+2$ pi electrons.",
+    "Electrophilic substitution electrophiles: $Cl^+$ (via $FeCl_3$), $NO_2^+$ (nitrating mixture), $R^+$ and $RCO^+$ (via $AlCl_3$).",
+    "Friedel-Crafts fails on nitrobenzene and aniline; alkylation suffers rearrangement and polysubstitution, acylation does not.",
+    "o/p directors: $-OH$, $-NH_2$, $-OCH_3$, $-CH_3$, halogens. m directors: $-NO_2$, $-CN$, $-CHO$, $-COOH$, $-SO_3H$."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q076",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q76"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q077",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q77"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q083",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q83"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u12",
+  "unit_no": 12,
+  "unit_name": "Current Electricity",
+  "slug": "current-electricity",
+  "overview": "Current Electricity covers how charges move steadily through conductors and how currents, voltages, resistances, cells and networks are analysed using Ohm's law and Kirchhoff's rules. It is one of the highest-weightage units in NEET Physics. It typically gives 2-4 direct questions on resistance combinations, temperature dependence, cells, power and bridge circuits, and its tools are reused in magnetism and semiconductor problems.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Electric current is the rate of flow of charge through a cross-section, $I = \\frac{dq}{dt}$. Its SI unit is the ampere. Current has a direction but is a scalar, because it does not obey vector addition. In a metal, free electrons move randomly at high thermal speeds of about $10^5$ m/s, so their average velocity is zero. When an electric field $E$ is applied, each electron is accelerated between collisions. This gives a small net average velocity opposite to $E$, called the drift velocity, $v_d = \\frac{eE\\tau}{m}$, where $\\tau$ is the relaxation time (mean time between collisions). Drift velocity is very small, about $10^{-4}$ m/s. Current is related to drift velocity by $I = neAv_d$, where $n$ is the free-electron density. Mobility $\\mu$ is the drift velocity per unit electric field. Current density $J$ is current per unit area normal to the flow; it is a vector.",
+      "key_points": [
+        "Conventional current flows opposite to electron flow.",
+        "Drift velocity is about $10^{-4}$ m/s, yet a bulb glows almost instantly because the electric field is set up in the wire at nearly the speed of light.",
+        "For a given current, $v_d \\propto \\frac{1}{A}$, so drift velocity is larger at the narrower part of a wire.",
+        "For a wire of length $l$ across a voltage $V$, $E = \\frac{V}{l}$, so $v_d \\propto \\frac{V}{l}$.",
+        "Mobility has SI unit $m^2V^{-1}s^{-1}$.",
+        "When temperature increases, $\\tau$ decreases, so both $v_d$ and $\\mu$ decrease.",
+        "Current density $J$ is a vector, while current $I$ is a scalar."
+      ],
+      "formulas": [
+        {
+          "formula": "$I = \\frac{dq}{dt}$",
+          "meaning": "Instantaneous current. For steady current, $I = \\frac{q}{t}$."
+        },
+        {
+          "formula": "$v_d = \\frac{eE\\tau}{m}$",
+          "meaning": "Drift speed of electrons; $\\tau$ is relaxation time and $m$ is electron mass."
+        },
+        {
+          "formula": "$I = neAv_d$",
+          "meaning": "Current in terms of electron density $n$, cross-sectional area $A$ and drift velocity $v_d$."
+        },
+        {
+          "formula": "$\\mu = \\frac{v_d}{E} = \\frac{e\\tau}{m}$",
+          "meaning": "Mobility: drift velocity per unit electric field."
+        },
+        {
+          "formula": "$J = \\frac{I}{A} = nev_d$",
+          "meaning": "Current density (current per unit area)."
+        }
+      ],
+      "neet_tip": "NEET asks for ratios of drift velocity when length, area, voltage or temperature change, and for numerical values of $v_d$ using $I = neAv_d$.",
+      "topic": "Electric current, drift velocity and mobility"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Ohm's law states that the current through a conductor is proportional to the potential difference across it, provided temperature and other physical conditions stay constant. So $V = IR$, where the constant $R$ is the resistance, measured in ohm ($\\Omega$). Resistance arises because drifting electrons collide with lattice ions and lose energy. For a uniform wire, $R = \\frac{\\rho l}{A}$. Resistance depends on the material, the dimensions and the temperature. A frequent NEET type involves stretching a wire. The volume stays constant, so $lA$ is constant. Hence $R \\propto l^2$ or $R \\propto \\frac{1}{A^2}$, which also gives $R \\propto \\frac{1}{r^4}$ for radius $r$. Conductance is $G = \\frac{1}{R}$; its unit is siemens (S, also called mho).",
+      "key_points": [
+        "Ohm's law holds only at constant temperature and physical conditions.",
+        "Resistance depends on dimensions; resistivity does not.",
+        "If a wire is stretched to $n$ times its length, $R' = n^2R$.",
+        "If the radius is reduced to $\\frac{1}{n}$ of its value at constant volume, $R' = n^4R$.",
+        "Cutting a wire into $n$ equal parts gives each part resistance $\\frac{R}{n}$.",
+        "The microscopic form of Ohm's law is $J = \\sigma E$."
+      ],
+      "formulas": [
+        {
+          "formula": "$V = IR$",
+          "meaning": "Ohm's law; $R$ is constant for ohmic conductors."
+        },
+        {
+          "formula": "$R = \\frac{\\rho l}{A}$",
+          "meaning": "Resistance of a uniform conductor of length $l$, area $A$ and resistivity $\\rho$."
+        },
+        {
+          "formula": "$\\frac{R_2}{R_1} = \\left(\\frac{l_2}{l_1}\\right)^2 = \\left(\\frac{A_1}{A_2}\\right)^2$",
+          "meaning": "Change in resistance when a wire is stretched at constant volume."
+        },
+        {
+          "formula": "$G = \\frac{1}{R}$",
+          "meaning": "Conductance, in siemens."
+        }
+      ],
+      "neet_tip": "Expect stretching-wire ratio questions, such as finding $R'$ when length is doubled or the percentage change in $R$ for a 0.1% stretch (answer 0.2%).",
+      "topic": "Ohm's law and electrical resistance"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "For ohmic conductors such as metals at constant temperature, the V-I graph is a straight line through the origin. The slope is constant: in a V-I graph the slope equals $R$, and in an I-V graph the slope equals $\\frac{1}{R}$. Non-ohmic devices break this linearity in different ways. The relation may be non-linear, as in a filament bulb, where heating raises $R$. It may depend on the sign of $V$, as in a p-n junction diode. It may be non-unique, as in GaAs, where the same current can occur at more than one voltage. A water voltameter shows a non-linear graph that does not pass through the origin. For non-ohmic devices, the dynamic resistance is defined as $r_d = \\frac{dV}{dI}$.",
+      "key_points": [
+        "An ohmic conductor gives a straight-line V-I graph through the origin with constant slope.",
+        "Non-ohmic examples: diode, transistor, thyristor, GaAs, filament lamp and electrolytes.",
+        "In a V-I graph, a steeper line means larger resistance. In an I-V graph, a steeper line means smaller resistance.",
+        "For a metal wire plotted at two temperatures, the line with smaller slope in the I-V graph is the higher-temperature line.",
+        "A negative slope region, called negative resistance, occurs in GaAs."
+      ],
+      "formulas": [
+        {
+          "formula": "$R = \\frac{V}{I}$",
+          "meaning": "Static resistance at a given operating point."
+        },
+        {
+          "formula": "$r_d = \\frac{dV}{dI}$",
+          "meaning": "Dynamic resistance, used for non-linear devices."
+        }
+      ],
+      "neet_tip": "Graph-based questions ask you to compare resistances or temperatures from slopes, or to identify which device is non-ohmic.",
+      "topic": "V-I characteristics of ohmic and non-ohmic conductors"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "When charge $q$ moves through a potential difference $V$, it loses energy $qV$. In a resistor this energy appears as heat; this is Joule heating. The electrical power is $P = VI$. For a resistor, this can also be written as $P = I^2R$ or $P = \\frac{V^2}{R}$. Choose the form based on what is common to the resistors being compared. In series the current is common, so use $I^2R$: the larger resistance dissipates more power. In parallel the voltage is common, so use $\\frac{V^2}{R}$: the smaller resistance dissipates more power. A bulb rated $P$ watt at $V$ volt has resistance $R = \\frac{V^2}{P}$. When bulbs are joined in series, the lower-wattage bulb glows brighter. Power is transmitted at high voltage to reduce the $I^2R$ loss in the lines. The commercial unit of energy is the kWh, equal to $3.6 \\times 10^6$ J.",
+      "key_points": [
+        "Heat produced is $H = I^2Rt$ (Joule's law of heating).",
+        "Rated bulbs in series: the lower-wattage bulb has higher $R$, so it glows brighter.",
+        "Rated bulbs in parallel: the higher-wattage bulb glows brighter.",
+        "Bulbs in series: $\\frac{1}{P_{total}} = \\frac{1}{P_1} + \\frac{1}{P_2}$. Bulbs in parallel: $P_{total} = P_1 + P_2$.",
+        "If supply voltage drops to a fraction $f$ of the rated value, power becomes $f^2$ times the rated power, assuming $R$ stays constant.",
+        "1 kWh $= 3.6 \\times 10^6$ J; this is the 'unit' on electricity bills."
+      ],
+      "formulas": [
+        {
+          "formula": "$P = VI = I^2R = \\frac{V^2}{R}$",
+          "meaning": "Power dissipated in a resistor."
+        },
+        {
+          "formula": "$W = VIt = I^2Rt = \\frac{V^2t}{R}$",
+          "meaning": "Electrical energy consumed, or heat produced, in time $t$."
+        },
+        {
+          "formula": "$R = \\frac{V_{rated}^2}{P_{rated}}$",
+          "meaning": "Resistance of an appliance from its rating."
+        },
+        {
+          "formula": "$P_{loss} = \\frac{P^2R_c}{V^2}$",
+          "meaning": "Line loss when power $P$ is sent at voltage $V$ through cables of resistance $R_c$."
+        }
+      ],
+      "neet_tip": "NEET frequently asks about brightness of rated bulbs in series or parallel, power at reduced voltage, and cost of energy in kWh.",
+      "topic": "Electrical energy and power"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Resistivity $\\rho$ is the resistance of a conductor of unit length and unit cross-sectional area. It is a property of the material and temperature only, not of the shape. From the free-electron model, $\\rho = \\frac{m}{ne^2\\tau}$, so resistivity depends on the electron density $n$ and the relaxation time $\\tau$. Conductivity is $\\sigma = \\frac{1}{\\rho}$, with SI unit $\\Omega^{-1}m^{-1}$ (S/m). Ohm's law in vector form is $\\vec{J} = \\sigma\\vec{E}$. Typical resistivities are: metals $10^{-8}$ to $10^{-6}\\ \\Omega$m, semiconductors in between, and insulators $10^{14}$ to $10^{16}\\ \\Omega$m. Alloys such as nichrome, manganin and constantan have high resistivity and a very low temperature coefficient. Manganin and constantan are therefore used in standard resistors, potentiometer wires and metre-bridge wires. Nichrome is used in heater elements because of its high $\\rho$ and high melting point.",
+      "key_points": [
+        "Unit of $\\rho$ is $\\Omega$m; unit of $\\sigma$ is S/m.",
+        "$\\rho$ does not change when a wire is stretched or cut.",
+        "Silver has the lowest resistivity among common metals; copper and aluminium are used for wiring.",
+        "Resistivity of an alloy is generally greater than that of its constituent metals.",
+        "Resistivity decreases if $n$ or $\\tau$ increases."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\rho = \\frac{RA}{l} = \\frac{m}{ne^2\\tau}$",
+          "meaning": "Resistivity from measurements and from the microscopic model."
+        },
+        {
+          "formula": "$\\sigma = \\frac{1}{\\rho} = \\frac{ne^2\\tau}{m}$",
+          "meaning": "Conductivity of a material."
+        },
+        {
+          "formula": "$J = \\sigma E$",
+          "meaning": "Microscopic (vector) form of Ohm's law."
+        },
+        {
+          "formula": "$\\sigma = ne\\mu$",
+          "meaning": "Conductivity in terms of mobility."
+        }
+      ],
+      "neet_tip": "Conceptual questions test whether resistivity changes with dimensions (it does not) and which material is used for heaters versus standard resistors.",
+      "topic": "Electrical resistivity and conductivity"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "In a series combination, the same current flows through every resistor. The voltages add, and the equivalent resistance is $R_{eq} = R_1 + R_2 + \\dots$, which is larger than the largest resistor. In a parallel combination, the potential difference across each resistor is the same. The currents add, and $\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots$, which is smaller than the smallest resistor. Two useful results follow. In series, voltage divides in proportion to resistance. In parallel, current divides in inverse proportion to resistance. For $n$ identical resistors $R$, series gives $nR$, parallel gives $\\frac{R}{n}$, and the ratio of series to parallel resistance is $n^2$. For complex networks, use symmetry, identify points at equal potential, or redraw the circuit between the two terminals.",
+      "key_points": [
+        "Series: same current. Parallel: same voltage.",
+        "$R_{series} \\geq n^2R_{parallel}$ for $n$ resistors, with equality when all are equal.",
+        "Two resistors in parallel: $R_{eq} = \\frac{R_1R_2}{R_1+R_2}$.",
+        "A wire bent into a circle: the resistance between diametrically opposite points is $\\frac{R}{4}$.",
+        "Any resistor connected between two points at equal potential carries no current and can be removed.",
+        "Connecting a zero-resistance wire across a resistor shorts it out."
+      ],
+      "formulas": [
+        {
+          "formula": "$R_s = R_1 + R_2 + \\dots + R_n$",
+          "meaning": "Equivalent resistance in series."
+        },
+        {
+          "formula": "$\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n}$",
+          "meaning": "Equivalent resistance in parallel."
+        },
+        {
+          "formula": "$V_1 = \\frac{R_1}{R_1+R_2}V$",
+          "meaning": "Voltage divider rule for two series resistors."
+        },
+        {
+          "formula": "$I_1 = \\frac{R_2}{R_1+R_2}I$",
+          "meaning": "Current divider rule for two parallel resistors."
+        }
+      ],
+      "neet_tip": "Expect equivalent resistance of symmetric networks (cube, triangle, ring) and current or voltage division in mixed circuits.",
+      "topic": "Series and parallel combinations of resistors"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "For metals, resistivity rises approximately linearly with temperature: $\\rho_T = \\rho_0[1 + \\alpha(T - T_0)]$. Here $\\alpha$ is the temperature coefficient of resistivity, and it is positive for metals. The physical reason is that the relaxation time $\\tau$ decreases as temperature rises. Over small ranges, the resistance follows the same rule, $R_T = R_0(1 + \\alpha\\Delta T)$. In semiconductors and insulators, $\\alpha$ is negative: rising temperature frees more charge carriers, so $n$ increases sharply and $\\rho$ falls. Alloys such as manganin have a very small $\\alpha$. Some materials become superconductors below a critical temperature, where $\\rho = 0$. When resistors with positive and negative $\\alpha$ are combined, find the total resistance as a function of $\\Delta T$. Then decide how the circuit current changes; terms in $\\alpha^2$ may matter.",
+      "key_points": [
+        "Metals: $\\alpha > 0$; for copper, $\\alpha \\approx 4 \\times 10^{-3}$ $K^{-1}$.",
+        "Semiconductors (Si, Ge, carbon, thermistors): $\\alpha < 0$.",
+        "Manganin and constantan: $\\alpha \\approx 0$, so their resistance is nearly independent of temperature.",
+        "Equal $R_0$ with $+\\alpha$ and $-\\alpha$ in series: the total stays $2R_0$, independent of $\\Delta T$.",
+        "The same pair in parallel: $R_{eq} = \\frac{R_0(1-\\alpha^2\\Delta T^2)}{2}$, which decreases slightly with temperature.",
+        "Use $\\frac{R_2}{R_1} = \\frac{1+\\alpha T_2}{1+\\alpha T_1}$ when the reference resistance at $0^\\circ C$ is unknown."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\rho_T = \\rho_0[1 + \\alpha(T - T_0)]$",
+          "meaning": "Temperature dependence of resistivity."
+        },
+        {
+          "formula": "$R_T = R_0(1 + \\alpha\\Delta T)$",
+          "meaning": "Resistance at a temperature $\\Delta T$ above the reference."
+        },
+        {
+          "formula": "$\\alpha = \\frac{R_T - R_0}{R_0\\Delta T}$",
+          "meaning": "Temperature coefficient from measured resistances."
+        },
+        {
+          "formula": "$\\alpha_{eq} = \\frac{R_1\\alpha_1 + R_2\\alpha_2}{R_1 + R_2}$",
+          "meaning": "Effective temperature coefficient of two resistors in series."
+        }
+      ],
+      "neet_tip": "NEET tests how current in series or parallel circuits changes when resistors with opposite temperature coefficients are heated, and numericals using $R_T = R_0(1+\\alpha\\Delta T)$.",
+      "topic": "Temperature dependence of resistance"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "The emf $\\varepsilon$ of a cell is the work done per unit charge by the non-electrostatic (chemical) force in moving charge from the negative to the positive terminal inside the cell. It equals the terminal voltage when no current is drawn. Internal resistance $r$ is the opposition offered by the electrolyte and electrodes. When the cell delivers current $I$ to an external resistance $R$, the current is $I = \\frac{\\varepsilon}{R + r}$ and the terminal voltage is $V = \\varepsilon - Ir$, which is less than $\\varepsilon$. When the cell is being charged, $V = \\varepsilon + Ir$. On a short circuit ($R = 0$), $I_{max} = \\frac{\\varepsilon}{r}$ and $V = 0$. Maximum power is delivered to $R$ when $R = r$, and this maximum power is $\\frac{\\varepsilon^2}{4r}$. Internal resistance increases with the age of the cell and with the distance between the electrodes. It decreases with larger electrode area and higher temperature.",
+      "key_points": [
+        "Emf is not a force; it is energy per unit charge, measured in volt.",
+        "Open circuit: $V = \\varepsilon$.",
+        "Discharging: $V < \\varepsilon$. Charging: $V > \\varepsilon$.",
+        "Maximum power transfer condition: $R = r$. The efficiency at that point is only 50%.",
+        "Efficiency of power delivery is $\\eta = \\frac{V}{\\varepsilon} = \\frac{R}{R+r}$.",
+        "The V-I graph of a cell is a straight line with intercept $\\varepsilon$ on the V-axis and slope $-r$."
+      ],
+      "formulas": [
+        {
+          "formula": "$I = \\frac{\\varepsilon}{R + r}$",
+          "meaning": "Current drawn from a cell of internal resistance $r$."
+        },
+        {
+          "formula": "$V = \\varepsilon - Ir$",
+          "meaning": "Terminal voltage while discharging. Use $V = \\varepsilon + Ir$ while charging."
+        },
+        {
+          "formula": "$r = R\\left(\\frac{\\varepsilon}{V} - 1\\right)$",
+          "meaning": "Internal resistance from measured $\\varepsilon$, $V$ and $R$."
+        },
+        {
+          "formula": "$P_{max} = \\frac{\\varepsilon^2}{4r}$",
+          "meaning": "Maximum power delivered to an external load, reached when $R = r$."
+        }
+      ],
+      "neet_tip": "NEET asks for $r$ from terminal-voltage data, terminal voltage during charging, and the maximum power transfer condition.",
+      "topic": "Internal resistance, potential difference and emf of a cell"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "For cells in series, the emfs add when the cells are joined in the same sense and subtract when one is reversed. The internal resistances always add. So $n$ identical cells in series give $I = \\frac{n\\varepsilon}{R + nr}$. If $m$ cells out of $n$ are reversed, the net emf becomes $(n - 2m)\\varepsilon$. For two cells in parallel with like terminals joined, $\\varepsilon_{eq} = \\frac{\\varepsilon_1r_2 + \\varepsilon_2r_1}{r_1 + r_2}$ and $r_{eq} = \\frac{r_1r_2}{r_1 + r_2}$. For $m$ identical cells in parallel, $I = \\frac{\\varepsilon}{R + \\frac{r}{m}}$. Series is preferred when $R \\gg r$ and parallel when $R \\ll r$. In a mixed grouping of $n$ cells per row and $m$ rows, the current is $I = \\frac{n\\varepsilon}{R + \\frac{nr}{m}}$. This current is maximum when $R = \\frac{nr}{m}$, that is, when the external resistance equals the total internal resistance.",
+      "key_points": [
+        "Series: emfs add with sign; internal resistances always add.",
+        "Parallel identical cells: emf is unchanged and internal resistance becomes $\\frac{r}{m}$.",
+        "Reversing $m$ cells out of $n$ in series gives net emf $(n-2m)\\varepsilon$, but the internal resistance is still $nr$.",
+        "Mixed grouping gives maximum current when $\\frac{nr}{m} = R$.",
+        "In parallel with unequal emfs, a current circulates inside the cells even with no external load."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\varepsilon_{eq} = \\varepsilon_1 + \\varepsilon_2,\\ r_{eq} = r_1 + r_2$",
+          "meaning": "Two cells in series, same sense."
+        },
+        {
+          "formula": "$\\varepsilon_{eq} = \\frac{\\varepsilon_1r_2 + \\varepsilon_2r_1}{r_1 + r_2}$",
+          "meaning": "Equivalent emf of two cells in parallel."
+        },
+        {
+          "formula": "$\\frac{1}{r_{eq}} = \\frac{1}{r_1} + \\frac{1}{r_2}$",
+          "meaning": "Equivalent internal resistance of cells in parallel."
+        },
+        {
+          "formula": "$I = \\frac{n\\varepsilon}{R + \\frac{nr}{m}}$",
+          "meaning": "Current for a mixed grouping of $m$ rows, each with $n$ cells in series."
+        }
+      ],
+      "neet_tip": "Typical questions: wrongly connected cells in series, the equivalent emf of parallel cells, and the arrangement that gives maximum current.",
+      "topic": "Combination of cells in series and parallel"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Kirchhoff's first law (the junction rule, KCL) states that the algebraic sum of currents meeting at a junction is zero. Equivalently, the current entering a junction equals the current leaving it. This follows from conservation of charge. Kirchhoff's second law (the loop rule, KVL) states that the algebraic sum of potential changes around any closed loop is zero. This follows from conservation of energy, because the electrostatic field is conservative. Use a consistent sign convention when going around a loop. Crossing a resistor in the direction of the assumed current gives a change of $-IR$, and against it $+IR$. Crossing a cell from the negative to the positive terminal gives $+\\varepsilon$, and the reverse gives $-\\varepsilon$. First assign currents using KCL so that the number of unknowns is minimal. Then write KVL for independent loops. A negative answer simply means the actual current flows opposite to the assumed direction.",
+      "key_points": [
+        "KCL is based on conservation of charge; KVL is based on conservation of energy.",
+        "Both laws apply to DC and to quasi-static AC circuits.",
+        "Number of independent loop equations = branches minus junctions plus 1.",
+        "The node (potential) method is often faster: take one point as 0 V and apply KCL at the other nodes.",
+        "Potential difference between two points = the sum of potential changes along any path between them."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\sum I = 0$",
+          "meaning": "Junction rule at any node."
+        },
+        {
+          "formula": "$\\sum \\varepsilon = \\sum IR$",
+          "meaning": "Loop rule: sum of emfs equals sum of $IR$ drops around a closed loop."
+        },
+        {
+          "formula": "$\\sum \\Delta V = 0$",
+          "meaning": "Total potential change around any closed loop is zero."
+        }
+      ],
+      "neet_tip": "NEET gives two- or three-loop circuits with multiple cells and asks for the current in a branch or the potential difference between two points.",
+      "topic": "Kirchhoff's laws and their applications"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "A Wheatstone bridge has four resistors $P$, $Q$, $R$ and $S$ arranged in a quadrilateral. A cell is connected across one diagonal and a galvanometer across the other. The bridge is balanced when the galvanometer shows no deflection, which happens when $\\frac{P}{Q} = \\frac{R}{S}$. At balance, the two ends of the galvanometer are at equal potential. The balance condition does not depend on the cell's emf or internal resistance, or on the galvanometer's resistance. Interchanging the cell and the galvanometer does not disturb the balance. In circuit problems, a balanced bridge lets you remove the central resistor, or replace it by a wire, to simplify the circuit. The bridge is most sensitive when all four resistances are of the same order. It measures medium resistances accurately but is not suited to very low or very high resistances.",
+      "key_points": [
+        "Balance condition: $PS = QR$.",
+        "At balance, the galvanometer current is zero and the middle arm can be ignored.",
+        "Balance is unaffected by interchanging the cell and the galvanometer.",
+        "Highest sensitivity is obtained when $P$, $Q$, $R$ and $S$ are comparable.",
+        "Its practical applications are the metre bridge, the post office box and the carey foster bridge."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{P}{Q} = \\frac{R}{S}$",
+          "meaning": "Balance condition of a Wheatstone bridge."
+        },
+        {
+          "formula": "$S = \\frac{QR}{P}$",
+          "meaning": "Unknown resistance from a balanced bridge."
+        }
+      ],
+      "neet_tip": "NEET hides a balanced bridge inside a network and asks for the equivalent resistance or the galvanometer current. Always check the ratio first.",
+      "topic": "Wheatstone bridge"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "The metre bridge, or slide wire bridge, is a practical Wheatstone bridge. It uses a 1 m uniform wire of manganin or constantan stretched between thick copper strips. A known resistance $R$ goes in one gap and the unknown $S$ in the other. A jockey slides along the wire to find the null point at length $l$ cm from the end next to $R$. Because the wire is uniform, its resistance is proportional to length, so $\\frac{R}{S} = \\frac{l}{100 - l}$. To reduce errors, choose $R$ so that the null point lies near the middle of the wire. This also reduces end-correction errors from the strips and joints. Repeat the reading with $R$ and $S$ interchanged and take the mean. The thick copper strips have negligible resistance. The jockey should be pressed gently and not slid along the wire.",
+      "key_points": [
+        "The wire is made of manganin or constantan for high $\\rho$ and low $\\alpha$, and must have uniform cross-section.",
+        "The null point is most accurate near the 50 cm mark.",
+        "Interchanging $R$ and $S$ shifts the null point from $l$ to $(100 - l)$.",
+        "Changing the cell emf or the galvanometer does not shift the null point.",
+        "Any resistance added in series with the cell does not shift the null point.",
+        "If $S$ is heated, its resistance rises, so the null point shifts towards $S$, giving a larger $l$ measured from the $R$ end.",
+        "Shunting $S$ with a resistor reduces it, so the null point shifts towards $R$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{R}{S} = \\frac{l}{100 - l}$",
+          "meaning": "Balance condition of a metre bridge, with $l$ in cm measured from the $R$ side."
+        },
+        {
+          "formula": "$S = R\\frac{(100 - l)}{l}$",
+          "meaning": "Unknown resistance from the balancing length."
+        },
+        {
+          "formula": "$\\frac{R}{S} = \\frac{l + \\alpha_1}{100 - l + \\alpha_2}$",
+          "meaning": "Balance with end corrections $\\alpha_1$ and $\\alpha_2$ expressed as equivalent wire lengths."
+        }
+      ],
+      "neet_tip": "Expect shift-of-null-point questions when a resistance is added in series or parallel with one arm, or when the two resistors are interchanged.",
+      "topic": "Metre bridge"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$I = \\frac{dq}{dt}$",
+      "meaning": "Electric current; $q$ is charge, $t$ is time."
+    },
+    {
+      "formula": "$I = neAv_d$",
+      "meaning": "Current; $n$ is free-electron density, $e$ is electron charge, $A$ is area, $v_d$ is drift velocity."
+    },
+    {
+      "formula": "$v_d = \\frac{eE\\tau}{m}$",
+      "meaning": "Drift velocity; $E$ is field, $\\tau$ is relaxation time, $m$ is electron mass."
+    },
+    {
+      "formula": "$\\mu = \\frac{v_d}{E} = \\frac{e\\tau}{m}$",
+      "meaning": "Mobility of charge carriers."
+    },
+    {
+      "formula": "$J = \\frac{I}{A} = nev_d = \\sigma E$",
+      "meaning": "Current density; $\\sigma$ is conductivity."
+    },
+    {
+      "formula": "$V = IR$",
+      "meaning": "Ohm's law; $V$ is potential difference, $R$ is resistance."
+    },
+    {
+      "formula": "$R = \\frac{\\rho l}{A}$",
+      "meaning": "Resistance; $\\rho$ is resistivity, $l$ is length, $A$ is cross-sectional area."
+    },
+    {
+      "formula": "$\\rho = \\frac{m}{ne^2\\tau},\\ \\sigma = \\frac{1}{\\rho} = ne\\mu$",
+      "meaning": "Resistivity and conductivity from the free-electron model."
+    },
+    {
+      "formula": "$R' = n^2R$",
+      "meaning": "Resistance after stretching a wire to $n$ times its length at constant volume."
+    },
+    {
+      "formula": "$P = VI = I^2R = \\frac{V^2}{R}$",
+      "meaning": "Electrical power dissipated."
+    },
+    {
+      "formula": "$H = I^2Rt$",
+      "meaning": "Joule heat produced in time $t$."
+    },
+    {
+      "formula": "$1\\ kWh = 3.6 \\times 10^6\\ J$",
+      "meaning": "Commercial unit of electrical energy."
+    },
+    {
+      "formula": "$R_s = \\sum R_i,\\ \\frac{1}{R_p} = \\sum \\frac{1}{R_i}$",
+      "meaning": "Series and parallel equivalent resistance."
+    },
+    {
+      "formula": "$R_T = R_0(1 + \\alpha\\Delta T)$",
+      "meaning": "Temperature dependence; $\\alpha$ is temperature coefficient, $\\Delta T$ is temperature rise."
+    },
+    {
+      "formula": "$I = \\frac{\\varepsilon}{R + r}$",
+      "meaning": "Circuit current; $\\varepsilon$ is emf, $r$ is internal resistance, $R$ is external load."
+    },
+    {
+      "formula": "$V = \\varepsilon - Ir$ (discharging), $V = \\varepsilon + Ir$ (charging)",
+      "meaning": "Terminal voltage of a cell."
+    },
+    {
+      "formula": "$r = R\\left(\\frac{\\varepsilon}{V} - 1\\right)$",
+      "meaning": "Internal resistance from terminal voltage $V$ across load $R$."
+    },
+    {
+      "formula": "$P_{max} = \\frac{\\varepsilon^2}{4r}$ at $R = r$",
+      "meaning": "Maximum power transfer to the load."
+    },
+    {
+      "formula": "$I = \\frac{n\\varepsilon}{R + nr}$",
+      "meaning": "$n$ identical cells in series."
+    },
+    {
+      "formula": "$I = \\frac{\\varepsilon}{R + \\frac{r}{m}}$",
+      "meaning": "$m$ identical cells in parallel."
+    },
+    {
+      "formula": "$\\varepsilon_{eq} = \\frac{\\varepsilon_1r_2 + \\varepsilon_2r_1}{r_1 + r_2},\\ r_{eq} = \\frac{r_1r_2}{r_1 + r_2}$",
+      "meaning": "Two unequal cells in parallel."
+    },
+    {
+      "formula": "$I = \\frac{n\\varepsilon}{R + \\frac{nr}{m}}$, maximum when $R = \\frac{nr}{m}$",
+      "meaning": "Mixed grouping of $m$ rows with $n$ cells per row."
+    },
+    {
+      "formula": "$\\sum I = 0,\\ \\sum \\Delta V = 0$",
+      "meaning": "Kirchhoff's junction and loop rules."
+    },
+    {
+      "formula": "$\\frac{P}{Q} = \\frac{R}{S}$",
+      "meaning": "Wheatstone bridge balance condition."
+    },
+    {
+      "formula": "$S = R\\frac{100 - l}{l}$",
+      "meaning": "Metre bridge; $l$ is balancing length in cm from the known-resistance side."
+    }
+  ],
+  "common_traps": [
+    "Thinking that stretching a wire changes its resistivity. Resistivity depends only on material and temperature; only $R$ changes, as $R \\propto l^2$ at constant volume.",
+    "Saying the higher-wattage bulb always glows brighter. In series, the lower-wattage bulb, which has higher $R$, glows brighter because the current is common and $P = I^2R$.",
+    "Using $V = \\varepsilon - Ir$ while a cell is being charged. During charging the terminal voltage is $V = \\varepsilon + Ir$, which is greater than $\\varepsilon$.",
+    "Subtracting internal resistance for a reversed cell in series. Only the emf subtracts; internal resistances always add.",
+    "Assuming the null point of a metre bridge shifts when the cell or galvanometer is changed. The balance depends only on the ratio of resistances in the four arms.",
+    "Treating current as a vector because it has direction. Current is a scalar, while current density $J$ is a vector.",
+    "Assuming all resistances increase with temperature. Semiconductors and thermistors have negative $\\alpha$, and alloys like manganin have nearly zero $\\alpha$.",
+    "Believing maximum power transfer means maximum efficiency. At $R = r$ the efficiency is only 50%."
+  ],
+  "quick_revision": [
+    "$I = neAv_d$; drift velocity is about $10^{-4}$ m/s, and $v_d \\propto \\frac{1}{A}$ for a fixed current.",
+    "Mobility is $\\mu = \\frac{e\\tau}{m}$; both $\\mu$ and $\\tau$ decrease when temperature rises in metals.",
+    "$R = \\frac{\\rho l}{A}$; stretching a wire to $n$ times its length makes $R$ become $n^2R$.",
+    "Ohmic conductor: straight-line V-I graph through the origin. Diode, GaAs and thyristor are non-ohmic.",
+    "Series: same $I$, and the larger $R$ dissipates more power. Parallel: same $V$, and the smaller $R$ dissipates more power.",
+    "Metals have $\\alpha > 0$, semiconductors have $\\alpha < 0$, and manganin and constantan have $\\alpha \\approx 0$.",
+    "Equal $R_0$ with $+\\alpha$ and $-\\alpha$ in series gives a constant total of $2R_0$ as temperature changes.",
+    "Terminal voltage is $V = \\varepsilon - Ir$; short-circuit current is $\\frac{\\varepsilon}{r}$; maximum power is $\\frac{\\varepsilon^2}{4r}$ at $R = r$.",
+    "Mixed grouping of cells gives maximum current when the external resistance equals the total internal resistance, $\\frac{nr}{m}$.",
+    "KCL comes from charge conservation and KVL from energy conservation; a negative current means the actual direction is reversed.",
+    "Balanced Wheatstone bridge: $PS = QR$, and the galvanometer arm can be removed.",
+    "Metre bridge: $S = R\\frac{100 - l}{l}$; keep the null point near 50 cm, and interchange $R$ and $S$ to cancel end errors."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q036",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q36"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

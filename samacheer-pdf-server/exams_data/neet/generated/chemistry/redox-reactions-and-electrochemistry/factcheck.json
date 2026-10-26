@@ -1,0 +1,21 @@
+{
+  "unit_id": "che_u07",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[10].key_points[0]",
+      "quote": "$E_{cell} > 0$, $\\Delta G < 0$, $K > 1$: spontaneous",
+      "problem": "This mixes non-standard and standard quantities. K > 1 follows from $E^\\circ_{cell} > 0$ (equivalently $\\Delta G^\\circ < 0$), not from $E_{cell} > 0$. A reaction can have $E_{cell} > 0$ under given concentrations while K < 1.",
+      "correction": "$E_{cell} > 0$ and $\\Delta G < 0$ mean the reaction is spontaneous under the given conditions. Separately, $E^\\circ_{cell} > 0$ and $\\Delta G^\\circ < 0$ mean K > 1.",
+      "severity": "minor"
+    },
+    {
+      "location": "topics[1].key_points[6]",
+      "quote": "Alkali metals are always $+1$ and alkaline earth metals are always $+2$",
+      "problem": "Saying 'always' contradicts the rule given just before it, that the ON of an element in its free state is 0. The rule applies only to compounds.",
+      "correction": "In all their compounds, alkali metals have ON +1 and alkaline earth metals have ON +2.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

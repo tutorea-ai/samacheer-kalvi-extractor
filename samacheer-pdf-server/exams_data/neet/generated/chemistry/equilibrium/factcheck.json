@@ -1,0 +1,14 @@
+{
+  "unit_id": "che_u06",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[7].explanation",
+      "quote": "By Ostwald's dilution law, the degree of ionisation of a weak electrolyte increases with dilution and with temperature.",
+      "problem": "Ostwald's dilution law ($K = c\\alpha^2/(1-\\alpha)$) only predicts that $\\alpha$ increases with dilution. The rise of $\\alpha$ with temperature does not come from this law. It follows from $K$ increasing with temperature, because ionisation is usually endothermic.",
+      "correction": "By Ostwald's dilution law, the degree of ionisation of a weak electrolyte increases with dilution. It also generally increases with temperature, because ionisation is endothermic and $K$ rises.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

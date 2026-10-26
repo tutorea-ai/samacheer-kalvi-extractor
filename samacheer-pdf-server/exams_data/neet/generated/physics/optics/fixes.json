@@ -1,0 +1,20 @@
+[
+  {
+    "path": "topics[12].key_points[4]",
+    "old": "Diffraction limits resolution: telescope resolving limit $\\theta = 1.22\\lambda/D$",
+    "new": "Diffraction limits resolution: telescope resolving limit $\\theta \\approx 1.22\\lambda/D$, where D is the diameter of the objective aperture, not the screen distance (NCERT writes this as $0.61\\lambda/a$ with a = aperture radius)",
+    "fixes": "Clarify that D in the resolving limit is the aperture diameter, not the slit-to-screen distance"
+  },
+  {
+    "path": "topics[4].explanation",
+    "old": "Linear magnification of a lens is $m = h'/h = v/u$. A negative m means the image is real and inverted. A positive m means it is virtual and erect. A concave lens always gives a virtual, erect, diminished image. A convex lens gives a magnified virtual image only when the object lies within f. The power of a lens measures its ability to converge or diverge light: $P = 1/f$ with f in metres, and the unit is the dioptre (D). Converging lenses have positive power and diverging lenses negative power. Power in a medium is $P = n_{medium}/f$. Shorter focal length means higher power.",
+    "new": "Linear magnification of a lens is $m = h'/h = v/u$. A negative m means the image is real and inverted. A positive m means it is virtual and erect. A concave lens always gives a virtual, erect, diminished image. A convex lens gives a magnified virtual image only when the object lies within f. The power of a lens measures its ability to converge or diverge light: $P = 1/f$ with f in metres, and the unit is the dioptre (D). Converging lenses have positive power and diverging lenses negative power. In a medium, find the new f from the lens maker's formula with $n_{21} = n_{lens}/n_{medium}$, then take $P = 1/f$. Shorter focal length means higher power.",
+    "fixes": "Removed incorrect $P = n_{medium}/f$; power is $P = 1/f$ with f from the lens maker's formula"
+  },
+  {
+    "path": "topics[6].explanation",
+    "old": "A prism of angle A deviates a ray by $\\delta = i + e - A$, with $r_1 + r_2 = A$. As i increases, the deviation first decreases to a minimum $\\delta_m$ and then increases. At minimum deviation, $i = e$ and $r_1 = r_2 = A/2$, and the ray passes symmetrically, parallel to the base for an equilateral prism. This gives the prism formula for n. For a thin prism (small A), $\\delta = (n-1)A$, independent of i. Since n depends on wavelength, white light splits into colours (dispersion). Violet deviates most and red least. Angular dispersion is $(n_v - n_r)A$, and dispersive power is $\\omega = (n_v - n_r)/(n - 1)$.",
+    "new": "A prism of angle A deviates a ray by $\\delta = i + e - A$, with $r_1 + r_2 = A$. As i increases, the deviation first decreases to a minimum $\\delta_m$ and then increases. At minimum deviation, $i = e$ and $r_1 = r_2 = A/2$, and the ray passes symmetrically through the prism. Inside an isosceles (including equilateral) prism, it travels parallel to the base. This gives the prism formula for n. For a thin prism (small A), $\\delta = (n-1)A$, independent of i. Since n depends on wavelength, white light splits into colours (dispersion). Violet deviates most and red least. Angular dispersion is $(n_v - n_r)A$, and dispersive power is $\\omega = (n_v - n_r)/(n - 1)$.",
+    "fixes": "Ray parallel to base at minimum deviation for any isosceles prism, not only equilateral"
+  }
+]

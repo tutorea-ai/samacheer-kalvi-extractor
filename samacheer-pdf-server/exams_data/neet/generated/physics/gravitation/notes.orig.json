@@ -1,0 +1,332 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u06",
+  "unit_no": 6,
+  "unit_name": "Gravitation",
+  "slug": "gravitation",
+  "overview": "Gravitation explains how every mass attracts every other mass and uses this one law to describe falling bodies, planetary orbits and artificial satellites. In NEET this unit appears almost every year, usually as short ratio or proportionality questions on $g$, escape speed, orbital speed, time period and energy. These can be solved in seconds if the scaling relations are clear.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Newton's universal law of gravitation states that every point mass attracts every other point mass. The force acts along the line joining them. It is directly proportional to the product of the masses and inversely proportional to the square of the distance between them. $G$ is a universal constant, unlike $g$, which varies from place to place. Gravitational force is always attractive and is a central force. It is conservative, so work done by it is path independent. It does not depend on the medium between the masses. For several masses, the net force is the vector sum of individual forces (superposition principle). A uniform spherical shell or solid sphere attracts an external point mass as if all its mass were concentrated at its centre. A uniform shell exerts zero net force on a mass placed anywhere inside it. Gravity is the weakest of the fundamental forces but dominates at astronomical scales.",
+      "key_points": [
+        "$G = 6.67 \\times 10^{-11}\\ N\\,m^2\\,kg^{-2}$, dimensions $[M^{-1}L^3T^{-2}]$",
+        "Force is always attractive, central and conservative",
+        "Forces between two bodies are equal and opposite (action-reaction pair)",
+        "Net force from many masses is found by vector addition (superposition)",
+        "A uniform sphere acts like a point mass at its centre for external points",
+        "Net gravitational force inside a uniform spherical shell is zero",
+        "Force is independent of the intervening medium"
+      ],
+      "formulas": [
+        {
+          "formula": "$F = \\frac{G m_1 m_2}{r^2}$",
+          "meaning": "Magnitude of gravitational force between point masses $m_1$ and $m_2$ separated by distance $r$"
+        },
+        {
+          "formula": "$\\vec{F}_{12} = -\\frac{G m_1 m_2}{r^2}\\hat{r}_{12}$",
+          "meaning": "Vector form; the minus sign shows attraction, with $\\hat{r}_{12}$ the unit vector from 1 to 2"
+        }
+      ],
+      "neet_tip": "Expect superposition questions (net force on a mass at the centre or vertex of a symmetric arrangement) and questions on the dimensions or nature of $G$.",
+      "topic": "Universal law of gravitation"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Acceleration due to gravity at the Earth's surface is $g = GM/R^2$. This value is independent of the mass of the falling body. Writing $M = \\frac{4}{3}\\pi R^3 \\rho$ gives $g = \\frac{4}{3}\\pi G \\rho R$. Above the surface, $g$ falls off as the inverse square of the distance from the centre. For small heights ($h \\ll R$) this reduces to $g(1 - 2h/R)$. Below the surface, only the mass inside radius $(R-d)$ attracts. This makes $g$ decrease linearly with depth until it becomes zero at the centre. So $g$ is maximum at the surface and decreases on going either up or down. For small $h$, going up by $h$ reduces $g$ about twice as much as going down by the same $h$.",
+      "key_points": [
+        "$g$ does not depend on the mass of the falling body",
+        "$g$ is maximum at the Earth's surface",
+        "Above the surface, $g \\propto 1/r^2$; below the surface, $g \\propto r$ (distance from centre)",
+        "At the centre of the Earth, $g = 0$",
+        "For small heights, the decrease in $g$ at height $h$ equals the decrease at depth $d = 2h$",
+        "Weight $mg$ changes with location, but mass does not"
+      ],
+      "formulas": [
+        {
+          "formula": "$g = \\frac{GM}{R^2} = \\frac{4}{3}\\pi G \\rho R$",
+          "meaning": "Acceleration due to gravity at the surface of a planet of mass $M$, radius $R$ and density $\\rho$"
+        },
+        {
+          "formula": "$g_h = \\frac{g}{(1 + h/R)^2} = \\frac{gR^2}{(R+h)^2}$",
+          "meaning": "Exact value at height $h$ above the surface"
+        },
+        {
+          "formula": "$g_h \\approx g\\left(1 - \\frac{2h}{R}\\right)$",
+          "meaning": "Approximate value at height $h$, valid only for $h \\ll R$"
+        },
+        {
+          "formula": "$g_d = g\\left(1 - \\frac{d}{R}\\right)$",
+          "meaning": "Value at depth $d$; exact for a uniform Earth"
+        }
+      ],
+      "neet_tip": "NEET asks for the height or depth at which $g$ becomes a given fraction of its surface value, or for ratios of $g$ on planets with different $M$, $R$ or $\\rho$.",
+      "topic": "Acceleration due to gravity and its variation with altitude and depth"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Kepler's first law (law of orbits) states that every planet moves in an elliptical orbit with the Sun at one focus. The second law (law of areas) states that the line joining the Sun and the planet sweeps out equal areas in equal intervals of time. This is a consequence of conservation of angular momentum, because gravity is a central force. As a result, a planet moves fastest at perihelion (nearest point) and slowest at aphelion (farthest point). The third law (law of periods) states that the square of the time period is proportional to the cube of the semi-major axis of the orbit. For a circular orbit, the semi-major axis is simply the radius. This law follows from equating the gravitational force to the required centripetal force, and it is the basis of most period-radius ratio questions.",
+      "key_points": [
+        "Law of orbits: elliptical orbits with the Sun at one focus",
+        "Law of areas: areal velocity is constant, which follows from conservation of angular momentum",
+        "Speed is maximum at perihelion and minimum at aphelion",
+        "Law of periods: $T^2 \\propto a^3$, so $T \\propto R^{3/2}$ for circular orbits",
+        "The constant in $T^2/a^3$ depends only on the mass of the central body",
+        "Semi-major axis $a = \\frac{r_{min} + r_{max}}{2}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{dA}{dt} = \\frac{L}{2m} = \\text{constant}$",
+          "meaning": "Areal velocity, where $L$ is the angular momentum of a planet of mass $m$"
+        },
+        {
+          "formula": "$v_p r_p = v_a r_a$",
+          "meaning": "Angular momentum conservation between perihelion ($p$) and aphelion ($a$)"
+        },
+        {
+          "formula": "$T^2 = \\frac{4\\pi^2}{GM} a^3$",
+          "meaning": "Kepler's third law; $M$ is the mass of the central body and $a$ is the semi-major axis"
+        },
+        {
+          "formula": "$\\frac{T_1^2}{T_2^2} = \\frac{a_1^3}{a_2^3}$",
+          "meaning": "Ratio form used to compare two planets orbiting the same star"
+        }
+      ],
+      "neet_tip": "The favourite question is $T \\propto R^{3/2}$ in ratio form. Also expect speed ratios at perihelion and aphelion using $v_p r_p = v_a r_a$.",
+      "topic": "Kepler's laws of planetary motion"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Gravitational potential energy of two masses is the work done in bringing them from infinity to a separation $r$. Zero potential energy is taken at infinity, so $U = -GMm/r$. The value is negative because the force is attractive and the system is bound. Gravitational potential at a point is the potential energy per unit mass, $V = -GM/r$. Potential is a scalar, so contributions from several masses simply add algebraically. Near the surface, for $h \\ll R$, the change in potential energy reduces to $mgh$. Inside a uniform shell, the potential is constant and equals its surface value. For a uniform solid sphere, the potential is most negative at the centre. The gravitational field is the negative gradient of the potential.",
+      "key_points": [
+        "$U$ and $V$ are zero at infinity and negative everywhere else",
+        "Potential is a scalar and adds algebraically; the field is a vector",
+        "$\\Delta U = mgh$ is valid only when $h \\ll R$",
+        "Inside a uniform shell, $V$ is constant ($-GM/R$) and the field is zero",
+        "At the centre of a uniform solid sphere, $V = -\\frac{3GM}{2R}$, which is 1.5 times the surface value",
+        "SI unit of potential is $J\\,kg^{-1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$U = -\\frac{GMm}{r}$",
+          "meaning": "Gravitational potential energy of masses $M$ and $m$ separated by $r$"
+        },
+        {
+          "formula": "$V = -\\frac{GM}{r}$",
+          "meaning": "Gravitational potential at distance $r$ from mass $M$ (for $r \\geq R$ in the case of a sphere)"
+        },
+        {
+          "formula": "$\\Delta U = \\frac{mgh}{1 + h/R}$",
+          "meaning": "Exact work needed to raise mass $m$ from the surface to height $h$"
+        },
+        {
+          "formula": "$V_{in} = -\\frac{GM(3R^2 - r^2)}{2R^3}$",
+          "meaning": "Potential inside a uniform solid sphere at distance $r < R$ from the centre"
+        },
+        {
+          "formula": "$E = -\\frac{dV}{dr}$",
+          "meaning": "Gravitational field intensity obtained from potential"
+        }
+      ],
+      "neet_tip": "NEET tests work done in lifting a body to height $h = R$ (answer $\\frac{1}{2}mgR$) and potential energy of systems of point masses, such as three masses at the vertices of a triangle.",
+      "topic": "Gravitational potential energy and gravitational potential"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Escape velocity is the minimum speed with which a body must be projected from a planet's surface so that it never returns. To find it, set the total energy equal to zero: $\\frac{1}{2}mv_e^2 - \\frac{GMm}{R} = 0$. This gives $v_e = \\sqrt{2GM/R} = \\sqrt{2gR}$, which is about 11.2 km/s for Earth. Escape velocity does not depend on the mass of the projected body. It also does not depend on the direction of projection, provided air resistance is neglected. It does depend on the mass, radius and density of the planet. For a fixed mass, $v_e \\propto 1/\\sqrt{R}$. For fixed density, $v_e \\propto R$. The Moon has no atmosphere because its escape velocity (about 2.4 km/s) is comparable to the speeds of gas molecules.",
+      "key_points": [
+        "On Earth, $v_e \\approx 11.2$ km/s",
+        "Independent of the mass of the body and the angle of projection",
+        "For a fixed planet mass, $v_e \\propto R^{-1/2}$",
+        "For a fixed planet density, $v_e \\propto R$",
+        "$v_e = \\sqrt{2}\\,v_o$ for a satellite orbiting close to the surface",
+        "Low escape velocity explains why the Moon has no atmosphere"
+      ],
+      "formulas": [
+        {
+          "formula": "$v_e = \\sqrt{\\frac{2GM}{R}} = \\sqrt{2gR}$",
+          "meaning": "Escape velocity from the surface of a planet of mass $M$ and radius $R$"
+        },
+        {
+          "formula": "$v_e = R\\sqrt{\\frac{8\\pi G\\rho}{3}}$",
+          "meaning": "Escape velocity in terms of the planet's density $\\rho$"
+        },
+        {
+          "formula": "$v_e = \\sqrt{\\frac{2GM}{R+h}}$",
+          "meaning": "Escape velocity from height $h$ above the surface"
+        }
+      ],
+      "neet_tip": "Expect ratio questions in which planet mass, radius or density changes. Check which quantity is held constant before scaling.",
+      "topic": "Escape velocity"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "A satellite in a circular orbit of radius $r = R + h$ is held in orbit because gravity supplies the centripetal force. Setting $GMm/r^2 = mv^2/r$ gives the orbital velocity $v_o = \\sqrt{GM/r}$, which is independent of the satellite's mass. Near the surface, $v_o = \\sqrt{gR} \\approx 7.9$ km/s and the period is about 84 minutes. The time period follows Kepler's third law: $T = 2\\pi\\sqrt{r^3/GM}$. The kinetic energy of the satellite is $GMm/2r$ and its potential energy is $-GMm/r$. So the total energy is $-GMm/2r$, which is negative, showing a bound system. The energy needed to free the satellite is its binding energy, $+GMm/2r$. A geostationary satellite orbits above the equator with a period of 24 h, moving in the same direction as Earth's rotation, at a height of about 36,000 km. Astronauts in orbit feel weightless because they and the satellite are in free fall together.",
+      "key_points": [
+        "$v_o \\propto r^{-1/2}$ and $T \\propto r^{3/2}$; both are independent of the satellite's mass",
+        "Total energy $E = -KE$ and $U = 2E$, so $KE : U : E = 1 : -2 : -1$",
+        "Binding energy $= GMm/2r$",
+        "Near-Earth satellite: $v_o \\approx 7.9$ km/s and $T \\approx 84$ min",
+        "Geostationary satellite: $T = 24$ h, equatorial orbit, height about 36,000 km, used for communication",
+        "Polar satellites have low orbits passing over the poles and are used for remote sensing and weather",
+        "Weightlessness in orbit is due to free fall, not to the absence of gravity"
+      ],
+      "formulas": [
+        {
+          "formula": "$v_o = \\sqrt{\\frac{GM}{R+h}} = \\sqrt{\\frac{gR^2}{R+h}}$",
+          "meaning": "Orbital velocity at height $h$ above a planet of radius $R$"
+        },
+        {
+          "formula": "$T = 2\\pi\\sqrt{\\frac{(R+h)^3}{GM}}$",
+          "meaning": "Time period of a satellite in a circular orbit"
+        },
+        {
+          "formula": "$KE = \\frac{GMm}{2r},\\ U = -\\frac{GMm}{r},\\ E = -\\frac{GMm}{2r}$",
+          "meaning": "Energies of a satellite of mass $m$ in an orbit of radius $r$"
+        },
+        {
+          "formula": "$W = \\frac{GMm}{2}\\left(\\frac{1}{r_1} - \\frac{1}{r_2}\\right)$",
+          "meaning": "Energy needed to shift a satellite from orbit radius $r_1$ to a larger radius $r_2$"
+        }
+      ],
+      "neet_tip": "NEET asks ratios of $v_o$, $T$ or energies for orbits of different radii, and the $KE : PE : E$ relationship.",
+      "topic": "Motion of a satellite: orbital velocity, time period and energy"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$F = \\frac{Gm_1m_2}{r^2}$",
+      "meaning": "Gravitational force; $G = 6.67 \\times 10^{-11}\\ N\\,m^2\\,kg^{-2}$, $r$ is the separation"
+    },
+    {
+      "formula": "$g = \\frac{GM}{R^2}$",
+      "meaning": "Surface gravity of a planet of mass $M$ and radius $R$"
+    },
+    {
+      "formula": "$g = \\frac{4}{3}\\pi G\\rho R$",
+      "meaning": "Surface gravity in terms of the planet's density $\\rho$"
+    },
+    {
+      "formula": "$g_h = \\frac{gR^2}{(R+h)^2}$",
+      "meaning": "Gravity at height $h$ (exact)"
+    },
+    {
+      "formula": "$g_h \\approx g(1 - 2h/R)$",
+      "meaning": "Gravity at height $h$ for $h \\ll R$"
+    },
+    {
+      "formula": "$g_d = g(1 - d/R)$",
+      "meaning": "Gravity at depth $d$ below the surface"
+    },
+    {
+      "formula": "$\\frac{dA}{dt} = \\frac{L}{2m}$",
+      "meaning": "Constant areal velocity (Kepler's second law); $L$ is angular momentum"
+    },
+    {
+      "formula": "$T^2 = \\frac{4\\pi^2 a^3}{GM}$",
+      "meaning": "Kepler's third law; $a$ is the semi-major axis, $M$ the central mass"
+    },
+    {
+      "formula": "$v_p r_p = v_a r_a$",
+      "meaning": "Speeds and distances at perihelion and aphelion"
+    },
+    {
+      "formula": "$U = -\\frac{GMm}{r}$",
+      "meaning": "Gravitational potential energy, zero at infinity"
+    },
+    {
+      "formula": "$V = -\\frac{GM}{r}$",
+      "meaning": "Gravitational potential (potential energy per unit mass)"
+    },
+    {
+      "formula": "$E = -\\frac{dV}{dr}$",
+      "meaning": "Gravitational field from potential"
+    },
+    {
+      "formula": "$\\Delta U = \\frac{mgh}{1+h/R}$",
+      "meaning": "Work done to lift mass $m$ to height $h$; reduces to $mgh$ for $h \\ll R$"
+    },
+    {
+      "formula": "$V_{centre} = -\\frac{3GM}{2R}$",
+      "meaning": "Potential at the centre of a uniform solid sphere"
+    },
+    {
+      "formula": "$v_e = \\sqrt{\\frac{2GM}{R}} = \\sqrt{2gR}$",
+      "meaning": "Escape velocity from the surface (11.2 km/s for Earth)"
+    },
+    {
+      "formula": "$v_e = R\\sqrt{\\frac{8\\pi G\\rho}{3}}$",
+      "meaning": "Escape velocity in terms of density $\\rho$"
+    },
+    {
+      "formula": "$v_o = \\sqrt{\\frac{GM}{r}}$",
+      "meaning": "Orbital velocity at orbit radius $r = R + h$"
+    },
+    {
+      "formula": "$v_o = \\sqrt{gR}$",
+      "meaning": "Orbital velocity of a satellite near the surface (about 7.9 km/s)"
+    },
+    {
+      "formula": "$v_e = \\sqrt{2}\\,v_o$",
+      "meaning": "Relation between escape velocity and near-surface orbital velocity"
+    },
+    {
+      "formula": "$T = 2\\pi\\sqrt{\\frac{r^3}{GM}}$",
+      "meaning": "Time period of a satellite in an orbit of radius $r$"
+    },
+    {
+      "formula": "$E_{total} = -\\frac{GMm}{2r}$",
+      "meaning": "Total energy of an orbiting satellite; $KE = GMm/2r$, $U = -GMm/r$"
+    },
+    {
+      "formula": "$BE = \\frac{GMm}{2r}$",
+      "meaning": "Binding energy, the minimum energy needed to free the satellite from orbit"
+    }
+  ],
+  "common_traps": [
+    "Using $r = h$ instead of $r = R + h$ in orbital formulas. All distances are measured from the centre of the planet.",
+    "Applying $g(1 - 2h/R)$ when $h$ is comparable to $R$. Use the exact form $gR^2/(R+h)^2$ when $h$ is not small.",
+    "Assuming escape velocity depends on the mass or launch direction of the body. It depends only on the planet's $M$ and $R$.",
+    "Scaling escape velocity without checking what is held constant. At constant mass, $v_e \\propto R^{-1/2}$; at constant density, $v_e \\propto R$.",
+    "Thinking $g$ increases inside the Earth. It decreases linearly with depth and becomes zero at the centre.",
+    "Taking satellite total energy as positive or equal to $KE$. Total energy $E = -KE$ and $U = 2E$, so a higher orbit has more (less negative) total energy but lower $KE$.",
+    "Believing astronauts are weightless because there is no gravity in orbit. Gravity there is substantial; they appear weightless because they are in free fall.",
+    "Confusing $G$ with $g$. $G$ is a universal constant, while $g$ varies with height, depth and the planet considered."
+  ],
+  "quick_revision": [
+    "$F \\propto m_1m_2/r^2$: always attractive, central and conservative; $G = 6.67 \\times 10^{-11}$ SI units.",
+    "$g = GM/R^2 = \\frac{4}{3}\\pi G\\rho R$; it is maximum at the surface and zero at the centre.",
+    "Height: $g_h \\approx g(1 - 2h/R)$. Depth: $g_d = g(1 - d/R)$. For small $h$, the effect of height $h$ equals that of depth $2h$.",
+    "Kepler's laws: elliptical orbits, equal areas in equal times (angular momentum conservation), and $T^2 \\propto a^3$.",
+    "$T \\propto R^{3/2}$ and $v_o \\propto R^{-1/2}$ for circular orbits about the same central mass.",
+    "$U = -GMm/r$ and $V = -GM/r$; both are zero at infinity and negative elsewhere.",
+    "Work done to lift a body to height $h = R$ is $\\frac{1}{2}mgR$.",
+    "$v_e = \\sqrt{2GM/R} = \\sqrt{2gR} \\approx 11.2$ km/s, independent of the body's mass and direction of projection.",
+    "$v_o = \\sqrt{gR} \\approx 7.9$ km/s near Earth, and $v_e = \\sqrt{2}\\,v_o$.",
+    "Satellite energies: $KE : U : E = 1 : -2 : -1$; binding energy is $GMm/2r$.",
+    "Geostationary satellite: $T = 24$ h, equatorial, height about 36,000 km. Polar satellites are low-orbit and pass over the poles.",
+    "Inside a uniform shell, the field is zero and the potential is constant, equal to $-GM/R$."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q013",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q13"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q014",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q14"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

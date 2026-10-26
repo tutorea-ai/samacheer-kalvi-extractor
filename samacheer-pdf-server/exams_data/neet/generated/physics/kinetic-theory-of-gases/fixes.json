@@ -1,0 +1,26 @@
+[
+  {
+    "path": "topics[5].explanation",
+    "old": "The law of equipartition states that in thermal equilibrium, each quadratic energy term (degree of freedom) gets an average energy of $\\frac{1}{2}k_BT$ per molecule. Hence the internal energy of $n$ moles is $U = \\frac{f}{2}nRT$. This gives $C_V = \\frac{f}{2}R$, and Mayer's relation gives $C_P = C_V + R$. The ratio is $\\gamma = 1 + \\frac{2}{f}$. Typical values are $\\frac{5}{3}$ for monatomic, $\\frac{7}{5}$ for rigid diatomic and $\\frac{4}{3}$ for rigid polyatomic gases. For mixtures, $C_V$ is the mole-weighted average. For solids, each atom acts as a 3D oscillator with energy $3k_BT$, so $C = 3R$ (Dulong-Petit law). Classical theory fails at low temperatures, where specific heats fall because modes freeze; this needs quantum theory.",
+    "new": "The law of equipartition states that in thermal equilibrium, each quadratic energy term (degree of freedom) gets an average energy of $\\frac{1}{2}k_BT$ per molecule. Hence the internal energy of $n$ moles is $U = \\frac{f}{2}nRT$. This gives $C_V = \\frac{f}{2}R$, and Mayer's relation gives $C_P = C_V + R$. The ratio is $\\gamma = 1 + \\frac{2}{f}$. Typical values are $\\frac{5}{3}$ for monatomic, $\\frac{7}{5}$ for rigid diatomic and $\\frac{4}{3}$ for rigid non-linear polyatomic gases (e.g. $H_2O$, $NH_3$). Rigid linear polyatomic gases such as $CO_2$ have $\\gamma = \\frac{7}{5}$. For mixtures, $C_V$ is the mole-weighted average. For solids, each atom acts as a 3D oscillator with energy $3k_BT$, so $C = 3R$ (Dulong-Petit law). Classical theory fails at low temperatures, where specific heats fall because modes freeze; this needs quantum theory.",
+    "fixes": "γ = 4/3 only for rigid non-linear polyatomic; linear (CO2) has 7/5"
+  },
+  {
+    "path": "formula_sheet[16].meaning",
+    "old": "Ratio of specific heats: $\\frac{5}{3}$ monatomic, $\\frac{7}{5}$ diatomic, $\\frac{4}{3}$ rigid polyatomic.",
+    "new": "Ratio of specific heats: $\\frac{5}{3}$ monatomic, $\\frac{7}{5}$ diatomic, $\\frac{4}{3}$ rigid non-linear polyatomic ($\\frac{7}{5}$ for rigid linear polyatomic such as $CO_2$).",
+    "fixes": "γ = 4/3 only for rigid non-linear polyatomic; linear (CO2) has 7/5"
+  },
+  {
+    "path": "quick_revision[9]",
+    "old": "$\\gamma$ values: $\\frac{5}{3}$ (monatomic), $\\frac{7}{5}$ (diatomic), $\\frac{4}{3}$ (rigid polyatomic); solids have $C = 3R$.",
+    "new": "$\\gamma$ values: $\\frac{5}{3}$ (monatomic), $\\frac{7}{5}$ (diatomic), $\\frac{4}{3}$ (rigid non-linear polyatomic), $\\frac{7}{5}$ (rigid linear polyatomic such as $CO_2$); solids have $C = 3R$.",
+    "fixes": "γ = 4/3 only for rigid non-linear polyatomic; linear (CO2) has 7/5"
+  },
+  {
+    "path": "quick_revision[1]",
+    "old": "Work equals the area under the P-V curve; isothermal work is $nRT\\ln\\frac{V_2}{V_1}$.",
+    "new": "Work equals the area under the P-V curve; isothermal work done by the gas is $nRT\\ln\\frac{V_2}{V_1}$, and work done on the gas is $nRT\\ln\\frac{V_1}{V_2}$.",
+    "fixes": "Label isothermal work as by/on the gas"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "topics[1].formulas[0].formula",
+    "old": "$\\vec{F}_{12} = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1 q_2}{r^2}\\hat{r}_{21}$",
+    "new": "$\\vec{F}_{12} = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1 q_2}{r_{12}^2}\\hat{r}_{12}$",
+    "fixes": "Coulomb vector form: unit vector must be r̂12 (from q2 to q1)"
+  },
+  {
+    "path": "topics[1].formulas[0].meaning",
+    "old": "Vector form of Coulomb's law: the force on charge 1 due to charge 2.",
+    "new": "Vector form of Coulomb's law: the force on charge 1 due to charge 2, where $\\hat{r}_{12}$ points from q2 to q1. Equivalently, $\\vec{F}_{21} = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1 q_2}{r^2}\\hat{r}_{21}$ is the force on q2 due to q1.",
+    "fixes": "Coulomb vector form: unit vector direction"
+  },
+  {
+    "path": "topics[6].key_points[4]",
+    "old": "Charge at a cube corner gives $q/(24\\epsilon_0)$ through the whole cube. Charge at the centre of a face gives $q/(2\\epsilon_0)$.",
+    "new": "Charge at a cube corner gives $q/(8\\epsilon_0)$ through the whole cube. This is $q/(24\\epsilon_0)$ through each of the 3 faces not containing the corner, and zero through the 3 faces that meet at the corner. Charge at the centre of a face gives $q/(2\\epsilon_0)$.",
+    "fixes": "Corner-charge flux through whole cube is q/(8ε0)"
+  },
+  {
+    "path": "topics[11].explanation",
+    "old": "Conductors contain free charge carriers, while insulators have none. In electrostatic equilibrium a conductor has the following properties. E is zero everywhere inside the material. Any excess charge resides on the outer surface. E just outside is normal to the surface, with magnitude $\\sigma/\\epsilon_0$. The whole conductor is an equipotential. Surface charge density is greater where the radius of curvature is smaller, which is why charge leaks from sharp points (corona discharge). If a charge Q is placed inside a cavity, -Q is induced on the cavity wall and +Q on the outer surface. The field inside the cavity is non-zero because it is produced by Q. The outer surface charge redistributes uniformly on a sphere regardless of where the cavity or charge sits. The outside field is therefore symmetric and depends only on the net outer charge. This shielding effect is the principle of electrostatic shielding.",
+    "new": "Conductors contain free charge carriers, while insulators have none. In electrostatic equilibrium a conductor has the following properties. E is zero everywhere inside the material. Any excess charge resides on the outer surface. E just outside is normal to the surface, with magnitude $\\sigma/\\epsilon_0$. The whole conductor is an equipotential. Surface charge density is greater where the radius of curvature is smaller, which is why charge leaks from sharp points (corona discharge). If a charge Q is placed inside a cavity, -Q is induced on the cavity wall and +Q on the outer surface. The field inside the cavity is non-zero because it is produced by Q. The outer surface charge redistributes uniformly on a sphere regardless of where the cavity or charge sits. The outside field is therefore symmetric and depends only on the net outer charge. Electrostatic shielding: the field inside a charge-free cavity of a conductor is zero, whatever the external charges or fields. A charge placed inside the cavity is not shielded from the outside unless the conductor is earthed.",
+    "fixes": "Electrostatic shielding misdescribed after cavity-charge case"
+  }
+]

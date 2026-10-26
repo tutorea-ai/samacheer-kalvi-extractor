@@ -1,0 +1,14 @@
+{
+  "unit_id": "che_u05",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[4].key_points[7]",
+      "quote": "Of the same solutions, the one with the most particles has the lowest freezing point and the highest boiling point",
+      "problem": "The phrase 'Of the same solutions' does not say what is being held equal. The comparison is valid only for solutions in the same solvent at the same molal concentration of solute. As written, a student could apply it wrongly.",
+      "correction": "For solutions in the same solvent with equal molality, the one giving the most solute particles (largest i × m) has the lowest freezing point and the highest boiling point.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

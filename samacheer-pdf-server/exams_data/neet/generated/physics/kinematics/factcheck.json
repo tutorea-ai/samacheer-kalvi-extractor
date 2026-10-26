@@ -1,0 +1,21 @@
+{
+  "unit_id": "phy_u02",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[11].key_points[3]",
+      "quote": "The range is maximum at $45^\\circ$, where $H_{max} = \\frac{R_{max}}{4}$",
+      "problem": "Labelling the 45° height as $H_{max}$ is misleading. The greatest height a projectile with speed u can reach is $\\frac{u^2}{2g}$ (at 90°), which equals $\\frac{R_{max}}{2}$. The quantity $\\frac{R_{max}}{4}$ is only the maximum height of the 45° trajectory. Students often meet the relation $H_{max} = \\frac{R_{max}}{2}$ and may confuse the two.",
+      "correction": "At $\\theta = 45^\\circ$ the height reached is $H = \\frac{u^2}{4g} = \\frac{R_{max}}{4}$. The greatest possible height for a given u is $\\frac{u^2}{2g} = \\frac{R_{max}}{2}$, reached at 90°.",
+      "severity": "minor"
+    },
+    {
+      "location": "topics[9].explanation",
+      "quote": "heading upstream at angle $\\theta$ with $\\sin\\theta = \\frac{u}{v}$",
+      "problem": "The notes do not say what θ is measured from. $\\sin\\theta = \\frac{u}{v}$ holds only when θ is measured from the perpendicular to the flow (the normal to the bank). If θ is measured from the bank or flow direction, the relation is $\\cos\\theta = \\frac{u}{v}$, a common source of wrong answers. The same ambiguity appears in formula_sheet[14] and quick_revision[7].",
+      "correction": "Head upstream at angle θ to the perpendicular to the river flow, with $\\sin\\theta = \\frac{u}{v}$. Equivalently, head at angle $90^\\circ + \\theta$ to the direction of flow.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

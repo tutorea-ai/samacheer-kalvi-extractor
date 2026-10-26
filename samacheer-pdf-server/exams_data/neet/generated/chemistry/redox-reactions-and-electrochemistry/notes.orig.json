@@ -1,0 +1,534 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u07",
+  "unit_no": 7,
+  "unit_name": "Redox Reactions and Electrochemistry",
+  "slug": "redox-reactions-and-electrochemistry",
+  "overview": "This unit links electron transfer (redox) chemistry with the production and use of electricity. It covers oxidation numbers, balancing redox equations, conductance of electrolytes, galvanic and electrolytic cells, electrode potentials, the Nernst equation, the link between cell potential and Gibbs energy, and commercial cells. NEET asks 2-4 questions here every year, mostly numericals on $\\Lambda_m$, Kohlrausch's law, $E^\\circ$ combination, Nernst equation and $\\Delta G = -nFE$, plus oxidation-number and statement-type questions.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "The classical definitions describe oxidation as addition of oxygen or an electronegative element, or removal of hydrogen or an electropositive element. Reduction is the reverse. The electronic concept is more general. Oxidation is loss of electrons and reduction is gain of electrons, and the two always occur together, which is why the reaction is called redox. In $Zn + Cu^{2+} \\rightarrow Zn^{2+} + Cu$, zinc loses $2e^-$ and is oxidised, while $Cu^{2+}$ gains $2e^-$ and is reduced. The species that accepts electrons is the oxidising agent (oxidant), and it gets reduced itself. The electron donor is the reducing agent (reductant), and it gets oxidised. Each half-reaction pairs an oxidised and a reduced form, called a redox couple, for example $Zn^{2+}/Zn$. The tendency of a couple to gain electrons is measured later by its electrode potential.",
+      "key_points": [
+        "Oxidation = loss of electrons; reduction = gain of electrons (OIL RIG)",
+        "The oxidant is itself reduced; the reductant is itself oxidised",
+        "Oxidation and reduction occur simultaneously; electrons lost = electrons gained",
+        "In $2Na + Cl_2 \\rightarrow 2NaCl$, Na is the reductant and $Cl_2$ is the oxidant",
+        "A redox couple is written as oxidised form/reduced form, e.g. $Cu^{2+}/Cu$",
+        "Metals usually act as reducing agents; non-metals such as $F_2$, $O_2$ and $Cl_2$ act as oxidising agents"
+      ],
+      "formulas": [
+        {
+          "formula": "$Zn \\rightarrow Zn^{2+} + 2e^-$ (oxidation); $Cu^{2+} + 2e^- \\rightarrow Cu$ (reduction)",
+          "meaning": "Splitting a redox reaction into its two electron-transfer half-reactions"
+        }
+      ],
+      "neet_tip": "NEET asks you to identify the oxidant and reductant, or which element is oxidised or reduced, in a given reaction, often inside statement-type questions.",
+      "topic": "Electronic concepts of oxidation and reduction"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Oxidation number (ON) is the charge an atom would carry if all its bonds were completely ionic.",
+      "key_points": [
+        "Rules for assigning ON",
+        "The ON of an element in its free state is 0 (e.g. $O_2$, $P_4$, $S_8$)",
+        "For a monatomic ion, the ON equals its charge",
+        "F is always $-1$",
+        "O is $-2$, except: $-1$ in peroxides ($H_2O_2$, $Na_2O_2$), $-\\frac{1}{2}$ in superoxides ($KO_2$), $+2$ in $OF_2$ and $+1$ in $O_2F_2$",
+        "H is $+1$ with non-metals and $-1$ in metal hydrides such as $NaH$ and $CaH_2$",
+        "Alkali metals are always $+1$ and alkaline earth metals are always $+2$",
+        "The ONs in a neutral species add up to 0; in an ion they add up to its charge",
+        "An increase in ON is oxidation; a decrease in ON is reduction",
+        "Fractional ONs are averages: Fe in $Fe_3O_4$ is $+\\frac{8}{3}$ and S in $S_4O_6^{2-}$ is $+2.5$ (two S at $+5$, two at 0)",
+        "Peroxide linkages give unexpected values: Cr in $CrO_5$ is $+6$ and S in $H_2SO_5$ is $+6$",
+        "Types of redox reaction: combination, decomposition, displacement and disproportionation",
+        "In disproportionation, one element is oxidised and reduced at the same time: $Cl_2 + 2OH^- \\rightarrow Cl^- + ClO^- + H_2O$ and $2H_2O_2 \\rightarrow 2H_2O + O_2$",
+        "Max ON is usually the group valence: N $+5$ in $N_2O_5$, S $+6$ in $SO_3$, Cl $+7$ in $Cl_2O_7$",
+        "An element at its maximum ON acts only as an oxidant; at its minimum ON it acts only as a reductant"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\sum (\\text{ON} \\times \\text{number of atoms}) = \\text{net charge}$",
+          "meaning": "Basic equation used to find an unknown oxidation number"
+        }
+      ],
+      "neet_tip": "Expect ordering questions on ONs of atoms in oxides and hydrides (e.g. $P_4O_{10}$, $N_2O_3$, $AlH_3$) and on species with peroxide linkages or fractional ONs.",
+      "topic": "Oxidation number and rules for assigning it"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Redox equations are balanced by two methods.",
+      "key_points": [
+        "Oxidation number method",
+        "Find the elements whose ON changes",
+        "Equalise the total increase and decrease in ON by multiplying with suitable coefficients",
+        "Balance O with $H_2O$ and H with $H^+$ (acid) or $OH^-$ (base)",
+        "Ion-electron (half-reaction) method",
+        "Write the oxidation and reduction half-reactions separately",
+        "Balance atoms other than O and H",
+        "Balance O by adding $H_2O$ and H by adding $H^+$",
+        "Balance charge with electrons",
+        "Equalise the electrons in both halves and add them",
+        "In basic medium, add $OH^-$ to both sides to neutralise $H^+$",
+        "The number of electrons gained or lost per formula unit is the n-factor",
+        "A balanced equation must conserve both atoms and charge",
+        "In acid, add $H_2O$ on the oxygen-deficient side and $H^+$ on the other side",
+        "In base, convert $H^+$ to $H_2O$ by adding equal $OH^-$ to both sides",
+        "$MnO_4^-$ gains 5, 3 or 1 electron in acidic, neutral or strongly basic medium respectively",
+        "$Cr_2O_7^{2-}$ gains $6e^-$ per ion (2 Cr going from $+6$ to $+3$)",
+        "Stoichiometric shortcut: equivalents of oxidant = equivalents of reductant (moles x n-factor)"
+      ],
+      "formulas": [
+        {
+          "formula": "$MnO_4^- + 5Fe^{2+} + 8H^+ \\rightarrow Mn^{2+} + 5Fe^{3+} + 4H_2O$",
+          "meaning": "Permanganate in acid gains $5e^-$; mole ratio $MnO_4^-:Fe^{2+} = 1:5$"
+        },
+        {
+          "formula": "$Cr_2O_7^{2-} + 6Fe^{2+} + 14H^+ \\rightarrow 2Cr^{3+} + 6Fe^{3+} + 7H_2O$",
+          "meaning": "Dichromate in acid gains $6e^-$; mole ratio 1:6"
+        },
+        {
+          "formula": "$2MnO_4^- + 5C_2O_4^{2-} + 16H^+ \\rightarrow 2Mn^{2+} + 10CO_2 + 8H_2O$",
+          "meaning": "Permanganate-oxalate titration; ratio 2:5"
+        }
+      ],
+      "neet_tip": "NEET asks for coefficients of $H^+$, $H_2O$ or electrons in a balanced equation, or mole ratios such as $KMnO_4$ : $FeSO_4$ in acidic medium.",
+      "topic": "Balancing of redox reactions"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "In metallic (electronic) conduction, current is carried by mobile electrons. The metal undergoes no chemical change and no matter is transferred. Conductance decreases as temperature rises because increased lattice vibrations hinder electron flow. In electrolytic (ionic) conduction, current is carried by ions in molten electrolytes or solutions, and chemical changes (redox) occur at the electrodes. It depends on the nature of the electrolyte, the size and solvation of the ions, the nature and viscosity of the solvent, the concentration and the temperature. Electrolytic conductance increases with temperature because viscosity falls and ionic mobility (and dissociation for weak electrolytes) rises. Strong electrolytes such as $NaCl$, $HCl$ and $KNO_3$ dissociate almost completely. Weak electrolytes such as $CH_3COOH$ and $NH_4OH$ ionise only partially.",
+      "key_points": [
+        "Metallic conduction: electrons carry the charge, there is no chemical change, and conductance falls as T rises",
+        "Electrolytic conduction: ions carry the charge, there is chemical change at the electrodes, and conductance rises as T rises",
+        "Heavily hydrated small ions (e.g. $Li^+$) move more slowly in water than larger ions",
+        "$H^+$ and $OH^-$ have unusually high ionic mobility (Grotthuss-type proton hopping)",
+        "Pure water is a very poor conductor because its self-ionisation is tiny"
+      ],
+      "formulas": [],
+      "neet_tip": "NEET tests the effect of temperature on metallic versus electrolytic conductance and the factors affecting ionic conductance, usually as statement questions.",
+      "topic": "Electrolytic and metallic conduction"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Conductance is the reciprocal of resistance.",
+      "key_points": [
+        "Definitions",
+        "Resistance: $R = \\rho \\frac{l}{A}$, where $\\rho$ is resistivity",
+        "Conductance: $G = \\frac{1}{R}$, in siemens (S)",
+        "Conductivity (specific conductance): $\\kappa = \\frac{1}{\\rho} = G \\times G^*$, where $G^* = \\frac{l}{A}$ is the cell constant",
+        "Molar conductivity: $\\Lambda_m = \\frac{\\kappa \\times 1000}{c}$, with $\\kappa$ in S $cm^{-1}$ and c in mol $L^{-1}$, giving S $cm^2$ $mol^{-1}$",
+        "Variation with dilution",
+        "$\\kappa$ decreases on dilution because there are fewer ions per unit volume",
+        "$\\Lambda_m$ increases on dilution because the volume containing 1 mol of electrolyte increases",
+        "Strong electrolytes: $\\Lambda_m$ rises slowly and linearly with $\\sqrt{c}$ (Debye-Huckel-Onsager)",
+        "Weak electrolytes: $\\Lambda_m$ rises steeply at low c due to increased ionisation, so $\\Lambda_m^\\circ$ cannot be found by extrapolation",
+        "Units: $\\kappa$ in S $m^{-1}$ (1 S $m^{-1}$ = 0.01 S $cm^{-1}$); $\\Lambda_m$ in S $m^2$ $mol^{-1}$ (1 S $m^2$ $mol^{-1}$ = $10^4$ S $cm^2$ $mol^{-1}$)",
+        "The cell constant is usually found using standard KCl solutions of known $\\kappa$",
+        "For a strong electrolyte, a plot of $\\Lambda_m$ vs $\\sqrt{c}$ is a straight line with slope $-A$ and intercept $\\Lambda_m^\\circ$",
+        "A depends on the solvent, the temperature and the charge type of the electrolyte ($NaCl$, $CaCl_2$, $MgSO_4$ have different A)"
+      ],
+      "formulas": [
+        {
+          "formula": "$G = \\frac{1}{R}$, $\\kappa = G \\times \\frac{l}{A}$",
+          "meaning": "Conductivity from measured conductance and cell constant"
+        },
+        {
+          "formula": "$\\Lambda_m = \\frac{1000\\,\\kappa}{c}$",
+          "meaning": "Molar conductivity in S $cm^2$ $mol^{-1}$ ($\\kappa$ in S $cm^{-1}$, c in mol $L^{-1}$)"
+        },
+        {
+          "formula": "$\\Lambda_m = \\Lambda_m^\\circ - A\\sqrt{c}$",
+          "meaning": "Debye-Huckel-Onsager equation for strong electrolytes; use the slope and one data point to get $\\Lambda_m^\\circ$"
+        }
+      ],
+      "neet_tip": "Numericals on cell constant, $\\Lambda_m$ from $\\kappa$, and finding $\\Lambda_m^\\circ$ from the slope of the $\\Lambda_m$ vs $\\sqrt{c}$ plot are very common.",
+      "topic": "Conductance and molar conductivity; variation with concentration"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Kohlrausch's law of independent migration of ions states that, at infinite dilution, each ion makes a definite contribution to the limiting molar conductivity of an electrolyte, independent of its partner ion. Hence $\\Lambda_m^\\circ = \\nu_+\\lambda_+^\\circ + \\nu_-\\lambda_-^\\circ$.",
+      "key_points": [
+        "Application 1: Find $\\Lambda_m^\\circ$ of weak electrolytes from strong ones, e.g. $\\Lambda^\\circ(CH_3COOH) = \\Lambda^\\circ(CH_3COONa) + \\Lambda^\\circ(HCl) - \\Lambda^\\circ(NaCl)$",
+        "Application 2: Find the degree of dissociation, $\\alpha = \\frac{\\Lambda_m^c}{\\Lambda_m^\\circ}$",
+        "Application 3: Find the dissociation constant, $K_a = \\frac{c\\alpha^2}{1-\\alpha}$",
+        "Application 4: Find the solubility of sparingly soluble salts (e.g. $AgCl$, $BaSO_4$), since their saturated solution is effectively at infinite dilution, so $S = \\frac{1000\\,\\kappa}{\\Lambda_m^\\circ}$",
+        "Application 5: Then find $K_{sp}$ from S",
+        "For $CaCl_2$: $\\Lambda_m^\\circ = \\lambda^\\circ_{Ca^{2+}} + 2\\lambda^\\circ_{Cl^-}$; for $Al_2(SO_4)_3$: $2\\lambda^\\circ_{Al^{3+}} + 3\\lambda^\\circ_{SO_4^{2-}}$",
+        "Choose the strong-electrolyte combination so that the unwanted ions cancel",
+        "For a 1:1 salt, $K_{sp} = S^2$, with S in mol $L^{-1}$",
+        "For the solubility calculation, subtract the conductivity of water: $\\kappa_{salt} = \\kappa_{solution} - \\kappa_{water}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Lambda_m^\\circ = \\nu_+\\lambda_+^\\circ + \\nu_-\\lambda_-^\\circ$",
+          "meaning": "Kohlrausch's law; $\\nu$ is the number of ions per formula unit"
+        },
+        {
+          "formula": "$\\alpha = \\frac{\\Lambda_m^c}{\\Lambda_m^\\circ}$, $K_a = \\frac{c\\alpha^2}{1-\\alpha}$",
+          "meaning": "Degree of dissociation and dissociation constant of a weak electrolyte"
+        },
+        {
+          "formula": "$S = \\frac{1000\\,\\kappa}{\\Lambda_m^\\circ}$",
+          "meaning": "Solubility (mol $L^{-1}$) of a sparingly soluble salt"
+        }
+      ],
+      "neet_tip": "Typical questions: combine three strong-electrolyte $\\Lambda^\\circ$ values to get a weak acid's $\\Lambda^\\circ$, or find an ionic $\\lambda^\\circ$ after first getting $\\Lambda_m^\\circ$ from the Onsager equation.",
+      "topic": "Kohlrausch's law and its applications"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "A galvanic (voltaic) cell converts the chemical energy of a spontaneous redox reaction into electrical energy, as in the Daniell cell. An electrolytic cell uses external electrical energy to drive a non-spontaneous reaction, as in the electrolysis of molten NaCl.",
+      "key_points": [
+        "In both cell types, oxidation occurs at the anode and reduction at the cathode",
+        "Galvanic cell: anode is negative, cathode is positive",
+        "Electrolytic cell: anode is positive (connected to the + terminal), cathode is negative",
+        "Salt bridge (KCl or $KNO_3$ in agar gel): completes the circuit and keeps each solution electrically neutral",
+        "Faraday's laws: $w = ZIt$ and $Q = It$; deposition of 1 mol of $M^{n+}$ needs nF",
+        "Product of electrolysis depends on electrode potential and overpotential",
+        "Aqueous NaCl gives $H_2$ at the cathode and $Cl_2$ at the anode",
+        "Galvanic: $\\Delta G < 0$, $E_{cell} > 0$; electrolytic: driven by an external source with $E_{ext}$ greater than the cell emf",
+        "Electrons flow from anode to cathode through the external wire in both types",
+        "Without a salt bridge, charge accumulates and the current stops quickly",
+        "Electrolysis of aqueous $CuSO_4$ with Pt electrodes: Cu at the cathode, $O_2$ at the anode",
+        "1 F = 96487 C $mol^{-1}$ = charge on 1 mol of electrons"
+      ],
+      "formulas": [
+        {
+          "formula": "$w = ZIt$, $Z = \\frac{M}{nF}$",
+          "meaning": "Mass deposited in electrolysis (Faraday's first law)"
+        },
+        {
+          "formula": "$\\frac{w_1}{w_2} = \\frac{E_1}{E_2}$",
+          "meaning": "Faraday's second law; same charge deposits masses proportional to equivalent weights"
+        }
+      ],
+      "neet_tip": "Statement questions compare the sign of electrodes in galvanic and electrolytic cells, the role of the salt bridge, and electrolysis products.",
+      "topic": "Electrolytic and galvanic cells"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "When a metal dips into a solution of its ions, a potential difference called the electrode potential develops at the interface. By IUPAC convention, it is expressed as a reduction potential. The standard electrode potential $E^\\circ$ is measured at 1 M concentration, 1 bar pressure and 298 K, against the standard hydrogen electrode (SHE).",
+      "key_points": [
+        "SHE: Pt | $H_2$(1 bar) | $H^+$(1 M), with $E^\\circ = 0$ by definition",
+        "Arranging $E^\\circ$ values gives the electrochemical series",
+        "More positive $E^\\circ$ means a stronger oxidising agent ($F_2$, +2.87 V)",
+        "More negative $E^\\circ$ means a stronger reducing agent (Li, -3.05 V, strongest in aqueous solution)",
+        "A metal with lower $E^\\circ$ displaces a metal with higher $E^\\circ$ from its salt solution",
+        "Metals with negative $E^\\circ$ liberate $H_2$ from dilute acids",
+        "$E^\\circ$ is intensive: it does not change when the half-reaction is multiplied",
+        "To combine half-reactions, add $\\Delta G^\\circ = -nFE^\\circ$ values, not $E^\\circ$ values",
+        "Oxidation potential = $-$(reduction potential)",
+        "Cu ($E^\\circ$ = +0.34 V) does not liberate $H_2$ from dilute HCl; Zn (-0.76 V) does",
+        "Example of combining half-reactions: $Fe^{3+}/Fe^{2+}$ is found from $Fe^{3+}/Fe$ and $Fe^{2+}/Fe$ via the n-weighted formula"
+      ],
+      "formulas": [
+        {
+          "formula": "$E^\\circ_3 = \\frac{n_1E^\\circ_1 - n_2E^\\circ_2}{n_3}$",
+          "meaning": "$E^\\circ$ of a half-reaction obtained by subtracting two half-reactions (use + for adding), with $n_3 = n_1 - n_2$"
+        }
+      ],
+      "neet_tip": "Very common: combine two given $E^\\circ$ values to get a third (e.g. $Fe^{3+}/Fe^{2+}$, $Cu^{2+}/Cu^+$), or rank species by oxidising or reducing power.",
+      "topic": "Electrode potentials and standard electrode potential"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "A galvanic cell has an oxidation half-cell (anode) and a reduction half-cell (cathode). The cell reaction is their sum with the electrons cancelled.",
+      "key_points": [
+        "Cell notation: anode | anode electrolyte || cathode electrolyte | cathode",
+        "Example: Daniell cell, $Zn|Zn^{2+}(1M)||Cu^{2+}(1M)|Cu$",
+        "The emf is the potential difference between the electrodes when no current flows",
+        "$E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode}$, using reduction potentials for both",
+        "Daniell cell: $E^\\circ = 0.34 - (-0.76) = 1.10$ V",
+        "A positive $E_{cell}$ means the reaction as written is spontaneous; a negative value means the reverse is spontaneous",
+        "The emf exceeds the potential difference measured while current is drawn",
+        "Anode is on the left, cathode on the right; || denotes the salt bridge",
+        "Do not multiply $E^\\circ$ by stoichiometric coefficients when balancing the cell reaction",
+        "The half-cell with higher $E^\\circ$ becomes the cathode",
+        "Example: $Mg|Mg^{2+}||Ag^+|Ag$ has $E^\\circ = 0.80 - (-2.37) = 3.17$ V"
+      ],
+      "formulas": [
+        {
+          "formula": "$E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode} = E^\\circ_{right} - E^\\circ_{left}$",
+          "meaning": "Standard emf from standard reduction potentials"
+        }
+      ],
+      "neet_tip": "NEET gives cell notation or two $E^\\circ$ values and asks for $E^\\circ_{cell}$, the spontaneous direction, or which metal acts as the anode.",
+      "topic": "Half-cell and cell reactions; emf of a galvanic cell"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "The Nernst equation relates electrode or cell potential to concentration.",
+      "key_points": [
+        "General form for a cell reaction: $E_{cell} = E^\\circ_{cell} - \\frac{2.303RT}{nF}\\log Q$",
+        "At 298 K: $E_{cell} = E^\\circ_{cell} - \\frac{0.059}{n}\\log Q$",
+        "Single electrode $M^{n+} + ne^- \\rightarrow M$: $E = E^\\circ - \\frac{0.059}{n}\\log\\frac{1}{[M^{n+}]}$",
+        "Application 1: Find the potential at non-standard concentrations",
+        "Application 2: Find the equilibrium constant; at equilibrium $E_{cell} = 0$, so $E^\\circ = \\frac{0.059}{n}\\log K_c$",
+        "Application 3: Find pH; a hydrogen electrode has $E = -0.059\\,pH$",
+        "Application 4: Concentration cells, which have $E^\\circ = 0$; emf arises only from a concentration difference",
+        "Pure solids and liquids are taken as 1 in Q; gases enter as partial pressure in bar",
+        "Increasing reactant concentration (or decreasing product concentration) increases $E_{cell}$",
+        "In a concentration cell, the more dilute side is the anode",
+        "A large positive $E^\\circ$ gives a very large K: n = 2 and $E^\\circ$ = 1.1 V give $K \\approx 10^{37}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$E_{cell} = E^\\circ_{cell} - \\frac{0.059}{n}\\log Q$",
+          "meaning": "Nernst equation at 298 K"
+        },
+        {
+          "formula": "$\\log K_c = \\frac{nE^\\circ_{cell}}{0.059}$",
+          "meaning": "Equilibrium constant from standard emf"
+        },
+        {
+          "formula": "$E = \\frac{0.059}{n}\\log\\frac{c_2}{c_1}$ ($c_2 > c_1$)",
+          "meaning": "Emf of a concentration cell"
+        },
+        {
+          "formula": "$E_{H^+/H_2} = -0.059\\,pH$",
+          "meaning": "Potential of a hydrogen electrode at 1 bar $H_2$"
+        }
+      ],
+      "neet_tip": "Expect calculations of $E_{cell}$ for given ion concentrations, of $K_c$ from $E^\\circ$, or of the pH of the solution in a hydrogen electrode.",
+      "topic": "Nernst equation and its applications"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "The electrical work done by a reversible galvanic cell equals the decrease in Gibbs energy, so $\\Delta G = -nFE_{cell}$ and $\\Delta G^\\circ = -nFE^\\circ_{cell}$. Since $\\Delta G^\\circ = -RT\\ln K = -2.303RT\\log K$, it follows that $E^\\circ_{cell} = \\frac{2.303RT}{nF}\\log K$. These relations connect electrochemistry with thermodynamics.",
+      "key_points": [
+        "$E_{cell} > 0$, $\\Delta G < 0$, $K > 1$: spontaneous",
+        "$E_{cell} = 0$, $\\Delta G = 0$: equilibrium",
+        "$E_{cell} < 0$, $\\Delta G > 0$: non-spontaneous",
+        "$\\Delta G$ is extensive: doubling the equation doubles $\\Delta G$, while $E$ remains the same",
+        "This relation is the basis for combining half-cell potentials through $nE^\\circ$ values",
+        "F = 96487 C $mol^{-1}$, often taken as 96500",
+        "$\\Delta G$ in J = n x F x E with E in volts",
+        "Daniell cell: $\\Delta G^\\circ = -2 \\times 96500 \\times 1.10 = -212.3$ kJ $mol^{-1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta G^\\circ = -nFE^\\circ_{cell}$",
+          "meaning": "Standard Gibbs energy change from standard emf"
+        },
+        {
+          "formula": "$\\Delta G^\\circ = -2.303RT\\log K$",
+          "meaning": "Links standard Gibbs energy to the equilibrium constant"
+        }
+      ],
+      "neet_tip": "Direct numericals ask for $\\Delta G^\\circ$ in kJ from $E^\\circ$ and n, or for the sign of $\\Delta G$ given cell data; watch the J/kJ conversion.",
+      "topic": "Relationship between cell potential and Gibbs energy"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "The dry cell (Leclanche cell) is a primary cell, which means it cannot be recharged.",
+      "key_points": [
+        "Dry cell components",
+        "Anode: zinc container",
+        "Cathode: carbon (graphite) rod surrounded by powdered $MnO_2$ and carbon",
+        "Electrolyte: moist paste of $NH_4Cl$ and $ZnCl_2$",
+        "Voltage: about 1.5 V",
+        "Anode reaction: $Zn \\rightarrow Zn^{2+} + 2e^-$",
+        "Cathode reaction: $MnO_2 + NH_4^+ + e^- \\rightarrow MnO(OH) + NH_3$",
+        "$NH_3$ forms the complex $[Zn(NH_3)_4]^{2+}$",
+        "Lead storage battery (lead accumulator) is a secondary cell, which means it can be recharged",
+        "Lead accumulator anode: Pb",
+        "Lead accumulator cathode: lead grid packed with $PbO_2$",
+        "Lead accumulator electrolyte: about 38% $H_2SO_4$",
+        "On discharge, both electrodes become coated with $PbSO_4$ and $H_2SO_4$ is consumed",
+        "On charging, the reactions reverse",
+        "Each lead cell gives about 2 V; a 12 V battery has 6 cells in series",
+        "Mn changes from +4 to +3 in the dry cell cathode reaction",
+        "The density of the acid falls on discharge and is used to check the state of charge",
+        "On charging, $PbSO_4$ is converted back to Pb and $PbO_2$"
+      ],
+      "formulas": [
+        {
+          "formula": "$Pb + SO_4^{2-} \\rightarrow PbSO_4 + 2e^-$",
+          "meaning": "Anode reaction of the lead accumulator during discharge"
+        },
+        {
+          "formula": "$PbO_2 + SO_4^{2-} + 4H^+ + 2e^- \\rightarrow PbSO_4 + 2H_2O$",
+          "meaning": "Cathode reaction during discharge"
+        },
+        {
+          "formula": "$Pb + PbO_2 + 2H_2SO_4 \\rightarrow 2PbSO_4 + 2H_2O$",
+          "meaning": "Overall discharge reaction; it is reversed on charging"
+        }
+      ],
+      "neet_tip": "Questions ask for the electrode reactions, the change in ON of Mn or Pb, the electrolyte, or primary versus secondary classification.",
+      "topic": "Dry cell and lead accumulator"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Fuel cells convert the chemical energy of fuels such as $H_2$, $CH_4$ or $CH_3OH$ directly into electricity, with reactants supplied continuously. In the $H_2$-$O_2$ fuel cell used in the Apollo space programme, the gases are bubbled through porous carbon electrodes into concentrated aqueous NaOH or KOH. Finely divided Pt or Pd catalysts are built into the electrodes. The water produced was used as drinking water by astronauts. Fuel cells are pollution-free and about 70% efficient, compared with about 40% for thermal power plants.",
+      "key_points": [
+        "Reactants are fed continuously and products are removed; the cell is not stored or recharged",
+        "Electrolyte: concentrated KOH or NaOH; electrodes: porous carbon with Pt/Pd catalyst",
+        "Anode reaction: oxidation of $H_2$",
+        "Cathode reaction: reduction of $O_2$",
+        "The only product is water, so there is no pollution",
+        "Efficiency is high (about 70%) because the energy is converted directly",
+        "Theoretical efficiency is $\\frac{\\Delta G}{\\Delta H}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$2H_2 + 4OH^- \\rightarrow 4H_2O + 4e^-$",
+          "meaning": "Anode reaction of the $H_2$-$O_2$ fuel cell"
+        },
+        {
+          "formula": "$O_2 + 2H_2O + 4e^- \\rightarrow 4OH^-$",
+          "meaning": "Cathode reaction of the $H_2$-$O_2$ fuel cell"
+        },
+        {
+          "formula": "$2H_2 + O_2 \\rightarrow 2H_2O$; $\\eta = \\frac{\\Delta G}{\\Delta H}$",
+          "meaning": "Overall reaction and thermodynamic efficiency"
+        }
+      ],
+      "neet_tip": "NEET asks for the electrode reactions, the electrolyte or catalyst used, or the advantages and efficiency of the $H_2$-$O_2$ fuel cell.",
+      "topic": "Fuel cells"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\sum \\text{ON} = \\text{net charge}$",
+      "meaning": "Assigning oxidation numbers"
+    },
+    {
+      "formula": "Moles x n-factor (oxidant) = moles x n-factor (reductant)",
+      "meaning": "Redox stoichiometry and titrations"
+    },
+    {
+      "formula": "$MnO_4^-$: n = 5 (acid), 3 (neutral), 1 (strong base); $Cr_2O_7^{2-}$: n = 6",
+      "meaning": "n-factors of common oxidants"
+    },
+    {
+      "formula": "$R = \\rho\\frac{l}{A}$, $G = \\frac{1}{R}$",
+      "meaning": "Resistance and conductance"
+    },
+    {
+      "formula": "$\\kappa = G \\times G^*$, $G^* = \\frac{l}{A}$",
+      "meaning": "Conductivity and cell constant"
+    },
+    {
+      "formula": "$\\Lambda_m = \\frac{1000\\,\\kappa}{c}$",
+      "meaning": "Molar conductivity in S $cm^2$ $mol^{-1}$"
+    },
+    {
+      "formula": "$\\Lambda_m = \\Lambda_m^\\circ - A\\sqrt{c}$",
+      "meaning": "Strong electrolytes (Debye-Huckel-Onsager)"
+    },
+    {
+      "formula": "$\\Lambda_m^\\circ = \\nu_+\\lambda_+^\\circ + \\nu_-\\lambda_-^\\circ$",
+      "meaning": "Kohlrausch's law"
+    },
+    {
+      "formula": "$\\alpha = \\frac{\\Lambda_m}{\\Lambda_m^\\circ}$, $K_a = \\frac{c\\alpha^2}{1-\\alpha}$",
+      "meaning": "Weak electrolyte dissociation"
+    },
+    {
+      "formula": "$S = \\frac{1000\\,\\kappa}{\\Lambda_m^\\circ}$, $K_{sp} = S^2$ (1:1 salt)",
+      "meaning": "Solubility from conductance"
+    },
+    {
+      "formula": "$w = ZIt = \\frac{MIt}{nF}$",
+      "meaning": "Faraday's first law"
+    },
+    {
+      "formula": "$E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode}$",
+      "meaning": "Standard cell emf"
+    },
+    {
+      "formula": "$E^\\circ_3 = \\frac{n_1E^\\circ_1 \\pm n_2E^\\circ_2}{n_3}$",
+      "meaning": "Combining half-cell potentials"
+    },
+    {
+      "formula": "$E = E^\\circ - \\frac{0.059}{n}\\log Q$",
+      "meaning": "Nernst equation at 298 K"
+    },
+    {
+      "formula": "$\\log K = \\frac{nE^\\circ}{0.059}$",
+      "meaning": "Equilibrium constant from emf"
+    },
+    {
+      "formula": "$E_{H^+/H_2} = -0.059\\,pH$",
+      "meaning": "pH from a hydrogen electrode"
+    },
+    {
+      "formula": "$\\Delta G^\\circ = -nFE^\\circ = -2.303RT\\log K$",
+      "meaning": "Thermodynamics of cells"
+    },
+    {
+      "formula": "$E^\\circ$: Li $-3.05$ V, Zn $-0.76$ V, SHE 0, Cu $+0.34$ V, Ag $+0.80$ V, $F_2$ $+2.87$ V",
+      "meaning": "Key reference values of the electrochemical series"
+    },
+    {
+      "formula": "$Pb + PbO_2 + 2H_2SO_4 \\rightarrow 2PbSO_4 + 2H_2O$",
+      "meaning": "Lead accumulator discharge"
+    },
+    {
+      "formula": "$MnO_2 + NH_4^+ + e^- \\rightarrow MnO(OH) + NH_3$",
+      "meaning": "Dry cell cathode"
+    },
+    {
+      "formula": "$2H_2 + O_2 \\rightarrow 2H_2O$ (KOH, Pt/C electrodes)",
+      "meaning": "$H_2$-$O_2$ fuel cell"
+    }
+  ],
+  "common_traps": [
+    "Adding $E^\\circ$ values directly when combining half-reactions into a new half-reaction. $E^\\circ$ is intensive, so you must combine $nE^\\circ$ values (via $\\Delta G^\\circ$) and divide by the new n.",
+    "Multiplying $E^\\circ$ by stoichiometric coefficients when balancing a cell reaction. Electrode potential does not depend on the amount of substance.",
+    "Assuming the anode is always negative. It is negative in a galvanic cell but positive in an electrolytic cell; oxidation at the anode is common to both.",
+    "Thinking conductivity and molar conductivity both increase on dilution. On dilution $\\kappa$ decreases while $\\Lambda_m$ increases.",
+    "Forgetting the factor 1000 or the unit conversion in $\\Lambda_m = \\frac{1000\\kappa}{c}$. Keep $\\kappa$ in S $cm^{-1}$ and c in mol $L^{-1}$ to get S $cm^2$ $mol^{-1}$.",
+    "Taking O as $-2$ in every compound. It is $-1$ in peroxides and in the peroxo bonds of $CrO_5$ and $H_2SO_5$, so Cr and S stay at $+6$, not $+10$ or $+8$.",
+    "Assuming $MnO_2$ is oxidised when it is heated with a halide and concentrated $H_2SO_4$. $MnO_2$ is the oxidant: Mn goes from $+4$ to $+2$ while the halide is oxidised to the halogen.",
+    "Extrapolating the $\\Lambda_m$ vs $\\sqrt{c}$ plot of a weak electrolyte to get $\\Lambda_m^\\circ$. This is only valid for strong electrolytes; use Kohlrausch's law for weak ones."
+  ],
+  "quick_revision": [
+    "Oxidation = electron loss or ON increase; reduction = electron gain or ON decrease; the oxidant gets reduced.",
+    "F is always $-1$; O is $-2$, except in peroxides ($-1$), superoxides ($-\\frac{1}{2}$) and $OF_2$ ($+2$); H is $-1$ in metal hydrides.",
+    "Balance redox equations by electron equality; in acid use $H^+/H_2O$, in base add $OH^-$.",
+    "Metallic conductance falls with temperature; electrolytic conductance rises with temperature.",
+    "$\\kappa$ decreases and $\\Lambda_m$ increases on dilution; strong electrolytes follow $\\Lambda_m = \\Lambda_m^\\circ - A\\sqrt{c}$.",
+    "Kohlrausch's law gives $\\Lambda_m^\\circ$ of weak electrolytes, $\\alpha$, $K_a$ and the solubility of sparingly soluble salts.",
+    "Higher $E^\\circ$ means a stronger oxidant and the cathode; $E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode}$; Daniell cell = 1.10 V.",
+    "Nernst at 298 K: $E = E^\\circ - \\frac{0.059}{n}\\log Q$; at equilibrium E = 0 and $\\log K = \\frac{nE^\\circ}{0.059}$.",
+    "$\\Delta G^\\circ = -nFE^\\circ$; a positive E means the reaction is spontaneous.",
+    "Dry cell: Zn anode, $MnO_2$/C cathode, $NH_4Cl$ + $ZnCl_2$ paste, about 1.5 V, primary cell.",
+    "Lead accumulator: Pb anode, $PbO_2$ cathode, 38% $H_2SO_4$, $PbSO_4$ forms on discharge, secondary cell.",
+    "$H_2$-$O_2$ fuel cell: porous C electrodes with Pt/Pd, KOH electrolyte, water as product, about 70% efficient."
+  ],
+  "pyq": {
+    "count": 4,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q056",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q56"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q062",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q62"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q065",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q65"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q081",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q81"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

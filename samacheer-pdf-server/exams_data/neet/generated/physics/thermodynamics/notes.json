@@ -1,0 +1,330 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u08",
+  "unit_no": 8,
+  "unit_name": "Thermodynamics",
+  "slug": "thermodynamics",
+  "overview": "This unit applies energy conservation to systems that exchange heat and work, mainly ideal gases. It introduces temperature through the zeroth law, energy bookkeeping through the first law, process analysis using P-V diagrams, and the limits on converting heat into work through the second law and the Carnot engine. NEET usually asks 2-3 questions from this unit, mostly short numericals on work in adiabatic or isothermal processes, cyclic processes, first-law sign conventions, and engine or refrigerator efficiency.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Two systems are in thermal equilibrium when no net heat flows between them after thermal contact. Their macroscopic variables, such as pressure, volume and temperature, then stop changing. The zeroth law states that if systems A and B are each separately in thermal equilibrium with a third system C, then A and B are in thermal equilibrium with each other. This law defines temperature: temperature is the property that has the same value for all systems in thermal equilibrium with one another. It is also the working principle of a thermometer, because the thermometer acts as system C. Heat flows spontaneously from higher to lower temperature until the temperatures become equal. Gas laws and all thermodynamic equations use absolute temperature, measured in kelvin.",
+      "key_points": [
+        "Thermal equilibrium means no net heat flow and steady macroscopic variables",
+        "The zeroth law introduces temperature as a physical quantity",
+        "Systems in thermal equilibrium have equal temperatures",
+        "A thermometer works because of the zeroth law",
+        "Temperature is an intensive state variable",
+        "A change of 1 degree Celsius equals a change of 1 K"
+      ],
+      "formulas": [
+        {
+          "formula": "$T(K) = t(^{\\circ}C) + 273.15$",
+          "meaning": "Converts Celsius temperature to absolute temperature, which must be used in all gas and thermodynamic formulas"
+        }
+      ],
+      "neet_tip": "Usually asked as a statement-based question identifying the law that defines temperature, which is the zeroth law.",
+      "topic": "Thermal equilibrium, zeroth law and the concept of temperature"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Internal energy U is the sum of the kinetic and potential energies of the molecules, measured in the centre of mass frame. U is a state function, so its change depends only on the initial and final states. For an ideal gas, U depends only on temperature. Heat and work are two ways of transferring energy, and neither is a property of the system. Heat is transferred because of a temperature difference. Work is transferred by other means, such as a piston moving against pressure. Both heat and work are path functions, so their values depend on the process followed. On a P-V diagram, the work done by a gas equals the area under the curve. This work is positive for expansion and negative for compression. For a cyclic process, the net work equals the area enclosed by the loop. It is positive when the cycle runs clockwise and negative when it runs anticlockwise.",
+      "key_points": [
+        "Internal energy is a state function, while heat and work are path functions",
+        "For an ideal gas, the change in internal energy depends only on the change in temperature",
+        "Work done by a gas is positive in expansion and negative in compression",
+        "Work equals the area under the P-V curve",
+        "Net work in a cycle equals the area enclosed by the loop",
+        "No work is done when the volume stays constant",
+        "Degrees of freedom f decide the molar heat capacity at constant volume: $C_v = \\frac{f}{2}R$"
+      ],
+      "formulas": [
+        {
+          "formula": "$W = \\int_{V_1}^{V_2} P\\,dV$",
+          "meaning": "Work done by a gas as its volume changes from $V_1$ to $V_2$"
+        },
+        {
+          "formula": "$\\Delta U = nC_v\\Delta T$",
+          "meaning": "Change in internal energy of an ideal gas in any process, where n is the number of moles and $C_v$ is the molar heat capacity at constant volume"
+        },
+        {
+          "formula": "$U = \\frac{f}{2}nRT$",
+          "meaning": "Internal energy of an ideal gas with f degrees of freedom: f = 3 for a monatomic gas and f = 5 for a diatomic gas"
+        }
+      ],
+      "neet_tip": "NEET often gives a P-V diagram and asks for work as an area, or uses the fact that the change in internal energy is the same for different paths between the same two states.",
+      "topic": "Heat, work and internal energy"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "The first law of thermodynamics is the law of conservation of energy: $\\Delta Q = \\Delta U + \\Delta W$. Here $\\Delta Q$ is the heat supplied to the system and $\\Delta W$ is the work done by the system. Heat absorbed is taken as positive, and work done by the gas is taken as positive. In an isochoric (constant volume) process, W = 0, so all the heat changes the internal energy. In an isobaric (constant pressure) process, $W = P\\Delta V$ and $Q = nC_p\\Delta T$. In a cyclic process, $\\Delta U = 0$, so the net heat supplied equals the net work done, which is the enclosed area. In free expansion into a vacuum, Q = 0 and W = 0, so $\\Delta U = 0$. Applying the first law to an ideal gas gives Mayer's relation, $C_p - C_v = R$.",
+      "key_points": [
+        "The first law expresses energy conservation, not the direction of a process",
+        "Use the convention: heat absorbed is positive and work done by the gas is positive",
+        "In an isochoric process, $Q = \\Delta U$",
+        "In an isobaric process, $Q = nC_p\\Delta T$ and $W = nR\\Delta T$",
+        "In a cyclic process, $Q_{net} = W_{net}$, which equals the area of the loop",
+        "Monatomic gas: $C_v = \\frac{3}{2}R$ and $C_p = \\frac{5}{2}R$",
+        "Diatomic gas: $C_v = \\frac{5}{2}R$ and $C_p = \\frac{7}{2}R$",
+        "For isobaric heating of a monatomic gas, $\\Delta U : W : Q = 3 : 2 : 5$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta Q = \\Delta U + \\Delta W$",
+          "meaning": "First law of thermodynamics, with heat absorbed and work done by the system taken as positive"
+        },
+        {
+          "formula": "$C_p - C_v = R$",
+          "meaning": "Mayer's relation between the molar heat capacities of an ideal gas"
+        },
+        {
+          "formula": "$W = P(V_2 - V_1) = nR\\Delta T$",
+          "meaning": "Work done by a gas in an isobaric process"
+        },
+        {
+          "formula": "$Q = nC_p\\Delta T$",
+          "meaning": "Heat supplied in an isobaric process"
+        },
+        {
+          "formula": "$Q = nC_v\\Delta T$",
+          "meaning": "Heat supplied in an isochoric process"
+        }
+      ],
+      "neet_tip": "For a rectangular or triangular cycle on a P-V diagram, the total heat supplied equals the enclosed area, with the sign set by the direction of the cycle.",
+      "topic": "First law of thermodynamics"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "In an isothermal process the temperature stays constant, so PV is constant and, for an ideal gas, $\\Delta U = 0$. All the heat supplied is therefore converted into work, Q = W. Such a process must be slow and must take place in a container with conducting walls in contact with a reservoir. In an adiabatic process no heat is exchanged, Q = 0, so $W = -\\Delta U$. Such a process is fast or takes place in an insulated container. In adiabatic expansion the gas cools, and in adiabatic compression it heats up. The process equation is $PV^\\gamma$ = constant, where $\\gamma = C_p/C_v$. The work done by the gas is $W = \\frac{nR(T_1 - T_2)}{\\gamma - 1}$, which simplifies to $nC_v(T_1 - T_2)$. On a P-V diagram, an adiabatic curve is steeper than an isothermal curve by a factor of $\\gamma$. For the same expansion, the work done is greater in the isothermal process than in the adiabatic one.",
+      "key_points": [
+        "Isothermal process: $\\Delta T = 0$, $\\Delta U = 0$ and Q = W",
+        "Adiabatic process: Q = 0 and $W = -\\Delta U$",
+        "Adiabatic expansion causes cooling",
+        "Ratio of specific heats: $\\gamma$ = 5/3 for a monatomic gas, 7/5 for a diatomic gas and 4/3 for a polyatomic gas",
+        "The slope of an adiabatic curve is $\\gamma$ times the slope of an isothermal curve",
+        "For the same expansion, $W_{isothermal} > W_{adiabatic}$",
+        "The molar heat capacity is infinite for an isothermal process and zero for an adiabatic process",
+        "Isothermal bulk modulus = P, and adiabatic bulk modulus = $\\gamma P$"
+      ],
+      "formulas": [
+        {
+          "formula": "$W = nRT\\ln\\frac{V_2}{V_1} = 2.303\\,nRT\\log_{10}\\frac{V_2}{V_1}$",
+          "meaning": "Work done in an isothermal process at absolute temperature T"
+        },
+        {
+          "formula": "$W = nRT\\ln\\frac{P_1}{P_2}$",
+          "meaning": "Isothermal work written in terms of pressures"
+        },
+        {
+          "formula": "$PV^{\\gamma} = \\text{constant}$",
+          "meaning": "Adiabatic process equation, where $\\gamma = C_p/C_v$"
+        },
+        {
+          "formula": "$TV^{\\gamma-1} = \\text{constant}$",
+          "meaning": "Adiabatic relation between temperature and volume"
+        },
+        {
+          "formula": "$P^{1-\\gamma}T^{\\gamma} = \\text{constant}$",
+          "meaning": "Adiabatic relation between pressure and temperature"
+        },
+        {
+          "formula": "$W = \\frac{nR(T_1 - T_2)}{\\gamma - 1} = \\frac{P_1V_1 - P_2V_2}{\\gamma - 1}$",
+          "meaning": "Work done by a gas in an adiabatic process; it is positive when the gas cools"
+        }
+      ],
+      "neet_tip": "NEET frequently asks for adiabatic work from a given temperature drop, using $W = \\frac{nR\\Delta T}{\\gamma-1}$, or asks you to compare the slopes of isothermal and adiabatic curves.",
+      "topic": "Isothermal and adiabatic processes"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "The first law allows any process that conserves energy, but the second law sets limits on which processes can actually occur. The Kelvin-Planck statement says that no process is possible whose sole result is the absorption of heat from a reservoir and its complete conversion into work. This means no heat engine can have 100 percent efficiency. The Clausius statement says that no process is possible whose sole result is the transfer of heat from a colder body to a hotter body. This means a refrigerator always needs external work. A heat engine takes heat $Q_1$ from a hot source, does work W and rejects heat $Q_2$ to a sink. Its efficiency is $\\eta = W/Q_1$. A refrigerator extracts heat $Q_2$ from a cold body using work W and rejects heat $Q_1$ to the surroundings. Its coefficient of performance is $\\beta = Q_2/W$. The two statements of the second law are equivalent.",
+      "key_points": [
+        "The second law gives the direction of natural processes",
+        "Kelvin-Planck statement: a perfect heat engine is impossible",
+        "Clausius statement: a perfect refrigerator is impossible",
+        "Efficiency of a heat engine is always less than 1",
+        "The coefficient of performance of a refrigerator can be greater than 1",
+        "Energy balance for both a heat engine and a refrigerator: $Q_1 = W + Q_2$",
+        "Kelvin-Planck and Clausius statements are equivalent"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\eta = \\frac{W}{Q_1} = 1 - \\frac{Q_2}{Q_1}$",
+          "meaning": "Efficiency of a heat engine; $Q_1$ is the heat absorbed from the source and $Q_2$ is the heat rejected to the sink"
+        },
+        {
+          "formula": "$\\beta = \\frac{Q_2}{W} = \\frac{Q_2}{Q_1 - Q_2}$",
+          "meaning": "Coefficient of performance of a refrigerator; $Q_2$ is the heat extracted from the cold reservoir"
+        },
+        {
+          "formula": "$\\beta = \\frac{1 - \\eta}{\\eta}$",
+          "meaning": "Relation between a refrigerator and an engine working between the same reservoirs in reverse"
+        }
+      ],
+      "neet_tip": "Expect statement-based questions on the Kelvin-Planck and Clausius statements, and short numericals on efficiency or coefficient of performance.",
+      "topic": "Second law of thermodynamics"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "A reversible process is one that can be retraced so that both the system and its surroundings return exactly to their original states. It must be quasi-static, meaning extremely slow and always in equilibrium, and it must involve no dissipative effects such as friction, viscosity or resistance. All real processes are irreversible. Examples include free expansion, heat flow through a finite temperature difference, mixing of gases and friction. The Carnot engine is an ideal reversible engine. Its cycle has four steps: isothermal expansion at $T_1$, adiabatic expansion from $T_1$ to $T_2$, isothermal compression at $T_2$, and adiabatic compression back to $T_1$. Carnot's theorem states that no engine working between two given temperatures can be more efficient than a Carnot engine. Its efficiency, $1 - T_2/T_1$, depends only on the reservoir temperatures and not on the working substance.",
+      "key_points": [
+        "A reversible process must be quasi-static and free of dissipation",
+        "All natural processes are irreversible",
+        "Heat transfer through a finite temperature difference is irreversible",
+        "Carnot cycle order: isothermal expansion, adiabatic expansion, isothermal compression, adiabatic compression",
+        "In a Carnot engine, $\\frac{Q_2}{Q_1} = \\frac{T_2}{T_1}$",
+        "Carnot efficiency is independent of the working substance",
+        "Efficiency becomes 100 percent only if $T_2 = 0$ K, which is unattainable",
+        "All reversible engines working between the same two temperatures have equal efficiency"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\eta_{Carnot} = 1 - \\frac{T_2}{T_1}$",
+          "meaning": "Maximum possible efficiency of an engine between a source at $T_1$ and a sink at $T_2$, both in kelvin"
+        },
+        {
+          "formula": "$\\frac{Q_2}{Q_1} = \\frac{T_2}{T_1}$",
+          "meaning": "Ratio of heat rejected to heat absorbed in a reversible Carnot cycle"
+        },
+        {
+          "formula": "$\\beta_{Carnot} = \\frac{T_2}{T_1 - T_2}$",
+          "meaning": "Coefficient of performance of a Carnot refrigerator, with temperatures in kelvin"
+        }
+      ],
+      "neet_tip": "Carnot efficiency numericals, often involving a change in source or sink temperature, are very common; always convert temperatures to kelvin first.",
+      "topic": "Reversible and irreversible processes"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\Delta Q = \\Delta U + \\Delta W$",
+      "meaning": "First law: heat supplied equals the change in internal energy plus the work done by the system"
+    },
+    {
+      "formula": "$W = \\int P\\,dV$",
+      "meaning": "Work done by a gas, equal to the area under the P-V curve"
+    },
+    {
+      "formula": "$\\Delta U = nC_v\\Delta T$",
+      "meaning": "Change in internal energy of an ideal gas in any process; n is the number of moles"
+    },
+    {
+      "formula": "$C_v = \\frac{f}{2}R, \\; C_p = \\left(\\frac{f}{2}+1\\right)R$",
+      "meaning": "Molar heat capacities of an ideal gas with f degrees of freedom"
+    },
+    {
+      "formula": "$C_p - C_v = R$",
+      "meaning": "Mayer's relation for an ideal gas"
+    },
+    {
+      "formula": "$\\gamma = \\frac{C_p}{C_v} = 1 + \\frac{2}{f}$",
+      "meaning": "Ratio of specific heats: 5/3 for a monatomic gas, 7/5 for a diatomic gas, 4/3 for a polyatomic gas"
+    },
+    {
+      "formula": "$W = P\\Delta V = nR\\Delta T$",
+      "meaning": "Work done in an isobaric process"
+    },
+    {
+      "formula": "$Q = nC_p\\Delta T$",
+      "meaning": "Heat supplied at constant pressure"
+    },
+    {
+      "formula": "$W = 0, \\; Q = nC_v\\Delta T$",
+      "meaning": "Work and heat in an isochoric process"
+    },
+    {
+      "formula": "$W = nRT\\ln\\frac{V_2}{V_1}$",
+      "meaning": "Work in an isothermal process, where $\\Delta U = 0$ and Q = W"
+    },
+    {
+      "formula": "$PV^{\\gamma} = \\text{constant}$",
+      "meaning": "Adiabatic process equation"
+    },
+    {
+      "formula": "$TV^{\\gamma-1} = \\text{constant}$",
+      "meaning": "Adiabatic relation between temperature and volume"
+    },
+    {
+      "formula": "$P^{1-\\gamma}T^{\\gamma} = \\text{constant}$",
+      "meaning": "Adiabatic relation between pressure and temperature"
+    },
+    {
+      "formula": "$W = \\frac{nR(T_1 - T_2)}{\\gamma - 1} = \\frac{P_1V_1 - P_2V_2}{\\gamma - 1}$",
+      "meaning": "Work done by a gas in an adiabatic process"
+    },
+    {
+      "formula": "$\\left(\\frac{dP}{dV}\\right)_{adiabatic} = \\gamma \\left(\\frac{dP}{dV}\\right)_{isothermal}$",
+      "meaning": "An adiabatic curve is steeper than an isothermal curve"
+    },
+    {
+      "formula": "$W_{cycle} = Q_{net} = \\text{area enclosed}$",
+      "meaning": "Cyclic process, where $\\Delta U = 0$; work is positive for a clockwise cycle on a P-V diagram"
+    },
+    {
+      "formula": "$\\eta = \\frac{W}{Q_1} = 1 - \\frac{Q_2}{Q_1}$",
+      "meaning": "Efficiency of a heat engine"
+    },
+    {
+      "formula": "$\\eta_{Carnot} = 1 - \\frac{T_2}{T_1}$",
+      "meaning": "Efficiency of a Carnot engine; $T_1$ is the source temperature and $T_2$ the sink temperature, in kelvin"
+    },
+    {
+      "formula": "$\\beta = \\frac{Q_2}{W} = \\frac{Q_2}{Q_1 - Q_2}$",
+      "meaning": "Coefficient of performance of a refrigerator"
+    },
+    {
+      "formula": "$\\beta_{Carnot} = \\frac{T_2}{T_1 - T_2}$",
+      "meaning": "Coefficient of performance of a Carnot refrigerator"
+    },
+    {
+      "formula": "$\\beta = \\frac{1-\\eta}{\\eta}$",
+      "meaning": "Relation between engine efficiency and refrigerator coefficient of performance for the same reservoirs"
+    }
+  ],
+  "common_traps": [
+    "Using Celsius temperatures in Carnot efficiency or gas formulas is wrong; always convert to kelvin.",
+    "Assuming that Q = 0 means the temperature is constant is wrong; in an adiabatic process the temperature changes, while in an isothermal process Q is not zero.",
+    "Using $\\Delta U = nC_p\\Delta T$ in an isobaric process is wrong; $\\Delta U$ is always $nC_v\\Delta T$ for an ideal gas, and only Q uses $C_p$.",
+    "Mixing sign conventions causes errors; with $\\Delta Q = \\Delta U + \\Delta W$, work done by the gas is positive and heat absorbed is positive.",
+    "Taking the net work of an anticlockwise P-V cycle as positive is wrong; it is negative, and the net heat is rejected.",
+    "Using $\\gamma = 5/3$ for diatomic gases like oxygen and nitrogen is wrong; use 7/5 unless stated otherwise.",
+    "Believing that the coefficient of performance of a refrigerator cannot exceed 1 is wrong; it usually does exceed 1, unlike efficiency.",
+    "Assuming free expansion does work is wrong; against a vacuum W = 0 and Q = 0, so $\\Delta U = 0$ and the temperature of an ideal gas stays the same."
+  ],
+  "quick_revision": [
+    "The zeroth law defines temperature, and systems in thermal equilibrium have equal temperatures.",
+    "Internal energy is a state function and depends only on T for an ideal gas; heat and work are path functions.",
+    "First law: $\\Delta Q = \\Delta U + \\Delta W$, with work done by the gas taken as positive.",
+    "Work equals the area under the P-V curve, and net work in a cycle equals the enclosed area.",
+    "Isochoric: W = 0. Isobaric: $W = nR\\Delta T$. Cyclic: $\\Delta U = 0$.",
+    "Isothermal: $\\Delta U = 0$ and $W = nRT\\ln(V_2/V_1)$.",
+    "Adiabatic: Q = 0, $PV^\\gamma$ = constant and $W = nR(T_1 - T_2)/(\\gamma - 1)$.",
+    "An adiabatic curve is $\\gamma$ times steeper than an isothermal curve on a P-V diagram.",
+    "$\\gamma$ = 5/3 for monatomic, 7/5 for diatomic and 4/3 for polyatomic gases; $C_p - C_v = R$.",
+    "Kelvin-Planck rules out a perfect engine, and Clausius rules out a perfect refrigerator.",
+    "Carnot engine efficiency is $1 - T_2/T_1$, independent of the working substance, and is the maximum possible.",
+    "Real processes are irreversible; reversible processes are quasi-static and free of friction."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q017",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q17"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q039",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q39"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u10",
+  "unit_no": 10,
+  "unit_name": "Oscillations and Waves",
+  "slug": "oscillations-and-waves",
+  "overview": "This unit covers repetitive motion, from simple harmonic motion of springs and pendulums to mechanical waves on strings and in air columns, including superposition, standing waves and beats. NEET asks 2-3 questions from it almost every year, mostly on SHM equations and energy, time periods of oscillating systems, wave equations, organ pipe and string harmonics, and beats. Questions are formula-driven but often hide a conceptual twist.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "A motion that repeats itself after equal intervals of time is periodic motion. Examples are the Earth's revolution, a clock's hands and a swinging pendulum. If a body moves to and fro about a fixed mean (equilibrium) position, the periodic motion is called oscillatory or vibratory. Every oscillation is periodic, but not every periodic motion is oscillatory; uniform circular motion is periodic but not to and fro. The time period $T$ is the smallest interval after which the motion repeats, measured in seconds. Frequency $\\nu$ is the number of repetitions per second, with unit hertz (Hz). Angular frequency is $\\omega = 2\\pi\\nu$ in rad/s. The state of the body at any instant is described by its displacement $x(t)$ from the mean position. Displacement may be linear, angular, a pressure change or an electric field, depending on the system.",
+      "key_points": [
+        "Periodic motion repeats after a fixed time T.",
+        "Oscillatory motion is periodic motion about a mean position.",
+        "All oscillations are periodic; the converse is not true.",
+        "Unit of frequency is Hz, equal to $s^{-1}$.",
+        "Displacement is measured from the equilibrium position, not from the extreme position."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\nu = \\frac{1}{T}$",
+          "meaning": "Frequency from time period"
+        },
+        {
+          "formula": "$\\omega = \\frac{2\\pi}{T} = 2\\pi\\nu$",
+          "meaning": "Angular frequency in rad/s"
+        }
+      ],
+      "neet_tip": "Expect statement-type questions that separate periodic motion from oscillatory motion, or simple T, ν, ω conversions.",
+      "topic": "Periodic motion: time period, frequency, displacement as a function of time"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "A function $f(t)$ is periodic if $f(t+T) = f(t)$ for the smallest positive $T$, which is its period. The simplest periodic functions are $\\sin\\omega t$ and $\\cos\\omega t$, each with period $2\\pi/\\omega$. A linear combination $a\\sin\\omega t + b\\cos\\omega t$ is also periodic and is itself a simple harmonic function, with amplitude $\\sqrt{a^2+b^2}$. Any periodic function can be expressed as a superposition of sines and cosines of different time periods with suitable coefficients. $\\sin^2\\omega t = \\frac{1-\\cos2\\omega t}{2}$ is periodic with period $\\pi/\\omega$. It represents SHM about the mean value 1/2, with angular frequency $2\\omega$. $\\sin\\omega t + \\sin2\\omega t$ is periodic but not SHM. Functions such as $e^{-\\omega t}$ and $\\log\\omega t$ are non-periodic.",
+      "key_points": [
+        "The condition for periodicity is $f(t+T)=f(t)$.",
+        "$\\sin\\omega t$ and $\\cos\\omega t$ both have period $2\\pi/\\omega$.",
+        "$a\\sin\\omega t + b\\cos\\omega t$ is SHM with amplitude $\\sqrt{a^2+b^2}$.",
+        "$\\sin^2\\omega t$ and $\\cos^2\\omega t$ have period $\\pi/\\omega$.",
+        "A sum of sinusoids with different ω is periodic but not simple harmonic.",
+        "Exponential and logarithmic functions are non-periodic."
+      ],
+      "formulas": [
+        {
+          "formula": "$a\\sin\\omega t + b\\cos\\omega t = \\sqrt{a^2+b^2}\\,\\sin(\\omega t+\\phi),\\ \\tan\\phi=\\frac{b}{a}$",
+          "meaning": "Combining two sinusoids of the same ω into a single SHM"
+        }
+      ],
+      "neet_tip": "NEET lists functions and asks which are periodic, which are SHM, or what their period is.",
+      "topic": "Periodic functions"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "In simple harmonic motion (SHM), the acceleration is proportional to the displacement from the mean position and always directed towards it: $a = -\\omega^2 x$. Its solution is $x = A\\cos(\\omega t+\\phi)$. Here $A$ is the amplitude, the maximum displacement. $(\\omega t+\\phi)$ is the phase, which fixes position and direction of motion at time t. $\\phi$ is the phase constant (initial phase). SHM is the projection of uniform circular motion on a diameter. Velocity is $v = -A\\omega\\sin(\\omega t+\\phi)$, with magnitude $\\omega\\sqrt{A^2-x^2}$. Velocity is maximum ($A\\omega$) at the mean position and zero at the extremes. Acceleration is maximum ($A\\omega^2$) at the extremes and zero at the mean position. Velocity leads displacement by $\\pi/2$, and acceleration leads displacement by $\\pi$.",
+      "key_points": [
+        "Defining condition: $a \\propto -x$, or $F = -kx$.",
+        "Phase determines the state of motion; phase constant is the phase at t = 0.",
+        "$v_{max} = A\\omega$ at the mean position; $a_{max} = A\\omega^2$ at the extremes.",
+        "The v-x graph is an ellipse; the a-x graph is a straight line of negative slope.",
+        "Time from mean to extreme is T/4; time from mean to A/2 is T/12.",
+        "Velocity and displacement are $90^\\circ$ out of phase; acceleration and displacement are $180^\\circ$ out of phase."
+      ],
+      "formulas": [
+        {
+          "formula": "$x = A\\cos(\\omega t+\\phi)$",
+          "meaning": "Displacement in SHM"
+        },
+        {
+          "formula": "$v = \\omega\\sqrt{A^2-x^2}$",
+          "meaning": "Speed at displacement x"
+        },
+        {
+          "formula": "$a = -\\omega^2 x$",
+          "meaning": "Acceleration in SHM"
+        },
+        {
+          "formula": "$\\frac{x^2}{A^2}+\\frac{v^2}{A^2\\omega^2}=1$",
+          "meaning": "Ellipse in the x-v plane; it becomes a circle when $\\omega = 1$"
+        }
+      ],
+      "neet_tip": "Frequently tested items are the ratios $v_{max}/a_{max} = 1/\\omega$, time to travel between two positions, and phase relations.",
+      "topic": "Simple harmonic motion, its equation and phase"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "A mass m attached to an ideal spring experiences a restoring force $F = -kx$ (Hooke's law). The spring (force) constant $k$, in N/m, measures stiffness. This gives $\\omega = \\sqrt{k/m}$ and $T = 2\\pi\\sqrt{m/k}$, independent of amplitude. For a vertical spring, gravity only shifts the mean position, so T is unchanged and $T = 2\\pi\\sqrt{\\Delta l/g}$, where $\\Delta l$ is the static extension. For springs in series, $1/k = 1/k_1+1/k_2$; in parallel, $k = k_1+k_2$. When a spring is cut, $k \\propto 1/l$, so each piece is stiffer. The general rule for any system is $T = 2\\pi\\sqrt{\\text{inertia factor}/\\text{restoring force per unit displacement}}$. For example, a floating cylinder of length L and density $\\rho_c$ in a liquid of density $\\rho_l$ has $T = 2\\pi\\sqrt{L\\rho_c/(\\rho_l g)}$, so $T \\propto 1/\\sqrt{\\rho_l}$.",
+      "key_points": [
+        "Restoring force is $F = -kx$; k has unit N/m.",
+        "T is independent of amplitude and of g for a spring-mass system.",
+        "Series combination gives a softer spring; parallel gives a stiffer one.",
+        "Cutting a spring into n equal parts makes each part's constant nk.",
+        "A floating body, liquid in a U-tube, and a ball in a tunnel through the Earth are all SHM by the same method."
+      ],
+      "formulas": [
+        {
+          "formula": "$T = 2\\pi\\sqrt{\\frac{m}{k}}$",
+          "meaning": "Period of a spring-mass system"
+        },
+        {
+          "formula": "$k_{series} = \\frac{k_1k_2}{k_1+k_2}$, $k_{parallel} = k_1+k_2$",
+          "meaning": "Effective spring constants"
+        },
+        {
+          "formula": "$T = 2\\pi\\sqrt{\\frac{\\Delta l}{g}}$",
+          "meaning": "Vertical spring with static extension $\\Delta l$"
+        },
+        {
+          "formula": "$T = 2\\pi\\sqrt{\\frac{h}{g}}$",
+          "meaning": "Floating body, where h is the depth submerged at equilibrium"
+        }
+      ],
+      "neet_tip": "Expect spring combinations, cut springs, and the 'derive T for an unusual system' type (cork in a liquid, U-tube).",
+      "topic": "Oscillations of a spring: restoring force and force constant"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "In SHM, kinetic energy is $K = \\frac{1}{2}m\\omega^2(A^2-x^2)$ and potential energy is $U = \\frac{1}{2}kx^2$. The total energy $E = \\frac{1}{2}kA^2 = \\frac{1}{2}m\\omega^2A^2$ stays constant when there is no damping. K is maximum at the mean position; U is maximum at the extremes. Both K and U oscillate with frequency $2\\nu$, that is, with period T/2, while the total stays fixed. Averaged over a cycle, $\\langle K\\rangle = \\langle U\\rangle = E/2$. K equals U at $x = A/\\sqrt{2}$. The energy-position graphs are parabolas: U opens upward, K opens downward, and their sum is a horizontal line. Energy is proportional to the square of both the amplitude and the frequency.",
+      "key_points": [
+        "Total energy is proportional to $A^2$ and to $\\omega^2$.",
+        "K and U vary with period T/2.",
+        "K = U at $x = \\pm A/\\sqrt{2}$.",
+        "At x = A/2, K = 3E/4 and U = E/4.",
+        "Time-averaged K and U each equal E/2.",
+        "In the x-v plane the curve is an ellipse; it is a circle only if $\\omega = 1$, that is, k = m numerically."
+      ],
+      "formulas": [
+        {
+          "formula": "$K = \\frac{1}{2}k(A^2-x^2)$",
+          "meaning": "Kinetic energy at displacement x"
+        },
+        {
+          "formula": "$U = \\frac{1}{2}kx^2$",
+          "meaning": "Potential energy at displacement x"
+        },
+        {
+          "formula": "$E = \\frac{1}{2}m\\omega^2A^2$",
+          "meaning": "Total mechanical energy"
+        }
+      ],
+      "neet_tip": "Standard questions ask the fraction of energy as kinetic at a given x, the position where K = U, or the frequency of energy oscillation.",
+      "topic": "Energy in SHM: kinetic and potential energies"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "A simple pendulum is a point mass hanging from a light, inextensible string of length l. The restoring torque is $-mgl\\sin\\theta$. For small angles, $\\sin\\theta \\approx \\theta$, so the motion is angular SHM with $T = 2\\pi\\sqrt{l/g}$. T is independent of the bob's mass and, for small amplitudes, of the amplitude. Here l is measured from the point of suspension to the centre of the bob. A seconds pendulum has T = 2 s and $l \\approx 1$ m (about 0.99 m). In non-inertial frames, replace g by $g_{eff}$. In a lift accelerating up, $g_{eff} = g+a$; accelerating down, $g-a$; in free fall, $g_{eff} = 0$, so the pendulum does not oscillate. In a car accelerating horizontally, $g_{eff} = \\sqrt{g^2+a^2}$. Raising temperature lengthens l, so the pendulum clock loses time. On the Moon, T is larger.",
+      "key_points": [
+        "Valid only for small angular amplitude.",
+        "$T \\propto \\sqrt{l}$ and $T \\propto 1/\\sqrt{g}$; independent of mass.",
+        "Seconds pendulum: T = 2 s, l is about 1 m.",
+        "Use $g_{eff}$ in a lift, an accelerating car or a liquid medium.",
+        "A girl standing up on a swing raises the centre of mass, so l decreases and T decreases."
+      ],
+      "formulas": [
+        {
+          "formula": "$T = 2\\pi\\sqrt{\\frac{l}{g}}$",
+          "meaning": "Period of a simple pendulum for small oscillations"
+        },
+        {
+          "formula": "$T = 2\\pi\\sqrt{\\frac{l}{g_{eff}}}$",
+          "meaning": "Period in accelerating frames"
+        },
+        {
+          "formula": "$\\frac{\\Delta T}{T} = \\frac{1}{2}\\frac{\\Delta l}{l}$",
+          "meaning": "Fractional change in period for a small change in length"
+        }
+      ],
+      "neet_tip": "Common angles are g_eff in a lift or car, percentage change in T when l changes, and effect of mass or amplitude (none).",
+      "topic": "Simple pendulum and its time period"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "A wave is a disturbance that transfers energy and momentum through a medium without net transport of matter. Each particle only oscillates about its mean position. Mechanical waves need a medium with elasticity and inertia. Electromagnetic waves need no medium. In a transverse wave, particles vibrate perpendicular to the direction of propagation, forming crests and troughs; examples are waves on a stretched string and EM waves. Transverse mechanical waves need shear rigidity, so they travel in solids and along strings but not through the bulk of fluids. In a longitudinal wave, particles vibrate along the direction of propagation, forming compressions and rarefactions; sound in air is the example. Longitudinal waves travel in solids, liquids and gases. Ripples on a water surface are a combination of both types.",
+      "key_points": [
+        "Waves transport energy, not matter.",
+        "Transverse waves have crests and troughs; longitudinal waves have compressions and rarefactions.",
+        "Sound in gases is purely longitudinal.",
+        "Transverse mechanical waves cannot travel through the bulk of gases or liquids.",
+        "Polarisation is possible only for transverse waves.",
+        "Sound cannot travel in vacuum; light can."
+      ],
+      "formulas": [],
+      "neet_tip": "Assertion-reason or statement questions test the medium requirement, the nature of sound, and polarisation applying only to transverse waves.",
+      "topic": "Wave motion: longitudinal and transverse waves"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Wave speed is $v = \\nu\\lambda$. It depends on the medium's elastic and inertial properties, not on the source. When a wave passes into another medium, its frequency stays the same while speed and wavelength change. For a transverse wave on a string, $v = \\sqrt{T/\\mu}$, where T is tension and $\\mu$ is mass per unit length. For longitudinal waves, $v = \\sqrt{B/\\rho}$ in fluids and $v = \\sqrt{Y/\\rho}$ in thin rods. Newton assumed isothermal compressions, $v = \\sqrt{P/\\rho}$, which gave about 280 m/s for air. Laplace corrected this to adiabatic compressions, $v = \\sqrt{\\gamma P/\\rho}$, giving about 331 m/s at STP. At constant temperature, changing pressure does not change v, because $P/\\rho$ stays constant. In gases, $v \\propto \\sqrt{T}$ and $v \\propto 1/\\sqrt{M}$. Humidity increases v, since moist air is less dense. In general, $v_{solid} > v_{liquid} > v_{gas}$.",
+      "key_points": [
+        "Frequency is set by the source; speed is set by the medium.",
+        "String: $v \\propto \\sqrt{T}$.",
+        "Laplace correction: compressions in sound are adiabatic.",
+        "Pressure has no effect on v at constant temperature.",
+        "$v \\propto \\sqrt{T}$ (absolute temperature); speed rises about 0.61 m/s per $^\\circ C$ near room temperature.",
+        "Speed of sound is greater in moist air."
+      ],
+      "formulas": [
+        {
+          "formula": "$v = \\nu\\lambda = \\frac{\\omega}{k}$",
+          "meaning": "Wave speed"
+        },
+        {
+          "formula": "$v = \\sqrt{\\frac{T}{\\mu}}$",
+          "meaning": "Transverse wave on a string: T tension, $\\mu$ mass per unit length"
+        },
+        {
+          "formula": "$v = \\sqrt{\\frac{\\gamma P}{\\rho}} = \\sqrt{\\frac{\\gamma RT}{M}}$",
+          "meaning": "Speed of sound in a gas (Laplace)"
+        },
+        {
+          "formula": "$v = \\sqrt{\\frac{Y}{\\rho}}$",
+          "meaning": "Longitudinal wave in a solid rod"
+        }
+      ],
+      "neet_tip": "Typical questions use the ratio of speeds in two gases or at two temperatures, and string speed when tension or diameter changes.",
+      "topic": "Speed of a travelling wave"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "A sinusoidal wave travelling along +x is $y(x,t) = a\\sin(kx-\\omega t+\\phi)$. Here a is amplitude, $k = 2\\pi/\\lambda$ is the angular wave number, and $\\omega = 2\\pi\\nu$ is the angular frequency. If x and t have the same sign, as in $(kx+\\omega t)$, the wave travels along -x. Wave speed is $v = \\omega/k$, the ratio of the coefficient of t to the coefficient of x. Particle velocity is $\\partial y/\\partial t$, with maximum value $a\\omega$; this is different from wave speed. Particle velocity also equals $-v$ times the slope $\\partial y/\\partial x$. Two points separated by a path difference $\\Delta x$ have phase difference $\\Delta\\phi = \\frac{2\\pi}{\\lambda}\\Delta x$. Two instants separated by $\\Delta t$ at the same point have phase difference $\\frac{2\\pi}{T}\\Delta t$. Intensity is proportional to $a^2\\omega^2$.",
+      "key_points": [
+        "$kx-\\omega t$ means motion along +x; $kx+\\omega t$ means motion along -x.",
+        "$v = \\omega/k$ = coefficient of t divided by coefficient of x.",
+        "Maximum particle speed is $a\\omega$, not v.",
+        "Phase difference = $(2\\pi/\\lambda) \\times$ path difference.",
+        "Intensity is proportional to $a^2\\omega^2$."
+      ],
+      "formulas": [
+        {
+          "formula": "$y = a\\sin(kx-\\omega t+\\phi)$",
+          "meaning": "Progressive wave along +x"
+        },
+        {
+          "formula": "$k = \\frac{2\\pi}{\\lambda}$",
+          "meaning": "Angular wave number"
+        },
+        {
+          "formula": "$v_p = -v\\frac{\\partial y}{\\partial x}$",
+          "meaning": "Particle velocity in terms of wave speed and slope"
+        },
+        {
+          "formula": "$\\Delta\\phi = \\frac{2\\pi}{\\lambda}\\Delta x$",
+          "meaning": "Phase difference from path difference"
+        }
+      ],
+      "neet_tip": "NEET gives a wave equation and asks for v, λ, ν, direction, maximum particle speed, or phase difference between two points.",
+      "topic": "Displacement relation for a progressive wave"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Principle of superposition: when two or more waves overlap, the resultant displacement at any point is the algebraic (vector) sum of the individual displacements, $y = y_1+y_2$. Each wave then continues unaffected. For two waves of the same frequency with amplitudes $a_1$ and $a_2$ and phase difference $\\phi$, the resultant amplitude is $A = \\sqrt{a_1^2+a_2^2+2a_1a_2\\cos\\phi$. Constructive interference occurs at $\\phi = 2n\\pi$, giving $A = a_1+a_2$. Destructive interference occurs at $\\phi = (2n+1)\\pi$, giving $A = |a_1-a_2|$. On reflection from a rigid boundary (fixed end, or a denser medium), the wave suffers a phase change of $\\pi$, so the pulse is inverted. On reflection from a free end (rarer medium), there is no phase change. Frequency never changes on reflection. The reflected wave from a rigid end can be written $y_r = -a\\sin(kx+\\omega t)$.",
+      "key_points": [
+        "Superposition holds for small, linear disturbances.",
+        "Intensity is proportional to $A^2$; $I_{max}/I_{min} = \\left(\\frac{a_1+a_2}{a_1-a_2}\\right)^2$.",
+        "Rigid end or denser medium: phase change $\\pi$ (path change $\\lambda/2$).",
+        "Free end or rarer medium: no phase change.",
+        "Reflection changes direction, and possibly phase, but not frequency or speed."
+      ],
+      "formulas": [
+        {
+          "formula": "$A = \\sqrt{a_1^2+a_2^2+2a_1a_2\\cos\\phi}$",
+          "meaning": "Resultant amplitude of two superposed waves"
+        },
+        {
+          "formula": "$I = I_1+I_2+2\\sqrt{I_1I_2}\\cos\\phi$",
+          "meaning": "Resultant intensity"
+        }
+      ],
+      "neet_tip": "Expect resultant amplitude or intensity ratio questions, and phase change on reflection at fixed or free ends.",
+      "topic": "Principle of superposition and reflection of waves"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "Two identical waves moving in opposite directions superpose to form a standing wave, $y = 2a\\sin kx\\cos\\omega t$. Nodes (zero amplitude) and antinodes (amplitude 2a) alternate. Adjacent nodes are $\\lambda/2$ apart, and a node and the next antinode are $\\lambda/4$ apart. No net energy is transported. For a string fixed at both ends, the ends are nodes, so $L = n\\lambda/2$ and $\\nu_n = nv/2L$; all harmonics are present. For an open pipe, both ends are displacement antinodes, so $\\nu_n = nv/2L$ and all harmonics are present. For a closed pipe, the closed end is a node and the open end an antinode, so $\\nu = (2n-1)v/4L$ and only odd harmonics are present. The lowest frequency is the fundamental, or first harmonic; the fundamental of a closed pipe is half that of an open pipe of the same length. End correction is $e = 0.3d$ (0.6r) per open end.",
+      "key_points": [
+        "Node-to-node distance is $\\lambda/2$; node-to-antinode is $\\lambda/4$.",
+        "String and open pipe: all harmonics, in the ratio 1:2:3.",
+        "Closed pipe: only odd harmonics, in the ratio 1:3:5.",
+        "In the pth harmonic of an open pipe there are p displacement nodes.",
+        "In the pth (odd) harmonic of a closed pipe there are (p+1)/2 nodes, counting the closed end.",
+        "A string fixed at both ends in the nth harmonic has n+1 nodes (including the ends) and n antinodes.",
+        "Pressure nodes are located at displacement antinodes, and vice versa."
+      ],
+      "formulas": [
+        {
+          "formula": "$y = 2a\\sin kx\\cos\\omega t$",
+          "meaning": "Standing wave equation"
+        },
+        {
+          "formula": "$\\nu_n = \\frac{n}{2L}\\sqrt{\\frac{T}{\\mu}}$",
+          "meaning": "Harmonics of a string fixed at both ends, n = 1, 2, 3, ..."
+        },
+        {
+          "formula": "$\\nu_n = \\frac{nv}{2(L+2e)}$",
+          "meaning": "Open organ pipe with end correction"
+        },
+        {
+          "formula": "$\\nu = \\frac{(2n-1)v}{4(L+e)}$",
+          "meaning": "Closed organ pipe, odd harmonics only"
+        }
+      ],
+      "neet_tip": "Very high-yield: harmonic number, node/antinode counting, and comparing open and closed pipes (for example, the third harmonic of a closed pipe equal to the fundamental of an open pipe).",
+      "topic": "Standing waves in strings and organ pipes; fundamental mode and harmonics"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "When two sound waves of slightly different frequencies $\\nu_1$ and $\\nu_2$ superpose, the loudness rises and falls periodically. This is called beats. The resultant is $y = 2a\\cos(\\pi\\Delta\\nu\\, t)\\sin(2\\pi\\nu_{av}t)$. The tone heard has frequency $\\nu_{av} = (\\nu_1+\\nu_2)/2$, and its amplitude varies at the beat frequency $|\\nu_1-\\nu_2|$. The ear can distinguish beats only up to about 10 per second. Beats are used to find an unknown frequency and to tune instruments. Loading a tuning fork with wax lowers its frequency, while filing its prongs raises it. If loading the unknown fork reduces the beat count, it was the higher-frequency fork. If loading increases the beat count, it was the lower-frequency fork. Strings can be tuned the same way by changing tension.",
+      "key_points": [
+        "Beat frequency = $|\\nu_1-\\nu_2|$.",
+        "Beat period = $1/|\\nu_1-\\nu_2|$.",
+        "Beats are audible only if the difference is about 10 Hz or less.",
+        "Waxing lowers a fork's frequency; filing raises it.",
+        "The unknown frequency is $\\nu = \\nu_{known} \\pm b$; the sign is decided by the wax or file test."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\nu_{beat} = |\\nu_1-\\nu_2|$",
+          "meaning": "Number of beats per second"
+        },
+        {
+          "formula": "$\\nu_{av} = \\frac{\\nu_1+\\nu_2}{2}$",
+          "meaning": "Frequency of the sound actually heard"
+        }
+      ],
+      "neet_tip": "NEET tests the wax/file sign decision, beats between two pipes or strings, and beat frequency from two given wave equations.",
+      "topic": "Beats"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\omega = 2\\pi\\nu = \\frac{2\\pi}{T}$",
+      "meaning": "Angular frequency ω, frequency ν, period T"
+    },
+    {
+      "formula": "$x = A\\cos(\\omega t+\\phi)$",
+      "meaning": "SHM displacement: A amplitude, φ phase constant"
+    },
+    {
+      "formula": "$v = \\omega\\sqrt{A^2-x^2}$",
+      "meaning": "Speed in SHM at displacement x"
+    },
+    {
+      "formula": "$a = -\\omega^2x$",
+      "meaning": "Acceleration in SHM"
+    },
+    {
+      "formula": "$T = 2\\pi\\sqrt{\\frac{m}{k}}$",
+      "meaning": "Spring-mass period: m mass, k spring constant"
+    },
+    {
+      "formula": "$\\frac{1}{k_s} = \\frac{1}{k_1}+\\frac{1}{k_2},\\ k_p = k_1+k_2$",
+      "meaning": "Springs in series and in parallel"
+    },
+    {
+      "formula": "$E = \\frac{1}{2}kA^2 = \\frac{1}{2}m\\omega^2A^2$",
+      "meaning": "Total energy of SHM"
+    },
+    {
+      "formula": "$K = \\frac{1}{2}k(A^2-x^2),\\ U = \\frac{1}{2}kx^2$",
+      "meaning": "Kinetic and potential energy at displacement x"
+    },
+    {
+      "formula": "$T = 2\\pi\\sqrt{\\frac{l}{g_{eff}}}$",
+      "meaning": "Simple pendulum: l length, $g_{eff}$ effective gravity"
+    },
+    {
+      "formula": "$T = 2\\pi\\sqrt{\\frac{h}{g}}$",
+      "meaning": "Floating body: h submerged depth at equilibrium"
+    },
+    {
+      "formula": "$v = \\nu\\lambda = \\frac{\\omega}{k}$",
+      "meaning": "Wave speed: λ wavelength, k wave number"
+    },
+    {
+      "formula": "$v = \\sqrt{\\frac{T}{\\mu}}$",
+      "meaning": "Wave on a string: T tension, μ mass per unit length"
+    },
+    {
+      "formula": "$v = \\sqrt{\\frac{\\gamma P}{\\rho}} = \\sqrt{\\frac{\\gamma RT}{M}}$",
+      "meaning": "Speed of sound in a gas: γ ratio of specific heats, P pressure, ρ density, M molar mass, T absolute temperature"
+    },
+    {
+      "formula": "$v = \\sqrt{\\frac{B}{\\rho}},\\ v = \\sqrt{\\frac{Y}{\\rho}}$",
+      "meaning": "Longitudinal waves in a fluid (bulk modulus B) and in a rod (Young's modulus Y)"
+    },
+    {
+      "formula": "$y = a\\sin(kx-\\omega t+\\phi)$",
+      "meaning": "Progressive wave along +x"
+    },
+    {
+      "formula": "$\\Delta\\phi = \\frac{2\\pi}{\\lambda}\\Delta x$",
+      "meaning": "Phase difference from path difference Δx"
+    },
+    {
+      "formula": "$A = \\sqrt{a_1^2+a_2^2+2a_1a_2\\cos\\phi}$",
+      "meaning": "Resultant amplitude on superposition"
+    },
+    {
+      "formula": "$y = 2a\\sin kx\\cos\\omega t$",
+      "meaning": "Standing wave; nodes $\\lambda/2$ apart"
+    },
+    {
+      "formula": "$\\nu_n = \\frac{nv}{2L}$",
+      "meaning": "String fixed at both ends, or open pipe; all harmonics n = 1, 2, 3, ..."
+    },
+    {
+      "formula": "$\\nu = \\frac{(2n-1)v}{4L}$",
+      "meaning": "Closed pipe; odd harmonics only"
+    },
+    {
+      "formula": "$e = 0.3d = 0.6r$",
+      "meaning": "End correction at each open end: d diameter, r radius"
+    },
+    {
+      "formula": "$\\nu_{beat} = |\\nu_1-\\nu_2|$",
+      "meaning": "Beat frequency"
+    }
+  ],
+  "common_traps": [
+    "Confusing particle velocity with wave velocity: maximum particle speed is $a\\omega$, while wave speed is $\\omega/k$, and they are unrelated in general.",
+    "Taking the frequency of KE or PE oscillation as ν: energies in SHM oscillate at $2\\nu$, with period T/2.",
+    "Thinking the period of a spring-mass system changes with g or on the Moon: it depends only on m and k, whereas a pendulum's period depends on g.",
+    "Assuming a closed pipe has all harmonics: it has only odd harmonics, and its 'second overtone' is the 5th harmonic, not the 3rd.",
+    "Believing pressure changes the speed of sound: at constant temperature $P/\\rho$ is constant, so v depends only on temperature, molar mass and humidity.",
+    "Counting nodes wrongly: in pipes, the open end is a displacement antinode and the closed end is a node; draw the pattern before counting.",
+    "Getting the wax/file logic backwards: wax lowers frequency, filing raises it; check whether the beat count increases or decreases.",
+    "Forgetting the small-angle condition for $T = 2\\pi\\sqrt{l/g}$, or measuring l only up to the top of the bob instead of to its centre."
+  ],
+  "quick_revision": [
+    "SHM condition: $a = -\\omega^2x$; $v_{max} = A\\omega$, $a_{max} = A\\omega^2$.",
+    "Velocity leads displacement by $\\pi/2$; acceleration leads displacement by $\\pi$.",
+    "$T = 2\\pi\\sqrt{m/k}$ for a spring and $T = 2\\pi\\sqrt{l/g}$ for a pendulum; neither depends on amplitude.",
+    "K = U at $x = A/\\sqrt{2}$; energies oscillate at twice the motion's frequency.",
+    "The x-v graph of SHM is an ellipse, becoming a circle when $\\omega = 1$.",
+    "Seconds pendulum: T = 2 s, l is about 1 m; use $g_{eff}$ in accelerating frames.",
+    "Sound in air is longitudinal; transverse mechanical waves need rigidity.",
+    "$v_{string} = \\sqrt{T/\\mu}$; $v_{sound} = \\sqrt{\\gamma P/\\rho}$, proportional to $\\sqrt{T}$.",
+    "In $y = a\\sin(kx-\\omega t)$, $v = \\omega/k$ and the wave moves along +x.",
+    "Fixed end: phase change $\\pi$; free end: no phase change.",
+    "Open pipe and string: all harmonics, $nv/2L$; closed pipe: odd harmonics, $(2n-1)v/4L$.",
+    "Beats = $|\\nu_1-\\nu_2|$, audible only up to about 10 per second; wax lowers frequency, filing raises it."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q004",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q4"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q025",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q25"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q028",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q28"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

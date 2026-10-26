@@ -1,0 +1,19 @@
+{
+  "default": "accept",
+  "overrides": [
+    {
+      "unit_id": "che_u03",
+      "quote_contains": "polarity",
+      "action": "custom",
+      "correction": "Keep the order diethyl ether < acetone < ethanol < acetic acid as the polarity order in the sense NEET uses it (Re-NEET 2026 Q89, official NTA answer), i.e. polarity as reflected by hydrogen bonding and interaction with polar media. Add one short clarification: by dipole moment alone, acetone (about 2.9 D) is higher than ethanol (about 1.7 D); boiling points follow the same ether < ketone < alcohol < acid order.",
+      "reason": "Fact-checker suggested calling this only a boiling point order, but the official NEET answer to Re-NEET 2026 Q89 uses it as the polarity order. Notes must not contradict the official key."
+    },
+    {
+      "unit_id": "bio_u03",
+      "quote_contains": "Schwann",
+      "action": "custom",
+      "correction": "Remove the nationality: write 'Theodore Schwann, a zoologist' (no 'British' or 'German'). NCERT calls him British, history says German; NEET does not test this, so stating neither avoids a contradiction.",
+      "reason": "Historical fact (German) conflicts with NCERT wording (British); dropping the nationality is accurate and avoids confusing students."
+    }
+  ]
+}

@@ -1,0 +1,516 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u20",
+  "unit_no": 20,
+  "unit_name": "Principles Related to Practical Chemistry",
+  "slug": "principles-related-to-practical-chemistry",
+  "overview": "This unit covers the laboratory chemistry NEET expects you to know from NCERT: detecting elements and functional groups, preparing standard inorganic and organic compounds, volumetric (acid-base and redox) titrations, systematic salt analysis, simple calorimetry, colloid preparation and a clock-reaction kinetic study. NEET usually asks 1-2 direct questions from it. These test reagents, colours of precipitates, formulas of double salts, stoichiometry of $KMnO_4$ titrations and indicator choice, so careful factual recall scores easy marks.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Covalent organic compounds do not ionise, so N, S and halogens are first converted to ionic sodium salts by fusing the compound with sodium metal (Lassaigne's test). The fused mass is extracted with water to give the sodium fusion extract (SFE). Nitrogen becomes $NaCN$. Boiling with $FeSO_4$ gives $Na_4[Fe(CN)_6]$, and acidifying followed by $Fe^{3+}$ gives Prussian blue $Fe_4[Fe(CN)_6]_3$. Sulphur becomes $Na_2S$, which gives a violet colour with sodium nitroprusside and a black $PbS$ precipitate with lead acetate. If both N and S are present, $NaSCN$ forms and gives a blood-red colour with $Fe^{3+}$. Halogens become $NaX$. The extract is boiled with $HNO_3$ to destroy $NaCN$ and $Na_2S$, which would otherwise interfere. Adding $AgNO_3$ then gives AgCl (white, soluble in $NH_4OH$), AgBr (pale yellow, sparingly soluble) or AgI (yellow, insoluble).",
+      "key_points": [
+        "Sodium fusion converts covalent N, S and X into ionic $NaCN$, $Na_2S$ and $NaX$.",
+        "Prussian blue $Fe_4[Fe(CN)_6]_3$ confirms nitrogen.",
+        "Violet $Na_4[Fe(CN)_5NOS]$ with sodium nitroprusside confirms sulphur.",
+        "Blood-red $[Fe(SCN)]^{2+}$ means N and S are both present.",
+        "Boil the extract with $HNO_3$ before the $AgNO_3$ test for halogens.",
+        "Hydrazine has no carbon, so it cannot form $CN^-$ and does not give the Lassaigne test for N."
+      ],
+      "formulas": [
+        {
+          "formula": "$Na + C + N \\rightarrow NaCN$",
+          "meaning": "Conversion of nitrogen during sodium fusion"
+        },
+        {
+          "formula": "$3Na_4[Fe(CN)_6] + 4Fe^{3+} \\rightarrow Fe_4[Fe(CN)_6]_3 + 12Na^+$",
+          "meaning": "Prussian blue formation (test for N)"
+        },
+        {
+          "formula": "$Na_2S + Na_2[Fe(CN)_5NO] \\rightarrow Na_4[Fe(CN)_5NOS]$",
+          "meaning": "Violet colour (test for S)"
+        },
+        {
+          "formula": "$NaSCN + Fe^{3+} \\rightarrow [Fe(SCN)]^{2+}$",
+          "meaning": "Blood-red colour when both N and S are present"
+        }
+      ],
+      "neet_tip": "NEET asks the formula or colour of the complex formed (Prussian blue, violet or blood red) and why $HNO_3$ is added before the $AgNO_3$ test.",
+      "topic": "Detection of extra elements: nitrogen, sulphur and halogens"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Alcohols: alcoholic $-OH$ releases $H_2$ with sodium metal and gives a red colour with ceric ammonium nitrate. The Lucas reagent (conc. $HCl$ + anhydrous $ZnCl_2$) gives turbidity immediately with 3°, in about 5 minutes with 2°, and not at room temperature with 1° alcohols. Phenols: phenolic $-OH$ gives a violet colour with neutral $FeCl_3$ and a white precipitate of 2,4,6-tribromophenol with bromine water. Carbonyl compounds: these give a yellow-orange precipitate with 2,4-DNP. Aldehydes also give a silver mirror with Tollens' reagent, a red $Cu_2O$ precipitate with Fehling's solution (aliphatic aldehydes only) and a pink colour with Schiff's reagent. Methyl ketones such as acetone give a red colour with sodium nitroprusside in alkali. Carboxylic acids: these give brisk effervescence of $CO_2$ with $NaHCO_3$ and a fruity ester smell when warmed with ethanol and conc. $H_2SO_4$. Amines: primary amines give the offensive-smelling isocyanide in the carbylamine test. Aromatic primary amines give an orange-red azo dye in the azo dye test.",
+      "key_points": [
+        "The $NaHCO_3$ test distinguishes $-COOH$ from phenol, because phenol is too weak an acid to react.",
+        "Neutral $FeCl_3$ gives violet with phenols; alcohols do not respond.",
+        "2,4-DNP reacts with both aldehydes and ketones; Tollens', Fehling's and Schiff's tests are for aldehydes.",
+        "Benzaldehyde gives the Tollens' test but not the Fehling's test.",
+        "The carbylamine test is given only by primary amines (aliphatic and aromatic).",
+        "The azo dye test needs diazotisation at 0-5 °C followed by coupling with alkaline $\\beta$-naphthol."
+      ],
+      "formulas": [
+        {
+          "formula": "$RCHO + 2[Ag(NH_3)_2]^+ + 3OH^- \\rightarrow RCOO^- + 2Ag + 4NH_3 + 2H_2O$",
+          "meaning": "Tollens' silver mirror test for aldehydes"
+        },
+        {
+          "formula": "$RNH_2 + CHCl_3 + 3KOH \\rightarrow RNC + 3KCl + 3H_2O$",
+          "meaning": "Carbylamine test for primary amines"
+        },
+        {
+          "formula": "$RCOOH + NaHCO_3 \\rightarrow RCOONa + H_2O + CO_2$",
+          "meaning": "Effervescence test for the carboxyl group"
+        },
+        {
+          "formula": "$RCHO + 2Cu^{2+} + 5OH^- \\rightarrow RCOO^- + Cu_2O + 3H_2O$",
+          "meaning": "Fehling's test: red precipitate of $Cu_2O$"
+        }
+      ],
+      "neet_tip": "Expect match-the-test-to-the-group questions and questions that distinguish pairs such as phenol and carboxylic acid, or aldehyde and ketone.",
+      "topic": "Detection of functional groups: hydroxyl, carbonyl, carboxyl and amino"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Mohr's salt, $FeSO_4\\cdot(NH_4)_2SO_4\\cdot6H_2O$, is ferrous ammonium sulphate. It is prepared by dissolving equimolar amounts of ferrous sulphate and ammonium sulphate in the minimum amount of water containing a little dilute $H_2SO_4$. The solution is concentrated by gentle heating and cooled slowly to give pale green crystals. Potash alum, $K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$ (or $KAl(SO_4)_2\\cdot12H_2O$), is made in the same way from equimolar potassium sulphate and aluminium sulphate and crystallises as colourless octahedra. Dilute $H_2SO_4$ is added in both cases to suppress hydrolysis of $Fe^{2+}$ and $Al^{3+}$. Prolonged heating is avoided, because it oxidises $Fe^{2+}$ to $Fe^{3+}$ and makes the product yellowish. Both are double salts: in water they give all their constituent ions and retain no identity as a complex.",
+      "key_points": [
+        "Mohr's salt contains 6 water molecules and is pale green, from $Fe^{2+}$.",
+        "Potash alum contains 24 water molecules per $K_2SO_4\\cdot Al_2(SO_4)_3$ unit.",
+        "In potash alum, $K^+:Al^{3+}:SO_4^{2-} = 1:1:2$.",
+        "Dilute $H_2SO_4$ prevents hydrolysis of $Fe^{2+}$ and $Al^{3+}$.",
+        "Crystals form only on slow cooling of the concentrated solution; the mixture is not evaporated to dryness.",
+        "Mohr's salt is a primary standard in redox titrations because $Fe^{2+}$ in it is stable to air oxidation."
+      ],
+      "formulas": [
+        {
+          "formula": "$FeSO_4\\cdot(NH_4)_2SO_4\\cdot6H_2O$",
+          "meaning": "Mohr's salt, molar mass 392 g/mol"
+        },
+        {
+          "formula": "$K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$",
+          "meaning": "Potash alum, molar mass 948 g/mol (474 for the $KAl(SO_4)_2\\cdot12H_2O$ unit)"
+        }
+      ],
+      "neet_tip": "NEET asks the ion ratio in potash alum, the number of water molecules, the double-salt nature, or the role of dilute $H_2SO_4$.",
+      "topic": "Preparation of inorganic compounds: Mohr's salt and potash alum"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Acetanilide: aniline is acetylated with acetic anhydride in glacial acetic acid (or with acetyl chloride) and the mixture is poured into ice water. This gives white crystals, m.p. about 114 °C. p-Nitroacetanilide: acetanilide is nitrated with a conc. $HNO_3$ + conc. $H_2SO_4$ mixture below 10 °C. Acetylation moderates the activating effect of $-NH_2$, protects it from oxidation, and directs substitution mainly to the para position because of steric hindrance at ortho. The o-isomer stays in the ethanol filtrate, while the p-isomer forms pale yellow crystals (m.p. about 214 °C). Aniline yellow (p-aminoazobenzene): aniline is diazotised with $NaNO_2$/$HCl$ at 0-5 °C and the diazonium salt is coupled with aniline. Iodoform: ethanol or acetone is warmed with $I_2$ and $NaOH$ (or with $KI$ and $NaOCl$). It forms yellow crystals with a characteristic antiseptic smell, m.p. about 119 °C.",
+      "key_points": [
+        "Acetylation converts the strongly activating $-NH_2$ into the moderately activating $-NHCOCH_3$.",
+        "Nitration is kept below 10 °C to avoid polynitration and oxidation.",
+        "The p-nitro product is separated from the o-isomer by crystallisation from ethanol.",
+        "Diazotisation requires 0-5 °C because diazonium salts decompose at higher temperature.",
+        "Aniline yellow is p-aminoazobenzene, $C_6H_5N=NC_6H_4NH_2$.",
+        "The iodoform reaction is given by compounds with $CH_3CO-$ or $CH_3CH(OH)-$ groups."
+      ],
+      "formulas": [
+        {
+          "formula": "$C_6H_5NH_2 + (CH_3CO)_2O \\rightarrow C_6H_5NHCOCH_3 + CH_3COOH$",
+          "meaning": "Preparation of acetanilide"
+        },
+        {
+          "formula": "$C_6H_5NHCOCH_3 + HNO_3 \\xrightarrow{H_2SO_4} p\\text{-}O_2NC_6H_4NHCOCH_3 + H_2O$",
+          "meaning": "Preparation of p-nitroacetanilide"
+        },
+        {
+          "formula": "$C_6H_5N_2^+Cl^- + C_6H_5NH_2 \\rightarrow p\\text{-}H_2NC_6H_4N=NC_6H_5 + HCl$",
+          "meaning": "Aniline yellow by diazo coupling"
+        },
+        {
+          "formula": "$CH_3CH_2OH + 4I_2 + 6NaOH \\rightarrow CHI_3 + HCOONa + 5NaI + 5H_2O$",
+          "meaning": "Iodoform from ethanol"
+        },
+        {
+          "formula": "$CH_3COCH_3 + 3I_2 + 4NaOH \\rightarrow CHI_3 + CH_3COONa + 3NaI + 3H_2O$",
+          "meaning": "Iodoform from acetone"
+        }
+      ],
+      "neet_tip": "NEET asks why acetylation precedes nitration, which compounds give iodoform, and the reagents and temperature for diazotisation.",
+      "topic": "Preparation of organic compounds: acetanilide, p-nitroacetanilide, aniline yellow and iodoform"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "In an acid-base titration, a standard solution reacts with an unknown solution until the equivalence point. The end point is shown by an indicator that changes colour within the pH jump. Phenolphthalein, a weak acid indicator (pH 8.2-10), is colourless in acid and pink in base. Methyl orange, a weak base indicator (pH 3.1-4.4), is red in acid and yellow in base. Indicators are chosen as follows. Strong acid with strong base: either indicator works, because the pH jump is large (about 3 to 11). Weak acid with strong base: phenolphthalein. Strong acid with weak base: methyl orange. Weak acid with weak base: no sharp end point, so no simple indicator is suitable. Oxalic acid dihydrate is a primary standard. $NaOH$ is not, because it is hygroscopic and absorbs $CO_2$, so it must be standardised.",
+      "key_points": [
+        "At the equivalence point, gram equivalents of acid equal gram equivalents of base.",
+        "Phenolphthalein turns pink in base; methyl orange turns yellow in base and red in acid.",
+        "The indicator's colour-change range must lie within the steep part of the titration curve.",
+        "A primary standard is pure, stable, non-hygroscopic and of high molar mass.",
+        "Oxalic acid has n-factor 2 as an acid; $Na_2CO_3$ has n-factor 2 with methyl orange.",
+        "Only a few drops of indicator are used, because indicators are themselves weak acids or bases."
+      ],
+      "formulas": [
+        {
+          "formula": "$N_1V_1 = N_2V_2$",
+          "meaning": "Equivalence condition in a titration"
+        },
+        {
+          "formula": "$n_1M_1V_1 = n_2M_2V_2$",
+          "meaning": "Same condition using molarity and n-factors"
+        },
+        {
+          "formula": "$N = M \\times n$",
+          "meaning": "Normality from molarity and n-factor"
+        },
+        {
+          "formula": "$M = \\frac{w \\times 1000}{M_m \\times V(mL)}$",
+          "meaning": "Molarity of a solution made by weighing mass $w$ of a solute of molar mass $M_m$"
+        }
+      ],
+      "neet_tip": "Indicator choice for a given acid-base pair and simple $n_1M_1V_1 = n_2M_2V_2$ calculations are the usual questions.",
+      "topic": "Titrimetric exercises: acids, bases and use of indicators"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "$KMnO_4$ is a strong oxidant in acid medium ($MnO_4^- \\rightarrow Mn^{2+}$, n-factor 5). It acts as its own indicator: the end point is the first permanent light pink colour. Only dilute $H_2SO_4$ is used. $HCl$ is unsuitable because it is oxidised to $Cl_2$, and $HNO_3$ is unsuitable because it is itself an oxidant. Oxalic acid solution is warmed to 60-70 °C because the reaction is slow at first. It is then autocatalysed by the $Mn^{2+}$ produced, and oxalic acid has n-factor 2. Mohr's salt is titrated at room temperature, because heating lets air oxidise $Fe^{2+}$; it has n-factor 1. $KMnO_4$ is not a primary standard, because it is not available pure and decomposes in light. It is standardised against oxalic acid or Mohr's salt.",
+      "key_points": [
+        "$KMnO_4$ is a self-indicator, going from colourless to light pink at the end point.",
+        "$KMnO_4$ is taken in the burette and the reducing agent in the conical flask.",
+        "Only dilute $H_2SO_4$ is used to acidify the solution.",
+        "The oxalate reaction is autocatalysed by $Mn^{2+}$, so the solution is warmed to 60-70 °C.",
+        "Mohr's salt is titrated cold; dilute $H_2SO_4$ prevents hydrolysis and air oxidation.",
+        "Mole ratio: $MnO_4^-:C_2O_4^{2-} = 2:5$ and $MnO_4^-:Fe^{2+} = 1:5$."
+      ],
+      "formulas": [
+        {
+          "formula": "$2MnO_4^- + 5C_2O_4^{2-} + 16H^+ \\rightarrow 2Mn^{2+} + 10CO_2 + 8H_2O$",
+          "meaning": "Oxalic acid (oxalate) vs $KMnO_4$"
+        },
+        {
+          "formula": "$MnO_4^- + 5Fe^{2+} + 8H^+ \\rightarrow Mn^{2+} + 5Fe^{3+} + 4H_2O$",
+          "meaning": "Mohr's salt vs $KMnO_4$"
+        },
+        {
+          "formula": "$5M_{KMnO_4}V_{KMnO_4} = 2M_{ox}V_{ox}$",
+          "meaning": "Molarity relation for the oxalic acid titration"
+        },
+        {
+          "formula": "$5M_{KMnO_4}V_{KMnO_4} = M_{Fe^{2+}}V_{Fe^{2+}}$",
+          "meaning": "Molarity relation for the Mohr's salt titration"
+        },
+        {
+          "formula": "$E_{KMnO_4} = \\frac{158}{5} = 31.6$",
+          "meaning": "Equivalent weight of $KMnO_4$ in acid medium"
+        }
+      ],
+      "neet_tip": "NEET gives volumes and molarity of oxalic acid or $Fe^{2+}$ and asks the molarity of $KMnO_4$ using n-factors 5, 2 and 1.",
+      "topic": "Oxalic acid vs KMnO4 and Mohr's salt vs KMnO4"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Cations are separated into groups by group reagents.\nGroup 0 ($NH_4^+$): $NH_3$ is evolved on heating with $NaOH$ and gives a brown precipitate with Nessler's reagent.\nGroup I ($Pb^{2+}$): dilute $HCl$ gives white $PbCl_2$, which is soluble in hot water. It is confirmed by yellow $PbI_2$ with $KI$ and yellow $PbCrO_4$ with $K_2CrO_4$.\nGroup II ($Pb^{2+}$, $Cu^{2+}$): $H_2S$ in dilute $HCl$ gives black $CuS$. $Cu^{2+}$ gives a deep blue $[Cu(NH_3)_4]^{2+}$ solution with excess $NH_4OH$ and a chocolate-brown precipitate with $K_4[Fe(CN)_6]$.\nGroup III ($Fe^{3+}$, $Al^{3+}$): $NH_4OH$ in the presence of $NH_4Cl$ gives reddish-brown $Fe(OH)_3$ and white gelatinous $Al(OH)_3$. $Fe^{3+}$ gives Prussian blue with $K_4[Fe(CN)_6]$ and blood red with $KSCN$. $Al^{3+}$ gives a blue lake with litmus.\nGroup IV ($Zn^{2+}$, $Ni^{2+}$): $H_2S$ in ammoniacal medium gives white $ZnS$ and black $NiS$. $Ni^{2+}$ gives a rosy-red precipitate with dimethylglyoxime.\nGroup V ($Ca^{2+}$, $Ba^{2+}$): $(NH_4)_2CO_3$ gives white carbonates.\nGroup VI ($Mg^{2+}$): $Na_2HPO_4$ gives white $MgNH_4PO_4$.",
+      "key_points": [
+        "In acid medium (Group II), $[S^{2-}]$ is low, so only very low $K_{sp}$ sulphides precipitate.",
+        "$NH_4Cl$ suppresses $OH^-$ by the common-ion effect, so only Group III hydroxides precipitate.",
+        "Ammoniacal medium (Group IV) raises $[S^{2-}]$, so $ZnS$, $NiS$, $CoS$ and $MnS$ precipitate.",
+        "$Zn^{2+}$ gives a white or bluish-white precipitate with $K_4[Fe(CN)_6]$.",
+        "$Ba^{2+}$ gives yellow $BaCrO_4$ and an apple-green flame; $Ca^{2+}$ gives white $CaC_2O_4$ and a brick-red flame.",
+        "$Mg^{2+}$ gives a blue lake with magneson; $Cu^{2+}$ gives a blue-green flame.",
+        "$Pb^{2+}$ appears in both Groups I and II, because $PbCl_2$ is partly soluble."
+      ],
+      "formulas": [
+        {
+          "formula": "$Cu^{2+} + 4NH_3 \\rightarrow [Cu(NH_3)_4]^{2+}$",
+          "meaning": "Deep blue complex (test for copper)"
+        },
+        {
+          "formula": "$4Fe^{3+} + 3[Fe(CN)_6]^{4-} \\rightarrow Fe_4[Fe(CN)_6]_3$",
+          "meaning": "Prussian blue (test for $Fe^{3+}$)"
+        },
+        {
+          "formula": "$Ni^{2+} + 2\\,dmgH \\rightarrow [Ni(dmg)_2] + 2H^+$",
+          "meaning": "Rosy-red nickel dimethylglyoximate"
+        },
+        {
+          "formula": "$Mg^{2+} + HPO_4^{2-} + NH_3 \\rightarrow MgNH_4PO_4$",
+          "meaning": "White precipitate (test for $Mg^{2+}$)"
+        }
+      ],
+      "neet_tip": "NEET most often asks the group reagent of an ion, the colour of a precipitate or complex, and the role of $NH_4Cl$ or $HCl$ in group separation.",
+      "topic": "Qualitative salt analysis: cations Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Dilute $H_2SO_4$ group:\n$CO_3^{2-}$ gives brisk effervescence of $CO_2$, which turns lime water milky.\n$S^{2-}$ gives $H_2S$ (rotten-egg smell), which blackens lead acetate paper. It also gives a violet colour with sodium nitroprusside.\n$NO_2^-$ gives brown $NO_2$ fumes; it also turns $KI$-starch blue and gives a brown ring with dilute acid.\nConcentrated $H_2SO_4$ group:\n$Cl^-$ gives $HCl$, which forms white fumes with an $NH_3$ rod. It is confirmed by the chromyl chloride test: orange-red $CrO_2Cl_2$ vapours, which give yellow $PbCrO_4$.\n$Br^-$ gives reddish-brown $Br_2$ vapours, and $I^-$ gives violet $I_2$ vapours.\n$NO_3^-$ gives brown fumes with Cu turnings. It is confirmed by the brown ring test with fresh $FeSO_4$ and conc. $H_2SO_4$.\nIndependent group:\n$SO_4^{2-}$ gives white $BaSO_4$ with $BaCl_2$, insoluble in conc. acids.\nHalides are confirmed with $AgNO_3$ and by the layer test with $Cl_2$ water + $CCl_4$: an orange-brown layer for $Br_2$ and a violet layer for $I_2$.",
+      "key_points": [
+        "$CO_3^{2-}$, $S^{2-}$ and $NO_2^-$ react with dilute $H_2SO_4$; $Cl^-$, $Br^-$, $I^-$ and $NO_3^-$ need conc. $H_2SO_4$.",
+        "The brown ring is $[Fe(H_2O)_5NO]^{2+}$, in which iron is +1 and NO is $NO^+$.",
+        "The chromyl chloride test is given by $Cl^-$ only; bromides and iodides do not form $CrO_2X_2$.",
+        "AgCl is white and soluble in $NH_4OH$; AgBr is pale yellow and partly soluble; AgI is yellow and insoluble.",
+        "$BaSO_4$ is insoluble in conc. $HCl$, which distinguishes it from $BaCO_3$ and $BaSO_3$.",
+        "$NO_2^-$ interferes with the nitrate brown ring test and is removed with sulphamic acid."
+      ],
+      "formulas": [
+        {
+          "formula": "$K_2Cr_2O_7 + 4NaCl + 6H_2SO_4 \\rightarrow 2CrO_2Cl_2 + 2KHSO_4 + 4NaHSO_4 + 3H_2O$",
+          "meaning": "Chromyl chloride test for $Cl^-$"
+        },
+        {
+          "formula": "$[Fe(H_2O)_6]^{2+} + NO \\rightarrow [Fe(H_2O)_5NO]^{2+} + H_2O$",
+          "meaning": "Brown ring test for nitrate or nitrite"
+        },
+        {
+          "formula": "$Ba^{2+} + SO_4^{2-} \\rightarrow BaSO_4$",
+          "meaning": "White precipitate (test for sulphate)"
+        },
+        {
+          "formula": "$Ca(OH)_2 + CO_2 \\rightarrow CaCO_3 + H_2O$",
+          "meaning": "Lime water turns milky (test for $CO_2$ from carbonate)"
+        }
+      ],
+      "neet_tip": "NEET asks the composition and oxidation state of the brown ring complex, the chromyl chloride test, and the colours and solubility of silver halides.",
+      "topic": "Qualitative salt analysis: anions CO3 2-, S2-, SO4 2-, NO3-, NO2-, Cl-, Br-, I-"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Enthalpy of solution is the enthalpy change when 1 mol of solute dissolves in a large excess of solvent. A known mass of $CuSO_4$ is dissolved in a known volume of water in a calorimeter of known water equivalent. The temperature change is recorded and the heat change is calculated. Anhydrous $CuSO_4$ dissolves exothermically (about $-66.5$ kJ/mol), because the large hydration energy outweighs the lattice energy. Hydrated $CuSO_4\\cdot5H_2O$ dissolves slightly endothermically (about $+11.7$ kJ/mol), because its ions are already partly hydrated. The difference between the two gives the enthalpy of hydration of $CuSO_4$ by 5 water molecules (about $-78.2$ kJ/mol), an application of Hess's law.",
+      "key_points": [
+        "A temperature rise means an exothermic process ($\\Delta H$ negative); a temperature fall means an endothermic one.",
+        "The calorimeter's water equivalent is found first, by the method of mixtures.",
+        "Anhydrous $CuSO_4$ is white and dissolves with heat release; $CuSO_4\\cdot5H_2O$ is blue and absorbs heat.",
+        "$\\Delta_{hyd}H = \\Delta_{sol}H(anhydrous) - \\Delta_{sol}H(hydrated)$.",
+        "The solution's density and specific heat are taken as those of water (1 g/mL and 4.18 J/g/K)."
+      ],
+      "formulas": [
+        {
+          "formula": "$q = (m + W)\\,s\\,\\Delta T$",
+          "meaning": "Heat exchanged; $W$ is the water equivalent of the calorimeter"
+        },
+        {
+          "formula": "$\\Delta_{sol}H = -\\frac{q \\times M}{w}$",
+          "meaning": "Molar enthalpy of solution for mass $w$ of a solute of molar mass $M$ (sign follows the temperature change)"
+        },
+        {
+          "formula": "$CuSO_4(s) + 5H_2O(l) \\rightarrow CuSO_4\\cdot5H_2O(s)$",
+          "meaning": "Hydration reaction, whose $\\Delta H$ is obtained by Hess's law"
+        }
+      ],
+      "neet_tip": "NEET checks the sign of $\\Delta H$ for anhydrous versus hydrated salt and Hess's-law calculation of the hydration enthalpy.",
+      "topic": "Enthalpy of solution of CuSO4"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Enthalpy of neutralisation is the enthalpy change when 1 g-equivalent of an acid is neutralised by 1 g-equivalent of a base in dilute solution. For any strong acid with any strong base it is almost constant at about $-57.1$ kJ/mol (13.7 kcal), because both are fully ionised. The only net reaction is therefore $H^+ + OH^- \\rightarrow H_2O$. In the lab, equal volumes of, for example, 1 M $HCl$ and 1 M $NaOH$ at the same initial temperature are mixed in a calorimeter. The rise in temperature is noted, and the heat released is divided by the moles of water formed. With a weak acid or weak base the value is numerically smaller, because part of the heat is used to ionise the weak electrolyte.",
+      "key_points": [
+        "Strong acid with strong base gives $\\Delta_{neut}H \\approx -57.1$ kJ/mol, independent of which strong acid or base is used.",
+        "With $CH_3COOH$ or $NH_4OH$ the magnitude is smaller, because energy is spent on ionisation.",
+        "The heat released depends on the moles of water formed, which are set by the limiting reagent.",
+        "The acid and base solutions must start at the same temperature.",
+        "For $HF$ the magnitude exceeds 57.1 kJ/mol because of the high hydration enthalpy of $F^-$."
+      ],
+      "formulas": [
+        {
+          "formula": "$H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$, $\\Delta H = -57.1$ kJ/mol",
+          "meaning": "Net neutralisation for a strong acid and a strong base"
+        },
+        {
+          "formula": "$\\Delta_{neut}H = -\\frac{(m + W)\\,s\\,\\Delta T}{n_{H_2O}}$",
+          "meaning": "Enthalpy of neutralisation from calorimetric data"
+        },
+        {
+          "formula": "$|\\Delta_{neut}H_{weak}| = 57.1 - \\Delta_{ion}H$",
+          "meaning": "Neutralisation involving a weak electrolyte (kJ/mol)"
+        }
+      ],
+      "neet_tip": "NEET asks the heat released when given volumes and molarities are mixed (find the limiting moles of water), or why the value is lower for weak acids.",
+      "topic": "Enthalpy of neutralization of a strong acid and a strong base"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "Lyophilic sols, such as those of starch, gum, gelatin and egg albumin, are made directly by warming the substance with water. For starch, a paste in cold water is poured into boiling water with stirring. These sols are reversible, highly stable because the particles are solvated, and not easily coagulated. Lyophobic sols, such as those of metals, $Fe(OH)_3$, $Al(OH)_3$ and $As_2S_3$, must be prepared by special methods and need a stabilising ion. Ferric hydroxide sol (red-brown, positively charged) is formed by hydrolysis when $FeCl_3$ solution is added dropwise to boiling water. Aluminium hydroxide sol is made in the same way. Arsenious sulphide sol (yellow, negatively charged) is formed by double decomposition when $H_2S$ is passed into a dilute solution of $As_2O_3$. Excess electrolyte is removed by dialysis. Lyophobic sols are irreversible and are coagulated by electrolytes according to the Hardy-Schulze rule.",
+      "key_points": [
+        "Lyophilic sols are reversible, self-stabilised by solvation, and have high viscosity.",
+        "Lyophobic sols are irreversible, stabilised only by charge, and coagulate easily.",
+        "$Fe(OH)_3$ sol is positive because it adsorbs $Fe^{3+}$; $As_2S_3$ sol is negative because it adsorbs $S^{2-}$.",
+        "$FeCl_3$ is added to boiling water, not cold water, to make $Fe(OH)_3$ sol.",
+        "Dialysis removes excess electrolyte, which would otherwise coagulate the sol.",
+        "Hardy-Schulze rule: the higher the charge of the oppositely charged ion, the greater its coagulating power."
+      ],
+      "formulas": [
+        {
+          "formula": "$FeCl_3 + 3H_2O \\xrightarrow{boil} Fe(OH)_3(sol) + 3HCl$",
+          "meaning": "Ferric hydroxide sol by hydrolysis"
+        },
+        {
+          "formula": "$As_2O_3 + 3H_2S \\rightarrow As_2S_3(sol) + 3H_2O$",
+          "meaning": "Arsenious sulphide sol by double decomposition"
+        },
+        {
+          "formula": "$Fe(OH)_3/Fe^{3+}$",
+          "meaning": "Positively charged sol formed by preferential adsorption of $Fe^{3+}$"
+        }
+      ],
+      "neet_tip": "NEET asks to classify sols, the method and charge of $Fe(OH)_3$ or $As_2S_3$ sols, and coagulating power by the Hardy-Schulze rule.",
+      "topic": "Preparation of lyophilic and lyophobic sols"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "In acid medium, hydrogen peroxide oxidises iodide to iodine. The rate is studied as an iodine clock reaction. A fixed small amount of $Na_2S_2O_3$ and starch is added to the mixture. The $I_2$ formed is immediately reduced back to $I^-$ by thiosulphate, so the solution stays colourless and $[I^-]$ remains effectively constant. When all the thiosulphate is used up, free $I_2$ appears and instantly gives a blue colour with starch. The time $t$ for the blue colour to appear corresponds to a fixed amount of $H_2O_2$ consumed, so rate $\\propto \\frac{1}{t}$. Varying $[I^-]$ or $[H_2O_2]$ while keeping the other constant shows that the reaction is first order in each. The same set-up can be used to study the effect of temperature.",
+      "key_points": [
+        "Rate law: rate $= k[H_2O_2][I^-]$, overall second order.",
+        "Thiosulphate acts as a clock and also regenerates $I^-$.",
+        "The blue starch-iodine colour marks the end of the timed interval.",
+        "Doubling $[I^-]$ halves the time $t$ if the reaction is first order in $I^-$.",
+        "A higher temperature gives a shorter time and a faster rate, consistent with the Arrhenius equation."
+      ],
+      "formulas": [
+        {
+          "formula": "$H_2O_2 + 2I^- + 2H^+ \\rightarrow I_2 + 2H_2O$",
+          "meaning": "Reaction under study"
+        },
+        {
+          "formula": "$I_2 + 2S_2O_3^{2-} \\rightarrow 2I^- + S_4O_6^{2-}$",
+          "meaning": "Clock reaction that consumes the $I_2$ formed"
+        },
+        {
+          "formula": "$rate = k[H_2O_2][I^-]$",
+          "meaning": "Experimental rate law"
+        },
+        {
+          "formula": "$rate \\propto \\frac{1}{t}$",
+          "meaning": "Relation between rate and the time for the blue colour to appear"
+        }
+      ],
+      "neet_tip": "NEET tests the role of thiosulphate and starch, the order with respect to each reactant, and the inverse relation between rate and time.",
+      "topic": "Kinetic study of the reaction of iodide ions with hydrogen peroxide"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$Fe_4[Fe(CN)_6]_3$",
+      "meaning": "Prussian blue: N in Lassaigne's test and $Fe^{3+}$ with $K_4[Fe(CN)_6]$"
+    },
+    {
+      "formula": "$Na_4[Fe(CN)_5NOS]$",
+      "meaning": "Violet complex: test for sulphur or sulphide with sodium nitroprusside"
+    },
+    {
+      "formula": "$[Fe(SCN)]^{2+}$",
+      "meaning": "Blood-red complex: N and S together, or $Fe^{3+}$ with $KSCN$"
+    },
+    {
+      "formula": "$[Fe(H_2O)_5NO]^{2+}$",
+      "meaning": "Brown ring complex (Fe in +1 state)"
+    },
+    {
+      "formula": "$CrO_2Cl_2$",
+      "meaning": "Orange-red chromyl chloride vapours, specific to $Cl^-$"
+    },
+    {
+      "formula": "$FeSO_4\\cdot(NH_4)_2SO_4\\cdot6H_2O$",
+      "meaning": "Mohr's salt, M = 392, n-factor 1 with $KMnO_4$"
+    },
+    {
+      "formula": "$K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$",
+      "meaning": "Potash alum; $K^+:SO_4^{2-} = 1:2$"
+    },
+    {
+      "formula": "$n_1M_1V_1 = n_2M_2V_2$",
+      "meaning": "General titration equation"
+    },
+    {
+      "formula": "$2MnO_4^- + 5C_2O_4^{2-} + 16H^+ \\rightarrow 2Mn^{2+} + 10CO_2 + 8H_2O$",
+      "meaning": "Permanganate-oxalate titration, warmed to 60-70 °C"
+    },
+    {
+      "formula": "$MnO_4^- + 5Fe^{2+} + 8H^+ \\rightarrow Mn^{2+} + 5Fe^{3+} + 4H_2O$",
+      "meaning": "Permanganate-Mohr's salt titration at room temperature"
+    },
+    {
+      "formula": "$E_{KMnO_4} = 31.6$, $E_{H_2C_2O_4\\cdot2H_2O} = 63$",
+      "meaning": "Equivalent weights in acid medium"
+    },
+    {
+      "formula": "$RNH_2 + CHCl_3 + 3KOH \\rightarrow RNC + 3KCl + 3H_2O$",
+      "meaning": "Carbylamine test for primary amines"
+    },
+    {
+      "formula": "$CH_3COR + 3I_2 + 4NaOH \\rightarrow CHI_3 + RCOONa + 3NaI + 3H_2O$",
+      "meaning": "Iodoform reaction"
+    },
+    {
+      "formula": "$C_6H_5NH_2 + NaNO_2 + 2HCl \\xrightarrow{0-5^\\circ C} C_6H_5N_2^+Cl^- + NaCl + 2H_2O$",
+      "meaning": "Diazotisation for azo dye and aniline yellow"
+    },
+    {
+      "formula": "$q = (m + W)\\,s\\,\\Delta T$",
+      "meaning": "Calorimetric heat"
+    },
+    {
+      "formula": "$\\Delta_{neut}H = -57.1$ kJ/mol",
+      "meaning": "Strong acid with strong base"
+    },
+    {
+      "formula": "$\\Delta_{hyd}H = \\Delta_{sol}H(CuSO_4) - \\Delta_{sol}H(CuSO_4\\cdot5H_2O)$",
+      "meaning": "Hydration enthalpy by Hess's law"
+    },
+    {
+      "formula": "$FeCl_3 + 3H_2O \\rightarrow Fe(OH)_3 + 3HCl$",
+      "meaning": "Positive lyophobic sol by hydrolysis"
+    },
+    {
+      "formula": "$As_2O_3 + 3H_2S \\rightarrow As_2S_3 + 3H_2O$",
+      "meaning": "Negative lyophobic sol by double decomposition"
+    },
+    {
+      "formula": "$rate = k[H_2O_2][I^-] \\propto \\frac{1}{t}$",
+      "meaning": "Iodine clock kinetics"
+    },
+    {
+      "formula": "$\\text{Phenolphthalein: } pH\\ 8.2\\text{-}10;\\ \\text{methyl orange: } pH\\ 3.1\\text{-}4.4$",
+      "meaning": "Indicator ranges for selecting an indicator"
+    },
+    {
+      "formula": "$\\text{Groups: } HCl;\\ H_2S/H^+;\\ NH_4OH/NH_4Cl;\\ H_2S/NH_4OH;\\ (NH_4)_2CO_3;\\ Na_2HPO_4$",
+      "meaning": "Group reagents for Groups I to VI"
+    }
+  ],
+  "common_traps": [
+    "Using equal moles of $KMnO_4$ and oxalic acid. The correct relation uses n-factors: $5M_1V_1 = 2M_2V_2$, so the mole ratio of $MnO_4^-$ to oxalate is 2:5.",
+    "Taking the $K^+$ to $SO_4^{2-}$ ratio in potash alum as 1:1 or 2:3. Per formula unit $K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$ there are 2 $K^+$ and 4 $SO_4^{2-}$, so the ratio is 1:2.",
+    "Thinking $HCl$ can acidify $KMnO_4$ titrations. $HCl$ is oxidised to $Cl_2$ and gives high readings; only dilute $H_2SO_4$ is used.",
+    "Heating Mohr's salt solution before titration as is done for oxalic acid. Only oxalic acid is warmed; heating oxidises $Fe^{2+}$ by air.",
+    "Assuming the oxidation state of Fe in the brown ring complex is +2. In $[Fe(H_2O)_5NO]^{2+}$, NO is present as $NO^+$, so Fe is +1.",
+    "Believing $Br^-$ and $I^-$ also give the chromyl chloride test. Only chloride forms volatile $CrO_2Cl_2$.",
+    "Choosing phenolphthalein for a strong acid-weak base titration. Methyl orange is required, because the pH jump lies in the acidic range.",
+    "Taking $\\Delta_{neut}H$ of acetic acid with $NaOH$ as $-57.1$ kJ/mol. It is numerically less, because some energy is used to ionise the weak acid."
+  ],
+  "quick_revision": [
+    "Lassaigne's test results: Prussian blue means N; violet with nitroprusside means S; blood red means N + S; $AgX$ precipitate after boiling with $HNO_3$ means halogen.",
+    "Functional group tests: $NaHCO_3$ effervescence for $-COOH$; neutral $FeCl_3$ violet for phenol; 2,4-DNP for $C=O$; Tollens' and Fehling's for aldehydes; carbylamine for $1^\\circ$ amines.",
+    "Mohr's salt $FeSO_4\\cdot(NH_4)_2SO_4\\cdot6H_2O$ is pale green; potash alum $K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$ is colourless; dilute $H_2SO_4$ stops hydrolysis in both preparations.",
+    "Acetylation protects $-NH_2$ before nitration, done below 10 °C; diazotisation is done at 0-5 °C; iodoform is a yellow solid with a characteristic smell.",
+    "Use phenolphthalein for a weak acid with a strong base, methyl orange for a strong acid with a weak base, and either for a strong acid with a strong base.",
+    "In acid medium, $KMnO_4$ has n-factor 5, oxalic acid 2 and Mohr's salt 1; $KMnO_4$ is its own indicator and turns pink at the end point.",
+    "Group reagents: I dilute $HCl$; II $H_2S$ in acid; III $NH_4OH$ + $NH_4Cl$; IV $H_2S$ in ammonia; V $(NH_4)_2CO_3$; VI $Na_2HPO_4$. $NH_4^+$ is detected with Nessler's reagent.",
+    "Cation confirmatory tests: DMG gives rosy red with $Ni^{2+}$; $[Cu(NH_3)_4]^{2+}$ is deep blue; $K_4[Fe(CN)_6]$ gives Prussian blue with $Fe^{3+}$; $BaCrO_4$ and $PbCrO_4$ are yellow; $CaC_2O_4$ is white.",
+    "Anion tests: lime water milky for $CO_3^{2-}$; lead acetate black for $S^{2-}$; brown ring for $NO_3^-$; $BaSO_4$ white for $SO_4^{2-}$; chromyl chloride only for $Cl^-$.",
+    "Dissolution enthalpies: anhydrous $CuSO_4$ exothermic; $CuSO_4\\cdot5H_2O$ endothermic; strong acid with strong base $\\Delta H = -57.1$ kJ/mol.",
+    "$Fe(OH)_3$ sol is positive (hydrolysis in boiling water); $As_2S_3$ sol is negative (double decomposition); lyophilic sols are reversible and stable.",
+    "Iodine clock: the blue colour appears after the thiosulphate is used up; rate $\\propto 1/t$; rate $= k[H_2O_2][I^-]$."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q049",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q49"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q057",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q57"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,518 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u02",
+  "unit_no": 2,
+  "unit_name": "Kinematics",
+  "slug": "kinematics",
+  "overview": "Kinematics describes motion (position, velocity and acceleration) without asking what causes it. It covers motion in one dimension, the vector tools needed for two dimensions, projectile motion and uniform circular motion. In NEET it usually gives 1-2 direct questions, and its ideas (graphs, vectors, relative motion) are used throughout mechanics, electrostatics and magnetism.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Motion is always described relative to a frame of reference. A frame is a reference point (origin) with coordinate axes and a clock to measure time. A body is at rest or in motion only with respect to a chosen frame, so rest and motion are relative. In rectilinear (straight-line) motion, position is given by a single coordinate $x$ with a sign. Displacement $\\Delta x = x_2 - x_1$ is the change in position. It is a vector: it can be positive, negative or zero, and it depends only on the initial and final positions. Distance, or path length, is the total length of the actual path covered. It is a scalar, never negative, and never less than the magnitude of displacement. In the point-object approximation, a body is treated as a point when its size is negligible compared with the distance it moves.",
+      "key_points": [
+        "Rest and motion are relative to the chosen frame of reference",
+        "Displacement depends only on the initial and final positions, not on the path",
+        "Path length is greater than or equal to the magnitude of displacement; they are equal only for straight-line motion without reversal",
+        "For a closed path, displacement is zero but path length is not",
+        "In 1D motion, the sign of a quantity shows its direction along the chosen axis"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta x = x_2 - x_1$",
+          "meaning": "Displacement in 1D motion; the sign gives the direction"
+        }
+      ],
+      "neet_tip": "Expect conceptual questions comparing distance and displacement, for example for a particle completing a full or half circle.",
+      "topic": "Frame of reference and motion in a straight line"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Graphs are a very high-yield area. In a position-time ($x$-$t$) graph, the slope at any point gives the instantaneous velocity. A straight line means uniform velocity, a line parallel to the time axis means rest, and a curved graph means acceleration. An upward-curving graph (concave up) means positive acceleration. In a velocity-time ($v$-$t$) graph, the slope gives acceleration. The area under the graph gives displacement, taking area below the time axis as negative. The total area counted as positive gives distance. A horizontal $v$-$t$ line means uniform velocity. A straight sloping line means uniform acceleration. In an acceleration-time graph, the area gives the change in velocity. Two practical rules: an $x$-$t$ graph can never show two positions at the same instant, and time can never run backwards.",
+      "key_points": [
+        "Slope of the $x$-$t$ graph gives velocity; slope of the $v$-$t$ graph gives acceleration",
+        "Area under the $v$-$t$ graph gives displacement; the sum of absolute areas gives distance",
+        "Area under the $a$-$t$ graph gives the change in velocity",
+        "For uniform acceleration, the $x$-$t$ graph is a parabola and the $v$-$t$ graph is a straight line",
+        "Velocity changes sign where the $v$-$t$ graph crosses the time axis"
+      ],
+      "formulas": [
+        {
+          "formula": "$v = \\frac{dx}{dt}$",
+          "meaning": "Velocity as the slope of the position-time graph"
+        },
+        {
+          "formula": "$a = \\frac{dv}{dt}$",
+          "meaning": "Acceleration as the slope of the velocity-time graph"
+        },
+        {
+          "formula": "$\\Delta x = \\int v\\,dt$",
+          "meaning": "Displacement as the area under the velocity-time graph"
+        }
+      ],
+      "neet_tip": "NEET often gives one graph and asks for the matching graph or quantity, or asks you to identify a physically impossible graph.",
+      "topic": "Position-time and velocity-time graphs"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Speed is the rate of covering path length. It is a scalar and is never negative. Velocity is the rate of change of displacement. It is a vector, with both magnitude and direction. Uniform motion means a body covers equal displacements in equal intervals of time, however small. Its velocity is therefore constant, its acceleration is zero and its $x$-$t$ graph is a straight line. Non-uniform motion means the velocity changes in magnitude, in direction, or in both, so the body has acceleration. A body moving with constant speed can still be accelerating if its direction changes, as in uniform circular motion. However, constant velocity always implies constant speed and zero acceleration.",
+      "key_points": [
+        "Speed is a scalar and never negative; velocity is a vector",
+        "Uniform motion has constant velocity and zero acceleration",
+        "Constant speed does not necessarily mean constant velocity",
+        "A change in direction alone produces acceleration",
+        "SI unit of both speed and velocity is $m\\,s^{-1}$; $1\\ km\\,h^{-1} = \\frac{5}{18}\\ m\\,s^{-1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$1\\ km\\,h^{-1} = \\frac{5}{18}\\ m\\,s^{-1}$",
+          "meaning": "Unit conversion used frequently in numericals"
+        }
+      ],
+      "neet_tip": "Statement-type questions ask whether constant speed implies zero acceleration; it does not.",
+      "topic": "Speed and velocity; uniform and non-uniform motion"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Average speed is the total path length divided by the total time. Average velocity is the net displacement divided by the total time. Since path length is at least as large as the magnitude of displacement, average speed is at least as large as the magnitude of average velocity. They are equal only for straight-line motion with no reversal. Instantaneous velocity is the limit of average velocity as the time interval tends to zero, so $v = \\frac{dx}{dt}$. Its magnitude equals the instantaneous speed. For motion given as $x(t)$, first find where $v = 0$ inside the interval. If the particle reverses direction there, compute the distance in separate pieces before averaging. For two equal distances covered at speeds $v_1$ and $v_2$, the average speed is the harmonic-type mean, not the arithmetic mean.",
+      "key_points": [
+        "Average speed is greater than or equal to the magnitude of average velocity",
+        "Average velocity is zero for a round trip, but average speed is not",
+        "Instantaneous speed equals the magnitude of instantaneous velocity",
+        "Always check for reversal by solving $v(t) = 0$ before finding distance",
+        "Equal distances at $v_1$ and $v_2$ give average speed $\\frac{2v_1v_2}{v_1+v_2}$",
+        "Equal time intervals at $v_1$ and $v_2$ give average speed $\\frac{v_1+v_2}{2}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$v_{avg} = \\frac{\\text{total path length}}{\\text{total time}}$",
+          "meaning": "Average speed (scalar)"
+        },
+        {
+          "formula": "$\\vec{v}_{avg} = \\frac{\\Delta \\vec{r}}{\\Delta t}$",
+          "meaning": "Average velocity (vector)"
+        },
+        {
+          "formula": "$v = \\lim_{\\Delta t \\to 0}\\frac{\\Delta x}{\\Delta t} = \\frac{dx}{dt}$",
+          "meaning": "Instantaneous velocity"
+        },
+        {
+          "formula": "$v_{avg} = \\frac{2v_1v_2}{v_1+v_2}$",
+          "meaning": "Average speed for two equal distances covered at speeds $v_1$ and $v_2$"
+        }
+      ],
+      "neet_tip": "NEET gives polynomial $x(t)$ and asks for average speed; the trap is a turning point inside the interval, where average velocity can even be zero.",
+      "topic": "Average speed and instantaneous velocity"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "When acceleration $a$ is constant, the kinematic equations apply. These are $v = u + at$, $s = ut + \\frac{1}{2}at^2$ and $v^2 = u^2 + 2as$. All quantities are signed, so fix one positive direction and use it consistently. Free fall is a special case with $a = g$ directed downward, neglecting air resistance. A body thrown up with speed $u$ rises a maximum height $\\frac{u^2}{2g}$ in time $\\frac{u}{g}$. Time up equals time down, and it returns with the same speed. The distance covered in the $n$th second follows a separate formula. For a body starting from rest, the distances in successive equal time intervals are in the ratio $1:3:5:\\dots$ (Galileo's law of odd numbers). Stopping distance is proportional to $u^2$. If acceleration varies with time or position, use calculus instead of these equations.",
+      "key_points": [
+        "The kinematic equations are valid only for constant acceleration",
+        "Use a consistent sign convention for all vector quantities",
+        "Starting from rest, distances in successive equal intervals are in the ratio $1:3:5:7\\dots$",
+        "Stopping distance is $\\frac{u^2}{2a}$, so doubling the speed makes it four times larger",
+        "At the highest point of vertical motion, $v = 0$ but $a = g$",
+        "For variable acceleration, use $a = v\\frac{dv}{dx}$ or integrate directly"
+      ],
+      "formulas": [
+        {
+          "formula": "$v = u + at$",
+          "meaning": "Final velocity after time $t$"
+        },
+        {
+          "formula": "$s = ut + \\frac{1}{2}at^2$",
+          "meaning": "Displacement in time $t$"
+        },
+        {
+          "formula": "$v^2 = u^2 + 2as$",
+          "meaning": "Relation without time"
+        },
+        {
+          "formula": "$s_n = u + \\frac{a}{2}(2n-1)$",
+          "meaning": "Displacement in the $n$th second"
+        },
+        {
+          "formula": "$H = \\frac{u^2}{2g},\\ t = \\frac{u}{g}$",
+          "meaning": "Maximum height and time of ascent for vertical projection"
+        },
+        {
+          "formula": "$a = v\\frac{dv}{dx}$",
+          "meaning": "Acceleration when velocity is given as a function of position"
+        }
+      ],
+      "neet_tip": "Common questions use the $n$th-second formula, the ratio of distances in successive seconds, stopping distance, and balls dropped or thrown from towers.",
+      "topic": "Uniformly accelerated motion and its relations"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "A scalar has only magnitude and combines by ordinary algebra. Examples are mass, time, speed, distance, work, energy and temperature. A vector has both magnitude and direction and obeys the triangle (parallelogram) law of addition. Examples are displacement, velocity, acceleration, force and momentum. Having a direction is not enough to be a vector. Electric current has direction but adds algebraically, so it is a scalar. Equal vectors have the same magnitude and the same direction. A negative vector has the same magnitude but the opposite direction. A null (zero) vector has zero magnitude and an arbitrary direction. Multiplying a vector by a scalar $\\lambda$ scales its magnitude by $|\\lambda|$ and reverses its direction if $\\lambda < 0$.",
+      "key_points": [
+        "A vector needs both magnitude and direction and must obey the triangle law",
+        "Current, pressure, work and energy are scalars",
+        "Displacement, velocity, force and momentum are vectors",
+        "A null vector has zero magnitude and indeterminate direction",
+        "A vector can be shifted parallel to itself without changing it"
+      ],
+      "formulas": [],
+      "neet_tip": "Classification questions often test whether electric current is a scalar or a vector; it is a scalar.",
+      "topic": "Scalars and vectors"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Vectors are added geometrically using the triangle law (head-to-tail) or the parallelogram law. If two vectors of magnitudes $A$ and $B$ have an angle $\\theta$ between them, the resultant magnitude is $\\sqrt{A^2+B^2+2AB\\cos\\theta}$. Its direction from $\\vec{A}$ is given by $\\tan\\alpha = \\frac{B\\sin\\theta}{A+B\\cos\\theta}$. The resultant is maximum, $A+B$, at $\\theta = 0$ and minimum, $|A-B|$, at $\\theta = 180^\\circ$. Vector addition is commutative and associative. Subtraction means adding the negative: $\\vec{A} - \\vec{B} = \\vec{A} + (-\\vec{B})$. Its magnitude is $\\sqrt{A^2+B^2-2AB\\cos\\theta}$. For two equal vectors of magnitude $A$, the resultant is $2A\\cos\\frac{\\theta}{2}$, and it equals $A$ when $\\theta = 120^\\circ$. Three vectors can give a zero resultant only if they can form a closed triangle.",
+      "key_points": [
+        "The resultant always lies between $|A-B|$ and $A+B$",
+        "Vector addition is commutative; subtraction is not",
+        "For equal vectors of magnitude $A$, $R = 2A\\cos\\frac{\\theta}{2}$",
+        "Two equal vectors at $120^\\circ$ give a resultant equal to either vector",
+        "Three forces in equilibrium must be able to form a closed triangle",
+        "The change in velocity is $\\Delta \\vec{v} = \\vec{v}_2 - \\vec{v}_1$, a vector subtraction"
+      ],
+      "formulas": [
+        {
+          "formula": "$R = \\sqrt{A^2+B^2+2AB\\cos\\theta}$",
+          "meaning": "Magnitude of $\\vec{A}+\\vec{B}$ with angle $\\theta$ between the vectors"
+        },
+        {
+          "formula": "$\\tan\\alpha = \\frac{B\\sin\\theta}{A+B\\cos\\theta}$",
+          "meaning": "Angle of the resultant measured from $\\vec{A}$"
+        },
+        {
+          "formula": "$|\\vec{A}-\\vec{B}| = \\sqrt{A^2+B^2-2AB\\cos\\theta}$",
+          "meaning": "Magnitude of the difference of two vectors"
+        }
+      ],
+      "neet_tip": "Questions ask for the angle when $|\\vec{A}+\\vec{B}| = |\\vec{A}-\\vec{B}|$ (answer $90^\\circ$) or for possible resultant values of given forces.",
+      "topic": "Vector addition and subtraction"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "The scalar (dot) product is $\\vec{A}\\cdot\\vec{B} = AB\\cos\\theta = A_xB_x + A_yB_y + A_zB_z$. It is commutative and is zero for perpendicular vectors. It is used for work ($W = \\vec{F}\\cdot\\vec{s}$), for power, and for finding the angle between vectors. The vector (cross) product is $\\vec{A}\\times\\vec{B} = AB\\sin\\theta\\,\\hat{n}$, where the direction of $\\hat{n}$ follows the right-hand rule. It is anticommutative: $\\vec{A}\\times\\vec{B} = -\\vec{B}\\times\\vec{A}$. It is zero for parallel or antiparallel vectors. The product is perpendicular to both $\\vec{A}$ and $\\vec{B}$. Its magnitude equals the area of the parallelogram formed by them, and half of that gives the triangle's area. Use it for torque, angular momentum and the magnetic force on a moving charge. The cyclic rules are $\\hat{i}\\times\\hat{j} = \\hat{k}$, $\\hat{j}\\times\\hat{k} = \\hat{i}$ and $\\hat{k}\\times\\hat{i} = \\hat{j}$, while $\\hat{i}\\cdot\\hat{i} = 1$ and $\\hat{i}\\times\\hat{i} = \\vec{0}$.",
+      "key_points": [
+        "Dot product is zero when the vectors are perpendicular",
+        "Cross product is zero when the vectors are parallel or antiparallel",
+        "$\\vec{A}\\times\\vec{B}$ is perpendicular to both $\\vec{A}$ and $\\vec{B}$",
+        "Cross product is anticommutative; dot product is commutative",
+        "$\\vec{A}\\cdot\\vec{A} = A^2$ and $\\vec{A}\\times\\vec{A} = \\vec{0}$",
+        "The magnitude of the cross product gives the area of a parallelogram"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{A}\\cdot\\vec{B} = AB\\cos\\theta = A_xB_x+A_yB_y+A_zB_z$",
+          "meaning": "Scalar product; gives work and the angle between vectors"
+        },
+        {
+          "formula": "$\\cos\\theta = \\frac{\\vec{A}\\cdot\\vec{B}}{AB}$",
+          "meaning": "Angle between two vectors"
+        },
+        {
+          "formula": "$|\\vec{A}\\times\\vec{B}| = AB\\sin\\theta$",
+          "meaning": "Magnitude of the cross product, equal to the area of the parallelogram"
+        },
+        {
+          "formula": "$\\vec{A}\\times\\vec{B} = \\hat{i}(A_yB_z-A_zB_y)-\\hat{j}(A_xB_z-A_zB_x)+\\hat{k}(A_xB_y-A_yB_x)$",
+          "meaning": "Component (determinant) form of the cross product"
+        }
+      ],
+      "neet_tip": "Typical questions: find the angle when $|\\vec{A}\\times\\vec{B}| = \\sqrt{3}\\,\\vec{A}\\cdot\\vec{B}$ (answer $60^\\circ$), find a value making two vectors perpendicular, or find the area of a parallelogram.",
+      "topic": "Scalar and vector products"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "A unit vector has magnitude 1 and only specifies direction: $\\hat{A} = \\frac{\\vec{A}}{A}$. It has no units. The unit vectors $\\hat{i}$, $\\hat{j}$ and $\\hat{k}$ point along the x, y and z axes. Resolving a vector means splitting it into components along chosen directions, usually perpendicular axes. A vector of magnitude $A$ at angle $\\theta$ to the x-axis has components $A_x = A\\cos\\theta$ and $A_y = A\\sin\\theta$. Conversely, $A = \\sqrt{A_x^2+A_y^2}$ and $\\tan\\theta = \\frac{A_y}{A_x}$. In 3D, $\\vec{A} = A_x\\hat{i}+A_y\\hat{j}+A_z\\hat{k}$. The direction cosines are $\\cos\\alpha = \\frac{A_x}{A}$, $\\cos\\beta = \\frac{A_y}{A}$ and $\\cos\\gamma = \\frac{A_z}{A}$, and the squares of the three sum to 1. A component of a vector can never exceed the vector's magnitude.",
+      "key_points": [
+        "A unit vector is dimensionless and has magnitude exactly 1",
+        "Rectangular components are $A\\cos\\theta$ and $A\\sin\\theta$",
+        "Add vectors component-wise for quick algebra",
+        "The squares of the direction cosines sum to 1",
+        "The component of $\\vec{A}$ along $\\vec{B}$ is $\\frac{\\vec{A}\\cdot\\vec{B}}{B}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$",
+          "meaning": "Unit vector along $\\vec{A}$"
+        },
+        {
+          "formula": "$A = \\sqrt{A_x^2+A_y^2+A_z^2}$",
+          "meaning": "Magnitude from the components"
+        },
+        {
+          "formula": "$\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma = 1$",
+          "meaning": "Property of direction cosines"
+        },
+        {
+          "formula": "$A_{\\parallel B} = \\vec{A}\\cdot\\hat{B}$",
+          "meaning": "Projection (component) of $\\vec{A}$ along $\\vec{B}$"
+        }
+      ],
+      "neet_tip": "Questions ask for the unit vector along a given vector or a resultant, or test whether an expression such as $0.5\\hat{i}+0.5\\hat{j}$ is a unit vector (it is not).",
+      "topic": "Unit vector and resolution of a vector"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "The velocity of A relative to B is $\\vec{v}_{AB} = \\vec{v}_A - \\vec{v}_B$, which is A's velocity as seen by an observer moving with B. In 1D, bodies moving in the same direction have a relative speed equal to the difference of their speeds. Bodies moving in opposite directions have a relative speed equal to the sum. For rain and a moving person, the rain's velocity relative to the person is $\\vec{v}_r - \\vec{v}_m$, and the umbrella should be held along this relative velocity. For river crossing with swimmer speed $v$ in still water and river speed $u$, the shortest time comes from swimming perpendicular to the flow. That gives $t = \\frac{d}{v}$ with drift $\\frac{ud}{v}$. The shortest path (zero drift) comes from heading upstream at angle $\\theta$ with $\\sin\\theta = \\frac{u}{v}$, which requires $v > u$, giving $t = \\frac{d}{\\sqrt{v^2-u^2}}$.",
+      "key_points": [
+        "$\\vec{v}_{AB} = -\\vec{v}_{BA}$",
+        "Relative speed is the difference for the same direction and the sum for opposite directions",
+        "Hold the umbrella along the velocity of rain relative to the person",
+        "Minimum crossing time: head perpendicular to the flow",
+        "Zero drift is possible only if the swimmer's speed exceeds the river's speed",
+        "Relative acceleration is zero for two bodies in free fall, so their relative motion is uniform"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{v}_{AB} = \\vec{v}_A - \\vec{v}_B$",
+          "meaning": "Velocity of A relative to B"
+        },
+        {
+          "formula": "$t_{min} = \\frac{d}{v},\\ x = \\frac{ud}{v}$",
+          "meaning": "Shortest crossing time and downstream drift (river width $d$, swimmer speed $v$, river speed $u$)"
+        },
+        {
+          "formula": "$\\sin\\theta = \\frac{u}{v},\\ t = \\frac{d}{\\sqrt{v^2-u^2}}$",
+          "meaning": "Upstream heading angle and time for crossing along the shortest path"
+        }
+      ],
+      "neet_tip": "Classic NEET problems cover trains overtaking, rain and umbrella angles, and boat or river crossing.",
+      "topic": "Relative velocity"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "In 2D motion, position is $\\vec{r} = x\\hat{i}+y\\hat{j}$, velocity is $\\vec{v} = \\frac{d\\vec{r}}{dt}$ and acceleration is $\\vec{a} = \\frac{d\\vec{v}}{dt}$. Instantaneous velocity is always tangent to the path. The x and y motions are independent of each other and can be treated as two separate 1D problems sharing the same time $t$. For constant acceleration in a plane, the vector forms are $\\vec{v} = \\vec{v}_0 + \\vec{a}t$ and $\\vec{r} = \\vec{r}_0 + \\vec{v}_0t + \\frac{1}{2}\\vec{a}t^2$. Each of these splits into separate x and y equations. To find the path equation $y(x)$, eliminate $t$ between $x(t)$ and $y(t)$. Acceleration need not be along the velocity. The component of acceleration along $\\vec{v}$ changes the speed, and the component perpendicular to $\\vec{v}$ changes the direction.",
+      "key_points": [
+        "Perpendicular components of motion are independent",
+        "Velocity is always tangential to the trajectory",
+        "Constant-acceleration equations hold component-wise",
+        "Eliminate $t$ to get the trajectory equation",
+        "The tangential component of acceleration changes speed; the normal component changes direction"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{v} = \\frac{d\\vec{r}}{dt} = v_x\\hat{i}+v_y\\hat{j}$",
+          "meaning": "Velocity in 2D"
+        },
+        {
+          "formula": "$\\vec{v} = \\vec{v}_0+\\vec{a}t$",
+          "meaning": "Velocity under constant acceleration in a plane"
+        },
+        {
+          "formula": "$\\vec{r} = \\vec{r}_0+\\vec{v}_0t+\\frac{1}{2}\\vec{a}t^2$",
+          "meaning": "Position under constant acceleration in a plane"
+        }
+      ],
+      "neet_tip": "NEET gives $\\vec{r}(t)$ or $x(t)$, $y(t)$ and asks for the velocity, acceleration or path at a given instant.",
+      "topic": "Motion in a plane"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "A projectile launched with speed $u$ at angle $\\theta$, neglecting air resistance, has constant horizontal velocity $u\\cos\\theta$ and constant vertical acceleration $g$ downward. Its path is a parabola. The time of flight is $T = \\frac{2u\\sin\\theta}{g}$, the maximum height is $H = \\frac{u^2\\sin^2\\theta}{2g}$ and the range is $R = \\frac{u^2\\sin 2\\theta}{g}$. Maximum range, $\\frac{u^2}{g}$, occurs at $45^\\circ$. Complementary angles ($\\theta$ and $90^\\circ - \\theta$) give the same range. At the top, the velocity is $u\\cos\\theta$ (horizontal, minimum, but not zero) and the acceleration is still $g$. Two useful relations are $\\frac{H}{R} = \\frac{\\tan\\theta}{4}$ and $R = 4H$ at $\\theta = 76^\\circ$ approximately. For horizontal projection from height $h$, the time is $\\sqrt{\\frac{2h}{g}}$ (independent of $u$) and the range is $u\\sqrt{\\frac{2h}{g}}$.",
+      "key_points": [
+        "Horizontal velocity is constant; vertical motion is free fall",
+        "At the highest point, $v = u\\cos\\theta$, $a = g$, and $\\vec{v}$ is perpendicular to $\\vec{a}$",
+        "Complementary angles give equal ranges; their times of flight satisfy $T_1T_2 = \\frac{2R}{g}$",
+        "The range is maximum at $45^\\circ$, where $H_{max} = \\frac{R_{max}}{4}$",
+        "The time of fall for horizontal projection does not depend on the horizontal speed",
+        "Kinetic energy at the top is $K\\cos^2\\theta$, where $K$ is the initial kinetic energy"
+      ],
+      "formulas": [
+        {
+          "formula": "$T = \\frac{2u\\sin\\theta}{g}$",
+          "meaning": "Time of flight on level ground"
+        },
+        {
+          "formula": "$H = \\frac{u^2\\sin^2\\theta}{2g}$",
+          "meaning": "Maximum height"
+        },
+        {
+          "formula": "$R = \\frac{u^2\\sin2\\theta}{g}$",
+          "meaning": "Horizontal range; maximum value $\\frac{u^2}{g}$ at $45^\\circ$"
+        },
+        {
+          "formula": "$y = x\\tan\\theta-\\frac{gx^2}{2u^2\\cos^2\\theta}$",
+          "meaning": "Equation of trajectory (a parabola)"
+        },
+        {
+          "formula": "$\\frac{H}{R} = \\frac{\\tan\\theta}{4}$",
+          "meaning": "Ratio of maximum height to range"
+        },
+        {
+          "formula": "$t = \\sqrt{\\frac{2h}{g}},\\ R = u\\sqrt{\\frac{2h}{g}}$",
+          "meaning": "Time and range for horizontal projection from height $h$"
+        }
+      ],
+      "neet_tip": "Expect ratio questions (H/R, ranges at complementary angles), velocity or kinetic energy at the top, and horizontal projection from a cliff.",
+      "topic": "Projectile motion"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "In uniform circular motion, a body moves on a circle of radius $r$ with constant speed $v$. Its velocity keeps changing direction, so it is accelerated. The centripetal acceleration $a_c = \\frac{v^2}{r} = \\omega^2 r$ is always directed towards the centre. Its magnitude is constant, but its direction changes continuously, so it is not a constant vector. Angular velocity $\\omega = \\frac{d\\theta}{dt}$ is related to speed by $v = \\omega r$. Also $\\omega = \\frac{2\\pi}{T} = 2\\pi\\nu$, where $T$ is the time period and $\\nu$ the frequency. The velocity is tangential and perpendicular to the acceleration. As a result, the centripetal force does no work and kinetic energy stays constant. Over half a revolution, the change in velocity has magnitude $2v$. Over a full revolution, both the displacement and the average velocity are zero.",
+      "key_points": [
+        "Speed is constant, but velocity and acceleration change in direction",
+        "Centripetal acceleration points towards the centre and is perpendicular to the velocity",
+        "Work done by the centripetal force is zero",
+        "$v = \\omega r$; $\\omega$ is the same for all points of a rotating rigid body",
+        "The change in velocity after an angle $\\theta$ has magnitude $2v\\sin\\frac{\\theta}{2}$",
+        "If the speed also changes, the net acceleration is $\\sqrt{a_t^2+a_c^2}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$a_c = \\frac{v^2}{r} = \\omega^2 r$",
+          "meaning": "Centripetal acceleration magnitude"
+        },
+        {
+          "formula": "$v = \\omega r$",
+          "meaning": "Relation between linear and angular speed"
+        },
+        {
+          "formula": "$\\omega = \\frac{2\\pi}{T} = 2\\pi\\nu$",
+          "meaning": "Angular speed from the time period $T$ or frequency $\\nu$"
+        },
+        {
+          "formula": "$|\\Delta\\vec{v}| = 2v\\sin\\frac{\\theta}{2}$",
+          "meaning": "Magnitude of the change in velocity after turning through angle $\\theta$"
+        },
+        {
+          "formula": "$a = \\sqrt{a_t^2+a_c^2}$",
+          "meaning": "Net acceleration in non-uniform circular motion ($a_t$ tangential, $a_c$ centripetal)"
+        }
+      ],
+      "neet_tip": "Common questions: centripetal acceleration of a stone on a string given revolutions per minute, statements on constant quantities in UCM, and the change in velocity after a given angle.",
+      "topic": "Uniform circular motion"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$v_{avg} = \\frac{\\text{path length}}{\\text{time}},\\ \\vec{v}_{avg} = \\frac{\\Delta\\vec{r}}{\\Delta t}$",
+      "meaning": "Average speed (scalar) and average velocity (vector)"
+    },
+    {
+      "formula": "$v = \\frac{dx}{dt},\\ a = \\frac{dv}{dt} = v\\frac{dv}{dx}$",
+      "meaning": "Instantaneous velocity and acceleration"
+    },
+    {
+      "formula": "$v = u+at$",
+      "meaning": "Velocity under constant acceleration $a$; $u$ is initial velocity, $t$ is time"
+    },
+    {
+      "formula": "$s = ut+\\frac{1}{2}at^2$",
+      "meaning": "Displacement $s$ under constant acceleration"
+    },
+    {
+      "formula": "$v^2 = u^2+2as$",
+      "meaning": "Velocity-displacement relation for constant acceleration"
+    },
+    {
+      "formula": "$s_n = u+\\frac{a}{2}(2n-1)$",
+      "meaning": "Displacement in the $n$th second"
+    },
+    {
+      "formula": "$v_{avg} = \\frac{2v_1v_2}{v_1+v_2}$",
+      "meaning": "Average speed for equal distances covered at speeds $v_1$ and $v_2$"
+    },
+    {
+      "formula": "$R = \\sqrt{A^2+B^2+2AB\\cos\\theta}$",
+      "meaning": "Resultant of two vectors with angle $\\theta$ between them"
+    },
+    {
+      "formula": "$\\tan\\alpha = \\frac{B\\sin\\theta}{A+B\\cos\\theta}$",
+      "meaning": "Direction of the resultant relative to $\\vec{A}$"
+    },
+    {
+      "formula": "$\\vec{A}\\cdot\\vec{B} = AB\\cos\\theta = A_xB_x+A_yB_y+A_zB_z$",
+      "meaning": "Scalar product"
+    },
+    {
+      "formula": "$|\\vec{A}\\times\\vec{B}| = AB\\sin\\theta$",
+      "meaning": "Magnitude of the vector product; direction by the right-hand rule"
+    },
+    {
+      "formula": "$\\hat{A} = \\frac{\\vec{A}}{A}$",
+      "meaning": "Unit vector along $\\vec{A}$"
+    },
+    {
+      "formula": "$A_x = A\\cos\\theta,\\ A_y = A\\sin\\theta$",
+      "meaning": "Rectangular components; $\\theta$ is measured from the x-axis"
+    },
+    {
+      "formula": "$\\vec{v}_{AB} = \\vec{v}_A-\\vec{v}_B$",
+      "meaning": "Relative velocity of A with respect to B"
+    },
+    {
+      "formula": "$t_{min} = \\frac{d}{v},\\ \\sin\\theta = \\frac{u}{v}$",
+      "meaning": "River crossing: minimum time, and upstream angle for zero drift ($d$ width, $v$ swimmer speed, $u$ river speed)"
+    },
+    {
+      "formula": "$\\vec{r} = \\vec{r}_0+\\vec{v}_0t+\\frac{1}{2}\\vec{a}t^2$",
+      "meaning": "Position in 2D motion with constant acceleration"
+    },
+    {
+      "formula": "$T = \\frac{2u\\sin\\theta}{g}$",
+      "meaning": "Time of flight of a projectile"
+    },
+    {
+      "formula": "$H = \\frac{u^2\\sin^2\\theta}{2g}$",
+      "meaning": "Maximum height of a projectile"
+    },
+    {
+      "formula": "$R = \\frac{u^2\\sin2\\theta}{g}$",
+      "meaning": "Range of a projectile; maximum $\\frac{u^2}{g}$ at $\\theta = 45^\\circ$"
+    },
+    {
+      "formula": "$y = x\\tan\\theta-\\frac{gx^2}{2u^2\\cos^2\\theta}$",
+      "meaning": "Trajectory equation of a projectile"
+    },
+    {
+      "formula": "$t = \\sqrt{\\frac{2h}{g}},\\ R = u\\sqrt{\\frac{2h}{g}}$",
+      "meaning": "Horizontal projection from height $h$"
+    },
+    {
+      "formula": "$a_c = \\frac{v^2}{r} = \\omega^2r,\\ v = \\omega r$",
+      "meaning": "Uniform circular motion: centripetal acceleration and linear speed"
+    },
+    {
+      "formula": "$\\omega = \\frac{2\\pi}{T} = 2\\pi\\nu$",
+      "meaning": "Angular speed from time period $T$ or frequency $\\nu$"
+    }
+  ],
+  "common_traps": [
+    "Taking average speed equal to the magnitude of average velocity when the particle reverses direction. Find where $v = 0$ and add the distances piece by piece.",
+    "Using the arithmetic mean $\\frac{v_1+v_2}{2}$ for equal distances. That is correct only for equal time intervals; for equal distances use $\\frac{2v_1v_2}{v_1+v_2}$.",
+    "Applying $v = u+at$ and the other equations when acceleration varies with time. They hold only for constant acceleration; otherwise integrate.",
+    "Thinking velocity and acceleration are both zero at the top of vertical motion. Velocity is zero but acceleration remains $g$; for a projectile the speed at the top is $u\\cos\\theta$, not zero.",
+    "Believing uniform circular motion has zero or constant acceleration. The magnitude $\\frac{v^2}{r}$ is constant, but the direction changes, so acceleration is not constant.",
+    "Mixing up the sign conventions in vertical motion. Choose upward or downward as positive once and give $g$ the correct sign.",
+    "Holding the umbrella along the actual direction of the rain. It must be held along the velocity of rain relative to the person.",
+    "Treating $\\vec{A}\\times\\vec{B}$ and $\\vec{B}\\times\\vec{A}$ as equal. They are opposite in direction."
+  ],
+  "quick_revision": [
+    "Slope of $x$-$t$ gives $v$, slope of $v$-$t$ gives $a$, area under $v$-$t$ gives displacement, and area under $a$-$t$ gives the change in velocity.",
+    "Average speed is at least the magnitude of average velocity; they are equal only for unidirectional straight-line motion.",
+    "Starting from rest with uniform acceleration, distances in successive equal intervals are in the ratio $1:3:5:7$.",
+    "Stopping distance is proportional to $u^2$.",
+    "The resultant of $\\vec{A}$ and $\\vec{B}$ lies between $|A-B|$ and $A+B$; equal vectors at $120^\\circ$ give a resultant of equal magnitude.",
+    "The dot product is zero means perpendicular; the cross product is zero means parallel; $|\\vec{A}\\times\\vec{B}|$ is the parallelogram area.",
+    "$\\hat{i}\\times\\hat{j} = \\hat{k}$, $\\hat{j}\\times\\hat{k} = \\hat{i}$, $\\hat{k}\\times\\hat{i} = \\hat{j}$, in cyclic order.",
+    "Relative velocity: $\\vec{v}_{AB} = \\vec{v}_A-\\vec{v}_B$; for minimum crossing time head perpendicular to the flow, for zero drift head upstream with $\\sin\\theta = \\frac{u}{v}$.",
+    "Projectile: $T = \\frac{2u\\sin\\theta}{g}$, $H = \\frac{u^2\\sin^2\\theta}{2g}$, $R = \\frac{u^2\\sin2\\theta}{g}$; maximum range at $45^\\circ$, and complementary angles give equal ranges.",
+    "At the top of a projectile path, $v = u\\cos\\theta$, $a = g$, and kinetic energy is $K\\cos^2\\theta$.",
+    "Horizontal projection: the fall time $\\sqrt{\\frac{2h}{g}}$ is independent of the horizontal speed.",
+    "UCM: $a_c = \\frac{v^2}{r} = \\omega^2r$ towards the centre, $v = \\omega r$, $\\omega = 2\\pi\\nu$; the centripetal force does no work."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q006",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q6"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

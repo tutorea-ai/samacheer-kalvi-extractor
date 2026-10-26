@@ -1,0 +1,380 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u01",
+  "unit_no": 1,
+  "unit_name": "Some Basic Concepts in Chemistry",
+  "slug": "some-basic-concepts-in-chemistry",
+  "overview": "This unit sets up the quantitative language of chemistry: the nature and measurement of matter, Dalton's atomic theory, the laws of chemical combination, atomic and molecular masses, and the mole concept. These ideas are then used to find percentage composition, empirical and molecular formulae, and stoichiometric quantities. NEET asks 1-2 direct numerical questions from this unit every year, and mole-based reasoning is needed in almost every other physical chemistry chapter.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Matter is anything that has mass and occupies space. It exists as solid (definite shape and volume), liquid (definite volume only) or gas (neither definite). Matter is classified as pure substances or mixtures. Pure substances are elements or compounds and have a fixed composition. Mixtures are homogeneous (uniform composition, for example air or sugar solution) or heterogeneous (non-uniform, for example sand in water). Mixtures can be separated by physical methods, but compounds need chemical methods. Properties are physical (colour, density, melting point) or chemical (reactivity, combustibility). Measurements use SI units, which have seven base units: m, kg, s, A, K, cd and mol. Every measurement carries some uncertainty, which is expressed through significant figures. Precision means closeness of repeated readings to each other, while accuracy means closeness to the true value. Rounding follows a fixed rule. If the digit to be dropped is greater than 5, the preceding digit is increased by one. If it is less than 5, the preceding digit is unchanged. If it is exactly 5, the preceding digit is increased by one only when it is odd and left unchanged when it is even.",
+      "key_points": [
+        "Mixture: variable composition, separable by physical methods; compound: fixed composition, separable only chemically",
+        "Seven SI base units: metre, kilogram, second, ampere, kelvin, candela, mole",
+        "All non-zero digits are significant",
+        "Zeros between non-zero digits are significant",
+        "Leading zeros are not significant, e.g. $0.0034$ has 2 significant figures",
+        "Trailing zeros are significant only if a decimal point is present, e.g. $0.200$ has 3 significant figures",
+        "Exact numbers (counted objects, defined values) have infinite significant figures",
+        "In scientific notation $N \\times 10^n$, only the digits in $N$ are significant",
+        "Addition and subtraction: round the result to the least number of decimal places",
+        "Multiplication and division: round the result to the least number of significant figures",
+        "Rounding when the dropped digit is exactly 5: raise the preceding digit if odd, keep it if even"
+      ],
+      "formulas": [
+        {
+          "formula": "$d = \\frac{m}{V}$",
+          "meaning": "Density of a substance, in $g\\,cm^{-3}$ or $kg\\,m^{-3}$"
+        },
+        {
+          "formula": "$T(K) = t(^{\\circ}C) + 273.15$",
+          "meaning": "Converts Celsius to Kelvin"
+        },
+        {
+          "formula": "$^{\\circ}F = \\frac{9}{5}(^{\\circ}C) + 32$",
+          "meaning": "Converts Celsius to Fahrenheit"
+        }
+      ],
+      "neet_tip": "NEET asks about counting significant figures, the rounding-off rule (especially the 'dropped digit is 5' case) and classifying a substance as element, compound or type of mixture.",
+      "topic": "Matter and its nature"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "In 1808 John Dalton proposed his atomic theory, which has four main postulates. First, matter consists of indivisible atoms. Second, all atoms of an element are identical in mass and properties, while atoms of different elements differ. Third, compounds form when atoms of different elements combine in a fixed ratio. Fourth, chemical reactions only rearrange atoms; atoms are neither created nor destroyed. The theory was able to explain the laws of conservation of mass, definite proportions and multiple proportions. Key terms follow from this picture. An atom is the smallest particle of an element that can take part in a chemical reaction. A molecule is the smallest particle of a substance that can exist independently and has all its properties. An element contains only one kind of atom, for example $Na$, $H_2$, $O_3$ or $S_8$. A compound contains two or more kinds of atoms in a fixed ratio, for example $H_2O$ or $CO_2$. The theory has limitations. It cannot explain the law of gaseous volumes. Discoveries of subatomic particles showed that atoms are divisible. Isotopes showed that atoms of one element can differ in mass, and isobars showed that atoms of different elements can have the same mass.",
+      "key_points": [
+        "Dalton's theory explains conservation of mass, definite proportions and multiple proportions",
+        "Dalton's theory fails to explain Gay-Lussac's law of gaseous volumes",
+        "Isotopes (same element, different mass) contradict 'all atoms of an element are identical'",
+        "Discovery of electrons, protons and neutrons contradicts 'atoms are indivisible'",
+        "Monoatomic molecules: noble gases such as $He$ and $Ar$",
+        "Polyatomic elemental molecules: $O_3$, $P_4$, $S_8$",
+        "Molecules of compounds contain different atoms; atomicity of $NH_3$ is 4",
+        "Dalton's theory did not distinguish atoms from molecules; Avogadro's idea of molecules removed this gap"
+      ],
+      "formulas": [],
+      "neet_tip": "Expect statement-based questions on which postulate is incorrect or which law Dalton's theory could not explain.",
+      "topic": "Dalton's atomic theory: atom, molecule, element and compound"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Five laws govern chemical combination. The law of conservation of mass (Lavoisier) states that matter is neither created nor destroyed in a chemical reaction. The law of definite proportions (Proust) states that a given compound always contains the same elements in the same mass ratio, whatever its source. The law of multiple proportions (Dalton) states that when two elements form more than one compound, the masses of one element that combine with a fixed mass of the other are in a simple whole-number ratio. For example, in $H_2O$ and $H_2O_2$, the oxygen masses combining with 2 g of hydrogen are 16 g and 32 g, a ratio of 1:2. Gay-Lussac's law of gaseous volumes states that gases react, and gaseous products form, in simple whole-number volume ratios at the same temperature and pressure. For example, 2 volumes of $H_2$ react with 1 volume of $O_2$ to give 2 volumes of water vapour. Avogadro's law states that equal volumes of all gases at the same temperature and pressure contain equal numbers of molecules.",
+      "key_points": [
+        "Conservation of mass: Lavoisier (1789)",
+        "Definite proportions: Proust",
+        "Multiple proportions: Dalton (1803); always compare masses for a fixed mass of the other element",
+        "Typical multiple-proportion pairs: $CO$/$CO_2$, $H_2O$/$H_2O_2$, the oxides of nitrogen",
+        "Gay-Lussac's law is a volume relationship, applicable only to gases at the same T and P",
+        "Gay-Lussac's law is effectively the law of definite proportions applied to volumes",
+        "Avogadro distinguished atoms from molecules and explained Gay-Lussac's law",
+        "Volume ratio of gases = mole ratio = ratio of stoichiometric coefficients (same T, P)"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{Total mass of reactants} = \\text{Total mass of products}$",
+          "meaning": "Law of conservation of mass"
+        },
+        {
+          "formula": "$V \\propto n$ (constant $T$, $P$)",
+          "meaning": "Avogadro's law; gas volumes are proportional to number of moles"
+        }
+      ],
+      "neet_tip": "NEET gives mass data for two compounds of the same pair of elements and asks which law is illustrated, or matches each law with its scientist.",
+      "topic": "Laws of chemical combination"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Atomic masses are measured relative to the carbon-12 standard. One atomic mass unit (u) is defined as exactly one-twelfth of the mass of one $^{12}C$ atom, which equals $1.66056 \\times 10^{-24}$ g. Most elements occur as mixtures of isotopes. The atomic mass used in calculations is therefore an average atomic mass, weighted by natural abundance. Chlorine, for example, is about 75.77% $^{35}Cl$ and 24.23% $^{37}Cl$, giving an average of about 35.45 u. The molecular mass of a covalent molecule is the sum of the atomic masses of all its atoms; for $H_2O$ it is $2(1.008) + 16.00 = 18.02$ u. Ionic solids such as $NaCl$ do not contain discrete molecules. For them we use the formula mass, which is the sum of atomic masses in one formula unit; for $NaCl$ it is 58.5 u.",
+      "key_points": [
+        "$1\\,u = 1\\,amu = \\frac{1}{12}$ of the mass of one $^{12}C$ atom $= 1.66056 \\times 10^{-24}\\,g$",
+        "The mass of one $^{12}C$ atom is exactly 12 u",
+        "Average atomic mass depends on isotopic abundance, so it is usually non-integral",
+        "Molecular mass applies to covalent molecules",
+        "Formula mass applies to ionic compounds",
+        "Atomic and molecular masses are relative masses expressed in u",
+        "Mass of one atom in grams = atomic mass in u multiplied by $1.66 \\times 10^{-24}$ g, which equals $\\frac{\\text{molar mass}}{N_A}$",
+        "Mass spectrometry is used to determine isotopic masses and abundances"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\bar{A} = \\frac{\\sum (\\text{abundance}_i \\times m_i)}{\\sum \\text{abundance}_i}$",
+          "meaning": "Average atomic mass from isotopic masses and abundances"
+        },
+        {
+          "formula": "$M = \\sum (\\text{number of atoms} \\times \\text{atomic mass})$",
+          "meaning": "Molecular mass or formula mass"
+        },
+        {
+          "formula": "$\\text{Mass of 1 atom} = \\frac{\\text{Molar mass}}{N_A}$",
+          "meaning": "Absolute mass of a single atom or molecule in grams"
+        }
+      ],
+      "neet_tip": "NEET often asks for the average atomic mass from isotopic abundance data, or the absolute mass of one atom or molecule in grams.",
+      "topic": "Atomic and molecular masses"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "A mole is the amount of substance that contains exactly $6.02214076 \\times 10^{23}$ elementary entities, such as atoms, molecules, ions or electrons. This number is the Avogadro constant, $N_A$. Molar mass is the mass of one mole of a substance in grams. It is numerically equal to the atomic, molecular or formula mass in u; for example, $H_2O$ has a molar mass of 18.02 g mol$^{-1}$. The mole links three measurable quantities: mass, number of particles and gas volume. At STP (273.15 K, 1 bar), one mole of an ideal gas occupies 22.7 L. The older convention (273 K, 1 atm) uses 22.4 L, and NEET follows whichever value the question data indicate. Always specify the entity being counted. One mole of $O_2$ contains $N_A$ molecules but $2N_A$ oxygen atoms.",
+      "key_points": [
+        "$N_A = 6.022 \\times 10^{23}\\,mol^{-1}$",
+        "1 mole of any substance contains $N_A$ entities of that substance",
+        "Gram atomic mass: mass of 1 mol of atoms; gram molecular mass: mass of 1 mol of molecules",
+        "1 mol of $H_2SO_4$ contains 2 mol H, 1 mol S and 4 mol O",
+        "Molar volume at STP: 22.7 L (1 bar) or 22.4 L (1 atm), both at 273 K",
+        "Number of electrons, protons or ions = moles of substance × entities per formula × $N_A$",
+        "The mole concept applies to atoms, molecules, ions, electrons and even photons"
+      ],
+      "formulas": [
+        {
+          "formula": "$n = \\frac{m}{M}$",
+          "meaning": "Moles from given mass and molar mass"
+        },
+        {
+          "formula": "$n = \\frac{N}{N_A}$",
+          "meaning": "Moles from number of particles"
+        },
+        {
+          "formula": "$n = \\frac{V_{gas}}{22.7\\,L}$ (or $22.4\\,L$)",
+          "meaning": "Moles of a gas from its volume at STP"
+        },
+        {
+          "formula": "$N = n \\times N_A \\times \\text{atomicity}$",
+          "meaning": "Number of atoms in a given amount of molecules"
+        }
+      ],
+      "neet_tip": "NEET asks you to compare the number of atoms or molecules in different given masses, or to find the number of electrons or ions in a sample. Always convert everything to moles first.",
+      "topic": "Mole concept and molar mass"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Percentage composition gives the mass percentage of each element in a compound. It can be calculated from the formula and used to check the purity of a sample or to identify a compound. Take one mole of the compound and divide the mass of each element in it by the molar mass, then multiply by 100. For ethanol, $C_2H_5OH$ (molar mass 46.07 g mol$^{-1}$), carbon is $\\frac{24.02}{46.07} \\times 100 = 52.14\\%$. Hydrogen works out to 13.13% and oxygen to 34.73%. The percentages of all elements must add up to 100%. In experimental data, oxygen is often not given directly and is found as 100 minus the sum of the other percentages.",
+      "key_points": [
+        "Percentage composition is based on mass, not on number of atoms",
+        "The sum of all elemental percentages equals 100",
+        "Missing oxygen % = 100 − (sum of the other elements' %)",
+        "Percentage composition is the same for compounds sharing an empirical formula, e.g. $C_2H_2$ and $C_6H_6$",
+        "Use one mole of the compound as the calculation basis",
+        "Percentage composition is used to derive the empirical formula (next topic)"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\%\\,\\text{element} = \\frac{\\text{atoms of element in formula} \\times \\text{atomic mass}}{\\text{molar mass of compound}} \\times 100$",
+          "meaning": "Mass percent of an element in a compound"
+        }
+      ],
+      "neet_tip": "NEET asks for the mass percent of an element in a compound, or for the element with the highest percentage among several compounds.",
+      "topic": "Percentage composition"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "The empirical formula shows the simplest whole-number ratio of atoms in a compound. The molecular formula shows the actual number of each kind of atom in one molecule. The two are related by $\\text{Molecular formula} = n \\times \\text{Empirical formula}$, where n is a whole number. For example, glucose $C_6H_{12}O_6$ has the empirical formula $CH_2O$ with n = 6. To find an empirical formula from percentage composition, follow four steps. First, assume a 100 g sample, so each percentage becomes a mass in grams. Second, divide each mass by the atomic mass to get moles. Third, divide every mole value by the smallest one. Fourth, if the results are fractional (such as 1.5 or 1.33), multiply all of them by a small integer to obtain whole numbers. To get the molecular formula, divide the molar mass (from data, or from vapour density × 2) by the empirical formula mass to find n.",
+      "key_points": [
+        "Empirical formula = simplest whole-number atomic ratio",
+        "Molecular formula = actual atoms per molecule",
+        "Same empirical formula: $CH_2O$ for formaldehyde, acetic acid and glucose",
+        "Same empirical formula: $CH$ for acetylene and benzene",
+        "Ratio near 1.5: multiply all values by 2",
+        "Ratio near 1.33: multiply all values by 3",
+        "Ratio near 1.25: multiply all values by 4",
+        "Molar mass of a gas or vapour = 2 × vapour density",
+        "For ionic compounds the empirical formula is usually the formula used, e.g. $NaCl$"
+      ],
+      "formulas": [
+        {
+          "formula": "$n = \\frac{\\text{Molar mass}}{\\text{Empirical formula mass}}$",
+          "meaning": "Multiplier relating molecular and empirical formulae"
+        },
+        {
+          "formula": "$M = 2 \\times VD$",
+          "meaning": "Molar mass from vapour density"
+        },
+        {
+          "formula": "$\\text{Moles of element} = \\frac{\\%\\,\\text{element}}{\\text{atomic mass}}$",
+          "meaning": "Relative moles of each element in a 100 g sample"
+        }
+      ],
+      "neet_tip": "A common NEET question gives percentage composition plus molar mass (or vapour density) and asks for the molecular formula. Watch for ratios like 1.5 that need multiplying.",
+      "topic": "Empirical and molecular formulae"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "A balanced chemical equation shows reactants and products with equal numbers of each atom on both sides. Its coefficients give the mole ratios, and for gases at the same T and P they also give the volume ratios. Stoichiometry uses these ratios to relate amounts of reactants and products. The standard route is: convert the given mass or volume to moles, apply the mole ratio from the equation, then convert back to the quantity asked. For complete combustion of a hydrocarbon $C_xH_y$, each mole produces x moles of $CO_2$ and y/2 moles of $H_2O$. The limiting reagent is the reactant that is used up first, and it decides how much product forms. To find it, divide the moles of each reactant by its coefficient; the smallest value is limiting. NCERT also covers stoichiometry in solutions, which uses mass percent, mole fraction, molarity (M) and molality (m).",
+      "key_points": [
+        "Always balance the equation before using the coefficients",
+        "Coefficients give mole ratios, not mass ratios",
+        "Limiting reagent: smallest value of (moles available ÷ coefficient)",
+        "The excess reagent is left over after the reaction",
+        "Combustion: $C_xH_y + (x + \\frac{y}{4})O_2 \\rightarrow xCO_2 + \\frac{y}{2}H_2O$",
+        "Molarity depends on temperature, because volume changes with temperature",
+        "Molality and mole fraction are independent of temperature",
+        "Sum of the mole fractions of all components = 1",
+        "For gases at the same T and P, coefficient ratio = volume ratio",
+        "Percentage yield = (actual yield ÷ theoretical yield) × 100"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_xH_y + \\left(x + \\frac{y}{4}\\right)O_2 \\rightarrow xCO_2 + \\frac{y}{2}H_2O$",
+          "meaning": "General complete combustion of a hydrocarbon"
+        },
+        {
+          "formula": "$M = \\frac{n_{solute}}{V_{solution}(L)}$",
+          "meaning": "Molarity"
+        },
+        {
+          "formula": "$m = \\frac{n_{solute}}{W_{solvent}(kg)}$",
+          "meaning": "Molality"
+        },
+        {
+          "formula": "$x_A = \\frac{n_A}{n_A + n_B}$",
+          "meaning": "Mole fraction of component A"
+        },
+        {
+          "formula": "$\\text{Mass}\\,\\% = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 100$",
+          "meaning": "Mass percent of a solution"
+        },
+        {
+          "formula": "$M_1V_1 = M_2V_2$",
+          "meaning": "Dilution of a solution"
+        },
+        {
+          "formula": "$\\%\\,\\text{yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100$",
+          "meaning": "Efficiency of a reaction"
+        }
+      ],
+      "neet_tip": "NEET regularly asks for the mass of product (such as $CO_2$ from combustion of a hydrocarbon) or for the limiting reagent. Write the balanced equation first, then work with moles.",
+      "topic": "Chemical equations and stoichiometry"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$1\\,u = \\frac{1}{12}\\,m(^{12}C) = 1.66056 \\times 10^{-24}\\,g$",
+      "meaning": "Definition of the atomic mass unit"
+    },
+    {
+      "formula": "$N_A = 6.022 \\times 10^{23}\\,mol^{-1}$",
+      "meaning": "Avogadro constant"
+    },
+    {
+      "formula": "$n = \\frac{m}{M} = \\frac{N}{N_A} = \\frac{V_{STP}}{22.7\\,L}$",
+      "meaning": "Master mole relation (use 22.4 L for 1 atm, 273 K)"
+    },
+    {
+      "formula": "$\\bar{A} = \\frac{\\sum x_i m_i}{\\sum x_i}$",
+      "meaning": "Average atomic mass"
+    },
+    {
+      "formula": "$\\text{Mass of one particle} = \\frac{M}{N_A}$",
+      "meaning": "Absolute mass of an atom or molecule"
+    },
+    {
+      "formula": "$M = 2 \\times VD$",
+      "meaning": "Molar mass from vapour density"
+    },
+    {
+      "formula": "$\\%\\,\\text{element} = \\frac{\\text{mass of element in 1 mol}}{M} \\times 100$",
+      "meaning": "Percentage composition"
+    },
+    {
+      "formula": "$\\text{Molecular formula} = n \\times \\text{Empirical formula}$",
+      "meaning": "Relation between the two formulae"
+    },
+    {
+      "formula": "$n = \\frac{\\text{Molar mass}}{\\text{Empirical formula mass}}$",
+      "meaning": "Formula multiplier"
+    },
+    {
+      "formula": "$C_xH_y + \\left(x + \\frac{y}{4}\\right)O_2 \\rightarrow xCO_2 + \\frac{y}{2}H_2O$",
+      "meaning": "Hydrocarbon combustion stoichiometry"
+    },
+    {
+      "formula": "$\\text{Limiting reagent: smallest } \\frac{n_{available}}{\\text{coefficient}}$",
+      "meaning": "Identifies the reactant that controls the amount of product"
+    },
+    {
+      "formula": "$M = \\frac{n_{solute}}{V(L)}$",
+      "meaning": "Molarity (temperature dependent)"
+    },
+    {
+      "formula": "$m = \\frac{n_{solute}}{W_{solvent}(kg)}$",
+      "meaning": "Molality (temperature independent)"
+    },
+    {
+      "formula": "$x_A + x_B = 1$",
+      "meaning": "Mole fractions of a binary mixture"
+    },
+    {
+      "formula": "$M_1V_1 = M_2V_2$",
+      "meaning": "Dilution equation"
+    },
+    {
+      "formula": "$d = \\frac{m}{V}$",
+      "meaning": "Density"
+    },
+    {
+      "formula": "$T(K) = t(^{\\circ}C) + 273.15$",
+      "meaning": "Temperature conversion to kelvin"
+    },
+    {
+      "formula": "$^{\\circ}F = \\frac{9}{5}\\,^{\\circ}C + 32$",
+      "meaning": "Celsius to Fahrenheit"
+    },
+    {
+      "formula": "$\\text{Law of multiple proportions: masses of B per fixed mass of A in simple ratio}$",
+      "meaning": "Dalton; e.g. $H_2O$ and $H_2O_2$ give an oxygen ratio of 1:2"
+    },
+    {
+      "formula": "$V \\propto n$ (constant $T$, $P$)",
+      "meaning": "Avogadro's law; gas volume ratio = mole ratio"
+    },
+    {
+      "formula": "$\\%\\,\\text{yield} = \\frac{\\text{actual}}{\\text{theoretical}} \\times 100$",
+      "meaning": "Percentage yield"
+    }
+  ],
+  "common_traps": [
+    "Rounding a terminal 5 by always raising the previous digit. The correct rule: when the dropped digit is exactly 5, raise the preceding digit only if it is odd and keep it if it is even.",
+    "Counting trailing zeros as significant in numbers like 2500 with no decimal point. Trailing zeros are significant only when a decimal point is present, and leading zeros are never significant.",
+    "Confusing molecules with atoms. One mole of $O_3$ has $N_A$ molecules but $3N_A$ atoms, so always check which entity the question counts.",
+    "Using mass ratios directly from equation coefficients. Coefficients give mole ratios, so convert mass to moles first.",
+    "Taking the reactant with the smaller mass or smaller number of moles as the limiting reagent. Instead, compare moles divided by the stoichiometric coefficient.",
+    "Mixing the two molar volume values. Use 22.7 L at 1 bar and 273 K, or 22.4 L at 1 atm and 273 K, as indicated by the data or options.",
+    "Rounding mole ratios like 1.5 or 1.33 to the nearest integer when finding an empirical formula. Multiply all the ratios by 2 or 3 instead.",
+    "Treating molarity as temperature independent. Molarity changes with temperature because volume changes, whereas molality and mole fraction do not."
+  ],
+  "quick_revision": [
+    "Pure substances (elements, compounds) have fixed composition; mixtures are homogeneous or heterogeneous and separable by physical means.",
+    "There are seven SI base units, and the mole is the unit of amount of substance.",
+    "Significant figures: answers to addition and subtraction keep the least decimal places; answers to multiplication and division keep the least significant figures.",
+    "Dalton's theory explains the mass-based laws but not Gay-Lussac's law of gaseous volumes; isotopes and subatomic particles contradict it.",
+    "The five laws: conservation of mass (Lavoisier), definite proportions (Proust), multiple proportions (Dalton), gaseous volumes (Gay-Lussac) and Avogadro's law.",
+    "$1\\,u = 1.66 \\times 10^{-24}\\,g$, and the mass of one $^{12}C$ atom is exactly 12 u.",
+    "Average atomic mass is the abundance-weighted mean, which is why chlorine is about 35.5 u.",
+    "Master relation: $n = \\frac{m}{M} = \\frac{N}{N_A} = \\frac{V}{22.7\\,L}$ at STP.",
+    "Percentage composition is computed on a 1 mol basis, and all percentages add up to 100.",
+    "Empirical formula route: % → grams → moles → divide by smallest → whole numbers. Then molecular formula = n × empirical formula, with n = M ÷ empirical formula mass.",
+    "Stoichiometry: balance the equation, convert to moles, apply the mole ratio, then convert back. The limiting reagent decides the yield.",
+    "Molarity is temperature dependent; molality and mole fraction are temperature independent."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q051",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q51"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q063",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q63"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

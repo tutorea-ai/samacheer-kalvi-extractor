@@ -1,0 +1,14 @@
+{
+  "unit_id": "bio_u05",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[11].explanation",
+      "quote": "almost all blood constituents except proteins pass",
+      "problem": "Formed elements (RBCs, WBCs, platelets) are also blood constituents, and they are not filtered. NCERT says plasma constituents. As written, students may think blood cells enter the filtrate.",
+      "correction": "Almost all the constituents of the plasma except the proteins pass into the lumen of Bowman's capsule.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

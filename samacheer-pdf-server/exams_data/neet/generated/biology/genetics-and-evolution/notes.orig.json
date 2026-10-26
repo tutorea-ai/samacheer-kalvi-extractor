@@ -1,0 +1,515 @@
+{
+  "exam": "neet",
+  "subject": "biology",
+  "unit_id": "bio_u07",
+  "unit_no": 7,
+  "unit_name": "Genetics and Evolution",
+  "slug": "genetics-and-evolution",
+  "overview": "Genetics and Evolution covers how traits pass from parents to offspring, from Mendel's laws to the molecular basis of inheritance (DNA, replication, transcription, translation, gene regulation). It also covers how populations change over time, from the origin of life to human evolution. It is one of the highest-weightage Biology units in NEET, regularly giving 15-20 questions, mostly direct NCERT statements, crosses, numerical problems and match-the-following items.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Gregor Mendel worked on garden pea (Pisum sativum) from 1856 to 1863. He chose 7 pairs of contrasting traits and used true-breeding lines and large samples, then analysed results statistically. He called the inherited units factors; these are now called genes, and their alternative forms are alleles. In a monohybrid cross (tall TT x dwarf tt) all F1 plants are tall (Tt). F2 gives 3:1 phenotypically and 1:2:1 genotypically. His three principles are dominance, segregation and independent assortment. Segregation means alleles separate during gamete formation, so gametes are always pure. Independent assortment means a dihybrid cross gives 9:3:3:1 in F2. A test cross is a cross with the homozygous recessive and reveals the genotype of a dominant-looking plant. Mendel's work was rediscovered in 1900 by de Vries, Correns and von Tschermak.",
+      "key_points": [
+        "7 contrasting traits: stem height, flower colour, flower position, pod shape, pod colour, seed shape, seed colour",
+        "Monohybrid F2: phenotype 3:1, genotype 1:2:1",
+        "Dihybrid F2: phenotype 9:3:3:1, with 9 phenotypic and 4 parental-type classes reasoning based on independent segregation",
+        "Monohybrid test cross gives 1:1; dihybrid test cross gives 1:1:1:1",
+        "Law of segregation is universal; independent assortment applies only to unlinked genes",
+        "Punnett square was developed by Reginald C. Punnett",
+        "Dominance is a property of an allele pair and depends on the product each allele makes, not on the allele alone"
+      ],
+      "formulas": [
+        {
+          "formula": "$2^n$",
+          "meaning": "Number of gamete types, or F2 phenotypes under complete dominance, for n heterozygous gene pairs"
+        },
+        {
+          "formula": "$3^n$",
+          "meaning": "Number of F2 genotypes for n heterozygous gene pairs"
+        },
+        {
+          "formula": "$4^n$",
+          "meaning": "Number of F2 combinations (boxes in the Punnett square) for n gene pairs"
+        }
+      ],
+      "neet_tip": "Expect ratio-based crosses, test cross outcomes and assertion-reason items on why F1 shows only the dominant trait.",
+      "topic": "Mendelian inheritance"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Incomplete dominance occurs when the F1 heterozygote has an intermediate phenotype. In snapdragon (Antirrhinum), red RR x white rr gives pink Rr. The F2 phenotypic ratio then equals the genotypic ratio, 1:2:1. In co-dominance both alleles are fully expressed in the heterozygote; the ABO blood group $I^AI^B$ shows both A and B sugars. Multiple alleles means more than two alleles exist for one gene in a population, although any individual carries only two. Gene I has three alleles: $I^A$, $I^B$ and $i$. $I^A$ and $I^B$ are co-dominant to each other and both are dominant over $i$. This gives 6 genotypes and 4 blood groups. Pleiotropy means a single gene shows multiple phenotypic effects. One example is phenylketonuria, where a single gene mutation causes mental retardation and reduced hair and skin pigmentation. Another is the starch synthesis gene in pea, which affects both starch grain size and seed shape.",
+      "key_points": [
+        "Incomplete dominance: F2 phenotype and genotype ratios are both 1:2:1",
+        "Blood group A = $I^AI^A$ or $I^Ai$; B = $I^BI^B$ or $I^Bi$; AB = $I^AI^B$; O = $ii$",
+        "The ABO gene codes for a sugar polymer on the RBC plasma membrane; $i$ adds no sugar",
+        "Pea starch gene: BB gives large grains and round seeds; bb gives small grains and wrinkled seeds; Bb gives round seeds with intermediate grains",
+        "So seed shape shows dominance while grain size shows incomplete dominance; dominance depends on the phenotype chosen",
+        "An O-group child needs both parents to carry $i$; an $I^AI^B$ parent cannot have an O child"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{n(n+1)}{2}$",
+          "meaning": "Number of possible genotypes for n multiple alleles of a gene (n = 3 gives 6)"
+        }
+      ],
+      "neet_tip": "Blood group parentage questions, such as which parental genotypes cannot produce an O child, and pea starch grain pleiotropy are favourites.",
+      "topic": "Deviations from Mendelism: incomplete dominance, co-dominance, multiple alleles, blood groups, pleiotropy"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "In polygenic inheritance, a trait is controlled by three or more genes whose alleles act additively, and the environment also influences the trait. Such traits show continuous variation and a bell-shaped distribution rather than discrete classes. Human skin colour and height are classic examples. Consider skin colour controlled by three genes A, B and C, where each dominant allele adds one unit of pigment. The genotype AABBCC is darkest, aabbcc is lightest, and AaBbCc is intermediate. Phenotype depends on the number of dominant alleles present, not on which particular alleles they are. An F2 from AaBbCc x AaBbCc gives 7 phenotypic classes in the ratio 1:6:15:20:15:6:1. Polygenic inheritance is quantitative, unlike Mendel's qualitative traits.",
+      "key_points": [
+        "Multiple genes with additive (cumulative) effect",
+        "Continuous variation; graph is bell-shaped",
+        "Environment also modifies the phenotype",
+        "Examples: human skin colour, height",
+        "Polygenic (many genes, one trait) is the opposite of pleiotropy (one gene, many traits)"
+      ],
+      "formulas": [
+        {
+          "formula": "$2n+1$",
+          "meaning": "Number of phenotypic classes in F2 for n polygenes (n = 3 gives 7)"
+        },
+        {
+          "formula": "$\\left(\\frac{1}{4}\\right)^n$",
+          "meaning": "Fraction of F2 showing either extreme phenotype (n = 3 gives 1/64)"
+        }
+      ],
+      "neet_tip": "Usually asked as an identification of the example (skin colour) or as a count of phenotypic classes for a given number of genes.",
+      "topic": "Polygenic inheritance (elementary idea)"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Mendel's work stayed unrecognised for decades. Reasons include poor communication, a mathematical approach unfamiliar to biologists, and the absence of physical proof for his factors. By 1900, microscopy showed that chromosomes occur in pairs, segregate at meiosis and assort independently, exactly as Mendel's factors did. Walter Sutton and Theodore Boveri (1902) united chromosomal segregation with Mendelian principles in the chromosome theory of inheritance. The theory states that genes are located on chromosomes and that chromosome behaviour during meiosis explains segregation and independent assortment. Thomas Hunt Morgan provided experimental verification using the fruit fly Drosophila melanogaster. Drosophila is a convenient model because it can be grown on simple synthetic medium and completes its life cycle in about two weeks. A single mating produces many progeny, the sexes are clearly distinguishable, and it shows many hereditary variations visible under a low-power microscope.",
+      "key_points": [
+        "Genes lie on chromosomes in linear order",
+        "Homologous chromosomes pair and separate at anaphase I, which explains segregation",
+        "Non-homologous chromosome pairs orient independently at metaphase I, which explains independent assortment",
+        "Proposed by Sutton and Boveri, 1902; verified by T.H. Morgan using Drosophila",
+        "Both chromosomes and genes occur in pairs in diploid cells, and gametes receive one of each pair"
+      ],
+      "formulas": [],
+      "neet_tip": "Questions ask who proposed the theory versus who verified it, and why Drosophila is a suitable organism.",
+      "topic": "Chromosome theory of inheritance; chromosomes and genes"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Henking (1891) observed a nuclear structure he named the X body in some insects; it was later called the X chromosome. In XO types such as grasshopper, females are XX and males have a single X. Humans follow the XX-XY type, where the male is heterogametic: half the sperms carry X and half carry Y, while all eggs carry X. The sex of the child therefore depends on the sperm, so the father determines sex. Birds follow the ZW-ZZ type: females are ZW (heterogametic) and males are ZZ, so the mother determines sex. The honey bee shows haplodiploid sex determination. A fertilised egg (2n = 32) develops into a female, either a queen or a worker. An unfertilised egg develops by parthenogenesis into a haploid male drone (n = 16). Drones produce sperms by mitosis, have no father and cannot have sons, but they do have a grandfather.",
+      "key_points": [
+        "Humans: 22 pairs of autosomes plus XX (female) or XY (male); male heterogamety",
+        "Probability of a male child is 50% in every pregnancy",
+        "Birds: female ZW heterogametic, male ZZ",
+        "Grasshopper and many insects: XO type; males have one chromosome fewer",
+        "Honey bee: female 2n = 32, male drone n = 16; drone sperms form by mitosis",
+        "Queen and worker are both diploid; their difference is nutritional (royal jelly), not genetic"
+      ],
+      "formulas": [],
+      "neet_tip": "Match-the-following items on which sex is heterogametic in which organism, and honey bee drone facts, are common.",
+      "topic": "Sex determination in humans, birds and honey bee"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Morgan carried out dihybrid crosses in Drosophila involving X-linked genes, such as yellow body with white eyes crossed to brown body with red eyes. He found that F2 ratios deviated strongly from 9:3:3:1 and that parental combinations far outnumbered recombinants. He concluded that genes on the same chromosome tend to be inherited together, and he coined the term linkage for this physical association. He used recombination for the generation of non-parental combinations, which arise by crossing over between non-sister chromatids at pachytene of prophase I. Tightly linked genes show low recombination, while loosely linked genes show high recombination. Alfred Sturtevant, Morgan's student, used recombination frequency as a measure of the distance between genes. With this he constructed the first chromosome maps.",
+      "key_points": [
+        "Yellow-white genes: 1.3% recombination (tightly linked)",
+        "White-miniature genes: 37.2% recombination (loosely linked)",
+        "Recombination frequency is proportional to the distance between genes",
+        "1% recombination = 1 map unit (centiMorgan)",
+        "Crossing over occurs at pachytene, mediated by the enzyme recombinase",
+        "Complete linkage gives only parental types in a test cross"
+      ],
+      "formulas": [
+        {
+          "formula": "$RF = \\frac{\\text{number of recombinants}}{\\text{total progeny}} \\times 100$",
+          "meaning": "Percentage recombination, which equals map distance in cM"
+        }
+      ],
+      "neet_tip": "Questions focus on Morgan's percentages (1.3 and 37.2) and on the relation between recombination frequency and gene distance.",
+      "topic": "Linkage and crossing over"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Sex-linked traits are controlled by genes on the X chromosome. Males are hemizygous, so a single recessive X-linked allele expresses in them, while females usually remain heterozygous carriers. Haemophilia is X-linked recessive. A single protein in the cascade of proteins involved in blood clotting is affected, so a simple cut can cause non-stop bleeding. A carrier female transmits it to half her sons. A haemophilic female is very rare, because her mother must be at least a carrier and her father must be haemophilic; such females often do not survive to later stages of life. Queen Victoria was a carrier, and several of her descendants were haemophilic. Colour blindness is also X-linked recessive and involves defects in red or green cones of the eye. It occurs in about 8% of males but only about 0.4% of females. A daughter is colour blind only if her father is colour blind and her mother is at least a carrier.",
+      "key_points": [
+        "Criss-cross inheritance: a trait passes from an affected father through a carrier daughter to her son",
+        "Sons inherit their X from the mother, so an affected father never passes an X-linked trait to his son",
+        "Carrier mother x normal father gives 50% of sons affected and 50% of daughters carriers",
+        "Affected father x normal mother gives all daughters carriers and all sons normal",
+        "Pedigree symbols: square = male, circle = female, shaded = affected, double line = consanguineous mating"
+      ],
+      "formulas": [],
+      "neet_tip": "NEET tests probability calculations for children of carrier mothers and the incidence figures of colour blindness.",
+      "topic": "Sex-linked inheritance: haemophilia and colour blindness"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Mendelian disorders are caused by alteration or mutation of a single gene and follow Mendelian inheritance; pedigree analysis helps trace them. They may be dominant or recessive, and autosomal or sex-linked. Examples include haemophilia, cystic fibrosis, sickle-cell anaemia, colour blindness, phenylketonuria and thalassemia. Thalassemia is an autosomal recessive blood disease transmitted when both parents are unaffected carriers. A mutation or deletion reduces the synthesis of one of the globin chains of haemoglobin, producing abnormal haemoglobin and anaemia. Alpha thalassemia involves two closely linked genes, HBA1 and HBA2, on chromosome 16 of each parent. Mutation or deletion of one or more of these four genes reduces alpha chain production; the more genes affected, the less alpha globin is made. Beta thalassemia involves the single gene HBB on chromosome 11 of each parent, where mutation of one or both genes reduces beta chain production.",
+      "key_points": [
+        "Thalassemia is quantitative: too few globin chains are synthesised",
+        "Sickle-cell anaemia is qualitative: an incorrectly functioning globin is made",
+        "Sickle-cell: Glu replaced by Val at the 6th position of the beta chain (GAG becomes GUG); autosomal recessive",
+        "Phenylketonuria: autosomal recessive; missing enzyme converting phenylalanine to tyrosine",
+        "Alpha thalassemia: chromosome 16, four genes in total; beta thalassemia: chromosome 11, two genes in total",
+        "Two carrier parents have a 25% chance of an affected child"
+      ],
+      "formulas": [],
+      "neet_tip": "Expect chromosome-number matching (16 for alpha, 11 for beta) and the quantitative versus qualitative contrast with sickle-cell.",
+      "topic": "Mendelian disorders: thalassemia"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Chromosomal disorders are caused by the absence, excess or abnormal arrangement of one or more chromosomes. Failure of chromatids to segregate during cell division causes aneuploidy, the gain or loss of a chromosome. Failure of cytokinesis after telophase causes polyploidy, which is common in plants. Down's syndrome is trisomy of chromosome 21 (47 chromosomes), first described by Langdon Down in 1866. Affected persons are short with a small round head, a furrowed tongue and a partially open mouth, a characteristic palm crease, and retarded physical, psychomotor and mental development. Klinefelter's syndrome is 47, XXY: the person has an overall masculine development with some feminine features such as gynaecomastia, and is sterile. Turner's syndrome is 45, XO, caused by the absence of one X chromosome. Affected females are sterile because the ovaries are rudimentary, and they lack other secondary sexual characters.",
+      "key_points": [
+        "Down's: autosomal trisomy 21; 47 chromosomes; occurs in both sexes",
+        "Klinefelter's: 44 + XXY; male; sterile; gynaecomastia",
+        "Turner's: 44 + XO; female; sterile; rudimentary ovaries",
+        "Turner's is a monosomy, not an extra-chromosome condition",
+        "Aneuploidy is caused by non-disjunction; polyploidy by failure of cytokinesis"
+      ],
+      "formulas": [],
+      "neet_tip": "Statement-based questions swap the causes (extra copy versus missing X), so memorise the exact karyotype of each syndrome.",
+      "topic": "Chromosomal disorders: Down's, Turner's and Klinefelter's syndromes"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Frederick Griffith (1928) worked with Streptococcus pneumoniae and mice. The S strain has a mucous capsule and is virulent, while the R strain is non-virulent. Heat-killed S strain mixed with live R strain killed the mice, and live S bacteria were recovered from them. Griffith called this transformation, caused by a transforming principle, but did not identify it. Oswald Avery, Colin MacLeod and Maclyn McCarty (1933-44) purified the components and showed that the transforming principle is DNA. Proteases and RNases did not stop transformation, but DNase did. Hershey and Chase (1952) grew bacteriophages with radioactive $^{32}P$ (labels DNA) or $^{35}S$ (labels protein). After infection and blending, only $^{32}P$ was found inside the bacteria, proving that DNA is the genetic material. A genetic material must replicate, be chemically and structurally stable, allow slow mutation, and express itself as Mendelian characters.",
+      "key_points": [
+        "Griffith: transformation discovered, nature of the principle unknown",
+        "Avery, MacLeod and McCarty: biochemical proof that DNA is the transforming principle",
+        "Hershey-Chase: unequivocal proof using phage; $^{32}P$ for DNA, $^{35}S$ for protein",
+        "Protein has no phosphorus; DNA has no sulphur",
+        "RNA was the first genetic material, giving an RNA world",
+        "DNA is more stable than RNA because it lacks the 2'-OH group and has thymine instead of uracil",
+        "RNA is catalytic and mutates faster, which suits RNA viruses"
+      ],
+      "formulas": [],
+      "neet_tip": "Match scientists with experiments, and know which isotope labels which molecule in the Hershey-Chase experiment.",
+      "topic": "Search for genetic material; DNA as genetic material"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "A nucleotide has three parts: a nitrogenous base, a pentose sugar and a phosphate. A base joined to a sugar by an N-glycosidic linkage forms a nucleoside. Adding phosphate by a phosphoester linkage forms a nucleotide, and nucleotides join by 3'-5' phosphodiester bonds. Purines are A and G; pyrimidines are C, T (in DNA) and U (in RNA). Watson and Crick (1953) proposed the double helix using X-ray diffraction data from Wilkins and Rosalind Franklin. In this model, two antiparallel polynucleotide chains form a right-handed helix with sugar-phosphate backbones outside and bases inside. A pairs with T through 2 hydrogen bonds, and G pairs with C through 3. The pitch is 3.4 nm, with about 10 bp per turn and 0.34 nm between base pairs. Chargaff's rule states A = T and G = C. In eukaryotes, negatively charged DNA wraps around a positively charged histone octamer (rich in lysine and arginine) to form nucleosomes of about 200 bp. These appear as beads-on-string and coil further into chromatin fibres.",
+      "key_points": [
+        "Human DNA: $6.6 \\times 10^9$ bp, about 2.2 m long",
+        "E. coli: $4.6 \\times 10^6$ bp; phi X174: 5386 nucleotides; lambda phage: 48502 bp",
+        "Prokaryotic DNA is held in a nucleoid by positively charged proteins",
+        "Histone octamer: two each of H2A, H2B, H3, H4; H1 is the linker histone",
+        "Non-histone chromosomal (NHC) proteins are needed for higher-order packaging",
+        "Euchromatin is loosely packed, light-staining and transcriptionally active; heterochromatin is densely packed, dark-staining and inactive",
+        "RNA is single-stranded, contains ribose and uracil, and occurs as mRNA, tRNA and rRNA"
+      ],
+      "formulas": [
+        {
+          "formula": "$A + G = T + C$, i.e. $\\frac{A+G}{T+C} = 1$",
+          "meaning": "Chargaff's rule for double-stranded DNA; used to find the percentage of other bases"
+        },
+        {
+          "formula": "$L = \\text{bp} \\times 0.34 \\times 10^{-9}\\,m$",
+          "meaning": "Length of a DNA double helix from its number of base pairs"
+        }
+      ],
+      "neet_tip": "Numericals on base percentage and DNA length, plus histone and nucleosome facts, are frequently asked.",
+      "topic": "Structure of DNA and RNA; DNA packaging"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "Watson and Crick proposed that DNA replication is semiconservative: each daughter duplex contains one parental and one new strand. Meselson and Stahl (1958) proved this in E. coli. They grew cells in $^{15}NH_4Cl$, transferred them to $^{14}N$ medium, and analysed the DNA by CsCl density gradient centrifugation. After 20 minutes (one generation) all DNA was hybrid. After 40 minutes, hybrid and light DNA were present in equal amounts. Taylor showed the same in Vicia faba using radioactive thymidine. Replication starts at a definite origin and proceeds through a replication fork. DNA-dependent DNA polymerase adds nucleotides only in the $5' \\rightarrow 3'$ direction. Synthesis is therefore continuous on the leading strand (template $3' \\rightarrow 5'$). On the lagging strand it is discontinuous, producing Okazaki fragments that DNA ligase joins. Deoxyribonucleoside triphosphates act both as substrates and as the energy source. In eukaryotes, replication occurs in the S phase.",
+      "key_points": [
+        "E. coli replicates $4.6 \\times 10^6$ bp in about 18 minutes, roughly 2000 bp per second",
+        "DNA polymerase cannot initiate replication on its own and works only $5' \\rightarrow 3'$",
+        "Unwinding of the helix opens a replication fork",
+        "Lagging strand: discontinuous synthesis, Okazaki fragments, joined by DNA ligase",
+        "Failure of cell division after replication results in polyploidy",
+        "After n generations in $^{14}N$, hybrid DNA = 2 molecules out of $2^n$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{2}{2^n}$",
+          "meaning": "Fraction of hybrid ($^{15}N$-$^{14}N$) DNA after n generations in light medium (Meselson-Stahl)"
+        }
+      ],
+      "neet_tip": "Meselson-Stahl generation fractions and leading versus lagging strand features are standard questions.",
+      "topic": "DNA replication"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Crick's central dogma states that genetic information flows from DNA to RNA to protein. In retroviruses, reverse transcription (RNA to DNA) also occurs. A transcription unit has a promoter (towards the 5' end of the coding strand), a structural gene and a terminator. The template strand has $3' \\rightarrow 5'$ polarity. The coding strand has the same sequence as the RNA except that T is replaced by U. Bacteria have one RNA polymerase, which uses the sigma factor for initiation and the rho factor for termination. Eukaryotes have three nuclear RNA polymerases. They have split genes: hnRNA undergoes splicing (introns removed), capping (methyl guanosine triphosphate added at the 5' end) and tailing (200-300 adenylates added at the 3' end). The genetic code is triplet, with 64 codons: 61 code for amino acids and 3 (UAA, UAG, UGA) are stop codons. AUG codes for methionine and is the start codon. The code is unambiguous, degenerate, comma-less and nearly universal. During translation, tRNA carries amino acids to the ribosome, where rRNA catalyses peptide bonds.",
+      "key_points": [
+        "RNA polymerase I makes rRNAs 28S, 18S and 5.8S; RNA polymerase II makes hnRNA (precursor mRNA); RNA polymerase III makes tRNA, 5S rRNA and snRNAs",
+        "Prokaryotic transcription and translation are coupled because mRNA needs no processing",
+        "George Gamow proposed the triplet code; Khorana synthesised RNA with defined base combinations; Nirenberg used a cell-free system; Severo Ochoa's enzyme polynucleotide phosphorylase polymerises RNA without a template",
+        "UUU codes for phenylalanine",
+        "tRNA is the adapter molecule: cloverleaf in 2D, inverted L in 3D, with an anticodon loop",
+        "Charging (aminoacylation) of tRNA uses ATP",
+        "23S rRNA in bacteria acts as a ribozyme (peptidyl transferase)",
+        "UTRs lie before the start codon and after the stop codon; a release factor binds the stop codon"
+      ],
+      "formulas": [
+        {
+          "formula": "$4^3 = 64$",
+          "meaning": "Total number of triplet codons"
+        }
+      ],
+      "neet_tip": "Questions ask which RNA polymerase makes which RNA, the properties of the code, and the scientists behind deciphering it.",
+      "topic": "Central dogma, transcription, genetic code and translation"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "Gene expression can be regulated at transcription, processing or splicing, transport of mRNA, and translation; in prokaryotes, control of transcription initiation is predominant. The lac operon of E. coli was described by Francois Jacob and Jacques Monod. It has a regulator gene i, which codes for a repressor and is constitutively expressed from its own promoter. It also has a promoter, an operator, and three structural genes. Gene z codes for beta-galactosidase, which hydrolyses lactose into galactose and glucose. Gene y codes for permease, which increases cell permeability to lactose. Gene a codes for transacetylase. When lactose is absent, the repressor binds the operator and blocks RNA polymerase. When lactose (the inducer) is present, it binds the repressor and inactivates it, so RNA polymerase transcribes z, y and a as one polycistronic mRNA. This is negative regulation. A very low level of operon expression always exists so that some lactose can enter the cell.",
+      "key_points": [
+        "Lactose (or allolactose) is the inducer; it inactivates the repressor, it does not activate it",
+        "The i gene is not part of the z, y, a transcription unit and has its own promoter",
+        "z, y and a share a single promoter and form a polycistronic mRNA",
+        "Galactose and glucose are products, not inducers",
+        "The operon is switched off again once lactose is used up",
+        "The lac operon is an inducible operon under negative control by the repressor"
+      ],
+      "formulas": [],
+      "neet_tip": "Statement items check whether the i gene is constitutive, what the inducer is, and which genes share a promoter.",
+      "topic": "Gene expression and regulation: lac operon"
+    },
+    {
+      "topic_index": 14,
+      "explanation": "The genome is the complete DNA content of an organism. The Human Genome Project (HGP) was launched in 1990 and completed in 2003, coordinated by the US Department of Energy and NIH with the Wellcome Trust (UK). It used two approaches: Expressed Sequence Tags, which identify genes expressed as RNA, and sequence annotation, which sequences the whole genome and then assigns functions. DNA fragments were cloned in BAC and YAC vectors and sequenced on automated sequencers based on Sanger's method. DNA fingerprinting was developed by Alec Jeffreys. It uses Variable Number of Tandem Repeats (VNTRs), a type of satellite DNA that shows high polymorphism. The steps are DNA isolation, digestion with restriction endonucleases, gel electrophoresis, Southern blotting, hybridisation with a labelled VNTR probe, and autoradiography. Its main uses are forensics and paternity testing.",
+      "key_points": [
+        "Human genome: about $3 \\times 10^9$ bp (3164.7 million nucleotide bases)",
+        "Average gene: 3000 bases; largest is dystrophin at 2.4 million bases",
+        "About 30,000 genes; 99.9% of bases are identical among all humans",
+        "Less than 2% of the genome codes for proteins; repeated sequences form a large portion",
+        "Functions of over 50% of discovered genes are unknown",
+        "Chromosome 1 has the most genes (2968) and Y the fewest (231)",
+        "About 1.4 million SNPs identified",
+        "VNTR size ranges from 0.1 to 20 kb; PCR amplifies DNA from tiny samples"
+      ],
+      "formulas": [],
+      "neet_tip": "Expect HGP statistics and the correct sequence of DNA fingerprinting steps.",
+      "topic": "Genome, Human Genome Project and DNA fingerprinting"
+    },
+    {
+      "topic_index": 15,
+      "explanation": "According to the Big Bang theory, the universe originated about 20 billion years ago, and Earth formed about 4.5 billion years ago. Life appeared roughly 500 million years later. Early theories included special creation and spontaneous generation; Louis Pasteur disproved spontaneous generation with swan-neck flask experiments. The panspermia idea held that spores reached Earth from outer space. Oparin of Russia and Haldane of England proposed chemical evolution: the first life formed from pre-existing non-living organic molecules under a reducing early atmosphere. In 1953 Stanley Miller created electric discharge in a closed flask containing $CH_4$, $H_2$, $NH_3$ and water vapour at 800 degrees C, and he obtained amino acids. The first non-cellular forms of life probably arose about 3 billion years ago. The first cellular forms appeared about 2000 million years ago.",
+      "key_points": [
+        "Early atmosphere was reducing: $CH_4$, $NH_3$, $H_2$, water vapour; free $O_2$ absent",
+        "Miller's experiment gave amino acids; others observed sugars, nitrogen bases, pigments and fats",
+        "Pasteur: life comes only from pre-existing life",
+        "Oparin-Haldane theory: chemical evolution preceded biological evolution",
+        "The first life forms were probably giant molecules such as RNA, proteins and polysaccharides that could reproduce"
+      ],
+      "formulas": [],
+      "neet_tip": "Questions target the gases used and the temperature in Miller's experiment, and who proposed which theory.",
+      "topic": "Origin of life"
+    },
+    {
+      "topic_index": 16,
+      "explanation": "Paleontological evidence comes from fossils in sedimentary rock layers, which show that life forms changed over time. Comparative anatomy provides two kinds of evidence. Homologous organs share the same structure and origin but perform different functions; examples are the forelimbs of whale, bat, cheetah and human, and Bougainvillea thorns compared with Cucurbita tendrils. These indicate divergent evolution. Analogous organs perform similar functions but differ in structure and origin; examples are the wings of butterfly and bird, the eyes of octopus and mammals, the flippers of penguin and dolphin, and sweet potato (a root) compared with potato (a stem). These indicate convergent evolution. Ernst Haeckel proposed embryological support, citing vestigial gill slits in all vertebrate embryos. Karl Ernst von Baer disapproved this, noting that embryos never pass through the adult stages of other animals. Biochemical similarities in proteins and genes also support common ancestry.",
+      "key_points": [
+        "Homology indicates divergent evolution; analogy indicates convergent evolution",
+        "Heart and brain of vertebrates are also homologous",
+        "Industrial melanism in the peppered moth Biston betularia, England: before industrialisation white moths outnumbered dark ones; after it the reverse",
+        "Lichens are industrial pollution indicators",
+        "Antibiotic, herbicide and pesticide resistance are evolution through anthropogenic action",
+        "Haeckel's embryological evidence is the version NCERT treats as disapproved"
+      ],
+      "formulas": [],
+      "neet_tip": "Classify examples as homologous or analogous, and remember that Haeckel's embryological evidence was disapproved by von Baer.",
+      "topic": "Evidences for biological evolution"
+    },
+    {
+      "topic_index": 17,
+      "explanation": "Lamarck proposed evolution through the use and disuse of organs and the inheritance of acquired characters, illustrated by the giraffe's long neck; this view is now rejected. Charles Darwin sailed around the world on HMS Beagle and studied fauna such as the Galapagos finches. He concluded that existing living forms share similarities with each other and with forms that existed millions of years ago. His theory has two key concepts, branching descent and natural selection. Fitness means reproductive fitness: the fitter individuals leave more progeny. Alfred Wallace, working in the Malay Archipelago, reached similar conclusions. Darwin was influenced by Malthus's ideas on population. Hugo de Vries, working on evening primrose (Oenothera lamarckiana), proposed that mutation causes evolution. He described saltation as large, single-step mutations, whereas Darwin's variations were small and directional. The modern synthetic theory combines Darwinian selection with genetics.",
+      "key_points": [
+        "Darwin: variation, overproduction, struggle for existence, survival of the fittest, natural selection",
+        "Darwinian variations are small and directional; mutations are random and directionless",
+        "de Vries: mutation theory, saltation, Oenothera lamarckiana",
+        "Synthetic theory factors: gene mutation, recombination, gene flow, genetic drift, natural selection",
+        "Darwin could not explain the source of variation; genetics later supplied it"
+      ],
+      "formulas": [],
+      "neet_tip": "Match the scientist with the plant, animal or concept: de Vries with evening primrose, Lamarck with giraffe, Darwin with finches.",
+      "topic": "Darwin's contribution and modern synthetic theory"
+    },
+    {
+      "topic_index": 18,
+      "explanation": "Evolution is a stochastic process based on chance events in nature and chance mutations in organisms. Variation arises through mutation, recombination during gametogenesis, and gene flow. Natural selection acts on heritable variation: individuals that are better fitted leave more offspring, so their alleles increase over generations. Selection on a continuously varying trait can produce three outcomes. Stabilising selection favours individuals with the average value, so the peak becomes higher and narrower. Directional selection favours one extreme, so the peak shifts in one direction. Disruptive selection favours both extremes over the mean, producing two peaks. Lederberg's replica plating showed that mutations pre-exist in a population and are not induced by the environment. Bacteria grown on antibiotic medium reveal pre-existing resistant forms within days, which shows evolution on a short timescale.",
+      "key_points": [
+        "Stabilising: more individuals acquire the mean character value; variation decreases",
+        "Directional: more individuals acquire a value other than the mean, at one extreme",
+        "Disruptive: more individuals acquire peripheral values at both ends; two peaks",
+        "Genetic drift is a chance change in allele frequency and is not a type of natural selection",
+        "Natural selection is the main driving force of adaptive change"
+      ],
+      "formulas": [],
+      "neet_tip": "Match graphs with the type of selection, and note that drift is not an outcome of natural selection.",
+      "topic": "Mechanism of evolution: variation and natural selection; types of natural selection"
+    },
+    {
+      "topic_index": 19,
+      "explanation": "The Hardy-Weinberg principle states that allele and genotype frequencies in a population stay constant from generation to generation when no evolutionary force acts. The total of all genes and alleles in a population is the gene pool, and its stability is called genetic equilibrium. With two alleles of frequencies p and q, $p + q = 1$, and the genotype frequencies are $p^2$ (AA), $2pq$ (Aa) and $q^2$ (aa). Five factors disturb this equilibrium: gene migration (gene flow), genetic drift, mutation, genetic recombination and natural selection. Gene flow is the movement of alleles between populations when individuals migrate. Genetic drift is a chance change in allele frequency and is strongest in small populations. In the founder effect, a small group that colonises a new area becomes genetically different from the original population and may become a new species. A disturbed equilibrium indicates evolution.",
+      "key_points": [
+        "Equilibrium conditions: large population, random mating, no mutation, no migration, no selection",
+        "Founder effect: the colonisers are called founders",
+        "Bottleneck effect: a drastic reduction in population size, also a form of drift",
+        "If $q^2$ is known, take its square root to get q",
+        "Carrier (heterozygote) frequency is $2pq$"
+      ],
+      "formulas": [
+        {
+          "formula": "$p + q = 1$",
+          "meaning": "Allele frequencies for two alleles"
+        },
+        {
+          "formula": "$p^2 + 2pq + q^2 = 1$",
+          "meaning": "Genotype frequencies of AA, Aa and aa at equilibrium"
+        }
+      ],
+      "neet_tip": "Numericals give p, q or $q^2$ and ask for a genotype frequency; for example, p = 0.1 gives AA = 0.01.",
+      "topic": "Gene flow, genetic drift and Hardy-Weinberg principle"
+    },
+    {
+      "topic_index": 20,
+      "explanation": "Adaptive radiation is the evolution of different species in a geographical area, starting from one point and radiating into other habitats. Darwin's finches on the Galapagos Islands are the classic example. A seed-eating ancestral finch gave rise to many forms with altered beaks, including insectivorous and vegetarian types. Australian marsupials are another example: many different marsupials evolved from a common ancestral stock within the Australian island continent. Both are examples of divergent evolution. When more than one adaptive radiation appears to have occurred in an isolated geographical area, representing different habitats, the result can be called convergent evolution. Australian placental mammals show adaptive radiation into forms that each resemble a corresponding marsupial. Examples include the placental wolf and the Tasmanian wolf, and the flying squirrel and the flying phalanger.",
+      "key_points": [
+        "Adaptive radiation from a single ancestor is divergent evolution",
+        "Similarity between placental mammals and marsupials in Australia is convergent evolution",
+        "Pairs: placental wolf and Tasmanian wolf; flying squirrel and flying phalanger; mole and marsupial mole; anteater and numbat; lemur and spotted cuscus; bobcat and Tasmanian tiger cat",
+        "Darwin's finches show variation in beak type according to food habit"
+      ],
+      "formulas": [],
+      "neet_tip": "NEET asks whether a given radiation example is divergent or convergent evolution.",
+      "topic": "Adaptive radiation"
+    },
+    {
+      "topic_index": 21,
+      "explanation": "About 15 million years ago, Dryopithecus and Ramapithecus existed. They were hairy and walked like gorillas and chimpanzees; Ramapithecus was more man-like and Dryopithecus more ape-like. About 2 million years ago, australopithecines probably lived in East African grasslands. They hunted with stone weapons but essentially ate fruit. Homo habilis, the first human-like being, had a brain capacity of 650-800 cc and probably did not eat meat. Homo erectus, about 1.5 million years ago, had a brain of 900 cc and probably ate meat; its fossils were discovered in Java in 1891. Neanderthal man, with a brain of 1400 cc, lived in the Near East and Central Asia between 1,00,000 and 40,000 years ago. Neanderthals used hides to protect the body and buried their dead. Homo sapiens arose in Africa and moved across continents. During the ice age, between 75,000 and 10,000 years ago, modern Homo sapiens arose.",
+      "key_points": [
+        "Sequence: Dryopithecus/Ramapithecus, then Australopithecus, Homo habilis, Homo erectus, Neanderthal and Homo sapiens",
+        "Brain capacity: H. habilis 650-800 cc; H. erectus 900 cc; Neanderthal 1400 cc",
+        "Prehistoric cave art developed about 18,000 years ago (Bhimbetka, Madhya Pradesh)",
+        "Agriculture began about 10,000 years ago, along with human settlements",
+        "Homo sapiens originated in Africa, not Australia or Asia"
+      ],
+      "formulas": [],
+      "neet_tip": "Statement items test the place of origin (Africa), the 75,000-10,000 years window and brain capacities.",
+      "topic": "Human evolution"
+    }
+  ],
+  "key_facts": [
+    "Mendel studied 7 pairs of contrasting characters in garden pea between 1856 and 1863.",
+    "Mendel's laws were rediscovered in 1900 by de Vries, Correns and von Tschermak.",
+    "ABO blood group has 3 alleles, 6 genotypes and 4 phenotypes; $I^A$ and $I^B$ are co-dominant.",
+    "Morgan's Drosophila data: yellow-white recombination 1.3%, white-miniature 37.2%.",
+    "Honey bee: female 2n = 32, male drone n = 16, and the drone has no father.",
+    "Colour blindness occurs in about 8% of males and about 0.4% of females.",
+    "Alpha thalassemia genes HBA1 and HBA2 lie on chromosome 16; the beta thalassemia gene HBB lies on chromosome 11.",
+    "Down's syndrome is trisomy 21 (Langdon Down, 1866); Klinefelter's is 47, XXY; Turner's is 45, XO.",
+    "Hershey and Chase used $^{32}P$ to label DNA and $^{35}S$ to label protein in bacteriophage.",
+    "DNA double helix: pitch 3.4 nm, 10 bp per turn, 0.34 nm between base pairs.",
+    "Human haploid genome is $3 \\times 10^9$ bp; diploid DNA is $6.6 \\times 10^9$ bp and about 2.2 m long.",
+    "A nucleosome contains about 200 bp of DNA wrapped around a histone octamer.",
+    "Meselson and Stahl (1958) used $^{15}N$ and CsCl density gradient centrifugation; E. coli divides every 20 minutes.",
+    "E. coli replicates $4.6 \\times 10^6$ bp in about 18 minutes, roughly 2000 bp per second.",
+    "RNA polymerase I makes rRNA (28S, 18S, 5.8S); II makes hnRNA; III makes tRNA, 5S rRNA and snRNA.",
+    "Of 64 codons, 61 code for amino acids and 3 are stop codons: UAA, UAG, UGA. AUG is the start codon.",
+    "Lac operon structural genes: z (beta-galactosidase), y (permease), a (transacetylase).",
+    "HGP ran from 1990 to 2003; about 30,000 genes; dystrophin is the largest gene at 2.4 million bases.",
+    "Chromosome 1 has the most genes (2968) and the Y chromosome the fewest (231).",
+    "DNA fingerprinting was developed by Alec Jeffreys using VNTR probes.",
+    "Miller (1953) used $CH_4$, $NH_3$, $H_2$ and water vapour at 800 degrees C with electric discharge.",
+    "Earth is about 4.5 billion years old; the universe is about 20 billion years old.",
+    "Industrial melanism was seen in the peppered moth Biston betularia in England.",
+    "Hugo de Vries worked on Oenothera lamarckiana and proposed saltation.",
+    "Homo erectus fossils were found in Java in 1891; brain capacity 900 cc.",
+    "Modern Homo sapiens arose in Africa during the ice age, between 75,000 and 10,000 years ago."
+  ],
+  "common_traps": [
+    "Thinking lactose activates the repressor: the inducer actually inactivates the repressor, which frees the operator for transcription.",
+    "Assuming the i gene shares the z, y, a promoter: the i gene has its own promoter and is constitutively expressed.",
+    "Calling Turner's syndrome trisomic or Down's syndrome an X-chromosome defect: Turner's is 45, XO (missing X) and Down's is autosomal trisomy 21.",
+    "Listing genetic drift as an outcome of natural selection: natural selection is stabilising, directional or disruptive, while drift is a separate chance process.",
+    "Writing 2p or $p^2$ for the heterozygote: in Hardy-Weinberg, AA = $p^2$, Aa = $2pq$ and aa = $q^2$.",
+    "Treating Australian placental-marsupial similarity as divergent evolution: radiation within one lineage is divergent, but the placental-marsupial resemblance is convergent.",
+    "Assuming an affected father passes an X-linked trait to his son: sons get their X from the mother, so the father passes it only to daughters.",
+    "Considering Haeckel's embryological evidence valid: NCERT states it was disapproved by Karl Ernst von Baer."
+  ],
+  "quick_revision": [
+    "Monohybrid F2 is 3:1 (1:2:1 genotype); dihybrid F2 is 9:3:3:1; incomplete dominance F2 is 1:2:1 for both.",
+    "ABO blood group shows co-dominance and multiple alleles; pleiotropy is seen in phenylketonuria and pea starch grains.",
+    "Polygenic traits give $2n+1$ phenotypes and a bell-shaped curve; skin colour is the standard example.",
+    "Sutton and Boveri proposed the chromosome theory; Morgan verified it, coined linkage, and Sturtevant made gene maps.",
+    "Heterogametic sex: male in humans (XY), female in birds (ZW); honey bee drones are haploid.",
+    "Haemophilia and colour blindness are X-linked recessive; thalassemia and sickle-cell are autosomal recessive.",
+    "Down's is 47 (+21); Klinefelter's is 47, XXY (sterile male); Turner's is 45, XO (sterile female).",
+    "Griffith showed transformation, Avery's group identified DNA, and Hershey-Chase proved it using $^{32}P$.",
+    "Replication is semiconservative and polymerase works $5' \\rightarrow 3'$; Okazaki fragments on the lagging strand are joined by ligase.",
+    "RNA polymerase II makes hnRNA, which is capped, tailed and spliced; the genetic code is degenerate, unambiguous and nearly universal.",
+    "Lac operon: lactose is the inducer, the repressor comes from the i gene, and z, y, a form one polycistronic mRNA.",
+    "Hardy-Weinberg: $p^2 + 2pq + q^2 = 1$; disturbed by gene flow, drift, mutation, recombination and selection; Homo sapiens arose in Africa."
+  ],
+  "pyq": {
+    "count": 11,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q138",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q138"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q141",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q141"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q147",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q147"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q153",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q153"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q159",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q159"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q160",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q160"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q164",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q164"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q167",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q167"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q169",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q169"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q170",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q170"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q175",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q175"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

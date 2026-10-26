@@ -1,0 +1,482 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u05",
+  "unit_no": 5,
+  "unit_name": "Rotational Motion",
+  "slug": "rotational-motion",
+  "overview": "This unit extends Newtonian mechanics from point particles to extended rigid bodies. It covers the centre of mass, torque, angular momentum, moment of inertia, equilibrium and the dynamics of rotation including rolling. NEET usually asks 2-3 questions from it, mostly moment of inertia calculations with the axis theorems, conservation of angular momentum, rolling on an incline and torque or equilibrium problems.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "The centre of mass (COM) is the point where the entire mass of a system can be treated as concentrated when describing its translational motion. For two particles it lies on the line joining them and divides that line in the inverse ratio of the masses, so it sits closer to the heavier mass. For a rigid body it is a fixed point relative to the body, and it may lie outside the material, as in a ring. External forces alone change the motion of the COM, because internal forces cancel in pairs. If the net external force is zero, the COM moves with constant velocity, or stays at rest if it started at rest. For symmetric uniform bodies the COM lies at the geometric centre. Standard results for semicircular and hemispherical shapes should be memorised.",
+      "key_points": [
+        "For two particles separated by d, the COM lies at $r_1 = \\frac{m_2 d}{m_1+m_2}$ from $m_1$ and at $r_2 = \\frac{m_1 d}{m_1+m_2}$ from $m_2$",
+        "$m_1 r_1 = m_2 r_2$, so the COM is nearer the heavier mass",
+        "Internal forces (explosions, collisions) cannot shift the COM",
+        "COM of a uniform semicircular ring is at $\\frac{2R}{\\pi}$ and of a semicircular disc at $\\frac{4R}{3\\pi}$, measured from the centre",
+        "COM of a solid hemisphere is at $\\frac{3R}{8}$ and of a hollow hemisphere at $\\frac{R}{2}$, measured from the centre",
+        "COM of a solid cone is at $\\frac{h}{4}$ from the base",
+        "In a uniform gravitational field the centre of gravity coincides with the COM"
+      ],
+      "formulas": [
+        {
+          "formula": "$x_{cm} = \\frac{m_1x_1 + m_2x_2}{m_1+m_2}$",
+          "meaning": "COM position of a two-particle system along a line"
+        },
+        {
+          "formula": "$\\vec{r}_{cm} = \\frac{\\sum m_i\\vec{r}_i}{M}$",
+          "meaning": "COM of a system of particles; M is the total mass"
+        },
+        {
+          "formula": "$\\vec{r}_{cm} = \\frac{1}{M}\\int \\vec{r}\\,dm$",
+          "meaning": "COM of a continuous rigid body"
+        },
+        {
+          "formula": "$\\vec{v}_{cm} = \\frac{\\sum m_i\\vec{v}_i}{M}$",
+          "meaning": "Velocity of the COM; total momentum equals $M\\vec{v}_{cm}$"
+        },
+        {
+          "formula": "$M\\vec{a}_{cm} = \\vec{F}_{ext}$",
+          "meaning": "Only the net external force accelerates the COM"
+        }
+      ],
+      "neet_tip": "Expect COM of composite or cut-out bodies (treat the removed part as negative mass) and questions where the COM stays at rest, such as a person walking on a boat.",
+      "topic": "Centre of mass of a two-particle system and of a rigid body"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "A rigid body is one in which the distance between any two particles does not change. Its motion can be pure translation, pure rotation about a fixed axis, or a combination of the two, as in rolling. In rotation about a fixed axis, every particle moves in a circle in a plane perpendicular to the axis, with its centre on the axis. All particles share the same angular displacement, angular velocity and angular acceleration, but their linear speeds grow with distance from the axis. Angular velocity is a vector along the axis, with direction given by the right-hand rule. For constant angular acceleration, the rotational kinematic equations have the same form as the linear ones.",
+      "key_points": [
+        "In fixed-axis rotation $\\theta$, $\\omega$ and $\\alpha$ are the same for every particle; $v$ is proportional to $r$",
+        "The direction of $\\vec{\\omega}$ follows the right-hand thumb rule, along the axis",
+        "Tangential acceleration $a_t = \\alpha r$ and centripetal acceleration $a_c = \\omega^2 r$ act at right angles",
+        "Net acceleration of a particle is $\\sqrt{a_t^2 + a_c^2}$",
+        "Rolling is translation of the COM combined with rotation about the COM",
+        "Units: rad, rad/s and rad/s²; 1 rev = $2\\pi$ rad"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\omega = \\frac{d\\theta}{dt},\\ \\alpha = \\frac{d\\omega}{dt}$",
+          "meaning": "Definitions of angular velocity and angular acceleration"
+        },
+        {
+          "formula": "$\\vec{v} = \\vec{\\omega}\\times\\vec{r},\\ v = \\omega r$",
+          "meaning": "Linear velocity of a particle at distance r from the axis"
+        },
+        {
+          "formula": "$\\omega = \\omega_0 + \\alpha t$",
+          "meaning": "Rotational kinematics at constant $\\alpha$"
+        },
+        {
+          "formula": "$\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2$",
+          "meaning": "Angular displacement at constant $\\alpha$"
+        },
+        {
+          "formula": "$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$",
+          "meaning": "Time-independent relation at constant $\\alpha$"
+        }
+      ],
+      "neet_tip": "Typical questions ask for revolutions completed while a wheel decelerates uniformly, or for the net acceleration of a point on a wheel that is speeding up.",
+      "topic": "Basic concepts of rotational motion"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Torque, or moment of a force, is the turning effect of a force about a point or axis. It is the cross product of the position vector (from the reference point to the point of application) and the force. Its magnitude equals the force multiplied by the perpendicular distance from the reference point to the line of action. A force whose line of action passes through the reference point produces zero torque. Torque is an axial vector, perpendicular to the plane of $\\vec{r}$ and $\\vec{F}$, and is conventionally positive for anticlockwise turning. A couple is a pair of equal, opposite, non-collinear forces. It produces pure rotation, and its torque is the same about every point.",
+      "key_points": [
+        "Torque depends on the chosen reference point, except for a couple",
+        "SI unit is N m; dimensions are $[ML^2T^{-2}]$, the same as work, but torque is a vector",
+        "Torque is maximum when $\\theta = 90^\\circ$ and zero when the force is parallel to $\\vec{r}$",
+        "A couple has zero net force, so it causes no translation",
+        "Gravity produces no torque about the centre of gravity"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{\\tau} = \\vec{r}\\times\\vec{F}$",
+          "meaning": "Torque of force F about a point"
+        },
+        {
+          "formula": "$\\tau = rF\\sin\\theta = F\\,r_{\\perp}$",
+          "meaning": "Magnitude; $r_{\\perp}$ is the perpendicular distance (moment arm)"
+        },
+        {
+          "formula": "$\\tau_{couple} = F\\,d$",
+          "meaning": "Torque of a couple; d is the perpendicular distance between the two forces"
+        }
+      ],
+      "neet_tip": "Vector cross-product torque calculations, such as finding $\\vec{r}\\times\\vec{F}$ with given unit vectors, are very common.",
+      "topic": "Moment of a force and torque"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "The angular momentum of a particle about a point is the moment of its linear momentum. For a rigid body rotating about a fixed axis, the component along the axis is $L = I\\omega$. Net external torque equals the rate of change of angular momentum. If the net external torque is zero, the total angular momentum stays constant. Applications include a skater or diver pulling in the arms (I decreases, so $\\omega$ increases), Kepler's second law (constant areal velocity under a central force) and a person on a rotating stool. A particle moving uniformly in a straight line has constant angular momentum about any point. For a rotating body whose centre of mass is at rest, total linear momentum is zero, so the angular momentum is the same about every point.",
+      "key_points": [
+        "Angular momentum is conserved when $\\tau_{ext} = 0$, even if internal forces change I",
+        "When I changes at constant L, the rotational kinetic energy $\\frac{L^2}{2I}$ changes; it increases when I decreases, because internal forces do work, and decreases when I increases. Kinetic energy is not conserved, but total energy still is",
+        "A central force produces zero torque about the centre, so L is conserved and areal velocity is constant",
+        "For straight-line uniform motion, $L = mvd$, where d is the perpendicular distance of the line from the point",
+        "If the total linear momentum of the body is zero (COM at rest), L is independent of the reference point",
+        "Total angular momentum is L about the COM plus $\\vec{r}_{cm}\\times M\\vec{v}_{cm}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{L} = \\vec{r}\\times\\vec{p}$, $L = mvr\\sin\\theta$",
+          "meaning": "Angular momentum of a particle"
+        },
+        {
+          "formula": "$L = I\\omega$",
+          "meaning": "Angular momentum of a rigid body about its fixed rotation axis"
+        },
+        {
+          "formula": "$\\vec{\\tau}_{ext} = \\frac{d\\vec{L}}{dt}$",
+          "meaning": "Rotational form of Newton's second law"
+        },
+        {
+          "formula": "$I_1\\omega_1 = I_2\\omega_2$",
+          "meaning": "Conservation of angular momentum when external torque is zero"
+        },
+        {
+          "formula": "$\\frac{dA}{dt} = \\frac{L}{2m}$",
+          "meaning": "Areal velocity of a planet; constant because L is conserved"
+        },
+        {
+          "formula": "$K = \\frac{L^2}{2I}$",
+          "meaning": "Rotational KE in terms of angular momentum"
+        }
+      ],
+      "neet_tip": "NEET often tests a rotating disc that gains mass or a person moving on a turntable (find the new $\\omega$ and the fractional KE change), and asks whether L depends on the reference point.",
+      "topic": "Angular momentum, its conservation and applications"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Moment of inertia (I) is the rotational counterpart of mass. It measures how strongly a body resists changes in its rotational motion about a given axis. It depends on the total mass, on how that mass is distributed relative to the axis, and on the position and orientation of the axis. It does not depend on angular velocity. Mass placed farther from the axis contributes more, which is why flywheels carry most of their mass on the rim. The radius of gyration K is the distance from the axis at which the whole mass could be concentrated to give the same moment of inertia. K is a property of both the body and the axis.",
+      "key_points": [
+        "SI unit is kg m²; dimensions are $[ML^2]$",
+        "I is not a fixed property of a body; it changes with the axis",
+        "For a given mass, the farther the mass lies from the axis, the larger I is",
+        "Flywheels have mass concentrated at the rim to give large I and smooth rotation",
+        "K is the root-mean-square distance of the mass elements from the axis",
+        "For a solid sphere about a diameter, $K = \\sqrt{\\frac{2}{5}}R$; for a ring about its axis, $K = R$"
+      ],
+      "formulas": [
+        {
+          "formula": "$I = \\sum m_i r_i^2$",
+          "meaning": "MOI of discrete particles; $r_i$ is the perpendicular distance from the axis"
+        },
+        {
+          "formula": "$I = \\int r^2\\,dm$",
+          "meaning": "MOI of a continuous body"
+        },
+        {
+          "formula": "$I = MK^2,\\ K = \\sqrt{\\frac{I}{M}}$",
+          "meaning": "Radius of gyration"
+        }
+      ],
+      "neet_tip": "Questions compare I or K for bodies of the same mass and radius, or ask for the MOI of point masses at the corners of a polygon.",
+      "topic": "Moment of inertia and radius of gyration"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "These standard results must be at your fingertips. For a ring, all the mass is at distance R from its central axis, so $I = MR^2$. A disc has mass spread from the centre to R, so $I = \\frac{1}{2}MR^2$. A hollow cylinder behaves like a ring and a solid cylinder like a disc about the central axis, because length along the axis does not matter. A thin spherical shell has $\\frac{2}{3}MR^2$ and a solid sphere $\\frac{2}{5}MR^2$. A thin rod has $\\frac{ML^2}{12}$ about a perpendicular axis through its centre and $\\frac{ML^2}{3}$ about one end. For the same M and R, the order is ring = hollow cylinder > spherical shell > disc = solid cylinder > solid sphere.",
+      "key_points": [
+        "Ring about its axis: $MR^2$; about a diameter: $\\frac{1}{2}MR^2$",
+        "Disc about its axis: $\\frac{1}{2}MR^2$; about a diameter: $\\frac{1}{4}MR^2$",
+        "Thin rod: $\\frac{ML^2}{12}$ about the centre and $\\frac{ML^2}{3}$ about an end, both for perpendicular axes",
+        "Solid sphere: $\\frac{2}{5}MR^2$; hollow sphere: $\\frac{2}{3}MR^2$ (about a diameter)",
+        "Solid cylinder: $\\frac{1}{2}MR^2$; hollow thin cylinder: $MR^2$ (about the central axis)",
+        "Rectangular plate about a perpendicular axis through the centre: $\\frac{M(a^2+b^2)}{12}$",
+        "Solid cylinder about a perpendicular axis through its centre: $M\\left(\\frac{R^2}{4}+\\frac{L^2}{12}\\right)$"
+      ],
+      "formulas": [
+        {
+          "formula": "$I_{ring} = MR^2,\\ I_{disc} = \\frac{1}{2}MR^2$",
+          "meaning": "About the central axis perpendicular to the plane"
+        },
+        {
+          "formula": "$I_{rod,c} = \\frac{ML^2}{12},\\ I_{rod,end} = \\frac{ML^2}{3}$",
+          "meaning": "Thin rod, axis perpendicular to its length"
+        },
+        {
+          "formula": "$I_{solid\\,sphere} = \\frac{2}{5}MR^2,\\ I_{shell} = \\frac{2}{3}MR^2$",
+          "meaning": "About a diameter"
+        },
+        {
+          "formula": "$I_{plate} = \\frac{M(a^2+b^2)}{12}$",
+          "meaning": "Rectangular lamina with sides a and b, axis perpendicular through the centre"
+        }
+      ],
+      "neet_tip": "Direct recall questions, ratio problems such as a solid sphere against a hollow sphere of the same mass and radius, and bodies melted or recast into a new shape at the same density are all common.",
+      "topic": "Moments of inertia of simple geometrical objects"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "The parallel axis theorem applies to any body. The MOI about an axis equals the MOI about a parallel axis through the COM plus $Md^2$, where d is the distance between the two axes. One of the two axes must pass through the COM. It follows that I about a centroidal axis is the minimum among all parallel axes. The perpendicular axis theorem applies only to planar (laminar) bodies. The MOI about an axis perpendicular to the plane equals the sum of the MOIs about two mutually perpendicular axes lying in the plane and meeting at the same point. In composite systems, such as spheres joined together, apply the parallel axis theorem to each part separately and then add.",
+      "key_points": [
+        "The parallel axis theorem requires one axis through the COM; never shift directly between two non-COM axes",
+        "The perpendicular axis theorem is valid only for laminae, never for spheres or cylinders",
+        "Ring about a tangent in its plane: $\\frac{3}{2}MR^2$; about a tangent perpendicular to its plane: $2MR^2$",
+        "Disc about a tangent in its plane: $\\frac{5}{4}MR^2$; about a tangent perpendicular to its plane: $\\frac{3}{2}MR^2$",
+        "Solid sphere about a tangent: $\\frac{7}{5}MR^2$; hollow sphere about a tangent: $\\frac{5}{3}MR^2$",
+        "Square plate: the MOI about any in-plane axis through the centre is $\\frac{Ma^2}{12}$",
+        "For a composite body, $I_{total} = \\sum (I_{cm,i} + m_i d_i^2)$"
+      ],
+      "formulas": [
+        {
+          "formula": "$I = I_{cm} + Md^2$",
+          "meaning": "Parallel axis theorem; d is the distance between the COM axis and the parallel axis"
+        },
+        {
+          "formula": "$I_z = I_x + I_y$",
+          "meaning": "Perpendicular axis theorem for a planar body; x and y lie in the plane, z is perpendicular"
+        },
+        {
+          "formula": "$I_2 - I_1 = M(d_2^2 - d_1^2)$",
+          "meaning": "Relating two parallel axes, both measured from the COM"
+        }
+      ],
+      "neet_tip": "NEET favours composite bodies, such as joined spheres, rods forming a frame, or a disc with a hole, where the parallel axis theorem is applied to each part separately.",
+      "topic": "Parallel and perpendicular axes theorems and their applications"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "A rigid body is in mechanical equilibrium when it has neither linear nor angular acceleration. Translational equilibrium requires the vector sum of external forces to be zero. Rotational equilibrium requires the vector sum of external torques to be zero. Once the net force is zero, the net torque is zero about every point if it is zero about any one point, so choose the point that eliminates the most unknown forces. A body may be in translational equilibrium but not rotational, as under a couple, or the reverse. The principle of moments for a lever states that load × load arm = effort × effort arm. Mechanical advantage is the ratio of load to effort. Ladder, beam and see-saw problems use both conditions.",
+      "key_points": [
+        "Conditions for equilibrium: $\\sum\\vec{F} = 0$ and $\\sum\\vec{\\tau} = 0$",
+        "Take torques about the point where unknown forces act to eliminate them",
+        "A couple gives rotational non-equilibrium with translational equilibrium",
+        "In a uniform field, the weight of a body acts at its centre of gravity (= COM)",
+        "A body suspended from a point comes to rest with its centre of gravity vertically below that point",
+        "Mechanical advantage = effort arm / load arm; it exceeds 1 when the effort arm is longer"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\sum\\vec{F}_{ext} = 0$",
+          "meaning": "Translational equilibrium"
+        },
+        {
+          "formula": "$\\sum\\vec{\\tau}_{ext} = 0$",
+          "meaning": "Rotational equilibrium about any point"
+        },
+        {
+          "formula": "$F_1 d_1 = F_2 d_2$",
+          "meaning": "Principle of moments for a lever"
+        },
+        {
+          "formula": "$M.A. = \\frac{\\text{load}}{\\text{effort}} = \\frac{d_{effort}}{d_{load}}$",
+          "meaning": "Mechanical advantage of a lever"
+        }
+      ],
+      "neet_tip": "Expect a loaded beam on two supports (find the reactions), a balanced metre rule with masses, or a ladder against a wall.",
+      "topic": "Equilibrium of rigid bodies"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "For rotation about a fixed axis, net torque equals moment of inertia times angular acceleration ($\\tau = I\\alpha$), the analogue of $F = ma$. Rotational KE is $\\frac{1}{2}I\\omega^2$. The work done by a torque is $\\int\\tau\\,d\\theta$ and power is $\\tau\\omega$. The work-energy theorem gives the change in rotational KE. In rolling without slipping, $v_{cm} = \\omega R$. The contact point is momentarily at rest and the top point moves at $2v_{cm}$. Total KE is $\\frac{1}{2}mv^2(1 + \\frac{K^2}{R^2})$. Down an incline, a smaller $\\frac{K^2}{R^2}$ means larger acceleration and a quicker descent. The solid sphere therefore wins, followed by the disc and then the ring. In pure rolling, static friction does no work, so mechanical energy is conserved.",
+      "key_points": [
+        "$\\frac{K^2}{R^2}$ values: ring 1, disc or solid cylinder $\\frac{1}{2}$, hollow sphere $\\frac{2}{3}$, solid sphere $\\frac{2}{5}$",
+        "Fraction of KE that is rotational in rolling: $\\frac{K^2/R^2}{1+K^2/R^2}$; for a disc this is $\\frac{1}{3}$",
+        "In pure rolling the contact point has zero velocity, the centre has $v$ and the top has $2v$",
+        "On a smooth (frictionless) incline there is no rolling, so all bodies slide with $g\\sin\\theta$",
+        "Static friction is needed for rolling on an incline, but it does no work",
+        "For a mass hanging from a rope wound on a pulley, $a = \\frac{mg}{m + I/R^2}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\tau = I\\alpha$",
+          "meaning": "Equation of rotational motion about a fixed axis"
+        },
+        {
+          "formula": "$K_{rot} = \\frac{1}{2}I\\omega^2$",
+          "meaning": "Rotational kinetic energy"
+        },
+        {
+          "formula": "$W = \\int\\tau\\,d\\theta,\\ P = \\tau\\omega$",
+          "meaning": "Work and power in rotation"
+        },
+        {
+          "formula": "$K = \\frac{1}{2}mv^2\\left(1+\\frac{K^2}{R^2}\\right)$",
+          "meaning": "Total KE in rolling without slipping"
+        },
+        {
+          "formula": "$a = \\frac{g\\sin\\theta}{1+K^2/R^2}$",
+          "meaning": "Acceleration of a body rolling down an incline"
+        },
+        {
+          "formula": "$v = \\sqrt{\\frac{2gh}{1+K^2/R^2}}$",
+          "meaning": "Speed at the bottom after rolling down a height h"
+        }
+      ],
+      "neet_tip": "Ranking bodies by time taken or speed at the bottom of an incline, the ratio of rotational to total KE, and $\\tau = I\\alpha$ with a falling mass on a pulley are high-frequency questions.",
+      "topic": "Rigid body rotation and equations of rotational motion"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Rotational motion about a fixed axis mirrors linear motion term by term, which makes rotational formulas easy to recall. Displacement x corresponds to $\\theta$, velocity v to $\\omega$, and acceleration a to $\\alpha$. Mass m corresponds to moment of inertia I, force F to torque $\\tau$, and linear momentum p to angular momentum L. Newton's second law $F = ma$ becomes $\\tau = I\\alpha$, and $F = \\frac{dp}{dt}$ becomes $\\tau = \\frac{dL}{dt}$. Kinetic energy $\\frac{1}{2}mv^2$ becomes $\\frac{1}{2}I\\omega^2$, work $\\int F dx$ becomes $\\int\\tau d\\theta$, and power $Fv$ becomes $\\tau\\omega$. Conservation of linear momentum when the net force is zero corresponds to conservation of angular momentum when the net torque is zero. One key difference is that mass is intrinsic and constant, whereas I depends on the choice of axis.",
+      "key_points": [
+        "x, v, a, m, F, p correspond to $\\theta$, $\\omega$, $\\alpha$, I, $\\tau$, L",
+        "The kinematic equations have identical form",
+        "$KE = \\frac{p^2}{2m}$ corresponds to $KE = \\frac{L^2}{2I}$",
+        "Impulse $\\int F dt = \\Delta p$ corresponds to angular impulse $\\int\\tau dt = \\Delta L$",
+        "Mass is the same for every axis, but I varies with the axis"
+      ],
+      "formulas": [
+        {
+          "formula": "$F = ma \\leftrightarrow \\tau = I\\alpha$",
+          "meaning": "Second law analogues"
+        },
+        {
+          "formula": "$p = mv \\leftrightarrow L = I\\omega$",
+          "meaning": "Momentum analogues"
+        },
+        {
+          "formula": "$P = Fv \\leftrightarrow P = \\tau\\omega$",
+          "meaning": "Power analogues"
+        },
+        {
+          "formula": "$\\int\\tau\\,dt = \\Delta L$",
+          "meaning": "Angular impulse equals the change in angular momentum"
+        }
+      ],
+      "neet_tip": "Usually tested indirectly through analogy-based statements or by converting a linear problem into its rotational counterpart.",
+      "topic": "Comparison of linear and rotational motions"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\vec{r}_{cm} = \\frac{\\sum m_i\\vec{r}_i}{\\sum m_i}$",
+      "meaning": "Centre of mass; $m_i$ are the masses and $\\vec{r}_i$ their position vectors"
+    },
+    {
+      "formula": "$M\\vec{a}_{cm} = \\vec{F}_{ext}$",
+      "meaning": "Motion of the COM; M is the total mass and $\\vec{F}_{ext}$ the net external force"
+    },
+    {
+      "formula": "$v = \\omega r,\\ a_t = \\alpha r,\\ a_c = \\omega^2 r$",
+      "meaning": "Linear-angular relations; r is the distance from the axis"
+    },
+    {
+      "formula": "$\\omega = \\omega_0+\\alpha t,\\ \\theta = \\omega_0 t+\\frac{1}{2}\\alpha t^2,\\ \\omega^2 = \\omega_0^2+2\\alpha\\theta$",
+      "meaning": "Rotational kinematics at constant angular acceleration $\\alpha$"
+    },
+    {
+      "formula": "$\\vec{\\tau} = \\vec{r}\\times\\vec{F},\\ \\tau = rF\\sin\\theta$",
+      "meaning": "Torque; $\\theta$ is the angle between $\\vec{r}$ and $\\vec{F}$"
+    },
+    {
+      "formula": "$\\vec{L} = \\vec{r}\\times\\vec{p},\\ L = I\\omega$",
+      "meaning": "Angular momentum of a particle; of a rigid body about its fixed axis"
+    },
+    {
+      "formula": "$\\vec{\\tau}_{ext} = \\frac{d\\vec{L}}{dt}$",
+      "meaning": "Torque is the rate of change of angular momentum"
+    },
+    {
+      "formula": "$I_1\\omega_1 = I_2\\omega_2$",
+      "meaning": "Conservation of angular momentum when $\\tau_{ext} = 0$"
+    },
+    {
+      "formula": "$I = \\sum m_i r_i^2 = \\int r^2 dm$",
+      "meaning": "Moment of inertia; r is the perpendicular distance from the axis"
+    },
+    {
+      "formula": "$K = \\sqrt{\\frac{I}{M}}$",
+      "meaning": "Radius of gyration; M is the total mass"
+    },
+    {
+      "formula": "$I = I_{cm} + Md^2$",
+      "meaning": "Parallel axis theorem; d is the distance from the parallel axis through the COM"
+    },
+    {
+      "formula": "$I_z = I_x + I_y$",
+      "meaning": "Perpendicular axis theorem, valid for planar bodies only"
+    },
+    {
+      "formula": "$I_{ring} = MR^2,\\ I_{disc} = \\frac{1}{2}MR^2$",
+      "meaning": "About the central axis perpendicular to the plane; R is the radius"
+    },
+    {
+      "formula": "$I_{rod} = \\frac{ML^2}{12}$ (centre), $\\frac{ML^2}{3}$ (end)",
+      "meaning": "Thin rod of length L, axis perpendicular to the rod"
+    },
+    {
+      "formula": "$I_{solid\\,sphere} = \\frac{2}{5}MR^2,\\ I_{hollow\\,sphere} = \\frac{2}{3}MR^2$",
+      "meaning": "About a diameter"
+    },
+    {
+      "formula": "$\\tau = I\\alpha$",
+      "meaning": "Rotational form of Newton's second law"
+    },
+    {
+      "formula": "$K_{rot} = \\frac{1}{2}I\\omega^2 = \\frac{L^2}{2I}$",
+      "meaning": "Rotational kinetic energy"
+    },
+    {
+      "formula": "$W = \\int\\tau\\,d\\theta,\\ P = \\tau\\omega$",
+      "meaning": "Work done by a torque and rotational power"
+    },
+    {
+      "formula": "$K_{rolling} = \\frac{1}{2}mv^2\\left(1+\\frac{K^2}{R^2}\\right)$",
+      "meaning": "KE of a body rolling without slipping; v is the COM speed"
+    },
+    {
+      "formula": "$a = \\frac{g\\sin\\theta}{1+K^2/R^2}$",
+      "meaning": "Acceleration rolling down an incline of angle $\\theta$"
+    },
+    {
+      "formula": "$v = \\sqrt{\\frac{2gh}{1+K^2/R^2}}$",
+      "meaning": "Speed after rolling down a vertical height h"
+    },
+    {
+      "formula": "$\\frac{dA}{dt} = \\frac{L}{2m}$",
+      "meaning": "Areal velocity under a central force; m is the mass of the orbiting body"
+    },
+    {
+      "formula": "$\\sum\\vec{F} = 0,\\ \\sum\\vec{\\tau} = 0$",
+      "meaning": "Conditions for equilibrium of a rigid body"
+    }
+  ],
+  "common_traps": [
+    "Applying the parallel axis theorem between two axes that do not pass through the COM. Always go through $I_{cm}$ first.",
+    "Using the perpendicular axis theorem for 3D bodies such as spheres or cylinders. It holds only for planar laminae.",
+    "Assuming kinetic energy is conserved when a skater pulls in the arms. Angular momentum is conserved, but KE increases because work is done by internal forces.",
+    "Thinking angular momentum always depends on the reference point. If the body's total linear momentum is zero, as for a disc rotating about its fixed centre, L is the same about every point.",
+    "Assuming heavier bodies roll down faster. The time depends only on $\\frac{K^2}{R^2}$, not on mass or radius.",
+    "Measuring r in $I = \\sum mr^2$ from the origin instead of as the perpendicular distance from the axis of rotation.",
+    "Believing the COM must lie inside the material. For a ring or a hollow sphere it lies in empty space.",
+    "Assuming friction does work in pure rolling. Static friction acts at the instantaneously stationary contact point, so it does no work."
+  ],
+  "quick_revision": [
+    "The COM divides the line between two masses in the inverse ratio of the masses, and only external forces move it.",
+    "In fixed-axis rotation all particles share the same $\\omega$ and $\\alpha$, while $v = \\omega r$ varies.",
+    "Torque is $\\vec{r}\\times\\vec{F}$, equal to force times perpendicular distance; a couple's torque is the same about every point.",
+    "$\\tau = \\frac{dL}{dt}$; if $\\tau_{ext} = 0$ then $I\\omega$ is constant.",
+    "I depends on mass distribution and axis; $K = \\sqrt{I/M}$.",
+    "Ring $MR^2$, disc $\\frac{1}{2}MR^2$, rod $\\frac{ML^2}{12}$ or $\\frac{ML^2}{3}$, solid sphere $\\frac{2}{5}MR^2$, hollow sphere $\\frac{2}{3}MR^2$.",
+    "Parallel axis: $I = I_{cm}+Md^2$. Perpendicular axis: $I_z = I_x+I_y$, for laminae only.",
+    "Tangent axes: ring $\\frac{3}{2}MR^2$ (in plane) and $2MR^2$ (perpendicular); disc $\\frac{5}{4}MR^2$ and $\\frac{3}{2}MR^2$; solid sphere $\\frac{7}{5}MR^2$.",
+    "Equilibrium requires both net force and net torque to be zero; take torques about the unknown force.",
+    "Rolling: $v = \\omega R$, KE $= \\frac{1}{2}mv^2(1+K^2/R^2)$, and the solid sphere reaches the bottom first.",
+    "Analogues: m to I, F to $\\tau$, p to L, $\\frac{1}{2}mv^2$ to $\\frac{1}{2}I\\omega^2$, Fv to $\\tau\\omega$."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q027",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q27"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q031",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q31"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u14",
+  "unit_no": 14,
+  "unit_name": "Some Basic Principles of Organic Chemistry",
+  "slug": "some-basic-principles-of-organic-chemistry",
+  "overview": "This unit lays the foundation of organic chemistry. It covers bonding and hybridization of carbon, classification, isomerism and IUPAC nomenclature, and the electronic effects (inductive, electromeric, resonance, hyperconjugation) that control the stability of reactive intermediates and the course of reactions. NEET asks 2-4 questions every year from it, mostly on intermediate stability, electronic effects, isomer counting and IUPAC names, and these concepts underpin every later organic chapter.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Carbon (ground state $1s^2 2s^2 2p^2$) is tetravalent. Promotion of one 2s electron gives four half-filled orbitals, so carbon forms four covalent bonds. These orbitals mix (hybridize) to give equivalent hybrid orbitals. In $sp^3$ carbon, as in $CH_4$, there are four hybrids arranged tetrahedrally at $109^{\\circ}28'$. In $sp^2$ carbon, as in $C_2H_4$, three hybrids form a trigonal planar arrangement at $120^{\\circ}$ and one unhybridized p orbital forms a $\\pi$ bond. In $sp$ carbon, as in $C_2H_2$, two hybrids are linear at $180^{\\circ}$ and two p orbitals form two $\\pi$ bonds. More s-character keeps electrons closer to the nucleus. Hence an $sp$ carbon is the most electronegative, its bonds are the shortest and strongest, and $HC\\equiv CH$ is weakly acidic. Hybridization therefore fixes molecular shape, bond length, bond strength and acidity.",
+      "key_points": [
+        "$sp^3$: 25% s-character, tetrahedral, $109^{\\circ}28'$ (alkanes, $CH_3^-$ pyramidal)",
+        "$sp^2$: 33.3% s-character, trigonal planar, $120^{\\circ}$ (alkenes, benzene, $C=O$, $CH_3^+$, $CH_3^{\\bullet}$)",
+        "$sp$: 50% s-character, linear, $180^{\\circ}$ (alkynes, $C\\equiv N$, $CO_2$, allenic central carbon)",
+        "Electronegativity of carbon: $sp > sp^2 > sp^3$",
+        "Bond lengths: $C-C$ 154 pm, $C=C$ 134 pm, $C\\equiv C$ 120 pm; benzene $C-C$ 139 pm",
+        "A $\\pi$ bond forms by sideways overlap and prevents free rotation about $C=C$"
+      ],
+      "formulas": [
+        {
+          "formula": "Steric number $= $ number of $\\sigma$ bonds $+$ number of lone pairs",
+          "meaning": "4 gives $sp^3$, 3 gives $sp^2$, 2 gives $sp$; use it to assign hybridization of any atom"
+        },
+        {
+          "formula": "$\\%\\,s = \\frac{1}{\\text{number of hybrid orbitals}} \\times 100$",
+          "meaning": "s-character: 25% ($sp^3$), 33.3% ($sp^2$), 50% ($sp$)"
+        }
+      ],
+      "neet_tip": "Expect questions asking for the hybridization of each carbon in a given molecule (e.g. $CH_2=C=CH_2$, $CH_3-CH=CH-C\\equiv N$) or a comparison of bond lengths and acidity based on s-character.",
+      "topic": "Tetravalency of carbon; shapes of simple molecules and hybridization"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Organic compounds are first classified by structure. Acyclic (open-chain or aliphatic) compounds have straight or branched chains. Cyclic compounds are of three kinds. Alicyclic compounds are carbocyclic rings that behave like aliphatics, e.g. cyclohexane. Aromatic compounds may be benzenoid (benzene, naphthalene) or non-benzenoid (tropolone). Heterocyclic compounds contain a ring heteroatom, e.g. furan, thiophene and pyridine. Compounds are further grouped by functional group, the atom or group that decides characteristic chemical behaviour. When a molecule contains several groups, the senior one is named as the suffix and the rest become prefixes. Knowing the functional-group seniority order is therefore essential for both classification and IUPAC naming.",
+      "key_points": [
+        "Functional groups: $-COOH$ (acid), $-SO_3H$, $-COOR$ (ester), $-COX$ (acyl halide), $-CONH_2$ (amide), $-CN$ (nitrile), $-CHO$ (aldehyde), $>C=O$ (ketone), $-OH$ (alcohol), $-NH_2$ (amine), $-O-$ (ether)",
+        "Seniority: $-COOH > -SO_3H > $ anhydride $> -COOR > -COX > -CONH_2 > -CN > -CHO > >C=O > -OH > -NH_2 > C=C > C\\equiv C$",
+        "Always-prefix groups (never suffix): $-X$ (halo), $-NO_2$ (nitro), $-OR$ (alkoxy)",
+        "Heterocyclic aromatic examples: furan (O), thiophene (S), pyridine (N)",
+        "Non-benzenoid aromatic example: tropolone"
+      ],
+      "formulas": [],
+      "neet_tip": "NEET checks the seniority order indirectly, for instance by asking which group becomes the suffix in a polyfunctional IUPAC name, or by asking you to identify alicyclic, aromatic or heterocyclic compounds.",
+      "topic": "Classification of organic compounds by functional groups"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "A homologous series is a family of compounds with the same functional group and the same general formula. Successive members differ by one $-CH_2-$ unit, which corresponds to a molecular mass difference of 14 u. Members show very similar chemical properties because they share the functional group. Their physical properties change gradually with molecular mass: boiling point rises, while solubility in water falls along the series. All members can usually be prepared by similar general methods. Examples are alkanes ($CH_4$, $C_2H_6$, $C_3H_8$), alkenes, alkynes, alkanols and alkanoic acids. The general formula lets you check whether two compounds are homologues and also calculate the degree of unsaturation.",
+      "key_points": [
+        "Adjacent homologues differ by $CH_2$, i.e. 14 u",
+        "Chemical properties are similar; physical properties show a regular gradation",
+        "Boiling point increases with chain length; among isomers, branching lowers it",
+        "Same general formula and similar methods of preparation",
+        "Example: $CH_3OH$, $C_2H_5OH$ and $C_3H_7OH$ are homologues"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_nH_{2n+2}$, $C_nH_{2n}$, $C_nH_{2n-2}$",
+          "meaning": "Alkanes, alkenes (also cycloalkanes), alkynes (also dienes)"
+        },
+        {
+          "formula": "$C_nH_{2n+1}OH$; $C_nH_{2n}O$; $C_nH_{2n}O_2$",
+          "meaning": "Alcohols (and ethers); aldehydes and ketones; carboxylic acids and esters"
+        },
+        {
+          "formula": "$DU = \\frac{2C + 2 + N - H - X}{2}$",
+          "meaning": "Degree of unsaturation: number of rings plus $\\pi$ bonds"
+        }
+      ],
+      "neet_tip": "Typical asks: pick the pair that are homologues, or calculate the mass difference between members three steps apart (3 x 14 = 42 u).",
+      "topic": "Homologous series"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Isomers have the same molecular formula but different properties. Structural isomers differ in how atoms are connected. Chain isomers differ in the carbon skeleton (n-pentane, isopentane, neopentane). Position isomers differ in the location of a group (propan-1-ol and propan-2-ol). Functional isomers have different functional groups (ethanol and methoxymethane). Metamers differ in the alkyl groups on either side of a functional group (diethyl ether and methyl propyl ether). Stereoisomers have the same connectivity but different spatial arrangement. Geometrical (cis-trans) isomerism needs restricted rotation, about a $C=C$ or in a ring, with two different groups on each restricted carbon. Optical isomerism arises from chirality, usually a carbon bearing four different groups. Such molecules have non-superimposable mirror images (enantiomers) that rotate plane-polarised light in opposite directions.",
+      "key_points": [
+        "Structural isomerism types: chain, position, functional, metamerism",
+        "Geometrical isomerism needs a $C=C$ with $a \\neq b$ on each carbon; $CH_2=CHCl$ shows none",
+        "cis: like groups on the same side (higher dipole); trans: opposite sides (usually higher melting point)",
+        "A chiral carbon carries four different groups; enantiomers are non-superimposable mirror images",
+        "dextro (+) rotates light clockwise, laevo (-) anticlockwise; an equimolar mixture is a racemic mixture (optically inactive)",
+        "$C_4H_{10}$ has 2 isomers, $C_5H_{12}$ has 3, $C_4H_{10}O$ has 7 (4 alcohols and 3 ethers)"
+      ],
+      "formulas": [
+        {
+          "formula": "Number of stereoisomers $= 2^n$",
+          "meaning": "$n$ = number of stereocentres in an unsymmetrical molecule; symmetric molecules give fewer because meso forms appear"
+        },
+        {
+          "formula": "Geometrical isomers $= 2^n$",
+          "meaning": "$n$ = number of stereogenic double bonds in an unsymmetrical polyene"
+        }
+      ],
+      "neet_tip": "NEET asks you to name the type of isomerism shown by a given pair, count structural isomers for a formula, or spot which compound shows geometrical or optical isomerism.",
+      "topic": "Structural and stereoisomerism"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Trivial names usually reflect a compound's source: formic acid comes from ants (Latin formica), acetic acid from vinegar (acetum), and methane was called marsh gas. IUPAC names are built as prefix, then word root, then primary suffix, then secondary suffix. The word root gives the number of carbons (meth, eth, prop, but, pent, hex, hept, oct, non, dec). The primary suffix gives saturation (ane, ene, yne). The secondary suffix shows the principal functional group. The rules are applied in order. First, select the longest chain that contains the principal group and the maximum number of multiple bonds. Second, number the chain so that the principal group, then the multiple bonds, then the substituents get the lowest locants. Third, write substituent prefixes in alphabetical order, ignoring di, tri, sec and tert but counting iso and neo.",
+      "key_points": [
+        "Lowest locant rule: compare locant sets at the first point of difference",
+        "If ene and yne tie in position, the double bond gets the lower number; in the name, ene is written before yne",
+        "Multiplying prefixes di, tri and tetra are ignored when alphabetising",
+        "Example: $CH_3CH(CH_3)CH_2CH_3$ is 2-methylbutane",
+        "Example: $CH_2=CH-CH_2-OH$ is prop-2-en-1-ol",
+        "Benzene derivatives: ortho = 1,2, meta = 1,3, para = 1,4",
+        "Carbon of $-CHO$, $-COOH$ or $-CN$ is C-1 when such a group is the principal group"
+      ],
+      "formulas": [
+        {
+          "formula": "Name $=$ prefix(es) $+$ word root $+$ primary suffix $+$ secondary suffix",
+          "meaning": "Template for assembling any IUPAC name"
+        }
+      ],
+      "neet_tip": "The usual NEET question gives a branched or polyfunctional structure (often with a $C=C$ or a ring) and asks for the correct IUPAC name; the distractors break the locant or alphabetical rules.",
+      "topic": "Nomenclature: trivial and IUPAC"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "A covalent bond can break in two ways. In homolytic fission, each atom takes one electron of the shared pair, giving neutral free radicals. Homolysis is favoured by heat, UV light and peroxides, and by non-polar solvents or the gas phase; electrons are shown moving with half-headed (fish-hook) arrows. In heterolytic fission, the more electronegative atom takes both electrons, giving a cation and an anion. Heterolysis is favoured by polar solvents and a large electronegativity difference; electrons move as a pair, shown by full arrows. Heterolysis of a carbon bond gives a carbocation or a carbanion. These modes of fission produce the reactive intermediates that drive free-radical and polar (ionic) reactions respectively.",
+      "key_points": [
+        "Homolysis gives free radicals; it occurs in free-radical (homopolar) reactions",
+        "Heterolysis gives ions; it occurs in polar (ionic) reactions",
+        "A fish-hook arrow shows one-electron movement; a full arrow shows two-electron movement",
+        "In heterolysis the more electronegative atom keeps the bonding pair",
+        "Example: $Cl_2 \\xrightarrow{h\\nu} 2Cl^{\\bullet}$ is homolysis; $(CH_3)_3C-Br \\rightarrow (CH_3)_3C^+ + Br^-$ is heterolysis"
+      ],
+      "formulas": [
+        {
+          "formula": "$A-B \\rightarrow A^{\\bullet} + B^{\\bullet}$",
+          "meaning": "Homolytic fission"
+        },
+        {
+          "formula": "$A-B \\rightarrow A^+ + :B^-$",
+          "meaning": "Heterolytic fission when $B$ is more electronegative"
+        }
+      ],
+      "neet_tip": "NEET asks which conditions favour homolysis, or which intermediate a given fission produces.",
+      "topic": "Homolytic and heterolytic bond fission"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Free radicals, carbocations and carbanions are short-lived intermediates. A carbon free radical has 7 valence electrons, is roughly $sp^2$ and planar, and its stability order is $3^{\\circ} > 2^{\\circ} > 1^{\\circ} > CH_3^{\\bullet}$, with benzyl and allyl radicals extra-stable through resonance. A carbocation has 6 valence electrons, is $sp^2$ and planar with an empty p orbital, and is electron-deficient. Any factor that supplies electron density stabilises it: +I effect, hyperconjugation and resonance. Its order is $3^{\\circ} > 2^{\\circ} > 1^{\\circ} > CH_3^+$, and benzylic and allylic cations are strongly stabilised. A carbanion has 8 valence electrons, is $sp^3$ and pyramidal, and has a lone pair. Electron-withdrawing groups (-I, -R) stabilise it, so its order is reversed: $CH_3^- > 1^{\\circ} > 2^{\\circ} > 3^{\\circ}$. Carbanions conjugated with $\\pi$ systems become $sp^2$ and are stabilised by resonance.",
+      "key_points": [
+        "Carbocation: $sp^2$, planar, 6 electrons, electrophilic; can rearrange by 1,2-hydride or methyl shift",
+        "Stability: $(C_6H_5)_3C^+ > (C_6H_5)_2CH^+ > C_6H_5CH_2^+ \\approx CH_2=CHCH_2^+ \\approx 3^{\\circ} > 2^{\\circ} > 1^{\\circ} > CH_3^+$",
+        "Vinyl ($CH_2=CH^+$) and phenyl cations are very unstable because the positive charge sits on an $sp^2$ or $sp$-like carbon and there is no resonance",
+        "Carbanion: $sp^3$, pyramidal, 8 electrons, nucleophilic; stability $CH_3^- > 1^{\\circ} > 2^{\\circ} > 3^{\\circ}$",
+        "Free radical: 7 electrons, neutral, paramagnetic; stability $3^{\\circ} > 2^{\\circ} > 1^{\\circ} > CH_3^{\\bullet}$",
+        "In a benzylic or allylic carbocation, the empty p orbital overlaps both the filled $\\pi$ system (resonance) and filled $\\alpha$ $C-H$ $\\sigma$ orbitals (hyperconjugation)"
+      ],
+      "formulas": [
+        {
+          "formula": "Carbocation stability $\\propto$ electron donation $(+I, +R$, number of $\\alpha$-H$)$",
+          "meaning": "Quick rule for ranking carbocations"
+        },
+        {
+          "formula": "Carbanion stability $\\propto$ electron withdrawal $(-I, -R)$",
+          "meaning": "Quick rule for ranking carbanions (opposite trend)"
+        }
+      ],
+      "neet_tip": "The single most tested idea: rank carbocations, radicals or carbanions, or identify which orbital interactions (filled $\\sigma$ or $\\pi$ with an empty p) stabilise a given intermediate.",
+      "topic": "Free radicals, carbocations and carbanions; their stability"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "An electrophile ('electron-loving') is an electron-deficient species that accepts an electron pair, so it is a Lewis acid. It attacks electron-rich centres. Electrophiles may be positive, such as $H^+$, $NO_2^+$, $Br^+$, $Cl^+$ and carbocations. They may also be neutral, such as $BF_3$, $AlCl_3$, $FeCl_3$ and $SO_3$, or the carbonyl carbon. A nucleophile ('nucleus-loving') is an electron-rich species that donates an electron pair, so it is a Lewis base. It attacks electron-deficient centres. Nucleophiles may be negative, such as $OH^-$, $CN^-$, $Cl^-$, $RO^-$ and carbanions. They may also be neutral with a lone pair or $\\pi$ electrons, such as $H_2O$, $NH_3$, $ROH$ and $R_3N$. Polar reactions are described as a nucleophile attacking an electrophilic centre, with curved arrows starting from the electron pair.",
+      "key_points": [
+        "Electrophiles are Lewis acids; nucleophiles are Lewis bases",
+        "Neutral electrophiles: $BF_3$, $AlCl_3$, $SO_3$, $:CCl_2$ (dichlorocarbene)",
+        "Neutral nucleophiles: $H_2O$, $NH_3$, $ROH$, $RNH_2$",
+        "Ambident nucleophiles have two donor sites, e.g. $CN^-$ (C or N) and $NO_2^-$ (N or O)",
+        "Carbonyl carbon is electrophilic and carbonyl oxygen is nucleophilic",
+        "A curved arrow always starts at the electron source (nucleophile) and points to the electron sink"
+      ],
+      "formulas": [],
+      "neet_tip": "Questions ask you to classify a list of species as electrophiles or nucleophiles, especially neutral ones like $BF_3$, $AlCl_3$, $NH_3$ or $H_2O$.",
+      "topic": "Electrophiles and nucleophiles"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "The inductive effect is a permanent polarisation transmitted along a $\\sigma$ chain. It fades rapidly with distance and is almost negligible beyond three bonds. Groups that withdraw electrons show -I (e.g. $-NO_2$, $-CN$, halogens), and alkyl groups that push electrons show +I. The electromeric effect is temporary. It is a complete shift of $\\pi$ electrons in a multiple bond, occurs only when an attacking reagent is present, and disappears when the reagent is removed. Resonance is delocalisation of $\\pi$ electrons or lone pairs, shown by contributing structures whose weighted average is the resonance hybrid. The hybrid is more stable than any single contributor. Hyperconjugation ('no-bond resonance') is delocalisation of $\\sigma$ electrons of an $\\alpha$ $C-H$ bond into an adjacent empty p orbital or $\\pi$ system. It stabilises carbocations, free radicals and alkenes.",
+      "key_points": [
+        "-I order: $-NO_2 > -CN > -COOH > -F > -Cl > -Br > -I > -OCH_3 > -C_6H_5$",
+        "+I order: $(CH_3)_3C- > (CH_3)_2CH- > CH_3CH_2- > CH_3-$",
+        "+E effect: electrons move toward the attacking electrophile (e.g. $H^+$ adding to an alkene); -E effect: electrons move away from the attacking nucleophile (e.g. $CN^-$ adding to $C=O$)",
+        "+R groups donate a lone pair to the ring: $-OH$, $-OR$, $-NH_2$, $-NHCOCH_3$, $-X$; -R groups withdraw: $-NO_2$, $-CN$, $-CHO$, $-COR$, $-COOH$",
+        "Favoured contributors: more covalent bonds, complete octets, least charge separation, negative charge on the more electronegative atom",
+        "Hyperconjugation is greater with more $\\alpha$-H, so it is strongest for $-CH_3$ and absent for $-C(CH_3)_3$ (Baker-Nathan order)",
+        "Alkene stability rises with the number of $\\alpha$-H: $(CH_3)_2C=C(CH_3)_2$ is the most stable"
+      ],
+      "formulas": [
+        {
+          "formula": "Resonance energy $= E_{\\text{most stable contributor}} - E_{\\text{actual hybrid}}$",
+          "meaning": "Extra stability gained from delocalisation; about 150 kJ/mol for benzene"
+        },
+        {
+          "formula": "Number of hyperconjugative structures $=$ number of $\\alpha$-H atoms",
+          "meaning": "Compare the extent of hyperconjugation in carbocations, radicals and alkenes"
+        }
+      ],
+      "neet_tip": "NEET asks you to name the effect responsible for a stability or acidity trend, count $\\alpha$-H for hyperconjugation, or pick the most stable resonance contributor.",
+      "topic": "Inductive effect, electromeric effect, resonance and hyperconjugation"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Organic reactions fall into four broad types. In substitution, one atom or group replaces another. Examples are free-radical chlorination of methane, nucleophilic substitution ($S_N1$, $S_N2$) in alkyl halides, and electrophilic substitution in benzene. In addition, a reagent adds across a multiple bond, so the product contains all atoms of both reactants. Alkenes undergo electrophilic addition (Markovnikov orientation), and carbonyl compounds undergo nucleophilic addition. In elimination, atoms or groups are lost from adjacent carbons to form a multiple bond, as in dehydrohalogenation with alcoholic $KOH$ or dehydration of alcohols with concentrated $H_2SO_4$. The more substituted alkene is the major product (Saytzeff rule). In rearrangement, atoms or groups migrate within a molecule to give a structural isomer, often via a carbocation shifting to a more stable form.",
+      "key_points": [
+        "Substitution: free radical (alkanes, $h\\nu$), nucleophilic (alkyl halides), electrophilic (arenes)",
+        "Addition: electrophilic to $C=C$ (Markovnikov rule), nucleophilic to $C=O$",
+        "Elimination: $\\beta$-elimination gives the more substituted alkene as the major product (Saytzeff rule)",
+        "Rearrangement: 1,2-hydride or 1,2-methyl shift converts $1^{\\circ}$ or $2^{\\circ}$ carbocations to more stable ones",
+        "Addition and elimination are reverse processes; a rearranged product has the same molecular formula as the starting material"
+      ],
+      "formulas": [
+        {
+          "formula": "$CH_4 + Cl_2 \\xrightarrow{h\\nu} CH_3Cl + HCl$",
+          "meaning": "Free-radical substitution"
+        },
+        {
+          "formula": "$CH_3CH=CH_2 + HBr \\rightarrow CH_3CHBrCH_3$",
+          "meaning": "Electrophilic addition (Markovnikov)"
+        },
+        {
+          "formula": "$CH_3CH_2Br + KOH(alc) \\rightarrow CH_2=CH_2 + KBr + H_2O$",
+          "meaning": "Elimination (dehydrohalogenation)"
+        },
+        {
+          "formula": "$CH_3CH_2Br + OH^-(aq) \\rightarrow CH_3CH_2OH + Br^-$",
+          "meaning": "Nucleophilic substitution"
+        }
+      ],
+      "neet_tip": "NEET gives a reaction and asks you to classify it, or predict a product where a carbocation rearrangement or Markovnikov or Saytzeff orientation decides the answer.",
+      "topic": "Types of organic reactions: substitution, addition, elimination and rearrangement"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$sp^3$: $109^{\\circ}28'$; $sp^2$: $120^{\\circ}$; $sp$: $180^{\\circ}$",
+      "meaning": "Bond angles from hybridization"
+    },
+    {
+      "formula": "$\\%\\,s$: $sp^3 = 25$, $sp^2 = 33.3$, $sp = 50$",
+      "meaning": "s-character; electronegativity and acidity of $C-H$ rise with it"
+    },
+    {
+      "formula": "$C-C$ 154 pm $> C=C$ 134 pm $> C\\equiv C$ 120 pm",
+      "meaning": "Bond lengths; benzene $C-C$ = 139 pm (resonance)"
+    },
+    {
+      "formula": "$DU = \\frac{2C + 2 + N - H - X}{2}$",
+      "meaning": "Degree of unsaturation (rings plus $\\pi$ bonds)"
+    },
+    {
+      "formula": "$C_nH_{2n+2}$, $C_nH_{2n}$, $C_nH_{2n-2}$",
+      "meaning": "General formulas of alkanes, alkenes, alkynes"
+    },
+    {
+      "formula": "Homologues differ by $CH_2$ = 14 u",
+      "meaning": "Homologous series"
+    },
+    {
+      "formula": "Stereoisomers $= 2^n$",
+      "meaning": "$n$ = stereocentres (unsymmetrical molecule)"
+    },
+    {
+      "formula": "$-COOH > -SO_3H > -COOR > -COX > -CONH_2 > -CN > -CHO > >C=O > -OH > -NH_2$",
+      "meaning": "Functional group priority in IUPAC naming"
+    },
+    {
+      "formula": "$A-B \\rightarrow A^{\\bullet} + B^{\\bullet}$; $A-B \\rightarrow A^+ + B^-$",
+      "meaning": "Homolytic and heterolytic fission"
+    },
+    {
+      "formula": "$3^{\\circ} > 2^{\\circ} > 1^{\\circ} > CH_3$",
+      "meaning": "Stability of carbocations and free radicals"
+    },
+    {
+      "formula": "$CH_3^- > 1^{\\circ} > 2^{\\circ} > 3^{\\circ}$",
+      "meaning": "Stability of carbanions"
+    },
+    {
+      "formula": "$(C_6H_5)_3C^+ > (C_6H_5)_2CH^+ > C_6H_5CH_2^+$",
+      "meaning": "Resonance-stabilised carbocations"
+    },
+    {
+      "formula": "$-NO_2 > -CN > -COOH > -F > -Cl > -Br > -I$",
+      "meaning": "-I effect order"
+    },
+    {
+      "formula": "$(CH_3)_3C- > (CH_3)_2CH- > C_2H_5- > CH_3-$",
+      "meaning": "+I effect order"
+    },
+    {
+      "formula": "$-CH_3 > -CH_2CH_3 > -CH(CH_3)_2 > -C(CH_3)_3$",
+      "meaning": "Hyperconjugation (Baker-Nathan) order, set by the number of $\\alpha$-H"
+    },
+    {
+      "formula": "Hyperconjugative structures $=$ number of $\\alpha$-H",
+      "meaning": "Extent of hyperconjugation"
+    },
+    {
+      "formula": "Resonance energy $= E_{\\text{contributor}} - E_{\\text{hybrid}}$",
+      "meaning": "Stabilisation by delocalisation"
+    },
+    {
+      "formula": "Markovnikov rule",
+      "meaning": "In $HX$ addition to an unsymmetrical alkene, $H$ adds to the carbon with more H (via the more stable carbocation)"
+    },
+    {
+      "formula": "Saytzeff rule",
+      "meaning": "In elimination, the more substituted alkene is the major product"
+    },
+    {
+      "formula": "$CH_4 + Cl_2 \\xrightarrow{h\\nu} CH_3Cl + HCl$",
+      "meaning": "Free-radical substitution"
+    }
+  ],
+  "common_traps": [
+    "Applying the carbocation order to carbanions: carbanion stability is reversed ($CH_3^- > 1^{\\circ} > 2^{\\circ} > 3^{\\circ}$) because alkyl +I groups destabilise a negative charge.",
+    "Counting all H atoms for hyperconjugation: only H atoms on carbons directly attached to the positive, radical or $sp^2$ centre ($\\alpha$-H) count; $(CH_3)_3C^+$ has 9.",
+    "Treating the inductive effect as temporary: inductive is permanent and acts through $\\sigma$ bonds, whereas the electromeric effect is temporary and needs an attacking reagent.",
+    "Believing resonance structures interconvert or exist separately: only the hybrid is real, and it is more stable than every contributor.",
+    "Calling all carbanions $sp^3$: benzylic or allylic carbanions become $sp^2$ to delocalise the lone pair.",
+    "Thinking a vinyl cation is as stable as an allyl cation: in a vinyl cation the charge is on the double-bond carbon with no resonance stabilisation, so it is very unstable.",
+    "Alphabetising with multiplying prefixes: di, tri, sec and tert are ignored, but iso and neo are counted (e.g. ethyl before dimethyl).",
+    "Assuming every alkene shows cis-trans isomerism: each doubly bonded carbon must carry two different groups, so $CH_3CH=CH_2$ shows none."
+  ],
+  "quick_revision": [
+    "Carbon is tetravalent; hybridization $sp^3$, $sp^2$, $sp$ gives tetrahedral, trigonal and linear shapes.",
+    "More s-character means more electronegative carbon, shorter bonds and more acidic $C-H$.",
+    "Homologues differ by $CH_2$ (14 u) and share the general formula and chemical properties.",
+    "Structural isomerism includes chain, position, functional and metamerism; stereoisomerism includes geometrical and optical.",
+    "In IUPAC naming, the principal group gets the lowest locant, then multiple bonds, then substituents (alphabetical order).",
+    "Homolysis (light, heat, peroxide) gives radicals; heterolysis (polar solvent) gives ions.",
+    "Carbocation and radical stability is $3^{\\circ} > 2^{\\circ} > 1^{\\circ} > CH_3$; carbanion stability is the reverse.",
+    "Benzylic and allylic intermediates are stabilised by resonance; alkyl-substituted ones by +I and hyperconjugation.",
+    "Electrophiles are Lewis acids ($BF_3$, $NO_2^+$); nucleophiles are Lewis bases ($NH_3$, $OH^-$, $H_2O$).",
+    "The inductive effect is permanent and distance-dependent; the electromeric effect is temporary and reagent-dependent.",
+    "Hyperconjugation is no-bond resonance of an $\\alpha$ $C-H$ $\\sigma$ bond with an empty p orbital or $\\pi$ system; more $\\alpha$-H gives more stability.",
+    "Reaction types are substitution, addition (Markovnikov), elimination (Saytzeff) and rearrangement (hydride or methyl shift)."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q048",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q48"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u08",
+  "unit_no": 8,
+  "unit_name": "Chemical Kinetics",
+  "slug": "chemical-kinetics",
+  "overview": "Chemical kinetics studies how fast reactions occur, the factors that control their speed, and the mechanism by which reactants change into products. NEET asks one or two questions from this unit almost every year. These are mostly numericals on rate law, units of $k$, zero and first order integrated equations, half-life and Arrhenius activation energy, plus conceptual questions on order, molecularity and collision theory.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "The rate of a reaction is the change in concentration of a reactant or product per unit time. For reactants the concentration decreases, so a minus sign is used to keep the rate positive. For a general reaction $aA + bB \\rightarrow cC + dD$, each concentration change is divided by its stoichiometric coefficient, so that one unique rate is obtained for the whole reaction. The average rate is measured over a finite time interval. The instantaneous rate is the slope of the concentration versus time curve at a particular instant, i.e. a tangent, as $\\Delta t \\rightarrow 0$. Units are $mol\\,L^{-1}\\,s^{-1}$. For gaseous reactions the units can be $atm\\,s^{-1}$ when partial pressures are used. The rate generally decreases with time because reactant concentration falls.",
+      "key_points": [
+        "Rate is always reported as a positive quantity.",
+        "Rate of disappearance of a reactant is not equal to the rate of reaction unless its coefficient is 1.",
+        "The instantaneous rate is the slope of the tangent on the concentration versus time graph.",
+        "The average rate equals the instantaneous rate only for a zero order reaction.",
+        "For $N_2 + 3H_2 \\rightarrow 2NH_3$: $-\\frac{d[N_2]}{dt} = -\\frac{1}{3}\\frac{d[H_2]}{dt} = \\frac{1}{2}\\frac{d[NH_3]}{dt}$."
+      ],
+      "formulas": [
+        {
+          "formula": "$r_{av} = -\\frac{\\Delta[R]}{\\Delta t} = \\frac{\\Delta[P]}{\\Delta t}$",
+          "meaning": "Average rate over the time interval $\\Delta t$."
+        },
+        {
+          "formula": "$r = -\\frac{1}{a}\\frac{d[A]}{dt} = -\\frac{1}{b}\\frac{d[B]}{dt} = \\frac{1}{c}\\frac{d[C]}{dt} = \\frac{1}{d}\\frac{d[D]}{dt}$",
+          "meaning": "Instantaneous rate of reaction for $aA + bB \\rightarrow cC + dD$."
+        }
+      ],
+      "neet_tip": "Expect questions that relate the rate of disappearance of one species to the rate of formation of another using stoichiometric coefficients.",
+      "topic": "Rate of a chemical reaction"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Concentration: for most reactions, rate increases with reactant concentration as dictated by the rate law. Zero order reactions are the exception, since their rate does not depend on concentration. Temperature: rate rises sharply with temperature. For many reactions, a 10 K rise roughly doubles or triples the rate constant; the ratio $k_{T+10}/k_T$ is called the temperature coefficient. Pressure: for gaseous reactions, increasing pressure decreases volume and raises concentration, so collisions become more frequent and the rate increases. Pressure has negligible effect on reactions in solids and liquids. Catalyst: a catalyst gives an alternative pathway with lower activation energy and so increases the rate. It remains chemically unchanged at the end of the reaction. It does not change $\\Delta H$, $\\Delta G$ or the equilibrium constant. It speeds up the forward and backward reactions equally, so equilibrium is reached sooner. Surface area and the nature of reactants also affect the rate.",
+      "key_points": [
+        "Temperature coefficient $= \\frac{k_{T+10}}{k_T} \\approx 2$ to $3$.",
+        "A catalyst lowers $E_a$ but cannot make a non-spontaneous reaction ($\\Delta G > 0$) occur.",
+        "A catalyst does not alter the equilibrium position or $K$; it only shortens the time needed to reach equilibrium.",
+        "Increasing pressure raises the rate of gaseous reactions only, through increased concentration.",
+        "Rate depends on concentration, not on the total amount of reactant."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{k_{T_2}}{k_{T_1}} = \\mu^{\\frac{T_2 - T_1}{10}}$",
+          "meaning": "Approximate rate constant at a new temperature when the temperature coefficient $\\mu$ is known."
+        }
+      ],
+      "neet_tip": "Statement-based questions on what a catalyst can and cannot change ($E_a$ versus $\\Delta H$, $\\Delta G$, $K$) are very common.",
+      "topic": "Factors affecting rate: concentration, temperature, pressure and catalyst"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "An elementary reaction takes place in a single step: reactants collide and form products directly. For an elementary reaction, the rate law can be written directly from the balanced equation, so order equals molecularity. A complex reaction occurs through a sequence of elementary steps called the mechanism. The slowest step is the rate determining step and controls the overall rate. Intermediates formed in one step and consumed in a later step do not appear in the overall equation. They should not appear in the final rate law either, so they are eliminated using a fast pre-equilibrium where needed. Example: decomposition of $H_2O_2$ catalysed by $I^-$ in alkaline medium. Step 1 (slow): $H_2O_2 + I^- \\rightarrow H_2O + IO^-$. Step 2 (fast): $H_2O_2 + IO^- \\rightarrow H_2O + I^- + O_2$. The rate is $k[H_2O_2][I^-]$, which is first order in each species.",
+      "key_points": [
+        "Elementary reaction: single step, and the rate law follows the stoichiometry.",
+        "Complex reaction: multistep, and the rate law must be found experimentally.",
+        "The slowest step is rate determining.",
+        "Intermediates such as $IO^-$ do not appear in the overall equation.",
+        "A catalyst used up in one step and regenerated in a later step may appear in the rate law."
+      ],
+      "formulas": [],
+      "neet_tip": "NEET gives a mechanism with slow and fast steps and asks for the rate law or overall order; always use the slow step and eliminate intermediates.",
+      "topic": "Elementary and complex reactions"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Order of reaction is the sum of the powers of the concentration terms in the experimentally determined rate law. It can be 0, a positive or negative integer, or a fraction. Molecularity is the number of reacting species (atoms, ions or molecules) that collide simultaneously in an elementary step. It is a theoretical concept and is always a whole number: 1, 2 or rarely 3. It cannot be zero or fractional. Molecularity above 3 is very improbable because simultaneous collision of many species is rare. For a complex reaction, molecularity has no meaning for the overall reaction; it applies to each elementary step. The order of a complex reaction is decided by its slowest step. Pseudo first order reactions are those where one reactant is in large excess, so its concentration stays practically constant. Examples are acid hydrolysis of ethyl acetate and inversion of cane sugar in excess water.",
+      "key_points": [
+        "Order is experimental and can be zero or fractional.",
+        "Molecularity is theoretical and is a whole number from 1 to 3.",
+        "Order equals molecularity only for elementary reactions.",
+        "$CH_3COOC_2H_5 + H_2O \\xrightarrow{H^+} CH_3COOH + C_2H_5OH$ is pseudo first order, with rate $= k'[ester]$.",
+        "Inversion of sucrose, $C_{12}H_{22}O_{11} + H_2O \\rightarrow C_6H_{12}O_6 + C_6H_{12}O_6$, is pseudo first order."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{Rate} = k[A]^x[B]^y,\\ \\text{order} = x + y$",
+          "meaning": "Overall order from the rate law; $x$ and $y$ are found by experiment."
+        }
+      ],
+      "neet_tip": "Direct conceptual questions such as 'which statement about molecularity or order is incorrect' and identification of pseudo first order examples.",
+      "topic": "Order and molecularity"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "The rate law expresses the rate in terms of molar concentrations of reactants, each raised to a power that may differ from its stoichiometric coefficient. It must be determined experimentally, commonly by the initial rate method. In that method, the concentration of one reactant is changed while the others are kept fixed, and the change in rate gives the order with respect to that reactant. The rate constant $k$, also called the specific reaction rate, is the rate when all concentrations are unity. It depends on temperature and catalyst. It does not depend on concentration. Its units depend on the overall order $n$ and equal $(mol\\,L^{-1})^{1-n}\\,s^{-1}$. For gas reactions using pressure, the units are $atm^{1-n}\\,s^{-1}$.",
+      "key_points": [
+        "Zero order: $k$ in $mol\\,L^{-1}\\,s^{-1}$.",
+        "First order: $k$ in $s^{-1}$, independent of concentration units.",
+        "Second order: $k$ in $L\\,mol^{-1}\\,s^{-1}$.",
+        "Third order: $k$ in $L^2\\,mol^{-2}\\,s^{-1}$.",
+        "If doubling $[A]$ multiplies the rate by $2^x$, the order with respect to A is $x$.",
+        "$k$ changes with temperature but not with concentration or time."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{Units of } k = (mol\\,L^{-1})^{1-n}\\,s^{-1}$",
+          "meaning": "Find the unit of $k$ from the order, or deduce the order from the given unit."
+        },
+        {
+          "formula": "$\\frac{r_2}{r_1} = \\left(\\frac{[A]_2}{[A]_1}\\right)^x$",
+          "meaning": "Order with respect to A from initial rate data."
+        }
+      ],
+      "neet_tip": "Frequent question type: identify the order from the units of $k$, or use an initial rate data table to find the rate law.",
+      "topic": "Rate law, rate constant and its units"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Zero order: the rate is independent of concentration, so $-\\frac{d[R]}{dt} = k$. Integration gives $[R] = [R]_0 - kt$. A plot of $[R]$ against $t$ is a straight line with slope $-k$ and intercept $[R]_0$. Examples are decomposition of $NH_3$ on a hot Pt surface at high pressure, decomposition of HI on a gold surface, and some enzyme-catalysed reactions. First order: $-\\frac{d[R]}{dt} = k[R]$. Integration gives $\\ln[R] = \\ln[R]_0 - kt$, or $[R] = [R]_0 e^{-kt}$. A plot of $\\ln[R]$ against $t$ is a straight line with slope $-k$. A plot of $\\log\\frac{[R]_0}{[R]}$ against $t$ has slope $\\frac{k}{2.303}$. Examples are radioactive decay, decomposition of $N_2O_5$, and hydrogenation of ethene. For a gas phase first order reaction $A(g) \\rightarrow B(g) + C(g)$ at constant volume, $k$ can be calculated from initial and total pressures.",
+      "key_points": [
+        "Zero order: concentration falls linearly with time, and the reaction completes at $t = \\frac{[R]_0}{k}$.",
+        "First order: concentration falls exponentially and never theoretically reaches zero.",
+        "For first order, the time for a given fraction to react is independent of initial concentration.",
+        "For first order, $t_{99.9\\%} \\approx 10\\,t_{1/2}$ and $t_{99\\%} = 2\\,t_{90\\%}$.",
+        "For first order, $t_{75\\%} = 2\\,t_{1/2}$ and $t_{87.5\\%} = 3\\,t_{1/2}$."
+      ],
+      "formulas": [
+        {
+          "formula": "$[R] = [R]_0 - kt$",
+          "meaning": "Integrated zero order rate law."
+        },
+        {
+          "formula": "$k = \\frac{2.303}{t}\\log\\frac{[R]_0}{[R]}$",
+          "meaning": "Integrated first order rate law."
+        },
+        {
+          "formula": "$[R] = [R]_0 e^{-kt}$",
+          "meaning": "Exponential form for first order decay."
+        },
+        {
+          "formula": "$k = \\frac{2.303}{t}\\log\\frac{p_i}{2p_i - p_t}$",
+          "meaning": "First order gas reaction $A(g) \\rightarrow B(g) + C(g)$; $p_i$ is the initial pressure and $p_t$ the total pressure at time $t$."
+        }
+      ],
+      "neet_tip": "Numericals ask for the time to complete $x\\%$ of a zero or first order reaction, and for identification of the correct linear plot for each order.",
+      "topic": "Differential and integral forms of zero and first order reactions"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Half-life ($t_{1/2}$) is the time in which the concentration of a reactant falls to half of its initial value. For a zero order reaction, $t_{1/2} = \\frac{[R]_0}{2k}$. It is directly proportional to the initial concentration, so successive half-lives become shorter as concentration decreases. For a first order reaction, $t_{1/2} = \\frac{0.693}{k}$. It is independent of initial concentration and stays constant throughout the reaction, which is why radioactive decay is characterised by a fixed half-life. After $n$ half-lives of a first order reaction, the remaining amount is $\\frac{[R]_0}{2^n}$. In general, $t_{1/2} \\propto [R]_0^{1-n}$ for an $n^{th}$ order reaction. This relation lets you deduce the order from how the half-life changes with initial concentration.",
+      "key_points": [
+        "Zero order: $t_{1/2} \\propto [R]_0$.",
+        "First order: $t_{1/2}$ is constant and independent of $[R]_0$.",
+        "Second order: $t_{1/2} \\propto \\frac{1}{[R]_0}$.",
+        "Amount left after $n$ half-lives $= [R]_0\\left(\\frac{1}{2}\\right)^n$, for first order only.",
+        "A constant half-life is the hallmark of a first order reaction."
+      ],
+      "formulas": [
+        {
+          "formula": "$t_{1/2} = \\frac{[R]_0}{2k}$",
+          "meaning": "Half-life of a zero order reaction."
+        },
+        {
+          "formula": "$t_{1/2} = \\frac{0.693}{k}$",
+          "meaning": "Half-life of a first order reaction."
+        },
+        {
+          "formula": "$t_{1/2} \\propto [R]_0^{1-n}$",
+          "meaning": "Find the order $n$ from half-life data at different initial concentrations."
+        }
+      ],
+      "neet_tip": "Watch for questions where the half-life changes with initial concentration and you must decide the order, or count half-lives for a first order process.",
+      "topic": "Half-life of zero and first order reactions"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Rate constants rise rapidly with temperature. Arrhenius explained this with the equation $k = Ae^{-E_a/RT}$. Here $A$ is the pre-exponential or frequency factor, related to collision frequency, and $E_a$ is the activation energy. The term $e^{-E_a/RT}$ is the fraction of molecules having energy equal to or greater than $E_a$. According to Arrhenius, reactants must pass through an unstable, short-lived activated complex (transition state) at the energy maximum before converting to products. The Maxwell-Boltzmann distribution curve shows that raising the temperature flattens and broadens the curve and shifts its peak to a higher energy. This sharply increases the fraction of molecules with energy at least $E_a$, and roughly doubles it for a 10 K rise. The total area under the curve stays constant. Taking logarithms gives $\\ln k = \\ln A - \\frac{E_a}{RT}$. So a plot of $\\ln k$ against $\\frac{1}{T}$ is a straight line with slope $-\\frac{E_a}{R}$ and intercept $\\ln A$.",
+      "key_points": [
+        "$k \\rightarrow A$ as $T \\rightarrow \\infty$ or as $E_a \\rightarrow 0$.",
+        "A plot of $\\ln k$ against $\\frac{1}{T}$ has slope $-\\frac{E_a}{R}$ and y-intercept $\\ln A$.",
+        "A plot of $\\log k$ against $\\frac{1}{T}$ has slope $-\\frac{E_a}{2.303R}$.",
+        "The activated complex lies at the energy maximum of the potential energy profile.",
+        "The total area under the Maxwell-Boltzmann curve is constant at all temperatures."
+      ],
+      "formulas": [
+        {
+          "formula": "$k = Ae^{-E_a/RT}$",
+          "meaning": "Arrhenius equation."
+        },
+        {
+          "formula": "$\\ln k = \\ln A - \\frac{E_a}{RT}$",
+          "meaning": "Linear form used to read $E_a$ and $A$ from a graph."
+        },
+        {
+          "formula": "$\\log k = \\log A - \\frac{E_a}{2.303RT}$",
+          "meaning": "Log base 10 form of the Arrhenius equation."
+        }
+      ],
+      "neet_tip": "Arrhenius plot questions give the intercept ($\\ln A$) and slope ($-\\frac{E_a}{R}$) graphically and ask for $k$, $T$ or $E_a$.",
+      "topic": "Effect of temperature; Arrhenius theory"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Activation energy is the minimum extra energy that reactant molecules must absorb to form the activated complex. Threshold energy equals the average energy of the reactants plus $E_a$. In a potential energy diagram, $E_a$ for the forward reaction is the height of the peak above the reactants. The enthalpy change is $\\Delta H = E_{a(f)} - E_{a(b)}$. For an exothermic reaction, $E_{a(b)} > E_{a(f)}$. $E_a$ is calculated by measuring $k$ at two temperatures and using the two-temperature Arrhenius equation, or from the slope of an Arrhenius plot. A higher $E_a$ means a slower reaction and greater sensitivity of $k$ to temperature. A catalyst lowers $E_a$ by the same amount for the forward and backward reactions. Always convert $E_a$ to J $mol^{-1}$ when $R = 8.314$ J $K^{-1}\\,mol^{-1}$ is used.",
+      "key_points": [
+        "$E_a$ is always positive (or zero) for an elementary step.",
+        "Threshold energy $= E_a +$ average energy of the reactants.",
+        "$\\Delta H = E_{a(f)} - E_{a(b)}$.",
+        "Endothermic reaction: $E_{a(f)} > \\Delta H$.",
+        "A larger $E_a$ makes $k$ more temperature sensitive.",
+        "A catalyst reduces $E_{a(f)}$ and $E_{a(b)}$ equally, so $\\Delta H$ is unchanged."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\log\\frac{k_2}{k_1} = \\frac{E_a}{2.303R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right) = \\frac{E_a}{2.303R}\\left(\\frac{T_2 - T_1}{T_1T_2}\\right)$",
+          "meaning": "Calculate $E_a$ from rate constants at two temperatures."
+        },
+        {
+          "formula": "$\\Delta H = E_{a(f)} - E_{a(b)}$",
+          "meaning": "Relates the forward and backward activation energies to the enthalpy change."
+        },
+        {
+          "formula": "$\\frac{k_{cat}}{k} = e^{(E_a - E_{a,cat})/RT}$",
+          "meaning": "Rate enhancement by a catalyst at the same temperature, assuming the same $A$."
+        }
+      ],
+      "neet_tip": "Typical numerical: $k$ is given at two temperatures, or 'rate doubles from 300 K to 310 K', and you must find $E_a$ (about 53.6 kJ $mol^{-1}$ in the latter case).",
+      "topic": "Activation energy and its calculation"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Collision theory, developed for bimolecular gaseous reactions, treats reacting molecules as hard spheres. A reaction occurs only through collisions. The collision frequency $Z_{AB}$ is the number of collisions per second per unit volume. Not every collision is fruitful. An effective collision needs two things: sufficient energy (at least the threshold energy) and proper orientation, so that the bonds to be broken and formed are suitably aligned. The fraction of molecules with sufficient energy is $e^{-E_a/RT}$. The probability or steric factor $P$ accounts for orientation. So the rate is $P Z_{AB} e^{-E_a/RT}$. Comparing this with the Arrhenius equation, $A$ corresponds to $PZ_{AB}$. The theory works well for simple atoms and molecules. It deviates for complex molecules because it ignores molecular structure, which is why the steric factor $P$ was introduced.",
+      "key_points": [
+        "Effective collisions require energy $\\ge$ threshold energy and proper orientation.",
+        "$Z_{AB}$ is the collision frequency of A and B.",
+        "$P$ is the probability or steric factor, with $P \\le 1$.",
+        "The Arrhenius factor $A \\approx PZ_{AB}$.",
+        "Only a tiny fraction of total collisions lead to products.",
+        "The main limitation is that molecules are treated as hard spheres, ignoring their structure."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{Rate} = PZ_{AB}e^{-E_a/RT}$",
+          "meaning": "Collision theory rate expression for a bimolecular reaction."
+        }
+      ],
+      "neet_tip": "Conceptual questions ask about the conditions for effective collisions, the meaning of the steric factor, and how $A$ relates to collision frequency.",
+      "topic": "Collision theory of bimolecular gaseous reactions"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$r = -\\frac{1}{a}\\frac{d[A]}{dt} = \\frac{1}{c}\\frac{d[C]}{dt}$",
+      "meaning": "Rate of reaction for $aA \\rightarrow cC$, normalised by stoichiometric coefficients."
+    },
+    {
+      "formula": "$\\text{Rate} = k[A]^x[B]^y$",
+      "meaning": "Rate law; overall order $= x + y$."
+    },
+    {
+      "formula": "$\\text{Units of } k = (mol\\,L^{-1})^{1-n}\\,s^{-1}$",
+      "meaning": "Units of the rate constant for an $n^{th}$ order reaction."
+    },
+    {
+      "formula": "$[R] = [R]_0 - kt$",
+      "meaning": "Zero order integrated rate law."
+    },
+    {
+      "formula": "$t_{1/2} = \\frac{[R]_0}{2k}$",
+      "meaning": "Zero order half-life."
+    },
+    {
+      "formula": "$k = \\frac{2.303}{t}\\log\\frac{[R]_0}{[R]}$",
+      "meaning": "First order integrated rate law."
+    },
+    {
+      "formula": "$[R] = [R]_0e^{-kt}$",
+      "meaning": "First order exponential decay."
+    },
+    {
+      "formula": "$t_{1/2} = \\frac{0.693}{k}$",
+      "meaning": "First order half-life, independent of $[R]_0$."
+    },
+    {
+      "formula": "$k = \\frac{2.303}{t}\\log\\frac{p_i}{2p_i - p_t}$",
+      "meaning": "First order gas reaction $A(g) \\rightarrow B(g) + C(g)$."
+    },
+    {
+      "formula": "$t_{1/2} \\propto [R]_0^{1-n}$",
+      "meaning": "Dependence of half-life on initial concentration for order $n$."
+    },
+    {
+      "formula": "$[R] = \\frac{[R]_0}{2^n}$",
+      "meaning": "First order reactant remaining after $n$ half-lives."
+    },
+    {
+      "formula": "$k = Ae^{-E_a/RT}$",
+      "meaning": "Arrhenius equation."
+    },
+    {
+      "formula": "$\\ln k = \\ln A - \\frac{E_a}{RT}$",
+      "meaning": "Arrhenius plot of $\\ln k$ against $\\frac{1}{T}$: slope $-\\frac{E_a}{R}$, intercept $\\ln A$."
+    },
+    {
+      "formula": "$\\log\\frac{k_2}{k_1} = \\frac{E_a}{2.303R}\\left(\\frac{T_2 - T_1}{T_1T_2}\\right)$",
+      "meaning": "Two-temperature form for calculating $E_a$."
+    },
+    {
+      "formula": "$\\Delta H = E_{a(f)} - E_{a(b)}$",
+      "meaning": "Enthalpy change from the potential energy diagram."
+    },
+    {
+      "formula": "$\\frac{k_{T+10}}{k_T} \\approx 2 \\text{ to } 3$",
+      "meaning": "Temperature coefficient of most reactions."
+    },
+    {
+      "formula": "$\\text{Rate} = PZ_{AB}e^{-E_a/RT}$",
+      "meaning": "Collision theory rate with steric factor $P$."
+    },
+    {
+      "formula": "$e^{-E_a/RT}$",
+      "meaning": "Fraction of molecules with energy $\\ge E_a$."
+    },
+    {
+      "formula": "$t_{99.9\\%} \\approx 10\\,t_{1/2}$",
+      "meaning": "Handy shortcut for first order reactions."
+    },
+    {
+      "formula": "$t_{75\\%} = 2\\,t_{1/2}$",
+      "meaning": "Handy shortcut for first order reactions."
+    }
+  ],
+  "common_traps": [
+    "Ignoring stoichiometric coefficients: for $2A \\rightarrow B$, if the rate of reaction is $k$, then $-\\frac{d[A]}{dt} = 2k$. Always check whether $k$ refers to the reaction rate or to the rate of disappearance of A before applying integrated equations.",
+    "Writing the rate law from the balanced equation for a complex reaction: the exponents are experimental and equal the coefficients only for elementary reactions.",
+    "Believing molecularity can be zero or fractional: only the order can be; molecularity is always 1, 2 or 3.",
+    "Thinking a catalyst changes $\\Delta H$, $\\Delta G$ or $K$: it only lowers $E_a$ and speeds up the attainment of equilibrium.",
+    "Using $E_a$ in kJ with $R$ in J $K^{-1}\\,mol^{-1}$: convert $E_a$ to joules first.",
+    "Mixing up the slopes of Arrhenius plots: $\\ln k$ against $\\frac{1}{T}$ has slope $-\\frac{E_a}{R}$, while $\\log k$ against $\\frac{1}{T}$ has slope $-\\frac{E_a}{2.303R}$.",
+    "Assuming the half-life is constant for every order: it is constant only for first order. For zero order it decreases as the reaction proceeds, since it is proportional to $[R]_0$.",
+    "Using the first order unit $s^{-1}$ for every order: $k$ has $mol\\,L^{-1}\\,s^{-1}$ for zero order and $L\\,mol^{-1}\\,s^{-1}$ for second order."
+  ],
+  "quick_revision": [
+    "Rate is a positive quantity: the change in concentration per unit time divided by the stoichiometric coefficient.",
+    "Rate increases with concentration (except for zero order), temperature, pressure (for gases), catalysts and surface area.",
+    "Order is experimental and can be 0 or fractional; molecularity is theoretical and is a whole number from 1 to 3.",
+    "The slowest step of a mechanism determines the rate law of a complex reaction.",
+    "Units of $k$ are $(mol\\,L^{-1})^{1-n}\\,s^{-1}$; first order units are $s^{-1}$.",
+    "Zero order: $[R] = [R]_0 - kt$ and $t_{1/2} = \\frac{[R]_0}{2k}$.",
+    "First order: $k = \\frac{2.303}{t}\\log\\frac{[R]_0}{[R]}$ and $t_{1/2} = \\frac{0.693}{k}$, which is constant.",
+    "Pseudo first order examples are acid hydrolysis of ester and inversion of cane sugar.",
+    "Arrhenius equation: $k = Ae^{-E_a/RT}$. The $\\ln k$ against $\\frac{1}{T}$ line has slope $-\\frac{E_a}{R}$ and intercept $\\ln A$.",
+    "Two-temperature form: $\\log\\frac{k_2}{k_1} = \\frac{E_a}{2.303R}\\left(\\frac{T_2 - T_1}{T_1T_2}\\right)$. Rate doubling from 300 K to 310 K gives $E_a \\approx 53.6$ kJ $mol^{-1}$.",
+    "A catalyst lowers $E_a$ for both forward and backward reactions; $\\Delta H$ and $K$ are unchanged.",
+    "Collision theory: rate $= PZ_{AB}e^{-E_a/RT}$. Effective collisions need sufficient energy and proper orientation."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q060",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q60"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q064",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q64"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

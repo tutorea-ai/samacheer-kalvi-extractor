@@ -1,0 +1,607 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u11",
+  "unit_no": 11,
+  "unit_name": "Electrostatics",
+  "slug": "electrostatics",
+  "overview": "Electrostatics studies charges at rest: the forces between them, the electric field and potential they create, and how conductors, dielectrics and capacitors store charge and energy. It is one of the highest-weightage units in NEET Physics, usually giving 2-4 questions every year. Questions centre on Gauss's law, potential and work, behaviour of conductors, and capacitor combinations and energy.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Electric charge is an intrinsic property of matter and comes in two kinds, positive and negative. Like charges repel and unlike charges attract. Charge is additive, so the total charge of a system is the algebraic sum of the individual charges. It is quantized: any charge is an integer multiple of the elementary charge, $q = ne$ with $e = 1.6 \\times 10^{-19}\\,C$. Charge is conserved, so it can neither be created nor destroyed, only transferred. In pair production and annihilation the net charge stays the same. Bodies get charged by friction, conduction or induction, and charging always involves a transfer of electrons. A body that gains electrons becomes negative and gains a tiny amount of mass. Charge is also relativistically invariant: its value does not depend on the speed of the body.",
+      "key_points": [
+        "SI unit is the coulomb (C). 1 C corresponds to about $6.25 \\times 10^{18}$ electrons.",
+        "Quantization: $q = \\pm ne$, where n is an integer. Quarks have fractional charge but are never found free.",
+        "Conservation holds in every process, including nuclear reactions and pair production.",
+        "Charging by induction gives a charge opposite to that of the inducing body, and the inducing body loses no charge.",
+        "Only electrons are transferred in ordinary charging. Protons stay bound in the nucleus.",
+        "Charge is a scalar and is additive."
+      ],
+      "formulas": [
+        {
+          "formula": "$q = ne$",
+          "meaning": "Quantization: n is the number of electrons transferred and $e = 1.6 \\times 10^{-19}\\,C$."
+        }
+      ],
+      "neet_tip": "Expect quick conceptual items on quantization, such as checking whether a given charge is possible or finding the number of electrons, and on conservation in nuclear or pair-production processes.",
+      "topic": "Electric charges and conservation of charge"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Coulomb's law gives the force between two stationary point charges. The force is proportional to the product of the charges and inversely proportional to the square of the distance between them, and it acts along the line joining them. In vacuum $F = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1 q_2}{r^2}$, where $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$. In a medium of dielectric constant K the force falls to $F/K$. The force is a central, conservative force and obeys Newton's third law. The superposition principle says that the net force on a charge is the vector sum of the forces exerted by each other charge individually. Each pair interaction is unaffected by the presence of the other charges. Equilibrium and symmetry problems, such as charges at polygon corners or a third charge placed between two charges, rely on this principle.",
+      "key_points": [
+        "$\\epsilon_0 = 8.85 \\times 10^{-12}\\,C^2\\,N^{-1}\\,m^{-2}$.",
+        "In a medium the permittivity becomes $\\epsilon = K\\epsilon_0$, and the force is reduced by a factor of K.",
+        "The force is a vector. Add forces vectorially, never as plain magnitudes.",
+        "For two like charges q and 4q a distance r apart, a third charge is in equilibrium at r/3 from q. Find the null point near the smaller charge.",
+        "Touching two identical conducting spheres makes each carry $(q_1+q_2)/2$.",
+        "Two equal forces F at angle $\\theta$ give a resultant of $2F\\cos(\\theta/2)$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{F}_{12} = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1 q_2}{r_{12}^2}\\hat{r}_{12}$",
+          "meaning": "Vector form of Coulomb's law: the force on charge 1 due to charge 2, where $\\hat{r}_{12}$ points from q2 to q1. Equivalently, $\\vec{F}_{21} = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1 q_2}{r^2}\\hat{r}_{21}$ is the force on q2 due to q1."
+        },
+        {
+          "formula": "$F_{medium} = \\frac{1}{4\\pi\\epsilon_0 K}\\frac{q_1 q_2}{r^2}$",
+          "meaning": "Force inside a medium of dielectric constant K."
+        },
+        {
+          "formula": "$\\vec{F}_{net} = \\vec{F}_1 + \\vec{F}_2 + ... + \\vec{F}_n$",
+          "meaning": "Superposition principle for a system of charges."
+        }
+      ],
+      "neet_tip": "NEET often asks how the force changes when charges are shared, the distance is changed or a medium is inserted, and where a third charge must sit to be in equilibrium.",
+      "topic": "Coulomb's law and the superposition principle"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "When charge is spread continuously rather than located at points, divide it into small elements dq. Treat each element as a point charge and integrate their contributions vectorially. Three densities are used. Linear density $\\lambda = dq/dl$ applies to wires and rings. Surface density $\\sigma = dq/dA$ applies to sheets and shells. Volume density $\\rho = dq/dV$ applies to solid spheres. The force on a test charge $q_0$ is $\\vec{F} = \\frac{q_0}{4\\pi\\epsilon_0}\\int \\frac{dq}{r^2}\\hat{r}$. Symmetry is essential: components that cancel in pairs can be dropped before integrating. A standard result is the field on the axis of a uniformly charged ring. It is zero at the centre and reaches its maximum at $x = R/\\sqrt{2}$.",
+      "key_points": [
+        "$dq = \\lambda\\,dl$, $\\sigma\\,dA$ or $\\rho\\,dV$, depending on the geometry.",
+        "Use symmetry to cancel perpendicular components before you integrate.",
+        "Ring on its axis: E = 0 at the centre, maximum at $x = R/\\sqrt{2}$, and point-charge-like for $x \\gg R$.",
+        "A small charge on the axis of a ring, displaced slightly, executes SHM if its sign is opposite to that of the ring.",
+        "For a uniform distribution, total charge = density times length, area or volume."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{F} = \\frac{q_0}{4\\pi\\epsilon_0}\\int \\frac{dq}{r^2}\\hat{r}$",
+          "meaning": "Force on a test charge $q_0$ due to a continuous charge distribution."
+        },
+        {
+          "formula": "$E_{axis} = \\frac{1}{4\\pi\\epsilon_0}\\frac{Qx}{(x^2+R^2)^{3/2}}$",
+          "meaning": "Field at distance x on the axis of a ring of charge Q and radius R."
+        }
+      ],
+      "neet_tip": "Ring-axis field, the position of maximum field and symmetry-based cancellation are the usual angles of attack.",
+      "topic": "Forces due to continuous charge distribution"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "The electric field at a point is the force per unit positive test charge placed there: $\\vec{E} = \\vec{F}/q_0$, with the test charge taken to be vanishingly small. For a point charge, $E = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{r^2}$, directed radially outward for positive q and inward for negative q. The field is a vector, so fields due to several charges add by superposition. Field lines are imaginary curves whose tangent at any point gives the direction of E. They start on positive charges and end on negative charges, or at infinity. Two field lines never intersect, because the field has only one direction at each point. Lines crowd together where the field is strong. Electrostatic field lines never form closed loops. They meet a conductor's surface at right angles.",
+      "key_points": [
+        "SI unit of E is N/C, which is the same as V/m.",
+        "The force on a charge is $\\vec{F} = q\\vec{E}$. A negative charge feels a force opposite to E.",
+        "Uniform field lines are parallel and equally spaced.",
+        "There are no field lines inside a conductor in electrostatic equilibrium.",
+        "The number of lines leaving a charge is proportional to its magnitude.",
+        "A charged particle in a uniform field moves with constant acceleration $qE/m$, so its path is parabolic if it enters perpendicular to the field."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{E} = \\frac{\\vec{F}}{q_0}$",
+          "meaning": "Definition of the electric field."
+        },
+        {
+          "formula": "$E = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{r^2}$",
+          "meaning": "Field of a point charge q at distance r."
+        }
+      ],
+      "neet_tip": "Common questions ask you to identify valid field-line diagrams (closed loops or crossing lines are wrong) or to find the field at the centre of symmetric charge arrangements.",
+      "topic": "Electric field due to a point charge; electric field lines"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "An electric dipole is a pair of equal and opposite charges, +q and -q, separated by a small distance 2a. The dipole moment is $\\vec{p} = q(2\\vec{a})$, directed from -q to +q, and is measured in C m. The net charge is zero, but the field is not. For a short dipole ($r \\gg a$) the field falls off as $1/r^3$, unlike the $1/r^2$ field of a point charge. On the axial line, $E = \\frac{2kp}{r^3}$ along $\\vec{p}$. On the equatorial line, $E = \\frac{kp}{r^3}$ opposite to $\\vec{p}$. At the same distance, the axial field is therefore twice the equatorial field. At a general angle $\\theta$, $E = \\frac{kp}{r^3}\\sqrt{1+3\\cos^2\\theta}$. Polar molecules such as $H_2O$ carry permanent dipole moments.",
+      "key_points": [
+        "The direction of $\\vec{p}$ is from the negative charge to the positive charge.",
+        "$E_{axial} : E_{equatorial} = 2 : 1$ at equal distance.",
+        "The equatorial field is antiparallel to $\\vec{p}$, while the axial field is parallel to it.",
+        "A dipole's field varies as $1/r^3$ and its potential as $1/r^2$.",
+        "The field is perpendicular to $\\vec{p}$ where $\\tan\\theta = \\sqrt{2}$, that is, $\\theta \\approx 54.7^\\circ$."
+      ],
+      "formulas": [
+        {
+          "formula": "$p = q \\times 2a$",
+          "meaning": "Dipole moment magnitude, where 2a is the separation."
+        },
+        {
+          "formula": "$E_{axial} = \\frac{1}{4\\pi\\epsilon_0}\\frac{2p}{r^3}$",
+          "meaning": "Field on the axis of a short dipole."
+        },
+        {
+          "formula": "$E_{eq} = \\frac{1}{4\\pi\\epsilon_0}\\frac{p}{r^3}$",
+          "meaning": "Field on the equatorial line of a short dipole."
+        },
+        {
+          "formula": "$E = \\frac{1}{4\\pi\\epsilon_0}\\frac{p}{r^3}\\sqrt{1+3\\cos^2\\theta}$",
+          "meaning": "Field at a general point at angle $\\theta$ from the dipole axis."
+        }
+      ],
+      "neet_tip": "Ratio questions comparing axial and equatorial fields, or asking how E scales with distance ($1/r^3$), are frequent.",
+      "topic": "Electric dipole and the field due to a dipole"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "In a uniform electric field the two charges of a dipole feel equal and opposite forces, so the net force is zero. These forces form a couple, giving a torque $\\vec{\\tau} = \\vec{p} \\times \\vec{E}$ with magnitude $pE\\sin\\theta$. The torque tends to align $\\vec{p}$ with $\\vec{E}$. The dipole has stable equilibrium at $\\theta = 0^\\circ$ and unstable equilibrium at $\\theta = 180^\\circ$, with zero torque in both cases. The torque is maximum, equal to pE, at $90^\\circ$. The work needed to rotate the dipole from $\\theta_1$ to $\\theta_2$ is $W = pE(\\cos\\theta_1 - \\cos\\theta_2)$. In a non-uniform field the dipole experiences both a torque and a net force, and is pulled toward the region of stronger field when aligned with it. A dipole slightly disturbed from stable equilibrium oscillates with angular SHM.",
+      "key_points": [
+        "Uniform field: net force zero, torque generally non-zero.",
+        "Non-uniform field: both net force and torque can be non-zero.",
+        "Maximum torque, pE, occurs at $\\theta = 90^\\circ$.",
+        "Rotating from $0^\\circ$ to $180^\\circ$ requires work 2pE.",
+        "The time period of small oscillations is $T = 2\\pi\\sqrt{I/(pE)}$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{\\tau} = \\vec{p} \\times \\vec{E},\\ \\tau = pE\\sin\\theta$",
+          "meaning": "Torque on a dipole in a uniform field."
+        },
+        {
+          "formula": "$W = pE(\\cos\\theta_1 - \\cos\\theta_2)$",
+          "meaning": "Work done by an external agent in rotating a dipole from $\\theta_1$ to $\\theta_2$."
+        }
+      ],
+      "neet_tip": "Questions test zero net force but non-zero torque in a uniform field, stable versus unstable orientations, and the work needed to rotate a dipole.",
+      "topic": "Torque on a dipole in a uniform electric field"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Electric flux measures the number of field lines crossing a surface. It is defined as $\\Phi = \\oint \\vec{E}\\cdot d\\vec{A}$, which reduces to $EA\\cos\\theta$ for a uniform field. The area vector points along the normal, outward for a closed surface. Flux is a scalar with unit N m^2/C, equivalent to V m. Gauss's law states that the total flux through any closed surface equals the enclosed charge divided by $\\epsilon_0$: $\\Phi = q_{enc}/\\epsilon_0$. The flux does not depend on the shape or size of the surface or on where the charge sits inside it. Charges outside the surface contribute zero net flux. However, the field E at points on the surface does depend on all charges, inside and outside. Symmetry tricks follow directly: a charge at the centre of a cube sends $q/6\\epsilon_0$ through each face.",
+      "key_points": [
+        "Outgoing flux is positive and incoming flux is negative.",
+        "Zero net flux does not mean zero field on the surface.",
+        "A uniform field gives zero net flux through any closed surface.",
+        "Charge at the centre of a cube gives $q/(6\\epsilon_0)$ per face.",
+        "Charge at a cube corner gives $q/(8\\epsilon_0)$ through the whole cube. This is $q/(24\\epsilon_0)$ through each of the 3 faces not containing the corner, and zero through the 3 faces that meet at the corner. Charge at the centre of a face gives $q/(2\\epsilon_0)$.",
+        "Gauss's law is valid for any closed surface but useful for finding E only when symmetry exists."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Phi = \\vec{E}\\cdot\\vec{A} = EA\\cos\\theta$",
+          "meaning": "Flux of a uniform field through a flat area A."
+        },
+        {
+          "formula": "$\\oint \\vec{E}\\cdot d\\vec{A} = \\frac{q_{enc}}{\\epsilon_0}$",
+          "meaning": "Gauss's law for any closed surface."
+        }
+      ],
+      "neet_tip": "Cube, hemisphere and cylinder flux problems that depend on the position of the charge and on symmetry are classic NEET items.",
+      "topic": "Electric flux and Gauss's law"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Gauss's law with a suitable Gaussian surface gives E quickly for symmetric charge distributions. For an infinite line charge with density $\\lambda$, a coaxial cylinder gives $E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$, so E varies as $1/r$. For an infinite plane sheet with density $\\sigma$, a pillbox gives $E = \\frac{\\sigma}{2\\epsilon_0}$, independent of distance. For a thin spherical shell of charge Q and radius R, the field outside is $E = \\frac{kQ}{r^2}$, as if all the charge sat at the centre. The field anywhere inside the shell is zero. The same method extends to a uniformly charged solid (insulating) sphere. Outside it, $E = kQ/r^2$. Inside it, $E = \\frac{kQr}{R^3} = \\frac{\\rho r}{3\\epsilon_0}$, which grows linearly with r and is maximum at the surface.",
+      "key_points": [
+        "Line charge: E is proportional to 1/r. Plane sheet: E is independent of r. Point or sphere outside: E is proportional to $1/r^2$.",
+        "Between two oppositely charged parallel sheets, E = $\\sigma/\\epsilon_0$. Outside them, E = 0.",
+        "Just outside a charged conductor's surface, E = $\\sigma/\\epsilon_0$, twice the field of an isolated sheet.",
+        "For a shell, E is discontinuous at r = R, jumping from 0 to $kQ/R^2$.",
+        "For a solid sphere, E is continuous and peaks at r = R.",
+        "In terms of $\\rho$, $kQ = \\frac{\\rho R^3}{3\\epsilon_0}$ for a solid sphere."
+      ],
+      "formulas": [
+        {
+          "formula": "$E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$",
+          "meaning": "Field at distance r from an infinite line charge."
+        },
+        {
+          "formula": "$E = \\frac{\\sigma}{2\\epsilon_0}$",
+          "meaning": "Field of an infinite plane sheet (non-conducting)."
+        },
+        {
+          "formula": "$E = \\frac{1}{4\\pi\\epsilon_0}\\frac{Q}{r^2}\\ (r \\ge R),\\ E = 0\\ (r < R)$",
+          "meaning": "Field of a thin spherical shell."
+        },
+        {
+          "formula": "$E_{inside} = \\frac{\\rho r}{3\\epsilon_0}$",
+          "meaning": "Field inside a uniformly charged solid sphere at distance r from its centre."
+        }
+      ],
+      "neet_tip": "Expect graph-based questions (E versus r for a shell and a solid sphere) and multi-sheet field problems.",
+      "topic": "Applications of Gauss's law: infinite line charge, infinite plane sheet, thin spherical shell"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "The electric potential at a point is the work done by an external agent in bringing a unit positive charge slowly from infinity to that point. For a point charge, $V = \\frac{kq}{r}$. Potential is a scalar, so for a system of charges the individual potentials add algebraically: $V = k\\sum q_i/r_i$. For a short dipole, $V = \\frac{kp\\cos\\theta}{r^2}$. This is maximum on the axis and zero everywhere on the equatorial plane, even though E is not zero there. For a spherical shell, V = kQ/r outside and V = kQ/R, a constant, inside. For a uniformly charged solid sphere, $V_{inside} = \\frac{kQ(3R^2 - r^2)}{2R^3}$. At the centre this equals 1.5 times the surface value.",
+      "key_points": [
+        "SI unit is the volt, where 1 V = 1 J/C.",
+        "Potential is a scalar and carries the sign of the charge.",
+        "Dipole equatorial plane: V = 0 but E is not zero.",
+        "Shell: inside, V is constant and equals the surface value while E = 0.",
+        "Solid sphere: $V_{centre} = \\frac{3}{2}V_{surface}$.",
+        "At points where V = 0, E need not be zero, and vice versa."
+      ],
+      "formulas": [
+        {
+          "formula": "$V = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{r}$",
+          "meaning": "Potential of a point charge."
+        },
+        {
+          "formula": "$V = \\frac{1}{4\\pi\\epsilon_0}\\frac{p\\cos\\theta}{r^2}$",
+          "meaning": "Potential of a short dipole at distance r and angle $\\theta$."
+        },
+        {
+          "formula": "$V = \\frac{1}{4\\pi\\epsilon_0}\\sum_i \\frac{q_i}{r_i}$",
+          "meaning": "Potential due to a system of point charges."
+        },
+        {
+          "formula": "$V_{in} = \\frac{1}{4\\pi\\epsilon_0}\\frac{Q(3R^2 - r^2)}{2R^3}$",
+          "meaning": "Potential inside a uniformly charged solid sphere."
+        }
+      ],
+      "neet_tip": "Potential at the centre of symmetric arrangements, and points where V = 0 but E is not zero, are tested repeatedly.",
+      "topic": "Electric potential due to a point charge, a dipole and a system of charges"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "The potential difference between two points is the work done by an external agent per unit charge in moving a charge slowly between them: $V_B - V_A = -\\int_A^B \\vec{E}\\cdot d\\vec{l}$. The electrostatic field is conservative, so this work depends only on the end points and not on the path. A charge can be dragged through a tube or along any curved route and the work is still $q(V_B - V_A)$. The field is related to potential by $E = -dV/dr$, so E points in the direction of steepest decrease of V. An equipotential surface is one on which V is constant everywhere. No work is done in moving a charge along an equipotential surface, and E is always perpendicular to it. Equipotentials are concentric spheres for a point charge and parallel planes for a uniform field. They crowd together where the field is strong.",
+      "key_points": [
+        "The work done by external agent equals $q(V_B - V_A)$ for slow movement, and is path independent.",
+        "$E = -\\frac{dV}{dr}$. In a uniform field, V = Ed.",
+        "E points from high potential to low potential.",
+        "Two equipotential surfaces never intersect.",
+        "The surface and interior of a conductor in equilibrium form one equipotential volume.",
+        "Around any closed loop, $\\oint \\vec{E}\\cdot d\\vec{l} = 0$."
+      ],
+      "formulas": [
+        {
+          "formula": "$V_B - V_A = -\\int_A^B \\vec{E}\\cdot d\\vec{l}$",
+          "meaning": "Potential difference from the field."
+        },
+        {
+          "formula": "$W_{A \\to B} = q(V_B - V_A)$",
+          "meaning": "Work by an external agent in moving charge q slowly from A to B."
+        },
+        {
+          "formula": "$\\vec{E} = -\\nabla V,\\ E = -\\frac{dV}{dr}$",
+          "meaning": "Field from potential. Use it to find E when V(x) is given."
+        }
+      ],
+      "neet_tip": "NEET exploits path independence (complex paths with simple end points) and the perpendicularity of equipotentials to field lines.",
+      "topic": "Potential difference and equipotential surfaces"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "The potential energy of a system of charges is the work done in assembling them from infinity. For two point charges, $U = \\frac{kq_1q_2}{r}$. U is positive for like charges and negative for unlike charges. For three or more charges, add the energies of all distinct pairs. A charge q placed at a point where the external potential is V has energy qV. Energy conservation, $\\Delta K = -\\Delta U = -q\\Delta V$, gives speeds of charges released in a field. A dipole in a uniform field has $U = -\\vec{p}\\cdot\\vec{E} = -pE\\cos\\theta$. This energy is minimum, -pE, at $\\theta = 0$ (stable) and maximum, +pE, at $\\theta = 180^\\circ$ (unstable). It is zero at $90^\\circ$, which is taken as the reference orientation.",
+      "key_points": [
+        "Count each pair once: three charges have 3 pairs and four charges have 6 pairs.",
+        "Negative U means a bound system that needs external work to separate.",
+        "Released charge: $\\frac{1}{2}mv^2 = q(V_{initial} - V_{final})$, keeping the signs.",
+        "Dipole: U is minimum when aligned with E and maximum when anti-aligned.",
+        "The 1 eV energy unit equals $1.6 \\times 10^{-19}\\,J$."
+      ],
+      "formulas": [
+        {
+          "formula": "$U = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1q_2}{r}$",
+          "meaning": "Potential energy of two point charges."
+        },
+        {
+          "formula": "$U = \\frac{1}{4\\pi\\epsilon_0}\\sum_{i<j}\\frac{q_iq_j}{r_{ij}}$",
+          "meaning": "Potential energy of a system of point charges."
+        },
+        {
+          "formula": "$U = -\\vec{p}\\cdot\\vec{E} = -pE\\cos\\theta$",
+          "meaning": "Potential energy of a dipole in a uniform field."
+        }
+      ],
+      "neet_tip": "Energy conservation problems, such as finding the speed of a charge falling toward a charged sphere, together with the configuration energy of triangles and squares, appear often.",
+      "topic": "Electrical potential energy of a system of two point charges and of a dipole"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "Conductors contain free charge carriers, while insulators have none. In electrostatic equilibrium a conductor has the following properties. E is zero everywhere inside the material. Any excess charge resides on the outer surface. E just outside is normal to the surface, with magnitude $\\sigma/\\epsilon_0$. The whole conductor is an equipotential. Surface charge density is greater where the radius of curvature is smaller, which is why charge leaks from sharp points (corona discharge). If a charge Q is placed inside a cavity, -Q is induced on the cavity wall and +Q on the outer surface. The field inside the cavity is non-zero because it is produced by Q. The outer surface charge redistributes uniformly on a sphere regardless of where the cavity or charge sits. The outside field is therefore symmetric and depends only on the net outer charge. Electrostatic shielding: the field inside a charge-free cavity of a conductor is zero, whatever the external charges or fields. A charge placed inside the cavity is not shielded from the outside unless the conductor is earthed.",
+      "key_points": [
+        "Inside the conducting material, E = 0 and V = constant, equal to the surface value.",
+        "A charge in a cavity induces -Q on the inner wall and +Q on the outer surface of an isolated neutral conductor.",
+        "The outer field of a spherical conductor is unaffected by the position of the charge in the cavity.",
+        "$\\sigma \\propto 1/r$ for connected spheres, so charges divide in the ratio of the radii and the potentials become equal.",
+        "Outside charges cannot create a field inside an empty cavity (shielding).",
+        "Insulators hold charge where it is placed and do not redistribute it."
+      ],
+      "formulas": [
+        {
+          "formula": "$E_{surface} = \\frac{\\sigma}{\\epsilon_0}$",
+          "meaning": "Field just outside a charged conductor, directed normal to the surface."
+        },
+        {
+          "formula": "$\\frac{q_1}{q_2} = \\frac{r_1}{r_2},\\ \\frac{\\sigma_1}{\\sigma_2} = \\frac{r_2}{r_1}$",
+          "meaning": "Two conducting spheres joined by a wire."
+        }
+      ],
+      "neet_tip": "Cavity-charge conductor questions (field inside the cavity, in the material and outside) are a recent NEET favourite.",
+      "topic": "Conductors and insulators"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Dielectrics are insulators that become polarized in an electric field. In non-polar molecules such as $O_2$ and $N_2$, the field induces dipoles by displacing the charge centres. In polar molecules such as $H_2O$ and HCl, the field partially aligns permanent dipoles that are otherwise randomly oriented. Polarization $\\vec{P}$ is the dipole moment per unit volume. For linear dielectrics, $\\vec{P} = \\chi_e\\epsilon_0\\vec{E}$, where $\\chi_e$ is the electric susceptibility. Polarization produces bound surface charges that set up an opposing field inside. The net field is therefore reduced, $E = E_0/K$, where the dielectric constant is $K = 1 + \\chi_e = \\epsilon/\\epsilon_0$. K equals 1 for vacuum, is very large for water (about 80), and is effectively infinite for a metal.",
+      "key_points": [
+        "Dielectric constant (relative permittivity) is $K = \\epsilon/\\epsilon_0 \\ge 1$ and is dimensionless.",
+        "The field, force and potential due to given charges are reduced by a factor of K in a medium.",
+        "Polar molecules have permanent dipoles. Non-polar molecules have only induced dipoles.",
+        "Induced (bound) charge on a dielectric surface is $q_b = q(1 - 1/K)$.",
+        "Dielectric strength is the maximum field a dielectric can withstand without breakdown. For air it is about $3 \\times 10^6\\,V/m$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{P} = \\chi_e\\epsilon_0\\vec{E}$",
+          "meaning": "Polarization of a linear dielectric."
+        },
+        {
+          "formula": "$K = 1 + \\chi_e = \\frac{\\epsilon}{\\epsilon_0}$",
+          "meaning": "Dielectric constant related to susceptibility."
+        },
+        {
+          "formula": "$E = \\frac{E_0}{K}$",
+          "meaning": "Reduced field inside a dielectric."
+        }
+      ],
+      "neet_tip": "Conceptual questions on polar versus non-polar molecules, the reduction of field by a factor of K, and induced charge on a dielectric slab are common.",
+      "topic": "Dielectrics and electric polarization"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "A capacitor consists of two conductors carrying equal and opposite charges, ±Q, with a potential difference V between them. Capacitance is defined as $C = Q/V$. It depends only on geometry and the medium, not on Q or V. The SI unit is the farad (F), and practical values are in $\\mu F$ or pF. An isolated sphere has $C = 4\\pi\\epsilon_0R$. In a series combination every capacitor carries the same charge, the voltages add, and $1/C_{eq} = \\sum 1/C_i$. The equivalent capacitance is smaller than the smallest individual value. In a parallel combination every capacitor has the same voltage, the charges add, and $C_{eq} = \\sum C_i$. In circuit problems, redraw the network carefully and identify which capacitors share the same pair of nodes. For a bridge circuit, use symmetry or the balanced condition.",
+      "key_points": [
+        "Series: same Q, voltage divides as $V_i \\propto 1/C_i$.",
+        "Parallel: same V, charge divides as $Q_i \\propto C_i$.",
+        "Two capacitors in series: $C_{eq} = \\frac{C_1C_2}{C_1+C_2}$.",
+        "n identical capacitors: C/n in series and nC in parallel.",
+        "The capacitance of the Earth is only about 711 $\\mu F$, which shows that 1 F is a huge unit.",
+        "In steady DC conditions no current flows through a capacitor branch."
+      ],
+      "formulas": [
+        {
+          "formula": "$C = \\frac{Q}{V}$",
+          "meaning": "Definition of capacitance."
+        },
+        {
+          "formula": "$C = 4\\pi\\epsilon_0 R$",
+          "meaning": "Capacitance of an isolated conducting sphere of radius R."
+        },
+        {
+          "formula": "$\\frac{1}{C_s} = \\frac{1}{C_1} + \\frac{1}{C_2} + ...$",
+          "meaning": "Series combination."
+        },
+        {
+          "formula": "$C_p = C_1 + C_2 + ...$",
+          "meaning": "Parallel combination."
+        }
+      ],
+      "neet_tip": "Mixed series-parallel networks asking for the charge, voltage or energy of a particular capacitor are the most common question type.",
+      "topic": "Capacitors and capacitance; series and parallel combinations"
+    },
+    {
+      "topic_index": 14,
+      "explanation": "A parallel plate capacitor has plates of area A separated by distance d. The field between the plates is uniform, $E = \\sigma/\\epsilon_0$, and $C_0 = \\epsilon_0A/d$. Filling the gap completely with a dielectric of constant K gives $C = KC_0$. A slab of thickness t < d gives $C = \\frac{\\epsilon_0A}{d - t + t/K}$, and a metal slab ($K \\to \\infty$) gives $\\frac{\\epsilon_0A}{d-t}$. Two cases must be distinguished. If the battery stays connected, V is constant, so inserting a dielectric raises Q to KQ and U to KU, while E stays the same. If the battery is disconnected, Q is constant, so V falls to V/K, E falls to E/K and U falls to U/K. Dielectrics arranged side by side act as capacitors in parallel. Dielectric layers stacked across the gap act as capacitors in series.",
+      "key_points": [
+        "Capacitance is proportional to A and K, and inversely proportional to d.",
+        "Battery connected: V is fixed, while Q and U increase by a factor of K.",
+        "Battery disconnected: Q is fixed, while V, E and U all decrease by a factor of K.",
+        "A slab of thickness t reduces the effective separation to $d - t + t/K$.",
+        "Side-by-side dielectric fillings combine in parallel. Layered fillings combine in series.",
+        "Force of attraction between the plates: $F = \\frac{Q^2}{2\\epsilon_0A}$."
+      ],
+      "formulas": [
+        {
+          "formula": "$C_0 = \\frac{\\epsilon_0A}{d}$",
+          "meaning": "Parallel plate capacitor with vacuum or air."
+        },
+        {
+          "formula": "$C = \\frac{K\\epsilon_0A}{d}$",
+          "meaning": "Gap completely filled with a dielectric."
+        },
+        {
+          "formula": "$C = \\frac{\\epsilon_0A}{d - t + \\frac{t}{K}}$",
+          "meaning": "Dielectric slab of thickness t partially filling the gap."
+        },
+        {
+          "formula": "$F = \\frac{Q^2}{2\\epsilon_0A}$",
+          "meaning": "Attractive force between the plates."
+        }
+      ],
+      "neet_tip": "Questions on how C, Q, V, E and U change when a dielectric is inserted with the battery connected or disconnected are near-certain.",
+      "topic": "Parallel plate capacitor with and without a dielectric"
+    },
+    {
+      "topic_index": 15,
+      "explanation": "Charging a capacitor requires work against the field already built up between its plates. This work is stored as electrostatic energy, $U = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C} = \\frac{1}{2}QV$. The energy resides in the field, with energy density $u = \\frac{1}{2}\\epsilon_0E^2$ in vacuum and $\\frac{1}{2}K\\epsilon_0E^2$ in a dielectric. A battery charging a capacitor supplies energy QV, but only half of it is stored. The other half is dissipated as heat, whatever the resistance. When two capacitors at different potentials are connected, charge flows until their potentials become equal. The common potential is $V = \\frac{C_1V_1 + C_2V_2}{C_1+C_2}$, and some energy is always lost. In combinations, use $\\frac{1}{2}CV^2$ for parallel elements (same V) and $\\frac{Q^2}{2C}$ for series elements (same Q). This makes energy-ratio questions simple.",
+      "key_points": [
+        "Energy in series: $U \\propto 1/C$, so the smaller capacitor stores more energy.",
+        "Energy in parallel: $U \\propto C$, so the larger capacitor stores more energy.",
+        "The battery supplies QV and the capacitor stores QV/2. The rest is lost as heat.",
+        "Energy loss on sharing charge is $\\frac{C_1C_2(V_1-V_2)^2}{2(C_1+C_2)}$.",
+        "Total charge is conserved on sharing, but energy is not.",
+        "Energy density depends only on the local field: $u = \\frac{1}{2}\\epsilon_0E^2$."
+      ],
+      "formulas": [
+        {
+          "formula": "$U = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C} = \\frac{1}{2}QV$",
+          "meaning": "Energy stored in a capacitor."
+        },
+        {
+          "formula": "$u = \\frac{1}{2}\\epsilon_0E^2$",
+          "meaning": "Energy per unit volume of an electric field."
+        },
+        {
+          "formula": "$V_{common} = \\frac{C_1V_1 + C_2V_2}{C_1 + C_2}$",
+          "meaning": "Common potential after two charged capacitors are connected."
+        },
+        {
+          "formula": "$\\Delta U = \\frac{C_1C_2(V_1 - V_2)^2}{2(C_1 + C_2)}$",
+          "meaning": "Energy lost when two capacitors share charge."
+        }
+      ],
+      "neet_tip": "Ratio of the energy in one capacitor to the total energy of a network, and energy loss on sharing charge, are the favourite angles.",
+      "topic": "Energy stored in a capacitor"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$q = ne$",
+      "meaning": "Quantization of charge. n is an integer and $e = 1.6 \\times 10^{-19}\\,C$."
+    },
+    {
+      "formula": "$F = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1q_2}{r^2}$",
+      "meaning": "Coulomb force between point charges $q_1$ and $q_2$ separated by r. $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9$ SI units."
+    },
+    {
+      "formula": "$E = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{r^2}$",
+      "meaning": "Electric field of a point charge q at distance r."
+    },
+    {
+      "formula": "$E_{ring} = \\frac{1}{4\\pi\\epsilon_0}\\frac{Qx}{(x^2+R^2)^{3/2}}$",
+      "meaning": "Field on the axis of a ring of charge Q and radius R at distance x from its centre."
+    },
+    {
+      "formula": "$p = q(2a)$",
+      "meaning": "Dipole moment. 2a is the separation, and p points from -q to +q."
+    },
+    {
+      "formula": "$E_{axial} = \\frac{2kp}{r^3},\\ E_{eq} = \\frac{kp}{r^3}$",
+      "meaning": "Short dipole fields on the axial and equatorial lines, with $k = \\frac{1}{4\\pi\\epsilon_0}$."
+    },
+    {
+      "formula": "$\\tau = pE\\sin\\theta$",
+      "meaning": "Torque on a dipole p at angle $\\theta$ to a uniform field E."
+    },
+    {
+      "formula": "$U = -pE\\cos\\theta$",
+      "meaning": "Potential energy of a dipole in a uniform field."
+    },
+    {
+      "formula": "$\\oint \\vec{E}\\cdot d\\vec{A} = \\frac{q_{enc}}{\\epsilon_0}$",
+      "meaning": "Gauss's law. $q_{enc}$ is the charge enclosed by the closed surface."
+    },
+    {
+      "formula": "$E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$",
+      "meaning": "Infinite line charge with linear density $\\lambda$, at distance r."
+    },
+    {
+      "formula": "$E = \\frac{\\sigma}{2\\epsilon_0}$",
+      "meaning": "Infinite plane sheet with surface density $\\sigma$. Near a conductor's surface the field is $\\sigma/\\epsilon_0$."
+    },
+    {
+      "formula": "$E_{shell} = \\frac{kQ}{r^2}\\ (r \\ge R),\\ 0\\ (r<R)$",
+      "meaning": "Thin spherical shell of charge Q and radius R."
+    },
+    {
+      "formula": "$E_{solid,in} = \\frac{kQr}{R^3} = \\frac{\\rho r}{3\\epsilon_0}$",
+      "meaning": "Inside a uniformly charged solid sphere with volume density $\\rho$."
+    },
+    {
+      "formula": "$V = \\frac{kq}{r}$",
+      "meaning": "Potential of a point charge. Add algebraically for several charges."
+    },
+    {
+      "formula": "$V_{dipole} = \\frac{kp\\cos\\theta}{r^2}$",
+      "meaning": "Potential of a short dipole at angle $\\theta$ from its axis."
+    },
+    {
+      "formula": "$V_{solid,in} = \\frac{kQ(3R^2 - r^2)}{2R^3}$",
+      "meaning": "Potential inside a uniformly charged solid sphere. It equals 1.5 times the surface value at the centre."
+    },
+    {
+      "formula": "$E = -\\frac{dV}{dr}$",
+      "meaning": "Field as the negative potential gradient."
+    },
+    {
+      "formula": "$W = q(V_B - V_A)$",
+      "meaning": "External work to move charge q slowly from A to B, independent of the path."
+    },
+    {
+      "formula": "$U = \\frac{kq_1q_2}{r}$",
+      "meaning": "Potential energy of two point charges. Sum over all pairs for a system."
+    },
+    {
+      "formula": "$C = \\frac{Q}{V},\\ C_{sphere} = 4\\pi\\epsilon_0R$",
+      "meaning": "Definition of capacitance, and the capacitance of an isolated sphere."
+    },
+    {
+      "formula": "$C = \\frac{K\\epsilon_0A}{d}$",
+      "meaning": "Parallel plate capacitor with plate area A, separation d and dielectric constant K."
+    },
+    {
+      "formula": "$C = \\frac{\\epsilon_0A}{d - t + t/K}$",
+      "meaning": "Parallel plate capacitor with a dielectric slab of thickness t."
+    },
+    {
+      "formula": "$\\frac{1}{C_s} = \\sum\\frac{1}{C_i},\\ C_p = \\sum C_i$",
+      "meaning": "Series and parallel combinations."
+    },
+    {
+      "formula": "$U = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C}$",
+      "meaning": "Energy stored in a capacitor."
+    },
+    {
+      "formula": "$u = \\frac{1}{2}\\epsilon_0E^2$",
+      "meaning": "Energy density of an electric field in vacuum."
+    }
+  ],
+  "common_traps": [
+    "Assuming zero flux through a closed surface means zero field on it. Zero flux only means zero net enclosed charge. Outside charges still create a field on the surface.",
+    "Thinking the work in moving a charge depends on the path, such as through a tube or a curved route. The electrostatic field is conservative, so only the potentials at the end points matter.",
+    "Believing the field inside a cavity of a conductor is always zero. It is zero only if the cavity contains no charge. A charge inside the cavity produces a non-zero field there, while the outer field depends only on the outer surface charge.",
+    "Using the shell formula inside a solid charged sphere. For a uniformly charged insulating sphere, E inside is proportional to r and V inside is $kQ(3R^2 - r^2)/(2R^3)$, not kQ/R.",
+    "Confusing battery-connected and battery-disconnected cases on dielectric insertion. Connected means V is constant and Q and U rise by K. Disconnected means Q is constant and V, E and U fall by K.",
+    "Treating V = 0 as implying E = 0. On a dipole's equatorial line V = 0 but E is not zero. Inside a charged shell E = 0 but V is not zero.",
+    "Forgetting that the battery supplies energy QV while the capacitor stores only QV/2, and that energy is lost when charged capacitors are connected even though charge is conserved.",
+    "Taking the direction of the dipole moment as + to -. It points from -q to +q, and the equatorial field is opposite to $\\vec{p}$."
+  ],
+  "quick_revision": [
+    "Charge is quantized, additive, conserved and invariant, with $e = 1.6 \\times 10^{-19}\\,C$.",
+    "Coulomb force varies as $1/r^2$ and is reduced by a factor of K in a medium. Use vector superposition for multiple charges.",
+    "Distance dependence of E: point charge $1/r^2$, dipole $1/r^3$, line charge $1/r$, sheet independent of r.",
+    "A dipole in a uniform field feels zero net force and torque $pE\\sin\\theta$. Its energy is $-pE\\cos\\theta$, minimum when aligned.",
+    "Gauss's law: flux = $q_{enc}/\\epsilon_0$. A cube with a central charge has $q/6\\epsilon_0$ per face.",
+    "Shell: E = 0 inside and V constant inside. Solid sphere: E is proportional to r inside and V at the centre is 1.5 times the surface value.",
+    "Work = $q\\Delta V$ and is path independent. Equipotentials are perpendicular to field lines and no work is done along them.",
+    "Released charge: $\\frac{1}{2}mv^2 = |q\\Delta V|$. Use V outside a sphere = kQ/r.",
+    "Conductor: E = 0 inside, charge on the surface, equipotential, surface field $\\sigma/\\epsilon_0$, and $\\sigma$ largest at sharp points.",
+    "Series combination has the same Q and $C_{eq}$ smaller than the smallest capacitor. Parallel combination has the same V and $C_{eq}$ equal to the sum.",
+    "$C = K\\epsilon_0A/d$. With a slab, use $d - t + t/K$. A metal slab reduces the separation to $d - t$.",
+    "$U = \\frac{1}{2}CV^2 = Q^2/2C$. Energy density is $\\frac{1}{2}\\epsilon_0E^2$. Sharing charge always loses energy."
+  ],
+  "pyq": {
+    "count": 4,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q009",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q9"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q021",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q21"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q033",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q33"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q034",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q34"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

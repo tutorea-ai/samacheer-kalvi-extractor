@@ -1,0 +1,311 @@
+{
+  "exam": "neet",
+  "subject": "biology",
+  "unit_id": "bio_u10",
+  "unit_no": 10,
+  "unit_name": "Ecology and Environment",
+  "slug": "ecology-and-environment",
+  "overview": "This unit covers how organisms interact within populations and communities, how ecosystems are structured and how they function through productivity, decomposition and energy flow, and how ecological pyramids are built. It also covers biodiversity: its patterns, its loss and its conservation. NEET draws many direct, NCERT-line questions from it every year, especially on interaction types, population growth equations, the 10% law, pyramids, Amazon species numbers, causes of extinction and protected areas.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Population interactions are classified by the effect on each species: beneficial (+), harmful (-) or neutral (0). Mutualism (+,+) includes lichens (fungus and alga), mycorrhizae (fungus and roots of higher plants), fig and wasp, and the Mediterranean orchid Ophrys, which uses sexual deceit to get bees to pollinate it. Competition (-,-) occurs between related or unrelated species for limited resources. Gause's competitive exclusion principle says the inferior competitor is eliminated. Connell showed that Balanus excludes Chthamalus on rocky Scottish coasts. Resource partitioning, seen in MacArthur's warblers, allows coexistence. Predation (+,-) transfers energy and keeps prey in check; a moth controlled the invasive prickly pear in Australia. Prey defences include camouflage, the distastefulness of the Monarch butterfly and the cardiac glycosides of Calotropis. Parasitism (+,-) includes Cuscuta, the human liver fluke and brood parasitism by the cuckoo in the crow's nest. Commensalism (+,0) and amensalism (-,0) complete the set.",
+      "key_points": [
+        "Mutualism +,+ ; Competition -,- ; Predation +,- ; Parasitism +,- ; Commensalism +,0 ; Amensalism -,0",
+        "Commensalism examples: orchid on mango branch, barnacles on whale, cattle egret with grazing cattle, clown fish with sea anemone",
+        "Abingdon tortoise (Galapagos) went extinct within a decade of goat introduction because goats browsed more efficiently (competition)",
+        "Competitive release: a species expands its range when the superior competitor is removed",
+        "Monarch butterfly becomes distasteful by feeding on a poisonous weed as a caterpillar",
+        "Human liver fluke needs two intermediate hosts: a snail and a fish",
+        "Cuscuta is a leafless parasitic plant on hedge plants and derives nutrition from the host",
+        "Ophrys petal resembles a female bee, and the male bee pollinates it during pseudocopulation"
+      ],
+      "formulas": [],
+      "neet_tip": "Expect match-the-column questions pairing (+/-/0) signs or examples with interaction names, and assertion-reason questions on the Abingdon tortoise and Connell's barnacles.",
+      "topic": "Population interactions: mutualism, competition, predation and parasitism"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "A population has attributes an individual lacks: birth rate (natality), death rate (mortality), sex ratio, age distribution and density. Birth and death rates are expressed per capita. For example, 8 new lotus plants added to 20 gives a birth rate of 0.4 per lotus per year, and 4 deaths among 40 fruit flies in a week gives a death rate of 0.1 per fly per week. Density changes through natality and immigration (increase) and mortality and emigration (decrease). With unlimited resources, growth is exponential and gives a J-shaped curve. With limited resources, growth is logistic (Verhulst-Pearl) and gives an S-shaped (sigmoid) curve that levels off at the carrying capacity K. Age pyramids show pre-reproductive, reproductive and post-reproductive groups. They are triangular (expanding), bell-shaped (stable) or urn-shaped (declining).",
+      "key_points": [
+        "Intrinsic rate of natural increase r = b - d; if b = d then r = 0 and the population size stays constant",
+        "Exponential growth gives a J-shaped curve; logistic growth gives a sigmoid curve with an asymptote at K",
+        "r values: Norway rat 0.015, flour beetle 0.12, India 1981 0.0205",
+        "Logistic growth is considered more realistic because resources are finite",
+        "Density may be estimated from relative measures such as pug marks and fecal pellets (tigers) or percent cover (plants)",
+        "Age pyramid shapes: expanding = triangular, stable = bell-shaped, declining = urn-shaped"
+      ],
+      "formulas": [
+        {
+          "formula": "$N_{t+1} = N_t + [(B + I) - (D + E)]$",
+          "meaning": "Population density after time t, using births B, immigration I, deaths D and emigration E"
+        },
+        {
+          "formula": "$\\frac{dN}{dt} = rN$",
+          "meaning": "Exponential (J-shaped) growth with unlimited resources"
+        },
+        {
+          "formula": "$N_t = N_0 e^{rt}$",
+          "meaning": "Integrated form of exponential growth; gives population size after time t"
+        },
+        {
+          "formula": "$\\frac{dN}{dt} = rN\\left(\\frac{K - N}{K}\\right)$",
+          "meaning": "Logistic (sigmoid) growth with carrying capacity K"
+        },
+        {
+          "formula": "$r = b - d$",
+          "meaning": "Per capita growth rate; when b = d the population remains unchanged"
+        }
+      ],
+      "neet_tip": "Numerical questions test per capita rates and the case b = d, where r = 0 and the population is unchanged; graph questions test J versus S curves and age pyramid shapes.",
+      "topic": "Population attributes: growth, birth rate, death rate and age distribution"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "An ecosystem is a functional unit of nature in which living organisms interact among themselves and with their physical environment. Ecosystems may be terrestrial (forest, grassland, desert) or aquatic (pond, lake, wetland, river, estuary). Crop fields and aquaria are man-made ecosystems. Its components are biotic (producers, consumers and decomposers) and abiotic (light, temperature, water, soil and inorganic nutrients). Structure refers to the species composition and their stratification. Stratification is the vertical distribution of species at different levels: trees in the top layer, shrubs in the second and herbs and grasses in the bottom layers. A pond is the standard example of a self-sustaining unit showing all components. Ecosystem functions include productivity, decomposition, energy flow and nutrient cycling.",
+      "key_points": [
+        "Biotic and abiotic components interact to form a functional unit",
+        "Stratification is the vertical layering of species: trees, then shrubs, then herbs and grasses",
+        "Pond producers: phytoplankton, some algae, and floating, submerged and marginal plants",
+        "Pond consumers: zooplankton and free-swimming and bottom-dwelling animals; decomposers: fungi, bacteria and flagellates",
+        "Four functions: productivity, decomposition, energy flow and nutrient cycling",
+        "Man-made ecosystems include crop fields and aquaria"
+      ],
+      "formulas": [],
+      "neet_tip": "Usually tested as a definition or stratification question, or by identifying the components and functions of a pond ecosystem.",
+      "topic": "Ecosystem: patterns and components"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Primary production is the amount of biomass or organic matter produced per unit area over a time period by plants during photosynthesis. Productivity is the rate of biomass production, expressed in $g\\,m^{-2}\\,yr^{-1}$ or $kcal\\,m^{-2}\\,yr^{-1}$. Gross primary productivity (GPP) is the rate of total production; net primary productivity (NPP) is GPP minus respiration losses. NPP is the biomass available to heterotrophs. Secondary productivity is the rate of formation of new organic matter by consumers. Decomposition breaks complex organic matter (detritus) into inorganic substances through five steps. Fragmentation is carried out by detritivores such as earthworms. In leaching, water-soluble nutrients move into the soil. In catabolism, bacterial and fungal enzymes break detritus into simpler substances. Humification produces humus, and mineralisation releases inorganic nutrients.",
+      "key_points": [
+        "Annual net primary productivity of the whole biosphere is about 170 billion tons (dry weight)",
+        "Oceans produce only about 55 billion tons despite covering about 70% of the surface",
+        "Decomposition steps in order: fragmentation, leaching, catabolism, humification, mineralisation",
+        "Humus is dark, amorphous and highly resistant to microbial action; it decomposes very slowly and acts as a reservoir of nutrients",
+        "Decomposition is slow when detritus is rich in lignin and chitin and fast when it is rich in nitrogen and water-soluble sugars",
+        "Warm, moist conditions favour decomposition; low temperature and anaerobiosis inhibit it",
+        "Productivity depends on the plant species, environmental factors, nutrient availability and photosynthetic capacity",
+        "Decomposition is an oxygen-requiring process"
+      ],
+      "formulas": [
+        {
+          "formula": "$NPP = GPP - R$",
+          "meaning": "Net primary productivity, where R is respiratory loss; this is the energy available to consumers"
+        }
+      ],
+      "neet_tip": "Questions ask for the sequence of decomposition steps, the factors that speed up or slow decomposition, and the GPP/NPP relation along with the ocean productivity figure.",
+      "topic": "Productivity and decomposition"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Except for deep-sea hydrothermal ecosystems, the Sun is the only source of energy for all ecosystems. Less than 50% of incident solar radiation is photosynthetically active radiation (PAR), and plants capture only 2 to 10% of PAR. Energy flows unidirectionally from the Sun to producers and then to consumers; it is never recycled. Ecosystems obey the second law of thermodynamics and need a constant supply of energy to overcome rising disorder. In the grazing food chain (GFC), primary consumers are herbivores. The detritus food chain (DFC) begins with dead organic matter and includes decomposers such as fungi and bacteria. In aquatic ecosystems the GFC is the major conduit, whereas in terrestrial ecosystems a larger fraction of energy flows through the DFC. Food chains interconnect to form food webs. Lindeman's 10% law states that only about 10% of the energy is transferred from one trophic level to the next.",
+      "key_points": [
+        "Energy flow is unidirectional and non-cyclic",
+        "PAR is less than 50% of incident radiation; plants fix only 2 to 10% of PAR",
+        "Producers form the first trophic level, herbivores (primary consumers) the second, and primary carnivores (secondary consumers) the third",
+        "Grazing food chain example: Grass to goat to man",
+        "Detritus food chain decomposers are saprotrophs that secrete digestive enzymes",
+        "Standing crop is the mass of living material at a trophic level at a particular time, measured as biomass or number",
+        "10% law (Lindeman): about 10% of energy passes to the next trophic level"
+      ],
+      "formulas": [
+        {
+          "formula": "$E_{n+1} \\approx 0.1 \\times E_n$",
+          "meaning": "Energy available at the next trophic level under the 10% law"
+        },
+        {
+          "formula": "$\\text{Ecological efficiency} = \\frac{\\text{energy at trophic level } n+1}{\\text{energy at trophic level } n} \\times 100$",
+          "meaning": "Percentage of energy transferred between successive trophic levels"
+        }
+      ],
+      "neet_tip": "Statement-based questions test unidirectional flow, the 10% (not 1%) law, PAR capture figures, herbivores as primary consumers and the GFC versus DFC dominance.",
+      "topic": "Energy flow"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Ecological pyramids show the relationship between trophic levels in terms of number, biomass or energy. The base is always producers and the apex is the top carnivore. The pyramid of numbers in a grassland is upright: producers 5,842,424, primary consumers 708,624, secondary consumers 354,904 and tertiary consumers 3. It can be inverted, for example insects feeding on a single big tree. The pyramid of biomass is usually upright but is inverted in the sea, because the biomass of fishes far exceeds that of phytoplankton. The pyramid of energy is always upright and can never be inverted, because energy is lost as heat at every step. Pyramids have limitations: they ignore a species belonging to two or more trophic levels, they assume a simple food chain, and they do not accommodate food webs or saprophytes.",
+      "key_points": [
+        "Pyramid of energy is always upright",
+        "Pyramid of biomass in the sea is inverted (fish biomass is greater than phytoplankton biomass)",
+        "Pyramid of numbers can be inverted, as in a tree ecosystem with insects",
+        "Grassland pyramid of numbers has only 3 tertiary consumers",
+        "Saprophytes are given no place in ecological pyramids",
+        "Pyramids are built for a single food chain and ignore food webs"
+      ],
+      "formulas": [],
+      "neet_tip": "Frequently asked: which pyramid is inverted in the sea (biomass) and which can never be inverted (energy), along with the limitations of pyramids.",
+      "topic": "Pyramids of number, biomass and energy"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Biodiversity, a term popularised by Edward Wilson, exists at three levels. Genetic diversity is shown by Rauwolfia vomitoria in the Himalayas varying in reserpine content, and by India's more than 50,000 rice strains and 1,000 mango varieties. Species diversity is shown by the Western Ghats having more amphibian species than the Eastern Ghats. Ecological diversity is shown by India, with deserts, rain forests, mangroves, coral reefs, wetlands, estuaries and alpine meadows, having more than Norway. Diversity decreases from the equator towards the poles (latitudinal gradient). Explanations for high tropical diversity include long undisturbed evolutionary time, a less seasonal and more predictable environment, and more solar energy giving higher productivity. Humboldt's species-area relationship states that species richness rises with area up to a limit. Long-term ecosystem experiments by David Tilman showed that greater diversity gives more stable and productive ecosystems. Paul Ehrlich's rivet popper hypothesis compares species to rivets on an airplane.",
+      "key_points": [
+        "Three levels: genetic, species and ecological diversity",
+        "About 1.5 million species have been described; Robert May estimates about 7 million in total",
+        "Animals make up more than 70% of species and plants (including algae, fungi, bryophytes, gymnosperms and angiosperms) not more than 22%; insects are more than 70% of animals",
+        "India has 2.4% of the world's land area but 8.1% of global species diversity; it is one of 12 megadiversity countries",
+        "Bird species: Colombia about 1,400, New York 105, Greenland 56, India more than 1,200",
+        "Z ranges from 0.1 to 0.2 for small areas; for very large areas such as continents it is 0.6 to 1.2",
+        "Reasons to conserve: narrowly utilitarian (food, drugs, bioprospecting), broadly utilitarian (Amazon gives about 20% of atmospheric oxygen) and ethical",
+        "Tilman: more species means less year-to-year variation in total biomass and higher productivity"
+      ],
+      "formulas": [
+        {
+          "formula": "$S = CA^Z$",
+          "meaning": "Species-area relationship; S is species richness, A is area, C is the Y-intercept and Z is the slope (regression coefficient)"
+        },
+        {
+          "formula": "$\\log S = \\log C + Z \\log A$",
+          "meaning": "Log form of the species-area relationship, which gives a straight line"
+        }
+      ],
+      "neet_tip": "High-yield items are the Amazon species numbers, Z values, latitudinal gradient reasons and examples matched to the three levels of diversity.",
+      "topic": "Concept, patterns and importance of biodiversity"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "The IUCN Red List (2004) records 784 extinctions in the last 500 years: 338 vertebrates, 359 invertebrates and 87 plants. Recent extinctions include the dodo (Mauritius), quagga (Africa), thylacine (Australia), Steller's sea cow (Russia) and three tiger subspecies (Bali, Javan and Caspian). Current extinction rates are 100 to 1000 times faster than in pre-human times, a sixth extinction driven by human activity. Paul Ehrlich's evil quartet lists the four causes. Habitat loss and fragmentation is the most important cause. Over-exploitation drove the Steller's sea cow and passenger pigeon to extinction. Alien species invasions include the Nile perch in Lake Victoria wiping out more than 200 cichlid species. Co-extinction happens when an obligately associated species dies with its partner, such as a parasite with its host. Loss of diversity lowers plant production, reduces resistance to drought and other disturbances, and increases variability in ecosystem processes.",
+      "key_points": [
+        "Evil quartet: habitat loss and fragmentation, over-exploitation, alien species invasions, co-extinctions",
+        "Tropical rain forests once covered 14% of land surface and now cover no more than 6%",
+        "Amazon rain forest, the lungs of the planet, is being cleared for soya beans and for grasslands to raise beef cattle",
+        "Threatened groups: 12% of birds, 23% of mammals, 32% of amphibians and 31% of gymnosperms; more than 15,500 species face extinction",
+        "Amphibians appear more vulnerable to extinction",
+        "Invasive weeds include Parthenium (carrot grass), Lantana and water hyacinth (Eichhornia)",
+        "African catfish Clarias gariepinus, introduced for aquaculture, threatens indigenous catfishes",
+        "27 species went extinct in the last 20 years"
+      ],
+      "formulas": [],
+      "neet_tip": "Expect cause-example matching (Nile perch with alien invasion, Steller's sea cow with over-exploitation) and the 784/338/359/87 extinction figures.",
+      "topic": "Loss of biodiversity"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Conservation is either in situ (on site) or ex situ (off site). Norman Myers proposed biodiversity hotspots: regions with very high species richness, high endemism and severe threat. There were originally 25 hotspots, and the number has risen to 34. Three of them cover India's rich biodiversity regions: the Western Ghats and Sri Lanka, Indo-Burma, and the Himalaya. Hotspots cover less than 2% of Earth's land area, yet strict protection could cut ongoing mass extinctions by almost 30%. The IUCN maintains the Red Data Book, or Red List, which records threatened species. Its categories are Extinct, Extinct in the Wild, Critically Endangered, Endangered, Vulnerable, Near Threatened, Least Concern, Data Deficient and Not Evaluated. Ex situ methods include zoos, botanical gardens, wildlife safari parks, cryopreservation of gametes, in vitro fertilisation, tissue culture and seed banks. International efforts include the Rio Earth Summit (1992) and the World Summit on Sustainable Development (Johannesburg, 2002), where 190 countries pledged to reduce biodiversity loss by 2010.",
+      "key_points": [
+        "Hotspot criteria: high species richness, high endemism and high threat",
+        "Hotspots now number 34; three cover India's rich biodiversity regions",
+        "Hotspots cover less than 2% of land area; strict protection could cut extinctions by about 30%",
+        "Red Data Book (Red List) is maintained by the IUCN",
+        "Endemic species are confined to a particular region and found nowhere else",
+        "Gametes can be preserved for long periods by cryopreservation at -196 degrees C in liquid nitrogen",
+        "Rio Earth Summit 1992 produced the Convention on Biological Diversity",
+        "Johannesburg 2002: 190 countries pledged to significantly reduce biodiversity loss by 2010"
+      ],
+      "formulas": [],
+      "neet_tip": "Questions focus on the number of hotspots, the three hotspots covering India, the IUCN categories and classifying methods as in situ or ex situ.",
+      "topic": "Biodiversity conservation: hotspots, endangered organisms, extinction, Red Data Book"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "In situ conservation protects whole ecosystems and their species in natural habitats. India has 14 biosphere reserves, 90 national parks and 448 wildlife sanctuaries. Biosphere reserves are multipurpose protected areas under UNESCO's Man and Biosphere programme. They have a core zone with no human activity, a buffer zone for limited research and education, and a transition zone where human settlement and activities are allowed. National parks give strict protection, with no grazing, cultivation, private ownership or forestry. Wildlife sanctuaries protect animals but allow activities such as harvesting timber and collecting minor forest products, provided these do not harm the animals. Sacred groves are forest patches protected by tribal communities on religious grounds. They shelter many rare and threatened plants.",
+      "key_points": [
+        "India: 14 biosphere reserves, 90 national parks and 448 wildlife sanctuaries",
+        "Biosphere reserve zones: core, buffer and transition (manipulation zone)",
+        "National parks forbid human activities; sanctuaries permit limited activities",
+        "Sacred groves in Meghalaya: Khasi and Jaintia Hills",
+        "Sacred groves in Rajasthan: Aravalli Hills",
+        "Sacred groves in Karnataka and Maharashtra: Western Ghats region",
+        "Sacred groves in Madhya Pradesh (as per NCERT): Sarguja, Chanda and Bastar areas; Sarguja and Bastar are now in Chhattisgarh",
+        "Sacred groves are in situ, community-based conservation of the last refuges of rare and threatened plants"
+      ],
+      "formulas": [],
+      "neet_tip": "NEET matches sacred grove locations with states and asks for the numbers of biosphere reserves, national parks and sanctuaries, plus national park versus sanctuary differences.",
+      "topic": "Biosphere reserves, national parks, sanctuaries and sacred groves"
+    }
+  ],
+  "key_facts": [
+    "Amazon rain forest: more than 40,000 plant, 3,000 fish, 1,300 bird, 427 mammal, 427 amphibian, 378 reptile and more than 1,25,000 invertebrate species",
+    "Amazon descending order: invertebrates > plants > fishes > birds > mammals",
+    "Gause's competitive exclusion principle: two closely related species competing for the same resources cannot coexist indefinitely",
+    "Connell's experiment: Balanus excludes Chthamalus from the intertidal zone on the rocky coasts of Scotland",
+    "MacArthur's warblers coexist through resource partitioning (different foraging behaviour)",
+    "Prickly pear cactus in Australia was controlled by a cactus-feeding moth from its native range",
+    "Calotropis produces cardiac glycosides that protect it from herbivores",
+    "Brood parasitism: the cuckoo lays its eggs in the crow's nest",
+    "Lichen = fungus + alga (or cyanobacterium); mycorrhiza = fungus + roots of higher plants",
+    "Exponential growth gives a J curve; logistic growth gives an S curve with asymptote K",
+    "r of India in 1981 was 0.0205",
+    "Annual NPP of the biosphere is about 170 billion tons dry weight, of which oceans contribute about 55 billion tons",
+    "Plants capture only 2 to 10% of PAR, and PAR is less than 50% of incident sunlight",
+    "Lindeman's 10% law of energy transfer between trophic levels",
+    "Grassland pyramid of numbers has 5,842,424 producers and only 3 tertiary consumers",
+    "IUCN 2004: 784 extinctions in 500 years (338 vertebrates, 359 invertebrates, 87 plants)",
+    "Extinct examples: dodo (Mauritius), quagga (Africa), thylacine (Australia), Steller's sea cow (Russia)",
+    "Three extinct tiger subspecies: Bali, Javan and Caspian",
+    "Nile perch introduced into Lake Victoria caused the extinction of more than 200 cichlid fish species",
+    "Species-area Z value is 0.1 to 0.2 regardless of taxa; for frugivorous birds and mammals in tropical forests of different continents Z is 1.15",
+    "India has 2.4% of world land area, 8.1% of global species diversity and about 45,000 plant species, with twice as many animal species",
+    "34 biodiversity hotspots worldwide; three cover India's rich biodiversity regions",
+    "Rauwolfia vomitoria shows genetic diversity in the concentration of reserpine",
+    "The Amazon rain forest produces about 20% of the total oxygen in Earth's atmosphere",
+    "Edward Wilson popularised the term biodiversity; Paul Ehrlich gave the rivet popper hypothesis",
+    "Humboldt gave the species-area relationship; Norman Myers developed the hotspot concept"
+  ],
+  "common_traps": [
+    "Thinking the pyramid of energy can be inverted in the sea. The pyramid of biomass is inverted in the sea; the energy pyramid is always upright.",
+    "Assuming any positive birth rate means growth. Growth depends on b minus d; if birth rate equals death rate, r = 0 and the population stays constant.",
+    "Writing a 1% law for energy transfer. Lindeman's law is the 10% law; the 2 to 10% figure refers to the fraction of PAR captured by plants, not trophic transfer.",
+    "Calling an orchid on a mango tree mutualism or parasitism. It is commensalism; mycorrhiza and lichen are mutualism.",
+    "Treating the Abingdon tortoise case as predation. Goats outcompeted the tortoise through greater browsing efficiency, which is competition caused by an introduced alien species.",
+    "Assuming oceans contribute most global productivity because they cover 70% of the surface. They contribute only about 55 of the 170 billion tons.",
+    "Believing humus decomposes quickly. Humus is highly resistant to microbial action and decomposes very slowly; mineralisation releases nutrients.",
+    "Confusing national parks with sanctuaries. National parks allow no human activity, while sanctuaries permit limited activities such as collecting timber and minor forest products."
+  ],
+  "quick_revision": [
+    "Interaction signs: mutualism +,+ ; competition -,- ; predation and parasitism +,- ; commensalism +,0 ; amensalism -,0",
+    "Population growth: exponential dN/dt = rN (J curve); logistic dN/dt = rN(K-N)/K (S curve)",
+    "Age pyramids: triangular = expanding, bell = stable, urn = declining",
+    "NPP = GPP - R; secondary productivity is new organic matter formed by consumers",
+    "Decomposition order: fragmentation, leaching, catabolism, humification, mineralisation",
+    "Energy flow is unidirectional; 10% law; plants fix only 2 to 10% of PAR",
+    "GFC dominates in aquatic ecosystems and DFC in terrestrial ecosystems; herbivores are primary consumers",
+    "Energy pyramid is always upright; biomass pyramid is inverted in the sea",
+    "Biodiversity levels: genetic, species, ecological; diversity is highest in the tropics; species-area relation S = CA^Z",
+    "Evil quartet: habitat loss (most important), over-exploitation, alien species, co-extinction",
+    "34 hotspots, three covering India; the IUCN maintains the Red Data Book",
+    "India: 14 biosphere reserves, 90 national parks, 448 sanctuaries; sacred groves in Khasi-Jaintia, Aravalli, Western Ghats and Bastar-Sarguja-Chanda"
+  ],
+  "pyq": {
+    "count": 6,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q144",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q144"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q146",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q146"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q161",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q161"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q172",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q172"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q174",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q174"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q178",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q178"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

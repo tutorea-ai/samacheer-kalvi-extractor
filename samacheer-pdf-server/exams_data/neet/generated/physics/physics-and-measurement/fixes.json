@@ -1,0 +1,20 @@
+[
+  {
+    "path": "topics[2].key_points[3]",
+    "old": "Changing units does not change the number of significant figures: 2.30 m = 230 cm = $2.30 \\times 10^{2}$ cm",
+    "new": "Changing units does not change the number of significant figures: 2.30 m = $2.30 \\times 10^{2}$ cm (or 230. cm). Writing 230 cm without a decimal point is ambiguous about the trailing zero.",
+    "fixes": "Ambiguous trailing zero in 230 cm example"
+  },
+  {
+    "path": "topics[3].key_points[2]",
+    "old": "The quantity with the highest power contributes the most error",
+    "new": "The contribution of each quantity is (power) × (its relative error). For similar relative errors, the quantity with the highest power contributes the most.",
+    "fixes": "Highest power does not always contribute most error"
+  },
+  {
+    "path": "topics[5].key_points[3]",
+    "old": "If $x$ appears in $P + \\frac{a}{V^2}$, then $\\frac{a}{V^2}$ has the dimensions of P",
+    "new": "In $(P + \\frac{a}{V^2})$, the term $\\frac{a}{V^2}$ must have the dimensions of P",
+    "fixes": "Unexplained 'x' in P + a/V^2 example"
+  }
+]

@@ -1,0 +1,422 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u18",
+  "unit_no": 18,
+  "unit_name": "Atoms and Nuclei",
+  "slug": "atoms-and-nuclei",
+  "overview": "This unit traces how our picture of the atom developed: alpha-particle scattering revealed a tiny massive nucleus, Rutherford proposed a nuclear model, and Bohr quantised electron orbits to explain the hydrogen spectrum. It then examines the nucleus itself: its composition, size, mass, mass defect, binding energy, and the release of energy in fission and fusion. NEET asks 2-3 questions from this unit almost every year. Most are formula-based numericals on Bohr radius, velocity and energy, spectral wavelengths, Q-value and binding energy, along with graph and concept questions on scattering and the BE/A curve.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Geiger and Marsden, working under Rutherford, directed a narrow beam of 5.5 MeV alpha particles from $^{214}Bi$ at a thin gold foil about $2.1\\times10^{-7}$ m thick. A rotatable zinc sulphide screen with a microscope counted the scattered particles at different angles $\\theta$. Most alpha particles passed straight through or were deflected only slightly. About 0.14% were scattered by more than $1^\\circ$, and roughly 1 in 8000 was deflected by more than $90^\\circ$, a few almost straight back. Rutherford concluded that the positive charge and nearly all the mass are concentrated in a tiny central nucleus. The plot of $N(\\theta)$ against $\\theta$ falls very steeply at small angles and then flattens to a very low value at large angles, following $N(\\theta)\\propto 1/\\sin^4(\\theta/2)$. The impact parameter $b$ is the perpendicular distance of the initial velocity from the nucleus. Small $b$ gives large deflection, and $b=0$ (a head-on collision) gives $\\theta=180^\\circ$.",
+      "key_points": [
+        "Most alpha particles go undeflected, so the atom is mostly empty space",
+        "Rare large-angle deflections show a tiny, massive, positively charged nucleus",
+        "$N(\\theta)\\propto 1/\\sin^4(\\theta/2)$: the count drops sharply as $\\theta$ increases",
+        "Smaller impact parameter means larger scattering angle",
+        "A head-on collision ($b=0$) rebounds at $180^\\circ$, and its turning point is the distance of closest approach",
+        "Thin gold foil is used so that each alpha particle undergoes essentially a single scattering",
+        "The closest-approach estimate (about $4\\times10^{-14}$ m for gold) gives an upper limit on nuclear size of a few times $10^{-14}$ m; actual nuclear radii are about $10^{-15}$ to $10^{-14}$ m"
+      ],
+      "formulas": [
+        {
+          "formula": "$N(\\theta)\\propto \\frac{1}{\\sin^4(\\theta/2)}$",
+          "meaning": "Number of alpha particles scattered at angle $\\theta$ (Rutherford scattering formula)"
+        },
+        {
+          "formula": "$r_0=\\frac{1}{4\\pi\\epsilon_0}\\frac{2Ze^2}{K}$",
+          "meaning": "Distance of closest approach for an alpha particle of kinetic energy $K$ approaching a nucleus of atomic number $Z$ head-on"
+        },
+        {
+          "formula": "$b=\\frac{1}{4\\pi\\epsilon_0}\\frac{Ze^2\\cot(\\theta/2)}{K}$",
+          "meaning": "Impact parameter $b$ for an alpha particle (charge $2e$) of kinetic energy $K$ scattered through angle $\\theta$"
+        }
+      ],
+      "neet_tip": "Expect graph identification of $N(\\theta)$ versus $\\theta$, numericals on the distance of closest approach, and the link between impact parameter and scattering angle.",
+      "topic": "Alpha-particle scattering experiment"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "In Rutherford's nuclear model, the atom has a tiny positively charged nucleus of size about $10^{-15}$ to $10^{-14}$ m that carries almost all its mass. Electrons revolve around it in orbits, with the overall atom size about $10^{-10}$ m. For hydrogen, the electrostatic attraction supplies the centripetal force: $\\frac{mv^2}{r}=\\frac{1}{4\\pi\\epsilon_0}\\frac{e^2}{r^2}$. This gives kinetic energy $K=\\frac{e^2}{8\\pi\\epsilon_0 r}$, potential energy $U=-\\frac{e^2}{4\\pi\\epsilon_0 r}$, and total energy $E=-\\frac{e^2}{8\\pi\\epsilon_0 r}$. The negative total energy means the electron is bound. The model has two serious failures. First, by classical electromagnetism an accelerating, revolving electron should radiate energy continuously and spiral into the nucleus, so the atom would be unstable. Second, the frequency of revolution would change continuously, so the atom would emit a continuous spectrum, whereas observed spectra are line spectra.",
+      "key_points": [
+        "Nucleus radius is about $10^{-15}$ m, while atom radius is about $10^{-10}$ m (a ratio of about $10^5$)",
+        "Electrostatic force provides the centripetal force",
+        "$K=-E$ and $U=2E$ in any orbit",
+        "The model cannot explain atomic stability",
+        "It predicts a continuous spectrum, contradicting the observed line spectra"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{mv^2}{r}=\\frac{1}{4\\pi\\epsilon_0}\\frac{e^2}{r^2}$",
+          "meaning": "Force balance for an electron in a circular orbit; use it to relate $v$ and $r$ directly"
+        },
+        {
+          "formula": "$E=-\\frac{e^2}{8\\pi\\epsilon_0 r}$",
+          "meaning": "Total energy of the electron in an orbit of radius $r$"
+        }
+      ],
+      "neet_tip": "NEET often gives $v$ (or $r$) and asks for the other using $r=\\frac{e^2}{4\\pi\\epsilon_0 m v^2}$, or asks for the energy ratios $K:U:E$.",
+      "topic": "Rutherford's model of the atom"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Bohr's model rests on three postulates. First, electrons revolve only in certain stationary orbits without radiating. Second, only those orbits are allowed in which angular momentum is quantised, $mvr=\\frac{nh}{2\\pi}$. Third, a photon is emitted or absorbed only when the electron jumps between orbits, with $h\\nu=E_i-E_f$. Combining these with the force balance gives, for hydrogen-like ions: radius $r_n=0.529\\frac{n^2}{Z}$ Å, speed $v_n=2.18\\times10^6\\frac{Z}{n}$ m/s, and energy $E_n=-13.6\\frac{Z^2}{n^2}$ eV. The ground state of hydrogen is at $-13.6$ eV, so its ionisation energy is 13.6 eV, and the first excitation energy is 10.2 eV. De Broglie explained the quantisation condition: an orbit is allowed only if it holds a whole number of electron wavelengths, $2\\pi r_n=n\\lambda$. The model has limitations. It works only for one-electron systems, cannot explain line intensities or fine structure, and mixes classical and quantum ideas.",
+      "key_points": [
+        "$r_n\\propto n^2/Z$, $v_n\\propto Z/n$, $E_n\\propto -Z^2/n^2$",
+        "Time period $T_n\\propto n^3/Z^2$ and frequency of revolution $\\propto Z^2/n^3$",
+        "Energy levels crowd together as $n$ increases",
+        "Ionisation energy of the ground state is $13.6Z^2$ eV",
+        "For $He^+$ ($Z=2$) $E_1=-54.4$ eV, and for $Li^{2+}$ ($Z=3$) $E_1=-122.4$ eV",
+        "The orbital speed in the first orbit of H is $c/137$",
+        "Bohr's model is valid only for hydrogen-like (single-electron) species"
+      ],
+      "formulas": [
+        {
+          "formula": "$mvr=\\frac{nh}{2\\pi}$",
+          "meaning": "Bohr quantisation of angular momentum; $n$ is the principal quantum number"
+        },
+        {
+          "formula": "$r_n=\\frac{n^2h^2\\epsilon_0}{\\pi m Z e^2}=0.529\\frac{n^2}{Z}$ Å",
+          "meaning": "Radius of the $n$th orbit"
+        },
+        {
+          "formula": "$v_n=\\frac{Ze^2}{2\\epsilon_0 nh}=2.18\\times10^6\\frac{Z}{n}$ m/s",
+          "meaning": "Speed of the electron in the $n$th orbit"
+        },
+        {
+          "formula": "$E_n=-\\frac{mZ^2e^4}{8\\epsilon_0^2n^2h^2}=-13.6\\frac{Z^2}{n^2}$ eV",
+          "meaning": "Total energy of the $n$th level"
+        },
+        {
+          "formula": "$2\\pi r_n=n\\lambda$",
+          "meaning": "De Broglie standing-wave interpretation of Bohr orbits"
+        }
+      ],
+      "neet_tip": "Ratio questions dominate, for example $r$, $v$, $E$ or $T$ for different $n$ or $Z$, along with ionisation and excitation energies of hydrogen-like ions.",
+      "topic": "Bohr model and energy levels"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "When an electron jumps from a higher level $n_2$ to a lower level $n_1$, it emits a photon of wavenumber $\\frac{1}{\\lambda}=RZ^2\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)$, where the Rydberg constant is $R=1.097\\times10^7$ m$^{-1}$. Lines that end on the same lower level form a series. The Lyman series ($n_1=1$) lies in the ultraviolet. The Balmer series ($n_1=2$) lies in the visible region. The Paschen ($n_1=3$), Brackett ($n_1=4$) and Pfund ($n_1=5$) series lie in the infrared. Within each series, the longest wavelength comes from $n_2=n_1+1$, and the shortest wavelength (the series limit) comes from $n_2\\to\\infty$. An electron falling from level $n$ can produce at most $\\frac{n(n-1)}{2}$ different lines when many atoms are involved. At room temperature, almost all atoms are in the ground state, so the absorption spectrum shows mainly Lyman lines.",
+      "key_points": [
+        "Lyman series is ultraviolet, Balmer is visible, and Paschen, Brackett and Pfund are infrared",
+        "Lyman series limit is 91.2 nm, Balmer series limit is 364.6 nm",
+        "$H_\\alpha$ (the transition 3 to 2) has wavelength 656.3 nm and is red",
+        "Total number of lines from level $n$ is $\\frac{n(n-1)}{2}$",
+        "A single atom can emit at most $n-1$ lines in one cascade",
+        "Emitted photon energy equals $E_{n_2}-E_{n_1}$; the atom's recoil is neglected",
+        "Ratio of longest wavelengths: Lyman to Balmer is $5:27$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{1}{\\lambda}=RZ^2\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)$",
+          "meaning": "Wavenumber of a line for a transition from $n_2$ to $n_1$"
+        },
+        {
+          "formula": "$h\\nu=E_{n_2}-E_{n_1}=13.6Z^2\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)$ eV",
+          "meaning": "Photon energy emitted in the transition"
+        },
+        {
+          "formula": "$\\lambda(\\text{nm})=\\frac{1240}{E(\\text{eV})}$",
+          "meaning": "Quick conversion between photon energy and wavelength"
+        },
+        {
+          "formula": "$N=\\frac{n(n-1)}{2}$",
+          "meaning": "Maximum number of spectral lines from level $n$ down to the ground state"
+        }
+      ],
+      "neet_tip": "Expect questions on wavelength ratios between series, the series limit, the spectral region of a series, and the number of emitted lines.",
+      "topic": "Hydrogen spectrum"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "A nucleus contains $Z$ protons and $N$ neutrons, together called nucleons. The mass number is $A=Z+N$, and a nuclide is written $^A_ZX$. Chadwick discovered the neutron in 1932, which explained why nuclear mass exceeds $Z$ proton masses. Nuclides are classified by what they share. Isotopes have the same $Z$ (for example $^{1}H$, $^{2}H$, $^{3}H$). Isobars have the same $A$ (for example $^3H$, $^3He$). Isotones have the same $N$ (for example $^{198}_{80}Hg$, $^{197}_{79}Au$). Scattering experiments show that nuclear radius grows as $R=R_0A^{1/3}$, with $R_0=1.2$ fm. Nuclear volume is therefore proportional to $A$, so nuclear density is about $2.3\\times10^{17}$ kg/m$^3$ and is the same for all nuclei. Nucleons are held together by the nuclear force. This force is very strong, short-ranged (a few fm), charge-independent, and becomes repulsive below about 0.8 fm.",
+      "key_points": [
+        "$A=Z+N$, and the number of neutrons is $A-Z$",
+        "Isotopes share $Z$, isobars share $A$, isotones share $N$",
+        "$R=R_0A^{1/3}$ with $R_0\\approx1.2\\times10^{-15}$ m",
+        "Nuclear density is independent of $A$, about $2.3\\times10^{17}$ kg/m$^3$",
+        "Nuclear force is the strongest force, short-ranged and charge-independent ($p$-$p$, $n$-$n$ and $n$-$p$ are alike)",
+        "Nuclear force is attractive at a few fm and repulsive below about 0.8 fm"
+      ],
+      "formulas": [
+        {
+          "formula": "$R=R_0A^{1/3}$",
+          "meaning": "Nuclear radius; $R_0=1.2$ fm and $A$ is the mass number"
+        },
+        {
+          "formula": "$\\frac{R_1}{R_2}=\\left(\\frac{A_1}{A_2}\\right)^{1/3}$",
+          "meaning": "Ratio of the radii of two nuclei"
+        },
+        {
+          "formula": "$\\rho=\\frac{3m_u}{4\\pi R_0^3}$",
+          "meaning": "Nuclear density, which does not depend on $A$"
+        }
+      ],
+      "neet_tip": "Common questions ask for a radius ratio from mass numbers, or for the ratio of nuclear densities, which is always 1.",
+      "topic": "Composition and size of the nucleus"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Atomic masses are expressed in the atomic mass unit (u). By definition, 1 u is one-twelfth of the mass of one $^{12}C$ atom, which equals $1.660539\\times10^{-27}$ kg. On this scale the proton mass is 1.007276 u, the neutron mass is 1.008665 u, and the hydrogen atom mass is 1.007825 u. Atomic masses are measured accurately with a mass spectrometer. An element with several isotopes has an average atomic mass weighted by natural abundance. For example, chlorine contains 75.4% $^{35}Cl$ and 24.6% $^{37}Cl$, giving an average of about 35.47 u. Tabulated masses are atomic masses, which include the electrons. The energy equivalent of 1 u is 931.5 MeV, which lets mass differences be converted directly into energies.",
+      "key_points": [
+        "1 u = $\\frac{1}{12}$ of the mass of a $^{12}C$ atom = $1.66\\times10^{-27}$ kg",
+        "$m_p=1.007276$ u, $m_n=1.008665$ u, $m_H=1.007825$ u",
+        "A neutron is slightly heavier than a proton",
+        "Average atomic mass is the abundance-weighted mean of the isotope masses",
+        "1 u $\\equiv$ 931.5 MeV/$c^2$"
+      ],
+      "formulas": [
+        {
+          "formula": "$1\\,u=\\frac{m(^{12}C)}{12}=1.66\\times10^{-27}$ kg",
+          "meaning": "Definition of the atomic mass unit"
+        },
+        {
+          "formula": "$\\bar{M}=\\frac{\\sum x_iM_i}{\\sum x_i}$",
+          "meaning": "Average atomic mass from the isotope masses $M_i$ and their abundances $x_i$"
+        }
+      ],
+      "neet_tip": "Usually tested through unit conversion (u to MeV) or average atomic mass from isotopic abundances.",
+      "topic": "Atomic masses"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Einstein's relation $E=mc^2$ shows that mass and energy are equivalent. One kilogram corresponds to $9\\times10^{16}$ J, and 1 u corresponds to 931.5 MeV. The mass of a nucleus is always less than the total mass of its separate nucleons. This difference is the mass defect: $\\Delta m=[Zm_p+(A-Z)m_n]-M_N$. The energy equivalent of the mass defect is the binding energy, $E_b=\\Delta m c^2$. It is the energy released when the nucleus forms, or equivalently the energy needed to break it completely into free nucleons. When atomic masses are used, write $m_H$ in place of $m_p$; the electron masses then cancel. For a nuclear reaction, the Q-value is $Q=(\\sum m_{\\text{reactants}}-\\sum m_{\\text{products}})c^2$. A positive Q means energy is released (exoergic), and a negative Q means energy must be supplied (endoergic). In alpha decay with $Q>0$, the energy appears mainly as kinetic energy of the alpha particle.",
+      "key_points": [
+        "$E=mc^2$, with 1 u $\\to$ 931.5 MeV",
+        "Mass defect is always positive for a bound nucleus",
+        "Binding energy is $\\Delta m\\times931.5$ MeV when $\\Delta m$ is in u",
+        "Using atomic masses with $m_H$ automatically accounts for the electrons",
+        "$Q>0$ means energy is released; $Q<0$ means energy is absorbed",
+        "Converting MeV to keV means multiplying by $10^3$, so watch the units in options"
+      ],
+      "formulas": [
+        {
+          "formula": "$E=mc^2$",
+          "meaning": "Mass-energy equivalence"
+        },
+        {
+          "formula": "$\\Delta m=Zm_H+(A-Z)m_n-M_{atom}$",
+          "meaning": "Mass defect calculated from atomic masses"
+        },
+        {
+          "formula": "$E_b=\\Delta m\\times931.5$ MeV",
+          "meaning": "Binding energy when $\\Delta m$ is in u"
+        },
+        {
+          "formula": "$Q=(\\sum m_{\\text{reactants}}-\\sum m_{\\text{products}})\\times931.5$ MeV",
+          "meaning": "Energy released in a nuclear reaction, with masses in u"
+        }
+      ],
+      "neet_tip": "Q-value and binding-energy numericals using given masses in u are very frequent; check carefully whether the answer is asked in MeV or keV.",
+      "topic": "Mass-energy relation and mass defect"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Binding energy per nucleon, $E_{bn}=E_b/A$, measures nuclear stability: the higher its value, the more stable the nucleus. On the plot of $E_{bn}$ against $A$, the curve rises steeply for light nuclei, with local peaks at $^4He$ (7.07 MeV), $^{12}C$ and $^{16}O$. It reaches a maximum of about 8.75 MeV near $A=56$ ($Fe$). It stays nearly constant at about 8 MeV for $30<A<170$, then falls to about 7.6 MeV for $^{238}U$. The flat middle region reflects the saturation property of the short-range nuclear force: each nucleon interacts only with its nearest neighbours. Heavy nuclei have lower $E_{bn}$ because Coulomb repulsion among many protons grows. The curve explains energy release in two ways. Splitting a heavy nucleus (fission) produces fragments with higher $E_{bn}$. Joining light nuclei (fusion) also produces a nucleus with higher $E_{bn}$. In both cases the products are more tightly bound, and energy is released.",
+      "key_points": [
+        "Peak of the curve is about 8.75 MeV per nucleon near $A=56$ (iron), the most stable region",
+        "$E_{bn}$ is about 8 MeV over the broad range $30<A<170$",
+        "$^{238}U$ has about 7.6 MeV per nucleon; deuteron has $E_b=2.22$ MeV, i.e. 1.11 MeV per nucleon",
+        "$^4He$ shows a sharp local peak, making it unusually stable",
+        "Saturation of nuclear forces explains the nearly constant middle region",
+        "Energy is released whenever the products have higher total binding energy than the reactants"
+      ],
+      "formulas": [
+        {
+          "formula": "$E_{bn}=\\frac{E_b}{A}$",
+          "meaning": "Binding energy per nucleon, the measure of stability"
+        },
+        {
+          "formula": "$Q=\\sum (E_b)_{\\text{products}}-\\sum (E_b)_{\\text{reactants}}$",
+          "meaning": "Energy released, calculated from binding energies"
+        }
+      ],
+      "neet_tip": "Expect curve-based reasoning (which nucleus is most stable, why fission and fusion release energy) and energy-release calculations using $A\\times E_{bn}$ values.",
+      "topic": "Binding energy per nucleon and its variation with mass number"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "In fission, a heavy nucleus splits into two medium-mass fragments after absorbing a slow (thermal) neutron. A typical reaction is $^{235}_{92}U+^1_0n\\to^{236}_{92}U\\to^{144}_{56}Ba+^{89}_{36}Kr+3^1_0n$, which releases about 200 MeV per fission. The extra neutrons released can cause further fissions, creating a chain reaction. In a nuclear reactor, three components control this. A moderator (heavy water or graphite) slows the fast neutrons. Control rods (cadmium or boron) absorb excess neutrons. A coolant removes the heat. The multiplication factor $K$ is the ratio of neutrons in one generation to the previous one. $K=1$ is critical (steady), $K>1$ is supercritical (as in a bomb), and $K<1$ is subcritical. In fusion, light nuclei combine into a heavier one. This needs temperatures of about $10^7$ K to overcome Coulomb repulsion, so it is called thermonuclear fusion. The Sun's proton-proton cycle converts $4\\,^1H$ into $^4He$ and releases 26.7 MeV.",
+      "key_points": [
+        "Fission of $^{235}U$ releases about 200 MeV, i.e. about 0.9 MeV per nucleon",
+        "Slow (thermal) neutrons are the most effective in causing fission of $^{235}U$",
+        "Moderator slows neutrons; control rods (Cd, B) absorb neutrons",
+        "$K=1$ critical, $K>1$ supercritical, $K<1$ subcritical",
+        "Fusion requires about $10^7$ K, which is the source of stellar energy",
+        "Proton-proton cycle: $4\\,^1H+2e^-\\to\\,^4He+2\\nu+6\\gamma+26.7$ MeV (26.7 MeV includes positron annihilation)",
+        "Energy released per unit mass is larger in fusion than in fission",
+        "D-T fusion: $^2H+^3H\\to^4He+n+17.6$ MeV"
+      ],
+      "formulas": [
+        {
+          "formula": "$^{235}_{92}U+^1_0n\\to^{144}_{56}Ba+^{89}_{36}Kr+3^1_0n+200$ MeV",
+          "meaning": "Typical fission reaction; both $A$ and $Z$ are conserved"
+        },
+        {
+          "formula": "$K=\\frac{\\text{neutrons in generation } (n+1)}{\\text{neutrons in generation } n}$",
+          "meaning": "Multiplication factor of a chain reaction"
+        },
+        {
+          "formula": "$4\\,^1_1H+2e^-\\to\\,^4_2He+2\\nu+6\\gamma+26.7$ MeV",
+          "meaning": "Net proton-proton cycle in stars; 26.7 MeV includes positron annihilation"
+        }
+      ],
+      "neet_tip": "Questions test balancing fission equations (finding the number of neutrons or missing $A$, $Z$), the roles of moderator and control rods, and comparisons of fission with fusion.",
+      "topic": "Nuclear fission and fusion"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$N(\\theta)\\propto\\frac{1}{\\sin^4(\\theta/2)}$",
+      "meaning": "Rutherford scattering: $N$ is the number of alpha particles scattered at angle $\\theta$"
+    },
+    {
+      "formula": "$r_0=\\frac{1}{4\\pi\\epsilon_0}\\frac{2Ze^2}{K}$",
+      "meaning": "Distance of closest approach; $K$ is the alpha kinetic energy and $Z$ the target atomic number"
+    },
+    {
+      "formula": "$b=\\frac{1}{4\\pi\\epsilon_0}\\frac{Ze^2\\cot(\\theta/2)}{K}$",
+      "meaning": "Impact parameter $b$ for an alpha particle scattered through $\\theta$"
+    },
+    {
+      "formula": "$\\frac{mv^2}{r}=\\frac{1}{4\\pi\\epsilon_0}\\frac{Ze^2}{r^2}$",
+      "meaning": "Centripetal force balance for an electron of mass $m$ and speed $v$ in an orbit of radius $r$"
+    },
+    {
+      "formula": "$mvr=\\frac{nh}{2\\pi}$",
+      "meaning": "Bohr angular momentum quantisation; $n$ is the orbit number and $h$ is Planck's constant"
+    },
+    {
+      "formula": "$r_n=0.529\\frac{n^2}{Z}$ Å",
+      "meaning": "Radius of the $n$th Bohr orbit of a hydrogen-like ion of atomic number $Z$"
+    },
+    {
+      "formula": "$v_n=2.18\\times10^6\\frac{Z}{n}$ m/s",
+      "meaning": "Orbital speed in the $n$th orbit"
+    },
+    {
+      "formula": "$E_n=-13.6\\frac{Z^2}{n^2}$ eV",
+      "meaning": "Total energy of the $n$th level"
+    },
+    {
+      "formula": "$K_n=-E_n,\\ U_n=2E_n$",
+      "meaning": "Kinetic energy $K_n$ and potential energy $U_n$ in terms of the total energy $E_n$"
+    },
+    {
+      "formula": "$T_n\\propto\\frac{n^3}{Z^2}$",
+      "meaning": "Time period of revolution in the $n$th orbit"
+    },
+    {
+      "formula": "$2\\pi r_n=n\\lambda$",
+      "meaning": "De Broglie condition for stationary orbits; $\\lambda$ is the electron wavelength"
+    },
+    {
+      "formula": "$\\frac{1}{\\lambda}=RZ^2\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)$",
+      "meaning": "Wavelength of an emitted line for $n_2\\to n_1$; $R=1.097\\times10^7$ m$^{-1}$"
+    },
+    {
+      "formula": "$h\\nu=E_{n_2}-E_{n_1}$",
+      "meaning": "Photon energy (frequency $\\nu$) in a transition between levels"
+    },
+    {
+      "formula": "$\\lambda(\\text{nm})=\\frac{1240}{E(\\text{eV})}$",
+      "meaning": "Photon energy to wavelength conversion"
+    },
+    {
+      "formula": "$N_{lines}=\\frac{n(n-1)}{2}$",
+      "meaning": "Maximum number of spectral lines from level $n$"
+    },
+    {
+      "formula": "$A=Z+N$",
+      "meaning": "Mass number $A$ in terms of protons $Z$ and neutrons $N$"
+    },
+    {
+      "formula": "$R=R_0A^{1/3}$",
+      "meaning": "Nuclear radius; $R_0=1.2$ fm"
+    },
+    {
+      "formula": "$\\rho_{nucleus}\\approx2.3\\times10^{17}$ kg/m$^3$",
+      "meaning": "Nuclear density, the same for all nuclei"
+    },
+    {
+      "formula": "$1\\,u=1.66\\times10^{-27}$ kg $\\equiv931.5$ MeV/$c^2$",
+      "meaning": "Atomic mass unit and its energy equivalent"
+    },
+    {
+      "formula": "$E=mc^2$",
+      "meaning": "Mass-energy equivalence; $c$ is the speed of light"
+    },
+    {
+      "formula": "$\\Delta m=Zm_H+(A-Z)m_n-M_{atom}$",
+      "meaning": "Mass defect from the hydrogen atom mass $m_H$, neutron mass $m_n$ and atomic mass $M_{atom}$"
+    },
+    {
+      "formula": "$E_b=\\Delta m\\times931.5$ MeV",
+      "meaning": "Binding energy with $\\Delta m$ in u"
+    },
+    {
+      "formula": "$E_{bn}=\\frac{E_b}{A}$",
+      "meaning": "Binding energy per nucleon"
+    },
+    {
+      "formula": "$Q=(\\sum m_{\\text{reactants}}-\\sum m_{\\text{products}})\\times931.5$ MeV",
+      "meaning": "Q-value of a nuclear reaction, with masses in u"
+    },
+    {
+      "formula": "$K=\\frac{N_{n+1}}{N_n}$",
+      "meaning": "Neutron multiplication factor in a chain reaction"
+    }
+  ],
+  "common_traps": [
+    "Writing $N(\\theta)\\propto1/\\sin^4\\theta$. The correct dependence is on $\\sin^4(\\theta/2)$, and the count falls very steeply with angle, so the plot is never bell-shaped or rising.",
+    "Forgetting $Z$ for hydrogen-like ions. Energy scales as $Z^2$, radius as $1/Z$ and speed as $Z$, so $He^+$ has $E_1=-54.4$ eV, not $-13.6$ eV.",
+    "Mixing up signs of orbital energies. Kinetic energy is positive and equals $-E$, while potential energy equals $2E$. A more negative $E$ means a more tightly bound electron.",
+    "Assuming the series limit is the longest wavelength. The series limit ($n_2\\to\\infty$) is the shortest wavelength; the longest comes from $n_2=n_1+1$.",
+    "Thinking that a larger nucleus is denser. Since $R\\propto A^{1/3}$, nuclear density is the same for all nuclei.",
+    "Judging stability by total binding energy. Stability depends on binding energy per nucleon, which peaks near $A=56$.",
+    "Mixing nuclear and atomic masses when computing mass defect. If atomic masses are given, use $m_H$ in place of $m_p$ so the electron masses cancel.",
+    "Answering in MeV when options are in keV, or using 931 instead of the given 931.5. Always use the conversion supplied in the question."
+  ],
+  "quick_revision": [
+    "Geiger-Marsden experiment: most alpha particles pass undeflected and about 1 in 8000 is deflected by more than $90^\\circ$, revealing a tiny, dense, positive nucleus.",
+    "Rutherford scattering: $N(\\theta)\\propto1/\\sin^4(\\theta/2)$; smaller impact parameter gives larger deflection, and $b=0$ gives $180^\\circ$.",
+    "Rutherford model failed to explain atomic stability and line spectra.",
+    "Bohr model: $r_n\\propto n^2/Z$, $v_n\\propto Z/n$, $E_n=-13.6Z^2/n^2$ eV, and $L=nh/2\\pi$.",
+    "In any orbit $K:U:E=1:-2:-1$; the ionisation energy of H is 13.6 eV.",
+    "Spectral series by lower level: Lyman ($n_1=1$) UV, Balmer ($n_1=2$) visible, Paschen ($n_1=3$), Brackett ($n_1=4$) and Pfund ($n_1=5$) IR.",
+    "Maximum number of spectral lines from level $n$ is $n(n-1)/2$; $\\lambda(\\text{nm})=1240/E(\\text{eV})$.",
+    "Nuclear radius $R=1.2A^{1/3}$ fm; nuclear density is about $2.3\\times10^{17}$ kg/m$^3$ for every nucleus.",
+    "1 u = $1.66\\times10^{-27}$ kg = 931.5 MeV/$c^2$; a neutron is heavier than a proton.",
+    "Binding energy $E_b=\\Delta m\\times931.5$ MeV; $Q>0$ means the reaction releases energy.",
+    "BE per nucleon peaks at about 8.75 MeV near Fe-56, is about 7.6 MeV for U-238, and a flat middle region shows nuclear force saturation.",
+    "Fission of U-235 releases about 200 MeV; moderator slows neutrons, control rods absorb them, and $K=1$ is critical. Fusion needs about $10^7$ K, and the p-p cycle releases 26.7 MeV."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q007",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q7"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q035",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q35"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q040",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q40"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

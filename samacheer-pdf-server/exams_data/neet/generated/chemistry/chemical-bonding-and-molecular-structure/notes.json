@@ -1,0 +1,503 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u03",
+  "unit_no": 3,
+  "unit_name": "Chemical Bonding and Molecular Structure",
+  "slug": "chemical-bonding-and-molecular-structure",
+  "overview": "This unit explains why atoms combine and how they do it. It covers ionic, covalent, coordinate, metallic and hydrogen bonds. It also uses Lewis structures, VSEPR, valence bond theory with hybridization, and molecular orbital theory to predict shape, polarity, magnetism, bond order and stability. NEET asks 3 to 4 direct questions from this unit almost every year, on shapes, hybridization, dipole moment, MO configurations, bond order and hydrogen bonding, so it is a high-yield scoring area.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Kossel and Lewis proposed that atoms combine to attain a stable noble gas configuration, an octet (or a duplet for H, Li and Be). Kossel explained ionic bonding: electropositive atoms lose electrons, electronegative atoms gain them, and the ions are held by electrostatic attraction. Lewis explained covalent bonding by sharing of electron pairs, shown with Lewis dot structures. Formal charge identifies the most stable Lewis structure, which is the one with the lowest formal charges on its atoms. The octet rule has clear limitations. Some molecules have an incomplete octet ($BeCl_2$, $BF_3$, $LiCl$). Some are odd-electron molecules ($NO$, $NO_2$). Others have an expanded octet using d orbitals ($PCl_5$, $SF_6$, $H_2SO_4$). Noble gases also form compounds such as $XeF_2$ and $XeF_4$. The theory also cannot explain molecular shape or bond energy.",
+      "key_points": [
+        "Octet rule: atoms gain, lose or share electrons to get 8 valence electrons.",
+        "Only valence electrons take part in bonding.",
+        "Incomplete octet: $BeCl_2$ (4 electrons around Be), $BF_3$ (6 electrons around B).",
+        "Odd-electron molecules: $NO$ and $NO_2$.",
+        "Expanded octet: $PF_5$ (10 electrons), $SF_6$ (12 electrons), $IF_7$ (14 electrons).",
+        "Formal charge is a bookkeeping charge, not a real charge on the atom.",
+        "Coordinate (dative) bond: both shared electrons come from one atom, as in $NH_4^+$ and $H_3O^+$."
+      ],
+      "formulas": [
+        {
+          "formula": "$FC = V - L - \\frac{1}{2}S$",
+          "meaning": "Formal charge. V is valence electrons, L is non-bonding (lone pair) electrons, S is shared (bonding) electrons."
+        }
+      ],
+      "neet_tip": "Expect formal charge on each O atom of $O_3$ (+1, 0, −1) and identification of molecules that violate the octet rule.",
+      "topic": "Kossel-Lewis approach to chemical bond formation"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "An ionic (electrovalent) bond forms by complete transfer of electrons from a metal to a non-metal. The resulting ions are held by non-directional electrostatic forces in a crystal lattice. Ionic compounds have high melting and boiling points and are hard and brittle. They conduct electricity in the molten state or in aqueous solution, and are generally soluble in polar solvents. A covalent bond forms by mutual sharing of electron pairs. It can be single, double or triple, and it is directional, which gives molecules definite shapes. Covalent compounds usually have low melting points, are poor conductors and dissolve in non-polar solvents. A bond between identical atoms is non-polar. A bond between atoms of different electronegativity is polar covalent, with partial charges. Most real bonds are intermediate: ionic bonds have some covalent character, and covalent bonds between unlike atoms have some ionic character.",
+      "key_points": [
+        "Ionic bonds are non-directional, so they show no isomerism.",
+        "Covalent bonds are directional, so they give definite geometry and can show isomerism.",
+        "An electronegativity difference above about 1.7 suggests predominantly ionic character.",
+        "A polar covalent bond carries partial charges, for example $H^{\\delta+}-Cl^{\\delta-}$.",
+        "Single bond = 1 sigma; double bond = 1 sigma + 1 pi; triple bond = 1 sigma + 2 pi.",
+        "Ionic solids do not conduct in the solid state because the ions are fixed in the lattice."
+      ],
+      "formulas": [],
+      "neet_tip": "Questions usually compare properties such as conductivity, solubility and melting point of ionic and covalent compounds, or count sigma and pi bonds.",
+      "topic": "Ionic and covalent bonds"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Ionic bond formation involves three steps: ionisation of the metal atom (needs energy), electron gain by the non-metal atom (usually releases energy), and packing of the gaseous ions into a lattice (releases lattice energy). Formation is favoured by three factors: low ionisation enthalpy of the metal, highly negative electron gain enthalpy of the non-metal, and high lattice enthalpy. The overall energy change is analysed by the Born-Haber cycle. For NaCl, ionisation of Na (+495.8 kJ/mol) and electron gain of Cl (−348.7 kJ/mol) together are endothermic. The large lattice enthalpy released makes the overall process exothermic. Therefore lattice enthalpy, not the octet alone, is the real driving force for ionic compound formation in the solid state. Alkali and alkaline earth metals combining with halogens and oxygen form the most typical ionic compounds.",
+      "key_points": [
+        "Low ionisation enthalpy of the metal favours cation formation.",
+        "Highly negative electron gain enthalpy of the non-metal favours anion formation.",
+        "High lattice enthalpy stabilises the ionic solid.",
+        "In the gas phase, $Na(g) + Cl(g) \\rightarrow Na^+(g) + Cl^-(g)$ is endothermic.",
+        "The Born-Haber cycle applies Hess's law to ionic compound formation.",
+        "Smaller ions with higher charge give stronger ionic lattices."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta_f H = \\Delta_{sub}H + IE + \\frac{1}{2}\\Delta_{diss}H + \\Delta_{eg}H - U$",
+          "meaning": "Born-Haber cycle for an MX-type solid. U is the lattice enthalpy, taken as the energy needed to separate the lattice, so it is subtracted for lattice formation."
+        }
+      ],
+      "neet_tip": "Asked as conceptual statements on the conditions that favour ionic bond formation and on the role of lattice enthalpy.",
+      "topic": "Formation of ionic bonds and factors affecting it"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Lattice enthalpy is the energy required to completely separate one mole of a solid ionic compound into its gaseous constituent ions. For NaCl it is +788 kJ/mol. It measures the strength of the ionic lattice and the stability of the compound. It increases with the charge on the ions and decreases with the sum of their radii. So MgO has a much higher lattice enthalpy than NaCl, and LiF is higher than CsI. A high lattice enthalpy means a high melting point, greater hardness and usually lower solubility. Solubility depends on the balance between lattice enthalpy and hydration enthalpy. A compound dissolves if hydration enthalpy can compensate the lattice enthalpy. It cannot be measured directly; it is obtained from the Born-Haber cycle.",
+      "key_points": [
+        "Lattice enthalpy is proportional to the product of ionic charges.",
+        "It is inversely proportional to interionic distance $(r_+ + r_-)$.",
+        "Order: $MgO > CaO > NaF > NaCl > KCl$.",
+        "Among alkali halides, $LiF$ has the highest and $CsI$ the lowest lattice enthalpy.",
+        "A compound dissolves if hydration enthalpy is at least comparable to lattice enthalpy.",
+        "It is determined indirectly using the Born-Haber cycle."
+      ],
+      "formulas": [
+        {
+          "formula": "$U \\propto \\frac{z_+ z_-}{r_+ + r_-}$",
+          "meaning": "Relative lattice enthalpy from ionic charges and radii."
+        }
+      ],
+      "neet_tip": "Typical questions ask you to arrange compounds by lattice enthalpy using charge first, then size.",
+      "topic": "Lattice enthalpy"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Electronegativity is the tendency of an atom in a molecule to attract the shared pair of electrons towards itself. It is a relative property with no units; the Pauling scale is most common. Fluorine is the most electronegative element (4.0), followed by O (3.5), then N and Cl (3.0). Across a period electronegativity increases, and down a group it decreases. It rises with effective nuclear charge and falls with atomic size. It also depends on hybridisation: greater s-character means higher electronegativity, so $sp > sp^2 > sp^3$ carbon. The electronegativity difference between bonded atoms decides bond polarity and percentage ionic character. Electronegativity differs from electron gain enthalpy: the latter is a measurable energy change of an isolated gaseous atom.",
+      "key_points": [
+        "Pauling values: $F = 4.0$, $O = 3.5$, $N = Cl = 3.0$, $C = 2.5$, $H = 2.1$.",
+        "Trend: increases across a period and decreases down a group.",
+        "Cs and Fr are the least electronegative.",
+        "Hybridised carbon order: $C_{sp} > C_{sp^2} > C_{sp^3}$.",
+        "A larger electronegativity difference gives a more polar and more ionic bond.",
+        "Electronegativity concerns a bonded atom; electron gain enthalpy concerns an isolated atom."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\chi_A - \\chi_B = 0.208\\sqrt{\\Delta}$",
+          "meaning": "Pauling relation. $\\Delta$ (kcal/mol) is the extra bond energy of A–B over the mean of A–A and B–B."
+        }
+      ],
+      "neet_tip": "Used indirectly to decide bond polarity, dipole moment direction and acidity order.",
+      "topic": "Electronegativity"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Fajans' rule explains partial covalent character in ionic bonds. A cation distorts (polarises) the electron cloud of a nearby anion, which draws electron density between the nuclei and gives the bond partial covalency. Covalent character increases in four situations. First, the cation is small. Second, the cation carries a high charge. Third, the anion is large and highly charged. Fourth, the cation has a pseudo noble gas (18-electron) configuration, as in $Cu^+$, $Ag^+$ and $Zn^{2+}$; poorly shielding d electrons make such cations more polarising than noble gas cations of similar size. Greater covalent character lowers melting point and solubility in water and raises solubility in organic solvents. Examples: $LiCl$ is more covalent than $NaCl$, and $AlCl_3$ is more covalent than $NaCl$. $CuCl$ is more covalent than $NaCl$ despite similar ionic size. Among the lithium halides, $LiI$ is the most covalent.",
+      "key_points": [
+        "Small, highly charged cation means high polarising power.",
+        "Large, highly charged anion means high polarisability.",
+        "An 18-electron cation is more polarising than an 8-electron cation of similar size.",
+        "Covalent character: $LiI > LiBr > LiCl > LiF$.",
+        "Covalent character: $AlCl_3 > MgCl_2 > NaCl$.",
+        "Higher covalent character gives a lower melting point; $AgCl$ has lower water solubility than expected."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\phi = \\frac{\\text{charge on cation}}{\\text{radius of cation}}$",
+          "meaning": "Ionic potential. A higher value means greater polarising power and more covalent character."
+        }
+      ],
+      "neet_tip": "Expect ordering of covalent character or melting points among halides and oxides.",
+      "topic": "Fajan's rule"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Dipole moment measures the polarity of a bond or molecule. It equals the magnitude of charge multiplied by the distance between the charges. It is a vector, drawn by chemists from the positive to the negative end, and its unit is the debye. The net molecular dipole is the vector sum of bond dipoles and lone pair contributions. Symmetrical molecules have zero dipole moment even with polar bonds: $CO_2$, $BF_3$, $CH_4$, $CCl_4$, $PCl_5$, $SF_6$ and $XeF_4$. $H_2O$ (1.85 D) and $NH_3$ (1.47 D) are polar. $NH_3$ has a larger dipole than $NF_3$ (0.23 D): in $NH_3$ the lone pair moment adds to the N–H bond moments, while in $NF_3$ it opposes the N–F moments. Applications include deciding polarity and geometry, distinguishing cis and trans isomers, and calculating percent ionic character. Polarity also follows functional groups, in the sense NEET uses it (polarity as reflected by hydrogen bonding and interaction with polar media). For example, $CH_3CH_2OCH_2CH_3 < CH_3COCH_3 < CH_3CH_2OH < CH_3COOH$. By dipole moment alone, acetone (about 2.9 D) is higher than ethanol (about 1.7 D). Boiling points follow the same ether < ketone < alcohol < acid order.",
+      "key_points": [
+        "$1\\,D = 3.336 \\times 10^{-30}\\,C\\,m$.",
+        "Zero dipole moment: $CO_2$, $BF_3$, $CH_4$, $CCl_4$, $SF_6$, $XeF_2$, $XeF_4$, trans-dichloroethene.",
+        "$NH_3$ (1.47 D) is more polar than $NF_3$ (0.23 D) because of the lone pair direction.",
+        "Dipole order: $CH_3Cl > CH_2Cl_2 > CHCl_3 > CCl_4 (= 0)$.",
+        "cis-isomers are generally more polar than trans-isomers.",
+        "p-dichlorobenzene has zero dipole moment; ortho > meta > para."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\mu = q \\times d$",
+          "meaning": "Dipole moment from charge and separation."
+        },
+        {
+          "formula": "$\\%\\,\\text{ionic character} = \\frac{\\mu_{observed}}{\\mu_{ionic}} \\times 100$",
+          "meaning": "Percent ionic character of a bond."
+        },
+        {
+          "formula": "$\\mu_R = \\sqrt{\\mu_1^2 + \\mu_2^2 + 2\\mu_1\\mu_2\\cos\\theta}$",
+          "meaning": "Resultant of two bond dipoles at angle $\\theta$."
+        }
+      ],
+      "neet_tip": "NEET frequently asks to pick zero-dipole molecules, order polarity, or explain $NH_3$ vs $NF_3$.",
+      "topic": "Dipole moment"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "VSEPR (Valence Shell Electron Pair Repulsion) theory, developed by Sidgwick, Powell, Nyholm and Gillespie, says that electron pairs around the central atom arrange themselves as far apart as possible to minimise repulsion. Shape is decided by the total number of electron pairs, bond pairs plus lone pairs. Multiple bonds are treated as a single super pair. Repulsion order is lp–lp > lp–bp > bp–bp, so lone pairs distort shapes and reduce bond angles. Electron pair geometries are linear (2 pairs), trigonal planar (3), tetrahedral (4), trigonal bipyramidal (5), octahedral (6) and pentagonal bipyramidal (7). In trigonal bipyramidal arrangements, lone pairs occupy equatorial positions. Example shapes: $SF_4$ is see-saw, $ClF_3$ is T-shaped, $XeF_2$ and $I_3^-$ are linear. $BrF_5$ is square pyramidal and $XeF_4$ is square planar.",
+      "key_points": [
+        "2 bp: linear ($BeCl_2$, $CO_2$).",
+        "3 bp: trigonal planar ($BF_3$). 2 bp + 1 lp: bent ($SO_2$).",
+        "4 bp: tetrahedral ($CH_4$, $BF_4^-$, $NH_4^+$).",
+        "3 bp + 1 lp: pyramidal ($NH_3$, 107°). 2 bp + 2 lp: bent ($H_2O$, 104.5°).",
+        "5 bp: trigonal bipyramidal ($PCl_5$). 4 bp + 1 lp: see-saw ($SF_4$).",
+        "3 bp + 2 lp: T-shaped ($ClF_3$). 2 bp + 3 lp: linear ($XeF_2$, $I_3^-$).",
+        "6 bp: octahedral ($SF_6$). 5 bp + 1 lp: square pyramidal ($BrF_5$, $XeOF_4$).",
+        "4 bp + 2 lp: square planar ($XeF_4$, $ICl_4^-$).",
+        "7 bp: pentagonal bipyramidal ($IF_7$). 6 bp + 1 lp: distorted octahedral ($XeF_6$)."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{electron pairs} = \\frac{1}{2}(V + M - c + a)$",
+          "meaning": "Steric number of the central atom. V is its valence electrons, M is monovalent atoms attached, c is cationic charge, a is anionic charge."
+        },
+        {
+          "formula": "$\\text{lone pairs} = \\text{electron pairs} - \\text{bonded atoms}$",
+          "meaning": "Gives lone pairs on the central atom to decide the shape."
+        }
+      ],
+      "neet_tip": "Match-the-list questions pairing species like $PCl_5$, $BrF_5$, $BF_4^-$, $SF_4$, $XeF_4$ with geometries are very common.",
+      "topic": "VSEPR theory and shapes of simple molecules"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Valence bond theory (Heitler, London, Pauling) says a covalent bond forms when half-filled atomic orbitals of two atoms with opposite spins overlap. The shared pair then concentrates between the nuclei. As two H atoms approach, attraction outweighs repulsion and energy falls to a minimum at 74 pm, the bond length. The 435.8 kJ/mol released is the H–H bond enthalpy. Greater overlap gives a stronger bond. Head-on (axial) overlap gives a sigma bond, through s–s, s–p or p–p overlap. Sideways (lateral) overlap of parallel p orbitals gives a pi bond. A sigma bond is stronger because the overlap is larger, and it allows free rotation. A pi bond is weaker and restricts rotation. Overlap can be positive (bonding), negative (antibonding) or zero. VBT explains directional bonds but needs hybridisation to explain shapes such as tetrahedral $CH_4$.",
+      "key_points": [
+        "Bonding needs half-filled orbitals with opposite spins.",
+        "Bond strength is proportional to the extent of overlap.",
+        "H–H: bond length 74 pm, bond enthalpy 435.8 kJ/mol.",
+        "Sigma bond: axial overlap, stronger, forms first, allows free rotation.",
+        "Pi bond: lateral overlap, weaker, forms only after a sigma bond.",
+        "Overlap strength: p–p (axial) > s–p > s–s.",
+        "s orbitals cannot form pi bonds."
+      ],
+      "formulas": [],
+      "neet_tip": "Statement-based questions on sigma vs pi strength, types of overlap and the energy curve of $H_2$ formation.",
+      "topic": "Valence bond theory"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Hybridisation is the intermixing of atomic orbitals of slightly different energies on the same atom. It produces an equal number of identical hybrid orbitals with equivalent energy and shape. Only orbitals take part, not electrons, and both half-filled and fully filled orbitals can hybridise. Hybrid orbitals form only sigma bonds or hold lone pairs; pi bonds use unhybridised orbitals. The number of electron pairs gives the hybridisation: 2 is sp, 3 is $sp^2$, 4 is $sp^3$, 5 is $sp^3d$, 6 is $sp^3d^2$ and 7 is $sp^3d^3$. In $sp^3d$ (for example $PCl_5$), the axial bonds are longer and weaker than the equatorial bonds. Inner-shell d orbitals give $dsp^2$ (square planar, $[Ni(CN)_4]^{2-}$) and $d^2sp^3$ (octahedral inner-orbital complexes). More s-character means a shorter, stronger bond and a larger angle.",
+      "key_points": [
+        "$sp$: 180°, linear, 50% s-character ($BeCl_2$, $C_2H_2$).",
+        "$sp^2$: 120°, trigonal planar, 33.3% s ($BF_3$, $C_2H_4$).",
+        "$sp^3$: 109°28', tetrahedral, 25% s ($CH_4$).",
+        "$sp^3d$: trigonal bipyramidal, using the $d_{z^2}$ orbital ($PCl_5$).",
+        "$sp^3d^2$: octahedral, using $d_{x^2-y^2}$ and $d_{z^2}$ ($SF_6$).",
+        "$sp^3d^3$: pentagonal bipyramidal ($IF_7$).",
+        "$dsp^2$: square planar ($[Ni(CN)_4]^{2-}$, $[PtCl_4]^{2-}$).",
+        "$[NiCl_4]^{2-}$ is $sp^3$ tetrahedral; $[Ni(CN)_4]^{2-}$ is $dsp^2$ square planar.",
+        "$PCl_5$ (solid) exists as $[PCl_4]^+[PCl_6]^-$."
+      ],
+      "formulas": [
+        {
+          "formula": "$H = \\frac{1}{2}(V + M - c + a)$",
+          "meaning": "Hybridisation number: 2 = sp, 3 = $sp^2$, 4 = $sp^3$, 5 = $sp^3d$, 6 = $sp^3d^2$, 7 = $sp^3d^3$."
+        },
+        {
+          "formula": "$\\%\\,s = \\frac{1}{\\text{number of orbitals mixed}} \\times 100$",
+          "meaning": "s-character of a hybrid orbital."
+        }
+      ],
+      "neet_tip": "Identifying hybridisation and geometry of central atoms in molecules, ions and simple complexes is tested almost every year.",
+      "topic": "Hybridization involving s, p and d orbitals"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "When a single Lewis structure cannot explain all properties of a molecule, two or more structures (canonical forms) are written. They differ only in the position of electrons, not of atoms. The actual molecule is a resonance hybrid that is more stable than any canonical form. The canonical forms have no real existence. The energy difference between the actual molecule and the most stable canonical form is the resonance energy. Resonance averages bond lengths. In $O_3$ both O–O bonds are equal (128 pm), between single (148 pm) and double (121 pm). In $CO_3^{2-}$ all three C–O bonds are equal with bond order 4/3. In benzene all C–C bonds are 139 pm. Canonical forms must have the same number of unpaired electrons and nearly equal energy.",
+      "key_points": [
+        "Only electrons move between canonical forms, never atoms.",
+        "The resonance hybrid is lower in energy than every canonical form.",
+        "Average bond order = total bonds between the atoms ÷ number of resonating positions.",
+        "Bond order 4/3 in $CO_3^{2-}$ and $NO_3^-$.",
+        "Bond order 1.5 in $O_3$, $NO_2^-$, $HCOO^-$ and benzene.",
+        "Bond order 1.25 in $PO_4^{3-}$; 1.5 in $SO_4^{2-}$ (with d-orbital participation).",
+        "Resonance energy measures extra stability, for example in benzene."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{B.O.} = \\frac{\\text{total number of bonds between two atom types}}{\\text{number of resonating structures}}$",
+          "meaning": "Average bond order in resonating species."
+        }
+      ],
+      "neet_tip": "Asked as comparisons of bond order or bond length, for example $CO$, $CO_2$ and $CO_3^{2-}$ (C–O length: $CO < CO_2 < CO_3^{2-}$).",
+      "topic": "Resonance"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "Molecular orbital theory (Hund and Mulliken) treats electrons as belonging to the whole molecule. Atomic orbitals combine to form molecular orbitals, which are polycentric and influenced by all nuclei. The number of MOs formed equals the number of AOs combined. Filling follows the Aufbau principle, Pauli exclusion principle and Hund's rule. MOs are approximated by the Linear Combination of Atomic Orbitals (LCAO). Additive combination of wave functions gives a bonding MO, and subtractive combination gives an antibonding MO. Effective combination needs three conditions. The AOs must have comparable energy, for example 1s with 1s but not 1s with 2s. They must have the same symmetry about the molecular axis; with z as the axis, $2p_z$ cannot combine with $2p_x$. They must also overlap to the maximum extent. MOT successfully explains the paramagnetism of $O_2$, which VBT fails to explain.",
+      "key_points": [
+        "Atomic orbitals are monocentric; molecular orbitals are polycentric.",
+        "n atomic orbitals combine to give n molecular orbitals.",
+        "Bonding MO: $\\psi_A + \\psi_B$. Antibonding MO: $\\psi_A - \\psi_B$.",
+        "Combining AOs need comparable energy, the same symmetry and maximum overlap.",
+        "With z as the internuclear axis, $s$ and $p_z$ can combine but $s$ and $p_x$ cannot.",
+        "MOT explains the paramagnetism of $O_2$ and the existence of $H_2^+$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\sigma = \\psi_A + \\psi_B$",
+          "meaning": "Bonding MO by constructive interference."
+        },
+        {
+          "formula": "$\\sigma^* = \\psi_A - \\psi_B$",
+          "meaning": "Antibonding MO by destructive interference."
+        }
+      ],
+      "neet_tip": "Statement questions on LCAO conditions and on the number of MOs formed.",
+      "topic": "Molecular orbital theory and LCAO"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "A bonding molecular orbital comes from constructive overlap. It concentrates electron density between the nuclei, reduces repulsion and lies lower in energy than the parent atomic orbitals, so it stabilises the molecule. An antibonding molecular orbital comes from destructive overlap. It has a nodal plane between the nuclei and lies higher in energy than the parent AOs, so electrons in it destabilise the molecule. The antibonding orbital is raised slightly more than the bonding orbital is lowered. Sigma MOs, such as $\\sigma 1s$, $\\sigma 2s$ and $\\sigma 2p_z$, are symmetrical about the internuclear axis. Pi MOs, such as $\\pi 2p_x$ and $\\pi 2p_y$, come from sideways overlap. They have a nodal plane containing the internuclear axis and are not symmetrical about it. $\\pi^*$ orbitals have an additional node between the nuclei. Pi bonding orbitals occur as a degenerate pair.",
+      "key_points": [
+        "Bonding MO: lower energy, electron density between the nuclei.",
+        "Antibonding MO: higher energy, nodal plane between the nuclei, marked with *.",
+        "Sigma MO: cylindrically symmetrical about the internuclear axis.",
+        "Pi MO: a nodal plane contains the internuclear axis.",
+        "$\\pi 2p_x$ and $\\pi 2p_y$ are degenerate; so are $\\pi^* 2p_x$ and $\\pi^* 2p_y$.",
+        "Electrons in antibonding MOs cancel the effect of an equal number of bonding electrons."
+      ],
+      "formulas": [],
+      "neet_tip": "Questions ask about nodal planes, the symmetry of sigma vs pi MOs, or which combination is allowed.",
+      "topic": "Bonding and antibonding orbitals; sigma and pi bonds"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "For molecules with up to 14 electrons ($H_2$ to $N_2$), s–p mixing raises $\\sigma 2p_z$ above $\\pi 2p$. The order is $\\sigma 1s < \\sigma^* 1s < \\sigma 2s < \\sigma^* 2s < (\\pi 2p_x = \\pi 2p_y) < \\sigma 2p_z < (\\pi^* 2p_x = \\pi^* 2p_y) < \\sigma^* 2p_z$. For $O_2$, $F_2$ and $Ne_2$, $\\sigma 2p_z$ lies below the $\\pi 2p$ orbitals. $B_2$ is paramagnetic, with two unpaired electrons in the $\\pi 2p$ orbitals. $C_2$ is diamagnetic and has only pi bonds, a double bond made of two pi bonds. $N_2$ has bond order 3 and is diamagnetic. $O_2$ has two unpaired electrons in $\\pi^*$ orbitals, so it is paramagnetic with bond order 2. $F_2$ has bond order 1. In $Ne_2$ all MOs up to $\\sigma^* 2p_z$ are filled. That orbital is the HOMO, and the bond order is zero, so $Ne_2$ does not exist. Paramagnetism arises from unpaired electrons.",
+      "key_points": [
+        "$N_2$ (14 electrons): $KK\\,\\sigma 2s^2\\,\\sigma^* 2s^2\\,\\pi 2p_x^2 = \\pi 2p_y^2\\,\\sigma 2p_z^2$.",
+        "$O_2$ (16 electrons): $KK\\,\\sigma 2s^2\\,\\sigma^* 2s^2\\,\\sigma 2p_z^2\\,\\pi 2p^4\\,\\pi^* 2p_x^1 = \\pi^* 2p_y^1$.",
+        "Paramagnetic species: $B_2$, $O_2$, $O_2^+$, $O_2^-$, $N_2^+$, $N_2^-$, $H_2^+$, $He_2^+$.",
+        "Diamagnetic species: $H_2$, $C_2$, $N_2$, $F_2$, $O_2^{2-}$, $CO$, $NO^+$.",
+        "HOMO of $N_2$ is $\\sigma 2p_z$; HOMO of $O_2$ is $\\pi^* 2p$; HOMO of $Ne_2$ is $\\sigma^* 2p_z$.",
+        "$C_2$ contains two pi bonds and no sigma bond in the simple MO picture."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\mu = \\sqrt{n(n+2)}\\ BM$",
+          "meaning": "Spin-only magnetic moment from the number of unpaired electrons n."
+        }
+      ],
+      "neet_tip": "NEET asks the HOMO of a species, magnetic behaviour, or the number of unpaired electrons from MO configurations.",
+      "topic": "MO configurations of homonuclear diatomic molecules"
+    },
+    {
+      "topic_index": 14,
+      "explanation": "Bond order is half the difference between the numbers of electrons in bonding ($N_b$) and antibonding ($N_a$) molecular orbitals. A positive bond order means the molecule is stable. Zero bond order ($He_2$, $Be_2$, $Ne_2$) means it does not exist. A higher bond order means a shorter bond length and a higher bond dissociation energy, so the bond is stronger. Bond length is the equilibrium internuclear distance. Bond enthalpy is the energy needed to break one mole of bonds of a given type in the gaseous state. Isoelectronic species have the same bond order: $N_2$, $CO$, $NO^+$ and $CN^-$ all have 3. Removing an electron from an antibonding orbital raises bond order ($O_2^+$ is 2.5). Adding an electron to one lowers it ($O_2^-$ is 1.5, $O_2^{2-}$ is 1). If bond orders are equal, the species with fewer antibonding electrons is more stable, so $H_2^+$ is more stable than $He_2^+$.",
+      "key_points": [
+        "Bond orders: $H_2 = 1$, $H_2^+ = 0.5$, $He_2^+ = 0.5$, $He_2 = 0$.",
+        "Bond orders: $B_2 = 1$, $C_2 = 2$, $N_2 = 3$, $O_2 = 2$, $F_2 = 1$, $Ne_2 = 0$.",
+        "Bond order: $O_2^+ (2.5) > O_2 (2) > O_2^- (1.5) > O_2^{2-} (1)$.",
+        "Bond length follows the reverse order: $O_2^{2-} > O_2^- > O_2 > O_2^+$.",
+        "Bond order: $N_2 (3) > N_2^+ = N_2^- (2.5)$; $N_2^+$ is more stable than $N_2^-$.",
+        "Bond length order for carbon bonds: C–C > C=C > C≡C (154, 134, 120 pm).",
+        "Bond enthalpy of $F_2$ is lower than that of $Cl_2$ because of lone pair repulsion in small F."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{B.O.} = \\frac{1}{2}(N_b - N_a)$",
+          "meaning": "Bond order from MO electron counts."
+        },
+        {
+          "formula": "$\\text{Bond length} \\propto \\frac{1}{\\text{B.O.}}$",
+          "meaning": "Qualitative relation: a higher bond order gives a shorter bond."
+        },
+        {
+          "formula": "$\\text{Bond energy} \\propto \\text{B.O.}$",
+          "meaning": "Qualitative relation: a higher bond order gives a stronger bond."
+        }
+      ],
+      "neet_tip": "Ordering bond orders, bond lengths or stabilities of $O_2$, $N_2$ and their ions is a favourite question.",
+      "topic": "Bond order, bond length and bond energy"
+    },
+    {
+      "topic_index": 15,
+      "explanation": "Metallic bonding is the force holding metal atoms together in a metallic crystal. In the electron sea (free electron) model, each metal atom loses its valence electrons and becomes a positive kernel. The kernels sit at fixed lattice points in a sea of delocalised mobile electrons, and the attraction between kernels and electrons is the metallic bond. The bond is non-directional. This model explains metallic properties. Mobile electrons give high electrical and thermal conductivity. They absorb and re-emit light, which gives lustre. Layers of kernels can slide without breaking bonds, which explains malleability and ductility. Metallic bond strength increases with the number of valence electrons and decreases with atomic size. This explains why transition metals have high melting points and alkali metals are soft with low melting points.",
+      "key_points": [
+        "Positive kernels sit in a sea of delocalised electrons.",
+        "The metallic bond is non-directional.",
+        "Mobile electrons explain conductivity, lustre, malleability and ductility.",
+        "Bond strength increases with the number of valence electrons.",
+        "Bond strength decreases with increasing atomic size.",
+        "Alkali metals have weak metallic bonding and low melting points.",
+        "Transition metals have strong metallic bonding involving d electrons."
+      ],
+      "formulas": [],
+      "neet_tip": "Asked conceptually: which property the electron sea model explains, or melting point trends among metals.",
+      "topic": "Metallic bonding (elementary idea)"
+    },
+    {
+      "topic_index": 16,
+      "explanation": "A hydrogen bond is the attraction between a hydrogen atom covalently bonded to a highly electronegative atom (F, O or N) and a lone pair on another electronegative atom. It is shown by a dotted line and is weaker than a covalent bond. Intermolecular hydrogen bonds link different molecules, as in $HF$, $H_2O$, alcohols, carboxylic acids (dimers) and p-nitrophenol. These raise boiling point, viscosity and solubility in water. Intramolecular hydrogen bonds form within one molecule, as in o-nitrophenol and salicylaldehyde. They cause chelation and lower boiling point and water solubility. Applications include the anomalously high boiling point of water, the lower density of ice (open cage structure), the existence of $KHF_2$, the miscibility of ethanol with water, acetic acid dimers, and the structure of DNA and proteins.",
+      "key_points": [
+        "Strength order: F–H···F > O–H···O > N–H···N.",
+        "Boiling point: $H_2O > HF > NH_3$ (water forms more H-bonds per molecule).",
+        "Ice has an open cage structure, so it is less dense than liquid water.",
+        "o-nitrophenol is steam volatile; p-nitrophenol is not (intermolecular H-bonding).",
+        "$HF_2^-$ exists (as in $KHF_2$), but $HCl_2^-$ does not.",
+        "Acetic acid shows a dimeric structure in benzene.",
+        "Lower alcohols and amines are soluble in water due to H-bonding.",
+        "H-bonds hold DNA base pairs and the protein secondary structure ($\\alpha$-helix, $\\beta$-sheet)."
+      ],
+      "formulas": [],
+      "neet_tip": "Common questions compare boiling points or solubility, intra- vs intermolecular H-bonding, or the polarity and boiling order of ether, ketone, alcohol and acid (ether < ketone < alcohol < acid; polarity here is as reflected by H-bonding, since by dipole moment alone acetone, about 2.9 D, is higher than ethanol, about 1.7 D).",
+      "topic": "Hydrogen bonding and its applications"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$FC = V - L - \\frac{1}{2}S$",
+      "meaning": "Formal charge on an atom in a Lewis structure."
+    },
+    {
+      "formula": "$U \\propto \\frac{z_+ z_-}{r_+ + r_-}$",
+      "meaning": "Lattice enthalpy rises with ionic charge and falls with ionic size."
+    },
+    {
+      "formula": "$\\Delta_f H = \\Delta_{sub}H + IE + \\frac{1}{2}\\Delta_{diss}H + \\Delta_{eg}H - U$",
+      "meaning": "Born-Haber cycle for an MX-type ionic solid."
+    },
+    {
+      "formula": "$\\chi_A - \\chi_B = 0.208\\sqrt{\\Delta}$",
+      "meaning": "Pauling electronegativity difference from extra bond energy."
+    },
+    {
+      "formula": "$\\phi = \\frac{z}{r}$",
+      "meaning": "Ionic potential. A higher value means more polarising and more covalent character (Fajans' rule)."
+    },
+    {
+      "formula": "$\\mu = q \\times d$",
+      "meaning": "Dipole moment; $1\\,D = 3.336 \\times 10^{-30}\\,C\\,m$."
+    },
+    {
+      "formula": "$\\%\\,\\text{ionic character} = \\frac{\\mu_{obs}}{\\mu_{ionic}} \\times 100$",
+      "meaning": "Percent ionic character from dipole moments."
+    },
+    {
+      "formula": "$\\mu_R = \\sqrt{\\mu_1^2 + \\mu_2^2 + 2\\mu_1\\mu_2\\cos\\theta}$",
+      "meaning": "Resultant of two bond dipoles."
+    },
+    {
+      "formula": "$H = \\frac{1}{2}(V + M - c + a)$",
+      "meaning": "Steric number, which gives hybridisation and electron pair geometry."
+    },
+    {
+      "formula": "$\\text{lp} = H - \\text{number of bonded atoms}$",
+      "meaning": "Lone pairs on the central atom."
+    },
+    {
+      "formula": "$\\text{lp–lp} > \\text{lp–bp} > \\text{bp–bp}$",
+      "meaning": "VSEPR repulsion order."
+    },
+    {
+      "formula": "$CH_4\\,(109.5^\\circ) > NH_3\\,(107^\\circ) > H_2O\\,(104.5^\\circ)$",
+      "meaning": "Bond angle decreases as the number of lone pairs increases."
+    },
+    {
+      "formula": "$\\%\\,s: sp\\,(50) > sp^2\\,(33.3) > sp^3\\,(25)$",
+      "meaning": "More s-character gives a shorter bond, larger angle and more electronegative orbital."
+    },
+    {
+      "formula": "$\\sigma = \\psi_A + \\psi_B$, $\\sigma^* = \\psi_A - \\psi_B$",
+      "meaning": "LCAO formation of bonding and antibonding MOs."
+    },
+    {
+      "formula": "$\\text{B.O.} = \\frac{1}{2}(N_b - N_a)$",
+      "meaning": "Bond order from MO theory; zero means the molecule does not exist."
+    },
+    {
+      "formula": "$\\pi 2p_x = \\pi 2p_y < \\sigma 2p_z$ (up to 14 electrons); $\\sigma 2p_z < \\pi 2p$ (O_2, F_2, Ne_2)",
+      "meaning": "Energy order of 2p MOs for light vs heavier diatomics."
+    },
+    {
+      "formula": "$\\mu_s = \\sqrt{n(n+2)}\\ BM$",
+      "meaning": "Spin-only magnetic moment from n unpaired electrons."
+    },
+    {
+      "formula": "$O_2^+ (2.5) > O_2 (2) > O_2^- (1.5) > O_2^{2-} (1)$",
+      "meaning": "Bond order sequence; bond length follows the reverse order."
+    },
+    {
+      "formula": "$N_2 = CO = NO^+ = CN^- = 3$",
+      "meaning": "Isoelectronic species (14 electrons) with bond order 3."
+    },
+    {
+      "formula": "$\\text{B.O.}_{avg} = \\frac{\\text{total bonds}}{\\text{resonating positions}}$",
+      "meaning": "Resonance bond order, for example $CO_3^{2-} = 4/3$, $O_3 = 1.5$."
+    },
+    {
+      "formula": "$F\\cdots H > O\\cdots H > N\\cdots H$",
+      "meaning": "Hydrogen bond strength order; boiling point $H_2O > HF > NH_3$."
+    }
+  ],
+  "common_traps": [
+    "Assuming polar bonds always make a polar molecule. Symmetry cancels bond dipoles, so $CO_2$, $BF_3$, $CCl_4$ and $XeF_4$ have zero dipole moment.",
+    "Using the $N_2$-type MO order for $O_2$, $F_2$ and $Ne_2$. For these, $\\sigma 2p_z$ lies below $\\pi 2p$, and the HOMO of $Ne_2$ is $\\sigma^* 2p_z$.",
+    "Confusing electron pair geometry with molecular shape. $H_2O$ is $sp^3$ with a tetrahedral electron arrangement, but its shape is bent. $XeF_4$ is $sp^3d^2$ but square planar.",
+    "Thinking $NF_3$ is more polar than $NH_3$ because F is more electronegative. In $NF_3$ the lone pair moment opposes the bond moments, so $NH_3$ (1.47 D) is far more polar than $NF_3$ (0.23 D).",
+    "Believing resonance structures interconvert or exist separately. Only the resonance hybrid exists, and atoms never change position.",
+    "Placing lone pairs in axial positions of a trigonal bipyramid. Lone pairs occupy equatorial positions, which gives see-saw $SF_4$, T-shaped $ClF_3$ and linear $XeF_2$.",
+    "Assuming intramolecular hydrogen bonding raises boiling point. It actually lowers boiling point and water solubility, so o-nitrophenol is more volatile than p-nitrophenol.",
+    "Assuming all $[NiX_4]^{2-}$ complexes have the same geometry. $[Ni(CN)_4]^{2-}$ is $dsp^2$ square planar and diamagnetic, while $[NiCl_4]^{2-}$ is $sp^3$ tetrahedral and paramagnetic."
+  ],
+  "quick_revision": [
+    "Octet rule exceptions: $BF_3$ and $BeCl_2$ (incomplete), $NO$ and $NO_2$ (odd electron), $PCl_5$ and $SF_6$ (expanded).",
+    "Lattice enthalpy of NaCl is +788 kJ/mol; it increases with charge and decreases with size ($MgO \\gg NaCl$).",
+    "Fajans' rule: a small, highly charged or 18-electron cation with a large anion gives more covalent character and a lower melting point.",
+    "Zero dipole moment: $CO_2$, $BF_3$, $CH_4$, $CCl_4$, $PCl_5$, $SF_6$, $XeF_2$, $XeF_4$, p-dichlorobenzene.",
+    "Shapes: $SF_4$ see-saw, $ClF_3$ T-shaped, $XeF_2$ linear, $BrF_5$ square pyramidal, $XeF_4$ square planar, $IF_7$ pentagonal bipyramidal.",
+    "Hybridisation number 2, 3, 4, 5, 6, 7 corresponds to sp, $sp^2$, $sp^3$, $sp^3d$, $sp^3d^2$, $sp^3d^3$.",
+    "In $PCl_5$, axial bonds are longer than equatorial bonds; solid $PCl_5$ is $[PCl_4]^+[PCl_6]^-$.",
+    "Sigma bonds are stronger than pi bonds; pi bonds form by lateral overlap of unhybridised p orbitals.",
+    "Bond orders: $N_2 = 3$, $O_2 = 2$, $F_2 = 1$, $C_2 = 2$ (two pi bonds), $B_2 = 1$; $He_2$, $Be_2$ and $Ne_2$ are 0.",
+    "Paramagnetic species: $O_2$, $B_2$, $O_2^+$, $O_2^-$, $NO$. Diamagnetic species: $N_2$, $C_2$, $F_2$, $CO$, $O_2^{2-}$.",
+    "Higher bond order means a shorter, stronger bond; C–O length order is $CO < CO_2 < CO_3^{2-}$.",
+    "H-bond strength F > O > N; boiling point $H_2O > HF > NH_3$; ice floats; polarity (NEET sense, as reflected by H-bonding) follows ether < ketone < alcohol < carboxylic acid, the same as the boiling point order (by dipole moment alone, acetone, about 2.9 D, is higher than ethanol, about 1.7 D)."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q075",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q75"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q089",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q89"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q090",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q90"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

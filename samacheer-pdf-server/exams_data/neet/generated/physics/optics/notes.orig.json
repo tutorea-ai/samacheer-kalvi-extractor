@@ -1,0 +1,557 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u16",
+  "unit_no": 16,
+  "unit_name": "Optics",
+  "slug": "optics",
+  "overview": "Optics covers ray optics, which treats light as rays and deals with reflection, refraction, lenses, prisms and optical instruments, and wave optics, which deals with wavefronts, interference, diffraction and polarization. NEET usually sets 3-4 questions from this unit. Most are numericals on mirror and lens formulae, lens combinations, apparent depth, prisms, YDSE fringe width and Malus or Brewster law, so correct sign convention and quick formula use matter a great deal.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Reflection obeys two laws: the angle of incidence equals the angle of reflection, and the incident ray, reflected ray and normal lie in one plane. A spherical mirror is part of a sphere. A concave mirror converges light and a convex mirror diverges it. The focal length is $f = R/2$. Use the Cartesian sign convention: distances are measured from the pole, distances along the incident light are positive and distances against it are negative, while heights above the axis are positive. So a concave mirror has negative $f$ and a convex mirror has positive $f$. A concave mirror forms real, inverted images, except when the object lies between F and P, where the image is virtual, erect and magnified. A convex mirror always forms a virtual, erect, diminished image within its focal length. The focal length of a mirror does not depend on the surrounding medium or on the wavelength.",
+      "key_points": [
+        "$f = R/2$ holds for paraxial rays only",
+        "Concave mirror: $f < 0$; convex mirror: $f > 0$ (Cartesian convention)",
+        "Real image: $m$ negative (inverted); virtual image: $m$ positive (erect)",
+        "Object at C gives image at C of the same size; object at F gives image at infinity",
+        "Convex mirrors are used as rear-view mirrors because they give a wide field of view",
+        "A plane mirror gives a lateral inversion; rotating it by $\\theta$ turns the reflected ray by $2\\theta$",
+        "A mirror has no chromatic aberration"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$",
+          "meaning": "Mirror formula relating object distance u, image distance v and focal length f"
+        },
+        {
+          "formula": "$m = \\frac{h'}{h} = -\\frac{v}{u}$",
+          "meaning": "Linear magnification of a mirror"
+        },
+        {
+          "formula": "$f = \\frac{R}{2}$",
+          "meaning": "Focal length in terms of the radius of curvature"
+        }
+      ],
+      "neet_tip": "Expect image position and nature questions, and also the speed or size of an image when the object moves near a concave mirror; watch every sign.",
+      "topic": "Reflection of light; spherical mirrors and mirror formula"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Refraction obeys Snell's law, $n_1 \\sin i = n_2 \\sin r$. Light bends towards the normal when it enters a denser medium. The frequency stays the same, while the speed and wavelength both decrease by a factor of n. At a plane surface viewed near the normal, an object in a denser medium appears raised. The apparent depth is the real depth divided by the relative refractive index. For several layers the shifts simply add. For a spherical refracting surface separating media $n_1$ (object side) and $n_2$, the image is given by $\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$, with R taken as positive when the centre of curvature lies on the refracted-light side. This single relation is the starting point for the lens formula.",
+      "key_points": [
+        "$n = c/v$; frequency is unchanged on refraction, and $\\lambda_{medium} = \\lambda/n$",
+        "Apparent depth = real depth / $n_{rel}$, where $n_{rel}$ = (index of object medium) / (index of observer medium)",
+        "Normal shift for a glass slab: $t(1 - 1/n)$, independent of object position",
+        "A slab produces lateral displacement but does not deviate the ray",
+        "For layered media seen from outside, apparent depth = $\\sum t_i / n_i$",
+        "Viewing from a denser medium into a rarer one makes objects appear farther away"
+      ],
+      "formulas": [
+        {
+          "formula": "$n_1 \\sin i = n_2 \\sin r$",
+          "meaning": "Snell's law"
+        },
+        {
+          "formula": "$h_{app} = \\frac{h_{real}}{n_{rel}}$",
+          "meaning": "Apparent depth near normal incidence"
+        },
+        {
+          "formula": "$\\Delta = t\\left(1 - \\frac{1}{n}\\right)$",
+          "meaning": "Normal shift produced by a slab of thickness t (observer in air)"
+        },
+        {
+          "formula": "$\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$",
+          "meaning": "Refraction at a single spherical surface"
+        }
+      ],
+      "neet_tip": "Apparent depth through multiple layers or from different sides, and image formation by a glass sphere or hemisphere, are favourite questions.",
+      "topic": "Refraction at plane and spherical surfaces"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "A thin lens has two refracting surfaces. Applying the spherical-surface relation twice and neglecting thickness gives the lens maker's formula. In this formula $n_{21}$ is the index of the lens material relative to the surrounding medium. Combining it with the image relation gives the thin lens formula $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$. A convex lens has $f > 0$ and a concave lens has $f < 0$. When a lens is placed in a medium of higher index than the lens material, $n_{21} < 1$, so f changes sign: a convex lens then behaves as a diverging lens. If the medium has the same index as the lens, the lens becomes invisible and its power is zero. Focal length also depends on wavelength, which causes chromatic aberration.",
+      "key_points": [
+        "Lens formula: $1/v - 1/u = 1/f$ (note the minus sign, unlike the mirror formula)",
+        "For an equiconvex lens: $R_1 = R$, $R_2 = -R$, giving $f = R/[2(n-1)]$",
+        "For a plano-convex lens: $f = R/(n-1)$",
+        "Changing the surrounding medium changes f; the ratio of focal lengths is $f_{liquid}/f_{air} = (n_g - 1)/(n_g/n_l - 1)$",
+        "Cutting a lens along the axis gives two halves of the same f; cutting perpendicular to the axis doubles f for each half",
+        "Violet light has a shorter focal length than red light"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$",
+          "meaning": "Thin lens formula"
+        },
+        {
+          "formula": "$\\frac{1}{f} = (n_{21} - 1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$",
+          "meaning": "Lens maker's formula; $n_{21} = n_{lens}/n_{medium}$"
+        }
+      ],
+      "neet_tip": "NEET often immerses a lens in a liquid or water and asks for the new focal length or power, or asks whether it becomes diverging.",
+      "topic": "Thin lens formula and lens maker formula"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "When light travels from a denser to a rarer medium, the angle of refraction exceeds the angle of incidence. At the critical angle $i_c$ the refracted ray grazes the surface. For $i > i_c$ all the light is reflected back into the denser medium with no loss; this is total internal reflection (TIR). The two conditions are that light must go from denser to rarer, and the angle of incidence must exceed the critical angle. Applications include mirage and looming, the sparkle of diamond (small $i_c \\approx 24.4^\\circ$), totally reflecting prisms in periscopes and binoculars, and optical fibres. An optical fibre has a core of higher index than the cladding and carries light through repeated TIR with very little loss.",
+      "key_points": [
+        "$\\sin i_c = 1/n_{21}$, where $n_{21}$ is the index of the denser medium relative to the rarer",
+        "A larger n gives a smaller $i_c$; violet light has a smaller $i_c$ than red light",
+        "Critical angles: diamond about $24.4^\\circ$, glass about $42^\\circ$, water about $49^\\circ$",
+        "A right-angled isosceles prism ($45^\\circ$ angle) deviates rays by $90^\\circ$ or $180^\\circ$ through TIR, provided $n > \\sqrt{2}$",
+        "Optical fibres are used in telecommunication and endoscopy",
+        "A source at depth h under water lights up a circle of radius $r = h/\\sqrt{n^2 - 1}$ on the surface"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\sin i_c = \\frac{n_{rarer}}{n_{denser}}$",
+          "meaning": "Critical angle"
+        },
+        {
+          "formula": "$r = \\frac{h}{\\sqrt{n^2 - 1}}$",
+          "meaning": "Radius of the circle of light emerging from a point source at depth h"
+        }
+      ],
+      "neet_tip": "Expect critical-angle calculations, TIR conditions, the illuminated circle on a water surface, and identifying which phenomenon (mirage, sparkle, fibre) uses TIR.",
+      "topic": "Total internal reflection and its applications"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Linear magnification of a lens is $m = h'/h = v/u$. A negative m means the image is real and inverted. A positive m means it is virtual and erect. A concave lens always gives a virtual, erect, diminished image. A convex lens gives a magnified virtual image only when the object lies within f. The power of a lens measures its ability to converge or diverge light: $P = 1/f$ with f in metres, and the unit is the dioptre (D). Converging lenses have positive power and diverging lenses negative power. Power in a medium is $P = n_{medium}/f$. Shorter focal length means higher power.",
+      "key_points": [
+        "Lens: $m = v/u$; mirror: $m = -v/u$ (do not mix them up)",
+        "Real image from a single lens means m < 0; a virtual image is always erect",
+        "$1\\,D = 1\\,m^{-1}$; f must be in metres",
+        "Convex lens: +P; concave lens: -P",
+        "Areal magnification is $m^2$; longitudinal magnification for small objects is about $m^2$",
+        "Myopia is corrected with a concave lens (-P), hypermetropia with a convex lens (+P)"
+      ],
+      "formulas": [
+        {
+          "formula": "$m = \\frac{h'}{h} = \\frac{v}{u}$",
+          "meaning": "Magnification of a lens"
+        },
+        {
+          "formula": "$m = \\frac{f}{f + u} = \\frac{f - v}{f}$",
+          "meaning": "Magnification in terms of f and u, or f and v"
+        },
+        {
+          "formula": "$P = \\frac{1}{f(\\text{in m})}$",
+          "meaning": "Power of a lens in dioptre"
+        }
+      ],
+      "neet_tip": "Questions ask for the object position needed for a given magnification, or convert power to focal length using a sign.",
+      "topic": "Magnification and power of a lens"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "For thin lenses in contact, the image from the first lens acts as the object for the second. This gives an equivalent focal length $\\frac{1}{F} = \\frac{1}{f_1} + \\frac{1}{f_2} + \\cdots$, so powers simply add algebraically. The total magnification is the product of the individual magnifications. For separated lenses (distance d), $\\frac{1}{F} = \\frac{1}{f_1} + \\frac{1}{f_2} - \\frac{d}{f_1 f_2}$. In numericals with separated lenses it is safer to trace the image step by step, shifting the origin to each lens. The intermediate image may act as a virtual object for the next lens. Combinations are used in camera and microscope objectives to reduce aberrations and to obtain the required power.",
+      "key_points": [
+        "Lenses in contact: $P = P_1 + P_2 + \\cdots$",
+        "Total magnification: $m = m_1 m_2 m_3 \\cdots$",
+        "Equal and opposite lenses in contact give P = 0 (acts like a plane glass plate)",
+        "For separated lenses, solve stepwise; if the first image lies beyond the second lens, it is a virtual object with positive u",
+        "Silvering one face of a lens makes a mirror of power $P = 2P_{lens} + P_{mirror}$",
+        "An achromatic doublet satisfies $\\omega_1/f_1 + \\omega_2/f_2 = 0$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{1}{F} = \\frac{1}{f_1} + \\frac{1}{f_2}$",
+          "meaning": "Equivalent focal length of thin lenses in contact"
+        },
+        {
+          "formula": "$P = P_1 + P_2$",
+          "meaning": "Net power of lenses in contact"
+        },
+        {
+          "formula": "$\\frac{1}{F} = \\frac{1}{f_1} + \\frac{1}{f_2} - \\frac{d}{f_1 f_2}$",
+          "meaning": "Two thin lenses separated by distance d"
+        }
+      ],
+      "neet_tip": "NEET loves two-lens systems with a small separation; trace the image lens by lens and handle the virtual object carefully.",
+      "topic": "Combination of thin lenses in contact"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "A prism of angle A deviates a ray by $\\delta = i + e - A$, with $r_1 + r_2 = A$. As i increases, the deviation first decreases to a minimum $\\delta_m$ and then increases. At minimum deviation, $i = e$ and $r_1 = r_2 = A/2$, and the ray passes symmetrically, parallel to the base for an equilateral prism. This gives the prism formula for n. For a thin prism (small A), $\\delta = (n-1)A$, independent of i. Since n depends on wavelength, white light splits into colours (dispersion). Violet deviates most and red least. Angular dispersion is $(n_v - n_r)A$, and dispersive power is $\\omega = (n_v - n_r)/(n - 1)$.",
+      "key_points": [
+        "$r_1 + r_2 = A$ and $\\delta = i + e - A$",
+        "At minimum deviation: $i = e$, $r = A/2$",
+        "The i-versus-$\\delta$ graph is U-shaped; one value of $\\delta$ corresponds to two values of i, except at the minimum",
+        "Grazing emergence occurs when $r_2 = i_c$; no emergence is possible if $A > 2i_c$",
+        "Thin prism: $\\delta = (n-1)A$",
+        "Violet light has larger n and larger deviation; red has the least",
+        "Dispersion without deviation, or deviation without dispersion, can be obtained with combined prisms"
+      ],
+      "formulas": [
+        {
+          "formula": "$n = \\frac{\\sin\\left(\\frac{A + \\delta_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}$",
+          "meaning": "Refractive index from the angle of minimum deviation"
+        },
+        {
+          "formula": "$\\delta = (n - 1)A$",
+          "meaning": "Deviation by a thin prism"
+        },
+        {
+          "formula": "$\\omega = \\frac{n_v - n_r}{n_y - 1}$",
+          "meaning": "Dispersive power, where $n_y$ is the index for mean (yellow) light"
+        }
+      ],
+      "neet_tip": "Typical questions give A and $\\delta_m$ (or $\\delta_m = A$) and ask for n, or ask for the minimum-deviation condition and angle of incidence.",
+      "topic": "Refraction of light through a prism"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "A simple microscope is a convex lens with the object placed within f. With the image at the near point ($D = 25$ cm), $m = 1 + D/f$; with the image at infinity, $m = D/f$. A compound microscope uses an objective of short focal length to form a real, magnified image, which the eyepiece then magnifies further. With the final image at infinity, $m \\approx \\frac{L}{f_o}\\cdot\\frac{D}{f_e}$, where L is the tube length. An astronomical telescope has an objective of large focal length and large aperture, and an eyepiece of small focal length. In normal adjustment the final image is at infinity, $m = f_o/f_e$, and the tube length is $f_o + f_e$. The final image in both instruments is inverted.",
+      "key_points": [
+        "Microscope: both $f_o$ and $f_e$ are small, with $f_o < f_e$",
+        "Telescope: $f_o \\gg f_e$; a large objective aperture improves light-gathering and resolution",
+        "Telescope magnification at the near point: $m = \\frac{f_o}{f_e}\\left(1 + \\frac{f_e}{D}\\right)$",
+        "Compound microscope at the near point: $m = \\frac{v_o}{|u_o|}\\left(1 + \\frac{D}{f_e}\\right)$",
+        "Reflecting telescopes avoid chromatic aberration and are easier to support mechanically",
+        "Magnifying power is an angular magnification"
+      ],
+      "formulas": [
+        {
+          "formula": "$m = 1 + \\frac{D}{f}$",
+          "meaning": "Simple microscope, image at the near point"
+        },
+        {
+          "formula": "$m = \\frac{L}{f_o}\\cdot\\frac{D}{f_e}$",
+          "meaning": "Compound microscope, normal adjustment"
+        },
+        {
+          "formula": "$m = \\frac{f_o}{f_e}$, $L = f_o + f_e$",
+          "meaning": "Astronomical telescope in normal adjustment, with tube length L"
+        }
+      ],
+      "neet_tip": "Expect direct numericals on the magnifying power or tube length of a telescope or microscope, and on choosing lenses for an instrument.",
+      "topic": "Microscope and astronomical telescope and their magnifying powers"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "A wavefront is the locus of points oscillating in the same phase. Rays are normal to wavefronts. A point source produces spherical wavefronts, a line source cylindrical ones, and a very distant source plane wavefronts. Huygens' principle states that every point on a wavefront acts as a source of secondary wavelets that spread out with the speed of the wave. The forward envelope (common tangent) of these wavelets after time t gives the new wavefront. Backward wavelets are ignored. Huygens' construction explains how a convex lens converts a plane wavefront into a converging spherical one, and how a prism tilts a plane wavefront.",
+      "key_points": [
+        "Wavefront is a surface of constant phase; the ray is perpendicular to it",
+        "Point source: spherical wavefront; line source: cylindrical; source at infinity: plane",
+        "Intensity falls as $1/r^2$ for spherical waves and as $1/r$ for cylindrical waves",
+        "Phase difference between any two points on the same wavefront is zero",
+        "Secondary wavelets travel with the speed of light in that medium",
+        "A convex lens or concave mirror makes a plane wavefront converge to a spherical one"
+      ],
+      "formulas": [],
+      "neet_tip": "Questions are usually conceptual: the shape of the wavefront for a given source, or the wavefront emerging from a lens, prism or mirror.",
+      "topic": "Wavefront and Huygens' principle"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Using Huygens' construction for a plane wavefront striking a plane surface, the time taken by wavelets gives the laws directly. For reflection, the incident and reflected wavelets travel in the same medium with equal speed. Congruent triangles then give $i = r$. For refraction, wavelets travel distance $v_1 t$ in medium 1 and $v_2 t$ in medium 2. This gives $\\frac{\\sin i}{\\sin r} = \\frac{v_1}{v_2} = \\frac{n_2}{n_1}$, which is Snell's law. So light bends towards the normal on slowing down, which supports the wave theory: light is slower in a denser medium, contrary to the corpuscular prediction. Frequency remains unchanged; wavelength changes in proportion to speed.",
+      "key_points": [
+        "$\\frac{\\sin i}{\\sin r} = \\frac{v_1}{v_2} = \\frac{\\lambda_1}{\\lambda_2} = \\frac{n_2}{n_1}$",
+        "Frequency is unchanged across a boundary",
+        "Wave theory predicts a smaller speed in a denser medium, confirmed by experiment",
+        "Newton's corpuscular theory wrongly predicted a larger speed in a denser medium",
+        "Huygens' construction also explains TIR and the critical angle",
+        "Reflection does not change speed, frequency or wavelength"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{\\sin i}{\\sin r} = \\frac{v_1}{v_2} = \\frac{n_2}{n_1}$",
+          "meaning": "Snell's law from Huygens' principle"
+        },
+        {
+          "formula": "$\\lambda_2 = \\frac{\\lambda_1 n_1}{n_2}$",
+          "meaning": "Wavelength in the second medium"
+        }
+      ],
+      "neet_tip": "Asked as statement-type questions comparing wave and corpuscular predictions, or on how speed, frequency and wavelength change on refraction.",
+      "topic": "Laws of reflection and refraction using Huygens' principle"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "Interference is the redistribution of light energy when two coherent waves superpose. In Young's double-slit experiment (YDSE), slits separated by d, at a distance D from the screen, produce a path difference $\\Delta x = d\\sin\\theta \\approx yd/D$. Bright fringes occur where $\\Delta x = n\\lambda$ and dark fringes where $\\Delta x = (2n-1)\\lambda/2$. The fringe width is $\\beta = \\lambda D/d$, and all fringes are equally spaced. The resultant intensity is $I = I_1 + I_2 + 2\\sqrt{I_1 I_2}\\cos\\phi$; for equal slits, $I = 4I_0\\cos^2(\\phi/2)$. Phase difference is $\\phi = \\frac{2\\pi}{\\lambda}\\Delta x$. Immersing the apparatus in a liquid reduces $\\beta$ to $\\beta/n$. With white light, the central fringe is white and the others are coloured.",
+      "key_points": [
+        "$\\beta = \\lambda D/d$; angular fringe width is $\\lambda/d$",
+        "Position of the nth bright fringe: $y_n = n\\lambda D/d$; nth dark fringe: $(2n-1)\\lambda D/2d$",
+        "In a medium, $\\beta' = \\beta/n$",
+        "A thin film of thickness t and index $\\mu$ over one slit shifts the pattern by $(\\mu - 1)tD/d$ towards that slit, without changing $\\beta$",
+        "Energy is conserved: it is only redistributed",
+        "Phase difference $\\phi = (2\\pi/\\lambda)\\Delta x$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\beta = \\frac{\\lambda D}{d}$",
+          "meaning": "Fringe width in YDSE"
+        },
+        {
+          "formula": "$\\Delta x = \\frac{yd}{D}$",
+          "meaning": "Path difference at position y on the screen"
+        },
+        {
+          "formula": "$I = I_1 + I_2 + 2\\sqrt{I_1 I_2}\\cos\\phi$",
+          "meaning": "Resultant intensity for two coherent waves"
+        },
+        {
+          "formula": "$\\frac{I_{max}}{I_{min}} = \\left(\\frac{\\sqrt{I_1} + \\sqrt{I_2}}{\\sqrt{I_1} - \\sqrt{I_2}}\\right)^2$",
+          "meaning": "Ratio of maximum to minimum intensity"
+        },
+        {
+          "formula": "$y = \\frac{(\\mu - 1)tD}{d}$",
+          "meaning": "Fringe shift caused by a thin film"
+        }
+      ],
+      "neet_tip": "NEET frequently asks for the change in fringe width when $\\lambda$, d, D or the medium changes, intensity ratios, and fringe shift caused by a thin film.",
+      "topic": "Interference; Young's double-slit experiment and fringe width"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "Two sources are coherent if they have the same frequency and a constant phase difference. Independent sources, such as two bulbs, emit random wave trains with phase changing about every $10^{-10}$ s. Their interference pattern therefore shifts too fast to observe, and the intensities simply add ($I = I_1 + I_2$). Coherent sources are produced from a single source by division of wavefront (YDSE, Fresnel biprism, Lloyd's mirror) or by division of amplitude (thin films). For sustained interference with good contrast, the sources must be coherent and the waves must have equal or nearly equal amplitudes. They should also be narrow and closely spaced, with the screen at a suitable distance, so fringes are wide enough to resolve. Lasers are highly coherent.",
+      "key_points": [
+        "Coherence requires a constant phase difference and the same frequency",
+        "Incoherent sources: intensities add, $I = I_1 + I_2$",
+        "Coherent sources: amplitudes add, giving intensity from $(\\sqrt{I_1} - \\sqrt{I_2})^2$ to $(\\sqrt{I_1} + \\sqrt{I_2})^2$",
+        "Equal amplitudes give $I_{min} = 0$, i.e. perfect darkness and best contrast",
+        "Division of wavefront: YDSE; division of amplitude: soap films and oil films",
+        "Two independent lasers or lamps are not coherent in practice"
+      ],
+      "formulas": [
+        {
+          "formula": "$I_{incoherent} = I_1 + I_2$",
+          "meaning": "Average intensity for incoherent sources"
+        },
+        {
+          "formula": "$I_{coherent} = 4I_0\\cos^2\\frac{\\phi}{2}$",
+          "meaning": "Intensity for two equal coherent sources of intensity $I_0$"
+        }
+      ],
+      "neet_tip": "Conceptual questions ask for the conditions for sustained interference or why two bulbs do not show interference.",
+      "topic": "Coherent sources and sustained interference"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Diffraction is the bending of light around obstacles or apertures comparable in size to its wavelength. For a single slit of width a, illuminated by a plane wavefront, the minima occur at $a\\sin\\theta = n\\lambda$ ($n = 1, 2, \\ldots$). The secondary maxima lie roughly at $a\\sin\\theta = (n + \\frac{1}{2})\\lambda$, with rapidly decreasing intensity. The central maximum spans from the first minimum on one side to the first minimum on the other. Its angular width is $2\\lambda/a$ and its linear width on a screen at distance D is $2\\lambda D/a$, twice the width of the secondary maxima. A narrower slit or longer wavelength gives a wider central maximum. The Fresnel distance $z_F = a^2/\\lambda$ marks where ray optics stops being valid.",
+      "key_points": [
+        "Minima: $a\\sin\\theta = n\\lambda$; the centre is always bright",
+        "Central maximum angular width $= 2\\lambda/a$; linear width $= 2\\lambda D/a$",
+        "Secondary maxima have half the width of the central maximum and much lower intensity",
+        "In a liquid, $\\lambda$ decreases, so the central maximum narrows",
+        "Diffraction limits resolution: telescope resolving limit $\\theta = 1.22\\lambda/D$",
+        "Interference fringes are equally wide and equally bright (ideally); diffraction fringes are not",
+        "Fresnel distance $z_F = a^2/\\lambda$"
+      ],
+      "formulas": [
+        {
+          "formula": "$a\\sin\\theta = n\\lambda$",
+          "meaning": "Condition for the nth minimum in single-slit diffraction"
+        },
+        {
+          "formula": "$W = \\frac{2\\lambda D}{a}$",
+          "meaning": "Linear width of the central maximum"
+        },
+        {
+          "formula": "$2\\theta = \\frac{2\\lambda}{a}$",
+          "meaning": "Angular width of the central maximum"
+        },
+        {
+          "formula": "$z_F = \\frac{a^2}{\\lambda}$",
+          "meaning": "Fresnel distance"
+        }
+      ],
+      "neet_tip": "NEET asks for the width of the central maximum, the effect of changing a or $\\lambda$, or the condition for the first minimum to coincide with a given angle or point.",
+      "topic": "Diffraction due to a single slit; width of central maximum"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "Polarization shows that light is a transverse wave. In unpolarized light the electric vector vibrates in all directions perpendicular to propagation. In plane-polarized light it vibrates in a single plane. A polaroid transmits only the component along its pass axis, so unpolarized light of intensity $I_0$ emerges with $I_0/2$. A second polaroid at angle $\\theta$ follows Malus' law, $I = I_1\\cos^2\\theta$. Light reflected from a transparent surface is completely plane-polarized, perpendicular to the plane of incidence, when the angle of incidence equals the Brewster angle, $\\tan i_B = n$. At this angle the reflected and refracted rays are perpendicular ($i_B + r = 90^\\circ$). Scattering of sunlight also polarizes light.",
+      "key_points": [
+        "Only transverse waves can be polarized; sound in air cannot",
+        "Unpolarized light through one polaroid gives $I_0/2$, independent of orientation",
+        "Malus' law: $I = I_1\\cos^2\\theta$",
+        "Crossed polaroids transmit zero intensity; a third polaroid at $45^\\circ$ between them gives $I_0/8$",
+        "Brewster angle: $\\tan i_B = n$, and $i_B + r_B = 90^\\circ$",
+        "For glass with $n = 1.5$, $i_B \\approx 56.3^\\circ$",
+        "Light scattered at $90^\\circ$ to the incident sunlight is plane-polarized"
+      ],
+      "formulas": [
+        {
+          "formula": "$I = I_1\\cos^2\\theta$",
+          "meaning": "Malus' law for polarized light of intensity $I_1$ through an analyser at angle $\\theta$"
+        },
+        {
+          "formula": "$\\tan i_B = n$",
+          "meaning": "Brewster's law"
+        },
+        {
+          "formula": "$i_B + r = 90^\\circ$",
+          "meaning": "Reflected and refracted rays are perpendicular at the Brewster angle"
+        }
+      ],
+      "neet_tip": "Expect multi-polaroid intensity calculations and Brewster-angle questions, such as finding n or the angle of refraction.",
+      "topic": "Polarization, plane-polarized light and Brewster's law"
+    },
+    {
+      "topic_index": 14,
+      "explanation": "A Polaroid is a thin sheet of long-chain molecules, such as polyvinyl alcohol treated with iodine, aligned in one direction. It absorbs the electric-field component parallel to the chains and transmits the perpendicular one. Plane-polarized light and Polaroids have many uses. Polaroid sunglasses cut glare from horizontal reflecting surfaces such as water and roads. Polaroid filters in cameras control reflections. Polaroid window panes in trains and aircraft control the light entering. LCD displays (calculators, screens) work by controlling polarization. 3D movies use two oppositely polarized images viewed through polarizing glasses. Polarized light is also used to study optical activity (polarimeter, sugar concentration) and stress patterns in transparent materials.",
+      "key_points": [
+        "A Polaroid acts as both polarizer and analyser",
+        "Sunglasses cut glare because reflected light is partly polarized horizontally",
+        "Rotating a Polaroid in unpolarized light causes no change in intensity; in polarized light the intensity varies",
+        "Uses include LCDs, 3D movies, camera filters, adjustable windows and headlight glare reduction",
+        "Polarimeters measure optical rotation, for example sugar concentration",
+        "Photoelasticity uses polarized light to reveal stress in transparent models"
+      ],
+      "formulas": [
+        {
+          "formula": "$I = \\frac{I_0}{2}$",
+          "meaning": "Intensity of unpolarized light after passing through one Polaroid"
+        }
+      ],
+      "neet_tip": "Usually tested as a statement or matching question on applications, or on testing whether light is polarized by rotating a Polaroid.",
+      "topic": "Uses of plane-polarized light and Polaroid"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$, $m = -\\frac{v}{u}$",
+      "meaning": "Mirror formula and magnification; u = object distance, v = image distance, f = focal length"
+    },
+    {
+      "formula": "$f = \\frac{R}{2}$",
+      "meaning": "Focal length of a spherical mirror; R = radius of curvature"
+    },
+    {
+      "formula": "$n_1\\sin i = n_2\\sin r$",
+      "meaning": "Snell's law; i and r are angles from the normal"
+    },
+    {
+      "formula": "$h_{app} = \\frac{h_{real}}{n_{rel}}$",
+      "meaning": "Apparent depth near the normal; $n_{rel}$ = index of object medium / index of observer medium"
+    },
+    {
+      "formula": "$\\Delta = t\\left(1 - \\frac{1}{n}\\right)$",
+      "meaning": "Normal shift produced by a slab of thickness t and index n"
+    },
+    {
+      "formula": "$\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$",
+      "meaning": "Refraction at a spherical surface; $n_1$ = object side, $n_2$ = refraction side"
+    },
+    {
+      "formula": "$\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$, $m = \\frac{v}{u}$",
+      "meaning": "Thin lens formula and magnification"
+    },
+    {
+      "formula": "$\\frac{1}{f} = (n_{21} - 1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$",
+      "meaning": "Lens maker's formula; $n_{21}$ = lens index relative to the medium"
+    },
+    {
+      "formula": "$\\sin i_c = \\frac{1}{n_{21}}$",
+      "meaning": "Critical angle for denser-to-rarer incidence"
+    },
+    {
+      "formula": "$P = \\frac{1}{f}$",
+      "meaning": "Power in dioptre, with f in metres"
+    },
+    {
+      "formula": "$P = P_1 + P_2$, $m = m_1 m_2$",
+      "meaning": "Thin lenses in contact: net power and net magnification"
+    },
+    {
+      "formula": "$\\frac{1}{F} = \\frac{1}{f_1} + \\frac{1}{f_2} - \\frac{d}{f_1 f_2}$",
+      "meaning": "Two lenses separated by distance d"
+    },
+    {
+      "formula": "$A + \\delta = i + e$, $r_1 + r_2 = A$",
+      "meaning": "Prism relations; A = prism angle, $\\delta$ = deviation, e = angle of emergence"
+    },
+    {
+      "formula": "$n = \\frac{\\sin\\frac{A + \\delta_m}{2}}{\\sin\\frac{A}{2}}$",
+      "meaning": "Refractive index from the minimum deviation $\\delta_m$"
+    },
+    {
+      "formula": "$\\delta = (n - 1)A$",
+      "meaning": "Deviation by a thin prism"
+    },
+    {
+      "formula": "$m = 1 + \\frac{D}{f}$",
+      "meaning": "Simple microscope at the near point; D = 25 cm"
+    },
+    {
+      "formula": "$m = \\frac{L}{f_o}\\frac{D}{f_e}$",
+      "meaning": "Compound microscope, normal adjustment; L = tube length, $f_o$ and $f_e$ = objective and eyepiece focal lengths"
+    },
+    {
+      "formula": "$m = \\frac{f_o}{f_e}$, $L = f_o + f_e$",
+      "meaning": "Astronomical telescope in normal adjustment"
+    },
+    {
+      "formula": "$\\frac{\\sin i}{\\sin r} = \\frac{v_1}{v_2} = \\frac{\\lambda_1}{\\lambda_2}$",
+      "meaning": "Refraction from Huygens' principle; v = speed, $\\lambda$ = wavelength"
+    },
+    {
+      "formula": "$\\beta = \\frac{\\lambda D}{d}$",
+      "meaning": "YDSE fringe width; d = slit separation, D = slit-to-screen distance"
+    },
+    {
+      "formula": "$I = I_1 + I_2 + 2\\sqrt{I_1 I_2}\\cos\\phi$",
+      "meaning": "Interference intensity; $\\phi$ = phase difference $= \\frac{2\\pi}{\\lambda}\\Delta x$"
+    },
+    {
+      "formula": "$a\\sin\\theta = n\\lambda$, $W = \\frac{2\\lambda D}{a}$",
+      "meaning": "Single-slit minima and central maximum width; a = slit width"
+    },
+    {
+      "formula": "$I = I_1\\cos^2\\theta$",
+      "meaning": "Malus' law; $\\theta$ = angle between the polarization direction and the analyser axis"
+    },
+    {
+      "formula": "$\\tan i_B = n$",
+      "meaning": "Brewster's law; $i_B$ = polarizing angle"
+    }
+  ],
+  "common_traps": [
+    "Using the mirror formula with a minus sign, or the lens formula with a plus sign; the mirror formula is $1/v + 1/u = 1/f$ while the lens formula is $1/v - 1/u = 1/f$, and the magnifications are $-v/u$ and $v/u$ respectively.",
+    "Thinking a mirror's focal length changes in water; it depends only on R, while a lens's focal length changes with the surrounding medium.",
+    "Forgetting that a convex glass lens in a denser liquid becomes diverging, because $n_{21} < 1$ reverses the sign of f.",
+    "Taking the width of the central maximum as $\\lambda D/a$; it is $2\\lambda D/a$, twice the width of the secondary maxima, and the first minimum is at $a\\sin\\theta = \\lambda$.",
+    "Applying Malus' law directly to unpolarized light; the first polaroid always transmits $I_0/2$, and the $\\cos^2\\theta$ factor applies only after that.",
+    "Treating separated lenses as if in contact; trace the image through each lens in turn and use a virtual object when the intermediate image lies beyond the second lens.",
+    "Believing a thin film over one slit changes the fringe width; it only shifts the whole pattern towards the covered slit, whereas immersion in a liquid reduces $\\beta$ by a factor of n.",
+    "Taking power with f in cm; f must be in metres to get power in dioptre, with the correct sign (convex +, concave -)."
+  ],
+  "quick_revision": [
+    "Cartesian convention: measure distances from the pole or optical centre; a concave mirror and a concave lens have negative f.",
+    "Apparent depth = real depth / relative index; for layers, add $t_i/n_i$; slab shift = $t(1 - 1/n)$.",
+    "TIR needs denser-to-rarer travel and $i > i_c$, with $\\sin i_c = 1/n$; applications include optical fibres, diamond sparkle, mirage and prism periscopes.",
+    "Lens maker: $1/f = (n_{21} - 1)(1/R_1 - 1/R_2)$; equiconvex lens with n = 1.5 gives f = R.",
+    "Lenses in contact: powers add, magnifications multiply.",
+    "Prism at minimum deviation: $i = e$, $r = A/2$; thin prism $\\delta = (n-1)A$; violet deviates most.",
+    "Telescope: $m = f_o/f_e$, length $f_o + f_e$; compound microscope: $m = (L/f_o)(D/f_e)$.",
+    "Huygens: every point of a wavefront is a source of secondary wavelets; frequency stays constant on refraction while $\\lambda$ and v change.",
+    "YDSE: $\\beta = \\lambda D/d$; in a medium, $\\beta/n$; for equal intensities, $I_{max} = 4I_0$ and $I_{min} = 0$.",
+    "Coherent sources have a constant phase difference and come from a single source by division of wavefront or of amplitude.",
+    "Single slit: minima at $a\\sin\\theta = n\\lambda$; central maximum width $2\\lambda D/a$.",
+    "Polarization: one polaroid gives $I_0/2$, then Malus $\\cos^2\\theta$; Brewster $\\tan i_B = n$ with reflected and refracted rays at $90^\\circ$."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q022",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q22"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q029",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q29"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,467 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u17",
+  "unit_no": 17,
+  "unit_name": "Organic Compounds Containing Oxygen",
+  "slug": "organic-compounds-containing-oxygen",
+  "overview": "This unit covers alcohols, phenols, ethers, aldehydes, ketones and carboxylic acids: how they are classified, the reasons behind their acidity and reactivity, and the named reactions used to convert one into another. NEET regularly asks reaction-sequence and reagent-identification questions from it, including the Etard reaction, haloform, aldol, Cannizzaro, Reimer-Tiemann, Clemmensen and Wolff-Kishner reactions. Acidity orders and distinguishing tests such as Lucas, Tollens', Fehling's and iodoform are also frequent, so the unit is high-yield for scoring.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "An alcohol is primary (1°), secondary (2°) or tertiary (3°) according to how many carbons are attached to the carbinol carbon (the C bearing OH). The Lucas test uses conc. $HCl$ with anhydrous $ZnCl_2$. The alcohol reacts by an $S_N1$-type path, and the insoluble alkyl chloride separates out as turbidity. Tertiary alcohols give turbidity immediately because they form the most stable carbocation. Secondary alcohols give turbidity within about 5 minutes. Primary alcohols give no turbidity at room temperature and react only on heating. Dehydrogenation over heated Cu at 573 K gives an aldehyde from a 1° alcohol, a ketone from a 2° alcohol and an alkene from a 3° alcohol (by dehydration). Oxidation is also diagnostic: 1° alcohols give aldehydes and then acids, 2° alcohols give ketones, and 3° alcohols resist mild oxidation.",
+      "key_points": [
+        "Lucas reagent is conc. $HCl$ with anhydrous $ZnCl_2$; the order of reactivity is 3° > 2° > 1°",
+        "Turbidity in the Lucas test is caused by the insoluble alkyl chloride",
+        "Cu at 573 K: 1° alcohol gives aldehyde, 2° gives ketone, 3° gives alkene",
+        "PCC oxidises a 1° alcohol only up to the aldehyde stage",
+        "3° alcohols are not oxidised by mild oxidants because the carbinol carbon has no H"
+      ],
+      "formulas": [
+        {
+          "formula": "$R-OH + HCl \\xrightarrow{anhyd.\\ ZnCl_2} R-Cl + H_2O$",
+          "meaning": "Lucas test reaction; speed indicates 3° > 2° > 1°"
+        },
+        {
+          "formula": "$RCH_2OH \\xrightarrow{Cu,\\ 573\\ K} RCHO + H_2$",
+          "meaning": "Dehydrogenation of 1° alcohol; a 2° alcohol gives a ketone, a 3° alcohol gives an alkene"
+        }
+      ],
+      "neet_tip": "Expect a match of alcohol class with Lucas test time, or with the product formed over Cu at 573 K.",
+      "topic": "Alcohols: identification of primary, secondary and tertiary alcohols"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Alcohols lose water on heating with protic acids. Ethanol needs conc. $H_2SO_4$ at 443 K. Secondary alcohols need 85% $H_3PO_4$ at about 440 K, and tertiary alcohols need only 20% $H_3PO_4$ at about 358 K. The mechanism (E1 for 2° and 3° alcohols) has three steps. Step 1 is fast protonation of the OH group, which converts it into a good leaving group ($H_2O$). Step 2 is the slow, rate-determining loss of water to give a carbocation. Step 3 is loss of a β-proton to give the alkene. Since carbocation stability decides the rate, the ease of dehydration is 3° > 2° > 1°. The more substituted alkene is the major product (Saytzeff rule). Carbocations may also rearrange by hydride or methyl shifts. If excess ethanol is used at 413 K, the product is diethyl ether, formed by an $S_N2$ attack of a second alcohol molecule.",
+      "key_points": [
+        "Step 1 is protonation, step 2 (slow, rate-determining) is carbocation formation, step 3 is deprotonation",
+        "Ease of dehydration is 3° > 2° > 1°, the same as the order of carbocation stability",
+        "The more substituted alkene is the major product (Saytzeff rule)",
+        "Rearrangements (1,2-H or 1,2-$CH_3$ shift) can give unexpected alkenes",
+        "Ethanol gives an alkene with conc. $H_2SO_4$ at 443 K but an ether at 413 K",
+        "Acid acts as a catalyst and is regenerated at the end"
+      ],
+      "formulas": [
+        {
+          "formula": "$CH_3CH_2OH \\xrightarrow{conc.\\ H_2SO_4,\\ 443\\ K} CH_2=CH_2 + H_2O$",
+          "meaning": "Intramolecular dehydration of ethanol"
+        },
+        {
+          "formula": "$2C_2H_5OH \\xrightarrow{H_2SO_4,\\ 413\\ K} C_2H_5OC_2H_5 + H_2O$",
+          "meaning": "Intermolecular dehydration giving an ether"
+        }
+      ],
+      "neet_tip": "NEET asks for the rate-determining step, the major alkene (often after a rearrangement) or the relative ease of dehydration.",
+      "topic": "Mechanism of dehydration of alcohols"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Phenol ($pK_a \\approx 10$) is far more acidic than ethanol ($pK_a \\approx 15.9$) and water. There are two reasons. First, the OH is attached to an sp2 carbon, which is more electronegative and polarises the O–H bond. Second, and more important, the phenoxide ion is stabilised by delocalisation of its negative charge over the ring. This delocalisation is more effective than in phenol itself, where resonance requires charge separation. Phenol reacts with $Na$ and $NaOH$ but not with $NaHCO_3$, since it is weaker than carbonic acid. Electron-withdrawing groups (EWG) at the ortho or para positions, such as $-NO_2$, increase acidity strongly through the -R effect. Electron-donating groups ($-CH_3$, $-OCH_3$) decrease acidity. A meta EWG acts only through the -I effect, so its influence is smaller. Picric acid ($pK_a$ 0.38) is very strongly acidic.",
+      "key_points": [
+        "Acidity order: carboxylic acid > phenol > water > ethanol",
+        "Phenol dissolves in $NaOH$ but gives no $CO_2$ with $NaHCO_3$",
+        "p-nitrophenol (7.1) > o-nitrophenol (7.2) > m-nitrophenol (8.3) > phenol (10.0) in acidity",
+        "o-nitrophenol is slightly weaker than the para isomer because of intramolecular H-bonding",
+        "Cresols are less acidic than phenol because of the +I/hyperconjugation effect of $CH_3$",
+        "More nitro groups at ortho/para mean higher acidity: 2,4,6-trinitrophenol is the strongest"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_6H_5OH + NaOH \\rightarrow C_6H_5ONa + H_2O$",
+          "meaning": "Phenol neutralises a strong base"
+        },
+        {
+          "formula": "$pK_a = -\\log K_a$",
+          "meaning": "A lower $pK_a$ means a stronger acid"
+        }
+      ],
+      "neet_tip": "Arranging substituted phenols in order of acidity, and the NaHCO3 versus NaOH test, are favourite NEET questions.",
+      "topic": "Phenols: acidic nature"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "The OH group strongly activates the benzene ring and directs incoming electrophiles to ortho and para positions through its +R effect. Bromination in a solvent of low polarity ($CHCl_3$ or $CS_2$) at low temperature gives monobromophenols, with para as the major product. With bromine water, phenol is converted at once into 2,4,6-tribromophenol, a white precipitate, without any Lewis acid. The polar solvent increases ionisation to phenoxide, which is even more activating. Dilute $HNO_3$ at 298 K gives o- and p-nitrophenol. These are separated by steam distillation: the ortho isomer is volatile because of intramolecular H-bonding, while the para isomer is intermolecularly H-bonded and less volatile. Conc. $HNO_3$ gives 2,4,6-trinitrophenol (picric acid). Sulphonation with conc. $H_2SO_4$ gives mainly o-phenolsulphonic acid near room temperature (kinetic control) and p-phenolsulphonic acid at about 373 K (thermodynamic control).",
+      "key_points": [
+        "$-OH$ is an activating, ortho/para-directing group; no Lewis acid is needed for halogenation",
+        "$Br_2$ in $CS_2$ at low temperature gives mono-bromination (mainly para)",
+        "Bromine water gives a white precipitate of 2,4,6-tribromophenol, a test for phenol",
+        "o-nitrophenol is steam volatile (intramolecular H-bond); p-nitrophenol is not",
+        "Picric acid is better prepared by sulphonation followed by nitration (higher yield)",
+        "Sulphonation gives ortho at low temperature and para at 373 K"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_6H_5OH + 3Br_2(aq) \\rightarrow C_6H_2Br_3OH \\downarrow + 3HBr$",
+          "meaning": "2,4,6-tribromophenol, a white precipitate"
+        },
+        {
+          "formula": "$C_6H_5OH \\xrightarrow{conc.\\ HNO_3} C_6H_2(NO_2)_3OH$",
+          "meaning": "Picric acid formation"
+        }
+      ],
+      "neet_tip": "NEET contrasts bromine water with Br2 in CS2, and asks about steam distillation of nitrophenol isomers.",
+      "topic": "Electrophilic substitution of phenols: halogenation, nitration and sulphonation"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "In the Reimer-Tiemann reaction, phenol is heated with chloroform and aqueous $NaOH$ at about 340 K, followed by acidification. An -CHO group is introduced at the ortho position, giving salicylaldehyde (2-hydroxybenzaldehyde). The base removes HCl from chloroform to form dichlorocarbene ($:CCl_2$). This is an electron-deficient electrophile and attacks the electron-rich phenoxide ring, mainly at the ortho position. The intermediate is a substituted benzal chloride ($-CHCl_2$ group). Alkali hydrolyses this to the aldehyde, which exists as the phenoxide until acid is added. Using carbon tetrachloride instead of chloroform gives salicylic acid (2-hydroxybenzoic acid). The reaction is an electrophilic substitution on the highly activated phenoxide ion.",
+      "key_points": [
+        "Reagents: $CHCl_3$ with aqueous $NaOH$, then $H^+$",
+        "The electrophile is dichlorocarbene $:CCl_2$",
+        "The intermediate is a benzal chloride ($-CHCl_2$) type species",
+        "The major product is the ortho isomer, salicylaldehyde",
+        "With $CCl_4$ in place of $CHCl_3$, salicylic acid is formed"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_6H_5OH \\xrightarrow{CHCl_3,\\ aq.\\ NaOH;\\ H^+} o-HOC_6H_4CHO$",
+          "meaning": "Reimer-Tiemann formylation giving salicylaldehyde"
+        },
+        {
+          "formula": "$CHCl_3 + OH^- \\rightarrow :CCl_2 + H_2O + Cl^-$",
+          "meaning": "Generation of the dichlorocarbene electrophile"
+        }
+      ],
+      "neet_tip": "NEET asks to identify the electrophile (:CCl2), the intermediate, or the product when CCl4 replaces CHCl3.",
+      "topic": "Reimer-Tiemann reaction"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "In ethers (R–O–R'), the oxygen is sp3 hybridised and carries two lone pairs, giving a bent shape. The C–O–C bond angle in dimethyl ether is about 111.7°, slightly more than the tetrahedral angle. This widening is caused by repulsion between the bulky alkyl groups. The C–O bond length is about 141 pm. In aryl alkyl ethers such as anisole, the oxygen lone pair is delocalised into the ring, which gives the Ar–O bond partial double-bond character and makes it shorter. Because of the bent shape, ethers have a net dipole moment. They cannot H-bond with each other, so their boiling points are close to those of alkanes of similar mass. They can, however, accept H-bonds from water, so their water solubility is comparable to that of alcohols. With HI, an alkyl aryl ether is cleaved to give a phenol and an alkyl iodide. The bond broken is the O–alkyl bond, because the Ar–O bond is strengthened by partial double-bond character.",
+      "key_points": [
+        "The O atom is sp3 hybridised with a bent C–O–C geometry",
+        "The bond angle is about 111.7° in $CH_3OCH_3$, larger than 109.5° due to repulsion between alkyl groups",
+        "Ethers are polar (net dipole) but have no intermolecular H-bonding, so they have low boiling points",
+        "Ethers are soluble in water because they accept H-bonds",
+        "In anisole, the Ar–O bond has partial double-bond character",
+        "$C_6H_5OCH_3 + HI \\rightarrow C_6H_5OH + CH_3I$"
+      ],
+      "formulas": [
+        {
+          "formula": "$C_6H_5OCH_3 + HI \\rightarrow C_6H_5OH + CH_3I$",
+          "meaning": "Cleavage of an alkyl aryl ether; phenol and alkyl iodide are formed"
+        }
+      ],
+      "neet_tip": "NEET asks why the C–O–C angle exceeds the tetrahedral angle, or which products form when an ether is cleaved by HI.",
+      "topic": "Ethers: structure"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "In the carbonyl group, the carbon is sp2 hybridised. It forms three sigma bonds lying in one plane at about 120°, giving a trigonal planar arrangement. The remaining unhybridised p orbital overlaps with a p orbital of oxygen to form the π bond. Oxygen is more electronegative than carbon, so the C=O bond is polar. It is best described as a resonance hybrid of the neutral form and the dipolar form $>C^+–O^-$. The carbonyl carbon is therefore electrophilic (a Lewis acid site) and the oxygen is nucleophilic (a Lewis base site). This polarity gives aldehydes and ketones high dipole moments, larger than those of ethers. Their boiling points lie between those of hydrocarbons/ethers and alcohols of comparable mass, because of dipole-dipole attraction without H-bonding. Lower members are water soluble because they accept H-bonds. The planar geometry allows nucleophiles to attack from either face.",
+      "key_points": [
+        "Carbonyl carbon is sp2 hybridised, trigonal planar, with bond angles of about 120°",
+        "The C=O bond consists of one σ bond and one π bond",
+        "Polarisation $>C^{\\delta+}=O^{\\delta-}$ makes the carbon electrophilic",
+        "Boiling point order: alcohols > aldehydes/ketones > ethers ≈ alkanes (similar molar mass)",
+        "Lower aldehydes and ketones are miscible with water through H-bonding with water"
+      ],
+      "formulas": [],
+      "neet_tip": "NEET asks about hybridisation, the polarity of C=O, or boiling point comparisons among carbonyl compounds, alcohols and ethers.",
+      "topic": "Aldehydes and ketones: nature of the carbonyl group"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "In nucleophilic addition, the nucleophile attacks the electrophilic carbonyl carbon roughly perpendicular to the plane of the group. The carbon changes from sp2 to sp3, giving a tetrahedral alkoxide intermediate that is then protonated. HCN adds in the presence of a base catalyst, which generates the stronger nucleophile $CN^-$; the product is a cyanohydrin. Ammonia derivatives ($H_2N–Z$) react by addition followed by elimination of water, giving $>C=N–Z$. The pH must be weakly acidic (about 3.5), so that the carbonyl is activated without protonating the nucleophile. Hydroxylamine gives oximes, hydrazine gives hydrazones, phenylhydrazine gives phenylhydrazones, 2,4-DNP gives orange-yellow 2,4-dinitrophenylhydrazones, and semicarbazide gives semicarbazones. Formaldehyde with ammonia gives hexamethylenetetramine (urotropine). Grignard reagents add $R^-$ to the carbonyl carbon. After hydrolysis, HCHO gives a 1° alcohol, other aldehydes give 2° alcohols and ketones give 3° alcohols.",
+      "key_points": [
+        "Hybridisation changes from sp2 (planar) to sp3 (tetrahedral)",
+        "Addition of HCN is base catalysed because the true nucleophile is $CN^-$",
+        "$NH_2OH$ gives an oxime, $NH_2NH_2$ a hydrazone, $C_6H_5NHNH_2$ a phenylhydrazone, $NH_2NHCONH_2$ a semicarbazone",
+        "In semicarbazide, only the $NH_2$ not attached to C=O acts as the nucleophile",
+        "Reactions with ammonia derivatives work best at pH about 3.5",
+        "Grignard addition: HCHO gives a 1° alcohol, RCHO a 2° alcohol, $R_2CO$ a 3° alcohol",
+        "$6HCHO + 4NH_3 \\rightarrow (CH_2)_6N_4 + 6H_2O$ (urotropine)"
+      ],
+      "formulas": [
+        {
+          "formula": "$>C=O + HCN \\xrightarrow{OH^-} >C(OH)CN$",
+          "meaning": "Cyanohydrin formation"
+        },
+        {
+          "formula": "$>C=O + H_2N-Z \\rightarrow >C=N-Z + H_2O$",
+          "meaning": "Addition-elimination with ammonia derivatives"
+        },
+        {
+          "formula": "$>C=O + RMgX \\rightarrow >C(R)OMgX \\xrightarrow{H_3O^+} >C(R)OH$",
+          "meaning": "Grignard synthesis of alcohols"
+        }
+      ],
+      "neet_tip": "NEET asks you to identify the product (oxime, semicarbazone, cyanohydrin) or the type of alcohol formed from a carbonyl compound and RMgX.",
+      "topic": "Nucleophilic addition to C=O: HCN, NH3 and its derivatives; Grignard reagent"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Aldehydes are more reactive than ketones towards nucleophilic addition, for two reasons. The sterically smaller H atom lets the nucleophile approach the carbonyl carbon more easily. In addition, ketones have two electron-releasing alkyl groups, which reduce the positive charge on the carbonyl carbon more than the single alkyl group of an aldehyde does. Hence HCHO > $CH_3CHO$ > $CH_3COCH_3$, and reactivity falls further as the alkyl groups become larger. Aromatic aldehydes such as benzaldehyde are less reactive than aliphatic aldehydes like propanal, because the ring donates electrons to the carbonyl group by resonance. Electron-withdrawing groups on the ring increase reactivity, while electron-donating groups decrease it. For example, p-nitrobenzaldehyde > benzaldehyde > p-tolualdehyde > p-methoxybenzaldehyde.",
+      "key_points": [
+        "Aldehydes are more reactive than ketones for both steric and electronic reasons",
+        "HCHO > $CH_3CHO$ > $CH_3CH_2CHO$ > $CH_3COCH_3$ > $C_2H_5COCH_3$",
+        "Aliphatic aldehydes are more reactive than aromatic aldehydes (resonance in aromatic ones)",
+        "An EWG ($-NO_2$) on the ring increases reactivity; an EDG ($-OCH_3$, $-CH_3$) decreases it",
+        "Bulky groups lower reactivity, e.g. di-tert-butyl ketone is very unreactive"
+      ],
+      "formulas": [],
+      "neet_tip": "Arranging carbonyl compounds by their reactivity towards HCN or nucleophilic addition is a frequent NEET question.",
+      "topic": "Relative reactivities of aldehydes and ketones"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "Aldehydes are easily oxidised to carboxylic acids, even by mild agents such as Tollens' reagent, Fehling's solution, $HNO_3$, $KMnO_4$ and $K_2Cr_2O_7$. Ketones are oxidised only by strong oxidants under vigorous conditions, with cleavage of C–C bonds into a mixture of acids with fewer carbons. Reduction with $NaBH_4$, $LiAlH_4$ or $H_2$/catalyst converts aldehydes into 1° alcohols and ketones into 2° alcohols. The C=O group can also be reduced completely to $CH_2$. In the Clemmensen reduction, zinc amalgam with conc. HCl is used, so it suits compounds that are stable in acid. In the Wolff-Kishner reduction, the hydrazone is first formed and then heated with KOH in ethylene glycol, releasing $N_2$; it suits compounds that are sensitive to acid but stable in base.",
+      "key_points": [
+        "Aldehydes are oxidised by mild reagents to RCOOH; ketones need drastic conditions and undergo C–C cleavage",
+        "$NaBH_4$ or $LiAlH_4$ reduce aldehydes to 1° alcohols and ketones to 2° alcohols",
+        "$NaBH_4$ does not reduce an isolated C=C bond",
+        "Clemmensen reduction uses $Zn-Hg$ with conc. HCl (acidic medium)",
+        "Wolff-Kishner reduction uses $NH_2NH_2$, then KOH in ethylene glycol with heat (basic medium)",
+        "Both reductions convert C=O into $CH_2$, giving a hydrocarbon"
+      ],
+      "formulas": [
+        {
+          "formula": "$>C=O \\xrightarrow{Zn-Hg,\\ conc.\\ HCl} >CH_2 + H_2O$",
+          "meaning": "Clemmensen reduction (acidic)"
+        },
+        {
+          "formula": "$>C=O \\xrightarrow{NH_2NH_2} >C=NNH_2 \\xrightarrow{KOH,\\ ethylene\\ glycol,\\ \\Delta} >CH_2 + N_2$",
+          "meaning": "Wolff-Kishner reduction (basic)"
+        }
+      ],
+      "neet_tip": "NEET asks which reagent converts C=O to CH2 and which method suits acid-sensitive versus base-sensitive substrates.",
+      "topic": "Oxidation and reduction: Wolff-Kishner and Clemmensen"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "A hydrogen on the carbon next to the carbonyl group (the α-hydrogen) is unusually acidic. The $pK_a$ is about 19–20 for acetone, compared with about 50 for an alkane. There are two reasons. The strongly electron-withdrawing C=O group polarises the α C–H bond. More importantly, the conjugate base (the enolate ion) is stabilised by resonance, with the negative charge shared between the α-carbon and the oxygen. This acidity is responsible for keto-enol tautomerism, aldol condensation, α-halogenation and the haloform reaction. A hydrogen flanked by two carbonyl groups, as in 1,3-dicarbonyl compounds, is even more acidic ($pK_a$ about 9–11). Compounds without α-hydrogens cannot form enolates and therefore do not undergo aldol condensation. Examples are HCHO, $C_6H_5CHO$, $(CH_3)_3CCHO$ and benzophenone.",
+      "key_points": [
+        "α-H acidity arises from the -I effect of C=O and resonance stabilisation of the enolate",
+        "Keto-enol tautomerism requires an α-H",
+        "No α-H in HCHO, $C_6H_5CHO$, $(CH_3)_3CCHO$, $C_6H_5COC_6H_5$, so they cannot undergo aldol condensation",
+        "Acidity of α-H increases when it lies between two C=O groups",
+        "Always count α-H carefully: a carbon bearing two methyl groups beside C=O has no α-H"
+      ],
+      "formulas": [
+        {
+          "formula": "$CH_3COCH_3 + OH^- \\rightleftharpoons CH_3COCH_2^- + H_2O$",
+          "meaning": "Enolate formation, the basis of aldol and haloform reactions"
+        }
+      ],
+      "neet_tip": "NEET often hinges on spotting which carbon has α-hydrogens before predicting aldol or Cannizzaro products.",
+      "topic": "Acidity of alpha-hydrogen"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "Aldol condensation occurs when aldehydes or ketones with at least one α-H are treated with dilute NaOH. The enolate attacks a second carbonyl molecule to give a β-hydroxy aldehyde (aldol) or β-hydroxy ketone (ketol). On heating, this loses water to give an α,β-unsaturated carbonyl compound. Crossed aldol between two different carbonyl compounds, each with α-H, gives four products. Claisen-Schmidt condensation is the crossed aldol of ArCHO with a ketone; the E (trans) alkene is favoured. In the Cannizzaro reaction, aldehydes without α-H react with conc. NaOH and disproportionate: one molecule is oxidised to the carboxylate and another is reduced to the alcohol by hydride transfer. In crossed Cannizzaro with HCHO, the HCHO is always the molecule oxidised, to formate. In the haloform reaction, methyl ketones ($CH_3CO–$), $CH_3CHO$, ethanol and $CH_3CH(OH)R$ react with NaOX to give a haloform and a carboxylate with one carbon fewer. Any C=C bond present is not attacked. Chloroform slowly oxidises in air and light to poisonous phosgene.",
+      "key_points": [
+        "Aldol needs an α-H and dilute base; heating gives the α,β-unsaturated product",
+        "Two different enolisable carbonyl compounds give four crossed aldol products",
+        "Claisen-Schmidt reaction: ArCHO + ketone gives an α,β-unsaturated ketone (E isomer favoured)",
+        "Cannizzaro needs no α-H and conc. NaOH; it is a disproportionation",
+        "Crossed Cannizzaro: HCHO is oxidised to $HCOO^-$ and the other aldehyde is reduced",
+        "Haloform: $CH_3CO-R$ gives $R-COO^- + CHX_3$; $CHI_3$ is a yellow precipitate",
+        "$CHCl_3$ forms phosgene ($COCl_2$) on exposure to air and light"
+      ],
+      "formulas": [
+        {
+          "formula": "$2CH_3CHO \\xrightarrow{dil.\\ NaOH} CH_3CH(OH)CH_2CHO \\xrightarrow{\\Delta} CH_3CH=CHCHO + H_2O$",
+          "meaning": "Aldol condensation of ethanal giving but-2-enal"
+        },
+        {
+          "formula": "$2C_6H_5CHO + NaOH(conc.) \\rightarrow C_6H_5CH_2OH + C_6H_5COONa$",
+          "meaning": "Cannizzaro reaction"
+        },
+        {
+          "formula": "$RCOCH_3 + 3NaOX \\rightarrow RCOONa + CHX_3 + 2NaOH$",
+          "meaning": "Haloform reaction of methyl ketones"
+        },
+        {
+          "formula": "$2CHCl_3 + O_2 \\xrightarrow{light} 2COCl_2 + 2HCl$",
+          "meaning": "Formation of poisonous phosgene from chloroform"
+        }
+      ],
+      "neet_tip": "NEET builds product-prediction questions on self versus crossed aldol, crossed Cannizzaro, and haloform products such as carboxylate plus CHX3.",
+      "topic": "Aldol condensation, Cannizzaro reaction and haloform reaction"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Aldehydes are reducing agents, while ketones generally are not. Tollens' reagent (ammoniacal silver nitrate) is reduced by all aldehydes, aliphatic and aromatic, giving a silver mirror. Fehling's solution and Benedict's solution (both alkaline $Cu^{2+}$ complexes) give a red-brown precipitate of $Cu_2O$ only with aliphatic aldehydes; aromatic aldehydes such as benzaldehyde do not respond. Schiff's reagent (decolourised rosaniline dye) turns pink with aldehydes. The iodoform test ($I_2$/NaOH) gives a yellow $CHI_3$ precipitate with methyl ketones and with acetaldehyde, the only aldehyde that responds. The 2,4-DNP test gives an orange-yellow precipitate with both aldehydes and ketones, so it confirms a carbonyl group without distinguishing between them. Sodium bisulphite adds to aldehydes and to most methyl ketones. α-Hydroxy ketones such as fructose also reduce Tollens' and Fehling's reagents.",
+      "key_points": [
+        "Tollens' reagent gives a silver mirror with all aldehydes",
+        "Fehling's and Benedict's solutions give red $Cu_2O$ with aliphatic aldehydes only",
+        "Schiff's reagent turns pink (magenta) with aldehydes",
+        "Iodoform test is positive for $CH_3CO-$ compounds, $CH_3CHO$, $C_2H_5OH$ and $CH_3CH(OH)R$",
+        "2,4-DNP is positive for both aldehydes and ketones",
+        "Benzaldehyde is positive with Tollens' but negative with Fehling's"
+      ],
+      "formulas": [
+        {
+          "formula": "$RCHO + 2[Ag(NH_3)_2]^+ + 3OH^- \\rightarrow RCOO^- + 2Ag + 2H_2O + 4NH_3$",
+          "meaning": "Tollens' (silver mirror) test"
+        },
+        {
+          "formula": "$RCHO + 2Cu^{2+} + 5OH^- \\rightarrow RCOO^- + Cu_2O \\downarrow + 3H_2O$",
+          "meaning": "Fehling's test, red-brown precipitate"
+        }
+      ],
+      "neet_tip": "NEET asks which test distinguishes a given pair, such as benzaldehyde versus acetophenone or propanal versus propanone.",
+      "topic": "Chemical tests to distinguish aldehydes and ketones"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "Carboxylic acids are stronger acids than phenols and alcohols. The carboxylate ion is stabilised by two equivalent resonance structures, which place the negative charge equally on two oxygens. In phenoxide, the charge is delocalised onto less electronegative carbon atoms. As a result, carboxylic acids release $CO_2$ with $NaHCO_3$ (brisk effervescence), whereas phenols do not. Electron-withdrawing groups stabilise the anion and increase acidity. Acidity increases with the number of such groups, with their electronegativity, and as they move closer to the COOH group. Electron-donating groups decrease acidity. Typical $pK_a$ values are $HCOOH$ 3.75, $C_6H_5COOH$ 4.19 and $CH_3COOH$ 4.76. Directly attached sp2 or phenyl groups increase acidity. In benzoic acids, $-NO_2$ increases acidity and $-OCH_3$ at the para position decreases it. Most ortho-substituted benzoic acids are stronger than benzoic acid itself, an observation known as the ortho effect.",
+      "key_points": [
+        "The carboxylate ion has equivalent resonance structures, so carboxylic acids are more acidic than phenols",
+        "$RCOOH + NaHCO_3$ gives $CO_2$ effervescence; phenols do not",
+        "$CF_3COOH > CCl_3COOH > CHCl_2COOH > ClCH_2COOH > CH_3COOH$",
+        "$FCH_2COOH > ClCH_2COOH > BrCH_2COOH > ICH_2COOH$",
+        "2-chlorobutanoic > 3-chlorobutanoic > 4-chlorobutanoic acid; the -I effect falls with distance",
+        "$HCOOH > C_6H_5COOH > CH_3COOH > (CH_3)_2CHCOOH$",
+        "p-nitrobenzoic acid > benzoic acid > p-methoxybenzoic acid; most ortho isomers are stronger (ortho effect)"
+      ],
+      "formulas": [
+        {
+          "formula": "$RCOOH + NaHCO_3 \\rightarrow RCOONa + H_2O + CO_2 \\uparrow$",
+          "meaning": "Test for the carboxylic acid group"
+        },
+        {
+          "formula": "$K_a = \\frac{[RCOO^-][H_3O^+]}{[RCOOH]}$",
+          "meaning": "Acid dissociation constant; larger $K_a$ means a stronger acid"
+        }
+      ],
+      "neet_tip": "Arranging substituted acids by pKa, or choosing the reagent (NaHCO3) that separates acids from phenols, is common in NEET.",
+      "topic": "Carboxylic acids: acidic strength and factors affecting it"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$R-OH \\xrightarrow{conc.\\ HCl/ZnCl_2} R-Cl$",
+      "meaning": "Lucas test; turbidity appears immediately (3°), in about 5 min (2°) or not at room temperature (1°)"
+    },
+    {
+      "formula": "$CH_3CH_2OH \\xrightarrow{conc.\\ H_2SO_4,\\ 443\\ K} CH_2=CH_2$",
+      "meaning": "Acid-catalysed dehydration via a carbocation"
+    },
+    {
+      "formula": "$C_6H_5OH + 3Br_2(aq) \\rightarrow C_6H_2Br_3OH$",
+      "meaning": "Bromine water gives a white precipitate of 2,4,6-tribromophenol"
+    },
+    {
+      "formula": "$C_6H_5OH \\xrightarrow{CHCl_3,\\ NaOH;\\ H^+} o-HOC_6H_4CHO$",
+      "meaning": "Reimer-Tiemann reaction; the electrophile is $:CCl_2$"
+    },
+    {
+      "formula": "$C_6H_5CH_3 \\xrightarrow{CrO_2Cl_2,\\ CS_2;\\ H_3O^+} C_6H_5CHO$",
+      "meaning": "Etard reaction giving benzaldehyde"
+    },
+    {
+      "formula": "$C_6H_5COCl \\xrightarrow{H_2,\\ Pd/BaSO_4} C_6H_5CHO$",
+      "meaning": "Rosenmund reduction of an acid chloride to an aldehyde"
+    },
+    {
+      "formula": "$C_6H_6 + CH_3COCl \\xrightarrow{anhyd.\\ AlCl_3} C_6H_5COCH_3$",
+      "meaning": "Friedel-Crafts acylation giving acetophenone"
+    },
+    {
+      "formula": "$>C=O + HCN \\rightarrow >C(OH)CN$",
+      "meaning": "Cyanohydrin formation (base catalysed)"
+    },
+    {
+      "formula": "$>C=O + H_2N-Z \\rightarrow >C=N-Z$",
+      "meaning": "Oxime, hydrazone, phenylhydrazone, 2,4-DNP derivative or semicarbazone formation at pH about 3.5"
+    },
+    {
+      "formula": "$>C=O + RMgX \\xrightarrow{H_3O^+} >C(R)OH$",
+      "meaning": "HCHO gives a 1° alcohol, RCHO a 2° alcohol, $R_2CO$ a 3° alcohol"
+    },
+    {
+      "formula": "$>C=O \\xrightarrow{Zn-Hg/HCl} >CH_2$",
+      "meaning": "Clemmensen reduction (acidic medium)"
+    },
+    {
+      "formula": "$>C=O \\xrightarrow{NH_2NH_2;\\ KOH/glycol,\\ \\Delta} >CH_2$",
+      "meaning": "Wolff-Kishner reduction (basic medium)"
+    },
+    {
+      "formula": "$2RCH_2CHO \\xrightarrow{dil.\\ NaOH} RCH_2CH(OH)CH(R)CHO$",
+      "meaning": "Aldol addition; needs α-H; heating gives the α,β-unsaturated product"
+    },
+    {
+      "formula": "$2ArCHO \\xrightarrow{conc.\\ NaOH} ArCH_2OH + ArCOO^-$",
+      "meaning": "Cannizzaro reaction; needs no α-H"
+    },
+    {
+      "formula": "$RCOCH_3 + 3NaOX \\rightarrow RCOONa + CHX_3 + 2NaOH$",
+      "meaning": "Haloform reaction; $CHI_3$ is a yellow precipitate"
+    },
+    {
+      "formula": "$RCHO + 2[Ag(NH_3)_2]^+ + 3OH^- \\rightarrow RCOO^- + 2Ag + 2H_2O + 4NH_3$",
+      "meaning": "Tollens' silver mirror test for aldehydes"
+    },
+    {
+      "formula": "$RCHO + 2Cu^{2+} + 5OH^- \\rightarrow RCOO^- + Cu_2O + 3H_2O$",
+      "meaning": "Fehling's test; aliphatic aldehydes only"
+    },
+    {
+      "formula": "$RCOOH + NaHCO_3 \\rightarrow RCOONa + H_2O + CO_2$",
+      "meaning": "Effervescence distinguishes acids from phenols"
+    },
+    {
+      "formula": "$pK_a = -\\log K_a$",
+      "meaning": "A lower $pK_a$ means a stronger acid"
+    },
+    {
+      "formula": "$RCOOH > C_6H_5OH > H_2O > C_2H_5OH$",
+      "meaning": "Order of acidity"
+    },
+    {
+      "formula": "$HCHO > CH_3CHO > CH_3COCH_3$",
+      "meaning": "Order of reactivity towards nucleophilic addition"
+    }
+  ],
+  "common_traps": [
+    "Assuming every aldehyde gives a positive Fehling's test. Benzaldehyde and other aromatic aldehydes give the Tollens' test but not the Fehling's test.",
+    "Thinking phenol reacts with NaHCO3. Phenol is weaker than carbonic acid, so only carboxylic acids (and very strong phenols such as picric acid) liberate CO2.",
+    "Using aldol conditions for aldehydes without α-H. HCHO, PhCHO and (CH3)3CCHO undergo Cannizzaro reaction with conc. NaOH instead. In crossed Cannizzaro, HCHO is always oxidised.",
+    "Forgetting that the iodoform test is positive for ethanol, acetaldehyde and 2° alcohols of the type CH3CH(OH)R. The haloform product acid has one carbon fewer than the methyl ketone.",
+    "Writing o-nitrophenol as more acidic than p-nitrophenol. Intramolecular H-bonding makes the ortho isomer slightly weaker, but also makes it steam volatile.",
+    "Interchanging Clemmensen (Zn-Hg/HCl, acidic) with Wolff-Kishner (NH2NH2/KOH, basic). Choose the method by the acid or base sensitivity of the other groups present.",
+    "Counting α-hydrogens wrongly. A carbon adjacent to C=O that carries two methyl groups has no α-H, so condensation can occur only at the other α-carbon.",
+    "Assuming 2,4-DNP distinguishes aldehydes from ketones. It is positive for both, and only confirms the presence of a carbonyl group."
+  ],
+  "quick_revision": [
+    "Lucas test: turbidity is immediate for 3°, appears in about 5 min for 2°, and does not form at room temperature for 1°. Over Cu at 573 K, 1° alcohols give aldehydes, 2° give ketones and 3° give alkenes.",
+    "In dehydration, carbocation formation is the slow step. Ease is 3° > 2° > 1°, the Saytzeff product is major, and rearrangements are possible.",
+    "Phenol has pKa about 10 because phenoxide is resonance stabilised. EWG at ortho/para positions increase acidity and EDG decrease it.",
+    "Bromine water converts phenol to a white 2,4,6-tribromophenol precipitate. Dilute HNO3 gives o- and p-nitrophenol (ortho is steam volatile), and conc. HNO3 gives picric acid.",
+    "Reimer-Tiemann: CHCl3 with NaOH gives the :CCl2 electrophile and salicylaldehyde; using CCl4 gives salicylic acid.",
+    "In ethers, O is sp3 hybridised and the C–O–C angle is about 111.7°. HI cleaves anisole to phenol and CH3I.",
+    "The C=O carbon is sp2 and electrophilic. Nucleophilic addition reactivity is HCHO > CH3CHO > ketones, and aliphatic carbonyls are more reactive than aromatic ones.",
+    "With ammonia derivatives, NH2OH gives oximes, N2H4 hydrazones, PhNHNH2 phenylhydrazones and semicarbazide semicarbazones. Grignard addition gives 1°, 2° or 3° alcohols.",
+    "Clemmensen (Zn-Hg/HCl) and Wolff-Kishner (N2H4, KOH, glycol) both convert C=O to CH2.",
+    "Aldol condensation needs an α-H and dilute base. Cannizzaro needs no α-H and conc. base. The haloform reaction needs a CH3CO– group and gives CHX3 plus RCOO–.",
+    "Tollens' reagent responds to all aldehydes, Fehling's only to aliphatic ones. The iodoform test detects methyl ketones and CH3CHO, and 2,4-DNP detects any carbonyl.",
+    "Acid strength: CF3COOH > CCl3COOH > ClCH2COOH > HCOOH > PhCOOH > CH3COOH. The -I effect falls with distance, and ortho-substituted benzoic acids are stronger (ortho effect)."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q046",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q46"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q082",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q82"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q086",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q86"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "unit_id": "che_u17",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[2].explanation",
+      "quote": "Picric acid ($pK_a$ 0.38) is very strongly acidic.",
+      "problem": "NCERT's pKa table (the NEET reference) lists 2,4,6-trinitrophenol as pKa 0.71. The value 0.38 comes from other literature and does not match NCERT-based answer keys.",
+      "correction": "Picric acid (2,4,6-trinitrophenol, pKa ≈ 0.71 as per NCERT) is very strongly acidic.",
+      "severity": "minor"
+    },
+    {
+      "location": "topics[12].key_points[3]",
+      "quote": "Iodoform test is positive for $CH_3CO-$ compounds",
+      "problem": "This overgeneralises. Acetic acid, acetate esters and acetamide contain CH3CO– but do not give the iodoform test. The test is positive for methyl ketones (CH3CO–R, where R is H, alkyl or aryl), not for every CH3CO– compound.",
+      "correction": "Iodoform test is positive for methyl ketones $CH_3COR$, $CH_3CHO$, $C_2H_5OH$ and $CH_3CH(OH)R$, but not for $CH_3COOH$ or its esters and amides.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

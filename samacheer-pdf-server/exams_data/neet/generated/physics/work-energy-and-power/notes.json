@@ -1,0 +1,424 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u04",
+  "unit_no": 4,
+  "unit_name": "Work, Energy and Power",
+  "slug": "work-energy-and-power",
+  "overview": "This unit links force and motion through the scalar ideas of work, energy and power. It introduces the work-energy theorem, conservation of mechanical energy, conservative forces, vertical circular motion and collisions. NEET asks 2-3 questions from it almost every year, mostly variable-force work, F-x graphs, spring problems, vertical circle conditions and collision calculations, and these ideas recur throughout mechanics.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Work measures energy transferred by a force acting through a displacement. For a constant force, work is the dot product $W = \\vec{F}\\cdot\\vec{d} = Fd\\cos\\theta$, where $\\theta$ is the angle between force and displacement. Work is a scalar. It is positive when $0 \\le \\theta < 90^\\circ$ (force aids motion), zero when $\\theta = 90^\\circ$ (centripetal force, normal force on a horizontal surface, a coolie walking horizontally with a load) and negative when $90^\\circ < \\theta \\le 180^\\circ$ (friction opposing motion, gravity on a rising body). For a variable force, divide the path into small elements so that $W = \\int_{x_i}^{x_f} F(x)\\,dx$. Graphically, this is the area under the F-x curve, with area below the axis counted negative. In three dimensions, $W = \\int (F_x dx + F_y dy + F_z dz)$. The SI unit is the joule (1 J = 1 N m = $10^7$ erg), and its dimensions are $[ML^2T^{-2}]$.",
+      "key_points": [
+        "Work is a scalar but can be positive, negative or zero",
+        "No displacement or perpendicular force means zero work",
+        "Variable force: integrate, or take the area under the F-x graph",
+        "Area below the x-axis on an F-x graph counts as negative work",
+        "For a position-dependent friction coefficient, integrate $\\mu(x) mg\\,dx$",
+        "$1\\ \\text{eV} = 1.6 \\times 10^{-19}\\ \\text{J}$ and $1\\ \\text{kWh} = 3.6 \\times 10^6\\ \\text{J}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$W = \\vec{F}\\cdot\\vec{d} = Fd\\cos\\theta$",
+          "meaning": "Work by a constant force; $\\theta$ is the angle between $\\vec{F}$ and $\\vec{d}$"
+        },
+        {
+          "formula": "$W = F_x d_x + F_y d_y + F_z d_z$",
+          "meaning": "Work from vector components of a constant force and displacement"
+        },
+        {
+          "formula": "$W = \\int_{x_i}^{x_f} F(x)\\,dx$",
+          "meaning": "Work by a variable force along a straight line; equals the area under the F-x graph"
+        }
+      ],
+      "neet_tip": "Expect integration of a position-dependent force (such as friction with variable $\\mu$) or area under an F-x graph.",
+      "topic": "Work done by a constant force and a variable force"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Kinetic energy is energy of motion, $K = \\frac{1}{2}mv^2 = \\frac{p^2}{2m}$. It is always non-negative and independent of the direction of velocity. Potential energy is energy stored due to position or configuration. It can be defined only for conservative forces, and only changes in potential energy are physically meaningful, so the reference level is arbitrary. Near the Earth's surface, $U = mgh$, with $h$ measured from the chosen reference. The force is related to potential energy by $F = -\\frac{dU}{dx}$, so the force points towards decreasing potential energy. Equilibrium occurs where $\\frac{dU}{dx} = 0$. It is stable at a minimum of $U$ ($\\frac{d^2U}{dx^2} > 0$), unstable at a maximum ($\\frac{d^2U}{dx^2} < 0$) and neutral where $U$ is constant. For equal momentum, the lighter body has more kinetic energy.",
+      "key_points": [
+        "Kinetic energy is never negative; potential energy can be negative",
+        "$K = \\frac{p^2}{2m}$, so at equal momentum $K \\propto \\frac{1}{m}$",
+        "If $p$ increases by 100%, $K$ becomes 4 times (a 300% increase)",
+        "Potential energy is defined only for conservative forces",
+        "Force is the negative slope of the U-x graph",
+        "Stable equilibrium is a minimum of U; unstable is a maximum"
+      ],
+      "formulas": [
+        {
+          "formula": "$K = \\frac{1}{2}mv^2 = \\frac{p^2}{2m}$",
+          "meaning": "Kinetic energy in terms of speed or momentum"
+        },
+        {
+          "formula": "$U = mgh$",
+          "meaning": "Gravitational potential energy near the Earth's surface, $h \\ll R_E$"
+        },
+        {
+          "formula": "$F = -\\frac{dU}{dx}$",
+          "meaning": "Conservative force from a potential energy function"
+        }
+      ],
+      "neet_tip": "NEET tests the percentage change of K with p, and reading force or equilibrium type from U-x graphs.",
+      "topic": "Kinetic and potential energies"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "The work-energy theorem states that the work done by the net force on a particle equals the change in its kinetic energy: $W_{net} = K_f - K_i$. It follows from Newton's second law, since $\\int m v\\,\\frac{dv}{dx}\\,dx = \\Delta(\\frac{1}{2}mv^2)$. It holds for constant and variable forces and for conservative and non-conservative forces alike. You add the work of every force, including gravity, friction, tension, normal force and applied force. It is the fastest route to speeds or stopping distances without finding acceleration or time. Example: a body sliding to rest on a rough floor satisfies $\\mu mg s = \\frac{1}{2}mu^2$, giving $s = \\frac{u^2}{2\\mu g}$. For a bullet stopped in a block, the average resistive force is $\\frac{mu^2}{2s}$.",
+      "key_points": [
+        "Total work by all forces equals the change in kinetic energy",
+        "Valid for all forces, including friction and variable forces",
+        "Stopping distance $s = \\frac{u^2}{2\\mu g}$ on a rough horizontal surface",
+        "Stopping distance is proportional to $u^2$ for the same retarding force",
+        "Bodies with equal K and equal retarding force stop in equal distance regardless of mass"
+      ],
+      "formulas": [
+        {
+          "formula": "$W_{net} = \\Delta K = \\frac{1}{2}mv^2 - \\frac{1}{2}mu^2$",
+          "meaning": "Work-energy theorem"
+        },
+        {
+          "formula": "$W_{all} = W_c + W_{nc} = \\Delta K$",
+          "meaning": "Splitting net work into conservative and non-conservative parts"
+        }
+      ],
+      "neet_tip": "Used for speed after variable-force work, stopping distance, and bullet penetration problems.",
+      "topic": "Work-energy theorem"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Power is the rate of doing work. Average power is $P_{avg} = \\frac{W}{t}$, and instantaneous power is $P = \\frac{dW}{dt} = \\vec{F}\\cdot\\vec{v}$. Power is a scalar. The SI unit is the watt ($1\\ \\text{W} = 1\\ \\text{J s}^{-1}$), with dimensions $[ML^2T^{-3}]$, and $1\\ \\text{hp} = 746\\ \\text{W}$. The kilowatt-hour is a unit of energy, not power. Typical cases: for a body moving at constant velocity against a resistive force, $P = Fv$; for a pump or lift raising mass, $P = \\frac{mgh}{t}$; and for a liquid ejected with speed $v$, $P = \\frac{1}{2}\\frac{dm}{dt}v^2$. If an engine delivers constant power from rest, $\\frac{1}{2}mv^2 = Pt$, so $v \\propto t^{1/2}$ and $s \\propto t^{3/2}$. Efficiency is output power divided by input power.",
+      "key_points": [
+        "Power is a scalar: $P = \\vec{F}\\cdot\\vec{v}$",
+        "kWh is energy: $1\\ \\text{kWh} = 3.6 \\times 10^6\\ \\text{J}$",
+        "$1\\ \\text{hp} = 746\\ \\text{W}$",
+        "Constant power from rest: $v \\propto \\sqrt{t}$ and $s \\propto t^{3/2}$",
+        "Under a constant force from rest, $P \\propto t$",
+        "The area under a P-t graph gives work done"
+      ],
+      "formulas": [
+        {
+          "formula": "$P_{avg} = \\frac{W}{t}$",
+          "meaning": "Average power over time t"
+        },
+        {
+          "formula": "$P = \\frac{dW}{dt} = \\vec{F}\\cdot\\vec{v} = Fv\\cos\\theta$",
+          "meaning": "Instantaneous power"
+        },
+        {
+          "formula": "$P = \\frac{mgh}{t}$",
+          "meaning": "Power needed to lift mass m through height h in time t (pumps, lifts)"
+        },
+        {
+          "formula": "$P = \\frac{1}{2}\\frac{dm}{dt}v^2$",
+          "meaning": "Power to eject fluid at mass rate $\\frac{dm}{dt}$ with speed v"
+        }
+      ],
+      "neet_tip": "Common items are motor or pump power, lift problems with friction, and power at an instant for an accelerating body.",
+      "topic": "Power"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "An ideal spring obeys Hooke's law, $F_s = -kx$, where x is the extension or compression from the natural length and k is the spring constant (N/m). The spring force is a variable, restoring and conservative force. The work done by an external agent in slowly stretching the spring from 0 to x is $\\frac{1}{2}kx^2$, and this is stored as elastic potential energy $U = \\frac{1}{2}kx^2$. The same energy is stored for equal compression or extension. The work done by the spring force from $x_1$ to $x_2$ is $-\\frac{1}{2}k(x_2^2 - x_1^2)$. The U-x graph is a parabola, and the F-x graph is a straight line through the origin with slope $-k$. A block of speed v hitting a spring on a smooth surface has maximum compression $x_{max} = v\\sqrt{\\frac{m}{k}}$. A spring cut into pieces has a larger k for each piece, with $k \\propto \\frac{1}{\\text{length}}$.",
+      "key_points": [
+        "Spring force is restoring: $F = -kx$",
+        "Stored energy is $\\frac{1}{2}kx^2$, identical for compression and extension",
+        "Energy also equals $\\frac{F^2}{2k}$ in terms of the force",
+        "Stretching from $x_1$ to $x_2$ needs $\\frac{1}{2}k(x_2^2 - x_1^2)$, not $\\frac{1}{2}k(x_2 - x_1)^2$",
+        "Maximum compression from $\\frac{1}{2}mv^2 = \\frac{1}{2}kx_{max}^2$"
+      ],
+      "formulas": [
+        {
+          "formula": "$F = -kx$",
+          "meaning": "Hooke's law; k is the spring constant"
+        },
+        {
+          "formula": "$U = \\frac{1}{2}kx^2 = \\frac{F^2}{2k}$",
+          "meaning": "Elastic potential energy of a spring with deformation x"
+        },
+        {
+          "formula": "$W_{ext} = \\frac{1}{2}k(x_2^2 - x_1^2)$",
+          "meaning": "External work to stretch a spring from $x_1$ to $x_2$"
+        },
+        {
+          "formula": "$x_{max} = v\\sqrt{\\frac{m}{k}}$",
+          "meaning": "Maximum compression when mass m with speed v hits a spring on a smooth surface"
+        }
+      ],
+      "neet_tip": "Watch for extra work when stretching from $x_1$ to $x_2$, and maximum compression or speed of a block-spring system.",
+      "topic": "Potential energy of a spring"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "If only conservative forces do work on a system, its total mechanical energy $E = K + U$ remains constant, so $K_i + U_i = K_f + U_f$. Kinetic and potential energy interconvert but their sum is fixed. For a body falling freely from height h, the speed just before hitting the ground is $v = \\sqrt{2gh}$, independent of mass. For a simple pendulum released from angle $\\theta_0$, the speed at the lowest point is $v = \\sqrt{2gL(1 - \\cos\\theta_0)}$. On smooth surfaces of any shape, the final speed depends only on the height drop, not on the path. When non-conservative forces such as friction act, mechanical energy is not conserved: $W_{nc} = \\Delta E_{mech}$, and the lost energy appears as heat or sound. The total energy of an isolated system, including all forms, is always conserved.",
+      "key_points": [
+        "$K + U$ is constant when only conservative forces do work",
+        "Speed after falling height h is $\\sqrt{2gh}$, independent of mass and path on smooth surfaces",
+        "Free fall: at height $\\frac{h}{2}$, $K = U$ (taking the ground as reference)",
+        "With friction, $W_{friction} = E_f - E_i$, which is negative",
+        "Total energy of an isolated system is always conserved"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_i + U_i = K_f + U_f$",
+          "meaning": "Conservation of mechanical energy (conservative forces only)"
+        },
+        {
+          "formula": "$v = \\sqrt{2gh}$",
+          "meaning": "Speed after falling a height h from rest"
+        },
+        {
+          "formula": "$v = \\sqrt{2gL(1-\\cos\\theta_0)}$",
+          "meaning": "Speed of a pendulum bob at the lowest point when released from angle $\\theta_0$"
+        },
+        {
+          "formula": "$W_{nc} = \\Delta K + \\Delta U$",
+          "meaning": "Work by non-conservative forces equals the change in mechanical energy"
+        }
+      ],
+      "neet_tip": "Used in pendulum, incline, roller-coaster and spring-plus-gravity problems, often combined with collisions.",
+      "topic": "Conservation of mechanical energy"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "A force is conservative if the work it does depends only on the initial and final positions, not on the path. Equivalently, its work around any closed path is zero, and it can be written as $F = -\\frac{dU}{dx}$. Examples include gravitational, electrostatic and ideal spring forces. For a conservative force, $W_c = -\\Delta U$. A non-conservative force does path-dependent work, and its work around a closed loop is not zero. Friction, viscous drag and air resistance are examples; they dissipate mechanical energy as heat, and no potential energy can be defined for them. Kinetic friction always does negative work on a sliding body relative to the surface, and this work grows with path length. Note that work by a conservative force is reversible: it can be recovered as kinetic energy.",
+      "key_points": [
+        "Conservative force: path-independent work, zero work over a closed loop",
+        "Conservative examples: gravity, spring force, electrostatic force",
+        "Non-conservative examples: friction, air drag, viscous force",
+        "Potential energy exists only for conservative forces",
+        "Work done by friction depends on path length",
+        "$W_c = -\\Delta U$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\oint \\vec{F}_c\\cdot d\\vec{r} = 0$",
+          "meaning": "Closed-loop work of a conservative force is zero"
+        },
+        {
+          "formula": "$W_c = -\\Delta U = U_i - U_f$",
+          "meaning": "Work by a conservative force in terms of potential energy change"
+        }
+      ],
+      "neet_tip": "Usually a conceptual statement-type question on path independence, closed-loop work, or identifying conservative forces.",
+      "topic": "Conservative and non-conservative forces"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "A bob of mass m on a string of length L moving in a vertical circle has non-uniform speed, because gravity changes its kinetic energy. Use energy conservation between points and Newton's second law radially. With $\\theta$ measured from the lowest point, the tension is $T = \\frac{mv^2}{L} + mg\\cos\\theta$. At the top, the string must stay taut ($T \\ge 0$), so $v_{top} \\ge \\sqrt{gL}$. This requires $v_{bottom} \\ge \\sqrt{5gL}$, and then $T_{bottom} - T_{top} = 6mg$. If $v_{bottom} \\le \\sqrt{2gL}$, the bob oscillates below the horizontal. If $\\sqrt{2gL} < v_{bottom} < \\sqrt{5gL}$, the string slackens somewhere above the horizontal and the bob follows a projectile path. For a rod or a bead on a ring, which can push as well as pull, the minimum top speed is zero, so $v_{bottom} \\ge \\sqrt{4gL}$. In general, $v^2 = u^2 - 2gL(1 - \\cos\\theta)$.",
+      "key_points": [
+        "String: $v_{top,min} = \\sqrt{gL}$ and $v_{bottom,min} = \\sqrt{5gL}$",
+        "Rod or ring: $v_{top,min} = 0$ and $v_{bottom,min} = \\sqrt{4gL}$",
+        "With $v_{bottom} = \\sqrt{5gL}$: speed at horizontal position is $\\sqrt{3gL}$",
+        "In that critical case, tensions are 6mg (bottom), 3mg (horizontal), 0 (top)",
+        "$T_{bottom} - T_{top} = 6mg$ for any speed, provided the circle is completed",
+        "Tension is maximum at the bottom, so a string is most likely to break there"
+      ],
+      "formulas": [
+        {
+          "formula": "$T = \\frac{mv^2}{L} + mg\\cos\\theta$",
+          "meaning": "String tension at angle $\\theta$ from the lowest point"
+        },
+        {
+          "formula": "$v^2 = u^2 - 2gL(1-\\cos\\theta)$",
+          "meaning": "Speed at angle $\\theta$, given speed u at the bottom"
+        },
+        {
+          "formula": "$v_{bottom} \\ge \\sqrt{5gL}$, $v_{top} \\ge \\sqrt{gL}$",
+          "meaning": "Condition to complete a vertical circle with a string"
+        },
+        {
+          "formula": "$T_{bottom} - T_{top} = 6mg$",
+          "meaning": "Tension difference between the lowest and highest points"
+        }
+      ],
+      "neet_tip": "Asks for minimum speed, tension ratios at different points, or where the string slackens.",
+      "topic": "Motion in a vertical circle"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "In every collision, linear momentum is conserved if external impulse is negligible. In an elastic collision, total kinetic energy is also conserved. In an inelastic collision, some kinetic energy is lost. In a perfectly inelastic collision, the bodies stick together and the loss is maximum. In one-dimensional elastic collisions, the relative speed of separation equals the relative speed of approach. The coefficient of restitution is $e = \\frac{v_2 - v_1}{u_1 - u_2}$: $e = 1$ for elastic, $0 < e < 1$ for inelastic and $e = 0$ for perfectly inelastic collisions. In a 1D elastic collision between equal masses, the bodies exchange velocities. When a heavy body hits a light one at rest, the light body moves off at about $2u_1$. When a light body hits a heavy one at rest, it rebounds with nearly the same speed. In two dimensions, conserve momentum separately along x and y. For an elastic oblique collision of equal masses with one at rest, the two velocities after collision are perpendicular.",
+      "key_points": [
+        "Momentum is conserved in all collisions; kinetic energy only in elastic ones",
+        "Equal masses, 1D elastic: velocities are exchanged",
+        "Perfectly inelastic: common velocity, maximum KE loss",
+        "Fraction of KE transferred to a stationary target (elastic) is $\\frac{4m_1m_2}{(m_1+m_2)^2}$, maximum when $m_1 = m_2$",
+        "2D: momentum is conserved separately along x and y",
+        "Equal masses, elastic, target at rest: velocities after collision are at $90^\\circ$",
+        "Ball dropped from h with restitution e rebounds to height $e^2h$"
+      ],
+      "formulas": [
+        {
+          "formula": "$m_1u_1 + m_2u_2 = m_1v_1 + m_2v_2$",
+          "meaning": "Momentum conservation in 1D"
+        },
+        {
+          "formula": "$v_1 = \\frac{(m_1-m_2)u_1 + 2m_2u_2}{m_1+m_2}$",
+          "meaning": "Velocity of body 1 after a 1D elastic collision"
+        },
+        {
+          "formula": "$v_2 = \\frac{(m_2-m_1)u_2 + 2m_1u_1}{m_1+m_2}$",
+          "meaning": "Velocity of body 2 after a 1D elastic collision"
+        },
+        {
+          "formula": "$e = \\frac{v_2 - v_1}{u_1 - u_2}$",
+          "meaning": "Coefficient of restitution: separation speed divided by approach speed"
+        },
+        {
+          "formula": "$\\Delta K = \\frac{m_1m_2(u_1-u_2)^2}{2(m_1+m_2)}$",
+          "meaning": "KE lost in a perfectly inelastic collision"
+        },
+        {
+          "formula": "$m_1u_1 = m_1v_1\\cos\\theta_1 + m_2v_2\\cos\\theta_2$, $0 = m_1v_1\\sin\\theta_1 - m_2v_2\\sin\\theta_2$",
+          "meaning": "2D collision with body 2 initially at rest"
+        }
+      ],
+      "neet_tip": "Frequent combination: elastic collision of equal masses followed by the bob rising, $h = \\frac{v^2}{2g}$, or a ballistic pendulum.",
+      "topic": "Elastic and inelastic collisions in one and two dimensions"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$W = Fd\\cos\\theta$",
+      "meaning": "Work by a constant force F over displacement d at angle $\\theta$"
+    },
+    {
+      "formula": "$W = \\int F(x)\\,dx$",
+      "meaning": "Work by a variable force; area under the F-x graph"
+    },
+    {
+      "formula": "$K = \\frac{1}{2}mv^2 = \\frac{p^2}{2m}$",
+      "meaning": "Kinetic energy; m is mass, v speed, p momentum"
+    },
+    {
+      "formula": "$U = mgh$",
+      "meaning": "Gravitational potential energy at height h near the Earth's surface"
+    },
+    {
+      "formula": "$F = -\\frac{dU}{dx}$",
+      "meaning": "Conservative force from potential energy U"
+    },
+    {
+      "formula": "$W_{net} = \\Delta K$",
+      "meaning": "Work-energy theorem"
+    },
+    {
+      "formula": "$P = \\frac{dW}{dt} = \\vec{F}\\cdot\\vec{v}$",
+      "meaning": "Instantaneous power"
+    },
+    {
+      "formula": "$P = \\frac{mgh}{t}$",
+      "meaning": "Power to raise mass m through height h in time t"
+    },
+    {
+      "formula": "$1\\ \\text{hp} = 746\\ \\text{W}$, $1\\ \\text{kWh} = 3.6\\times10^6\\ \\text{J}$",
+      "meaning": "Unit conversions for power and energy"
+    },
+    {
+      "formula": "$U = \\frac{1}{2}kx^2$",
+      "meaning": "Spring potential energy; k is spring constant, x deformation"
+    },
+    {
+      "formula": "$W = \\frac{1}{2}k(x_2^2 - x_1^2)$",
+      "meaning": "External work to stretch a spring from $x_1$ to $x_2$"
+    },
+    {
+      "formula": "$K_i + U_i = K_f + U_f$",
+      "meaning": "Conservation of mechanical energy"
+    },
+    {
+      "formula": "$W_{nc} = \\Delta E_{mech}$",
+      "meaning": "Work by non-conservative forces such as friction"
+    },
+    {
+      "formula": "$v = \\sqrt{2gh}$",
+      "meaning": "Speed after falling height h from rest"
+    },
+    {
+      "formula": "$T = \\frac{mv^2}{L} + mg\\cos\\theta$",
+      "meaning": "Tension in a vertical circle; $\\theta$ measured from the lowest point"
+    },
+    {
+      "formula": "$v_{bottom} = \\sqrt{5gL}$, $v_{top} = \\sqrt{gL}$",
+      "meaning": "Minimum speeds to complete a vertical circle with a string of length L"
+    },
+    {
+      "formula": "$v_{bottom} = \\sqrt{4gL}$",
+      "meaning": "Minimum bottom speed for a rod or bead on a ring"
+    },
+    {
+      "formula": "$T_{bottom} - T_{top} = 6mg$",
+      "meaning": "Tension difference in a complete vertical circle"
+    },
+    {
+      "formula": "$v_1 = \\frac{(m_1-m_2)u_1 + 2m_2u_2}{m_1+m_2}$",
+      "meaning": "Final velocity of body 1 in a 1D elastic collision"
+    },
+    {
+      "formula": "$v_2 = \\frac{(m_2-m_1)u_2 + 2m_1u_1}{m_1+m_2}$",
+      "meaning": "Final velocity of body 2 in a 1D elastic collision"
+    },
+    {
+      "formula": "$e = \\frac{v_2 - v_1}{u_1 - u_2}$",
+      "meaning": "Coefficient of restitution"
+    },
+    {
+      "formula": "$v = \\frac{m_1u_1 + m_2u_2}{m_1+m_2}$",
+      "meaning": "Common velocity after a perfectly inelastic collision"
+    },
+    {
+      "formula": "$\\Delta K = \\frac{m_1m_2(u_1-u_2)^2}{2(m_1+m_2)}$",
+      "meaning": "KE loss in a perfectly inelastic collision"
+    },
+    {
+      "formula": "$\\frac{\\Delta K}{K} = \\frac{4m_1m_2}{(m_1+m_2)^2}$",
+      "meaning": "Fraction of KE transferred to a stationary target in a 1D elastic collision"
+    }
+  ],
+  "common_traps": [
+    "Writing spring work from $x_1$ to $x_2$ as $\\frac{1}{2}k(x_2 - x_1)^2$; the correct value is $\\frac{1}{2}k(x_2^2 - x_1^2)$.",
+    "Using $W = Fd$ for a position-dependent force such as friction with variable $\\mu$; you must integrate, for example $\\int_0^L (\\mu_0 - \\alpha x) mg\\,dx$.",
+    "Assuming kinetic energy is conserved in every collision; only momentum is always conserved, and KE is conserved only in elastic collisions.",
+    "Using $\\sqrt{5gL}$ as the minimum bottom speed for a rod; for a rod or ring it is $\\sqrt{4gL}$, because the minimum top speed is zero.",
+    "Treating kWh as a unit of power; it is energy, equal to $3.6\\times10^6$ J.",
+    "Thinking zero work means zero force; a centripetal force or the normal force on a horizontal surface does zero work while acting.",
+    "Applying mechanical energy conservation during an inelastic impact, such as a bullet embedding in a block; use momentum conservation for the impact, then energy conservation for the subsequent swing.",
+    "Ignoring the sign of area below the axis in F-x graphs; that area represents negative work."
+  ],
+  "quick_revision": [
+    "$W = Fd\\cos\\theta$; for a variable force, $W = \\int F\\,dx$ or the area under the F-x graph.",
+    "Work-energy theorem: $W_{net} = \\Delta K$, valid for all types of force.",
+    "$K = \\frac{p^2}{2m}$; doubling p makes K four times larger.",
+    "$F = -\\frac{dU}{dx}$; stable equilibrium at a minimum of U, unstable at a maximum.",
+    "$P = \\vec{F}\\cdot\\vec{v}$; under constant power from rest, $v \\propto t^{1/2}$ and $s \\propto t^{3/2}$.",
+    "Spring: $U = \\frac{1}{2}kx^2$; maximum compression $x = v\\sqrt{\\frac{m}{k}}$.",
+    "Conservative force: path-independent work and zero closed-loop work; friction is non-conservative.",
+    "Vertical circle with a string: minimum speeds $\\sqrt{5gL}$ at bottom and $\\sqrt{gL}$ at top; $T_{bottom} - T_{top} = 6mg$.",
+    "Bob oscillates if $v \\le \\sqrt{2gL}$; string slackens if $\\sqrt{2gL} < v < \\sqrt{5gL}$.",
+    "1D elastic collision of equal masses: velocities are exchanged.",
+    "Perfectly inelastic: bodies share a common velocity and KE loss is maximum; e = 0.",
+    "2D elastic collision of equal masses with one at rest: velocities after collision are perpendicular."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q001",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q1"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q044",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q44"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

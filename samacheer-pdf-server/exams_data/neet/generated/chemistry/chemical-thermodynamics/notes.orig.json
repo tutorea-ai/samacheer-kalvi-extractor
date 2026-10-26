@@ -1,0 +1,439 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u04",
+  "unit_no": 4,
+  "unit_name": "Chemical Thermodynamics",
+  "slug": "chemical-thermodynamics",
+  "overview": "Chemical thermodynamics studies energy changes in physical and chemical processes using macroscopic properties such as internal energy, enthalpy, entropy and Gibbs energy. It explains why reactions release or absorb heat, which processes are spontaneous, and how the standard Gibbs energy change fixes the equilibrium constant. NEET asks 2-3 questions from this unit every year, mostly on sign conventions, work in different processes, Hess's law calculations, entropy changes and the $\\Delta G$-$K$ relation.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "The system is the part of the universe chosen for study, for example a reaction mixture in a beaker. Everything else is the surroundings, and system plus surroundings make up the universe. The real or imaginary wall that separates them is the boundary. Systems are classified by what can cross this boundary. An open system exchanges both matter and energy with the surroundings, such as reactants in an open beaker. A closed system exchanges energy but not matter, such as a sealed metal vessel. An isolated system exchanges neither matter nor energy, such as an ideal thermos flask. The energy of an isolated system stays constant. Only the surroundings close to the system usually take part in heat exchange.",
+      "key_points": [
+        "Universe = system + surroundings",
+        "Open system: matter and energy are both exchanged",
+        "Closed system: only energy is exchanged",
+        "Isolated system: no exchange of matter or energy",
+        "A thermos flask is the standard example of an isolated system",
+        "The boundary may be real or imaginary and rigid or movable"
+      ],
+      "formulas": [],
+      "neet_tip": "Expect direct identification of open, closed or isolated systems from everyday examples such as a sealed bottle, an open beaker, a thermos or a living cell (open).",
+      "topic": "System and surroundings"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "An extensive property depends on the amount of matter present. Mass, volume, number of moles, internal energy, enthalpy, entropy, Gibbs energy and heat capacity are extensive. An intensive property does not depend on the amount of matter. Temperature, pressure, density, refractive index, viscosity, surface tension, molar heat capacity, specific heat and molar quantities are intensive. One simple test is to divide the system into two halves: an extensive property is shared between the halves, while an intensive property stays the same in each. The ratio of two extensive properties is always intensive. For example, density is mass divided by volume, and molar volume is volume divided by moles. Likewise, heat capacity C is extensive, but molar heat capacity $C_m$ and specific heat c are intensive.",
+      "key_points": [
+        "Extensive properties: m, V, n, U, H, S, G, C",
+        "Intensive properties: T, p, density, viscosity, surface tension, $C_m$, specific heat",
+        "Extensive divided by extensive gives an intensive property",
+        "Molar quantities and E° (electrode potential) are intensive",
+        "Extensive properties are additive and intensive properties are not"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\rho = \\frac{m}{V}$",
+          "meaning": "Density: an intensive property formed as the ratio of two extensive properties"
+        },
+        {
+          "formula": "$C_m = \\frac{C}{n}$",
+          "meaning": "Molar heat capacity: intensive, obtained from the extensive heat capacity"
+        }
+      ],
+      "neet_tip": "NEET gives a list of properties and asks which are all intensive or all extensive; watch for the trap pair heat capacity (extensive) versus molar heat capacity (intensive).",
+      "topic": "Extensive and intensive properties"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "A state function depends only on the initial and final states of the system and not on the path followed. Examples are U, H, S, G, p, V and T. Path functions such as heat q and work w depend on how the change is carried out. For a cyclic process, the change in every state function is zero, but q and w need not be zero. Processes are classified by the condition held fixed. An isothermal process has constant T, so $\\Delta U = 0$ for an ideal gas. An adiabatic process has q = 0. An isobaric process has constant p, and an isochoric process has constant V, so w = 0. A reversible process proceeds through infinitesimal steps and stays almost at equilibrium at every stage. An irreversible process occurs in a finite time and is the kind found in nature.",
+      "key_points": [
+        "State functions: U, H, S, G, p, V, T",
+        "Path functions: q and w (their sum q + w is a state function)",
+        "Cyclic process: $\\Delta U = \\Delta H = \\Delta S = \\Delta G = 0$",
+        "Isothermal: $\\Delta T = 0$; adiabatic: q = 0; isochoric: $\\Delta V = 0$; isobaric: $\\Delta p = 0$",
+        "Reversible work is the maximum work obtainable in expansion",
+        "All natural (spontaneous) processes are irreversible"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\oint dU = 0$",
+          "meaning": "The change in any state function over a complete cycle is zero"
+        }
+      ],
+      "neet_tip": "Cyclic p-V diagrams are common; remember that for a full cycle $\\Delta U = 0$, so $q = -w$, while the individual work and heat terms are non-zero.",
+      "topic": "State functions and types of processes"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "The first law states that energy can be neither created nor destroyed. Its mathematical form is $\\Delta U = q + w$, using the convention that q and w are positive when heat or work enters the system. Pressure-volume work is $w = -p_{ext}\\Delta V$. Expansion against zero external pressure (free expansion) gives w = 0. For reversible isothermal expansion of an ideal gas, $w = -2.303nRT\\log\\frac{V_2}{V_1}$, and because $\\Delta U = 0$, it follows that $q = -w$. For an adiabatic process, $\\Delta U = w$. Internal energy is the heat exchanged at constant volume ($\\Delta U = q_V$). Enthalpy is defined as H = U + pV, and its change equals the heat exchanged at constant pressure ($\\Delta H = q_p$). For gaseous reactions, $\\Delta H = \\Delta U + \\Delta n_g RT$. Here $\\Delta n_g$ is the moles of gaseous products minus the moles of gaseous reactants.",
+      "key_points": [
+        "Sign convention: work done on the system and heat absorbed are both positive",
+        "Free expansion of an ideal gas: w = 0, q = 0, $\\Delta U = 0$, $\\Delta T = 0$",
+        "Isothermal ideal gas: $\\Delta U = 0$ and $\\Delta H = 0$, so q = -w",
+        "Adiabatic: q = 0 and $\\Delta U = w$; an adiabatic expansion cools the gas",
+        "$\\Delta H = \\Delta U$ when $\\Delta n_g = 0$ or only solids and liquids are involved",
+        "The magnitude of reversible work exceeds irreversible work for the same expansion",
+        "Unit conversion: 1 L atm = 101.3 J"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta U = q + w$",
+          "meaning": "First law of thermodynamics"
+        },
+        {
+          "formula": "$w = -p_{ext}(V_2 - V_1)$",
+          "meaning": "Irreversible work against a constant external pressure"
+        },
+        {
+          "formula": "$w_{rev} = -2.303\\,nRT\\log\\frac{V_2}{V_1} = -2.303\\,nRT\\log\\frac{p_1}{p_2}$",
+          "meaning": "Reversible isothermal work for an ideal gas"
+        },
+        {
+          "formula": "$H = U + pV$",
+          "meaning": "Definition of enthalpy"
+        },
+        {
+          "formula": "$\\Delta H = \\Delta U + \\Delta n_g RT$",
+          "meaning": "Relation between $\\Delta H$ and $\\Delta U$ for gaseous reactions"
+        },
+        {
+          "formula": "$\\Delta U = nC_V(T_2 - T_1)$",
+          "meaning": "Work done in an adiabatic process, since $w = \\Delta U$ when q = 0"
+        }
+      ],
+      "neet_tip": "Common questions include free-expansion values, calculating $\\Delta H - \\Delta U$ from $\\Delta n_g$, and reading work signs from p-V cycles of isothermal and adiabatic steps.",
+      "topic": "First law: work, heat, internal energy and enthalpy"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Heat capacity C is the heat needed to raise the temperature of a substance by 1 K, so q = C$\\Delta T$. Molar heat capacity $C_m$ refers to 1 mol of substance, and specific heat c refers to 1 g. For heating at constant volume, q = $\\Delta U$ = n$C_V\\Delta T$. For heating at constant pressure, q = $\\Delta H$ = n$C_p\\Delta T$. For an ideal gas, $C_p - C_V = R$, so $C_p$ is always greater than $C_V$. This is because at constant pressure part of the heat is used to do expansion work. For a monoatomic gas, $C_V = \\frac{3}{2}R$, $C_p = \\frac{5}{2}R$ and $\\gamma = 1.67$. For a diatomic gas, $C_V = \\frac{5}{2}R$, $C_p = \\frac{7}{2}R$ and $\\gamma = 1.4$. A bomb calorimeter works at constant volume and measures $\\Delta U$. A coffee-cup calorimeter works at constant pressure and measures $\\Delta H$.",
+      "key_points": [
+        "$C_p - C_V = R$ for 1 mol of an ideal gas",
+        "Monoatomic gas: $\\gamma = 5/3$; diatomic gas: $\\gamma = 7/5$",
+        "For an ideal gas, $\\Delta U = nC_V\\Delta T$ holds for any process, not only at constant volume",
+        "Bomb calorimeter measures $\\Delta U$ (constant V); coffee-cup calorimeter measures $\\Delta H$ (constant p)",
+        "Calorimeter calculation: q = $C_{cal}\\Delta T$",
+        "Water has a high specific heat of 4.18 J g$^{-1}$ K$^{-1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$q = mc\\Delta T = nC_m\\Delta T$",
+          "meaning": "Heat absorbed or released for a temperature change"
+        },
+        {
+          "formula": "$C_p - C_V = R$",
+          "meaning": "Mayer relation for an ideal gas"
+        },
+        {
+          "formula": "$\\gamma = \\frac{C_p}{C_V}$",
+          "meaning": "Ratio of heat capacities, which depends on the atomicity of the gas"
+        },
+        {
+          "formula": "$\\Delta H = nC_p\\Delta T$",
+          "meaning": "Enthalpy change of an ideal gas"
+        }
+      ],
+      "neet_tip": "Typical questions are numericals on calorimeter heat and $\\Delta U$/$\\Delta H$ from heat capacities, and conceptual questions on why $C_p > C_V$.",
+      "topic": "Heat capacity and molar heat capacity"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Hess's law states that if a reaction occurs in several steps, its total enthalpy change equals the sum of the enthalpy changes of the steps. This is true because enthalpy is a state function. The law lets us calculate enthalpies that cannot be measured directly. A standard example is the enthalpy of formation of CO, obtained by combining the combustion of C and the combustion of CO. Thermochemical equations can be handled like algebraic equations. Reversing a reaction changes the sign of $\\Delta H$. Multiplying a reaction by a factor multiplies $\\Delta H$ by the same factor. Adding reactions adds their $\\Delta H$ values. Hess's law is also the basis of the Born-Haber cycle used to find lattice enthalpy.",
+      "key_points": [
+        "Hess's law is a consequence of H being a state function",
+        "Reversing a reaction changes the sign of $\\Delta H$",
+        "Multiplying a reaction by a factor multiplies $\\Delta H$ by the same factor",
+        "The physical states of all species must match when equations are combined",
+        "Hess's law underlies the Born-Haber cycle for lattice enthalpy"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta_r H = \\Delta H_1 + \\Delta H_2 + \\Delta H_3 + \\dots$",
+          "meaning": "Total enthalpy change for a reaction carried out in steps"
+        },
+        {
+          "formula": "$C(s) + \\frac{1}{2}O_2(g) \\rightarrow CO(g);\\ \\Delta H = \\Delta_c H(C) - \\Delta_c H(CO)$",
+          "meaning": "Classic Hess's law application to find the enthalpy of formation of CO"
+        }
+      ],
+      "neet_tip": "Usually tested as a numerical where 2-3 given equations must be manipulated to reach a target equation; check signs and coefficients carefully.",
+      "topic": "Hess's law of constant heat summation"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "The standard enthalpy of formation, $\\Delta_f H^\\circ$, is the enthalpy change when 1 mol of a compound forms from its elements in their standard states. It is zero for elements in their reference forms, such as graphite, $O_2(g)$ and $Br_2(l)$. Combustion enthalpy ($\\Delta_c H$) refers to burning 1 mol of a substance completely and is always negative. Bond dissociation enthalpy is the energy needed to break 1 mol of bonds in the gas phase. Atomization enthalpy ($\\Delta_a H$) converts 1 mol of a substance into gaseous atoms. Phase transitions include fusion, vaporization and sublimation, with $\\Delta_{sub}H = \\Delta_{fus}H + \\Delta_{vap}H$. Ionization enthalpy refers to removing an electron from a gaseous atom. Hydration enthalpy is the enthalpy released when gaseous ions become surrounded by water. Enthalpy of solution is the lattice enthalpy plus the hydration enthalpy.",
+      "key_points": [
+        "$\\Delta_f H^\\circ$ = 0 for the reference form of an element (graphite, not diamond)",
+        "Combustion and hydration enthalpies are negative; bond dissociation, atomization, sublimation and ionization enthalpies are positive",
+        "Atomization of $H_2$ equals its bond dissociation enthalpy",
+        "For $CH_4$, $\\Delta_a H$ = 4 times the average C-H bond enthalpy",
+        "$\\Delta_{sub}H > \\Delta_{vap}H$ for the same substance",
+        "Dissolution is endothermic when lattice enthalpy exceeds the magnitude of hydration enthalpy (for example $NH_4Cl$)",
+        "Lattice enthalpy is found through the Born-Haber cycle"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta_r H^\\circ = \\sum \\nu\\Delta_f H^\\circ(\\text{products}) - \\sum \\nu\\Delta_f H^\\circ(\\text{reactants})$",
+          "meaning": "Reaction enthalpy from enthalpies of formation"
+        },
+        {
+          "formula": "$\\Delta_r H = \\sum BE(\\text{reactants}) - \\sum BE(\\text{products})$",
+          "meaning": "Reaction enthalpy from bond enthalpies (gas-phase reactions)"
+        },
+        {
+          "formula": "$\\Delta_{sub}H = \\Delta_{fus}H + \\Delta_{vap}H$",
+          "meaning": "Sublimation enthalpy from fusion and vaporization enthalpies"
+        },
+        {
+          "formula": "$\\Delta_{sol}H = \\Delta_{lattice}H + \\Delta_{hyd}H$",
+          "meaning": "Enthalpy of solution of an ionic solid"
+        }
+      ],
+      "neet_tip": "Common questions ask which reaction represents a true $\\Delta_f H^\\circ$ (1 mol product from elements in standard states) and use bond-enthalpy numericals with the reactants-minus-products order.",
+      "topic": "Enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization and solution"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "The first law cannot predict direction, because exothermic character alone does not make a process spontaneous. Ice melting above 273 K is spontaneous but endothermic. The second law states that the entropy of the universe increases in every spontaneous process and remains constant at equilibrium. Entropy S is a state function that measures the disorder or randomness of a system. Its change is defined using reversible heat: $\\Delta S = \\frac{q_{rev}}{T}$. Entropy increases on melting, on vaporization, when gas moles increase, on heating and on dissolution. For an ideal gas expanding isothermally, $\\Delta S = 2.303nR\\log\\frac{V_2}{V_1}$, whatever the path. This is why free expansion still has a positive $\\Delta S_{sys}$. At a phase transition, $\\Delta S = \\frac{\\Delta H_{trans}}{T}$, where T is the transition temperature.",
+      "key_points": [
+        "Entropy order: $S_{gas} \\gg S_{liquid} > S_{solid}$",
+        "$\\Delta S$ is positive when gas moles increase, $\\Delta n_g > 0$",
+        "$\\Delta S$ is a state function and is always calculated from a reversible path",
+        "Free expansion: $\\Delta S_{sys} = nR\\ln\\frac{V_2}{V_1}$, $\\Delta S_{surr} = 0$",
+        "Reversible adiabatic process: $\\Delta S = 0$ (isentropic)",
+        "Entropy rises with temperature, and a given heat q raises entropy more at low T",
+        "Unit of S: J K$^{-1}$ mol$^{-1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta S = \\frac{q_{rev}}{T}$",
+          "meaning": "Definition of entropy change"
+        },
+        {
+          "formula": "$\\Delta S = 2.303\\,nR\\log\\frac{V_2}{V_1}$",
+          "meaning": "Isothermal entropy change of an ideal gas, valid for both reversible and free expansion"
+        },
+        {
+          "formula": "$\\Delta S_{trans} = \\frac{\\Delta H_{trans}}{T_{trans}}$",
+          "meaning": "Entropy of fusion or vaporization at the transition temperature"
+        },
+        {
+          "formula": "$\\Delta S^\\circ_r = \\sum S^\\circ(\\text{products}) - \\sum S^\\circ(\\text{reactants})$",
+          "meaning": "Standard entropy change of a reaction"
+        }
+      ],
+      "neet_tip": "NEET often tests the signs of $\\Delta S$ for given changes and asks for $\\Delta S_{sys}$ and $\\Delta S_{surr}$ in free or isothermal expansion.",
+      "topic": "Second law of thermodynamics and spontaneity"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "A process is spontaneous when the total entropy change of the universe is positive: $\\Delta S_{total} = \\Delta S_{sys} + \\Delta S_{surr} > 0$. At constant p and T, $\\Delta S_{surr} = -\\frac{\\Delta H_{sys}}{T}$. Combining the two gives the Gibbs energy, G = H - TS, so $\\Delta G = \\Delta H - T\\Delta S = -T\\Delta S_{total}$. At constant T and p, a process is spontaneous if $\\Delta G < 0$, at equilibrium if $\\Delta G = 0$, and non-spontaneous if $\\Delta G > 0$. When $\\Delta H$ is negative and $\\Delta S$ is positive, the process is spontaneous at all T. When $\\Delta H$ is positive and $\\Delta S$ is negative, it is never spontaneous. When both are negative, it is spontaneous at low T. When both are positive, it is spontaneous at high T. The crossover temperature is $T = \\frac{\\Delta H}{\\Delta S}$. $-\\Delta G$ also equals the maximum useful (non-pV) work.",
+      "key_points": [
+        "Spontaneous: $\\Delta S_{total} > 0$ or $\\Delta G < 0$",
+        "Equilibrium: $\\Delta S_{total} = 0$ or $\\Delta G = 0$",
+        "$\\Delta H < 0, \\Delta S > 0$: spontaneous at all temperatures",
+        "$\\Delta H > 0, \\Delta S < 0$: non-spontaneous at all temperatures",
+        "$\\Delta H < 0, \\Delta S < 0$: spontaneous below $T = \\Delta H/\\Delta S$",
+        "$\\Delta H > 0, \\Delta S > 0$: spontaneous above $T = \\Delta H/\\Delta S$",
+        "Spontaneity says nothing about the rate of a reaction"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta S_{total} = \\Delta S_{sys} + \\Delta S_{surr}$",
+          "meaning": "Entropy criterion for spontaneity"
+        },
+        {
+          "formula": "$\\Delta S_{surr} = -\\frac{\\Delta H_{sys}}{T}$",
+          "meaning": "Entropy change of the surroundings at constant p"
+        },
+        {
+          "formula": "$\\Delta G = \\Delta H - T\\Delta S$",
+          "meaning": "Gibbs-Helmholtz relation for constant T and p"
+        },
+        {
+          "formula": "$T = \\frac{\\Delta H}{\\Delta S}$",
+          "meaning": "Temperature at which $\\Delta G = 0$ (equilibrium or crossover point)"
+        },
+        {
+          "formula": "$-\\Delta G = w_{useful,max}$",
+          "meaning": "Maximum non-expansion work obtainable"
+        }
+      ],
+      "neet_tip": "A favourite question type gives $\\Delta H$ and $\\Delta S$ and asks for the minimum temperature for spontaneity; convert $\\Delta H$ (kJ) and $\\Delta S$ (J/K) to the same energy unit first.",
+      "topic": "Entropy of the universe and Gibbs energy as criteria for spontaneity"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "The Gibbs energy change under non-standard conditions is $\\Delta_r G = \\Delta_r G^\\circ + RT\\ln Q$. At equilibrium, $\\Delta_r G = 0$ and Q = K, which gives $\\Delta_r G^\\circ = -RT\\ln K = -2.303RT\\log K$. If $\\Delta G^\\circ$ is negative, then K > 1 and products are favoured. If $\\Delta G^\\circ$ is positive, then K < 1 and reactants are favoured. If $\\Delta G^\\circ = 0$, then K = 1. In that last case, $\\Delta H^\\circ = T\\Delta S^\\circ$, so $\\Delta S^\\circ = \\frac{\\Delta H^\\circ}{T}$. This applies, for example, when equal concentrations of N and D exist in a $N \\rightleftharpoons D$ equilibrium. Combining the equations gives $-RT\\ln K = \\Delta H^\\circ - T\\Delta S^\\circ$. From this, K can be calculated from tabulated $\\Delta H^\\circ$ and $\\Delta S^\\circ$ values.",
+      "key_points": [
+        "$\\Delta G^\\circ < 0$ means K > 1; $\\Delta G^\\circ > 0$ means K < 1; $\\Delta G^\\circ = 0$ means K = 1",
+        "At equilibrium $\\Delta G = 0$, but $\\Delta G^\\circ$ is generally not zero",
+        "2.303RT is about 5.7 kJ mol$^{-1}$ at 298 K",
+        "Each tenfold increase in K lowers $\\Delta G^\\circ$ by about 5.7 kJ mol$^{-1}$ at 298 K",
+        "Always use T in kelvin and R = 8.314 J K$^{-1}$ mol$^{-1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta_r G = \\Delta_r G^\\circ + RT\\ln Q$",
+          "meaning": "Gibbs energy change at any composition"
+        },
+        {
+          "formula": "$\\Delta_r G^\\circ = -RT\\ln K = -2.303RT\\log K$",
+          "meaning": "Link between standard Gibbs energy change and the equilibrium constant"
+        },
+        {
+          "formula": "$K = e^{-\\Delta_r G^\\circ/RT}$",
+          "meaning": "Equilibrium constant from the standard Gibbs energy change"
+        },
+        {
+          "formula": "$-2.303RT\\log K = \\Delta H^\\circ - T\\Delta S^\\circ$",
+          "meaning": "Calculates K, $\\Delta H^\\circ$ or $\\Delta S^\\circ$ from the other quantities"
+        }
+      ],
+      "neet_tip": "Watch for K = 1 (equal concentrations) situations, where $\\Delta G^\\circ = 0$ and $\\Delta S^\\circ = \\Delta H^\\circ/T$ with T in kelvin.",
+      "topic": "Standard Gibbs energy change and equilibrium constant"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\Delta U = q + w$",
+      "meaning": "First law (work done on the system is positive)"
+    },
+    {
+      "formula": "$w = -p_{ext}\\Delta V$",
+      "meaning": "Irreversible pressure-volume work"
+    },
+    {
+      "formula": "$w_{rev} = -2.303\\,nRT\\log\\frac{V_2}{V_1}$",
+      "meaning": "Reversible isothermal work for an ideal gas"
+    },
+    {
+      "formula": "$w_{adiabatic} = \\Delta U = nC_V\\Delta T$",
+      "meaning": "Work in an adiabatic process"
+    },
+    {
+      "formula": "$H = U + pV$",
+      "meaning": "Definition of enthalpy"
+    },
+    {
+      "formula": "$\\Delta H = \\Delta U + \\Delta n_g RT$",
+      "meaning": "Relation between $\\Delta H$ and $\\Delta U$"
+    },
+    {
+      "formula": "$q_V = \\Delta U,\\ q_p = \\Delta H$",
+      "meaning": "Heat at constant volume and at constant pressure"
+    },
+    {
+      "formula": "$C_p - C_V = R$",
+      "meaning": "Mayer relation for an ideal gas"
+    },
+    {
+      "formula": "$q = mc\\Delta T = C\\Delta T$",
+      "meaning": "Calorimetry"
+    },
+    {
+      "formula": "$\\Delta_r H^\\circ = \\sum \\Delta_f H^\\circ(P) - \\sum \\Delta_f H^\\circ(R)$",
+      "meaning": "Reaction enthalpy from formation enthalpies"
+    },
+    {
+      "formula": "$\\Delta_r H = \\sum BE(R) - \\sum BE(P)$",
+      "meaning": "Reaction enthalpy from bond enthalpies"
+    },
+    {
+      "formula": "$\\Delta_{sub}H = \\Delta_{fus}H + \\Delta_{vap}H$",
+      "meaning": "Sublimation enthalpy"
+    },
+    {
+      "formula": "$\\Delta_{sol}H = \\Delta_{lattice}H + \\Delta_{hyd}H$",
+      "meaning": "Enthalpy of solution"
+    },
+    {
+      "formula": "$\\Delta S = \\frac{q_{rev}}{T}$",
+      "meaning": "Definition of entropy change"
+    },
+    {
+      "formula": "$\\Delta S = 2.303\\,nR\\log\\frac{V_2}{V_1}$",
+      "meaning": "Isothermal entropy change of an ideal gas"
+    },
+    {
+      "formula": "$\\Delta S_{trans} = \\frac{\\Delta H_{trans}}{T}$",
+      "meaning": "Entropy of phase transition"
+    },
+    {
+      "formula": "$\\Delta S_{surr} = -\\frac{\\Delta H_{sys}}{T}$",
+      "meaning": "Entropy change of the surroundings"
+    },
+    {
+      "formula": "$\\Delta G = \\Delta H - T\\Delta S$",
+      "meaning": "Gibbs energy criterion"
+    },
+    {
+      "formula": "$\\Delta G = -T\\Delta S_{total}$",
+      "meaning": "Link between $\\Delta G$ and the entropy of the universe"
+    },
+    {
+      "formula": "$\\Delta G = \\Delta G^\\circ + RT\\ln Q$",
+      "meaning": "Gibbs energy at any composition"
+    },
+    {
+      "formula": "$\\Delta G^\\circ = -2.303RT\\log K$",
+      "meaning": "Standard Gibbs energy and equilibrium constant"
+    },
+    {
+      "formula": "$T = \\frac{\\Delta H}{\\Delta S}$",
+      "meaning": "Crossover or equilibrium temperature"
+    }
+  ],
+  "common_traps": [
+    "Treating free expansion as having $\\Delta S_{sys} = 0$. In fact $\\Delta S_{sys} = nR\\ln(V_2/V_1) > 0$; only q, w, $\\Delta U$ and $\\Delta S_{surr}$ are zero.",
+    "Mixing up sign conventions. In current usage, work done on the system is positive and expansion work is negative ($w = -p_{ext}\\Delta V$).",
+    "Using bond enthalpies as products minus reactants. The correct order for bond enthalpies is reactants minus products, which is the reverse of the formation-enthalpy formula.",
+    "Counting liquids and solids in $\\Delta n_g$. Only gaseous moles are counted when converting between $\\Delta H$ and $\\Delta U$.",
+    "Mixing kJ and J in $\\Delta G = \\Delta H - T\\Delta S$ or $T = \\Delta H/\\Delta S$. Convert both to the same unit, and use T in kelvin rather than $^\\circ C$.",
+    "Assuming every exothermic reaction is spontaneous, or that a negative $\\Delta G$ means a fast reaction. Spontaneity depends on both $\\Delta H$ and $T\\Delta S$, and it says nothing about rate.",
+    "Thinking $\\Delta G^\\circ = 0$ at every equilibrium. It is $\\Delta G$ that is zero at equilibrium; $\\Delta G^\\circ$ is zero only when K = 1.",
+    "Taking diamond or $O_3$ as the reference state. $\\Delta_f H^\\circ$ = 0 only for the most stable form, such as graphite and $O_2(g)$."
+  ],
+  "quick_revision": [
+    "Isolated systems exchange no matter or energy, closed systems exchange only energy, and open systems exchange both.",
+    "U, H, S and G are extensive state functions, while q and w are path functions.",
+    "$\\Delta U = q + w$, $\\Delta U = q_V$ and $\\Delta H = q_p$.",
+    "For an isothermal ideal gas, $\\Delta U = \\Delta H = 0$ and $q = -w = 2.303nRT\\log(V_2/V_1)$.",
+    "Free expansion gives w = q = $\\Delta U$ = 0, but $\\Delta S_{sys} > 0$.",
+    "$\\Delta H - \\Delta U = \\Delta n_g RT$, and $C_p - C_V = R$.",
+    "Hess's law: reversing a reaction flips the sign of $\\Delta H$ and multiplying a reaction scales $\\Delta H$.",
+    "Combustion and hydration enthalpies are negative, while bond dissociation, atomization and ionization enthalpies are positive.",
+    "$\\Delta S_{total} > 0$ and $\\Delta G < 0$ are equivalent criteria for a spontaneous process.",
+    "For $\\Delta G = \\Delta H - T\\Delta S$, check the signs of $\\Delta H$ and $\\Delta S$ to fix the temperature range of spontaneity.",
+    "$\\Delta G^\\circ = -2.303RT\\log K$: when K = 1, $\\Delta G^\\circ = 0$ and $\\Delta S^\\circ = \\Delta H^\\circ/T$.",
+    "In any cyclic process, every state function change is zero, so $q_{net} = -w_{net}$."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q059",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q59"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q069",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q69"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q074",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q74"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

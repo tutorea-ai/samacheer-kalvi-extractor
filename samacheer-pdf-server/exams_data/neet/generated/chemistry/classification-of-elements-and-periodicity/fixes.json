@@ -1,0 +1,26 @@
+[
+  {
+    "path": "formula_sheet[15].formula",
+    "old": "$Na_2O < MgO$ basic; $Al_2O_3$ amphoteric; $SiO_2 < P_4O_{10} < SO_3 < Cl_2O_7$ acidic",
+    "new": "$Na_2O > MgO$ (basic strength); $Al_2O_3$ amphoteric; $SiO_2 < P_4O_{10} < SO_3 < Cl_2O_7$ (acidic strength)",
+    "fixes": "Basic oxide order reversed (Na2O > MgO)"
+  },
+  {
+    "path": "topics[0].explanation",
+    "old": "The modern periodic law, based on Moseley's work, states that the physical and chemical properties of elements are periodic functions of their atomic numbers. The present long form of the table has 7 horizontal periods and 18 vertical groups, numbered 1 to 18 as recommended by IUPAC. The period number equals the principal quantum number $n$ of the outermost shell. The number of elements in a period equals the number of electrons that can fill the orbitals of that energy level, giving 2, 8, 8, 18, 18, 32 and 32 elements in periods 1 to 7. Elements in the same group have similar outer electronic configurations and hence similar properties. The 14 lanthanoids (Ce to Lu) and 14 actinoids (Th to Lr) are placed separately at the bottom to keep the table compact. Elements with $Z > 100$ are given temporary IUPAC names built from numerical roots, for example $Z = 101$ is unnilunium (Unu).",
+    "new": "The modern periodic law, based on Moseley's work, states that the physical and chemical properties of elements are periodic functions of their atomic numbers. The present long form of the table has 7 horizontal periods and 18 vertical groups, numbered 1 to 18 as recommended by IUPAC. The period number equals the principal quantum number $n$ of the outermost shell. The number of elements in a period is twice the number of atomic orbitals filled during that period (e.g. 3s + 3p, 4 orbitals, gives 8 elements in period 3), giving 2, 8, 8, 18, 18, 32 and 32 elements in periods 1 to 7. Elements in the same group have similar outer electronic configurations and hence similar properties. The 14 lanthanoids (Ce to Lu) and 14 actinoids (Th to Lr) are placed separately at the bottom to keep the table compact. Elements with $Z > 100$ are given temporary IUPAC names built from numerical roots, for example $Z = 101$ is unnilunium (Unu).",
+    "fixes": "Period length is set by orbitals filled during the period, not by shell capacity"
+  },
+  {
+    "path": "topics[5].formulas[1].meaning",
+    "old": "Predicts the highest oxidation state of a p-block element",
+    "new": "Predicts the highest oxidation state of most p-block elements; F (maximum −1, or 0 in $F_2$) and O (maximum +2, in $OF_2$) are exceptions",
+    "fixes": "Max oxidation state formula: add F and O exceptions"
+  },
+  {
+    "path": "quick_revision[9]",
+    "old": "Maximum oxidation state equals the group valence, as in $Cl_2O_7$; the inert pair effect gives Tl(+1) and Pb(+2).",
+    "new": "Maximum oxidation state equals the group valence for most elements, as in $Cl_2O_7$ (F and O are exceptions); the inert pair effect gives Tl(+1) and Pb(+2).",
+    "fixes": "Max oxidation state rule: add F and O exceptions"
+  }
+]

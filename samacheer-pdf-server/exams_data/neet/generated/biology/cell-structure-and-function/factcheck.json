@@ -1,0 +1,14 @@
+{
+  "unit_id": "bio_u03",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[0].explanation",
+      "quote": "Theodore Schwann, a British zoologist",
+      "problem": "Theodore Schwann was a German physiologist and zoologist, not British. The NCERT text uses the word 'British', but as a historical fact this is wrong and could mislead students.",
+      "correction": "In 1839 Theodore Schwann, a German zoologist (NCERT's wording calls him 'British'), studied animal cells.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

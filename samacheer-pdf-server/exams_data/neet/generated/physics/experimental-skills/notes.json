@@ -1,0 +1,554 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u20",
+  "unit_no": 20,
+  "unit_name": "Experimental Skills",
+  "slug": "experimental-skills",
+  "overview": "This unit covers the practical experiments of the NCERT Class 11 and 12 physics syllabus. It deals with instruments such as the vernier calipers, screw gauge, metre bridge, optical bench and travelling microscope, and with the procedures, graphs, errors and corrections used in each experiment. NEET usually asks 2-3 direct questions from this unit on least count, zero error, end or index correction, the shape of graphs and formula-based calculations, so it is a high-scoring and low-effort area.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Vernier calipers measure lengths more finely than the main scale alone. The main scale division (MSD) is usually 1 mm. N vernier divisions coincide with (N-1) main scale divisions. The outside (lower) jaws measure the external diameter of a beaker or rod. The inside (upper) jaws measure the internal diameter. The thin depth strip at the tail measures the depth of a vessel. To take a reading, note the main scale reading (MSR) just before the vernier zero. Then find the vernier division that coincides with any main scale line (VSR). If the vernier zero lies to the right of the main scale zero when the jaws are closed, the zero error is positive. If it lies to the left, the zero error is negative. The zero error is always subtracted algebraically from the observed reading.",
+      "key_points": [
+        "Least count = 1 MSD - 1 VSD, which is typically 0.1 mm = 0.01 cm",
+        "External diameter is measured with the outside jaws, internal diameter with the inside jaws, and depth with the depth strip",
+        "Positive zero error means the vernier zero is to the right of the main zero, so the correction is negative",
+        "Take readings at several orientations and use the mean to reduce random error",
+        "Wall thickness of a hollow cylinder = (external diameter - internal diameter)/2"
+      ],
+      "formulas": [
+        {
+          "formula": "$LC = 1\\,MSD - 1\\,VSD = \\frac{1\\,MSD}{N}$",
+          "meaning": "Least count when N vernier divisions equal (N-1) main scale divisions"
+        },
+        {
+          "formula": "$\\text{Reading} = MSR + (VSR \\times LC) - (\\text{zero error})$",
+          "meaning": "True reading with the zero error removed algebraically"
+        }
+      ],
+      "neet_tip": "NEET often gives an unusual vernier design (for example 10 VSD = 9 MSD with MSD = 0.5 mm) or a negative zero error and asks for the corrected reading.",
+      "topic": "Vernier calipers: internal and external diameter and depth of a vessel"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "A screw gauge (micrometer) works on the principle of a screw. The linear distance moved by the spindle is proportional to the rotation of the thimble. Pitch is the distance moved by the spindle in one complete rotation. The least count equals the pitch divided by the number of circular scale divisions, usually 0.01 mm. It is used to measure the diameter of a thin wire or the thickness of a sheet. The ratchet is used so that the object is held with uniform pressure and is not compressed. Zero error is positive when the circular scale zero lies below the reference line. It is negative when it lies above. Backlash error arises from wear of the screw threads. It is avoided by always rotating the screw in one direction.",
+      "key_points": [
+        "Pitch = linear distance moved per rotation, and LC = pitch/number of circular divisions",
+        "Turn the ratchet, not the thimble, to avoid overtightening",
+        "Positive zero error means the circular scale zero is below the reference line",
+        "Backlash error is avoided by rotating in one direction only",
+        "For a wire, take readings at different places along it in two mutually perpendicular directions"
+      ],
+      "formulas": [
+        {
+          "formula": "$LC = \\frac{\\text{pitch}}{\\text{number of circular scale divisions}}$",
+          "meaning": "Least count of the screw gauge"
+        },
+        {
+          "formula": "$\\text{Reading} = PSR + (CSR \\times LC) - (\\text{zero error})$",
+          "meaning": "Corrected diameter or thickness (PSR = pitch scale reading, CSR = circular scale reading)"
+        }
+      ],
+      "neet_tip": "Expect calculations of least count from pitch and divisions, and corrected readings with a zero error given as a number of circular divisions above or below the line.",
+      "topic": "Screw gauge: thickness or diameter of a thin sheet or wire"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "A real pendulum loses energy to air resistance and friction at the support. Its amplitude therefore decreases with time. For light damping (damping force = -bv), the amplitude decays as $A = A_0 e^{-bt/2m}$. The mechanical energy is proportional to $A^2$, so it decays as $e^{-bt/m}$. In the experiment, the amplitude is noted at regular time intervals and $A^2$ is plotted against t. The curve is a falling exponential, which shows that energy is dissipated continuously. A plot of $\\ln A^2$ against t is a straight line with slope -b/m. The time for the energy to fall to half its value is $(m/b)\\ln 2$. The time period stays nearly the same for small damping.",
+      "key_points": [
+        "Energy is proportional to the square of the amplitude, $E = \\frac{1}{2}m\\omega^2 A^2$",
+        "The $A^2$ vs t graph is an exponential decay, not a straight line",
+        "The $\\ln A^2$ vs t graph is linear with slope -b/m",
+        "The energy decays twice as fast as the amplitude (exponent b/m against b/2m)",
+        "The time period is practically unchanged for light damping"
+      ],
+      "formulas": [
+        {
+          "formula": "$A(t) = A_0 e^{-bt/2m}$",
+          "meaning": "Amplitude of a lightly damped oscillator"
+        },
+        {
+          "formula": "$E(t) = E_0 e^{-bt/m}$",
+          "meaning": "Mechanical energy decay, since $E \\propto A^2$"
+        }
+      ],
+      "neet_tip": "Questions ask for the graph shape or the fraction of energy left when the amplitude has fallen to a given fraction (energy fraction = square of the amplitude fraction).",
+      "topic": "Simple pendulum: dissipation of energy from amplitude-squared vs time graph"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "A metre scale balanced on a knife edge works on the principle of moments. In equilibrium, the sum of clockwise moments equals the sum of anticlockwise moments about the fulcrum. First, the scale is balanced alone to find its centre of gravity G (ideally at 50 cm). A known mass is then hung on one side and the unknown mass on the other. Their positions are adjusted until the scale balances again with the fulcrum at G. The unknown mass is $m = M d_1/d_2$, where $d_1$ and $d_2$ are the distances of the known and unknown masses from the fulcrum. If the fulcrum is not at G, the weight of the scale acting at G must also be included in the moment equation. Repeat the measurement for different positions and take the mean.",
+      "key_points": [
+        "Clockwise moment = anticlockwise moment about the fulcrum",
+        "Find the centre of gravity of the scale first",
+        "If the fulcrum is shifted from G, include the scale's own weight acting at G",
+        "Use thin threads for suspension and keep the scale horizontal"
+      ],
+      "formulas": [
+        {
+          "formula": "$m_1 d_1 = m_2 d_2$",
+          "meaning": "Balance condition when the fulcrum is at the centre of gravity of the scale"
+        },
+        {
+          "formula": "$M d_1 = m d_2 + m_s d_s$",
+          "meaning": "General balance condition including the scale mass $m_s$ acting at G, a distance $d_s$ from the fulcrum, on the same side as m"
+        }
+      ],
+      "neet_tip": "NEET typically asks for an unknown mass when the fulcrum is not at the centre of gravity, so the scale's own weight must be included.",
+      "topic": "Metre scale: mass of an object by the principle of moments"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Searle's apparatus is used to find Young's modulus of a metallic wire. Two identical wires hang from the same rigid support. The reference wire carries a constant load. The experimental wire is loaded in steps. Using a reference wire cancels errors due to temperature changes and yielding of the support. The extension is read with a micrometer screw and a spirit level. The micrometer is adjusted each time to bring the bubble back to the centre. The diameter of the wire is measured with a screw gauge, and the original length with a metre scale. The load vs extension graph is a straight line within the elastic limit, and its slope gives Mg/l. Readings are taken both while loading and while unloading. The mean is used to cancel elastic lag.",
+      "key_points": [
+        "Stress/strain = Y within the elastic limit",
+        "The reference wire compensates for thermal expansion and sagging of the support",
+        "The extension is measured with a micrometer and spirit level, and the diameter with a screw gauge",
+        "The load-extension graph is a straight line through the origin, so Y = (slope) × L/(πr²) if slope = Mg/l",
+        "The maximum error comes from the radius, since r appears squared"
+      ],
+      "formulas": [
+        {
+          "formula": "$Y = \\frac{MgL}{\\pi r^2 \\, l}$",
+          "meaning": "Young's modulus (M = load, L = original length, r = radius, l = extension)"
+        },
+        {
+          "formula": "$\\frac{\\Delta Y}{Y} = \\frac{\\Delta L}{L} + 2\\frac{\\Delta r}{r} + \\frac{\\Delta l}{l}$",
+          "meaning": "Maximum relative error in Y"
+        }
+      ],
+      "neet_tip": "NEET asks for the percentage error in Y, the role of the reference wire, or the slope of the load-extension graph.",
+      "topic": "Young's modulus of elasticity of a metallic wire"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Water rises in a clean, narrow glass capillary because the adhesion between water and glass is greater than the cohesion within water. The angle of contact is nearly zero. The rise h is found by balancing the surface tension force against the weight of the liquid column. A travelling microscope is used to measure the height of the meniscus, the level of the water in the beaker and the internal radius of the capillary. When a detergent is added, the surface tension falls, so the capillary rise decreases. This is why detergents help water to penetrate fabrics and wet them. A narrower tube gives a larger rise, since hr is constant (Jurin's law). Hot water also rises less, because surface tension decreases with temperature.",
+      "key_points": [
+        "Height of rise is inversely proportional to the radius: hr = constant",
+        "The contact angle for pure water and clean glass is about 0°",
+        "Detergents and soaps reduce surface tension, so the rise decreases",
+        "The travelling microscope measures both h and r",
+        "Meniscus correction: use h + r/3 for an accurate value"
+      ],
+      "formulas": [
+        {
+          "formula": "$h = \\frac{2T\\cos\\theta}{r\\rho g}$",
+          "meaning": "Capillary rise (T = surface tension, θ = contact angle, ρ = density)"
+        },
+        {
+          "formula": "$T = \\frac{r\\rho g}{2}\\left(h + \\frac{r}{3}\\right)$",
+          "meaning": "Surface tension of water with θ ≈ 0 and the meniscus correction"
+        }
+      ],
+      "neet_tip": "NEET tests the effect of detergents or temperature on the rise, or the change in h when the radius changes.",
+      "topic": "Surface tension of water by capillary rise and effect of detergents"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "A small steel ball falling through a viscous liquid such as glycerine first accelerates. It soon reaches a constant terminal velocity. At that point, the weight equals the buoyant force plus the viscous drag given by Stokes' law, $6\\pi\\eta r v$. Two marks are made on a tall jar, the upper one well below the liquid surface so the ball is already at terminal velocity there. The time taken to cross the marks gives v. Plotting v against $r^2$ for balls of different radii gives a straight line through the origin. The coefficient of viscosity is obtained from its slope. The ball should be dropped along the axis of the jar to avoid wall effects. The temperature must be noted, because viscosity of liquids decreases sharply as temperature rises.",
+      "key_points": [
+        "Terminal velocity is proportional to $r^2$",
+        "The upper mark must be well below the surface so terminal velocity is reached",
+        "The v vs $r^2$ graph is a straight line, and η is found from its slope",
+        "Viscosity of liquids decreases with temperature, while that of gases increases",
+        "Drop the ball along the axis, away from the walls"
+      ],
+      "formulas": [
+        {
+          "formula": "$v_t = \\frac{2r^2(\\rho - \\sigma)g}{9\\eta}$",
+          "meaning": "Terminal velocity (ρ = density of the ball, σ = density of the liquid)"
+        },
+        {
+          "formula": "$\\eta = \\frac{2r^2(\\rho - \\sigma)g}{9v_t}$",
+          "meaning": "Coefficient of viscosity from the measured terminal velocity"
+        }
+      ],
+      "neet_tip": "NEET asks for the ratio of terminal velocities for different radii, or the shape of the velocity-time graph (it rises and then becomes flat).",
+      "topic": "Coefficient of viscosity by terminal velocity of a spherical body"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "A resonance tube is a tube closed at one end by a water column. A vibrating tuning fork is held over the open end and the length of the air column is changed. Loud sound (resonance) is heard when the natural frequency of the air column matches the fork. The closed end is a node and the open end is an antinode. The antinode actually forms slightly above the open end, at a distance called the end correction, e = 0.3d. At the first resonance, $l_1 + e = \\lambda/4$. At the second, $l_2 + e = 3\\lambda/4$. Subtracting the two eliminates the end correction, giving $v = 2f(l_2 - l_1)$. The resonance length is located accurately by approaching it from both sides.",
+      "key_points": [
+        "This is a closed pipe, so only odd harmonics are present",
+        "End correction e = 0.3d = 0.6r, where d is the internal diameter",
+        "$l_2 - l_1 = \\lambda/2$ is independent of the end correction",
+        "$l_2 \\approx 3l_1$, and $l_2$ is slightly greater than $3l_1$ because of the end correction ($l_2 = 3l_1 + 2e$)",
+        "The speed of sound increases with temperature and humidity"
+      ],
+      "formulas": [
+        {
+          "formula": "$v = 2f(l_2 - l_1)$",
+          "meaning": "Speed of sound from the first two resonance lengths"
+        },
+        {
+          "formula": "$e = \\frac{l_2 - 3l_1}{2}$",
+          "meaning": "End correction from the resonance lengths"
+        },
+        {
+          "formula": "$v = 4f(l_1 + e)$",
+          "meaning": "Speed of sound from the first resonance with the end correction"
+        }
+      ],
+      "neet_tip": "NEET frequently asks for v or e from the given $l_1$ and $l_2$. Note that this experiment needs an end correction, not an index correction.",
+      "topic": "Speed of sound in air using a resonance tube"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "The method of mixtures is based on the principle of calorimetry: heat lost by the hot body equals heat gained by the cold body and the calorimeter, assuming no losses. For a solid, a heated sample of known mass is quickly dropped into water at a known temperature in a copper calorimeter. The water is stirred and the highest steady temperature of the mixture is noted. For a liquid, a hot solid of known specific heat is dropped into the liquid instead. The calorimeter is polished and insulated to reduce heat loss by radiation and conduction. The transfer must be quick to reduce heat loss to the surroundings.",
+      "key_points": [
+        "Heat lost = heat gained (principle of calorimetry)",
+        "The copper calorimeter has low specific heat and good conductivity",
+        "Note the maximum temperature of the mixture",
+        "Polished surfaces and insulation reduce radiation and conduction losses",
+        "Heat loss to the surroundings makes the calculated specific heat of the solid smaller than the true value"
+      ],
+      "formulas": [
+        {
+          "formula": "$m_1 s_1 (T_1 - T) = (m_2 s_w + m_c s_c)(T - T_2)$",
+          "meaning": "Method of mixtures: hot solid ($m_1, s_1, T_1$), water ($m_2, s_w$) and calorimeter ($m_c, s_c$) both initially at $T_2$, final temperature T"
+        }
+      ],
+      "neet_tip": "NEET gives masses and temperatures and asks for the specific heat or the final temperature, sometimes including the water equivalent of the calorimeter.",
+      "topic": "Specific heat capacity of a solid and a liquid by method of mixtures"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "A metre bridge is a practical form of the Wheatstone bridge. It uses a 1 m uniform wire with a jockey. A known resistance R from a resistance box and the unknown wire X are placed in the two gaps. The jockey is slid along the wire to find the balance point where the galvanometer shows no deflection. If R is in the left gap and the balance length l is measured from the left end, then $R/X = l/(100 - l)$. The resistivity follows from the measured length and diameter of the wire. The balance point should lie near the middle of the wire for maximum sensitivity and minimum end error. R and X are interchanged and the mean is taken to cancel end corrections.",
+      "key_points": [
+        "This is the Wheatstone bridge principle, P/Q = R/S at balance",
+        "At balance, no current flows through the galvanometer",
+        "A null point near 50 cm gives the highest accuracy",
+        "Interchange the resistances to remove end error",
+        "The thick copper strips have negligible resistance, and the jockey should be pressed gently, never slid while pressed"
+      ],
+      "formulas": [
+        {
+          "formula": "$X = R\\frac{100 - l}{l}$",
+          "meaning": "Unknown resistance with R in the left gap and l in cm from the left end"
+        },
+        {
+          "formula": "$\\rho = \\frac{X\\pi r^2}{L}$",
+          "meaning": "Resistivity of the wire of length L and radius r"
+        },
+        {
+          "formula": "$X = R\\frac{100 - l + \\beta}{l + \\alpha}$",
+          "meaning": "With end corrections α and β at the two ends"
+        }
+      ],
+      "neet_tip": "NEET asks for X or the shift of the balance point when resistances change, and why the null point should be near the middle.",
+      "topic": "Resistivity of a wire using a metre bridge"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "The resistance of a wire is found from Ohm's law, V = IR, at constant temperature. The circuit has a battery, a key, a rheostat, an ammeter in series with the wire and a voltmeter in parallel with it. The current is varied with the rheostat and the corresponding values of V and I are noted. The V-I graph for an ohmic conductor is a straight line through the origin. The slope of V vs I gives R, while the slope of I vs V gives 1/R. A large current heats the wire and increases its resistance, so currents are kept small. An ideal ammeter has zero resistance and an ideal voltmeter infinite resistance. The resistivity is then calculated from the wire's dimensions.",
+      "key_points": [
+        "Ammeter in series, voltmeter in parallel across the wire",
+        "The V-I graph is linear and the slope (V on the y-axis) gives R",
+        "Keep the current small to avoid heating",
+        "Positive terminals of the meters go towards the positive terminal of the battery",
+        "Resistance depends on length and area, but resistivity is a material property"
+      ],
+      "formulas": [
+        {
+          "formula": "$R = \\frac{V}{I}$",
+          "meaning": "Ohm's law, valid at constant temperature"
+        },
+        {
+          "formula": "$\\rho = \\frac{RA}{L} = \\frac{R\\pi d^2}{4L}$",
+          "meaning": "Resistivity from resistance, length L and diameter d"
+        }
+      ],
+      "neet_tip": "NEET asks how to compare resistances from the slopes of V-I or I-V graphs, or about the correct placement of meters.",
+      "topic": "Resistance of a wire using Ohm's law"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "In the half deflection method, a high resistance R is connected in series with the galvanometer and a cell. R is adjusted to get an even-numbered deflection θ. A shunt S is then connected across the galvanometer and adjusted until the deflection becomes θ/2. If R is much larger than G, the main current is nearly unchanged, so the shunt carries half the current and G ≈ S. The exact formula is G = RS/(R - S). The figure of merit is the current needed for a deflection of one division. It is k = E/[(R + G)θ], with the unit ampere per division. A smaller figure of merit means a more sensitive galvanometer.",
+      "key_points": [
+        "Keep R very large (several kΩ) compared with G",
+        "Choose an even deflection so that θ/2 is a whole number",
+        "G ≈ S when R is much larger than G",
+        "The figure of merit is the current per division, and sensitivity is its reciprocal",
+        "Use a low-resistance cell (accumulator) to keep the emf steady"
+      ],
+      "formulas": [
+        {
+          "formula": "$G = \\frac{RS}{R - S}$",
+          "meaning": "Galvanometer resistance by the half deflection method"
+        },
+        {
+          "formula": "$k = \\frac{E}{(R + G)\\theta}$",
+          "meaning": "Figure of merit in A/div (E = emf, θ = deflection in divisions)"
+        }
+      ],
+      "neet_tip": "Expect a calculation of G from R and S, or the figure of merit from E, R, G and θ.",
+      "topic": "Resistance and figure of merit of a galvanometer by half deflection method"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "On an optical bench, the image position is located by the no-parallax method. The image is located when the tip of the image pin and the tip of the image coincide and do not separate when the eye is moved sideways. The bench scale readings may not equal the actual distances between the optical element and the pins. The index correction is found with an index rod of known length: index correction = actual length - observed length. It is added to every measured distance. For a concave mirror and a convex lens, real images are located directly and u, v are used in the mirror or lens formula. A convex mirror forms only a virtual image, so a convex lens is used to form a real image that acts as a virtual object. A plot of 1/v against 1/u is a straight line with equal intercepts of 1/f on both axes.",
+      "key_points": [
+        "No parallax means the image and the pin are at the same position",
+        "Index correction is needed in optical bench experiments",
+        "Index correction = actual distance (index rod) - observed distance",
+        "For a convex mirror, use an auxiliary convex lens",
+        "The u-v graph is a rectangular hyperbola, and the 1/u-1/v graph is a straight line with intercepts 1/f",
+        "At u = v = 2f, the image is the same size as the object for a concave mirror or convex lens"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$",
+          "meaning": "Mirror formula for concave and convex mirrors, with sign convention"
+        },
+        {
+          "formula": "$\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$",
+          "meaning": "Lens formula for a convex lens, with sign convention"
+        },
+        {
+          "formula": "$f = \\frac{R}{2}$",
+          "meaning": "For a convex mirror, R is the distance from the mirror to the point where the lens-formed image coincides with its own pin"
+        }
+      ],
+      "neet_tip": "NEET asks which experiment needs index correction (optical bench focal length) and for f from u-v data.",
+      "topic": "Focal length of convex mirror, concave mirror and convex lens by parallax method"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "Pins are fixed in front of a triangular glass prism to trace the incident ray, and the emergent ray is traced by sighting through the other face. The angle of deviation δ is measured for different angles of incidence i, usually from 30° to 60°. The δ-i graph is U-shaped but not symmetric. Its lowest point gives the angle of minimum deviation $\\delta_m$. At minimum deviation, i = e and the refracted ray inside the prism travels parallel to the base, with $r_1 = r_2 = A/2$. The refractive index then follows from the prism formula. For a given δ other than $\\delta_m$, there are two values of i, which are interchangeable as i and e.",
+      "key_points": [
+        "$i + e = A + \\delta$ and $r_1 + r_2 = A$",
+        "The δ vs i graph is U-shaped with a single minimum",
+        "At minimum deviation, i = e, r = A/2 and the ray inside is parallel to the base",
+        "δ increases with refractive index, so violet deviates more than red",
+        "Keep the pins vertical and widely separated (about 5 cm or more)"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\delta = i + e - A$",
+          "meaning": "Angle of deviation for a prism of angle A"
+        },
+        {
+          "formula": "$n = \\frac{\\sin\\left(\\frac{A + \\delta_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}$",
+          "meaning": "Refractive index from the angle of minimum deviation"
+        }
+      ],
+      "neet_tip": "NEET tests the shape of the δ-i graph, the condition i = e at minimum deviation, and n from A and $\\delta_m$.",
+      "topic": "Angle of deviation vs angle of incidence for a triangular prism"
+    },
+    {
+      "topic_index": 14,
+      "explanation": "A travelling microscope with a vernier on its vertical scale is used to measure the real and apparent thickness of a glass slab. First, a mark on paper is focused and the reading $R_1$ is taken. The slab is placed over the mark, and the microscope is raised to refocus the mark seen through the glass, giving $R_2$. Finally, lycopodium powder or chalk dust sprinkled on the top surface is focused, giving $R_3$. The real thickness is $R_3 - R_1$ and the apparent thickness is $R_3 - R_2$. Their ratio gives the refractive index. The microscope must always be moved in one direction to avoid backlash error.",
+      "key_points": [
+        "Real thickness = $R_3 - R_1$ and apparent thickness = $R_3 - R_2$",
+        "Normal shift = $R_2 - R_1 = t(1 - 1/n)$",
+        "Lycopodium powder makes the top surface visible",
+        "Move the microscope in one direction only to avoid backlash",
+        "The least count is found as in vernier calipers"
+      ],
+      "formulas": [
+        {
+          "formula": "$n = \\frac{\\text{real thickness}}{\\text{apparent thickness}} = \\frac{R_3 - R_1}{R_3 - R_2}$",
+          "meaning": "Refractive index of the glass slab"
+        },
+        {
+          "formula": "$d = t\\left(1 - \\frac{1}{n}\\right)$",
+          "meaning": "Apparent shift of the mark for a slab of thickness t"
+        }
+      ],
+      "neet_tip": "NEET gives the three microscope readings and asks for n, or gives n and t and asks for the shift.",
+      "topic": "Refractive index of a glass slab using a travelling microscope"
+    },
+    {
+      "topic_index": 15,
+      "explanation": "A p-n junction diode is studied in forward bias with a milliammeter and in reverse bias with a microammeter, the voltage being changed with a potential divider. In forward bias (p side to positive), the current is negligible until the knee or threshold voltage is reached. This is about 0.7 V for Si and 0.3 V for Ge. Beyond it, the current rises steeply, almost exponentially. In reverse bias, only a tiny, nearly constant reverse saturation current of the order of μA flows, due to minority carriers. This current increases with temperature. The forward resistance is low and the reverse resistance is very high. The dynamic resistance is the reciprocal of the slope of the I-V curve at a point.",
+      "key_points": [
+        "Knee voltage is about 0.7 V for Si and 0.3 V for Ge",
+        "Use a milliammeter in forward bias and a microammeter in reverse bias",
+        "The reverse saturation current is due to minority carriers and depends on temperature",
+        "The I-V curve is non-linear, so the diode is a non-ohmic device",
+        "Exceeding the reverse breakdown voltage of an ordinary diode damages it"
+      ],
+      "formulas": [
+        {
+          "formula": "$r_d = \\frac{\\Delta V}{\\Delta I}$",
+          "meaning": "Dynamic (ac) resistance of the diode from the slope of the characteristic"
+        }
+      ],
+      "neet_tip": "NEET asks you to identify the forward or reverse characteristic graph, the knee voltage, or the dynamic resistance from a graph.",
+      "topic": "Characteristic curves of a p-n junction diode in forward and reverse bias"
+    },
+    {
+      "topic_index": 16,
+      "explanation": "A Zener diode is a heavily doped p-n junction designed to operate in the reverse breakdown region. Its forward characteristic is like that of an ordinary diode. In reverse bias, the current is negligible until the Zener voltage $V_Z$ is reached. At that point, the current rises sharply while the voltage across the diode stays almost constant. This voltage is read from the vertical part of the reverse characteristic. A series resistor limits the current to protect the diode. Because the voltage stays constant over a wide range of current, the Zener diode is used as a voltage regulator. Heavy doping makes the depletion layer very thin, so the electric field across it becomes very strong.",
+      "key_points": [
+        "Heavily doped, with a thin depletion layer",
+        "Operated in reverse bias at breakdown",
+        "The voltage across it stays nearly constant at $V_Z$ beyond breakdown",
+        "A series resistor is essential to limit the current",
+        "Used as a voltage regulator"
+      ],
+      "formulas": [
+        {
+          "formula": "$R_s = \\frac{V_{in} - V_Z}{I}$",
+          "meaning": "Series resistance, where I is the total current through $R_s$ (Zener current + load current)"
+        },
+        {
+          "formula": "$I_Z = I - I_L = \\frac{V_{in} - V_Z}{R_s} - \\frac{V_Z}{R_L}$",
+          "meaning": "Current through the Zener diode in a regulator circuit"
+        }
+      ],
+      "neet_tip": "NEET asks for the Zener current or series resistance in a regulator circuit, or for identifying the breakdown region on a graph.",
+      "topic": "Characteristic curves of a Zener diode and reverse breakdown voltage"
+    },
+    {
+      "topic_index": 17,
+      "explanation": "Components are identified using a multimeter in the resistance or continuity mode. The leads are connected one way and then reversed. A resistor shows the same finite resistance in both directions and no change with time. A diode conducts (low resistance) in one direction only and shows very high resistance on reversal. An LED behaves like a diode but also glows when forward biased. A capacitor shows a deflection that starts large and gradually decays as it charges, ending at very high resistance. On reversing the leads, the same transient appears again. An integrated circuit (IC) has many terminals.",
+      "key_points": [
+        "Resistor: same steady resistance in both directions",
+        "Diode: conducts in one direction only, with no light",
+        "LED: one-way conduction with light emission",
+        "Capacitor: momentary current that decays to zero in either direction",
+        "IC: multiple terminals"
+      ],
+      "formulas": [],
+      "neet_tip": "NEET describes the multimeter behaviour of an unknown component and asks you to identify it.",
+      "topic": "Identification of diode, LED, resistor and capacitor from a mixed collection"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$LC_{vernier} = 1\\,MSD - 1\\,VSD = \\frac{MSD}{N}$",
+      "meaning": "Least count of vernier calipers, where N vernier divisions equal (N-1) main scale divisions"
+    },
+    {
+      "formula": "$LC_{screw} = \\frac{p}{N}$",
+      "meaning": "Least count of a screw gauge, p = pitch, N = number of circular divisions"
+    },
+    {
+      "formula": "$\\text{True reading} = \\text{observed} - \\text{zero error}$",
+      "meaning": "Zero error is subtracted algebraically"
+    },
+    {
+      "formula": "$E = E_0 e^{-bt/m}$",
+      "meaning": "Energy of a damped pendulum, $E \\propto A^2$, b = damping constant, m = bob mass"
+    },
+    {
+      "formula": "$m_1 d_1 = m_2 d_2$",
+      "meaning": "Principle of moments, masses times distances from the fulcrum"
+    },
+    {
+      "formula": "$Y = \\frac{MgL}{\\pi r^2 l}$",
+      "meaning": "Young's modulus, M = load, L = length, r = radius, l = extension"
+    },
+    {
+      "formula": "$h = \\frac{2T\\cos\\theta}{r\\rho g}$",
+      "meaning": "Capillary rise, T = surface tension, r = tube radius, ρ = liquid density"
+    },
+    {
+      "formula": "$v_t = \\frac{2r^2(\\rho - \\sigma)g}{9\\eta}$",
+      "meaning": "Terminal velocity, ρ = ball density, σ = liquid density, η = viscosity"
+    },
+    {
+      "formula": "$v = 2f(l_2 - l_1)$",
+      "meaning": "Speed of sound from a resonance tube, f = fork frequency"
+    },
+    {
+      "formula": "$e = 0.3d = \\frac{l_2 - 3l_1}{2}$",
+      "meaning": "End correction of the resonance tube, d = internal diameter"
+    },
+    {
+      "formula": "$m_1 s_1 (T_1 - T) = (m_2 s_w + m_c s_c)(T - T_2)$",
+      "meaning": "Method of mixtures, heat lost = heat gained"
+    },
+    {
+      "formula": "$X = R\\frac{100 - l}{l}$",
+      "meaning": "Metre bridge with R in the left gap and balance length l cm from the left"
+    },
+    {
+      "formula": "$\\rho = \\frac{R\\pi r^2}{L}$",
+      "meaning": "Resistivity, r = wire radius, L = wire length"
+    },
+    {
+      "formula": "$R = \\frac{V}{I}$",
+      "meaning": "Ohm's law, the slope of the V-I graph"
+    },
+    {
+      "formula": "$G = \\frac{RS}{R - S}$",
+      "meaning": "Galvanometer resistance by half deflection, R = series resistance, S = shunt"
+    },
+    {
+      "formula": "$k = \\frac{E}{(R + G)\\theta}$",
+      "meaning": "Figure of merit in A/div"
+    },
+    {
+      "formula": "$\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$",
+      "meaning": "Mirror formula"
+    },
+    {
+      "formula": "$\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$",
+      "meaning": "Lens formula"
+    },
+    {
+      "formula": "$\\text{Index correction} = \\text{actual length} - \\text{observed length}$",
+      "meaning": "Optical bench correction found with an index rod"
+    },
+    {
+      "formula": "$n = \\frac{\\sin\\left(\\frac{A + \\delta_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}$",
+      "meaning": "Prism refractive index, A = prism angle, $\\delta_m$ = minimum deviation"
+    },
+    {
+      "formula": "$n = \\frac{R_3 - R_1}{R_3 - R_2}$",
+      "meaning": "Glass slab refractive index from travelling microscope readings"
+    },
+    {
+      "formula": "$r_d = \\frac{\\Delta V}{\\Delta I}$",
+      "meaning": "Dynamic resistance of a diode"
+    },
+    {
+      "formula": "$R_s = \\frac{V_{in} - V_Z}{I}$",
+      "meaning": "Series resistor for a Zener regulator, I = total current"
+    }
+  ],
+  "common_traps": [
+    "Adding a positive zero error instead of subtracting it. The correct rule is true value = observed value - zero error, taken with its sign.",
+    "Confusing end correction with index correction. The resonance tube needs an end correction, while optical bench focal length experiments need an index correction.",
+    "Assuming the $A^2$ vs t graph of a damped pendulum is linear. It is exponential, and only $\\ln A^2$ vs t is linear.",
+    "Using $v = 4fl_1$ without the end correction. Using $v = 2f(l_2 - l_1)$ removes the end correction automatically.",
+    "Thinking detergents increase capillary rise. They lower surface tension, so the rise decreases.",
+    "Writing G = S in the half deflection method even when R is not large. The exact formula is G = RS/(R - S).",
+    "Taking the prism δ-i graph as symmetric or V-shaped. It is a smooth U-shaped curve that is not symmetric, with a single minimum where i = e.",
+    "Expecting a Zener diode to regulate in forward bias. It regulates only in reverse breakdown and needs a series resistor."
+  ],
+  "quick_revision": [
+    "Vernier least count is 0.1 mm and screw gauge least count is 0.01 mm. Zero error is always subtracted algebraically.",
+    "Backlash error occurs in the screw gauge and travelling microscope. Avoid it by rotating in one direction only.",
+    "Damped pendulum: $E \\propto A^2$ decays as $e^{-bt/m}$, and the $\\ln A^2$ vs t graph is a straight line.",
+    "In Searle's experiment, the reference wire cancels temperature and support-yielding errors, and the radius gives the largest error.",
+    "Capillary rise follows hr = constant, and detergents or a rise in temperature lower the rise.",
+    "Terminal velocity is proportional to $r^2$, and the v vs $r^2$ graph is a straight line.",
+    "Resonance tube: $l_2 - l_1 = \\lambda/2$, e = 0.3d, and $l_2 \\approx 3l_1$.",
+    "Metre bridge accuracy is best near the 50 cm null point. Interchange the resistances to cancel end error.",
+    "Half deflection: G = RS/(R - S), and the figure of merit has the unit A/div.",
+    "An optical bench needs an index correction, and the no-parallax condition locates the image.",
+    "Prism: at minimum deviation, i = e, r = A/2 and the ray inside is parallel to the base. Slab: n = real thickness/apparent thickness.",
+    "Diode knee voltage is 0.7 V (Si) or 0.3 V (Ge). A Zener diode is used in reverse breakdown. A capacitor shows a decaying deflection on a multimeter, and an LED glows in forward bias."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q020",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q20"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

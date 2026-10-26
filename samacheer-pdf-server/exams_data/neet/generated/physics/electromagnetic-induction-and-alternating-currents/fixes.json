@@ -1,0 +1,20 @@
+[
+  {
+    "path": "topics[3].key_points[5]",
+    "old": "Voltage across an inductor is $L\\,dI/dt$; in parallel the current splits, so each inductor carries $I/2$",
+    "new": "Voltage across an inductor is $L\\,dI/dt$; in parallel each inductor has the same voltage across it, so $L_1\\,dI_1/dt = L_2\\,dI_2/dt$ and the current divides inversely as $L$ (each carries $I/2$ only if $L_1 = L_2$)",
+    "fixes": "Parallel inductors: current divides inversely as L, not always I/2"
+  },
+  {
+    "path": "common_traps[7]",
+    "old": "Forgetting that in parallel inductors each carries only part of the current, so the emf across the combination differs from that across one inductor in series.",
+    "new": "Forgetting how current and emf divide between inductors: in parallel, all inductors have the same emf across them, and the currents divide inversely as $L$. In series, all carry the same current, and the emfs divide in proportion to $L$.",
+    "fixes": "Replaced misleading parallel/series inductor emf trap"
+  },
+  {
+    "path": "topics[6].explanation",
+    "old": "In a series LCR circuit driven by $V = V_0\\sin\\omega t$, the current is $I = I_0\\sin(\\omega t - \\phi)$, where $\\tan\\phi = \\frac{X_L - X_C}{R}$. The circuit is inductive if $X_L > X_C$ (current lags) and capacitive if $X_C > X_L$ (current leads). Resonance occurs when $X_L = X_C$, that is $\\omega_0 = \\frac{1}{\\sqrt{LC}}$. At resonance Z is minimum and equal to R, the current is maximum ($V_0/R$), $\\phi = 0$ and the power factor is 1. $V_L$ and $V_C$ are equal and opposite, cancelling each other, and each may be much larger than the source voltage. Sharpness of resonance is measured by the quality factor $Q = \\frac{\\omega_0 L}{R} = \\frac{1}{R}\\sqrt{\\frac{L}{C}}$. The bandwidth is $\\Delta\\omega = R/L$. A smaller R gives a sharper resonance. Resonance is used in radio and TV tuning circuits. It needs both L and C to be present.",
+    "new": "In a series LCR circuit driven by $V = V_0\\sin\\omega t$, the current is $I = I_0\\sin(\\omega t - \\phi)$, where $\\tan\\phi = \\frac{X_L - X_C}{R}$. The circuit is inductive if $X_L > X_C$ (current lags) and capacitive if $X_C > X_L$ (current leads). Resonance occurs when $X_L = X_C$, that is $\\omega_0 = \\frac{1}{\\sqrt{LC}}$. At resonance Z is minimum and equal to R, the current is maximum ($V_0/R$), $\\phi = 0$ and the power factor is 1. $V_L$ and $V_C$ are equal and opposite, cancelling each other, and each may be much larger than the source voltage. Sharpness of resonance is measured by the quality factor $Q = \\frac{\\omega_0 L}{R} = \\frac{1}{R}\\sqrt{\\frac{L}{C}}$. The bandwidth is $2\\Delta\\omega = R/L$, so $Q = \\omega_0/(2\\Delta\\omega)$. A smaller R gives a sharper resonance. Resonance is used in radio and TV tuning circuits. It needs both L and C to be present.",
+    "fixes": "Bandwidth is 2Δω = R/L"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "unit_id": "che_u10",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[0].key_points[3]",
+      "quote": "B is a non-metal while Al, Ga, In and Tl are metals.",
+      "problem": "This conflicts with key_points[2] and the explanation, which list B as a metalloid. A student cannot tell which classification to use in a classification MCQ.",
+      "correction": "Use one consistent classification. For example: 'B is non-metallic (often classed as a metalloid) while Al, Ga, In and Tl are metals.'",
+      "severity": "minor"
+    },
+    {
+      "location": "topics[0].explanation",
+      "quote": "All Group 18 elements are monatomic gases.",
+      "problem": "The notes list Og as a Group 18 member. Og is a synthetic superheavy element whose physical state is not established and is predicted not to be a gas, so 'all' overgeneralises.",
+      "correction": "He, Ne, Ar, Kr, Xe and Rn are monatomic gases.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

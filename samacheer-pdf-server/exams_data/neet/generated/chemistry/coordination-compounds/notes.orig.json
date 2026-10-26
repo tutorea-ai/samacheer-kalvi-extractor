@@ -1,0 +1,322 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u12",
+  "unit_no": 12,
+  "unit_name": "Co-ordination Compounds",
+  "slug": "coordination-compounds",
+  "overview": "Coordination compounds contain a central metal atom or ion bonded to a fixed number of ligands through coordinate bonds. The unit covers Werner's theory, ligands, IUPAC naming, isomerism, valence bond theory, crystal field theory, colour, magnetism and applications. NEET asks 3 to 4 questions from it almost every year, mostly on nomenclature, isomer counting, the spectrochemical series and magnetic moment calculations, so it is a high-scoring unit.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "A coordination compound contains a complex entity, such as $[Co(NH_3)_6]^{3+}$, that keeps its identity in solution. A double salt, such as Mohr's salt $FeSO_4\\cdot(NH_4)_2SO_4\\cdot6H_2O$, dissociates completely into simple ions. Werner proposed that a metal shows two kinds of valency. Primary valency is ionisable, equals the oxidation state and is satisfied only by negative ions. Secondary valency is non-ionisable, equals the coordination number, is satisfied by neutral molecules or negative ions, and is directed in space, which gives the complex its geometry. Werner tested this with cobalt ammines. With excess $AgNO_3$, $CoCl_3\\cdot6NH_3$ precipitates 3 mol AgCl, $CoCl_3\\cdot5NH_3$ precipitates 2 mol and $CoCl_3\\cdot4NH_3$ precipitates 1 mol. Their formulas are therefore $[Co(NH_3)_6]Cl_3$, $[CoCl(NH_3)_5]Cl_2$ and $[CoCl_2(NH_3)_4]Cl$. Molar conductivity rises with the number of ions released, which identifies the electrolyte type: 1:1, 1:2 or 1:3.",
+      "key_points": [
+        "Primary valency equals the oxidation state; it is ionisable and satisfied by anions only.",
+        "Secondary valency equals the coordination number; it is non-ionisable and directional.",
+        "Only ions outside the square bracket (counter ions) are precipitated by $AgNO_3$.",
+        "Number of ions in solution is the complex ion plus its counter ions; conductivity increases with it.",
+        "$[Co(NH_3)_6]Cl_3$ gives 4 ions (1:3 electrolyte); $[Co(NH_3)_3(NO_2)_3]$ is a non-electrolyte.",
+        "Coordination sphere is the metal plus its ligands written inside square brackets.",
+        "Homoleptic complexes have one type of ligand, e.g. $[Co(NH_3)_6]^{3+}$; heteroleptic complexes have more than one, e.g. $[Co(NH_3)_4Cl_2]^+$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{Charge on complex} = \\text{O.S. of metal} + \\sum \\text{charges of ligands}$",
+          "meaning": "Use to find the oxidation state of the central metal."
+        },
+        {
+          "formula": "$n(AgCl) = \\text{number of ionisable } Cl^- \\text{ per formula unit}$",
+          "meaning": "Moles of AgCl precipitated per mole of complex give the number of chlorides outside the sphere."
+        }
+      ],
+      "neet_tip": "Expect questions asking for the 1:3 or 1:2 electrolyte, or the moles of AgCl precipitated; count only the ions outside the bracket.",
+      "topic": "Introduction to coordination compounds; Werner's theory"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "A ligand is an ion or molecule that donates an electron pair to the metal. The coordination number (CN) is the number of donor atoms bonded to the metal, not the number of ligands. Denticity is the number of donor atoms one ligand uses. Unidentate ligands include $Cl^-$, $H_2O$, $NH_3$ and $CO$. Didentate ligands include ethylenediamine ($en$) and oxalate ($C_2O_4^{2-}$). $EDTA^{4-}$ is hexadentate, binding through 2 N and 4 O atoms. Ambidentate ligands can bind through either of two atoms: $NO_2^-$ (N gives nitro, O gives nitrito), $SCN^-$ (S gives thiocyanato, N gives isothiocyanato) and $CN^-$/$NC^-$. A di- or polydentate ligand that binds one metal through two or more atoms forms a ring and is called a chelating ligand. Chelate complexes are more stable than comparable complexes of unidentate ligands; this is the chelate effect, and it is mainly entropy-driven.",
+      "key_points": [
+        "CN = sum of the denticities of all ligands; e.g. $[Co(en)_3]^{3+}$ has CN 6.",
+        "$EDTA^{4-}$ is hexadentate and forms 1:1 complexes with $Ca^{2+}$ and $Mg^{2+}$.",
+        "Ambidentate ligands, such as $NO_2^-$, $SCN^-$ and $CN^-$, give rise to linkage isomerism.",
+        "Five- and six-membered chelate rings are the most stable.",
+        "A ligand that bonds through only one donor atom at a time, even if it has two (as ambidentate ligands do), counts as unidentate.",
+        "Common CN values: 2 (linear), 4 (tetrahedral or square planar), 6 (octahedral)."
+      ],
+      "formulas": [
+        {
+          "formula": "$CN = \\sum (\\text{number of ligands} \\times \\text{denticity})$",
+          "meaning": "Coordination number of the central atom."
+        }
+      ],
+      "neet_tip": "NEET asks for the coordination number of complexes containing $en$, $ox$ or EDTA, and asks you to identify ambidentate or chelating ligands.",
+      "topic": "Ligands, coordination number, denticity and chelation"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "In a salt, name the cation first, then the anion. Inside the complex, list ligands alphabetically, then the metal, then its oxidation state in Roman numerals in parentheses. Multiplying prefixes such as di, tri and tetra are ignored when alphabetising. For ligands whose names already contain a number, such as ethane-1,2-diamine, use bis, tris and tetrakis. Anionic ligands end in -o or -ido, for example chlorido, cyanido, hydroxido, oxalato and nitrito-N. Neutral ligands keep their names, with special names aqua ($H_2O$), ammine ($NH_3$), carbonyl ($CO$) and nitrosyl ($NO$). If the complex is an anion, the metal name ends in -ate, using Latin roots where they exist: ferrate (Fe), cuprate (Cu), argentate (Ag), aurate (Au), plumbate (Pb) and stannate (Sn). For example, $K_3[Fe(CN)_6]$ is potassium hexacyanidoferrate(III), and $[Co(NH_3)_4(H_2O)Cl]Cl_2$ is tetraammineaquachloridocobalt(III) chloride.",
+      "key_points": [
+        "In a formula, write the metal symbol first, then the ligands in alphabetical order, all inside square brackets.",
+        "Alphabetise by ligand name only: ammine (a) comes before aqua, chlorido, cyanido.",
+        "Neutral complexes take no -ate ending: $[Ni(CO)_4]$ is tetracarbonylnickel(0).",
+        "$[Pt(NH_3)_2Cl(NO_2)]$ is diamminechloridonitrito-N-platinum(II).",
+        "$[Co(en)_3]_2(SO_4)_3$ is tris(ethane-1,2-diamine)cobalt(III) sulphate.",
+        "When converting a name to a formula, check that the overall charge balances."
+      ],
+      "formulas": [],
+      "neet_tip": "Most often a name is given and you must pick the correct formula, or vice versa; balance the charge to find how many counter ions there are.",
+      "topic": "IUPAC nomenclature of mononuclear coordination compounds"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Isomerism is of two types. Structural isomers differ in which atoms are bonded to which. Ionisation isomers exchange an ion inside the sphere with one outside, e.g. $[Co(NH_3)_5SO_4]Br$ and $[Co(NH_3)_5Br]SO_4$. Hydrate isomers differ in whether water is a ligand or water of crystallisation, e.g. the $CrCl_3\\cdot6H_2O$ series. Linkage isomers arise from ambidentate ligands, e.g. $-NO_2$ versus $-ONO$. Coordination isomers exchange ligands between a cationic and an anionic complex. Stereoisomers have the same bonds but a different spatial arrangement. Geometrical isomerism occurs in square planar $MA_2B_2$ (cis/trans) and $MABCD$ (3 isomers), and in octahedral $MA_4B_2$ and $[M(AA)_2B_2]$ (cis/trans). Octahedral $MA_3B_3$ shows fac and mer isomers. Tetrahedral complexes show no geometrical isomerism. Optical isomerism requires the absence of a plane of symmetry. $[M(AA)_3]$ complexes such as $[Co(en)_3]^{3+}$ and $[Fe(ox)_3]^{3-}$ are chiral. In $[M(AA)_2B_2]$ only the cis form is chiral; the trans form has a mirror plane.",
+      "key_points": [
+        "Fac: three identical ligands on one triangular face. Mer: three identical ligands in a plane containing the metal.",
+        "$[CoCl_2(en)_2]^+$ has 3 stereoisomers: trans plus a d/l pair of cis.",
+        "$MA_2B_2C_2$ (octahedral) has 5 geometrical isomers and 6 stereoisomers in total.",
+        "Tetrahedral complexes with four different unidentate ligands can be optically active but are rarely examined.",
+        "Square planar complexes with unidentate ligands are generally optically inactive because the molecular plane is a mirror plane.",
+        "Ionisation isomers give different precipitation tests, e.g. one gives a $BaSO_4$ precipitate, the other an AgBr precipitate."
+      ],
+      "formulas": [],
+      "neet_tip": "Typical questions: which complex shows fac/mer isomerism, whether a given cis/trans or $[M(AA)_3]$ species is chiral, and how many isomers are possible.",
+      "topic": "Isomerism in coordination compounds"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "In valence bond theory (VBT), the metal ion uses empty hybrid orbitals to accept lone pairs from the ligands. The type of hybridisation fixes the geometry. sp3 hybridisation gives a tetrahedral complex, as in $[NiCl_4]^{2-}$ (2 unpaired electrons) and $[Ni(CO)_4]$ (diamagnetic). dsp2 hybridisation gives a square planar complex, as in $[Ni(CN)_4]^{2-}$ (diamagnetic). d2sp3 hybridisation uses inner $(n-1)d$ orbitals and gives an inner-orbital, low-spin octahedral complex, e.g. $[Co(NH_3)_6]^{3+}$, which is diamagnetic. sp3d2 hybridisation uses outer $nd$ orbitals and gives an outer-orbital, high-spin octahedral complex, e.g. $[CoF_6]^{3-}$ with 4 unpaired electrons. Strong-field ligands such as $CN^-$ and $CO$ force electrons to pair; $NH_3$ pairs electrons with $Co^{3+}$. VBT has several limitations. It cannot explain colour, gives no quantitative treatment of magnetic data, does not distinguish strong and weak ligands, and cannot predict whether a 4-coordinate complex is tetrahedral or square planar.",
+      "key_points": [
+        "Unpaired electrons give paramagnetism; zero unpaired electrons give diamagnetism.",
+        "$[Fe(CN)_6]^{4-}$ is d2sp3 and diamagnetic. $[Fe(CN)_6]^{3-}$ is d2sp3 with 1 unpaired electron.",
+        "$[MnCl_4]^{2-}$ and $[CoCl_4]^{2-}$ are sp3 and paramagnetic.",
+        "Ni(0) in $[Ni(CO)_4]$ is $3d^{10}$, sp3, tetrahedral and diamagnetic.",
+        "Most $d^8$ $Ni^{2+}$ complexes with strong ligands are square planar (dsp2)."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\mu_{s} = \\sqrt{n(n+2)}\\ \\text{BM}$",
+          "meaning": "Spin-only magnetic moment; n is the number of unpaired electrons."
+        }
+      ],
+      "neet_tip": "NEET asks you to match a complex with its hybridisation and magnetic nature; first find the oxidation state and d-electron count.",
+      "topic": "Bonding: valence bond approach"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Crystal field theory (CFT) treats ligands as point charges or dipoles and the metal–ligand bond as purely ionic. In an octahedral field the five degenerate d orbitals split into a lower $t_{2g}$ set ($d_{xy}$, $d_{yz}$, $d_{xz}$) at $-0.4\\Delta_o$ and a higher $e_g$ set ($d_{x^2-y^2}$, $d_{z^2}$) at $+0.6\\Delta_o$. In a tetrahedral field the order is reversed: e lies lower and $t_2$ higher, with $\\Delta_t = \\frac{4}{9}\\Delta_o$. Because $\\Delta_t$ is so small, tetrahedral complexes are almost always high spin. For $d^4$ to $d^7$ octahedral ions, the spin state depends on how $\\Delta_o$ compares with the pairing energy P. If $\\Delta_o < P$ (weak field), the complex is high spin, e.g. $t_{2g}^3e_g^1$ for $d^4$. If $\\Delta_o > P$ (strong field), it is low spin, e.g. $t_{2g}^4$ for $d^4$. The spectrochemical series ranks ligands by field strength: $I^- < Br^- < SCN^- < Cl^- < S^{2-} < F^- < OH^- < C_2O_4^{2-} < H_2O < NCS^- < edta^{4-} < NH_3 < en < CN^- < CO$. $\\Delta_o$ also increases with higher metal oxidation state and on going from 3d to 4d to 5d metals.",
+      "key_points": [
+        "Strongest ligands are $CO$ and $CN^-$; halides are weak-field, with $I^-$ the weakest.",
+        "Within ligands: $NH_3 > H_2O > F^- > Cl^-$.",
+        "4d and 5d metal complexes are nearly always low spin.",
+        "In a square planar complex, $d_{x^2-y^2}$ is the highest-energy orbital.",
+        "CFT ignores covalent character, so it cannot explain why neutral $CO$ is the strongest ligand."
+      ],
+      "formulas": [
+        {
+          "formula": "$CFSE_{oct} = (-0.4\\,n_{t_{2g}} + 0.6\\,n_{e_g})\\Delta_o + mP$",
+          "meaning": "Crystal field stabilisation energy for an octahedral complex; m is the number of extra electron pairs formed."
+        },
+        {
+          "formula": "$\\Delta_t = \\frac{4}{9}\\Delta_o$",
+          "meaning": "Tetrahedral splitting compared with octahedral splitting for the same metal and ligands."
+        }
+      ],
+      "neet_tip": "Ligand field-strength order and high-spin versus low-spin configurations ($t_{2g}^x e_g^y$) are asked almost every year.",
+      "topic": "Basic ideas of crystal field theory"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Most transition metal complexes are coloured because of d–d transitions. An electron in $t_{2g}$ absorbs visible light and is promoted to $e_g$, and we see the complementary colour. $[Ti(H_2O)_6]^{3+}$ ($d^1$) absorbs at about 498 nm (blue-green) and appears violet. Ions with $d^0$ (e.g. $Sc^{3+}$, $Ti^{4+}$) or $d^{10}$ (e.g. $Zn^{2+}$, $Cu^+$) configurations show no d–d transitions and are colourless. Intensely coloured species such as $MnO_4^-$ and $CrO_4^{2-}$ owe their colour to charge transfer, not d–d transitions. Anhydrous $CuSO_4$ is white and $CuSO_4\\cdot5H_2O$ is blue, because there is no splitting without ligands. Replacing $H_2O$ in green $[Ni(H_2O)_6]^{2+}$ with $en$ raises $\\Delta_o$, so the complex absorbs at shorter wavelength and turns blue, then violet. Magnetic behaviour follows from the number of unpaired electrons, using the spin-only formula. Spin-only moments are 1.73 BM for n = 1, 2.83 for n = 2, 3.87 for n = 3, 4.90 for n = 4 and 5.92 for n = 5.",
+      "key_points": [
+        "Larger $\\Delta_o$ means higher-energy absorption, i.e. shorter wavelength absorbed.",
+        "Colour seen is complementary to the colour absorbed.",
+        "$d^6$ low spin, such as $[Co(NH_3)_6]^{3+}$ and $[Fe(CN)_6]^{4-}$, has n = 0 and is diamagnetic.",
+        "$d^5$ high spin, such as $[Fe(H_2O)_6]^{3+}$ and $[MnF_6]^{4-}$, has n = 5, the maximum.",
+        "Procedure: find the O.S., find the d-count, decide strong or weak field, then count unpaired electrons."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta_o = \\frac{hc}{\\lambda}$ (per ion), $\\Delta_o = \\frac{N_Ahc}{\\lambda}$ (per mole)",
+          "meaning": "Crystal field splitting from the wavelength absorbed by a $d^1$ complex."
+        },
+        {
+          "formula": "$\\mu = \\sqrt{n(n+2)}\\ \\text{BM}$",
+          "meaning": "Compare paramagnetism of complexes; the highest n gives the highest $\\mu$."
+        }
+      ],
+      "neet_tip": "Questions ask which species has the highest spin-only moment or which is colourless; work out the d-count and spin state carefully.",
+      "topic": "Colour and magnetic properties"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Qualitative analysis uses several characteristic complexes. $Ni^{2+}$ gives a rosy-red precipitate with dimethylglyoxime (DMG). $Cu^{2+}$ gives deep blue $[Cu(NH_3)_4]^{2+}$ with excess $NH_3$. $Fe^{3+}$ gives blood-red $[Fe(SCN)(H_2O)_5]^{2+}$ with $SCN^-$, and Prussian blue $Fe_4[Fe(CN)_6]_3$ with $K_4[Fe(CN)_6]$. Water hardness is estimated by titrating $Ca^{2+}$ and $Mg^{2+}$ with $Na_2EDTA$. In metallurgy, Ag and Au are leached with $CN^-$ in the presence of air to form $[Ag(CN)_2]^-$ and $[Au(CN)_2]^-$, then recovered by displacement with Zn. Nickel is refined by the Mond process via volatile $[Ni(CO)_4]$. In biology, chlorophyll contains Mg, haemoglobin contains Fe, and vitamin $B_{12}$ (cyanocobalamin) contains Co. In medicine, cis-platin $cis-[PtCl_2(NH_3)_2]$ is an anticancer drug. EDTA removes Pb in lead poisoning, and D-penicillamine and desferrioxamine B remove excess Cu and Fe. Wilkinson's catalyst $[(Ph_3P)_3RhCl]$ hydrogenates alkenes, and $[Ag(S_2O_3)_2]^{3-}$ forms when photographic film is fixed with hypo.",
+      "key_points": [
+        "Chlorophyll contains Mg; haemoglobin contains Fe; vitamin $B_{12}$ contains Co.",
+        "Cis-platin is the cis isomer; the trans isomer is inactive as an anticancer drug.",
+        "Mond process: $Ni + 4CO \\rightarrow [Ni(CO)_4]$, which decomposes on heating to give pure Ni.",
+        "Gold and silver extraction is a cyanide process: complexation followed by Zn displacement.",
+        "Electroplating of Ag and Au uses $[Ag(CN)_2]^-$ and $[Au(CN)_2]^-$ baths.",
+        "EDTA titration is used to estimate water hardness."
+      ],
+      "formulas": [
+        {
+          "formula": "$4Au + 8CN^- + 2H_2O + O_2 \\rightarrow 4[Au(CN)_2]^- + 4OH^-$",
+          "meaning": "Leaching of gold."
+        },
+        {
+          "formula": "$2[Au(CN)_2]^- + Zn \\rightarrow [Zn(CN)_4]^{2-} + 2Au$",
+          "meaning": "Recovery of gold by displacement with zinc."
+        }
+      ],
+      "neet_tip": "Usually a match-the-column question pairing a metal with a biomolecule, or a drug or catalyst with the complex involved.",
+      "topic": "Importance in qualitative analysis, extraction of metals and biological systems"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\mu_s = \\sqrt{n(n+2)}\\ \\text{BM}$",
+      "meaning": "Spin-only magnetic moment: n = 1, 2, 3, 4, 5 gives 1.73, 2.83, 3.87, 4.90, 5.92 BM."
+    },
+    {
+      "formula": "$CN = \\sum(\\text{ligands} \\times \\text{denticity})$",
+      "meaning": "Coordination number."
+    },
+    {
+      "formula": "$\\text{O.S.} = \\text{charge of complex} - \\sum \\text{ligand charges}$",
+      "meaning": "Oxidation state of the central metal."
+    },
+    {
+      "formula": "$CFSE = (-0.4\\,n_{t_{2g}} + 0.6\\,n_{e_g})\\Delta_o + mP$",
+      "meaning": "Octahedral crystal field stabilisation energy."
+    },
+    {
+      "formula": "$\\Delta_t = \\frac{4}{9}\\Delta_o$",
+      "meaning": "Tetrahedral splitting; tetrahedral complexes are always high spin."
+    },
+    {
+      "formula": "$\\Delta_o = \\frac{N_A hc}{\\lambda}$",
+      "meaning": "Splitting energy per mole from the absorbed wavelength."
+    },
+    {
+      "formula": "$I^- < Br^- < SCN^- < Cl^- < S^{2-} < F^- < OH^- < C_2O_4^{2-} < H_2O < NCS^- < edta^{4-} < NH_3 < en < CN^- < CO$",
+      "meaning": "Spectrochemical series in increasing field strength."
+    },
+    {
+      "formula": "$\\Delta_o > P \\Rightarrow$ low spin; $\\Delta_o < P \\Rightarrow$ high spin",
+      "meaning": "Spin-state decision for $d^4$ to $d^7$ octahedral ions."
+    },
+    {
+      "formula": "sp3: tetrahedral; dsp2: square planar; d2sp3: inner-orbital octahedral; sp3d2: outer-orbital octahedral",
+      "meaning": "VBT hybridisation and the geometry it produces."
+    },
+    {
+      "formula": "$MA_3B_3$: fac + mer; $MA_4B_2$: cis + trans; $MA_2B_2C_2$: 5 geometrical isomers",
+      "meaning": "Geometrical isomer counts for octahedral complexes."
+    },
+    {
+      "formula": "$[M(AA)_3]$: d/l pair; $cis-[M(AA)_2B_2]$: chiral; $trans-[M(AA)_2B_2]$: achiral",
+      "meaning": "Optical activity of chelate complexes."
+    },
+    {
+      "formula": "$Ni^{2+} + 2\\,DMG \\rightarrow$ rosy-red complex",
+      "meaning": "Test for nickel."
+    },
+    {
+      "formula": "$Fe^{3+} + SCN^- \\rightarrow [Fe(SCN)(H_2O)_5]^{2+}$ (blood red)",
+      "meaning": "Test for ferric ion."
+    },
+    {
+      "formula": "$Cu^{2+} + 4NH_3 \\rightarrow [Cu(NH_3)_4]^{2+}$ (deep blue)",
+      "meaning": "Test for cupric ion."
+    },
+    {
+      "formula": "$4Fe^{3+} + 3[Fe(CN)_6]^{4-} \\rightarrow Fe_4[Fe(CN)_6]_3$ (Prussian blue)",
+      "meaning": "Confirmatory test for $Fe^{3+}$."
+    },
+    {
+      "formula": "$Ni + 4CO \\xrightarrow{330-350\\,K} [Ni(CO)_4] \\xrightarrow{450-470\\,K} Ni + 4CO$",
+      "meaning": "Mond process for refining nickel."
+    },
+    {
+      "formula": "$4Au + 8CN^- + 2H_2O + O_2 \\rightarrow 4[Au(CN)_2]^- + 4OH^-$",
+      "meaning": "Cyanide leaching of gold (silver is analogous)."
+    },
+    {
+      "formula": "$AgBr + 2S_2O_3^{2-} \\rightarrow [Ag(S_2O_3)_2]^{3-} + Br^-$",
+      "meaning": "Fixing of photographic film with hypo."
+    },
+    {
+      "formula": "$[(Ph_3P)_3RhCl]$",
+      "meaning": "Wilkinson's catalyst for hydrogenation of alkenes."
+    },
+    {
+      "formula": "$cis-[PtCl_2(NH_3)_2]$",
+      "meaning": "Cis-platin, an anticancer drug."
+    }
+  ],
+  "common_traps": [
+    "Counting ligands instead of donor atoms for the coordination number. $[Co(en)_3]^{3+}$ has CN 6, not 3.",
+    "Counting chlorides inside the bracket as ionisable. Only counter ions outside the sphere precipitate with $AgNO_3$ or conduct as separate ions.",
+    "Assuming every bis-chelate complex is chiral. $trans-[M(AA)_2B_2]$ has a mirror plane and is achiral; only the cis form and $[M(AA)_3]$ are chiral.",
+    "Expecting geometrical isomerism in tetrahedral complexes. All positions are equivalent, so tetrahedral complexes have no cis/trans isomers.",
+    "Using the neutral atom's electron configuration. Always find the oxidation state first; e.g. $Co^{3+}$ is $3d^6$, and $NH_3$ makes it low spin and diamagnetic.",
+    "Reversing the spectrochemical order of $H_2O$ and $NH_3$. Correct order is $CO > CN^- > en > NH_3 > H_2O > F^- > Cl^-$.",
+    "Alphabetising by multiplying prefixes or by symbol in names. 'tetraammine' is listed under 'a', so ammine comes before aqua and chlorido.",
+    "Forgetting the -ate ending and Latin roots for anionic complexes, e.g. ferrate, not ironate, in $K_4[Fe(CN)_6]$."
+  ],
+  "quick_revision": [
+    "Werner: primary valency = oxidation state (ionisable); secondary valency = coordination number (non-ionisable, directional).",
+    "Number of ions = complex ion + counter ions; $[Co(NH_3)_6]Cl_3$ is a 1:3 electrolyte.",
+    "EDTA is hexadentate; $NO_2^-$, $SCN^-$ and $CN^-$ are ambidentate; chelates are extra stable (chelate effect).",
+    "Naming: ligands alphabetical, anionic ligands end in -ido, special names aqua, ammine, carbonyl, nitrosyl; anionic complexes take -ate.",
+    "$MA_3B_3$ gives fac/mer; $MA_4B_2$ and $[M(AA)_2B_2]$ give cis/trans; tetrahedral complexes give no geometrical isomers.",
+    "$[M(AA)_3]$ and $cis-[M(AA)_2B_2]$ are optically active; trans forms are inactive.",
+    "VBT: d2sp3 is inner-orbital low spin; sp3d2 is outer-orbital high spin; dsp2 is square planar; sp3 is tetrahedral.",
+    "Octahedral splitting: $t_{2g}$ at $-0.4\\Delta_o$, $e_g$ at $+0.6\\Delta_o$; $\\Delta_t = \\frac{4}{9}\\Delta_o$.",
+    "Field strength: $CO > CN^- > en > NH_3 > H_2O > F^- > Cl^- > Br^- > I^-$.",
+    "$\\mu = \\sqrt{n(n+2)}$ BM; $d^5$ high spin is maximum (5.92 BM); $d^6$ low spin is zero.",
+    "$d^0$ and $d^{10}$ ions are colourless; colour seen is complementary to light absorbed; larger $\\Delta_o$ means shorter wavelength absorbed.",
+    "Applications: Ni–DMG (red), $Fe^{3+}$–SCN (blood red), Mond process (Ni), cyanide process (Au, Ag), chlorophyll (Mg), haemoglobin (Fe), vitamin $B_{12}$ (Co), cis-platin (anticancer)."
+  ],
+  "pyq": {
+    "count": 6,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q047",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q47"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q058",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q58"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q066",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q66"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q068",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q68"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q078",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q78"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q087",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q87"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

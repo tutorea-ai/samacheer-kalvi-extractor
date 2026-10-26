@@ -1,0 +1,21 @@
+{
+  "unit_id": "phy_u16",
+  "model": "claude-opus-5-5",
+  "issues": [
+    {
+      "location": "topics[4].explanation",
+      "quote": "Power in a medium is $P = n_{medium}/f$.",
+      "problem": "This is not the NCERT definition of power. NCERT uses $P = 1/f$ throughout. The change of power in a liquid already comes from the lens maker's formula through $n_{21}$. The extra factor contradicts the formula given in the same topic and in the formula sheet. A student who also applies $n_{21}$ would count the medium twice in lens-in-liquid questions.",
+      "correction": "Power is $P = 1/f$ (f in metres). In a medium, find the new f from the lens maker's formula with $n_{21} = n_{lens}/n_{medium}$, then take $P = 1/f$.",
+      "severity": "minor"
+    },
+    {
+      "location": "topics[6].explanation",
+      "quote": "parallel to the base for an equilateral prism",
+      "problem": "This suggests the ray travels parallel to the base only in an equilateral prism. At minimum deviation, $r_1 = r_2 = A/2$, so the ray inside is parallel to the base for any isosceles prism. It is not parallel for every prism shape.",
+      "correction": "At minimum deviation the ray passes symmetrically through the prism. Inside an isosceles (including equilateral) prism, it travels parallel to the base.",
+      "severity": "minor"
+    }
+  ],
+  "status": "fixed"
+}

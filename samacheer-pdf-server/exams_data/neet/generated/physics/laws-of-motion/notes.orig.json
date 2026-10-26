@@ -1,0 +1,371 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u03",
+  "unit_no": 3,
+  "unit_name": "Laws of Motion",
+  "slug": "laws-of-motion",
+  "overview": "Laws of Motion explains why bodies move the way they do, using Newton's three laws, momentum, friction and the dynamics of circular motion. NEET asks 2-3 questions from this unit almost every year. These are usually numericals on connected bodies, impulse, friction, conservation of momentum and banked roads, and they require clean free-body diagrams and correct vector reasoning.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Force is an external push or pull that changes, or tends to change, the state of rest or uniform motion of a body. Inertia is the tendency of a body to resist any change in its state of rest or uniform motion along a straight line. Mass is the quantitative measure of linear inertia. Newton's first law states that every body continues in its state of rest or uniform straight-line motion unless an external net force acts on it. The first law therefore defines force and defines inertial frames, which are frames in which the law holds. Familiar examples are passengers jerking backward when a bus starts, jerking forward when it brakes suddenly, and dust leaving a carpet when it is beaten. Galileo's inclined plane experiments first suggested that motion needs no force to continue; force is needed only to change velocity.",
+      "key_points": [
+        "Net force zero means acceleration zero: the body is at rest or moves with constant velocity",
+        "Inertia of rest, inertia of motion and inertia of direction are its three types",
+        "Greater mass means greater inertia",
+        "The first law defines inertial frames; an accelerating frame is non-inertial",
+        "A body moving with constant speed along a curve is NOT free of force, because its velocity direction changes"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{F}_{net} = 0 \\Rightarrow \\vec{a} = 0,\\ \\vec{v} = \\text{constant}$",
+          "meaning": "Condition stated by the first law; equally the condition for translational equilibrium"
+        }
+      ],
+      "neet_tip": "Usually tested through conceptual statements, such as identifying inertia examples or recognising that uniform circular motion needs a net force.",
+      "topic": "Force and inertia; Newton's first law of motion"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Linear momentum is $\\vec{p} = m\\vec{v}$. It is a vector along the velocity and its SI unit is kg m/s. Newton's second law states that the rate of change of momentum equals the applied net external force and occurs in the direction of that force. For constant mass this reduces to $F = ma$. The law is a vector law, so it applies component-wise, and it is local, meaning the force at an instant fixes the acceleration at that instant. Impulse is the product of force and time, or more generally the integral of force over time. It equals the change in momentum and is the area under the F-t graph. Impulsive forces are large forces acting for a very short time, as when a bat hits a ball. Catching a ball with the hands drawn back increases the contact time, which reduces the force.",
+      "key_points": [
+        "One newton is the force that gives 1 kg an acceleration of $1\\ m/s^2$",
+        "Impulse and momentum have the same unit: N s = kg m/s",
+        "Area under the F-t graph gives impulse, which equals the change in momentum",
+        "For a ball rebounding normally with the same speed, $|\\Delta p| = 2mv$",
+        "Draw a free-body diagram for each body when solving connected-body problems",
+        "Apparent weight in a lift is $m(g+a)$ when accelerating upward and $m(g-a)$ when accelerating downward; it is zero in free fall"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{p} = m\\vec{v}$",
+          "meaning": "Linear momentum of a body"
+        },
+        {
+          "formula": "$\\vec{F} = \\frac{d\\vec{p}}{dt} = m\\vec{a}$",
+          "meaning": "Second law; the second form holds for constant mass"
+        },
+        {
+          "formula": "$\\vec{J} = \\int \\vec{F}\\,dt = \\vec{F}_{avg}\\Delta t = \\Delta \\vec{p}$",
+          "meaning": "Impulse-momentum theorem"
+        },
+        {
+          "formula": "$F = v\\frac{dm}{dt}$",
+          "meaning": "Force needed for variable mass, e.g. a conveyor belt or rocket thrust"
+        },
+        {
+          "formula": "$a = \\frac{(m_1 - m_2)g}{m_1 + m_2},\\ T = \\frac{2m_1 m_2 g}{m_1 + m_2}$",
+          "meaning": "Atwood machine with an ideal pulley, where $m_1 > m_2$"
+        }
+      ],
+      "neet_tip": "Expect numericals on impulse from F-t graphs, ball-rebound momentum change, lift problems, and the acceleration and tension in pulley-block systems.",
+      "topic": "Momentum, Newton's second law and impulse"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Newton's third law states that to every action there is an equal and opposite reaction. Forces always occur in pairs. If A exerts $\\vec{F}_{AB}$ on B, then B exerts $\\vec{F}_{BA} = -\\vec{F}_{AB}$ on A, at the same instant. Action and reaction act on DIFFERENT bodies, so they never cancel each other. A book resting on a table illustrates this. Its weight (Earth pulls book) and the normal force (table pushes book) balance each other because of the first law, not the third law. Their actual third-law partners are book pulls Earth and book pushes table. Applications include walking (the foot pushes the ground back, the ground pushes the foot forward), rocket propulsion, swimming and gun recoil. The third law, combined with the second, leads directly to conservation of momentum.",
+      "key_points": [
+        "Action and reaction are equal in magnitude, opposite in direction and simultaneous",
+        "They act on different bodies and are of the same nature (both gravitational, both contact, and so on)",
+        "Weight and normal force on a resting body are NOT an action-reaction pair",
+        "Internal forces of a system cancel in pairs, so only external forces change the system's momentum",
+        "Contact force between blocks pushed together is $F_{contact} = \\frac{m_2}{m_1 + m_2}F$ on the rear block $m_2$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{F}_{AB} = -\\vec{F}_{BA}$",
+          "meaning": "Mutual forces between two interacting bodies"
+        }
+      ],
+      "neet_tip": "NEET checks whether you can correctly identify action-reaction pairs and find contact forces between blocks in contact.",
+      "topic": "Newton's third law of motion"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "If the net external force on a system is zero, the total linear momentum of the system remains constant. Internal forces cannot change total momentum, because they cancel in third-law pairs. Momentum is a vector, so the total is the vector sum of the individual momenta. Two bodies with equal momentum magnitudes moving in different directions have a resultant that depends on the angle between them: it is maximum when they move parallel and zero when they move antiparallel. Applications include gun recoil, rocket propulsion, explosion of a shell into fragments and collisions. In a collision, momentum is always conserved, while kinetic energy is conserved only in elastic collisions. Momentum can also be conserved along one direction when the external force has no component along that direction.",
+      "key_points": [
+        "Conservation holds only when the net external force is zero, either overall or along a chosen axis",
+        "Gun recoil: $mv = MV$, so the recoil speed is $V = \\frac{mv}{M}$",
+        "A body at rest that explodes has zero total momentum, so the fragments' momenta add vectorially to zero",
+        "In a two-piece explosion, the fragments move in opposite directions with KE in the inverse ratio of their masses",
+        "Magnitude of the resultant of two momenta $p$ at angle $\\phi$ is $2p\\cos(\\phi/2)$",
+        "Momentum is conserved in all collisions, but KE is conserved only in elastic collisions"
+      ],
+      "formulas": [
+        {
+          "formula": "$m_1\\vec{u}_1 + m_2\\vec{u}_2 = m_1\\vec{v}_1 + m_2\\vec{v}_2$",
+          "meaning": "Momentum conservation for two bodies with no net external force"
+        },
+        {
+          "formula": "$V_{recoil} = -\\frac{m v}{M}$",
+          "meaning": "Recoil velocity of a gun of mass M firing a bullet of mass m with speed v"
+        },
+        {
+          "formula": "$K = \\frac{p^2}{2m}$",
+          "meaning": "Kinetic energy in terms of momentum; useful for explosion problems"
+        },
+        {
+          "formula": "$|\\vec{p}_1 + \\vec{p}_2| = \\sqrt{p_1^2 + p_2^2 + 2p_1p_2\\cos\\phi}$",
+          "meaning": "Resultant momentum of two bodies whose momenta make angle $\\phi$"
+        }
+      ],
+      "neet_tip": "Expect recoil and explosion numericals, plus conceptual questions on the vector total momentum of symmetric systems, such as particles moving on a circle in opposite directions.",
+      "topic": "Law of conservation of linear momentum and its applications"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Concurrent forces are forces whose lines of action pass through a single point. A particle, or a body acted on by concurrent forces, is in equilibrium when the vector sum of the forces is zero. Equivalently, the sum of components along each of x, y and z is zero. For three concurrent forces in equilibrium, the forces can be represented by the three sides of a closed triangle taken in order, so any one force is equal and opposite to the resultant of the other two. Lami's theorem gives a handy relation: each force is proportional to the sine of the angle between the other two. Typical problems include a mass hung by two strings at different angles, a string-pulley junction, and a body held on a smooth incline by a horizontal force.",
+      "key_points": [
+        "The equilibrium condition is $\\sum \\vec{F} = 0$, i.e. $\\sum F_x = 0$ and $\\sum F_y = 0$",
+        "Three forces in equilibrium must be coplanar and form a closed triangle",
+        "Lami's theorem applies only to three concurrent forces in equilibrium",
+        "Resolve forces along convenient perpendicular axes",
+        "For a weight W hung symmetrically by two strings each at angle $\\theta$ to the vertical, $T = \\frac{W}{2\\cos\\theta}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{F}_1 + \\vec{F}_2 + \\vec{F}_3 = 0$",
+          "meaning": "Equilibrium of three concurrent forces"
+        },
+        {
+          "formula": "$\\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}$",
+          "meaning": "Lami's theorem; $\\alpha$, $\\beta$, $\\gamma$ are the angles opposite to $F_1$, $F_2$, $F_3$ respectively"
+        },
+        {
+          "formula": "$R = \\sqrt{F_1^2 + F_2^2 + 2F_1F_2\\cos\\theta}$",
+          "meaning": "Resultant of two forces at angle $\\theta$"
+        }
+      ],
+      "neet_tip": "NEET asks for string tensions in hanging-mass systems or the force needed to keep a body in equilibrium, solved by resolving components or by Lami's theorem.",
+      "topic": "Equilibrium of concurrent forces"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Friction opposes relative motion, or impending relative motion, between surfaces in contact. Static friction is self-adjusting: it equals the applied force up to a maximum value, called limiting friction, given by $\\mu_s N$. Once sliding starts, kinetic friction $\\mu_k N$ acts. It is nearly constant and slightly less than limiting friction, since $\\mu_k < \\mu_s$. The laws of friction are as follows. Limiting friction is proportional to the normal reaction. It is independent of the apparent area of contact. It depends on the nature of the surfaces. Kinetic friction is roughly independent of speed. The angle of friction $\\lambda$ satisfies $\\tan\\lambda = \\mu_s$, and the angle of repose of an incline equals the angle of friction. Rolling friction is much smaller than sliding friction, which is why wheels and ball bearings are used. Friction is necessary for walking and for vehicles to move.",
+      "key_points": [
+        "Static friction lies in the range $0 \\le f_s \\le \\mu_s N$; do not automatically write $\\mu_s N$",
+        "Rolling friction is much smaller than kinetic friction, which is smaller than limiting friction",
+        "Pulling a body at an angle reduces the normal force N and hence the friction; pushing at an angle increases them",
+        "On an incline, $N = mg\\cos\\theta$ if no other force acts perpendicular to the surface",
+        "Friction on the driven wheels of a car and on a walking person's foot acts forward",
+        "To keep a block pressed against a vertical wall from sliding, $\\mu F \\ge mg$"
+      ],
+      "formulas": [
+        {
+          "formula": "$f_s \\le \\mu_s N,\\ f_k = \\mu_k N$",
+          "meaning": "Static (up to limiting) and kinetic friction"
+        },
+        {
+          "formula": "$\\tan\\lambda = \\mu_s = \\tan\\alpha_{repose}$",
+          "meaning": "Angle of friction equals angle of repose"
+        },
+        {
+          "formula": "$a = g(\\sin\\theta - \\mu_k\\cos\\theta)$",
+          "meaning": "Acceleration of a block sliding down a rough incline"
+        },
+        {
+          "formula": "$a = g(\\sin\\theta + \\mu_k\\cos\\theta)$",
+          "meaning": "Retardation of a block moving up a rough incline"
+        },
+        {
+          "formula": "$F_{min} = \\frac{\\mu mg}{\\sqrt{1 + \\mu^2}}$",
+          "meaning": "Minimum pull to move a block on a rough horizontal surface, applied at angle $\\tan^{-1}\\mu$ above the horizontal"
+        }
+      ],
+      "neet_tip": "Common questions find the friction actually acting (static vs limiting), the acceleration on rough inclines, the ratio of times to slide down rough vs smooth inclines, and block-on-block motion.",
+      "topic": "Static and kinetic friction, laws of friction, rolling friction"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "In uniform circular motion the speed is constant but the velocity direction changes continuously. The body therefore has a centripetal acceleration $v^2/r$ directed towards the centre, which requires a net force $mv^2/r$ towards the centre. Centripetal force is not a new kind of force. It is the role played by some real force or combination of forces: tension for a stone whirled on a string, gravity for a planet or satellite, friction for a car on a level turn, and the normal force component for banked roads. Because this force is always perpendicular to the velocity, it does no work and kinetic energy remains constant. If the force disappears, the body moves off along the tangent, not radially outward. A conical pendulum is another standard case, in which the horizontal component of tension supplies the centripetal force.",
+      "key_points": [
+        "Centripetal acceleration is $\\frac{v^2}{r} = \\omega^2 r$, directed towards the centre",
+        "Work done by the centripetal force is zero",
+        "Speed and kinetic energy are constant, but velocity and momentum change direction",
+        "When the string breaks, the body flies off along the tangent",
+        "Centrifugal force is a pseudo force that appears only in the rotating, non-inertial frame",
+        "For a conical pendulum, $\\tan\\theta = \\frac{v^2}{rg}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$F_c = \\frac{mv^2}{r} = m\\omega^2 r$",
+          "meaning": "Net inward force needed for circular motion of radius r"
+        },
+        {
+          "formula": "$v = \\omega r,\\ \\omega = \\frac{2\\pi}{T} = 2\\pi n$",
+          "meaning": "Relation between linear speed, angular speed, period T and frequency n"
+        },
+        {
+          "formula": "$T\\sin\\theta = \\frac{mv^2}{r},\\ T\\cos\\theta = mg$",
+          "meaning": "Conical pendulum with the string at angle $\\theta$ to the vertical"
+        }
+      ],
+      "neet_tip": "NEET tests identifying which real force provides the centripetal force, the vector nature of momentum in circular motion, and maximum speeds before a string breaks or a body slips.",
+      "topic": "Dynamics of uniform circular motion: centripetal force"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "On a level circular road, only static friction can supply the centripetal force. Safe turning requires $mv^2/r \\le \\mu_s mg$, giving $v_{max} = \\sqrt{\\mu_s r g}$, which is independent of the vehicle's mass. Banking the road at an angle $\\theta$ lets the horizontal component of the normal reaction provide part, or all, of the centripetal force. At the optimum speed $v_0 = \\sqrt{rg\\tan\\theta}$, no friction is needed, so wear and tear on the tyres is minimum. Above this speed, friction acts down the slope. Below it, friction acts up the slope. With friction included, the maximum safe speed on a banked road is $\\sqrt{rg\\frac{\\mu_s + \\tan\\theta}{1 - \\mu_s\\tan\\theta}}$. A cyclist turning must lean inward by an angle $\\theta$ with $\\tan\\theta = v^2/(rg)$. This is the same expression as the banking condition.",
+      "key_points": [
+        "Level road: the maximum speed $\\sqrt{\\mu_s r g}$ does not depend on mass",
+        "Banked road with no friction: $\\tan\\theta = \\frac{v^2}{rg}$, and tyre wear is minimum",
+        "The normal reaction on a banked road exceeds mg, being $N = \\frac{mg}{\\cos\\theta}$ at the optimum speed",
+        "Friction direction on a banked road depends on whether v is above or below $v_0$",
+        "Railway tracks are banked by raising the outer rail; for small $\\theta$, $\\tan\\theta \\approx \\sin\\theta = \\frac{h}{l}$, where h is the height of the outer rail and l the distance between rails",
+        "If $\\mu_s \\ge \\tan\\theta$, a vehicle can stay at rest on the banked road without sliding"
+      ],
+      "formulas": [
+        {
+          "formula": "$v_{max} = \\sqrt{\\mu_s r g}$",
+          "meaning": "Maximum safe speed on a level curved road"
+        },
+        {
+          "formula": "$v_0 = \\sqrt{r g \\tan\\theta}$",
+          "meaning": "Optimum speed on a banked road, at which no friction is needed"
+        },
+        {
+          "formula": "$v_{max} = \\sqrt{r g \\frac{\\mu_s + \\tan\\theta}{1 - \\mu_s \\tan\\theta}}$",
+          "meaning": "Maximum safe speed on a rough banked road"
+        },
+        {
+          "formula": "$v_{min} = \\sqrt{r g \\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s \\tan\\theta}}$",
+          "meaning": "Minimum speed below which the vehicle slides down a rough banked road"
+        },
+        {
+          "formula": "$\\tan\\theta = \\frac{v^2}{rg}$",
+          "meaning": "Banking angle, or a cyclist's lean angle from the vertical"
+        }
+      ],
+      "neet_tip": "Directly asked as finding the banking angle for minimum tyre wear, the maximum speed on level or banked roads, or a cyclist's lean angle.",
+      "topic": "Vehicle on a level circular road and on a banked road"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$\\vec{p} = m\\vec{v}$",
+      "meaning": "Linear momentum, where m is mass and v is velocity"
+    },
+    {
+      "formula": "$\\vec{F} = \\frac{d\\vec{p}}{dt} = m\\vec{a}$",
+      "meaning": "Newton's second law, with F the net external force and a the acceleration"
+    },
+    {
+      "formula": "$\\vec{J} = \\vec{F}_{avg}\\Delta t = \\Delta\\vec{p}$",
+      "meaning": "Impulse, equal to the change in momentum and to the area under the F-t graph"
+    },
+    {
+      "formula": "$F = v\\frac{dm}{dt}$",
+      "meaning": "Thrust or force for a variable-mass system ejecting or adding mass at rate dm/dt with relative speed v"
+    },
+    {
+      "formula": "$\\vec{F}_{AB} = -\\vec{F}_{BA}$",
+      "meaning": "Third law: forces of interaction between two bodies A and B"
+    },
+    {
+      "formula": "$m_1\\vec{u}_1 + m_2\\vec{u}_2 = m_1\\vec{v}_1 + m_2\\vec{v}_2$",
+      "meaning": "Conservation of linear momentum, with u the initial and v the final velocities"
+    },
+    {
+      "formula": "$V = \\frac{mv}{M}$",
+      "meaning": "Recoil speed of a gun of mass M firing a bullet of mass m at speed v"
+    },
+    {
+      "formula": "$K = \\frac{p^2}{2m}$",
+      "meaning": "Kinetic energy K of a body of mass m and momentum p"
+    },
+    {
+      "formula": "$R_{lift} = m(g \\pm a)$",
+      "meaning": "Apparent weight in a lift with acceleration a, using + for upward and - for downward acceleration"
+    },
+    {
+      "formula": "$a = \\frac{(m_1 - m_2)g}{m_1+m_2},\\ T = \\frac{2m_1m_2 g}{m_1+m_2}$",
+      "meaning": "Atwood machine: acceleration a and tension T for masses $m_1 > m_2$"
+    },
+    {
+      "formula": "$\\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}$",
+      "meaning": "Lami's theorem for three concurrent forces in equilibrium, with each angle opposite the corresponding force"
+    },
+    {
+      "formula": "$f_s \\le \\mu_s N,\\ f_k = \\mu_k N$",
+      "meaning": "Static and kinetic friction, with N the normal reaction and $\\mu$ the coefficient of friction"
+    },
+    {
+      "formula": "$\\tan\\lambda = \\mu_s$",
+      "meaning": "Angle of friction $\\lambda$, which equals the angle of repose"
+    },
+    {
+      "formula": "$a = g(\\sin\\theta - \\mu_k\\cos\\theta)$",
+      "meaning": "Acceleration down a rough incline of inclination $\\theta$"
+    },
+    {
+      "formula": "$t_{rough} = \\frac{t_{smooth}}{\\sqrt{1 - \\mu_k\\cot\\theta}}$",
+      "meaning": "Time to slide down a rough incline compared with a smooth incline of the same length"
+    },
+    {
+      "formula": "$F_c = \\frac{mv^2}{r} = m\\omega^2 r$",
+      "meaning": "Centripetal force for speed v or angular speed $\\omega$ on radius r"
+    },
+    {
+      "formula": "$v_{max} = \\sqrt{\\mu_s r g}$",
+      "meaning": "Maximum speed on a level circular road"
+    },
+    {
+      "formula": "$v_0 = \\sqrt{rg\\tan\\theta}$",
+      "meaning": "Optimum speed on a road banked at angle $\\theta$, giving minimum tyre wear"
+    },
+    {
+      "formula": "$v_{max} = \\sqrt{rg\\frac{\\mu_s + \\tan\\theta}{1 - \\mu_s\\tan\\theta}}$",
+      "meaning": "Maximum safe speed on a rough banked road"
+    },
+    {
+      "formula": "$\\tan\\theta = \\frac{v^2}{rg}$",
+      "meaning": "Cyclist's lean angle from the vertical, or the banking angle for the optimum speed"
+    }
+  ],
+  "common_traps": [
+    "Writing static friction as $\\mu_s N$ in every case. Static friction only equals the applied force needed to prevent motion, and reaches $\\mu_s N$ only at the point of slipping.",
+    "Treating weight and normal reaction as an action-reaction pair. They act on the same body; the true third-law pairs act on different bodies.",
+    "Adding momenta as scalars. Momentum is a vector, so two equal momenta in opposite directions give a total of zero, and at an angle they must be added vectorially.",
+    "Thinking the body flies radially outward when a whirling string breaks. It moves along the tangent, because no outward real force exists.",
+    "Taking $N = mg$ on inclines, banked roads or when a force is pulled at an angle. Resolve forces properly; for example, N = mg cos θ on a simple incline and N = mg/cos θ on a frictionless banked turn.",
+    "Assuming friction on a banked road always acts down the slope. It acts down only when v exceeds $\\sqrt{rg\\tan\\theta}$ and acts up the slope when v is below it.",
+    "Believing a constant-speed circular motion has no net force. A centripetal force of $mv^2/r$ is always required, even though it does no work.",
+    "Ignoring the sign of velocity in impulse problems. For a rebound with the same speed, the change in momentum is 2mv, not zero."
+  ],
+  "quick_revision": [
+    "Mass is the measure of inertia, and the first law defines force and inertial frames.",
+    "$F = dp/dt$ is the general form of the second law, and $F = ma$ applies only for constant mass.",
+    "Impulse equals the change in momentum and the area under the F-t graph; increasing the contact time reduces the force.",
+    "Action and reaction are equal, opposite and simultaneous, and act on different bodies.",
+    "With zero net external force, total momentum is conserved as a vector, which explains gun recoil, explosions and rockets.",
+    "Equilibrium of concurrent forces requires zero vector sum; for three forces, use a closed triangle or Lami's theorem.",
+    "Static friction is self-adjusting up to $\\mu_s N$; kinetic friction is $\\mu_k N$, with $\\mu_k < \\mu_s$; rolling friction is the least.",
+    "Angle of repose equals angle of friction, with $\\tan\\theta = \\mu_s$.",
+    "Centripetal force $mv^2/r$ is supplied by a real force such as tension, friction, gravity or a normal-force component.",
+    "On a level road $v_{max} = \\sqrt{\\mu r g}$, and on a frictionless banked road $v = \\sqrt{rg\\tan\\theta}$ gives minimum tyre wear.",
+    "A lift accelerating up increases apparent weight, and in free fall apparent weight is zero.",
+    "In every problem, draw a free-body diagram, choose axes, and apply $\\sum F = ma$ along each axis."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q023",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q23"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q041",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q41"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

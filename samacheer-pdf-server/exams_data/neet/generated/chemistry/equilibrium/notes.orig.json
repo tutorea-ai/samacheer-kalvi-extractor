@@ -1,0 +1,514 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u06",
+  "unit_no": 6,
+  "unit_name": "Equilibrium",
+  "slug": "equilibrium",
+  "overview": "Equilibrium covers reversible physical and chemical processes that reach a dynamic balance. It includes the quantitative treatment of chemical equilibria through $K_c$, $K_p$ and Gibbs energy, and of ionic equilibria through $K_a$, $K_b$, $K_w$, pH, hydrolysis, $K_{sp}$ and buffers. NEET asks 2-4 questions from this unit almost every year, mostly short numericals on $K_p$/$K_c$, pH, $K_{sp}$ and solubility, plus Le Chatelier shift questions.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "When a reversible process is carried out in a closed system, the rate of the forward process gradually falls and the rate of the reverse process rises. Eventually the two rates become equal. From then on, the observable properties stay constant: concentration, pressure, colour and density. This state is called equilibrium. It is dynamic, not static, because both processes continue at the molecular level at equal rates. Isotope (tracer) experiments prove this: if $D_2$ is added to an equilibrium $N_2$, $H_2$, $NH_3$ mixture, deuterium soon appears in ammonia. Equilibrium can be approached from either direction, and the same equilibrium state is reached. It can be established only in a closed system at constant temperature. A catalyst helps reach equilibrium faster but does not change the equilibrium position.",
+      "key_points": [
+        "At equilibrium, rate of forward reaction = rate of backward reaction",
+        "Measurable properties become constant, but molecular activity continues",
+        "Equilibrium is attained only in a closed system at constant temperature",
+        "Equilibrium can be approached from either side",
+        "A catalyst shortens the time to reach equilibrium but does not shift it",
+        "The double half-arrow symbol $\\rightleftharpoons$ denotes equilibrium"
+      ],
+      "formulas": [
+        {
+          "formula": "$r_f = r_b$",
+          "meaning": "Kinetic condition of equilibrium"
+        }
+      ],
+      "neet_tip": "Statement-type questions test that equilibrium is dynamic, needs a closed system and is unaffected by a catalyst.",
+      "topic": "Meaning of equilibrium; dynamic equilibrium"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Physical equilibria involve phase changes without any chemical change. Solid-liquid: ice and water coexist at 273 K and 1 atm. The melting point is the temperature at which the rate of melting equals the rate of freezing. Liquid-gas: water in a closed vessel evaporates until the rate of evaporation equals the rate of condensation. The pressure then reaches a constant value, the equilibrium vapour pressure, which depends only on temperature and the nature of the liquid. The boiling point is the temperature at which vapour pressure equals the external pressure (373 K at 1.013 bar for water). Solid-gas: substances such as iodine, camphor and $NH_4Cl$ sublime, giving a solid-vapour equilibrium in a closed vessel. Dissolution of a solid in a liquid also reaches equilibrium in a saturated solution, where the rate of dissolution equals the rate of crystallisation.",
+      "key_points": [
+        "Solid-liquid: $H_2O(s) \\rightleftharpoons H_2O(l)$ at the normal melting point (273 K, 1 atm)",
+        "Liquid-gas: $H_2O(l) \\rightleftharpoons H_2O(g)$; vapour pressure is constant at a given temperature",
+        "Vapour pressure depends on temperature, not on the amount of liquid or the vessel volume",
+        "Solid-gas: sublimation of $I_2$, camphor and $NH_4Cl$",
+        "Saturated solution: solid solute is in dynamic equilibrium with dissolved solute",
+        "Pressure increase favours the denser phase; ice melts under pressure because water is denser than ice"
+      ],
+      "formulas": [],
+      "neet_tip": "Matching-type questions pair each physical equilibrium with its example or condition, such as boiling point or sublimation.",
+      "topic": "Physical equilibria: solid-liquid, liquid-gas and solid-gas"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Henry's law describes the equilibrium between a gas and its solution in a liquid. At constant temperature, the solubility (mole fraction) of a gas in a liquid is directly proportional to the partial pressure of the gas above the liquid. The constant $K_H$ depends on the gas, the solvent and the temperature. A higher $K_H$ means lower solubility. Gas solubility decreases as temperature increases, because dissolution of gases is usually exothermic, so $K_H$ increases with temperature. Applications include sealing soda bottles under high $CO_2$ pressure, the bends in deep-sea divers (nitrogen dissolves in blood under high pressure), diluting air with helium in scuba tanks, and anoxia at high altitude. The law holds well for gases that do not react chemically with the solvent, at low pressure.",
+      "key_points": [
+        "Mass of gas dissolved per unit volume is proportional to its partial pressure at constant temperature",
+        "Higher $K_H$ means lower solubility of the gas",
+        "Gas solubility decreases as temperature rises",
+        "Applications: soda water, the bends, He-diluted scuba air, altitude anoxia",
+        "The law fails for gases that react with the solvent, such as $NH_3$ or $HCl$ in water"
+      ],
+      "formulas": [
+        {
+          "formula": "$p = K_H \\, x$",
+          "meaning": "Partial pressure of a gas vs its mole fraction in solution"
+        },
+        {
+          "formula": "$m \\propto p$",
+          "meaning": "Mass of gas dissolved is proportional to its pressure (constant T)"
+        }
+      ],
+      "neet_tip": "Expect a conceptual question on the effect of temperature on gas solubility or on comparing $K_H$ values of different gases.",
+      "topic": "Henry's law"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Guldberg and Waage's law of mass action states that the rate of a reaction is proportional to the product of the active masses (molar concentrations) of the reactants. For a general reaction $aA + bB \\rightleftharpoons cC + dD$ at equilibrium, the ratio of the product of product concentrations to the product of reactant concentrations, each raised to its stoichiometric coefficient, is constant at a given temperature. This is the law of chemical equilibrium. The same expression with non-equilibrium concentrations is the reaction quotient $Q$. Comparing $Q$ with $K$ predicts the direction of net reaction. The value of $K$ depends on how the equation is written: reversing the reaction inverts $K$, multiplying the equation by $n$ raises $K$ to the power $n$, and adding equations multiplies their constants. Pure solids and pure liquids are omitted from the expression.",
+      "key_points": [
+        "$K_c$ depends only on temperature, not on initial concentrations, pressure or catalyst",
+        "If $Q < K$, the reaction moves forward; if $Q > K$, backward; if $Q = K$, the system is at equilibrium",
+        "Pure solids and pure liquids have activity 1 and are omitted",
+        "Large $K$ ($>10^3$): products predominate; small $K$ ($<10^{-3}$): reactants predominate",
+        "Reverse reaction: $K' = 1/K$; equation multiplied by $n$: $K' = K^n$; reactions added: $K = K_1 K_2$"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$",
+          "meaning": "Equilibrium constant in terms of molar concentrations"
+        },
+        {
+          "formula": "$Q_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$ (any instant)",
+          "meaning": "Reaction quotient; compare with $K$ to predict direction"
+        }
+      ],
+      "neet_tip": "Common questions ask for $K$ of a reversed, halved or combined equation from given $K$ values.",
+      "topic": "Law of chemical equilibrium"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "For gaseous reactions, the equilibrium constant can be written in terms of partial pressures ($K_p$) or molar concentrations ($K_c$). Since $p = cRT$, the two are related by $K_p = K_c(RT)^{\\Delta n_g}$. Here $\\Delta n_g$ is the moles of gaseous products minus the moles of gaseous reactants. If $\\Delta n_g = 0$, as in $H_2 + I_2 \\rightleftharpoons 2HI$, then $K_p = K_c$. Use $R = 0.0821$ L atm $K^{-1}$ mol$^{-1}$ (or 0.0831 L bar $K^{-1}$ mol$^{-1}$) consistently with the pressure unit. For heterogeneous equilibria, only gaseous species appear in $K_p$; for example, $K_p = p_{CO_2}$ for $CaCO_3(s) \\rightleftharpoons CaO(s) + CO_2(g)$. The units of $K_c$ are $(mol\\,L^{-1})^{\\Delta n}$. Degree of dissociation problems are solved with an ICE (initial, change, equilibrium) table.",
+      "key_points": [
+        "$\\Delta n_g$ counts only gaseous species",
+        "$\\Delta n_g = 0$: $K_p = K_c$; $\\Delta n_g > 0$: $K_p > K_c$ (when $RT > 1$)",
+        "Heterogeneous equilibria: solids and liquids are omitted from both $K_p$ and $K_c$",
+        "Units of $K_c$ are $(mol\\,L^{-1})^{\\Delta n}$; units of $K_p$ are $(atm)^{\\Delta n}$ or $(bar)^{\\Delta n}$",
+        "For $PCl_5 \\rightleftharpoons PCl_3 + Cl_2$ with degree of dissociation $\\alpha$: $K_p = \\frac{\\alpha^2 P}{1-\\alpha^2}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_p = K_c(RT)^{\\Delta n_g}$",
+          "meaning": "Converts between $K_c$ and $K_p$"
+        },
+        {
+          "formula": "$p_i = x_i P_{total}$",
+          "meaning": "Partial pressure of a component from its mole fraction"
+        },
+        {
+          "formula": "$\\alpha = \\frac{D - d}{(n-1)d}$",
+          "meaning": "Degree of dissociation from vapour densities ($D$ initial, $d$ equilibrium, $n$ particles formed per molecule)"
+        }
+      ],
+      "neet_tip": "NEET often asks for the $K_p/K_c$ ratio or the $\\Delta n_g$ of a given reaction, including heterogeneous ones.",
+      "topic": "Equilibrium constants Kp and Kc"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Gibbs energy links thermodynamics to equilibrium. At any instant, $\\Delta G = \\Delta G^\\circ + RT\\ln Q$. At equilibrium, $\\Delta G = 0$ and $Q = K$, giving $\\Delta G^\\circ = -RT\\ln K = -2.303RT\\log K$. A negative $\\Delta G^\\circ$ means $K > 1$ and the forward reaction is favoured, so products predominate. A positive $\\Delta G^\\circ$ means $K < 1$ and reactants predominate. If $\\Delta G^\\circ = 0$, then $K = 1$. Since $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ$, the value of $K$ changes with temperature. A reaction proceeds spontaneously while $\\Delta G < 0$ and stops at equilibrium when $\\Delta G$ becomes zero. Remember that $\\Delta G^\\circ$ fixes the value of $K$, while the sign of $\\Delta G$ (through $Q$) gives the instantaneous direction of the reaction.",
+      "key_points": [
+        "At equilibrium, $\\Delta G = 0$",
+        "$\\Delta G^\\circ < 0$ gives $K > 1$; $\\Delta G^\\circ > 0$ gives $K < 1$; $\\Delta G^\\circ = 0$ gives $K = 1$",
+        "$\\Delta G < 0$: spontaneous in the forward direction; $\\Delta G > 0$: the reverse is spontaneous",
+        "Use $R = 8.314$ J $K^{-1}$ mol$^{-1}$ and keep the energy units consistent"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta G = \\Delta G^\\circ + RT\\ln Q$",
+          "meaning": "Gibbs energy change at any composition"
+        },
+        {
+          "formula": "$\\Delta G^\\circ = -2.303RT\\log K$",
+          "meaning": "Relates standard Gibbs energy to the equilibrium constant"
+        },
+        {
+          "formula": "$K = e^{-\\Delta G^\\circ/RT}$",
+          "meaning": "Calculates $K$ from $\\Delta G^\\circ$"
+        }
+      ],
+      "neet_tip": "Typical questions ask for the sign or value of $\\Delta G^\\circ$ from $K$ (or vice versa), or the value of $\\Delta G$ at equilibrium.",
+      "topic": "Significance of Gibbs energy in chemical equilibrium"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Le Chatelier's principle: if a system at equilibrium is subjected to a change in concentration, pressure or temperature, the equilibrium shifts in the direction that reduces the effect of the change. Adding a reactant or removing a product shifts the equilibrium forward. Increasing pressure (by reducing volume) shifts it towards fewer gaseous moles; there is no effect if $\\Delta n_g = 0$. Raising temperature favours the endothermic direction. Temperature is the only factor that changes the value of $K$: for an exothermic reaction $K$ decreases with rise in temperature, and for an endothermic reaction it increases. A catalyst does not shift the equilibrium. Adding an inert gas at constant volume has no effect. Adding an inert gas at constant pressure shifts the equilibrium towards more gaseous moles. In the Haber process ($\\Delta H < 0$, $\\Delta n_g = -2$), high pressure and moderate temperature with an Fe catalyst are used.",
+      "key_points": [
+        "Concentration and pressure changes shift the position of equilibrium but leave $K$ unchanged",
+        "Temperature changes $K$; use the van't Hoff relation for quantitative work",
+        "Catalyst: no shift; equilibrium is reached faster",
+        "Inert gas at constant V: no effect; at constant P: shift towards more gaseous moles",
+        "$N_2 + 3H_2 \\rightleftharpoons 2NH_3$ is favoured by high pressure and low temperature",
+        "$N_2 + O_2 \\rightleftharpoons 2NO$ (endothermic, $\\Delta n_g = 0$): pressure has no effect, high temperature favours NO",
+        "Physical systems: pressure melts ice and raises the boiling point of water"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\log\\frac{K_2}{K_1} = \\frac{\\Delta H^\\circ}{2.303R}\\left(\\frac{1}{T_1}-\\frac{1}{T_2}\\right)$",
+          "meaning": "van't Hoff equation: variation of $K$ with temperature"
+        }
+      ],
+      "neet_tip": "Expect a question on the direction of shift for a given change, especially inert gas addition or the effect of temperature on $K$.",
+      "topic": "Factors affecting equilibrium; Le Chatelier's principle"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Substances that conduct electricity in aqueous solution by forming ions are called electrolytes. Strong electrolytes are almost completely ionised in water. Examples are strong acids ($HCl$, $HNO_3$, $H_2SO_4$), strong bases ($NaOH$, $KOH$) and most salts ($NaCl$). For these, the degree of ionisation $\\alpha \\approx 1$. Weak electrolytes, such as $CH_3COOH$, $NH_4OH$ and $HCN$, ionise only partially. An equilibrium exists between their unionised molecules and ions, so $\\alpha \\ll 1$. Ionic equilibrium is the equilibrium between ions and unionised molecules of a weak electrolyte. By Ostwald's dilution law, the degree of ionisation of a weak electrolyte increases with dilution and with temperature. Faraday classified substances as electrolytes and non-electrolytes; Arrhenius then explained conduction through ionisation in solution.",
+      "key_points": [
+        "Strong electrolytes: $\\alpha \\approx 1$; weak electrolytes: $\\alpha \\ll 1$",
+        "Ionic equilibrium exists only for weak electrolytes",
+        "$\\alpha$ increases with dilution and with rise in temperature",
+        "Non-electrolytes such as glucose and urea give no ions",
+        "Ostwald's dilution law is valid only for weak electrolytes"
+      ],
+      "formulas": [
+        {
+          "formula": "$K = \\frac{c\\alpha^2}{1-\\alpha} \\approx c\\alpha^2$",
+          "meaning": "Ostwald's dilution law for a weak binary electrolyte"
+        },
+        {
+          "formula": "$\\alpha = \\sqrt{\\frac{K}{c}}$",
+          "meaning": "Degree of ionisation of a weak electrolyte ($\\alpha \\ll 1$)"
+        }
+      ],
+      "neet_tip": "Classification of electrolytes and the effect of dilution on $\\alpha$ are tested conceptually.",
+      "topic": "Weak and strong electrolytes; ionization"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Arrhenius: acids give $H^+$ (as $H_3O^+$) in water, and bases give $OH^-$. This concept is limited to aqueous solutions and cannot explain the basicity of $NH_3$. Bronsted-Lowry: an acid is a proton donor and a base is a proton acceptor. An acid and the base formed when it loses a proton are a conjugate acid-base pair; for example, $HCl/Cl^-$ and $NH_4^+/NH_3$. A strong acid has a weak conjugate base, and vice versa. Amphoteric (amphiprotic) species, such as $H_2O$, $HCO_3^-$ and $HSO_4^-$, can both donate and accept a proton. Lewis: an acid is an electron-pair acceptor and a base is an electron-pair donor. Lewis acids include electron-deficient molecules ($BF_3$, $AlCl_3$), cations ($H^+$, $Fe^{3+}$, $Ag^+$) and molecules with vacant d-orbitals ($SiF_4$, $SnCl_4$). Lewis bases include $NH_3$, $H_2O$, $OH^-$ and $Cl^-$. Every Bronsted base is a Lewis base, but not every Lewis acid is a Bronsted acid.",
+      "key_points": [
+        "Arrhenius concept: restricted to aqueous medium",
+        "Conjugate pairs differ by exactly one $H^+$",
+        "Stronger acid means weaker conjugate base",
+        "Amphiprotic species: $H_2O$, $HCO_3^-$, $HSO_4^-$, $H_2PO_4^-$",
+        "Lewis acids: $BF_3$, $AlCl_3$, $SO_3$, $CO_2$, metal cations",
+        "Lewis bases: species with lone pairs, such as $NH_3$, $H_2O$, $OH^-$",
+        "$BF_3$ is a Lewis acid but not a Bronsted acid"
+      ],
+      "formulas": [
+        {
+          "formula": "$HA + H_2O \\rightleftharpoons H_3O^+ + A^-$",
+          "meaning": "Bronsted acid $HA$ with conjugate base $A^-$"
+        }
+      ],
+      "neet_tip": "Questions ask for the conjugate acid or base of a species, or ask you to identify Lewis acids from a list.",
+      "topic": "Arrhenius, Bronsted-Lowry and Lewis concepts of acids and bases"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "For a weak acid $HA \\rightleftharpoons H^+ + A^-$, the ionisation constant is $K_a = [H^+][A^-]/[HA]$; similarly $K_b$ is defined for a weak base. A larger $K_a$ (smaller $pK_a$) means a stronger acid. For dilute solutions with $\\alpha \\ll 1$, $[H^+] = \\sqrt{K_a c}$ and $\\alpha = \\sqrt{K_a/c}$. For a conjugate pair, $K_a K_b = K_w$, so $pK_a + pK_b = 14$ at 298 K. Polyprotic acids such as $H_2S$, $H_2CO_3$ and $H_3PO_4$ ionise stepwise, with $K_{a1} \\gg K_{a2} \\gg K_{a3}$, because removing $H^+$ from a negatively charged ion is harder. Acid strength of $H-X$ increases down a group as bond strength falls: $HF < HCl < HBr < HI$. Across a period it increases with electronegativity of the central atom: $CH_4 < NH_3 < H_2O < HF$. Factors increasing acid strength are bond weakness, polarity and stability of the conjugate base.",
+      "key_points": [
+        "$pK_a = -\\log K_a$; a lower $pK_a$ means a stronger acid",
+        "$K_a K_b = K_w$ for a conjugate acid-base pair",
+        "Polyprotic acids: $K_{a1} > K_{a2} > K_{a3}$; $[H^+]$ comes mainly from the first step",
+        "Down a group, bond strength decides acidity: $HI$ is the strongest hydrohalic acid",
+        "Across a period, electronegativity decides acidity"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_a = \\frac{c\\alpha^2}{1-\\alpha}$",
+          "meaning": "Ionisation constant of a weak acid"
+        },
+        {
+          "formula": "$[H^+] = \\sqrt{K_a c}$",
+          "meaning": "Hydrogen ion concentration of a weak acid"
+        },
+        {
+          "formula": "$[OH^-] = \\sqrt{K_b c}$",
+          "meaning": "Hydroxide ion concentration of a weak base"
+        },
+        {
+          "formula": "$pK_a + pK_b = pK_w = 14$",
+          "meaning": "Conjugate pair relation at 298 K"
+        }
+      ],
+      "neet_tip": "Short numericals on the pH or $\\alpha$ of a weak acid or base from $K_a$ and $c$ are very common.",
+      "topic": "Acid-base equilibria and ionization constants"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "Water self-ionises: $2H_2O \\rightleftharpoons H_3O^+ + OH^-$. The ionic product $K_w = [H^+][OH^-] = 1.0\\times10^{-14}$ at 298 K. In pure water, $[H^+] = [OH^-] = 10^{-7}$ M. $K_w$ increases with temperature because ionisation is endothermic. Pure water therefore has pH less than 7 at higher temperature, yet remains neutral because $[H^+] = [OH^-]$. The pH is $-\\log[H^+]$. At 298 K, pH < 7 is acidic, pH = 7 is neutral and pH > 7 is basic, with pH + pOH = 14. The molarity of pure water is 55.55 M, and its degree of ionisation is about $1.8\\times10^{-9}$. For very dilute strong acids such as $10^{-8}$ M HCl, the $H^+$ from water must be added, giving a pH of about 6.98, not 8. When strong acid and strong base solutions are mixed, calculate the net excess of $H^+$ or $OH^-$ over the total volume.",
+      "key_points": [
+        "$K_w = 10^{-14}$ at 298 K and increases with temperature",
+        "A change of 1 pH unit is a 10-fold change in $[H^+]$",
+        "Neutrality means $[H^+] = [OH^-]$, not necessarily pH 7",
+        "Acidic solutions cannot have pH > 7 on dilution; pH approaches 7",
+        "$10^{-8}$ M HCl has pH about 6.98",
+        "Human blood pH is about 7.4; gastric juice about 1.2"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_w = [H^+][OH^-] = 10^{-14}$",
+          "meaning": "Ionic product of water at 298 K"
+        },
+        {
+          "formula": "$pH = -\\log[H^+]$",
+          "meaning": "Definition of pH"
+        },
+        {
+          "formula": "$pH + pOH = pK_w = 14$",
+          "meaning": "Relation at 298 K"
+        },
+        {
+          "formula": "$[H^+]_{mix} = \\frac{N_1V_1 - N_2V_2}{V_1+V_2}$",
+          "meaning": "Mixing a strong acid with a strong base (acid in excess)"
+        }
+      ],
+      "neet_tip": "NEET asks the pH of mixtures of strong acids and bases, very dilute acids, or the effect of temperature on $K_w$.",
+      "topic": "Ionization of water and the pH scale"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "The common ion effect is the suppression of a weak electrolyte's ionisation, or of a sparingly soluble salt's solubility, when a strong electrolyte containing a common ion is added. It is an application of Le Chatelier's principle. Adding $CH_3COONa$ to $CH_3COOH$ lowers $[H^+]$ and raises the pH. Adding $NH_4Cl$ to $NH_4OH$ lowers $[OH^-]$. The solubility of $AgCl$ falls in a solution containing $NaCl$. If a salt $AB$ with solubility product $K_{sp}$ dissolves in a solution with a common ion concentration $c$, its solubility becomes $s \\approx K_{sp}/c$. Applications include: purification of NaCl by passing HCl gas; salting out of soap with NaCl; precipitation of Group II sulphides with $H_2S$ in acidic medium (low $[S^{2-}]$); and precipitation of Group III hydroxides with $NH_4OH$ in the presence of $NH_4Cl$.",
+      "key_points": [
+        "A common ion suppresses ionisation and decreases solubility",
+        "The value of $K_a$ or $K_{sp}$ does not change; only the equilibrium position shifts",
+        "HCl suppresses $H_2S$ ionisation, so only low-$K_{sp}$ Group II sulphides precipitate",
+        "$NH_4Cl$ suppresses $NH_4OH$ ionisation, so only Group III hydroxides precipitate",
+        "Basis of buffer action and of salting out"
+      ],
+      "formulas": [
+        {
+          "formula": "$s = \\frac{K_{sp}}{[\\text{common ion}]}$",
+          "meaning": "Solubility of an AB-type salt in the presence of a common ion"
+        },
+        {
+          "formula": "$[H^+] = \\frac{K_a[HA]}{[A^-]}$",
+          "meaning": "$[H^+]$ of a weak acid in the presence of its salt"
+        }
+      ],
+      "neet_tip": "Expect a calculation of solubility in a solution containing a common ion, or questions on the qualitative-analysis applications.",
+      "topic": "Common ion effect"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Salt hydrolysis is the reaction of the cation or anion of a salt with water, which changes the pH. Salts of a strong acid and a strong base (NaCl) do not hydrolyse; their pH is 7. A salt of a weak acid and a strong base ($CH_3COONa$, $Na_2CO_3$) undergoes anionic hydrolysis and gives a basic solution. A salt of a strong acid and a weak base ($NH_4Cl$, $CuSO_4$) undergoes cationic hydrolysis and gives an acidic solution. A salt of a weak acid and a weak base ($CH_3COONH_4$) undergoes both. Its pH depends on the relative $K_a$ and $K_b$ and is independent of concentration. The hydrolysis constant is $K_h = K_w/K_a$ or $K_w/K_b$, and the degree of hydrolysis is $h = \\sqrt{K_h/c}$. For a weak acid and weak base salt, $h = \\sqrt{K_w/(K_aK_b)}$, also independent of concentration.",
+      "key_points": [
+        "Strong acid + strong base salt: neutral, no hydrolysis",
+        "Weak acid + strong base salt: basic (pH > 7)",
+        "Strong acid + weak base salt: acidic (pH < 7)",
+        "Weak acid + weak base salt: neutral if $K_a = K_b$, acidic if $K_a > K_b$, basic if $K_b > K_a$",
+        "Degree of hydrolysis increases with dilution and temperature, except for weak acid + weak base salts"
+      ],
+      "formulas": [
+        {
+          "formula": "$pH = 7 + \\frac{1}{2}(pK_a + \\log c)$",
+          "meaning": "Salt of weak acid and strong base"
+        },
+        {
+          "formula": "$pH = 7 - \\frac{1}{2}(pK_b + \\log c)$",
+          "meaning": "Salt of strong acid and weak base"
+        },
+        {
+          "formula": "$pH = 7 + \\frac{1}{2}(pK_a - pK_b)$",
+          "meaning": "Salt of weak acid and weak base"
+        },
+        {
+          "formula": "$K_h = \\frac{K_w}{K_a}$, $h = \\sqrt{\\frac{K_h}{c}}$",
+          "meaning": "Hydrolysis constant and degree of hydrolysis (weak acid + strong base salt)"
+        }
+      ],
+      "neet_tip": "Questions ask whether a salt solution is acidic, basic or neutral, or ask for the pH of salts such as $CH_3COONa$ and $NH_4Cl$.",
+      "topic": "Hydrolysis of salts and pH of their solutions"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "For a sparingly soluble salt in a saturated solution, $A_xB_y(s) \\rightleftharpoons xA^{y+} + yB^{x-}$. The solubility product is $K_{sp} = [A^{y+}]^x[B^{x-}]^y$, which is constant at a given temperature. If the molar solubility is $s$, then $K_{sp} = x^x y^y s^{x+y}$. Thus $K_{sp} = s^2$ for AB (AgCl), $4s^3$ for $AB_2$ or $A_2B$ ($CaF_2$, $Ag_2CrO_4$, and $Hg_2Cl_2$, which gives $Hg_2^{2+}$ + $2Cl^-$), and $27s^4$ for $AB_3$ ($Al(OH)_3$). Solubility order can be read directly from $K_{sp}$ only for salts of the same type. For different stoichiometries, calculate $s$ for each. The ionic product $Q_{sp}$ predicts precipitation: if $Q_{sp} > K_{sp}$, precipitation occurs; if $Q_{sp} = K_{sp}$, the solution is saturated; if $Q_{sp} < K_{sp}$, it is unsaturated. Solubility decreases in the presence of a common ion. It increases if an ion is removed, for example by complex formation or by acid acting on salts of weak acids.",
+      "key_points": [
+        "$K_{sp}$ applies only to saturated solutions of sparingly soluble salts",
+        "Compare $K_{sp}$ directly only for salts of the same formula type",
+        "$Hg_2Cl_2$ dissociates as $Hg_2^{2+} + 2Cl^-$ (dimeric mercurous ion), so $K_{sp} = 4s^3$",
+        "Precipitation occurs when the ionic product exceeds $K_{sp}$",
+        "Mixing solutions dilutes each ion; use the concentrations after mixing for $Q_{sp}$",
+        "The salt with lower $K_{sp}$ (same type) precipitates first in selective precipitation"
+      ],
+      "formulas": [
+        {
+          "formula": "$K_{sp} = x^x y^y s^{x+y}$",
+          "meaning": "General relation for $A_xB_y$ with molar solubility $s$"
+        },
+        {
+          "formula": "$K_{sp} = s^2$ (AB), $4s^3$ ($AB_2$), $27s^4$ ($AB_3$), $108s^5$ ($A_2B_3$)",
+          "meaning": "Quick relations for common salt types"
+        },
+        {
+          "formula": "$Q_{sp} > K_{sp}$",
+          "meaning": "Condition for precipitation"
+        }
+      ],
+      "neet_tip": "NEET favours ranking the solubilities of salts with different stoichiometries from given $K_{sp}$ values, which requires calculating $s$, not comparing $K_{sp}$ directly.",
+      "topic": "Solubility and solubility product"
+    },
+    {
+      "topic_index": 14,
+      "explanation": "A buffer solution resists changes in pH when a small amount of acid or base is added or on dilution. An acidic buffer is a weak acid with its salt of a strong base, such as $CH_3COOH + CH_3COONa$. A basic buffer is a weak base with its salt of a strong acid, such as $NH_4OH + NH_4Cl$. In an acetate buffer, added $H^+$ is consumed by $CH_3COO^-$ and added $OH^-$ by $CH_3COOH$. The pH is given by the Henderson-Hasselbalch equation. Buffer capacity is maximum when [salt] = [acid], where pH = $pK_a$. The effective buffer range is $pK_a \\pm 1$. Diluting a buffer does not change its pH, since the ratio stays the same. A buffer can also be prepared by partially neutralising a weak acid with a strong base. For example, if moles of NaOH are half the moles of $CH_3COOH$, then pH = $pK_a$. A salt of a weak acid and weak base, $CH_3COONH_4$, also shows buffer action. Blood is buffered at pH about 7.4 by $H_2CO_3/HCO_3^-$.",
+      "key_points": [
+        "Acidic buffer: weak acid + its conjugate base salt",
+        "Basic buffer: weak base + its conjugate acid salt",
+        "Strong acid + its salt (e.g. $HCl + NaCl$) is not a buffer",
+        "Maximum buffer capacity occurs at [salt]/[acid] = 1",
+        "Buffer pH is unchanged on dilution",
+        "Weak acid + strong base, with the weak acid in excess, gives a buffer",
+        "Blood buffer: $H_2CO_3/HCO_3^-$, pH about 7.4"
+      ],
+      "formulas": [
+        {
+          "formula": "$pH = pK_a + \\log\\frac{[\\text{salt}]}{[\\text{acid}]}$",
+          "meaning": "Henderson-Hasselbalch equation for an acidic buffer"
+        },
+        {
+          "formula": "$pOH = pK_b + \\log\\frac{[\\text{salt}]}{[\\text{base}]}$",
+          "meaning": "Henderson-Hasselbalch equation for a basic buffer"
+        },
+        {
+          "formula": "$\\beta = \\frac{\\text{moles of acid or base added per litre}}{\\Delta pH}$",
+          "meaning": "Buffer capacity"
+        }
+      ],
+      "neet_tip": "Questions ask you to identify which mixture forms a buffer, or to calculate buffer pH from moles of weak acid partly neutralised by a strong base.",
+      "topic": "Buffer solutions"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$",
+      "meaning": "Law of chemical equilibrium"
+    },
+    {
+      "formula": "$K_p = K_c(RT)^{\\Delta n_g}$",
+      "meaning": "Relation between $K_p$ and $K_c$"
+    },
+    {
+      "formula": "$K_{reverse} = \\frac{1}{K}$; $K_{(n \\times eq)} = K^n$; $K_{overall} = K_1K_2$",
+      "meaning": "Manipulating equilibrium constants"
+    },
+    {
+      "formula": "$Q < K$: forward; $Q > K$: backward",
+      "meaning": "Predicting the direction of reaction"
+    },
+    {
+      "formula": "$\\Delta G^\\circ = -2.303RT\\log K$",
+      "meaning": "Gibbs energy and the equilibrium constant"
+    },
+    {
+      "formula": "$\\Delta G = \\Delta G^\\circ + RT\\ln Q$",
+      "meaning": "Gibbs energy at any instant"
+    },
+    {
+      "formula": "$\\log\\frac{K_2}{K_1} = \\frac{\\Delta H^\\circ}{2.303R}\\left(\\frac{1}{T_1}-\\frac{1}{T_2}\\right)$",
+      "meaning": "van't Hoff equation"
+    },
+    {
+      "formula": "$p = K_H x$",
+      "meaning": "Henry's law"
+    },
+    {
+      "formula": "$\\alpha = \\sqrt{\\frac{K}{c}}$",
+      "meaning": "Ostwald's dilution law"
+    },
+    {
+      "formula": "$[H^+] = \\sqrt{K_a c}$; $[OH^-] = \\sqrt{K_b c}$",
+      "meaning": "Weak acid and weak base"
+    },
+    {
+      "formula": "$K_w = [H^+][OH^-] = 10^{-14}$ (298 K)",
+      "meaning": "Ionic product of water"
+    },
+    {
+      "formula": "$pH + pOH = 14$",
+      "meaning": "At 298 K"
+    },
+    {
+      "formula": "$K_aK_b = K_w$",
+      "meaning": "Conjugate acid-base pair"
+    },
+    {
+      "formula": "$K_h = \\frac{K_w}{K_a}$ or $\\frac{K_w}{K_b}$ or $\\frac{K_w}{K_aK_b}$",
+      "meaning": "Hydrolysis constants"
+    },
+    {
+      "formula": "$pH = 7 + \\frac{1}{2}(pK_a + \\log c)$",
+      "meaning": "Salt of weak acid and strong base"
+    },
+    {
+      "formula": "$pH = 7 - \\frac{1}{2}(pK_b + \\log c)$",
+      "meaning": "Salt of strong acid and weak base"
+    },
+    {
+      "formula": "$pH = 7 + \\frac{1}{2}(pK_a - pK_b)$",
+      "meaning": "Salt of weak acid and weak base"
+    },
+    {
+      "formula": "$K_{sp} = x^x y^y s^{x+y}$",
+      "meaning": "Solubility product of $A_xB_y$"
+    },
+    {
+      "formula": "$s = \\frac{K_{sp}}{c}$",
+      "meaning": "Solubility of an AB salt with common ion concentration $c$"
+    },
+    {
+      "formula": "$pH = pK_a + \\log\\frac{[\\text{salt}]}{[\\text{acid}]}$",
+      "meaning": "Acidic buffer"
+    },
+    {
+      "formula": "$pOH = pK_b + \\log\\frac{[\\text{salt}]}{[\\text{base}]}$",
+      "meaning": "Basic buffer"
+    },
+    {
+      "formula": "$HF < HCl < HBr < HI$",
+      "meaning": "Acid strength trend of hydrogen halides (bond strength)"
+    }
+  ],
+  "common_traps": [
+    "Comparing solubilities directly from $K_{sp}$ values for salts of different formula types. Convert each $K_{sp}$ to molar solubility $s$ first, using $s^2$, $4s^3$, $27s^4$ and so on.",
+    "Treating $Hg_2Cl_2$ as giving $2Hg^+$. The mercurous ion is dimeric, $Hg_2^{2+}$, so $Hg_2Cl_2 \\rightleftharpoons Hg_2^{2+} + 2Cl^-$ and $K_{sp} = 4s^3$.",
+    "Including solids or liquids in $K_p$ or $K_c$, or counting them in $\\Delta n_g$. Only gaseous species count in $\\Delta n_g$ and in $K_p$.",
+    "Thinking that a catalyst, pressure or concentration changes $K$. Only temperature changes the value of the equilibrium constant.",
+    "Assuming inert gas addition always shifts equilibrium. At constant volume there is no shift; only at constant pressure does it shift towards more gaseous moles.",
+    "Writing pH = 8 for $10^{-8}$ M HCl. The $10^{-7}$ M $H^+$ from water must be added, giving a pH of about 6.98, since an acid can never be basic.",
+    "Assuming pure water always has pH 7. At higher temperature $K_w$ rises and pH falls below 7, but water remains neutral.",
+    "Taking $HCl + NaCl$ or $NaOH + NaCl$ as buffers. A buffer needs a weak acid or weak base with its conjugate partner."
+  ],
+  "quick_revision": [
+    "Equilibrium is dynamic: $r_f = r_b$ in a closed system; a catalyst does not shift it.",
+    "Gas solubility is proportional to partial pressure ($p = K_Hx$); a higher $K_H$ means lower solubility, and gas solubility falls as temperature rises.",
+    "$K_p = K_c(RT)^{\\Delta n_g}$; when $\\Delta n_g = 0$, $K_p = K_c$.",
+    "$\\Delta G^\\circ = -RT\\ln K$; at equilibrium $\\Delta G = 0$; negative $\\Delta G^\\circ$ means $K > 1$.",
+    "Le Chatelier: pressure favours fewer gaseous moles, heat favours the endothermic side, and only temperature changes $K$.",
+    "Bronsted conjugate pairs differ by one $H^+$; $BF_3$, $AlCl_3$ and metal cations are Lewis acids.",
+    "$K_aK_b = K_w$; $pK_a + pK_b = 14$; for polyprotic acids $K_{a1} > K_{a2} > K_{a3}$.",
+    "$K_w = 10^{-14}$ at 298 K and increases with temperature; pH + pOH = 14.",
+    "A common ion suppresses ionisation and solubility (Group II and III qualitative analysis, salting out of soap).",
+    "Weak acid + strong base salt is basic; strong acid + weak base salt is acidic; for weak acid + weak base salts, pH is independent of concentration.",
+    "$K_{sp}$: AB = $s^2$, $AB_2$ = $4s^3$, $AB_3$ = $27s^4$; precipitation occurs when $Q_{sp} > K_{sp}$.",
+    "Buffer pH = $pK_a + \\log$[salt]/[acid]; maximum capacity at pH = $pK_a$; buffer pH is unchanged on dilution; blood pH is 7.4."
+  ],
+  "pyq": {
+    "count": 1,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q052",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q52"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

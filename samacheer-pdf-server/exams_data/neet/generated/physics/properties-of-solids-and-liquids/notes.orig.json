@@ -1,0 +1,552 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u07",
+  "unit_no": 7,
+  "unit_name": "Properties of Solids and Liquids",
+  "slug": "properties-of-solids-and-liquids",
+  "overview": "This unit covers the mechanical and thermal properties of matter. It includes elasticity of solids, fluid statics and dynamics (pressure, viscosity, Bernoulli's principle), surface tension, and thermal phenomena such as expansion, calorimetry, latent heat and heat transfer. NEET asks 2-4 questions from this unit almost every year, mostly formula-based numericals and graph interpretation, so exact formulas and limiting cases matter.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Elasticity is the property of a body to regain its original shape and size when the deforming force is removed. Plasticity is the tendency to retain the deformation. When a force acts, internal restoring forces develop. The restoring force per unit area is called stress, and the fractional change in dimension is called strain. Hooke's law states that, within the elastic limit, stress is directly proportional to strain. On the stress-strain curve, the initial straight portion obeys Hooke's law up to the proportional limit. Beyond the yield point the material deforms plastically. The maximum stress is the ultimate tensile strength, and beyond it the material reaches the fracture point. Ductile materials, such as metals, have a large plastic region. Brittle materials fracture soon after the elastic limit. Elastomers, such as rubber or the aorta, stretch a lot without obeying Hooke's law.",
+      "key_points": [
+        "Stress = restoring force / area; SI unit $N\\,m^{-2}$ (Pa), same unit as pressure",
+        "Strain is dimensionless; it can be longitudinal, volumetric or shear",
+        "Three types of stress: tensile/compressive (longitudinal), shearing (tangential) and hydraulic (volume)",
+        "Hooke's law is valid only within the proportional limit",
+        "Large gap between elastic limit and fracture point means ductile; small gap means brittle",
+        "Rubber has no well-defined plastic region; its stress-strain curve is non-linear"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\text{Stress} = \\frac{F}{A}$",
+          "meaning": "Restoring force per unit area"
+        },
+        {
+          "formula": "$\\text{Longitudinal strain} = \\frac{\\Delta L}{L}$",
+          "meaning": "Fractional change in length"
+        },
+        {
+          "formula": "$\\text{Stress} = E \\times \\text{Strain}$",
+          "meaning": "Hooke's law; $E$ is the modulus of elasticity"
+        }
+      ],
+      "neet_tip": "NEET asks you to identify regions on the stress-strain curve and to judge which material is ductile or brittle from given graphs.",
+      "topic": "Elastic behaviour, stress-strain relationship and Hooke's law"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "A modulus of elasticity is the ratio of stress to strain within the elastic limit. Young's modulus applies to change in length, bulk modulus to change in volume, and modulus of rigidity (shear modulus) to change in shape. A larger modulus means the material is more elastic, that is, harder to deform. Steel is therefore more elastic than rubber. Solids possess all three moduli. Liquids and gases have only a bulk modulus. The reciprocal of the bulk modulus is the compressibility. Poisson's ratio is lateral strain divided by longitudinal strain. Energy is stored in a stretched wire, and the energy per unit volume equals half of stress times strain. For a wire under its own load, the extension is proportional to $L^2/r^2$. A given load produces more extension in a thinner, longer wire.",
+      "key_points": [
+        "Moduli have the same unit as stress, Pa",
+        "Young's modulus of a material is independent of the wire's length and radius",
+        "For most materials $G \\approx Y/3$",
+        "Bulk modulus: solids > liquids > gases; gases are the most compressible",
+        "The negative sign in $B$ appears because volume decreases when pressure increases",
+        "Poisson's ratio is dimensionless; its theoretical range is $-1$ to $0.5$",
+        "If the same wire is stretched, $\\Delta L \\propto L^2$ when volume is constant"
+      ],
+      "formulas": [
+        {
+          "formula": "$Y = \\frac{FL}{A\\,\\Delta L}$",
+          "meaning": "Young's modulus from load $F$, original length $L$, area $A$ and extension $\\Delta L$"
+        },
+        {
+          "formula": "$B = -\\frac{\\Delta P}{\\Delta V/V}$",
+          "meaning": "Bulk modulus; compressibility $k = 1/B$"
+        },
+        {
+          "formula": "$G = \\frac{F/A}{\\theta}$",
+          "meaning": "Modulus of rigidity; $\\theta = \\Delta x/L$ is the shear strain"
+        },
+        {
+          "formula": "$u = \\frac{1}{2}\\,\\text{stress}\\times\\text{strain} = \\frac{1}{2}\\frac{(\\text{stress})^2}{Y}$",
+          "meaning": "Elastic potential energy per unit volume"
+        },
+        {
+          "formula": "$U = \\frac{1}{2}F\\,\\Delta L$",
+          "meaning": "Total elastic energy stored in a stretched wire"
+        }
+      ],
+      "neet_tip": "Expect ratio problems comparing extensions of wires of different radius and length under the same load, and energy-stored questions.",
+      "topic": "Young's modulus, bulk modulus and modulus of rigidity"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Pressure is the normal force per unit area. It is a scalar quantity. In a fluid at rest, the pressure at depth $h$ below the free surface is $P = P_a + \\rho g h$. It depends only on depth, not on the shape of the vessel; this is the hydrostatic paradox. Gauge pressure, $P - P_a = \\rho g h$, is what a pressure gauge or manometer reads. Atmospheric pressure is measured with a mercury barometer and equals 76 cm of Hg, about $1.013\\times10^5$ Pa. Pascal's law states that pressure applied to an enclosed fluid is transmitted undiminished to every part of the fluid and to the container walls. Applications include the hydraulic lift, hydraulic press and hydraulic brakes. All of these multiply force: a small force on a small piston gives a large force on a large piston. Energy is conserved, so the larger piston moves through a smaller distance.",
+      "key_points": [
+        "Pressure at the same horizontal level in a continuous static fluid is the same",
+        "Pressure depends on depth only, not on vessel shape or base area",
+        "$1\\,atm = 1.013\\times10^5\\,Pa$; $1\\,bar = 10^5\\,Pa$; $1\\,torr = 1\\,mm$ of Hg",
+        "A hydraulic machine multiplies force but not work",
+        "Open-tube manometer: the difference in levels gives gauge pressure"
+      ],
+      "formulas": [
+        {
+          "formula": "$P = P_a + \\rho g h$",
+          "meaning": "Absolute pressure at depth $h$ in a liquid of density $\\rho$"
+        },
+        {
+          "formula": "$\\frac{F_1}{A_1} = \\frac{F_2}{A_2}$",
+          "meaning": "Pascal's law for a hydraulic lift; $F_2 = F_1 A_2/A_1$"
+        },
+        {
+          "formula": "$A_1 d_1 = A_2 d_2$",
+          "meaning": "Equal volume displaced; the large piston moves less"
+        }
+      ],
+      "neet_tip": "NEET tests hydraulic lift force ratios and U-tube problems with two immiscible liquids balanced at a common level.",
+      "topic": "Pressure due to a fluid column; Pascal's law and its applications"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "The variation of pressure with depth is entirely a consequence of gravity. Consider a fluid element in equilibrium: the difference in pressure on its top and bottom faces must support its weight, which gives $dP/dh = \\rho g$. Hence pressure increases linearly with depth for an incompressible liquid. In the atmosphere, air is compressible, so pressure and density both decrease with altitude, roughly exponentially. If the effective gravity changes, the pressure difference changes too. In a lift accelerating upward, $P = P_a + \\rho (g+a) h$. In free fall or in an orbiting spacecraft, the effective $g = 0$, so there is no depth-dependent pressure and no buoyancy. The buoyant force, given by Archimedes' principle, is itself the net upward force from this gravity-induced pressure difference.",
+      "key_points": [
+        "Without gravity there is no hydrostatic pressure gradient",
+        "Accelerating upward: $g_{eff} = g + a$; accelerating downward: $g_{eff} = g - a$",
+        "In a horizontally accelerating container, the free surface tilts at $\\tan\\theta = a/g$",
+        "Buoyant force = weight of fluid displaced = $V \\rho_{fluid} g$",
+        "A floating body has the same fraction submerged inside an accelerating lift, because both the weight and the buoyancy scale with $g_{eff}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$P_2 - P_1 = \\rho g (h_2 - h_1)$",
+          "meaning": "Pressure difference between two depths"
+        },
+        {
+          "formula": "$P = P_a + \\rho (g \\pm a) h$",
+          "meaning": "Pressure in a container accelerating vertically up (+) or down (-)"
+        },
+        {
+          "formula": "$F_B = V \\rho_{fluid} g$",
+          "meaning": "Buoyant force on a submerged volume $V$"
+        }
+      ],
+      "neet_tip": "NEET asks conceptual questions on pressure or buoyancy in an accelerating lift, in free fall, or in a horizontally accelerated tank.",
+      "topic": "Effect of gravity on fluid pressure"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Viscosity is the internal friction between adjacent fluid layers in relative motion. By Newton's law of viscosity, the viscous force is $F = \\eta A\\, dv/dx$, where $\\eta$ is the coefficient of viscosity. The SI unit of $\\eta$ is Pa s (poiseuille); the CGS unit is the poise, and 1 Pa s = 10 poise. For a small sphere moving slowly through a viscous fluid, Stokes' law gives the drag $F = 6\\pi\\eta r v$. A falling sphere accelerates until weight equals buoyancy plus viscous drag; it then moves at a constant terminal velocity. The terminal velocity is proportional to $r^2$ and to $(\\sigma - \\rho)$. If the sphere's density is less than the fluid's, it rises; an air bubble in water is an example. The viscosity of liquids decreases with temperature, while that of gases increases.",
+      "key_points": [
+        "Dimensions of $\\eta$: $[ML^{-1}T^{-1}]$",
+        "Terminal velocity $v_t \\propto r^2$, so a larger raindrop falls faster",
+        "$v_t \\propto (\\sigma - \\rho)$; for $\\sigma < \\rho$ the body moves upward",
+        "For a fixed radius, a plot of $v_t$ against $\\sigma/\\rho$ is linear, with zero value at $\\sigma/\\rho = 1$",
+        "When $n$ identical drops merge into one big drop, the new terminal velocity is $n^{2/3}$ times the old",
+        "In the velocity-time graph of a falling sphere, $v$ rises exponentially and saturates at $v_t$"
+      ],
+      "formulas": [
+        {
+          "formula": "$F = \\eta A \\frac{dv}{dx}$",
+          "meaning": "Viscous force between layers; $dv/dx$ is the velocity gradient"
+        },
+        {
+          "formula": "$F = 6\\pi\\eta r v$",
+          "meaning": "Stokes' drag on a sphere of radius $r$ moving with speed $v$"
+        },
+        {
+          "formula": "$v_t = \\frac{2 r^2 (\\sigma - \\rho) g}{9\\eta}$",
+          "meaning": "Terminal velocity; $\\sigma$ is the sphere's density, $\\rho$ the fluid's density"
+        }
+      ],
+      "neet_tip": "Very frequent: terminal velocity ratios, merging-drops problems, and graphs of $v_t$ against radius or density ratio.",
+      "topic": "Viscosity, Stokes' law and terminal velocity"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "In streamline (laminar) flow, the velocity of the fluid at any given point does not change with time. Fluid particles follow smooth paths called streamlines, and two streamlines never cross. Beyond a certain speed, called the critical velocity, the flow becomes turbulent: irregular, with eddies, and dissipating energy. The nature of the flow is predicted by the dimensionless Reynolds number $R_e = \\rho v D/\\eta$. As a rough guide, $R_e < 1000$ gives streamline flow, $R_e > 2000$ gives turbulent flow, and values in between are unsteady. Critical velocity is low for less viscous, denser fluids and wider pipes. For steady incompressible flow, mass conservation gives the equation of continuity, $A v = \\text{constant}$. The fluid therefore speeds up where the pipe narrows.",
+      "key_points": [
+        "Crowded streamlines indicate higher speed",
+        "Volume flow rate $Q = Av$ is constant along a tube",
+        "$R_e$ is the ratio of inertial force to viscous force",
+        "High viscosity favours streamline flow",
+        "Turbulence is caused by high speed, large diameter and low viscosity"
+      ],
+      "formulas": [
+        {
+          "formula": "$R_e = \\frac{\\rho v D}{\\eta}$",
+          "meaning": "Reynolds number; $D$ is the pipe diameter"
+        },
+        {
+          "formula": "$v_c = \\frac{R_e\\,\\eta}{\\rho D}$",
+          "meaning": "Critical velocity for the onset of turbulence"
+        },
+        {
+          "formula": "$A_1 v_1 = A_2 v_2$",
+          "meaning": "Equation of continuity for an incompressible fluid"
+        }
+      ],
+      "neet_tip": "Continuity is usually combined with Bernoulli; direct questions ask how critical velocity depends on $\\eta$, $\\rho$ and $D$.",
+      "topic": "Streamline and turbulent flow; critical velocity"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "Bernoulli's principle applies the work-energy theorem to steady, incompressible, non-viscous, irrotational flow along a streamline. It states that $P + \\frac{1}{2}\\rho v^2 + \\rho g h$ is constant, so the sum of pressure energy, kinetic energy and potential energy per unit volume is constant. In a horizontal pipe, a higher speed means a lower pressure. Applications include the following. A venturimeter measures flow rate from the pressure difference between the wide and narrow sections. Torricelli's law gives the speed of efflux from a hole at depth $h$ as $\\sqrt{2gh}$. Dynamic lift on aircraft wings arises from faster flow above the wing. The Magnus effect explains the swing of a spinning ball. Other examples are atomizers and sprayers, and roofs blown off during storms. Combining Bernoulli with continuity solves most pipe-flow problems.",
+      "key_points": [
+        "Bernoulli is invalid for viscous or turbulent flow",
+        "Every term has the dimension of pressure (energy per unit volume)",
+        "Efflux speed $\\sqrt{2gh}$ equals the speed of free fall from height $h$",
+        "Horizontal range of a jet from a hole at depth $h$ in a tank of liquid height $H$: $R = 2\\sqrt{h(H-h)}$, maximum at $h = H/2$",
+        "Pressure difference in a venturimeter: $\\Delta P = \\frac{1}{2}\\rho (v_2^2 - v_1^2)$"
+      ],
+      "formulas": [
+        {
+          "formula": "$P + \\frac{1}{2}\\rho v^2 + \\rho g h = \\text{constant}$",
+          "meaning": "Bernoulli's equation along a streamline"
+        },
+        {
+          "formula": "$v = \\sqrt{2gh}$",
+          "meaning": "Torricelli's speed of efflux from depth $h$"
+        },
+        {
+          "formula": "$Q = A_1 A_2\\sqrt{\\frac{2\\Delta P}{\\rho (A_1^2 - A_2^2)}}$",
+          "meaning": "Venturimeter flow rate from pressure difference $\\Delta P$ between areas $A_1$ and $A_2$"
+        }
+      ],
+      "neet_tip": "NEET regularly gives the areas and pressure difference in a horizontal pipe and asks for the flow rate (continuity plus Bernoulli).",
+      "topic": "Bernoulli's principle and its applications"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "Molecules on a liquid surface experience a net inward cohesive pull, so the surface behaves like a stretched membrane with extra energy. Surface tension $S$ is the force per unit length acting perpendicular to an imaginary line on the surface. It equals the surface energy per unit area, that is, the work done to increase the surface area isothermally by one unit. A soap film has two surfaces, so the work is $2S\\Delta A$. Surface tension decreases with temperature and becomes zero at the critical temperature. Detergents reduce it, while highly soluble impurities such as NaCl increase it. The angle of contact $\\theta$ is the angle between the solid surface and the tangent to the liquid surface, measured inside the liquid. If adhesion exceeds cohesion, $\\theta$ is acute and the liquid wets the solid, as water does glass. If cohesion dominates, $\\theta$ is obtuse, as for mercury on glass.",
+      "key_points": [
+        "Unit: $N\\,m^{-1}$ or $J\\,m^{-2}$; dimensions $[MT^{-2}]$",
+        "Water-glass: $\\theta \\approx 0^\\circ$; mercury-glass: $\\theta \\approx 140^\\circ$",
+        "Waterproofing agents increase $\\theta$; detergents decrease $\\theta$ and $S$",
+        "Liquid drops are spherical because a sphere has minimum surface area for a given volume",
+        "Surface tension is independent of the area of the surface"
+      ],
+      "formulas": [
+        {
+          "formula": "$S = \\frac{F}{l}$",
+          "meaning": "Surface tension as force per unit length"
+        },
+        {
+          "formula": "$W = S\\,\\Delta A$",
+          "meaning": "Work to increase area of a single surface; use $2S\\Delta A$ for a film"
+        }
+      ],
+      "neet_tip": "NEET checks whether you count two surfaces for a film or bubble, and asks how temperature or impurities affect surface tension.",
+      "topic": "Surface energy, surface tension and angle of contact"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "Surface tension makes the pressure on the concave side of a curved liquid surface greater than on the convex side. For a spherical liquid drop of radius $R$, which has one surface, the excess pressure inside is $2S/R$. A soap bubble in air has two surfaces, inner and outer, so its excess pressure is $4S/R$. An air bubble inside a liquid has only one liquid-air surface, so its excess pressure is $2S/R$. The pressure inside an air bubble at depth $h$ is $P_a + \\rho g h + 2S/R$. Excess pressure is inversely proportional to radius, so smaller bubbles have higher internal pressure. When two bubbles of different sizes are connected, air flows from the smaller bubble into the larger one. For a cylindrical surface the excess pressure is $S/R$.",
+      "key_points": [
+        "Pressure is always greater on the concave side",
+        "Drop: $2S/R$; soap bubble: $4S/R$; air bubble in liquid: $2S/R$",
+        "Smaller bubble means larger excess pressure",
+        "Two soap bubbles coalescing isothermally in vacuum: $R^2 = R_1^2 + R_2^2$",
+        "Double bubble interface radius: $r = \\frac{r_1 r_2}{r_2 - r_1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta P = \\frac{2S}{R}$",
+          "meaning": "Excess pressure inside a drop or an air bubble in a liquid"
+        },
+        {
+          "formula": "$\\Delta P = \\frac{4S}{R}$",
+          "meaning": "Excess pressure inside a soap bubble (two surfaces)"
+        },
+        {
+          "formula": "$P_{in} = P_a + \\rho g h + \\frac{2S}{R}$",
+          "meaning": "Pressure inside an air bubble at depth $h$"
+        }
+      ],
+      "neet_tip": "Ratio questions on excess pressure for bubbles of different radii, and the drop versus soap bubble distinction, are common.",
+      "topic": "Excess pressure across a curved surface"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "In a narrow capillary tube, a liquid rises (or falls) because of surface tension and the angle of contact. Balancing the upward surface-tension force against the weight of the liquid column gives $h = 2S\\cos\\theta/(\\rho g r)$. Water, with acute $\\theta$, rises and forms a concave meniscus. Mercury, with obtuse $\\theta$, is depressed and forms a convex meniscus. For a given liquid, $hr$ is constant; this is Jurin's law. If the tube is shorter than $h$, the liquid does not overflow; the meniscus radius increases until $R' h' = Rh$. Splitting one drop into $n$ droplets increases surface area and requires energy. Merging droplets into one drop releases energy, which may appear as heating. Everyday examples include wicks, the rise of sap, towels absorbing water and the action of soaps.",
+      "key_points": [
+        "Capillary rise $h \\propto 1/r$; a narrower tube gives a higher rise",
+        "In a freely falling lift ($g_{eff} = 0$), the liquid rises to the full length of the tube",
+        "Rise is greater at lower temperature because $S$ is larger",
+        "Work done by surface tension in capillary rise is $2\\pi r S h$ when $\\theta = 0$; half of it is stored as potential energy and half lost as heat",
+        "One drop of radius $R$ split into $n$ drops: each droplet has radius $r = R n^{-1/3}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$h = \\frac{2S\\cos\\theta}{\\rho g r}$",
+          "meaning": "Capillary rise in a tube of radius $r$"
+        },
+        {
+          "formula": "$W = 4\\pi R^2 S (n^{1/3} - 1)$",
+          "meaning": "Energy needed to split a drop of radius $R$ into $n$ equal droplets"
+        },
+        {
+          "formula": "$hR = \\text{constant}$",
+          "meaning": "Jurin's law; also used for an insufficient tube length"
+        }
+      ],
+      "neet_tip": "NEET asks capillary rise ratios, the insufficient-length concept, and energy released or absorbed when drops merge or split.",
+      "topic": "Applications of surface tension: drops, bubbles and capillary rise"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "Temperature measures the hotness of a body and decides the direction of heat flow. Heat is energy in transit because of a temperature difference. The temperature scales are related by $\\frac{C}{100} = \\frac{F - 32}{180} = \\frac{K - 273.15}{100}$. Most substances expand on heating. Linear, area and volume expansion follow $\\Delta L = \\alpha L \\Delta T$, $\\Delta A = \\beta A \\Delta T$ and $\\Delta V = \\gamma V \\Delta T$, with $\\beta = 2\\alpha$ and $\\gamma = 3\\alpha$ for isotropic solids. For an ideal gas at constant pressure, $\\gamma = 1/T$. Water shows anomalous expansion: it contracts when heated from 0 to 4 degrees Celsius and has maximum density at 4 degrees Celsius. This is why lakes freeze from the top while aquatic life survives below. A rod clamped between rigid supports develops thermal stress $Y\\alpha\\Delta T$ when heated.",
+      "key_points": [
+        "A hole or cavity expands as if it were made of the surrounding material",
+        "$-40^\\circ C = -40^\\circ F$",
+        "Expansion of a sphere: $\\Delta V = 3\\alpha \\cdot \\frac{4}{3}\\pi R^3 \\Delta T = 4\\pi R^3 \\alpha \\Delta T$",
+        "Bimetallic strip bends towards the metal with the smaller $\\alpha$",
+        "Density decreases on heating: $\\rho' \\approx \\rho (1 - \\gamma \\Delta T)$",
+        "Pendulum clock loses time in summer: $\\frac{\\Delta T_p}{T_p} = \\frac{1}{2}\\alpha \\Delta \\theta$, where $T_p$ is the period and $\\Delta\\theta$ the temperature rise"
+      ],
+      "formulas": [
+        {
+          "formula": "$\\Delta L = \\alpha L \\Delta T$",
+          "meaning": "Linear expansion"
+        },
+        {
+          "formula": "$\\Delta V = \\gamma V \\Delta T,\\ \\gamma = 3\\alpha,\\ \\beta = 2\\alpha$",
+          "meaning": "Volume and area expansion coefficients related to $\\alpha$"
+        },
+        {
+          "formula": "$\\text{Thermal stress} = Y\\alpha\\Delta T$",
+          "meaning": "Stress in a rod prevented from expanding"
+        },
+        {
+          "formula": "$\\frac{C}{5} = \\frac{F - 32}{9}$",
+          "meaning": "Celsius-Fahrenheit conversion"
+        }
+      ],
+      "neet_tip": "NEET favours $\\gamma = 3\\alpha$ applications (volume change of a sphere or cube), thermal stress, and scale conversions.",
+      "topic": "Heat, temperature and thermal expansion"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "Heat capacity is the heat required to raise the temperature of a body by 1 K. Specific heat capacity $c$ is the heat needed per unit mass per kelvin, so $Q = mc\\Delta T$. Molar specific heat is the heat needed per mole per kelvin. Water has a very high specific heat, $4186\\,J\\,kg^{-1}K^{-1}$, which is why it is used as a coolant and why it moderates coastal climates. Calorimetry is based on conservation of energy: in an isolated system, heat lost by hot bodies equals heat gained by cold bodies. The water equivalent of a container is the mass of water that would absorb the same heat as the container for the same temperature rise; it equals $mc/c_w$. For gases, $C_p > C_v$, and Mayer's relation gives $C_p - C_v = R$.",
+      "key_points": [
+        "$1\\,cal = 4.186\\,J$",
+        "Specific heat of water is $1\\,cal\\,g^{-1}\\,^\\circ C^{-1}$; ice and steam have about half of this value",
+        "Specific heat is infinite for an isothermal process and zero for an adiabatic process",
+        "Mixture temperature: $T = \\frac{m_1 c_1 T_1 + m_2 c_2 T_2}{m_1 c_1 + m_2 c_2}$ when no phase change occurs",
+        "Always check whether a phase change happens before using the mixture formula"
+      ],
+      "formulas": [
+        {
+          "formula": "$Q = mc\\Delta T$",
+          "meaning": "Heat for a temperature change without phase change"
+        },
+        {
+          "formula": "$Q = nC\\Delta T$",
+          "meaning": "Using molar heat capacity $C$ for $n$ moles"
+        },
+        {
+          "formula": "$\\sum Q_{lost} = \\sum Q_{gained}$",
+          "meaning": "Principle of calorimetry"
+        }
+      ],
+      "neet_tip": "NEET asks for the final temperature of mixtures, including water equivalent, and checks whether some ice remains unmelted.",
+      "topic": "Specific heat capacity and calorimetry"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "During a change of state such as melting, boiling or sublimation, heat is absorbed or released without any change in temperature. This heat changes intermolecular potential energy, not kinetic energy. Latent heat $L$ is the heat per unit mass required for the phase change, so $Q = mL$. For water, the latent heat of fusion is $3.33\\times10^5\\,J\\,kg^{-1}$ (80 cal/g) and the latent heat of vaporisation is $22.6\\times10^5\\,J\\,kg^{-1}$ (540 cal/g). A temperature-time heating curve shows sloped regions, where the slope is inversely proportional to specific heat, and flat plateaus, where the plateau length is proportional to latent heat. Boiling point rises with pressure, as in a pressure cooker. The melting point of ice falls with pressure, which explains regelation. The triple point of water is 273.16 K at 0.006 atm. Dry ice sublimes at ordinary pressure.",
+      "key_points": [
+        "Temperature remains constant during a phase change",
+        "A burn from steam at 100 degrees Celsius is worse than from water at 100 degrees Celsius, because of latent heat",
+        "On the heating curve, plateau length is proportional to $L$ and slope is proportional to $1/c$",
+        "Boiling occurs when vapour pressure equals the external pressure",
+        "Phase diagram: the fusion curve of water has a negative slope",
+        "Ice at 0 degrees Celsius cools better than water at 0 degrees Celsius"
+      ],
+      "formulas": [
+        {
+          "formula": "$Q = mL$",
+          "meaning": "Heat for phase change of mass $m$"
+        },
+        {
+          "formula": "$m L_f + m c_w (T - 0) = M c_w (T_0 - T)$",
+          "meaning": "Typical ice-water mixing balance: ice of mass $m$ melts and warms to $T$ while water of mass $M$ cools from $T_0$"
+        }
+      ],
+      "neet_tip": "Ice-water-steam mixing problems and heating-curve interpretation (finding the ratio of latent heats or specific heats) are classic NEET items.",
+      "topic": "Change of state and latent heat"
+    },
+    {
+      "topic_index": 13,
+      "explanation": "Heat is transferred in three ways. Conduction is transfer through a medium without bulk motion of matter. The rate of conduction is $H = KA\\Delta T/L$, where $K$ is the thermal conductivity. Thermal resistance $R = L/(KA)$ combines like electrical resistance: added directly in series, and as reciprocals in parallel. Convection involves bulk motion of fluid. It may be natural (driven by density differences) or forced; sea breezes and trade winds are examples. Radiation needs no medium and travels as electromagnetic waves. Stefan-Boltzmann law: the power radiated is $e\\sigma A T^4$. Wien's law: $\\lambda_m T = b$, about $2.9\\times10^{-3}\\,m\\,K$. A perfect blackbody has $e = 1$. Good absorbers are good emitters. Newton's law of cooling states that the rate of cooling is proportional to the excess temperature over the surroundings, for small differences. The greenhouse effect traps infrared radiation.",
+      "key_points": [
+        "Junction temperature of two slabs in series: equate the heat currents",
+        "Equivalent conductivity, equal lengths in series: $K = \\frac{2K_1K_2}{K_1+K_2}$; equal areas in parallel: $K = \\frac{K_1+K_2}{2}$",
+        "Net radiation loss: $P = e\\sigma A (T^4 - T_0^4)$",
+        "Hotter body: peak wavelength shifts to shorter values",
+        "Average form of Newton's cooling: $\\frac{T_1 - T_2}{t} = k\\left(\\frac{T_1+T_2}{2} - T_0\\right)$",
+        "Unit of $K$: $W\\,m^{-1}K^{-1}$"
+      ],
+      "formulas": [
+        {
+          "formula": "$H = \\frac{KA(T_1 - T_2)}{L}$",
+          "meaning": "Rate of heat conduction through a slab"
+        },
+        {
+          "formula": "$P = e\\sigma A T^4$",
+          "meaning": "Stefan-Boltzmann law; $\\sigma = 5.67\\times10^{-8}\\,W\\,m^{-2}K^{-4}$"
+        },
+        {
+          "formula": "$\\lambda_m T = b$",
+          "meaning": "Wien's displacement law, $b \\approx 2.9\\times10^{-3}\\,m\\,K$"
+        },
+        {
+          "formula": "$\\frac{dT}{dt} = -k(T - T_0)$",
+          "meaning": "Newton's law of cooling"
+        }
+      ],
+      "neet_tip": "NEET loves Stefan's $T^4$ ratio problems, Wien's law from graphs, Newton's cooling time calculations and junction temperature of composite slabs.",
+      "topic": "Heat transfer: conduction, convection and radiation"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$Y = \\frac{FL}{A\\Delta L}$",
+      "meaning": "Young's modulus; $F$ is load, $L$ length, $A$ area, $\\Delta L$ extension"
+    },
+    {
+      "formula": "$B = -\\frac{V\\Delta P}{\\Delta V}$",
+      "meaning": "Bulk modulus; compressibility $k = 1/B$"
+    },
+    {
+      "formula": "$G = \\frac{F}{A\\theta}$",
+      "meaning": "Modulus of rigidity; $\\theta$ is the shear strain"
+    },
+    {
+      "formula": "$u = \\frac{1}{2}\\,\\text{stress}\\times\\text{strain}$",
+      "meaning": "Elastic energy per unit volume"
+    },
+    {
+      "formula": "$P = P_a + \\rho g h$",
+      "meaning": "Pressure at depth $h$; $\\rho$ is liquid density, $P_a$ atmospheric pressure"
+    },
+    {
+      "formula": "$\\frac{F_1}{A_1} = \\frac{F_2}{A_2}$",
+      "meaning": "Pascal's law, hydraulic lift"
+    },
+    {
+      "formula": "$F_B = V\\rho g$",
+      "meaning": "Buoyant force; $V$ is the submerged volume"
+    },
+    {
+      "formula": "$F = \\eta A \\frac{dv}{dx}$",
+      "meaning": "Viscous force; $\\eta$ is the coefficient of viscosity"
+    },
+    {
+      "formula": "$F = 6\\pi\\eta r v$",
+      "meaning": "Stokes' law for a sphere of radius $r$"
+    },
+    {
+      "formula": "$v_t = \\frac{2r^2(\\sigma - \\rho)g}{9\\eta}$",
+      "meaning": "Terminal velocity; $\\sigma$ is body density, $\\rho$ fluid density"
+    },
+    {
+      "formula": "$R_e = \\frac{\\rho v D}{\\eta}$",
+      "meaning": "Reynolds number; $D$ is pipe diameter"
+    },
+    {
+      "formula": "$A_1 v_1 = A_2 v_2$",
+      "meaning": "Equation of continuity"
+    },
+    {
+      "formula": "$P + \\frac{1}{2}\\rho v^2 + \\rho g h = \\text{const}$",
+      "meaning": "Bernoulli's equation"
+    },
+    {
+      "formula": "$v = \\sqrt{2gh}$",
+      "meaning": "Torricelli's speed of efflux"
+    },
+    {
+      "formula": "$S = \\frac{F}{l} = \\frac{W}{\\Delta A}$",
+      "meaning": "Surface tension, equal to surface energy per unit area"
+    },
+    {
+      "formula": "$\\Delta P = \\frac{2S}{R}$ (drop), $\\frac{4S}{R}$ (soap bubble)",
+      "meaning": "Excess pressure inside curved surfaces"
+    },
+    {
+      "formula": "$h = \\frac{2S\\cos\\theta}{\\rho g r}$",
+      "meaning": "Capillary rise; $\\theta$ is angle of contact, $r$ tube radius"
+    },
+    {
+      "formula": "$\\Delta L = \\alpha L\\Delta T,\\ \\gamma = 3\\alpha,\\ \\beta = 2\\alpha$",
+      "meaning": "Thermal expansion coefficients"
+    },
+    {
+      "formula": "$Q = mc\\Delta T$",
+      "meaning": "Heat for a temperature change; $c$ is specific heat"
+    },
+    {
+      "formula": "$Q = mL$",
+      "meaning": "Latent heat for a phase change"
+    },
+    {
+      "formula": "$H = \\frac{KA\\Delta T}{L}$",
+      "meaning": "Heat conduction rate; $K$ is thermal conductivity"
+    },
+    {
+      "formula": "$P = e\\sigma A T^4$",
+      "meaning": "Stefan-Boltzmann law; $e$ is emissivity, $T$ absolute temperature"
+    },
+    {
+      "formula": "$\\lambda_m T = b$",
+      "meaning": "Wien's displacement law"
+    },
+    {
+      "formula": "$\\frac{dT}{dt} = -k(T - T_0)$",
+      "meaning": "Newton's law of cooling; $T_0$ is the surrounding temperature"
+    }
+  ],
+  "common_traps": [
+    "Using $4S/R$ for an air bubble inside water: an air bubble in a liquid has one surface, so the excess pressure is $2S/R$. Only a soap bubble in air uses $4S/R$.",
+    "Thinking a larger modulus means more stretchable: a larger Young's modulus means less strain for the same stress, so steel is more elastic than rubber.",
+    "Forgetting buoyancy in terminal velocity: the factor is $(\\sigma - \\rho)$, not $\\sigma$. Terminal velocity is zero when the densities are equal, and the body rises when $\\sigma < \\rho$.",
+    "Assuming liquid overflows from a short capillary tube: it never overflows. The meniscus radius adjusts so that $hR$ stays constant.",
+    "Using Celsius in Stefan's law: radiation formulas need absolute temperature in kelvin.",
+    "Writing $\\Delta V = \\alpha V \\Delta T$ for solids: the volume coefficient is $\\gamma = 3\\alpha$, so a sphere gains $4\\pi R^3\\alpha\\Delta T$ in volume.",
+    "Applying the mixture formula blindly in ice-water problems: first check whether the available heat is enough to melt all the ice. If not, the final temperature is 0 degrees Celsius.",
+    "Applying Bernoulli between different streamlines or to viscous flow: it holds along a streamline for ideal, steady, incompressible flow."
+  ],
+  "quick_revision": [
+    "Hooke's law: stress is proportional to strain up to the proportional limit; moduli are $Y$, $B$ and $G$, all in Pa.",
+    "Liquids and gases have only a bulk modulus; for most solids $G \\approx Y/3$.",
+    "Hydrostatic pressure $\\rho g h$ is independent of vessel shape; Pascal's law is the basis of hydraulic machines.",
+    "In free fall $g_{eff} = 0$: no hydrostatic pressure gradient, no buoyancy, and full capillary rise.",
+    "Terminal velocity $v_t \\propto r^2(\\sigma - \\rho)/\\eta$; when $n$ drops merge, $v_t$ grows by $n^{2/3}$.",
+    "Reynolds number below about 1000 means laminar flow, above about 2000 turbulent; $Av$ = constant.",
+    "Bernoulli: faster flow means lower pressure; efflux speed is $\\sqrt{2gh}$; maximum range is from a hole at $H/2$.",
+    "Surface tension decreases with temperature; excess pressure is $2S/R$ for a drop and $4S/R$ for a soap bubble.",
+    "Capillary rise $h = 2S\\cos\\theta/(\\rho g r)$; mercury shows depression because $\\theta > 90^\\circ$.",
+    "Expansion: $\\beta = 2\\alpha$, $\\gamma = 3\\alpha$; water has maximum density at 4 degrees Celsius; thermal stress is $Y\\alpha\\Delta T$.",
+    "Temperature is constant during a phase change; for water $L_f = 80$ cal/g and $L_v = 540$ cal/g.",
+    "Radiated power is proportional to $T^4$; $\\lambda_m T = 2.9\\times10^{-3}\\,m\\,K$; slabs in series add thermal resistances."
+  ],
+  "pyq": {
+    "count": 3,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q010",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q10"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q012",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q12"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q024",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q24"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,554 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u13",
+  "unit_no": 13,
+  "unit_name": "Magnetic Effects of Current and Magnetism",
+  "slug": "magnetic-effects-of-current-and-magnetism",
+  "overview": "This unit explains how moving charges and currents produce magnetic fields (Biot-Savart and Ampere's laws), how magnetic fields exert forces and torques on moving charges, currents and loops, and how these ideas apply to the galvanometer, bar magnets and magnetic materials. NEET usually asks 2-4 questions here. Field at the centre of loops and arcs, force between parallel wires, charged-particle motion, galvanometer conversion and classification of magnetic materials are tested year after year.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "The Biot-Savart law gives the field $d\\vec{B}$ produced by a small current element $I\\,d\\vec{l}$ at position $\\vec{r}$ from it. The field is perpendicular to both $d\\vec{l}$ and $\\vec{r}$, and it varies as $1/r^2$. For a circular loop, every element is perpendicular to the line joining it to the centre and is at the same distance R from it. Integrating gives $B=\\frac{\\mu_0 I}{2R}$ at the centre. A circular arc that subtends angle $\\theta$ at the centre gives a fraction $\\theta/2\\pi$ of this value. On the axis, the components perpendicular to the axis cancel and the axial components add. Direction is found with the right-hand thumb rule: curl the fingers along the current and the thumb points along B. When current splits between two arcs of a loop, the field at the centre from each arc is proportional to $I\\theta$. Because the arc lengths are proportional to $\\theta$ and the resistances to arc length, $I\\theta$ is the same for both branches. The two fields are opposite, so the net field at the centre is zero.",
+      "key_points": [
+        "Element magnitude: $dB=\\frac{\\mu_0}{4\\pi}\\frac{I\\,dl\\sin\\theta}{r^2}$, which is zero along the line of the element.",
+        "$\\frac{\\mu_0}{4\\pi}=10^{-7}\\,T\\,m\\,A^{-1}$.",
+        "Field at the centre of an N-turn coil is $\\frac{\\mu_0 NI}{2R}$.",
+        "Field at the centre of an arc is proportional to the angle subtended; for a semicircle it is $\\frac{\\mu_0 I}{4R}$.",
+        "Straight leads pointing radially towards the centre contribute zero field at the centre.",
+        "Far along the axis ($x\\gg R$), the loop field falls as $1/x^3$, like a dipole.",
+        "Equal $I\\theta$ in parallel arcs means opposite and equal fields, so the net field at the centre is zero."
+      ],
+      "formulas": [
+        {
+          "formula": "$d\\vec{B}=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec{l}\\times\\hat{r}}{r^2}$",
+          "meaning": "Biot-Savart law: field due to a current element"
+        },
+        {
+          "formula": "$B=\\frac{\\mu_0 NI}{2R}$",
+          "meaning": "Field at the centre of a circular coil of N turns and radius R"
+        },
+        {
+          "formula": "$B=\\frac{\\mu_0 I\\theta}{4\\pi R}$",
+          "meaning": "Field at the centre of an arc subtending angle $\\theta$ (in radians)"
+        },
+        {
+          "formula": "$B=\\frac{\\mu_0 NIR^2}{2(R^2+x^2)^{3/2}}$",
+          "meaning": "Field on the axis at distance x from the centre of the loop"
+        }
+      ],
+      "neet_tip": "NEET favours combinations of arcs and straight wires, and current dividing between two arcs, asking for the field at the centre.",
+      "topic": "Biot-Savart law and its application to a circular current loop"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Ampere's circuital law states that the line integral of $\\vec{B}$ around any closed loop equals $\\mu_0$ times the net current enclosed by that loop. It is useful only when symmetry makes B constant along a chosen path. For an infinitely long straight wire, take a circle of radius r around the wire, which gives $B=\\frac{\\mu_0 I}{2\\pi r}$; the field lines are concentric circles. Inside a solid wire carrying uniform current, B grows linearly with r. Outside the wire it falls as 1/r, and it is maximum at the surface. For a long solid wire, a rectangular Amperian loop gives a uniform field $B=\\mu_0 nI$ inside, where n is the number of turns per unit length. The field outside is nearly zero. At either end of a long solenoid the field is half the central value. A toroid, which is a solenoid bent into a ring, has $B=\\frac{\\mu_0 NI}{2\\pi r}$ inside its core and zero field both in the open space and outside.",
+      "key_points": [
+        "Only the enclosed current counts; the sign follows the right-hand rule.",
+        "Long wire: $B\\propto 1/r$ outside, and the field lines are concentric circles.",
+        "Solid wire with uniform current: $B\\propto r$ inside and $B=0$ on the axis.",
+        "Hollow pipe: $B=0$ inside and $\\frac{\\mu_0 I}{2\\pi r}$ outside.",
+        "Solenoid: the field is independent of radius and length, and depends only on n and I.",
+        "Finite straight wire: $B=\\frac{\\mu_0 I}{4\\pi d}(\\sin\\alpha+\\sin\\beta)$.",
+        "Field at the end of a long solenoid is $\\frac{\\mu_0 nI}{2}$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\oint\\vec{B}\\cdot d\\vec{l}=\\mu_0 I_{enc}$",
+          "meaning": "Ampere's circuital law"
+        },
+        {
+          "formula": "$B=\\frac{\\mu_0 I}{2\\pi r}$",
+          "meaning": "Field of an infinitely long straight wire at distance r"
+        },
+        {
+          "formula": "$B=\\frac{\\mu_0 I r}{2\\pi R^2}$",
+          "meaning": "Field inside a solid wire of radius R at distance $r<R$"
+        },
+        {
+          "formula": "$B=\\mu_0 nI$",
+          "meaning": "Field inside a long solenoid; n is the number of turns per unit length"
+        },
+        {
+          "formula": "$B=\\frac{\\mu_0 NI}{2\\pi r}$",
+          "meaning": "Field inside a toroid of N total turns at mean radius r"
+        }
+      ],
+      "neet_tip": "Expect a B versus r graph for a solid or hollow wire, solenoid ratio questions, and superposition of fields from two long wires.",
+      "topic": "Ampere's law: infinitely long straight wire and solenoid"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "A charge q moving with velocity $\\vec{v}$ in electric and magnetic fields experiences the Lorentz force $\\vec{F}=q(\\vec{E}+\\vec{v}\\times\\vec{B})$. The magnetic part is always perpendicular to the velocity. It therefore does no work and cannot change speed or kinetic energy; it only changes direction. If $\\vec{v}\\perp\\vec{B}$, the motion is a circle of radius $r=\\frac{mv}{qB}$. The period $T=\\frac{2\\pi m}{qB}$ does not depend on speed or radius. If the velocity makes an angle $\\theta$ with B, the path is a helix. The component $v\\cos\\theta$ along B stays unchanged and sets the pitch, while $v\\sin\\theta$ gives the circular part. A charge moving parallel to B feels no magnetic force. In crossed E and B fields (a velocity selector), a particle passes undeflected when $qE=qvB$, that is $v=E/B$, regardless of its charge or mass.",
+      "key_points": [
+        "Magnetic force is zero when the charge is at rest or moving parallel or antiparallel to B.",
+        "Magnetic force does no work, so kinetic energy stays constant.",
+        "Radius can be written as $r=\\frac{p}{qB}=\\frac{\\sqrt{2mK}}{qB}=\\frac{\\sqrt{2mqV}}{qB}$ for a particle accelerated through potential V.",
+        "Period and frequency are independent of speed (cyclotron frequency).",
+        "Helical motion has pitch $p=v\\cos\\theta\\,T$.",
+        "Positive and negative charges circulate in opposite senses.",
+        "Undeflected motion in crossed fields requires $v=E/B$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{F}=q(\\vec{E}+\\vec{v}\\times\\vec{B})$",
+          "meaning": "Lorentz force"
+        },
+        {
+          "formula": "$F=qvB\\sin\\theta$",
+          "meaning": "Magnitude of the magnetic force"
+        },
+        {
+          "formula": "$r=\\frac{mv\\sin\\theta}{qB}$",
+          "meaning": "Radius of the circular or helical path"
+        },
+        {
+          "formula": "$T=\\frac{2\\pi m}{qB},\\ \\nu=\\frac{qB}{2\\pi m}$",
+          "meaning": "Period and frequency of revolution"
+        },
+        {
+          "formula": "$p=\\frac{2\\pi m v\\cos\\theta}{qB}$",
+          "meaning": "Pitch of the helix"
+        },
+        {
+          "formula": "$v=\\frac{E}{B}$",
+          "meaning": "Speed of an undeflected particle in a velocity selector"
+        }
+      ],
+      "neet_tip": "NEET compares radii or periods for proton, deuteron and alpha particles, and tests the 'no work done by magnetic force' idea.",
+      "topic": "Force on a moving charge in uniform magnetic and electric fields"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "A current-carrying conductor contains drift electrons moving in a magnetic field. The sum of the Lorentz forces on these electrons gives $\\vec{F}=I\\vec{l}\\times\\vec{B}$, where $\\vec{l}$ points along the current. The magnitude is $BIl\\sin\\theta$; it is maximum when the wire is perpendicular to B and zero when parallel. The direction comes from Fleming's left-hand rule or the cross product. For a wire of any shape in a uniform field, the force equals the force on a straight wire joining its end points while carrying the same current. Hence any closed loop in a uniform field has zero net force, although it may experience a torque. Common equilibrium problems involve a rod suspended or resting in a field, where $BIl=mg$ or the forces are balanced on an incline.",
+      "key_points": [
+        "The vector $\\vec{l}$ is taken in the direction of conventional current.",
+        "Net force on a closed loop in a uniform B is zero.",
+        "A semicircular wire feels the same force as its diameter, $F=BI(2R)$.",
+        "Floating or levitation condition: $BIl=mg$, or $IB=\\lambda g$ per unit length.",
+        "Fleming's left-hand rule: First finger for field, seCond finger for current, thuMb for motion or force."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{F}=I\\vec{l}\\times\\vec{B}$",
+          "meaning": "Force on a straight conductor in a uniform field"
+        },
+        {
+          "formula": "$F=BIl\\sin\\theta$",
+          "meaning": "Magnitude; $\\theta$ is the angle between the wire and B"
+        },
+        {
+          "formula": "$\\vec{F}=I\\vec{L}_{eff}\\times\\vec{B}$",
+          "meaning": "Curved wire; $\\vec{L}_{eff}$ is the straight line joining its ends"
+        }
+      ],
+      "neet_tip": "Questions ask for the force on bent or semicircular wires, or the current needed to balance a rod's weight.",
+      "topic": "Force on a current-carrying conductor in a uniform magnetic field"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Each of two long parallel wires sits in the field of the other. The field of wire 1 at wire 2 is $\\frac{\\mu_0 I_1}{2\\pi d}$, so the force per unit length on wire 2 is $\\frac{\\mu_0 I_1 I_2}{2\\pi d}$. Currents in the same direction attract and opposite currents repel, which is the reverse of the rule for like charges. The forces on the two wires are equal and opposite, obeying Newton's third law. In NCERT the ampere is defined as follows. One ampere is the steady current which, maintained in two infinitely long, straight, parallel conductors of negligible cross-section placed 1 m apart in vacuum, produces a force of $2\\times10^{-7}$ N per metre of length on each. Since 2019 the SI ampere is formally fixed through the elementary charge. Even so, the force definition gives the same value and remains the one examined. For equilibrium problems, compare the magnetic force per unit length with the weight per unit length $\\lambda g$.",
+      "key_points": [
+        "Like (parallel) currents attract and unlike (antiparallel) currents repel.",
+        "Force per unit length is proportional to $I_1I_2$ and to 1/d.",
+        "Both wires feel equal force, even if their currents differ.",
+        "Ampere definition: $2\\times10^{-7}\\,N\\,m^{-1}$ at a separation of 1 m.",
+        "For a wire on the floor with a fixed wire above it carrying a parallel current, the attraction must not exceed $\\lambda g$.",
+        "Stable levitation is possible for a wire above a fixed wire carrying an antiparallel current."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\frac{F}{l}=\\frac{\\mu_0 I_1 I_2}{2\\pi d}$",
+          "meaning": "Force per unit length between parallel wires separated by d"
+        },
+        {
+          "formula": "$\\frac{\\mu_0 I_1 I_2}{2\\pi d}=\\lambda g$",
+          "meaning": "Balance of magnetic force with weight per unit length $\\lambda$"
+        }
+      ],
+      "neet_tip": "Typical questions balance the magnetic force against weight per unit length, or test the attract-versus-repel direction.",
+      "topic": "Force between two parallel currents; definition of ampere"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "A rectangular loop carrying current I in a uniform field B experiences zero net force. However, the forces on opposite sides can form a couple. The torque is $\\vec{\\tau}=\\vec{m}\\times\\vec{B}$, with magnetic moment $m=NIA$ directed normal to the loop plane by the right-hand rule. Its magnitude is $\\tau=NIAB\\sin\\theta$, where $\\theta$ is the angle between the area vector (normal) and B. Torque is maximum when the plane of the loop is parallel to B ($\\theta=90^\\circ$). It is zero when the plane is perpendicular to B. The result holds for a planar loop of any shape. The torque tends to align $\\vec{m}$ with $\\vec{B}$. The loop's potential energy is $U=-\\vec{m}\\cdot\\vec{B}$, which is minimum (stable equilibrium) at $\\theta=0$ and maximum (unstable equilibrium) at $\\theta=180^\\circ$.",
+      "key_points": [
+        "Net force is zero in a uniform field, but torque can be non-zero.",
+        "$\\theta$ is measured from the normal to the loop, not from the plane.",
+        "Maximum torque $NIAB$ occurs when the plane is parallel to B.",
+        "For a fixed wire length bent into one turn, a circle gives the maximum area and hence maximum torque.",
+        "This torque is the working principle of the motor and the galvanometer."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{\\tau}=\\vec{m}\\times\\vec{B}$",
+          "meaning": "Torque on a current loop"
+        },
+        {
+          "formula": "$\\tau=NIAB\\sin\\theta$",
+          "meaning": "Magnitude; $\\theta$ is the angle between the normal and B"
+        },
+        {
+          "formula": "$U=-\\vec{m}\\cdot\\vec{B}$",
+          "meaning": "Potential energy of the loop in the field"
+        }
+      ],
+      "neet_tip": "NEET checks the angle convention (plane versus normal) and the torque for a given wire length bent into a circle.",
+      "topic": "Torque on a current loop in a uniform magnetic field"
+    },
+    {
+      "topic_index": 6,
+      "explanation": "A moving coil galvanometer (MCG) has a coil pivoted between concave pole pieces with a soft iron core. This arrangement makes the field radial, so the plane of the coil is always parallel to B and the torque is $NIAB$ at every position. A spring provides a restoring torque $k\\phi$. At equilibrium $NIAB=k\\phi$, giving $\\phi=\\frac{NAB}{k}I$, a linear scale. Current sensitivity is $\\frac{\\phi}{I}=\\frac{NAB}{k}$. Voltage sensitivity is $\\frac{\\phi}{V}=\\frac{NAB}{kG}$, where G is the coil resistance. Doubling N doubles both the current sensitivity and G, so the voltage sensitivity stays the same. To convert to an ammeter, connect a small shunt S in parallel. To convert to a voltmeter, connect a large resistance R in series. An ideal ammeter has zero resistance and an ideal voltmeter infinite resistance.",
+      "key_points": [
+        "The radial field makes the deflection proportional to current.",
+        "The soft iron core increases B, which increases sensitivity.",
+        "Sensitivity increases with N, A and B, and decreases with k.",
+        "Increasing N does not change voltage sensitivity because G also increases.",
+        "Ammeter resistance is $\\frac{GS}{G+S}$, which is less than S.",
+        "Voltmeter resistance is $G+R$.",
+        "An ammeter is connected in series and a voltmeter in parallel."
+      ],
+      "formulas": [
+        {
+          "formula": "$NIAB=k\\phi$",
+          "meaning": "Equilibrium condition of the galvanometer"
+        },
+        {
+          "formula": "$\\frac{\\phi}{I}=\\frac{NAB}{k}$",
+          "meaning": "Current sensitivity"
+        },
+        {
+          "formula": "$\\frac{\\phi}{V}=\\frac{NAB}{kG}$",
+          "meaning": "Voltage sensitivity"
+        },
+        {
+          "formula": "$S=\\frac{I_gG}{I-I_g}$",
+          "meaning": "Shunt to convert a galvanometer of full-scale current $I_g$ into an ammeter of range I"
+        },
+        {
+          "formula": "$R=\\frac{V}{I_g}-G$",
+          "meaning": "Series resistance for a voltmeter of range V"
+        }
+      ],
+      "neet_tip": "Very frequent: calculate the shunt or series resistance, and the effect of changing N on current and voltage sensitivity.",
+      "topic": "Moving coil galvanometer, its sensitivity and conversion to ammeter and voltmeter"
+    },
+    {
+      "topic_index": 7,
+      "explanation": "A planar current loop behaves like a magnetic dipole with moment $\\vec{m}=NI\\vec{A}$, in units of $A\\,m^2$. Its direction is along the area vector, given by the right-hand rule. The face where the current appears anticlockwise to the viewer acts as a north pole. Far along its axis, the loop field is $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$, which matches the axial field of an electric dipole with $\\frac{1}{4\\pi\\varepsilon_0}$ replaced by $\\frac{\\mu_0}{4\\pi}$. A revolving electron forms a tiny current loop of current $I=\\frac{ev}{2\\pi r}$. Its orbital moment is $\\mu=\\frac{evr}{2}=\\frac{e}{2m_e}L$, so the gyromagnetic ratio is $\\frac{e}{2m_e}\\approx8.8\\times10^{10}\\,C\\,kg^{-1}$. With Bohr quantisation $L=\\frac{nh}{2\\pi}$, the minimum value is the Bohr magneton, $\\mu_B=\\frac{eh}{4\\pi m_e}\\approx9.27\\times10^{-24}\\,A\\,m^2$.",
+      "key_points": [
+        "The moment depends on area, not on shape.",
+        "Anticlockwise current as seen by the viewer gives a north pole facing the viewer.",
+        "For an electron, $\\vec{\\mu}$ is antiparallel to $\\vec{L}$ because its charge is negative.",
+        "A charge q rotating at angular speed $\\omega$ in radius r has $m=\\frac{q\\omega r^2}{2}$.",
+        "The ratio $\\mu/L=q/2m$ is the same for rotating rings and discs carrying uniform charge-to-mass ratio."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{m}=NI\\vec{A}$",
+          "meaning": "Magnetic moment of a current loop"
+        },
+        {
+          "formula": "$B_{axis}=\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$",
+          "meaning": "Far-field of a loop along its axis"
+        },
+        {
+          "formula": "$\\mu_l=\\frac{e}{2m_e}l$",
+          "meaning": "Orbital magnetic moment of an electron with angular momentum l"
+        },
+        {
+          "formula": "$\\mu_B=\\frac{eh}{4\\pi m_e}$",
+          "meaning": "Bohr magneton, about $9.27\\times10^{-24}\\,A\\,m^2$"
+        }
+      ],
+      "neet_tip": "Common questions: the magnetic moment of a revolving electron or rotating charge, and how m changes when a wire is rebent into more turns.",
+      "topic": "Current loop as a magnetic dipole; magnetic dipole moment"
+    },
+    {
+      "topic_index": 8,
+      "explanation": "A bar magnet behaves like a finite solenoid. The field lines of both are identical, and a solenoid with moment $NIA$ can replace a magnet of equal moment. Treating the magnet as two poles of strength $q_m$ separated by 2l gives $m=q_m(2l)$, directed from S to N. Isolated magnetic monopoles do not exist. Cutting a magnet produces smaller magnets, each with both poles. Magnetic field lines are continuous closed loops. They run from N to S outside the magnet and from S to N inside it. The tangent at any point gives the direction of B, and the crowding of lines indicates field strength. Lines never intersect, because the field has a unique direction at each point. Since lines close on themselves, the net magnetic flux through any closed surface is zero; this is Gauss's law for magnetism. Electric field lines from static charges, by contrast, start and end on charges.",
+      "key_points": [
+        "Magnetic field lines form closed loops.",
+        "Outside a magnet the lines run N to S; inside they run S to N.",
+        "Gauss's law for magnetism: $\\oint\\vec{B}\\cdot d\\vec{A}=0$, so no monopoles exist.",
+        "Cutting a magnet perpendicular to its axis halves m and keeps pole strength the same.",
+        "Cutting a magnet along its axis halves both pole strength and m.",
+        "The magnetic moment of a magnet points from S to N.",
+        "Field lines never cross each other."
+      ],
+      "formulas": [
+        {
+          "formula": "$m=q_m\\times2l$",
+          "meaning": "Magnetic moment of a bar magnet of pole strength $q_m$ and magnetic length 2l"
+        },
+        {
+          "formula": "$\\oint\\vec{B}\\cdot d\\vec{A}=0$",
+          "meaning": "Gauss's law for magnetism"
+        }
+      ],
+      "neet_tip": "Assertion-type questions on closed field lines, the absence of monopoles, and cutting or bending magnets.",
+      "topic": "Bar magnet as an equivalent solenoid; magnetic field lines"
+    },
+    {
+      "topic_index": 9,
+      "explanation": "The field of a bar magnet is found the same way as that of an electric dipole, with $\\frac{1}{4\\pi\\varepsilon_0}$ replaced by $\\frac{\\mu_0}{4\\pi}$. On the axial line at distance r from the centre, $B=\\frac{\\mu_0}{4\\pi}\\frac{2mr}{(r^2-l^2)^2}$. For a short magnet ($r\\gg l$) this becomes $\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$, directed along $\\vec{m}$. On the equatorial (perpendicular bisector) line, $B=\\frac{\\mu_0}{4\\pi}\\frac{m}{(r^2+l^2)^{3/2}}$, which for a short magnet becomes $\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$, directed opposite to $\\vec{m}$. At equal distances, the axial field is therefore twice the equatorial field. At a general point at angle $\\theta$ from the axis, the field is $B=\\frac{\\mu_0 m}{4\\pi r^3}\\sqrt{3\\cos^2\\theta+1}$. Neutral points occur where the magnet's field cancels an external field.",
+      "key_points": [
+        "Both fields vary as $1/r^3$ for a short magnet.",
+        "Ratio of axial to equatorial field at the same distance is $2:1$.",
+        "The axial field is along m; the equatorial field is opposite to m.",
+        "The general point formula interpolates between the axial and equatorial cases.",
+        "Doubling the distance reduces the field to 1/8."
+      ],
+      "formulas": [
+        {
+          "formula": "$B_{ax}=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$",
+          "meaning": "Axial field of a short bar magnet"
+        },
+        {
+          "formula": "$B_{eq}=\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$",
+          "meaning": "Equatorial field of a short bar magnet"
+        },
+        {
+          "formula": "$B=\\frac{\\mu_0 m}{4\\pi r^3}\\sqrt{3\\cos^2\\theta+1}$",
+          "meaning": "Field at a general point at angle $\\theta$ from the axis"
+        }
+      ],
+      "neet_tip": "Ratio questions comparing axial and equatorial fields, and their $1/r^3$ dependence, are standard.",
+      "topic": "Magnetic field of a bar magnet along and perpendicular to its axis"
+    },
+    {
+      "topic_index": 10,
+      "explanation": "A magnetic dipole in a uniform field B experiences zero net force but a torque $\\vec{\\tau}=\\vec{m}\\times\\vec{B}$ of magnitude $mB\\sin\\theta$, which tries to align m with B. Its potential energy is $U=-mB\\cos\\theta$. This is minimum ($-mB$, stable) at $\\theta=0$ and maximum ($+mB$, unstable) at $\\theta=180^\\circ$. The work needed to rotate the dipole from $\\theta_1$ to $\\theta_2$ is $W=mB(\\cos\\theta_1-\\cos\\theta_2)$. For example, rotating it from $0$ to $180^\\circ$ needs $2mB$ and from $0$ to $90^\\circ$ needs $mB$. If slightly displaced from stable equilibrium, a freely suspended magnet performs angular SHM with period $T=2\\pi\\sqrt{\\frac{I}{mB}}$, where I is its moment of inertia. This principle underlies the compass needle and lets m or B be determined from oscillation periods.",
+      "key_points": [
+        "In a uniform field, F = 0 while $\\tau$ is generally non-zero.",
+        "In a non-uniform field there is also a net force.",
+        "Work from $\\theta_1$ to $\\theta_2$ is $W=U_2-U_1$.",
+        "Stable equilibrium at $0^\\circ$, unstable at $180^\\circ$.",
+        "Period of oscillation $T\\propto1/\\sqrt{B}$."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\tau=mB\\sin\\theta$",
+          "meaning": "Torque on a dipole in a uniform field"
+        },
+        {
+          "formula": "$U=-mB\\cos\\theta$",
+          "meaning": "Potential energy of the dipole"
+        },
+        {
+          "formula": "$W=mB(\\cos\\theta_1-\\cos\\theta_2)$",
+          "meaning": "Work done in rotating the dipole from $\\theta_1$ to $\\theta_2$"
+        },
+        {
+          "formula": "$T=2\\pi\\sqrt{\\frac{I}{mB}}$",
+          "meaning": "Period of small oscillations of a freely suspended magnet"
+        }
+      ],
+      "neet_tip": "Work done in rotating a dipole and its oscillation period are the usual numericals.",
+      "topic": "Torque on a magnetic dipole in a uniform magnetic field"
+    },
+    {
+      "topic_index": 11,
+      "explanation": "Materials are classified by their response to an applied field. Magnetisation M is the net dipole moment per unit volume, H is the magnetic intensity, and susceptibility is $\\chi=M/H$. These are related by $B=\\mu_0(H+M)=\\mu_0\\mu_rH$, with $\\mu_r=1+\\chi$. Diamagnetic substances (Bi, Cu, Pb, Si, water, $N_2$, NaCl) have small negative $\\chi$ and $\\mu_r$ slightly less than 1. They are weakly repelled and move from stronger to weaker field regions. Superconductors are perfect diamagnets with $\\chi=-1$, which expels field lines (Meissner effect). Paramagnetic substances (Al, Na, Ca, $O_2$, $CuCl_2$) have permanent atomic moments, small positive $\\chi$ and $\\mu_r$ slightly greater than 1. They are weakly attracted towards stronger fields. Ferromagnetic substances (Fe, Co, Ni, Gd) contain domains with aligned moments. They have very large positive $\\chi$ and $\\mu_r$ (up to thousands), are strongly attracted, and concentrate field lines inside them.",
+      "key_points": [
+        "Diamagnetism is present in all materials but is masked if para- or ferromagnetism exists.",
+        "Diamagnetic: $-1\\le\\chi<0$, $0\\le\\mu_r<1$; field lines are expelled.",
+        "Paramagnetic: $0<\\chi<\\epsilon$ (small), $1<\\mu_r<1+\\epsilon$; field lines are slightly concentrated.",
+        "Ferromagnetic: $\\chi\\gg1$, $\\mu_r\\gg1$; field lines are strongly concentrated.",
+        "A diamagnetic liquid in a U-tube is depressed in the limb placed in the field; a paramagnetic liquid rises.",
+        "A rod hung in a field aligns perpendicular to it if diamagnetic and parallel to it if paramagnetic.",
+        "Ferromagnetism arises from domains, which grow and align in an applied field."
+      ],
+      "formulas": [
+        {
+          "formula": "$M=\\frac{m_{net}}{V}$",
+          "meaning": "Magnetisation: net dipole moment per unit volume"
+        },
+        {
+          "formula": "$B=\\mu_0(H+M)$",
+          "meaning": "Relation between B, H and M"
+        },
+        {
+          "formula": "$\\chi=\\frac{M}{H}$",
+          "meaning": "Magnetic susceptibility"
+        },
+        {
+          "formula": "$\\mu_r=1+\\chi,\\ \\mu=\\mu_0\\mu_r$",
+          "meaning": "Relative permeability and permeability"
+        }
+      ],
+      "neet_tip": "Matching substances to classes and to the signs of $\\chi$ and $\\mu_r$ is asked almost every year.",
+      "topic": "Para-, dia- and ferromagnetic substances"
+    },
+    {
+      "topic_index": 12,
+      "explanation": "Temperature disturbs the alignment of atomic dipoles. Paramagnetic susceptibility follows Curie's law, $\\chi=\\frac{C\\mu_0}{T}$: it is inversely proportional to absolute temperature, because thermal agitation opposes alignment. Diamagnetism arises from induced moments, so it is essentially independent of temperature. A ferromagnet loses its spontaneous domain alignment when heated above the Curie temperature $T_C$ and becomes paramagnetic. Above $T_C$ its susceptibility follows $\\chi=\\frac{C}{T-T_C}$ (the Curie-Weiss form). The Curie temperatures given in NCERT are Fe 1043 K, Co 1394 K, Ni 631 K, Gd 317 K and $Fe_2O_3$ 893 K. Cooling below $T_C$ restores ferromagnetic behaviour. Heating a permanent magnet therefore weakens it, which is why magnets must not be overheated.",
+      "key_points": [
+        "Curie's law: $\\chi\\propto1/T$ for paramagnets.",
+        "Diamagnetic $\\chi$ is independent of T.",
+        "Above $T_C$, a ferromagnet becomes paramagnetic.",
+        "Curie-Weiss law holds for $T>T_C$.",
+        "M is proportional to $B/T$ for paramagnets in weak fields, until saturation."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\chi=\\frac{C\\mu_0}{T}$",
+          "meaning": "Curie's law for paramagnets; C is the Curie constant"
+        },
+        {
+          "formula": "$\\chi=\\frac{C}{T-T_C}$",
+          "meaning": "Susceptibility of a ferromagnet above the Curie temperature $T_C$"
+        }
+      ],
+      "neet_tip": "Questions ask for the ratio of susceptibilities at two temperatures, or what happens to a ferromagnet above $T_C$.",
+      "topic": "Effect of temperature on magnetic properties"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$d\\vec{B}=\\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec{l}\\times\\hat{r}}{r^2}$",
+      "meaning": "Biot-Savart law; $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$"
+    },
+    {
+      "formula": "$B=\\frac{\\mu_0 NI}{2R}$",
+      "meaning": "Centre of a coil of N turns, radius R"
+    },
+    {
+      "formula": "$B=\\frac{\\mu_0 I\\theta}{4\\pi R}$",
+      "meaning": "Centre of an arc subtending angle $\\theta$ in radians"
+    },
+    {
+      "formula": "$B=\\frac{\\mu_0 NIR^2}{2(R^2+x^2)^{3/2}}$",
+      "meaning": "Axis of a circular coil at distance x from the centre"
+    },
+    {
+      "formula": "$B=\\frac{\\mu_0 I}{4\\pi d}(\\sin\\alpha+\\sin\\beta)$",
+      "meaning": "Finite straight wire at perpendicular distance d; $\\alpha,\\beta$ are angles subtended by the ends"
+    },
+    {
+      "formula": "$\\oint\\vec{B}\\cdot d\\vec{l}=\\mu_0 I_{enc}$",
+      "meaning": "Ampere's circuital law"
+    },
+    {
+      "formula": "$B=\\frac{\\mu_0 I}{2\\pi r}$",
+      "meaning": "Infinitely long straight wire at distance r"
+    },
+    {
+      "formula": "$B=\\mu_0 nI$",
+      "meaning": "Inside a long solenoid; n is turns per unit length"
+    },
+    {
+      "formula": "$B=\\frac{\\mu_0 NI}{2\\pi r}$",
+      "meaning": "Inside a toroid of N turns at radius r"
+    },
+    {
+      "formula": "$\\vec{F}=q(\\vec{E}+\\vec{v}\\times\\vec{B})$",
+      "meaning": "Lorentz force on charge q with velocity v"
+    },
+    {
+      "formula": "$r=\\frac{mv}{qB},\\ T=\\frac{2\\pi m}{qB}$",
+      "meaning": "Radius and period of circular motion in B"
+    },
+    {
+      "formula": "$v=\\frac{E}{B}$",
+      "meaning": "Velocity selector: undeflected speed in crossed fields"
+    },
+    {
+      "formula": "$\\vec{F}=I\\vec{l}\\times\\vec{B}$",
+      "meaning": "Force on a current-carrying wire of length l"
+    },
+    {
+      "formula": "$\\frac{F}{l}=\\frac{\\mu_0 I_1I_2}{2\\pi d}$",
+      "meaning": "Force per unit length between parallel wires separated by d"
+    },
+    {
+      "formula": "$\\vec{m}=NI\\vec{A},\\ \\vec{\\tau}=\\vec{m}\\times\\vec{B}$",
+      "meaning": "Magnetic moment of a loop and the torque on it"
+    },
+    {
+      "formula": "$U=-\\vec{m}\\cdot\\vec{B}$",
+      "meaning": "Potential energy of a dipole in a field"
+    },
+    {
+      "formula": "$\\frac{\\phi}{I}=\\frac{NAB}{k},\\ \\frac{\\phi}{V}=\\frac{NAB}{kG}$",
+      "meaning": "Current and voltage sensitivity; k is the spring constant, G the coil resistance"
+    },
+    {
+      "formula": "$S=\\frac{I_gG}{I-I_g}$",
+      "meaning": "Shunt for an ammeter of range I"
+    },
+    {
+      "formula": "$R=\\frac{V}{I_g}-G$",
+      "meaning": "Series resistance for a voltmeter of range V"
+    },
+    {
+      "formula": "$\\mu_l=\\frac{e}{2m_e}l,\\ \\mu_B=\\frac{eh}{4\\pi m_e}$",
+      "meaning": "Orbital moment of an electron and the Bohr magneton"
+    },
+    {
+      "formula": "$B_{ax}=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3},\\ B_{eq}=\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$",
+      "meaning": "Fields of a short bar magnet of moment m"
+    },
+    {
+      "formula": "$T=2\\pi\\sqrt{\\frac{I}{mB}}$",
+      "meaning": "Oscillation period of a magnet; I is its moment of inertia"
+    },
+    {
+      "formula": "$B=\\mu_0(H+M),\\ \\chi=\\frac{M}{H},\\ \\mu_r=1+\\chi$",
+      "meaning": "Magnetisation relations"
+    },
+    {
+      "formula": "$\\chi=\\frac{C\\mu_0}{T}$",
+      "meaning": "Curie's law for paramagnets"
+    },
+    {
+      "formula": "$\\chi=\\frac{C}{T-T_C}$",
+      "meaning": "Ferromagnet above the Curie temperature"
+    }
+  ],
+  "common_traps": [
+    "Assuming a magnetic force can change a particle's speed: magnetic force is perpendicular to velocity, does no work, and keeps kinetic energy constant.",
+    "Using $\\theta$ from the plane of the loop in $\\tau=NIAB\\sin\\theta$: $\\theta$ is measured from the normal (area vector), so torque is maximum when the plane is parallel to B.",
+    "Thinking parallel currents repel like charges do: parallel currents attract and antiparallel currents repel.",
+    "Believing that increasing the number of turns raises voltage sensitivity: resistance rises in the same proportion, so voltage sensitivity is unchanged.",
+    "Treating ammeter resistance as equal to the shunt: it is $\\frac{GS}{G+S}$, which is smaller than both G and S.",
+    "Forgetting that field lines inside a magnet run from S to N: they are closed loops, and the net flux through any closed surface is zero.",
+    "Assuming every material's susceptibility depends on temperature: diamagnetic susceptibility is temperature-independent, and only paramagnets follow Curie's law.",
+    "Ignoring that radial straight leads give zero field at the centre, or that current dividing between two arcs of a uniform loop gives zero net field at the centre."
+  ],
+  "quick_revision": [
+    "Centre of a loop: $\\frac{\\mu_0 I}{2R}$; an arc gives the fraction $\\theta/2\\pi$ of it; a long wire gives $\\frac{\\mu_0 I}{2\\pi r}$; a solenoid gives $\\mu_0 nI$.",
+    "Field at the end of a long solenoid is half the field at its centre.",
+    "Lorentz force: $q(\\vec{E}+\\vec{v}\\times\\vec{B})$; radius $r=\\frac{mv}{qB}$; period $\\frac{2\\pi m}{qB}$ is independent of speed.",
+    "Velocity selector condition is $v=E/B$; helix pitch is $v\\cos\\theta\\cdot T$.",
+    "Any closed loop in a uniform B feels zero net force, but torque $\\vec{m}\\times\\vec{B}$ can act.",
+    "Parallel wires: $\\frac{\\mu_0 I_1I_2}{2\\pi d}$ per metre; one ampere gives $2\\times10^{-7}\\,N\\,m^{-1}$ at 1 m separation.",
+    "Galvanometer: radial field, $\\phi\\propto I$; ammeter uses a low shunt in parallel, voltmeter a high resistance in series.",
+    "Magnetic moment $m=NIA$; electron orbital moment ratio is $\\frac{e}{2m_e}$; Bohr magneton is $9.27\\times10^{-24}\\,A\\,m^2$.",
+    "Short magnet: axial field is twice the equatorial field at the same distance, and both vary as $1/r^3$.",
+    "Dipole energy $U=-mB\\cos\\theta$; work from $0$ to $180^\\circ$ is $2mB$.",
+    "Dia: $\\chi<0$, repelled. Para: small $\\chi>0$, weakly attracted. Ferro: $\\chi\\gg1$, domains, strongly attracted.",
+    "Curie's law $\\chi\\propto1/T$ for paramagnets; above $T_C$ a ferromagnet becomes paramagnetic."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q011",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q11"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q015",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q15"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u15",
+  "unit_no": 15,
+  "unit_name": "Electromagnetic Waves",
+  "slug": "electromagnetic-waves",
+  "overview": "This unit explains how Maxwell's idea of displacement current completes Ampere's law and predicts self-sustaining electromagnetic waves travelling at the speed of light. It covers the properties and transverse nature of these waves, the electromagnetic spectrum from radio waves to gamma rays, and their practical uses. NEET asks 1-2 questions here every year, usually on wave equations (speed, wavelength, the $E_0/B_0$ relation, direction of propagation), energy and intensity, displacement current in a charging capacitor, and matching spectrum regions with their sources and applications.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Ampere's circuital law gives contradictory results for a charging capacitor. A loop around the wire encloses a conduction current, but a surface passing between the plates encloses none. Maxwell resolved this by adding a displacement current, $i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$. It arises from a time-varying electric flux, not from moving charges. Between the plates of a charging capacitor, $i_d$ exactly equals the conduction current $i_c$ in the connecting wires, so the total current is continuous. The modified law is $\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 (i_c + i_d)$, called the Ampere-Maxwell law. It shows that a changing electric field produces a magnetic field, which is the counterpart of Faraday's law. Together, these two laws explain how EM waves sustain themselves.",
+      "key_points": [
+        "Displacement current is due to a changing electric field or flux, not due to the flow of charge.",
+        "In a charging or discharging capacitor, $i_d$ between the plates equals $i_c$ in the wires.",
+        "Displacement current produces a magnetic field exactly like conduction current does.",
+        "In steady state (DC fully charged capacitor), $\\frac{dE}{dt} = 0$, so $i_d = 0$.",
+        "Inside a good conductor $i_d$ is negligible; in free space or a dielectric with changing $E$, only $i_d$ exists.",
+        "Maxwell's equations (Gauss's law for $E$, Gauss's law for $B$, Faraday's law, Ampere-Maxwell law) form the basis of EM wave theory.",
+        "For circular plates of radius $R$, the magnetic field between the plates rises linearly with $r$ inside ($r < R$) and falls as $\\frac{1}{r}$ outside."
+      ],
+      "formulas": [
+        {
+          "formula": "$i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$",
+          "meaning": "Displacement current due to rate of change of electric flux"
+        },
+        {
+          "formula": "$\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 i_c + \\mu_0 \\epsilon_0 \\frac{d\\Phi_E}{dt}$",
+          "meaning": "Ampere-Maxwell law"
+        },
+        {
+          "formula": "$i_d = \\epsilon_0 A \\frac{dE}{dt} = C \\frac{dV}{dt}$",
+          "meaning": "Displacement current in a parallel plate capacitor of plate area $A$ and capacitance $C$"
+        },
+        {
+          "formula": "$j_d = \\epsilon_0 \\frac{dE}{dt}$",
+          "meaning": "Displacement current density"
+        },
+        {
+          "formula": "$B = \\frac{\\mu_0 i_d r}{2\\pi R^2}$ for $r < R$; $B = \\frac{\\mu_0 i_d}{2\\pi r}$ for $r \\ge R$",
+          "meaning": "Magnetic field between circular capacitor plates of radius $R$ at distance $r$ from the axis"
+        }
+      ],
+      "neet_tip": "Expect numericals that compute $i_d$ from $C \\frac{dV}{dt}$ or $\\epsilon_0 A \\frac{dE}{dt}$, or that find $B$ at a point between capacitor plates, along with conceptual statements such as $i_d = i_c$.",
+      "topic": "Displacement current"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Electromagnetic waves are produced by accelerated or oscillating charges. A charge moving with constant velocity does not radiate. An oscillating charge produces an oscillating electric field. That field generates an oscillating magnetic field, which in turn regenerates the electric field, so the wave propagates through space without needing a medium. In vacuum all EM waves travel at $c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}} \\approx 3 \\times 10^8$ m/s. In a medium the speed is $v = \\frac{c}{\\sqrt{\\mu_r \\epsilon_r}}$. The frequency equals the frequency of the source and stays the same when the wave enters a new medium; the speed and wavelength change. EM waves carry energy, momentum and linear momentum, and so exert radiation pressure. The electric and magnetic fields oscillate in phase, with $E_0 = c B_0$. The average energy density is shared equally between the electric and magnetic fields.",
+      "key_points": [
+        "Source of EM waves: accelerated charges; the frequency of the wave equals the frequency of the oscillating charge.",
+        "No material medium is required; EM waves can travel through vacuum.",
+        "$E$ and $B$ oscillate in phase: both reach maxima and zeros together.",
+        "EM waves are uncharged, so electric and magnetic fields do not deflect them.",
+        "Frequency stays unchanged on entering a medium; $\\lambda$ and $v$ decrease by the factor $n = \\sqrt{\\mu_r \\epsilon_r}$.",
+        "Electric and magnetic energy densities are equal on average; total average energy density is $\\frac{1}{2}\\epsilon_0 E_0^2$.",
+        "Momentum delivered is $p = \\frac{U}{c}$ for complete absorption and $\\frac{2U}{c}$ for complete reflection.",
+        "Hertz first produced and detected EM waves experimentally; J.C. Bose and Marconi extended this work."
+      ],
+      "formulas": [
+        {
+          "formula": "$c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$",
+          "meaning": "Speed of EM waves in vacuum"
+        },
+        {
+          "formula": "$v = \\frac{1}{\\sqrt{\\mu \\epsilon}} = \\frac{c}{\\sqrt{\\mu_r \\epsilon_r}}$",
+          "meaning": "Speed in a medium; for non-magnetic media $v = \\frac{c}{\\sqrt{\\epsilon_r}}$"
+        },
+        {
+          "formula": "$\\frac{E_0}{B_0} = c$",
+          "meaning": "Ratio of field amplitudes in vacuum (equals $v$ in a medium)"
+        },
+        {
+          "formula": "$u_{av} = \\frac{1}{2}\\epsilon_0 E_0^2 = \\frac{B_0^2}{2\\mu_0}$",
+          "meaning": "Average energy density of the wave"
+        },
+        {
+          "formula": "$I = u_{av} c = \\frac{1}{2}\\epsilon_0 c E_0^2$",
+          "meaning": "Intensity (average power per unit area)"
+        },
+        {
+          "formula": "$p = \\frac{U}{c}$",
+          "meaning": "Momentum carried by energy $U$ (complete absorption)"
+        },
+        {
+          "formula": "$P_{rad} = \\frac{I}{c}$ (absorbing), $\\frac{2I}{c}$ (perfectly reflecting)",
+          "meaning": "Radiation pressure at normal incidence"
+        }
+      ],
+      "neet_tip": "NEET frequently gives $\\epsilon_r$ or the refractive index and asks for speed or wavelength in the medium, or asks for $B_0$ from $E_0$, or for energy density or intensity values.",
+      "topic": "Electromagnetic waves and their characteristics"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "EM waves are transverse. The electric field, the magnetic field and the direction of propagation are mutually perpendicular. The direction of propagation is along $\\vec{E} \\times \\vec{B}$. For a wave travelling along $+z$, take $E_x = E_0 \\sin(kz - \\omega t)$; then $B_y = B_0 \\sin(kz - \\omega t)$ with $B_0 = \\frac{E_0}{c}$. The phase $(kz - \\omega t)$ indicates propagation along $+z$, while $(kz + \\omega t)$ indicates propagation along $-z$. The wave number is $k = \\frac{2\\pi}{\\lambda}$, the angular frequency is $\\omega = 2\\pi\\nu$, and the wave speed is $v = \\frac{\\omega}{k}$. Because the fields are transverse, EM waves can be polarised, and polarisation is experimental proof of their transverse nature. The energy flow is given by the Poynting vector $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$.",
+      "key_points": [
+        "$\\vec{E} \\perp \\vec{B}$, $\\vec{E} \\perp \\vec{k}$, $\\vec{B} \\perp \\vec{k}$; there is no field component along the direction of propagation.",
+        "Direction of propagation is $\\hat{E} \\times \\hat{B}$; for example, $\\hat{i} \\times \\hat{j} = \\hat{k}$.",
+        "If $E$ is along $x$ and the wave moves along $z$, then $B$ must be along $y$.",
+        "The sign of $\\omega t$ relative to $kz$ fixes the direction of travel.",
+        "Read $\\omega$ and $k$ directly from the wave equation; then $\\nu = \\frac{\\omega}{2\\pi}$ and $\\lambda = \\frac{2\\pi}{k}$.",
+        "Polarisation of light confirms that EM waves are transverse; longitudinal sound waves cannot be polarised."
+      ],
+      "formulas": [
+        {
+          "formula": "$\\vec{E} = E_0 \\sin(kz - \\omega t)\\hat{i}$, $\\vec{B} = B_0 \\sin(kz - \\omega t)\\hat{j}$",
+          "meaning": "Plane EM wave travelling along $+z$"
+        },
+        {
+          "formula": "$k = \\frac{2\\pi}{\\lambda}$, $\\omega = 2\\pi\\nu$, $v = \\frac{\\omega}{k} = \\nu\\lambda$",
+          "meaning": "Relations between wave parameters"
+        },
+        {
+          "formula": "$\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$",
+          "meaning": "Poynting vector: direction and rate of energy flow per unit area"
+        }
+      ],
+      "neet_tip": "From a given $E$ expression, NEET asks for the direction and expression of $B$, the direction of propagation, $\\lambda$ or $\\nu$, or which statement about the wave is incorrect.",
+      "topic": "Transverse nature of electromagnetic waves"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "The electromagnetic spectrum arranges EM waves by frequency or wavelength. In order of increasing frequency (decreasing wavelength), the regions are radio waves, microwaves, infrared, visible, ultraviolet, X-rays and gamma rays. All travel at $c$ in vacuum. Energy per photon, $E = h\\nu$, increases from radio to gamma rays. The regions are not sharply separated and overlap at their boundaries. Each region has characteristic sources and detectors, and NEET tests these frequently. Visible light spans only a narrow band of about 400 nm to 700 nm, from violet to red.",
+      "key_points": [
+        "Radio waves: $\\lambda > 0.1$ m. Produced by accelerated charges in conducting wires (oscillating circuits). Detected by receiver aerials.",
+        "Microwaves: $0.1$ m to $1$ mm. Produced by klystron, magnetron and Gunn diode. Detected by point-contact diodes.",
+        "Infrared: $1$ mm to $700$ nm. Produced by hot bodies and molecular vibrations; also called heat waves. Detected by thermopiles, bolometers and IR photographic film.",
+        "Visible: $700$ nm to $400$ nm. Produced by electron transitions in atoms (glowing bodies). Detected by the eye, photocells and photographic film.",
+        "Ultraviolet: $400$ nm to $1$ nm. Produced by the Sun, special lamps and very hot bodies. Detected by photocells and photographic film. Mostly absorbed by the ozone layer.",
+        "X-rays: $1$ nm to $10^{-3}$ nm. Produced by X-ray tubes (bombarding metal targets) and inner-shell electron transitions. Detected by photographic film and Geiger tubes.",
+        "Gamma rays: $\\lambda < 10^{-3}$ nm. Produced by radioactive decay of nuclei and nuclear reactions. Detected by photographic film, Geiger tubes and ionisation chambers.",
+        "Mnemonic for increasing frequency: Raging Martians Invaded Venus Using X-ray Guns (R, M, I, V, U, X, G)."
+      ],
+      "formulas": [
+        {
+          "formula": "$c = \\nu\\lambda$",
+          "meaning": "Relates frequency and wavelength in vacuum for all regions"
+        },
+        {
+          "formula": "$E = h\\nu = \\frac{hc}{\\lambda}$",
+          "meaning": "Photon energy; increases from radio to gamma rays"
+        }
+      ],
+      "neet_tip": "Questions ask you to arrange regions by wavelength, frequency or energy, identify the source or detector of a region, or place a given wavelength or frequency in its region.",
+      "topic": "Electromagnetic spectrum: radio waves to gamma rays"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Each region of the spectrum has distinct uses based on its frequency and how it interacts with matter. Radio waves carry AM, FM, TV and cellular communication. Microwaves are used in radar, navigation and microwave ovens; oven frequencies are chosen to match the resonant frequency of water molecules, so food heats up. Infrared drives the greenhouse effect and is used in physiotherapy, remote controls and night vision. Ultraviolet kills germs, so it is used for water purification and sterilisation; it is also used in LASIK eye surgery. Welders wear special glass goggles to block UV. X-rays are used in medical diagnosis and crystal structure studies. Gamma rays are used in cancer radiotherapy and in sterilising medical equipment.",
+      "key_points": [
+        "AM radio band: $530$ kHz to $1710$ kHz. FM: $88$ MHz to $108$ MHz. TV: $54$ MHz to $890$ MHz. Cellular phones use the UHF band.",
+        "Microwaves: radar, aircraft navigation, speed guns and microwave ovens (about $2.45$ GHz, resonant with water molecules).",
+        "Infrared: remote switches, physical therapy, IR detectors on Earth satellites, night vision and the greenhouse effect.",
+        "Visible: vision and photography. Ultraviolet: water purification, sterilisation, LASIK surgery and counterfeit detection.",
+        "The ozone layer absorbs harmful UV; glass blocks UV, which is why welders wear glass goggles.",
+        "X-rays: medical diagnosis (bone imaging) and cancer treatment; overexposure damages tissue.",
+        "Gamma rays: cancer treatment (radiotherapy), sterilisation of food and medical equipment, and nuclear studies."
+      ],
+      "formulas": [],
+      "neet_tip": "Match-the-list questions pairing regions with uses are very common: microwave with food heating, UV with water purification, gamma rays with cancer treatment, radio waves with AM and FM communication.",
+      "topic": "Applications of electromagnetic waves"
+    }
+  ],
+  "formula_sheet": [
+    {
+      "formula": "$i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$",
+      "meaning": "Displacement current; $\\Phi_E$ is electric flux and $\\epsilon_0$ is the permittivity of free space"
+    },
+    {
+      "formula": "$i_d = C\\frac{dV}{dt} = \\epsilon_0 A \\frac{dE}{dt}$",
+      "meaning": "Displacement current in a capacitor of capacitance $C$ and plate area $A$"
+    },
+    {
+      "formula": "$\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 (i_c + i_d)$",
+      "meaning": "Ampere-Maxwell law; $i_c$ is conduction current"
+    },
+    {
+      "formula": "$B = \\frac{\\mu_0 i_d r}{2\\pi R^2}$",
+      "meaning": "Magnetic field at distance $r < R$ between circular plates of radius $R$"
+    },
+    {
+      "formula": "$c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}} = 3 \\times 10^8$ m/s",
+      "meaning": "Speed of light in vacuum; $\\mu_0$ is permeability and $\\epsilon_0$ is permittivity"
+    },
+    {
+      "formula": "$v = \\frac{c}{\\sqrt{\\mu_r \\epsilon_r}} = \\frac{c}{n}$",
+      "meaning": "Speed in a medium; $\\mu_r, \\epsilon_r$ are relative permeability and permittivity and $n$ is the refractive index"
+    },
+    {
+      "formula": "$\\lambda_{medium} = \\frac{\\lambda_0}{n}$",
+      "meaning": "Wavelength in a medium; frequency is unchanged"
+    },
+    {
+      "formula": "$\\frac{E_0}{B_0} = c$",
+      "meaning": "Ratio of peak electric and magnetic fields (equals $v$ in a medium)"
+    },
+    {
+      "formula": "$c = \\nu\\lambda = \\frac{\\omega}{k}$",
+      "meaning": "Wave speed from frequency $\\nu$, wavelength $\\lambda$, angular frequency $\\omega$ and wave number $k$"
+    },
+    {
+      "formula": "$k = \\frac{2\\pi}{\\lambda}$, $\\omega = 2\\pi\\nu$",
+      "meaning": "Wave number and angular frequency"
+    },
+    {
+      "formula": "$u_E = \\frac{1}{2}\\epsilon_0 E^2$, $u_B = \\frac{B^2}{2\\mu_0}$",
+      "meaning": "Instantaneous electric and magnetic energy densities, equal for an EM wave"
+    },
+    {
+      "formula": "$u_{av} = \\frac{1}{2}\\epsilon_0 E_0^2 = \\epsilon_0 E_{rms}^2$",
+      "meaning": "Average total energy density; $E_{rms} = \\frac{E_0}{\\sqrt{2}}$"
+    },
+    {
+      "formula": "$I = u_{av} c = \\frac{1}{2}\\epsilon_0 c E_0^2$",
+      "meaning": "Intensity: average power per unit area"
+    },
+    {
+      "formula": "$I = \\frac{P}{4\\pi r^2}$",
+      "meaning": "Intensity at distance $r$ from an isotropic point source of power $P$"
+    },
+    {
+      "formula": "$p = \\frac{U}{c}$ (absorbed), $p = \\frac{2U}{c}$ (reflected)",
+      "meaning": "Momentum transferred by EM energy $U$ at normal incidence"
+    },
+    {
+      "formula": "$P_{rad} = \\frac{I}{c}$ or $\\frac{2I}{c}$",
+      "meaning": "Radiation pressure on a perfect absorber or a perfect reflector"
+    },
+    {
+      "formula": "$F = \\frac{IA}{c}$",
+      "meaning": "Force on a perfectly absorbing surface of area $A$"
+    },
+    {
+      "formula": "$\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$",
+      "meaning": "Poynting vector giving direction and magnitude of energy flow"
+    },
+    {
+      "formula": "$E = h\\nu = \\frac{hc}{\\lambda}$",
+      "meaning": "Photon energy; $h$ is Planck's constant"
+    }
+  ],
+  "common_traps": [
+    "Thinking displacement current is a flow of charges. It is produced only by a changing electric flux; no charge crosses the capacitor gap.",
+    "Assuming frequency changes when the wave enters a medium. Frequency stays constant; only speed and wavelength reduce by the factor $n = \\sqrt{\\epsilon_r \\mu_r}$.",
+    "Using $E_0 / B_0 = c$ inside a dielectric. In a medium the ratio is $v$, so $B_0 = \\frac{E_0}{v}$, not $\\frac{E_0}{c}$.",
+    "Believing magnetic energy is smaller because $B$ is numerically tiny. The average electric and magnetic energy densities are exactly equal.",
+    "Getting the direction of propagation wrong. $(kz - \\omega t)$ means travel along $+z$ and $(kz + \\omega t)$ means travel along $-z$; also check with $\\vec{E} \\times \\vec{B}$.",
+    "Forgetting the factor 2 for a perfectly reflecting surface in momentum and radiation pressure calculations.",
+    "Mixing up sources: microwaves come from klystron, magnetron and Gunn diode, while gamma rays come from nuclei, not from electron transitions as X-rays do.",
+    "Confusing applications: microwaves heat food (via water molecule resonance), whereas infrared is used for remote controls and physiotherapy."
+  ],
+  "quick_revision": [
+    "$i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$; in a charging capacitor $i_d = i_c$, and $i_d = 0$ in steady DC.",
+    "A changing $E$ produces $B$ (Ampere-Maxwell law), and a changing $B$ produces $E$ (Faraday's law); this mutual generation creates EM waves.",
+    "EM waves come from accelerated charges, need no medium, and are not deflected by electric or magnetic fields.",
+    "$c = \\frac{1}{\\sqrt{\\mu_0\\epsilon_0}}$; in a medium $v = \\frac{c}{\\sqrt{\\mu_r\\epsilon_r}}$; frequency is unchanged.",
+    "$E_0 = cB_0$; $E$ and $B$ are in phase and mutually perpendicular, and both are perpendicular to the direction of propagation.",
+    "Propagation is along $\\vec{E} \\times \\vec{B}$; polarisation proves the transverse nature.",
+    "$u_{av} = \\frac{1}{2}\\epsilon_0 E_0^2$, shared equally between electric and magnetic fields; $I = \\frac{1}{2}\\epsilon_0 c E_0^2$.",
+    "Radiation pressure is $\\frac{I}{c}$ for an absorber and $\\frac{2I}{c}$ for a reflector; momentum is $\\frac{U}{c}$.",
+    "Increasing frequency order: radio, microwave, infrared, visible, UV, X-ray, gamma.",
+    "Visible light spans 400 nm to 700 nm; X-rays span 1 nm to $10^{-3}$ nm; gamma rays are below $10^{-3}$ nm.",
+    "Uses: microwave for ovens and radar; IR for remote controls and the greenhouse effect; UV for water purification and LASIK; X-rays for diagnosis; gamma rays for cancer therapy.",
+    "Frequency bands: AM 530 kHz to 1710 kHz; FM 88 MHz to 108 MHz; TV 54 MHz to 890 MHz."
+  ],
+  "pyq": {
+    "count": 2,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q038",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q38"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q043",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q43"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

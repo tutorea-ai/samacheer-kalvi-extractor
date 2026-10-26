@@ -1,0 +1,212 @@
+{
+  "exam": "neet",
+  "subject": "biology",
+  "unit_id": "bio_u09",
+  "unit_no": 9,
+  "unit_name": "Biotechnology and Its Applications",
+  "slug": "biotechnology-and-its-applications",
+  "overview": "This unit covers how genes are cut, joined, cloned and expressed using recombinant DNA technology, and how these tools are applied in medicine (insulin, vaccines, gene therapy), agriculture (Bt crops, RNAi) and animal biotechnology, along with the ethical and legal issues they raise. NEET asks 3-5 questions from it every year. Most are direct NCERT-based items on enzymes, vectors, PCR steps, Bt toxin, ADA gene therapy, transgenic animals and biopiracy.",
+  "topics": [
+    {
+      "topic_index": 0,
+      "explanation": "Biotechnology rests on two core techniques. Genetic engineering alters the chemistry of the genetic material. Bioprocess engineering maintains a sterile, contamination-free environment for large-scale culture. Cohen and Boyer made the first recombinant DNA in 1972 by linking an antibiotic resistance gene from a Salmonella typhimurium plasmid into another plasmid. The basic steps are: isolate DNA, cut it with a restriction enzyme, amplify the gene of interest by PCR, ligate it into a vector, transfer it into a host, culture the host and recover the product. Restriction endonucleases recognise palindromic sequences and leave sticky ends that DNA ligase joins. A vector needs three features: an ori, a selectable marker and cloning sites. Recombinants are identified by insertional inactivation, either of an antibiotic resistance gene or of lacZ (blue-white screening). Hosts are made competent with $Ca^{2+}$ and heat shock, or the DNA is delivered by microinjection or a gene gun. The product is then made in bioreactors and purified by downstream processing.",
+      "key_points": [
+        "Restriction enzymes are molecular scissors. Hind II was the first isolated. Endonucleases cut within DNA, while exonucleases remove nucleotides from the ends.",
+        "EcoRI is named from Escherichia coli strain RY13 and recognises the palindrome GAATTC, cutting between G and A to leave sticky ends.",
+        "Cell disruption depends on the cell wall: lysozyme for bacteria, cellulase for plants, chitinase for fungi.",
+        "During DNA isolation, RNase removes RNA and protease removes proteins. Chilled ethanol then precipitates DNA as fine threads, which are spooled out.",
+        "In agarose gel electrophoresis, the agarose comes from seaweed. DNA is negatively charged and moves towards the anode. Smaller fragments move farther.",
+        "DNA bands are stained with ethidium bromide and seen as orange bands under UV light. Cutting a band out and extracting its DNA is called elution.",
+        "PCR has three steps: denaturation at about $94^\\circ C$, annealing of primers, and extension by thermostable Taq polymerase from Thermus aquaticus at about $72^\\circ C$.",
+        "pBR322 carries ori, rop, $amp^R$ and $tet^R$. It has a BamHI site in $tet^R$ and PstI and PvuI sites in $amp^R$.",
+        "Insertion at BamHI inactivates $tet^R$, so recombinants grow on ampicillin but not on tetracycline.",
+        "In blue-white selection, an insert in lacZ inactivates $\\beta$-galactosidase. Recombinant colonies stay colourless (white) on a chromogenic substrate, while non-recombinants turn blue.",
+        "Natural vectors include the Ti plasmid of Agrobacterium tumefaciens, which is disarmed to deliver genes to plants, and disarmed retroviruses for animal cells.",
+        "Transformation methods include $CaCl_2$ treatment with heat shock (ice, then $42^\\circ C$, then ice), microinjection into the nucleus, biolistics using gold or tungsten particles, and disarmed pathogen vectors.",
+        "Stirred-tank bioreactors (typically 100 to 1000 L) control temperature, pH, foam, oxygen and sampling. Downstream processing (separation, purification, formulation, preservatives) and clinical trials follow."
+      ],
+      "formulas": [
+        {
+          "formula": "$N = N_0 \\times 2^n$",
+          "meaning": "Number of DNA copies after n PCR cycles, starting from $N_0$ double-stranded molecules, assuming ideal doubling each cycle."
+        },
+        {
+          "formula": "$\\text{Probability of a site} = \\frac{1}{4^n}$",
+          "meaning": "Expected frequency of a specific n-bp restriction site in random DNA. A 6-bp site such as GAATTC occurs about once every $4^6 = 4096$ bp."
+        }
+      ],
+      "neet_tip": "Expect PCR step identification, enzyme to cell-wall matching, pBR322 sites and insertional inactivation, the direction of DNA movement in a gel, and matching vector features (ori, selectable marker, cloning site) to their functions.",
+      "topic": "Principles and process of biotechnology: recombinant DNA technology"
+    },
+    {
+      "topic_index": 1,
+      "explanation": "Insulin used to be extracted from the pancreas of slaughtered cattle and pigs, which caused allergic reactions in some patients. Mature human insulin has two polypeptide chains, A (21 amino acids) and B (30 amino acids), joined by disulphide bridges. In the body it is made as pro-insulin, which carries an extra C-peptide that is removed during maturation. In 1983 Eli Lilly, an American company, prepared DNA sequences for the A and B chains and introduced them into plasmids of E. coli. The two chains were produced separately, extracted, and combined by creating disulphide bonds to form human insulin (Humulin), which avoids the need to process the C-peptide. Recombinant DNA technology also enables recombinant vaccines. Here a gene for a pathogen's antigenic protein is expressed in a host to give a safe subunit vaccine. The hepatitis B vaccine is the standard NCERT example: it uses the surface antigen produced in yeast.",
+      "key_points": [
+        "Human insulin consists of an A chain of 21 amino acids and a B chain of 30 amino acids, linked by disulphide bridges.",
+        "Pro-insulin contains an extra C-peptide that is removed to give mature insulin.",
+        "Eli Lilly produced recombinant human insulin in 1983 by expressing the A and B chains separately in E. coli.",
+        "The C-peptide is not part of the final recombinant product.",
+        "Animal-derived insulin could trigger allergy or immune reactions, which recombinant human insulin avoids.",
+        "Recombinant vaccines express only an antigenic protein of the pathogen, so they cannot cause the disease.",
+        "Recombinant hepatitis B vaccine uses the surface antigen (HBsAg) produced in yeast.",
+        "Other recombinant therapeutics are approved worldwide, and around 12 of them are marketed in India."
+      ],
+      "formulas": [],
+      "neet_tip": "NEET asks for the amino acid numbers in the A and B chains, the fate of the C-peptide, Eli Lilly with 1983, E. coli as the host, and yeast as the host for the hepatitis B vaccine.",
+      "topic": "Human insulin and vaccine production"
+    },
+    {
+      "topic_index": 2,
+      "explanation": "Gene therapy corrects a hereditary defect by delivering a normal gene into a person's cells or tissues, where it compensates for the non-functional gene. The first clinical gene therapy was given in 1990 to a 4-year-old girl with adenosine deaminase (ADA) deficiency. ADA is crucial for the immune system, and its absence causes severe immunodeficiency. Her lymphocytes were grown in culture outside the body. A functional ADA cDNA was introduced into them using a retroviral vector, and the cells were returned to her. Because lymphocytes are not immortal, the infusion has to be repeated periodically. A permanent cure is possible only if the ADA gene, isolated from marrow cells, is introduced into cells at early embryonic stages. Alternatives for ADA deficiency are bone marrow transplantation and enzyme replacement therapy, in which functional ADA is injected.",
+      "key_points": [
+        "The first clinical gene therapy, in 1990, treated ADA deficiency in a 4-year-old girl.",
+        "ADA stands for adenosine deaminase. A deletion in the ADA gene causes immunodeficiency.",
+        "The procedure was ex vivo: lymphocytes were cultured, given functional ADA cDNA through a retroviral vector, and reinfused.",
+        "The treatment is not permanent because genetically engineered lymphocytes are not immortal, so periodic infusions are needed.",
+        "A permanent cure requires introducing the ADA gene, isolated from marrow cells, into cells at early embryonic stages.",
+        "Non-gene options are bone marrow transplantation and enzyme replacement therapy (injection of functional ADA).",
+        "Retroviruses are used because they integrate their genetic material into the host genome. They are first disarmed so they do not cause disease."
+      ],
+      "formulas": [],
+      "neet_tip": "Typical questions ask which disease was first treated (ADA deficiency), which vector was used (retrovirus), which cells were used (lymphocytes), why the therapy is not permanent, and what a permanent cure would require.",
+      "topic": "Gene therapy"
+    },
+    {
+      "topic_index": 3,
+      "explanation": "Genetically modified (GM) organisms carry genes altered by manipulation. GM plants have made crops more tolerant to abiotic stresses, reduced reliance on chemical pesticides, cut post-harvest losses, improved mineral use efficiency and raised nutritional value, as in Golden rice rich in vitamin A. Bt crops carry cry genes from the soil bacterium Bacillus thuringiensis. Bt toxin is formed as inactive protoxin crystals, which is why the bacterium is not harmed. When an insect eats them, the alkaline pH of its gut solubilises the crystals and activates the toxin. The active toxin binds to midgut epithelial cells and creates pores, causing swelling, lysis and death. NCERT also describes pest resistance through RNA interference (RNAi). Nematode-specific genes are introduced into tobacco through Agrobacterium vectors, producing sense and anti-sense RNA. These form dsRNA, which silences the parasite's mRNA so that Meloidogyne incognita cannot survive in the transgenic host.",
+      "key_points": [
+        "Bt toxin protein is called Insecticidal Crystal Protein (ICP) and is encoded by cry genes.",
+        "The toxin exists as inactive protoxin and is activated by the alkaline pH of the insect gut.",
+        "Active toxin binds midgut epithelial cells and forms pores, leading to cell swelling, lysis and insect death.",
+        "Bt toxin targets lepidopterans (tobacco budworm, armyworm), coleopterans (beetles) and dipterans (flies, mosquitoes).",
+        "cryIAc and cryIIAb control cotton bollworms, while cryIAb controls corn borer.",
+        "Bt cotton is the prominent Bt crop grown in India.",
+        "In RNAi, dsRNA silences a specific mRNA. It is used against the root-knot nematode Meloidogyne incognita in tobacco roots.",
+        "In the RNAi method, Agrobacterium vectors introduce nematode-specific genes into the host plant, producing both sense and anti-sense RNA.",
+        "Golden rice is a GM rice rich in vitamin A."
+      ],
+      "formulas": [],
+      "neet_tip": "Be ready for why the protoxin is activated (alkaline pH), matching cry genes to pests, which insect orders are affected, and the RNAi mechanism with the nematode name.",
+      "topic": "Genetically modified organisms: Bt crops"
+    },
+    {
+      "topic_index": 4,
+      "explanation": "Transgenic animals carry and express an extra foreign gene in their DNA. Rats, rabbits, pigs, sheep, cows and fish have been made transgenic, but over 95 percent of existing transgenic animals are mice. They are used for five main purposes. First, they help study how genes regulate normal physiology and development, for example insulin-like growth factor. Second, they serve as disease models for cancer, cystic fibrosis, rheumatoid arthritis and Alzheimer's disease. Third, they produce useful biological products, such as alpha-1-antitrypsin for treating emphysema. Fourth, they test vaccine safety, as with transgenic mice used for polio vaccine before human trials. Fifth, they test chemical safety, because animals carrying sensitive genes respond faster to toxic chemicals. In 1997 Rosie, the first transgenic cow, produced milk enriched with human protein (2.4 g per litre) containing human alpha-lactalbumin. This milk is nutritionally more balanced for human babies than natural cow milk.",
+      "key_points": [
+        "Over 95 percent of all existing transgenic animals are mice.",
+        "Rosie (1997) was the first transgenic cow. Her milk contained 2.4 g per litre of human protein, including human alpha-lactalbumin.",
+        "Alpha-1-antitrypsin produced by transgenic animals is used to treat emphysema.",
+        "Transgenic animals are being developed to make products for phenylketonuria (PKU) and cystic fibrosis.",
+        "Transgenic mice are used to test the safety of polio vaccine.",
+        "Toxicity testing in transgenic animals gives faster results because the animals carry genes that make them more sensitive to toxic substances.",
+        "Transgenic animal models are used to study cancer, cystic fibrosis, rheumatoid arthritis and Alzheimer's disease."
+      ],
+      "formulas": [],
+      "neet_tip": "NEET usually asks about Rosie (year, protein, amount), alpha-1-antitrypsin for emphysema, polio vaccine testing in mice, and the 95 percent mouse figure.",
+      "topic": "Transgenic animals"
+    },
+    {
+      "topic_index": 5,
+      "explanation": "Genetic modification raises ethical and safety concerns, including unpredictable effects when GM organisms enter ecosystems. In India the Genetic Engineering Appraisal Committee (GEAC) judges whether GM research is valid and whether introducing GM organisms for public services is safe. A patent is a right granted by a government that stops others from commercially using an invention. Biopiracy is the use of bio-resources or traditional knowledge by multinational companies or organisations without proper authorisation or compensation to the countries and people concerned. In 1997 an American company obtained patent rights on Basmati rice through the US Patent and Trademark Office. The rice had been derived from Indian farmers' varieties crossed with semi-dwarf varieties. India has about 200,000 varieties of rice, of which 27 documented varieties are Basmati. Attempts have also been made to patent uses of turmeric and neem. Developing nations demand fair benefit-sharing, and India amended its Patents Bill to address patent terms, emergency provisions and research and development initiatives.",
+      "key_points": [
+        "GEAC (Genetic Engineering Appraisal Committee) is the Indian body that regulates GM research and the release of GM organisms.",
+        "Biopiracy is the unauthorised use of bio-resources or traditional knowledge without compensation.",
+        "A patent on Basmati rice was granted to an American company in 1997.",
+        "India has about 200,000 rice varieties, of which 27 are documented Basmati varieties.",
+        "Turmeric and neem are other Indian examples where patent attempts were made on traditional knowledge.",
+        "Industrialised nations are rich financially but poor in biodiversity and traditional knowledge, whereas developing nations are rich in both.",
+        "The Indian Parliament cleared the second amendment of the Indian Patents Bill to address these issues."
+      ],
+      "formulas": [],
+      "neet_tip": "Questions focus on the full form and role of GEAC, the definition of biopiracy, and the Basmati facts (1997, 27 varieties, 200,000 rice varieties).",
+      "topic": "Biosafety issues, biopiracy and patents"
+    }
+  ],
+  "key_facts": [
+    "Cohen and Boyer constructed the first recombinant DNA in 1972 using a Salmonella typhimurium plasmid.",
+    "Hind II was the first restriction endonuclease isolated, and it always cuts at a specific 6-bp sequence.",
+    "EcoRI recognises GAATTC and is named from Escherichia coli strain RY13.",
+    "Restriction enzymes recognise palindromic sequences, which read the same on both strands in the 5' to 3' direction.",
+    "DNA ligase joins sticky ends and is often called molecular glue.",
+    "Lysozyme lyses bacterial cells, cellulase lyses plant cells and chitinase lyses fungal cells.",
+    "Chilled ethanol precipitates purified DNA, which is then spooled out as fine threads.",
+    "In gel electrophoresis, agarose comes from seaweed and DNA moves towards the anode.",
+    "Ethidium bromide stains DNA, which shows as orange bands under UV light.",
+    "In PCR, denaturation occurs at about $94^\\circ C$ and extension by Taq polymerase at about $72^\\circ C$. About 1 billion copies can be obtained after roughly 30 cycles.",
+    "Taq polymerase comes from the thermophilic bacterium Thermus aquaticus.",
+    "In pBR322, BamHI and SalI sites lie in $tet^R$, while PstI and PvuI sites lie in $amp^R$. The rop gene codes for proteins involved in plasmid replication.",
+    "Blue-white screening works through insertional inactivation of lacZ, which codes for $\\beta$-galactosidase. Recombinant colonies are white.",
+    "Agrobacterium tumefaciens transfers T-DNA from its Ti plasmid into plant cells. The disarmed Ti plasmid is used as a vector.",
+    "Competent cells are prepared with divalent $Ca^{2+}$ ions and heat shock (ice, then $42^\\circ C$, then ice).",
+    "Biolistics, or the gene gun, uses gold or tungsten microparticles coated with DNA and is used for plant cells.",
+    "Stirred-tank bioreactors hold typically 100 to 1000 L. Separation and purification of the product is called downstream processing.",
+    "Human insulin has an A chain of 21 amino acids and a B chain of 30 amino acids. Eli Lilly made it in E. coli in 1983.",
+    "Recombinant hepatitis B vaccine is produced in yeast.",
+    "The first gene therapy, in 1990, treated ADA deficiency in a 4-year-old girl using a retroviral vector.",
+    "cryIAc and cryIIAb control cotton bollworms, while cryIAb controls corn borer.",
+    "RNAi against Meloidogyne incognita was used to protect tobacco roots.",
+    "Over 95 percent of transgenic animals are mice. Rosie, the first transgenic cow (1997), gave milk with 2.4 g per litre of human protein containing alpha-lactalbumin.",
+    "Alpha-1-antitrypsin from transgenic animals is used to treat emphysema.",
+    "GEAC stands for Genetic Engineering Appraisal Committee. The Basmati patent was granted in 1997, and India has 27 documented Basmati varieties among about 200,000 rice varieties."
+  ],
+  "common_traps": [
+    "Some think Bt toxin is activated by acidic pH or by proteases. The NCERT answer is the alkaline pH of the insect gut, which solubilises the crystals and activates the protoxin.",
+    "Some place primer binding in the denaturation or extension step. Primers bind in the annealing step, and Taq polymerase extends them in the extension step.",
+    "Some think DNA moves towards the cathode in gel electrophoresis. DNA is negatively charged, so it moves towards the anode, and smaller fragments travel farther.",
+    "Students often confuse which gene is inactivated in pBR322. An insert at BamHI inactivates $tet^R$, so recombinants survive on ampicillin but die on tetracycline.",
+    "In blue-white screening, some assume blue colonies are recombinant. Blue colonies have an intact lacZ and are non-recombinant, while white colonies carry the insert.",
+    "Some believe the 1990 ADA gene therapy was a permanent cure. It was not, because lymphocytes are mortal, and only gene transfer at early embryonic stages could give a permanent cure.",
+    "Some think recombinant insulin was made as pro-insulin with the C-peptide. Eli Lilly produced the A and B chains separately and joined them by disulphide bonds.",
+    "Ethidium bromide is sometimes thought to show DNA under visible light. It reveals DNA as orange bands only under UV light."
+  ],
+  "quick_revision": [
+    "The basic steps of recombinant DNA technology are: isolate DNA, cut it with a restriction enzyme, amplify the gene by PCR, ligate it into a vector, transform a host, culture the host and carry out downstream processing.",
+    "EcoRI cuts the palindrome GAATTC and leaves sticky ends, which DNA ligase joins.",
+    "Cells are disrupted with lysozyme (bacteria), cellulase (plants) or chitinase (fungi). DNA is purified with RNase and protease and precipitated with chilled ethanol.",
+    "A vector needs an ori, a selectable marker and cloning sites. Plasmids are autonomously replicating, extrachromosomal DNA.",
+    "The three PCR steps are denaturation, annealing and extension, the last carried out by Taq polymerase. The number of copies follows $2^n$.",
+    "Recombinants are selected by insertional inactivation, either of an antibiotic resistance gene or of lacZ in blue-white screening.",
+    "Hosts take up DNA after $CaCl_2$ treatment and heat shock, or DNA is delivered by microinjection, biolistics or a disarmed Agrobacterium.",
+    "Eli Lilly made insulin in E. coli in 1983, with A and B chains of 21 and 30 amino acids joined by disulphide bonds. The hepatitis B vaccine is made in yeast.",
+    "The first gene therapy (1990) treated ADA deficiency by giving lymphocytes ADA cDNA through a retroviral vector. It is not permanent.",
+    "Bt protoxin is activated by alkaline gut pH and makes pores in midgut cells. cryIAc and cryIIAb act on cotton bollworms, and cryIAb on corn borer.",
+    "In RNAi, dsRNA silences the mRNA of Meloidogyne incognita in transgenic tobacco.",
+    "Key facts for the final topics: over 95 percent of transgenic animals are mice, Rosie the cow (1997) and alpha-1-antitrypsin, GEAC, and the 1997 Basmati biopiracy case."
+  ],
+  "pyq": {
+    "count": 5,
+    "questions": [
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q137",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q137"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q162",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q162"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q163",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q163"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q168",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q168"
+      },
+      {
+        "paper_id": "re_neet_2026",
+        "q_id": "re_neet_2026_c50_q180",
+        "exam_ref": "Re-NEET (UG) 2026 · Code 50 · Q180"
+      }
+    ]
+  },
+  "review_flags": [],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "syllabus_year": 2026,
+    "generated": "2026-10-23"
+  }
+}

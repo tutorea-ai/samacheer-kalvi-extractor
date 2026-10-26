@@ -1,0 +1,20 @@
+[
+  {
+    "path": "topics[7].key_points[6]",
+    "old": "Unit of S: J K$^{-1}$ mol$^{-1}$",
+    "new": "Unit of S: J K$^{-1}$. Molar entropy (e.g. tabulated $S^\\circ$) has the unit J K$^{-1}$ mol$^{-1}$",
+    "fixes": "Entropy S is extensive, so its unit is J K⁻¹; J K⁻¹ mol⁻¹ is for molar entropy"
+  },
+  {
+    "path": "quick_revision[3]",
+    "old": "For an isothermal ideal gas, $\\Delta U = \\Delta H = 0$ and $q = -w = 2.303nRT\\log(V_2/V_1)$.",
+    "new": "For an isothermal ideal gas, $\\Delta U = \\Delta H = 0$ and $q = -w$. For a reversible path, $q = -w = 2.303nRT\\log(V_2/V_1)$.",
+    "fixes": "The 2.303nRT log expression holds only for a reversible isothermal path"
+  },
+  {
+    "path": "topics[3].explanation",
+    "old": "The first law states that energy can be neither created nor destroyed. Its mathematical form is $\\Delta U = q + w$, using the convention that q and w are positive when heat or work enters the system. Pressure-volume work is $w = -p_{ext}\\Delta V$. Expansion against zero external pressure (free expansion) gives w = 0. For reversible isothermal expansion of an ideal gas, $w = -2.303nRT\\log\\frac{V_2}{V_1}$, and because $\\Delta U = 0$, it follows that $q = -w$. For an adiabatic process, $\\Delta U = w$. Internal energy is the heat exchanged at constant volume ($\\Delta U = q_V$). Enthalpy is defined as H = U + pV, and its change equals the heat exchanged at constant pressure ($\\Delta H = q_p$). For gaseous reactions, $\\Delta H = \\Delta U + \\Delta n_g RT$. Here $\\Delta n_g$ is the moles of gaseous products minus the moles of gaseous reactants.",
+    "new": "The first law states that energy can be neither created nor destroyed. Its mathematical form is $\\Delta U = q + w$, using the convention that q and w are positive when heat or work enters the system. Pressure-volume work is $w = -p_{ext}\\Delta V$. Expansion against zero external pressure (free expansion) gives w = 0. For reversible isothermal expansion of an ideal gas, $w = -2.303nRT\\log\\frac{V_2}{V_1}$, and because $\\Delta U = 0$, it follows that $q = -w$. For an adiabatic process, $\\Delta U = w$. The change in internal energy equals the heat exchanged at constant volume ($\\Delta U = q_V$). Enthalpy is defined as H = U + pV, and its change equals the heat exchanged at constant pressure ($\\Delta H = q_p$). For gaseous reactions, $\\Delta H = \\Delta U + \\Delta n_g RT$. Here $\\Delta n_g$ is the moles of gaseous products minus the moles of gaseous reactants.",
+    "fixes": "ΔU, not U itself, equals the heat exchanged at constant volume"
+  }
+]

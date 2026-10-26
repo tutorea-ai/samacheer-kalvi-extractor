@@ -1,0 +1,20 @@
+[
+  {
+    "path": "topics[5].key_points[5]",
+    "old": "Check that $V_{in} > V_Z$ before assuming regulation",
+    "new": "Before assuming regulation, check that the voltage across the Zener without it, $V_{in}R_L/(R_s+R_L)$, is at least $V_Z$. If it is less, treat the Zener as an open circuit.",
+    "fixes": "Zener breakdown condition: voltage-divider check, not just V_in > V_Z"
+  },
+  {
+    "path": "topics[5].explanation",
+    "old": "A Zener diode is heavily doped on both sides, which gives a very thin depletion layer and a very strong junction field (about $5 \\times 10^6$ V/m). It is designed to operate in reverse breakdown. At the Zener voltage $V_Z$, the field pulls electrons out of covalent bonds (internal field emission), and the current rises sharply while the voltage stays nearly constant at $V_Z$. In a voltage regulator, the Zener is reverse biased and connected in parallel with the load, with a series resistor $R_s$. If the input voltage or the load changes, the Zener current adjusts and the extra voltage drops across $R_s$. The load voltage therefore stays at $V_Z$. The drop across the series resistor is $V_{in} - V_Z$. If the input voltage is below $V_Z$, the Zener does not conduct and behaves like an open circuit.",
+    "new": "A Zener diode is heavily doped on both sides, which gives a very thin depletion layer and a very strong junction field (about $5 \\times 10^6$ V/m). It is designed to operate in reverse breakdown. At the Zener voltage $V_Z$, the field pulls electrons out of covalent bonds (internal field emission), and the current rises sharply while the voltage stays nearly constant at $V_Z$. In a voltage regulator, the Zener is reverse biased and connected in parallel with the load, with a series resistor $R_s$. If the input voltage or the load changes, the Zener current adjusts and the extra voltage drops across $R_s$. The load voltage therefore stays at $V_Z$. The drop across the series resistor is $V_{in} - V_Z$. If the voltage across the Zener without it, $V_{in}R_L/(R_s+R_L)$, is below $V_Z$, the Zener does not conduct and behaves like an open circuit.",
+    "fixes": "Zener breakdown condition: voltage-divider check, not just V_in > V_Z"
+  },
+  {
+    "path": "topics[0].formulas[2].meaning",
+    "old": "Majority carrier density is roughly equal to the dopant concentration for heavy doping",
+    "new": "The majority carrier density is approximately equal to the dopant concentration when $N_D$ (or $N_A$) is much greater than $n_i$.",
+    "fixes": "n_e ≈ N_D approximation needs N_D >> n_i, not heavy doping"
+  }
+]
