@@ -1,0 +1,1231 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u06",
+  "slug": "gravitation",
+  "questions": [
+    {
+      "q_id": "neet_phy_u06_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Universal law of gravitation",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What are the dimensions of the universal gravitational constant $G$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$[M L^3 T^{-2}]$",
+        "$[M^{-1} L^3 T^{-2}]$",
+        "$[M^{-1} L^2 T^{-2}]$",
+        "$[M^{-2} L^3 T^{-2}]$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "From $F = Gm_1m_2/r^2$, we get $G = Fr^2/(m_1m_2)$.",
+        "steps": [
+          "$[F] = [MLT^{-2}]$ and $[r^2] = [L^2]$.",
+          "$[G] = [MLT^{-2}][L^2]/[M^2] = [M^{-1}L^3T^{-2}]$."
+        ],
+        "final_answer": "Option (2): $[M^{-1} L^3 T^{-2}]$",
+        "why_not_others": "Option (1) forgets to divide by $M^2$. Option (3) drops the $r^2$ factor. Option (4) divides by $M^3$ in effect.",
+        "common_trap": "Forgetting that the product of two masses appears in the denominator.",
+        "time_saving_tip": "Remember that $G$ has SI units $N\\,m^2\\,kg^{-2}$ and convert directly."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Universal law of gravitation",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The gravitational force between two point masses is $F$. One mass is tripled and the separation between them is doubled. What is the new force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{3F}{2}$",
+        "$6F$",
+        "$\\frac{3F}{4}$",
+        "$12F$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$F \\propto m_1 m_2 / r^2$",
+        "steps": [
+          "Tripling one mass multiplies $F$ by 3.",
+          "Doubling $r$ divides $F$ by $2^2 = 4$.",
+          "New force $= 3F/4$."
+        ],
+        "final_answer": "Option (3): $\\frac{3F}{4}$",
+        "why_not_others": "$3F/2$ treats the force as inverse of $r$, not $r^2$. $6F$ multiplies by $r$. $12F$ multiplies by $r^2$ instead of dividing.",
+        "common_trap": "Using an inverse-distance law instead of the inverse-square law.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Universal law of gravitation",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Three identical point masses $m$ are placed at the vertices of an equilateral triangle of side $a$. What is the magnitude of the net gravitational force on any one of the masses?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{2Gm^2}{a^2}$",
+        "$\\frac{\\sqrt{3}\\,Gm^2}{a^2}$",
+        "$\\frac{Gm^2}{a^2}$",
+        "$\\frac{\\sqrt{2}\\,Gm^2}{a^2}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Superposition: the net force is the vector sum of the individual forces.",
+        "steps": [
+          "Each of the other two masses exerts $F = Gm^2/a^2$.",
+          "The angle between the two forces is $60^\\circ$.",
+          "Resultant $= \\sqrt{F^2 + F^2 + 2F^2\\cos 60^\\circ} = \\sqrt{3}F$."
+        ],
+        "final_answer": "Option (2): $\\frac{\\sqrt{3}\\,Gm^2}{a^2}$",
+        "why_not_others": "$2F$ adds the magnitudes as scalars. $F$ counts only one force. $\\sqrt{2}F$ assumes the forces are perpendicular.",
+        "common_trap": "Adding the magnitudes directly instead of adding the forces as vectors.",
+        "time_saving_tip": "For two equal forces at angle $\\theta$, the resultant is $2F\\cos(\\theta/2)$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Universal law of gravitation",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The gravitational force between two masses decreases when a thick metal sheet is placed between them.",
+        "R": "Gravitational force between two masses does not depend on the medium between them."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Gravitational force is independent of the intervening medium.",
+        "steps": [
+          "The force depends only on the two masses and the distance between them.",
+          "A metal sheet between the masses does not change the force between them, so A is false.",
+          "R states a correct property, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Assuming gravity can be shielded, as electric fields can be.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Universal law of gravitation",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A point mass placed inside a uniform spherical shell, away from its centre, experiences a net gravitational force directed towards the nearer part of the shell.",
+        "II": "The gravitational force exerted by the Earth on a falling apple is much larger than the force exerted by the apple on the Earth."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The shell theorem and Newton's third law applied to gravity.",
+        "steps": [
+          "A uniform shell exerts zero net force on a mass anywhere inside it, so I is incorrect.",
+          "The forces between two bodies form an equal and opposite action-reaction pair, so II is incorrect.",
+          "The apple accelerates more only because its mass is much smaller."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements are false, so every option that calls either statement correct is wrong.",
+        "common_trap": "Confusing a larger acceleration with a larger force.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Acceleration due to gravity and its variation with altitude and depth",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A $2\\ kg$ ball and a $10\\ kg$ ball are dropped from the same height near the Earth's surface, with air resistance neglected. What is the ratio of their accelerations?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1:1$",
+        "$1:5$",
+        "$5:1$",
+        "$1:25$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$g = GM/R^2$ is independent of the mass of the falling body.",
+        "steps": [
+          "Both balls fall with the same acceleration $g$.",
+          "The ratio is therefore $1:1$."
+        ],
+        "final_answer": "Option (1): $1:1$",
+        "why_not_others": "Options (2), (3) and (4) wrongly assume the acceleration depends on the mass of the body.",
+        "common_trap": "Thinking that heavier bodies fall faster.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Acceleration due to gravity and its variation with altitude and depth",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "At what height above the Earth's surface does the acceleration due to gravity become one-fourth of its surface value? ($R$ is the radius of the Earth.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{3R}{8}$",
+        "$\\frac{R}{2}$",
+        "$2R$",
+        "$R$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Exact relation: $g_h = gR^2/(R+h)^2$.",
+        "steps": [
+          "Set $\\frac{R^2}{(R+h)^2} = \\frac{1}{4}$.",
+          "Then $R + h = 2R$, so $h = R$."
+        ],
+        "final_answer": "Option (4): $R$",
+        "why_not_others": "$3R/8$ comes from wrongly using the approximation $g(1-2h/R)$ when $h$ is not small. $2R$ is the distance from the centre, not the height. $R/2$ is a random halving error.",
+        "common_trap": "Applying the small-height approximation when $h$ is comparable to $R$.",
+        "time_saving_tip": "$g \\propto 1/r^2$, so $g/4$ means $r = 2R$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Acceleration due to gravity and its variation with altitude and depth",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The value of $g$ at a height of $16\\ km$ above the Earth's surface is equal to its value at a depth $d$ below the surface. Find $d$. (Take $h \\ll R$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$32\\ km$",
+        "$16\\ km$",
+        "$8\\ km$",
+        "$64\\ km$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For small heights, $g_h \\approx g(1-2h/R)$ and $g_d = g(1-d/R)$.",
+        "steps": [
+          "Equate the two expressions: $2h/R = d/R$.",
+          "So $d = 2h = 32\\ km$."
+        ],
+        "final_answer": "Option (1): $32\\ km$",
+        "why_not_others": "$16\\ km$ assumes height and depth reduce $g$ equally. $8\\ km$ reverses the factor of 2. $64\\ km$ uses a factor of 4.",
+        "common_trap": "Thinking that going up and going down change $g$ by the same amount.",
+        "time_saving_tip": "Depth $= 2 \\times$ height for an equal decrease in $g$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Acceleration due to gravity and its variation with altitude and depth",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Value of $g$ at height $h = R$ above the surface"
+          },
+          {
+            "label": "B",
+            "text": "Value of $g$ at depth $d = R/2$ below the surface"
+          },
+          {
+            "label": "C",
+            "text": "Value of $g$ at the centre of the Earth"
+          },
+          {
+            "label": "D",
+            "text": "Surface $g$ on a planet with the same density as the Earth but twice its radius"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$0$"
+          },
+          {
+            "label": "II",
+            "text": "$g/2$"
+          },
+          {
+            "label": "III",
+            "text": "$2g$"
+          },
+          {
+            "label": "IV",
+            "text": "$g/4$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-IV, B-II, C-I, D-III",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Variation of $g$ with height, depth and planet size.",
+        "steps": [
+          "A: $g_h = gR^2/(2R)^2 = g/4$.",
+          "B: $g_d = g(1 - 1/2) = g/2$.",
+          "C: $g = 0$ at the centre.",
+          "D: $g = \\frac{4}{3}\\pi G\\rho R$, so doubling $R$ at the same density gives $2g$."
+        ],
+        "final_answer": "Option (3): A-IV, B-II, C-I, D-III",
+        "why_not_others": "Option (1) swaps the height and depth values. Option (2) gives a non-zero $g$ at the centre. Option (4) puts $g = 0$ at height $R$.",
+        "common_trap": "Using $g \\propto 1/R^2$ for D, which holds only when mass is constant, not when density is constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Acceleration due to gravity and its variation with altitude and depth",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the acceleration due to gravity are correct?",
+      "statements": {
+        "A": "At the surface of a planet of density $\\rho$ and radius $R$, $g = \\frac{4}{3}\\pi G\\rho R$.",
+        "B": "Below the Earth's surface, $g$ is proportional to the distance from the centre.",
+        "C": "The value of $g$ is maximum at the centre of the Earth.",
+        "D": "For $h \\ll R$, rising a height $h$ reduces $g$ about twice as much as going down a depth $h$.",
+        "E": "The mass of a body decreases as it is taken to greater heights."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B and C only",
+        "B, D and E only",
+        "A and C only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Variation of $g$ with altitude and depth, and the difference between mass and weight.",
+        "steps": [
+          "A is true: substitute $M = \\frac{4}{3}\\pi R^3\\rho$ into $g = GM/R^2$.",
+          "B is true: below the surface, $g \\propto r$.",
+          "C is false: $g = 0$ at the centre.",
+          "D is true: the decrease is $2h/R$ going up versus $h/R$ going down.",
+          "E is false: weight changes with location, but mass does not."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Options (2) and (4) include C, and option (3) includes E. Both C and E are false.",
+        "common_trap": "Confusing a change in weight with a change in mass.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Kepler's laws of planetary motion",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Kepler's second law (the law of areas) is a direct consequence of which conservation law?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Conservation of mechanical energy",
+        "Conservation of linear momentum",
+        "Conservation of mass",
+        "Conservation of angular momentum"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Gravity is a central force, so the planet's angular momentum about the Sun is conserved.",
+        "steps": [
+          "Areal velocity is $dA/dt = L/(2m)$.",
+          "Constant $L$ means constant areal velocity."
+        ],
+        "final_answer": "Option (4): Conservation of angular momentum",
+        "why_not_others": "Energy is conserved, but it does not give the law of areas. The linear momentum of the planet is not conserved, since a net force acts on it. Conservation of mass is irrelevant here.",
+        "common_trap": "Choosing energy conservation because it also holds for the orbit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Kepler's laws of planetary motion",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A planet moves around the Sun in a circular orbit whose radius is 9 times the radius of the Earth's orbit. Taking the Earth's orbit as circular, what is the period of the planet?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9$ years",
+        "$81$ years",
+        "$27$ years",
+        "$3$ years"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Kepler's third law: $T \\propto R^{3/2}$.",
+        "steps": [
+          "$T = 1 \\times 9^{3/2}$ years.",
+          "$9^{3/2} = 27$, so $T = 27$ years."
+        ],
+        "final_answer": "Option (3): $27$ years",
+        "why_not_others": "9 years assumes $T \\propto R$. 81 years assumes $T \\propto R^2$. 3 years assumes $T \\propto R^{1/2}$.",
+        "common_trap": "Using the wrong power of $R$.",
+        "time_saving_tip": "$9^{3/2} = (\\sqrt{9})^3 = 27$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Kepler's laws of planetary motion",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A planet's distance from the Sun is $2 \\times 10^{11}\\ m$ at perihelion and $3 \\times 10^{11}\\ m$ at aphelion. Its speed at perihelion is $6 \\times 10^4\\ m\\,s^{-1}$. What is its speed at aphelion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4 \\times 10^4\\ m\\,s^{-1}$",
+        "$9 \\times 10^4\\ m\\,s^{-1}$",
+        "$2.67 \\times 10^4\\ m\\,s^{-1}$",
+        "$6 \\times 10^4\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Angular momentum conservation: $v_p r_p = v_a r_a$.",
+        "steps": [
+          "$v_a = v_p r_p / r_a$.",
+          "$v_a = 6 \\times 10^4 \\times 2/3 = 4 \\times 10^4\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (1): $4 \\times 10^4\\ m\\,s^{-1}$",
+        "why_not_others": "$9 \\times 10^4$ inverts the distance ratio. $2.67 \\times 10^4$ squares the ratio. $6 \\times 10^4$ assumes the speed is constant.",
+        "common_trap": "Thinking the planet moves faster at aphelion.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Kepler's laws of planetary motion",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A planet moves fastest when it is at perihelion.",
+        "R": "The square of the time period of a planet is proportional to the cube of the semi-major axis of its orbit."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Speed variation within an orbit follows from the law of areas, not the law of periods.",
+        "steps": [
+          "A is true: angular momentum conservation gives the maximum speed at the nearest point.",
+          "R is true: it is Kepler's third law.",
+          "R relates the period to the orbit size. It does not explain the speed variation within one orbit."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option (1) wrongly links A to the third law. Options (3) and (4) each declare a true statement false.",
+        "common_trap": "Picking option (1) simply because both statements are about Kepler's laws.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Kepler's laws of planetary motion",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For planets orbiting the Sun, the value of $T^2/a^3$ depends on the mass of each planet.",
+        "II": "For an elliptical orbit with minimum distance $r_{min}$ and maximum distance $r_{max}$ from the Sun, the semi-major axis is $\\sqrt{r_{min} r_{max}}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Kepler's third law constant and the definition of the semi-major axis.",
+        "steps": [
+          "$T^2/a^3 = 4\\pi^2/(GM)$, where $M$ is the mass of the central body only. So I is incorrect.",
+          "The semi-major axis is $a = (r_{min} + r_{max})/2$, the arithmetic mean. So II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Neither statement is true, so every other option fails.",
+        "common_trap": "Confusing the arithmetic mean with the geometric mean for the semi-major axis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Gravitational potential energy and gravitational potential",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the SI unit of gravitational potential?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$J$",
+        "$N\\,kg^{-1}$",
+        "$J\\,kg$",
+        "$J\\,kg^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Potential is potential energy per unit mass.",
+        "steps": [
+          "$V = U/m$.",
+          "So the unit is $J\\,kg^{-1}$."
+        ],
+        "final_answer": "Option (4): $J\\,kg^{-1}$",
+        "why_not_others": "$J$ is the unit of potential energy. $N\\,kg^{-1}$ is the unit of field intensity. $J\\,kg$ multiplies by mass instead of dividing.",
+        "common_trap": "Confusing potential with field intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Gravitational potential energy and gravitational potential",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The gravitational potential at the surface of a uniform solid sphere is $-6 \\times 10^7\\ J\\,kg^{-1}$. What is the potential at its centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0$",
+        "$-6 \\times 10^7\\ J\\,kg^{-1}$",
+        "$-9 \\times 10^7\\ J\\,kg^{-1}$",
+        "$-3 \\times 10^7\\ J\\,kg^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At the centre, $V = -\\frac{3GM}{2R}$, which is 1.5 times the surface value.",
+        "steps": [
+          "The surface value is $-GM/R = -6 \\times 10^7\\ J\\,kg^{-1}$.",
+          "$V_{centre} = 1.5 \\times (-6 \\times 10^7) = -9 \\times 10^7\\ J\\,kg^{-1}$."
+        ],
+        "final_answer": "Option (3): $-9 \\times 10^7\\ J\\,kg^{-1}$",
+        "why_not_others": "0 confuses the potential with the field, which is zero at the centre. $-6 \\times 10^7$ is the result for a shell. $-3 \\times 10^7$ halves the value instead of multiplying by 1.5.",
+        "common_trap": "Assuming the potential is zero where the field is zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Gravitational potential energy and gravitational potential",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "How much work is needed to raise a $10\\ kg$ body from the Earth's surface to a height equal to the Earth's radius? (Take $g = 10\\ m\\,s^{-2}$ and $R = 6.4 \\times 10^6\\ m$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.4 \\times 10^8\\ J$",
+        "$3.2 \\times 10^8\\ J$",
+        "$1.6 \\times 10^8\\ J$",
+        "$12.8 \\times 10^8\\ J$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Exact relation: $\\Delta U = \\frac{mgh}{1 + h/R}$.",
+        "steps": [
+          "With $h = R$: $\\Delta U = mgR/2$.",
+          "$\\Delta U = 10 \\times 10 \\times 6.4 \\times 10^6 / 2 = 3.2 \\times 10^8\\ J$."
+        ],
+        "final_answer": "Option (2): $3.2 \\times 10^8\\ J$",
+        "why_not_others": "$6.4 \\times 10^8$ uses $mgh$, which is invalid for large $h$. $1.6 \\times 10^8$ divides by 4. $12.8 \\times 10^8$ multiplies by 2.",
+        "common_trap": "Using $mgh$ when $h$ is not small compared with $R$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Gravitational potential energy and gravitational potential",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Potential inside a uniform shell of mass $M$ and radius $R$"
+          },
+          {
+            "label": "B",
+            "text": "Potential at the centre of a uniform solid sphere of mass $M$ and radius $R$"
+          },
+          {
+            "label": "C",
+            "text": "Potential energy of masses $M$ and $m$ separated by $r$"
+          },
+          {
+            "label": "D",
+            "text": "Gravitational field intensity"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$-\\frac{dV}{dr}$"
+          },
+          {
+            "label": "II",
+            "text": "$-\\frac{GMm}{r}$"
+          },
+          {
+            "label": "III",
+            "text": "$-\\frac{3GM}{2R}$"
+          },
+          {
+            "label": "IV",
+            "text": "$-\\frac{GM}{R}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-I, D-II",
+        "A-IV, B-III, C-II, D-I",
+        "A-II, B-III, C-IV, D-I"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Standard expressions for potential, potential energy and field.",
+        "steps": [
+          "A: the potential inside a shell is constant and equals $-GM/R$.",
+          "B: the potential at the centre of a solid sphere is $-3GM/(2R)$.",
+          "C: $U = -GMm/r$.",
+          "D: $E = -dV/dr$."
+        ],
+        "final_answer": "Option (3): A-IV, B-III, C-II, D-I",
+        "why_not_others": "Option (1) swaps the shell and solid sphere results. Option (2) swaps the potential energy and field expressions. Option (4) mixes up potential energy with the shell potential.",
+        "common_trap": "Thinking the potential is zero inside a shell because the field there is zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Gravitational potential energy and gravitational potential",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about gravitational potential and potential energy are correct?",
+      "statements": {
+        "A": "Gravitational potential is a scalar, so contributions from several masses add algebraically.",
+        "B": "The relation $\\Delta U = mgh$ is valid only when $h \\ll R$.",
+        "C": "The gravitational potential energy of a bound two-mass system is positive.",
+        "D": "Inside a uniform spherical shell, the gravitational field is zero but the potential is not zero.",
+        "E": "The potential at the surface of a uniform solid sphere is more negative than at its centre."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Properties of gravitational potential and potential energy.",
+        "steps": [
+          "A is true: potential is a scalar.",
+          "B is true: the exact form is $mgh/(1+h/R)$.",
+          "C is false: $U = -GMm/r$ is negative.",
+          "D is true: inside the shell, $V = -GM/R$ and the field is zero.",
+          "E is false: the potential is most negative at the centre."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Options (2) and (4) include C, and option (3) includes E. Both C and E are false.",
+        "common_trap": "Taking the potential energy as positive, or assuming the potential is zero wherever the field is zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Escape velocity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The escape velocity of a body of mass $m$ from the Earth's surface is about $11.2$ km/s. If a body of mass $2m$ is projected from the same place, its escape velocity will be:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$11.2$ km/s",
+        "$22.4$ km/s",
+        "$5.6$ km/s",
+        "$15.8$ km/s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Escape velocity $v_e = \\sqrt{2GM/R}$ depends only on the planet's mass and radius, not on the mass of the projected body.",
+        "steps": [
+          "Set the total energy to zero: $\\frac{1}{2}mv_e^2 - \\frac{GMm}{R} = 0$.",
+          "The mass $m$ cancels, so $v_e = \\sqrt{2GM/R}$.",
+          "Doubling the body's mass therefore leaves $v_e$ unchanged at $11.2$ km/s."
+        ],
+        "final_answer": "Option (1): $11.2$ km/s",
+        "why_not_others": "$22.4$ km/s assumes $v_e \\propto m$. $5.6$ km/s assumes $v_e \\propto 1/m$. $15.8$ km/s assumes $v_e \\propto \\sqrt{m}$. None of these hold because $m$ cancels.",
+        "common_trap": "Assuming a heavier body needs a larger speed to escape.",
+        "time_saving_tip": "The body's mass never appears in $v_e = \\sqrt{2gR}$, so the answer stays the same."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Escape velocity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A planet has the same average density as the Earth but three times its radius. If the escape velocity from the Earth's surface is $11.2$ km/s, the escape velocity from the surface of this planet is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.47$ km/s",
+        "$19.4$ km/s",
+        "$33.6$ km/s",
+        "$100.8$ km/s"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a fixed density, $v_e = R\\sqrt{8\\pi G\\rho/3}$, so $v_e \\propto R$.",
+        "steps": [
+          "The density is the same for both bodies, so $v_e \\propto R$.",
+          "The ratio is $v_p/v_E = 3R/R = 3$.",
+          "Hence $v_p = 3 \\times 11.2 = 33.6$ km/s."
+        ],
+        "final_answer": "Option (3): $33.6$ km/s",
+        "why_not_others": "$19.4$ km/s uses $v_e \\propto \\sqrt{R}$. $6.47$ km/s uses the constant-mass relation $v_e \\propto R^{-1/2}$. $100.8$ km/s uses $v_e \\propto R^2$.",
+        "common_trap": "Applying the constant-mass scaling $v_e \\propto R^{-1/2}$ when it is the density that is held constant.",
+        "time_saving_tip": "At the same density, escape velocity scales directly with radius."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Escape velocity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The escape velocity from the Earth's surface is $11.2$ km/s. What is the minimum speed with which a body must be projected from a point at a height equal to the Earth's radius $R$ above the surface so that it escapes the Earth's gravity? (Take $\\sqrt{2} = 1.414$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7.9$ km/s",
+        "$5.6$ km/s",
+        "$11.2$ km/s",
+        "$15.8$ km/s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The escape velocity from height $h$ is $v = \\sqrt{2GM/(R+h)}$, with the distance measured from the centre.",
+        "steps": [
+          "Here $h = R$, so the distance from the centre is $r = R + h = 2R$.",
+          "Then $v = \\sqrt{2GM/2R} = v_e/\\sqrt{2}$.",
+          "So $v = 11.2/1.414 \\approx 7.9$ km/s."
+        ],
+        "final_answer": "Option (1): $7.9$ km/s",
+        "why_not_others": "$5.6$ km/s wrongly assumes $v \\propto 1/r$. $11.2$ km/s comes from using $r = h = R$ instead of $R + h$. $15.8$ km/s multiplies by $\\sqrt{2}$ instead of dividing.",
+        "common_trap": "Using $r = h$ instead of $r = R + h$.",
+        "time_saving_tip": "Doubling the distance from the centre divides $v_e$ by $\\sqrt{2}$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Escape velocity",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Neglecting air resistance, the escape velocity of a body from the Earth's surface depends on the angle at which the body is projected.",
+        "R": "Escape velocity is obtained by equating the total energy of the body to zero, and the kinetic energy of a body does not depend on the direction of its velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Escape velocity follows from energy conservation, and energy is a scalar.",
+        "steps": [
+          "Setting $\\frac{1}{2}mv_e^2 - GMm/R = 0$ involves only the speed, not the direction of motion.",
+          "So escape velocity is independent of the angle of projection when air resistance is neglected. A is therefore false.",
+          "R correctly describes how escape velocity is derived and why direction does not matter, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options 1 and 2 need A to be true, but it is false. Option 3 calls R false, but R is a correct statement.",
+        "common_trap": "Assuming a vertical launch needs a different escape speed from an inclined launch.",
+        "time_saving_tip": "Kinetic energy is a scalar, so the direction of projection cannot affect an energy-based result."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Escape velocity",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the radius of a planet is reduced to one-fourth of its value while its mass is kept constant, the escape velocity from its surface becomes four times.",
+        "II": "If the radius of a planet is doubled while its average density is kept constant, the escape velocity from its surface is doubled."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At constant mass, $v_e \\propto R^{-1/2}$. At constant density, $v_e \\propto R$.",
+        "steps": [
+          "Statement I: at constant mass, $v_e \\propto 1/\\sqrt{R}$. With $R \\to R/4$, $v_e \\to \\sqrt{4}\\,v_e = 2v_e$, not $4v_e$. Statement I is incorrect.",
+          "Statement II: at constant density, $v_e = R\\sqrt{8\\pi G\\rho/3} \\propto R$. Doubling $R$ doubles $v_e$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I uses $v_e \\propto 1/R$ instead of $1/\\sqrt{R}$, so any option calling it correct fails. Statement II is correct, so the options calling it incorrect also fail.",
+        "common_trap": "Scaling escape velocity without checking whether mass or density is held constant.",
+        "time_saving_tip": "Constant $M$ means a square-root dependence on $R$. Constant $\\rho$ means a linear dependence on $R$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Motion of a satellite: orbital velocity, time period and energy",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A satellite moving in a circular orbit around the Earth has a kinetic energy of $5 \\times 10^9$ J. Its total mechanical energy is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+5 \\times 10^9$ J",
+        "$-5 \\times 10^9$ J",
+        "$-1 \\times 10^{10}$ J",
+        "$+1 \\times 10^{10}$ J"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a circular orbit, $KE : U : E = 1 : -2 : -1$, so $E = -KE$.",
+        "steps": [
+          "$KE = GMm/2r$ and $E = -GMm/2r$.",
+          "So $E = -KE = -5 \\times 10^9$ J."
+        ],
+        "final_answer": "Option (2): $-5 \\times 10^9$ J",
+        "why_not_others": "$+5 \\times 10^9$ J takes $E$ equal to $KE$. $-1 \\times 10^{10}$ J is the potential energy $U = -2KE$. $+1 \\times 10^{10}$ J has both the wrong sign and the wrong magnitude.",
+        "common_trap": "Taking the total energy as positive or equal to the kinetic energy.",
+        "time_saving_tip": "Remember the ratio $KE : U : E = 1 : -2 : -1$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Motion of a satellite: orbital velocity, time period and energy",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two satellites revolve around the Earth in circular orbits. The orbit radius of the second satellite is four times that of the first. If the period of the first satellite is $2$ h, the period of the second satellite is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4$ h",
+        "$8$ h",
+        "$16$ h",
+        "$32$ h"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Kepler's third law: $T = 2\\pi\\sqrt{r^3/GM}$, so $T \\propto r^{3/2}$.",
+        "steps": [
+          "$T_2/T_1 = (r_2/r_1)^{3/2} = 4^{3/2}$.",
+          "$4^{3/2} = (\\sqrt{4})^3 = 2^3 = 8$.",
+          "So $T_2 = 8 \\times 2 = 16$ h."
+        ],
+        "final_answer": "Option (3): $16$ h",
+        "why_not_others": "$4$ h uses $T \\propto r^{1/2}$. $8$ h uses $T \\propto r$. $32$ h uses $T \\propto r^2$.",
+        "common_trap": "Using the wrong power of $r$ in Kepler's third law.",
+        "time_saving_tip": "Take the square root of the radius ratio first, then cube it."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Motion of a satellite: orbital velocity, time period and energy",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A satellite is shifted from a circular orbit around the Earth to another circular orbit of larger radius. Compared with its values in the original orbit, the kinetic energy and the total energy of the satellite in the new orbit are respectively:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "kinetic energy increases, total energy increases",
+        "kinetic energy decreases, total energy increases",
+        "kinetic energy decreases, total energy decreases",
+        "kinetic energy increases, total energy decreases"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$KE = GMm/2r$ and $E = -GMm/2r$.",
+        "steps": [
+          "As $r$ increases, $KE = GMm/2r$ decreases.",
+          "$E = -GMm/2r$ becomes less negative as $r$ increases, so the total energy increases.",
+          "This agrees with the positive work $W = \\frac{GMm}{2}(1/r_1 - 1/r_2)$ needed to shift the satellite outward."
+        ],
+        "final_answer": "Option (2): kinetic energy decreases, total energy increases",
+        "why_not_others": "Kinetic energy cannot increase because $v_o \\propto r^{-1/2}$. Total energy cannot decrease because positive work must be done to move the satellite to a higher orbit.",
+        "common_trap": "Thinking that less negative means smaller, or assuming kinetic energy and total energy change in the same direction.",
+        "time_saving_tip": "Since $E = -KE$, whenever $KE$ falls the total energy must rise."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Motion of a satellite: orbital velocity, time period and energy",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Kinetic energy of a satellite of mass $m$ in a circular orbit of radius $r$"
+          },
+          {
+            "label": "B",
+            "text": "Potential energy of the satellite in that orbit"
+          },
+          {
+            "label": "C",
+            "text": "Total energy of the satellite in that orbit"
+          },
+          {
+            "label": "D",
+            "text": "Energy needed to shift the satellite from the orbit of radius $r$ to an orbit of radius $2r$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$-\\frac{GMm}{r}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{GMm}{4r}$"
+          },
+          {
+            "label": "III",
+            "text": "$-\\frac{GMm}{2r}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{GMm}{2r}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$KE = GMm/2r$, $U = -GMm/r$, $E = -GMm/2r$ and $W = \\frac{GMm}{2}(1/r_1 - 1/r_2)$.",
+        "steps": [
+          "A: $KE = GMm/2r$, which matches IV.",
+          "B: $U = -GMm/r$, which matches I.",
+          "C: $E = -GMm/2r$, which matches III.",
+          "D: $W = \\frac{GMm}{2}(\\frac{1}{r} - \\frac{1}{2r}) = \\frac{GMm}{4r}$, which matches II."
+        ],
+        "final_answer": "Option (1): A-IV, B-I, C-III, D-II",
+        "why_not_others": "Option 2 swaps the kinetic energy with the shifting energy. Option 3 swaps the potential energy with the total energy. Option 4 gives the kinetic energy a negative sign.",
+        "common_trap": "Taking the shifting energy as the full binding energy $GMm/2r$ instead of the difference in total energies.",
+        "time_saving_tip": "The shifting energy is just $E_2 - E_1 = -\\frac{GMm}{4r} + \\frac{GMm}{2r}$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u06_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u06",
+      "topic": "Motion of a satellite: orbital velocity, time period and energy",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about artificial satellites are correct?",
+      "statements": {
+        "A": "A geostationary satellite has a period of 24 h, orbits in the equatorial plane and moves in the same direction as the Earth's rotation.",
+        "B": "Astronauts in an orbiting satellite feel weightless because the Earth's gravity is zero at their location.",
+        "C": "A satellite orbiting close to the Earth's surface has an orbital speed of about $7.9$ km/s and a period of about 84 minutes.",
+        "D": "The orbital speed of a satellite in a given circular orbit increases with the mass of the satellite.",
+        "E": "Polar satellites move in low orbits passing over the poles and are used for remote sensing and weather studies."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Properties of geostationary, near-Earth and polar satellites, and the origin of weightlessness in orbit.",
+        "steps": [
+          "A is correct: a geostationary satellite has $T = 24$ h, an equatorial orbit and the same sense of motion as the Earth's rotation.",
+          "B is incorrect: gravity in orbit is substantial. Astronauts appear weightless because they and the satellite are in free fall together.",
+          "C is correct: near the surface, $v_o = \\sqrt{gR} \\approx 7.9$ km/s and $T \\approx 84$ min.",
+          "D is incorrect: $v_o = \\sqrt{GM/r}$ does not depend on the satellite's mass.",
+          "E is correct: polar satellites have low orbits over the poles and are used for remote sensing and weather."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option 1 includes the false statement B. Option 2 leaves out the true statement E. Option 3 includes the false statements B and D.",
+        "common_trap": "Believing that weightlessness means there is no gravity, or that a heavier satellite orbits faster.",
+        "time_saving_tip": "Rule out B and D first. Only option 4 contains neither of them."
+      }
+    }
+  ]
+}

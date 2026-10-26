@@ -1,0 +1,314 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "The escape velocity of a body of mass $m$ from the Earth's surface is about $11.2$ km/s. If a body of mass $2m$ is projected from the same place, its escape velocity will be:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$11.2$ km/s",
+        "$22.4$ km/s",
+        "$5.6$ km/s",
+        "$15.8$ km/s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Escape velocity $v_e = \\sqrt{2GM/R}$ depends only on the planet's mass and radius, not on the mass of the projected body.",
+        "steps": [
+          "Set the total energy to zero: $\\frac{1}{2}mv_e^2 - \\frac{GMm}{R} = 0$.",
+          "The mass $m$ cancels, so $v_e = \\sqrt{2GM/R}$.",
+          "Doubling the body's mass therefore leaves $v_e$ unchanged at $11.2$ km/s."
+        ],
+        "final_answer": "Option (1): $11.2$ km/s",
+        "why_not_others": "$22.4$ km/s assumes $v_e \\propto m$. $5.6$ km/s assumes $v_e \\propto 1/m$. $15.8$ km/s assumes $v_e \\propto \\sqrt{m}$. None of these hold because $m$ cancels.",
+        "common_trap": "Assuming a heavier body needs a larger speed to escape.",
+        "time_saving_tip": "The body's mass never appears in $v_e = \\sqrt{2gR}$, so the answer stays the same."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A planet has the same average density as the Earth but three times its radius. If the escape velocity from the Earth's surface is $11.2$ km/s, the escape velocity from the surface of this planet is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.47$ km/s",
+        "$19.4$ km/s",
+        "$33.6$ km/s",
+        "$100.8$ km/s"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a fixed density, $v_e = R\\sqrt{8\\pi G\\rho/3}$, so $v_e \\propto R$.",
+        "steps": [
+          "The density is the same for both bodies, so $v_e \\propto R$.",
+          "The ratio is $v_p/v_E = 3R/R = 3$.",
+          "Hence $v_p = 3 \\times 11.2 = 33.6$ km/s."
+        ],
+        "final_answer": "Option (3): $33.6$ km/s",
+        "why_not_others": "$19.4$ km/s uses $v_e \\propto \\sqrt{R}$. $6.47$ km/s uses the constant-mass relation $v_e \\propto R^{-1/2}$. $100.8$ km/s uses $v_e \\propto R^2$.",
+        "common_trap": "Applying the constant-mass scaling $v_e \\propto R^{-1/2}$ when it is the density that is held constant.",
+        "time_saving_tip": "At the same density, escape velocity scales directly with radius."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "The escape velocity from the Earth's surface is $11.2$ km/s. What is the minimum speed with which a body must be projected from a point at a height equal to the Earth's radius $R$ above the surface so that it escapes the Earth's gravity? (Take $\\sqrt{2} = 1.414$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7.9$ km/s",
+        "$5.6$ km/s",
+        "$11.2$ km/s",
+        "$15.8$ km/s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The escape velocity from height $h$ is $v = \\sqrt{2GM/(R+h)}$, with the distance measured from the centre.",
+        "steps": [
+          "Here $h = R$, so the distance from the centre is $r = R + h = 2R$.",
+          "Then $v = \\sqrt{2GM/2R} = v_e/\\sqrt{2}$.",
+          "So $v = 11.2/1.414 \\approx 7.9$ km/s."
+        ],
+        "final_answer": "Option (1): $7.9$ km/s",
+        "why_not_others": "$5.6$ km/s wrongly assumes $v \\propto 1/r$. $11.2$ km/s comes from using $r = h = R$ instead of $R + h$. $15.8$ km/s multiplies by $\\sqrt{2}$ instead of dividing.",
+        "common_trap": "Using $r = h$ instead of $r = R + h$.",
+        "time_saving_tip": "Doubling the distance from the centre divides $v_e$ by $\\sqrt{2}$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Neglecting air resistance, the escape velocity of a body from the Earth's surface depends on the angle at which the body is projected.",
+        "R": "Escape velocity is obtained by equating the total energy of the body to zero, and the kinetic energy of a body does not depend on the direction of its velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Escape velocity follows from energy conservation, and energy is a scalar.",
+        "steps": [
+          "Setting $\\frac{1}{2}mv_e^2 - GMm/R = 0$ involves only the speed, not the direction of motion.",
+          "So escape velocity is independent of the angle of projection when air resistance is neglected. A is therefore false.",
+          "R correctly describes how escape velocity is derived and why direction does not matter, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options 1 and 2 need A to be true, but it is false. Option 3 calls R false, but R is a correct statement.",
+        "common_trap": "Assuming a vertical launch needs a different escape speed from an inclined launch.",
+        "time_saving_tip": "Kinetic energy is a scalar, so the direction of projection cannot affect an energy-based result."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the radius of a planet is reduced to one-fourth of its value while its mass is kept constant, the escape velocity from its surface becomes four times.",
+        "II": "If the radius of a planet is doubled while its average density is kept constant, the escape velocity from its surface is doubled."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "At constant mass, $v_e \\propto R^{-1/2}$. At constant density, $v_e \\propto R$.",
+        "steps": [
+          "Statement I: at constant mass, $v_e \\propto 1/\\sqrt{R}$. With $R \\to R/4$, $v_e \\to \\sqrt{4}\\,v_e = 2v_e$, not $4v_e$. Statement I is incorrect.",
+          "Statement II: at constant density, $v_e = R\\sqrt{8\\pi G\\rho/3} \\propto R$. Doubling $R$ doubles $v_e$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I uses $v_e \\propto 1/R$ instead of $1/\\sqrt{R}$, so any option calling it correct fails. Statement II is correct, so the options calling it incorrect also fail.",
+        "common_trap": "Scaling escape velocity without checking whether mass or density is held constant.",
+        "time_saving_tip": "Constant $M$ means a square-root dependence on $R$. Constant $\\rho$ means a linear dependence on $R$."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "A satellite moving in a circular orbit around the Earth has a kinetic energy of $5 \\times 10^9$ J. Its total mechanical energy is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+5 \\times 10^9$ J",
+        "$-5 \\times 10^9$ J",
+        "$-1 \\times 10^{10}$ J",
+        "$+1 \\times 10^{10}$ J"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a circular orbit, $KE : U : E = 1 : -2 : -1$, so $E = -KE$.",
+        "steps": [
+          "$KE = GMm/2r$ and $E = -GMm/2r$.",
+          "So $E = -KE = -5 \\times 10^9$ J."
+        ],
+        "final_answer": "Option (2): $-5 \\times 10^9$ J",
+        "why_not_others": "$+5 \\times 10^9$ J takes $E$ equal to $KE$. $-1 \\times 10^{10}$ J is the potential energy $U = -2KE$. $+1 \\times 10^{10}$ J has both the wrong sign and the wrong magnitude.",
+        "common_trap": "Taking the total energy as positive or equal to the kinetic energy.",
+        "time_saving_tip": "Remember the ratio $KE : U : E = 1 : -2 : -1$."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "Two satellites revolve around the Earth in circular orbits. The orbit radius of the second satellite is four times that of the first. If the period of the first satellite is $2$ h, the period of the second satellite is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4$ h",
+        "$8$ h",
+        "$16$ h",
+        "$32$ h"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Kepler's third law: $T = 2\\pi\\sqrt{r^3/GM}$, so $T \\propto r^{3/2}$.",
+        "steps": [
+          "$T_2/T_1 = (r_2/r_1)^{3/2} = 4^{3/2}$.",
+          "$4^{3/2} = (\\sqrt{4})^3 = 2^3 = 8$.",
+          "So $T_2 = 8 \\times 2 = 16$ h."
+        ],
+        "final_answer": "Option (3): $16$ h",
+        "why_not_others": "$4$ h uses $T \\propto r^{1/2}$. $8$ h uses $T \\propto r$. $32$ h uses $T \\propto r^2$.",
+        "common_trap": "Using the wrong power of $r$ in Kepler's third law.",
+        "time_saving_tip": "Take the square root of the radius ratio first, then cube it."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A satellite is shifted from a circular orbit around the Earth to another circular orbit of larger radius. Compared with its values in the original orbit, the kinetic energy and the total energy of the satellite in the new orbit are respectively:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "kinetic energy increases, total energy increases",
+        "kinetic energy decreases, total energy increases",
+        "kinetic energy decreases, total energy decreases",
+        "kinetic energy increases, total energy decreases"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$KE = GMm/2r$ and $E = -GMm/2r$.",
+        "steps": [
+          "As $r$ increases, $KE = GMm/2r$ decreases.",
+          "$E = -GMm/2r$ becomes less negative as $r$ increases, so the total energy increases.",
+          "This agrees with the positive work $W = \\frac{GMm}{2}(1/r_1 - 1/r_2)$ needed to shift the satellite outward."
+        ],
+        "final_answer": "Option (2): kinetic energy decreases, total energy increases",
+        "why_not_others": "Kinetic energy cannot increase because $v_o \\propto r^{-1/2}$. Total energy cannot decrease because positive work must be done to move the satellite to a higher orbit.",
+        "common_trap": "Thinking that less negative means smaller, or assuming kinetic energy and total energy change in the same direction.",
+        "time_saving_tip": "Since $E = -KE$, whenever $KE$ falls the total energy must rise."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Kinetic energy of a satellite of mass $m$ in a circular orbit of radius $r$"
+          },
+          {
+            "label": "B",
+            "text": "Potential energy of the satellite in that orbit"
+          },
+          {
+            "label": "C",
+            "text": "Total energy of the satellite in that orbit"
+          },
+          {
+            "label": "D",
+            "text": "Energy needed to shift the satellite from the orbit of radius $r$ to an orbit of radius $2r$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$-\\frac{GMm}{r}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{GMm}{4r}$"
+          },
+          {
+            "label": "III",
+            "text": "$-\\frac{GMm}{2r}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{GMm}{2r}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$KE = GMm/2r$, $U = -GMm/r$, $E = -GMm/2r$ and $W = \\frac{GMm}{2}(1/r_1 - 1/r_2)$.",
+        "steps": [
+          "A: $KE = GMm/2r$, which matches IV.",
+          "B: $U = -GMm/r$, which matches I.",
+          "C: $E = -GMm/2r$, which matches III.",
+          "D: $W = \\frac{GMm}{2}(\\frac{1}{r} - \\frac{1}{2r}) = \\frac{GMm}{4r}$, which matches II."
+        ],
+        "final_answer": "Option (1): A-IV, B-I, C-III, D-II",
+        "why_not_others": "Option 2 swaps the kinetic energy with the shifting energy. Option 3 swaps the potential energy with the total energy. Option 4 gives the kinetic energy a negative sign.",
+        "common_trap": "Taking the shifting energy as the full binding energy $GMm/2r$ instead of the difference in total energies.",
+        "time_saving_tip": "The shifting energy is just $E_2 - E_1 = -\\frac{GMm}{4r} + \\frac{GMm}{2r}$."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about artificial satellites are correct?",
+      "statements": {
+        "A": "A geostationary satellite has a period of 24 h, orbits in the equatorial plane and moves in the same direction as the Earth's rotation.",
+        "B": "Astronauts in an orbiting satellite feel weightless because the Earth's gravity is zero at their location.",
+        "C": "A satellite orbiting close to the Earth's surface has an orbital speed of about $7.9$ km/s and a period of about 84 minutes.",
+        "D": "The orbital speed of a satellite in a given circular orbit increases with the mass of the satellite.",
+        "E": "Polar satellites move in low orbits passing over the poles and are used for remote sensing and weather studies."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Properties of geostationary, near-Earth and polar satellites, and the origin of weightlessness in orbit.",
+        "steps": [
+          "A is correct: a geostationary satellite has $T = 24$ h, an equatorial orbit and the same sense of motion as the Earth's rotation.",
+          "B is incorrect: gravity in orbit is substantial. Astronauts appear weightless because they and the satellite are in free fall together.",
+          "C is correct: near the surface, $v_o = \\sqrt{gR} \\approx 7.9$ km/s and $T \\approx 84$ min.",
+          "D is incorrect: $v_o = \\sqrt{GM/r}$ does not depend on the satellite's mass.",
+          "E is correct: polar satellites have low orbits over the poles and are used for remote sensing and weather."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option 1 includes the false statement B. Option 2 leaves out the true statement E. Option 3 includes the false statements B and D.",
+        "common_trap": "Believing that weightlessness means there is no gravity, or that a heavier satellite orbits faster.",
+        "time_saving_tip": "Rule out B and D first. Only option 4 contains neither of them."
+      }
+    }
+  ]
+}

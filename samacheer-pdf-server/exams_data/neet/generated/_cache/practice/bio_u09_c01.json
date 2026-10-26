@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "In agarose gel electrophoresis, DNA fragments move towards the:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Cathode, because DNA is positively charged",
+        "Anode, because DNA is negatively charged",
+        "Cathode, because DNA is negatively charged",
+        "Anode, because DNA is positively charged"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "DNA carries a negative charge, so in an electric field it migrates towards the positive electrode (anode).",
+        "steps": [
+          "DNA is negatively charged.",
+          "Opposite charges attract, so DNA moves towards the anode.",
+          "Smaller fragments travel farther through the agarose matrix."
+        ],
+        "final_answer": "Option (2): Anode, because DNA is negatively charged",
+        "why_not_others": "DNA is not positively charged. A negatively charged molecule cannot move towards the cathode.",
+        "common_trap": "Thinking that DNA moves towards the cathode.",
+        "time_saving_tip": "Remember that negative DNA goes to the positive anode."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A PCR reaction starts with 5 double-stranded DNA molecules. Assuming ideal doubling in every cycle, how many DNA copies are present after 6 cycles?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "30",
+        "160",
+        "60",
+        "320"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "With ideal doubling, $N = N_0 \\times 2^n$.",
+        "steps": [
+          "$N_0 = 5$ and $n = 6$.",
+          "$2^6 = 64$.",
+          "$N = 5 \\times 64 = 320$."
+        ],
+        "final_answer": "Option (4): 320",
+        "why_not_others": "30 comes from multiplying 5 by 6. 60 comes from $5 \\times 2 \\times 6$, which treats the growth as linear. 160 uses $2^5$, an off-by-one error in the number of cycles.",
+        "common_trap": "Treating PCR amplification as linear instead of exponential.",
+        "time_saving_tip": "Each cycle doubles the DNA, so multiply $N_0$ by $2^n$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A foreign DNA fragment is ligated into the PvuI site of pBR322, and the plasmids are introduced into E. coli. How will the recombinant colonies behave?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "They grow on tetracycline but not on ampicillin",
+        "They grow on ampicillin but not on tetracycline",
+        "They grow on both ampicillin and tetracycline",
+        "They grow on neither ampicillin nor tetracycline"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Insertional inactivation: the PvuI site of pBR322 lies within the $amp^R$ gene.",
+        "steps": [
+          "The PvuI and PstI sites lie in $amp^R$.",
+          "An insert at PvuI inactivates $amp^R$.",
+          "$tet^R$ remains intact, so recombinants survive on tetracycline but die on ampicillin."
+        ],
+        "final_answer": "Option (1): They grow on tetracycline but not on ampicillin",
+        "why_not_others": "Option 2 describes an insert at BamHI, which lies in $tet^R$. Option 3 describes non-recombinants, in which both genes are intact. Option 4 would require both genes to be inactivated.",
+        "common_trap": "Assuming every insert inactivates $tet^R$, as happens with BamHI.",
+        "time_saving_tip": "BamHI is in $tet^R$. PstI and PvuI are in $amp^R$."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "E. coli cells carrying pBR322 with a foreign insert at the BamHI site cannot grow on a medium containing tetracycline.",
+        "R": "pBR322 carries an origin of replication (ori) and the rop gene."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "An insert at BamHI inactivates $tet^R$. The presence of ori and rop has nothing to do with this.",
+        "steps": [
+          "The BamHI site lies within $tet^R$, so an insert there inactivates tetracycline resistance. A is true.",
+          "pBR322 does carry ori and rop. R is true.",
+          "The loss of tetracycline resistance comes from insertional inactivation, not from ori or rop, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are factually true, which rules out options 3 and 4. R does not explain A, which rules out option 1.",
+        "common_trap": "Picking option 1 simply because both statements are about pBR322.",
+        "time_saving_tip": "Ask whether R gives the reason for A, not merely whether it is related to A."
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A specific 6-bp restriction site such as GAATTC is expected to occur about once every 1024 bp in random DNA.",
+        "II": "In PCR, primers anneal to the template strands before thermostable Taq polymerase extends them at about $72^\\circ C$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The expected frequency of an n-bp site is $\\frac{1}{4^n}$. The PCR steps are denaturation, annealing and extension.",
+        "steps": [
+          "For a 6-bp site, $4^6 = 4096$, so the site occurs about once every 4096 bp. 1024 is $4^5$, so Statement I is incorrect.",
+          "Primers bind during annealing, and Taq polymerase extends them at about $72^\\circ C$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I uses $4^5$ instead of $4^6$, so options 1 and 3 fail. Statement II is accurate, so option 2 fails.",
+        "common_trap": "Using the wrong power of 4 when estimating site frequency.",
+        "time_saving_tip": "Count the bases in the site and use that number as the exponent of 4."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Mature human insulin consists of two polypeptide chains. Choose the correct number of amino acids in each chain.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A chain: 30, B chain: 21",
+        "A chain: 20, B chain: 31",
+        "A chain: 21, B chain: 30",
+        "A chain: 21, B chain: 31"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Insulin has an A chain of 21 amino acids and a B chain of 30 amino acids, linked by disulphide bridges.",
+        "steps": [
+          "The A chain has 21 amino acids.",
+          "The B chain has 30 amino acids."
+        ],
+        "final_answer": "Option (3): A chain: 21, B chain: 30",
+        "why_not_others": "Option 1 swaps the two chains. Options 2 and 4 give incorrect counts.",
+        "common_trap": "Swapping the lengths of the A and B chains.",
+        "time_saving_tip": "A comes before B, and 21 comes before 30."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Which feature of the 1983 recombinant insulin production by Eli Lilly removed the need to process the C-peptide?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The A and B chains were produced separately and then joined by disulphide bonds",
+        "Pro-insulin was produced in E. coli and the C-peptide was later cut out",
+        "Insulin was extracted from the pancreas of slaughtered pigs",
+        "The A and B chains were synthesised together as one continuous polypeptide"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Eli Lilly prepared separate DNA sequences for the A and B chains and expressed them in E. coli. The chains were then combined.",
+        "steps": [
+          "Separate DNA sequences for the A and B chains were introduced into E. coli plasmids.",
+          "Each chain was produced and extracted separately.",
+          "The chains were joined by creating disulphide bonds, so no C-peptide was ever made."
+        ],
+        "final_answer": "Option (1): The A and B chains were produced separately and then joined by disulphide bonds",
+        "why_not_others": "Option 2 describes making pro-insulin, which is exactly the step that was avoided. Option 3 describes the older animal source of insulin. Option 4 would require the chains to be made as one connected polypeptide, which was not done.",
+        "common_trap": "Believing recombinant insulin was made as pro-insulin.",
+        "time_saving_tip": "Separate chains mean there is no C-peptide to remove."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "The recombinant hepatitis B vaccine is based on:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Whole attenuated hepatitis B virus grown in E. coli",
+        "The viral surface antigen (HBsAg) produced in yeast",
+        "Viral DNA injected directly into the recipient",
+        "Pro-insulin expressed in yeast"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A recombinant vaccine expresses only an antigenic protein of the pathogen in a host.",
+        "steps": [
+          "The gene for the hepatitis B surface antigen is expressed in yeast.",
+          "The purified HBsAg acts as a safe subunit vaccine."
+        ],
+        "final_answer": "Option (2): The viral surface antigen (HBsAg) produced in yeast",
+        "why_not_others": "A recombinant vaccine does not contain the whole virus, and it is not made by injecting viral DNA. Pro-insulin has nothing to do with vaccines.",
+        "common_trap": "Thinking recombinant vaccines contain the whole pathogen.",
+        "time_saving_tip": "Hepatitis B vaccine: surface antigen made in yeast."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "A chain of insulin"
+          },
+          {
+            "label": "B",
+            "text": "B chain of insulin"
+          },
+          {
+            "label": "C",
+            "text": "C-peptide"
+          },
+          {
+            "label": "D",
+            "text": "Disulphide bridges"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "30 amino acids"
+          },
+          {
+            "label": "II",
+            "text": "Present in pro-insulin, removed during maturation"
+          },
+          {
+            "label": "III",
+            "text": "21 amino acids"
+          },
+          {
+            "label": "IV",
+            "text": "Link the two polypeptide chains"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Insulin structure and maturation.",
+        "steps": [
+          "The A chain has 21 amino acids (III).",
+          "The B chain has 30 amino acids (I).",
+          "The C-peptide is present in pro-insulin and removed during maturation (II).",
+          "Disulphide bridges link the A and B chains (IV)."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 1 swaps the chain lengths. Option 3 swaps the roles of the C-peptide and the disulphide bridges. Option 4 assigns the C-peptide to the A chain.",
+        "common_trap": "Swapping the A and B chain lengths.",
+        "time_saving_tip": "Fix A = 21 first. That alone eliminates options 1 and 4."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about recombinant insulin and vaccines are correct?",
+      "statements": {
+        "A": "Insulin extracted from cattle and pigs caused allergic reactions in some patients.",
+        "B": "Eli Lilly produced recombinant human insulin in 1983 by introducing DNA sequences for the A and B chains into plasmids of E. coli.",
+        "C": "The final recombinant insulin product contains the C-peptide.",
+        "D": "Recombinant vaccines can cause the disease because they are prepared from the pathogen's gene.",
+        "E": "Around 12 recombinant therapeutics are marketed in India."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B, C and E only",
+        "A, B and E only",
+        "B, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Facts about recombinant insulin and recombinant vaccines.",
+        "steps": [
+          "A is true: animal insulin caused allergy in some patients.",
+          "B is true: Eli Lilly made recombinant insulin in E. coli in 1983.",
+          "C is false: the C-peptide is not part of the recombinant product.",
+          "D is false: recombinant vaccines express only an antigenic protein, so they cannot cause the disease.",
+          "E is true: around 12 recombinant therapeutics are marketed in India."
+        ],
+        "final_answer": "Option (3): A, B and E only",
+        "why_not_others": "Option 1 leaves out the true statement E. Option 2 includes the false statement C. Option 4 includes the false statement D and leaves out A.",
+        "common_trap": "Assuming recombinant insulin retains the C-peptide.",
+        "time_saving_tip": "Eliminating C and D first leaves only option 3."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "The first clinical gene therapy, given in 1990 to a 4-year-old girl, was used to treat:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Haemophilia",
+        "Sickle-cell anaemia",
+        "Adenosine deaminase (ADA) deficiency",
+        "Diabetes mellitus"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The first clinical gene therapy, in 1990, treated ADA deficiency.",
+        "steps": [
+          "ADA is crucial for the immune system.",
+          "Its deficiency causes severe immunodeficiency, which was treated by gene therapy in 1990."
+        ],
+        "final_answer": "Option (3): Adenosine deaminase (ADA) deficiency",
+        "why_not_others": "Haemophilia, sickle-cell anaemia and diabetes were not the targets of the first clinical gene therapy.",
+        "common_trap": "Linking the first gene therapy with diabetes because recombinant insulin is also a well-known biotechnology product.",
+        "time_saving_tip": "1990 gene therapy = ADA deficiency."
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "In the first clinical gene therapy, functional ADA cDNA was introduced into the patient's cultured lymphocytes using:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The Ti plasmid of Agrobacterium tumefaciens",
+        "Gold particles delivered by a gene gun",
+        "The pBR322 plasmid",
+        "A retroviral vector"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Disarmed retroviruses are used as vectors for animal cells because they integrate into the host genome.",
+        "steps": [
+          "The lymphocytes were cultured outside the body.",
+          "ADA cDNA was delivered into them by a retroviral vector.",
+          "The cells were then returned to the patient."
+        ],
+        "final_answer": "Option (4): A retroviral vector",
+        "why_not_others": "The Ti plasmid is used for plants. The gene gun was not the method used here. pBR322 is an E. coli cloning vector.",
+        "common_trap": "Confusing the plant vector (Ti plasmid) with the animal vector (retrovirus).",
+        "time_saving_tip": "Animal cells: retrovirus. Plant cells: Ti plasmid."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A patient treated for ADA deficiency with genetically engineered lymphocytes needs periodic infusions because:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Genetically engineered lymphocytes are not immortal",
+        "Retroviral vectors cannot integrate genes into the host genome",
+        "The ADA gene was introduced into cells at early embryonic stages",
+        "The ADA cDNA is removed from the lymphocytes by RNase"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Lymphocytes have a limited lifespan, so the corrected cells are gradually lost.",
+        "steps": [
+          "The engineered lymphocytes die over time.",
+          "Fresh engineered cells must therefore be infused periodically."
+        ],
+        "final_answer": "Option (1): Genetically engineered lymphocytes are not immortal",
+        "why_not_others": "Retroviruses do integrate into the host genome. Gene transfer at early embryonic stages would give a permanent cure, which is the opposite of needing infusions. RNase acts on RNA, not on the integrated ADA gene.",
+        "common_trap": "Thinking that the vector fails to integrate.",
+        "time_saving_tip": "Mortal cells mean repeated infusions."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The 1990 gene therapy for ADA deficiency provided a permanent cure.",
+        "R": "A permanent cure is possible if the ADA gene, isolated from marrow cells, is introduced into cells at early embryonic stages."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Ex vivo lymphocyte therapy is temporary. Gene transfer at early embryonic stages could be permanent.",
+        "steps": [
+          "The engineered lymphocytes are mortal, so the 1990 therapy needed periodic infusions. A is false.",
+          "Introducing the ADA gene from marrow cells into cells at early embryonic stages could give a permanent cure. R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, which rules out options 1, 2 and 3.",
+        "common_trap": "Believing the 1990 therapy was a permanent cure.",
+        "time_saving_tip": "Ex vivo lymphocyte therapy is temporary. Embryonic gene transfer is permanent."
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the 1990 ADA gene therapy, the functional gene was delivered directly into the patient's body without removing any cells.",
+        "II": "Retroviruses used as gene therapy vectors are disarmed first and integrate their genetic material into the host genome."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The ADA therapy was ex vivo, and retroviral vectors are disarmed and integrating.",
+        "steps": [
+          "The lymphocytes were removed, cultured, modified and reinfused, so the procedure was ex vivo. Statement I is incorrect.",
+          "Retroviruses are disarmed so they do not cause disease, and they integrate their genetic material into the host genome. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I describes an in vivo procedure, which is wrong. Statement II is accurate.",
+        "common_trap": "Assuming the gene was injected directly into the patient.",
+        "time_saving_tip": "The cells were taken out, modified and put back, so the procedure was ex vivo."
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "The insecticidal crystal protein (ICP) of Bacillus thuringiensis is encoded by:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "nif genes",
+        "cry genes",
+        "lacZ gene",
+        "$tet^R$ gene"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The Bt toxin, called ICP, is encoded by cry genes.",
+        "steps": [
+          "Bt crops carry cry genes from B. thuringiensis.",
+          "These genes code for the insecticidal crystal protein."
+        ],
+        "final_answer": "Option (2): cry genes",
+        "why_not_others": "nif genes are not the source of Bt toxin. lacZ encodes $\\beta$-galactosidase. $tet^R$ confers tetracycline resistance.",
+        "common_trap": "Confusing marker genes used in cloning with genes for Bt toxin.",
+        "time_saving_tip": "cry stands for crystal protein."
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "Bacillus thuringiensis is not killed by the Bt toxin it produces because:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The toxin is produced as inactive protoxin crystals",
+        "The toxin is secreted in its active form immediately after synthesis",
+        "The toxin is activated only by acidic pH, which is present inside the bacterium",
+        "The bacterium degrades the toxin using nucleases"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Bt toxin exists as inactive protoxin crystals and becomes active only in the alkaline insect gut.",
+        "steps": [
+          "Inside the bacterium, the toxin stays as inactive protoxin crystals.",
+          "Activation happens only when the alkaline pH of the insect gut solubilises the crystals."
+        ],
+        "final_answer": "Option (1): The toxin is produced as inactive protoxin crystals",
+        "why_not_others": "The toxin is not made in an active form. Activation depends on alkaline pH, not acidic pH. Nucleases act on nucleic acids, not on proteins.",
+        "common_trap": "Believing the toxin is activated by acidic pH.",
+        "time_saving_tip": "Inactive protoxin is harmless to the bacterium itself."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "In transgenic tobacco protected against Meloidogyne incognita by RNA interference, the specific mRNA of the parasite is silenced by:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Bt toxin forming pores in the nematode gut",
+        "dsRNA formed from sense and anti-sense RNA",
+        "Sense RNA alone produced by the host plant",
+        "Protoxin activated by the alkaline pH of the nematode gut"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In RNAi, double-stranded RNA silences a specific mRNA.",
+        "steps": [
+          "Agrobacterium vectors introduce nematode-specific genes into tobacco.",
+          "The host produces both sense and anti-sense RNA.",
+          "These pair to form dsRNA, which silences the parasite's mRNA."
+        ],
+        "final_answer": "Option (2): dsRNA formed from sense and anti-sense RNA",
+        "why_not_others": "Options 1 and 4 describe how Bt toxin works, not RNAi. Sense RNA alone cannot form dsRNA.",
+        "common_trap": "Mixing up the RNAi mechanism with the Bt toxin mechanism.",
+        "time_saving_tip": "Nematode protection in tobacco = RNAi = dsRNA."
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "cryIAb"
+          },
+          {
+            "label": "B",
+            "text": "cryIAc"
+          },
+          {
+            "label": "C",
+            "text": "Golden rice"
+          },
+          {
+            "label": "D",
+            "text": "Meloidogyne incognita"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Rich in vitamin A"
+          },
+          {
+            "label": "II",
+            "text": "Controls corn borer"
+          },
+          {
+            "label": "III",
+            "text": "Root-knot nematode controlled by RNAi"
+          },
+          {
+            "label": "IV",
+            "text": "Controls cotton bollworm"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Specific cry genes target specific pests, and other GM applications have their own targets.",
+        "steps": [
+          "cryIAb controls corn borer (II).",
+          "cryIAc controls cotton bollworm (IV).",
+          "Golden rice is rich in vitamin A (I).",
+          "Meloidogyne incognita is the root-knot nematode controlled by RNAi (III)."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Options 1 and 3 swap cryIAb and cryIAc. Options 2 and 3 swap the matches for Golden rice and the nematode.",
+        "common_trap": "Confusing cryIAb with cryIAc.",
+        "time_saving_tip": "Remember cryIAb as the corn borer gene."
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Bt crops and pest resistance are correct?",
+      "statements": {
+        "A": "Active Bt toxin binds to midgut epithelial cells of the insect and creates pores.",
+        "B": "Bt toxin targets lepidopterans, coleopterans and dipterans.",
+        "C": "Bt protoxin crystals are solubilised by the acidic pH of the insect gut.",
+        "D": "Bt cotton is the prominent Bt crop grown in India.",
+        "E": "In RNAi-based nematode resistance, the host plant produces only sense RNA, which directly kills the nematode."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The mechanism and targets of Bt toxin, and the basis of RNAi.",
+        "steps": [
+          "A is true: the active toxin forms pores in midgut cells, causing swelling, lysis and death.",
+          "B is true: lepidopterans, coleopterans and dipterans are targeted.",
+          "C is false: the gut pH that activates the toxin is alkaline.",
+          "D is true: Bt cotton is the prominent Bt crop grown in India.",
+          "E is false: both sense and anti-sense RNA are produced, and the resulting dsRNA silences the parasite's mRNA."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option 2 includes the false statement C. Option 3 includes the false statement E and leaves out A. Option 4 includes both false statements C and E.",
+        "common_trap": "Accepting acidic pH as the activator of Bt toxin.",
+        "time_saving_tip": "Eliminating C and E leaves only option 1."
+      }
+    }
+  ]
+}

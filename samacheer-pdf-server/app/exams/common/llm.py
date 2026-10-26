@@ -11,6 +11,10 @@ RETRY_STATUS = {429, 500, 502, 503, 529}
 _client = None
 
 
+class RefusalError(RuntimeError):
+    """The model declined the request (stop_reason == 'refusal'). Never retried or worked around."""
+
+
 def client() -> anthropic.Anthropic:
     global _client
     if _client is None:
@@ -40,7 +44,12 @@ def call_json(content, model: str, max_tokens: int = 8000, max_retries: int = 5)
                 resp = stream.get_final_message()
             if resp.stop_reason == "max_tokens":
                 raise RuntimeError(f"Response hit max_tokens ({max_tokens}); increase it")
+            if resp.stop_reason == "refusal":
+                raise RefusalError("Model declined this request (stop_reason=refusal)")
             text = "".join(b.text for b in resp.content if b.type == "text")
+            if not text.strip():
+                raise RuntimeError(f"Empty reply from model (stop_reason={resp.stop_reason}, "
+                                   f"blocks={[b.type for b in resp.content]})")
             return parse_json(text)
         except anthropic.APIStatusError as e:
             if e.status_code in RETRY_STATUS and attempt < max_retries:
