@@ -1,0 +1,445 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "Monochromatic light of wavelength $600\\ \\text{nm}$ falls normally on a single slit of width $0.2\\ \\text{mm}$. What is the linear width of the central maximum on a screen placed $1\\ \\text{m}$ from the slit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3 mm",
+        "6 mm",
+        "12 mm",
+        "0.6 mm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The linear width of the central maximum is $W = 2\\lambda D/a$.",
+        "steps": [
+          "$W = \\dfrac{2\\lambda D}{a} = \\dfrac{2 \\times 600\\times10^{-9} \\times 1}{0.2\\times10^{-3}}$",
+          "$W = 6\\times10^{-3}\\ \\text{m} = 6\\ \\text{mm}$"
+        ],
+        "final_answer": "Option (2): 6 mm",
+        "why_not_others": "3 mm comes from using $\\lambda D/a$, which is only the half-width. 12 mm comes from wrongly using $4\\lambda D/a$. 0.6 mm is a powers-of-ten slip.",
+        "common_trap": "Taking the central maximum width as $\\lambda D/a$ instead of $2\\lambda D/a$.",
+        "time_saving_tip": "Compute $\\lambda D/a$ first (3 mm), then double it."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "In air, a single-slit set-up gives a central maximum of linear width $4.0\\ \\text{mm}$ on a screen. The entire apparatus is then immersed in a liquid of refractive index $4/3$, with the slit and screen positions unchanged. What is the new width of the central maximum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5.33 mm",
+        "3.0 mm",
+        "4.0 mm",
+        "1.5 mm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In a liquid of refractive index $n$, the wavelength becomes $\\lambda/n$. Since $W \\propto \\lambda$, the width also falls by a factor of $n$.",
+        "steps": [
+          "$W' = \\dfrac{W}{n} = \\dfrac{4.0}{4/3}$",
+          "$W' = 3.0\\ \\text{mm}$"
+        ],
+        "final_answer": "Option (2): 3.0 mm",
+        "why_not_others": "5.33 mm comes from multiplying by $n$ instead of dividing. 4.0 mm assumes the medium has no effect. 1.5 mm comes from halving and then dividing by $n$.",
+        "common_trap": "Thinking the pattern spreads out in a denser medium. In fact the wavelength decreases, so the central maximum narrows.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "Light of wavelength $600\\ \\text{nm}$ falls normally on a single slit. The second minimum of the diffraction pattern is observed at an angle of $30^\\circ$ from the central direction. What is the width of the slit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.2 μm",
+        "2.4 μm",
+        "0.6 μm",
+        "3.0 μm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The minima of single-slit diffraction satisfy $a\\sin\\theta = n\\lambda$.",
+        "steps": [
+          "For the second minimum, $n = 2$.",
+          "$a = \\dfrac{2\\lambda}{\\sin 30^\\circ} = \\dfrac{2\\times 600\\ \\text{nm}}{0.5} = 2400\\ \\text{nm}$",
+          "$a = 2.4\\ \\mu\\text{m}$"
+        ],
+        "final_answer": "Option (2): 2.4 μm",
+        "why_not_others": "1.2 μm uses $n = 1$. 3.0 μm uses the secondary-maximum condition $(n+\\frac{1}{2})\\lambda$ with $n = 2$. 0.6 μm comes from multiplying by $\\sin 30^\\circ$ instead of dividing.",
+        "common_trap": "Mixing up the minimum condition $a\\sin\\theta = n\\lambda$ with the approximate secondary-maximum condition $a\\sin\\theta = (n+\\frac{1}{2})\\lambda$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In single-slit diffraction, the central maximum becomes wider when the slit is made narrower.",
+        "R": "The intensity of the secondary maxima decreases rapidly as their order increases."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The width of the central maximum is $2\\lambda D/a$, so it varies inversely with the slit width $a$.",
+        "steps": [
+          "A is true: $W = 2\\lambda D/a$ increases as $a$ decreases.",
+          "R is true: the secondary maxima fall off rapidly in intensity.",
+          "R describes intensity, not width. It therefore does not explain why the central maximum widens."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are factually correct, so options (3) and (4) are ruled out. Option (1) fails because R gives no reason for the width depending on $a$.",
+        "common_trap": "Picking option (1) just because both statements are about the diffraction pattern.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a slit of width $1\\ \\text{mm}$ illuminated by light of wavelength $500\\ \\text{nm}$, the Fresnel distance is $2\\ \\text{m}$.",
+        "II": "If the slit width and the wavelength are both doubled, the Fresnel distance remains unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The Fresnel distance is $z_F = a^2/\\lambda$.",
+        "steps": [
+          "Statement I: $z_F = \\dfrac{(10^{-3})^2}{5\\times10^{-7}} = 2\\ \\text{m}$. It is correct.",
+          "Statement II: the new distance is $\\dfrac{(2a)^2}{2\\lambda} = 2\\,\\dfrac{a^2}{\\lambda}$.",
+          "So the Fresnel distance doubles, and Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I checks out numerically, and Statement II ignores the square on $a$. So options (1), (2) and (4) are wrong.",
+        "common_trap": "Treating $z_F$ as proportional to $a/\\lambda$ rather than $a^2/\\lambda$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_1",
+      "type": "single_correct",
+      "question": "Unpolarized light falls on the surface of a transparent medium of refractive index $\\sqrt{3}$. At what angle of incidence will the reflected light be completely plane-polarized?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$90^\\circ$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Brewster's law states $\\tan i_B = n$.",
+        "steps": [
+          "$\\tan i_B = \\sqrt{3}$",
+          "$i_B = 60^\\circ$"
+        ],
+        "final_answer": "Option (3): $60^\\circ$",
+        "why_not_others": "$30^\\circ$ is the refraction angle at the Brewster angle, or the result of using $\\cot i_B = n$. $45^\\circ$ corresponds to $n = 1$. $90^\\circ$ is grazing incidence.",
+        "common_trap": "Using $\\sin i_B = 1/n$, which is the critical-angle relation, instead of $\\tan i_B = n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_2",
+      "type": "single_correct",
+      "question": "Unpolarized light of intensity $I_0$ passes through two ideal polaroids whose pass axes are inclined at $30^\\circ$ to each other. What is the intensity of the light emerging from the second polaroid?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3I_0/4$",
+        "$3I_0/8$",
+        "$I_0/8$",
+        "$I_0/2$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The first polaroid transmits $I_0/2$. Malus' law then applies to the second polaroid.",
+        "steps": [
+          "After the first polaroid: $I_1 = I_0/2$.",
+          "After the second: $I = I_1\\cos^2 30^\\circ = \\dfrac{I_0}{2}\\times\\dfrac{3}{4}$",
+          "$I = \\dfrac{3I_0}{8}$"
+        ],
+        "final_answer": "Option (2): $3I_0/8$",
+        "why_not_others": "$3I_0/4$ applies Malus' law directly to the unpolarized light. $I_0/8$ uses $\\sin^2 30^\\circ$ in place of $\\cos^2 30^\\circ$. $I_0/2$ ignores the second polaroid.",
+        "common_trap": "Applying $\\cos^2\\theta$ to unpolarized light without first halving the intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_3",
+      "type": "single_correct",
+      "question": "A ray of unpolarized light strikes a transparent slab at the Brewster angle. The angle of refraction inside the slab is $37^\\circ$. What is the refractive index of the slab? (Take $\\tan 53^\\circ = 4/3$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3/4$",
+        "$3/5$",
+        "$5/3$",
+        "$4/3$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "At the Brewster angle, $i_B + r = 90^\\circ$ and $\\tan i_B = n$.",
+        "steps": [
+          "$i_B = 90^\\circ - 37^\\circ = 53^\\circ$",
+          "$n = \\tan 53^\\circ = 4/3$"
+        ],
+        "final_answer": "Option (4): $4/3$",
+        "why_not_others": "$3/4$ is $\\tan 37^\\circ$, taking the refraction angle as $i_B$. $3/5$ is $\\sin 37^\\circ$. $5/3$ is $1/\\sin 37^\\circ$, which wrongly uses the critical-angle relation.",
+        "common_trap": "Substituting the refraction angle directly into $\\tan i_B = n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Unpolarized light of intensity $I_0$ through one ideal polaroid"
+          },
+          {
+            "label": "B",
+            "text": "Unpolarized light of intensity $I_0$ through two crossed polaroids"
+          },
+          {
+            "label": "C",
+            "text": "Unpolarized light of intensity $I_0$ through two polaroids with pass axes at $45^\\circ$"
+          },
+          {
+            "label": "D",
+            "text": "Unpolarized light of intensity $I_0$ through two crossed polaroids with a third placed between them at $45^\\circ$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$I_0/8$"
+          },
+          {
+            "label": "II",
+            "text": "Zero"
+          },
+          {
+            "label": "III",
+            "text": "$I_0/2$"
+          },
+          {
+            "label": "IV",
+            "text": "$I_0/4$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-II, C-III, D-I",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-II, C-IV, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The first polaroid transmits $I_0/2$. Each later polaroid multiplies the intensity by $\\cos^2\\theta$.",
+        "steps": [
+          "A: one polaroid gives $I_0/2$, so A matches III.",
+          "B: crossed polaroids give $\\frac{I_0}{2}\\cos^2 90^\\circ = 0$, so B matches II.",
+          "C: $\\frac{I_0}{2}\\cos^2 45^\\circ = I_0/4$, so C matches IV.",
+          "D: $\\frac{I_0}{2}\\cdot\\frac{1}{2}\\cdot\\frac{1}{2} = I_0/8$, so D matches I."
+        ],
+        "final_answer": "Option (4): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Option (1) swaps C and D. Option (2) applies Malus' law to unpolarized light in A and C. Option (3) assigns $I_0/8$ to crossed polaroids, ignoring that they transmit zero.",
+        "common_trap": "Thinking that inserting a third polaroid between crossed polaroids cannot let any light through.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about polarization are correct?",
+      "statements": {
+        "A": "Sound waves in air cannot be polarized.",
+        "B": "At the Brewster angle, the reflected light is completely plane-polarized, with vibrations perpendicular to the plane of incidence.",
+        "C": "For glass of refractive index 1.5, the Brewster angle is about $33.7^\\circ$.",
+        "D": "Sunlight scattered at $90^\\circ$ to the incident direction is plane-polarized.",
+        "E": "Rotating a single polaroid in a beam of unpolarized light changes the transmitted intensity."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, B, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Only transverse waves can be polarized. Brewster's law is $\\tan i_B = n$. One polaroid transmits $I_0/2$ whatever its orientation.",
+        "steps": [
+          "A is true: sound in air is longitudinal.",
+          "B is true: this is the standard Brewster-angle result.",
+          "C is false: $\\tan^{-1}(1.5) \\approx 56.3^\\circ$, while $33.7^\\circ$ is the refraction angle.",
+          "D is true: scattering polarizes light, and light scattered at $90^\\circ$ is plane-polarized.",
+          "E is false: the intensity stays at $I_0/2$ for every orientation."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option (2) includes the false statement C. Options (3) and (4) include the false statement E, and option (3) also leaves out the true statement A.",
+        "common_trap": "Confusing the Brewster angle with the corresponding refraction angle, $90^\\circ - i_B$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_1",
+      "type": "single_correct",
+      "question": "Polaroid sunglasses are effective in reducing glare from a wet road mainly because the light reflected from the road is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "completely unpolarized",
+        "of shorter wavelength than the incident light",
+        "diffracted strongly by the road surface",
+        "partly polarized horizontally"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Light reflected from horizontal surfaces is partly plane-polarized horizontally.",
+        "steps": [
+          "Reflection from a horizontal surface partly polarizes the light horizontally.",
+          "The Polaroid lenses block this horizontal component, which cuts the glare."
+        ],
+        "final_answer": "Option (4): partly polarized horizontally",
+        "why_not_others": "If the reflected light were unpolarized, a Polaroid would only halve it and would not remove glare selectively. Reflection does not change the wavelength. Diffraction plays no role in glare.",
+        "common_trap": "Thinking sunglasses work simply by darkening, without using polarization.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_2",
+      "type": "single_correct",
+      "question": "A Polaroid sheet consists of long-chain molecules aligned in one direction. The light transmitted by the sheet has its electric vector",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "parallel to the direction of the molecular chains",
+        "along the direction of propagation of light",
+        "vibrating in all directions perpendicular to propagation",
+        "perpendicular to the direction of the molecular chains"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The aligned chains absorb the electric-field component parallel to them and transmit the perpendicular component.",
+        "steps": [
+          "The component of E parallel to the chains is absorbed.",
+          "The component perpendicular to the chains passes through, so the pass axis is perpendicular to the chains."
+        ],
+        "final_answer": "Option (4): perpendicular to the direction of the molecular chains",
+        "why_not_others": "The parallel component is the one absorbed, not transmitted. Light is transverse, so E never lies along the direction of propagation. Vibration in all perpendicular directions describes unpolarized light.",
+        "common_trap": "Assuming the pass axis lies along the chains.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_3",
+      "type": "single_correct",
+      "question": "An adjustable train window is made of two ideal Polaroid sheets. Unpolarized sunlight of intensity $800\\ \\text{W m}^{-2}$ falls on it, and the transmitted intensity is $100\\ \\text{W m}^{-2}$. What is the angle between the pass axes of the two sheets?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$90^\\circ$",
+        "$60^\\circ$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The first sheet transmits $I_0/2$. The second sheet then follows Malus' law.",
+        "steps": [
+          "After the first sheet: $800/2 = 400\\ \\text{W m}^{-2}$.",
+          "$400\\cos^2\\theta = 100$, so $\\cos^2\\theta = 1/4$.",
+          "$\\cos\\theta = 1/2$, giving $\\theta = 60^\\circ$."
+        ],
+        "final_answer": "Option (4): $60^\\circ$",
+        "why_not_others": "$30^\\circ$ comes from using $\\sin^2\\theta$ instead of $\\cos^2\\theta$. $45^\\circ$ would transmit $200\\ \\text{W m}^{-2}$. $90^\\circ$ would transmit nothing.",
+        "common_trap": "Writing $800\\cos^2\\theta = 100$ without first halving the unpolarized intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "3D movies use two oppositely polarized images that are viewed through polarizing glasses.",
+        "R": "Polarized light is used in photoelasticity to reveal stress patterns in transparent models."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "3D movies and photoelasticity are two separate applications of polarized light.",
+        "steps": [
+          "A is true: each eye receives only one of the two oppositely polarized images.",
+          "R is true: photoelasticity reveals stress in transparent models.",
+          "R describes an unrelated application, so it does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct, which rules out options (3) and (4). There is no causal link between them, which rules out option (1).",
+        "common_trap": "Choosing option (1) because both statements involve polarized light.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a single Polaroid is rotated in a beam of unpolarized light, the transmitted intensity varies between a maximum and zero.",
+        "II": "Polaroid sunglasses cut glare from roads because light reflected from horizontal surfaces is partly polarized vertically."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Unpolarized light through one Polaroid gives a constant $I_0/2$. Light reflected from horizontal surfaces is partly polarized horizontally.",
+        "steps": [
+          "Statement I: the intensity stays at $I_0/2$ for every orientation. It varies only when the incident light is already polarized. Statement I is incorrect.",
+          "Statement II: reflected glare is partly polarized horizontally, not vertically. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I describes what happens with polarized incident light, not unpolarized light. Statement II has the wrong direction of polarization. Since both are false, options (1), (3) and (4) fail.",
+        "common_trap": "Confusing the behaviour of a rotating analyser in polarized light with that of a single Polaroid in unpolarized light.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

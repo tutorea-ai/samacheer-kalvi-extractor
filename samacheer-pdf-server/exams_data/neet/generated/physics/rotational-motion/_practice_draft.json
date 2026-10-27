@@ -1,0 +1,2106 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u05",
+  "slug": "rotational-motion",
+  "questions": [
+    {
+      "q_id": "neet_phy_u05_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Centre of mass of a two-particle system and of a rigid body",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two point masses of $2\\ \\text{kg}$ and $3\\ \\text{kg}$ are held $1.0\\ \\text{m}$ apart. How far is the centre of mass of the system from the $2\\ \\text{kg}$ mass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ \\text{m}$",
+        "$0.5\\ \\text{m}$",
+        "$0.6\\ \\text{m}$",
+        "$1.5\\ \\text{m}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For two particles separated by $d$, the COM is at $r_1 = \\frac{m_2 d}{m_1+m_2}$ from $m_1$.",
+        "steps": [
+          "Take $m_1 = 2\\ \\text{kg}$, $m_2 = 3\\ \\text{kg}$ and $d = 1.0\\ \\text{m}$.",
+          "$r_1 = \\frac{3 \\times 1.0}{2+3} = 0.6\\ \\text{m}$.",
+          "Check: $m_1 r_1 = 2 \\times 0.6 = 1.2$ and $m_2 r_2 = 3 \\times 0.4 = 1.2$, so the moments balance."
+        ],
+        "final_answer": "Option (3): $0.6\\ \\text{m}$",
+        "why_not_others": "$0.4\\ \\text{m}$ is the distance from the $3\\ \\text{kg}$ mass. $0.5\\ \\text{m}$ wrongly assumes equal masses. $1.5\\ \\text{m}$ comes from dividing the masses instead of using the inverse ratio.",
+        "common_trap": "Using $m_1$ instead of $m_2$ in the numerator, which places the COM nearer the lighter mass.",
+        "time_saving_tip": "The COM divides the separation in the inverse ratio $3:2$, so the $2\\ \\text{kg}$ mass gets $\\frac{3}{5}$ of $d$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Centre of mass of a two-particle system and of a rigid body",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A shell at rest at the origin explodes into two fragments of masses $1\\ \\text{kg}$ and $3\\ \\text{kg}$ that move along the x-axis. Ignore gravity and all other external forces. At some instant the $1\\ \\text{kg}$ fragment is at $x = +9\\ \\text{m}$. Where is the $3\\ \\text{kg}$ fragment at that instant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$x = +3\\ \\text{m}$",
+        "$x = -27\\ \\text{m}$",
+        "$x = -9\\ \\text{m}$",
+        "$x = -3\\ \\text{m}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Internal forces such as those in an explosion cannot shift the COM. A COM that starts at rest stays at rest.",
+        "steps": [
+          "The COM stays at the origin, so $x_{cm} = 0$.",
+          "$\\frac{1 \\times 9 + 3 \\times x}{1+3} = 0$.",
+          "$3x = -9$, which gives $x = -3\\ \\text{m}$."
+        ],
+        "final_answer": "Option (4): $x = -3\\ \\text{m}$",
+        "why_not_others": "$+3\\ \\text{m}$ has a sign error, because the fragments must lie on opposite sides. $-27\\ \\text{m}$ multiplies by the mass ratio instead of dividing. $-9\\ \\text{m}$ wrongly assumes equal masses.",
+        "common_trap": "Thinking that the explosion forces move the COM.",
+        "time_saving_tip": "Use $m_1 x_1 = -m_2 x_2$ directly: $9 = 3|x_2|$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Centre of mass of a two-particle system and of a rigid body",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A thin uniform wire is bent into a semicircular arc of radius $11\\ \\text{cm}$. How far is its centre of mass from the centre of the arc? (Take $\\pi = \\frac{22}{7}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.5\\ \\text{cm}$",
+        "$4.67\\ \\text{cm}$",
+        "$7\\ \\text{cm}$",
+        "$5.5\\ \\text{cm}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The COM of a uniform semicircular ring is at $\\frac{2R}{\\pi}$ from the centre.",
+        "steps": [
+          "A bent wire is a semicircular ring, not a disc.",
+          "$\\frac{2R}{\\pi} = \\frac{2 \\times 11 \\times 7}{22} = 7\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (3): $7\\ \\text{cm}$",
+        "why_not_others": "$3.5\\ \\text{cm}$ drops the factor 2 and uses $\\frac{R}{\\pi}$. $4.67\\ \\text{cm}$ uses the semicircular disc formula $\\frac{4R}{3\\pi}$. $5.5\\ \\text{cm}$ uses $\\frac{R}{2}$, which belongs to the hollow hemisphere.",
+        "common_trap": "Mixing up the ring result $\\frac{2R}{\\pi}$ with the disc result $\\frac{4R}{3\\pi}$.",
+        "time_saving_tip": "With $\\pi = \\frac{22}{7}$, $\\frac{2R}{\\pi} = \\frac{14R}{22}$, which is clean for $R = 11$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Centre of mass of a two-particle system and of a rigid body",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The centre of mass of a uniform circular ring lies at a point where no material of the ring is present.",
+        "R": "In a uniform gravitational field, the centre of gravity of a body coincides with its centre of mass."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The COM of a symmetric uniform body is at its geometric centre and can lie outside the material.",
+        "steps": [
+          "By symmetry, the ring's COM is at its geometric centre, which is empty space. So A is true.",
+          "In a uniform field the centre of gravity coincides with the COM. So R is true.",
+          "R does not explain why the COM lies in empty space. Symmetry does."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is a true statement but says nothing about where the COM lies. Neither A nor R is false.",
+        "common_trap": "Believing that the COM must lie inside the material.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Centre of mass of a two-particle system and of a rigid body",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A uniform solid hemisphere and a uniform hollow hemisphere have the same radius R. Measured from the centre along the symmetry axis, their centres of mass are separated by $\\frac{R}{8}$.",
+        "II": "When a projectile explodes in mid-air, the centre of mass of its fragments leaves the original parabolic path, because the explosion forces are much larger than gravity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use the standard hemisphere COM results, and remember that internal forces cannot change the motion of the COM.",
+        "steps": [
+          "The solid hemisphere's COM is at $\\frac{3R}{8}$ and the hollow hemisphere's is at $\\frac{R}{2}$.",
+          "Their separation is $\\frac{R}{2} - \\frac{3R}{8} = \\frac{R}{8}$, so Statement I is correct.",
+          "Explosion forces are internal and cancel in pairs. Only gravity acts externally, so the COM keeps following the parabola. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses the size of a force with its type. Internal forces, however large, cannot shift the COM.",
+        "common_trap": "Swapping $\\frac{3R}{8}$ and $\\frac{R}{2}$ between the solid and hollow hemispheres, or thinking that a large explosion force moves the COM.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Basic concepts of rotational motion",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A wheel starts from rest and rotates with a constant angular acceleration of $2\\ \\text{rad/s}^2$. Through what angle does it turn in the first $5\\ \\text{s}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$25\\ \\text{rad}$",
+        "$50\\ \\text{rad}$",
+        "$10\\ \\text{rad}$",
+        "$12.5\\ \\text{rad}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At constant angular acceleration, $\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2$.",
+        "steps": [
+          "The wheel starts from rest, so $\\omega_0 = 0$.",
+          "$\\theta = \\frac{1}{2} \\times 2 \\times 5^2 = 25\\ \\text{rad}$."
+        ],
+        "final_answer": "Option (1): $25\\ \\text{rad}$",
+        "why_not_others": "$50\\ \\text{rad}$ drops the factor $\\frac{1}{2}$. $10\\ \\text{rad}$ is the final angular velocity in rad/s, not an angle. $12.5\\ \\text{rad}$ applies the factor $\\frac{1}{2}$ twice.",
+        "common_trap": "Leaving out the $\\frac{1}{2}$ in the displacement equation.",
+        "time_saving_tip": "Average angular velocity is $\\frac{0+10}{2} = 5\\ \\text{rad/s}$, and $5 \\times 5 = 25\\ \\text{rad}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Basic concepts of rotational motion",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle on a rigid body is $1\\ \\text{m}$ from the fixed rotation axis. At one instant the body's angular velocity is $2\\ \\text{rad/s}$ and its angular acceleration is $3\\ \\text{rad/s}^2$. What is the magnitude of the particle's net linear acceleration at that instant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7\\ \\text{m/s}^2$",
+        "$5\\ \\text{m/s}^2$",
+        "$1\\ \\text{m/s}^2$",
+        "$4\\ \\text{m/s}^2$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The tangential acceleration $\\alpha r$ and the centripetal acceleration $\\omega^2 r$ are perpendicular, so they add as vectors.",
+        "steps": [
+          "$a_t = \\alpha r = 3 \\times 1 = 3\\ \\text{m/s}^2$.",
+          "$a_c = \\omega^2 r = 4 \\times 1 = 4\\ \\text{m/s}^2$.",
+          "$a = \\sqrt{3^2 + 4^2} = 5\\ \\text{m/s}^2$."
+        ],
+        "final_answer": "Option (2): $5\\ \\text{m/s}^2$",
+        "why_not_others": "$7\\ \\text{m/s}^2$ adds the two components as scalars. $1\\ \\text{m/s}^2$ subtracts them. $4\\ \\text{m/s}^2$ keeps only the centripetal part.",
+        "common_trap": "Adding perpendicular components arithmetically instead of vectorially.",
+        "time_saving_tip": "Spot the 3-4-5 triangle."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Basic concepts of rotational motion",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A rigid body rotates about a fixed axis. Particle P is at distance r from the axis and particle Q is at distance 2r. Which statement correctly compares their motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "They have the same angular velocity, and Q's linear speed is twice P's",
+        "They have the same linear speed, and Q's angular velocity is half P's",
+        "Q's angular velocity is twice P's, and they have the same centripetal acceleration",
+        "They have the same linear speed, and Q's centripetal acceleration is twice P's"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In fixed-axis rotation, $\\omega$ is the same for every particle and $v = \\omega r$.",
+        "steps": [
+          "Every particle of a rigid body shares the same $\\omega$.",
+          "With $v = \\omega r$, Q at $2r$ moves twice as fast as P."
+        ],
+        "final_answer": "Option (1): They have the same angular velocity, and Q's linear speed is twice P's",
+        "why_not_others": "Angular velocity cannot differ between particles of a rigid body. Linear speed is not equal, because it grows with r. Centripetal acceleration $\\omega^2 r$ also doubles, so it is not equal either.",
+        "common_trap": "Treating linear speed, rather than angular velocity, as the common quantity.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Basic concepts of rotational motion",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Tangential acceleration of a particle"
+          },
+          {
+            "label": "B",
+            "text": "Centripetal acceleration of a particle"
+          },
+          {
+            "label": "C",
+            "text": "Linear velocity of a particle"
+          },
+          {
+            "label": "D",
+            "text": "Angular displacement at constant angular acceleration"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\omega^2 r$"
+          },
+          {
+            "label": "II",
+            "text": "$\\alpha r$"
+          },
+          {
+            "label": "III",
+            "text": "$\\omega_0 t + \\frac{1}{2}\\alpha t^2$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\vec{\\omega}\\times\\vec{r}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are the standard relations between linear and angular quantities, plus the rotational kinematic equations.",
+        "steps": [
+          "$a_t = \\alpha r$, so A-II.",
+          "$a_c = \\omega^2 r$, so B-I.",
+          "$\\vec{v} = \\vec{\\omega}\\times\\vec{r}$, so C-IV.",
+          "$\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2$, so D-III."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option (2) swaps the tangential and centripetal accelerations. Option (3) swaps velocity and displacement. Option (4) pairs tangential acceleration with $\\vec{\\omega}\\times\\vec{r}$, which is a velocity.",
+        "common_trap": "Confusing $\\alpha r$ with $\\omega^2 r$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Basic concepts of rotational motion",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about rotational motion are correct?",
+      "statements": {
+        "A": "In fixed-axis rotation of a rigid body, all particles undergo the same angular displacement in a given time.",
+        "B": "The angular velocity vector lies in the plane of rotation, tangent to the path of the particle.",
+        "C": "For a particle on a rotating body, the tangential and centripetal accelerations act at right angles to each other.",
+        "D": "Rolling can be described as translation of the centre of mass combined with rotation about the centre of mass.",
+        "E": "A particle lying on the axis of rotation has the maximum linear speed."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These statements test the basic kinematics of rigid-body rotation.",
+        "steps": [
+          "A is true, because $\\theta$ is common to all particles.",
+          "B is false, because $\\vec{\\omega}$ points along the axis by the right-hand rule.",
+          "C is true, because $a_t$ and $a_c$ are perpendicular.",
+          "D is true, because rolling is translation of the COM plus rotation about it.",
+          "E is false, because $v = \\omega r$ is zero on the axis."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Every other option includes B or E, and both of those are false.",
+        "common_trap": "Placing $\\vec{\\omega}$ along the velocity instead of along the axis.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of a force and torque",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A force of $20\\ \\text{N}$ is applied at the end of a spanner $0.5\\ \\text{m}$ long. The force makes an angle of $30^\\circ$ with the spanner. What is the magnitude of the torque about the bolt?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{N m}$",
+        "$8.66\\ \\text{N m}$",
+        "$5\\ \\text{N m}$",
+        "$40\\ \\text{N m}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\tau = rF\\sin\\theta$, where $\\theta$ is the angle between $\\vec{r}$ and $\\vec{F}$.",
+        "steps": [
+          "$\\tau = 0.5 \\times 20 \\times \\sin 30^\\circ$.",
+          "$\\tau = 10 \\times 0.5 = 5\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (3): $5\\ \\text{N m}$",
+        "why_not_others": "$10\\ \\text{N m}$ ignores the angle. $8.66\\ \\text{N m}$ uses $\\cos 30^\\circ$ instead of $\\sin 30^\\circ$. $40\\ \\text{N m}$ divides F by r instead of multiplying.",
+        "common_trap": "Using cosine of the angle between the force and the arm.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of a force and torque",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A force $\\vec{F} = (4\\hat{i} + \\hat{j})\\ \\text{N}$ acts at a point whose position vector is $\\vec{r} = (2\\hat{i} + 3\\hat{j})\\ \\text{m}$. What is the torque of this force about the origin?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\hat{k}\\ \\text{N m}$",
+        "$14\\hat{k}\\ \\text{N m}$",
+        "$-14\\hat{k}\\ \\text{N m}$",
+        "$-10\\hat{k}\\ \\text{N m}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\vec{\\tau} = \\vec{r}\\times\\vec{F}$, taken in that order.",
+        "steps": [
+          "For vectors in the xy-plane, $\\tau_z = xF_y - yF_x$.",
+          "$\\tau_z = 2 \\times 1 - 3 \\times 4 = -10$.",
+          "So $\\vec{\\tau} = -10\\hat{k}\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (4): $-10\\hat{k}\\ \\text{N m}$",
+        "why_not_others": "$+10\\hat{k}$ comes from computing $\\vec{F}\\times\\vec{r}$. $\\pm 14\\hat{k}$ comes from adding the two terms instead of subtracting.",
+        "common_trap": "Reversing the order of the cross product, which flips the sign.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of a force and torque",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two equal and opposite forces of $10\\ \\text{N}$ each act on a rigid body along parallel lines $0.3\\ \\text{m}$ apart. What is the magnitude of their net torque about a point lying on the line of action of one of the forces?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3\\ \\text{N m}$",
+        "$0$",
+        "$6\\ \\text{N m}$",
+        "$1.5\\ \\text{N m}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The torque of a couple is $Fd$ and is the same about every point.",
+        "steps": [
+          "The two forces form a couple.",
+          "$\\tau = Fd = 10 \\times 0.3 = 3\\ \\text{N m}$, about any point.",
+          "Check: the force through the point gives zero torque, and the other force gives $10 \\times 0.3 = 3\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (1): $3\\ \\text{N m}$",
+        "why_not_others": "Zero wrongly applies 'zero net force' to torque. $6\\ \\text{N m}$ counts both forces at the full separation. $1.5\\ \\text{N m}$ uses half the separation for one force only.",
+        "common_trap": "Thinking a couple's torque depends on the reference point.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of a force and torque",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A force whose line of action passes through the axis of rotation produces the maximum possible torque about that axis.",
+        "R": "The magnitude of a torque equals the force multiplied by the perpendicular distance from the reference point to the line of action of the force."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\tau = F r_{\\perp}$.",
+        "steps": [
+          "If the line of action passes through the axis, then $r_{\\perp} = 0$ and $\\tau = 0$. So A is false.",
+          "R is the correct definition of the magnitude of torque, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so every option that treats A as true is ruled out.",
+        "common_trap": "Confusing 'perpendicular to the arm' (maximum torque) with 'through the axis' (zero torque).",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of a force and torque",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Torque has the same dimensions as work, so torque, like work, is a scalar quantity.",
+        "II": "The torque of a couple depends on the point about which it is calculated, and it is least about the midpoint between the two forces."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Torque is an axial vector, and the torque of a couple is independent of the reference point.",
+        "steps": [
+          "Torque and work share the dimensions $[ML^2T^{-2}]$, but torque is a vector. So Statement I is incorrect.",
+          "A couple's torque $Fd$ is the same about every point. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Neither statement holds, so any option calling one of them correct is wrong.",
+        "common_trap": "Concluding that quantities with the same dimensions must have the same nature, scalar or vector.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Angular momentum, its conservation and applications",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A skater spins at $2\\ \\text{rad/s}$ with moment of inertia $6\\ \\text{kg m}^2$. She pulls in her arms, reducing her moment of inertia to $2\\ \\text{kg m}^2$. Neglecting external torques, what is her new angular velocity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.67\\ \\text{rad/s}$",
+        "$6\\ \\text{rad/s}$",
+        "$2\\ \\text{rad/s}$",
+        "$12\\ \\text{rad/s}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "With zero external torque, $I_1\\omega_1 = I_2\\omega_2$.",
+        "steps": [
+          "$6 \\times 2 = 2 \\times \\omega_2$.",
+          "$\\omega_2 = 6\\ \\text{rad/s}$."
+        ],
+        "final_answer": "Option (2): $6\\ \\text{rad/s}$",
+        "why_not_others": "$0.67\\ \\text{rad/s}$ inverts the ratio of moments of inertia. $2\\ \\text{rad/s}$ assumes $\\omega$ stays unchanged. $12\\ \\text{rad/s}$ multiplies $I_1\\omega_1$ without dividing by $I_2$.",
+        "common_trap": "Inverting the ratio, so that $\\omega$ wrongly decreases as I decreases.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Angular momentum, its conservation and applications",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A person on a freely rotating stool has a total moment of inertia of $4\\ \\text{kg m}^2$ and spins at $3\\ \\text{rad/s}$. They pull in their arms, reducing the moment of inertia to $2\\ \\text{kg m}^2$. What is the final rotational kinetic energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$18\\ \\text{J}$",
+        "$36\\ \\text{J}$",
+        "$72\\ \\text{J}$",
+        "$9\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Angular momentum is conserved. Kinetic energy is not, and $K = \\frac{L^2}{2I}$.",
+        "steps": [
+          "$L = 4 \\times 3 = 12\\ \\text{kg m}^2\\text{/s}$.",
+          "$K_2 = \\frac{L^2}{2I_2} = \\frac{144}{4} = 36\\ \\text{J}$.",
+          "The initial KE was $18\\ \\text{J}$. The increase comes from work done by internal forces."
+        ],
+        "final_answer": "Option (2): $36\\ \\text{J}$",
+        "why_not_others": "$18\\ \\text{J}$ assumes KE is conserved. $72\\ \\text{J}$ uses the old I with the new $\\omega = 6\\ \\text{rad/s}$. $9\\ \\text{J}$ uses the new I with the old $\\omega$.",
+        "common_trap": "Assuming kinetic energy is conserved when I changes.",
+        "time_saving_tip": "At constant L, $K \\propto \\frac{1}{I}$. Halving I doubles K: $18 \\rightarrow 36\\ \\text{J}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Angular momentum, its conservation and applications",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle of mass $2\\ \\text{kg}$ moves with a constant velocity of $3\\ \\text{m/s}$ along the line $y = 4\\ \\text{m}$, parallel to the x-axis. What is the magnitude of its angular momentum about the origin when it is at $x = 3\\ \\text{m}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$24\\ \\text{kg m}^2\\text{/s}$",
+        "$30\\ \\text{kg m}^2\\text{/s}$",
+        "$18\\ \\text{kg m}^2\\text{/s}$",
+        "$12\\ \\text{kg m}^2\\text{/s}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For uniform straight-line motion, $L = mvd$, where d is the perpendicular distance of the line from the point. This L is constant.",
+        "steps": [
+          "The perpendicular distance of the line $y = 4\\ \\text{m}$ from the origin is $d = 4\\ \\text{m}$.",
+          "$L = 2 \\times 3 \\times 4 = 24\\ \\text{kg m}^2\\text{/s}$, the same at every x."
+        ],
+        "final_answer": "Option (1): $24\\ \\text{kg m}^2\\text{/s}$",
+        "why_not_others": "$30$ uses the full distance $r = 5\\ \\text{m}$. $18$ uses $x = 3\\ \\text{m}$ as the lever arm. $12$ multiplies only $m$ and $d$, dropping $v$ and giving $mvd/v$.",
+        "common_trap": "Using the position distance r instead of the perpendicular distance d.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Angular momentum, its conservation and applications",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Skater pulling in her arms while spinning"
+          },
+          {
+            "label": "B",
+            "text": "Planet moving around the sun"
+          },
+          {
+            "label": "C",
+            "text": "Disc rotating about its fixed centre, with L calculated about different points"
+          },
+          {
+            "label": "D",
+            "text": "Particle moving uniformly in a straight line"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Angular velocity and rotational kinetic energy both increase"
+          },
+          {
+            "label": "II",
+            "text": "Areal velocity remains constant"
+          },
+          {
+            "label": "III",
+            "text": "Angular momentum is the same about every point"
+          },
+          {
+            "label": "IV",
+            "text": "Angular momentum $mvd$ is constant about any chosen point"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are standard applications of the conservation of angular momentum.",
+        "steps": [
+          "Skater: I decreases, so $\\omega$ and $\\frac{L^2}{2I}$ increase. A-I.",
+          "Planet: a central force gives zero torque, so the areal velocity is constant. B-II.",
+          "Disc with its COM at rest: total momentum is zero, so L is independent of the point. C-III.",
+          "Straight-line motion: $L = mvd$ is constant. D-IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The other options swap pairs. For example, the 'same about every point' property needs zero total linear momentum, which the moving particle in D does not have.",
+        "common_trap": "Thinking a rotating disc has different angular momentum about different points.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Angular momentum, its conservation and applications",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about angular momentum are correct?",
+      "statements": {
+        "A": "Angular momentum is conserved when the net external torque is zero, even if internal forces change the moment of inertia.",
+        "B": "When a person on a freely rotating stool stretches the arms outward, the rotational kinetic energy increases.",
+        "C": "A central force produces zero torque about the centre of force.",
+        "D": "The net external torque on a system equals the rate of change of its angular momentum.",
+        "E": "When a skater pulls in her arms, her rotational kinetic energy is conserved."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and D only",
+        "B, C and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "L is conserved when the external torque is zero, and $K = \\frac{L^2}{2I}$ changes when I changes.",
+        "steps": [
+          "A is true, because internal forces can change I but not L.",
+          "B is false, because stretching the arms increases I, so K decreases.",
+          "C is true, because the force is along $\\vec{r}$, so $\\vec{r}\\times\\vec{F} = 0$.",
+          "D is true, because $\\vec{\\tau}_{ext} = \\frac{d\\vec{L}}{dt}$.",
+          "E is false, because K increases when I decreases."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Every other option includes B or E, and both are false.",
+        "common_trap": "Assuming rotational KE is conserved along with angular momentum.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of inertia and radius of gyration",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A light rigid rod carries two point masses. A mass of $2\\ \\text{kg}$ is at a perpendicular distance of $1\\ \\text{m}$ from the axis of rotation, and a mass of $3\\ \\text{kg}$ is at a perpendicular distance of $2\\ \\text{m}$ from the same axis. What is the moment of inertia of the system about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$14\\ \\text{kg m}^2$",
+        "$8\\ \\text{kg m}^2$",
+        "$20\\ \\text{kg m}^2$",
+        "$7\\ \\text{kg m}^2$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For discrete particles, $I = \\sum m_i r_i^2$, where $r_i$ is the perpendicular distance from the axis.",
+        "steps": [
+          "Contribution of the first mass: $2 \\times 1^2 = 2\\ \\text{kg m}^2$.",
+          "Contribution of the second mass: $3 \\times 2^2 = 12\\ \\text{kg m}^2$.",
+          "Total: $I = 2 + 12 = 14\\ \\text{kg m}^2$."
+        ],
+        "final_answer": "Option (1): $14\\ \\text{kg m}^2$",
+        "why_not_others": "$8$ comes from using $r$ instead of $r^2$. $20$ comes from placing the total mass of $5\\ \\text{kg}$ at $2\\ \\text{m}$. $7$ is half the correct value, an arithmetic slip.",
+        "common_trap": "Forgetting to square the distance, or measuring r from an origin instead of perpendicular to the axis.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of inertia and radius of gyration",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A body of mass $4\\ \\text{kg}$ has a moment of inertia of $0.16\\ \\text{kg m}^2$ about a given axis. What is its radius of gyration about that axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\ \\text{m}$",
+        "$0.4\\ \\text{m}$",
+        "$0.2\\ \\text{m}$",
+        "$0.08\\ \\text{m}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Radius of gyration: $K = \\sqrt{\\frac{I}{M}}$.",
+        "steps": [
+          "$\\frac{I}{M} = \\frac{0.16}{4} = 0.04\\ \\text{m}^2$.",
+          "$K = \\sqrt{0.04} = 0.2\\ \\text{m}$."
+        ],
+        "final_answer": "Option (3): $0.2\\ \\text{m}$",
+        "why_not_others": "$0.04\\ \\text{m}$ is $\\frac{I}{M}$ without taking the square root. $0.4\\ \\text{m}$ is $\\sqrt{I}$, which ignores the mass. $0.08\\ \\text{m}$ is $\\frac{I}{2}$, which has no basis.",
+        "common_trap": "Stopping at $\\frac{I}{M}$ and forgetting that K is its square root.",
+        "time_saving_tip": "Check the units: $\\frac{I}{M}$ has units of $\\text{m}^2$, so a square root is needed to get metres."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of inertia and radius of gyration",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The moment of inertia of a rigid body about an axis does NOT depend on which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The angular velocity of the body about the axis",
+        "The total mass of the body",
+        "The distribution of mass relative to the axis",
+        "The position and orientation of the axis"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "I depends on the mass, on how the mass is distributed and on the axis. It does not depend on angular velocity.",
+        "steps": [
+          "$I = \\sum m_i r_i^2$ involves only the masses and their perpendicular distances from the axis.",
+          "Changing the axis changes the $r_i$, so I changes with the axis.",
+          "Angular velocity does not appear in the definition, so I is independent of it."
+        ],
+        "final_answer": "Option (1): The angular velocity of the body about the axis",
+        "why_not_others": "Total mass, mass distribution and the axis all enter $I = \\sum m_i r_i^2$, so I does depend on each of them.",
+        "common_trap": "Thinking a body that spins faster has a larger moment of inertia.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of inertia and radius of gyration",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Flywheels are designed with most of their mass concentrated near the rim.",
+        "R": "The moment of inertia of a body does not depend on its angular velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Mass placed farther from the axis contributes more to I. Separately, I is independent of angular velocity.",
+        "steps": [
+          "A is true: placing mass at the rim gives a large I, which keeps the rotation smooth.",
+          "R is true: I depends only on the mass distribution and the axis, not on the angular velocity.",
+          "A is explained by the $r^2$ dependence of I, not by its independence from angular velocity."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 is wrong because R does not explain why the mass is placed at the rim. Options 3 and 4 are wrong because both statements are true.",
+        "common_trap": "Choosing option 1 just because both statements concern moment of inertia.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moment of inertia and radius of gyration",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The radius of gyration of a body is a fixed property of the body alone and does not depend on the axis chosen.",
+        "II": "A ring of radius R (about its central axis) and a solid sphere of radius R' (about a diameter) have equal radii of gyration. Then $\\frac{R'}{R} = \\sqrt{\\frac{5}{2}}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "K depends on both the body and the axis. For a ring about its axis, $K = R$; for a solid sphere about a diameter, $K = \\sqrt{\\frac{2}{5}}R$.",
+        "steps": [
+          "Statement I is false: K changes when the axis changes, because I changes.",
+          "For equal K: $\\sqrt{\\frac{2}{5}}R' = R$.",
+          "So $\\frac{R'}{R} = \\sqrt{\\frac{5}{2}}$, and Statement II is true."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I is false and Statement II is true, which rules out options 1, 2 and 3.",
+        "common_trap": "Inverting the ratio to $\\sqrt{\\frac{2}{5}}$, or treating K as a fixed property of the body.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moments of inertia of simple geometrical objects",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Four bodies have the same mass M and the same radius R. Which of them has the largest moment of inertia about the stated axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Solid sphere about a diameter",
+        "Uniform disc about its central axis perpendicular to its plane",
+        "Thin spherical shell about a diameter",
+        "Thin ring about its central axis perpendicular to its plane"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For the same M and R: ring > spherical shell > disc > solid sphere.",
+        "steps": [
+          "Ring: $MR^2$. Shell: $\\frac{2}{3}MR^2$. Disc: $\\frac{1}{2}MR^2$. Solid sphere: $\\frac{2}{5}MR^2$.",
+          "The ring has all of its mass at distance R from the axis, so its I is the largest."
+        ],
+        "final_answer": "Option (4): Thin ring about its central axis perpendicular to its plane",
+        "why_not_others": "The solid sphere ($\\frac{2}{5}$), the disc ($\\frac{1}{2}$) and the shell ($\\frac{2}{3}$) all have coefficients smaller than 1.",
+        "common_trap": "Assuming the 3D shell beats the ring because it looks more massive. The masses are equal here.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moments of inertia of simple geometrical objects",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A thin uniform rod of mass $3\\ \\text{kg}$ and length $2\\ \\text{m}$ rotates about an axis perpendicular to its length passing through one end. What is its moment of inertia about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\text{kg m}^2$",
+        "$12\\ \\text{kg m}^2$",
+        "$6\\ \\text{kg m}^2$",
+        "$4\\ \\text{kg m}^2$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a thin rod about a perpendicular axis through one end, $I = \\frac{ML^2}{3}$.",
+        "steps": [
+          "$ML^2 = 3 \\times 2^2 = 12\\ \\text{kg m}^2$.",
+          "$I = \\frac{12}{3} = 4\\ \\text{kg m}^2$."
+        ],
+        "final_answer": "Option (4): $4\\ \\text{kg m}^2$",
+        "why_not_others": "$1$ uses the centre formula $\\frac{ML^2}{12}$. $12$ is $ML^2$ with no factor. $6$ uses $\\frac{ML^2}{2}$.",
+        "common_trap": "Using $\\frac{ML^2}{12}$ for an axis through the end.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moments of inertia of simple geometrical objects",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A uniform solid cylinder has mass M, radius R and length L. What is its moment of inertia about its central (symmetry) axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$M\\left(\\frac{R^2}{4}+\\frac{L^2}{12}\\right)$",
+        "$\\frac{1}{2}MR^2$",
+        "$MR^2$",
+        "$\\frac{1}{2}MR^2 + \\frac{ML^2}{12}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Length along the axis does not matter. A solid cylinder about its central axis behaves like a disc.",
+        "steps": [
+          "Every thin slice of the cylinder is a disc with $I = \\frac{1}{2}mR^2$ about the common axis.",
+          "Adding the slices gives $\\frac{1}{2}MR^2$, which is independent of L."
+        ],
+        "final_answer": "Option (2): $\\frac{1}{2}MR^2$",
+        "why_not_others": "$M\\left(\\frac{R^2}{4}+\\frac{L^2}{12}\\right)$ is the result for a perpendicular axis through the centre. $MR^2$ belongs to a hollow thin cylinder. The last option wrongly adds a length term.",
+        "common_trap": "Including L for an axis that runs along the length.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moments of inertia of simple geometrical objects",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Thin ring about a diameter"
+          },
+          {
+            "label": "B",
+            "text": "Uniform disc about a diameter"
+          },
+          {
+            "label": "C",
+            "text": "Thin spherical shell about a diameter"
+          },
+          {
+            "label": "D",
+            "text": "Solid sphere about a diameter"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{1}{4}MR^2$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{1}{2}MR^2$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{2}{5}MR^2$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{2}{3}MR^2$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Standard moments of inertia about a diameter.",
+        "steps": [
+          "Ring about a diameter: $\\frac{1}{2}MR^2$, so A-II.",
+          "Disc about a diameter: $\\frac{1}{4}MR^2$, so B-I.",
+          "Spherical shell: $\\frac{2}{3}MR^2$, so C-IV. Solid sphere: $\\frac{2}{5}MR^2$, so D-III."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option 2 swaps the ring and disc values. Option 3 swaps the shell and solid sphere values. Option 4 mismatches all four.",
+        "common_trap": "Using the central-axis value $\\frac{1}{2}MR^2$ for a disc about a diameter.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Moments of inertia of simple geometrical objects",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about moments of inertia of simple bodies are correct?",
+      "statements": {
+        "A": "A rectangular plate of mass M and sides a and b has $I = \\frac{M(a^2+b^2)}{12}$ about an axis perpendicular to it through its centre.",
+        "B": "A solid cylinder of mass M, radius R and length L has $I = M\\left(\\frac{R^2}{4}+\\frac{L^2}{12}\\right)$ about an axis perpendicular to its length through its centre.",
+        "C": "For the same M and R, a solid sphere about a diameter has a larger moment of inertia than a disc about its central axis.",
+        "D": "A hollow thin cylinder about its central axis has $I = \\frac{1}{2}MR^2$.",
+        "E": "The moment of inertia of a thin rod about a perpendicular axis through one end is four times its value about a parallel axis through its centre."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and E only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Recall the standard results and compare their coefficients.",
+        "steps": [
+          "A and B are standard results, so both are true.",
+          "C is false: $\\frac{2}{5}MR^2 < \\frac{1}{2}MR^2$.",
+          "D is false: a hollow thin cylinder has $MR^2$.",
+          "E is true: $\\frac{ML^2}{3} \\div \\frac{ML^2}{12} = 4$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Option 1 misses E. Option 3 includes the false D and omits A. Option 4 includes the false C.",
+        "common_trap": "Treating a hollow cylinder like a disc, or assuming a sphere has more I than a disc.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Parallel and perpendicular axes theorems and their applications",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A uniform disc of mass $2\\ \\text{kg}$ and radius $0.5\\ \\text{m}$ rotates about an axis that is tangent to its rim and perpendicular to its plane. What is its moment of inertia about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.25\\ \\text{kg m}^2$",
+        "$0.625\\ \\text{kg m}^2$",
+        "$0.75\\ \\text{kg m}^2$",
+        "$0.5\\ \\text{kg m}^2$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Parallel axis theorem: $I = I_{cm} + Md^2$.",
+        "steps": [
+          "$I_{cm} = \\frac{1}{2}MR^2 = \\frac{1}{2}(2)(0.25) = 0.25\\ \\text{kg m}^2$.",
+          "$Md^2 = 2 \\times 0.25 = 0.5\\ \\text{kg m}^2$.",
+          "$I = 0.25 + 0.5 = 0.75\\ \\text{kg m}^2$, which equals $\\frac{3}{2}MR^2$."
+        ],
+        "final_answer": "Option (3): $0.75\\ \\text{kg m}^2$",
+        "why_not_others": "$0.25$ is $I_{cm}$ alone. $0.625$ is $\\frac{5}{4}MR^2$, the value for a tangent lying in the plane. $0.5$ is $MR^2$.",
+        "common_trap": "Confusing the tangent perpendicular to the plane with the tangent in the plane.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Parallel and perpendicular axes theorems and their applications",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A thin uniform rod of mass $3\\ \\text{kg}$ and length $4\\ \\text{m}$ rotates about an axis perpendicular to its length. The axis passes through a point $1\\ \\text{m}$ from the centre of the rod. What is its moment of inertia about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$13\\ \\text{kg m}^2$",
+        "$3\\ \\text{kg m}^2$",
+        "$7\\ \\text{kg m}^2$",
+        "$19\\ \\text{kg m}^2$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Shift from the COM axis using $I = I_{cm} + Md^2$.",
+        "steps": [
+          "$I_{cm} = \\frac{ML^2}{12} = \\frac{3 \\times 16}{12} = 4\\ \\text{kg m}^2$.",
+          "$Md^2 = 3 \\times 1^2 = 3\\ \\text{kg m}^2$.",
+          "$I = 4 + 3 = 7\\ \\text{kg m}^2$."
+        ],
+        "final_answer": "Option (3): $7\\ \\text{kg m}^2$",
+        "why_not_others": "$13$ comes from $I_{end} - M(1)^2$ and $19$ from $I_{end} + M(1)^2$. Both shift directly from the end axis, which does not pass through the COM. $3$ is $Md^2$ alone.",
+        "common_trap": "Applying the parallel axis theorem between two non-COM axes.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Parallel and perpendicular axes theorems and their applications",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A thin uniform square plate has mass M and side a. What is its moment of inertia about one of its diagonals?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{Ma^2}{6}$",
+        "$\\frac{Ma^2}{24}$",
+        "$\\frac{Ma^2}{3}$",
+        "$\\frac{Ma^2}{12}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Perpendicular axis theorem for a lamina, combined with the symmetry of a square.",
+        "steps": [
+          "About the perpendicular axis through the centre: $I_z = \\frac{M(a^2+a^2)}{12} = \\frac{Ma^2}{6}$.",
+          "The two diagonals are perpendicular in-plane axes through the centre and, by symmetry, have equal I.",
+          "$I_z = 2I_d$, so $I_d = \\frac{Ma^2}{12}$."
+        ],
+        "final_answer": "Option (4): $\\frac{Ma^2}{12}$",
+        "why_not_others": "$\\frac{Ma^2}{6}$ is $I_z$, not the diagonal value. $\\frac{Ma^2}{24}$ halves the result a second time. $\\frac{Ma^2}{3}$ is the value about an edge.",
+        "common_trap": "Taking the perpendicular-axis value as the in-plane value.",
+        "time_saving_tip": "For a square plate, every in-plane axis through the centre gives $\\frac{Ma^2}{12}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Parallel and perpendicular axes theorems and their applications",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Among all parallel axes, the moment of inertia of a body is minimum about the axis passing through its centre of mass.",
+        "R": "The parallel axis theorem $I = I_{cm} + Md^2$ can be applied directly between any two parallel axes, even if neither passes through the centre of mass."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The parallel axis theorem needs one axis through the COM. Because $Md^2 \\ge 0$, $I_{cm}$ is the minimum.",
+        "steps": [
+          "A is true: $I = I_{cm} + Md^2 \\ge I_{cm}$.",
+          "R is false: one of the two axes must pass through the COM."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, which rules out options 1, 2 and 4.",
+        "common_trap": "Shifting directly between two non-COM axes.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Parallel and perpendicular axes theorems and their applications",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a solid sphere, the perpendicular axis theorem gives its moment of inertia about a diameter as the sum of its moments of inertia about two other mutually perpendicular diameters, that is $\\frac{4}{5}MR^2$.",
+        "II": "For a thin ring, the moment of inertia about a tangent perpendicular to its plane is $\\frac{4}{3}$ times its moment of inertia about a tangent lying in its plane."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The perpendicular axis theorem holds only for laminae. The ring tangent values follow from the parallel axis theorem.",
+        "steps": [
+          "Statement I is false: a sphere is not planar, and its I about any diameter is $\\frac{2}{5}MR^2$.",
+          "Ring, tangent perpendicular to its plane: $MR^2 + MR^2 = 2MR^2$.",
+          "Ring, tangent in its plane: $\\frac{1}{2}MR^2 + MR^2 = \\frac{3}{2}MR^2$.",
+          "Ratio: $2 \\div \\frac{3}{2} = \\frac{4}{3}$, so Statement II is true."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I is false and Statement II is true, which rules out options 1, 2 and 3.",
+        "common_trap": "Applying the perpendicular axis theorem to 3D bodies such as spheres.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Equilibrium of rigid bodies",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A rigid body is acted upon only by a couple, that is, two equal and opposite forces whose lines of action are different. In which state is the body?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Both translational and rotational equilibrium",
+        "Neither translational nor rotational equilibrium",
+        "Rotational equilibrium but not translational equilibrium",
+        "Translational equilibrium but not rotational equilibrium"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A couple has zero net force but a non-zero net torque.",
+        "steps": [
+          "The forces are equal and opposite, so $\\sum\\vec{F} = 0$ and the body is in translational equilibrium.",
+          "Their lines of action are separated, so $\\sum\\vec{\\tau} \\ne 0$ and the body is not in rotational equilibrium."
+        ],
+        "final_answer": "Option (4): Translational equilibrium but not rotational equilibrium",
+        "why_not_others": "The net torque is non-zero, so options 1 and 3 are wrong. The net force is zero, so option 2 is wrong.",
+        "common_trap": "Assuming equal and opposite forces always give complete equilibrium.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Equilibrium of rigid bodies",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A lever supports a load of $600\\ \\text{N}$ at $0.2\\ \\text{m}$ from the fulcrum. The effort is applied at $1.2\\ \\text{m}$ from the fulcrum. What effort is needed to keep the lever in equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3600\\ \\text{N}$",
+        "$100\\ \\text{N}$",
+        "$120\\ \\text{N}$",
+        "$720\\ \\text{N}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Principle of moments: load × load arm = effort × effort arm.",
+        "steps": [
+          "$600 \\times 0.2 = E \\times 1.2$.",
+          "$E = \\frac{120}{1.2} = 100\\ \\text{N}$.",
+          "The mechanical advantage is $\\frac{600}{100} = 6$."
+        ],
+        "final_answer": "Option (2): $100\\ \\text{N}$",
+        "why_not_others": "$3600$ comes from inverting the arm ratio. $120$ is the load torque, not a force. $720$ is load × effort arm.",
+        "common_trap": "Inverting the ratio of the arms.",
+        "time_saving_tip": "Effort = load × $\\frac{\\text{load arm}}{\\text{effort arm}} = 600 \\times \\frac{1}{6}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Equilibrium of rigid bodies",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A uniform beam of length $4\\ \\text{m}$ and weight $200\\ \\text{N}$ rests horizontally on two supports at its ends A and B. A load of $400\\ \\text{N}$ is placed $1\\ \\text{m}$ from end A. What is the normal reaction at support A?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$400\\ \\text{N}$",
+        "$200\\ \\text{N}$",
+        "$300\\ \\text{N}$",
+        "$600\\ \\text{N}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Take torques about B to eliminate the unknown reaction there.",
+        "steps": [
+          "The beam's weight acts at its centre, $2\\ \\text{m}$ from B. The load is $3\\ \\text{m}$ from B.",
+          "Torques about B: $R_A \\times 4 = 200 \\times 2 + 400 \\times 3 = 1600$.",
+          "$R_A = 400\\ \\text{N}$. As a check, $R_B = 600 - 400 = 200\\ \\text{N}$."
+        ],
+        "final_answer": "Option (1): $400\\ \\text{N}$",
+        "why_not_others": "$200\\ \\text{N}$ is the reaction at B. $300\\ \\text{N}$ comes from ignoring the beam's weight or from sharing the load equally. $600\\ \\text{N}$ is the total weight.",
+        "common_trap": "Measuring the load's moment arm from the wrong support, or forgetting the beam's own weight.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Equilibrium of rigid bodies",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Rigid body acted on by a couple"
+          },
+          {
+            "label": "B",
+            "text": "Rigid body suspended from a point and at rest"
+          },
+          {
+            "label": "C",
+            "text": "Lever with effort arm longer than load arm"
+          },
+          {
+            "label": "D",
+            "text": "Net force is zero and net torque about one point is zero"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Centre of gravity lies vertically below the point of suspension"
+          },
+          {
+            "label": "II",
+            "text": "Net torque is zero about every point"
+          },
+          {
+            "label": "III",
+            "text": "Mechanical advantage greater than 1"
+          },
+          {
+            "label": "IV",
+            "text": "Translational equilibrium but not rotational equilibrium"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-I, D-II",
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-I, C-III, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Conditions for equilibrium and lever principles.",
+        "steps": [
+          "A couple has zero net force but non-zero torque, so A-IV.",
+          "A suspended body at rest has its CG vertically below the point of suspension, so B-I.",
+          "M.A. $= \\frac{d_{effort}}{d_{load}} > 1$, so C-III.",
+          "With zero net force, zero torque about one point means zero torque about every point, so D-II."
+        ],
+        "final_answer": "Option (4): A-IV, B-I, C-III, D-II",
+        "why_not_others": "Options 1, 2 and 3 each mismatch at least two pairs. For example, option 1 swaps A and D.",
+        "common_trap": "Thinking a couple gives full equilibrium because its forces cancel.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Equilibrium of rigid bodies",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the equilibrium of rigid bodies are correct?",
+      "statements": {
+        "A": "If the net external force on a rigid body is zero and the net torque about one point is zero, then the net torque about every point is zero.",
+        "B": "A rigid body in translational equilibrium must also be in rotational equilibrium.",
+        "C": "In a uniform gravitational field, the weight of a body acts at its centre of gravity, which coincides with its centre of mass.",
+        "D": "The mechanical advantage of a lever is less than 1 when its effort arm is longer than its load arm.",
+        "E": "If the net torque on a rigid body is zero, the net force on it must also be zero."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and E only",
+        "A and C only",
+        "A, B and C only",
+        "C and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Translational and rotational equilibrium are independent conditions.",
+        "steps": [
+          "A is true: with zero net force, the torque is the same about every point.",
+          "B is false: a couple gives translational equilibrium without rotational equilibrium.",
+          "C is true for a uniform field.",
+          "D is false: M.A. $= \\frac{d_{effort}}{d_{load}} > 1$ when the effort arm is longer.",
+          "E is false: a body can be in rotational equilibrium without being in translational equilibrium."
+        ],
+        "final_answer": "Option (2): A and C only",
+        "why_not_others": "Option 1 includes the false E. Option 3 includes the false B. Option 4 includes the false D and omits A.",
+        "common_trap": "Assuming one equilibrium condition implies the other.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Rigid body rotation and equations of rotational motion",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A uniform disc of mass $2\\ \\text{kg}$ rolls without slipping on a horizontal floor. Its centre of mass moves at $3\\ \\text{m s}^{-1}$. What is the total kinetic energy of the disc?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9\\ \\text{J}$",
+        "$4.5\\ \\text{J}$",
+        "$13.5\\ \\text{J}$",
+        "$18\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In rolling without slipping, the total kinetic energy is $K = \\frac{1}{2}mv^2\\left(1+\\frac{K^2}{R^2}\\right)$.",
+        "steps": [
+          "For a disc, $\\frac{K^2}{R^2} = \\frac{1}{2}$.",
+          "Translational KE $= \\frac{1}{2}(2)(3)^2 = 9\\ \\text{J}$.",
+          "Total KE $= 9 \\times \\left(1+\\frac{1}{2}\\right) = 13.5\\ \\text{J}$."
+        ],
+        "final_answer": "Option (3): $13.5\\ \\text{J}$",
+        "why_not_others": "$9\\ \\text{J}$ is the translational KE alone. $4.5\\ \\text{J}$ is the rotational KE alone. $18\\ \\text{J}$ would be correct for a ring, which has $\\frac{K^2}{R^2} = 1$.",
+        "common_trap": "Forgetting to add the rotational KE to the translational KE for a rolling body.",
+        "time_saving_tip": "For a disc, total KE $= \\frac{3}{4}mv^2$ directly."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Rigid body rotation and equations of rotational motion",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A light rope is wound around a pulley that is a uniform disc of mass $4\\ \\text{kg}$ and radius $0.2\\ \\text{m}$. The pulley can rotate freely about a fixed horizontal axis through its centre. A block of mass $2\\ \\text{kg}$ hangs from the free end of the rope and is released from rest. The rope does not slip. Taking $g = 10\\ \\text{m s}^{-2}$, what is the acceleration of the block?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{m s}^{-2}$",
+        "$3.33\\ \\text{m s}^{-2}$",
+        "$5\\ \\text{m s}^{-2}$",
+        "$6.67\\ \\text{m s}^{-2}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a mass hanging from a rope wound on a pulley, $a = \\frac{mg}{m + I/R^2}$.",
+        "steps": [
+          "The moment of inertia of the disc pulley is $I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.2)^2 = 0.08\\ \\text{kg m}^2$.",
+          "Then $\\frac{I}{R^2} = \\frac{0.08}{0.04} = 2\\ \\text{kg}$.",
+          "So $a = \\frac{2 \\times 10}{2 + 2} = 5\\ \\text{m s}^{-2}$."
+        ],
+        "final_answer": "Option (3): $5\\ \\text{m s}^{-2}$",
+        "why_not_others": "$10\\ \\text{m s}^{-2}$ ignores the rotational inertia of the pulley. $3.33\\ \\text{m s}^{-2}$ treats the pulley as a ring, taking $I = MR^2$. $6.67\\ \\text{m s}^{-2}$ comes from wrongly taking $\\frac{I}{R^2} = \\frac{M}{4}$.",
+        "common_trap": "Treating the block as freely falling and ignoring the moment of inertia of the pulley.",
+        "time_saving_tip": "For a disc pulley, $\\frac{I}{R^2} = \\frac{M}{2}$, so you never need the radius."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Rigid body rotation and equations of rotational motion",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A uniform solid cylinder is released from rest at a height of $1.2\\ \\text{m}$ on a rough incline. It rolls down without slipping. Taking $g = 10\\ \\text{m s}^{-2}$, what is the speed of its centre of mass at the bottom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\sqrt{6}\\ \\text{m s}^{-1}$",
+        "$2\\sqrt{3}\\ \\text{m s}^{-1}$",
+        "$4\\sqrt{3}\\ \\text{m s}^{-1}$",
+        "$4\\ \\text{m s}^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a body rolling down a height $h$, $v = \\sqrt{\\frac{2gh}{1+K^2/R^2}}$.",
+        "steps": [
+          "For a solid cylinder, $\\frac{K^2}{R^2} = \\frac{1}{2}$.",
+          "$v^2 = \\frac{2 \\times 10 \\times 1.2}{1.5} = \\frac{24}{1.5} = 16$.",
+          "So $v = 4\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (4): $4\\ \\text{m s}^{-1}$",
+        "why_not_others": "$2\\sqrt{6}$ is $\\sqrt{2gh}$, which ignores rotation and applies only to sliding. $2\\sqrt{3}$ is $\\sqrt{gh}$, which is correct for a ring. $4\\sqrt{3}$ comes from dividing $2gh$ by $\\frac{1}{2}$ instead of by $1+\\frac{1}{2}$.",
+        "common_trap": "Dividing by $\\frac{K^2}{R^2}$ instead of by $1+\\frac{K^2}{R^2}$.",
+        "time_saving_tip": "For a disc or cylinder, $v = \\sqrt{\\frac{4gh}{3}}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Rigid body rotation and equations of rotational motion",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a body rolls without slipping down a rough incline, its total mechanical energy is conserved.",
+        "R": "A body placed on an incline needs static friction in order to roll on it."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In pure rolling, static friction acts at the instantaneously stationary contact point and does no work.",
+        "steps": [
+          "In pure rolling, the contact point is momentarily at rest, so static friction does no work. Mechanical energy is therefore conserved, and A is true.",
+          "Without friction the body cannot roll; on a smooth incline it simply slides. So R is true.",
+          "R only states that friction is needed. It does not explain energy conservation, which follows from friction doing no work."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain A, so option 1 is wrong. Both statements are true, so options 3 and 4 are wrong.",
+        "common_trap": "Assuming that because friction is present, it must dissipate energy in rolling.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Rigid body rotation and equations of rotational motion",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A solid sphere and a ring are released together from rest at the top of the same rough incline, and both roll without slipping. The sphere reaches the bottom first, whatever their masses and radii.",
+        "II": "If the same incline is made perfectly frictionless, the ring reaches the bottom later than the solid sphere because its $\\frac{K^2}{R^2}$ is larger."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The rolling acceleration is $a = \\frac{g\\sin\\theta}{1+K^2/R^2}$. On a frictionless incline there is no rolling, and every body slides with $g\\sin\\theta$.",
+        "steps": [
+          "For the solid sphere $\\frac{K^2}{R^2} = \\frac{2}{5}$, and for the ring it is $1$. The sphere therefore has the larger acceleration.",
+          "This acceleration does not depend on mass or radius, so Statement I is correct.",
+          "On a frictionless incline neither body can roll. Both slide with $g\\sin\\theta$ and reach the bottom together, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II wrongly applies the rolling result to a frictionless surface, where $\\frac{K^2}{R^2}$ plays no role. That rules out options 1 and 4. Statement I is correct, which rules out option 2.",
+        "common_trap": "Using $\\frac{K^2}{R^2}$ even when there is no friction, so that the bodies only slide.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Comparison of linear and rotational motions",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which relation is the rotational analogue of the linear relation $p = mv$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\tau = I\\alpha$",
+        "$K = \\frac{1}{2}I\\omega^2$",
+        "$\\tau = \\frac{dL}{dt}$",
+        "$L = I\\omega$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Under the linear-rotational correspondence, $p \\to L$, $m \\to I$ and $v \\to \\omega$.",
+        "steps": [
+          "Replace $p$ with $L$, $m$ with $I$, and $v$ with $\\omega$.",
+          "This gives $L = I\\omega$."
+        ],
+        "final_answer": "Option (4): $L = I\\omega$",
+        "why_not_others": "$\\tau = I\\alpha$ is the analogue of $F = ma$. $\\frac{1}{2}I\\omega^2$ is the analogue of $\\frac{1}{2}mv^2$. $\\tau = \\frac{dL}{dt}$ is the analogue of $F = \\frac{dp}{dt}$.",
+        "common_trap": "Confusing the analogue of momentum with the analogue of Newton's second law.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Comparison of linear and rotational motions",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A flywheel with moment of inertia $3\\ \\text{kg m}^2$ rotates about a fixed axis. Its angular momentum is $6\\ \\text{kg m}^2\\text{s}^{-1}$. What is its rotational kinetic energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\ \\text{J}$",
+        "$12\\ \\text{J}$",
+        "$3\\ \\text{J}$",
+        "$1\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The relation $KE = \\frac{p^2}{2m}$ has the rotational analogue $KE = \\frac{L^2}{2I}$.",
+        "steps": [
+          "$KE = \\frac{L^2}{2I} = \\frac{36}{2 \\times 3}$.",
+          "So $KE = 6\\ \\text{J}$."
+        ],
+        "final_answer": "Option (1): $6\\ \\text{J}$",
+        "why_not_others": "$12\\ \\text{J}$ omits the factor of 2 in the denominator. $3\\ \\text{J}$ comes from writing $\\frac{L}{2} \\times \\frac{L}{I} \\times \\frac{1}{2}$, which halves the result again. $1\\ \\text{J}$ comes from using $\\frac{L}{2I}$ without squaring $L$.",
+        "common_trap": "Forgetting to square $L$, or dropping the factor of 2.",
+        "time_saving_tip": "Find $\\omega = \\frac{L}{I} = 2\\ \\text{rad s}^{-1}$. Then $KE = \\frac{1}{2}L\\omega = 6\\ \\text{J}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Comparison of linear and rotational motions",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A constant torque of $4\\ \\text{N m}$ acts for $3\\ \\text{s}$ on a wheel that is initially at rest. The wheel can rotate about a fixed axis, and its moment of inertia about that axis is $2\\ \\text{kg m}^2$. What is the final angular speed of the wheel?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\ \\text{rad s}^{-1}$",
+        "$12\\ \\text{rad s}^{-1}$",
+        "$24\\ \\text{rad s}^{-1}$",
+        "$3\\ \\text{rad s}^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Angular impulse equals the change in angular momentum: $\\int\\tau\\,dt = \\Delta L$.",
+        "steps": [
+          "Angular impulse $= \\tau t = 4 \\times 3 = 12\\ \\text{kg m}^2\\text{s}^{-1} = \\Delta L$.",
+          "The wheel starts from rest, so $L = I\\omega = 12$.",
+          "Therefore $\\omega = \\frac{12}{2} = 6\\ \\text{rad s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $6\\ \\text{rad s}^{-1}$",
+        "why_not_others": "$12\\ \\text{rad s}^{-1}$ treats the angular impulse itself as the angular speed. $24\\ \\text{rad s}^{-1}$ multiplies by $I$ instead of dividing. $3\\ \\text{rad s}^{-1}$ inserts a spurious factor of $\\frac{1}{2}$.",
+        "common_trap": "Equating the angular impulse directly with $\\omega$ instead of with $I\\omega$.",
+        "time_saving_tip": "Use $\\alpha = \\frac{\\tau}{I} = 2\\ \\text{rad s}^{-2}$. Then $\\omega = \\alpha t = 6\\ \\text{rad s}^{-1}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Comparison of linear and rotational motions",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Force $F$"
+          },
+          {
+            "label": "B",
+            "text": "Mass $m$"
+          },
+          {
+            "label": "C",
+            "text": "Linear momentum $p$"
+          },
+          {
+            "label": "D",
+            "text": "Power $Fv$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Angular momentum $L$"
+          },
+          {
+            "label": "II",
+            "text": "$\\tau\\omega$"
+          },
+          {
+            "label": "III",
+            "text": "Torque $\\tau$"
+          },
+          {
+            "label": "IV",
+            "text": "Moment of inertia $I$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The linear quantities $F$, $m$, $p$ and $Fv$ correspond to the rotational quantities $\\tau$, $I$, $L$ and $\\tau\\omega$.",
+        "steps": [
+          "Force corresponds to torque: A-III.",
+          "Mass corresponds to moment of inertia: B-IV.",
+          "Linear momentum corresponds to angular momentum: C-I.",
+          "Power $Fv$ corresponds to $\\tau\\omega$: D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 1 swaps force and momentum. Option 2 pairs mass with power. Option 4 pairs force with power.",
+        "common_trap": "Confusing torque with angular momentum because both involve a cross product with $r$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u05_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u05",
+      "topic": "Comparison of linear and rotational motions",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the analogy between linear and rotational motion are correct?",
+      "statements": {
+        "A": "Like mass, the moment of inertia of a body has the same value about every axis.",
+        "B": "Angular impulse $\\int\\tau\\,dt$ equals the change in angular momentum.",
+        "C": "For constant angular acceleration about a fixed axis, $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$, which has the same form as its linear counterpart.",
+        "D": "When the net external torque on a body is zero, its angular momentum is conserved.",
+        "E": "The work done by a torque $\\tau$ rotating a body at angular speed $\\omega$ is given by $\\tau\\omega$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and D only",
+        "B and D only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Rotational relations mirror linear ones term by term. However, $I$ depends on the axis, and $\\tau\\omega$ is power, not work.",
+        "steps": [
+          "A is false. Mass is intrinsic, but $I$ changes with the choice of axis.",
+          "B is true, since $\\int\\tau\\,dt = \\Delta L$.",
+          "C is true, because the rotational kinematic equations have the same form as the linear ones.",
+          "D is true. It is the analogue of conservation of linear momentum when the net force is zero.",
+          "E is false. $\\tau\\omega$ is power, while work is $\\int\\tau\\,d\\theta$."
+        ],
+        "final_answer": "Option (2): B, C and D only",
+        "why_not_others": "Option 1 includes the false statement A. Option 3 leaves out the true statement C. Option 4 includes the false statement E.",
+        "common_trap": "Extending the mass analogy too far and assuming $I$ is fixed, or mixing up work and power.",
+        "time_saving_tip": "Spot A and E as false first. Only one option excludes both."
+      },
+      "review_flags": []
+    }
+  ],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "expected": 50,
+    "missing_slots": []
+  }
+}

@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "A light rigid rod carries two point masses. A mass of $2\\ \\text{kg}$ is at a perpendicular distance of $1\\ \\text{m}$ from the axis of rotation, and a mass of $3\\ \\text{kg}$ is at a perpendicular distance of $2\\ \\text{m}$ from the same axis. What is the moment of inertia of the system about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$14\\ \\text{kg m}^2$",
+        "$8\\ \\text{kg m}^2$",
+        "$20\\ \\text{kg m}^2$",
+        "$7\\ \\text{kg m}^2$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For discrete particles, $I = \\sum m_i r_i^2$, where $r_i$ is the perpendicular distance from the axis.",
+        "steps": [
+          "Contribution of the first mass: $2 \\times 1^2 = 2\\ \\text{kg m}^2$.",
+          "Contribution of the second mass: $3 \\times 2^2 = 12\\ \\text{kg m}^2$.",
+          "Total: $I = 2 + 12 = 14\\ \\text{kg m}^2$."
+        ],
+        "final_answer": "Option (1): $14\\ \\text{kg m}^2$",
+        "why_not_others": "$8$ comes from using $r$ instead of $r^2$. $20$ comes from placing the total mass of $5\\ \\text{kg}$ at $2\\ \\text{m}$. $7$ is half the correct value, an arithmetic slip.",
+        "common_trap": "Forgetting to square the distance, or measuring r from an origin instead of perpendicular to the axis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A body of mass $4\\ \\text{kg}$ has a moment of inertia of $0.16\\ \\text{kg m}^2$ about a given axis. What is its radius of gyration about that axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\ \\text{m}$",
+        "$0.4\\ \\text{m}$",
+        "$0.2\\ \\text{m}$",
+        "$0.08\\ \\text{m}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Radius of gyration: $K = \\sqrt{\\frac{I}{M}}$.",
+        "steps": [
+          "$\\frac{I}{M} = \\frac{0.16}{4} = 0.04\\ \\text{m}^2$.",
+          "$K = \\sqrt{0.04} = 0.2\\ \\text{m}$."
+        ],
+        "final_answer": "Option (3): $0.2\\ \\text{m}$",
+        "why_not_others": "$0.04\\ \\text{m}$ is $\\frac{I}{M}$ without taking the square root. $0.4\\ \\text{m}$ is $\\sqrt{I}$, which ignores the mass. $0.08\\ \\text{m}$ is $\\frac{I}{2}$, which has no basis.",
+        "common_trap": "Stopping at $\\frac{I}{M}$ and forgetting that K is its square root.",
+        "time_saving_tip": "Check the units: $\\frac{I}{M}$ has units of $\\text{m}^2$, so a square root is needed to get metres."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "The moment of inertia of a rigid body about an axis does NOT depend on which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The angular velocity of the body about the axis",
+        "The total mass of the body",
+        "The distribution of mass relative to the axis",
+        "The position and orientation of the axis"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "I depends on the mass, on how the mass is distributed and on the axis. It does not depend on angular velocity.",
+        "steps": [
+          "$I = \\sum m_i r_i^2$ involves only the masses and their perpendicular distances from the axis.",
+          "Changing the axis changes the $r_i$, so I changes with the axis.",
+          "Angular velocity does not appear in the definition, so I is independent of it."
+        ],
+        "final_answer": "Option (1): The angular velocity of the body about the axis",
+        "why_not_others": "Total mass, mass distribution and the axis all enter $I = \\sum m_i r_i^2$, so I does depend on each of them.",
+        "common_trap": "Thinking a body that spins faster has a larger moment of inertia.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Flywheels are designed with most of their mass concentrated near the rim.",
+        "R": "The moment of inertia of a body does not depend on its angular velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Mass placed farther from the axis contributes more to I. Separately, I is independent of angular velocity.",
+        "steps": [
+          "A is true: placing mass at the rim gives a large I, which keeps the rotation smooth.",
+          "R is true: I depends only on the mass distribution and the axis, not on the angular velocity.",
+          "A is explained by the $r^2$ dependence of I, not by its independence from angular velocity."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 is wrong because R does not explain why the mass is placed at the rim. Options 3 and 4 are wrong because both statements are true.",
+        "common_trap": "Choosing option 1 just because both statements concern moment of inertia.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The radius of gyration of a body is a fixed property of the body alone and does not depend on the axis chosen.",
+        "II": "A ring of radius R (about its central axis) and a solid sphere of radius R' (about a diameter) have equal radii of gyration. Then $\\frac{R'}{R} = \\sqrt{\\frac{5}{2}}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "K depends on both the body and the axis. For a ring about its axis, $K = R$; for a solid sphere about a diameter, $K = \\sqrt{\\frac{2}{5}}R$.",
+        "steps": [
+          "Statement I is false: K changes when the axis changes, because I changes.",
+          "For equal K: $\\sqrt{\\frac{2}{5}}R' = R$.",
+          "So $\\frac{R'}{R} = \\sqrt{\\frac{5}{2}}$, and Statement II is true."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I is false and Statement II is true, which rules out options 1, 2 and 3.",
+        "common_trap": "Inverting the ratio to $\\sqrt{\\frac{2}{5}}$, or treating K as a fixed property of the body.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Four bodies have the same mass M and the same radius R. Which of them has the largest moment of inertia about the stated axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Solid sphere about a diameter",
+        "Uniform disc about its central axis perpendicular to its plane",
+        "Thin spherical shell about a diameter",
+        "Thin ring about its central axis perpendicular to its plane"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For the same M and R: ring > spherical shell > disc > solid sphere.",
+        "steps": [
+          "Ring: $MR^2$. Shell: $\\frac{2}{3}MR^2$. Disc: $\\frac{1}{2}MR^2$. Solid sphere: $\\frac{2}{5}MR^2$.",
+          "The ring has all of its mass at distance R from the axis, so its I is the largest."
+        ],
+        "final_answer": "Option (4): Thin ring about its central axis perpendicular to its plane",
+        "why_not_others": "The solid sphere ($\\frac{2}{5}$), the disc ($\\frac{1}{2}$) and the shell ($\\frac{2}{3}$) all have coefficients smaller than 1.",
+        "common_trap": "Assuming the 3D shell beats the ring because it looks more massive. The masses are equal here.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A thin uniform rod of mass $3\\ \\text{kg}$ and length $2\\ \\text{m}$ rotates about an axis perpendicular to its length passing through one end. What is its moment of inertia about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\text{kg m}^2$",
+        "$12\\ \\text{kg m}^2$",
+        "$6\\ \\text{kg m}^2$",
+        "$4\\ \\text{kg m}^2$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a thin rod about a perpendicular axis through one end, $I = \\frac{ML^2}{3}$.",
+        "steps": [
+          "$ML^2 = 3 \\times 2^2 = 12\\ \\text{kg m}^2$.",
+          "$I = \\frac{12}{3} = 4\\ \\text{kg m}^2$."
+        ],
+        "final_answer": "Option (4): $4\\ \\text{kg m}^2$",
+        "why_not_others": "$1$ uses the centre formula $\\frac{ML^2}{12}$. $12$ is $ML^2$ with no factor. $6$ uses $\\frac{ML^2}{2}$.",
+        "common_trap": "Using $\\frac{ML^2}{12}$ for an axis through the end.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A uniform solid cylinder has mass M, radius R and length L. What is its moment of inertia about its central (symmetry) axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$M\\left(\\frac{R^2}{4}+\\frac{L^2}{12}\\right)$",
+        "$\\frac{1}{2}MR^2$",
+        "$MR^2$",
+        "$\\frac{1}{2}MR^2 + \\frac{ML^2}{12}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Length along the axis does not matter. A solid cylinder about its central axis behaves like a disc.",
+        "steps": [
+          "Every thin slice of the cylinder is a disc with $I = \\frac{1}{2}mR^2$ about the common axis.",
+          "Adding the slices gives $\\frac{1}{2}MR^2$, which is independent of L."
+        ],
+        "final_answer": "Option (2): $\\frac{1}{2}MR^2$",
+        "why_not_others": "$M\\left(\\frac{R^2}{4}+\\frac{L^2}{12}\\right)$ is the result for a perpendicular axis through the centre. $MR^2$ belongs to a hollow thin cylinder. The last option wrongly adds a length term.",
+        "common_trap": "Including L for an axis that runs along the length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Thin ring about a diameter"
+          },
+          {
+            "label": "B",
+            "text": "Uniform disc about a diameter"
+          },
+          {
+            "label": "C",
+            "text": "Thin spherical shell about a diameter"
+          },
+          {
+            "label": "D",
+            "text": "Solid sphere about a diameter"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{1}{4}MR^2$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{1}{2}MR^2$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{2}{5}MR^2$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{2}{3}MR^2$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Standard moments of inertia about a diameter.",
+        "steps": [
+          "Ring about a diameter: $\\frac{1}{2}MR^2$, so A-II.",
+          "Disc about a diameter: $\\frac{1}{4}MR^2$, so B-I.",
+          "Spherical shell: $\\frac{2}{3}MR^2$, so C-IV. Solid sphere: $\\frac{2}{5}MR^2$, so D-III."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option 2 swaps the ring and disc values. Option 3 swaps the shell and solid sphere values. Option 4 mismatches all four.",
+        "common_trap": "Using the central-axis value $\\frac{1}{2}MR^2$ for a disc about a diameter.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about moments of inertia of simple bodies are correct?",
+      "statements": {
+        "A": "A rectangular plate of mass M and sides a and b has $I = \\frac{M(a^2+b^2)}{12}$ about an axis perpendicular to it through its centre.",
+        "B": "A solid cylinder of mass M, radius R and length L has $I = M\\left(\\frac{R^2}{4}+\\frac{L^2}{12}\\right)$ about an axis perpendicular to its length through its centre.",
+        "C": "For the same M and R, a solid sphere about a diameter has a larger moment of inertia than a disc about its central axis.",
+        "D": "A hollow thin cylinder about its central axis has $I = \\frac{1}{2}MR^2$.",
+        "E": "The moment of inertia of a thin rod about a perpendicular axis through one end is four times its value about a parallel axis through its centre."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and E only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Recall the standard results and compare their coefficients.",
+        "steps": [
+          "A and B are standard results, so both are true.",
+          "C is false: $\\frac{2}{5}MR^2 < \\frac{1}{2}MR^2$.",
+          "D is false: a hollow thin cylinder has $MR^2$.",
+          "E is true: $\\frac{ML^2}{3} \\div \\frac{ML^2}{12} = 4$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Option 1 misses E. Option 3 includes the false D and omits A. Option 4 includes the false C.",
+        "common_trap": "Treating a hollow cylinder like a disc, or assuming a sphere has more I than a disc.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "A uniform disc of mass $2\\ \\text{kg}$ and radius $0.5\\ \\text{m}$ rotates about an axis that is tangent to its rim and perpendicular to its plane. What is its moment of inertia about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.25\\ \\text{kg m}^2$",
+        "$0.625\\ \\text{kg m}^2$",
+        "$0.75\\ \\text{kg m}^2$",
+        "$0.5\\ \\text{kg m}^2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Parallel axis theorem: $I = I_{cm} + Md^2$.",
+        "steps": [
+          "$I_{cm} = \\frac{1}{2}MR^2 = \\frac{1}{2}(2)(0.25) = 0.25\\ \\text{kg m}^2$.",
+          "$Md^2 = 2 \\times 0.25 = 0.5\\ \\text{kg m}^2$.",
+          "$I = 0.25 + 0.5 = 0.75\\ \\text{kg m}^2$, which equals $\\frac{3}{2}MR^2$."
+        ],
+        "final_answer": "Option (3): $0.75\\ \\text{kg m}^2$",
+        "why_not_others": "$0.25$ is $I_{cm}$ alone. $0.625$ is $\\frac{5}{4}MR^2$, the value for a tangent lying in the plane. $0.5$ is $MR^2$.",
+        "common_trap": "Confusing the tangent perpendicular to the plane with the tangent in the plane.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A thin uniform rod of mass $3\\ \\text{kg}$ and length $4\\ \\text{m}$ rotates about an axis perpendicular to its length. The axis passes through a point $1\\ \\text{m}$ from the centre of the rod. What is its moment of inertia about this axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$13\\ \\text{kg m}^2$",
+        "$3\\ \\text{kg m}^2$",
+        "$7\\ \\text{kg m}^2$",
+        "$19\\ \\text{kg m}^2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Shift from the COM axis using $I = I_{cm} + Md^2$.",
+        "steps": [
+          "$I_{cm} = \\frac{ML^2}{12} = \\frac{3 \\times 16}{12} = 4\\ \\text{kg m}^2$.",
+          "$Md^2 = 3 \\times 1^2 = 3\\ \\text{kg m}^2$.",
+          "$I = 4 + 3 = 7\\ \\text{kg m}^2$."
+        ],
+        "final_answer": "Option (3): $7\\ \\text{kg m}^2$",
+        "why_not_others": "$13$ comes from $I_{end} - M(1)^2$ and $19$ from $I_{end} + M(1)^2$. Both shift directly from the end axis, which does not pass through the COM. $3$ is $Md^2$ alone.",
+        "common_trap": "Applying the parallel axis theorem between two non-COM axes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A thin uniform square plate has mass M and side a. What is its moment of inertia about one of its diagonals?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{Ma^2}{6}$",
+        "$\\frac{Ma^2}{24}$",
+        "$\\frac{Ma^2}{3}$",
+        "$\\frac{Ma^2}{12}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Perpendicular axis theorem for a lamina, combined with the symmetry of a square.",
+        "steps": [
+          "About the perpendicular axis through the centre: $I_z = \\frac{M(a^2+a^2)}{12} = \\frac{Ma^2}{6}$.",
+          "The two diagonals are perpendicular in-plane axes through the centre and, by symmetry, have equal I.",
+          "$I_z = 2I_d$, so $I_d = \\frac{Ma^2}{12}$."
+        ],
+        "final_answer": "Option (4): $\\frac{Ma^2}{12}$",
+        "why_not_others": "$\\frac{Ma^2}{6}$ is $I_z$, not the diagonal value. $\\frac{Ma^2}{24}$ halves the result a second time. $\\frac{Ma^2}{3}$ is the value about an edge.",
+        "common_trap": "Taking the perpendicular-axis value as the in-plane value.",
+        "time_saving_tip": "For a square plate, every in-plane axis through the centre gives $\\frac{Ma^2}{12}$."
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Among all parallel axes, the moment of inertia of a body is minimum about the axis passing through its centre of mass.",
+        "R": "The parallel axis theorem $I = I_{cm} + Md^2$ can be applied directly between any two parallel axes, even if neither passes through the centre of mass."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The parallel axis theorem needs one axis through the COM. Because $Md^2 \\ge 0$, $I_{cm}$ is the minimum.",
+        "steps": [
+          "A is true: $I = I_{cm} + Md^2 \\ge I_{cm}$.",
+          "R is false: one of the two axes must pass through the COM."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, which rules out options 1, 2 and 4.",
+        "common_trap": "Shifting directly between two non-COM axes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a solid sphere, the perpendicular axis theorem gives its moment of inertia about a diameter as the sum of its moments of inertia about two other mutually perpendicular diameters, that is $\\frac{4}{5}MR^2$.",
+        "II": "For a thin ring, the moment of inertia about a tangent perpendicular to its plane is $\\frac{4}{3}$ times its moment of inertia about a tangent lying in its plane."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The perpendicular axis theorem holds only for laminae. The ring tangent values follow from the parallel axis theorem.",
+        "steps": [
+          "Statement I is false: a sphere is not planar, and its I about any diameter is $\\frac{2}{5}MR^2$.",
+          "Ring, tangent perpendicular to its plane: $MR^2 + MR^2 = 2MR^2$.",
+          "Ring, tangent in its plane: $\\frac{1}{2}MR^2 + MR^2 = \\frac{3}{2}MR^2$.",
+          "Ratio: $2 \\div \\frac{3}{2} = \\frac{4}{3}$, so Statement II is true."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I is false and Statement II is true, which rules out options 1, 2 and 3.",
+        "common_trap": "Applying the perpendicular axis theorem to 3D bodies such as spheres.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A rigid body is acted upon only by a couple, that is, two equal and opposite forces whose lines of action are different. In which state is the body?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Both translational and rotational equilibrium",
+        "Neither translational nor rotational equilibrium",
+        "Rotational equilibrium but not translational equilibrium",
+        "Translational equilibrium but not rotational equilibrium"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A couple has zero net force but a non-zero net torque.",
+        "steps": [
+          "The forces are equal and opposite, so $\\sum\\vec{F} = 0$ and the body is in translational equilibrium.",
+          "Their lines of action are separated, so $\\sum\\vec{\\tau} \\ne 0$ and the body is not in rotational equilibrium."
+        ],
+        "final_answer": "Option (4): Translational equilibrium but not rotational equilibrium",
+        "why_not_others": "The net torque is non-zero, so options 1 and 3 are wrong. The net force is zero, so option 2 is wrong.",
+        "common_trap": "Assuming equal and opposite forces always give complete equilibrium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A lever supports a load of $600\\ \\text{N}$ at $0.2\\ \\text{m}$ from the fulcrum. The effort is applied at $1.2\\ \\text{m}$ from the fulcrum. What effort is needed to keep the lever in equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3600\\ \\text{N}$",
+        "$100\\ \\text{N}$",
+        "$120\\ \\text{N}$",
+        "$720\\ \\text{N}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Principle of moments: load × load arm = effort × effort arm.",
+        "steps": [
+          "$600 \\times 0.2 = E \\times 1.2$.",
+          "$E = \\frac{120}{1.2} = 100\\ \\text{N}$.",
+          "The mechanical advantage is $\\frac{600}{100} = 6$."
+        ],
+        "final_answer": "Option (2): $100\\ \\text{N}$",
+        "why_not_others": "$3600$ comes from inverting the arm ratio. $120$ is the load torque, not a force. $720$ is load × effort arm.",
+        "common_trap": "Inverting the ratio of the arms.",
+        "time_saving_tip": "Effort = load × $\\frac{\\text{load arm}}{\\text{effort arm}} = 600 \\times \\frac{1}{6}$."
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A uniform beam of length $4\\ \\text{m}$ and weight $200\\ \\text{N}$ rests horizontally on two supports at its ends A and B. A load of $400\\ \\text{N}$ is placed $1\\ \\text{m}$ from end A. What is the normal reaction at support A?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$400\\ \\text{N}$",
+        "$200\\ \\text{N}$",
+        "$300\\ \\text{N}$",
+        "$600\\ \\text{N}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Take torques about B to eliminate the unknown reaction there.",
+        "steps": [
+          "The beam's weight acts at its centre, $2\\ \\text{m}$ from B. The load is $3\\ \\text{m}$ from B.",
+          "Torques about B: $R_A \\times 4 = 200 \\times 2 + 400 \\times 3 = 1600$.",
+          "$R_A = 400\\ \\text{N}$. As a check, $R_B = 600 - 400 = 200\\ \\text{N}$."
+        ],
+        "final_answer": "Option (1): $400\\ \\text{N}$",
+        "why_not_others": "$200\\ \\text{N}$ is the reaction at B. $300\\ \\text{N}$ comes from ignoring the beam's weight or from sharing the load equally. $600\\ \\text{N}$ is the total weight.",
+        "common_trap": "Measuring the load's moment arm from the wrong support, or forgetting the beam's own weight.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Rigid body acted on by a couple"
+          },
+          {
+            "label": "B",
+            "text": "Rigid body suspended from a point and at rest"
+          },
+          {
+            "label": "C",
+            "text": "Lever with effort arm longer than load arm"
+          },
+          {
+            "label": "D",
+            "text": "Net force is zero and net torque about one point is zero"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Centre of gravity lies vertically below the point of suspension"
+          },
+          {
+            "label": "II",
+            "text": "Net torque is zero about every point"
+          },
+          {
+            "label": "III",
+            "text": "Mechanical advantage greater than 1"
+          },
+          {
+            "label": "IV",
+            "text": "Translational equilibrium but not rotational equilibrium"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-I, D-II",
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-I, C-III, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Conditions for equilibrium and lever principles.",
+        "steps": [
+          "A couple has zero net force but non-zero torque, so A-IV.",
+          "A suspended body at rest has its CG vertically below the point of suspension, so B-I.",
+          "M.A. $= \\frac{d_{effort}}{d_{load}} > 1$, so C-III.",
+          "With zero net force, zero torque about one point means zero torque about every point, so D-II."
+        ],
+        "final_answer": "Option (4): A-IV, B-I, C-III, D-II",
+        "why_not_others": "Options 1, 2 and 3 each mismatch at least two pairs. For example, option 1 swaps A and D.",
+        "common_trap": "Thinking a couple gives full equilibrium because its forces cancel.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the equilibrium of rigid bodies are correct?",
+      "statements": {
+        "A": "If the net external force on a rigid body is zero and the net torque about one point is zero, then the net torque about every point is zero.",
+        "B": "A rigid body in translational equilibrium must also be in rotational equilibrium.",
+        "C": "In a uniform gravitational field, the weight of a body acts at its centre of gravity, which coincides with its centre of mass.",
+        "D": "The mechanical advantage of a lever is less than 1 when its effort arm is longer than its load arm.",
+        "E": "If the net torque on a rigid body is zero, the net force on it must also be zero."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and E only",
+        "A and C only",
+        "A, B and C only",
+        "C and D only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Translational and rotational equilibrium are independent conditions.",
+        "steps": [
+          "A is true: with zero net force, the torque is the same about every point.",
+          "B is false: a couple gives translational equilibrium without rotational equilibrium.",
+          "C is true for a uniform field.",
+          "D is false: M.A. $= \\frac{d_{effort}}{d_{load}} > 1$ when the effort arm is longer.",
+          "E is false: a body can be in rotational equilibrium without being in translational equilibrium."
+        ],
+        "final_answer": "Option (2): A and C only",
+        "why_not_others": "Option 1 includes the false E. Option 3 includes the false B. Option 4 includes the false D and omits A.",
+        "common_trap": "Assuming one equilibrium condition implies the other.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

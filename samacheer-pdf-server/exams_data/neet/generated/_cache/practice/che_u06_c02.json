@@ -1,0 +1,629 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "For which of the following equilibria is $K_p$ equal to $K_c$ at all temperatures?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2SO_2(g) + O_2(g) \\rightleftharpoons 2SO_3(g)$",
+        "$PCl_5(g) \\rightleftharpoons PCl_3(g) + Cl_2(g)$",
+        "$N_2(g) + O_2(g) \\rightleftharpoons 2NO(g)$",
+        "$C(s) + CO_2(g) \\rightleftharpoons 2CO(g)$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$K_p = K_c(RT)^{\\Delta n_g}$. Therefore $K_p = K_c$ only when $\\Delta n_g = 0$, counting gaseous species only.",
+        "steps": [
+          "For $2SO_2 + O_2 \\rightleftharpoons 2SO_3$: $\\Delta n_g = 2 - 3 = -1$.",
+          "For $PCl_5 \\rightleftharpoons PCl_3 + Cl_2$: $\\Delta n_g = 2 - 1 = +1$.",
+          "For $N_2 + O_2 \\rightleftharpoons 2NO$: $\\Delta n_g = 2 - 2 = 0$, so $K_p = K_c$.",
+          "For $C(s) + CO_2(g) \\rightleftharpoons 2CO(g)$: $\\Delta n_g = 2 - 1 = +1$, because solid carbon is not counted."
+        ],
+        "final_answer": "Option (3): $N_2(g) + O_2(g) \\rightleftharpoons 2NO(g)$",
+        "why_not_others": "Options (1), (2) and (4) all have $\\Delta n_g \\neq 0$, so $K_p \\neq K_c$.",
+        "common_trap": "Counting solid carbon as a reactant gives $\\Delta n_g = 0$ for option (4). Solids are never counted in $\\Delta n_g$.",
+        "time_saving_tip": "Count only the (g) coefficients on each side."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "For the equilibrium $N_2O_4(g) \\rightleftharpoons 2NO_2(g)$, $K_c = 0.020$ mol L$^{-1}$ at 500 K. What is $K_p$ at the same temperature? (Take $R = 0.0821$ L atm K$^{-1}$ mol$^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.87 \\times 10^{-4}$ atm",
+        "$0.020$ atm",
+        "$0.821$ atm",
+        "$33.7$ atm"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$K_p = K_c(RT)^{\\Delta n_g}$",
+        "steps": [
+          "$\\Delta n_g = 2 - 1 = 1$.",
+          "$RT = 0.0821 \\times 500 = 41.05$ L atm mol$^{-1}$.",
+          "$K_p = 0.020 \\times 41.05 = 0.821$ atm."
+        ],
+        "final_answer": "Option (3): $0.821$ atm",
+        "why_not_others": "$4.87 \\times 10^{-4}$ comes from dividing by $RT$. $0.020$ assumes $K_p = K_c$. $33.7$ uses $(RT)^2$, i.e. takes $\\Delta n_g = 2$.",
+        "common_trap": "Taking $\\Delta n_g$ as the product coefficient (2) instead of the difference (1).",
+        "time_saving_tip": "Since $\\Delta n_g > 0$ and $RT > 1$, $K_p$ must exceed $K_c$. This rules out options (1) and (2) at once."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "$PCl_5(g)$ dissociates as $PCl_5(g) \\rightleftharpoons PCl_3(g) + Cl_2(g)$. At a certain temperature, its degree of dissociation is 0.5 when the total equilibrium pressure is 3 atm. What is $K_p$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.75$ atm",
+        "$1.5$ atm",
+        "$2.0$ atm",
+        "$1.0$ atm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For $PCl_5$ dissociation, $K_p = \\frac{\\alpha^2 P}{1-\\alpha^2}$.",
+        "steps": [
+          "Start with 1 mol $PCl_5$. At equilibrium there are $(1-\\alpha)$ mol $PCl_5$, $\\alpha$ mol $PCl_3$ and $\\alpha$ mol $Cl_2$, so total moles $= 1+\\alpha$.",
+          "Using partial pressures from mole fractions, $K_p = \\frac{\\alpha^2 P}{(1-\\alpha)(1+\\alpha)} = \\frac{\\alpha^2 P}{1-\\alpha^2}$.",
+          "$K_p = \\frac{(0.25)(3)}{1 - 0.25} = \\frac{0.75}{0.75} = 1.0$ atm."
+        ],
+        "final_answer": "Option (4): $1.0$ atm",
+        "why_not_others": "$0.75$ atm omits the denominator. $1.5$ atm uses $(1-\\alpha)$ instead of $(1-\\alpha^2)$. $2.0$ atm uses $\\alpha$ instead of $\\alpha^2$ in the numerator.",
+        "common_trap": "Forgetting that the total moles change to $1+\\alpha$, which gives the wrong denominator.",
+        "time_saving_tip": "Substitute directly into the standard formula."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For the equilibrium $NH_4HS(s) \\rightleftharpoons NH_3(g) + H_2S(g)$, $\\Delta n_g = 1$.",
+        "R": "Pure solids are not counted in $\\Delta n_g$; only gaseous species are considered."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\Delta n_g$ = moles of gaseous products minus moles of gaseous reactants.",
+        "steps": [
+          "The gaseous products are $NH_3$ and $H_2S$, giving 2 mol.",
+          "There are no gaseous reactants, because $NH_4HS$ is a solid.",
+          "So $\\Delta n_g = 2 - 0 = 2$, not 1. A is false.",
+          "R correctly states that solids are excluded. R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Counting solid $NH_4HS$ as 1 mol of reactant, which gives $2 - 1 = 1$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For the equilibrium $2NO_2(g) \\rightleftharpoons N_2O_4(g)$, the units of $K_c$ are mol L$^{-1}$.",
+        "II": "For the equilibrium $N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g)$ at 500 K, $K_p$ is greater than $K_c$ (with $p$ in atm and $R = 0.0821$ L atm K$^{-1}$ mol$^{-1}$)."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The units of $K_c$ are $(mol\\,L^{-1})^{\\Delta n}$, and $K_p = K_c(RT)^{\\Delta n_g}$.",
+        "steps": [
+          "Statement I: $\\Delta n = 1 - 2 = -1$, so the units are $(mol\\,L^{-1})^{-1}$ = L mol$^{-1}$. Statement I is incorrect.",
+          "Statement II: $\\Delta n_g = 2 - 4 = -2$, so $K_p = K_c(RT)^{-2}$.",
+          "$RT = 0.0821 \\times 500 = 41.05 > 1$, so $(RT)^{-2} < 1$ and $K_p < K_c$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements contain errors: the sign of $\\Delta n$ in I and the direction of the inequality in II.",
+        "common_trap": "Writing $\\Delta n$ as reactants minus products, which flips the sign.",
+        "time_saving_tip": "When $RT > 1$, a negative $\\Delta n_g$ always gives $K_p < K_c$."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "The standard Gibbs energy change, $\\Delta G^\\circ$, of a reaction is positive at a given temperature. Which statement about its equilibrium constant $K$ at that temperature is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$K > 1$ and products predominate at equilibrium",
+        "$K = 1$ and reactants and products are equally favoured",
+        "$K < 1$ and reactants predominate at equilibrium",
+        "$K < 1$ and products predominate at equilibrium"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\Delta G^\\circ = -RT\\ln K$",
+        "steps": [
+          "If $\\Delta G^\\circ > 0$, then $\\ln K < 0$.",
+          "So $K < 1$.",
+          "With $K < 1$, reactants predominate at equilibrium."
+        ],
+        "final_answer": "Option (3): $K < 1$ and reactants predominate at equilibrium",
+        "why_not_others": "$K > 1$ requires $\\Delta G^\\circ < 0$. $K = 1$ requires $\\Delta G^\\circ = 0$. When $K < 1$, products cannot predominate.",
+        "common_trap": "Missing the minus sign in $\\Delta G^\\circ = -RT\\ln K$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "The equilibrium constant of a reaction is 10 at 300 K. What is its $\\Delta G^\\circ$? (Take $R = 8.314$ J K$^{-1}$ mol$^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-5.74$ kJ mol$^{-1}$",
+        "$+5.74$ kJ mol$^{-1}$",
+        "$-2.49$ kJ mol$^{-1}$",
+        "$-0.517$ kJ mol$^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\Delta G^\\circ = -2.303RT\\log K$",
+        "steps": [
+          "$\\log 10 = 1$.",
+          "$\\Delta G^\\circ = -2.303 \\times 8.314 \\times 300 \\times 1$ J mol$^{-1}$.",
+          "$= -5744$ J mol$^{-1}$, which is $-5.74$ kJ mol$^{-1}$."
+        ],
+        "final_answer": "Option (1): $-5.74$ kJ mol$^{-1}$",
+        "why_not_others": "$+5.74$ has the wrong sign. $-2.49$ omits the factor 2.303. $-0.517$ uses $T = 27$ instead of 300 K.",
+        "common_trap": "Dropping the minus sign, or using $\\log K$ without the 2.303 factor.",
+        "time_saving_tip": "$K > 1$ means $\\Delta G^\\circ$ must be negative, which removes option (2) immediately."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "For a reaction, $K = 4.0$ at temperature $T$. At a particular instant, the reaction quotient of the mixture is $Q = 10$ at the same temperature. Which statement is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\Delta G < 0$ and the reaction proceeds in the forward direction",
+        "$\\Delta G = 0$ and the system is at equilibrium",
+        "$\\Delta G^\\circ$ is positive, so reactants predominate at equilibrium",
+        "$\\Delta G > 0$ and the net reaction proceeds in the reverse direction until $Q = K$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\Delta G = \\Delta G^\\circ + RT\\ln Q = RT\\ln(Q/K)$",
+        "steps": [
+          "Since $\\Delta G^\\circ = -RT\\ln K$, we get $\\Delta G = RT\\ln(Q/K)$.",
+          "$Q/K = 10/4 = 2.5 > 1$, so $\\Delta G > 0$.",
+          "The reverse reaction is spontaneous and continues until $Q$ falls to $K$, where $\\Delta G = 0$."
+        ],
+        "final_answer": "Option (4): $\\Delta G > 0$ and the net reaction proceeds in the reverse direction until $Q = K$",
+        "why_not_others": "Option (1) has the wrong sign of $\\Delta G$. Option (2) is wrong because $Q \\neq K$. Option (3) is wrong because $K = 4 > 1$ means $\\Delta G^\\circ < 0$.",
+        "common_trap": "Confusing the sign of $\\Delta G$ (which depends on $Q$) with the sign of $\\Delta G^\\circ$ (which depends on $K$).",
+        "time_saving_tip": "Compare $Q$ with $K$: if $Q > K$, the reaction goes in reverse."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\Delta G^\\circ < 0$"
+          },
+          {
+            "label": "B",
+            "text": "$\\Delta G^\\circ = 0$"
+          },
+          {
+            "label": "C",
+            "text": "$\\Delta G = 0$"
+          },
+          {
+            "label": "D",
+            "text": "$\\Delta G > 0$ at a given instant"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$K = 1$"
+          },
+          {
+            "label": "II",
+            "text": "System is at equilibrium, $Q = K$"
+          },
+          {
+            "label": "III",
+            "text": "$K > 1$, products predominate"
+          },
+          {
+            "label": "IV",
+            "text": "Reverse reaction is spontaneous"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\Delta G^\\circ$ fixes the value of $K$, while $\\Delta G$ gives the instantaneous direction of the reaction.",
+        "steps": [
+          "A: $\\Delta G^\\circ < 0$ gives $K > 1$ (III).",
+          "B: $\\Delta G^\\circ = 0$ gives $K = 1$ (I).",
+          "C: $\\Delta G = 0$ means the system is at equilibrium with $Q = K$ (II).",
+          "D: $\\Delta G > 0$ means the reverse reaction is spontaneous (IV)."
+        ],
+        "final_answer": "Option (3): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option (1) swaps A and B. Option (2) confuses $\\Delta G^\\circ = 0$ with $\\Delta G = 0$. Option (4) swaps A and D.",
+        "common_trap": "Treating $\\Delta G^\\circ = 0$ and $\\Delta G = 0$ as the same condition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Gibbs energy and equilibrium are correct?",
+      "statements": {
+        "A": "At equilibrium, $\\Delta G = 0$ and $Q = K$.",
+        "B": "$\\Delta G^\\circ$ is zero for every reaction at equilibrium.",
+        "C": "Since $\\Delta G^\\circ = \\Delta H^\\circ - T\\Delta S^\\circ$, the equilibrium constant of a reaction changes with temperature.",
+        "D": "If $K = 1$ for a reaction at 298 K, then $\\Delta G^\\circ = 0$ at 298 K.",
+        "E": "A reaction with $\\Delta G^\\circ > 0$ can never proceed in the forward direction, whatever the composition of the mixture."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and C only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\Delta G = \\Delta G^\\circ + RT\\ln Q$. At equilibrium, $\\Delta G = 0$ and $\\Delta G^\\circ = -RT\\ln K$.",
+        "steps": [
+          "A is correct by definition of equilibrium.",
+          "B is wrong. At equilibrium $\\Delta G = 0$, but $\\Delta G^\\circ = -RT\\ln K$ is zero only when $K = 1$.",
+          "C is correct, because $\\Delta G^\\circ$ depends on $T$ and therefore so does $K$.",
+          "D is correct, since $\\ln 1 = 0$.",
+          "E is wrong. If $Q$ is small enough, $RT\\ln Q$ makes $\\Delta G < 0$, so the forward reaction occurs."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Options (2), (3) and (4) each include the false statement B or E.",
+        "common_trap": "Equating $\\Delta G^\\circ = 0$ with the condition for equilibrium.",
+        "time_saving_tip": "Rejecting B and E leaves only one possible combination."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "What is the effect of adding a catalyst to a reaction mixture that is already at equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The equilibrium shifts in the forward direction",
+        "The equilibrium constant increases",
+        "The equilibrium constant decreases",
+        "The equilibrium position is unchanged; a catalyst only helps equilibrium to be attained faster"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A catalyst speeds up the forward and reverse reactions equally.",
+        "steps": [
+          "A catalyst does not shift the position of equilibrium.",
+          "Only temperature changes $K$, so the equilibrium constant is unaffected.",
+          "A catalyst only reduces the time needed to reach equilibrium."
+        ],
+        "final_answer": "Option (4): The equilibrium position is unchanged; a catalyst only helps equilibrium to be attained faster",
+        "why_not_others": "A catalyst causes no shift in either direction and does not change $K$.",
+        "common_trap": "Assuming that a faster reaction means more product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "Argon gas is added at constant pressure to an equilibrium mixture of $N_2O_4(g) \\rightleftharpoons 2NO_2(g)$. What happens?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "There is no effect, because argon does not take part in the reaction",
+        "The equilibrium shifts backward, forming more $N_2O_4$",
+        "The equilibrium shifts forward, so the dissociation of $N_2O_4$ increases",
+        "The equilibrium constant increases"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "An inert gas added at constant pressure shifts the equilibrium towards more gaseous moles.",
+        "steps": [
+          "At constant pressure, the volume increases and the partial pressures of the reacting gases fall.",
+          "The system responds by shifting to the side with more gaseous moles. Here $\\Delta n_g = +1$, so the shift is towards $NO_2$.",
+          "$K$ is unchanged, because the temperature is constant."
+        ],
+        "final_answer": "Option (3): The equilibrium shifts forward, so the dissociation of $N_2O_4$ increases",
+        "why_not_others": "'No effect' applies only at constant volume. A backward shift is the wrong direction. $K$ changes only with temperature.",
+        "common_trap": "Applying the constant-volume result (no effect) to a constant-pressure situation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "The equilibrium constant of a reaction increases tenfold when the temperature is raised from 300 K to 400 K. What is $\\Delta H^\\circ$ of the reaction? (Take $R = 8.314$ J K$^{-1}$ mol$^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-23.0$ kJ mol$^{-1}$",
+        "$+9.98$ kJ mol$^{-1}$",
+        "$+5.74$ kJ mol$^{-1}$",
+        "$+23.0$ kJ mol$^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "van't Hoff equation: $\\log\\frac{K_2}{K_1} = \\frac{\\Delta H^\\circ}{2.303R}\\left(\\frac{1}{T_1}-\\frac{1}{T_2}\\right)$",
+        "steps": [
+          "$\\log 10 = 1$.",
+          "$\\frac{1}{300} - \\frac{1}{400} = \\frac{1}{1200}$ K$^{-1}$.",
+          "$\\Delta H^\\circ = 2.303 \\times 8.314 \\times 1200 = 22976$ J mol$^{-1}$, which is about $+23.0$ kJ mol$^{-1}$."
+        ],
+        "final_answer": "Option (4): $+23.0$ kJ mol$^{-1}$",
+        "why_not_others": "$-23.0$ has the wrong sign; $K$ rises with temperature, so the reaction is endothermic. $9.98$ omits 2.303. $5.74$ uses only $1/300$ instead of the difference of reciprocals.",
+        "common_trap": "Getting the sign wrong. An increase in $K$ with temperature means the reaction is endothermic.",
+        "time_saving_tip": "Since $K$ increases with $T$, $\\Delta H^\\circ$ must be positive, which removes option (1)."
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For $N_2(g) + O_2(g) \\rightleftharpoons 2NO(g)$, increasing the pressure by reducing the volume does not change the position of equilibrium.",
+        "R": "The formation of $NO$ from $N_2$ and $O_2$ is endothermic, so high temperature favours it."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Pressure has no effect on the position of equilibrium when $\\Delta n_g = 0$.",
+        "steps": [
+          "$\\Delta n_g = 2 - 2 = 0$, so pressure does not shift the equilibrium. A is true.",
+          "The reaction is endothermic, and high temperature favours $NO$. R is true.",
+          "A depends on $\\Delta n_g = 0$, not on the enthalpy change. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) are out. R gives a temperature effect, which does not explain a pressure effect, so option (1) is out.",
+        "common_trap": "Choosing option (1) simply because both statements are true and describe the same reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Compressing an equilibrium mixture of $N_2$, $H_2$ and $NH_3$ at constant temperature increases the yield of $NH_3$ and also increases the value of $K$.",
+        "II": "Adding an inert gas at constant volume to an equilibrium mixture of $N_2$, $H_2$ and $NH_3$ leaves the amount of $NH_3$ unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Pressure changes shift the position of equilibrium but leave $K$ unchanged. An inert gas added at constant volume has no effect.",
+        "steps": [
+          "Statement I: compression does shift the equilibrium towards $NH_3$, since $\\Delta n_g = -2$.",
+          "However, $K$ changes only with temperature, so the claim that $K$ increases is wrong. Statement I is incorrect.",
+          "Statement II: at constant volume, an inert gas does not change the partial pressures of the reacting gases, so there is no shift. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I is only half true, which makes it incorrect overall. Statement II is fully correct.",
+        "common_trap": "Accepting Statement I because its first part (higher yield) is true.",
+        "time_saving_tip": "Any claim that pressure changes $K$ is automatically false."
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "Which of the following is a weak electrolyte in aqueous solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$HCN$",
+        "$KOH$",
+        "$H_2SO_4$",
+        "$NaCl$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Weak electrolytes ionise only partially, so $\\alpha \\ll 1$.",
+        "steps": [
+          "$HCN$ ionises only partially, so it is a weak electrolyte.",
+          "$KOH$ (a strong base), $H_2SO_4$ (a strong acid) and $NaCl$ (a salt) are almost completely ionised."
+        ],
+        "final_answer": "Option (1): $HCN$",
+        "why_not_others": "$KOH$, $H_2SO_4$ and $NaCl$ are strong electrolytes with $\\alpha \\approx 1$.",
+        "common_trap": "Thinking that all acids are strong electrolytes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A weak monobasic acid has an ionisation constant of $2.0 \\times 10^{-5}$. What is its percentage degree of ionisation in a 0.2 M solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.01\\%$",
+        "$0.2\\%$",
+        "$10\\%$",
+        "$1\\%$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Ostwald's dilution law: $\\alpha = \\sqrt{K/c}$ when $\\alpha \\ll 1$.",
+        "steps": [
+          "$K/c = \\frac{2.0 \\times 10^{-5}}{0.2} = 1.0 \\times 10^{-4}$.",
+          "$\\alpha = \\sqrt{1.0 \\times 10^{-4}} = 0.01$.",
+          "Percentage ionisation $= 0.01 \\times 100 = 1\\%$."
+        ],
+        "final_answer": "Option (4): $1\\%$",
+        "why_not_others": "$0.01\\%$ uses $K/c$ without taking the square root. $0.2\\%$ uses $\\sqrt{Kc}$. $10\\%$ comes from a slip in the exponent while taking the square root.",
+        "common_trap": "Forgetting the square root in $\\alpha = \\sqrt{K/c}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A solution of a weak monobasic acid is diluted from 0.1 M to 0.001 M at constant temperature. How does its degree of ionisation change? (Assume $\\alpha \\ll 1$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It increases 10 times",
+        "It increases 100 times",
+        "It decreases 10 times",
+        "It remains unchanged because $K$ is constant"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\alpha = \\sqrt{K/c}$, so $\\alpha \\propto 1/\\sqrt{c}$.",
+        "steps": [
+          "The concentration decreases by a factor of 100.",
+          "$\\alpha$ therefore increases by $\\sqrt{100} = 10$ times.",
+          "$K$ stays constant because the temperature is constant, but $\\alpha$ changes."
+        ],
+        "final_answer": "Option (1): It increases 10 times",
+        "why_not_others": "100 times ignores the square root. 'Decreases' contradicts Ostwald's dilution law. A constant $K$ does not mean a constant $\\alpha$.",
+        "common_trap": "Assuming $\\alpha$ is inversely proportional to $c$ rather than to $\\sqrt{c}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$HNO_3$"
+          },
+          {
+            "label": "B",
+            "text": "$CH_3COOH$"
+          },
+          {
+            "label": "C",
+            "text": "Glucose"
+          },
+          {
+            "label": "D",
+            "text": "$KOH$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Strong acid, $\\alpha \\approx 1$"
+          },
+          {
+            "label": "II",
+            "text": "Weak acid, $\\alpha \\ll 1$"
+          },
+          {
+            "label": "III",
+            "text": "Non-electrolyte"
+          },
+          {
+            "label": "IV",
+            "text": "Strong base, $\\alpha \\approx 1$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Electrolytes are classified by their degree of ionisation.",
+        "steps": [
+          "$HNO_3$ is a strong acid (I).",
+          "$CH_3COOH$ is a weak acid (II).",
+          "Glucose gives no ions, so it is a non-electrolyte (III).",
+          "$KOH$ is a strong base (IV)."
+        ],
+        "final_answer": "Option (4): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option (1) swaps the strong and weak acids. Option (2) wrongly calls acetic acid a non-electrolyte. Option (3) swaps $HNO_3$ and $KOH$.",
+        "common_trap": "Treating acetic acid as a strong acid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about electrolytes and ionisation are correct?",
+      "statements": {
+        "A": "Ostwald's dilution law applies equally to strong and weak electrolytes.",
+        "B": "The degree of ionisation of acetic acid increases on dilution.",
+        "C": "Ionisation of a weak electrolyte is generally endothermic, so its degree of ionisation increases with rise in temperature.",
+        "D": "An ionic equilibrium between ions and unionised molecules exists in an aqueous solution of $NaCl$.",
+        "E": "For a weak binary electrolyte with $\\alpha \\ll 1$, $K \\approx c\\alpha^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only",
+        "B, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Ostwald's dilution law and ionic equilibrium apply only to weak electrolytes.",
+        "steps": [
+          "A is false. The law is valid only for weak electrolytes.",
+          "B is true. $\\alpha$ increases on dilution.",
+          "C is true. Ionisation is endothermic, so $K$ and $\\alpha$ rise with temperature.",
+          "D is false. $NaCl$ is a strong electrolyte that is almost completely ionised, so there is no ionic equilibrium.",
+          "E is true. This is the approximate form of Ostwald's dilution law."
+        ],
+        "final_answer": "Option (4): B, C and E only",
+        "why_not_others": "Options (1), (2) and (3) each include the false statement A or D.",
+        "common_trap": "Applying Ostwald's dilution law or ionic equilibrium to strong electrolytes.",
+        "time_saving_tip": "Rejecting A and D leaves only option (4)."
+      }
+    }
+  ]
+}

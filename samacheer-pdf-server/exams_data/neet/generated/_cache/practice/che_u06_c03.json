@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "Which of the following species is a Lewis acid but NOT a Bronsted acid?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NH_3$",
+        "$H_2O$",
+        "$HCl$",
+        "$BF_3$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A Lewis acid accepts an electron pair. A Bronsted acid donates a proton. $BF_3$ is electron deficient and has no proton to donate.",
+        "steps": [
+          "A Bronsted acid must have an ionisable $H^+$ to donate.",
+          "$BF_3$ has no hydrogen, so it cannot be a Bronsted acid.",
+          "Boron in $BF_3$ is electron deficient and accepts an electron pair, so $BF_3$ is a Lewis acid."
+        ],
+        "final_answer": "Option (4): $BF_3$",
+        "why_not_others": "$NH_3$ has a lone pair, so it is a Lewis base. $H_2O$ is a Lewis base and an amphiprotic Bronsted species. $HCl$ is a Bronsted acid because it donates $H^+$.",
+        "common_trap": "Assuming every Lewis acid must also be a proton donor.",
+        "time_saving_tip": "Look for an electron-deficient species that contains no hydrogen."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "In the equilibrium $NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-$, the conjugate acid-base pairs (written as acid/base) are",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NH_4^+/OH^-$ and $H_2O/NH_3$",
+        "$NH_4^+/NH_3$ and $H_2O/OH^-$",
+        "$NH_3/H_2O$ and $NH_4^+/OH^-$",
+        "$NH_4^+/H_2O$ and $NH_3/OH^-$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The two members of a conjugate pair differ by exactly one $H^+$.",
+        "steps": [
+          "$NH_3$ accepts a proton and becomes $NH_4^+$, so the pair is $NH_4^+/NH_3$.",
+          "$H_2O$ donates a proton and becomes $OH^-$, so the pair is $H_2O/OH^-$."
+        ],
+        "final_answer": "Option (2): $NH_4^+/NH_3$ and $H_2O/OH^-$",
+        "why_not_others": "In each of the other options, the species paired together do not differ by a single proton.",
+        "common_trap": "Pairing the two acids together, or pairing the two bases together.",
+        "time_saving_tip": "Check that the two members of each pair differ by exactly one $H^+$."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "Which of the following species can act both as a Bronsted acid and as a Bronsted base?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$HCO_3^-$",
+        "$CO_3^{2-}$",
+        "$NH_4^+$",
+        "$BF_3$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "An amphiprotic species can both donate and accept a proton.",
+        "steps": [
+          "$HCO_3^-$ can lose $H^+$ to form $CO_3^{2-}$, so it acts as an acid.",
+          "$HCO_3^-$ can also gain $H^+$ to form $H_2CO_3$, so it acts as a base.",
+          "Therefore $HCO_3^-$ is amphiprotic."
+        ],
+        "final_answer": "Option (1): $HCO_3^-$",
+        "why_not_others": "$CO_3^{2-}$ has no proton to donate, so it acts only as a base. $NH_4^+$ acts as a proton donor here. $BF_3$ has no protons and acts as a Lewis acid.",
+        "common_trap": "Choosing $CO_3^{2-}$ simply because it belongs to the carbonate system.",
+        "time_saving_tip": "Amphiprotic species usually carry both a removable H and a negative charge, for example $HCO_3^-$, $HSO_4^-$ and $H_2PO_4^-$."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "$NH_3$ behaves as a Bronsted base in water.",
+        "R": "Every Bronsted base is also a Lewis base."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A Bronsted base is defined as a proton acceptor. The Lewis relationship is a general fact about bases.",
+        "steps": [
+          "$NH_3$ accepts $H^+$ from water to form $NH_4^+$, so A is true.",
+          "A proton acceptor must donate an electron pair to the proton, so every Bronsted base is a Lewis base. R is true.",
+          "A is true because $NH_3$ accepts a proton. R is only a general relation between the two concepts and does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out options 3 and 4. R does not give the reason $NH_3$ is a Bronsted base, which rules out option 1.",
+        "common_trap": "Accepting any true and related Reason as the explanation.",
+        "time_saving_tip": "Ask whether R answers the question 'why A?'. Here the real reason is proton acceptance."
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The conjugate base of a strong acid such as $HCl$ is a weak base.",
+        "II": "Since $Ag^+$ accepts electron pairs, it acts both as a Lewis acid and as a Bronsted acid."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A strong acid has a weak conjugate base. Not every Lewis acid is a Bronsted acid.",
+        "steps": [
+          "$HCl$ is a strong acid, so $Cl^-$ is a weak conjugate base. Statement I is correct.",
+          "$Ag^+$ accepts electron pairs, so it is a Lewis acid.",
+          "$Ag^+$ has no proton to donate, so it is not a Bronsted acid. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I is correct and Statement II is wrong, so all the other combinations fail.",
+        "common_trap": "Believing that every Lewis acid is also a Bronsted acid.",
+        "time_saving_tip": "A Bronsted acid must contain a donatable H. Metal cations do not have one."
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "A weak monobasic acid $HA$ has $K_a = 1.0\\times10^{-5}$. What is the hydrogen ion concentration in its $0.1$ M aqueous solution (assume $\\alpha \\ll 1$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\times10^{-6}$ M",
+        "$1.0\\times10^{-3}$ M",
+        "$1.0\\times10^{-2}$ M",
+        "$3.16\\times10^{-3}$ M"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a weak acid with $\\alpha \\ll 1$, $[H^+] = \\sqrt{K_a c}$.",
+        "steps": [
+          "$K_a c = 1.0\\times10^{-5} \\times 0.1 = 1.0\\times10^{-6}$",
+          "$[H^+] = \\sqrt{1.0\\times10^{-6}} = 1.0\\times10^{-3}$ M"
+        ],
+        "final_answer": "Option (2): $1.0\\times10^{-3}$ M",
+        "why_not_others": "$1.0\\times10^{-6}$ M is $K_a c$ without the square root. $1.0\\times10^{-2}$ M is $\\sqrt{K_a/c}$, which is $\\alpha$, not $[H^+]$. $3.16\\times10^{-3}$ M is $\\sqrt{K_a}$, which ignores the concentration.",
+        "common_trap": "Confusing $\\alpha = \\sqrt{K_a/c}$ with $[H^+] = \\sqrt{K_a c}$.",
+        "time_saving_tip": "Add the exponents: $-5 + (-1) = -6$, then halve it to get $10^{-3}$."
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "The ionisation constant of a weak acid $HA$ is $2\\times10^{-5}$ at 298 K. What is the ionisation constant $K_b$ of its conjugate base $A^-$ at the same temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{-19}$",
+        "$5\\times10^{4}$",
+        "$5\\times10^{-10}$",
+        "$5\\times10^{-9}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a conjugate acid-base pair, $K_a K_b = K_w = 10^{-14}$ at 298 K.",
+        "steps": [
+          "$K_b = K_w/K_a = 10^{-14}/(2\\times10^{-5})$",
+          "$K_b = 0.5\\times10^{-9} = 5\\times10^{-10}$"
+        ],
+        "final_answer": "Option (3): $5\\times10^{-10}$",
+        "why_not_others": "$2\\times10^{-19}$ comes from multiplying $K_a$ by $K_w$. $5\\times10^{4}$ is $1/K_a$. $5\\times10^{-9}$ is an exponent error made when converting $0.5\\times10^{-9}$.",
+        "common_trap": "Writing $0.5\\times10^{-9}$ as $5\\times10^{-9}$.",
+        "time_saving_tip": "$1/2 = 0.5$, so shift the exponent down by one: $5\\times10^{-10}$."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "Which of the following represents the correct order of increasing acid strength of the hydrides of second-period elements?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$HF < H_2O < NH_3 < CH_4$",
+        "$NH_3 < CH_4 < H_2O < HF$",
+        "$CH_4 < NH_3 < H_2O < HF$",
+        "$CH_4 < H_2O < NH_3 < HF$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Across a period, acid strength of the hydrides increases with the electronegativity of the central atom.",
+        "steps": [
+          "Electronegativity increases in the order $C < N < O < F$.",
+          "The more electronegative the central atom, the more polar the X-H bond and the more easily $H^+$ is released.",
+          "Order of increasing acid strength: $CH_4 < NH_3 < H_2O < HF$."
+        ],
+        "final_answer": "Option (3): $CH_4 < NH_3 < H_2O < HF$",
+        "why_not_others": "Option 1 is the reverse order. Options 2 and 4 misplace $NH_3$ relative to $CH_4$ or $H_2O$.",
+        "common_trap": "Applying the down-the-group rule (bond strength) across a period, where electronegativity decides acidity.",
+        "time_saving_tip": "Within one period, simply follow the electronegativity order."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$K_a$ of a weak acid in terms of $c$ and $\\alpha$"
+          },
+          {
+            "label": "B",
+            "text": "$[H^+]$ of a dilute weak acid ($\\alpha \\ll 1$)"
+          },
+          {
+            "label": "C",
+            "text": "Degree of ionisation of a dilute weak acid ($\\alpha \\ll 1$)"
+          },
+          {
+            "label": "D",
+            "text": "$[OH^-]$ of a dilute weak base"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\sqrt{K_b c}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{c\\alpha^2}{1-\\alpha}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\sqrt{K_a/c}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\sqrt{K_a c}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "These are the standard expressions for the ionisation of weak acids and weak bases.",
+        "steps": [
+          "$K_a = c\\alpha^2/(1-\\alpha)$, so A-II.",
+          "$[H^+] = \\sqrt{K_a c}$, so B-IV.",
+          "$\\alpha = \\sqrt{K_a/c}$, so C-III.",
+          "$[OH^-] = \\sqrt{K_b c}$, so D-I."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 swaps the expressions for $[H^+]$ and $\\alpha$. Option 3 swaps A and B. Option 4 assigns the weak-base expression to $\\alpha$.",
+        "common_trap": "Interchanging $\\sqrt{K_a c}$ and $\\sqrt{K_a/c}$.",
+        "time_saving_tip": "$\\alpha$ decreases as $c$ increases, so $c$ must be in the denominator under the root."
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about acid-base ionisation constants are correct?",
+      "statements": {
+        "A": "For $H_3PO_4$, $K_{a1} > K_{a2} > K_{a3}$.",
+        "B": "In an aqueous solution of $H_2S$, $[H^+]$ comes mainly from the first ionisation step.",
+        "C": "An acid with a lower $pK_a$ is a weaker acid.",
+        "D": "For a conjugate acid-base pair at 298 K, $pK_a + pK_b = 14$.",
+        "E": "$HF$ is the strongest hydrohalic acid because fluorine is the most electronegative halogen."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, B, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Covers stepwise ionisation, the meaning of $pK_a$, the conjugate-pair relation and acid strength trends down a group.",
+        "steps": [
+          "A is true: removing $H^+$ from an anion is harder, so successive constants decrease.",
+          "B is true because $K_{a1} \\gg K_{a2}$.",
+          "C is false: a lower $pK_a$ means a larger $K_a$, which means a stronger acid.",
+          "D is true because $K_a K_b = K_w$.",
+          "E is false: down a group, bond strength decides acidity, so $HI$ is the strongest hydrohalic acid."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Every other combination includes C or E, both of which are false.",
+        "common_trap": "Using electronegativity to rank the hydrohalic acids, which belong to the same group.",
+        "time_saving_tip": "Spot that C and E are false; only option 1 excludes both."
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "What is the pH of a $1.0\\times10^{-3}$ M aqueous solution of $NaOH$ at 298 K?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "11",
+        "3",
+        "10",
+        "12"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a strong base, $[OH^-]$ equals its concentration, and pH + pOH = 14 at 298 K.",
+        "steps": [
+          "$[OH^-] = 10^{-3}$ M, so pOH = 3.",
+          "pH = 14 - 3 = 11"
+        ],
+        "final_answer": "Option (1): 11",
+        "why_not_others": "3 is the pOH, not the pH. 10 and 12 are arithmetic slips.",
+        "common_trap": "Reporting the pOH as the pH.",
+        "time_saving_tip": "A base must have pH > 7, which immediately rules out 3."
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "$50$ mL of $0.2$ M $HCl$ is mixed with $50$ mL of $0.1$ M $NaOH$ at 298 K. What is the pH of the resulting solution? (Take $\\log 2 = 0.30$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.0",
+        "1.3",
+        "0.7",
+        "2.0"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "When a strong acid and a strong base are mixed, the excess $H^+$ is spread over the total volume.",
+        "steps": [
+          "Millimoles of $H^+$ = 50 × 0.2 = 10. Millimoles of $OH^-$ = 50 × 0.1 = 5.",
+          "Excess $H^+$ = 5 mmol in a total volume of 100 mL, so $[H^+] = 0.05$ M.",
+          "pH = $-\\log(5\\times10^{-2})$ = 2 - 0.70 = 1.3"
+        ],
+        "final_answer": "Option (2): 1.3",
+        "why_not_others": "1.0 comes from dividing the excess by only 50 mL. 0.7 is the pH of 0.2 M HCl with the neutralisation ignored. 2.0 comes from wrongly taking $[H^+] = 0.01$ M.",
+        "common_trap": "Forgetting that the total volume after mixing is 100 mL.",
+        "time_saving_tip": "$\\log 5 = 1 - \\log 2 = 0.70$."
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "The pH of a $1.0\\times10^{-8}$ M aqueous $HCl$ solution at 298 K is approximately",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "8.00",
+        "6.98",
+        "7.00",
+        "7.02"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In very dilute strong acid, the $H^+$ supplied by water is not negligible.",
+        "steps": [
+          "The acid contributes $10^{-8}$ M $H^+$, while water contributes about $10^{-7}$ M.",
+          "Total $[H^+]$ is slightly greater than $10^{-7}$ M, so the pH is just below 7.",
+          "Accurate treatment gives pH ≈ 6.98."
+        ],
+        "final_answer": "Option (2): 6.98",
+        "why_not_others": "8.00 ignores the $H^+$ from water and would make an acid solution basic. 7.00 ignores the acid entirely. 7.02 lies on the basic side.",
+        "common_trap": "Writing pH = 8 by taking $-\\log 10^{-8}$ directly.",
+        "time_saving_tip": "An acid solution can never have pH above 7, so the answer must be slightly below 7."
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "At 350 K, pure water has a pH less than 7 but is still neutral.",
+        "R": "The self-ionisation of water is exothermic, so $K_w$ increases with rise in temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$K_w$ increases with temperature because the ionisation of water is endothermic. Neutrality means $[H^+] = [OH^-]$.",
+        "steps": [
+          "At higher temperature $K_w > 10^{-14}$, so $[H^+] > 10^{-7}$ M and pH < 7.",
+          "$[H^+]$ still equals $[OH^-]$, so the water is neutral. A is true.",
+          "The ionisation is endothermic, not exothermic. If it were exothermic, $K_w$ would decrease on heating. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1, 2 and 4 cannot be correct.",
+        "common_trap": "Equating neutrality with pH 7 at every temperature.",
+        "time_saving_tip": "Since $K_w$ rises with temperature, the forward ionisation must be endothermic."
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At 298 K, a solution of pH 2 has a hydrogen ion concentration 100 times lower than a solution of pH 4.",
+        "II": "On continuous dilution with water at 298 K, an acidic solution eventually becomes basic with pH greater than 7."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "One pH unit corresponds to a 10-fold change in $[H^+]$. Diluting an acid only makes its pH approach 7.",
+        "steps": [
+          "pH 2 means $[H^+] = 10^{-2}$ M and pH 4 means $10^{-4}$ M, so the pH 2 solution has 100 times HIGHER $[H^+]$. Statement I is incorrect.",
+          "On dilution, the pH of an acid rises towards 7 but never exceeds it. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements are false, so every option that calls either one correct is wrong.",
+        "common_trap": "Thinking that a numerically lower pH means a lower $[H^+]$.",
+        "time_saving_tip": "Lower pH always means higher $[H^+]$."
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "When solid sodium acetate is dissolved in an aqueous solution of acetic acid at constant temperature, which of the following occurs?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The pH of the solution decreases",
+        "The pH of the solution increases because the ionisation of acetic acid is suppressed",
+        "The $K_a$ of acetic acid increases",
+        "The $K_a$ of acetic acid decreases"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The common ion effect suppresses the ionisation of a weak electrolyte.",
+        "steps": [
+          "$CH_3COONa$ supplies the common ion $CH_3COO^-$.",
+          "By Le Chatelier's principle, $CH_3COOH \\rightleftharpoons CH_3COO^- + H^+$ shifts to the left.",
+          "$[H^+]$ falls, so the pH rises. $K_a$ stays the same because the temperature is constant."
+        ],
+        "final_answer": "Option (2): The pH of the solution increases because the ionisation of acetic acid is suppressed",
+        "why_not_others": "The pH cannot decrease because $[H^+]$ falls. $K_a$ changes only with temperature, so it neither increases nor decreases.",
+        "common_trap": "Believing that the equilibrium constant changes when a common ion is added.",
+        "time_saving_tip": "A common ion shifts the position of equilibrium, never the value of $K$ at constant temperature."
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "A sparingly soluble salt $MX$ has $K_{sp} = 4\\times10^{-10}$ at 298 K. What is its approximate molar solubility in a $0.02$ M solution of $NaX$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{-5}$ M",
+        "$8\\times10^{-12}$ M",
+        "$2\\times10^{-6}$ M",
+        "$2\\times10^{-8}$ M"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For an AB-type salt in a solution of a common ion, $s \\approx K_{sp}/[\\text{common ion}]$.",
+        "steps": [
+          "The common ion is $X^-$, with $[X^-] = 0.02$ M.",
+          "$s = 4\\times10^{-10}/(2\\times10^{-2}) = 2\\times10^{-8}$ M"
+        ],
+        "final_answer": "Option (4): $2\\times10^{-8}$ M",
+        "why_not_others": "$2\\times10^{-5}$ M is the solubility in pure water, $\\sqrt{K_{sp}}$. $8\\times10^{-12}$ M comes from multiplying instead of dividing. $2\\times10^{-6}$ M is an exponent error.",
+        "common_trap": "Using $\\sqrt{K_{sp}}$ and ignoring the common ion.",
+        "time_saving_tip": "Divide the coefficients and subtract the exponents: $4/2 = 2$ and $-10 - (-2) = -8$."
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "A solution contains $0.1$ M of a weak acid $HA$ ($K_a = 2\\times10^{-5}$) and $0.2$ M of its sodium salt $NaA$. What is the hydrogen ion concentration of the solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\times10^{-5}$ M",
+        "$1.4\\times10^{-3}$ M",
+        "$2\\times10^{-5}$ M",
+        "$1\\times10^{-5}$ M"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a weak acid in the presence of its salt, $[H^+] = K_a[HA]/[A^-]$.",
+        "steps": [
+          "$[H^+] = 2\\times10^{-5} \\times 0.1/0.2$",
+          "$[H^+] = 1\\times10^{-5}$ M"
+        ],
+        "final_answer": "Option (4): $1\\times10^{-5}$ M",
+        "why_not_others": "$4\\times10^{-5}$ M inverts the concentration ratio. $1.4\\times10^{-3}$ M is $\\sqrt{K_a c}$, which ignores the salt. $2\\times10^{-5}$ M ignores the ratio altogether.",
+        "common_trap": "Writing the ratio as $[A^-]/[HA]$ instead of $[HA]/[A^-]$.",
+        "time_saving_tip": "Extra salt suppresses ionisation, so $[H^+]$ must be smaller than $K_a$ when $[A^-] > [HA]$."
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Purification of common salt"
+          },
+          {
+            "label": "B",
+            "text": "Salting out of soap"
+          },
+          {
+            "label": "C",
+            "text": "Precipitation of Group II sulphides"
+          },
+          {
+            "label": "D",
+            "text": "Precipitation of Group III hydroxides"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$HCl$ suppresses the ionisation of $H_2S$"
+          },
+          {
+            "label": "II",
+            "text": "Passing $HCl$ gas through a saturated brine solution"
+          },
+          {
+            "label": "III",
+            "text": "$NH_4Cl$ suppresses the ionisation of $NH_4OH$"
+          },
+          {
+            "label": "IV",
+            "text": "Adding $NaCl$ to the soap solution"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-I, B-IV, C-II, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These are standard applications of the common ion effect.",
+        "steps": [
+          "$NaCl$ is purified by passing $HCl$ gas through brine (common ion $Cl^-$), so A-II.",
+          "Soap is salted out by adding $NaCl$ (common ion $Na^+$), so B-IV.",
+          "Group II sulphides are precipitated by $H_2S$ in acidic medium, where $HCl$ keeps $[S^{2-}]$ low, so C-I.",
+          "Group III hydroxides are precipitated by $NH_4OH$ with $NH_4Cl$, which keeps $[OH^-]$ low, so D-III."
+        ],
+        "final_answer": "Option (1): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option 2 swaps A and B. Option 3 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Confusing the roles of $HCl$ in Group II and $NH_4Cl$ in Group III.",
+        "time_saving_tip": "Group II needs acid, so it pairs with $HCl$. Group III needs $NH_4OH$, so it pairs with $NH_4Cl$."
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the common ion effect are correct?",
+      "statements": {
+        "A": "The common ion effect is an application of Le Chatelier's principle.",
+        "B": "Adding $NaCl$ decreases the solubility of $AgCl$, but the $K_{sp}$ of $AgCl$ remains unchanged.",
+        "C": "Adding $NH_4Cl$ to an $NH_4OH$ solution increases $[OH^-]$.",
+        "D": "Adding a common ion increases the $K_a$ of a weak acid.",
+        "E": "The common ion effect is the basis of buffer action."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, C and D only",
+        "B, C and E only",
+        "A, B, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A common ion shifts the position of equilibrium and suppresses ionisation or solubility. $K$ changes only with temperature.",
+        "steps": [
+          "A is true: adding a common ion shifts the equilibrium according to Le Chatelier's principle.",
+          "B is true: solubility falls, but $K_{sp}$ is constant at a given temperature.",
+          "C is false: $NH_4^+$ suppresses the ionisation of $NH_4OH$, so $[OH^-]$ decreases.",
+          "D is false: $K_a$ does not change.",
+          "E is true: buffer action is based on the common ion effect."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other combination includes C or D, both of which are false.",
+        "common_trap": "Thinking a common ion changes $K_a$ or $K_{sp}$.",
+        "time_saving_tip": "Eliminate any option that contains C or D; only option 1 remains."
+      }
+    }
+  ]
+}

@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "The light year is a unit of",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "time",
+        "velocity",
+        "distance",
+        "luminous intensity"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A light year is the distance light travels in one year. It is a practical unit of astronomical distance.",
+        "steps": [
+          "1 light year $= 9.46 \\times 10^{15}$ m.",
+          "This value is a length, so the light year measures distance."
+        ],
+        "final_answer": "Option (3): distance",
+        "why_not_others": "The word 'year' tempts students to choose time. Velocity would need length per time. Luminous intensity is measured in candela.",
+        "common_trap": "Treating the light year as a unit of time because of the word 'year'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A length measures 50 units when a unit $u$ is used. If a new unit equal to $2.5u$ is chosen, the numerical value of the same length becomes",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "125",
+        "52.5",
+        "47.5",
+        "20"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Since $Q = n_1u_1 = n_2u_2$, the numerical value is inversely proportional to the size of the unit.",
+        "steps": [
+          "$n_2 = \\frac{n_1 u_1}{u_2}$",
+          "$n_2 = \\frac{50 \\times u}{2.5u} = 20$"
+        ],
+        "final_answer": "Option (4): 20",
+        "why_not_others": "125 comes from multiplying by 2.5 instead of dividing. 52.5 and 47.5 come from adding or subtracting 2.5.",
+        "common_trap": "Thinking a bigger unit gives a bigger number.",
+        "time_saving_tip": "Bigger unit means smaller number, so divide."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "Using 1 parsec $\\approx 3.08 \\times 10^{16}$ m and 1 AU $\\approx 1.496 \\times 10^{11}$ m, the number of astronomical units in one parsec is approximately",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.26$",
+        "$2.06 \\times 10^{5}$",
+        "$6.32 \\times 10^{4}$",
+        "$3.08 \\times 10^{16}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Use $Q = n_1u_1 = n_2u_2$ to convert a distance from parsec to AU.",
+        "steps": [
+          "Number of AU in 1 parsec $= \\frac{3.08 \\times 10^{16}}{1.496 \\times 10^{11}}$.",
+          "This ratio $\\approx 2.06 \\times 10^{5}$."
+        ],
+        "final_answer": "Option (2): $2.06 \\times 10^{5}$",
+        "why_not_others": "3.26 is the number of light years in a parsec. $6.32 \\times 10^{4}$ is the number of AU in a light year. $3.08 \\times 10^{16}$ is the number of metres in a parsec.",
+        "common_trap": "Mixing up the parsec-to-light-year ratio with the parsec-to-AU ratio.",
+        "time_saving_tip": "Approximate the ratio as $3/1.5 = 2$, which gives $2 \\times 10^{5}$."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a physical quantity is expressed in a smaller unit, its numerical value becomes larger.",
+        "R": "The magnitude of a physical quantity depends on the system of units in which it is expressed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Since $Q = nu$ is the same in every system, $n \\propto \\frac{1}{u}$.",
+        "steps": [
+          "The quantity $Q$ is fixed, so a smaller $u$ needs a larger $n$. A is true.",
+          "The magnitude $Q$ itself does not change with the unit system. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R contradicts $n_1u_1 = n_2u_2$. Only the numerical value changes, not the magnitude, so options (1), (2) and (4) fail.",
+        "common_trap": "Confusing the numerical value with the magnitude of the quantity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "1 angstrom is equal to $10^{3}$ fermi.",
+        "II": "The distance at which a length of 1 AU subtends an angle of one arcsecond is about $3.08 \\times 10^{16}$ m."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Use 1 angstrom $= 10^{-10}$ m, 1 fermi $= 10^{-15}$ m, and the definition of the parsec.",
+        "steps": [
+          "$\\frac{1\\ \\text{angstrom}}{1\\ \\text{fermi}} = \\frac{10^{-10}}{10^{-15}} = 10^{5}$, so 1 angstrom $= 10^{5}$ fermi. Statement I is incorrect.",
+          "1 parsec $= \\frac{1\\ \\text{AU}}{1''} \\approx 3.08 \\times 10^{16}$ m. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I misses the true factor by $10^{2}$, so any option calling it correct fails. Statement II is the definition of the parsec, so any option calling it incorrect fails.",
+        "common_trap": "Subtracting the exponents wrongly when comparing $10^{-10}$ with $10^{-15}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which of the following is NOT an SI base unit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "kelvin",
+        "candela",
+        "mole",
+        "newton"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "SI has seven base units: m, kg, s, A, K, mol and cd.",
+        "steps": [
+          "Kelvin, candela and mole are all among the seven base units.",
+          "The newton equals $kg\\,m\\,s^{-2}$, so it is a derived unit."
+        ],
+        "final_answer": "Option (4): newton",
+        "why_not_others": "Kelvin (temperature), candela (luminous intensity) and mole (amount of substance) are base units.",
+        "common_trap": "Treating force as fundamental because the newton is so commonly used.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "The volt, expressed in SI base units, is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$kg\\,m^{2}\\,s^{-3}\\,A^{-1}$",
+        "$kg\\,m^{2}\\,s^{-2}\\,A^{-1}$",
+        "$kg\\,m^{2}\\,s^{-3}\\,A$",
+        "$kg\\,m\\,s^{-3}\\,A^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Use $1\\,V = 1\\,J\\,C^{-1}$, $1\\,J = 1\\,N\\,m$, $1\\,N = 1\\,kg\\,m\\,s^{-2}$ and $1\\,C = 1\\,A\\,s$.",
+        "steps": [
+          "$1\\,J = kg\\,m^{2}\\,s^{-2}$",
+          "$1\\,V = \\frac{kg\\,m^{2}\\,s^{-2}}{A\\,s} = kg\\,m^{2}\\,s^{-3}\\,A^{-1}$"
+        ],
+        "final_answer": "Option (1): $kg\\,m^{2}\\,s^{-3}\\,A^{-1}$",
+        "why_not_others": "Option (2) forgets the second inside the coulomb. Option (3) multiplies by the ampere instead of dividing. Option (4) uses the newton in place of the joule.",
+        "common_trap": "Writing the coulomb as A instead of $A\\,s$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A patch of area $0.36\\ m^{2}$ lies on the surface of a sphere of radius 3 m. The solid angle it subtends at the centre of the sphere is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.12 sr",
+        "0.04 sr",
+        "0.36 sr",
+        "1.08 sr"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Solid angle is $\\Omega = \\frac{A}{r^{2}}$.",
+        "steps": [
+          "$\\Omega = \\frac{0.36}{3^{2}}$",
+          "$\\Omega = \\frac{0.36}{9} = 0.04$ sr"
+        ],
+        "final_answer": "Option (2): 0.04 sr",
+        "why_not_others": "0.12 sr comes from dividing by $r$ instead of $r^{2}$. 0.36 sr ignores the radius. 1.08 sr comes from multiplying by $r$.",
+        "common_trap": "Using the plane angle formula $\\frac{l}{r}$ for a solid angle.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "newton"
+          },
+          {
+            "label": "B",
+            "text": "joule"
+          },
+          {
+            "label": "C",
+            "text": "watt"
+          },
+          {
+            "label": "D",
+            "text": "pascal"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$kg\\,m^{-1}\\,s^{-2}$"
+          },
+          {
+            "label": "II",
+            "text": "$kg\\,m^{2}\\,s^{-3}$"
+          },
+          {
+            "label": "III",
+            "text": "$kg\\,m\\,s^{-2}$"
+          },
+          {
+            "label": "IV",
+            "text": "$kg\\,m^{2}\\,s^{-2}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Use $N = kg\\,m\\,s^{-2}$, $J = N\\,m$, $W = J\\,s^{-1}$ and $Pa = N\\,m^{-2}$.",
+        "steps": [
+          "newton $= kg\\,m\\,s^{-2}$ (III)",
+          "joule $= kg\\,m^{2}\\,s^{-2}$ (IV)",
+          "watt $= kg\\,m^{2}\\,s^{-3}$ (II)",
+          "pascal $= kg\\,m^{-1}\\,s^{-2}$ (I)"
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the joule and the watt. Option (2) swaps the newton and the pascal. Option (4) swaps the watt and the pascal.",
+        "common_trap": "Confusing the joule with the watt, which differ only by one factor of $s^{-1}$.",
+        "time_saving_tip": "Fix the newton first, then derive each of the others from it."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about SI units are correct?",
+      "statements": {
+        "A": "The kilogram is the only SI base unit that carries a prefix.",
+        "B": "The radian and the steradian are dimensionless.",
+        "C": "A mass of ten kilograms is correctly written as 10 Kgs.",
+        "D": "The full name of a unit named after a person is written with a capital first letter, as in 'Newton'.",
+        "E": "$1\\,\\Omega = 1\\,V\\,A^{-1}$"
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and E only",
+        "A, C and E only",
+        "B, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "These are SI base unit facts, dimensionless angle units, and the rules for writing SI units.",
+        "steps": [
+          "A is true: kilo is part of the base unit kilogram.",
+          "B is true: the radian and steradian are dimensionless.",
+          "C is false: the correct form is 10 kg, since symbols are not pluralised or capitalised.",
+          "D is false: the full name is lowercase (newton); only the symbol N is capital.",
+          "E is true: $1\\,\\Omega = 1\\,V\\,A^{-1}$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Options containing C or D include false statements. Option (1) leaves out the true statement E.",
+        "common_trap": "Capitalising the full name of a unit that is named after a person.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "The number of significant figures in 0.03060 is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3",
+        "4",
+        "6",
+        "2"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Leading zeros are not significant. Zeros between non-zero digits and trailing zeros after a decimal point are significant.",
+        "steps": [
+          "Drop the leading zeros '0.0'.",
+          "The remaining digits 3, 0, 6, 0 are all significant, giving 4."
+        ],
+        "final_answer": "Option (2): 4",
+        "why_not_others": "3 ignores the trailing zero. 6 counts every digit including the leading zeros. 2 counts only the non-zero digits.",
+        "common_trap": "Counting leading zeros as significant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "In a vernier caliper, 1 MSD = 1 mm and 10 vernier divisions coincide with 9 main scale divisions. The instrument has a positive zero error of $+0.3$ mm. While measuring a rod, the main scale reading is 24 mm and the 7th vernier division coincides. The corrected length of the rod is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "24.4 mm",
+        "25.0 mm",
+        "24.7 mm",
+        "24.07 mm"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Use $LC = \\frac{s}{n}$ and Reading $= MSR + VSR \\times LC - \\text{zero error}$.",
+        "steps": [
+          "$LC = \\frac{1\\ \\text{mm}}{10} = 0.1$ mm",
+          "Observed reading $= 24 + 7 \\times 0.1 = 24.7$ mm",
+          "Corrected reading $= 24.7 - 0.3 = 24.4$ mm"
+        ],
+        "final_answer": "Option (1): 24.4 mm",
+        "why_not_others": "25.0 mm adds the zero error. 24.7 mm ignores the zero error. 24.07 mm uses a least count of 0.01 mm.",
+        "common_trap": "Adding a positive zero error instead of subtracting it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "The sum $12.4 + 2.356 + 0.07$, written with the correct number of significant figures, is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "14.8",
+        "14.83",
+        "15",
+        "14.826"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In addition, the result keeps the least number of decimal places among the terms.",
+        "steps": [
+          "The raw sum is 14.826.",
+          "The fewest decimal places is one, in 12.4.",
+          "Rounding to one decimal place gives 14.8."
+        ],
+        "final_answer": "Option (1): 14.8",
+        "why_not_others": "14.83 and 14.826 keep too many decimal places. 15 wrongly applies the significant-figure rule for multiplication.",
+        "common_trap": "Applying the multiplication rule to addition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In calculating the circumference $2\\pi r$ from a measured radius, the factor 2 does not limit the number of significant figures of the result.",
+        "R": "The number 2 has only one significant figure."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Exact numbers have infinite significant figures.",
+        "steps": [
+          "The 2 in $2\\pi r$ is exact, so it does not restrict the precision of the result. A is true.",
+          "An exact number has infinitely many significant figures, not one. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "If R were true, the 2 would limit the result to one significant figure and A would be false. So R cannot be true alongside A.",
+        "common_trap": "Treating exact counting numbers like measured values.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Rounding 6.735 to three significant figures gives 6.74.",
+        "II": "Rounding 4.865 to three significant figures gives 4.87."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "When the dropped digit is exactly 5, the preceding digit is raised only if it is odd.",
+        "steps": [
+          "In 6.735 the preceding digit is 3, which is odd, so it rises to 4. The result 6.74 is correct.",
+          "In 4.865 the preceding digit is 6, which is even, so it stays. The result is 4.86, not 4.87."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Always rounding 5 up would make II correct. Always dropping 5 would make I incorrect. The odd-even rule gives option (3) only.",
+        "common_trap": "Always rounding up when the dropped digit is 5.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Which type of error can be reduced by taking the mean of a large number of observations?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Systematic error",
+        "Random error",
+        "Zero error",
+        "Instrumental error"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Random errors fluctuate irregularly, so averaging many readings reduces them.",
+        "steps": [
+          "Systematic errors act in one direction, so averaging does not remove them.",
+          "Random errors scatter on both sides of the true value, so they partly cancel in the mean."
+        ],
+        "final_answer": "Option (2): Random error",
+        "why_not_others": "Zero error and instrumental error are both systematic and need correction or better technique, not repetition.",
+        "common_trap": "Believing that repetition removes all kinds of error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "Two lengths are $A = (50.0 \\pm 0.3)$ cm and $B = (20.0 \\pm 0.2)$ cm. The difference $A - B$ with its maximum error is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$(30.0 \\pm 0.5)$ cm",
+        "$(30.0 \\pm 0.1)$ cm",
+        "$(30.0 \\pm 0.36)$ cm",
+        "$(70.0 \\pm 0.5)$ cm"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For $Z = A - B$, the maximum absolute error is $\\Delta Z = \\Delta A + \\Delta B$.",
+        "steps": [
+          "$Z = 50.0 - 20.0 = 30.0$ cm",
+          "$\\Delta Z = 0.3 + 0.2 = 0.5$ cm"
+        ],
+        "final_answer": "Option (1): $(30.0 \\pm 0.5)$ cm",
+        "why_not_others": "$\\pm 0.1$ subtracts the errors. $\\pm 0.36$ combines the errors in quadrature, which is not the maximum error. 70.0 adds the lengths instead of subtracting them.",
+        "common_trap": "Subtracting the errors when the quantities are subtracted.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A quantity is given by $Z = \\frac{A^{2}B^{3}}{\\sqrt{C}}$. The percentage errors in A, B and C are 1%, 2% and 4% respectively. The maximum percentage error in Z is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7%",
+        "6%",
+        "10%",
+        "16%"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The percentage error in Z is the sum of (power) × (percentage error) for each quantity.",
+        "steps": [
+          "Contribution of A: $2 \\times 1\\% = 2\\%$",
+          "Contribution of B: $3 \\times 2\\% = 6\\%$",
+          "Contribution of C: $\\frac{1}{2} \\times 4\\% = 2\\%$",
+          "Total $= 2 + 6 + 2 = 10\\%$"
+        ],
+        "final_answer": "Option (3): 10%",
+        "why_not_others": "7% ignores the powers. 6% subtracts the error of C because C is in the denominator. 16% uses a power of 2 for C instead of $\\frac{1}{2}$.",
+        "common_trap": "Subtracting the error of a quantity that appears in the denominator.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Systematic error"
+          },
+          {
+            "label": "B",
+            "text": "Random error"
+          },
+          {
+            "label": "C",
+            "text": "Gross error"
+          },
+          {
+            "label": "D",
+            "text": "Precision"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Fluctuates irregularly and is reduced by averaging many readings"
+          },
+          {
+            "label": "II",
+            "text": "Arises from carelessness of the observer"
+          },
+          {
+            "label": "III",
+            "text": "Resolution or repeatability of a measurement"
+          },
+          {
+            "label": "IV",
+            "text": "Acts in one direction, for example zero error"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "These are the definitions of the types of error and of precision.",
+        "steps": [
+          "Systematic error acts in one direction (IV).",
+          "Random error fluctuates irregularly and is reduced by averaging (I).",
+          "Gross error comes from carelessness (II).",
+          "Precision is resolution or repeatability (III)."
+        ],
+        "final_answer": "Option (4): A-IV, B-I, C-II, D-III",
+        "why_not_others": "Option (1) swaps systematic and random error. Option (2) swaps random and gross error. Option (3) swaps systematic error and precision.",
+        "common_trap": "Confusing systematic error with random error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "The period of a pendulum is measured five times as 2.62 s, 2.64 s, 2.60 s, 2.66 s and 2.63 s. Which of the following statements are correct?",
+      "statements": {
+        "A": "The mean period is 2.63 s.",
+        "B": "The mean absolute error is 0.016 s.",
+        "C": "The percentage error is about 0.61%.",
+        "D": "Taking more readings will reduce any systematic error in the measurement."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and D only",
+        "B and D only",
+        "A, B and C only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Calculate the mean, then the mean absolute error, then the percentage error. Repetition reduces only random error.",
+        "steps": [
+          "Mean $= \\frac{13.15}{5} = 2.63$ s, so A is true.",
+          "The absolute errors are 0.01, 0.01, 0.03, 0.03 and 0.00 s. Their sum is 0.08 s, so the mean is $\\frac{0.08}{5} = 0.016$ s. B is true.",
+          "Percentage error $= \\frac{0.016}{2.63} \\times 100 \\approx 0.61\\%$, so C is true.",
+          "Repetition does not reduce systematic error, so D is false."
+        ],
+        "final_answer": "Option (4): A, B and C only",
+        "why_not_others": "Options (2) and (3) include the false statement D. Option (1) leaves out the true statement C.",
+        "common_trap": "Believing that more readings reduce systematic error.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

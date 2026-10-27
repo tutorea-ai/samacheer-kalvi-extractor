@@ -1,0 +1,2708 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u13",
+  "slug": "magnetic-effects-of-current-and-magnetism",
+  "questions": [
+    {
+      "q_id": "neet_phy_u13_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Biot-Savart law and its application to a circular current loop",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A circular coil of 50 turns and radius 10 cm carries a current of 2 A. What is the magnitude of the magnetic field at its centre? (Take $\\mu_0 = 4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.14\\times10^{-4}\\,T$",
+        "$2.0\\times10^{-4}\\,T$",
+        "$6.28\\times10^{-4}\\,T$",
+        "$1.26\\times10^{-3}\\,T$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The field at the centre of an N-turn circular coil is $B=\\frac{\\mu_0 NI}{2R}$.",
+        "steps": [
+          "$B=\\frac{4\\pi\\times10^{-7}\\times50\\times2}{2\\times0.1}$",
+          "$B=4\\pi\\times10^{-7}\\times500=2\\pi\\times10^{-4}\\,T$",
+          "$B\\approx6.28\\times10^{-4}\\,T$"
+        ],
+        "final_answer": "Option (3): $6.28\\times10^{-4}\\,T$",
+        "why_not_others": "$3.14\\times10^{-4}\\,T$ comes from using the diameter in place of the radius. $2.0\\times10^{-4}\\,T$ comes from using the straight-wire formula $\\frac{\\mu_0 NI}{2\\pi R}$. $1.26\\times10^{-3}\\,T$ comes from dropping the factor 2 in the denominator.",
+        "common_trap": "Confusing the loop formula $\\frac{\\mu_0 I}{2R}$ with the long-wire formula $\\frac{\\mu_0 I}{2\\pi r}$.",
+        "time_saving_tip": "Write $\\mu_0=4\\pi\\times10^{-7}$ and keep $\\pi$ until the last step."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Biot-Savart law and its application to a circular current loop",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A wire carrying current I is shaped into a circular arc of radius R that subtends an angle of $270^\\circ$ at its centre O. The two ends of the arc are joined to long straight leads that point radially towards O. What is the magnitude of the magnetic field at O?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{3\\mu_0 I}{8R}$",
+        "$\\frac{\\mu_0 I}{8R}$",
+        "$\\frac{3\\mu_0 I}{4R}$",
+        "$\\frac{3\\mu_0 I}{8\\pi R}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An arc subtending angle $\\theta$ gives $B=\\frac{\\mu_0 I\\theta}{4\\pi R}$ at its centre. Radial leads contribute nothing.",
+        "steps": [
+          "Convert the angle: $\\theta=270^\\circ=\\frac{3\\pi}{2}$ rad.",
+          "$B=\\frac{\\mu_0 I}{4\\pi R}\\cdot\\frac{3\\pi}{2}=\\frac{3\\mu_0 I}{8R}$",
+          "Each radial lead lies along the line to O, so its field at O is zero."
+        ],
+        "final_answer": "Option (1): $\\frac{3\\mu_0 I}{8R}$",
+        "why_not_others": "$\\frac{\\mu_0 I}{8R}$ uses the missing quarter instead of the arc. $\\frac{3\\mu_0 I}{4R}$ drops a factor of 2. $\\frac{3\\mu_0 I}{8\\pi R}$ leaves the angle in degrees-style fraction form, giving a stray $\\pi$.",
+        "common_trap": "Adding a field for the radial leads. Their field at the centre is zero because $\\sin\\theta=0$ along the line of each element.",
+        "time_saving_tip": "Find the arc fraction first: $\\frac{3}{4}$ of $\\frac{\\mu_0 I}{2R}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Biot-Savart law and its application to a circular current loop",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The magnetic field at the centre of a circular current loop of radius R is $40\\,\\mu T$. What is the magnitude of the field at a point on its axis at a distance $\\sqrt{3}R$ from the centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20\\,\\mu T$",
+        "$10\\,\\mu T$",
+        "$5\\,\\mu T$",
+        "$2.5\\,\\mu T$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "On the axis, $B_x=B_0\\frac{R^3}{(R^2+x^2)^{3/2}}$, where $B_0$ is the field at the centre.",
+        "steps": [
+          "With $x=\\sqrt{3}R$: $R^2+x^2=4R^2$.",
+          "$(4R^2)^{3/2}=8R^3$, so $B_x=\\frac{B_0}{8}$.",
+          "$B_x=\\frac{40}{8}=5\\,\\mu T$"
+        ],
+        "final_answer": "Option (3): $5\\,\\mu T$",
+        "why_not_others": "$20\\,\\mu T$ assumes the field simply halves. $10\\,\\mu T$ uses the exponent 1 instead of 3/2. $2.5\\,\\mu T$ uses the exponent 2 instead of 3/2.",
+        "common_trap": "Getting the exponent $3/2$ on $(R^2+x^2)$ wrong.",
+        "time_saving_tip": "At $x=\\sqrt{3}R$ the axial field is always $\\frac{1}{8}$ of the centre value."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Biot-Savart law and its application to a circular current loop",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a circular loop made of uniform wire, current enters at one point and leaves at another point that is not diametrically opposite. The net magnetic field at the centre of the loop is then non-zero.",
+        "R": "The field at the centre due to an arc is proportional to $I\\theta$, and for the two parallel arcs of a uniform loop the product $I\\theta$ is the same."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "When current divides between two arcs of a uniform loop, the products $I\\theta$ are equal and the fields at the centre are opposite.",
+        "steps": [
+          "Resistance is proportional to arc length, which is proportional to $\\theta$. So $I_1\\theta_1=I_2\\theta_2$.",
+          "The arc fields are proportional to $I\\theta$, so they are equal in magnitude.",
+          "The two arcs carry current in opposite senses about the centre, so their fields are opposite.",
+          "The net field is zero for any pair of entry and exit points. A is false and R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false because the net field is zero at any entry-exit pair, not only for diametrically opposite points. This rules out every option in which A is true.",
+        "common_trap": "Believing the cancellation happens only for a semicircular split.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Biot-Savart law and its application to a circular current loop",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A wire of fixed length is first bent into a single circular turn and then rewound into a two-turn circular coil, with the current unchanged. The magnetic field at the centre becomes four times its original value.",
+        "II": "The magnetic field produced by a current element at a point lying on the line of the element itself is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$B=\\frac{\\mu_0 NI}{2R}$ at the centre of a coil, and $dB\\propto\\sin\\theta$ for a current element.",
+        "steps": [
+          "For a fixed wire length, $2\\pi R\\cdot N$ is constant. Doubling N therefore halves R.",
+          "$B\\propto\\frac{N}{R}$, so B becomes $\\frac{2}{1/2}=4$ times. Statement I is correct.",
+          "On the line of the element, $\\theta=0$, so $dB=0$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I fails only if one forgets that the radius halves, which would give a factor of 2. Statement II follows directly from $\\sin0=0$.",
+        "common_trap": "Doubling the turns while keeping R fixed, and so getting a factor of 2 instead of 4.",
+        "time_saving_tip": "For a fixed wire length, $B\\propto N^2$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Ampere's law: infinitely long straight wire and solenoid",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An infinitely long straight wire carries a current of 10 A. What is the magnitude of the magnetic field at a distance of 5 cm from the wire? (Take $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\times10^{-5}\\,T$",
+        "$1.26\\times10^{-4}\\,T$",
+        "$2\\times10^{-5}\\,T$",
+        "$8\\times10^{-5}\\,T$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Ampere's law for a long straight wire gives $B=\\frac{\\mu_0 I}{2\\pi r}$.",
+        "steps": [
+          "$B=\\frac{2\\times10^{-7}\\times10}{0.05}$",
+          "$B=4\\times10^{-5}\\,T$"
+        ],
+        "final_answer": "Option (1): $4\\times10^{-5}\\,T$",
+        "why_not_others": "$1.26\\times10^{-4}\\,T$ uses the loop formula $\\frac{\\mu_0 I}{2r}$. $2\\times10^{-5}\\,T$ uses r = 10 cm. $8\\times10^{-5}\\,T$ uses $\\frac{\\mu_0 I}{\\pi r}$.",
+        "common_trap": "Mixing up the formula for a straight wire with the formula for the centre of a circular loop.",
+        "time_saving_tip": "Write $\\frac{\\mu_0}{2\\pi}=2\\times10^{-7}$ directly."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Ampere's law: infinitely long straight wire and solenoid",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A long solid cylindrical wire of radius 2 cm carries a current distributed uniformly over its cross-section. The magnetic field is $B_1$ at a distance of 1 cm from the axis and $B_2$ at a distance of 4 cm from the axis. What is the ratio $B_1/B_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4",
+        "1/4",
+        "1",
+        "2"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Inside the wire $B=\\frac{\\mu_0 Ir}{2\\pi R^2}$. Outside the wire $B=\\frac{\\mu_0 I}{2\\pi r}$.",
+        "steps": [
+          "Let $B_s$ be the field at the surface, r = R = 2 cm.",
+          "Inside, B is proportional to r. At 1 cm, $B_1=\\frac{B_s}{2}$.",
+          "Outside, B is proportional to 1/r. At 4 cm, $B_2=\\frac{B_s}{2}$.",
+          "So $\\frac{B_1}{B_2}=1$."
+        ],
+        "final_answer": "Option (3): 1",
+        "why_not_others": "4 assumes $B\\propto1/r$ at both points. 1/4 assumes $B\\propto r$ at both points. 2 uses the correct inside value but takes $B_2=B_s/4$.",
+        "common_trap": "Applying the outside-wire 1/r law to a point inside the wire.",
+        "time_saving_tip": "Measure both points relative to the surface field."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Ampere's law: infinitely long straight wire and solenoid",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A long solenoid has 500 turns wound uniformly over a length of 0.5 m and carries a current of 2 A. What is the magnitude of the magnetic field on its axis at one end? (Take $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.51\\times10^{-3}\\,T$",
+        "$5.03\\times10^{-3}\\,T$",
+        "$1.26\\times10^{-3}\\,T$",
+        "zero"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The field inside a long solenoid is $\\mu_0 nI$. At either end it is half of this.",
+        "steps": [
+          "Turns per unit length: $n=\\frac{500}{0.5}=1000\\,m^{-1}$.",
+          "Central field: $\\mu_0 nI=4\\pi\\times10^{-7}\\times1000\\times2\\approx2.51\\times10^{-3}\\,T$.",
+          "Field at the end: $\\frac{2.51\\times10^{-3}}{2}\\approx1.26\\times10^{-3}\\,T$."
+        ],
+        "final_answer": "Option (3): $1.26\\times10^{-3}\\,T$",
+        "why_not_others": "$2.51\\times10^{-3}\\,T$ is the central value, not the end value. $5.03\\times10^{-3}\\,T$ doubles the field instead of halving it. Zero confuses the end of the solenoid with the region outside it.",
+        "common_trap": "Using the central field $\\mu_0 nI$ at the end of the solenoid.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Ampere's law: infinitely long straight wire and solenoid",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Field outside a long straight wire at distance r"
+          },
+          {
+            "label": "B",
+            "text": "Field inside a long solid wire carrying uniform current, at distance r from the axis"
+          },
+          {
+            "label": "C",
+            "text": "Field inside a long hollow conducting pipe carrying current along its length"
+          },
+          {
+            "label": "D",
+            "text": "Field well inside a long solenoid"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "Proportional to r"
+          },
+          {
+            "label": "III",
+            "text": "Proportional to 1/r"
+          },
+          {
+            "label": "IV",
+            "text": "Uniform, equal to $\\mu_0 nI$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Ampere's law with a suitable symmetric Amperian path gives each of these results.",
+        "steps": [
+          "A: $B=\\frac{\\mu_0 I}{2\\pi r}$, so B is proportional to 1/r (III).",
+          "B: the enclosed current is proportional to $r^2$, so B is proportional to r (II).",
+          "C: a path inside the pipe encloses no current, so B is zero (I).",
+          "D: inside a long solenoid $B=\\mu_0 nI$, which is uniform (IV)."
+        ],
+        "final_answer": "Option (4): A-III, B-II, C-I, D-IV",
+        "why_not_others": "The first option swaps the inside and outside behaviour of the wire. The second makes the field inside the solid wire zero, which is true only on the axis. The third gives the straight wire a uniform field.",
+        "common_trap": "Thinking the field inside a solid wire is zero. It is zero only on the axis and grows linearly with r.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Ampere's law: infinitely long straight wire and solenoid",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Ampere's law and its applications are correct?",
+      "statements": {
+        "A": "The value of $\\oint\\vec{B}\\cdot d\\vec{l}$ around a closed path is not affected by currents lying outside the path.",
+        "B": "The magnetic field outside a long solenoid is nearly zero.",
+        "C": "For an ideal toroid, the field is zero both in the open space enclosed by the ring and outside it.",
+        "D": "If the length of a long solenoid is doubled while its total number of turns and current are kept the same, the field inside it doubles.",
+        "E": "For a long solid wire carrying uniform current, the magnetic field is maximum on its axis."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and C only",
+        "A, C and D only",
+        "B, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Only the enclosed current enters Ampere's law. The solenoid field depends on n and I, and the field of a solid wire is zero on its axis.",
+        "steps": [
+          "A is correct: only the enclosed current contributes to the line integral.",
+          "B and C are correct, as stated in the notes.",
+          "D is incorrect: doubling the length halves n, so the field halves.",
+          "E is incorrect: on the axis B = 0, and the field is maximum at the surface."
+        ],
+        "final_answer": "Option (2): A, B and C only",
+        "why_not_others": "Options containing D or E include a false statement. 'A and B only' leaves out the correct statement C.",
+        "common_trap": "Thinking a longer solenoid gives a stronger field. The field depends on turns per unit length, not on total length.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a moving charge in uniform magnetic and electric fields",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A charged particle moves in a region containing only a uniform magnetic field. Which of the following quantities remains constant during its motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Velocity",
+        "Linear momentum",
+        "Direction of motion",
+        "Kinetic energy"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The magnetic force is perpendicular to the velocity, so it does no work.",
+        "steps": [
+          "Since $\\vec{F}\\perp\\vec{v}$, the work done is zero.",
+          "The speed, and hence the kinetic energy, stays constant. Only the direction of motion changes."
+        ],
+        "final_answer": "Option (4): Kinetic energy",
+        "why_not_others": "Velocity, momentum and direction of motion all change whenever the direction changes, because they are vectors or depend on direction.",
+        "common_trap": "Thinking that constant speed means constant velocity.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a moving charge in uniform magnetic and electric fields",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A proton and an alpha particle are accelerated from rest through the same potential difference. Each then enters the same uniform magnetic field perpendicular to its velocity. What is the ratio of their radii, $r_p : r_\\alpha$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1:2$",
+        "$\\sqrt{2}:1$",
+        "$1:\\sqrt{2}$",
+        "$1:1$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a particle accelerated through potential V, $r=\\frac{\\sqrt{2mqV}}{qB}=\\frac{1}{B}\\sqrt{\\frac{2mV}{q}}$, so r is proportional to $\\sqrt{m/q}$.",
+        "steps": [
+          "Proton: $\\frac{m}{q}=\\frac{m}{e}$.",
+          "Alpha particle: $\\frac{m}{q}=\\frac{4m}{2e}=\\frac{2m}{e}$.",
+          "$\\frac{r_p}{r_\\alpha}=\\sqrt{\\frac{1}{2}}$, so $r_p:r_\\alpha=1:\\sqrt{2}$."
+        ],
+        "final_answer": "Option (3): $1:\\sqrt{2}$",
+        "why_not_others": "$1:2$ omits the square root. $\\sqrt{2}:1$ inverts the ratio. $1:1$ assumes equal kinetic energy means equal radius.",
+        "common_trap": "Forgetting that the alpha particle gains twice the kinetic energy because it carries twice the charge.",
+        "time_saving_tip": "For the same accelerating voltage, compare $\\sqrt{m/q}$ directly."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a moving charge in uniform magnetic and electric fields",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A charged particle enters a uniform magnetic field with its velocity at $60^\\circ$ to the field. It moves along a helix of radius 3 cm. What is the pitch of the helix?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\sqrt{3}\\pi$ cm",
+        "$6\\sqrt{3}\\pi$ cm",
+        "$6\\pi$ cm",
+        "$\\sqrt{3}\\pi$ cm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$r=\\frac{mv\\sin\\theta}{qB}$ and $p=\\frac{2\\pi mv\\cos\\theta}{qB}$, so $p=2\\pi r\\cot\\theta$.",
+        "steps": [
+          "$\\frac{p}{r}=2\\pi\\frac{\\cos\\theta}{\\sin\\theta}=2\\pi\\cot60^\\circ=\\frac{2\\pi}{\\sqrt{3}}$",
+          "$p=\\frac{2\\pi\\times3}{\\sqrt{3}}=2\\sqrt{3}\\pi$ cm"
+        ],
+        "final_answer": "Option (1): $2\\sqrt{3}\\pi$ cm",
+        "why_not_others": "$6\\sqrt{3}\\pi$ cm uses $\\tan\\theta$ in place of $\\cot\\theta$. $6\\pi$ cm ignores the angle and takes the pitch as $2\\pi r$. $\\sqrt{3}\\pi$ cm drops the factor 2.",
+        "common_trap": "Swapping $\\sin\\theta$ and $\\cos\\theta$ between the radius and the pitch.",
+        "time_saving_tip": "Remember $p/r=2\\pi\\cot\\theta$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a moving charge in uniform magnetic and electric fields",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a velocity selector with crossed uniform electric and magnetic fields, only particles of one particular charge-to-mass ratio pass through undeflected.",
+        "R": "A charged particle passes undeflected through crossed fields when the electric force qE balances the magnetic force qvB."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Setting $qE=qvB$ gives $v=E/B$, which does not involve charge or mass.",
+        "steps": [
+          "The balance condition $qE=qvB$ is correct, so R is true.",
+          "The charge q cancels, leaving $v=E/B$. Selection depends only on speed, not on $q/m$.",
+          "So A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, which rules out the first three options.",
+        "common_trap": "Confusing a velocity selector with a device that separates particles by charge-to-mass ratio.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a moving charge in uniform magnetic and electric fields",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the speed of a charged particle moving perpendicular to a uniform magnetic field is doubled, its period of revolution also doubles.",
+        "II": "A proton and an electron entering the same uniform magnetic field with the same velocity perpendicular to the field circulate in the same sense."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T=\\frac{2\\pi m}{qB}$ does not depend on speed, and the sense of circulation depends on the sign of the charge.",
+        "steps": [
+          "Doubling v doubles the radius, but T stays the same. Statement I is incorrect.",
+          "The force $q\\vec{v}\\times\\vec{B}$ reverses with the sign of q, so the proton and electron circulate in opposite senses. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contradicts a key point in the notes, so neither can be correct.",
+        "common_trap": "Thinking a faster particle takes longer to go round. The larger radius exactly compensates for the higher speed.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a current-carrying conductor in a uniform magnetic field",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A straight wire of length 0.5 m carries a current of 4 A. It is placed in a uniform magnetic field of 0.2 T with the wire making an angle of $30^\\circ$ with the field. What is the magnitude of the force on the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.4 N",
+        "0.2 N",
+        "0.35 N",
+        "0 N"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$F=BIl\\sin\\theta$, where $\\theta$ is the angle between the wire and the field.",
+        "steps": [
+          "$F=0.2\\times4\\times0.5\\times\\sin30^\\circ$",
+          "$F=0.4\\times0.5=0.2$ N"
+        ],
+        "final_answer": "Option (2): 0.2 N",
+        "why_not_others": "0.4 N takes the wire as perpendicular to the field. 0.35 N uses $\\cos30^\\circ$. 0 N treats the wire as parallel to the field.",
+        "common_trap": "Using cosine instead of sine of the angle between the wire and the field.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a current-carrying conductor in a uniform magnetic field",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A horizontal metal rod of mass 20 g and length 0.5 m is placed in a uniform horizontal magnetic field of 0.4 T acting perpendicular to the rod. What current must flow through the rod so that the magnetic force just balances its weight? (Take $g=10\\,m\\,s^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.1 A",
+        "1000 A",
+        "1 A",
+        "0.5 A"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For levitation, the magnetic force balances the weight: $BIl=mg$.",
+        "steps": [
+          "Weight: $mg=0.02\\times10=0.2$ N.",
+          "$I=\\frac{mg}{Bl}=\\frac{0.2}{0.4\\times0.5}=1$ A"
+        ],
+        "final_answer": "Option (3): 1 A",
+        "why_not_others": "0.1 A omits g. 1000 A uses the mass in grams. 0.5 A omits the length l.",
+        "common_trap": "Not converting the mass from grams to kilograms.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a current-carrying conductor in a uniform magnetic field",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A semicircular wire of radius 10 cm carries a current of 5 A. It lies in a plane perpendicular to a uniform magnetic field of 0.5 T. What is the magnitude of the net force on the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.5 N",
+        "0.785 N",
+        "0.25 N",
+        "0 N"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a uniform field, a curved wire feels the same force as the straight line joining its ends. For a semicircle this line is the diameter 2R.",
+        "steps": [
+          "Effective length: $L_{eff}=2R=0.2$ m.",
+          "$F=BIL_{eff}=0.5\\times5\\times0.2=0.5$ N"
+        ],
+        "final_answer": "Option (1): 0.5 N",
+        "why_not_others": "0.785 N uses the arc length $\\pi R$. 0.25 N uses R instead of 2R. 0 N treats the open semicircle as a closed loop.",
+        "common_trap": "Using the arc length instead of the straight-line length between the ends.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a current-carrying conductor in a uniform magnetic field",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Straight wire of length l perpendicular to a uniform field B"
+          },
+          {
+            "label": "B",
+            "text": "Straight wire of length l at $30^\\circ$ to a uniform field B"
+          },
+          {
+            "label": "C",
+            "text": "Semicircular wire of radius R with its plane perpendicular to a uniform field B"
+          },
+          {
+            "label": "D",
+            "text": "Closed circular loop in a uniform field B"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "$BIl$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{BIl}{2}$"
+          },
+          {
+            "label": "IV",
+            "text": "$2BIR$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$F=BIl\\sin\\theta$. A curved wire is replaced by the straight line joining its ends, and a closed loop has zero net force.",
+        "steps": [
+          "A: $\\sin90^\\circ=1$, so F = BIl (II).",
+          "B: $\\sin30^\\circ=\\frac{1}{2}$, so F = BIl/2 (III).",
+          "C: the effective length is 2R, so F = 2BIR (IV).",
+          "D: a closed loop has zero net force (I)."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-IV, D-I",
+        "why_not_others": "The first option swaps the perpendicular and inclined wires. The third gives the semicircle zero force and the closed loop a non-zero force. The fourth gives the perpendicular straight wire the semicircle's force.",
+        "common_trap": "Thinking an open semicircle feels zero force, like a closed loop.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force on a current-carrying conductor in a uniform magnetic field",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about forces on current-carrying conductors in a uniform magnetic field are correct?",
+      "statements": {
+        "A": "The net force on a closed current loop is zero, although it may experience a torque.",
+        "B": "The force on a straight current-carrying wire is maximum when the wire is parallel to the field.",
+        "C": "The force on a curved wire between two points equals the force on a straight wire joining those points and carrying the same current.",
+        "D": "In Fleming's left-hand rule, the first finger points along the direction of current.",
+        "E": "The force on the conductor is the sum of the Lorentz forces on its drift electrons."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "B, C and E only",
+        "A, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\vec{F}=I\\vec{l}\\times\\vec{B}$ arises from the Lorentz forces on drift electrons and depends only on the effective length of the wire.",
+        "steps": [
+          "A, C and E restate facts given in the notes, so they are correct.",
+          "B is incorrect: the force is zero when the wire is parallel to B and maximum when it is perpendicular.",
+          "D is incorrect: the first finger points along the field, and the second finger along the current."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Options containing B or D include a false statement. 'A and C only' leaves out the correct statement E.",
+        "common_trap": "Mixing up the finger assignments in Fleming's left-hand rule.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force between two parallel currents; definition of ampere",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two long straight parallel wires in vacuum are $0.2\\,m$ apart. They carry currents of $5\\,A$ and $8\\,A$ in the same direction. What are the magnitude and nature of the force per unit length between them? (Take $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{-5}\\,N\\,m^{-1}$, attractive",
+        "$4\\times10^{-5}\\,N\\,m^{-1}$, repulsive",
+        "$8\\times10^{-6}\\,N\\,m^{-1}$, attractive",
+        "$4\\times10^{-5}\\,N\\,m^{-1}$, attractive"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The force per unit length between parallel wires is $\\frac{\\mu_0 I_1 I_2}{2\\pi d}$. Parallel currents attract.",
+        "steps": [
+          "$\\frac{\\mu_0}{2\\pi}=2\\times10^{-7}\\,T\\,m\\,A^{-1}$.",
+          "$\\frac{F}{l}=\\frac{2\\times10^{-7}\\times5\\times8}{0.2}=4\\times10^{-5}\\,N\\,m^{-1}$.",
+          "The currents are in the same direction, so the force is attractive."
+        ],
+        "final_answer": "Option (4): $4\\times10^{-5}\\,N\\,m^{-1}$, attractive",
+        "why_not_others": "$2\\times10^{-5}$ comes from using $\\frac{\\mu_0}{4\\pi}$ in place of $\\frac{\\mu_0}{2\\pi}$. 'Repulsive' wrongly treats parallel currents like like charges. $8\\times10^{-6}$ ignores the separation d.",
+        "common_trap": "Thinking parallel currents repel, by analogy with like charges.",
+        "time_saving_tip": "Use $\\frac{F}{l}=2\\times10^{-7}\\frac{I_1I_2}{d}$ directly."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force between two parallel currents; definition of ampere",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A long horizontal wire P is fixed and carries a current of $50\\,A$. A second long wire Q lies parallel to P, directly above it. Q has mass per unit length $2\\,g\\,m^{-1}$ and carries $20\\,A$ in the opposite direction. Q floats in equilibrium at a height d above P. Find d. (Take $g=10\\,m\\,s^{-2}$ and $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.5\\,cm$",
+        "$10\\,cm$",
+        "$1\\,cm$",
+        "$2\\,cm$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Antiparallel currents repel. Q floats when the upward magnetic force per unit length equals $\\lambda g$.",
+        "steps": [
+          "Set $\\frac{\\mu_0 I_1 I_2}{2\\pi d}=\\lambda g$.",
+          "$d=\\frac{2\\times10^{-7}\\times50\\times20}{2\\times10^{-3}\\times10}$.",
+          "$d=\\frac{2\\times10^{-4}}{2\\times10^{-2}}=10^{-2}\\,m=1\\,cm$."
+        ],
+        "final_answer": "Option (3): $1\\,cm$",
+        "why_not_others": "$0.5\\,cm$ comes from using $\\frac{\\mu_0}{4\\pi}$. $10\\,cm$ comes from forgetting g (using $\\lambda$ alone). $2\\,cm$ comes from a spurious factor of 2.",
+        "common_trap": "Forgetting to convert $2\\,g\\,m^{-1}$ to $2\\times10^{-3}\\,kg\\,m^{-1}$, or dropping g.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force between two parallel currents; definition of ampere",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two long parallel wires exert a force F on each other per unit length. The current in one wire is doubled and the current in the other is tripled, with directions unchanged. Their separation is also doubled. What is the new force per unit length?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12F$",
+        "$3F$",
+        "$6F$",
+        "$1.5F$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The force per unit length is proportional to $\\frac{I_1I_2}{d}$.",
+        "steps": [
+          "Let $F\\propto\\frac{I_1I_2}{d}$.",
+          "The new force is $F'\\propto\\frac{(2I_1)(3I_2)}{2d}$.",
+          "So $F'=3F$."
+        ],
+        "final_answer": "Option (2): $3F$",
+        "why_not_others": "$12F$ multiplies by the change in d instead of dividing. $6F$ ignores the change in separation. $1.5F$ treats the force as varying as $\\frac{1}{d^2}$.",
+        "common_trap": "Treating the force as an inverse-square law, as for point charges.",
+        "time_saving_tip": "Multiply the current factors and divide by the distance factor: $\\frac{2\\times3}{2}=3$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force between two parallel currents; definition of ampere",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Two long parallel wires carrying currents of $2\\,A$ and $6\\,A$ in the same direction exert forces of equal magnitude on each other.",
+        "R": "Currents flowing in the same direction in two parallel wires attract each other."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The mutual forces are equal and opposite (Newton's third law), whatever the individual currents. The rule 'parallel currents attract' gives only the direction.",
+        "steps": [
+          "Force per unit length on each wire is $\\frac{\\mu_0 I_1 I_2}{2\\pi d}$. This expression is symmetric in $I_1$ and $I_2$, so A is true.",
+          "Parallel currents attract, so R is true.",
+          "R gives the nature of the force, not why the magnitudes are equal. The equality follows from Newton's third law."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain the equality, so option (1) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Thinking the wire with the larger current feels a larger force.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Force between two parallel currents; definition of ampere",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A long wire lies on an insulated floor, and a fixed wire above it carries a parallel current. The floor wire stays on the floor only if the magnetic attraction per unit length does not exceed $\\lambda g$, so raising the fixed wire higher makes it easier for the floor wire to stay down.",
+        "II": "If each of two infinitely long parallel wires placed 1 m apart in vacuum carries a steady current of 2 A, the force on each is $4\\times10^{-7}\\,N$ per metre of length."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The attraction varies as $\\frac{1}{d}$ and as $I_1I_2$. The ampere definition gives $2\\times10^{-7}\\,N\\,m^{-1}$ for 1 A in each wire at 1 m.",
+        "steps": [
+          "Statement I: the floor wire stays down if $\\frac{\\mu_0I_1I_2}{2\\pi d}\\le\\lambda g$. A larger d gives a smaller attraction, so Statement I is correct.",
+          "Statement II: $\\frac{F}{l}=2\\times10^{-7}\\times\\frac{2\\times2}{1}=8\\times10^{-7}\\,N\\,m^{-1}$, not $4\\times10^{-7}$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II scales the force linearly with the current. Doubling both currents actually quadruples the force.",
+        "common_trap": "Scaling the ampere-definition force as I instead of $I_1I_2$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a current loop in a uniform magnetic field",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A rectangular coil of 50 turns, each of area $4\\times10^{-3}\\,m^2$, carries a current of $2\\,A$. It is placed in a uniform magnetic field of $0.5\\,T$ with the plane of the coil parallel to the field. What is the torque on the coil?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\,N\\,m$",
+        "zero",
+        "$0.1\\,N\\,m$",
+        "$0.004\\,N\\,m$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\tau=NIAB\\sin\\theta$, where $\\theta$ is measured from the normal. When the plane is parallel to B, $\\theta=90^\\circ$.",
+        "steps": [
+          "Plane parallel to B means the normal is perpendicular to B, so $\\sin\\theta=1$.",
+          "$\\tau=50\\times2\\times4\\times10^{-3}\\times0.5=0.2\\,N\\,m$."
+        ],
+        "final_answer": "Option (1): $0.2\\,N\\,m$",
+        "why_not_others": "'Zero' comes from measuring $\\theta$ from the plane. $0.1\\,N\\,m$ includes an extra factor of $\\frac{1}{2}$. $0.004\\,N\\,m$ ignores the number of turns N.",
+        "common_trap": "Taking $\\theta$ as the angle between the plane of the coil and B.",
+        "time_saving_tip": "Plane parallel to B always gives the maximum torque, NIAB."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a current loop in a uniform magnetic field",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A wire of fixed length is bent into a single-turn loop carrying a fixed current in a uniform magnetic field. What is the ratio of the maximum torque when the loop is circular to the maximum torque when the loop is square?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\pi}{4}$",
+        "$\\frac{4}{\\pi}$",
+        "$1$",
+        "$\\frac{\\pi}{2}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The maximum torque IAB is proportional to the area. For a fixed perimeter, a circle encloses the largest area.",
+        "steps": [
+          "Circle: $2\\pi r=L$, so $A_c=\\frac{L^2}{4\\pi}$.",
+          "Square: side $\\frac{L}{4}$, so $A_s=\\frac{L^2}{16}$.",
+          "Ratio: $\\frac{A_c}{A_s}=\\frac{16}{4\\pi}=\\frac{4}{\\pi}$."
+        ],
+        "final_answer": "Option (2): $\\frac{4}{\\pi}$",
+        "why_not_others": "$\\frac{\\pi}{4}$ inverts the ratio. $1$ assumes the torque is independent of shape for the same wire length. $\\frac{\\pi}{2}$ comes from an algebra slip.",
+        "common_trap": "Assuming the same length of wire gives the same area.",
+        "time_saving_tip": "The circle must give the larger torque, so the ratio must exceed 1. That rules out $\\frac{\\pi}{4}$ at once."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a current loop in a uniform magnetic field",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A coil of 20 turns, each of area $0.01\\,m^2$, carries a current of $0.5\\,A$ in a uniform magnetic field of $0.4\\,T$. How much work must be done to rotate it slowly from its position of stable equilibrium to its position of unstable equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\,J$",
+        "$0.08\\,J$",
+        "zero",
+        "$0.16\\,J$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$U=-mB\\cos\\theta$. Stable equilibrium is at $\\theta=0$ and unstable equilibrium at $\\theta=180^\\circ$.",
+        "steps": [
+          "$m=NIA=20\\times0.5\\times0.01=0.1\\,A\\,m^2$.",
+          "$W=U_{180}-U_0=mB-(-mB)=2mB$.",
+          "$W=2\\times0.1\\times0.4=0.08\\,J$."
+        ],
+        "final_answer": "Option (2): $0.08\\,J$",
+        "why_not_others": "$0.04\\,J$ is the work to rotate only to $90^\\circ$. 'Zero' wrongly assumes the torque does no net work between equilibria. $0.16\\,J$ doubles the correct value.",
+        "common_trap": "Taking the work as mB instead of 2mB.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a current loop in a uniform magnetic field",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Magnetic moment parallel to B"
+          },
+          {
+            "label": "B",
+            "text": "Magnetic moment antiparallel to B"
+          },
+          {
+            "label": "C",
+            "text": "Plane of the loop parallel to B"
+          },
+          {
+            "label": "D",
+            "text": "Normal to the loop at $60^\\circ$ to B"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\tau=mB$, $U=0$"
+          },
+          {
+            "label": "II",
+            "text": "$\\tau=0$, $U=-mB$"
+          },
+          {
+            "label": "III",
+            "text": "$\\tau=0$, $U=+mB$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\tau=\\frac{\\sqrt3}{2}mB$, $U=-\\frac{mB}{2}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\tau=mB\\sin\\theta$ and $U=-mB\\cos\\theta$, with $\\theta$ measured from the normal.",
+        "steps": [
+          "A: $\\theta=0$ gives $\\tau=0$ and $U=-mB$, so A-II.",
+          "B: $\\theta=180^\\circ$ gives $\\tau=0$ and $U=+mB$, so B-III.",
+          "C: $\\theta=90^\\circ$ gives $\\tau=mB$ and $U=0$, so C-I.",
+          "D: $\\theta=60^\\circ$ gives $\\tau=\\frac{\\sqrt3}{2}mB$ and $U=-\\frac{mB}{2}$, so D-IV."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Option (1) swaps the signs of U for the two equilibria. Option (3) measures the angle in C and D from the plane. Option (4) gives maximum torque in the stable position.",
+        "common_trap": "Thinking 'plane parallel to B' means $\\theta=0$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a current loop in a uniform magnetic field",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about a current loop in a uniform magnetic field are correct?",
+      "statements": {
+        "A": "The net magnetic force on the loop is zero.",
+        "B": "The relation $\\tau=NIAB\\sin\\theta$ holds for a planar loop of any shape.",
+        "C": "The torque is maximum when the plane of the loop is perpendicular to B.",
+        "D": "The position in which the magnetic moment is antiparallel to B is an equilibrium position, but it is unstable.",
+        "E": "The potential energy of the loop is minimum when the plane of the loop is parallel to B."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and E only",
+        "A, B, D and E only",
+        "B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a uniform field the net force is zero. $\\tau=mB\\sin\\theta$ and $U=-mB\\cos\\theta$, with $\\theta$ measured from the normal.",
+        "steps": [
+          "A is true: the forces on opposite sides cancel.",
+          "B is true: the result holds for any planar shape.",
+          "C is false: the torque is maximum when the plane is parallel to B.",
+          "D is true: at $\\theta=180^\\circ$ the torque is zero but U is maximum, so the equilibrium is unstable.",
+          "E is false: with the plane parallel to B, $U=0$. The minimum, $-mB$, occurs when the plane is perpendicular to B."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Options (2) and (4) include C, which is false. Option (3) includes E, which is false.",
+        "common_trap": "Confusing the orientation of the plane with the orientation of the normal.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Moving coil galvanometer, its sensitivity and conversion to ammeter and voltmeter",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Why does a moving coil galvanometer use concave pole pieces with a soft iron core to produce a radial magnetic field?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To increase the resistance of the coil",
+        "To make the deflecting torque zero at equilibrium",
+        "To make the deflection proportional to the square of the current",
+        "To keep the plane of the coil always parallel to B, so that the deflection is proportional to the current"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a radial field the torque is NIAB at every position, so $\\phi=\\frac{NAB}{k}I$.",
+        "steps": [
+          "In a radial field the plane of the coil stays parallel to B, so $\\sin\\theta=1$ at every position.",
+          "At equilibrium $NIAB=k\\phi$, so $\\phi\\propto I$ and the scale is linear."
+        ],
+        "final_answer": "Option (4): To keep the plane of the coil always parallel to B, so that the deflection is proportional to the current",
+        "why_not_others": "The radial field does not change the coil resistance. The deflecting torque at equilibrium is balanced by the spring, not zero. The deflection is linear in I, not quadratic.",
+        "common_trap": "Thinking the radial field only increases the field strength. Its key role is to make the scale linear.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Moving coil galvanometer, its sensitivity and conversion to ammeter and voltmeter",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A galvanometer of resistance $99\\,\\Omega$ gives full-scale deflection for $10\\,mA$. It is to be converted into an ammeter of range $1\\,A$. What shunt resistance is required, and how is it connected?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\,\\Omega$ in parallel",
+        "$0.99\\,\\Omega$ in parallel",
+        "$9801\\,\\Omega$ in parallel",
+        "$0.01\\,\\Omega$ in parallel"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$S=\\frac{I_gG}{I-I_g}$, connected in parallel with the galvanometer.",
+        "steps": [
+          "$I_gG=0.01\\times99=0.99\\,V$.",
+          "$I-I_g=1-0.01=0.99\\,A$.",
+          "$S=\\frac{0.99}{0.99}=1\\,\\Omega$."
+        ],
+        "final_answer": "Option (1): $1\\,\\Omega$ in parallel",
+        "why_not_others": "$0.99\\,\\Omega$ divides by I instead of $I-I_g$. $9801\\,\\Omega$ is $(n-1)G$, the voltmeter-type multiplier. $0.01\\,\\Omega$ divides $I_g$ by $I-I_g$, omitting G.",
+        "common_trap": "Using I in place of $I-I_g$ in the denominator.",
+        "time_saving_tip": "With $n=\\frac{I}{I_g}=100$, $S=\\frac{G}{n-1}=\\frac{99}{99}=1\\,\\Omega$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Moving coil galvanometer, its sensitivity and conversion to ammeter and voltmeter",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A galvanometer of resistance $40\\,\\Omega$ gives full-scale deflection for $5\\,mA$. What must be done to convert it into a voltmeter of range $10\\,V$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Connect $1960\\,\\Omega$ in series",
+        "Connect $2000\\,\\Omega$ in series",
+        "Connect $2040\\,\\Omega$ in series",
+        "Connect $1960\\,\\Omega$ in parallel"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A large resistance $R=\\frac{V}{I_g}-G$ is connected in series.",
+        "steps": [
+          "$\\frac{V}{I_g}=\\frac{10}{0.005}=2000\\,\\Omega$.",
+          "$R=2000-40=1960\\,\\Omega$, connected in series."
+        ],
+        "final_answer": "Option (1): Connect $1960\\,\\Omega$ in series",
+        "why_not_others": "$2000\\,\\Omega$ forgets to subtract G. $2040\\,\\Omega$ adds G instead of subtracting it. A parallel connection is used for an ammeter, not a voltmeter.",
+        "common_trap": "Forgetting that the total voltmeter resistance is $G+R$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Moving coil galvanometer, its sensitivity and conversion to ammeter and voltmeter",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A soft iron core is placed inside the coil of a moving coil galvanometer to increase its current sensitivity.",
+        "R": "The soft iron core increases the magnetic field B, and the current sensitivity $\\frac{NAB}{k}$ increases with B."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Current sensitivity is $\\frac{\\phi}{I}=\\frac{NAB}{k}$.",
+        "steps": [
+          "The soft iron core strengthens B, so A is true.",
+          "Since the current sensitivity is proportional to B, R is true and directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R gives exactly the mechanism behind A, so options (2), (3) and (4) do not apply.",
+        "common_trap": "Thinking the core serves only a mechanical or supporting purpose.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Moving coil galvanometer, its sensitivity and conversion to ammeter and voltmeter",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Doubling the number of turns of a galvanometer coil, with all other factors and the wire unchanged, doubles its voltage sensitivity.",
+        "II": "An ammeter made by connecting a shunt S across a galvanometer of resistance G has a resistance smaller than both G and S."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Voltage sensitivity is $\\frac{NAB}{kG}$. Ammeter resistance is $\\frac{GS}{G+S}$.",
+        "steps": [
+          "Statement I: doubling N doubles G as well, so $\\frac{NAB}{kG}$ is unchanged. Statement I is incorrect.",
+          "Statement II: the parallel combination $\\frac{GS}{G+S}$ is smaller than each of G and S. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the proportional rise in coil resistance. Statement II is a standard property of a parallel combination.",
+        "common_trap": "Assuming that whatever raises current sensitivity also raises voltage sensitivity.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Current loop as a magnetic dipole; magnetic dipole moment",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A square coil of side $10\\,cm$ has 50 turns and carries a current of $2\\,A$. What is the magnitude of its magnetic dipole moment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.02\\,A\\,m^2$",
+        "$1\\,A\\,m^2$",
+        "$10\\,A\\,m^2$",
+        "$40\\,A\\,m^2$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$m=NIA$.",
+        "steps": [
+          "$A=(0.1)^2=0.01\\,m^2$.",
+          "$m=50\\times2\\times0.01=1\\,A\\,m^2$."
+        ],
+        "final_answer": "Option (2): $1\\,A\\,m^2$",
+        "why_not_others": "$0.02$ ignores N. $10$ uses the side length instead of the area. $40$ uses the perimeter (0.4 m) instead of the area.",
+        "common_trap": "Forgetting the number of turns, or not squaring the side.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Current loop as a magnetic dipole; magnetic dipole moment",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A point charge of $4\\,\\mu C$ moves in a circle of radius $0.1\\,m$ with a uniform angular speed of $50\\,rad\\,s^{-1}$. What is the magnitude of the magnetic moment of this motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{-6}\\,A\\,m^2$",
+        "$1\\times10^{-5}\\,A\\,m^2$",
+        "$1\\times10^{-6}\\,A\\,m^2$",
+        "$5\\times10^{-7}\\,A\\,m^2$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A charge rotating at angular speed $\\omega$ has $m=\\frac{q\\omega r^2}{2}$.",
+        "steps": [
+          "The equivalent current is $I=\\frac{q\\omega}{2\\pi}$, and the area is $\\pi r^2$.",
+          "$m=\\frac{q\\omega r^2}{2}=\\frac{4\\times10^{-6}\\times50\\times0.01}{2}$.",
+          "$m=1\\times10^{-6}\\,A\\,m^2$."
+        ],
+        "final_answer": "Option (3): $1\\times10^{-6}\\,A\\,m^2$",
+        "why_not_others": "$2\\times10^{-6}$ omits the factor $\\frac{1}{2}$. $1\\times10^{-5}$ uses r instead of $r^2$. $5\\times10^{-7}$ applies the factor $\\frac{1}{2}$ twice.",
+        "common_trap": "Writing the current as $q\\omega$ instead of $\\frac{q\\omega}{2\\pi}$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Current loop as a magnetic dipole; magnetic dipole moment",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An electron of mass $m_e$ and charge magnitude e revolves in a circular orbit with orbital angular momentum $\\vec{L}$. What is its orbital magnetic moment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{eL}{2m_e}$, parallel to $\\vec{L}$",
+        "$\\frac{eL}{2m_e}$, antiparallel to $\\vec{L}$",
+        "$\\frac{eL}{m_e}$, antiparallel to $\\vec{L}$",
+        "$\\frac{2eL}{m_e}$, parallel to $\\vec{L}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\mu=\\frac{evr}{2}=\\frac{e}{2m_e}L$. Because the electron is negatively charged, $\\vec{\\mu}$ is opposite to $\\vec{L}$.",
+        "steps": [
+          "$I=\\frac{ev}{2\\pi r}$ and $\\mu=I\\pi r^2=\\frac{evr}{2}$.",
+          "With $L=m_evr$, this gives $\\mu=\\frac{e}{2m_e}L$.",
+          "The charge is negative, so $\\vec{\\mu}$ is antiparallel to $\\vec{L}$."
+        ],
+        "final_answer": "Option (2): $\\frac{eL}{2m_e}$, antiparallel to $\\vec{L}$",
+        "why_not_others": "'Parallel' ignores the negative charge. $\\frac{eL}{m_e}$ drops the factor $\\frac{1}{2}$. $\\frac{2eL}{m_e}$ is wrong in both magnitude and direction.",
+        "common_trap": "Treating the electron as a positive charge when finding the direction.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Current loop as a magnetic dipole; magnetic dipole moment",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Magnetic moment of an N-turn loop of area A carrying current I"
+          },
+          {
+            "label": "B",
+            "text": "Magnetic field far along the axis of a loop of moment m"
+          },
+          {
+            "label": "C",
+            "text": "Bohr magneton"
+          },
+          {
+            "label": "D",
+            "text": "Orbital magnetic moment of an electron moving with speed v in an orbit of radius r"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{evr}{2}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{eh}{4\\pi m_e}$"
+          },
+          {
+            "label": "III",
+            "text": "$NIA$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-II, D-I",
+        "A-I, B-IV, C-II, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are standard results for the current loop treated as a magnetic dipole.",
+        "steps": [
+          "A: $m=NIA$, so A-III.",
+          "B: $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$, so B-IV.",
+          "C: $\\mu_B=\\frac{eh}{4\\pi m_e}$, so C-II.",
+          "D: $\\mu=\\frac{evr}{2}$, so D-I."
+        ],
+        "final_answer": "Option (2): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the Bohr magneton with the general orbital moment. Option (3) swaps the moment with the field. Option (4) swaps the loop moment with the electron's orbital moment.",
+        "common_trap": "Confusing the general orbital moment $\\frac{evr}{2}$ with its quantised minimum, $\\mu_B$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Current loop as a magnetic dipole; magnetic dipole moment",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about a current loop as a magnetic dipole are correct?",
+      "statements": {
+        "A": "The magnetic moment of a planar current loop depends on its area and not on its shape.",
+        "B": "The face of the loop on which the current appears clockwise to the viewer behaves as a north pole.",
+        "C": "The gyromagnetic ratio of an orbiting electron is $\\frac{e}{2m_e}\\approx8.8\\times10^{10}\\,C\\,kg^{-1}$.",
+        "D": "The Bohr magneton is about $9.27\\times10^{-24}\\,A\\,m^2$.",
+        "E": "Far along its axis, the magnetic field of a current loop varies as $\\frac{1}{x^2}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C, D and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$m=NIA$. An anticlockwise face is a north pole. $\\frac{e}{2m_e}$ is the gyromagnetic ratio. $\\mu_B\\approx9.27\\times10^{-24}\\,A\\,m^2$. The far axial field varies as $\\frac{1}{x^3}$.",
+        "steps": [
+          "A is true: m depends only on N, I and A.",
+          "B is false: the face showing anticlockwise current is the north pole.",
+          "C is true: the gyromagnetic ratio is $\\frac{e}{2m_e}\\approx8.8\\times10^{10}\\,C\\,kg^{-1}$.",
+          "D is true: $\\mu_B\\approx9.27\\times10^{-24}\\,A\\,m^2$.",
+          "E is false: the far axial field is $\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Options (1) and (2) include B, which is false. Options (2) and (3) include E, which is false.",
+        "common_trap": "Reversing the clockwise and anticlockwise pole rule, or using the inverse-square law for the dipole field.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Bar magnet as an equivalent solenoid; magnetic field lines",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Inside a bar magnet, the direction of the magnetic field lines is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "From the N-pole to the S-pole",
+        "From the S-pole to the N-pole",
+        "Undefined, because the field inside a magnet is zero",
+        "Perpendicular to the axis of the magnet"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Magnetic field lines are closed loops. They run N to S outside the magnet and S to N inside it.",
+        "steps": [
+          "Outside the magnet, the lines leave the N-pole and enter the S-pole.",
+          "Field lines are continuous closed loops, so they must return from S to N inside the magnet."
+        ],
+        "final_answer": "Option (2): From the S-pole to the N-pole",
+        "why_not_others": "N to S is the direction outside the magnet only. The field inside is not zero, because the lines pass through the magnet. The lines inside run along the axis, not perpendicular to it.",
+        "common_trap": "Assuming field lines run N to S everywhere, as electric lines run from + to -.",
+        "time_saving_tip": "Closed loops mean the inside direction must be opposite to the outside direction."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Bar magnet as an equivalent solenoid; magnetic field lines",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A bar magnet has pole strength $5\\ \\text{A m}$ and magnetic length $10\\ \\text{cm}$. It is cut into two equal halves by a cut perpendicular to its axis. What are the pole strength and magnetic moment of each piece?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5\\ \\text{A m}$ and $0.25\\ \\text{A m}^2$",
+        "$2.5\\ \\text{A m}$ and $0.25\\ \\text{A m}^2$",
+        "$2.5\\ \\text{A m}$ and $0.125\\ \\text{A m}^2$",
+        "$5\\ \\text{A m}$ and $0.5\\ \\text{A m}^2$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A cut perpendicular to the axis keeps the pole strength the same and halves the length, so the moment is halved.",
+        "steps": [
+          "Original moment: $m=q_m(2l)=5\\times0.10=0.5\\ \\text{A m}^2$.",
+          "Each piece keeps $q_m=5\\ \\text{A m}$ and has length $5\\ \\text{cm}$.",
+          "New moment: $m'=5\\times0.05=0.25\\ \\text{A m}^2$."
+        ],
+        "final_answer": "Option (1): $5\\ \\text{A m}$ and $0.25\\ \\text{A m}^2$",
+        "why_not_others": "Halving the pole strength applies to a cut along the axis, not perpendicular to it. Halving both the pole strength and the length would quarter the moment. Keeping the moment at 0.5 ignores the reduced length.",
+        "common_trap": "Mixing up the effects of an axial cut and a perpendicular cut.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Bar magnet as an equivalent solenoid; magnetic field lines",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A solenoid of 200 turns, each of area $5\\ \\text{cm}^2$, carries a current of $2\\ \\text{A}$. It is to be replaced by a bar magnet of equal magnetic moment and magnetic length $4\\ \\text{cm}$. The pole strength of the magnet must be:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\ \\text{A m}$",
+        "$10\\ \\text{A m}$",
+        "$5\\ \\text{A m}$",
+        "$0.008\\ \\text{A m}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A solenoid has moment $NIA$, and an equivalent magnet satisfies $m=q_m(2l)$.",
+        "steps": [
+          "$m=NIA=200\\times2\\times5\\times10^{-4}=0.2\\ \\text{A m}^2$.",
+          "$q_m=\\dfrac{m}{2l}=\\dfrac{0.2}{0.04}=5\\ \\text{A m}$."
+        ],
+        "final_answer": "Option (3): $5\\ \\text{A m}$",
+        "why_not_others": "0.2 is the moment itself, not the pole strength. 10 A m comes from dividing by l (2 cm) instead of 2l. 0.008 comes from multiplying by the length instead of dividing.",
+        "common_trap": "Using the half-length l in place of the magnetic length 2l.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Bar magnet as an equivalent solenoid; magnetic field lines",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The net magnetic flux through a closed surface that encloses only the N-pole of a long bar magnet is positive.",
+        "R": "Magnetic field lines are continuous closed loops."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Gauss's law for magnetism: $\\oint\\vec{B}\\cdot d\\vec{A}=0$ for every closed surface.",
+        "steps": [
+          "Field lines form closed loops, so every line leaving a closed surface also enters it.",
+          "The net flux through any closed surface is therefore zero, even one drawn around a single pole.",
+          "A is false and R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false because the flux is zero, not positive. This rules out options (1), (2) and (3).",
+        "common_trap": "Treating a magnetic pole like an electric charge that acts as a source of net flux.",
+        "time_saving_tip": "Magnetic flux through any closed surface is always zero."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Bar magnet as an equivalent solenoid; magnetic field lines",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a bar magnet is cut along its axis into two equal halves, the pole strength of each half stays the same and its magnetic moment is halved.",
+        "II": "Two magnetic field lines may intersect at a point where the fields of two different magnets superpose."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An axial cut halves both pole strength and moment. Field lines never cross.",
+        "steps": [
+          "Cutting along the axis halves the pole area, so $q_m$ is halved. The length is unchanged, so $m$ is also halved. Statement I is incorrect.",
+          "The resultant field has a unique direction at every point, so lines cannot intersect. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I describes a perpendicular cut, not an axial cut. Statement II ignores the fact that superposed fields give a single net direction at each point.",
+        "common_trap": "Swapping the results of perpendicular and axial cuts.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Magnetic field of a bar magnet along and perpendicular to its axis",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For a short bar magnet, the ratio of the magnitude of the field at a point on its axial line to that at a point on its equatorial line at the same distance from the centre is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2:1$",
+        "$1:2$",
+        "$1:1$",
+        "$4:1$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a short magnet, $B_{ax}=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$ and $B_{eq}=\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$.",
+        "steps": [
+          "Divide the two expressions at the same r.",
+          "$B_{ax}/B_{eq}=2$."
+        ],
+        "final_answer": "Option (1): $2:1$",
+        "why_not_others": "$1:2$ inverts the ratio. $1:1$ ignores the factor 2. $4:1$ squares the ratio.",
+        "common_trap": "Inverting the ratio.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Magnetic field of a bar magnet along and perpendicular to its axis",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A short bar magnet has magnetic moment $0.4\\ \\text{A m}^2$. The magnitude of its magnetic field at a point on its axial line $10\\ \\text{cm}$ from its centre is: (take $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\text{T m A}^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\times10^{-5}\\ \\text{T}$",
+        "$8\\times10^{-6}\\ \\text{T}$",
+        "$1.0\\times10^{-3}\\ \\text{T}$",
+        "$8\\times10^{-5}\\ \\text{T}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Axial field of a short magnet: $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$.",
+        "steps": [
+          "$r^3=(0.1)^3=10^{-3}\\ \\text{m}^3$.",
+          "$B=10^{-7}\\times\\dfrac{2\\times0.4}{10^{-3}}=8\\times10^{-5}\\ \\text{T}$."
+        ],
+        "final_answer": "Option (4): $8\\times10^{-5}\\ \\text{T}$",
+        "why_not_others": "$4\\times10^{-5}$ T uses the equatorial formula. $8\\times10^{-6}$ T uses $r^2$ instead of $r^3$. $1.0\\times10^{-3}$ T uses $\\mu_0$ in place of $\\mu_0/4\\pi$.",
+        "common_trap": "Dropping the factor 2 in the axial formula.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Magnetic field of a bar magnet along and perpendicular to its axis",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A short bar magnet produces a field of magnitude $B_0$ at a point on its equatorial line at distance r from its centre. What is the magnitude of the field at a point at the same distance r on a line making $60^\\circ$ with the magnetic axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sqrt{7}\\,B_0$",
+        "$\\dfrac{\\sqrt{13}}{2}B_0$",
+        "$\\dfrac{7}{4}B_0$",
+        "$\\dfrac{\\sqrt{7}}{2}B_0$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$B=\\frac{\\mu_0 m}{4\\pi r^3}\\sqrt{3\\cos^2\\theta+1}$, and $B_0=\\frac{\\mu_0 m}{4\\pi r^3}$.",
+        "steps": [
+          "$\\cos60^\\circ=\\tfrac12$, so $3\\cos^2\\theta+1=\\tfrac34+1=\\tfrac74$.",
+          "$B=B_0\\sqrt{7/4}=\\dfrac{\\sqrt7}{2}B_0$."
+        ],
+        "final_answer": "Option (4): $\\dfrac{\\sqrt{7}}{2}B_0$",
+        "why_not_others": "$\\frac{\\sqrt{13}}{2}B_0$ uses $\\cos30^\\circ$, measuring the angle from the equator instead of the axis. $\\frac74B_0$ forgets the square root. $\\sqrt7B_0$ drops the factor $\\frac12$.",
+        "common_trap": "Measuring $\\theta$ from the equatorial line instead of the axis.",
+        "time_saving_tip": "Check the limits: $\\theta=90^\\circ$ gives $B_0$ and $\\theta=0$ gives $2B_0$, so the answer must lie between them."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Magnetic field of a bar magnet along and perpendicular to its axis",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Axial field of a short magnet of moment m at distance r"
+          },
+          {
+            "label": "B",
+            "text": "Equatorial field of the same magnet at distance r"
+          },
+          {
+            "label": "C",
+            "text": "Axial field of the same magnet at distance 2r"
+          },
+          {
+            "label": "D",
+            "text": "Equatorial field of the same magnet at distance 2r"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{m}{8r^3}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{m}{4r^3}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a short magnet, $B_{ax}=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$ and $B_{eq}=\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$. Both vary as $1/r^3$.",
+        "steps": [
+          "A: $\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$, which is II.",
+          "B: $\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$, which is IV.",
+          "C: $\\frac{\\mu_0}{4\\pi}\\frac{2m}{8r^3}=\\frac{\\mu_0}{4\\pi}\\frac{m}{4r^3}$, which is III.",
+          "D: $\\frac{\\mu_0}{4\\pi}\\frac{m}{8r^3}$, which is I."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Options (1) and (4) swap the axial and equatorial forms. Option (3) forgets the factor 2 at distance 2r and mismatches C and D.",
+        "common_trap": "Assuming the field halves or quarters when the distance doubles, instead of falling to 1/8.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Magnetic field of a bar magnet along and perpendicular to its axis",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the field of a bar magnet are correct?",
+      "statements": {
+        "A": "For a short magnet, the field on the axial line is directed along $\\vec{m}$.",
+        "B": "For a short magnet, the field on the equatorial line is directed along $\\vec{m}$.",
+        "C": "Doubling the distance from a short magnet reduces its field to one-eighth.",
+        "D": "The exact axial expression $\\frac{\\mu_0}{4\\pi}\\frac{2mr}{(r^2-l^2)^2}$ reduces to $\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$ when $r\\gg l$.",
+        "E": "At a fixed distance, the field of a short magnet is maximum on the equatorial line ($\\theta=90^\\circ$)."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Axial field: along m, $\\propto 2m/r^3$. Equatorial field: opposite to m, $\\propto m/r^3$.",
+        "steps": [
+          "A is true: the axial field points along m.",
+          "B is false: the equatorial field points opposite to m.",
+          "C is true: since $B\\propto1/r^3$, doubling r gives 1/8 of the field.",
+          "D is true: for $r\\gg l$, $(r^2-l^2)^2\\approx r^4$, giving $\\frac{2m}{r^3}$.",
+          "E is false: $\\sqrt{3\\cos^2\\theta+1}$ is largest at $\\theta=0$, on the axis."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) misses the true statement D. Option (2) includes the false statement B. Option (4) includes the false statement E and omits A.",
+        "common_trap": "Assuming the equatorial field is along m, as the axial field is.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t10_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a magnetic dipole in a uniform magnetic field",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A bar magnet of magnetic moment $2\\ \\text{A m}^2$ is placed in a uniform field of $0.5\\ \\text{T}$ with its axis at $30^\\circ$ to the field. The magnitude of the torque on it is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.87\\ \\text{N m}$",
+        "$1.0\\ \\text{N m}$",
+        "$0.5\\ \\text{N m}$",
+        "$0.25\\ \\text{N m}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\tau=mB\\sin\\theta$.",
+        "steps": [
+          "$\\tau=2\\times0.5\\times\\sin30^\\circ$.",
+          "$\\tau=1\\times0.5=0.5\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (3): $0.5\\ \\text{N m}$",
+        "why_not_others": "0.87 N m uses $\\cos30^\\circ$. 1.0 N m omits $\\sin\\theta$. 0.25 N m applies the factor 0.5 twice.",
+        "common_trap": "Using cosine in place of sine.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t10_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a magnetic dipole in a uniform magnetic field",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A magnetic dipole of moment $1.5\\ \\text{A m}^2$ is in a uniform field of $0.4\\ \\text{T}$. The work required to rotate it from $\\theta=60^\\circ$ to $\\theta=180^\\circ$ with respect to the field is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.3\\ \\text{J}$",
+        "$1.2\\ \\text{J}$",
+        "$0.9\\ \\text{J}$",
+        "$0.6\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$W=mB(\\cos\\theta_1-\\cos\\theta_2)$.",
+        "steps": [
+          "$mB=1.5\\times0.4=0.6\\ \\text{J}$.",
+          "$W=0.6(\\cos60^\\circ-\\cos180^\\circ)=0.6(0.5+1)=0.9\\ \\text{J}$."
+        ],
+        "final_answer": "Option (3): $0.9\\ \\text{J}$",
+        "why_not_others": "0.3 J comes from the sign error $\\cos180^\\circ=+1$. 1.2 J is the work from $0^\\circ$ to $180^\\circ$. 0.6 J is just mB, the work from $0^\\circ$ to $90^\\circ$.",
+        "common_trap": "Making a sign error with $\\cos180^\\circ=-1$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t10_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a magnetic dipole in a uniform magnetic field",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A freely suspended magnet performs small angular oscillations with a period of $3\\ \\text{s}$ in a uniform magnetic field. If the field is made nine times stronger, the new period is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$27\\ \\text{s}$",
+        "$9\\ \\text{s}$",
+        "$\\frac{1}{3}\\ \\text{s}$",
+        "$1\\ \\text{s}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T=2\\pi\\sqrt{\\frac{I}{mB}}$, so $T\\propto\\frac{1}{\\sqrt B}$.",
+        "steps": [
+          "$T'/T=\\sqrt{B/9B}=\\tfrac13$.",
+          "$T'=3\\times\\tfrac13=1\\ \\text{s}$."
+        ],
+        "final_answer": "Option (4): $1\\ \\text{s}$",
+        "why_not_others": "27 s assumes $T\\propto B$. 9 s assumes $T\\propto\\sqrt B$. $\\frac13$ s assumes $T\\propto1/B$.",
+        "common_trap": "Forgetting the square root in the period formula.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t10_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a magnetic dipole in a uniform magnetic field",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A bar magnet placed in a uniform magnetic field with its moment antiparallel to the field is in unstable equilibrium.",
+        "R": "The potential energy $U=-mB\\cos\\theta$ of the magnet is maximum at $\\theta=180^\\circ$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Equilibrium at maximum potential energy is unstable.",
+        "steps": [
+          "At $\\theta=180^\\circ$, the torque $mB\\sin\\theta=0$, so the magnet is in equilibrium.",
+          "$U=+mB$ is the maximum value, so any small displacement lowers U and the magnet turns away.",
+          "R therefore explains why A is true."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. The maximum potential energy in R is exactly why the equilibrium in A is unstable, so option (2) fails.",
+        "common_trap": "Thinking zero torque always means stable equilibrium.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t10_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Torque on a magnetic dipole in a uniform magnetic field",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A bar magnet placed in a uniform magnetic field experiences a net force along the field in addition to a torque.",
+        "II": "In a uniform field, the work needed to rotate a magnetic dipole from $\\theta=0^\\circ$ to $90^\\circ$ is half the work needed to rotate it from $0^\\circ$ to $180^\\circ$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a uniform field the net force is zero, and $W=mB(\\cos\\theta_1-\\cos\\theta_2)$.",
+        "steps": [
+          "In a uniform field the forces on the two poles are equal and opposite, so the net force is zero. Statement I is incorrect.",
+          "$W_{0\\to90}=mB$ and $W_{0\\to180}=2mB$, so the first is half the second. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "A net force acts only in a non-uniform field, so Statement I is false. The ratio of works is exactly 1:2, so Statement II is true.",
+        "common_trap": "Assuming any magnetic field must exert a net force on a magnet.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t11_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Para-, dia- and ferromagnetic substances",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following substances is diamagnetic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Bismuth",
+        "Aluminium",
+        "Sodium",
+        "Nickel"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Diamagnetic substances have small negative susceptibility. Examples are Bi, Cu, Pb, Si, water, $N_2$ and NaCl.",
+        "steps": [
+          "Bismuth is a standard diamagnetic substance.",
+          "Al and Na are paramagnetic, and Ni is ferromagnetic."
+        ],
+        "final_answer": "Option (1): Bismuth",
+        "why_not_others": "Aluminium and sodium are paramagnetic. Nickel is ferromagnetic.",
+        "common_trap": "Assuming every metal is para- or ferromagnetic.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t11_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Para-, dia- and ferromagnetic substances",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A magnetic material placed in a magnetic intensity of $1000\\ \\text{A m}^{-1}$ acquires a magnetisation of $2.5\\times10^{5}\\ \\text{A m}^{-1}$. Its relative permeability is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$251$",
+        "$250$",
+        "$249$",
+        "$4\\times10^{-3}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\chi=M/H$ and $\\mu_r=1+\\chi$.",
+        "steps": [
+          "$\\chi=\\dfrac{2.5\\times10^5}{1000}=250$.",
+          "$\\mu_r=1+250=251$."
+        ],
+        "final_answer": "Option (1): $251$",
+        "why_not_others": "250 is the susceptibility, not $\\mu_r$. 249 comes from $\\chi-1$. $4\\times10^{-3}$ is $H/M$, the inverted ratio.",
+        "common_trap": "Reporting $\\chi$ as $\\mu_r$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t11_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Para-, dia- and ferromagnetic substances",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A liquid is filled in a U-tube, and one limb is placed between the poles of a strong electromagnet. When the field is switched on, the liquid level in that limb falls. The liquid could be:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Liquid oxygen",
+        "Aqueous $CuCl_2$ solution",
+        "Water",
+        "Molten aluminium"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A diamagnetic liquid is depressed in the limb placed in the field, while a paramagnetic liquid rises.",
+        "steps": [
+          "A falling level means the liquid moves from the stronger field to the weaker field, so it is diamagnetic.",
+          "Water is diamagnetic."
+        ],
+        "final_answer": "Option (3): Water",
+        "why_not_others": "Oxygen, $CuCl_2$ and aluminium are paramagnetic, so their level would rise in the field.",
+        "common_trap": "Reversing the U-tube behaviour of para- and diamagnetic liquids.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t11_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Para-, dia- and ferromagnetic substances",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Superconductor"
+          },
+          {
+            "label": "B",
+            "text": "Copper"
+          },
+          {
+            "label": "C",
+            "text": "Aluminium"
+          },
+          {
+            "label": "D",
+            "text": "Iron"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\chi=-1$"
+          },
+          {
+            "label": "II",
+            "text": "Small negative $\\chi$"
+          },
+          {
+            "label": "III",
+            "text": "Small positive $\\chi$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\chi\\gg1$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each class of magnetic material has a characteristic susceptibility.",
+        "steps": [
+          "A superconductor is a perfect diamagnet, with $\\chi=-1$: I.",
+          "Copper is diamagnetic, with small negative $\\chi$: II.",
+          "Aluminium is paramagnetic, with small positive $\\chi$: III.",
+          "Iron is ferromagnetic, with $\\chi\\gg1$: IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Options (2) and (4) swap the superconductor and copper. Option (3) swaps copper and aluminium. Option (4) also swaps aluminium and iron.",
+        "common_trap": "Treating copper as paramagnetic.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t11_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Para-, dia- and ferromagnetic substances",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about magnetic materials are correct?",
+      "statements": {
+        "A": "Diamagnetism is present in all materials but is masked when para- or ferromagnetism exists.",
+        "B": "For a diamagnetic substance, the relative permeability is slightly greater than 1.",
+        "C": "The fields are related by $B=\\mu_0(H+M)$, and $\\mu_r=1+\\chi$.",
+        "D": "A paramagnetic rod suspended freely in a uniform field aligns perpendicular to the field.",
+        "E": "Diamagnetic susceptibility does not depend on temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Properties of dia-, para- and ferromagnetic materials and the relations among B, H, M and $\\chi$.",
+        "steps": [
+          "A is true, as stated in the properties of diamagnetism.",
+          "B is false: for a diamagnet, $\\mu_r<1$.",
+          "C is true: these are the standard relations.",
+          "D is false: a paramagnetic rod aligns parallel to the field, and a diamagnetic rod aligns perpendicular.",
+          "E is true: only paramagnets follow Curie's law, and diamagnetic $\\chi$ is temperature-independent."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option (1) misses the true statement E. Option (2) includes the false statement B. Option (3) includes the false statements B and D.",
+        "common_trap": "Swapping the alignment of para- and diamagnetic rods.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t12_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Effect of temperature on magnetic properties",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The magnetic susceptibility of which of the following types of material is essentially independent of temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Paramagnetic materials",
+        "Ferromagnetic materials heated above their Curie temperature",
+        "Diamagnetic materials",
+        "Ferromagnetic materials below their Curie temperature"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Diamagnetism comes from induced moments, which thermal agitation does not disturb. Its susceptibility is therefore essentially independent of temperature.",
+        "steps": [
+          "Paramagnets follow Curie's law, $\\chi=\\frac{C\\mu_0}{T}$, so their $\\chi$ depends on $T$.",
+          "A ferromagnet above $T_C$ follows $\\chi=\\frac{C}{T-T_C}$, so its $\\chi$ depends on $T$.",
+          "Below $T_C$, heating a ferromagnet disturbs its domain alignment and weakens it, so its behaviour also depends on $T$.",
+          "Diamagnetic susceptibility arises from induced moments and is essentially temperature independent."
+        ],
+        "final_answer": "Option (3): Diamagnetic materials",
+        "why_not_others": "Paramagnets obey Curie's law. Ferromagnets above $T_C$ obey the Curie-Weiss law. Ferromagnets below $T_C$ weaken on heating. All three are temperature dependent.",
+        "common_trap": "Assuming every material's susceptibility depends on temperature.",
+        "time_saving_tip": "Induced moments mean the susceptibility is temperature independent. Permanent dipoles mean the susceptibility is temperature dependent."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t12_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Effect of temperature on magnetic properties",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A paramagnetic salt has a magnetic susceptibility of $3.0\\times10^{-4}$ at 300 K. Assuming Curie's law holds, what is its susceptibility at 200 K?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.5\\times10^{-4}$",
+        "$2.0\\times10^{-4}$",
+        "$3.0\\times10^{-4}$",
+        "$6.75\\times10^{-4}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Curie's law: $\\chi\\propto\\frac{1}{T}$ for a paramagnet.",
+        "steps": [
+          "Write the ratio: $\\frac{\\chi_2}{\\chi_1}=\\frac{T_1}{T_2}=\\frac{300}{200}=1.5$.",
+          "Then $\\chi_2=1.5\\times3.0\\times10^{-4}=4.5\\times10^{-4}$."
+        ],
+        "final_answer": "Option (1): $4.5\\times10^{-4}$",
+        "why_not_others": "$2.0\\times10^{-4}$ treats $\\chi$ as directly proportional to $T$. $3.0\\times10^{-4}$ treats $\\chi$ as temperature independent, which applies to diamagnets. $6.75\\times10^{-4}$ wrongly uses $\\chi\\propto1/T^2$.",
+        "common_trap": "Thinking that cooling reduces susceptibility. In fact, cooling reduces thermal agitation, so alignment and $\\chi$ increase.",
+        "time_saving_tip": "The product $\\chi T$ stays constant: $3.0\\times10^{-4}\\times300=\\chi_2\\times200$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t12_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Effect of temperature on magnetic properties",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Nickel has a Curie temperature of 631 K. At 731 K, its susceptibility is $\\chi_0$. Assuming the Curie-Weiss law holds, at what temperature will its susceptibility become $\\frac{\\chi_0}{2}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "681 K",
+        "831 K",
+        "1462 K",
+        "772 K"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Above $T_C$, a ferromagnet obeys $\\chi=\\frac{C}{T-T_C}$.",
+        "steps": [
+          "At 731 K: $T-T_C=731-631=100$ K.",
+          "Halving $\\chi$ requires doubling $T-T_C$, so $T-T_C=200$ K.",
+          "Therefore $T=631+200=831$ K."
+        ],
+        "final_answer": "Option (2): 831 K",
+        "why_not_others": "681 K comes from taking $\\chi\\propto(T-T_C)$, which halves $T-T_C$. 1462 K comes from applying Curie's law ($\\chi\\propto1/T$) and doubling the absolute temperature. 772 K comes from wrongly using $\\chi\\propto1/(T-T_C)^2$, which gives $T-T_C=100\\sqrt2\\approx141$ K.",
+        "common_trap": "Using Curie's law instead of the Curie-Weiss law for a ferromagnet above $T_C$.",
+        "time_saving_tip": "Work only with the temperature excess $T-T_C$ and scale it inversely with $\\chi$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t12_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Effect of temperature on magnetic properties",
+      "topic_index": 12,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A ferromagnetic material heated above its Curie temperature behaves as a paramagnetic material.",
+        "R": "Above the Curie temperature, the susceptibility of a ferromagnetic material becomes independent of temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Above $T_C$, spontaneous domain alignment is lost and the material becomes paramagnetic, with $\\chi=\\frac{C}{T-T_C}$.",
+        "steps": [
+          "Heating above $T_C$ destroys domain alignment, so the ferromagnet becomes paramagnetic. A is true.",
+          "Above $T_C$, $\\chi=\\frac{C}{T-T_C}$, which clearly depends on $T$. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is true, so option (4) is ruled out.",
+        "common_trap": "Confusing ferromagnets above $T_C$ with diamagnets, whose susceptibility is temperature independent.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u13_t12_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u13",
+      "topic": "Effect of temperature on magnetic properties",
+      "topic_index": 12,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At 330 K, a gadolinium sample is ferromagnetic while a nickel sample is paramagnetic.",
+        "II": "For a paramagnetic sample in a weak field, if both the applied magnetic field and the absolute temperature are doubled, its magnetization remains unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A material is ferromagnetic only below its Curie temperature. For a paramagnet in a weak field, $M\\propto\\frac{B}{T}$.",
+        "steps": [
+          "The Curie temperature of Gd is 317 K, which is below 330 K, so Gd is paramagnetic at 330 K.",
+          "The Curie temperature of Ni is 631 K, which is above 330 K, so Ni is still ferromagnetic at 330 K.",
+          "Statement I has the two behaviours reversed, so it is incorrect.",
+          "With $M\\propto\\frac{B}{T}$, doubling both $B$ and $T$ leaves $M$ unchanged. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I reverses the behaviours of Gd and Ni, which rules out options (1) and (3). Statement II follows directly from $M\\propto B/T$, which rules out option (2).",
+        "common_trap": "Assuming all common ferromagnets remain ferromagnetic near room temperature. Gd has a low Curie temperature of 317 K.",
+        "time_saving_tip": "Compare the given temperature with each $T_C$: below $T_C$ the material is ferromagnetic, above $T_C$ it is paramagnetic."
+      },
+      "review_flags": []
+    }
+  ],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "expected": 65,
+    "missing_slots": []
+  }
+}

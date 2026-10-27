@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A constant force of $10\\ \\text{N}$ acts on a block that is displaced $4\\ \\text{m}$ along a straight line. The force makes an angle of $60^\\circ$ with the displacement. What is the work done by the force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$40\\ \\text{J}$",
+        "$20\\ \\text{J}$",
+        "$34.6\\ \\text{J}$",
+        "$0\\ \\text{J}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Work by a constant force is $W = Fd\\cos\\theta$.",
+        "steps": [
+          "$W = Fd\\cos\\theta = 10 \\times 4 \\times \\cos 60^\\circ$.",
+          "$W = 40 \\times 0.5 = 20\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $20\\ \\text{J}$",
+        "why_not_others": "$40\\ \\text{J}$ ignores the angle. $34.6\\ \\text{J}$ uses $\\sin 60^\\circ$ instead of $\\cos 60^\\circ$. Zero work requires the force to be perpendicular to the displacement.",
+        "common_trap": "Using $\\sin\\theta$ in place of $\\cos\\theta$.",
+        "time_saving_tip": "Since $\\cos 60^\\circ = \\tfrac{1}{2}$, the answer is half of $Fd$."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A force $F = 6x$ (in newton, with $x$ in metre) acts on a particle along the x-axis. What is the work done by this force as the particle moves from $x = 1\\ \\text{m}$ to $x = 3\\ \\text{m}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ \\text{J}$",
+        "$24\\ \\text{J}$",
+        "$36\\ \\text{J}$",
+        "$27\\ \\text{J}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a variable force, $W = \\int_{x_i}^{x_f} F(x)\\,dx$.",
+        "steps": [
+          "$W = \\int_1^3 6x\\,dx = [3x^2]_1^3$.",
+          "$W = 27 - 3 = 24\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $24\\ \\text{J}$",
+        "why_not_others": "$36\\ \\text{J}$ comes from multiplying $F(3) = 18\\ \\text{N}$ by the $2\\ \\text{m}$ displacement. $27\\ \\text{J}$ evaluates only the upper limit. $12\\ \\text{J}$ comes from $3(x_2 - x_1)^2$.",
+        "common_trap": "Treating a variable force as constant, i.e. writing $W = Fd$.",
+        "time_saving_tip": "For a linear force, use the average force: $\\frac{6 + 18}{2} \\times 2 = 24\\ \\text{J}$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A force acting along the x-axis on a particle varies with position as follows. It rises linearly from $0$ at $x = 0$ to $10\\ \\text{N}$ at $x = 4\\ \\text{m}$. It stays constant at $10\\ \\text{N}$ up to $x = 6\\ \\text{m}$. It then decreases linearly to $-10\\ \\text{N}$ at $x = 10\\ \\text{m}$, passing through zero at $x = 8\\ \\text{m}$. What is the net work done by the force from $x = 0$ to $x = 10\\ \\text{m}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60\\ \\text{J}$",
+        "$40\\ \\text{J}$",
+        "$50\\ \\text{J}$",
+        "$20\\ \\text{J}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Work equals the area under the F-x graph, and area below the axis counts as negative.",
+        "steps": [
+          "From $0$ to $4\\ \\text{m}$: $\\tfrac{1}{2}(4)(10) = 20\\ \\text{J}$.",
+          "From $4$ to $6\\ \\text{m}$: $2 \\times 10 = 20\\ \\text{J}$.",
+          "From $6$ to $8\\ \\text{m}$: $\\tfrac{1}{2}(2)(10) = +10\\ \\text{J}$.",
+          "From $8$ to $10\\ \\text{m}$: $-\\tfrac{1}{2}(2)(10) = -10\\ \\text{J}$.",
+          "Net work $= 20 + 20 + 10 - 10 = 40\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $40\\ \\text{J}$",
+        "why_not_others": "$60\\ \\text{J}$ adds the area below the axis as positive. $50\\ \\text{J}$ stops the calculation at $x = 8\\ \\text{m}$. $20\\ \\text{J}$ counts only the first triangle.",
+        "common_trap": "Ignoring the negative sign of the area below the x-axis.",
+        "time_saving_tip": "The triangles from $6$ to $8\\ \\text{m}$ and from $8$ to $10\\ \\text{m}$ cancel, so only $20 + 20$ remains."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A coolie carrying a load on his head and walking on a level horizontal road does positive work on the load against gravity.",
+        "R": "The work done by a force is zero when the force is perpendicular to the displacement."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$W = Fd\\cos\\theta$ is zero when $\\theta = 90^\\circ$.",
+        "steps": [
+          "The coolie applies a vertical force on the load, while the displacement is horizontal.",
+          "With $\\theta = 90^\\circ$, the work done on the load is zero, so A is false.",
+          "R is a correct general statement."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Equating physical effort with work done in the physics sense.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A block of mass $m$ slides from $x = 0$ to $x = L$ on a horizontal floor where the coefficient of friction is $\\mu(x) = \\mu_0\\left(1 - \\frac{x}{L}\\right)$. The work done by friction is $-\\mu_0 mgL$.",
+        "II": "A constant force $\\vec{F} = (2\\hat{i} + 3\\hat{j} - \\hat{k})\\ \\text{N}$ moves a particle from the origin to the point $(1, -2, 3)\\ \\text{m}$. The work done by the force is $-7\\ \\text{J}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Integrate a position-dependent friction force. For constant vectors, $W = F_x d_x + F_y d_y + F_z d_z$.",
+        "steps": [
+          "Statement I: $W = -\\int_0^L \\mu_0\\left(1 - \\frac{x}{L}\\right) mg\\,dx = -\\mu_0 mg\\left(L - \\frac{L}{2}\\right) = -\\frac{\\mu_0 mgL}{2}$. So I is incorrect.",
+          "Statement II: $W = 2(1) + 3(-2) + (-1)(3) = 2 - 6 - 3 = -7\\ \\text{J}$. So II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I applies $W = Fd$ to a variable force, which fails. Statement II is computed correctly.",
+        "common_trap": "Using $\\mu_0$ throughout instead of integrating $\\mu(x)$.",
+        "time_saving_tip": "For linearly varying $\\mu$, use the average value $\\mu_0/2$."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "The linear momentum of a body is increased by $100\\%$. What is the percentage increase in its kinetic energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$100\\%$",
+        "$300\\%$",
+        "$200\\%$",
+        "$400\\%$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$K = \\frac{p^2}{2m}$, so $K \\propto p^2$ for a fixed mass.",
+        "steps": [
+          "A $100\\%$ increase means $p$ becomes $2p$.",
+          "So $K$ becomes $4K$.",
+          "The increase is $3K$, which is $300\\%$."
+        ],
+        "final_answer": "Option (2): $300\\%$",
+        "why_not_others": "$100\\%$ assumes $K \\propto p$. $400\\%$ confuses 'becomes 4 times' with 'increases by 400%'. $200\\%$ has no physical basis here.",
+        "common_trap": "Confusing the final multiple with the percentage increase.",
+        "time_saving_tip": "Percentage increase $= (\\text{factor} - 1) \\times 100\\%$."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "The potential energy of a particle moving along the x-axis is $U(x) = \\frac{x^3}{3} - 4x$ (in joule, with $x$ in metre). At which position is the particle in stable equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$x = +2\\ \\text{m}$",
+        "$x = -2\\ \\text{m}$",
+        "$x = 0$",
+        "$x = 2\\sqrt{3}\\ \\text{m}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Equilibrium requires $\\frac{dU}{dx} = 0$. It is stable if $\\frac{d^2U}{dx^2} > 0$.",
+        "steps": [
+          "$\\frac{dU}{dx} = x^2 - 4 = 0$ gives $x = \\pm 2\\ \\text{m}$.",
+          "$\\frac{d^2U}{dx^2} = 2x$.",
+          "At $x = +2$ this is $4 > 0$, so the equilibrium is stable. At $x = -2$ it is negative, so that equilibrium is unstable."
+        ],
+        "final_answer": "Option (1): $x = +2\\ \\text{m}$",
+        "why_not_others": "$x = -2\\ \\text{m}$ is a maximum of $U$, so it is unstable. At $x = 0$ the force is not zero. $x = 2\\sqrt{3}\\ \\text{m}$ is where $U = 0$, which is not an equilibrium point.",
+        "common_trap": "Taking $U = 0$ as the equilibrium condition instead of $\\frac{dU}{dx} = 0$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "Two bodies of masses $1\\ \\text{kg}$ and $4\\ \\text{kg}$ have equal linear momenta. What is the ratio of their kinetic energies $K_1 : K_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1:4$",
+        "$1:2$",
+        "$2:1$",
+        "$4:1$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$K = \\frac{p^2}{2m}$, so at equal momentum $K \\propto \\frac{1}{m}$.",
+        "steps": [
+          "$\\frac{K_1}{K_2} = \\frac{m_2}{m_1} = \\frac{4}{1}$."
+        ],
+        "final_answer": "Option (4): $4:1$",
+        "why_not_others": "$1:4$ assumes $K \\propto m$. The ratios $1:2$ and $2:1$ wrongly use $\\sqrt{m}$.",
+        "common_trap": "Thinking the heavier body must have more kinetic energy.",
+        "time_saving_tip": "At equal momentum, the lighter body has more kinetic energy."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Minimum of the U-x curve"
+          },
+          {
+            "label": "B",
+            "text": "Maximum of the U-x curve"
+          },
+          {
+            "label": "C",
+            "text": "Region where U is constant"
+          },
+          {
+            "label": "D",
+            "text": "Point where $\\frac{dU}{dx} > 0$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Neutral equilibrium"
+          },
+          {
+            "label": "II",
+            "text": "Force acts along the negative x-direction"
+          },
+          {
+            "label": "III",
+            "text": "Stable equilibrium"
+          },
+          {
+            "label": "IV",
+            "text": "Unstable equilibrium"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The force is $F = -\\frac{dU}{dx}$. A minimum of $U$ is stable, a maximum is unstable, and constant $U$ is neutral.",
+        "steps": [
+          "A minimum of $U$ gives stable equilibrium: A-III.",
+          "A maximum of $U$ gives unstable equilibrium: B-IV.",
+          "Constant $U$ gives neutral equilibrium: C-I.",
+          "If $\\frac{dU}{dx} > 0$, then $F < 0$, so the force acts along $-x$: D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (1) swaps stable and unstable. Option (2) swaps C and D. Option (4) swaps A and C.",
+        "common_trap": "Forgetting the minus sign in $F = -\\frac{dU}{dx}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about kinetic and potential energy are correct?",
+      "statements": {
+        "A": "Kinetic energy of a body can never be negative.",
+        "B": "Potential energy can be negative, depending on the choice of reference level.",
+        "C": "A potential energy can be defined for the kinetic friction force.",
+        "D": "For equal momenta, the heavier body has greater kinetic energy.",
+        "E": "If the speed of a body is tripled, its kinetic energy becomes 9 times."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$K = \\frac{1}{2}mv^2 \\ge 0$. Potential energy is defined only for conservative forces, and its reference level is arbitrary.",
+        "steps": [
+          "A is true because $v^2 \\ge 0$.",
+          "B is true because only changes in $U$ matter, so $U$ can be negative.",
+          "C is false because friction is non-conservative.",
+          "D is false because $K = \\frac{p^2}{2m}$, so the lighter body has more kinetic energy.",
+          "E is true because $K \\propto v^2$."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other option includes C or D, and both are false.",
+        "common_trap": "Assuming potential energy exists for every force.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "A block of mass $2\\ \\text{kg}$ slides on a rough horizontal floor with an initial speed of $6\\ \\text{m s}^{-1}$. The coefficient of kinetic friction is $0.3$. How far does it travel before stopping? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ \\text{m}$",
+        "$3\\ \\text{m}$",
+        "$6\\ \\text{m}$",
+        "$2\\ \\text{m}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "By the work-energy theorem, $\\mu mgs = \\frac{1}{2}mu^2$, so $s = \\frac{u^2}{2\\mu g}$.",
+        "steps": [
+          "$s = \\frac{36}{2 \\times 0.3 \\times 10} = \\frac{36}{6} = 6\\ \\text{m}$."
+        ],
+        "final_answer": "Option (3): $6\\ \\text{m}$",
+        "why_not_others": "$12\\ \\text{m}$ drops the factor of 2. $3\\ \\text{m}$ doubles the denominator. $2\\ \\text{m}$ is $\\frac{u}{\\mu g}$, which is the stopping time in seconds, not a distance.",
+        "common_trap": "Thinking the mass matters. It cancels out.",
+        "time_saving_tip": "Stopping distance does not depend on mass for frictional retardation."
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A bullet of mass $20\\ \\text{g}$ moving at $300\\ \\text{m s}^{-1}$ penetrates $0.15\\ \\text{m}$ into a fixed wooden block before coming to rest. What is the average resistive force exerted by the wood?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12000\\ \\text{N}$",
+        "$3000\\ \\text{N}$",
+        "$6000\\ \\text{N}$",
+        "$40\\ \\text{N}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "By the work-energy theorem, $Fs = \\frac{1}{2}mu^2$, so $F = \\frac{mu^2}{2s}$.",
+        "steps": [
+          "$\\frac{1}{2}mu^2 = \\frac{1}{2}(0.02)(90000) = 900\\ \\text{J}$.",
+          "$F = \\frac{900}{0.15} = 6000\\ \\text{N}$."
+        ],
+        "final_answer": "Option (3): $6000\\ \\text{N}$",
+        "why_not_others": "$12000\\ \\text{N}$ omits the $\\frac{1}{2}$. $3000\\ \\text{N}$ uses twice the penetration depth. $40\\ \\text{N}$ divides momentum by distance.",
+        "common_trap": "Forgetting the factor $\\frac{1}{2}$ in kinetic energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A body of mass $2\\ \\text{kg}$ is released from rest at a height of $5\\ \\text{m}$ on a rough curved track. It reaches the bottom with a speed of $8\\ \\text{m s}^{-1}$. What is the work done by friction? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-36\\ \\text{J}$",
+        "$+36\\ \\text{J}$",
+        "$-64\\ \\text{J}$",
+        "$-100\\ \\text{J}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$W_c + W_{nc} = \\Delta K$.",
+        "steps": [
+          "Work by gravity: $W_g = mgh = 2 \\times 10 \\times 5 = 100\\ \\text{J}$.",
+          "Change in kinetic energy: $\\Delta K = \\frac{1}{2}(2)(64) = 64\\ \\text{J}$.",
+          "Work by friction: $W_f = 64 - 100 = -36\\ \\text{J}$."
+        ],
+        "final_answer": "Option (1): $-36\\ \\text{J}$",
+        "why_not_others": "$+36\\ \\text{J}$ has the wrong sign, since friction opposes motion. $-64\\ \\text{J}$ uses only the kinetic energy. $-100\\ \\text{J}$ uses only the gravitational work.",
+        "common_trap": "Giving the magnitude without the negative sign.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Two bodies of different masses with equal kinetic energies are brought to rest by equal constant retarding forces. They travel equal distances before stopping.",
+        "R": "The work-energy theorem is valid only for conservative forces."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$Fs = K$, so $s = \\frac{K}{F}$ does not depend on mass.",
+        "steps": [
+          "Equal $K$ and equal $F$ give equal $s$, so A is true.",
+          "The work-energy theorem holds for all forces, including non-conservative ones, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Restricting the work-energy theorem to conservative forces.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the initial speed of a car is doubled and the retarding force is unchanged, its stopping distance becomes four times.",
+        "II": "A particle of mass $1\\ \\text{kg}$ starts from rest at $x = 0$ and is acted upon by a single force $F = x$ (in newton, with $x$ in metre) along the x-axis. Its speed at $x = 3\\ \\text{m}$ is $3\\ \\text{m s}^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$W_{net} = \\Delta K$, and for a constant retarding force the stopping distance is proportional to $u^2$.",
+        "steps": [
+          "Statement I: $s \\propto u^2$, so doubling $u$ makes $s$ four times. I is correct.",
+          "Statement II: $W = \\int_0^3 x\\,dx = 4.5\\ \\text{J}$.",
+          "Then $\\frac{1}{2}(1)v^2 = 4.5$, so $v = 3\\ \\text{m s}^{-1}$. II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out, so options (2), (3) and (4) are ruled out.",
+        "common_trap": "Writing $W = F(3) \\times 3 = 9\\ \\text{J}$ for a variable force.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A motor lifts a load of $50\\ \\text{kg}$ vertically through $10\\ \\text{m}$ at a steady rate in $20\\ \\text{s}$. What is the power delivered by the motor? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$25\\ \\text{W}$",
+        "$5000\\ \\text{W}$",
+        "$500\\ \\text{W}$",
+        "$250\\ \\text{W}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Power to lift a mass is $P = \\frac{mgh}{t}$.",
+        "steps": [
+          "$P = \\frac{50 \\times 10 \\times 10}{20} = \\frac{5000}{20} = 250\\ \\text{W}$."
+        ],
+        "final_answer": "Option (4): $250\\ \\text{W}$",
+        "why_not_others": "$25\\ \\text{W}$ omits $g$. $5000\\ \\text{W}$ is the work in joules, not divided by time. $500\\ \\text{W}$ divides by $10\\ \\text{s}$ instead of $20\\ \\text{s}$.",
+        "common_trap": "Reporting the work done as the power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A pump ejects water at a rate of $10\\ \\text{kg s}^{-1}$ with a speed of $20\\ \\text{m s}^{-1}$. What power is required to impart this kinetic energy to the water?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\ \\text{kW}$",
+        "$200\\ \\text{W}$",
+        "$2\\ \\text{kW}$",
+        "$1\\ \\text{kW}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$P = \\frac{1}{2}\\frac{dm}{dt}v^2$.",
+        "steps": [
+          "$P = \\frac{1}{2} \\times 10 \\times 400 = 2000\\ \\text{W} = 2\\ \\text{kW}$."
+        ],
+        "final_answer": "Option (3): $2\\ \\text{kW}$",
+        "why_not_others": "$4\\ \\text{kW}$ omits the $\\frac{1}{2}$. $200\\ \\text{W}$ uses $\\frac{dm}{dt}\\,v$ instead of $v^2$. $1\\ \\text{kW}$ introduces an extra factor of $\\frac{1}{2}$.",
+        "common_trap": "Forgetting the $\\frac{1}{2}$ from kinetic energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A body starts from rest and is driven by an engine delivering constant power. It covers a distance $s$ in time $t$. What distance does it cover, measured from the start, in time $4t$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16s$",
+        "$8s$",
+        "$4s$",
+        "$2s$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For constant power from rest, $\\frac{1}{2}mv^2 = Pt$, so $v \\propto t^{1/2}$ and $s \\propto t^{3/2}$.",
+        "steps": [
+          "$\\frac{s'}{s} = \\left(\\frac{4t}{t}\\right)^{3/2} = 4^{3/2} = 8$."
+        ],
+        "final_answer": "Option (2): $8s$",
+        "why_not_others": "$16s$ assumes $s \\propto t^2$, which holds for constant acceleration. $4s$ assumes $s \\propto t$. $2s$ assumes $s \\propto \\sqrt{t}$.",
+        "common_trap": "Treating constant-power motion as uniformly accelerated motion.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Dimensions of power"
+          },
+          {
+            "label": "B",
+            "text": "Dimensions of work"
+          },
+          {
+            "label": "C",
+            "text": "$1\\ \\text{kWh}$"
+          },
+          {
+            "label": "D",
+            "text": "$1\\ \\text{hp}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$746\\ \\text{W}$"
+          },
+          {
+            "label": "II",
+            "text": "$[ML^2T^{-2}]$"
+          },
+          {
+            "label": "III",
+            "text": "$[ML^2T^{-3}]$"
+          },
+          {
+            "label": "IV",
+            "text": "$3.6 \\times 10^6\\ \\text{J}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Power is work per unit time. The kWh is a unit of energy, and the hp is a unit of power.",
+        "steps": [
+          "Power has dimensions $[ML^2T^{-3}]$: A-III.",
+          "Work has dimensions $[ML^2T^{-2}]$: B-II.",
+          "$1\\ \\text{kWh} = 3.6 \\times 10^6\\ \\text{J}$: C-IV.",
+          "$1\\ \\text{hp} = 746\\ \\text{W}$: D-I."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Options (1) and (4) swap the dimensions of power and work. Options (2) and (4) treat the kWh as a power.",
+        "common_trap": "Treating the kWh as a unit of power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about power are correct?",
+      "statements": {
+        "A": "Power is a vector quantity because $P = \\vec{F}\\cdot\\vec{v}$.",
+        "B": "For a body starting from rest under a constant force, the instantaneous power delivered is proportional to time.",
+        "C": "The area under a power-time graph gives the work done.",
+        "D": "For a body starting from rest under constant power, its velocity is proportional to time.",
+        "E": "Efficiency of a machine is output power divided by input power."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "A, C and D only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Power is the scalar $\\vec{F}\\cdot\\vec{v}$. For constant power from rest, $v \\propto \\sqrt{t}$.",
+        "steps": [
+          "A is false because a dot product gives a scalar.",
+          "B is true because $v = at$, so $P = Fv = Fat \\propto t$.",
+          "C is true because $W = \\int P\\,dt$.",
+          "D is false because $v \\propto \\sqrt{t}$, not $t$.",
+          "E is true by the definition of efficiency."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Every other option includes A or D, and both are false.",
+        "common_trap": "Treating power as a vector because force and velocity are vectors.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

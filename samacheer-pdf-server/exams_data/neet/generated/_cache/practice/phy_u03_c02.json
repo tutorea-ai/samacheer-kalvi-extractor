@@ -1,0 +1,628 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "A lamp of weight $40\\ \\text{N}$ hangs at rest from two identical strings. The strings are attached symmetrically, and each makes an angle of $60^\\circ$ with the vertical. What is the tension in each string?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20\\ \\text{N}$",
+        "$23.1\\ \\text{N}$",
+        "$80\\ \\text{N}$",
+        "$40\\ \\text{N}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a weight hung symmetrically by two strings, each at angle $\\theta$ to the vertical, $T = \\frac{W}{2\\cos\\theta}$.",
+        "steps": [
+          "Balance the vertical components: $2T\\cos 60^\\circ = W$.",
+          "Since $\\cos 60^\\circ = 0.5$, this gives $2T(0.5) = 40$.",
+          "Therefore $T = 40\\ \\text{N}$."
+        ],
+        "final_answer": "Option (4): $40\\ \\text{N}$",
+        "why_not_others": "$20\\ \\text{N}$ simply splits the weight equally and ignores the angle. $23.1\\ \\text{N}$ wrongly uses $\\cos 30^\\circ$. $80\\ \\text{N}$ comes from $W/\\cos\\theta$, which forgets that there are two strings.",
+        "common_trap": "Assuming each string carries $W/2$ regardless of its angle.",
+        "time_saving_tip": "At $60^\\circ$ to the vertical, $2\\cos\\theta = 1$, so each tension equals W."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A particle is in equilibrium under three concurrent forces. Two of the forces have magnitudes $6\\ \\text{N}$ and $10\\ \\text{N}$, and the angle between them is $60^\\circ$. What is the magnitude of the third force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$14\\ \\text{N}$",
+        "$16\\ \\text{N}$",
+        "$2\\sqrt{19}\\ \\text{N}$",
+        "$4\\ \\text{N}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "When three forces are in equilibrium, any one force is equal and opposite to the resultant of the other two.",
+        "steps": [
+          "Find the resultant of the two known forces: $R = \\sqrt{F_1^2 + F_2^2 + 2F_1F_2\\cos\\theta}$.",
+          "Substitute: $R = \\sqrt{36 + 100 + 2(6)(10)(0.5)} = \\sqrt{196} = 14\\ \\text{N}$.",
+          "The third force is equal and opposite to this resultant, so its magnitude is $14\\ \\text{N}$."
+        ],
+        "final_answer": "Option (1): $14\\ \\text{N}$",
+        "why_not_others": "$16\\ \\text{N}$ adds the forces as scalars. $2\\sqrt{19}\\ \\text{N}$ uses a minus sign in the cosine term, as if the angle were $120^\\circ$. $4\\ \\text{N}$ is just the difference of the two magnitudes.",
+        "common_trap": "Writing $-2F_1F_2\\cos\\theta$ instead of $+2F_1F_2\\cos\\theta$ in the resultant formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A block of mass $2\\ \\text{kg}$ rests on a smooth incline of angle $45^\\circ$. It is held in equilibrium by a horizontal force. What is the normal reaction exerted by the incline on the block? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20\\ \\text{N}$",
+        "$20\\sqrt{2}\\ \\text{N}$",
+        "$10\\sqrt{2}\\ \\text{N}$",
+        "$40\\ \\text{N}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Resolve the forces properly. The horizontal force also has a component perpendicular to the incline, so N is not simply $mg\\cos\\theta$.",
+        "steps": [
+          "Along the incline: $F\\cos\\theta = mg\\sin\\theta$, which gives $F = mg\\tan\\theta = 20\\ \\text{N}$.",
+          "Perpendicular to the incline: $N = mg\\cos\\theta + F\\sin\\theta$.",
+          "Substitute: $N = 20(0.707) + 20(0.707) = 20\\sqrt{2}\\ \\text{N}$.",
+          "As a check, $N = \\frac{mg}{\\cos\\theta} = \\frac{20}{1/\\sqrt{2}} = 20\\sqrt{2}\\ \\text{N}$."
+        ],
+        "final_answer": "Option (2): $20\\sqrt{2}\\ \\text{N}$",
+        "why_not_others": "$10\\sqrt{2}\\ \\text{N}$ is $mg\\cos\\theta$, which ignores the horizontal force. $20\\ \\text{N}$ takes N = mg. $40\\ \\text{N}$ is simply $mg + F$.",
+        "common_trap": "Using $N = mg\\cos\\theta$ even when another force acts perpendicular to the surface.",
+        "time_saving_tip": "With a horizontal holding force on a smooth incline, $N = mg/\\cos\\theta$ directly."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Three concurrent forces of magnitudes $3\\ \\text{N}$, $4\\ \\text{N}$ and $8\\ \\text{N}$ cannot keep a particle in equilibrium.",
+        "R": "For three concurrent forces in equilibrium, any one force must be equal and opposite to the resultant of the other two."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Three forces in equilibrium form a closed triangle, so each force equals the resultant of the other two.",
+        "steps": [
+          "The resultant of $3\\ \\text{N}$ and $4\\ \\text{N}$ can range only from $1\\ \\text{N}$ to $7\\ \\text{N}$.",
+          "The third force, $8\\ \\text{N}$, lies outside this range, so it can never balance that resultant.",
+          "A is therefore true, and R is exactly the reason why."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R is a correct statement of the equilibrium condition, and it directly leads to A. So R is both true and the explanation.",
+        "common_trap": "Thinking that any three forces can be balanced if the angles are suitably adjusted.",
+        "time_saving_tip": "Apply the triangle inequality: the largest force must not exceed the sum of the other two."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A $100\\ \\text{N}$ weight hangs in equilibrium from two strings that make angles of $30^\\circ$ and $60^\\circ$ with the vertical. The tension in the string inclined at $30^\\circ$ to the vertical is $50\\sqrt{3}\\ \\text{N}$.",
+        "II": "Lami's theorem cannot be applied directly to a body in equilibrium under four concurrent forces."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Lami's theorem states $\\frac{F_1}{\\sin\\alpha} = \\frac{F_2}{\\sin\\beta} = \\frac{F_3}{\\sin\\gamma}$. It is valid only for three concurrent forces.",
+        "steps": [
+          "Find the angles between the forces. The two strings are $90^\\circ$ apart. The weight makes $150^\\circ$ with the $30^\\circ$ string and $120^\\circ$ with the $60^\\circ$ string.",
+          "For the $30^\\circ$ string, the opposite angle is the one between the other string and the weight, i.e. $120^\\circ$. Lami's theorem gives $\\frac{T_1}{\\sin 120^\\circ} = \\frac{100}{\\sin 90^\\circ}$.",
+          "So $T_1 = 100 \\times \\frac{\\sqrt{3}}{2} = 50\\sqrt{3}\\ \\text{N}$. Statement I is correct.",
+          "Lami's theorem applies only to three concurrent forces, so Statement II is also correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out: the Lami calculation confirms I, and the notes restrict Lami's theorem to three forces, which confirms II.",
+        "common_trap": "Pairing a force with the sine of the wrong angle. The correct angle is the one between the other two forces.",
+        "time_saving_tip": "When the strings are perpendicular, the string closer to the vertical carries $W\\cos(\\text{its angle with the vertical})$."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "A $5\\ \\text{kg}$ box rests on a horizontal floor. The coefficient of static friction is $\\mu_s = 0.4$. A horizontal push of $10\\ \\text{N}$ is applied, and the box remains at rest. What is the friction force acting on the box? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{N}$",
+        "$20\\ \\text{N}$",
+        "$50\\ \\text{N}$",
+        "$0\\ \\text{N}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Static friction is self-adjusting: $0 \\le f_s \\le \\mu_s N$.",
+        "steps": [
+          "The limiting friction is $\\mu_s mg = 0.4 \\times 50 = 20\\ \\text{N}$.",
+          "The applied push of $10\\ \\text{N}$ is less than $20\\ \\text{N}$, so the box does not move.",
+          "For equilibrium, static friction must balance the push, so $f_s = 10\\ \\text{N}$."
+        ],
+        "final_answer": "Option (1): $10\\ \\text{N}$",
+        "why_not_others": "$20\\ \\text{N}$ is the limiting value, which is reached only at the point of slipping. $50\\ \\text{N}$ is the weight. $0\\ \\text{N}$ would leave the push unbalanced.",
+        "common_trap": "Writing $f_s = \\mu_s N$ even when the box is not about to slip.",
+        "time_saving_tip": "If the body stays at rest, static friction equals the applied force."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A block slides down a rough incline of angle $30^\\circ$. The coefficient of kinetic friction is $\\mu_k = \\frac{1}{2\\sqrt{3}}$. What is the acceleration of the block? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5\\ \\text{m s}^{-2}$",
+        "$7.5\\ \\text{m s}^{-2}$",
+        "$5.0\\ \\text{m s}^{-2}$",
+        "$2.1\\ \\text{m s}^{-2}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a block sliding down a rough incline, $a = g(\\sin\\theta - \\mu_k\\cos\\theta)$.",
+        "steps": [
+          "Calculate the friction term: $\\mu_k\\cos 30^\\circ = \\frac{1}{2\\sqrt{3}} \\times \\frac{\\sqrt{3}}{2} = \\frac{1}{4}$.",
+          "Then $a = 10(0.5 - 0.25) = 2.5\\ \\text{m s}^{-2}$."
+        ],
+        "final_answer": "Option (1): $2.5\\ \\text{m s}^{-2}$",
+        "why_not_others": "$7.5\\ \\text{m s}^{-2}$ uses the plus sign, which applies to a block moving up the incline. $5.0\\ \\text{m s}^{-2}$ ignores friction. $2.1\\ \\text{m s}^{-2}$ treats the friction as $\\mu_k g$, i.e. takes N = mg.",
+        "common_trap": "Taking N = mg on an incline instead of $mg\\cos\\theta$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A $4\\ \\text{kg}$ block lies on a rough horizontal floor with $\\mu = \\frac{3}{4}$. What is the minimum pulling force, applied at a suitable angle, that will just make the block move? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30\\ \\text{N}$",
+        "$40\\ \\text{N}$",
+        "$18\\ \\text{N}$",
+        "$24\\ \\text{N}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The minimum pull is $F_{min} = \\frac{\\mu mg}{\\sqrt{1+\\mu^2}}$, applied at an angle $\\tan^{-1}\\mu$ above the horizontal.",
+        "steps": [
+          "Calculate $\\mu mg = 0.75 \\times 40 = 30\\ \\text{N}$.",
+          "Calculate $\\sqrt{1 + \\mu^2} = \\sqrt{1 + 0.5625} = 1.25$.",
+          "So $F_{min} = \\frac{30}{1.25} = 24\\ \\text{N}$. It is applied at $\\tan^{-1}(3/4)$ above the horizontal."
+        ],
+        "final_answer": "Option (4): $24\\ \\text{N}$",
+        "why_not_others": "$30\\ \\text{N}$ is the horizontal pull, which is not the minimum. $40\\ \\text{N}$ is the weight. $18\\ \\text{N}$ comes from multiplying $\\mu mg$ by $\\cos\\lambda$ instead of dividing by $\\sqrt{1+\\mu^2}$.",
+        "common_trap": "Assuming a horizontal pull is always the easiest way to move the block. Pulling upward at an angle reduces N and hence friction.",
+        "time_saving_tip": "Since $F_{min} = mg\\sin\\lambda$, with $\\tan\\lambda = 3/4$ we get $\\sin\\lambda = 3/5$, so $F_{min} = 40 \\times 0.6 = 24\\ \\text{N}$."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Angle of friction"
+          },
+          {
+            "label": "B",
+            "text": "Static friction before slipping"
+          },
+          {
+            "label": "C",
+            "text": "Kinetic friction"
+          },
+          {
+            "label": "D",
+            "text": "Rolling friction"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\mu_k N$, roughly independent of speed"
+          },
+          {
+            "label": "II",
+            "text": "$\\tan^{-1}\\mu_s$, equal to the angle of repose"
+          },
+          {
+            "label": "III",
+            "text": "Much smaller than sliding friction; the reason ball bearings are used"
+          },
+          {
+            "label": "IV",
+            "text": "Equal to the applied force, up to a maximum of $\\mu_s N$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Each type of friction has its own law or characteristic property.",
+        "steps": [
+          "The angle of friction satisfies $\\tan\\lambda = \\mu_s$, and it equals the angle of repose: A-II.",
+          "Static friction is self-adjusting up to $\\mu_s N$: B-IV.",
+          "Kinetic friction is $\\mu_k N$ and nearly independent of speed: C-I.",
+          "Rolling friction is much smaller than sliding friction: D-III."
+        ],
+        "final_answer": "Option (1): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (2) swaps the angle of friction with static friction. Option (3) swaps kinetic friction with rolling friction. Option (4) mismatches every pair.",
+        "common_trap": "Assigning a fixed value of $\\mu_s N$ to static friction in every case.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about friction are correct?",
+      "statements": {
+        "A": "Limiting friction is independent of the apparent area of contact.",
+        "B": "Pulling a block at an angle above the horizontal gives less friction than pushing it with the same force at the same angle below the horizontal.",
+        "C": "The friction force on the foot of a walking person acts backward.",
+        "D": "The coefficient of kinetic friction is greater than the coefficient of static friction for the same pair of surfaces.",
+        "E": "The angle of repose of an incline equals the angle of friction."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, B and C only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These statements test the laws of friction, how an angled force changes N, and the direction of friction in walking.",
+        "steps": [
+          "A is true. It is one of the laws of limiting friction.",
+          "B is true. Pulling upward reduces N, while pushing downward increases N, so friction is smaller when pulling.",
+          "C is false. Friction on the foot acts forward and is what propels the person.",
+          "D is false. In fact $\\mu_k < \\mu_s$.",
+          "E is true, since $\\tan\\lambda = \\mu_s = \\tan\\alpha_{repose}$."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other combination includes C or D, and both of those are false.",
+        "common_trap": "Believing that friction always opposes motion in the direction of travel. On a walking foot it acts forward.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "A stone of mass $0.5\\ \\text{kg}$ is tied to a string and whirled in a horizontal circle of radius $2\\ \\text{m}$ at a constant speed of $4\\ \\text{m s}^{-1}$. What is the centripetal force on the stone?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\ \\text{N}$",
+        "$1\\ \\text{N}$",
+        "$8\\ \\text{N}$",
+        "$16\\ \\text{N}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The centripetal force is $F_c = \\frac{mv^2}{r}$.",
+        "steps": [
+          "Substitute: $F_c = \\frac{0.5 \\times 16}{2}$.",
+          "So $F_c = 4\\ \\text{N}$."
+        ],
+        "final_answer": "Option (1): $4\\ \\text{N}$",
+        "why_not_others": "$1\\ \\text{N}$ uses $mv/r$. $8\\ \\text{N}$ forgets to divide by r. $16\\ \\text{N}$ multiplies by r instead of dividing.",
+        "common_trap": "Using v instead of $v^2$ in the formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "The bob of a conical pendulum has a mass of $0.5\\ \\text{kg}$. It moves in a horizontal circle, with the string making an angle of $60^\\circ$ with the vertical. What is the tension in the string? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5\\ \\text{N}$",
+        "$5\\ \\text{N}$",
+        "$\\frac{10}{\\sqrt{3}}\\ \\text{N}$",
+        "$10\\ \\text{N}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a conical pendulum, $T\\cos\\theta = mg$ and $T\\sin\\theta = \\frac{mv^2}{r}$.",
+        "steps": [
+          "Balance the vertical forces: $T\\cos 60^\\circ = mg = 5\\ \\text{N}$.",
+          "So $T = \\frac{5}{0.5} = 10\\ \\text{N}$."
+        ],
+        "final_answer": "Option (4): $10\\ \\text{N}$",
+        "why_not_others": "$2.5\\ \\text{N}$ is $mg\\cos\\theta$. $5\\ \\text{N}$ takes T = mg. $\\frac{10}{\\sqrt{3}}\\ \\text{N}$ is $mg/\\sin\\theta$, which uses the wrong component.",
+        "common_trap": "Writing $T = mg\\cos\\theta$, as in a simple pendulum at its extreme position.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A particle of mass $2\\ \\text{kg}$ moves uniformly on a circle of radius $1.5\\ \\text{m}$ at a speed of $3\\ \\text{m s}^{-1}$. Over half a revolution, what are the work done by the centripetal force and the magnitude of the change in the particle's momentum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0$ and $0$",
+        "$18\\pi\\ \\text{J}$ and $12\\ \\text{kg m s}^{-1}$",
+        "$18\\pi\\ \\text{J}$ and $0$",
+        "$0$ and $12\\ \\text{kg m s}^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The centripetal force is always perpendicular to the velocity, so it does no work. Momentum, however, is a vector and its direction changes.",
+        "steps": [
+          "Since the force is perpendicular to the velocity at every instant, $W = 0$.",
+          "After half a revolution, the velocity has reversed direction.",
+          "So $|\\Delta p| = 2mv = 2 \\times 2 \\times 3 = 12\\ \\text{kg m s}^{-1}$."
+        ],
+        "final_answer": "Option (4): $0$ and $12\\ \\text{kg m s}^{-1}$",
+        "why_not_others": "$18\\pi\\ \\text{J}$ wrongly multiplies the force by the arc length. A zero change in momentum treats momentum as a scalar.",
+        "common_trap": "Thinking that constant speed means constant momentum.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When the string of a stone whirled in a horizontal circle suddenly breaks, the stone moves off along the tangent to the circle.",
+        "R": "The centripetal force does no work because it is always perpendicular to the velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The tangential fly-off happens because no real outward force exists. Once the string breaks, the stone simply continues with its instantaneous velocity.",
+        "steps": [
+          "A is true. The stone moves along the tangent, not radially outward.",
+          "R is true. The centripetal force is perpendicular to the velocity, so it does no work.",
+          "However, R explains why kinetic energy stays constant, not why the stone moves tangentially. So R is not the explanation of A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are factually correct, which rules out options (3) and (4). R does not account for the tangential motion, which rules out option (1).",
+        "common_trap": "Believing the stone flies radially outward because of a centrifugal force.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A body of mass $1\\ \\text{kg}$ revolves in a circle of radius $0.5\\ \\text{m}$ at 2 revolutions per second. The centripetal force on it is $8\\pi^2\\ \\text{N}$.",
+        "II": "If the speed of a body in uniform circular motion is doubled while the radius is halved, the required centripetal force becomes four times as large."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The centripetal force is $F_c = m\\omega^2 r = \\frac{mv^2}{r}$, with $\\omega = 2\\pi n$.",
+        "steps": [
+          "For Statement I: $\\omega = 2\\pi \\times 2 = 4\\pi\\ \\text{rad s}^{-1}$.",
+          "Then $F_c = 1 \\times 16\\pi^2 \\times 0.5 = 8\\pi^2\\ \\text{N}$, so Statement I is correct.",
+          "For Statement II: $F \\propto \\frac{v^2}{r}$, which gives $\\frac{4}{1/2} = 8$.",
+          "The force becomes eight times as large, not four times, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I checks out numerically. Statement II ignores the effect of halving the radius.",
+        "common_trap": "Accounting only for the $v^2$ factor and forgetting that F also depends on 1/r.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A car of mass $1000\\ \\text{kg}$ takes a turn on a level circular road of radius $100\\ \\text{m}$. The coefficient of static friction between the tyres and the road is $0.4$. What is the maximum speed at which the car can safely take the turn? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.3\\ \\text{m s}^{-1}$",
+        "$50\\ \\text{m s}^{-1}$",
+        "$20\\ \\text{m s}^{-1}$",
+        "$31.6\\ \\text{m s}^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "On a level road, the maximum safe speed is $v_{max} = \\sqrt{\\mu_s r g}$. It does not depend on mass.",
+        "steps": [
+          "Substitute: $v_{max} = \\sqrt{0.4 \\times 100 \\times 10}$.",
+          "So $v_{max} = \\sqrt{400} = 20\\ \\text{m s}^{-1}$.",
+          "The mass of the car does not enter the calculation."
+        ],
+        "final_answer": "Option (3): $20\\ \\text{m s}^{-1}$",
+        "why_not_others": "$6.3\\ \\text{m s}^{-1}$ omits g. $50\\ \\text{m s}^{-1}$ uses $\\sqrt{rg/\\mu_s}$. $31.6\\ \\text{m s}^{-1}$ ignores $\\mu_s$ altogether.",
+        "common_trap": "Trying to use the mass of 1000 kg in the calculation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A railway track has a curve of radius $400\\ \\text{m}$, and the distance between the rails is $1.5\\ \\text{m}$. By how much should the outer rail be raised above the inner rail so that a train moving at $20\\ \\text{m s}^{-1}$ needs no lateral thrust from the rails? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.5\\ \\text{cm}$",
+        "$15\\ \\text{cm}$",
+        "$0.75\\ \\text{cm}$",
+        "$10\\ \\text{cm}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The banking condition is $\\tan\\theta = \\frac{v^2}{rg}$. For a small angle, $\\tan\\theta \\approx \\frac{h}{l}$.",
+        "steps": [
+          "Calculate $\\tan\\theta = \\frac{400}{400 \\times 10} = 0.1$.",
+          "Then $h = l\\tan\\theta = 1.5 \\times 0.1 = 0.15\\ \\text{m}$.",
+          "So $h = 15\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (2): $15\\ \\text{cm}$",
+        "why_not_others": "$1.5\\ \\text{cm}$ makes a factor-of-10 slip in the unit conversion. $0.75\\ \\text{cm}$ uses v instead of $v^2$. $10\\ \\text{cm}$ multiplies $\\tan\\theta$ by 1 m instead of the actual rail separation.",
+        "common_trap": "Using v instead of $v^2$ in the banking formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A circular road of radius $30\\ \\text{m}$ is banked at $45^\\circ$. The coefficient of static friction between the tyres and the road is $0.5$. What is the maximum safe speed on this road? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30\\ \\text{m s}^{-1}$",
+        "$17.3\\ \\text{m s}^{-1}$",
+        "$10\\ \\text{m s}^{-1}$",
+        "$12.2\\ \\text{m s}^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "On a rough banked road, $v_{max} = \\sqrt{rg\\frac{\\mu_s + \\tan\\theta}{1 - \\mu_s\\tan\\theta}}$.",
+        "steps": [
+          "Calculate the factor: $\\frac{0.5 + 1}{1 - 0.5} = 3$.",
+          "Then $v_{max}^2 = 30 \\times 10 \\times 3 = 900$.",
+          "So $v_{max} = 30\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $30\\ \\text{m s}^{-1}$",
+        "why_not_others": "$17.3\\ \\text{m s}^{-1}$ is the optimum speed with no friction. $10\\ \\text{m s}^{-1}$ is the minimum speed. $12.2\\ \\text{m s}^{-1}$ is the result for a level road.",
+        "common_trap": "Confusing the maximum safe speed with the minimum speed, or with the optimum speed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Optimum speed on a banked road"
+          },
+          {
+            "label": "B",
+            "text": "Maximum safe speed on a level curved road"
+          },
+          {
+            "label": "C",
+            "text": "Tangent of a cyclist's lean angle from the vertical"
+          },
+          {
+            "label": "D",
+            "text": "Normal reaction on a banked road at the optimum speed"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{mg}{\\cos\\theta}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\sqrt{rg\\tan\\theta}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\sqrt{\\mu_s r g}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{v^2}{rg}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "These are the standard results for vehicles on curved roads.",
+        "steps": [
+          "The optimum speed on a banked road is $v_0 = \\sqrt{rg\\tan\\theta}$: A-II.",
+          "The maximum safe speed on a level road is $\\sqrt{\\mu_s r g}$: B-III.",
+          "A cyclist's lean angle satisfies $\\tan\\theta = \\frac{v^2}{rg}$: C-IV.",
+          "At the optimum speed, $N = \\frac{mg}{\\cos\\theta}$: D-I."
+        ],
+        "final_answer": "Option (3): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Option (1) swaps the two speed formulas. Option (2) swaps the lean-angle expression and the normal reaction. Option (4) confuses $\\tan\\theta$ with a speed.",
+        "common_trap": "Taking N = mg on a banked road.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about vehicles on curved roads are correct?",
+      "statements": {
+        "A": "On a banked road, when the speed is less than $\\sqrt{rg\\tan\\theta}$, friction acts down the slope.",
+        "B": "The maximum safe speed on a level curved road is independent of the mass of the vehicle.",
+        "C": "If $\\mu_s \\ge \\tan\\theta$, a vehicle can remain at rest on the banked road without sliding.",
+        "D": "At the optimum speed on a banked road, the normal reaction equals mg.",
+        "E": "Railway tracks are banked by raising the outer rail."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "These statements test the direction of friction on banked roads, the normal reaction at the optimum speed, and the mass-independence of the safe speed.",
+        "steps": [
+          "A is false. Below the optimum speed, friction acts up the slope.",
+          "B is true, because $v_{max} = \\sqrt{\\mu_s r g}$ contains no mass term.",
+          "C is true. A vehicle can rest on the bank without sliding when $\\mu_s \\ge \\tan\\theta$.",
+          "D is false. At the optimum speed, $N = \\frac{mg}{\\cos\\theta}$, which is greater than mg.",
+          "E is true. The outer rail is raised to bank the track."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Every other combination includes A or D, and both of those are false.",
+        "common_trap": "Assuming friction on a banked road always acts down the slope.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

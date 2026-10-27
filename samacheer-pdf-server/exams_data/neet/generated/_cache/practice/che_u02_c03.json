@@ -1,0 +1,617 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "What is the total number of orbitals present in the shell with principal quantum number $n = 4$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "16",
+        "32",
+        "8",
+        "4"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A shell with principal quantum number n contains $n^2$ orbitals.",
+        "steps": [
+          "Number of orbitals in a shell is $n^2$.",
+          "For $n = 4$, this gives $4^2 = 16$ orbitals."
+        ],
+        "final_answer": "Option (1): 16",
+        "why_not_others": "32 is the electron capacity, $2n^2$. 8 comes from using $2n$. 4 is the number of subshells, which equals n.",
+        "common_trap": "Confusing the number of orbitals ($n^2$) with the number of electrons ($2n^2$) or with the number of subshells (n).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "What is the magnitude of the orbital angular momentum of an electron in a 3d orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sqrt{6}\\frac{h}{2\\pi}$",
+        "$\\sqrt{12}\\frac{h}{2\\pi}$",
+        "$\\sqrt{2}\\frac{h}{2\\pi}$",
+        "$2\\frac{h}{2\\pi}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Orbital angular momentum is $L = \\sqrt{l(l+1)}\\frac{h}{2\\pi}$. It depends on l, not on n.",
+        "steps": [
+          "For a d orbital, $l = 2$.",
+          "$L = \\sqrt{2 \\times 3}\\frac{h}{2\\pi} = \\sqrt{6}\\frac{h}{2\\pi}$."
+        ],
+        "final_answer": "Option (1): $\\sqrt{6}\\frac{h}{2\\pi}$",
+        "why_not_others": "$\\sqrt{12}$ comes from wrongly using $n = 3$ in place of l. $\\sqrt{2}$ comes from using $l = 1$ (a p orbital). $2\\frac{h}{2\\pi}$ comes from writing $l\\frac{h}{2\\pi}$ instead of $\\sqrt{l(l+1)}\\frac{h}{2\\pi}$.",
+        "common_trap": "Substituting the principal quantum number into the orbital angular momentum formula.",
+        "time_saving_tip": "s, p, d and f give $\\sqrt{0}$, $\\sqrt{2}$, $\\sqrt{6}$ and $\\sqrt{12}$ in units of $\\frac{h}{2\\pi}$."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "Which of the following sets of quantum numbers $(n, l, m_l, m_s)$ is permitted for an electron in an atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$n = 2, l = 2, m_l = 0, m_s = +\\frac{1}{2}$",
+        "$n = 3, l = 1, m_l = +2, m_s = -\\frac{1}{2}$",
+        "$n = 4, l = 3, m_l = -3, m_s = -\\frac{1}{2}$",
+        "$n = 1, l = 1, m_l = 0, m_s = +\\frac{1}{2}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "l ranges from 0 to $n-1$, $m_l$ ranges from $-l$ to $+l$, and $m_s = \\pm\\frac{1}{2}$.",
+        "steps": [
+          "For $n = 4$, l can be 0, 1, 2 or 3, so $l = 3$ is allowed.",
+          "For $l = 3$, $m_l$ can take values from $-3$ to $+3$, so $m_l = -3$ is allowed.",
+          "$m_s = -\\frac{1}{2}$ is allowed, so the whole set is valid."
+        ],
+        "final_answer": "Option (3): $n = 4, l = 3, m_l = -3, m_s = -\\frac{1}{2}$",
+        "why_not_others": "With $n = 2$, the largest allowed l is 1. With $l = 1$, $m_l$ cannot be $+2$. With $n = 1$, only $l = 0$ is allowed.",
+        "common_trap": "Allowing l to equal n, or letting $m_l$ exceed l.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the hydrogen atom, the 2s and 2p orbitals have the same energy.",
+        "R": "A p subshell contains three orbitals."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In hydrogen, orbital energy depends only on n. A subshell contains $2l + 1$ orbitals.",
+        "steps": [
+          "In H, energy depends only on n, so 2s and 2p are degenerate. A is true.",
+          "For $l = 1$, the number of orbitals is $2l + 1 = 3$. R is true.",
+          "The number of p orbitals has nothing to do with why 2s and 2p have equal energy. That follows from energy depending only on n."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is a correct fact, but it does not explain A, so option (1) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Thinking that 2s and 2p differ in energy in hydrogen, as they do in multi-electron atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The maximum number of electrons in an atom that can have $n = 3$ and $l = 2$ is 10.",
+        "II": "The total number of orbitals in the shell with $n = 5$ is 50."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A subshell holds $2(2l+1)$ electrons. A shell has $n^2$ orbitals and holds up to $2n^2$ electrons.",
+        "steps": [
+          "$n = 3, l = 2$ is the 3d subshell. It has $2l + 1 = 5$ orbitals, so it holds up to 10 electrons. Statement I is correct.",
+          "The number of orbitals for $n = 5$ is $5^2 = 25$. The value 50 is the electron capacity, $2n^2$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses orbitals with electrons, which rules out options (1) and (4). Statement I is correct, which rules out option (2).",
+        "common_trap": "Mixing up the $n^2$ formula for orbitals with the $2n^2$ formula for electrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "What is the shape of an orbital with azimuthal quantum number $l = 0$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Spherical",
+        "Dumbbell",
+        "Cloverleaf",
+        "Two lobes along an axis with a doughnut-shaped ring"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$l = 0$ corresponds to an s orbital, which is spherically symmetric.",
+        "steps": [
+          "$l = 0$ means an s orbital.",
+          "s orbitals are spherically symmetric and have no angular node."
+        ],
+        "final_answer": "Option (1): Spherical",
+        "why_not_others": "A dumbbell is the shape of a p orbital ($l = 1$). Cloverleaf is the shape of most d orbitals. Two lobes with a doughnut-shaped ring describes $d_{z^2}$.",
+        "common_trap": "Mixing up which shape belongs to which l value.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "Which of the following d orbitals has its lobes lying along the x and y axes?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$d_{xy}$",
+        "$d_{z^2}$",
+        "$d_{x^2-y^2}$",
+        "$d_{yz}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$d_{x^2-y^2}$ and $d_{z^2}$ have their lobes along the axes. $d_{xy}$, $d_{yz}$ and $d_{zx}$ have their lobes between the axes.",
+        "steps": [
+          "$d_{x^2-y^2}$ has its four lobes along the x and y axes.",
+          "$d_{z^2}$ has its lobes along the z-axis only."
+        ],
+        "final_answer": "Option (3): $d_{x^2-y^2}$",
+        "why_not_others": "The lobes of $d_{xy}$ lie between the x and y axes. The lobes of $d_{z^2}$ lie along the z-axis. The lobes of $d_{yz}$ lie between the y and z axes.",
+        "common_trap": "Thinking that the subscript xy means the lobes lie along x and y. In $d_{xy}$, they lie between those axes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "Which plane is the nodal plane of the $p_z$ orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "yz-plane",
+        "xy-plane",
+        "xz-plane",
+        "It has no nodal plane, only a conical node"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Each p orbital has one nodal plane through the nucleus, perpendicular to the axis of its lobes.",
+        "steps": [
+          "The lobes of $p_z$ point along the z-axis.",
+          "Its nodal plane passes through the nucleus perpendicular to z, so it is the xy-plane."
+        ],
+        "final_answer": "Option (2): xy-plane",
+        "why_not_others": "The yz-plane is the nodal plane of $p_x$. The xz-plane is the nodal plane of $p_y$. Conical nodes belong to $d_{z^2}$, not to p orbitals.",
+        "common_trap": "Choosing a plane that contains the axis of the lobes instead of the plane perpendicular to it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "s orbital"
+          },
+          {
+            "label": "B",
+            "text": "$p_z$ orbital"
+          },
+          {
+            "label": "C",
+            "text": "$d_{z^2}$ orbital"
+          },
+          {
+            "label": "D",
+            "text": "$d_{xy}$ orbital"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Spherically symmetric with no angular node"
+          },
+          {
+            "label": "II",
+            "text": "One nodal plane, the xy-plane"
+          },
+          {
+            "label": "III",
+            "text": "Two conical nodal surfaces"
+          },
+          {
+            "label": "IV",
+            "text": "Lobes lying between the axes"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Each orbital type has a characteristic shape and nodal pattern.",
+        "steps": [
+          "An s orbital is spherical with no angular node: A-I.",
+          "$p_z$ has the xy-plane as its nodal plane: B-II.",
+          "$d_{z^2}$ has two conical nodal surfaces: C-III.",
+          "$d_{xy}$ has its lobes between the axes: D-IV."
+        ],
+        "final_answer": "Option (2): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option (1) gives $p_z$ conical nodes. Option (3) gives the s orbital a nodal plane. Option (4) gives $d_{z^2}$ lobes between the axes.",
+        "common_trap": "Giving $d_{z^2}$ nodal planes like the other d orbitals.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the shapes of atomic orbitals are correct?",
+      "statements": {
+        "A": "All five 3d orbitals have the same energy in an isolated atom.",
+        "B": "The $d_{z^2}$ orbital has two nodal planes.",
+        "C": "Each p orbital has one nodal plane passing through the nucleus.",
+        "D": "The lobes of the $d_{x^2-y^2}$ orbital lie between the x and y axes.",
+        "E": "The size of the s orbital increases in the order 1s < 2s < 3s."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, C and E only",
+        "B, C and E only",
+        "A, B and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "This question tests degeneracy of the d set, nodal planes of p and d orbitals, and the directions of d-orbital lobes.",
+        "steps": [
+          "A is true: the 3d orbitals are degenerate in an isolated atom.",
+          "B is false: the angular nodes of $d_{z^2}$ are conical surfaces, not planes.",
+          "C is true: each p orbital has one nodal plane.",
+          "D is false: the lobes of $d_{x^2-y^2}$ lie along the x and y axes.",
+          "E is true: the size of an s orbital increases with n."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option (1) includes D, which is false. Option (3) includes B, which is false. Option (4) includes B and leaves out C.",
+        "common_trap": "Treating $d_{z^2}$ like the other four d orbitals, which do have two nodal planes each.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "Which values can the spin quantum number $m_s$ of an electron take?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0 and 1",
+        "$+\\frac{1}{2}$ and $-\\frac{1}{2}$",
+        "All integers from $-l$ to $+l$",
+        "$+1$ and $-1$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Electron spin has only two orientations, described by $m_s = \\pm\\frac{1}{2}$.",
+        "steps": [
+          "For every electron, $s = \\frac{1}{2}$.",
+          "The two possible orientations give $m_s = +\\frac{1}{2}$ or $m_s = -\\frac{1}{2}$."
+        ],
+        "final_answer": "Option (2): $+\\frac{1}{2}$ and $-\\frac{1}{2}$",
+        "why_not_others": "Integer values such as 0, 1 or $\\pm 1$ are not allowed for $m_s$. The range $-l$ to $+l$ applies to $m_l$, not $m_s$.",
+        "common_trap": "Mixing up the allowed values of $m_l$ and $m_s$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "What is the spin-only magnetic moment of the $Fe^{2+}$ ion (atomic number of Fe = 26)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.83 BM",
+        "3.87 BM",
+        "4.90 BM",
+        "5.92 BM"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\mu = \\sqrt{n(n+2)}$ BM, where n is the number of unpaired electrons.",
+        "steps": [
+          "Fe is [Ar] $3d^6 4s^2$. Electrons leave the 4s orbital first, so $Fe^{2+}$ is [Ar] $3d^6$.",
+          "By Hund's rule, five 3d electrons occupy the five orbitals singly and the 6th electron pairs. This leaves 4 unpaired electrons.",
+          "$\\mu = \\sqrt{4 \\times 6} = \\sqrt{24} \\approx 4.90$ BM."
+        ],
+        "final_answer": "Option (3): 4.90 BM",
+        "why_not_others": "2.83 BM corresponds to 2 unpaired electrons, which comes from writing [Ar] $3d^4 4s^2$. 3.87 BM corresponds to 3 unpaired electrons. 5.92 BM corresponds to 5 unpaired electrons, which is the value for $Fe^{3+}$.",
+        "common_trap": "Removing the two electrons from 3d instead of 4s.",
+        "time_saving_tip": "Memorise these values: 1, 2, 3, 4 and 5 unpaired electrons give 1.73, 2.83, 3.87, 4.90 and 5.92 BM."
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "What is the magnitude of the spin angular momentum of an electron?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\sqrt{3}}{2}\\frac{h}{2\\pi}$",
+        "$\\frac{1}{2}\\frac{h}{2\\pi}$",
+        "$\\sqrt{2}\\frac{h}{2\\pi}$",
+        "$\\frac{3}{4}\\frac{h}{2\\pi}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Spin angular momentum is $\\sqrt{s(s+1)}\\frac{h}{2\\pi}$, with $s = \\frac{1}{2}$.",
+        "steps": [
+          "$s(s+1) = \\frac{1}{2} \\times \\frac{3}{2} = \\frac{3}{4}$.",
+          "$\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{2}$, so the spin angular momentum is $\\frac{\\sqrt{3}}{2}\\frac{h}{2\\pi}$."
+        ],
+        "final_answer": "Option (1): $\\frac{\\sqrt{3}}{2}\\frac{h}{2\\pi}$",
+        "why_not_others": "$\\frac{1}{2}\\frac{h}{2\\pi}$ uses $s\\frac{h}{2\\pi}$ directly. $\\sqrt{2}$ comes from taking $s = 1$. $\\frac{3}{4}$ comes from forgetting to take the square root.",
+        "common_trap": "Writing $s\\frac{h}{2\\pi}$ instead of $\\sqrt{s(s+1)}\\frac{h}{2\\pi}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The nitrogen atom ($1s^2 2s^2 2p^3$) is paramagnetic.",
+        "R": "An orbital can hold at most two electrons, and they must have opposite spins."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Paramagnetism comes from unpaired electrons. Hund's rule decides how electrons occupy degenerate orbitals.",
+        "steps": [
+          "By Hund's rule, the three 2p electrons occupy the three p orbitals singly. N therefore has 3 unpaired electrons and is paramagnetic. A is true.",
+          "R is the Pauli limit on electrons in one orbital, which is true.",
+          "The reason N has unpaired electrons is Hund's rule, not the Pauli limit. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is true but does not account for the unpaired electrons, so option (1) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Accepting any true statement about spin as the explanation for paramagnetism.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A species with two unpaired electrons has a total spin of 1 and a spin multiplicity of 3.",
+        "II": "A species with three unpaired electrons has a spin multiplicity of 3."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Total spin is $S = n \\times \\frac{1}{2}$ for n unpaired electrons, and spin multiplicity is $2S + 1$.",
+        "steps": [
+          "For 2 unpaired electrons, $S = 1$ and $2S + 1 = 3$. Statement I is correct.",
+          "For 3 unpaired electrons, $S = \\frac{3}{2}$ and $2S + 1 = 4$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "The multiplicity for 3 unpaired electrons is 4, not 3, which rules out options (1) and (4). Statement I is correct, which rules out option (2).",
+        "common_trap": "Taking the multiplicity to be equal to the number of unpaired electrons. It is actually $n + 1$.",
+        "time_saving_tip": "Spin multiplicity equals (number of unpaired electrons + 1)."
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "According to the Aufbau principle, which orbital is filled immediately after the 4s orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3d",
+        "4p",
+        "4d",
+        "5s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Orbitals fill in increasing order of (n + l).",
+        "steps": [
+          "4s has $n + l = 4$, 3d has $n + l = 5$, and 4p also has $n + l = 5$.",
+          "3d and 4p tie at 5, so the one with lower n, which is 3d, fills first."
+        ],
+        "final_answer": "Option (1): 3d",
+        "why_not_others": "4p comes after 3d because of its higher n. 4d has $n + l = 6$ and 5s has $n + l = 5$ with $n = 5$, so both come later.",
+        "common_trap": "Assuming that orbitals of the same shell (4s, then 4p) fill consecutively.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "Using the (n + l) rule, which of the following orbitals has the highest energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6p",
+        "5d",
+        "4f",
+        "6s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A higher (n + l) means higher energy. If (n + l) is equal, the orbital with higher n has higher energy.",
+        "steps": [
+          "The (n + l) values are 6p = 7, 5d = 7, 4f = 7 and 6s = 6.",
+          "Among the orbitals with $n + l = 7$, 6p has the highest n, so it has the highest energy."
+        ],
+        "final_answer": "Option (1): 6p",
+        "why_not_others": "5d and 4f have the same (n + l) as 6p but lower n, so they are lower in energy. 6s has $n + l = 6$, which is the lowest of the four.",
+        "common_trap": "Breaking the tie in the wrong direction, by assuming the larger l gives the higher energy.",
+        "time_saving_tip": "Recall the filling order 6s, 4f, 5d, 6p. The last orbital in this list is the highest in energy."
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "How many unpaired electrons are present in a ground-state cobalt atom (atomic number 27)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1",
+        "5",
+        "3",
+        "7"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Fill orbitals using the Aufbau principle, then place electrons in degenerate orbitals using Hund's rule.",
+        "steps": [
+          "The configuration is $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^7$, giving a total of 27 electrons.",
+          "In $3d^7$, five electrons occupy the five orbitals singly. The 6th and 7th electrons then pair up.",
+          "This leaves 3 unpaired electrons."
+        ],
+        "final_answer": "Option (3): 3",
+        "why_not_others": "7 assumes no pairing at all, which is impossible with only five d orbitals. 5 counts only the singly filled stage. 1 assumes maximum pairing, which violates Hund's rule.",
+        "common_trap": "Pairing electrons before every d orbital is singly occupied.",
+        "time_saving_tip": "For $d^n$ with $n > 5$, the number of unpaired electrons is $10 - n$."
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Electron with which pairing begins in a p subshell"
+          },
+          {
+            "label": "B",
+            "text": "Electron with which pairing begins in a d subshell"
+          },
+          {
+            "label": "C",
+            "text": "Electron with which pairing begins in an f subshell"
+          },
+          {
+            "label": "D",
+            "text": "Maximum number of electrons in a single orbital"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "8th electron"
+          },
+          {
+            "label": "II",
+            "text": "2"
+          },
+          {
+            "label": "III",
+            "text": "6th electron"
+          },
+          {
+            "label": "IV",
+            "text": "4th electron"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "By Hund's rule, pairing starts only after each degenerate orbital is singly occupied. Pauli's principle limits each orbital to 2 electrons.",
+        "steps": [
+          "A p subshell has 3 orbitals, so pairing starts with the 4th electron: A-IV.",
+          "A d subshell has 5 orbitals, so pairing starts with the 6th electron: B-III.",
+          "An f subshell has 7 orbitals, so pairing starts with the 8th electron: C-I.",
+          "Pauli's principle allows at most 2 electrons per orbital: D-II."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option (1) swaps the d and f entries. Option (2) swaps the p and d entries. Option (3) mismatches the p and orbital-capacity entries.",
+        "common_trap": "Equating the pairing electron with the number of orbitals instead of (number of orbitals + 1).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about electron filling in atoms are correct?",
+      "statements": {
+        "A": "The 4s orbital is filled before 3d because it has a lower value of (n + l).",
+        "B": "Hund's rule governs the filling of the 1s and 2s orbitals.",
+        "C": "Pauli's exclusion principle limits each orbital to two electrons of opposite spin.",
+        "D": "The 4d orbital is filled before the 5s orbital.",
+        "E": "The ground-state configuration of $Fe^{2+}$ is [Ar] $3d^6$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and E only",
+        "A, C and E only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This question tests the (n + l) rule, the scope of Hund's rule, Pauli's limit, and the order in which ions lose electrons.",
+        "steps": [
+          "A is true: 4s has $n + l = 4$, while 3d has $n + l = 5$.",
+          "B is false: Hund's rule applies only to degenerate orbitals (p, d, f).",
+          "C is true: this is the statement of Pauli's principle.",
+          "D is false: 5s has $n + l = 5$, which is lower than 4d with $n + l = 6$, so 5s fills first.",
+          "E is true: Fe loses its 4s electrons first."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option (1) includes D, which is false. Option (2) includes B, which is false. Option (4) includes D and leaves out A.",
+        "common_trap": "Applying Hund's rule to s orbitals, or writing $Fe^{2+}$ as [Ar] $3d^4 4s^2$.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "Which of the following codons codes for the amino acid phenylalanine?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "AUG",
+        "UUU",
+        "UAA",
+        "UGA"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The genetic code assigns UUU to phenylalanine. AUG codes for methionine, and UAA, UAG and UGA are stop codons.",
+        "steps": [
+          "AUG is the start codon and codes for methionine.",
+          "UAA and UGA are stop codons and code for no amino acid.",
+          "UUU codes for phenylalanine."
+        ],
+        "final_answer": "Option (2): UUU",
+        "why_not_others": "AUG codes for methionine. UAA and UGA are stop codons.",
+        "common_trap": "Picking AUG simply because it is the best-known codon.",
+        "time_saving_tip": "Rule out the stop codons UAA, UAG and UGA first."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "In eukaryotes, RNA polymerase III is responsible for the synthesis of",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "28S rRNA",
+        "hnRNA",
+        "18S rRNA",
+        "tRNA and 5S rRNA"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Eukaryotes have three nuclear RNA polymerases. RNA polymerase I makes 28S, 18S and 5.8S rRNA. RNA polymerase II makes hnRNA. RNA polymerase III makes tRNA, 5S rRNA and snRNAs.",
+        "steps": [
+          "28S and 18S rRNA are made by RNA polymerase I.",
+          "hnRNA is made by RNA polymerase II.",
+          "tRNA and 5S rRNA are made by RNA polymerase III."
+        ],
+        "final_answer": "Option (4): tRNA and 5S rRNA",
+        "why_not_others": "28S and 18S rRNA are products of RNA polymerase I. hnRNA is the product of RNA polymerase II.",
+        "common_trap": "Assuming every rRNA is made by RNA polymerase I. The 5S rRNA is an exception and is made by RNA polymerase III.",
+        "time_saving_tip": "Remember 5S rRNA as the odd one out that goes with tRNA."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "Which of the following statements about a transcription unit is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The promoter lies towards the 3' end of the coding strand",
+        "The template strand has $5' \\rightarrow 3'$ polarity",
+        "The coding strand has the same sequence as the RNA except that thymine is present in place of uracil",
+        "In bacteria, the rho factor helps RNA polymerase initiate transcription"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A transcription unit consists of a promoter, a structural gene and a terminator. The template strand runs $3' \\rightarrow 5'$, and the coding strand matches the RNA sequence with T in place of U.",
+        "steps": [
+          "The promoter lies towards the 5' end of the coding strand.",
+          "The template strand has $3' \\rightarrow 5'$ polarity.",
+          "The coding strand sequence equals the RNA sequence, with T instead of U.",
+          "In bacteria, the sigma factor initiates transcription and the rho factor terminates it."
+        ],
+        "final_answer": "Option (3): The coding strand has the same sequence as the RNA except that thymine is present in place of uracil",
+        "why_not_others": "Option 1 places the promoter at the wrong end. Option 2 reverses the polarity of the template strand. Option 4 swaps the roles of sigma and rho.",
+        "common_trap": "Confusing the sigma factor (initiation) with the rho factor (termination).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In bacteria, transcription and translation cannot occur together because the mRNA must first be spliced.",
+        "R": "Bacterial mRNA does not require processing to become functional."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Prokaryotic transcription and translation are coupled because their mRNA needs no processing.",
+        "steps": [
+          "Bacterial mRNA needs no splicing or other processing, so R is true.",
+          "Because no processing is needed, transcription and translation are coupled in bacteria.",
+          "A claims the opposite, so A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so the options that call A true are wrong.",
+        "common_trap": "Applying eukaryotic split-gene splicing to bacteria.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "During processing of eukaryotic hnRNA, capping adds 200-300 adenylate residues at the 5' end.",
+        "II": "Charging of tRNA requires ATP, and in bacteria the 23S rRNA acts as the ribozyme that forms peptide bonds."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Capping adds methyl guanosine triphosphate at the 5' end, and tailing adds 200-300 adenylates at the 3' end. Aminoacylation of tRNA uses ATP, and 23S rRNA acts as peptidyl transferase in bacteria.",
+        "steps": [
+          "Statement I describes tailing but calls it capping and puts it at the wrong end, so it is incorrect.",
+          "Charging of tRNA uses ATP, so the first part of Statement II is true.",
+          "23S rRNA is the bacterial ribozyme (peptidyl transferase), so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I mixes up capping with tailing, so no option that calls it correct can be right.",
+        "common_trap": "Placing the poly-A tail at the 5' end, or mixing up capping with tailing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_1",
+      "type": "single_correct",
+      "question": "In the lac operon of E. coli, gene z codes for",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "beta-galactosidase",
+        "permease",
+        "transacetylase",
+        "the repressor"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In the lac operon, z codes for beta-galactosidase, y for permease and a for transacetylase. The i gene codes for the repressor.",
+        "steps": [
+          "Gene z codes for beta-galactosidase, which hydrolyses lactose into galactose and glucose.",
+          "Genes y and a code for permease and transacetylase.",
+          "The i gene codes for the repressor."
+        ],
+        "final_answer": "Option (1): beta-galactosidase",
+        "why_not_others": "Permease is coded by y, transacetylase by a and the repressor by i.",
+        "common_trap": "Swapping the products of the y and z genes.",
+        "time_saving_tip": "Read the genes in order: z, y, a gives beta-galactosidase, permease, transacetylase."
+      }
+    },
+    {
+      "slot": "t13_2",
+      "type": "single_correct",
+      "question": "Lactose switches on the lac operon by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "binding directly to the operator and pulling RNA polymerase onto it",
+        "binding to the repressor and inactivating it",
+        "activating the repressor so that it binds the operator",
+        "being hydrolysed first into galactose, which then acts as the inducer"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Lactose is the inducer. It binds the repressor and inactivates it, which frees the operator so RNA polymerase can transcribe the structural genes.",
+        "steps": [
+          "When lactose is absent, the repressor binds the operator and blocks RNA polymerase.",
+          "When present, lactose binds the repressor and inactivates it.",
+          "The operator is now free, and z, y and a are transcribed."
+        ],
+        "final_answer": "Option (2): binding to the repressor and inactivating it",
+        "why_not_others": "Lactose does not bind the operator. It inactivates the repressor rather than activating it. Galactose is a product of lactose breakdown, not the inducer.",
+        "common_trap": "Believing that lactose activates the repressor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_3",
+      "type": "single_correct",
+      "question": "Which of the following statements about the lac operon is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The i gene has its own promoter and is expressed constitutively",
+        "Galactose and glucose act as inducers of the operon",
+        "Genes z, y and a are transcribed from separate promoters as monocistronic mRNAs",
+        "The lac operon is a repressible operon under positive control"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The i gene is constitutive and has its own promoter. Genes z, y and a share a single promoter and are transcribed as one polycistronic mRNA. The operon is inducible and under negative control.",
+        "steps": [
+          "The i gene is not part of the z, y, a transcription unit and has its own promoter.",
+          "Galactose and glucose are products of lactose hydrolysis, not inducers.",
+          "Genes z, y and a share one promoter and give a polycistronic mRNA.",
+          "The operon is inducible and under negative control by the repressor."
+        ],
+        "final_answer": "Option (1): The i gene has its own promoter and is expressed constitutively",
+        "why_not_others": "Option 2 treats products as inducers. Option 3 wrongly gives separate promoters. Option 4 mislabels the type of regulation.",
+        "common_trap": "Assuming the i gene shares the z, y, a promoter.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Gene i"
+          },
+          {
+            "label": "B",
+            "text": "Gene z"
+          },
+          {
+            "label": "C",
+            "text": "Gene y"
+          },
+          {
+            "label": "D",
+            "text": "Gene a"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Permease"
+          },
+          {
+            "label": "II",
+            "text": "Transacetylase"
+          },
+          {
+            "label": "III",
+            "text": "Repressor"
+          },
+          {
+            "label": "IV",
+            "text": "Beta-galactosidase"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Each lac operon gene has a fixed product: i gives the repressor, z gives beta-galactosidase, y gives permease and a gives transacetylase.",
+        "steps": [
+          "Gene i codes for the repressor (A-III).",
+          "Gene z codes for beta-galactosidase (B-IV).",
+          "Gene y codes for permease (C-I).",
+          "Gene a codes for transacetylase (D-II)."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 1 swaps the products of i and z. Option 2 swaps those of y and a. Option 4 swaps those of z and y.",
+        "common_trap": "Swapping the products of y and a.",
+        "time_saving_tip": "Only two options pair A with III and B with IV. Check C to decide between them."
+      }
+    },
+    {
+      "slot": "t13_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about gene regulation and the lac operon are correct?",
+      "statements": {
+        "A": "In prokaryotes, control of the rate of transcription initiation is the predominant site of regulating gene expression.",
+        "B": "In the absence of lactose, the repressor binds the operator and prevents RNA polymerase from transcribing the operon.",
+        "C": "The lac operon is an example of positive regulation in which lactose activates the repressor.",
+        "D": "A very low level of lac operon expression is always present so that some lactose can enter the cell.",
+        "E": "Once lactose is used up, the operon stays switched on permanently."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only",
+        "A, B and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The lac operon is under negative regulation. The inducer inactivates the repressor, the operon always has basal expression, and it switches off again when lactose is used up.",
+        "steps": [
+          "A is correct: in prokaryotes, control of transcription initiation predominates.",
+          "B is correct: without lactose, the repressor blocks the operator.",
+          "C is incorrect: regulation is negative, and lactose inactivates the repressor.",
+          "D is correct: basal expression lets some lactose enter the cell.",
+          "E is incorrect: the operon switches off once lactose is used up."
+        ],
+        "final_answer": "Option (4): A, B and D only",
+        "why_not_others": "The other options include C or E, which are false, or leave out true statements.",
+        "common_trap": "Calling the lac operon positively regulated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_1",
+      "type": "single_correct",
+      "question": "The technique of DNA fingerprinting was developed by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Jacques Monod",
+        "Frederick Sanger",
+        "Alec Jeffreys",
+        "George Gamow"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Alec Jeffreys developed DNA fingerprinting using VNTRs.",
+        "steps": [
+          "Monod co-described the lac operon.",
+          "Sanger's method is the basis of automated DNA sequencing.",
+          "Gamow proposed the triplet code.",
+          "Alec Jeffreys developed DNA fingerprinting."
+        ],
+        "final_answer": "Option (3): Alec Jeffreys",
+        "why_not_others": "Each of the other scientists is linked with a different discovery.",
+        "common_trap": "Confusing Sanger's sequencing method with DNA fingerprinting.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_2",
+      "type": "single_correct",
+      "question": "Which of the following is a correct finding of the Human Genome Project?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Chromosome 1 has the fewest genes, 231",
+        "About 50% of the human genome codes for proteins",
+        "The average gene consists of about 2.4 million bases",
+        "Dystrophin is the largest known human gene, at 2.4 million bases"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Key HGP findings: the average gene is 3000 bases, dystrophin is the largest at 2.4 million bases, less than 2% of the genome codes for proteins, chromosome 1 has the most genes (2968) and Y the fewest (231).",
+        "steps": [
+          "Chromosome 1 has the most genes (2968). The Y chromosome has 231, the fewest.",
+          "Less than 2% of the genome codes for proteins.",
+          "The average gene is 3000 bases long.",
+          "Dystrophin, at 2.4 million bases, is the largest gene."
+        ],
+        "final_answer": "Option (4): Dystrophin is the largest known human gene, at 2.4 million bases",
+        "why_not_others": "Option 1 gives Y's gene count to chromosome 1. Option 2 inflates the protein-coding fraction. Option 3 gives dystrophin's size as the average gene size.",
+        "common_trap": "Mixing up the gene counts of chromosome 1 and the Y chromosome.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_3",
+      "type": "single_correct",
+      "question": "The correct sequence of steps in DNA fingerprinting is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "DNA isolation, restriction digestion, gel electrophoresis, Southern blotting, hybridisation with VNTR probe, autoradiography",
+        "DNA isolation, gel electrophoresis, restriction digestion, hybridisation with VNTR probe, Southern blotting, autoradiography",
+        "Restriction digestion, DNA isolation, Southern blotting, gel electrophoresis, autoradiography, hybridisation with VNTR probe",
+        "DNA isolation, restriction digestion, Southern blotting, gel electrophoresis, hybridisation with VNTR probe, autoradiography"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "DNA fingerprinting follows this order: isolation, digestion, electrophoresis, blotting, hybridisation, autoradiography.",
+        "steps": [
+          "DNA is isolated and cut with restriction endonucleases.",
+          "The fragments are separated by gel electrophoresis.",
+          "The separated DNA is transferred to a membrane by Southern blotting.",
+          "The membrane is hybridised with a labelled VNTR probe and detected by autoradiography."
+        ],
+        "final_answer": "Option (1): DNA isolation, restriction digestion, gel electrophoresis, Southern blotting, hybridisation with VNTR probe, autoradiography",
+        "why_not_others": "Fragments must be produced before electrophoresis, and they must be separated before they can be blotted. The other options break this order.",
+        "common_trap": "Placing Southern blotting before gel electrophoresis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "DNA fingerprinting can be carried out even on very tiny biological samples collected from a crime scene.",
+        "R": "VNTRs are a type of satellite DNA that shows high polymorphism, with sizes ranging from 0.1 to 20 kb."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "PCR amplifies DNA from tiny samples. VNTR polymorphism explains why individuals can be told apart, not why small samples are enough.",
+        "steps": [
+          "A is true: DNA from tiny samples can be amplified by PCR.",
+          "R is true: VNTRs are highly polymorphic satellite DNA, 0.1-20 kb in size.",
+          "The ability to work with tiny samples comes from PCR amplification, not from VNTR polymorphism, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 are out. Option 1 fails because R does not explain A.",
+        "common_trap": "Treating any true, related fact as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The Expressed Sequence Tags approach of the HGP sequenced the whole genome first and later assigned functions to its different regions.",
+        "II": "Over 50% of the human genome codes for proteins, whereas the functions of less than 2% of the discovered genes are unknown."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Expressed Sequence Tags identify genes expressed as RNA, while sequence annotation sequences the whole genome and then assigns functions. Less than 2% of the genome codes for proteins, and the functions of over 50% of discovered genes are unknown.",
+        "steps": [
+          "Statement I describes sequence annotation, not Expressed Sequence Tags, so it is incorrect.",
+          "Statement II swaps the two figures: less than 2% of the genome codes for proteins, and over 50% of genes have unknown functions. It is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements contain an error, so every other option fails.",
+        "common_trap": "Mixing up the two HGP approaches, or mixing up the 2% and 50% figures.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_1",
+      "type": "single_correct",
+      "question": "The theory of spontaneous generation was disproved by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A. I. Oparin",
+        "J. B. S. Haldane",
+        "Louis Pasteur",
+        "Stanley Miller"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Pasteur's swan-neck flask experiments showed that life comes only from pre-existing life.",
+        "steps": [
+          "Oparin and Haldane proposed chemical evolution.",
+          "Miller obtained amino acids in an electric discharge experiment.",
+          "Pasteur disproved spontaneous generation with swan-neck flasks."
+        ],
+        "final_answer": "Option (3): Louis Pasteur",
+        "why_not_others": "The other scientists worked on chemical evolution, not on spontaneous generation.",
+        "common_trap": "Linking Miller's experiment with disproving spontaneous generation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_2",
+      "type": "single_correct",
+      "question": "In Stanley Miller's experiment, the closed flask in which electric discharge was created contained",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_4$, $O_2$, $NH_3$ and water vapour",
+        "$CO_2$, $N_2$, $O_2$ and $H_2$",
+        "$CH_4$, $H_2$, $NH_3$ and water vapour",
+        "$CH_4$, $H_2$, $O_2$ and $NH_3$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Miller recreated the reducing early atmosphere, which had no free oxygen: $CH_4$, $H_2$, $NH_3$ and water vapour at 800 degrees C.",
+        "steps": [
+          "The early atmosphere was reducing and had no free $O_2$.",
+          "Every option containing $O_2$ can be eliminated.",
+          "The remaining mixture is $CH_4$, $H_2$, $NH_3$ and water vapour."
+        ],
+        "final_answer": "Option (3): $CH_4$, $H_2$, $NH_3$ and water vapour",
+        "why_not_others": "Options 1, 2 and 4 all include free oxygen, which was absent from the reducing early atmosphere.",
+        "common_trap": "Assuming the early atmosphere contained oxygen like today's air.",
+        "time_saving_tip": "Strike out every option that contains $O_2$."
+      }
+    },
+    {
+      "slot": "t15_3",
+      "type": "single_correct",
+      "question": "The first non-cellular forms of life probably originated about",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20 billion years ago",
+        "4.5 billion years ago",
+        "2000 million years ago",
+        "3 billion years ago"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Key dates: the universe about 20 billion years ago, Earth about 4.5 billion years ago, non-cellular life about 3 billion years ago, cellular life about 2000 million years ago.",
+        "steps": [
+          "20 billion years ago is the origin of the universe.",
+          "4.5 billion years ago is the formation of Earth.",
+          "2000 million years ago is when the first cellular forms appeared.",
+          "Non-cellular life arose about 3 billion years ago."
+        ],
+        "final_answer": "Option (4): 3 billion years ago",
+        "why_not_others": "Each wrong option is the date of a different event in the timeline.",
+        "common_trap": "Confusing the origin of non-cellular life with that of cellular life.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Oparin and Haldane"
+          },
+          {
+            "label": "B",
+            "text": "Louis Pasteur"
+          },
+          {
+            "label": "C",
+            "text": "Stanley Miller"
+          },
+          {
+            "label": "D",
+            "text": "Panspermia"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Spores transferred to Earth from outer space"
+          },
+          {
+            "label": "II",
+            "text": "Swan-neck flask experiment"
+          },
+          {
+            "label": "III",
+            "text": "First life formed from pre-existing non-living organic molecules"
+          },
+          {
+            "label": "IV",
+            "text": "Amino acids obtained by electric discharge in a closed flask"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Each idea or experiment on the origin of life belongs to a specific person or theory.",
+        "steps": [
+          "Oparin and Haldane proposed chemical evolution (A-III).",
+          "Pasteur performed the swan-neck flask experiment (B-II).",
+          "Miller obtained amino acids by electric discharge (C-IV).",
+          "Panspermia holds that spores came from outer space (D-I)."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Option 1 swaps A and B. Option 2 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Crediting Miller's experiment to Oparin and Haldane.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the origin of life are correct?",
+      "statements": {
+        "A": "Earth formed about 4.5 billion years ago, and life appeared roughly 500 million years later.",
+        "B": "The early atmosphere of Earth was oxidising and rich in free oxygen.",
+        "C": "Apart from amino acids, similar experiments by other scientists yielded sugars, nitrogen bases, pigments and fats.",
+        "D": "According to the Big Bang theory, the universe originated about 4.5 billion years ago.",
+        "E": "The first life forms were probably giant molecules such as RNA, proteins and polysaccharides that could reproduce."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "C, D and E only",
+        "A and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Earth is about 4.5 billion years old, the universe about 20 billion. The early atmosphere was reducing, and the first life was probably self-reproducing giant molecules.",
+        "steps": [
+          "A is correct.",
+          "B is incorrect: the early atmosphere was reducing, with no free $O_2$.",
+          "C is correct.",
+          "D is incorrect: the universe originated about 20 billion years ago. 4.5 billion years is the age of Earth.",
+          "E is correct."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Options 1 and 3 include a false statement (B or D). Option 4 leaves out the true statement C.",
+        "common_trap": "Confusing the age of Earth with the age of the universe.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

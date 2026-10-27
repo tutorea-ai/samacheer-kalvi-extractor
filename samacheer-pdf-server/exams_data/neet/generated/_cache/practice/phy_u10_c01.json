@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A simple pendulum completes 40 oscillations in 20 s. What is the frequency of its oscillation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.5\\ \\text{Hz}$",
+        "$2\\ \\text{Hz}$",
+        "$4\\pi\\ \\text{Hz}$",
+        "$40\\ \\text{Hz}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The time period is the time for one oscillation, and $\\nu = 1/T$.",
+        "steps": [
+          "Time period $T = 20/40 = 0.5$ s.",
+          "Frequency $\\nu = 1/T = 1/0.5 = 2$ Hz."
+        ],
+        "final_answer": "Option (2): $2\\ \\text{Hz}$",
+        "why_not_others": "0.5 Hz is the value of T in seconds, not the frequency. $4\\pi$ is the angular frequency in rad/s, wrongly given in Hz. 40 Hz takes the total oscillation count as the frequency.",
+        "common_trap": "Writing the time period, or the angular frequency $\\omega = 2\\pi\\nu$, as the frequency.",
+        "time_saving_tip": "Frequency = number of oscillations ÷ time taken = 40/20."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "Which of the following motions is periodic but NOT oscillatory?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A simple pendulum swinging with small amplitude",
+        "A particle moving in uniform circular motion",
+        "A block oscillating at the end of a horizontal spring",
+        "The prong of a vibrating tuning fork"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Oscillatory motion is periodic to-and-fro motion about a mean position. Not every periodic motion is oscillatory.",
+        "steps": [
+          "Uniform circular motion repeats after a fixed time, so it is periodic.",
+          "It is not a to-and-fro motion about a mean position, so it is not oscillatory.",
+          "The pendulum, the spring-block and the tuning-fork prong all move to and fro about a mean position."
+        ],
+        "final_answer": "Option (2): A particle moving in uniform circular motion",
+        "why_not_others": "Each of the other three moves to and fro about an equilibrium position, so each is both periodic and oscillatory.",
+        "common_trap": "Assuming every periodic motion must also be oscillatory.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A particle oscillates with an angular frequency of $10\\pi\\ \\text{rad s}^{-1}$. How many complete oscillations does it make in 3 s?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "15",
+        "30",
+        "94",
+        "7.5"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\omega = 2\\pi\\nu$, so $\\nu = \\omega/2\\pi$.",
+        "steps": [
+          "$\\nu = 10\\pi/2\\pi = 5$ Hz.",
+          "Number of oscillations in 3 s $= 5 \\times 3 = 15$."
+        ],
+        "final_answer": "Option (1): 15",
+        "why_not_others": "30 comes from taking $\\nu = \\omega/\\pi$. 94 treats $\\omega$ itself as the frequency ($10\\pi \\times 3 \\approx 94$). 7.5 comes from dividing by $4\\pi$.",
+        "common_trap": "Treating angular frequency in rad/s as frequency in Hz.",
+        "time_saving_tip": "Divide $\\omega$ by $2\\pi$ first; the $\\pi$ cancels at once."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Every oscillatory motion is periodic.",
+        "R": "Oscillatory motion is a to-and-fro motion about a mean position that repeats itself after equal intervals of time."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Oscillatory motion is defined as periodic motion about a mean position.",
+        "steps": [
+          "By definition, an oscillation repeats after equal time intervals, so it is periodic. A is true.",
+          "R states this definition correctly, so R is true.",
+          "Because the definition itself contains the repetition, R directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 fail. R is the very reason A holds, so option 2 fails.",
+        "common_trap": "Mixing up the direction of the relationship: the converse (every periodic motion is oscillatory) is false.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In an oscillating system, the quantity called 'displacement' need not be a linear distance; it may be an angle, a pressure change or an electric field.",
+        "II": "A body that makes 50 oscillations per second has a time period of 0.02 s and an angular frequency of $50\\ \\text{rad s}^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Displacement is a general variable whose nature depends on the system. Also, $\\omega = 2\\pi\\nu$.",
+        "steps": [
+          "Statement I: displacement can be linear, angular, a pressure change or an electric field. It is correct.",
+          "Statement II: $T = 1/50 = 0.02$ s is correct.",
+          "However, $\\omega = 2\\pi \\times 50 = 100\\pi \\approx 314\\ \\text{rad s}^{-1}$, not 50. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II has a correct period but a wrong angular frequency, so any option calling it correct fails. Statement I is fully correct, so options 2 and 4 fail.",
+        "common_trap": "Accepting Statement II after checking only its first part (the period).",
+        "time_saving_tip": "Check every number in a compound statement."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which of the following functions of time is non-periodic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sin\\omega t + \\cos\\omega t$",
+        "$e^{-\\omega t}$",
+        "$\\sin^2\\omega t$",
+        "$\\sin\\omega t + \\sin 2\\omega t$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A function is periodic if $f(t+T) = f(t)$. Exponential functions never repeat.",
+        "steps": [
+          "$e^{-\\omega t}$ decreases steadily and never takes the same value again, so it is non-periodic.",
+          "The other three are sinusoids or sums of sinusoids, so all are periodic."
+        ],
+        "final_answer": "Option (2): $e^{-\\omega t}$",
+        "why_not_others": "$\\sin\\omega t+\\cos\\omega t$ has period $2\\pi/\\omega$. $\\sin^2\\omega t$ has period $\\pi/\\omega$. $\\sin\\omega t+\\sin2\\omega t$ is periodic, although it is not SHM.",
+        "common_trap": "Thinking that a sum of sinusoids with different $\\omega$ is non-periodic. It is periodic but not simple harmonic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "The displacement of a particle is $x = 3\\sin(100t) + 4\\cos(100t)$, where x is in cm and t in s. What is the amplitude of its motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7$ cm",
+        "$5$ cm",
+        "$1$ cm",
+        "$\\sqrt{7}$ cm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$a\\sin\\omega t + b\\cos\\omega t$ is SHM with amplitude $\\sqrt{a^2+b^2}$.",
+        "steps": [
+          "Here $a = 3$ and $b = 4$.",
+          "Amplitude $= \\sqrt{9+16} = 5$ cm."
+        ],
+        "final_answer": "Option (2): $5$ cm",
+        "why_not_others": "7 cm adds the coefficients directly. 1 cm subtracts them. $\\sqrt{7}$ cm wrongly takes the square root of their sum.",
+        "common_trap": "Adding the coefficients as if the two terms were in phase.",
+        "time_saving_tip": "Recognise the 3-4-5 triple."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "The function $y = \\sin^2(\\pi t)$, where t is in seconds, is periodic. What is its period?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1$ s",
+        "$2$ s",
+        "$0.5$ s",
+        "$4$ s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\sin^2\\omega t = (1-\\cos2\\omega t)/2$ has period $\\pi/\\omega$.",
+        "steps": [
+          "Here $\\omega = \\pi$ rad/s.",
+          "Period $= \\pi/\\omega = \\pi/\\pi = 1$ s."
+        ],
+        "final_answer": "Option (1): $1$ s",
+        "why_not_others": "2 s is the period of $\\sin\\pi t$ itself. 0.5 s halves the period twice. 4 s doubles it instead of halving it.",
+        "common_trap": "Using $2\\pi/\\omega$ for a squared sinusoid.",
+        "time_saving_tip": "Squaring a sinusoid doubles its angular frequency, so the period is halved."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\sin\\omega t + \\cos\\omega t$"
+          },
+          {
+            "label": "B",
+            "text": "$\\sin^2\\omega t$"
+          },
+          {
+            "label": "C",
+            "text": "$\\sin\\omega t + \\sin2\\omega t$"
+          },
+          {
+            "label": "D",
+            "text": "$e^{-\\omega t}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Non-periodic"
+          },
+          {
+            "label": "II",
+            "text": "SHM with period $2\\pi/\\omega$"
+          },
+          {
+            "label": "III",
+            "text": "SHM about mean value 1/2 with period $\\pi/\\omega$"
+          },
+          {
+            "label": "IV",
+            "text": "Periodic but not SHM"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Classify each function: combinations of the same $\\omega$ give SHM, squared sinusoids give SHM at $2\\omega$, mixed $\\omega$ gives periodic non-SHM, and exponentials are non-periodic.",
+        "steps": [
+          "A: $\\sin\\omega t + \\cos\\omega t = \\sqrt{2}\\sin(\\omega t+\\pi/4)$, which is SHM with period $2\\pi/\\omega$. So A-II.",
+          "B: $\\sin^2\\omega t = (1-\\cos2\\omega t)/2$, which is SHM about 1/2 with period $\\pi/\\omega$. So B-III.",
+          "C: the two terms have different angular frequencies, so it is periodic but not SHM. So C-IV.",
+          "D: the exponential is non-periodic. So D-I."
+        ],
+        "final_answer": "Option (1): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Option 2 calls $\\sin^2\\omega t$ non-SHM and the mixed sum SHM. Option 3 swaps the periods of A and B. Option 4 wrongly calls the mixed-frequency sum SHM.",
+        "common_trap": "Treating $\\sin^2\\omega t$ as non-SHM, or treating any sum of sinusoids as SHM.",
+        "time_saving_tip": "D-I is common to all options, so focus on A, B and C."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about periodic functions are correct?",
+      "statements": {
+        "A": "$\\cos^2\\omega t$ has a period of $\\pi/\\omega$.",
+        "B": "$\\sin\\omega t + \\sin2\\omega t$ represents simple harmonic motion.",
+        "C": "$a\\sin\\omega t + b\\cos\\omega t$ represents SHM with amplitude $\\sqrt{a^2+b^2}$.",
+        "D": "$\\log\\omega t$ is a periodic function of time.",
+        "E": "Any periodic function can be expressed as a superposition of sines and cosines of different time periods with suitable coefficients."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and E only",
+        "A, B and C only",
+        "C, D and E only",
+        "A and C only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Periodicity, the SHM condition, and the superposition of sinusoids.",
+        "steps": [
+          "A is true: $\\cos^2\\omega t = (1+\\cos2\\omega t)/2$, so its period is $\\pi/\\omega$.",
+          "B is false: the terms have different $\\omega$, so the sum is periodic but not SHM.",
+          "C is true: the two terms combine into a single sinusoid of amplitude $\\sqrt{a^2+b^2}$.",
+          "D is false: the logarithm is non-periodic.",
+          "E is true: this is the stated superposition property of periodic functions."
+        ],
+        "final_answer": "Option (1): A, C and E only",
+        "why_not_others": "Option 2 includes B, which is false. Option 3 includes D, which is false. Option 4 leaves out E, which is true.",
+        "common_trap": "Taking 'periodic' to mean 'simple harmonic'.",
+        "time_saving_tip": "Once B and D are ruled out, only options 1 and 4 remain; checking E settles it."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "A particle executes SHM with amplitude 0.05 m and angular frequency $20\\ \\text{rad s}^{-1}$. What is its maximum speed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\text{m s}^{-1}$",
+        "$20\\ \\text{m s}^{-1}$",
+        "$0.0025\\ \\text{m s}^{-1}$",
+        "$2\\ \\text{m s}^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$v_{max} = A\\omega$, reached at the mean position.",
+        "steps": [
+          "$v_{max} = 0.05 \\times 20 = 1\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $1\\ \\text{m s}^{-1}$",
+        "why_not_others": "20 is $A\\omega^2$, the maximum acceleration. 0.0025 is $A/\\omega$. 2 uses $2A\\omega$, wrongly taking the peak-to-peak distance as the amplitude.",
+        "common_trap": "Mixing up the formulas for maximum speed and maximum acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A particle executes SHM with amplitude 10 cm and angular frequency $4\\ \\text{rad s}^{-1}$. What is its speed when its displacement from the mean position is 6 cm?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$24\\ \\text{cm s}^{-1}$",
+        "$32\\ \\text{cm s}^{-1}$",
+        "$40\\ \\text{cm s}^{-1}$",
+        "$16\\ \\text{cm s}^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$v = \\omega\\sqrt{A^2 - x^2}$",
+        "steps": [
+          "$A^2 - x^2 = 100 - 36 = 64$, so $\\sqrt{64} = 8$ cm.",
+          "$v = 4 \\times 8 = 32\\ \\text{cm s}^{-1}$."
+        ],
+        "final_answer": "Option (2): $32\\ \\text{cm s}^{-1}$",
+        "why_not_others": "24 uses $\\omega x$. 40 is the maximum speed $A\\omega$. 16 uses $\\omega(A - x)$.",
+        "common_trap": "Subtracting the displacements directly instead of their squares.",
+        "time_saving_tip": "6-8-10 is a Pythagorean triple."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "In simple harmonic motion, by what phase angle does the acceleration of the particle lead its velocity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\pi$",
+        "$\\pi/2$",
+        "zero",
+        "$\\pi/4$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Velocity leads displacement by $\\pi/2$, and acceleration leads displacement by $\\pi$.",
+        "steps": [
+          "Phase of velocity relative to displacement = $+\\pi/2$.",
+          "Phase of acceleration relative to displacement = $+\\pi$.",
+          "So acceleration leads velocity by $\\pi - \\pi/2 = \\pi/2$."
+        ],
+        "final_answer": "Option (2): $\\pi/2$",
+        "why_not_others": "$\\pi$ is the lead of acceleration over displacement, not over velocity. Zero and $\\pi/4$ have no basis in the SHM phase relations.",
+        "common_trap": "Answering with the acceleration-displacement phase difference.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In SHM, the speed of the particle is maximum at the extreme positions.",
+        "R": "In SHM, the magnitude of acceleration is maximum at the extreme positions."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In SHM, speed is maximum at the mean position and zero at the extremes, while acceleration is maximum at the extremes.",
+        "steps": [
+          "Speed $\\omega\\sqrt{A^2-x^2}$ is zero at $x = \\pm A$, so A is false.",
+          "Acceleration $|a| = \\omega^2|x|$ is maximum ($A\\omega^2$) at $x = \\pm A$, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options 1, 2 and 3 all fail.",
+        "common_trap": "Assuming that maximum acceleration means maximum speed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A particle executing SHM with a time period of 2.4 s takes 0.2 s to move from the mean position to a point midway between the mean position and an extreme position.",
+        "II": "The graph of acceleration versus displacement for a particle in SHM is a straight line with a positive slope of $\\omega^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The time from the mean position to $A/2$ is $T/12$. Also, $a = -\\omega^2 x$.",
+        "steps": [
+          "Statement I: $T/12 = 2.4/12 = 0.2$ s, so it is correct.",
+          "Statement II: since $a = -\\omega^2 x$, the slope is $-\\omega^2$, which is negative. So it is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II has the wrong sign of slope. Statement I is numerically correct, so options 2 and 4 fail.",
+        "common_trap": "Using T/6 or T/8 for the mean-to-A/2 interval, or ignoring the minus sign in $a = -\\omega^2 x$.",
+        "time_saving_tip": "Remember: mean to A/2 takes T/12, and A/2 to the extreme takes T/6."
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A block of mass 0.5 kg is attached to an ideal spring of force constant $50\\ \\text{N m}^{-1}$ on a smooth horizontal surface. What is the time period of its oscillations?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20\\pi$ s",
+        "$0.1$ s",
+        "$\\pi/10$ s",
+        "$\\pi/5$ s"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$T = 2\\pi\\sqrt{m/k}$",
+        "steps": [
+          "$m/k = 0.5/50 = 0.01$, so $\\sqrt{0.01} = 0.1$ s.",
+          "$T = 2\\pi \\times 0.1 = 0.2\\pi = \\pi/5$ s."
+        ],
+        "final_answer": "Option (4): $\\pi/5$ s",
+        "why_not_others": "$20\\pi$ s uses $\\sqrt{k/m}$, i.e. the ratio inverted. 0.1 s leaves out the $2\\pi$. $\\pi/10$ s uses $\\pi$ instead of $2\\pi$.",
+        "common_trap": "Inverting the ratio of m and k.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A spring-mass system has a time period T on the Earth. It is taken to the Moon, where the acceleration due to gravity is one-sixth of that on the Earth. What is its time period on the Moon?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$T\\sqrt{6}$",
+        "$T/\\sqrt{6}$",
+        "$T$",
+        "$6T$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The period of a spring-mass system depends only on m and k: $T = 2\\pi\\sqrt{m/k}$.",
+        "steps": [
+          "Neither m nor k changes on the Moon.",
+          "So the period stays T."
+        ],
+        "final_answer": "Option (3): $T$",
+        "why_not_others": "$T\\sqrt{6}$ is what a simple pendulum would show. $T/\\sqrt{6}$ and $6T$ wrongly bring g into the formula.",
+        "common_trap": "Applying the pendulum's dependence on g to a spring-mass system.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A spring of force constant $60\\ \\text{N m}^{-1}$ is cut into three equal parts. Two of these parts are connected in parallel. What is the effective force constant of the combination?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$40\\ \\text{N m}^{-1}$",
+        "$90\\ \\text{N m}^{-1}$",
+        "$120\\ \\text{N m}^{-1}$",
+        "$360\\ \\text{N m}^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Since $k \\propto 1/l$, each of n equal parts has constant nk. In parallel, the constants add.",
+        "steps": [
+          "Each part has $k = 3 \\times 60 = 180\\ \\text{N m}^{-1}$.",
+          "In parallel: $180 + 180 = 360\\ \\text{N m}^{-1}$."
+        ],
+        "final_answer": "Option (4): $360\\ \\text{N m}^{-1}$",
+        "why_not_others": "40 takes each part as $k/3$. 90 combines the parts in series. 120 ignores the effect of cutting.",
+        "common_trap": "Thinking a shorter piece of spring is softer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Mass m on a single spring of constant k"
+          },
+          {
+            "label": "B",
+            "text": "Mass hanging from a vertical spring with static extension $\\Delta l$"
+          },
+          {
+            "label": "C",
+            "text": "Mass m on springs $k_1$ and $k_2$ in series"
+          },
+          {
+            "label": "D",
+            "text": "Mass m on springs $k_1$ and $k_2$ in parallel"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$2\\pi\\sqrt{\\frac{m}{k_1+k_2}}$"
+          },
+          {
+            "label": "II",
+            "text": "$2\\pi\\sqrt{\\frac{m}{k}}$"
+          },
+          {
+            "label": "III",
+            "text": "$2\\pi\\sqrt{\\frac{m(k_1+k_2)}{k_1k_2}}$"
+          },
+          {
+            "label": "IV",
+            "text": "$2\\pi\\sqrt{\\frac{\\Delta l}{g}}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-III, C-IV, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Use $T = 2\\pi\\sqrt{m/k_{eff}}$ with the correct effective constant for each arrangement.",
+        "steps": [
+          "A: $T = 2\\pi\\sqrt{m/k}$, so A-II.",
+          "B: $k\\Delta l = mg$, so $m/k = \\Delta l/g$ and A-IV... that is, B-IV.",
+          "C: $k_{series} = k_1k_2/(k_1+k_2)$, so C-III.",
+          "D: $k_{parallel} = k_1+k_2$, so D-I."
+        ],
+        "final_answer": "Option (1): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 2 swaps the series and parallel formulas. Option 3 swaps A and B. Option 4 mismatches B and C.",
+        "common_trap": "Swapping the series and parallel effective constants.",
+        "time_saving_tip": "Series is softer, so it gives the longer period (the larger expression)."
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about spring and spring-like oscillators are correct?",
+      "statements": {
+        "A": "The time period of a spring-mass system is independent of its amplitude.",
+        "B": "For a mass on a vertical spring, gravity changes the time period because it changes the equilibrium extension.",
+        "C": "When a spring of constant k is cut into n equal parts, each part has a force constant k/n.",
+        "D": "For a floating cylinder oscillating vertically, the time period is inversely proportional to the square root of the liquid's density.",
+        "E": "Two springs connected in series behave as a softer spring than either one alone."
+      },
+      "match_lists": null,
+      "options": [
+        "A and D only",
+        "A, B and D only",
+        "B, C and E only",
+        "A, D and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Spring-mass period, spring combinations, and the general rule $T = 2\\pi\\sqrt{\\text{inertia}/\\text{restoring force per unit displacement}}$.",
+        "steps": [
+          "A is true: $T = 2\\pi\\sqrt{m/k}$ contains no amplitude.",
+          "B is false: gravity only shifts the mean position; T is unchanged.",
+          "C is false: each part has constant nk, since $k \\propto 1/l$.",
+          "D is true: $T = 2\\pi\\sqrt{L\\rho_c/(\\rho_l g)}$, so $T \\propto 1/\\sqrt{\\rho_l}$.",
+          "E is true: $k_{series} = k_1k_2/(k_1+k_2)$ is smaller than both $k_1$ and $k_2$."
+        ],
+        "final_answer": "Option (4): A, D and E only",
+        "why_not_others": "Option 1 leaves out E. Option 2 includes B, which is false. Option 3 includes B and C and leaves out A and D.",
+        "common_trap": "Believing that cutting a spring makes each piece softer, or that gravity alters the period of a vertical spring.",
+        "time_saving_tip": "Ruling out B and C leaves only options 1 and 4; check E to decide."
+      }
+    }
+  ]
+}

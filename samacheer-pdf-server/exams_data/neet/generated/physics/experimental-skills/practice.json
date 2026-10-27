@@ -1,0 +1,3476 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u20",
+  "slug": "experimental-skills",
+  "questions": [
+    {
+      "q_id": "neet_phy_u20_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Vernier calipers: internal and external diameter and depth of a vessel",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A student wants to measure the internal diameter of a beaker using vernier calipers. Which part of the instrument should be used?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The outside (lower) jaws",
+        "The depth strip at the tail",
+        "The inside (upper) jaws",
+        "The main scale alone, without the jaws"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each part of the vernier calipers has a specific use: outside jaws for external diameter, inside jaws for internal diameter, and the depth strip for depth.",
+        "steps": [
+          "The internal diameter is the distance across the inner walls of the beaker.",
+          "The inside (upper) jaws are inserted into the beaker and opened until they touch the inner walls.",
+          "So the internal diameter is measured with the inside jaws."
+        ],
+        "final_answer": "Option (3): The inside (upper) jaws",
+        "why_not_others": "The outside jaws measure the external diameter. The depth strip measures the depth of the vessel. The main scale alone cannot give a reading finer than 1 mm and cannot reach across the inner walls properly.",
+        "common_trap": "Mixing up the lower (outside) and upper (inside) jaws.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Vernier calipers: internal and external diameter and depth of a vessel",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a vernier calipers, the main scale division is 1 mm and 20 vernier divisions coincide with 19 main scale divisions. When the jaws are closed, the vernier zero lies to the right of the main scale zero and the 4th vernier division coincides with a main scale line. While measuring the depth of a vessel, the main scale reading is 2.4 cm and the 8th vernier division coincides. What is the true depth?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.46 cm",
+        "2.44 cm",
+        "2.48 cm",
+        "2.42 cm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "LC = 1 MSD/N, and true reading = MSR + VSR × LC − zero error, with the zero error taken with its sign.",
+        "steps": [
+          "LC = 1 mm/20 = 0.05 mm = 0.005 cm.",
+          "Observed reading = 2.4 + 8 × 0.005 = 2.44 cm.",
+          "The vernier zero lies to the right, so the zero error is positive: +4 × 0.005 = +0.02 cm.",
+          "True depth = 2.44 − 0.02 = 2.42 cm."
+        ],
+        "final_answer": "Option (4): 2.42 cm",
+        "why_not_others": "2.46 cm comes from adding the zero error. 2.44 cm ignores the zero error. 2.48 cm uses LC = 0.01 cm instead of 0.005 cm.",
+        "common_trap": "Adding a positive zero error instead of subtracting it.",
+        "time_saving_tip": "Net correction = (8 − 4) × LC above the MSR, which gives 2.4 + 0.02 = 2.42 cm."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Vernier calipers: internal and external diameter and depth of a vessel",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a hollow cylinder, vernier calipers of least count 0.01 cm with no zero error give the following readings. External diameter: main scale reading 5.3 cm, 6th vernier division coinciding. Internal diameter: main scale reading 4.8 cm, 4th vernier division coinciding. What is the wall thickness of the cylinder?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.26 cm",
+        "0.52 cm",
+        "5.10 cm",
+        "0.13 cm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Wall thickness = (external diameter − internal diameter)/2.",
+        "steps": [
+          "External diameter = 5.3 + 6 × 0.01 = 5.36 cm.",
+          "Internal diameter = 4.8 + 4 × 0.01 = 4.84 cm.",
+          "Thickness = (5.36 − 4.84)/2 = 0.52/2 = 0.26 cm."
+        ],
+        "final_answer": "Option (1): 0.26 cm",
+        "why_not_others": "0.52 cm is the difference in diameters, not divided by 2. 5.10 cm is the mean of the two diameters. 0.13 cm divides the difference by 4.",
+        "common_trap": "Forgetting that the difference in diameters includes two wall thicknesses.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Vernier calipers: internal and external diameter and depth of a vessel",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For vernier calipers having a positive zero error, the correction to be applied to every observed reading is negative.",
+        "R": "A positive zero error means the vernier zero lies to the right of the main scale zero when the jaws are closed, so every observed reading exceeds the true value by the zero error."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "True reading = observed reading − zero error, taken algebraically.",
+        "steps": [
+          "With a positive zero error, the instrument reads more than zero even when the jaws are closed.",
+          "So every reading is too large by the zero error.",
+          "The zero error must therefore be subtracted, which means the correction is negative.",
+          "R states exactly why A holds."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements match the rule in the notes, and R gives the reason for A. So options 2, 3 and 4 are ruled out.",
+        "common_trap": "Confusing the sign of the zero error with the sign of the correction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Vernier calipers: internal and external diameter and depth of a vessel",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If 50 vernier divisions coincide with 49 main scale divisions and each main scale division is 0.5 mm, the least count of the vernier calipers is 0.01 mm.",
+        "II": "With the jaws closed, the vernier zero lies 0.03 cm to the left of the main scale zero. If the observed reading is 3.25 cm, the true reading is 3.28 cm."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "LC = 1 MSD/N. A vernier zero to the left of the main zero gives a negative zero error, which is subtracted algebraically.",
+        "steps": [
+          "Statement I: LC = 0.5 mm/50 = 0.01 mm, so it is correct.",
+          "Statement II: the zero error is negative, −0.03 cm.",
+          "True reading = 3.25 − (−0.03) = 3.28 cm, so it is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I is wrong only if 1 MSD is taken as 1 mm. Statement II is wrong only if the negative zero error is subtracted as a magnitude, which gives 3.22 cm.",
+        "common_trap": "Subtracting the magnitude of a negative zero error instead of subtracting it with its sign.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Screw gauge: thickness or diameter of a thin sheet or wire",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "While measuring the diameter of a thin wire with a screw gauge, the screw is advanced by turning the ratchet rather than the thimble. What is the main purpose of this?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To make the least count of the screw gauge smaller",
+        "To eliminate backlash error from worn threads",
+        "To read the pitch scale more easily",
+        "To hold the wire with uniform pressure without compressing it"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The ratchet slips once a fixed pressure is reached, which prevents overtightening.",
+        "steps": [
+          "Turning the thimble directly can squeeze the wire and change the reading.",
+          "The ratchet applies the same gentle pressure every time.",
+          "So the wire is held uniformly and is not compressed."
+        ],
+        "final_answer": "Option (4): To hold the wire with uniform pressure without compressing it",
+        "why_not_others": "The least count depends only on the pitch and the number of circular divisions. Backlash error is avoided by rotating the screw in one direction only. The ratchet does not help in reading the pitch scale.",
+        "common_trap": "Thinking the ratchet removes backlash error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Screw gauge: thickness or diameter of a thin sheet or wire",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A screw gauge has a pitch of 0.5 mm and 50 divisions on its circular scale. With the studs in contact, the circular scale zero lies 4 divisions below the reference line. While measuring a wire, the pitch scale reading is 1.5 mm and the circular scale reading is 36. What is the corrected diameter of the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.90 mm",
+        "1.86 mm",
+        "1.82 mm",
+        "1.66 mm"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "LC = pitch/number of divisions. A circular scale zero below the reference line gives a positive zero error, which is subtracted.",
+        "steps": [
+          "LC = 0.5/50 = 0.01 mm.",
+          "Observed reading = 1.5 + 36 × 0.01 = 1.86 mm.",
+          "Zero error = +4 × 0.01 = +0.04 mm.",
+          "Corrected diameter = 1.86 − 0.04 = 1.82 mm."
+        ],
+        "final_answer": "Option (3): 1.82 mm",
+        "why_not_others": "1.90 mm comes from adding the zero error. 1.86 mm ignores the zero error. 1.66 mm uses a wrong LC of 0.005 mm.",
+        "common_trap": "Treating 'below the reference line' as a negative zero error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Screw gauge: thickness or diameter of a thin sheet or wire",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a screw gauge, the spindle advances 2.5 mm on the pitch scale when the thimble is given 5 complete rotations. The circular scale has 100 divisions. What is the least count of the screw gauge?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.025 mm",
+        "0.5 mm",
+        "0.05 mm",
+        "0.005 mm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Pitch is the distance moved in one rotation, and LC = pitch/number of circular divisions.",
+        "steps": [
+          "Pitch = 2.5 mm/5 = 0.5 mm.",
+          "LC = 0.5 mm/100 = 0.005 mm."
+        ],
+        "final_answer": "Option (4): 0.005 mm",
+        "why_not_others": "0.025 mm divides the total distance for 5 rotations by 100. 0.5 mm is the pitch itself. 0.05 mm divides the pitch by 10 instead of 100.",
+        "common_trap": "Using the distance moved in several rotations as the pitch.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Screw gauge: thickness or diameter of a thin sheet or wire",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pitch"
+          },
+          {
+            "label": "B",
+            "text": "Least count"
+          },
+          {
+            "label": "C",
+            "text": "Ratchet"
+          },
+          {
+            "label": "D",
+            "text": "Backlash error"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Avoided by rotating the screw in one direction only"
+          },
+          {
+            "label": "II",
+            "text": "Linear distance moved by the spindle in one complete rotation"
+          },
+          {
+            "label": "III",
+            "text": "Pitch divided by the number of circular scale divisions"
+          },
+          {
+            "label": "IV",
+            "text": "Holds the object with uniform pressure so that it is not compressed"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Basic definitions and precautions for a screw gauge.",
+        "steps": [
+          "Pitch is the distance moved per rotation, so A-II.",
+          "Least count = pitch/number of circular divisions, so B-III.",
+          "The ratchet ensures uniform pressure, so C-IV.",
+          "Backlash error is avoided by turning the screw one way only, so D-I."
+        ],
+        "final_answer": "Option (4): A-II, B-III, C-IV, D-I",
+        "why_not_others": "The other options swap pitch with least count, or swap the role of the ratchet with the remedy for backlash error.",
+        "common_trap": "Believing the ratchet removes backlash error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Screw gauge: thickness or diameter of a thin sheet or wire",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the screw gauge are correct?",
+      "statements": {
+        "A": "If the circular scale zero lies below the reference line when the studs touch, the zero error is positive.",
+        "B": "A screw gauge with a pitch of 1 mm and 100 circular scale divisions has a least count of 0.01 mm.",
+        "C": "A negative zero error makes the true reading smaller than the observed reading.",
+        "D": "For a wire, readings are taken at different places along it in two mutually perpendicular directions.",
+        "E": "Backlash error is removed by turning the thimble back and forth before each reading."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Zero error sign conventions, the least count formula, and the precautions for a screw gauge.",
+        "steps": [
+          "A is correct, because a circular scale zero below the reference line means a positive zero error.",
+          "B is correct, because LC = 1 mm/100 = 0.01 mm.",
+          "C is incorrect. Subtracting a negative zero error increases the reading, so the true reading is larger.",
+          "D is correct, as stated in the procedure.",
+          "E is incorrect. Backlash error is avoided by rotating the screw in one direction only."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Every other option includes C or E, and both are false.",
+        "common_trap": "Treating a negative zero error as something that reduces the reading.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Simple pendulum: dissipation of energy from amplitude-squared vs time graph",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the experiment to study energy dissipation of a lightly damped simple pendulum, the square of the amplitude $A^2$ is plotted against time t. What is the shape of the graph?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A straight line with a negative slope",
+        "A straight line parallel to the time axis",
+        "A falling exponential curve",
+        "A parabola opening upward"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$A^2 \\propto E = E_0 e^{-bt/m}$, which is an exponential decay.",
+        "steps": [
+          "The amplitude decays as $A = A_0 e^{-bt/2m}$.",
+          "So $A^2 = A_0^2 e^{-bt/m}$.",
+          "Plotting $A^2$ against t therefore gives a falling exponential curve."
+        ],
+        "final_answer": "Option (3): A falling exponential curve",
+        "why_not_others": "Only $\\ln A^2$ against t is a straight line. A line parallel to the time axis would mean there is no damping. The graph never rises, so it cannot be an upward parabola.",
+        "common_trap": "Assuming the $A^2$ vs t graph is linear.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Simple pendulum: dissipation of energy from amplitude-squared vs time graph",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A pendulum bob of mass 250 g experiences a damping force $-bv$ with $b = 0.05\\ \\text{kg s}^{-1}$. What is the slope of the graph of $\\ln A^2$ against time t?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-0.1\\ \\text{s}^{-1}$",
+        "$-0.2\\ \\text{s}^{-1}$",
+        "$-5\\ \\text{s}^{-1}$",
+        "$-2 \\times 10^{-4}\\ \\text{s}^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\ln A^2 = \\ln A_0^2 - (b/m)t$, so the slope is $-b/m$.",
+        "steps": [
+          "m = 250 g = 0.25 kg.",
+          "Slope = $-b/m = -0.05/0.25 = -0.2\\ \\text{s}^{-1}$."
+        ],
+        "final_answer": "Option (2): $-0.2\\ \\text{s}^{-1}$",
+        "why_not_others": "$-0.1$ is $-b/2m$, which is the slope of the $\\ln A$ graph. $-5$ is $-m/b$, the inverted ratio. $-2 \\times 10^{-4}$ comes from taking the mass in grams.",
+        "common_trap": "Using the amplitude exponent b/2m instead of the energy exponent b/m.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Simple pendulum: dissipation of energy from amplitude-squared vs time graph",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The amplitude of a lightly damped simple pendulum falls to half its initial value in 10 s. How long does it take for the mechanical energy of the pendulum to fall to half its initial value?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 s",
+        "10 s",
+        "20 s",
+        "2.5 s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Energy decays with exponent b/m, which is twice the amplitude exponent b/2m.",
+        "steps": [
+          "Amplitude halves: $e^{-b(10)/2m} = 1/2$, so $(b/m)(5) = \\ln 2$.",
+          "Energy halves when $e^{-bt/m} = 1/2$, which gives $t = (m/b)\\ln 2$.",
+          "From the first step, $(m/b)\\ln 2 = 5$ s."
+        ],
+        "final_answer": "Option (1): 5 s",
+        "why_not_others": "10 s assumes energy decays at the same rate as amplitude. 20 s assumes energy decays more slowly. 2.5 s assumes energy decays four times as fast.",
+        "common_trap": "Forgetting that energy is proportional to $A^2$.",
+        "time_saving_tip": "Because energy goes as $A^2$, its half-life is half the half-life of the amplitude."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Simple pendulum: dissipation of energy from amplitude-squared vs time graph",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For a lightly damped simple pendulum, the time period remains practically unchanged even as the amplitude decreases.",
+        "R": "The mechanical energy of a damped pendulum decreases linearly with time."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For light damping, the period is nearly constant and the energy decays exponentially.",
+        "steps": [
+          "The notes state that the period is practically unchanged for light damping, so A is true.",
+          "Energy follows $E = E_0 e^{-bt/m}$, which is exponential, not linear. So R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1, 2 and 4 cannot be correct.",
+        "common_trap": "Assuming the energy or $A^2$ falls linearly with time.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Simple pendulum: dissipation of energy from amplitude-squared vs time graph",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a lightly damped pendulum, the mechanical energy decays twice as fast as the amplitude, because the exponents are b/m and b/2m respectively.",
+        "II": "If the amplitude of a lightly damped pendulum falls to 1/e of its initial value in time $\\tau$, its mechanical energy falls to 1/e of its initial value in time $2\\tau$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$A \\propto e^{-bt/2m}$ and $E \\propto e^{-bt/m}$.",
+        "steps": [
+          "Statement I matches the notes, so it is correct.",
+          "The amplitude reaches 1/e when $bt/2m = 1$, which gives $\\tau = 2m/b$.",
+          "The energy reaches 1/e when $bt/m = 1$, which gives $t = m/b = \\tau/2$, not $2\\tau$. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II reverses the relation. Energy decays faster, so it needs less time, not more.",
+        "common_trap": "Concluding that a faster decay needs a longer time.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Metre scale: mass of an object by the principle of moments",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A metre scale is balanced on a knife edge at its centre of gravity, the 50 cm mark. A 100 g mass is hung at the 20 cm mark, and the scale balances when an unknown mass is hung at the 90 cm mark. What is the unknown mass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "75 g",
+        "133.3 g",
+        "22.2 g",
+        "225 g"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "With the fulcrum at G, $M d_1 = m d_2$, where distances are measured from the fulcrum.",
+        "steps": [
+          "$d_1 = 50 - 20 = 30$ cm and $d_2 = 90 - 50 = 40$ cm.",
+          "$m = 100 \\times 30/40 = 75$ g."
+        ],
+        "final_answer": "Option (1): 75 g",
+        "why_not_others": "133.3 g inverts the ratio of distances. 22.2 g uses scale readings (20 and 90) instead of distances from the fulcrum. 225 g mixes a scale reading (90) with a distance (40).",
+        "common_trap": "Measuring distances from the zero end instead of from the fulcrum.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Metre scale: mass of an object by the principle of moments",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A metre scale of mass 100 g has its centre of gravity at the 50 cm mark. It is placed on a knife edge at the 40 cm mark. A 120 g mass hung at the 10 cm mark balances an unknown mass hung at the 60 cm mark. What is the unknown mass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "180 g",
+        "130 g",
+        "230 g",
+        "80 g"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "When the fulcrum is not at G, the scale's weight acting at G must be included: $M d_1 = m d_2 + m_s d_s$.",
+        "steps": [
+          "$d_1 = 30$ cm, $d_2 = 20$ cm, and $d_s = 10$ cm, with G on the same side as m.",
+          "$120 \\times 30 = 20m + 100 \\times 10$.",
+          "$3600 = 20m + 1000$, so $m = 130$ g."
+        ],
+        "final_answer": "Option (2): 130 g",
+        "why_not_others": "180 g ignores the scale's own weight. 230 g places the scale's moment on the wrong side. 80 g inverts the distances and ignores the scale's weight.",
+        "common_trap": "Forgetting the scale's weight when the fulcrum is shifted from G.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Metre scale: mass of an object by the principle of moments",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A metre scale is first balanced alone on a knife edge, and the balance point is noted. Masses are then hung on either side and balanced with the knife edge at the same point. Why does the weight of the scale not appear in the relation $m_1 d_1 = m_2 d_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The scale is light enough that its weight can always be neglected",
+        "The weight of the scale acts at G, which coincides with the fulcrum, so its moment about the fulcrum is zero",
+        "The weight of the scale acts at the zero end and cancels the moment of the known mass",
+        "The thin threads used for suspension remove the effect of the scale's weight"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A force acting through the fulcrum has zero moment about it.",
+        "steps": [
+          "Balancing the scale alone locates its centre of gravity G.",
+          "With the fulcrum at G, the line of action of the scale's weight passes through the fulcrum.",
+          "So its moment is zero and it drops out of the balance equation."
+        ],
+        "final_answer": "Option (2): The weight of the scale acts at G, which coincides with the fulcrum, so its moment about the fulcrum is zero",
+        "why_not_others": "The scale's weight is not negligible, and it must be included when the fulcrum is moved away from G. The weight acts at G, not at the zero end. Thin threads only reduce suspension errors.",
+        "common_trap": "Thinking the scale's weight can be ignored even when the fulcrum is not at G.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Metre scale: mass of an object by the principle of moments",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Fulcrum at G; 60 g mass at 20 cm from the fulcrum; unknown mass at 30 cm on the other side"
+          },
+          {
+            "label": "B",
+            "text": "Fulcrum at G; 60 g mass at 30 cm from the fulcrum; unknown mass at 20 cm on the other side"
+          },
+          {
+            "label": "C",
+            "text": "Fulcrum at G; 60 g mass at 25 cm from the fulcrum; unknown mass at 25 cm on the other side"
+          },
+          {
+            "label": "D",
+            "text": "Fulcrum at G; 60 g mass at 40 cm from the fulcrum; unknown mass at 30 cm on the other side"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "60 g"
+          },
+          {
+            "label": "II",
+            "text": "80 g"
+          },
+          {
+            "label": "III",
+            "text": "40 g"
+          },
+          {
+            "label": "IV",
+            "text": "90 g"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$m = M d_1/d_2$ when the fulcrum is at the centre of gravity.",
+        "steps": [
+          "A: $60 \\times 20/30 = 40$ g, so A-III.",
+          "B: $60 \\times 30/20 = 90$ g, so B-IV.",
+          "C: $60 \\times 25/25 = 60$ g, so C-I.",
+          "D: $60 \\times 40/30 = 80$ g, so D-II."
+        ],
+        "final_answer": "Option (2): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 1 inverts the ratio for A and B. Option 3 swaps C and D. Option 4 has no consistent basis.",
+        "common_trap": "Writing $m = M d_2/d_1$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Metre scale: mass of an object by the principle of moments",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about finding mass with a metre scale by the principle of moments are correct?",
+      "statements": {
+        "A": "In equilibrium, the sum of clockwise moments equals the sum of anticlockwise moments about the fulcrum.",
+        "B": "With the fulcrum at the centre of gravity of the scale, the unknown mass is $m = M d_1/d_2$, where $d_1$ and $d_2$ are the distances of the known and unknown masses from the fulcrum.",
+        "C": "When the fulcrum is shifted away from G, the scale's weight acts at the fulcrum and can be ignored.",
+        "D": "Thin threads are used for suspension and the scale is kept horizontal.",
+        "E": "A 50 g scale with G at 50 cm rests on a fulcrum at 45 cm. A 100 g mass at 15 cm balances an unknown mass at 65 cm, so the unknown mass is 150 g."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, D and E only",
+        "B, C and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Principle of moments, including the scale's own weight when the fulcrum is not at G.",
+        "steps": [
+          "A, B and D are correct, as stated in the notes.",
+          "C is incorrect. The scale's weight acts at G, not at the fulcrum, and must be included.",
+          "E: $100 \\times 30 = 20m + 50 \\times 5$, so $3000 = 20m + 250$ and $m = 137.5$ g, not 150 g. E is incorrect.",
+          "The value 150 g comes from ignoring the scale's weight."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Every other option includes C or E, and both are false.",
+        "common_trap": "Ignoring the scale's weight when the fulcrum is not at G.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Young's modulus of elasticity of a metallic wire",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In Searle's apparatus for finding the Young's modulus of a metallic wire, two identical wires hang from the same rigid support. What is the main purpose of the reference wire, which carries a constant load?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To increase the extension of the experimental wire so that it is easier to read",
+        "To allow the diameter of the experimental wire to be measured accurately",
+        "To share the load with the experimental wire so that it does not cross its elastic limit",
+        "To compensate for errors due to temperature changes and yielding (sagging) of the support"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The reference wire hangs from the same support as the experimental wire and is at the same temperature. Thermal expansion and sagging of the support therefore affect both wires equally and cancel out.",
+        "steps": [
+          "Both wires hang from the same rigid support and are identical.",
+          "A temperature change or a slight yielding of the support shifts both wires equally.",
+          "The micrometer reads only the relative extension of the experimental wire, so these common errors cancel."
+        ],
+        "final_answer": "Option (4): To compensate for errors due to temperature changes and yielding (sagging) of the support",
+        "why_not_others": "The reference wire does not change the extension of the experimental wire. The diameter is measured with a screw gauge. The reference wire carries its own constant load and does not share the load on the experimental wire.",
+        "common_trap": "Thinking the reference wire only acts as a support or counterweight, and missing its role in compensation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Young's modulus of elasticity of a metallic wire",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a Searle's apparatus experiment, the graph of load $Mg$ (in N) against extension $l$ (in m) is a straight line through the origin with slope $4.0 \\times 10^{4}$ N/m. The wire has original length $1.0$ m and cross-sectional area $0.20$ mm$^2$. What is the Young's modulus of the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0 \\times 10^{5}$ N/m$^2$",
+        "$2.0 \\times 10^{11}$ N/m$^2$",
+        "$2.0 \\times 10^{8}$ N/m$^2$",
+        "$8.0 \\times 10^{-3}$ N/m$^2$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$Y = \\frac{MgL}{\\pi r^2 l} = (\\text{slope}) \\times \\frac{L}{A}$, where the slope is $Mg/l$.",
+        "steps": [
+          "Convert the area: $A = 0.20$ mm$^2 = 0.20 \\times 10^{-6}$ m$^2 = 2.0 \\times 10^{-7}$ m$^2$.",
+          "$Y = 4.0 \\times 10^{4} \\times \\frac{1.0}{2.0 \\times 10^{-7}}$.",
+          "$Y = 2.0 \\times 10^{11}$ N/m$^2$."
+        ],
+        "final_answer": "Option (2): $2.0 \\times 10^{11}$ N/m$^2$",
+        "why_not_others": "$2.0 \\times 10^{5}$ comes from leaving the area in mm$^2$. $2.0 \\times 10^{8}$ comes from using 1 mm$^2 = 10^{-3}$ m$^2$. $8.0 \\times 10^{-3}$ comes from multiplying by the area instead of dividing by it.",
+        "common_trap": "Converting mm$^2$ to m$^2$ with a factor of $10^{-3}$ instead of $10^{-6}$.",
+        "time_saving_tip": "Slope × L/A gives the answer in one line once the area is in m$^2$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Young's modulus of elasticity of a metallic wire",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a Searle's experiment, the following are measured: original length $L = 1.000$ m with uncertainty $0.001$ m, wire diameter $0.50$ mm with uncertainty $0.01$ mm (screw gauge), and extension $l = 0.50$ mm with uncertainty $0.01$ mm. What is the maximum percentage error in the Young's modulus calculated from $Y = \\frac{MgL}{\\pi r^2 l}$? Neglect the error in the load.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.1\\%$",
+        "$6.0\\%$",
+        "$10.1\\%$",
+        "$6.1\\%$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\frac{\\Delta Y}{Y} = \\frac{\\Delta L}{L} + 2\\frac{\\Delta r}{r} + \\frac{\\Delta l}{l}$, and $\\frac{\\Delta r}{r} = \\frac{\\Delta d}{d}$.",
+        "steps": [
+          "$\\frac{\\Delta L}{L} = \\frac{0.001}{1.000} = 0.1\\%$.",
+          "$\\frac{\\Delta r}{r} = \\frac{0.01}{0.50} = 2\\%$, so $2\\frac{\\Delta r}{r} = 4\\%$.",
+          "$\\frac{\\Delta l}{l} = \\frac{0.01}{0.50} = 2\\%$.",
+          "Total: $0.1 + 4 + 2 = 6.1\\%$."
+        ],
+        "final_answer": "Option (4): $6.1\\%$",
+        "why_not_others": "$4.1\\%$ comes from not doubling the radius term. $6.0\\%$ leaves out the length term. $10.1\\%$ comes from treating the 0.01 mm diameter uncertainty as the uncertainty in a radius of 0.25 mm.",
+        "common_trap": "Forgetting the factor 2 on the radius term, which is the largest contribution.",
+        "time_saving_tip": "The fractional error in r equals the fractional error in d, so work directly with the diameter."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Young's modulus of elasticity of a metallic wire",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In Searle's experiment, extension readings are taken both while loading and while unloading the experimental wire, and their mean is used.",
+        "R": "Taking the mean of the loading and unloading readings cancels the error due to temperature changes of the wire."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The mean of the loading and unloading readings cancels elastic lag. Temperature errors are cancelled by the reference wire.",
+        "steps": [
+          "Readings are indeed taken while loading and while unloading, so A is true.",
+          "The mean is taken to cancel elastic lag.",
+          "Temperature effects are compensated by the identical reference wire, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R gives the wrong reason, so options 1 and 2 are out. A is a correct description of the procedure, so option 4 is out.",
+        "common_trap": "Mixing up the two error-cancelling features: the reference wire handles temperature and support sagging, while loading and unloading handles elastic lag.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Young's modulus of elasticity of a metallic wire",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the load ($Mg$) vs extension ($l$) graph in Searle's experiment has slope $Mg/l$, then the Young's modulus is $Y = (\\text{slope}) \\times \\frac{\\pi r^2}{L}$.",
+        "II": "The largest contribution to the maximum relative error in Y comes from the original length L, because L is the largest quantity measured."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$Y = \\frac{MgL}{\\pi r^2 l} = (\\text{slope}) \\times \\frac{L}{\\pi r^2}$. The radius appears squared and is very small, so it gives the maximum error.",
+        "steps": [
+          "Rearranging $Y = \\frac{MgL}{\\pi r^2 l}$ gives $Y = \\frac{Mg}{l} \\cdot \\frac{L}{\\pi r^2}$. Statement I inverts the factor, so it is incorrect.",
+          "A large quantity such as L has a small fractional error.",
+          "The radius is tiny and enters as $2\\frac{\\Delta r}{r}$, so it gives the maximum error. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I has the geometric factor inverted, and Statement II names the wrong dominant source of error. So options 1, 3 and 4 all fail.",
+        "common_trap": "Assuming the quantity with the largest magnitude causes the largest error. It is the fractional error, weighted by the power, that matters.",
+        "time_saving_tip": "Check units: slope (N/m) × L/A gives N/m$^2$, while slope × A/L does not."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Surface tension of water by capillary rise and effect of detergents",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A little detergent is dissolved in the water used in a capillary rise experiment, with the same clean glass capillary. What happens to the height of the water column, and why?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It decreases, because the detergent lowers the surface tension of water",
+        "It increases, because the detergent raises the surface tension of water",
+        "It increases, because the detergent lowers the surface tension and helps water wet the glass",
+        "It remains unchanged, because the angle of contact stays nearly zero"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$h = \\frac{2T\\cos\\theta}{r\\rho g}$, so h is proportional to T. Detergents reduce T.",
+        "steps": [
+          "Detergents reduce the surface tension T of water.",
+          "With r, ρ and θ effectively unchanged, h falls in proportion to T.",
+          "So the capillary rise decreases."
+        ],
+        "final_answer": "Option (1): It decreases, because the detergent lowers the surface tension of water",
+        "why_not_others": "Detergents do not raise T. Better wetting of fabrics does not mean a greater rise. Even with θ ≈ 0, a lower T reduces h.",
+        "common_trap": "Thinking detergents increase capillary rise because they improve wetting.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Surface tension of water by capillary rise and effect of detergents",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Pure water rises to a height of $6.0$ cm in a clean glass capillary of internal radius $0.25$ mm. To what height will it rise in a similar clean capillary of internal radius $0.75$ mm at the same temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0$ cm",
+        "$18$ cm",
+        "$6.0$ cm",
+        "$0.67$ cm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Jurin's law: hr = constant.",
+        "steps": [
+          "$h_1 r_1 = h_2 r_2$.",
+          "$h_2 = \\frac{6.0 \\times 0.25}{0.75}$.",
+          "$h_2 = 2.0$ cm."
+        ],
+        "final_answer": "Option (1): $2.0$ cm",
+        "why_not_others": "18 cm assumes h is proportional to r. 6.0 cm ignores the dependence on radius. 0.67 cm assumes h is proportional to $1/r^2$.",
+        "common_trap": "Thinking a wider tube gives a larger rise.",
+        "time_saving_tip": "The radius triples, so the height becomes one third."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Surface tension of water by capillary rise and effect of detergents",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a capillary rise experiment with pure water (contact angle ≈ 0°), a travelling microscope gives the internal radius of the capillary as $0.30$ mm and the height of the bottom of the meniscus above the water level in the beaker as $4.99$ cm. Using the meniscus correction, what is the surface tension of water? (Take $\\rho = 1000$ kg/m$^3$ and $g = 10$ m/s$^2$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.150$ N/m",
+        "$0.0375$ N/m",
+        "$0.075$ N/m",
+        "$7.5$ N/m"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T = \\frac{r\\rho g}{2}\\left(h + \\frac{r}{3}\\right)$.",
+        "steps": [
+          "$r = 3.0 \\times 10^{-4}$ m, so $r/3 = 0.01$ cm.",
+          "$h + r/3 = 4.99 + 0.01 = 5.00$ cm $= 0.0500$ m.",
+          "$\\frac{r\\rho g}{2} = \\frac{3.0 \\times 10^{-4} \\times 1000 \\times 10}{2} = 1.5$.",
+          "$T = 1.5 \\times 0.0500 = 0.075$ N/m."
+        ],
+        "final_answer": "Option (3): $0.075$ N/m",
+        "why_not_others": "0.150 N/m drops the factor 1/2. 0.0375 N/m treats 0.30 mm as the diameter. 7.5 N/m leaves h in cm.",
+        "common_trap": "Mixing cm and m when substituting h.",
+        "time_saving_tip": "The values are chosen so that h + r/3 is exactly 5.00 cm."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Surface tension of water by capillary rise and effect of detergents",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "hr = constant for a given liquid"
+          },
+          {
+            "label": "B",
+            "text": "Angle of contact for pure water and clean glass"
+          },
+          {
+            "label": "C",
+            "text": "Adding detergent to the water"
+          },
+          {
+            "label": "D",
+            "text": "Meniscus correction to the measured height"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "About $0^\\circ$"
+          },
+          {
+            "label": "II",
+            "text": "Capillary rise decreases"
+          },
+          {
+            "label": "III",
+            "text": "Jurin's law"
+          },
+          {
+            "label": "IV",
+            "text": "Use $h + r/3$ in place of h"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are the basic facts of the capillary rise experiment.",
+        "steps": [
+          "hr = constant is Jurin's law: A-III.",
+          "Pure water on clean glass has θ ≈ 0°: B-I.",
+          "Detergent lowers T, so the rise decreases: C-II.",
+          "The meniscus correction replaces h with h + r/3: D-IV."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 1 swaps A and B. Option 3 swaps B and C. Option 4 swaps A and D.",
+        "common_trap": "Writing the meniscus correction as h - r/3, or forgetting it altogether.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Surface tension of water by capillary rise and effect of detergents",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the capillary rise experiment with water are correct?",
+      "statements": {
+        "A": "Water rises in a clean glass capillary because the adhesion between water and glass is greater than the cohesion within water.",
+        "B": "In the same capillary, hot water rises higher than cold water.",
+        "C": "A travelling microscope is used to measure both the height of the meniscus and the internal radius of the capillary.",
+        "D": "If the radius of the capillary is halved, the height of rise doubles.",
+        "E": "Detergents help water to wet fabrics because they increase the surface tension of water."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only",
+        "A and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$h = \\frac{2T\\cos\\theta}{r\\rho g}$, and T decreases with temperature and with detergents.",
+        "steps": [
+          "A is true: adhesion is greater than cohesion, so water rises and wets the glass.",
+          "B is false: surface tension decreases with temperature, so hot water rises less.",
+          "C is true: the travelling microscope measures h, the water level and r.",
+          "D is true: hr is constant, so halving r doubles h.",
+          "E is false: detergents decrease surface tension."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Option 1 includes the false statement B. Option 3 includes the false statement E. Option 4 leaves out the true statement C.",
+        "common_trap": "Believing detergents work by increasing surface tension.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Coefficient of viscosity by terminal velocity of a spherical body",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the experiment to find the coefficient of viscosity of glycerine, steel balls of different radii r are dropped through it. The terminal velocity of a ball is proportional to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$r$",
+        "$1/r$",
+        "$r^2$",
+        "$r^3$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v_t = \\frac{2r^2(\\rho - \\sigma)g}{9\\eta}$.",
+        "steps": [
+          "At terminal velocity, weight = buoyancy + $6\\pi\\eta r v$.",
+          "The weight minus the buoyancy is proportional to $r^3$, and the drag is proportional to $rv$.",
+          "So $v_t$ is proportional to $r^2$."
+        ],
+        "final_answer": "Option (3): $r^2$",
+        "why_not_others": "r and 1/r come from mistakes in cancelling powers. $r^3$ ignores the factor of r in the drag.",
+        "common_trap": "Equating only the volume with v and forgetting that the Stokes drag contains r.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Coefficient of viscosity by terminal velocity of a spherical body",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A steel ball of radius $1.0$ mm and density $8000$ kg/m$^3$ falls through glycerine of density $1250$ kg/m$^3$. After reaching terminal velocity, it covers $10$ cm in $10$ s. What is the coefficient of viscosity of the glycerine? (Take $g = 10$ m/s$^2$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.78$ Pa s",
+        "$6.0$ Pa s",
+        "$1.5$ Pa s",
+        "$2.06$ Pa s"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\eta = \\frac{2r^2(\\rho - \\sigma)g}{9v_t}$.",
+        "steps": [
+          "$v_t = 0.10/10 = 0.010$ m/s.",
+          "Numerator: $2 \\times (10^{-3})^2 \\times 6750 \\times 10 = 0.135$.",
+          "Denominator: $9 \\times 0.010 = 0.090$.",
+          "$\\eta = 0.135/0.090 = 1.5$ Pa s."
+        ],
+        "final_answer": "Option (3): $1.5$ Pa s",
+        "why_not_others": "1.78 Pa s ignores buoyancy (uses ρ alone). 6.0 Pa s takes 1.0 mm as the diameter. 2.06 Pa s uses $\\rho + \\sigma$ instead of $\\rho - \\sigma$.",
+        "common_trap": "Forgetting the buoyant force, that is, the σ term.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Coefficient of viscosity by terminal velocity of a spherical body",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In the terminal velocity method for the viscosity of a liquid, the upper of the two timing marks on the tall jar is placed well below the free surface of the liquid. The main reason for this is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To reduce the effect of the walls of the jar on the motion of the ball",
+        "To make sure the liquid near the mark is at room temperature",
+        "To increase the buoyant force on the ball between the marks",
+        "To make sure the ball has already reached its terminal velocity when it crosses the upper mark"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The ball first accelerates and only later moves at a constant terminal velocity. Timing must cover only the constant-velocity part.",
+        "steps": [
+          "Just after release, the ball is still speeding up.",
+          "It reaches terminal velocity after falling some distance.",
+          "Placing the upper mark well below the surface makes the timed motion uniform, so distance/time gives $v_t$."
+        ],
+        "final_answer": "Option (4): To make sure the ball has already reached its terminal velocity when it crosses the upper mark",
+        "why_not_others": "Wall effects are avoided by dropping the ball along the axis. The depth of the mark has nothing to do with temperature. The buoyant force does not depend on the depth of the mark.",
+        "common_trap": "Confusing the reason for the mark position with the reason for dropping the ball along the axis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Coefficient of viscosity by terminal velocity of a spherical body",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For steel balls of different radii falling through glycerine at a fixed temperature, the graph of terminal velocity v against $r^2$ is a straight line through the origin.",
+        "R": "The terminal velocity is $v_t = \\frac{2r^2(\\rho - \\sigma)g}{9\\eta}$, so for given ρ, σ and η it is directly proportional to $r^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v_t \\propto r^2$, so the v vs $r^2$ graph is a straight line through the origin with slope $\\frac{2(\\rho - \\sigma)g}{9\\eta}$.",
+        "steps": [
+          "R states the correct terminal velocity formula.",
+          "With all other factors constant, $v_t = k r^2$, which is a straight line through the origin.",
+          "So R directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and the proportionality in R is exactly what gives the linear graph in A.",
+        "common_trap": "Expecting the v vs r graph, rather than v vs $r^2$, to be linear.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Coefficient of viscosity by terminal velocity of a spherical body",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the temperature of the glycerine rises during the experiment, a given steel ball falls with a smaller terminal velocity, because the viscosity of liquids increases with temperature.",
+        "II": "When the ball moves at terminal velocity, its weight equals the sum of the buoyant force and the viscous drag $6\\pi\\eta r v$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The viscosity of liquids falls sharply as temperature rises, and $v_t \\propto 1/\\eta$. At terminal velocity, the net force on the ball is zero.",
+        "steps": [
+          "As temperature rises, η of glycerine decreases, so $v_t$ increases. Statement I is incorrect.",
+          "At terminal velocity, there is no acceleration: weight = buoyancy + Stokes drag. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I uses the trend for gases (viscosity increasing with temperature), which is wrong for liquids. Statement II is the correct force balance.",
+        "common_trap": "Applying the gas behaviour, where viscosity increases with temperature, to liquids.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Speed of sound in air using a resonance tube",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the resonance tube experiment, the air column is closed at one end by water and open at the other. What forms at the water surface and at the open end, respectively?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A node and an antinode",
+        "An antinode and a node",
+        "A node and a node",
+        "An antinode and an antinode"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a closed pipe, the closed end is a displacement node and the open end is an antinode.",
+        "steps": [
+          "Air cannot move at the water surface, so a node forms there.",
+          "Air is free to vibrate at the open end, so an antinode forms there (slightly above the end, by the end correction)."
+        ],
+        "final_answer": "Option (1): A node and an antinode",
+        "why_not_others": "Option 2 reverses the ends. Options 3 and 4 describe both ends alike, which does not apply to a pipe closed at one end.",
+        "common_trap": "Reversing the node and antinode positions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Speed of sound in air using a resonance tube",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A tuning fork of frequency $500$ Hz gives its first and second resonances in a resonance tube at air column lengths of $16.0$ cm and $50.0$ cm. What is the speed of sound in air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$340$ m/s",
+        "$320$ m/s",
+        "$680$ m/s",
+        "$500$ m/s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v = 2f(l_2 - l_1)$, which is free of the end correction.",
+        "steps": [
+          "$l_2 - l_1 = 34.0$ cm $= 0.340$ m $= \\lambda/2$.",
+          "$v = 2 \\times 500 \\times 0.340 = 340$ m/s."
+        ],
+        "final_answer": "Option (1): $340$ m/s",
+        "why_not_others": "320 m/s uses $4fl_1$ and ignores the end correction. 680 m/s uses $4f(l_2 - l_1)$. 500 m/s uses $2fl_2$.",
+        "common_trap": "Using $v = 4fl_1$ without the end correction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Speed of sound in air using a resonance tube",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a resonance tube experiment, the first and second resonance lengths are $16.0$ cm and $49.8$ cm. Taking the end correction as $0.3d$, what is the internal diameter d of the tube?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.9$ cm",
+        "$6.0$ cm",
+        "$1.5$ cm",
+        "$3.0$ cm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$e = \\frac{l_2 - 3l_1}{2}$ and $e = 0.3d$.",
+        "steps": [
+          "$l_2 - 3l_1 = 49.8 - 48.0 = 1.8$ cm.",
+          "$e = 1.8/2 = 0.9$ cm.",
+          "$d = e/0.3 = 3.0$ cm."
+        ],
+        "final_answer": "Option (4): $3.0$ cm",
+        "why_not_others": "0.9 cm is the end correction itself. 6.0 cm forgets to halve $l_2 - 3l_1$. 1.5 cm uses $e = 0.6d$, which is the relation that applies to the radius.",
+        "common_trap": "Mixing up $e = 0.3d$ with $e = 0.6r$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Speed of sound in air using a resonance tube",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$l_2 - l_1$"
+          },
+          {
+            "label": "B",
+            "text": "End correction e"
+          },
+          {
+            "label": "C",
+            "text": "$l_1 + e$"
+          },
+          {
+            "label": "D",
+            "text": "$l_2$ in terms of $l_1$ and e"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\lambda/4$"
+          },
+          {
+            "label": "II",
+            "text": "$\\lambda/2$"
+          },
+          {
+            "label": "III",
+            "text": "$0.3d$"
+          },
+          {
+            "label": "IV",
+            "text": "$3l_1 + 2e$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-IV, C-I, D-III",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$l_1 + e = \\lambda/4$ and $l_2 + e = 3\\lambda/4$.",
+        "steps": [
+          "Subtracting the two conditions gives $l_2 - l_1 = \\lambda/2$: A-II.",
+          "e = 0.3d: B-III.",
+          "$l_1 + e = \\lambda/4$: C-I.",
+          "$l_2 = 3\\lambda/4 - e = 3(l_1 + e) - e = 3l_1 + 2e$: D-IV."
+        ],
+        "final_answer": "Option (3): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Option 1 swaps the λ/4 and λ/2 entries. Option 2 swaps B and D. Option 4 swaps A and D.",
+        "common_trap": "Writing $l_2 = 3l_1$ exactly and ignoring the 2e term.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Speed of sound in air using a resonance tube",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the resonance tube experiment are correct?",
+      "statements": {
+        "A": "The air column behaves as a closed pipe, so only odd harmonics are present.",
+        "B": "To use $v = 2f(l_2 - l_1)$, the end correction must first be known.",
+        "C": "The second resonance length is slightly greater than three times the first resonance length.",
+        "D": "At the same temperature, the speed of sound found on a humid day is greater than on a dry day.",
+        "E": "For a tube of internal radius r, the end correction is $0.3r$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The end correction cancels in $l_2 - l_1$. Also $l_2 = 3l_1 + 2e$, and $e = 0.3d = 0.6r$.",
+        "steps": [
+          "A is true: a pipe closed at one end has only odd harmonics.",
+          "B is false: $l_2 - l_1 = \\lambda/2$ does not depend on e.",
+          "C is true: $l_2 = 3l_1 + 2e$.",
+          "D is true: the speed of sound increases with humidity.",
+          "E is false: e = 0.6r, not 0.3r."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option 1 includes the false statement B. Option 2 includes B and E, both false. Option 4 includes the false statement E.",
+        "common_trap": "Writing e = 0.3r instead of 0.3d or 0.6r.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Specific heat capacity of a solid and a liquid by method of mixtures",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the method of mixtures for finding the specific heat capacity of a solid, which temperature of the mixture should be recorded as the final temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The initial temperature of the water in the calorimeter",
+        "The average of the initial temperatures of the solid and the water",
+        "The maximum steady temperature reached after stirring",
+        "The temperature read immediately after the solid is dropped in"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the method of mixtures, the final temperature is the highest steady temperature of the mixture after stirring.",
+        "steps": [
+          "The hot solid gives heat to the water and the calorimeter until they all reach a common temperature.",
+          "Stirring makes the temperature uniform throughout the mixture.",
+          "The highest steady temperature is the common final temperature T used in the formula."
+        ],
+        "final_answer": "Option (3): The maximum steady temperature reached after stirring",
+        "why_not_others": "The initial water temperature is $T_2$, not the final temperature. The average of the initial temperatures is correct only for equal heat capacities, which is not generally the case. A reading taken immediately after dropping the solid comes before thermal equilibrium is reached.",
+        "common_trap": "Reading the thermometer before stirring and equilibrium are complete.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Specific heat capacity of a solid and a liquid by method of mixtures",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A solid of mass 0.4 kg at $85^\\circ C$ is dropped into 0.2 kg of water at $20^\\circ C$ contained in a copper calorimeter of mass 0.1 kg. The final temperature of the mixture is $30^\\circ C$. Take $s_w = 4200\\ J\\,kg^{-1}K^{-1}$ and $s_c = 400\\ J\\,kg^{-1}K^{-1}$, and assume no heat losses. The specific heat capacity of the solid is approximately",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$323\\ J\\,kg^{-1}K^{-1}$",
+        "$338\\ J\\,kg^{-1}K^{-1}$",
+        "$382\\ J\\,kg^{-1}K^{-1}$",
+        "$400\\ J\\,kg^{-1}K^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Principle of calorimetry: $m_1 s_1 (T_1 - T) = (m_2 s_w + m_c s_c)(T - T_2)$",
+        "steps": [
+          "Heat gained by the water and the calorimeter: $(0.2 \\times 4200 + 0.1 \\times 400)(30 - 20) = 880 \\times 10 = 8800\\ J$.",
+          "Heat lost by the solid: $0.4 \\times s_1 \\times (85 - 30) = 22 s_1$.",
+          "Equate the two: $22 s_1 = 8800$, so $s_1 = 400\\ J\\,kg^{-1}K^{-1}$."
+        ],
+        "final_answer": "Option (4): $400\\ J\\,kg^{-1}K^{-1}$",
+        "why_not_others": "382 comes from ignoring the calorimeter ($8400/22$). 338 comes from using $T_1 - T_2 = 65$ for the solid ($8800/26$). 323 comes from making both of these errors ($8400/26$).",
+        "common_trap": "Forgetting the heat absorbed by the calorimeter, or using the wrong temperature drop for the solid.",
+        "time_saving_tip": "Find the total heat capacity of the water and calorimeter first (880 J/K), then multiply by the temperature rise."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Specific heat capacity of a solid and a liquid by method of mixtures",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "To find the specific heat capacity of a liquid, a solid of mass 0.5 kg and specific heat $400\\ J\\,kg^{-1}K^{-1}$ at $100^\\circ C$ is dropped into 0.25 kg of the liquid at $20^\\circ C$. The liquid is held in a calorimeter of mass 0.1 kg and specific heat $400\\ J\\,kg^{-1}K^{-1}$. The final steady temperature is $40^\\circ C$. Assuming no heat losses, the specific heat capacity of the liquid is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2400\\ J\\,kg^{-1}K^{-1}$",
+        "$2240\\ J\\,kg^{-1}K^{-1}$",
+        "$2560\\ J\\,kg^{-1}K^{-1}$",
+        "$3040\\ J\\,kg^{-1}K^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Heat lost by the hot solid = heat gained by the liquid and the calorimeter.",
+        "steps": [
+          "Heat lost by the solid: $0.5 \\times 400 \\times (100 - 40) = 12000\\ J$.",
+          "Heat gained: $(0.25\\, s_l + 0.1 \\times 400)(40 - 20) = (0.25\\, s_l + 40) \\times 20$.",
+          "Equate the two: $0.25\\, s_l + 40 = 600$, so $0.25\\, s_l = 560$.",
+          "Therefore $s_l = 2240\\ J\\,kg^{-1}K^{-1}$."
+        ],
+        "final_answer": "Option (2): $2240\\ J\\,kg^{-1}K^{-1}$",
+        "why_not_others": "2400 comes from ignoring the calorimeter. 2560 comes from adding the calorimeter term instead of subtracting it. 3040 comes from using $100 - 20 = 80$ as the temperature drop of the solid.",
+        "common_trap": "Leaving out the calorimeter's heat capacity or getting its sign wrong.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Specific heat capacity of a solid and a liquid by method of mixtures",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The calorimeter used in the method of mixtures is usually made of copper.",
+        "R": "The outer surface of the calorimeter is polished to reduce heat loss by radiation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Copper is chosen for its low specific heat and good conductivity. Polishing serves a different purpose: it reduces radiation loss.",
+        "steps": [
+          "A copper calorimeter is used, so A is true.",
+          "Polished surfaces reduce radiation losses, so R is true.",
+          "Copper is chosen because of its low specific heat and good conductivity, not because the surface is polished. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 wrongly links polishing to the choice of copper. Options 3 and 4 are wrong because both statements are true.",
+        "common_trap": "Accepting any true statement about the calorimeter as the explanation for why copper is used.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Specific heat capacity of a solid and a liquid by method of mixtures",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If some heat is lost to the surroundings while the hot solid is being transferred, the calculated specific heat of the solid comes out smaller than its true value.",
+        "II": "The temperature of the mixture should be recorded immediately after the solid is dropped into the water, without stirring, so as to minimise heat loss."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Heat loss lowers the measured final temperature, and the final temperature to record is the maximum steady value after stirring.",
+        "steps": [
+          "Heat lost to the surroundings means less heat reaches the water, so the final temperature T is lower.",
+          "A lower T makes the calculated $s_1$ smaller than the true value. So Statement I is correct.",
+          "The water must be stirred and the maximum steady temperature noted. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II contradicts the required procedure of stirring and noting the maximum temperature, so options 1 and 4 fail. Statement I is a stated fact, so option 2 fails.",
+        "common_trap": "Confusing quick transfer, which is required, with taking the reading before equilibrium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistivity of a wire using a metre bridge",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In a metre bridge experiment, the balance point is preferably obtained near the middle of the wire because",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "it gives maximum sensitivity and minimum effect of end error",
+        "the current through the galvanometer is maximum there",
+        "the copper strips have zero resistance only when the balance point is at the middle",
+        "the bridge wire heats least when balanced at the middle"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A null point near 50 cm gives the highest accuracy.",
+        "steps": [
+          "Near the middle, a small change in jockey position produces a noticeable galvanometer response, so sensitivity is maximum.",
+          "End errors at the two ends have the least relative effect when both lengths are large.",
+          "Hence a balance point near 50 cm gives the most accurate result."
+        ],
+        "final_answer": "Option (1): it gives maximum sensitivity and minimum effect of end error",
+        "why_not_others": "At balance, the galvanometer current is zero, not maximum. The copper strips have negligible resistance wherever the balance point lies. Heating of the wire is not the stated reason.",
+        "common_trap": "Thinking the galvanometer carries current at balance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistivity of a wire using a metre bridge",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a metre bridge, a resistance of $2\\ \\Omega$ is placed in the left gap and a wire of length 0.5 m and diameter 0.4 mm in the right gap. The balance point is at 40 cm from the left end. The resistivity of the wire material is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.4\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$1.07\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$9.6\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$0.6\\pi \\times 10^{-7}\\ \\Omega\\,m$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$X = R\\frac{100 - l}{l}$ and $\\rho = \\frac{X\\pi r^2}{L}$",
+        "steps": [
+          "$X = 2 \\times \\frac{60}{40} = 3\\ \\Omega$.",
+          "The radius is $r = 0.2\\ mm = 2 \\times 10^{-4}\\ m$, so $r^2 = 4 \\times 10^{-8}\\ m^2$.",
+          "$\\rho = \\frac{3 \\times \\pi \\times 4 \\times 10^{-8}}{0.5} = 2.4\\pi \\times 10^{-7}\\ \\Omega\\,m$."
+        ],
+        "final_answer": "Option (1): $2.4\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "why_not_others": "$1.07\\pi$ comes from using $X = R\\,l/(100 - l) = 4/3\\ \\Omega$. $9.6\\pi$ comes from using the diameter as the radius. $0.6\\pi$ comes from halving the radius twice ($r = 0.1$ mm).",
+        "common_trap": "Inverting the ratio of lengths, or using the diameter in place of the radius.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistivity of a wire using a metre bridge",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a metre bridge, a $10\\ \\Omega$ resistance is in the left gap and an unknown resistance X is in the right gap. The balance length is 48 cm, measured from the left end. The end corrections are $\\alpha = 2$ cm at the left end and $\\beta = 1$ cm at the right end. The value of X is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10.83\\ \\Omega$",
+        "$9.43\\ \\Omega$",
+        "$11.02\\ \\Omega$",
+        "$10.6\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "With end corrections, $X = R\\frac{100 - l + \\beta}{l + \\alpha}$.",
+        "steps": [
+          "Corrected left length: $l + \\alpha = 48 + 2 = 50$ cm.",
+          "Corrected right length: $100 - l + \\beta = 52 + 1 = 53$ cm.",
+          "$X = 10 \\times \\frac{53}{50} = 10.6\\ \\Omega$."
+        ],
+        "final_answer": "Option (4): $10.6\\ \\Omega$",
+        "why_not_others": "10.83 comes from ignoring the end corrections ($10 \\times 52/48$). 9.43 comes from inverting the ratio ($10 \\times 50/53$). 11.02 comes from applying $\\alpha$ and $\\beta$ at the wrong ends ($10 \\times 54/49$).",
+        "common_trap": "Swapping the end corrections or ignoring them.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistivity of a wire using a metre bridge",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Galvanometer shows no deflection"
+          },
+          {
+            "label": "B",
+            "text": "Interchanging R and X and taking the mean"
+          },
+          {
+            "label": "C",
+            "text": "Thick copper strips"
+          },
+          {
+            "label": "D",
+            "text": "Jockey"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Removes end error"
+          },
+          {
+            "label": "II",
+            "text": "Have negligible resistance"
+          },
+          {
+            "label": "III",
+            "text": "Balance condition with zero current through the galvanometer"
+          },
+          {
+            "label": "IV",
+            "text": "Pressed gently and never slid while pressed"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Facts about the metre bridge procedure and its parts.",
+        "steps": [
+          "No deflection means the bridge is balanced and no current flows through the galvanometer: A-III.",
+          "Interchanging R and X and taking the mean cancels end corrections: B-I.",
+          "The thick copper strips have negligible resistance: C-II.",
+          "The jockey is pressed gently and not slid while pressed: D-IV."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Each of the other options mismatches at least two pairs, for example by linking the end error to the galvanometer or to the copper strips.",
+        "common_trap": "Mixing up the purpose of interchanging the resistances with the balance condition.",
+        "time_saving_tip": "Fix C-II and D-IV first, then choose between the remaining options."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistivity of a wire using a metre bridge",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the metre bridge experiment are correct?",
+      "statements": {
+        "A": "The metre bridge works on the Wheatstone bridge principle, $P/Q = R/S$ at balance.",
+        "B": "With R in the left gap and balance length l (in cm) from the left end, $X = R\\frac{l}{100 - l}$.",
+        "C": "Taking the mean of readings after interchanging R and X cancels the end corrections.",
+        "D": "The resistivity of the wire is given by $\\rho = \\frac{X\\pi r^2}{L}$.",
+        "E": "A null point close to either end of the wire gives the highest accuracy."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Metre bridge formula, end correction and accuracy.",
+        "steps": [
+          "A is true: the metre bridge is a practical Wheatstone bridge.",
+          "B is false: the correct formula is $X = R\\frac{100 - l}{l}$.",
+          "C is true: interchanging R and X and averaging removes the end error.",
+          "D is true: this is the resistivity formula.",
+          "E is false: the highest accuracy is obtained near 50 cm."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Options 2 and 3 include the inverted formula B. Options 3 and 4 include E, which contradicts the middle-point rule.",
+        "common_trap": "Inverting the length ratio in the formula for X.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t10_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance of a wire using Ohm's law",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the experiment to find the resistance of a wire using Ohm's law, the ammeter and the voltmeter are connected with respect to the wire, respectively,",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "in parallel and in series",
+        "in series and in parallel",
+        "both in series",
+        "both in parallel"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The ammeter measures the current through the wire and the voltmeter measures the potential difference across it.",
+        "steps": [
+          "The ammeter must carry the same current as the wire, so it is connected in series.",
+          "The voltmeter must measure the potential difference across the wire, so it is connected in parallel."
+        ],
+        "final_answer": "Option (2): in series and in parallel",
+        "why_not_others": "Option 1 reverses the connections. A voltmeter in series would block the current. An ammeter in parallel would short-circuit the wire.",
+        "common_trap": "Reversing the connections of the two meters.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t10_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance of a wire using Ohm's law",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In an Ohm's law experiment on a wire of length 1.2 m and diameter 0.4 mm, the readings (0.2 A, 0.6 V) and (0.6 A, 1.8 V) lie on the straight-line V-I graph. The resistivity of the wire material is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$4.0\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$1.44\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$1.1\\pi \\times 10^{-8}\\ \\Omega\\,m$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "R is the slope of the V-I graph, and $\\rho = \\frac{R\\pi d^2}{4L}$.",
+        "steps": [
+          "$R = \\frac{1.8 - 0.6}{0.6 - 0.2} = 3\\ \\Omega$.",
+          "$d^2 = (4 \\times 10^{-4})^2 = 1.6 \\times 10^{-7}\\ m^2$.",
+          "$\\rho = \\frac{3 \\times \\pi \\times 1.6 \\times 10^{-7}}{4 \\times 1.2} = 1.0\\pi \\times 10^{-7}\\ \\Omega\\,m$."
+        ],
+        "final_answer": "Option (1): $1.0\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "why_not_others": "$4.0\\pi$ comes from using the diameter as the radius. $1.44\\pi$ comes from multiplying by L instead of dividing. $1.1\\pi \\times 10^{-8}$ comes from taking R as the I/V slope ($1/3\\ \\Omega$).",
+        "common_trap": "Using the diameter in $\\pi r^2$, or taking the reciprocal slope as R.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t10_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance of a wire using Ohm's law",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In an Ohm's law experiment, V is plotted on the y-axis and I on the x-axis. If the current is made large enough to heat the wire appreciably, the slope of the graph at higher currents",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "decreases, because heating lowers the resistance of the wire",
+        "remains constant, because resistance depends only on the length and area of the wire",
+        "increases, because heating increases the resistance of the wire",
+        "becomes zero, because the wire stops obeying Ohm's law"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A large current heats the wire and increases its resistance. Ohm's law holds only at constant temperature.",
+        "steps": [
+          "The slope of the V-I graph equals R.",
+          "Heating at large current raises R.",
+          "So the slope increases and the graph bends away from a straight line."
+        ],
+        "final_answer": "Option (3): increases, because heating increases the resistance of the wire",
+        "why_not_others": "Heating raises the resistance of the wire, so it does not decrease. The constant-slope reasoning ignores the effect of temperature. A zero slope would mean zero resistance, which is not the case.",
+        "common_trap": "Assuming the graph stays linear at any current.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t10_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance of a wire using Ohm's law",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the experiment to verify Ohm's law for a wire, the current through the wire is kept small.",
+        "R": "A large current heats the wire and increases its resistance."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Ohm's law is valid at constant temperature.",
+        "steps": [
+          "Currents are kept small, so A is true.",
+          "A large current heats the wire and raises its resistance, so R is true.",
+          "Keeping the current small avoids this heating, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R is exactly the reason for keeping the current small, so option 2 fails. Both statements are true, so options 3 and 4 fail.",
+        "common_trap": "Thinking the current is kept small only to protect the ammeter.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t10_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance of a wire using Ohm's law",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the wire is replaced by another wire of the same material and diameter but twice the length, the slope of the V-I graph (V on the y-axis) doubles, while the calculated resistivity remains unchanged.",
+        "II": "An ideal ammeter has zero resistance, while an ideal voltmeter has infinite resistance."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Resistance depends on length and area, but resistivity is a property of the material.",
+        "steps": [
+          "$R = \\rho L/A$, so doubling L with the same A doubles R, which is the slope.",
+          "$\\rho = RA/L$ stays the same because R and L both double. So Statement I is correct.",
+          "An ideal ammeter has zero resistance and an ideal voltmeter has infinite resistance. So Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree with the notes, so any option calling either one incorrect fails.",
+        "common_trap": "Thinking resistivity changes with the length of the wire.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t11_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance and figure of merit of a galvanometer by half deflection method",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The figure of merit of a galvanometer is defined as",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the deflection produced per unit current",
+        "the resistance of the galvanometer per division",
+        "the potential difference required per unit current",
+        "the current required to produce a deflection of one division"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Figure of merit = current per division (A/div). Its reciprocal is the sensitivity.",
+        "steps": [
+          "By definition, the figure of merit is the current needed for a one-division deflection.",
+          "Its unit is ampere per division."
+        ],
+        "final_answer": "Option (4): the current required to produce a deflection of one division",
+        "why_not_others": "Deflection per unit current is the sensitivity, which is the reciprocal of the figure of merit. Resistance per division and potential difference per unit current are not the definition.",
+        "common_trap": "Confusing the figure of merit with its reciprocal, the sensitivity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t11_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance and figure of merit of a galvanometer by half deflection method",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a half deflection experiment, the series resistance is $R = 1100\\ \\Omega$. The deflection is halved when a shunt $S = 100\\ \\Omega$ is connected across the galvanometer. The resistance of the galvanometer is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$100\\ \\Omega$",
+        "$110\\ \\Omega$",
+        "$91.7\\ \\Omega$",
+        "$1000\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Exact formula: $G = \\frac{RS}{R - S}$. The approximation G ≈ S needs R ≫ G.",
+        "steps": [
+          "Here R is not very large compared with S, so the exact formula must be used.",
+          "$G = \\frac{1100 \\times 100}{1100 - 100} = \\frac{110000}{1000} = 110\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $110\\ \\Omega$",
+        "why_not_others": "100 comes from using G = S. 91.7 comes from using R + S in the denominator. 1000 is simply R - S.",
+        "common_trap": "Writing G = S even when R is not much larger than G.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t11_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance and figure of merit of a galvanometer by half deflection method",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A galvanometer of resistance $50\\ \\Omega$ is connected in series with a resistance of $9950\\ \\Omega$ and a cell of emf 2 V. It shows a deflection of 20 divisions. The figure of merit of the galvanometer is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0 \\times 10^{-5}\\ A/div$",
+        "$1.0 \\times 10^{-5}\\ A/div$",
+        "$2.0 \\times 10^{-4}\\ A/div$",
+        "$1.0 \\times 10^{5}\\ A/div$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$k = \\frac{E}{(R + G)\\theta}$",
+        "steps": [
+          "$R + G = 9950 + 50 = 10000\\ \\Omega$.",
+          "$k = \\frac{2}{10000 \\times 20} = 1.0 \\times 10^{-5}\\ A/div$."
+        ],
+        "final_answer": "Option (2): $1.0 \\times 10^{-5}\\ A/div$",
+        "why_not_others": "$2.0 \\times 10^{-5}$ comes from using $\\theta/2 = 10$. $2.0 \\times 10^{-4}$ is the total current, not divided by θ. $1.0 \\times 10^{5}$ is the reciprocal of the correct value, which is the sensitivity, wrongly given A/div units.",
+        "common_trap": "Dividing by half the deflection, or reporting the sensitivity instead of the figure of merit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t11_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance and figure of merit of a galvanometer by half deflection method",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Exact galvanometer resistance G"
+          },
+          {
+            "label": "B",
+            "text": "Figure of merit k"
+          },
+          {
+            "label": "C",
+            "text": "Sensitivity of the galvanometer"
+          },
+          {
+            "label": "D",
+            "text": "Approximate G when R ≫ G"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{RS}{R - S}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{E}{(R + G)\\theta}$"
+          },
+          {
+            "label": "III",
+            "text": "Reciprocal of the figure of merit"
+          },
+          {
+            "label": "IV",
+            "text": "S"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-II, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Formulas and definitions of the half deflection method.",
+        "steps": [
+          "Exact G = RS/(R - S): A-I.",
+          "Figure of merit = E/[(R + G)θ]: B-II.",
+          "Sensitivity = reciprocal of the figure of merit: C-III.",
+          "When R ≫ G, G ≈ S: D-IV."
+        ],
+        "final_answer": "Option (2): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option 1 swaps the exact and approximate values of G. Option 3 swaps the figure of merit and the sensitivity. Option 4 mismatches every pair.",
+        "common_trap": "Interchanging the figure of merit and the sensitivity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t11_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Resistance and figure of merit of a galvanometer by half deflection method",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the half deflection method are correct?",
+      "statements": {
+        "A": "A high resistance of several kΩ is connected in series with the galvanometer.",
+        "B": "An odd-numbered initial deflection is chosen so that half of it is a whole number.",
+        "C": "A smaller figure of merit means a more sensitive galvanometer.",
+        "D": "A low-resistance cell such as an accumulator is used to keep the emf steady.",
+        "E": "G = S exactly, whatever the value of R."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only",
+        "A, B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Precautions and results of the half deflection method.",
+        "steps": [
+          "A is true: R is kept very large compared with G.",
+          "B is false: an even deflection is chosen so that θ/2 is a whole number.",
+          "C is true: sensitivity is the reciprocal of the figure of merit.",
+          "D is true: an accumulator keeps the emf steady.",
+          "E is false: G = S holds only approximately when R ≫ G. In general, G = RS/(R - S)."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Options 1 and 4 include B, which uses odd instead of even. Options 3 and 4 include E, which ignores the exact formula.",
+        "common_trap": "Treating G = S as exact.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t12_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Focal length of convex mirror, concave mirror and convex lens by parallax method",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the optical bench experiment to find the focal length of a concave mirror, the image pin is moved until there is no parallax between its tip and the tip of the image. What does the condition of no parallax indicate?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The image pin is at the principal focus of the mirror",
+        "The image and the image pin are at the same position",
+        "The image pin is at the centre of curvature of the mirror",
+        "The image is of the same size as the object pin"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "No parallax means the image and the pin lie at the same position, so they do not separate when the eye moves sideways.",
+        "steps": [
+          "Parallax is the relative shift between two objects at different distances when the eye moves sideways.",
+          "If the image tip and the pin tip stay together as the eye moves, they must be at the same location.",
+          "So the image pin marks the image position, which gives v."
+        ],
+        "final_answer": "Option (2): The image and the image pin are at the same position",
+        "why_not_others": "The pin locates the image wherever it forms, not necessarily at F or C. Equal size happens only for the special case u = v = 2f.",
+        "common_trap": "Thinking that no parallax fixes a particular point, such as F or C, rather than simply the image position.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t12_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Focal length of convex mirror, concave mirror and convex lens by parallax method",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "On an optical bench, an index rod of actual length 20.0 cm is placed between the lens upright and a pin upright. The separation read on the bench scale is 19.6 cm. For a convex lens, the object pin and image pin distances read from the scale are both 29.6 cm, and the image is the same size as the object. What is the focal length of the lens?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "14.8 cm",
+        "15.0 cm",
+        "14.6 cm",
+        "30.0 cm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Index correction = actual length - observed length. It is added to every measured distance. At u = v = 2f, the image is the same size as the object.",
+        "steps": [
+          "Index correction = 20.0 - 19.6 = +0.4 cm.",
+          "Corrected distances: 29.6 + 0.4 = 30.0 cm each.",
+          "Same size image, so 2f = 30.0 cm.",
+          "Therefore f = 15.0 cm."
+        ],
+        "final_answer": "Option (2): 15.0 cm",
+        "why_not_others": "14.8 cm ignores the index correction. 14.6 cm subtracts the correction instead of adding it. 30.0 cm takes the corrected distance itself as f, when it is actually 2f.",
+        "common_trap": "Subtracting the index correction, or forgetting that u = v corresponds to 2f and not f.",
+        "time_saving_tip": "Use u = v = 2f directly instead of applying the full lens formula."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t12_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Focal length of convex mirror, concave mirror and convex lens by parallax method",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In finding the focal length of a convex mirror with an auxiliary convex lens, the distance from the mirror to the point where the lens-formed image coincides with its own pin is read on the bench scale as 23.5 cm. The index correction for this distance is +0.5 cm. What is the focal length of the convex mirror?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "11.75 cm",
+        "12.0 cm",
+        "11.5 cm",
+        "24.0 cm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a convex mirror, the corrected distance from the mirror to the coincidence point equals R, and f = R/2.",
+        "steps": [
+          "Corrected distance: R = 23.5 + 0.5 = 24.0 cm.",
+          "f = R/2 = 24.0/2 = 12.0 cm."
+        ],
+        "final_answer": "Option (2): 12.0 cm",
+        "why_not_others": "11.75 cm ignores the index correction. 11.5 cm subtracts the correction. 24.0 cm takes R as the focal length.",
+        "common_trap": "Equating the measured distance to f instead of R.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t12_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Focal length of convex mirror, concave mirror and convex lens by parallax method",
+      "topic_index": 12,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The focal length of a convex mirror cannot be found by directly locating its image with an image pin, so an auxiliary convex lens is used.",
+        "R": "A convex mirror forms only a virtual image of a real object."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A virtual image cannot be located on a pin directly. The convex lens forms a real image that acts as a virtual object for the mirror.",
+        "steps": [
+          "A convex mirror forms only a virtual image of a real object, so R is true.",
+          "A virtual image cannot be located directly with an image pin on the bench, so an auxiliary convex lens is needed. A is true.",
+          "The reason R is exactly why the lens is used, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R directly accounts for A, so option (2) fails.",
+        "common_trap": "Thinking the lens is used to increase the size of the image rather than to provide a real image that serves as a virtual object.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t12_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Focal length of convex mirror, concave mirror and convex lens by parallax method",
+      "topic_index": 12,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a convex lens, the u-v graph is a rectangular hyperbola, while the graph of $1/v$ against $1/u$ is a straight line whose intercepts on both axes are equal to $1/f$.",
+        "II": "For a concave mirror, when the object pin is placed so that its real image is the same size as the object, the distance of the pin from the mirror equals twice the focal length."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The $1/u$-$1/v$ graph is linear with equal intercepts $1/f$, and u = v = 2f gives an image of the same size as the object.",
+        "steps": [
+          "The lens formula is linear in $1/v$ and $1/u$, so that plot is a straight line with intercepts $1/f$ on both axes. The u-v plot is a rectangular hyperbola. Statement I is correct.",
+          "For a concave mirror, u = v = 2f gives an image of the same size as the object. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Neither statement contains an error, so options (2), (3) and (4) are ruled out.",
+        "common_trap": "Taking the u-v graph as the linear one, or placing the same-size image condition at f instead of 2f.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t13_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Angle of deviation vs angle of incidence for a triangular prism",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the experiment on a triangular glass prism, which condition holds when the ray passes through the prism at the angle of minimum deviation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The angle of incidence is $90^\\circ$",
+        "The angle of incidence equals the angle of emergence and the ray inside travels parallel to the base",
+        "The first refraction angle $r_1$ equals the prism angle A",
+        "The angle of deviation equals the prism angle A"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At minimum deviation, i = e, $r_1 = r_2 = A/2$, and the refracted ray inside the prism is parallel to the base.",
+        "steps": [
+          "At $\\delta_m$ the path through the prism is symmetric.",
+          "Therefore i = e and $r_1 = r_2 = A/2$, with the internal ray parallel to the base."
+        ],
+        "final_answer": "Option (2): The angle of incidence equals the angle of emergence and the ray inside travels parallel to the base",
+        "why_not_others": "Grazing incidence ($90^\\circ$) is not the minimum-deviation condition. At minimum deviation $r_1 = A/2$, not A. The deviation is not equal to A in general.",
+        "common_trap": "Writing $r_1 = A$ instead of $A/2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t13_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Angle of deviation vs angle of incidence for a triangular prism",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A prism of angle $60^\\circ$ gives an angle of minimum deviation of $30^\\circ$. What is the refractive index of the prism material?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sqrt{3}$",
+        "$2/\\sqrt{3}$",
+        "$1/\\sqrt{2}$",
+        "$\\sqrt{2}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$n = \\sin\\left(\\frac{A+\\delta_m}{2}\\right)/\\sin\\left(\\frac{A}{2}\\right)$",
+        "steps": [
+          "$(A+\\delta_m)/2 = 90^\\circ/2 = 45^\\circ$.",
+          "$A/2 = 30^\\circ$.",
+          "$n = \\sin 45^\\circ/\\sin 30^\\circ = (1/\\sqrt{2})/(1/2) = \\sqrt{2}$."
+        ],
+        "final_answer": "Option (4): $\\sqrt{2}$",
+        "why_not_others": "$\\sqrt{3}$ comes from $\\sin 60^\\circ/\\sin 30^\\circ$, which ignores $\\delta_m$. $2/\\sqrt{3}$ comes from forgetting to halve the angles ($\\sin 90^\\circ/\\sin 60^\\circ$). $1/\\sqrt{2}$ is the inverted ratio and is less than 1.",
+        "common_trap": "Forgetting to divide $(A+\\delta_m)$ and A by 2.",
+        "time_saving_tip": "A refractive index for glass must exceed 1, so $1/\\sqrt{2}$ can be rejected at once."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t13_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Angle of deviation vs angle of incidence for a triangular prism",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A ray incident at $55^\\circ$ on one face of a prism of angle $60^\\circ$ emerges from the other face at $45^\\circ$. What are the angle of deviation and the other angle of incidence that would produce the same deviation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\delta = 100^\\circ$, other $i = 45^\\circ$",
+        "$\\delta = 40^\\circ$, other $i = 50^\\circ$",
+        "$\\delta = 40^\\circ$, other $i = 45^\\circ$",
+        "$\\delta = 10^\\circ$, other $i = 45^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\delta = i + e - A$. For a given $\\delta \\neq \\delta_m$, the two angles of incidence are interchangeable as i and e.",
+        "steps": [
+          "$\\delta = 55^\\circ + 45^\\circ - 60^\\circ = 40^\\circ$.",
+          "By reversibility, incidence at $45^\\circ$ gives emergence at $55^\\circ$ and the same deviation of $40^\\circ$."
+        ],
+        "final_answer": "Option (3): $\\delta = 40^\\circ$, other $i = 45^\\circ$",
+        "why_not_others": "$100^\\circ$ forgets to subtract A. $10^\\circ$ takes $\\delta$ as $i - e$. $50^\\circ$ wrongly averages i and e.",
+        "common_trap": "Assuming the second angle is symmetric about some mean value, instead of simply swapping i and e.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t13_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Angle of deviation vs angle of incidence for a triangular prism",
+      "topic_index": 13,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$i + e$"
+          },
+          {
+            "label": "B",
+            "text": "$r_1 + r_2$"
+          },
+          {
+            "label": "C",
+            "text": "$r_1$ at minimum deviation"
+          },
+          {
+            "label": "D",
+            "text": "Angle of deviation $\\delta$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$A$"
+          },
+          {
+            "label": "II",
+            "text": "$A + \\delta$"
+          },
+          {
+            "label": "III",
+            "text": "$A/2$"
+          },
+          {
+            "label": "IV",
+            "text": "$i + e - A$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Prism relations: $i + e = A + \\delta$, $r_1 + r_2 = A$, $r_1 = r_2 = A/2$ at minimum deviation, and $\\delta = i + e - A$.",
+        "steps": [
+          "A: $i + e = A + \\delta$, so A-II.",
+          "B: $r_1 + r_2 = A$, so B-I.",
+          "C: $r_1 = A/2$ at minimum deviation, so C-III.",
+          "D: $\\delta = i + e - A$, so D-IV."
+        ],
+        "final_answer": "Option (4): A-II, B-I, C-III, D-IV",
+        "why_not_others": "The other matchings swap $i + e$ with $r_1 + r_2$, or confuse $A/2$ with A.",
+        "common_trap": "Writing $i + e = A$ by mixing it up with $r_1 + r_2 = A$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t13_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Angle of deviation vs angle of incidence for a triangular prism",
+      "topic_index": 13,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the prism δ-i experiment are correct?",
+      "statements": {
+        "A": "The δ-i graph is symmetric about its lowest point.",
+        "B": "At minimum deviation, the refracted ray inside the prism travels parallel to the base.",
+        "C": "For the same prism and angle of incidence, violet light is deviated more than red light.",
+        "D": "The pins should be kept vertical and separated by about 5 cm or more.",
+        "E": "Any angle of deviation greater than $\\delta_m$ is produced by only one angle of incidence."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C and D only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The δ-i curve is U-shaped but not symmetric. Each $\\delta \\neq \\delta_m$ corresponds to two values of i.",
+        "steps": [
+          "A is false: the curve is U-shaped but not symmetric.",
+          "B is true: at $\\delta_m$ the internal ray is parallel to the base.",
+          "C is true: δ increases with refractive index, so violet deviates more than red.",
+          "D is true: this is the stated precaution for the pins.",
+          "E is false: two interchangeable values of i give the same δ."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Options (1) and (4) include a false statement (A or E). Option (2) leaves out the true statement C.",
+        "common_trap": "Treating the δ-i graph as symmetric or V-shaped.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t14_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Refractive index of a glass slab using a travelling microscope",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the travelling microscope experiment to find the refractive index of a glass slab, why is lycopodium powder sprinkled on the top surface of the slab?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To reduce reflection of light from the top surface",
+        "To make the top surface visible so that the microscope can be focused on it",
+        "To prevent backlash error in the microscope screw",
+        "To find the least count of the vernier scale"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Lycopodium powder or chalk dust makes the top surface visible, so the reading $R_3$ can be taken.",
+        "steps": [
+          "A clean glass surface is hard to focus on.",
+          "Fine powder particles on the surface give a sharp target for focusing, which gives the reading $R_3$."
+        ],
+        "final_answer": "Option (2): To make the top surface visible so that the microscope can be focused on it",
+        "why_not_others": "Backlash is avoided by moving the microscope in one direction only. The least count is found as in vernier calipers. Reducing reflection is not the purpose of the powder.",
+        "common_trap": "Linking the powder to backlash or to error correction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t14_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Refractive index of a glass slab using a travelling microscope",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "With a travelling microscope, the readings are 2.250 cm for a mark on paper, 3.050 cm for the same mark seen through a glass slab, and 4.650 cm for lycopodium powder on the top of the slab. What is the refractive index of the glass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3.00",
+        "2.00",
+        "1.50",
+        "0.67"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$n = (R_3 - R_1)/(R_3 - R_2)$",
+        "steps": [
+          "Real thickness = 4.650 - 2.250 = 2.400 cm.",
+          "Apparent thickness = 4.650 - 3.050 = 1.600 cm.",
+          "n = 2.400/1.600 = 1.50."
+        ],
+        "final_answer": "Option (3): 1.50",
+        "why_not_others": "3.00 divides the real thickness by the shift ($R_2 - R_1$). 2.00 divides the apparent thickness by the shift. 0.67 is the inverted ratio.",
+        "common_trap": "Using the normal shift $R_2 - R_1$ in place of the apparent thickness.",
+        "time_saving_tip": "A refractive index below 1 is impossible, so 0.67 can be rejected immediately."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t14_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Refractive index of a glass slab using a travelling microscope",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A glass slab of thickness 3.0 cm and refractive index 1.5 is placed over a mark. By how much must the travelling microscope be raised to refocus the mark seen through the slab?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.0 cm",
+        "4.5 cm",
+        "1.5 cm",
+        "1.0 cm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Normal shift $d = t(1 - 1/n)$.",
+        "steps": [
+          "$1/n = 1/1.5 = 2/3$.",
+          "$d = 3.0 \\times (1 - 2/3) = 1.0$ cm."
+        ],
+        "final_answer": "Option (4): 1.0 cm",
+        "why_not_others": "2.0 cm is the apparent thickness $t/n$. 4.5 cm is $tn$. 1.5 cm is $t(n-1)$.",
+        "common_trap": "Confusing the apparent thickness with the shift.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t14_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Refractive index of a glass slab using a travelling microscope",
+      "topic_index": 14,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "While taking readings with a travelling microscope, the microscope should always be moved in one direction only.",
+        "R": "The least count of the travelling microscope is found in the same way as for vernier calipers."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "One-directional motion avoids backlash error. The least count method is a separate fact.",
+        "steps": [
+          "A is true: moving in one direction avoids backlash error.",
+          "R is true: the least count is found as in vernier calipers.",
+          "R does not explain why the movement must be one-directional. Backlash does."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R is unrelated to backlash, so option (1) fails.",
+        "common_trap": "Picking option (1) simply because both statements are true.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t14_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Refractive index of a glass slab using a travelling microscope",
+      "topic_index": 14,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If $R_2$ is the reading for the mark seen through the slab and $R_3$ is the reading for powder on its top surface, the apparent thickness of the slab is $R_3 - R_2$.",
+        "II": "The normal shift $R_2 - R_1$ of the mark is equal to $t/n$, where t is the real thickness of the slab."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Apparent thickness = $R_3 - R_2$, and normal shift = $t(1 - 1/n)$.",
+        "steps": [
+          "Statement I matches the definition of apparent thickness, so it is correct.",
+          "The normal shift is $t(1 - 1/n)$. The quantity $t/n$ is the apparent thickness, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses the shift with the apparent thickness, so options (1) and (4) fail. Statement I is correct, so option (2) fails.",
+        "common_trap": "Treating the apparent thickness $t/n$ as the shift.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t15_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a p-n junction diode in forward and reverse bias",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the forward characteristic of a silicon p-n junction diode, the current stays negligible until the knee voltage is reached. What is the approximate knee voltage?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.3 V",
+        "1.7 V",
+        "0.7 V",
+        "7 V"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The knee voltage is about 0.7 V for Si and 0.3 V for Ge.",
+        "steps": [
+          "For a silicon diode, the forward current rises steeply beyond about 0.7 V."
+        ],
+        "final_answer": "Option (3): 0.7 V",
+        "why_not_others": "0.3 V is the value for Ge. 1.7 V and 7 V are far too large for a silicon diode.",
+        "common_trap": "Swapping the Si and Ge values.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t15_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a p-n junction diode in forward and reverse bias",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In the forward characteristic of a diode, the current increases from 10 mA to 30 mA when the voltage increases from 0.70 V to 0.75 V. What is the dynamic resistance of the diode in this region?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "25 $\\Omega$",
+        "2.5 $\\Omega$",
+        "0.4 $\\Omega$",
+        "70 $\\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$r_d = \\Delta V/\\Delta I$",
+        "steps": [
+          "$\\Delta V = 0.05$ V.",
+          "$\\Delta I = 20$ mA = 0.020 A.",
+          "$r_d = 0.05/0.020 = 2.5\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): 2.5 $\\Omega$",
+        "why_not_others": "25 $\\Omega$ is the static ratio V/I at 0.75 V and 30 mA. 0.4 is $\\Delta I/\\Delta V$, the inverse. 70 $\\Omega$ is V/I at 0.70 V and 10 mA.",
+        "common_trap": "Using V/I at a single point instead of the ratio of changes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t15_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a p-n junction diode in forward and reverse bias",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "When a p-n junction diode is reverse biased, a microammeter records a small, nearly constant current. Which statement correctly describes this current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It is due to minority carriers and increases with temperature",
+        "It is due to majority carriers and does not depend on temperature",
+        "It is due to minority carriers and does not depend on temperature",
+        "It is due to majority carriers and increases rapidly with reverse voltage"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The reverse saturation current comes from minority carriers and increases with temperature.",
+        "steps": [
+          "In reverse bias, majority carriers are blocked, so only minority carriers drift across the junction.",
+          "The number of minority carriers increases with temperature, so this current increases with temperature."
+        ],
+        "final_answer": "Option (1): It is due to minority carriers and increases with temperature",
+        "why_not_others": "Majority carriers do not carry the reverse current. The current does depend on temperature. Below breakdown it stays nearly constant with reverse voltage.",
+        "common_trap": "Assuming the reverse saturation current is independent of temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t15_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a p-n junction diode in forward and reverse bias",
+      "topic_index": 15,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Meter used to measure current in forward bias"
+          },
+          {
+            "label": "B",
+            "text": "Meter used to measure current in reverse bias"
+          },
+          {
+            "label": "C",
+            "text": "Knee voltage of a germanium diode"
+          },
+          {
+            "label": "D",
+            "text": "Reciprocal of the slope of the I-V curve at a point"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Dynamic resistance"
+          },
+          {
+            "label": "II",
+            "text": "Microammeter"
+          },
+          {
+            "label": "III",
+            "text": "About 0.3 V"
+          },
+          {
+            "label": "IV",
+            "text": "Milliammeter"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Forward current is of the order of mA, and reverse current is of the order of μA. The Ge knee voltage is about 0.3 V. $r_d = \\Delta V/\\Delta I$.",
+        "steps": [
+          "A: forward current is in mA, so a milliammeter is used. A-IV.",
+          "B: reverse current is in μA, so a microammeter is used. B-II.",
+          "C: Ge knee voltage is about 0.3 V. C-III.",
+          "D: the reciprocal of the slope is the dynamic resistance. D-I."
+        ],
+        "final_answer": "Option (3): A-IV, B-II, C-III, D-I",
+        "why_not_others": "The other matchings swap the two meters or mix up the knee voltage with the dynamic resistance.",
+        "common_trap": "Using the microammeter in forward bias.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t15_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a p-n junction diode in forward and reverse bias",
+      "topic_index": 15,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about p-n junction diode characteristics are correct?",
+      "statements": {
+        "A": "In forward bias, the p side is connected to the positive terminal of the supply.",
+        "B": "The diode is an ohmic device because its current increases with applied voltage.",
+        "C": "The reverse resistance of the diode is very high compared with its forward resistance.",
+        "D": "Beyond the knee voltage, the forward current rises steeply, almost exponentially.",
+        "E": "An ordinary diode can be operated safely beyond its reverse breakdown voltage."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "B, C and D only",
+        "A, D and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The diode is non-ohmic, with low forward and very high reverse resistance. Exceeding the breakdown voltage damages an ordinary diode.",
+        "steps": [
+          "A is true by the definition of forward bias.",
+          "B is false: the I-V curve is non-linear, so the diode is non-ohmic.",
+          "C is true: reverse resistance is very high.",
+          "D is true: the current rises almost exponentially beyond the knee.",
+          "E is false: exceeding the reverse breakdown voltage damages an ordinary diode."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Option (1) leaves out the true statement D. Options (2) and (3) include a false statement (B or E).",
+        "common_trap": "Thinking that 'current increases with voltage' makes the diode ohmic. Ohmic behaviour requires a linear I-V relation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t16_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a Zener diode and reverse breakdown voltage",
+      "topic_index": 16,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A Zener diode is used as a voltage regulator. In which region of its characteristic curve is it operated for this purpose?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Forward bias, below the knee voltage",
+        "Reverse bias, in the breakdown region",
+        "Forward bias, beyond the knee voltage",
+        "Reverse bias, below the breakdown voltage"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A Zener diode is designed to work in reverse breakdown. There the voltage across it stays nearly constant at $V_Z$ over a wide range of current.",
+        "steps": [
+          "In reverse bias, the current is negligible until the voltage reaches $V_Z$.",
+          "At $V_Z$, the current rises sharply while the voltage stays almost constant.",
+          "This constant voltage over a wide current range is what makes voltage regulation possible."
+        ],
+        "final_answer": "Option (2): Reverse bias, in the breakdown region",
+        "why_not_others": "In forward bias, the Zener diode behaves like an ordinary diode and does not hold its voltage at $V_Z$. Below breakdown in reverse bias, the current is negligible, so no regulation takes place.",
+        "common_trap": "Expecting a Zener diode to regulate in forward bias, because its forward curve also looks steep beyond the knee.",
+        "time_saving_tip": "Remember the pairing: Zener regulation means reverse breakdown plus a series resistor."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t16_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a Zener diode and reverse breakdown voltage",
+      "topic_index": 16,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A Zener diode with $V_Z = 6\\ \\text{V}$ is used in a regulator circuit fed by a $15\\ \\text{V}$ supply. The total current drawn through the series resistor (Zener current plus load current) is $30\\ \\text{mA}$. What is the value of the series resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$300\\ \\Omega$",
+        "$500\\ \\Omega$",
+        "$200\\ \\Omega$",
+        "$700\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The series resistor drops the excess voltage: $R_s = \\frac{V_{in} - V_Z}{I}$, where I is the total current through it.",
+        "steps": [
+          "Voltage across the series resistor: $V_{in} - V_Z = 15 - 6 = 9\\ \\text{V}$.",
+          "$R_s = \\frac{9}{30 \\times 10^{-3}} = 300\\ \\Omega$."
+        ],
+        "final_answer": "Option (1): $300\\ \\Omega$",
+        "why_not_others": "$500\\ \\Omega$ comes from using the full $15\\ \\text{V}$. $200\\ \\Omega$ comes from using $V_Z$ alone. $700\\ \\Omega$ comes from adding $V_Z$ to $V_{in}$ instead of subtracting it.",
+        "common_trap": "Dividing the supply voltage by the current without subtracting the Zener voltage.",
+        "time_saving_tip": "Volts divided by milliamperes gives kilo-ohms directly: $9/30 = 0.3\\ \\text{k}\\Omega$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t16_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a Zener diode and reverse breakdown voltage",
+      "topic_index": 16,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a Zener regulator, the input voltage is $20\\ \\text{V}$, the Zener voltage is $8\\ \\text{V}$, the series resistance is $400\\ \\Omega$ and the load resistance is $1\\ \\text{k}\\Omega$. What is the current through the Zener diode?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30\\ \\text{mA}$",
+        "$38\\ \\text{mA}$",
+        "$22\\ \\text{mA}$",
+        "$8\\ \\text{mA}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I_Z = I - I_L = \\frac{V_{in} - V_Z}{R_s} - \\frac{V_Z}{R_L}$",
+        "steps": [
+          "Total current: $I = \\frac{20 - 8}{400} = 0.030\\ \\text{A} = 30\\ \\text{mA}$.",
+          "Load current: $I_L = \\frac{8}{1000} = 8\\ \\text{mA}$.",
+          "Zener current: $I_Z = 30 - 8 = 22\\ \\text{mA}$."
+        ],
+        "final_answer": "Option (3): $22\\ \\text{mA}$",
+        "why_not_others": "$30\\ \\text{mA}$ is the total current through $R_s$. $8\\ \\text{mA}$ is the load current. $38\\ \\text{mA}$ comes from adding the load current instead of subtracting it.",
+        "common_trap": "Taking the whole series-resistor current as the Zener current and forgetting the current that flows through the load.",
+        "time_saving_tip": "Find the current through $R_s$ first, then subtract $V_Z/R_L$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t16_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a Zener diode and reverse breakdown voltage",
+      "topic_index": 16,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A Zener diode regulates voltage when it is operated in forward bias, in the same way as an ordinary diode.",
+        "R": "The forward characteristic of a Zener diode is similar to that of an ordinary p-n junction diode."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A Zener diode regulates only in reverse breakdown. Its forward characteristic is simply like that of an ordinary diode.",
+        "steps": [
+          "Regulation needs the voltage to stay constant at $V_Z$, and this happens only beyond reverse breakdown.",
+          "So A is false.",
+          "The notes state that the forward characteristic of a Zener diode is like that of an ordinary diode, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Expecting a Zener diode to regulate in forward bias.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t16_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Characteristic curves of a Zener diode and reverse breakdown voltage",
+      "topic_index": 16,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In a Zener regulator kept in breakdown, if the load resistance is decreased while the input voltage and series resistance stay unchanged, the current through the Zener diode decreases.",
+        "II": "The Zener voltage $V_Z$ is read from the part of the reverse characteristic where the current remains negligible as the reverse voltage is increased."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I = \\frac{V_{in} - V_Z}{R_s}$ stays fixed, and $I_Z = I - \\frac{V_Z}{R_L}$. $V_Z$ is read from the vertical (sharply rising current) part of the reverse curve.",
+        "steps": [
+          "$V_{in}$, $V_Z$ and $R_s$ are fixed, so the total current I is constant.",
+          "Decreasing $R_L$ increases $I_L = V_Z/R_L$, so $I_Z = I - I_L$ decreases. Statement I is correct.",
+          "Where the current is negligible, the diode is still below breakdown.",
+          "$V_Z$ is read where the current rises sharply at nearly constant voltage. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II describes the pre-breakdown region, so options (1) and (4) fail. Statement I follows directly from the regulator formula, so option (2) fails.",
+        "common_trap": "Thinking the Zener current rises when the load draws more current. In fact, the fixed total current is shared, so the Zener's share falls.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

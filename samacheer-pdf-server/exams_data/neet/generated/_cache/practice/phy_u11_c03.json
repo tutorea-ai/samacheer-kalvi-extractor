@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "What is the electric potential at a distance of $0.3\\,m$ from a point charge of $+2\\,nC$ placed in vacuum? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9\\times10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$200\\,V$",
+        "$60\\,V$",
+        "$6\\,V$",
+        "$18\\,V$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The potential of a point charge is $V = \\frac{kq}{r}$, which varies as $1/r$ and not $1/r^2$.",
+        "steps": [
+          "$kq = 9\\times10^9 \\times 2\\times10^{-9} = 18\\,V\\,m$.",
+          "$V = \\frac{18}{0.3} = 60\\,V$."
+        ],
+        "final_answer": "Option (2): $60\\,V$",
+        "why_not_others": "$200\\,V$ comes from dividing by $r^2$. $18\\,V$ comes from forgetting to divide by r. $6\\,V$ comes from multiplying by r instead of dividing.",
+        "common_trap": "Using the $1/r^2$ dependence of the field for the potential.",
+        "time_saving_tip": "Note that $kq$ in nC units is simply $9 \\times q$, so here $kq = 18$."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "Point charges of $+3\\,\\mu C$, $-5\\,\\mu C$, $+4\\,\\mu C$ and $+2\\,\\mu C$ are placed at the four corners of a square of side $\\sqrt{2}\\,m$. What is the electric potential at the centre of the square? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9\\times10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.26\\times10^5\\,V$",
+        "$2.55\\times10^4\\,V$",
+        "Zero",
+        "$3.6\\times10^4\\,V$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Potential is a scalar, so the potentials of the individual charges add algebraically: $V = k\\sum q_i/r_i$.",
+        "steps": [
+          "The half-diagonal is $\\frac{\\sqrt{2}\\times\\sqrt{2}}{2} = 1\\,m$, so every charge is $1\\,m$ from the centre.",
+          "The algebraic sum of the charges is $3 - 5 + 4 + 2 = 4\\,\\mu C$.",
+          "$V = \\frac{9\\times10^9\\times4\\times10^{-6}}{1} = 3.6\\times10^4\\,V$."
+        ],
+        "final_answer": "Option (4): $3.6\\times10^4\\,V$",
+        "why_not_others": "$1.26\\times10^5\\,V$ adds the magnitudes of the charges and ignores their signs. $2.55\\times10^4\\,V$ uses the side $\\sqrt{2}\\,m$ as the distance. Zero wrongly assumes that the potentials cancel at the centre.",
+        "common_trap": "Ignoring the signs of the charges, or treating potential as a vector.",
+        "time_saving_tip": "When all the charges are equidistant from the point, find the net charge first and use $V = kq_{net}/r$."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "A uniformly charged insulating solid sphere of radius R has a potential of $16\\,V$ at its surface. What is the potential at a point at a distance $R/2$ from its centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16\\,V$",
+        "$22\\,V$",
+        "$24\\,V$",
+        "$32\\,V$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Inside a uniformly charged solid sphere, $V = \\frac{kQ(3R^2 - r^2)}{2R^3}$.",
+        "steps": [
+          "The surface potential is $\\frac{kQ}{R} = 16\\,V$.",
+          "At $r = R/2$: $V = \\frac{kQ}{R}\\cdot\\frac{3 - 1/4}{2} = \\frac{kQ}{R}\\cdot\\frac{11}{8}$.",
+          "$V = 16\\times\\frac{11}{8} = 22\\,V$."
+        ],
+        "final_answer": "Option (2): $22\\,V$",
+        "why_not_others": "$16\\,V$ uses the shell result, where V is constant inside. $24\\,V$ is the value at the centre ($1.5\\times16$). $32\\,V$ treats the sphere as a point charge, using $kQ/r$ with $r = R/2$.",
+        "common_trap": "Using the shell formula inside a solid charged sphere.",
+        "time_saving_tip": "Write $V_{in} = V_s\\cdot\\frac{3 - (r/R)^2}{2}$ and substitute directly."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The electric field at every point on the equatorial plane of a short electric dipole is zero.",
+        "R": "The electric potential at every point on the equatorial plane of a short electric dipole is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "On the equatorial plane of a dipole $\\theta = 90^\\circ$, so $V = \\frac{kp\\cos\\theta}{r^2} = 0$. The field there is not zero.",
+        "steps": [
+          "With $\\theta = 90^\\circ$, $\\cos\\theta = 0$, so V = 0 everywhere on the equatorial plane. R is true.",
+          "The field on the equatorial plane is non-zero and directed opposite to $\\vec{p}$. A is false.",
+          "V = 0 at a point does not imply E = 0 there."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so any option that calls A true is wrong.",
+        "common_trap": "Treating V = 0 as implying E = 0.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a short electric dipole, the potential at a distance r on its axis is twice the potential at the same distance r along a line making $60^\\circ$ with the dipole axis.",
+        "II": "Inside a uniformly charged thin spherical shell of radius R, the potential falls from $kQ/R$ at the surface to zero at the centre, because the electric field inside the shell is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Dipole: $V \\propto \\cos\\theta$ at a fixed r. Shell: V inside is constant and equal to $kQ/R$.",
+        "steps": [
+          "On the axis, $\\cos 0^\\circ = 1$. At $60^\\circ$, $\\cos 60^\\circ = 0.5$. The ratio is 2, so Statement I is correct.",
+          "Inside the shell E = 0, so V does not change with position. It stays equal to $kQ/R$ everywhere inside, including at the centre.",
+          "Statement II is therefore incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses E = 0 with V = 0. Zero field means constant potential, not zero potential.",
+        "common_trap": "Believing that the potential inside a charged shell is zero because the field there is zero.",
+        "time_saving_tip": "Remember that $E = -dV/dr$, so wherever E = 0 the potential is simply constant."
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "In a uniform electric field of magnitude $500\\,V/m$, what is the potential difference between two points separated by $4\\,cm$ along the direction of the field?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12500\\,V$",
+        "$2000\\,V$",
+        "$20\\,V$",
+        "$200\\,V$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In a uniform field, V = Ed, where d is the separation measured along the field.",
+        "steps": [
+          "$d = 4\\,cm = 0.04\\,m$.",
+          "$V = 500\\times0.04 = 20\\,V$."
+        ],
+        "final_answer": "Option (3): $20\\,V$",
+        "why_not_others": "$2000\\,V$ uses d in cm without converting it. $12500\\,V$ divides E by d. $200\\,V$ is a decimal slip.",
+        "common_trap": "Not converting centimetres to metres.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "The electric potential along the x-axis is given by $V(x) = 4x^2 - 3x$, where V is in volts and x is in metres. What is the electric field at $x = 2\\,m$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$13\\,V/m$ along the negative x-direction",
+        "$13\\,V/m$ along the positive x-direction",
+        "$10\\,V/m$ along the negative x-direction",
+        "$5\\,V/m$ along the positive x-direction"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$E = -\\frac{dV}{dx}$. The field points in the direction of steepest decrease of V.",
+        "steps": [
+          "$\\frac{dV}{dx} = 8x - 3$.",
+          "At $x = 2$: $\\frac{dV}{dx} = 13\\,V/m$.",
+          "$E = -13\\,V/m$, which means $13\\,V/m$ along the negative x-direction."
+        ],
+        "final_answer": "Option (1): $13\\,V/m$ along the negative x-direction",
+        "why_not_others": "The positive-direction option drops the minus sign. $10\\,V/m$ is the value of V at x = 2, not its derivative. $5\\,V/m$ comes from V/x.",
+        "common_trap": "Forgetting the negative sign in $E = -dV/dx$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "A charge of $+2\\,\\mu C$ is dragged slowly through a winding tube of length $3\\,m$ from point A, where the potential is $10\\,V$, to point B, where the potential is $70\\,V$. What is the work done by the external agent?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.6\\times10^{-4}\\,J$",
+        "$-1.2\\times10^{-4}\\,J$",
+        "$3.6\\times10^{-4}\\,J$",
+        "$1.2\\times10^{-4}\\,J$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The electrostatic field is conservative, so $W = q(V_B - V_A)$ regardless of the path.",
+        "steps": [
+          "$V_B - V_A = 70 - 10 = 60\\,V$.",
+          "$W = 2\\times10^{-6}\\times60 = 1.2\\times10^{-4}\\,J$.",
+          "The length and shape of the tube are irrelevant."
+        ],
+        "final_answer": "Option (4): $1.2\\times10^{-4}\\,J$",
+        "why_not_others": "$1.6\\times10^{-4}\\,J$ adds the two potentials. $-1.2\\times10^{-4}\\,J$ has the wrong sign. $3.6\\times10^{-4}\\,J$ wrongly multiplies by the path length.",
+        "common_trap": "Thinking the work depends on the path or the length of the tube.",
+        "time_saving_tip": "Ignore any path details. Only the end-point potentials matter."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Shape of the equipotential surfaces of an isolated point charge"
+          },
+          {
+            "label": "B",
+            "text": "Shape of the equipotential surfaces of a uniform electric field"
+          },
+          {
+            "label": "C",
+            "text": "Direction of the electric field relative to an equipotential surface"
+          },
+          {
+            "label": "D",
+            "text": "Work done in moving a charge along an equipotential surface"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "Concentric spheres"
+          },
+          {
+            "label": "III",
+            "text": "Parallel planes"
+          },
+          {
+            "label": "IV",
+            "text": "Perpendicular to the surface"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-II, D-I",
+        "A-II, B-III, C-IV, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Equipotentials are concentric spheres for a point charge and parallel planes for a uniform field. E is perpendicular to them, and no work is done in moving a charge along them.",
+        "steps": [
+          "A: a point charge gives concentric spheres (II).",
+          "B: a uniform field gives parallel planes (III).",
+          "C: E is perpendicular to an equipotential surface (IV).",
+          "D: since $\\Delta V = 0$, the work done is zero (I)."
+        ],
+        "final_answer": "Option (4): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Option 1 swaps the shapes for the point charge and the uniform field. Option 2 swaps the direction and the work. Option 3 pairs the point charge with a direction and C with a shape.",
+        "common_trap": "Mixing up the spherical and planar equipotentials.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about potential difference and equipotential surfaces are correct?",
+      "statements": {
+        "A": "Two equipotential surfaces can intersect in a region where the field is strong.",
+        "B": "The surface and interior of a conductor in electrostatic equilibrium form a single equipotential volume.",
+        "C": "Equipotential surfaces crowd closer together where the electric field is stronger.",
+        "D": "The electric field points in the direction in which the potential increases most steeply.",
+        "E": "The line integral of the electrostatic field around any closed loop is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C and E only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "E points from high to low potential, equipotentials never intersect, and the electrostatic field is conservative.",
+        "steps": [
+          "A is false. Two equipotential surfaces never intersect.",
+          "B is true. A conductor in equilibrium is a single equipotential volume.",
+          "C is true. Equipotentials crowd together where the field is strong.",
+          "D is false. E points along the steepest decrease of V.",
+          "E is true. $\\oint \\vec{E}\\cdot d\\vec{l} = 0$."
+        ],
+        "final_answer": "Option (3): B, C and E only",
+        "why_not_others": "Every other combination includes A or D, and both of these are false.",
+        "common_trap": "Reversing the direction of E relative to the potential gradient.",
+        "time_saving_tip": "Spotting that A and D are false eliminates all options except (3)."
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "Point charges of $+4\\,\\mu C$ and $-3\\,\\mu C$ are held $0.6\\,m$ apart in vacuum. What is the electrostatic potential energy of this system? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9\\times10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-0.18\\,J$",
+        "$+0.18\\,J$",
+        "$-0.30\\,J$",
+        "$-0.09\\,J$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$U = \\frac{kq_1q_2}{r}$, which is negative for unlike charges.",
+        "steps": [
+          "$kq_1q_2 = 9\\times10^9\\times(4\\times10^{-6})(-3\\times10^{-6}) = -0.108\\,J\\,m$.",
+          "$U = \\frac{-0.108}{0.6} = -0.18\\,J$."
+        ],
+        "final_answer": "Option (1): $-0.18\\,J$",
+        "why_not_others": "$+0.18\\,J$ ignores the sign of the charges. $-0.30\\,J$ divides by $r^2$. $-0.09\\,J$ wrongly includes a factor of 1/2.",
+        "common_trap": "Dropping the sign. A system of unlike charges is bound and has negative U.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "Charges $+q$, $+q$ and $-2q$ are placed at the three corners of an equilateral triangle of side a. What is the electrostatic potential energy of the system? (Here $k = \\frac{1}{4\\pi\\epsilon_0}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-\\frac{3kq^2}{a}$",
+        "$-\\frac{6kq^2}{a}$",
+        "$-\\frac{4kq^2}{a}$",
+        "$+\\frac{5kq^2}{a}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a system of charges, U is the sum over all distinct pairs. Three charges have 3 pairs.",
+        "steps": [
+          "The $(+q, +q)$ pair gives $+kq^2/a$.",
+          "The two $(+q, -2q)$ pairs give $2\\times(-2kq^2/a) = -4kq^2/a$.",
+          "$U = \\frac{kq^2}{a} - \\frac{4kq^2}{a} = -\\frac{3kq^2}{a}$."
+        ],
+        "final_answer": "Option (1): $-\\frac{3kq^2}{a}$",
+        "why_not_others": "$-6kq^2/a$ counts every pair twice. $-4kq^2/a$ leaves out the like-charge pair. $+5kq^2/a$ uses the magnitudes of the charges and ignores their signs.",
+        "common_trap": "Double counting pairs, or forgetting one of the pairs.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "An alpha particle (charge $+2e$) is released from rest at a point where the potential is $500\\,V$. It moves under electric forces alone to a point where the potential is $200\\,V$. What kinetic energy does it gain? ($e = 1.6\\times10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9.6\\times10^{-17}\\,J$",
+        "$4.8\\times10^{-17}\\,J$",
+        "$2.24\\times10^{-16}\\,J$",
+        "$6.4\\times10^{-17}\\,J$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "By energy conservation, $\\Delta K = q(V_{initial} - V_{final})$.",
+        "steps": [
+          "$V_{initial} - V_{final} = 500 - 200 = 300\\,V$.",
+          "$\\Delta K = 2e\\times300 = 600\\,eV$.",
+          "$600\\times1.6\\times10^{-19} = 9.6\\times10^{-17}\\,J$."
+        ],
+        "final_answer": "Option (1): $9.6\\times10^{-17}\\,J$",
+        "why_not_others": "$4.8\\times10^{-17}\\,J$ uses the charge e instead of 2e. $2.24\\times10^{-16}\\,J$ uses the sum of the potentials (700 V). $6.4\\times10^{-17}\\,J$ uses only the final potential.",
+        "common_trap": "Forgetting that the alpha particle carries charge 2e.",
+        "time_saving_tip": "Work in eV first: charge (in units of e) multiplied by the potential difference gives the energy in eV."
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "An electric dipole aligned along a uniform electric field is in stable equilibrium.",
+        "R": "The potential energy of an electric dipole in a uniform electric field is maximum when the dipole is aligned along the field."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$U = -pE\\cos\\theta$, which is minimum ($-pE$) at $\\theta = 0$ (stable) and maximum ($+pE$) at $\\theta = 180^\\circ$ (unstable).",
+        "steps": [
+          "At $\\theta = 0$, U is at its minimum, so the dipole is in stable equilibrium. A is true.",
+          "U is maximum at $180^\\circ$, not at $0^\\circ$. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Associating the aligned position with maximum energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The external work required to slowly rotate an electric dipole of moment p in a uniform field E from the aligned orientation to the anti-aligned orientation is pE.",
+        "II": "A system of two unlike point charges has positive potential energy, so no external work is needed to separate them to infinity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a dipole, $W = U_f - U_i$ with $U = -pE\\cos\\theta$. For two unlike charges, U is negative and the system is bound.",
+        "steps": [
+          "Rotating the dipole: $W = (+pE) - (-pE) = 2pE$, not pE. Statement I is incorrect.",
+          "Unlike charges give $U = kq_1q_2/r < 0$. The system is bound, and external work is needed to separate the charges. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contains an error, so no option that calls either statement correct can be right.",
+        "common_trap": "Taking only the change from 0 to +pE, which gives pE instead of 2pE.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "Where does the excess charge on an isolated conductor reside when the conductor is in electrostatic equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Uniformly throughout its volume",
+        "Concentrated at its centre",
+        "On its outer surface",
+        "Divided equally between its interior and its surface"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In equilibrium E = 0 inside the conducting material, so any excess charge resides on the outer surface.",
+        "steps": [
+          "Free charges move until the field inside the material vanishes.",
+          "With E = 0 inside, there can be no net charge in the interior, so the excess charge lies on the outer surface."
+        ],
+        "final_answer": "Option (3): On its outer surface",
+        "why_not_others": "A volume distribution is what an insulator can hold, because an insulator does not redistribute charge. Charge at the centre or inside the material would produce a non-zero internal field.",
+        "common_trap": "Confusing a conductor with a uniformly charged insulator.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "Two isolated conducting spheres of radii $2\\,cm$ and $6\\,cm$ carry a total charge of $80\\,nC$. They are connected by a thin conducting wire. What is the charge on the smaller sphere after equilibrium is reached?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60\\,nC$",
+        "$20\\,nC$",
+        "$40\\,nC$",
+        "$8\\,nC$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Connected spheres come to equal potentials, so $q_1/q_2 = r_1/r_2$.",
+        "steps": [
+          "$q_1 : q_2 = 2 : 6 = 1 : 3$.",
+          "$q_1 = \\frac{1}{4}\\times80 = 20\\,nC$."
+        ],
+        "final_answer": "Option (2): $20\\,nC$",
+        "why_not_others": "$60\\,nC$ inverts the ratio. $40\\,nC$ assumes the charge divides equally. $8\\,nC$ uses the ratio of the squares of the radii (1 : 9).",
+        "common_trap": "Dividing the charge in the ratio of surface areas instead of radii.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "The surface charge density at a point on a charged conductor in electrostatic equilibrium is $8.85\\times10^{-6}\\,C/m^2$. What is the electric field just outside the conductor at that point? ($\\epsilon_0 = 8.85\\times10^{-12}\\,C^2\\,N^{-1}\\,m^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\times10^6\\,N/C$, normal to the surface",
+        "$5.0\\times10^5\\,N/C$, normal to the surface",
+        "$1.0\\times10^6\\,N/C$, tangential to the surface",
+        "$2.0\\times10^6\\,N/C$, normal to the surface"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Just outside a conductor, $E = \\sigma/\\epsilon_0$, directed normal to the surface.",
+        "steps": [
+          "$E = \\frac{8.85\\times10^{-6}}{8.85\\times10^{-12}} = 1.0\\times10^6\\,N/C$.",
+          "The field is normal to the surface because a conductor is an equipotential."
+        ],
+        "final_answer": "Option (1): $1.0\\times10^6\\,N/C$, normal to the surface",
+        "why_not_others": "$5.0\\times10^5\\,N/C$ uses $\\sigma/2\\epsilon_0$. A tangential field would move charges along the surface, which cannot happen in equilibrium. $2.0\\times10^6\\,N/C$ wrongly doubles the result.",
+        "common_trap": "Using the result for a non-conducting sheet, $\\sigma/2\\epsilon_0$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Electric field just outside a charged conductor"
+          },
+          {
+            "label": "B",
+            "text": "Electric field inside a charge-free cavity in a conductor placed in an external field"
+          },
+          {
+            "label": "C",
+            "text": "Charge induced on the cavity wall when $+Q$ is placed inside the cavity of an isolated neutral conductor"
+          },
+          {
+            "label": "D",
+            "text": "Surface charge density on each of two conducting spheres joined by a wire"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$-Q$"
+          },
+          {
+            "label": "II",
+            "text": "Inversely proportional to the radius of the sphere"
+          },
+          {
+            "label": "III",
+            "text": "$\\sigma/\\epsilon_0$, normal to the surface"
+          },
+          {
+            "label": "IV",
+            "text": "Zero"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These are the properties of conductors in electrostatic equilibrium, including electrostatic shielding.",
+        "steps": [
+          "A: $E = \\sigma/\\epsilon_0$, normal to the surface (III).",
+          "B: the field inside a charge-free cavity is zero, whatever the external field (IV).",
+          "C: $-Q$ is induced on the cavity wall (I).",
+          "D: for connected spheres $\\sigma \\propto 1/r$ (II)."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 2 swaps A and B. Option 3 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Thinking that an external field can penetrate an empty cavity of a conductor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "A point charge $+Q$ is placed off-centre inside a cavity within an isolated, neutral, solid conducting sphere. Which of the following statements are correct?",
+      "statements": {
+        "A": "The electric field everywhere inside the cavity is zero.",
+        "B": "A charge $-Q$ is induced on the wall of the cavity.",
+        "C": "The charge on the outer surface of the sphere is distributed uniformly, irrespective of where the charge sits inside the cavity.",
+        "D": "Outside the sphere, at equal distances from its centre, the field is stronger on the side nearer to the cavity.",
+        "E": "The entire conducting material of the sphere is at the same potential."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "A, C and D only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The charge in the cavity induces $-Q$ on the cavity wall and $+Q$ on the outer surface. The outer charge spreads uniformly, so the outside field is symmetric.",
+        "steps": [
+          "A is false. The charge Q produces a non-zero field inside the cavity.",
+          "B is true. A charge $-Q$ is induced on the cavity wall.",
+          "C is true. The outer $+Q$ spreads uniformly over the sphere.",
+          "D is false. The outside field depends only on the outer charge, so it is symmetric.",
+          "E is true. A conductor in equilibrium is an equipotential."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Options (1) and (4) include A, which is false. Options (3) and (4) include D, which is false.",
+        "common_trap": "Assuming that the field inside any cavity of a conductor is zero, or that the off-centre position of the charge distorts the outside field.",
+        "time_saving_tip": "Spotting that A and D are false leaves only option (2)."
+      }
+    }
+  ]
+}

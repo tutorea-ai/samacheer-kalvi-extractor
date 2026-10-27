@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Two long straight parallel wires in vacuum are $0.2\\,m$ apart. They carry currents of $5\\,A$ and $8\\,A$ in the same direction. What are the magnitude and nature of the force per unit length between them? (Take $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{-5}\\,N\\,m^{-1}$, attractive",
+        "$4\\times10^{-5}\\,N\\,m^{-1}$, repulsive",
+        "$8\\times10^{-6}\\,N\\,m^{-1}$, attractive",
+        "$4\\times10^{-5}\\,N\\,m^{-1}$, attractive"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The force per unit length between parallel wires is $\\frac{\\mu_0 I_1 I_2}{2\\pi d}$. Parallel currents attract.",
+        "steps": [
+          "$\\frac{\\mu_0}{2\\pi}=2\\times10^{-7}\\,T\\,m\\,A^{-1}$.",
+          "$\\frac{F}{l}=\\frac{2\\times10^{-7}\\times5\\times8}{0.2}=4\\times10^{-5}\\,N\\,m^{-1}$.",
+          "The currents are in the same direction, so the force is attractive."
+        ],
+        "final_answer": "Option (4): $4\\times10^{-5}\\,N\\,m^{-1}$, attractive",
+        "why_not_others": "$2\\times10^{-5}$ comes from using $\\frac{\\mu_0}{4\\pi}$ in place of $\\frac{\\mu_0}{2\\pi}$. 'Repulsive' wrongly treats parallel currents like like charges. $8\\times10^{-6}$ ignores the separation d.",
+        "common_trap": "Thinking parallel currents repel, by analogy with like charges.",
+        "time_saving_tip": "Use $\\frac{F}{l}=2\\times10^{-7}\\frac{I_1I_2}{d}$ directly."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A long horizontal wire P is fixed and carries a current of $50\\,A$. A second long wire Q lies parallel to P, directly above it. Q has mass per unit length $2\\,g\\,m^{-1}$ and carries $20\\,A$ in the opposite direction. Q floats in equilibrium at a height d above P. Find d. (Take $g=10\\,m\\,s^{-2}$ and $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.5\\,cm$",
+        "$10\\,cm$",
+        "$1\\,cm$",
+        "$2\\,cm$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Antiparallel currents repel. Q floats when the upward magnetic force per unit length equals $\\lambda g$.",
+        "steps": [
+          "Set $\\frac{\\mu_0 I_1 I_2}{2\\pi d}=\\lambda g$.",
+          "$d=\\frac{2\\times10^{-7}\\times50\\times20}{2\\times10^{-3}\\times10}$.",
+          "$d=\\frac{2\\times10^{-4}}{2\\times10^{-2}}=10^{-2}\\,m=1\\,cm$."
+        ],
+        "final_answer": "Option (3): $1\\,cm$",
+        "why_not_others": "$0.5\\,cm$ comes from using $\\frac{\\mu_0}{4\\pi}$. $10\\,cm$ comes from forgetting g (using $\\lambda$ alone). $2\\,cm$ comes from a spurious factor of 2.",
+        "common_trap": "Forgetting to convert $2\\,g\\,m^{-1}$ to $2\\times10^{-3}\\,kg\\,m^{-1}$, or dropping g.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Two long parallel wires exert a force F on each other per unit length. The current in one wire is doubled and the current in the other is tripled, with directions unchanged. Their separation is also doubled. What is the new force per unit length?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12F$",
+        "$3F$",
+        "$6F$",
+        "$1.5F$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The force per unit length is proportional to $\\frac{I_1I_2}{d}$.",
+        "steps": [
+          "Let $F\\propto\\frac{I_1I_2}{d}$.",
+          "The new force is $F'\\propto\\frac{(2I_1)(3I_2)}{2d}$.",
+          "So $F'=3F$."
+        ],
+        "final_answer": "Option (2): $3F$",
+        "why_not_others": "$12F$ multiplies by the change in d instead of dividing. $6F$ ignores the change in separation. $1.5F$ treats the force as varying as $\\frac{1}{d^2}$.",
+        "common_trap": "Treating the force as an inverse-square law, as for point charges.",
+        "time_saving_tip": "Multiply the current factors and divide by the distance factor: $\\frac{2\\times3}{2}=3$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Two long parallel wires carrying currents of $2\\,A$ and $6\\,A$ in the same direction exert forces of equal magnitude on each other.",
+        "R": "Currents flowing in the same direction in two parallel wires attract each other."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The mutual forces are equal and opposite (Newton's third law), whatever the individual currents. The rule 'parallel currents attract' gives only the direction.",
+        "steps": [
+          "Force per unit length on each wire is $\\frac{\\mu_0 I_1 I_2}{2\\pi d}$. This expression is symmetric in $I_1$ and $I_2$, so A is true.",
+          "Parallel currents attract, so R is true.",
+          "R gives the nature of the force, not why the magnitudes are equal. The equality follows from Newton's third law."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain the equality, so option (1) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Thinking the wire with the larger current feels a larger force.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A long wire lies on an insulated floor, and a fixed wire above it carries a parallel current. The floor wire stays on the floor only if the magnetic attraction per unit length does not exceed $\\lambda g$, so raising the fixed wire higher makes it easier for the floor wire to stay down.",
+        "II": "If each of two infinitely long parallel wires placed 1 m apart in vacuum carries a steady current of 2 A, the force on each is $4\\times10^{-7}\\,N$ per metre of length."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The attraction varies as $\\frac{1}{d}$ and as $I_1I_2$. The ampere definition gives $2\\times10^{-7}\\,N\\,m^{-1}$ for 1 A in each wire at 1 m.",
+        "steps": [
+          "Statement I: the floor wire stays down if $\\frac{\\mu_0I_1I_2}{2\\pi d}\\le\\lambda g$. A larger d gives a smaller attraction, so Statement I is correct.",
+          "Statement II: $\\frac{F}{l}=2\\times10^{-7}\\times\\frac{2\\times2}{1}=8\\times10^{-7}\\,N\\,m^{-1}$, not $4\\times10^{-7}$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II scales the force linearly with the current. Doubling both currents actually quadruples the force.",
+        "common_trap": "Scaling the ampere-definition force as I instead of $I_1I_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "A rectangular coil of 50 turns, each of area $4\\times10^{-3}\\,m^2$, carries a current of $2\\,A$. It is placed in a uniform magnetic field of $0.5\\,T$ with the plane of the coil parallel to the field. What is the torque on the coil?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\,N\\,m$",
+        "zero",
+        "$0.1\\,N\\,m$",
+        "$0.004\\,N\\,m$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\tau=NIAB\\sin\\theta$, where $\\theta$ is measured from the normal. When the plane is parallel to B, $\\theta=90^\\circ$.",
+        "steps": [
+          "Plane parallel to B means the normal is perpendicular to B, so $\\sin\\theta=1$.",
+          "$\\tau=50\\times2\\times4\\times10^{-3}\\times0.5=0.2\\,N\\,m$."
+        ],
+        "final_answer": "Option (1): $0.2\\,N\\,m$",
+        "why_not_others": "'Zero' comes from measuring $\\theta$ from the plane. $0.1\\,N\\,m$ includes an extra factor of $\\frac{1}{2}$. $0.004\\,N\\,m$ ignores the number of turns N.",
+        "common_trap": "Taking $\\theta$ as the angle between the plane of the coil and B.",
+        "time_saving_tip": "Plane parallel to B always gives the maximum torque, NIAB."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A wire of fixed length is bent into a single-turn loop carrying a fixed current in a uniform magnetic field. What is the ratio of the maximum torque when the loop is circular to the maximum torque when the loop is square?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\pi}{4}$",
+        "$\\frac{4}{\\pi}$",
+        "$1$",
+        "$\\frac{\\pi}{2}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The maximum torque IAB is proportional to the area. For a fixed perimeter, a circle encloses the largest area.",
+        "steps": [
+          "Circle: $2\\pi r=L$, so $A_c=\\frac{L^2}{4\\pi}$.",
+          "Square: side $\\frac{L}{4}$, so $A_s=\\frac{L^2}{16}$.",
+          "Ratio: $\\frac{A_c}{A_s}=\\frac{16}{4\\pi}=\\frac{4}{\\pi}$."
+        ],
+        "final_answer": "Option (2): $\\frac{4}{\\pi}$",
+        "why_not_others": "$\\frac{\\pi}{4}$ inverts the ratio. $1$ assumes the torque is independent of shape for the same wire length. $\\frac{\\pi}{2}$ comes from an algebra slip.",
+        "common_trap": "Assuming the same length of wire gives the same area.",
+        "time_saving_tip": "The circle must give the larger torque, so the ratio must exceed 1. That rules out $\\frac{\\pi}{4}$ at once."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A coil of 20 turns, each of area $0.01\\,m^2$, carries a current of $0.5\\,A$ in a uniform magnetic field of $0.4\\,T$. How much work must be done to rotate it slowly from its position of stable equilibrium to its position of unstable equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\,J$",
+        "$0.08\\,J$",
+        "zero",
+        "$0.16\\,J$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$U=-mB\\cos\\theta$. Stable equilibrium is at $\\theta=0$ and unstable equilibrium at $\\theta=180^\\circ$.",
+        "steps": [
+          "$m=NIA=20\\times0.5\\times0.01=0.1\\,A\\,m^2$.",
+          "$W=U_{180}-U_0=mB-(-mB)=2mB$.",
+          "$W=2\\times0.1\\times0.4=0.08\\,J$."
+        ],
+        "final_answer": "Option (2): $0.08\\,J$",
+        "why_not_others": "$0.04\\,J$ is the work to rotate only to $90^\\circ$. 'Zero' wrongly assumes the torque does no net work between equilibria. $0.16\\,J$ doubles the correct value.",
+        "common_trap": "Taking the work as mB instead of 2mB.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Magnetic moment parallel to B"
+          },
+          {
+            "label": "B",
+            "text": "Magnetic moment antiparallel to B"
+          },
+          {
+            "label": "C",
+            "text": "Plane of the loop parallel to B"
+          },
+          {
+            "label": "D",
+            "text": "Normal to the loop at $60^\\circ$ to B"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\tau=mB$, $U=0$"
+          },
+          {
+            "label": "II",
+            "text": "$\\tau=0$, $U=-mB$"
+          },
+          {
+            "label": "III",
+            "text": "$\\tau=0$, $U=+mB$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\tau=\\frac{\\sqrt3}{2}mB$, $U=-\\frac{mB}{2}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\tau=mB\\sin\\theta$ and $U=-mB\\cos\\theta$, with $\\theta$ measured from the normal.",
+        "steps": [
+          "A: $\\theta=0$ gives $\\tau=0$ and $U=-mB$, so A-II.",
+          "B: $\\theta=180^\\circ$ gives $\\tau=0$ and $U=+mB$, so B-III.",
+          "C: $\\theta=90^\\circ$ gives $\\tau=mB$ and $U=0$, so C-I.",
+          "D: $\\theta=60^\\circ$ gives $\\tau=\\frac{\\sqrt3}{2}mB$ and $U=-\\frac{mB}{2}$, so D-IV."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Option (1) swaps the signs of U for the two equilibria. Option (3) measures the angle in C and D from the plane. Option (4) gives maximum torque in the stable position.",
+        "common_trap": "Thinking 'plane parallel to B' means $\\theta=0$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about a current loop in a uniform magnetic field are correct?",
+      "statements": {
+        "A": "The net magnetic force on the loop is zero.",
+        "B": "The relation $\\tau=NIAB\\sin\\theta$ holds for a planar loop of any shape.",
+        "C": "The torque is maximum when the plane of the loop is perpendicular to B.",
+        "D": "The position in which the magnetic moment is antiparallel to B is an equilibrium position, but it is unstable.",
+        "E": "The potential energy of the loop is minimum when the plane of the loop is parallel to B."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and E only",
+        "A, B, D and E only",
+        "B, C and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In a uniform field the net force is zero. $\\tau=mB\\sin\\theta$ and $U=-mB\\cos\\theta$, with $\\theta$ measured from the normal.",
+        "steps": [
+          "A is true: the forces on opposite sides cancel.",
+          "B is true: the result holds for any planar shape.",
+          "C is false: the torque is maximum when the plane is parallel to B.",
+          "D is true: at $\\theta=180^\\circ$ the torque is zero but U is maximum, so the equilibrium is unstable.",
+          "E is false: with the plane parallel to B, $U=0$. The minimum, $-mB$, occurs when the plane is perpendicular to B."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Options (2) and (4) include C, which is false. Option (3) includes E, which is false.",
+        "common_trap": "Confusing the orientation of the plane with the orientation of the normal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "Why does a moving coil galvanometer use concave pole pieces with a soft iron core to produce a radial magnetic field?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To increase the resistance of the coil",
+        "To make the deflecting torque zero at equilibrium",
+        "To make the deflection proportional to the square of the current",
+        "To keep the plane of the coil always parallel to B, so that the deflection is proportional to the current"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In a radial field the torque is NIAB at every position, so $\\phi=\\frac{NAB}{k}I$.",
+        "steps": [
+          "In a radial field the plane of the coil stays parallel to B, so $\\sin\\theta=1$ at every position.",
+          "At equilibrium $NIAB=k\\phi$, so $\\phi\\propto I$ and the scale is linear."
+        ],
+        "final_answer": "Option (4): To keep the plane of the coil always parallel to B, so that the deflection is proportional to the current",
+        "why_not_others": "The radial field does not change the coil resistance. The deflecting torque at equilibrium is balanced by the spring, not zero. The deflection is linear in I, not quadratic.",
+        "common_trap": "Thinking the radial field only increases the field strength. Its key role is to make the scale linear.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A galvanometer of resistance $99\\,\\Omega$ gives full-scale deflection for $10\\,mA$. It is to be converted into an ammeter of range $1\\,A$. What shunt resistance is required, and how is it connected?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\,\\Omega$ in parallel",
+        "$0.99\\,\\Omega$ in parallel",
+        "$9801\\,\\Omega$ in parallel",
+        "$0.01\\,\\Omega$ in parallel"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$S=\\frac{I_gG}{I-I_g}$, connected in parallel with the galvanometer.",
+        "steps": [
+          "$I_gG=0.01\\times99=0.99\\,V$.",
+          "$I-I_g=1-0.01=0.99\\,A$.",
+          "$S=\\frac{0.99}{0.99}=1\\,\\Omega$."
+        ],
+        "final_answer": "Option (1): $1\\,\\Omega$ in parallel",
+        "why_not_others": "$0.99\\,\\Omega$ divides by I instead of $I-I_g$. $9801\\,\\Omega$ is $(n-1)G$, the voltmeter-type multiplier. $0.01\\,\\Omega$ divides $I_g$ by $I-I_g$, omitting G.",
+        "common_trap": "Using I in place of $I-I_g$ in the denominator.",
+        "time_saving_tip": "With $n=\\frac{I}{I_g}=100$, $S=\\frac{G}{n-1}=\\frac{99}{99}=1\\,\\Omega$."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A galvanometer of resistance $40\\,\\Omega$ gives full-scale deflection for $5\\,mA$. What must be done to convert it into a voltmeter of range $10\\,V$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Connect $1960\\,\\Omega$ in series",
+        "Connect $2000\\,\\Omega$ in series",
+        "Connect $2040\\,\\Omega$ in series",
+        "Connect $1960\\,\\Omega$ in parallel"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A large resistance $R=\\frac{V}{I_g}-G$ is connected in series.",
+        "steps": [
+          "$\\frac{V}{I_g}=\\frac{10}{0.005}=2000\\,\\Omega$.",
+          "$R=2000-40=1960\\,\\Omega$, connected in series."
+        ],
+        "final_answer": "Option (1): Connect $1960\\,\\Omega$ in series",
+        "why_not_others": "$2000\\,\\Omega$ forgets to subtract G. $2040\\,\\Omega$ adds G instead of subtracting it. A parallel connection is used for an ammeter, not a voltmeter.",
+        "common_trap": "Forgetting that the total voltmeter resistance is $G+R$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A soft iron core is placed inside the coil of a moving coil galvanometer to increase its current sensitivity.",
+        "R": "The soft iron core increases the magnetic field B, and the current sensitivity $\\frac{NAB}{k}$ increases with B."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Current sensitivity is $\\frac{\\phi}{I}=\\frac{NAB}{k}$.",
+        "steps": [
+          "The soft iron core strengthens B, so A is true.",
+          "Since the current sensitivity is proportional to B, R is true and directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R gives exactly the mechanism behind A, so options (2), (3) and (4) do not apply.",
+        "common_trap": "Thinking the core serves only a mechanical or supporting purpose.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Doubling the number of turns of a galvanometer coil, with all other factors and the wire unchanged, doubles its voltage sensitivity.",
+        "II": "An ammeter made by connecting a shunt S across a galvanometer of resistance G has a resistance smaller than both G and S."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Voltage sensitivity is $\\frac{NAB}{kG}$. Ammeter resistance is $\\frac{GS}{G+S}$.",
+        "steps": [
+          "Statement I: doubling N doubles G as well, so $\\frac{NAB}{kG}$ is unchanged. Statement I is incorrect.",
+          "Statement II: the parallel combination $\\frac{GS}{G+S}$ is smaller than each of G and S. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the proportional rise in coil resistance. Statement II is a standard property of a parallel combination.",
+        "common_trap": "Assuming that whatever raises current sensitivity also raises voltage sensitivity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A square coil of side $10\\,cm$ has 50 turns and carries a current of $2\\,A$. What is the magnitude of its magnetic dipole moment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.02\\,A\\,m^2$",
+        "$1\\,A\\,m^2$",
+        "$10\\,A\\,m^2$",
+        "$40\\,A\\,m^2$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$m=NIA$.",
+        "steps": [
+          "$A=(0.1)^2=0.01\\,m^2$.",
+          "$m=50\\times2\\times0.01=1\\,A\\,m^2$."
+        ],
+        "final_answer": "Option (2): $1\\,A\\,m^2$",
+        "why_not_others": "$0.02$ ignores N. $10$ uses the side length instead of the area. $40$ uses the perimeter (0.4 m) instead of the area.",
+        "common_trap": "Forgetting the number of turns, or not squaring the side.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A point charge of $4\\,\\mu C$ moves in a circle of radius $0.1\\,m$ with a uniform angular speed of $50\\,rad\\,s^{-1}$. What is the magnitude of the magnetic moment of this motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{-6}\\,A\\,m^2$",
+        "$1\\times10^{-5}\\,A\\,m^2$",
+        "$1\\times10^{-6}\\,A\\,m^2$",
+        "$5\\times10^{-7}\\,A\\,m^2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A charge rotating at angular speed $\\omega$ has $m=\\frac{q\\omega r^2}{2}$.",
+        "steps": [
+          "The equivalent current is $I=\\frac{q\\omega}{2\\pi}$, and the area is $\\pi r^2$.",
+          "$m=\\frac{q\\omega r^2}{2}=\\frac{4\\times10^{-6}\\times50\\times0.01}{2}$.",
+          "$m=1\\times10^{-6}\\,A\\,m^2$."
+        ],
+        "final_answer": "Option (3): $1\\times10^{-6}\\,A\\,m^2$",
+        "why_not_others": "$2\\times10^{-6}$ omits the factor $\\frac{1}{2}$. $1\\times10^{-5}$ uses r instead of $r^2$. $5\\times10^{-7}$ applies the factor $\\frac{1}{2}$ twice.",
+        "common_trap": "Writing the current as $q\\omega$ instead of $\\frac{q\\omega}{2\\pi}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "An electron of mass $m_e$ and charge magnitude e revolves in a circular orbit with orbital angular momentum $\\vec{L}$. What is its orbital magnetic moment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{eL}{2m_e}$, parallel to $\\vec{L}$",
+        "$\\frac{eL}{2m_e}$, antiparallel to $\\vec{L}$",
+        "$\\frac{eL}{m_e}$, antiparallel to $\\vec{L}$",
+        "$\\frac{2eL}{m_e}$, parallel to $\\vec{L}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\mu=\\frac{evr}{2}=\\frac{e}{2m_e}L$. Because the electron is negatively charged, $\\vec{\\mu}$ is opposite to $\\vec{L}$.",
+        "steps": [
+          "$I=\\frac{ev}{2\\pi r}$ and $\\mu=I\\pi r^2=\\frac{evr}{2}$.",
+          "With $L=m_evr$, this gives $\\mu=\\frac{e}{2m_e}L$.",
+          "The charge is negative, so $\\vec{\\mu}$ is antiparallel to $\\vec{L}$."
+        ],
+        "final_answer": "Option (2): $\\frac{eL}{2m_e}$, antiparallel to $\\vec{L}$",
+        "why_not_others": "'Parallel' ignores the negative charge. $\\frac{eL}{m_e}$ drops the factor $\\frac{1}{2}$. $\\frac{2eL}{m_e}$ is wrong in both magnitude and direction.",
+        "common_trap": "Treating the electron as a positive charge when finding the direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Magnetic moment of an N-turn loop of area A carrying current I"
+          },
+          {
+            "label": "B",
+            "text": "Magnetic field far along the axis of a loop of moment m"
+          },
+          {
+            "label": "C",
+            "text": "Bohr magneton"
+          },
+          {
+            "label": "D",
+            "text": "Orbital magnetic moment of an electron moving with speed v in an orbit of radius r"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{evr}{2}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{eh}{4\\pi m_e}$"
+          },
+          {
+            "label": "III",
+            "text": "$NIA$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-II, D-I",
+        "A-I, B-IV, C-II, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "These are standard results for the current loop treated as a magnetic dipole.",
+        "steps": [
+          "A: $m=NIA$, so A-III.",
+          "B: $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$, so B-IV.",
+          "C: $\\mu_B=\\frac{eh}{4\\pi m_e}$, so C-II.",
+          "D: $\\mu=\\frac{evr}{2}$, so D-I."
+        ],
+        "final_answer": "Option (2): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the Bohr magneton with the general orbital moment. Option (3) swaps the moment with the field. Option (4) swaps the loop moment with the electron's orbital moment.",
+        "common_trap": "Confusing the general orbital moment $\\frac{evr}{2}$ with its quantised minimum, $\\mu_B$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about a current loop as a magnetic dipole are correct?",
+      "statements": {
+        "A": "The magnetic moment of a planar current loop depends on its area and not on its shape.",
+        "B": "The face of the loop on which the current appears clockwise to the viewer behaves as a north pole.",
+        "C": "The gyromagnetic ratio of an orbiting electron is $\\frac{e}{2m_e}\\approx8.8\\times10^{10}\\,C\\,kg^{-1}$.",
+        "D": "The Bohr magneton is about $9.27\\times10^{-24}\\,A\\,m^2$.",
+        "E": "Far along its axis, the magnetic field of a current loop varies as $\\frac{1}{x^2}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C, D and E only",
+        "A, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$m=NIA$. An anticlockwise face is a north pole. $\\frac{e}{2m_e}$ is the gyromagnetic ratio. $\\mu_B\\approx9.27\\times10^{-24}\\,A\\,m^2$. The far axial field varies as $\\frac{1}{x^3}$.",
+        "steps": [
+          "A is true: m depends only on N, I and A.",
+          "B is false: the face showing anticlockwise current is the north pole.",
+          "C is true: the gyromagnetic ratio is $\\frac{e}{2m_e}\\approx8.8\\times10^{10}\\,C\\,kg^{-1}$.",
+          "D is true: $\\mu_B\\approx9.27\\times10^{-24}\\,A\\,m^2$.",
+          "E is false: the far axial field is $\\frac{\\mu_0}{4\\pi}\\frac{2m}{x^3}$."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Options (1) and (2) include B, which is false. Options (2) and (3) include E, which is false.",
+        "common_trap": "Reversing the clockwise and anticlockwise pole rule, or using the inverse-square law for the dipole field.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,623 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "According to Heisenberg's uncertainty principle, the product of the uncertainties in position and momentum of a microscopic particle, $\\Delta x \\cdot \\Delta p$, is always greater than or equal to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{h}{2\\pi}$",
+        "$\\frac{h}{4\\pi}$",
+        "$\\frac{h}{\\pi}$",
+        "$4\\pi h$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The uncertainty relation is $\\Delta x \\cdot \\Delta p \\geq \\frac{h}{4\\pi}$.",
+        "steps": [
+          "Heisenberg's principle sets a lower limit on the product $\\Delta x \\cdot \\Delta p$.",
+          "That lower limit is $h/4\\pi$."
+        ],
+        "final_answer": "Option (2): $\\frac{h}{4\\pi}$",
+        "why_not_others": "$h/2\\pi$ is a common confusion with the reduced Planck constant. $h/\\pi$ and $4\\pi h$ are incorrect forms of the relation.",
+        "common_trap": "Writing $h/2\\pi$ in place of $h/4\\pi$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The position of an electron is known with an uncertainty of $0.1$ nm. What is the minimum uncertainty in its momentum? (Take $h = 6.626 \\times 10^{-34}$ J s.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.27 \\times 10^{-25}$ kg m s$^{-1}$",
+        "$1.05 \\times 10^{-24}$ kg m s$^{-1}$",
+        "$6.63 \\times 10^{-24}$ kg m s$^{-1}$",
+        "$5.27 \\times 10^{-26}$ kg m s$^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The minimum uncertainty in momentum is $\\Delta p = \\frac{h}{4\\pi \\Delta x}$.",
+        "steps": [
+          "Convert the position uncertainty: $\\Delta x = 0.1$ nm $= 1 \\times 10^{-10}$ m.",
+          "Calculate $h/4\\pi = 6.626 \\times 10^{-34} / 12.566 = 5.27 \\times 10^{-35}$ J s.",
+          "Divide by $\\Delta x$: $\\Delta p = 5.27 \\times 10^{-35} / 10^{-10} = 5.27 \\times 10^{-25}$ kg m s$^{-1}$."
+        ],
+        "final_answer": "Option (1): $5.27 \\times 10^{-25}$ kg m s$^{-1}$",
+        "why_not_others": "$1.05 \\times 10^{-24}$ comes from using $h/2\\pi$. $6.63 \\times 10^{-24}$ comes from using $h$ alone. $5.27 \\times 10^{-26}$ comes from wrongly converting 0.1 nm to $10^{-9}$ m.",
+        "common_trap": "Errors in the nm-to-m conversion, or using $h/2\\pi$ instead of $h/4\\pi$.",
+        "time_saving_tip": "Remember $h/4\\pi \\approx 5.27 \\times 10^{-35}$ J s."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "An electron and a proton are confined so that both have the same uncertainty in position. The mass of a proton is about 1836 times the mass of an electron. What is the approximate ratio of the minimum uncertainty in velocity of the electron to that of the proton?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1",
+        "1836",
+        "$\\frac{1}{1836}$",
+        "$\\sqrt{1836}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "From $\\Delta x \\cdot \\Delta v \\geq \\frac{h}{4\\pi m}$, the uncertainty in velocity varies as $1/m$ when $\\Delta x$ is fixed.",
+        "steps": [
+          "Write $\\Delta v = \\frac{h}{4\\pi m \\Delta x}$ for each particle.",
+          "With the same $\\Delta x$, the ratio is $\\Delta v_e / \\Delta v_p = m_p / m_e$.",
+          "Therefore $\\Delta v_e / \\Delta v_p \\approx 1836$."
+        ],
+        "final_answer": "Option (2): 1836",
+        "why_not_others": "1 ignores the mass term. $1/1836$ inverts the ratio. $\\sqrt{1836}$ assumes a square-root dependence that does not exist.",
+        "common_trap": "Assuming equal $\\Delta x$ gives equal $\\Delta v$. That is true only for $\\Delta p$, not for $\\Delta v$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Heisenberg's uncertainty principle has a significant practical effect on predicting the path of a moving cricket ball.",
+        "R": "Since $\\Delta x \\cdot \\Delta v \\geq \\frac{h}{4\\pi m}$, the uncertainties become negligible for objects of large mass."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The uncertainty principle is significant only for microscopic particles.",
+        "steps": [
+          "A cricket ball is macroscopic, so its large mass makes $h/4\\pi m$ extremely small.",
+          "Its uncertainties are therefore negligible, and the principle has no practical effect on it, so A is false.",
+          "R correctly states the relation and its consequence, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Assuming the principle matters equally for all objects.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "To locate an electron precisely, it must be illuminated with light of wavelength larger than its dimensions; such low-energy photons leave its momentum unchanged.",
+        "II": "If the uncertainty in position of an electron is reduced to one-fourth, the minimum uncertainty in its velocity becomes four times."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Precise location requires short-wavelength, high-energy light, and $\\Delta v \\propto 1/\\Delta x$.",
+        "steps": [
+          "Locating an electron precisely requires light of wavelength smaller than its dimensions.",
+          "Such high-energy photons change the electron's momentum on impact, so Statement I is incorrect.",
+          "From $\\Delta v = \\frac{h}{4\\pi m \\Delta x}$, reducing $\\Delta x$ to $\\Delta x/4$ makes $\\Delta v$ four times larger, so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I reverses both the wavelength condition and its effect on momentum, so any option calling it correct is wrong. Statement II follows directly from the inverse relation, so option (2) is also wrong.",
+        "common_trap": "Thinking that observing an electron does not disturb it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "In the Schrödinger wave equation written as $\\hat{H}\\psi = E\\psi$, the symbol $\\hat{H}$ represents:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the wave function of the electron",
+        "the probability density of the electron",
+        "the Hamiltonian operator, which corresponds to the total energy",
+        "the operator for kinetic energy only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\hat{H}$ is the Hamiltonian, the total energy operator.",
+        "steps": [
+          "In $\\hat{H}\\psi = E\\psi$, $\\psi$ is the wave function and $E$ is the energy.",
+          "$\\hat{H}$ is the Hamiltonian, the operator for total energy."
+        ],
+        "final_answer": "Option (3): the Hamiltonian operator, which corresponds to the total energy",
+        "why_not_others": "The wave function is $\\psi$. Probability density is $|\\psi|^2$. The Hamiltonian represents total energy, not kinetic energy alone.",
+        "common_trap": "Confusing $\\hat{H}$ with $\\psi$, or with the kinetic energy part only.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "According to the quantum mechanical model, which of the following pairs of orbitals are degenerate in the hydrogen atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2s and 2p",
+        "2p and 3p",
+        "1s and 2s",
+        "3s and 4s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In hydrogen, orbital energy depends only on n.",
+        "steps": [
+          "Degenerate orbitals have the same energy.",
+          "In H, orbitals with the same n have the same energy.",
+          "2s and 2p both have $n = 2$, so they are degenerate."
+        ],
+        "final_answer": "Option (1): 2s and 2p",
+        "why_not_others": "Each of the other pairs has different n values, so the two orbitals differ in energy.",
+        "common_trap": "Assuming 2s is lower than 2p in hydrogen. That ordering holds only for multi-electron atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Which of the following correctly describes the relative energies of 2s and 2p orbitals in a multi-electron atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2s and 2p have equal energy because energy depends only on n",
+        "2s is lower in energy than 2p because of shielding and penetration effects",
+        "2s is higher in energy than 2p because it has a smaller l value",
+        "The energies of 2s and 2p depend only on l and not on n"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In multi-electron atoms, orbital energy depends on both n and l.",
+        "steps": [
+          "In a multi-electron atom, orbital energy depends on both n and l.",
+          "Shielding and penetration effects make 2s lower in energy than 2p."
+        ],
+        "final_answer": "Option (2): 2s is lower in energy than 2p because of shielding and penetration effects",
+        "why_not_others": "Option (1) describes hydrogen, not a multi-electron atom. Option (3) reverses the order. Option (4) wrongly ignores the dependence on n.",
+        "common_trap": "Applying the hydrogen degeneracy rule to multi-electron atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\hat{H}$"
+          },
+          {
+            "label": "B",
+            "text": "$\\psi$"
+          },
+          {
+            "label": "C",
+            "text": "$|\\psi|^2$"
+          },
+          {
+            "label": "D",
+            "text": "Orbital"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Probability density of finding the electron"
+          },
+          {
+            "label": "II",
+            "text": "Total energy operator"
+          },
+          {
+            "label": "III",
+            "text": "Region where the probability of finding the electron is maximum"
+          },
+          {
+            "label": "IV",
+            "text": "Wave function with no physical meaning by itself"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each term of the quantum mechanical model has a distinct meaning.",
+        "steps": [
+          "$\\hat{H}$ is the total energy operator, so A-II.",
+          "$\\psi$ has no physical meaning by itself, so B-IV.",
+          "$|\\psi|^2$ gives probability density, so C-I.",
+          "An orbital is the region of maximum probability of finding the electron, so D-III."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) swaps $\\hat{H}$ and $\\psi$. Option (2) swaps $\\psi$ and $|\\psi|^2$. Option (3) swaps $|\\psi|^2$ and the orbital.",
+        "common_trap": "Assigning probability meaning to $\\psi$ instead of $|\\psi|^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the quantum mechanical model of the atom are correct?",
+      "statements": {
+        "A": "Solving the Schrödinger equation for an atom gives only certain allowed, quantised energy levels.",
+        "B": "The quantum numbers n, l and $m_l$ arise naturally from the solutions of the Schrödinger equation.",
+        "C": "The model allows the exact path of an electron around the nucleus to be determined.",
+        "D": "For the hydrogen atom, the energy of an orbital depends on both n and l.",
+        "E": "The model is based on wave-particle duality and the uncertainty principle."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and D only",
+        "A, B and E only",
+        "B, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Main features of the quantum mechanical model.",
+        "steps": [
+          "A is true: solving the equation gives quantised energies.",
+          "B is true: n, l and $m_l$ are introduced automatically by the solutions.",
+          "C is false: the exact path of an electron cannot be determined.",
+          "D is false: for H, energy depends only on n.",
+          "E is true: the model rests on wave-particle duality and the uncertainty principle."
+        ],
+        "final_answer": "Option (3): A, B and E only",
+        "why_not_others": "Option (1) omits the true statement E. Option (2) includes the false statement D. Option (4) includes the false statement C and omits A.",
+        "common_trap": "Thinking hydrogen orbital energy depends on l.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "How many angular nodes are present in a 3d orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The number of angular nodes equals l.",
+        "steps": [
+          "For a d orbital, $l = 2$.",
+          "Angular nodes $= l = 2$."
+        ],
+        "final_answer": "Option (3): 2",
+        "why_not_others": "0 is the number of radial nodes in 3d. 1 is the value of l for a p orbital. 3 is the value of n.",
+        "common_trap": "Using n or $n - l - 1$ instead of l.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "The numbers of radial and angular nodes in a 5d orbital are, respectively:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 and 2",
+        "4 and 0",
+        "3 and 2",
+        "2 and 3"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Radial nodes $= n - l - 1$ and angular nodes $= l$.",
+        "steps": [
+          "For 5d, $n = 5$ and $l = 2$.",
+          "Radial nodes $= 5 - 2 - 1 = 2$.",
+          "Angular nodes $= 2$."
+        ],
+        "final_answer": "Option (1): 2 and 2",
+        "why_not_others": "4 and 0 puts all $n - 1$ nodes as radial. 3 and 2 uses $n - l$ for radial nodes. 2 and 3 takes the wrong l value.",
+        "common_trap": "Forgetting the '−1' in $n - l - 1$.",
+        "time_saving_tip": "Check your answer: total nodes $= n - 1 = 4$."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "An atomic orbital has two radial nodes and one angular node. The orbital is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3p",
+        "3d",
+        "2p",
+        "4p"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Use angular nodes $= l$ and radial nodes $= n - l - 1$.",
+        "steps": [
+          "One angular node means $l = 1$, a p orbital.",
+          "Two radial nodes give $n - 1 - 1 = 2$, so $n = 4$.",
+          "The orbital is 4p."
+        ],
+        "final_answer": "Option (4): 4p",
+        "why_not_others": "3p has only 1 radial node. 3d has 0 radial and 2 angular nodes. 2p has no radial node.",
+        "common_trap": "Taking total nodes as $n$ instead of $n - 1$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A 2p orbital has no radial node.",
+        "R": "The number of radial nodes equals $n - l - 1$, which is zero for $n = 2$, $l = 1$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Radial nodes $= n - l - 1$.",
+        "steps": [
+          "For 2p, radial nodes $= 2 - 1 - 1 = 0$, so A is true.",
+          "R states the formula correctly and applies it correctly.",
+          "R directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true and R is the direct reason for A, so options (2), (3) and (4) are wrong.",
+        "common_trap": "Counting the zero of $\\psi$ at $r = 0$ as a radial node for p orbitals.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An orbital specified by n, l and $m_l$ can hold up to two electrons, and a 3s orbital has a total of three nodes.",
+        "II": "Radial nodes are planes or cones, whereas angular nodes are spherical surfaces."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Total nodes $= n - 1$. Radial nodes are spherical surfaces; angular nodes are planes or cones.",
+        "steps": [
+          "For 3s, total nodes $= n - 1 = 2$, not 3, so Statement I is incorrect even though its first part is true.",
+          "Radial nodes are spherical surfaces and angular nodes are planes or cones.",
+          "Statement II reverses these descriptions, so it is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I contains a wrong node count, and Statement II swaps the two node shapes, so options (1), (3) and (4) are wrong.",
+        "common_trap": "Accepting Statement I because its first half is correct.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "For the 1s orbital of the hydrogen atom, the radial probability function $4\\pi r^2 \\psi^2$ is maximum at a distance from the nucleus of:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$r = 0$",
+        "105.8 pm",
+        "26.45 pm",
+        "52.9 pm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The radial probability for 1s peaks at the Bohr radius, $a_0 = 52.9$ pm.",
+        "steps": [
+          "$4\\pi r^2 \\psi^2$ is zero at the nucleus because of the $r^2$ factor.",
+          "For 1s, this function peaks at $a_0 = 52.9$ pm."
+        ],
+        "final_answer": "Option (4): 52.9 pm",
+        "why_not_others": "$r = 0$ is where $\\psi^2$ is maximum, not the radial probability. 105.8 pm and 26.45 pm come from doubling or halving $a_0$.",
+        "common_trap": "Confusing the maximum of $\\psi^2$ (at the nucleus) with the maximum of the radial probability.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A plot of the wave function $\\psi$ against r for an orbital starts at zero at $r = 0$, rises to a maximum, crosses zero once at a finite r, and then approaches zero. The orbital is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3p",
+        "2p",
+        "2s",
+        "3s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A plot starting at zero indicates a p or d orbital, and each zero crossing at finite r is a radial node.",
+        "steps": [
+          "Starting from zero at $r = 0$ rules out s orbitals.",
+          "One crossing at finite r means one radial node.",
+          "For a p orbital, $n - 1 - 1 = 1$ gives $n = 3$, so the orbital is 3p."
+        ],
+        "final_answer": "Option (1): 3p",
+        "why_not_others": "2p has no radial node. 2s and 3s start at a non-zero value at $r = 0$.",
+        "common_trap": "Counting $r = 0$ as a node, which leads to the wrong n.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "Which of the following correctly describes the variation of $\\psi^2$ with distance r from the nucleus for a 2s orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It is zero at the nucleus, rises to a single maximum and then decays to zero",
+        "It is maximum at the nucleus, falls to zero, becomes negative and then approaches zero",
+        "It is maximum at the nucleus, drops to zero at one value of r and rises to a second, smaller maximum before decreasing",
+        "It is maximum at the nucleus and decreases steadily without becoming zero at any finite r"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For 2s, $\\psi^2$ is maximum at the nucleus, is zero at the radial node, and shows a second smaller maximum.",
+        "steps": [
+          "For s orbitals, $\\psi^2$ is maximum at the nucleus.",
+          "The single radial node of 2s makes $\\psi^2$ zero at one value of r.",
+          "Beyond the node, $\\psi^2$ rises to a second, smaller maximum and then decreases."
+        ],
+        "final_answer": "Option (3): It is maximum at the nucleus, drops to zero at one value of r and rises to a second, smaller maximum before decreasing",
+        "why_not_others": "Option (1) describes a radial probability curve. Option (2) describes $\\psi$, since $\\psi^2$ is never negative. Option (4) describes 1s.",
+        "common_trap": "Confusing the $\\psi$ curve with the $\\psi^2$ curve.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\psi$ for 1s"
+          },
+          {
+            "label": "B",
+            "text": "$\\psi$ for 2s"
+          },
+          {
+            "label": "C",
+            "text": "$\\psi$ for 3s"
+          },
+          {
+            "label": "D",
+            "text": "$4\\pi r^2 \\psi^2$ for 1s"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Crosses zero twice at finite r"
+          },
+          {
+            "label": "II",
+            "text": "Maximum at the nucleus, decreases steadily, never zero at finite r"
+          },
+          {
+            "label": "III",
+            "text": "Zero at the nucleus, maximum at 52.9 pm"
+          },
+          {
+            "label": "IV",
+            "text": "Crosses zero once, becomes negative and then approaches zero"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The number of zero crossings of $\\psi$ equals the number of radial nodes, and the 1s radial probability peaks at $a_0$.",
+        "steps": [
+          "1s has no node and $\\psi$ is maximum at the nucleus, so A-II.",
+          "2s has one node, so B-IV.",
+          "3s has two nodes, so C-I.",
+          "The 1s radial probability is zero at the nucleus and peaks at 52.9 pm, so D-III."
+        ],
+        "final_answer": "Option (3): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) swaps 2s and 3s. Option (2) swaps the 1s $\\psi$ curve with the radial probability curve. Option (4) swaps 1s and 2s.",
+        "common_trap": "Mixing up the $\\psi$ plot and the radial probability plot for 1s.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the variation of $\\psi$ and $\\psi^2$ with r are correct?",
+      "statements": {
+        "A": "$\\psi^2$ is never negative.",
+        "B": "For a 2s orbital, $\\psi^2$ has two maxima, the one at the nucleus being larger.",
+        "C": "The radial probability function $4\\pi r^2 \\psi^2$ for 1s is maximum at the nucleus.",
+        "D": "For a 2p orbital, $\\psi$ has a non-zero value at $r = 0$.",
+        "E": "The number of times $\\psi$ crosses zero, excluding $r = 0$, equals the number of radial nodes."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, B and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Features of the $\\psi$, $\\psi^2$ and radial probability plots.",
+        "steps": [
+          "A is true: a square can never be negative.",
+          "B is true: for 2s, $\\psi^2$ has a larger maximum at the nucleus and a second, smaller maximum.",
+          "C is false: $4\\pi r^2 \\psi^2$ is zero at the nucleus and peaks at 52.9 pm.",
+          "D is false: for p orbitals, $\\psi$ starts from zero at $r = 0$.",
+          "E is true: zero crossings at finite r count as radial nodes."
+        ],
+        "final_answer": "Option (4): A, B and E only",
+        "why_not_others": "Option (1) omits the true statement E. Option (2) includes the false statement C. Option (3) includes the false statement D.",
+        "common_trap": "Thinking the radial probability is maximum at the nucleus, as $\\psi^2$ is.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

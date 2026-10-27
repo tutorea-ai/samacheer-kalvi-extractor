@@ -1,0 +1,143 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Diazotisation of aniline with $NaNO_2$ and $HCl$ is carried out at 273-278 K mainly because:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NaNO_2$ does not react with $HCl$ above 278 K",
+        "aniline is oxidised to nitrobenzene by nitrous acid at higher temperatures",
+        "the coupling reaction with unreacted aniline becomes impossible at low temperature",
+        "the arenediazonium salt decomposes to phenol and $N_2$ at higher temperatures"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Arenediazonium salts are stable only in cold solution.",
+        "steps": [
+          "Diazotisation: $C_6H_5NH_2 + NaNO_2 + 2HCl \\rightarrow C_6H_5N_2^+Cl^- + NaCl + 2H_2O$ at 273-278 K.",
+          "Above this range, the salt reacts with water to give phenol and $N_2$ gas.",
+          "The salt is therefore prepared cold and used immediately."
+        ],
+        "final_answer": "Option (4): the arenediazonium salt decomposes to phenol and $N_2$ at higher temperatures",
+        "why_not_others": "Nitrous acid still forms from $NaNO_2$ and $HCl$ above 278 K. Oxidation of aniline to nitrobenzene is not the reason for the cold conditions. Low temperature does not prevent coupling, and coupling is not the purpose of the cold conditions.",
+        "common_trap": "Thinking the low temperature is needed for the reagents rather than for the stability of the product.",
+        "time_saving_tip": "Cold conditions in diazotisation exist to protect the diazonium salt."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "Which reagent or sequence converts benzenediazonium chloride into fluorobenzene?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$KF$ at room temperature",
+        "$CuF$ with $HF$",
+        "Copper powder with $HF$",
+        "$HBF_4$, followed by heating the precipitated salt"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Balz-Schiemann reaction: aryl fluorides are made by heating arenediazonium fluoroborates.",
+        "steps": [
+          "$ArN_2^+Cl^- + HBF_4 \\rightarrow ArN_2^+BF_4^-$",
+          "On heating: $ArN_2^+BF_4^- \\rightarrow ArF + BF_3 + N_2$.",
+          "This is the standard route to fluorobenzene."
+        ],
+        "final_answer": "Option (4): $HBF_4$, followed by heating the precipitated salt",
+        "why_not_others": "Direct treatment with a halide salt works only for iodine ($KI$). Sandmeyer reactions with Cu(I) salts give Cl, Br and CN, not F. Gattermann reactions with copper powder use $HCl$ or $HBr$ only.",
+        "common_trap": "Extending the $KI$ route for iodobenzene to $KF$ for fluorobenzene.",
+        "time_saving_tip": "F needs fluoroborate and heat. I needs only $KI$."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Which sequence of reactions gives 1,3,5-tribromobenzene?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Benzene, then excess $Br_2$ with $FeBr_3$",
+        "Aniline, then $Br_2$ water, then $NaNO_2/HCl$ at 273-278 K, then $CuBr/HBr$",
+        "Aniline, then $Br_2$ water, then $NaNO_2/HCl$ at 273-278 K, then $H_3PO_2$",
+        "Aniline, then $Br_2$ water, then $NaNO_2/HCl$ at 273-278 K, then warm water"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The $-NH_2$ group is used as a temporary directing group and then removed by diazotisation followed by $H_3PO_2$.",
+        "steps": [
+          "$Br_2$ water converts aniline to 2,4,6-tribromoaniline.",
+          "Diazotisation converts the $-NH_2$ group into $-N_2^+$.",
+          "$H_3PO_2$ replaces $-N_2^+$ by H.",
+          "The three Br atoms are now at positions 1, 3 and 5."
+        ],
+        "final_answer": "Option (3): Aniline, then $Br_2$ water, then $NaNO_2/HCl$ at 273-278 K, then $H_3PO_2$",
+        "why_not_others": "Direct bromination of benzene cannot give the 1,3,5 pattern, because Br directs to o/p positions. $CuBr/HBr$ replaces $-N_2^+$ by Br and gives a tetrabromobenzene. Warm water replaces $-N_2^+$ by OH and gives 2,4,6-tribromophenol.",
+        "common_trap": "Choosing a replacement step that introduces a new group instead of H.",
+        "time_saving_tip": "A pattern that direct substitution cannot give suggests: use $-NH_2$ to direct, then remove it with $H_3PO_2$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Alkyldiazonium salts are more stable than arenediazonium salts.",
+        "R": "In arenediazonium salts, the diazonium group is stabilised by resonance with the benzene ring."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Resonance with the aromatic ring makes arenediazonium salts more stable than alkyl ones.",
+        "steps": [
+          "The $-N_2^+$ group in $ArN_2^+$ is delocalised with the ring by resonance.",
+          "Alkyldiazonium salts have no such stabilisation.",
+          "So arene salts are more stable, and A is false.",
+          "R is a correct statement."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A states the reverse of the actual order of stability, so options (1), (2) and (3) cannot be right.",
+        "common_trap": "Reversing the stability order because arenediazonium salts must still be kept cold.",
+        "time_saving_tip": "Resonance with the ring makes the aryl salt the more stable one."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Benzenediazonium chloride treated with $CuCN/KCN$ gives a product which, on reduction with $LiAlH_4$, gives benzylamine and not aniline.",
+        "II": "Benzenediazonium chloride reacts with aniline in mildly acidic medium to give yellow p-aminoazobenzene, in which the $-N{=}N-$ linkage is retained."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The Sandmeyer cyanation product keeps its carbon on reduction. Coupling reactions retain the azo group.",
+        "steps": [
+          "Sandmeyer cyanation: $C_6H_5N_2^+Cl^- \\xrightarrow{CuCN/KCN} C_6H_5CN + N_2$.",
+          "$LiAlH_4$ reduces $C_6H_5CN$ to $C_6H_5CH_2NH_2$ (benzylamine), because the cyano carbon is kept. So I is correct.",
+          "Coupling with aniline in mildly acidic medium is electrophilic substitution at the para position.",
+          "It gives yellow p-aminoazobenzene with the $N_2$ group retained as $-N{=}N-$. So II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I is correct because the nitrile carbon is retained, so reduction cannot give aniline. Statement II correctly gives the colour, the medium and the retention of the $N_2$ group. Every option that marks either statement as incorrect is therefore wrong.",
+        "common_trap": "Assuming benzonitrile with $LiAlH_4$ gives aniline, or confusing the yellow aniline coupling product with the orange phenol product.",
+        "time_saving_tip": "Check the carbon count: $ArCN$ has one more carbon than $ArNH_2$. Phenol coupling gives orange in alkaline medium; aniline coupling gives yellow in mildly acidic medium."
+      }
+    }
+  ]
+}

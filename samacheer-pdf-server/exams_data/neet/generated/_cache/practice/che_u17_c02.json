@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Phenol is heated with chloroform and aqueous $NaOH$ at about 340 K, and the mixture is then acidified. What is the major organic product?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Benzaldehyde",
+        "4-Hydroxybenzaldehyde",
+        "Salicylic acid",
+        "Salicylaldehyde (2-hydroxybenzaldehyde)"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The Reimer-Tiemann reaction introduces a -CHO group mainly at the ortho position of phenol.",
+        "steps": [
+          "$CHCl_3$ and aqueous $NaOH$ generate dichlorocarbene, $:CCl_2$.",
+          "$:CCl_2$ attacks the phenoxide ion mainly at the ortho position.",
+          "Alkaline hydrolysis of the $-CHCl_2$ intermediate followed by acidification gives $o-HOC_6H_4CHO$."
+        ],
+        "final_answer": "Option (4): Salicylaldehyde (2-hydroxybenzaldehyde)",
+        "why_not_others": "Benzaldehyde has lost the -OH group, which does not happen. The para isomer is not the major product. Salicylic acid is formed only when $CCl_4$ is used instead of $CHCl_3$.",
+        "common_trap": "Confusing the $CHCl_3$ product (salicylaldehyde) with the $CCl_4$ product (salicylic acid).",
+        "time_saving_tip": "CHCl3 gives CHO; CCl4 gives COOH; both enter at the ortho position."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "Which species is the electrophile that attacks the aromatic ring in the Reimer-Tiemann reaction of phenol?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Dichloromethyl cation, $^+CHCl_2$",
+        "Chloronium ion, $Cl^+$",
+        "Trichloromethyl carbanion, $^-CCl_3$",
+        "Dichlorocarbene, $:CCl_2$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Base removes HCl from chloroform to give dichlorocarbene, which is an electron-deficient electrophile.",
+        "steps": [
+          "$CHCl_3 + OH^- \\rightarrow :CCl_2 + H_2O + Cl^-$",
+          "$:CCl_2$ is electron deficient and attacks the electron-rich phenoxide ring, mainly at the ortho position."
+        ],
+        "final_answer": "Option (4): Dichlorocarbene, $:CCl_2$",
+        "why_not_others": "$^+CHCl_2$ is not formed under these basic conditions. $Cl^+$ would chlorinate the ring, not formylate it. $^-CCl_3$ is negatively charged, so it cannot act as an electrophile.",
+        "common_trap": "Assuming that, because a base is used, the attacking species must be anionic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "In the Reimer-Tiemann reaction of phenol, chloroform is replaced by carbon tetrachloride and the other conditions are kept the same (aqueous $NaOH$, then acidification). What is the major product?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Salicylic acid (2-hydroxybenzoic acid)",
+        "Salicylaldehyde (2-hydroxybenzaldehyde)",
+        "Benzoic acid",
+        "2-Chlorophenol"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "With $CCl_4$, the Reimer-Tiemann reaction gives a carboxylic acid group at the ortho position instead of an aldehyde group.",
+        "steps": [
+          "With $CCl_4$, the carbon introduced at the ortho position carries three chlorine atoms.",
+          "Hydrolysis of this group gives -COOH rather than -CHO.",
+          "Acidification then gives 2-hydroxybenzoic acid (salicylic acid)."
+        ],
+        "final_answer": "Option (1): Salicylic acid (2-hydroxybenzoic acid)",
+        "why_not_others": "Salicylaldehyde is the product with $CHCl_3$. Benzoic acid lacks the phenolic -OH, which is retained. Ring chlorination is not the outcome of this reaction.",
+        "common_trap": "Assuming the product does not change when $CHCl_3$ is replaced by $CCl_4$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the Reimer-Tiemann reaction, the reaction mixture must be acidified at the end to obtain free salicylaldehyde.",
+        "R": "Dichlorocarbene, the attacking species in the Reimer-Tiemann reaction, is an electron-deficient electrophile."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In alkali, the product exists as its phenoxide, so acid is needed to liberate free salicylaldehyde.",
+        "steps": [
+          "In aqueous $NaOH$, the hydroxy aldehyde stays as the sodium phenoxide, so A is true.",
+          "$:CCl_2$ is an electron-deficient electrophile, so R is true.",
+          "The need for acidification comes from the phenoxide form of the product, not from the electrophilic nature of the carbene. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R describes the attacking species, while A concerns the work-up step. They are separate facts, so option (1) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Marking option (1) simply because both statements are true and refer to the same reaction.",
+        "time_saving_tip": "Ask whether R answers 'why' for A. Here it does not."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the Reimer-Tiemann reaction, base removes HCl from chloroform to form dichlorocarbene, which attacks the phenoxide ion mainly at the ortho position.",
+        "II": "In the Reimer-Tiemann reaction, the $-CHCl_2$ group of the intermediate is converted into the $-CHO$ group only when acid is added at the end."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Alkali, not acid, hydrolyses the benzal chloride intermediate. Acid only liberates the phenol from its phenoxide.",
+        "steps": [
+          "Statement I correctly describes how $:CCl_2$ is generated and where it attacks, so it is correct.",
+          "The $-CHCl_2$ (benzal chloride type) group is hydrolysed to -CHO by the alkali already present.",
+          "The aldehyde remains as its phenoxide until acid is added, so acid is not what converts $-CHCl_2$ to -CHO. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II assigns the hydrolysis step to the acid, which is wrong. This rules out options (1) and (4). Statement I is fully correct, which rules out option (2).",
+        "common_trap": "Thinking the final acid step performs the hydrolysis, when it only protonates the phenoxide.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "What is the approximate C–O–C bond angle in dimethyl ether?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$104.5^\\circ$",
+        "$109.5^\\circ$",
+        "$120^\\circ$",
+        "$111.7^\\circ$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The oxygen in an ether is sp3 hybridised. Repulsion between the bulky alkyl groups widens the bond angle slightly beyond the tetrahedral value.",
+        "steps": [
+          "The oxygen is sp3 hybridised with two lone pairs, giving a bent shape.",
+          "Repulsion between the two methyl groups widens the angle to about $111.7^\\circ$."
+        ],
+        "final_answer": "Option (4): $111.7^\\circ$",
+        "why_not_others": "$104.5^\\circ$ is the bond angle in water. $109.5^\\circ$ is the ideal tetrahedral angle. $120^\\circ$ corresponds to sp2 hybridisation.",
+        "common_trap": "Expecting lone-pair repulsion to shrink the angle below $109.5^\\circ$, as in water.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "What are the products when anisole ($C_6H_5OCH_3$) is heated with HI?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$C_6H_5I$ and $CH_3OH$",
+        "$C_6H_5OH$ and $CH_4$",
+        "$C_6H_5I$ and $CH_3I$",
+        "$C_6H_5OH$ and $CH_3I$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "HI cleaves the O–alkyl bond of an alkyl aryl ether, because the Ar–O bond has partial double-bond character.",
+        "steps": [
+          "Delocalisation of the oxygen lone pair into the ring strengthens the Ar–O bond.",
+          "The O–$CH_3$ bond therefore breaks instead.",
+          "$C_6H_5OCH_3 + HI \\rightarrow C_6H_5OH + CH_3I$"
+        ],
+        "final_answer": "Option (4): $C_6H_5OH$ and $CH_3I$",
+        "why_not_others": "Options (1) and (3) require the strong Ar–O bond to break. Option (2) shows methane, which is not formed in HI cleavage.",
+        "common_trap": "Writing iodobenzene and methanol by breaking the wrong C–O bond.",
+        "time_saving_tip": "In aryl alkyl ethers, the iodine always goes to the alkyl group."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Ethers have boiling points close to those of alkanes of similar molar mass, yet their solubility in water is comparable to that of alcohols. Which explanation best accounts for both observations?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ether molecules cannot form H-bonds with each other, but they can accept H-bonds from water molecules",
+        "Ethers are non-polar molecules with zero dipole moment",
+        "The oxygen atom in ethers is sp2 hybridised and has no lone pairs available",
+        "Ether molecules donate H-bonds to water through hydrogen atoms bonded to oxygen"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Ethers have no O–H bond, so there is no intermolecular H-bonding between ether molecules. Their oxygen lone pairs can still accept H-bonds from water.",
+        "steps": [
+          "With no H-bonding between ether molecules, their boiling points stay low, close to those of alkanes.",
+          "The oxygen lone pairs accept H-bonds from water molecules, which gives them alcohol-like solubility."
+        ],
+        "final_answer": "Option (1): Ether molecules cannot form H-bonds with each other, but they can accept H-bonds from water molecules",
+        "why_not_others": "Ethers are bent and have a net dipole moment. Their oxygen is sp3 hybridised and carries two lone pairs. Ethers have no H attached to O, so they cannot donate H-bonds.",
+        "common_trap": "Assuming ethers are non-polar because they have low boiling points.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "C–O–C bond angle in $CH_3OCH_3$"
+          },
+          {
+            "label": "B",
+            "text": "C–O bond length in ethers"
+          },
+          {
+            "label": "C",
+            "text": "Hybridisation of the ether oxygen"
+          },
+          {
+            "label": "D",
+            "text": "Products of heating anisole with HI"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "About 141 pm"
+          },
+          {
+            "label": "II",
+            "text": "sp3"
+          },
+          {
+            "label": "III",
+            "text": "About $111.7^\\circ$"
+          },
+          {
+            "label": "IV",
+            "text": "Phenol and methyl iodide"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-II, B-I, C-III, D-IV",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "These are the key structural data for ethers and the cleavage of an aryl alkyl ether.",
+        "steps": [
+          "The C–O–C angle in dimethyl ether is about $111.7^\\circ$, so A-III.",
+          "The C–O bond length is about 141 pm, so B-I.",
+          "The oxygen is sp3 hybridised, so C-II.",
+          "Anisole with HI gives $C_6H_5OH + CH_3I$, so D-IV."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option (1) swaps the bond angle and the bond length. Option (2) swaps the hybridisation and the products. Option (3) swaps the hybridisation and the bond angle.",
+        "common_trap": "Mixing up the numerical values 141 and 111.7 because both are close to 100 or more.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the structure of ethers are correct?",
+      "statements": {
+        "A": "The C–O–C bond angle in dimethyl ether is greater than the tetrahedral angle because of repulsion between the alkyl groups.",
+        "B": "Ethers have zero dipole moment because the two C–O bond dipoles cancel each other.",
+        "C": "In anisole, the Ar–O bond is shorter because the oxygen lone pair is delocalised into the ring, giving the bond partial double-bond character.",
+        "D": "When anisole is heated with HI, the Ar–O bond is broken.",
+        "E": "The oxygen atom of an ether carries two lone pairs."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and E only",
+        "A and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Ethers have a bent, sp3 oxygen. In aryl alkyl ethers, the Ar–O bond has partial double-bond character.",
+        "steps": [
+          "A is correct: the angle is about $111.7^\\circ$ because of alkyl group repulsion.",
+          "B is incorrect: the bent shape gives ethers a net dipole moment.",
+          "C is correct: lone-pair delocalisation shortens the Ar–O bond.",
+          "D is incorrect: the O–alkyl bond breaks, giving phenol and $CH_3I$.",
+          "E is correct: the sp3 oxygen carries two lone pairs."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option (1) includes B, which is false. Option (2) includes D, which is false. Option (4) leaves out C, which is true.",
+        "common_trap": "Treating an ether as linear and symmetric, and therefore non-polar.",
+        "time_saving_tip": "Eliminate any option containing B or D first."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "What are the hybridisation of the carbonyl carbon in an aldehyde and the arrangement of its three sigma bonds?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "sp2; trigonal planar with bond angles of about $120^\\circ$",
+        "sp3; tetrahedral with bond angles of about $109.5^\\circ$",
+        "sp; linear with a bond angle of $180^\\circ$",
+        "sp2; pyramidal with bond angles of about $107^\\circ$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The carbonyl carbon is sp2 hybridised, and its three sigma bonds lie in one plane.",
+        "steps": [
+          "Three sp2 orbitals form sigma bonds at about $120^\\circ$ in one plane.",
+          "The remaining unhybridised p orbital overlaps with an oxygen p orbital to form the π bond."
+        ],
+        "final_answer": "Option (1): sp2; trigonal planar with bond angles of about $120^\\circ$",
+        "why_not_others": "sp3 tetrahedral geometry describes the carbon after nucleophilic addition. sp is linear and is not the case here. Pyramidal geometry does not arise from sp2 hybridisation.",
+        "common_trap": "Confusing the geometry of the carbonyl compound with that of the tetrahedral addition intermediate.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "Propan-1-ol, propanal and butane have comparable molar masses. Which option arranges them in decreasing order of boiling point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Propanal > propan-1-ol > butane",
+        "Propan-1-ol > propanal > butane",
+        "Butane > propanal > propan-1-ol",
+        "Propan-1-ol > butane > propanal"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For compounds of similar molar mass, the boiling point order is alcohols > aldehydes/ketones > ethers ≈ alkanes.",
+        "steps": [
+          "Propan-1-ol forms intermolecular H-bonds, so it has the highest boiling point.",
+          "Propanal has strong dipole-dipole attractions but no H-bonding, so it comes next.",
+          "Butane has only weak forces, so it has the lowest boiling point."
+        ],
+        "final_answer": "Option (2): Propan-1-ol > propanal > butane",
+        "why_not_others": "Option (1) places the aldehyde above the H-bonded alcohol. Option (3) reverses the order. Option (4) ignores the dipole-dipole attraction in propanal.",
+        "common_trap": "Assuming the high dipole moment of the carbonyl group outweighs H-bonding in alcohols.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "Which statement about the carbonyl group of aldehydes and ketones is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The C=O double bond consists of two π bonds",
+        "The carbonyl carbon is an electrophilic (Lewis acid) site and the oxygen is a nucleophilic (Lewis base) site",
+        "Aldehydes and ketones have smaller dipole moments than ethers",
+        "The oxygen of the carbonyl group is the electrophilic centre because it is more electronegative"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Because the C=O bond is polarised as $>C^{\\delta+}=O^{\\delta-}$, the carbon is electrophilic and the oxygen is nucleophilic.",
+        "steps": [
+          "Oxygen is more electronegative than carbon, so electron density shifts towards oxygen.",
+          "The dipolar resonance form $>C^+–O^-$ shows the carbon as electron deficient (a Lewis acid site) and the oxygen as electron rich (a Lewis base site)."
+        ],
+        "final_answer": "Option (2): The carbonyl carbon is an electrophilic (Lewis acid) site and the oxygen is a nucleophilic (Lewis base) site",
+        "why_not_others": "C=O consists of one σ bond and one π bond. Carbonyl compounds have larger dipole moments than ethers. The electronegative oxygen carries partial negative charge, so it is nucleophilic, not electrophilic.",
+        "common_trap": "Linking high electronegativity with electrophilic character.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Lower aldehydes and ketones are miscible with water.",
+        "R": "Molecules of aldehydes and ketones form intermolecular hydrogen bonds with one another."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Carbonyl compounds have no O–H bond. They can accept H-bonds from water but cannot H-bond with each other.",
+        "steps": [
+          "Lower aldehydes and ketones dissolve in water by accepting H-bonds from water, so A is true.",
+          "With no H on oxygen, they cannot form H-bonds among their own molecules; only dipole-dipole forces act between them. So R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, which rules out options (1), (2) and (4).",
+        "common_trap": "Assuming that being able to H-bond with water means the molecules also H-bond with each other.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Because the carbonyl group is trigonal planar, a nucleophile can attack the carbonyl carbon from only one face of the group.",
+        "II": "The C=O bond is best described as a resonance hybrid of the neutral form and the dipolar form $>C^+–O^-$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The planar carbonyl group can be approached from either face. Its polarity is shown by the dipolar resonance form.",
+        "steps": [
+          "Planar geometry leaves both faces open, so nucleophiles can attack from either face. Statement I is incorrect.",
+          "The C=O bond is a hybrid of $>C=O$ and $>C^+–O^-$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I contradicts the either-face attack allowed by planar geometry, which rules out options (1) and (3). Statement II is true, which rules out option (2).",
+        "common_trap": "Thinking that planarity restricts the direction of attack, when it actually opens both faces.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A ketone is treated with a Grignard reagent ($RMgX$) and the product is then hydrolysed. Which class of compound is obtained?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Primary alcohol",
+        "Tertiary alcohol",
+        "Secondary alcohol",
+        "Aldehyde"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In Grignard addition, HCHO gives a 1° alcohol, RCHO gives a 2° alcohol and $R_2CO$ gives a 3° alcohol.",
+        "steps": [
+          "$R^-$ adds to the carbonyl carbon, which already carries two alkyl groups.",
+          "Hydrolysis gives a carbon bearing three alkyl groups and an -OH group, which is a 3° alcohol."
+        ],
+        "final_answer": "Option (2): Tertiary alcohol",
+        "why_not_others": "A primary alcohol comes from HCHO. A secondary alcohol comes from other aldehydes. An aldehyde is not a product of Grignard addition.",
+        "common_trap": "Mixing up the products obtained from aldehydes and from ketones.",
+        "time_saving_tip": "Count the groups on the carbonyl carbon and add one; that gives the alcohol's degree."
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "The addition of HCN to aldehydes and ketones is catalysed by a base. What is the role of the base?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It generates $CN^-$, which is a stronger nucleophile than HCN",
+        "It protonates the carbonyl oxygen and makes the carbon more electrophilic",
+        "It converts the carbonyl compound into its enolate, which then reacts with HCN",
+        "It removes the water eliminated during cyanohydrin formation"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In cyanohydrin formation, the true nucleophile is $CN^-$.",
+        "steps": [
+          "The base removes a proton from HCN to give $CN^-$.",
+          "$CN^-$ attacks the carbonyl carbon, giving an alkoxide that is then protonated to form the cyanohydrin $>C(OH)CN$."
+        ],
+        "final_answer": "Option (1): It generates $CN^-$, which is a stronger nucleophile than HCN",
+        "why_not_others": "A base cannot protonate anything. The reaction involves no enolate. No water is eliminated in cyanohydrin formation.",
+        "common_trap": "Confusing cyanohydrin formation with the addition-elimination reactions of ammonia derivatives.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "Acetone reacts with semicarbazide ($NH_2NHCONH_2$) in weakly acidic medium. What is the product formed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$(CH_3)_2C=N–CONHNH_2$",
+        "$(CH_3)_2C(OH)NHNHCONH_2$",
+        "$(CH_3)_2C=N–NH_2$",
+        "$(CH_3)_2C=N–NHCONH_2$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In semicarbazide, only the $NH_2$ group not attached to C=O acts as the nucleophile. Addition is followed by elimination of water.",
+        "steps": [
+          "The $NH_2$ attached to the C=O of the amide is deactivated, so the terminal $NH_2$ of the $–NHNH_2$ end attacks.",
+          "The tetrahedral intermediate loses $H_2O$ to form $>C=N–Z$.",
+          "The product is the semicarbazone $(CH_3)_2C=N–NHCONH_2$."
+        ],
+        "final_answer": "Option (4): $(CH_3)_2C=N–NHCONH_2$",
+        "why_not_others": "Option (1) results from attack by the amide $NH_2$, which is not nucleophilic. Option (2) stops before water is eliminated. Option (3) is a hydrazone, the product formed with hydrazine.",
+        "common_trap": "Thinking that either $NH_2$ group of semicarbazide can act as the nucleophile.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Carbonyl compound + $NH_2OH$"
+          },
+          {
+            "label": "B",
+            "text": "Carbonyl compound + $C_6H_5NHNH_2$"
+          },
+          {
+            "label": "C",
+            "text": "$HCHO + NH_3$"
+          },
+          {
+            "label": "D",
+            "text": "Carbonyl compound + HCN in the presence of base"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Urotropine, $(CH_2)_6N_4$"
+          },
+          {
+            "label": "II",
+            "text": "Cyanohydrin"
+          },
+          {
+            "label": "III",
+            "text": "Oxime"
+          },
+          {
+            "label": "IV",
+            "text": "Phenylhydrazone"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each nucleophile gives a characteristic addition or addition-elimination product.",
+        "steps": [
+          "Hydroxylamine gives an oxime, so A-III.",
+          "Phenylhydrazine gives a phenylhydrazone, so B-IV.",
+          "$6HCHO + 4NH_3 \\rightarrow (CH_2)_6N_4 + 6H_2O$, so C-I.",
+          "HCN with a base gives a cyanohydrin, so D-II."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (1) swaps the oxime and the phenylhydrazone. Option (2) swaps urotropine and the cyanohydrin. Option (3) swaps the oxime and urotropine.",
+        "common_trap": "Forgetting that formaldehyde with ammonia gives the cage compound urotropine.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about nucleophilic addition to the carbonyl group are correct?",
+      "statements": {
+        "A": "During nucleophilic addition, the carbonyl carbon changes from sp2 to sp3 hybridisation.",
+        "B": "Reactions of carbonyl compounds with ammonia derivatives work best in strongly acidic medium, at a pH of about 1.",
+        "C": "Formaldehyde reacts with $CH_3MgBr$, followed by hydrolysis, to give a primary alcohol.",
+        "D": "2,4-Dinitrophenylhydrazine gives orange-yellow 2,4-dinitrophenylhydrazones with both aldehydes and ketones.",
+        "E": "Acetaldehyde reacts with a Grignard reagent, followed by hydrolysis, to give a tertiary alcohol."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, D and E only",
+        "A, C and D only",
+        "B, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This combines the hybridisation change on addition, the pH needed for ammonia derivatives, the Grignard alcohol classes and the 2,4-DNP test.",
+        "steps": [
+          "A is correct: the planar sp2 carbon becomes a tetrahedral sp3 carbon.",
+          "B is incorrect: the optimum pH is about 3.5, because a strongly acidic medium protonates the nucleophile.",
+          "C is correct: HCHO gives a 1° alcohol (here ethanol).",
+          "D is correct: 2,4-DNP gives a positive test with both aldehydes and ketones.",
+          "E is incorrect: aldehydes other than HCHO give 2° alcohols."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options (1) and (4) include B, which is false. Options (2) and (4) include E, which is false.",
+        "common_trap": "Believing that more acid always speeds up the reaction with ammonia derivatives, or that 2,4-DNP distinguishes aldehydes from ketones.",
+        "time_saving_tip": "Spotting B and E as false leaves only option (3)."
+      }
+    }
+  ]
+}

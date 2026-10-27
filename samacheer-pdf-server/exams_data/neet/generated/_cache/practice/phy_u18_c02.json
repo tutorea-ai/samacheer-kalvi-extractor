@@ -1,0 +1,617 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "How many neutrons are present in the nucleus of $^{235}_{92}U$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "143",
+        "92",
+        "235",
+        "327"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The number of neutrons is $N=A-Z$.",
+        "steps": [
+          "For $^{235}_{92}U$, the mass number is $A=235$ and the atomic number is $Z=92$.",
+          "$N=A-Z=235-92=143$."
+        ],
+        "final_answer": "Option (1): 143",
+        "why_not_others": "92 is the proton number. 235 is the total nucleon count. 327 comes from adding $A$ and $Z$ instead of subtracting.",
+        "common_trap": "Taking the mass number itself as the neutron count.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The radius of the $^{27}Al$ nucleus is 3.6 fm. What is the radius of a nucleus of mass number 125?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "16.7 fm",
+        "2.16 fm",
+        "7.7 fm",
+        "6.0 fm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Nuclear radius varies as $R=R_0A^{1/3}$, so $\\frac{R_1}{R_2}=\\left(\\frac{A_1}{A_2}\\right)^{1/3}$.",
+        "steps": [
+          "Write the ratio: $\\frac{R}{3.6}=\\left(\\frac{125}{27}\\right)^{1/3}=\\frac{5}{3}$.",
+          "$R=3.6\\times\\frac{5}{3}=6.0$ fm."
+        ],
+        "final_answer": "Option (4): 6.0 fm",
+        "why_not_others": "16.7 fm assumes $R\\propto A$. 2.16 fm uses the inverted ratio. 7.7 fm uses a square-root dependence on $A$.",
+        "common_trap": "Assuming the radius is directly proportional to the mass number.",
+        "time_saving_tip": "125 and 27 are perfect cubes, so the cube roots 5 and 3 can be read off directly."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Which of the following pairs of nuclides are isotones?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$^{14}_{6}C$ and $^{14}_{7}N$",
+        "$^{12}_{6}C$ and $^{13}_{6}C$",
+        "$^{14}_{6}C$ and $^{16}_{8}O$",
+        "$^{40}_{18}Ar$ and $^{40}_{20}Ca$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Isotones have the same neutron number $N=A-Z$.",
+        "steps": [
+          "$^{14}_{6}C$ has $N=14-6=8$.",
+          "$^{16}_{8}O$ has $N=16-8=8$.",
+          "Both have $N=8$, so they are isotones."
+        ],
+        "final_answer": "Option (3): $^{14}_{6}C$ and $^{16}_{8}O$",
+        "why_not_others": "$^{14}C$ and $^{14}N$ share $A$, so they are isobars. $^{12}C$ and $^{13}C$ share $Z$, so they are isotopes. $^{40}Ar$ and $^{40}Ca$ share $A$, so they are isobars.",
+        "common_trap": "Confusing isotones (same $N$) with isobars (same $A$).",
+        "time_saving_tip": "Compute $A-Z$ for each nuclide and look for a pair with equal values."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The nuclear density of $^{238}U$ is approximately equal to that of $^{4}He$.",
+        "R": "Nuclear radius varies as $A^{1/3}$, so nuclear volume is proportional to $A$, just as nuclear mass is."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Nuclear density $\\rho=\\frac{3m_u}{4\\pi R_0^3}$ does not depend on $A$.",
+        "steps": [
+          "Volume is $\\frac{4}{3}\\pi R_0^3A$, which is proportional to $A$.",
+          "Mass is approximately $Am_u$, which is also proportional to $A$.",
+          "Their ratio, the density, is therefore independent of $A$. This explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R is exactly the reason the density is the same for all nuclei.",
+        "common_trap": "Thinking that a heavier nucleus must be denser.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the mass number of a nucleus is increased by a factor of 8, its radius doubles while its density remains unchanged.",
+        "II": "The nuclear force between two nucleons remains attractive at every separation smaller than its range, including separations below 0.8 fm."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$R\\propto A^{1/3}$, density is independent of $A$, and the nuclear force becomes repulsive below about 0.8 fm.",
+        "steps": [
+          "Statement I: $8^{1/3}=2$, so the radius doubles. The density stays the same. Correct.",
+          "Statement II: below about 0.8 fm the nuclear force becomes repulsive. Incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II ignores the repulsive core of the nuclear force, so any option calling II correct is wrong. Statement I is correct, so the option calling both incorrect is also wrong.",
+        "common_trap": "Assuming the nuclear force is attractive at all short distances.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "One atomic mass unit (1 u) is defined as",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the mass of one proton",
+        "the mass of one hydrogen atom",
+        "one-twelfth of the mass of a $^{12}C$ nucleus",
+        "one-twelfth of the mass of one $^{12}C$ atom"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "By definition, 1 u is $\\frac{1}{12}$ of the mass of one neutral $^{12}C$ atom.",
+        "steps": [
+          "The reference is the whole $^{12}C$ atom, electrons included.",
+          "One-twelfth of its mass is $1.66\\times10^{-27}$ kg."
+        ],
+        "final_answer": "Option (4): one-twelfth of the mass of one $^{12}C$ atom",
+        "why_not_others": "The proton mass is 1.007276 u and the hydrogen atom mass is 1.007825 u, so neither equals exactly 1 u. The $^{12}C$ nucleus excludes the electrons, so it is not the reference.",
+        "common_trap": "Using the carbon nucleus instead of the carbon atom.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A naturally occurring element consists of 60% of an isotope of mass 63.0 u and 40% of an isotope of mass 65.0 u. What is its average atomic mass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "64.0 u",
+        "64.2 u",
+        "63.8 u",
+        "63.0 u"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Average atomic mass is the abundance-weighted mean, $\\bar{M}=\\frac{\\sum x_iM_i}{\\sum x_i}$.",
+        "steps": [
+          "$\\bar{M}=\\frac{60\\times63.0+40\\times65.0}{100}$",
+          "$=\\frac{3780+2600}{100}=63.8$ u."
+        ],
+        "final_answer": "Option (3): 63.8 u",
+        "why_not_others": "64.0 u is the simple unweighted mean. 64.2 u swaps the two abundances. 63.0 u is just the mass of the more abundant isotope.",
+        "common_trap": "Taking a simple average instead of weighting by abundance.",
+        "time_saving_tip": "The answer must lie closer to 63.0 u, because that isotope is more abundant."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Given $m_n=1.008665$ u, $m_p=1.007276$ u and $1\\,u=931.5$ MeV/$c^2$, by how much does the rest energy of a neutron exceed that of a proton?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.29 keV",
+        "1.29 MeV",
+        "0.78 MeV",
+        "12.9 MeV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A mass difference in u is converted to energy by multiplying by 931.5 MeV.",
+        "steps": [
+          "$\\Delta m=1.008665-1.007276=0.001389$ u.",
+          "$\\Delta E=0.001389\\times931.5\\approx1.29$ MeV."
+        ],
+        "final_answer": "Option (2): 1.29 MeV",
+        "why_not_others": "1.29 keV has the wrong unit. 0.78 MeV uses the hydrogen atom mass instead of the proton mass. 12.9 MeV results from a decimal slip.",
+        "common_trap": "Using $m_H$ in place of $m_p$ when the proton itself is asked about.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Mass of a proton"
+          },
+          {
+            "label": "B",
+            "text": "Mass of a neutron"
+          },
+          {
+            "label": "C",
+            "text": "Mass of a hydrogen atom"
+          },
+          {
+            "label": "D",
+            "text": "Energy equivalent of 1 u"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "1.008665 u"
+          },
+          {
+            "label": "II",
+            "text": "931.5 MeV"
+          },
+          {
+            "label": "III",
+            "text": "1.007825 u"
+          },
+          {
+            "label": "IV",
+            "text": "1.007276 u"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-IV, C-III, D-II",
+        "A-IV, B-I, C-III, D-II",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Standard masses: $m_p=1.007276$ u, $m_n=1.008665$ u, $m_H=1.007825$ u, and 1 u corresponds to 931.5 MeV.",
+        "steps": [
+          "The neutron is the heaviest of the three, so B-I.",
+          "The hydrogen atom is a proton plus an electron, so it is heavier than the proton: C-III and A-IV.",
+          "The energy equivalent of 1 u is 931.5 MeV, so D-II."
+        ],
+        "final_answer": "Option (3): A-IV, B-I, C-III, D-II",
+        "why_not_others": "The other matchings swap the proton mass with the hydrogen atom mass or with the neutron mass.",
+        "common_trap": "Treating the proton mass and the hydrogen atom mass as the same value.",
+        "time_saving_tip": "Order the masses: $m_p<m_H<m_n$."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about atomic masses are correct?",
+      "statements": {
+        "A": "1 u is approximately $1.66\\times10^{-27}$ kg.",
+        "B": "The mass of a neutron is slightly less than the mass of a proton.",
+        "C": "Tabulated atomic masses include the masses of the electrons.",
+        "D": "The average atomic mass of chlorine is about 35.47 u because $^{35}Cl$ is far more abundant than $^{37}Cl$.",
+        "E": "The mass of a hydrogen atom is less than the mass of a proton."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Facts about the u scale, nucleon masses and abundance-weighted averages.",
+        "steps": [
+          "A: true, $1\\,u=1.66\\times10^{-27}$ kg.",
+          "B: false, since $m_n=1.008665$ u is greater than $m_p=1.007276$ u.",
+          "C: true, because tabulated masses are atomic masses.",
+          "D: true, since 75.4% $^{35}Cl$ pulls the average to about 35.47 u.",
+          "E: false, since $m_H=1.007825$ u is greater than $m_p$."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Options containing B or E include false statements. 'A and C only' leaves out the true statement D.",
+        "common_trap": "Believing the proton is heavier than the neutron.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "What is the energy equivalent of 1 g of mass? (Take $c=3\\times10^8$ m/s.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9\\times10^{13}$ J",
+        "$9\\times10^{16}$ J",
+        "$3\\times10^{5}$ J",
+        "$9\\times10^{10}$ J"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Mass-energy equivalence, $E=mc^2$.",
+        "steps": [
+          "$m=10^{-3}$ kg.",
+          "$E=10^{-3}\\times(3\\times10^8)^2=9\\times10^{13}$ J."
+        ],
+        "final_answer": "Option (1): $9\\times10^{13}$ J",
+        "why_not_others": "$9\\times10^{16}$ J is the value for 1 kg. $3\\times10^5$ J uses $mc$ instead of $mc^2$. $9\\times10^{10}$ J comes from a wrong conversion of grams to kilograms.",
+        "common_trap": "Forgetting to convert grams to kilograms.",
+        "time_saving_tip": "1 kg gives $9\\times10^{16}$ J, so divide that by $10^3$."
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "Given: atomic mass of $^{4}_{2}He$ = 4.0026 u, $m_H=1.0078$ u, $m_p=1.0073$ u, $m_n=1.0087$ u and $1\\,u=931.5$ MeV/$c^2$. What is the binding energy of the $^{4}He$ nucleus?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "27.4 MeV",
+        "28.3 MeV",
+        "7.08 MeV",
+        "28.3 keV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "With atomic masses, $\\Delta m=Zm_H+(A-Z)m_n-M_{atom}$, so the electron masses cancel.",
+        "steps": [
+          "$\\Delta m=2(1.0078)+2(1.0087)-4.0026$",
+          "$=2.0156+2.0174-4.0026=0.0304$ u.",
+          "$E_b=0.0304\\times931.5\\approx28.3$ MeV."
+        ],
+        "final_answer": "Option (2): 28.3 MeV",
+        "why_not_others": "27.4 MeV uses $m_p$ with an atomic mass, so the electron masses do not cancel. 7.08 MeV is the binding energy per nucleon. 28.3 keV has the wrong unit.",
+        "common_trap": "Mixing the proton mass with the atomic mass of helium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "For the reaction $^{2}H+^{2}H\\rightarrow ^{3}He+n$, take the masses of $^{2}H$, $^{3}He$ and $n$ as 2.0141 u, 3.0160 u and 1.0087 u respectively, with $1\\,u=931.5$ MeV/$c^2$. What is the Q-value of the reaction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-3.26$ MeV",
+        "3.26 keV",
+        "1.63 MeV",
+        "3.26 MeV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$Q=(\\sum m_{reactants}-\\sum m_{products})\\times931.5$ MeV.",
+        "steps": [
+          "Reactants: $2\\times2.0141=4.0282$ u.",
+          "Products: $3.0160+1.0087=4.0247$ u.",
+          "$\\Delta m=0.0035$ u, so $Q=0.0035\\times931.5\\approx3.26$ MeV, which is positive."
+        ],
+        "final_answer": "Option (4): 3.26 MeV",
+        "why_not_others": "$-3.26$ MeV subtracts in the wrong order. 3.26 keV has the wrong unit. 1.63 MeV wrongly divides the Q-value by the number of deuterons.",
+        "common_trap": "Reversing the order of subtraction and getting the wrong sign of Q.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The mass of a $^{4}He$ nucleus is less than the total mass of two free protons and two free neutrons.",
+        "R": "A free neutron is slightly heavier than a free proton."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The mass defect arises because binding energy is released when a nucleus forms.",
+        "steps": [
+          "A is true: every bound nucleus has a positive mass defect.",
+          "R is true: $m_n=1.008665$ u is greater than $m_p=1.007276$ u.",
+          "The mass defect is the mass equivalent of the binding energy. It has nothing to do with the neutron-proton mass difference."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, but R does not explain why a bound nucleus is lighter than its separate nucleons.",
+        "common_trap": "Linking two true facts as cause and effect when they are unrelated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When the mass defect is calculated from atomic masses, using $m_H$ in place of $m_p$ makes the electron masses cancel.",
+        "II": "If a nuclear reaction has a Q-value of $-2$ MeV, the products have more total rest mass than the reactants and 2 MeV of energy is released."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Atomic-mass bookkeeping for mass defect, and the meaning of the sign of Q.",
+        "steps": [
+          "Statement I: the $Z$ electrons in $Zm_H$ balance the $Z$ electrons in $M_{atom}$. Correct.",
+          "Statement II: $Q<0$ does mean the products have greater rest mass. However, energy must then be supplied, not released. So the statement is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is only half right, which makes it incorrect as a whole. Statement I is correct, so the remaining options do not fit.",
+        "common_trap": "Accepting a statement whose first half is correct without checking the second half.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "Which of the following nuclei has the highest binding energy per nucleon?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$^{238}U$",
+        "$^{4}He$",
+        "$^{56}Fe$",
+        "$^{2}H$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The binding energy per nucleon curve peaks at about 8.75 MeV near $A=56$.",
+        "steps": [
+          "$^{56}Fe$: about 8.75 MeV. $^{238}U$: about 7.6 MeV. $^{4}He$: 7.07 MeV. $^{2}H$: 1.11 MeV.",
+          "The highest value belongs to $^{56}Fe$."
+        ],
+        "final_answer": "Option (3): $^{56}Fe$",
+        "why_not_others": "$^{238}U$ has the largest total binding energy but a lower value per nucleon. $^{4}He$ is only a local peak. $^{2}H$ is very weakly bound.",
+        "common_trap": "Judging by total binding energy instead of binding energy per nucleon.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "Assume a nucleus of mass number 240 has a binding energy per nucleon of 7.6 MeV. It splits into two identical fragments of mass number 120, each with a binding energy per nucleon of 8.5 MeV. What is the energy released?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.9 MeV",
+        "108 MeV",
+        "216 MeV",
+        "2040 MeV"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$Q=\\sum(E_b)_{products}-\\sum(E_b)_{reactants}$.",
+        "steps": [
+          "Binding energy of the products: $2\\times120\\times8.5=2040$ MeV.",
+          "Binding energy of the reactant: $240\\times7.6=1824$ MeV.",
+          "$Q=2040-1824=216$ MeV."
+        ],
+        "final_answer": "Option (3): 216 MeV",
+        "why_not_others": "0.9 MeV is only the difference per nucleon. 108 MeV counts just one fragment. 2040 MeV is the total binding energy of the products, not the energy released.",
+        "common_trap": "Forgetting to multiply the per-nucleon difference by the number of nucleons.",
+        "time_saving_tip": "Multiply directly: $240\\times(8.5-7.6)=216$ MeV."
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "The binding energy per nucleon remains nearly constant, at about 8 MeV, for $30<A<170$. This is mainly because",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Coulomb repulsion between protons grows with $A$",
+        "the nuclear force is charge-independent",
+        "the short-range nuclear force saturates, so each nucleon interacts only with its nearest neighbours",
+        "nuclear density increases with mass number"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The saturation property of the short-range nuclear force.",
+        "steps": [
+          "Because the nuclear force is short-ranged, a nucleon feels only its nearest neighbours.",
+          "Adding more nucleons therefore does not raise the binding energy per nucleon, and the curve stays flat."
+        ],
+        "final_answer": "Option (3): the short-range nuclear force saturates, so each nucleon interacts only with its nearest neighbours",
+        "why_not_others": "Coulomb repulsion explains the fall in the curve for heavy nuclei. Charge independence does not explain the plateau. Nuclear density does not change with $A$.",
+        "common_trap": "Attributing the flat region to Coulomb repulsion.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$^{2}H$ (deuteron)"
+          },
+          {
+            "label": "B",
+            "text": "$^{4}He$"
+          },
+          {
+            "label": "C",
+            "text": "$^{56}Fe$"
+          },
+          {
+            "label": "D",
+            "text": "$^{238}U$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "About 7.6 MeV per nucleon"
+          },
+          {
+            "label": "II",
+            "text": "About 1.11 MeV per nucleon"
+          },
+          {
+            "label": "III",
+            "text": "About 8.75 MeV per nucleon"
+          },
+          {
+            "label": "IV",
+            "text": "About 7.07 MeV per nucleon"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Key values on the binding energy per nucleon curve.",
+        "steps": [
+          "Deuteron: $2.22/2=1.11$ MeV, so A-II.",
+          "$^{4}He$: 7.07 MeV, so B-IV.",
+          "$^{56}Fe$: about 8.75 MeV, the peak, so C-III.",
+          "$^{238}U$: about 7.6 MeV, so D-I."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-III, D-I",
+        "why_not_others": "The other matchings swap the values for He and U, swap those for H and He, or put U at the peak.",
+        "common_trap": "Assigning the largest value to uranium because it is the heaviest nucleus.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about binding energy per nucleon are correct?",
+      "statements": {
+        "A": "A nucleus with a larger total binding energy is necessarily more stable.",
+        "B": "Fusion of light nuclei releases energy because the product has a higher binding energy per nucleon.",
+        "C": "Binding energy per nucleon falls for heavy nuclei because Coulomb repulsion among the protons increases.",
+        "D": "$^{4}He$ shows a sharp local peak on the binding energy per nucleon curve.",
+        "E": "The binding energy per nucleon of $^{238}U$ is greater than that of $^{56}Fe$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and C only",
+        "B, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Stability depends on binding energy per nucleon, not on total binding energy.",
+        "steps": [
+          "A: false, because stability is judged by binding energy per nucleon.",
+          "B: true, since the fused product is more tightly bound.",
+          "C: true, as Coulomb repulsion lowers the binding energy per nucleon of heavy nuclei.",
+          "D: true, because $^{4}He$ is unusually stable.",
+          "E: false, since 7.6 MeV is less than 8.75 MeV."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Options containing A or E include false statements. 'B and C only' leaves out the true statement D.",
+        "common_trap": "Judging stability by total binding energy.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

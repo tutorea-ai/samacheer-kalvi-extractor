@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "Which of the following compounds reacts with sodamide ($NaNH_2$) to liberate ammonia?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ethene",
+        "Ethane",
+        "Propyne",
+        "But-2-yne"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Only terminal alkynes have an acidic hydrogen on an sp carbon. They react with $NaNH_2$ to form an acetylide and $NH_3$.",
+        "steps": [
+          "The H on an sp carbon (50% s character) is acidic.",
+          "Propyne, $CH_3C\\equiv CH$, is a terminal alkyne, so $CH_3C\\equiv CH + NaNH_2 \\rightarrow CH_3C\\equiv C^-Na^+ + NH_3$.",
+          "Ethene and ethane are far less acidic, and but-2-yne has no acidic H."
+        ],
+        "final_answer": "Option (3): Propyne",
+        "why_not_others": "Ethene and ethane have no sufficiently acidic hydrogen. But-2-yne is an internal alkyne with no H on an sp carbon.",
+        "common_trap": "Assuming every alkyne, including but-2-yne, reacts with $NaNH_2$.",
+        "time_saving_tip": "Look for the $\\equiv C-H$ unit."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "Propyne is treated with water in the presence of $HgSO_4$ and dilute $H_2SO_4$ at 333 K. The final product is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ethanal",
+        "Propanal",
+        "Propanone",
+        "Propan-1-ol"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Hydration of alkynes goes through an enol, which tautomerises to a carbonyl compound. Only ethyne gives an aldehyde.",
+        "steps": [
+          "Water adds by Markovnikov's rule: OH goes to the internal carbon, giving the enol $CH_3C(OH)=CH_2$.",
+          "The enol tautomerises to the keto form, $CH_3COCH_3$.",
+          "The product is therefore propanone."
+        ],
+        "final_answer": "Option (3): Propanone",
+        "why_not_others": "Ethanal is the product from ethyne. Propanal would need anti-Markovnikov addition. An alcohol is not the final product because the enol tautomerises to a carbonyl.",
+        "common_trap": "Extending the ethyne-to-ethanal result to all alkynes and choosing an aldehyde.",
+        "time_saving_tip": "Every alkyne except ethyne gives a ketone on hydration."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "But-2-yne is reduced with sodium in liquid ammonia. The product formed is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "cis-But-2-ene",
+        "Butane",
+        "trans-But-2-ene",
+        "But-1-ene"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The reducing agent controls the stereochemistry of partial hydrogenation of an alkyne.",
+        "steps": [
+          "Lindlar's catalyst gives the cis alkene.",
+          "$Na$/liquid $NH_3$ gives the trans alkene.",
+          "$Pt$ or $Ni$ with $H_2$ reduces the alkyne completely to the alkane.",
+          "So but-2-yne with $Na$/liq. $NH_3$ gives trans-but-2-ene."
+        ],
+        "final_answer": "Option (3): trans-But-2-ene",
+        "why_not_others": "The cis alkene comes from Lindlar's catalyst. Butane needs $Pt$/$Ni$. But-1-ene would require the double bond to shift position, which does not happen.",
+        "common_trap": "Mixing up the Lindlar (cis) and $Na$/liq. $NH_3$ (trans) reductions.",
+        "time_saving_tip": "Remember the pairs: Lindlar gives cis, Na/NH3 gives trans."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Alkynes are more reactive than alkenes towards electrophilic addition reactions.",
+        "R": "The vinylic cation formed during electrophilic addition to an alkyne is less stable than the carbocation formed from an alkene."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Alkynes are less reactive than alkenes towards electrophiles because the vinylic cation intermediate is less stable.",
+        "steps": [
+          "Electrophilic attack on an alkyne gives a vinylic cation.",
+          "A vinylic cation is less stable than the alkyl carbocation formed from an alkene, so R is true.",
+          "A less stable intermediate means slower reaction, so alkynes are less reactive and A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, which rules out options 1, 2 and 3.",
+        "common_trap": "Assuming that more pi electrons in the triple bond must mean greater reactivity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Since but-2-yne contains sp hybridised carbon atoms, it reacts with metallic sodium to liberate hydrogen gas and gives a white precipitate with ammoniacal $AgNO_3$.",
+        "II": "Propyne adds two molecules of HBr according to Markovnikov's rule to give 2,2-dibromopropane, a gem-dihalide."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Acidic character belongs only to H attached to an sp carbon. HX adds to alkynes by Markovnikov's rule to give gem-dihalides.",
+        "steps": [
+          "But-2-yne, $CH_3C\\equiv CCH_3$, has no H on an sp carbon, so it does not react with Na or ammoniacal $AgNO_3$. Statement I is false.",
+          "$CH_3C\\equiv CH + 2HBr \\rightarrow CH_3CBr_2CH_3$, which is 2,2-dibromopropane with both Br on the same carbon. Statement II is true."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I wrongly treats the internal alkyne as acidic. Statement II correctly describes the gem-dihalide product.",
+        "common_trap": "Assuming that having sp carbons is enough for acidity, without checking for an H on the sp carbon.",
+        "time_saving_tip": "Internal alkynes give none of the acidic-H tests."
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "All carbon-carbon bond lengths in benzene are equal. Their value is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "154 pm",
+        "139 pm",
+        "134 pm",
+        "120 pm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Resonance makes all six C-C bonds in benzene equal, with a length between a single and a double bond.",
+        "steps": [
+          "A C-C single bond is 154 pm and a C=C double bond is 134 pm.",
+          "The resonance hybrid has an intermediate bond length of 139 pm."
+        ],
+        "final_answer": "Option (2): 139 pm",
+        "why_not_others": "154 pm is the single bond and 134 pm is the double bond. 120 is the bond angle in degrees, not a bond length.",
+        "common_trap": "Picking a pure single or double bond length from the Kekulé picture.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "Which of the following species is aromatic according to Huckel's rule?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Cyclooctatetraene",
+        "Cyclopentadienyl anion",
+        "Cyclopentadiene",
+        "Hexa-1,3,5-triene"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "An aromatic species must be cyclic, planar and fully conjugated, with $(4n+2)$ pi electrons.",
+        "steps": [
+          "The cyclopentadienyl anion is cyclic, planar and fully conjugated, with 6 pi electrons ($n = 1$), so it is aromatic.",
+          "Cyclopentadiene has an $sp^3$ carbon, so it is not fully conjugated.",
+          "Cyclooctatetraene has 8 pi electrons and a non-planar tub shape.",
+          "Hexa-1,3,5-triene is not cyclic."
+        ],
+        "final_answer": "Option (2): Cyclopentadienyl anion",
+        "why_not_others": "Each of the other species fails at least one condition: planarity, full conjugation, or being cyclic.",
+        "common_trap": "Treating cyclopentadiene and its anion as the same; only the anion is aromatic.",
+        "time_saving_tip": "Check for any $sp^3$ ring carbon first."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "The number of pi electrons in naphthalene and the corresponding value of $n$ in Huckel's rule are, respectively,",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6 and $n = 1$",
+        "8 and $n = 2$",
+        "12 and $n = 2$",
+        "10 and $n = 2$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Huckel's rule: aromatic compounds have $4n + 2$ pi electrons.",
+        "steps": [
+          "Naphthalene has 10 pi electrons.",
+          "Solving $4n + 2 = 10$ gives $n = 2$."
+        ],
+        "final_answer": "Option (4): 10 and $n = 2$",
+        "why_not_others": "6 with $n = 1$ describes benzene. 8 and 12 are $4n$ numbers, which do not satisfy the rule, and 8 does not even correspond to $n = 2$.",
+        "common_trap": "Using the benzene values for naphthalene.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Benzene"
+          },
+          {
+            "label": "B",
+            "text": "Cyclooctatetraene"
+          },
+          {
+            "label": "C",
+            "text": "Tropylium cation"
+          },
+          {
+            "label": "D",
+            "text": "Cyclopentadiene"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "8 pi electrons, non-planar tub shape, not aromatic"
+          },
+          {
+            "label": "II",
+            "text": "Contains an $sp^3$ carbon, not aromatic"
+          },
+          {
+            "label": "III",
+            "text": "Neutral aromatic molecule with all C-C bonds of 139 pm"
+          },
+          {
+            "label": "IV",
+            "text": "Aromatic positive ion with 6 pi electrons"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Apply Huckel's rule together with the requirements of planarity and full conjugation.",
+        "steps": [
+          "Benzene is a neutral aromatic molecule with C-C bonds of 139 pm (A-III).",
+          "Cyclooctatetraene has 8 pi electrons and a tub shape, so it is not aromatic (B-I).",
+          "The tropylium cation has 6 pi electrons and is aromatic (C-IV).",
+          "Cyclopentadiene has an $sp^3$ carbon, so it is not aromatic (D-II)."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other matchings swap benzene with the tropylium cation, or swap cyclooctatetraene with cyclopentadiene.",
+        "common_trap": "Confusing the reason cyclooctatetraene is non-aromatic (8 pi electrons, tub shape) with the reason cyclopentadiene is non-aromatic ($sp^3$ carbon).",
+        "time_saving_tip": "A-III and C-IV appear together in only one option."
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about benzene and aromaticity are correct?",
+      "statements": {
+        "A": "All six carbon atoms of benzene are $sp^2$ hybridised and lie in a planar ring with bond angles of 120 degrees.",
+        "B": "Benzene gives two different 1,2-disubstituted isomers, as expected from a single Kekulé structure.",
+        "C": "Delocalisation of pi electrons gives benzene extra stability, so it prefers substitution over addition.",
+        "D": "Cyclooctatetraene is aromatic because it is cyclic and conjugated with 8 pi electrons.",
+        "E": "The cyclopentadienyl anion is aromatic because it has 6 pi electrons."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, C and E only",
+        "A, B, C and E only",
+        "C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Benzene is a resonance hybrid, and aromaticity requires $(4n+2)$ pi electrons in a planar, fully conjugated ring.",
+        "steps": [
+          "A is true: the carbons are $sp^2$, the ring is a planar hexagon, and the angles are 120 degrees.",
+          "B is false: benzene shows no isomeric 1,2-disubstituted forms, which is consistent with resonance.",
+          "C is true: resonance energy makes benzene favour substitution over addition.",
+          "D is false: cyclooctatetraene has 8 pi electrons and is non-planar.",
+          "E is true: the cyclopentadienyl anion has 6 pi electrons."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option 1 omits the true statement E. Option 3 includes the false statement B. Option 4 includes the false statement D and omits A.",
+        "common_trap": "Counting cyclooctatetraene as aromatic just because it is cyclic and conjugated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "The electrophile involved in the nitration of benzene with a mixture of concentrated $HNO_3$ and concentrated $H_2SO_4$ is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NO_2^-$",
+        "$NO^+$",
+        "$NO_2^+$",
+        "$NO_3^-$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$H_2SO_4$ protonates $HNO_3$, which then loses water to give the nitronium ion.",
+        "steps": [
+          "$HNO_3 + 2H_2SO_4 \\rightleftharpoons NO_2^+ + H_3O^+ + 2HSO_4^-$",
+          "The nitronium ion $NO_2^+$ attacks the benzene ring to give nitrobenzene."
+        ],
+        "final_answer": "Option (3): $NO_2^+$",
+        "why_not_others": "$NO_2^-$ and $NO_3^-$ are anions and cannot act as electrophiles. $NO^+$ is the nitrosonium ion, not the species formed from the nitrating mixture.",
+        "common_trap": "Confusing the nitronium ion with the nitrosonium ion or the nitrite ion.",
+        "time_saving_tip": "An electrophile must be electron-deficient, so rule out the anions immediately."
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "In the electrophilic aromatic substitution of benzene, the slow, rate-determining step is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Generation of the electrophile by the Lewis or Brønsted acid",
+        "Attack of the electrophile on the pi system to form the arenium ion",
+        "Removal of a proton from the arenium ion by a base",
+        "Regeneration of the Lewis acid catalyst"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Aromaticity is temporarily lost when the sigma complex forms, which makes this step slow.",
+        "steps": [
+          "The electrophile attacks the ring, and one ring carbon becomes $sp^3$.",
+          "The resulting arenium ion is non-aromatic, so this step has a high energy barrier and is rate determining.",
+          "Proton loss restores aromaticity and is fast."
+        ],
+        "final_answer": "Option (2): Attack of the electrophile on the pi system to form the arenium ion",
+        "why_not_others": "The other steps are fast. Proton removal in particular is fast because it restores aromaticity.",
+        "common_trap": "Choosing proton removal because it is the step where the C-H bond breaks.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "Which set of conditions converts benzene into chlorobenzene by electrophilic substitution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Cl_2$ in UV light",
+        "$Cl_2$ with aqueous $FeCl_3$",
+        "$Cl_2$ with anhydrous $FeCl_3$ in the dark",
+        "$Cl_2$ with concentrated $H_2SO_4$ at 333 K"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Halogenation needs an anhydrous Lewis acid to polarise the halogen and generate the electrophile.",
+        "steps": [
+          "Anhydrous $FeCl_3$ or $AlCl_3$ polarises $Cl_2$ to generate $Cl^+$.",
+          "Working in the dark prevents the addition reaction.",
+          "In UV light, benzene adds $Cl_2$ instead of undergoing substitution."
+        ],
+        "final_answer": "Option (3): $Cl_2$ with anhydrous $FeCl_3$ in the dark",
+        "why_not_others": "UV light leads to addition, not substitution. Aqueous $FeCl_3$ cannot be used because anhydrous conditions are essential. Concentrated $H_2SO_4$ is the acid used in nitration, not the Lewis acid catalyst for halogenation.",
+        "common_trap": "Overlooking that the Lewis acid must be anhydrous.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The arenium ion (sigma complex) formed during the nitration of benzene is non-aromatic.",
+        "R": "In the arenium ion, all six ring carbon atoms remain $sp^2$ hybridised."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In the sigma complex, the carbon bonded to the electrophile becomes $sp^3$, which breaks the cyclic conjugation.",
+        "steps": [
+          "The arenium ion is a carbocation that has temporarily lost aromaticity, so A is true.",
+          "The carbon attacked by the electrophile becomes $sp^3$, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, which rules out options 1, 2 and 4.",
+        "common_trap": "Assuming that resonance stabilisation of the arenium ion means it is still aromatic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the formation of the nitronium ion, one molecule of $HNO_3$ reacts with two molecules of $H_2SO_4$ to give $NO_2^+$, $H_3O^+$ and two $HSO_4^-$ ions.",
+        "II": "Heating benzene with an excess of nitrating mixture at a higher temperature gives m-dinitrobenzene."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Know the stoichiometry of nitronium ion formation and the result of further nitration.",
+        "steps": [
+          "$HNO_3 + 2H_2SO_4 \\rightleftharpoons NO_2^+ + H_3O^+ + 2HSO_4^-$, so Statement I is correct.",
+          "Excess nitrating mixture at a higher temperature gives m-dinitrobenzene, so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements match the established facts, so the options that call either one incorrect are wrong.",
+        "common_trap": "Writing the equation with only one $H_2SO_4$, or expecting the o/p-dinitro product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "Benzene reacts with acetyl chloride in the presence of anhydrous $AlCl_3$ to give",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Acetophenone",
+        "Toluene",
+        "Benzaldehyde",
+        "Phenyl acetate"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In Friedel-Crafts acylation, the acylium ion substitutes onto the ring.",
+        "steps": [
+          "$CH_3COCl + AlCl_3 \\rightarrow CH_3CO^+ + AlCl_4^-$",
+          "$C_6H_6 + CH_3COCl \\rightarrow C_6H_5COCH_3 + HCl$, which is acetophenone."
+        ],
+        "final_answer": "Option (1): Acetophenone",
+        "why_not_others": "Toluene is formed from $CH_3Cl$ (alkylation). Benzaldehyde would need a formyl group. Phenyl acetate is an ester, which is not formed in this reaction.",
+        "common_trap": "Confusing the products of alkylation and acylation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "The major product formed when benzene is treated with n-propyl chloride in the presence of anhydrous $AlCl_3$ is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "n-Propylbenzene",
+        "Ethylbenzene",
+        "Propiophenone",
+        "Isopropylbenzene"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Carbocations formed in Friedel-Crafts alkylation can rearrange.",
+        "steps": [
+          "The n-propyl carbocation (primary) rearranges to the more stable isopropyl carbocation (secondary).",
+          "This carbocation attacks benzene to give isopropylbenzene (cumene) as the major product."
+        ],
+        "final_answer": "Option (4): Isopropylbenzene",
+        "why_not_others": "n-Propylbenzene would require no rearrangement. Ethylbenzene has the wrong number of carbons. Propiophenone is an acylation product.",
+        "common_trap": "Writing n-propylbenzene without considering carbocation rearrangement.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "Which of the following compounds does not undergo Friedel-Crafts reactions and can even be used as a solvent for them?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Nitrobenzene",
+        "Toluene",
+        "Benzene",
+        "Ethylbenzene"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Strongly deactivated rings do not undergo Friedel-Crafts reactions.",
+        "steps": [
+          "The $-NO_2$ group strongly deactivates the benzene ring.",
+          "Nitrobenzene therefore does not react and can be used as a solvent."
+        ],
+        "final_answer": "Option (1): Nitrobenzene",
+        "why_not_others": "Benzene reacts readily, and toluene and ethylbenzene carry activating alkyl groups, so all three undergo Friedel-Crafts reactions.",
+        "common_trap": null,
+        "time_saving_tip": "Look for a strongly deactivating group on the ring."
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Electrophile in benzene + $CH_3Cl$/anhyd. $AlCl_3$"
+          },
+          {
+            "label": "B",
+            "text": "Electrophile in benzene + $CH_3COCl$/anhyd. $AlCl_3$"
+          },
+          {
+            "label": "C",
+            "text": "Product of benzene + $CH_3Cl$/anhyd. $AlCl_3$"
+          },
+          {
+            "label": "D",
+            "text": "Product of benzene + $CH_3COCl$/anhyd. $AlCl_3$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$C_6H_5COCH_3$"
+          },
+          {
+            "label": "II",
+            "text": "$CH_3^+$"
+          },
+          {
+            "label": "III",
+            "text": "$C_6H_5CH_3$"
+          },
+          {
+            "label": "IV",
+            "text": "$CH_3CO^+$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The electrophile is $R^+$ in alkylation and $RCO^+$ in acylation.",
+        "steps": [
+          "Alkylation with $CH_3Cl$ uses the electrophile $CH_3^+$ (A-II) and gives toluene (C-III).",
+          "Acylation with $CH_3COCl$ uses the acylium ion $CH_3CO^+$ (B-IV) and gives acetophenone (D-I)."
+        ],
+        "final_answer": "Option (3): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 swaps the two electrophiles. Option 2 swaps the two products. Option 4 matches electrophiles with products.",
+        "common_trap": "Swapping the alkylation and acylation species.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Friedel-Crafts reactions are correct?",
+      "statements": {
+        "A": "Polyalkylation occurs in Friedel-Crafts alkylation because the alkyl group introduced activates the ring.",
+        "B": "The acylium ion is resonance stabilised and does not undergo rearrangement.",
+        "C": "In Friedel-Crafts acylation, only a catalytic amount of $AlCl_3$ is required.",
+        "D": "Aniline does not undergo Friedel-Crafts reactions because its $-NH_2$ group forms a complex with $AlCl_3$, which deactivates the ring.",
+        "E": "Chlorobenzene can be used as the alkylating agent with benzene and $AlCl_3$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A and C only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Know the scope and limitations of Friedel-Crafts alkylation and acylation.",
+        "steps": [
+          "A is true: the alkyl group activates the ring, leading to polyalkylation.",
+          "B is true: the acylium ion is resonance stabilised and does not rearrange.",
+          "C is false: acylation needs more than a catalytic amount of $AlCl_3$.",
+          "D is true: the $-NH_2$ group complexes with $AlCl_3$ and becomes deactivating.",
+          "E is false: aryl halides cannot be used as alkylating agents."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option 2 includes the false statement C. Option 3 includes the false statement E and omits A. Option 4 includes C and omits B and D.",
+        "common_trap": "Assuming $AlCl_3$ is purely catalytic in acylation as it is in alkylation.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

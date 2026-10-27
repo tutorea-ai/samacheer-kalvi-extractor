@@ -1,0 +1,625 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "In the method of mixtures for finding the specific heat capacity of a solid, which temperature of the mixture should be recorded as the final temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The initial temperature of the water in the calorimeter",
+        "The average of the initial temperatures of the solid and the water",
+        "The maximum steady temperature reached after stirring",
+        "The temperature read immediately after the solid is dropped in"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In the method of mixtures, the final temperature is the highest steady temperature of the mixture after stirring.",
+        "steps": [
+          "The hot solid gives heat to the water and the calorimeter until they all reach a common temperature.",
+          "Stirring makes the temperature uniform throughout the mixture.",
+          "The highest steady temperature is the common final temperature T used in the formula."
+        ],
+        "final_answer": "Option (3): The maximum steady temperature reached after stirring",
+        "why_not_others": "The initial water temperature is $T_2$, not the final temperature. The average of the initial temperatures is correct only for equal heat capacities, which is not generally the case. A reading taken immediately after dropping the solid comes before thermal equilibrium is reached.",
+        "common_trap": "Reading the thermometer before stirring and equilibrium are complete.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "A solid of mass 0.4 kg at $85^\\circ C$ is dropped into 0.2 kg of water at $20^\\circ C$ contained in a copper calorimeter of mass 0.1 kg. The final temperature of the mixture is $30^\\circ C$. Take $s_w = 4200\\ J\\,kg^{-1}K^{-1}$ and $s_c = 400\\ J\\,kg^{-1}K^{-1}$, and assume no heat losses. The specific heat capacity of the solid is approximately",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$323\\ J\\,kg^{-1}K^{-1}$",
+        "$338\\ J\\,kg^{-1}K^{-1}$",
+        "$382\\ J\\,kg^{-1}K^{-1}$",
+        "$400\\ J\\,kg^{-1}K^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Principle of calorimetry: $m_1 s_1 (T_1 - T) = (m_2 s_w + m_c s_c)(T - T_2)$",
+        "steps": [
+          "Heat gained by the water and the calorimeter: $(0.2 \\times 4200 + 0.1 \\times 400)(30 - 20) = 880 \\times 10 = 8800\\ J$.",
+          "Heat lost by the solid: $0.4 \\times s_1 \\times (85 - 30) = 22 s_1$.",
+          "Equate the two: $22 s_1 = 8800$, so $s_1 = 400\\ J\\,kg^{-1}K^{-1}$."
+        ],
+        "final_answer": "Option (4): $400\\ J\\,kg^{-1}K^{-1}$",
+        "why_not_others": "382 comes from ignoring the calorimeter ($8400/22$). 338 comes from using $T_1 - T_2 = 65$ for the solid ($8800/26$). 323 comes from making both of these errors ($8400/26$).",
+        "common_trap": "Forgetting the heat absorbed by the calorimeter, or using the wrong temperature drop for the solid.",
+        "time_saving_tip": "Find the total heat capacity of the water and calorimeter first (880 J/K), then multiply by the temperature rise."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "To find the specific heat capacity of a liquid, a solid of mass 0.5 kg and specific heat $400\\ J\\,kg^{-1}K^{-1}$ at $100^\\circ C$ is dropped into 0.25 kg of the liquid at $20^\\circ C$. The liquid is held in a calorimeter of mass 0.1 kg and specific heat $400\\ J\\,kg^{-1}K^{-1}$. The final steady temperature is $40^\\circ C$. Assuming no heat losses, the specific heat capacity of the liquid is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2400\\ J\\,kg^{-1}K^{-1}$",
+        "$2240\\ J\\,kg^{-1}K^{-1}$",
+        "$2560\\ J\\,kg^{-1}K^{-1}$",
+        "$3040\\ J\\,kg^{-1}K^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Heat lost by the hot solid = heat gained by the liquid and the calorimeter.",
+        "steps": [
+          "Heat lost by the solid: $0.5 \\times 400 \\times (100 - 40) = 12000\\ J$.",
+          "Heat gained: $(0.25\\, s_l + 0.1 \\times 400)(40 - 20) = (0.25\\, s_l + 40) \\times 20$.",
+          "Equate the two: $0.25\\, s_l + 40 = 600$, so $0.25\\, s_l = 560$.",
+          "Therefore $s_l = 2240\\ J\\,kg^{-1}K^{-1}$."
+        ],
+        "final_answer": "Option (2): $2240\\ J\\,kg^{-1}K^{-1}$",
+        "why_not_others": "2400 comes from ignoring the calorimeter. 2560 comes from adding the calorimeter term instead of subtracting it. 3040 comes from using $100 - 20 = 80$ as the temperature drop of the solid.",
+        "common_trap": "Leaving out the calorimeter's heat capacity or getting its sign wrong.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The calorimeter used in the method of mixtures is usually made of copper.",
+        "R": "The outer surface of the calorimeter is polished to reduce heat loss by radiation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Copper is chosen for its low specific heat and good conductivity. Polishing serves a different purpose: it reduces radiation loss.",
+        "steps": [
+          "A copper calorimeter is used, so A is true.",
+          "Polished surfaces reduce radiation losses, so R is true.",
+          "Copper is chosen because of its low specific heat and good conductivity, not because the surface is polished. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 wrongly links polishing to the choice of copper. Options 3 and 4 are wrong because both statements are true.",
+        "common_trap": "Accepting any true statement about the calorimeter as the explanation for why copper is used.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If some heat is lost to the surroundings while the hot solid is being transferred, the calculated specific heat of the solid comes out smaller than its true value.",
+        "II": "The temperature of the mixture should be recorded immediately after the solid is dropped into the water, without stirring, so as to minimise heat loss."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Heat loss lowers the measured final temperature, and the final temperature to record is the maximum steady value after stirring.",
+        "steps": [
+          "Heat lost to the surroundings means less heat reaches the water, so the final temperature T is lower.",
+          "A lower T makes the calculated $s_1$ smaller than the true value. So Statement I is correct.",
+          "The water must be stirred and the maximum steady temperature noted. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II contradicts the required procedure of stirring and noting the maximum temperature, so options 1 and 4 fail. Statement I is a stated fact, so option 2 fails.",
+        "common_trap": "Confusing quick transfer, which is required, with taking the reading before equilibrium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "In a metre bridge experiment, the balance point is preferably obtained near the middle of the wire because",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "it gives maximum sensitivity and minimum effect of end error",
+        "the current through the galvanometer is maximum there",
+        "the copper strips have zero resistance only when the balance point is at the middle",
+        "the bridge wire heats least when balanced at the middle"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A null point near 50 cm gives the highest accuracy.",
+        "steps": [
+          "Near the middle, a small change in jockey position produces a noticeable galvanometer response, so sensitivity is maximum.",
+          "End errors at the two ends have the least relative effect when both lengths are large.",
+          "Hence a balance point near 50 cm gives the most accurate result."
+        ],
+        "final_answer": "Option (1): it gives maximum sensitivity and minimum effect of end error",
+        "why_not_others": "At balance, the galvanometer current is zero, not maximum. The copper strips have negligible resistance wherever the balance point lies. Heating of the wire is not the stated reason.",
+        "common_trap": "Thinking the galvanometer carries current at balance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "In a metre bridge, a resistance of $2\\ \\Omega$ is placed in the left gap and a wire of length 0.5 m and diameter 0.4 mm in the right gap. The balance point is at 40 cm from the left end. The resistivity of the wire material is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.4\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$1.07\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$9.6\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$0.6\\pi \\times 10^{-7}\\ \\Omega\\,m$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$X = R\\frac{100 - l}{l}$ and $\\rho = \\frac{X\\pi r^2}{L}$",
+        "steps": [
+          "$X = 2 \\times \\frac{60}{40} = 3\\ \\Omega$.",
+          "The radius is $r = 0.2\\ mm = 2 \\times 10^{-4}\\ m$, so $r^2 = 4 \\times 10^{-8}\\ m^2$.",
+          "$\\rho = \\frac{3 \\times \\pi \\times 4 \\times 10^{-8}}{0.5} = 2.4\\pi \\times 10^{-7}\\ \\Omega\\,m$."
+        ],
+        "final_answer": "Option (1): $2.4\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "why_not_others": "$1.07\\pi$ comes from using $X = R\\,l/(100 - l) = 4/3\\ \\Omega$. $9.6\\pi$ comes from using the diameter as the radius. $0.6\\pi$ comes from halving the radius twice ($r = 0.1$ mm).",
+        "common_trap": "Inverting the ratio of lengths, or using the diameter in place of the radius.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "In a metre bridge, a $10\\ \\Omega$ resistance is in the left gap and an unknown resistance X is in the right gap. The balance length is 48 cm, measured from the left end. The end corrections are $\\alpha = 2$ cm at the left end and $\\beta = 1$ cm at the right end. The value of X is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10.83\\ \\Omega$",
+        "$9.43\\ \\Omega$",
+        "$11.02\\ \\Omega$",
+        "$10.6\\ \\Omega$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "With end corrections, $X = R\\frac{100 - l + \\beta}{l + \\alpha}$.",
+        "steps": [
+          "Corrected left length: $l + \\alpha = 48 + 2 = 50$ cm.",
+          "Corrected right length: $100 - l + \\beta = 52 + 1 = 53$ cm.",
+          "$X = 10 \\times \\frac{53}{50} = 10.6\\ \\Omega$."
+        ],
+        "final_answer": "Option (4): $10.6\\ \\Omega$",
+        "why_not_others": "10.83 comes from ignoring the end corrections ($10 \\times 52/48$). 9.43 comes from inverting the ratio ($10 \\times 50/53$). 11.02 comes from applying $\\alpha$ and $\\beta$ at the wrong ends ($10 \\times 54/49$).",
+        "common_trap": "Swapping the end corrections or ignoring them.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Galvanometer shows no deflection"
+          },
+          {
+            "label": "B",
+            "text": "Interchanging R and X and taking the mean"
+          },
+          {
+            "label": "C",
+            "text": "Thick copper strips"
+          },
+          {
+            "label": "D",
+            "text": "Jockey"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Removes end error"
+          },
+          {
+            "label": "II",
+            "text": "Have negligible resistance"
+          },
+          {
+            "label": "III",
+            "text": "Balance condition with zero current through the galvanometer"
+          },
+          {
+            "label": "IV",
+            "text": "Pressed gently and never slid while pressed"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Facts about the metre bridge procedure and its parts.",
+        "steps": [
+          "No deflection means the bridge is balanced and no current flows through the galvanometer: A-III.",
+          "Interchanging R and X and taking the mean cancels end corrections: B-I.",
+          "The thick copper strips have negligible resistance: C-II.",
+          "The jockey is pressed gently and not slid while pressed: D-IV."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Each of the other options mismatches at least two pairs, for example by linking the end error to the galvanometer or to the copper strips.",
+        "common_trap": "Mixing up the purpose of interchanging the resistances with the balance condition.",
+        "time_saving_tip": "Fix C-II and D-IV first, then choose between the remaining options."
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the metre bridge experiment are correct?",
+      "statements": {
+        "A": "The metre bridge works on the Wheatstone bridge principle, $P/Q = R/S$ at balance.",
+        "B": "With R in the left gap and balance length l (in cm) from the left end, $X = R\\frac{l}{100 - l}$.",
+        "C": "Taking the mean of readings after interchanging R and X cancels the end corrections.",
+        "D": "The resistivity of the wire is given by $\\rho = \\frac{X\\pi r^2}{L}$.",
+        "E": "A null point close to either end of the wire gives the highest accuracy."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Metre bridge formula, end correction and accuracy.",
+        "steps": [
+          "A is true: the metre bridge is a practical Wheatstone bridge.",
+          "B is false: the correct formula is $X = R\\frac{100 - l}{l}$.",
+          "C is true: interchanging R and X and averaging removes the end error.",
+          "D is true: this is the resistivity formula.",
+          "E is false: the highest accuracy is obtained near 50 cm."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Options 2 and 3 include the inverted formula B. Options 3 and 4 include E, which contradicts the middle-point rule.",
+        "common_trap": "Inverting the length ratio in the formula for X.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "In the experiment to find the resistance of a wire using Ohm's law, the ammeter and the voltmeter are connected with respect to the wire, respectively,",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "in parallel and in series",
+        "in series and in parallel",
+        "both in series",
+        "both in parallel"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The ammeter measures the current through the wire and the voltmeter measures the potential difference across it.",
+        "steps": [
+          "The ammeter must carry the same current as the wire, so it is connected in series.",
+          "The voltmeter must measure the potential difference across the wire, so it is connected in parallel."
+        ],
+        "final_answer": "Option (2): in series and in parallel",
+        "why_not_others": "Option 1 reverses the connections. A voltmeter in series would block the current. An ammeter in parallel would short-circuit the wire.",
+        "common_trap": "Reversing the connections of the two meters.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "In an Ohm's law experiment on a wire of length 1.2 m and diameter 0.4 mm, the readings (0.2 A, 0.6 V) and (0.6 A, 1.8 V) lie on the straight-line V-I graph. The resistivity of the wire material is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$4.0\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$1.44\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "$1.1\\pi \\times 10^{-8}\\ \\Omega\\,m$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "R is the slope of the V-I graph, and $\\rho = \\frac{R\\pi d^2}{4L}$.",
+        "steps": [
+          "$R = \\frac{1.8 - 0.6}{0.6 - 0.2} = 3\\ \\Omega$.",
+          "$d^2 = (4 \\times 10^{-4})^2 = 1.6 \\times 10^{-7}\\ m^2$.",
+          "$\\rho = \\frac{3 \\times \\pi \\times 1.6 \\times 10^{-7}}{4 \\times 1.2} = 1.0\\pi \\times 10^{-7}\\ \\Omega\\,m$."
+        ],
+        "final_answer": "Option (1): $1.0\\pi \\times 10^{-7}\\ \\Omega\\,m$",
+        "why_not_others": "$4.0\\pi$ comes from using the diameter as the radius. $1.44\\pi$ comes from multiplying by L instead of dividing. $1.1\\pi \\times 10^{-8}$ comes from taking R as the I/V slope ($1/3\\ \\Omega$).",
+        "common_trap": "Using the diameter in $\\pi r^2$, or taking the reciprocal slope as R.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "In an Ohm's law experiment, V is plotted on the y-axis and I on the x-axis. If the current is made large enough to heat the wire appreciably, the slope of the graph at higher currents",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "decreases, because heating lowers the resistance of the wire",
+        "remains constant, because resistance depends only on the length and area of the wire",
+        "increases, because heating increases the resistance of the wire",
+        "becomes zero, because the wire stops obeying Ohm's law"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A large current heats the wire and increases its resistance. Ohm's law holds only at constant temperature.",
+        "steps": [
+          "The slope of the V-I graph equals R.",
+          "Heating at large current raises R.",
+          "So the slope increases and the graph bends away from a straight line."
+        ],
+        "final_answer": "Option (3): increases, because heating increases the resistance of the wire",
+        "why_not_others": "Heating raises the resistance of the wire, so it does not decrease. The constant-slope reasoning ignores the effect of temperature. A zero slope would mean zero resistance, which is not the case.",
+        "common_trap": "Assuming the graph stays linear at any current.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the experiment to verify Ohm's law for a wire, the current through the wire is kept small.",
+        "R": "A large current heats the wire and increases its resistance."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Ohm's law is valid at constant temperature.",
+        "steps": [
+          "Currents are kept small, so A is true.",
+          "A large current heats the wire and raises its resistance, so R is true.",
+          "Keeping the current small avoids this heating, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R is exactly the reason for keeping the current small, so option 2 fails. Both statements are true, so options 3 and 4 fail.",
+        "common_trap": "Thinking the current is kept small only to protect the ammeter.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the wire is replaced by another wire of the same material and diameter but twice the length, the slope of the V-I graph (V on the y-axis) doubles, while the calculated resistivity remains unchanged.",
+        "II": "An ideal ammeter has zero resistance, while an ideal voltmeter has infinite resistance."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Resistance depends on length and area, but resistivity is a property of the material.",
+        "steps": [
+          "$R = \\rho L/A$, so doubling L with the same A doubles R, which is the slope.",
+          "$\\rho = RA/L$ stays the same because R and L both double. So Statement I is correct.",
+          "An ideal ammeter has zero resistance and an ideal voltmeter has infinite resistance. So Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree with the notes, so any option calling either one incorrect fails.",
+        "common_trap": "Thinking resistivity changes with the length of the wire.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "The figure of merit of a galvanometer is defined as",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the deflection produced per unit current",
+        "the resistance of the galvanometer per division",
+        "the potential difference required per unit current",
+        "the current required to produce a deflection of one division"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Figure of merit = current per division (A/div). Its reciprocal is the sensitivity.",
+        "steps": [
+          "By definition, the figure of merit is the current needed for a one-division deflection.",
+          "Its unit is ampere per division."
+        ],
+        "final_answer": "Option (4): the current required to produce a deflection of one division",
+        "why_not_others": "Deflection per unit current is the sensitivity, which is the reciprocal of the figure of merit. Resistance per division and potential difference per unit current are not the definition.",
+        "common_trap": "Confusing the figure of merit with its reciprocal, the sensitivity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "In a half deflection experiment, the series resistance is $R = 1100\\ \\Omega$. The deflection is halved when a shunt $S = 100\\ \\Omega$ is connected across the galvanometer. The resistance of the galvanometer is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$100\\ \\Omega$",
+        "$110\\ \\Omega$",
+        "$91.7\\ \\Omega$",
+        "$1000\\ \\Omega$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Exact formula: $G = \\frac{RS}{R - S}$. The approximation G ≈ S needs R ≫ G.",
+        "steps": [
+          "Here R is not very large compared with S, so the exact formula must be used.",
+          "$G = \\frac{1100 \\times 100}{1100 - 100} = \\frac{110000}{1000} = 110\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $110\\ \\Omega$",
+        "why_not_others": "100 comes from using G = S. 91.7 comes from using R + S in the denominator. 1000 is simply R - S.",
+        "common_trap": "Writing G = S even when R is not much larger than G.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "A galvanometer of resistance $50\\ \\Omega$ is connected in series with a resistance of $9950\\ \\Omega$ and a cell of emf 2 V. It shows a deflection of 20 divisions. The figure of merit of the galvanometer is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0 \\times 10^{-5}\\ A/div$",
+        "$1.0 \\times 10^{-5}\\ A/div$",
+        "$2.0 \\times 10^{-4}\\ A/div$",
+        "$1.0 \\times 10^{5}\\ A/div$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$k = \\frac{E}{(R + G)\\theta}$",
+        "steps": [
+          "$R + G = 9950 + 50 = 10000\\ \\Omega$.",
+          "$k = \\frac{2}{10000 \\times 20} = 1.0 \\times 10^{-5}\\ A/div$."
+        ],
+        "final_answer": "Option (2): $1.0 \\times 10^{-5}\\ A/div$",
+        "why_not_others": "$2.0 \\times 10^{-5}$ comes from using $\\theta/2 = 10$. $2.0 \\times 10^{-4}$ is the total current, not divided by θ. $1.0 \\times 10^{5}$ is the reciprocal of the correct value, which is the sensitivity, wrongly given A/div units.",
+        "common_trap": "Dividing by half the deflection, or reporting the sensitivity instead of the figure of merit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Exact galvanometer resistance G"
+          },
+          {
+            "label": "B",
+            "text": "Figure of merit k"
+          },
+          {
+            "label": "C",
+            "text": "Sensitivity of the galvanometer"
+          },
+          {
+            "label": "D",
+            "text": "Approximate G when R ≫ G"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{RS}{R - S}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{E}{(R + G)\\theta}$"
+          },
+          {
+            "label": "III",
+            "text": "Reciprocal of the figure of merit"
+          },
+          {
+            "label": "IV",
+            "text": "S"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-II, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Formulas and definitions of the half deflection method.",
+        "steps": [
+          "Exact G = RS/(R - S): A-I.",
+          "Figure of merit = E/[(R + G)θ]: B-II.",
+          "Sensitivity = reciprocal of the figure of merit: C-III.",
+          "When R ≫ G, G ≈ S: D-IV."
+        ],
+        "final_answer": "Option (2): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option 1 swaps the exact and approximate values of G. Option 3 swaps the figure of merit and the sensitivity. Option 4 mismatches every pair.",
+        "common_trap": "Interchanging the figure of merit and the sensitivity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the half deflection method are correct?",
+      "statements": {
+        "A": "A high resistance of several kΩ is connected in series with the galvanometer.",
+        "B": "An odd-numbered initial deflection is chosen so that half of it is a whole number.",
+        "C": "A smaller figure of merit means a more sensitive galvanometer.",
+        "D": "A low-resistance cell such as an accumulator is used to keep the emf steady.",
+        "E": "G = S exactly, whatever the value of R."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only",
+        "A, B, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Precautions and results of the half deflection method.",
+        "steps": [
+          "A is true: R is kept very large compared with G.",
+          "B is false: an even deflection is chosen so that θ/2 is a whole number.",
+          "C is true: sensitivity is the reciprocal of the figure of merit.",
+          "D is true: an accumulator keeps the emf steady.",
+          "E is false: G = S holds only approximately when R ≫ G. In general, G = RS/(R - S)."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Options 1 and 4 include B, which uses odd instead of even. Options 3 and 4 include E, which ignores the exact formula.",
+        "common_trap": "Treating G = S as exact.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

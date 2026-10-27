@@ -1,0 +1,626 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A student wants to measure the internal diameter of a beaker using vernier calipers. Which part of the instrument should be used?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The outside (lower) jaws",
+        "The depth strip at the tail",
+        "The inside (upper) jaws",
+        "The main scale alone, without the jaws"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Each part of the vernier calipers has a specific use: outside jaws for external diameter, inside jaws for internal diameter, and the depth strip for depth.",
+        "steps": [
+          "The internal diameter is the distance across the inner walls of the beaker.",
+          "The inside (upper) jaws are inserted into the beaker and opened until they touch the inner walls.",
+          "So the internal diameter is measured with the inside jaws."
+        ],
+        "final_answer": "Option (3): The inside (upper) jaws",
+        "why_not_others": "The outside jaws measure the external diameter. The depth strip measures the depth of the vessel. The main scale alone cannot give a reading finer than 1 mm and cannot reach across the inner walls properly.",
+        "common_trap": "Mixing up the lower (outside) and upper (inside) jaws.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "In a vernier calipers, the main scale division is 1 mm and 20 vernier divisions coincide with 19 main scale divisions. When the jaws are closed, the vernier zero lies to the right of the main scale zero and the 4th vernier division coincides with a main scale line. While measuring the depth of a vessel, the main scale reading is 2.4 cm and the 8th vernier division coincides. What is the true depth?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.46 cm",
+        "2.44 cm",
+        "2.48 cm",
+        "2.42 cm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "LC = 1 MSD/N, and true reading = MSR + VSR × LC − zero error, with the zero error taken with its sign.",
+        "steps": [
+          "LC = 1 mm/20 = 0.05 mm = 0.005 cm.",
+          "Observed reading = 2.4 + 8 × 0.005 = 2.44 cm.",
+          "The vernier zero lies to the right, so the zero error is positive: +4 × 0.005 = +0.02 cm.",
+          "True depth = 2.44 − 0.02 = 2.42 cm."
+        ],
+        "final_answer": "Option (4): 2.42 cm",
+        "why_not_others": "2.46 cm comes from adding the zero error. 2.44 cm ignores the zero error. 2.48 cm uses LC = 0.01 cm instead of 0.005 cm.",
+        "common_trap": "Adding a positive zero error instead of subtracting it.",
+        "time_saving_tip": "Net correction = (8 − 4) × LC above the MSR, which gives 2.4 + 0.02 = 2.42 cm."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "For a hollow cylinder, vernier calipers of least count 0.01 cm with no zero error give the following readings. External diameter: main scale reading 5.3 cm, 6th vernier division coinciding. Internal diameter: main scale reading 4.8 cm, 4th vernier division coinciding. What is the wall thickness of the cylinder?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.26 cm",
+        "0.52 cm",
+        "5.10 cm",
+        "0.13 cm"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Wall thickness = (external diameter − internal diameter)/2.",
+        "steps": [
+          "External diameter = 5.3 + 6 × 0.01 = 5.36 cm.",
+          "Internal diameter = 4.8 + 4 × 0.01 = 4.84 cm.",
+          "Thickness = (5.36 − 4.84)/2 = 0.52/2 = 0.26 cm."
+        ],
+        "final_answer": "Option (1): 0.26 cm",
+        "why_not_others": "0.52 cm is the difference in diameters, not divided by 2. 5.10 cm is the mean of the two diameters. 0.13 cm divides the difference by 4.",
+        "common_trap": "Forgetting that the difference in diameters includes two wall thicknesses.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For vernier calipers having a positive zero error, the correction to be applied to every observed reading is negative.",
+        "R": "A positive zero error means the vernier zero lies to the right of the main scale zero when the jaws are closed, so every observed reading exceeds the true value by the zero error."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "True reading = observed reading − zero error, taken algebraically.",
+        "steps": [
+          "With a positive zero error, the instrument reads more than zero even when the jaws are closed.",
+          "So every reading is too large by the zero error.",
+          "The zero error must therefore be subtracted, which means the correction is negative.",
+          "R states exactly why A holds."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements match the rule in the notes, and R gives the reason for A. So options 2, 3 and 4 are ruled out.",
+        "common_trap": "Confusing the sign of the zero error with the sign of the correction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If 50 vernier divisions coincide with 49 main scale divisions and each main scale division is 0.5 mm, the least count of the vernier calipers is 0.01 mm.",
+        "II": "With the jaws closed, the vernier zero lies 0.03 cm to the left of the main scale zero. If the observed reading is 3.25 cm, the true reading is 3.28 cm."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "LC = 1 MSD/N. A vernier zero to the left of the main zero gives a negative zero error, which is subtracted algebraically.",
+        "steps": [
+          "Statement I: LC = 0.5 mm/50 = 0.01 mm, so it is correct.",
+          "Statement II: the zero error is negative, −0.03 cm.",
+          "True reading = 3.25 − (−0.03) = 3.28 cm, so it is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I is wrong only if 1 MSD is taken as 1 mm. Statement II is wrong only if the negative zero error is subtracted as a magnitude, which gives 3.22 cm.",
+        "common_trap": "Subtracting the magnitude of a negative zero error instead of subtracting it with its sign.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "While measuring the diameter of a thin wire with a screw gauge, the screw is advanced by turning the ratchet rather than the thimble. What is the main purpose of this?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To make the least count of the screw gauge smaller",
+        "To eliminate backlash error from worn threads",
+        "To read the pitch scale more easily",
+        "To hold the wire with uniform pressure without compressing it"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The ratchet slips once a fixed pressure is reached, which prevents overtightening.",
+        "steps": [
+          "Turning the thimble directly can squeeze the wire and change the reading.",
+          "The ratchet applies the same gentle pressure every time.",
+          "So the wire is held uniformly and is not compressed."
+        ],
+        "final_answer": "Option (4): To hold the wire with uniform pressure without compressing it",
+        "why_not_others": "The least count depends only on the pitch and the number of circular divisions. Backlash error is avoided by rotating the screw in one direction only. The ratchet does not help in reading the pitch scale.",
+        "common_trap": "Thinking the ratchet removes backlash error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A screw gauge has a pitch of 0.5 mm and 50 divisions on its circular scale. With the studs in contact, the circular scale zero lies 4 divisions below the reference line. While measuring a wire, the pitch scale reading is 1.5 mm and the circular scale reading is 36. What is the corrected diameter of the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.90 mm",
+        "1.86 mm",
+        "1.82 mm",
+        "1.66 mm"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "LC = pitch/number of divisions. A circular scale zero below the reference line gives a positive zero error, which is subtracted.",
+        "steps": [
+          "LC = 0.5/50 = 0.01 mm.",
+          "Observed reading = 1.5 + 36 × 0.01 = 1.86 mm.",
+          "Zero error = +4 × 0.01 = +0.04 mm.",
+          "Corrected diameter = 1.86 − 0.04 = 1.82 mm."
+        ],
+        "final_answer": "Option (3): 1.82 mm",
+        "why_not_others": "1.90 mm comes from adding the zero error. 1.86 mm ignores the zero error. 1.66 mm uses a wrong LC of 0.005 mm.",
+        "common_trap": "Treating 'below the reference line' as a negative zero error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "In a screw gauge, the spindle advances 2.5 mm on the pitch scale when the thimble is given 5 complete rotations. The circular scale has 100 divisions. What is the least count of the screw gauge?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.025 mm",
+        "0.5 mm",
+        "0.05 mm",
+        "0.005 mm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Pitch is the distance moved in one rotation, and LC = pitch/number of circular divisions.",
+        "steps": [
+          "Pitch = 2.5 mm/5 = 0.5 mm.",
+          "LC = 0.5 mm/100 = 0.005 mm."
+        ],
+        "final_answer": "Option (4): 0.005 mm",
+        "why_not_others": "0.025 mm divides the total distance for 5 rotations by 100. 0.5 mm is the pitch itself. 0.05 mm divides the pitch by 10 instead of 100.",
+        "common_trap": "Using the distance moved in several rotations as the pitch.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pitch"
+          },
+          {
+            "label": "B",
+            "text": "Least count"
+          },
+          {
+            "label": "C",
+            "text": "Ratchet"
+          },
+          {
+            "label": "D",
+            "text": "Backlash error"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Avoided by rotating the screw in one direction only"
+          },
+          {
+            "label": "II",
+            "text": "Linear distance moved by the spindle in one complete rotation"
+          },
+          {
+            "label": "III",
+            "text": "Pitch divided by the number of circular scale divisions"
+          },
+          {
+            "label": "IV",
+            "text": "Holds the object with uniform pressure so that it is not compressed"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Basic definitions and precautions for a screw gauge.",
+        "steps": [
+          "Pitch is the distance moved per rotation, so A-II.",
+          "Least count = pitch/number of circular divisions, so B-III.",
+          "The ratchet ensures uniform pressure, so C-IV.",
+          "Backlash error is avoided by turning the screw one way only, so D-I."
+        ],
+        "final_answer": "Option (4): A-II, B-III, C-IV, D-I",
+        "why_not_others": "The other options swap pitch with least count, or swap the role of the ratchet with the remedy for backlash error.",
+        "common_trap": "Believing the ratchet removes backlash error.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the screw gauge are correct?",
+      "statements": {
+        "A": "If the circular scale zero lies below the reference line when the studs touch, the zero error is positive.",
+        "B": "A screw gauge with a pitch of 1 mm and 100 circular scale divisions has a least count of 0.01 mm.",
+        "C": "A negative zero error makes the true reading smaller than the observed reading.",
+        "D": "For a wire, readings are taken at different places along it in two mutually perpendicular directions.",
+        "E": "Backlash error is removed by turning the thimble back and forth before each reading."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Zero error sign conventions, the least count formula, and the precautions for a screw gauge.",
+        "steps": [
+          "A is correct, because a circular scale zero below the reference line means a positive zero error.",
+          "B is correct, because LC = 1 mm/100 = 0.01 mm.",
+          "C is incorrect. Subtracting a negative zero error increases the reading, so the true reading is larger.",
+          "D is correct, as stated in the procedure.",
+          "E is incorrect. Backlash error is avoided by rotating the screw in one direction only."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Every other option includes C or E, and both are false.",
+        "common_trap": "Treating a negative zero error as something that reduces the reading.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "In the experiment to study energy dissipation of a lightly damped simple pendulum, the square of the amplitude $A^2$ is plotted against time t. What is the shape of the graph?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A straight line with a negative slope",
+        "A straight line parallel to the time axis",
+        "A falling exponential curve",
+        "A parabola opening upward"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$A^2 \\propto E = E_0 e^{-bt/m}$, which is an exponential decay.",
+        "steps": [
+          "The amplitude decays as $A = A_0 e^{-bt/2m}$.",
+          "So $A^2 = A_0^2 e^{-bt/m}$.",
+          "Plotting $A^2$ against t therefore gives a falling exponential curve."
+        ],
+        "final_answer": "Option (3): A falling exponential curve",
+        "why_not_others": "Only $\\ln A^2$ against t is a straight line. A line parallel to the time axis would mean there is no damping. The graph never rises, so it cannot be an upward parabola.",
+        "common_trap": "Assuming the $A^2$ vs t graph is linear.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A pendulum bob of mass 250 g experiences a damping force $-bv$ with $b = 0.05\\ \\text{kg s}^{-1}$. What is the slope of the graph of $\\ln A^2$ against time t?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-0.1\\ \\text{s}^{-1}$",
+        "$-0.2\\ \\text{s}^{-1}$",
+        "$-5\\ \\text{s}^{-1}$",
+        "$-2 \\times 10^{-4}\\ \\text{s}^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\ln A^2 = \\ln A_0^2 - (b/m)t$, so the slope is $-b/m$.",
+        "steps": [
+          "m = 250 g = 0.25 kg.",
+          "Slope = $-b/m = -0.05/0.25 = -0.2\\ \\text{s}^{-1}$."
+        ],
+        "final_answer": "Option (2): $-0.2\\ \\text{s}^{-1}$",
+        "why_not_others": "$-0.1$ is $-b/2m$, which is the slope of the $\\ln A$ graph. $-5$ is $-m/b$, the inverted ratio. $-2 \\times 10^{-4}$ comes from taking the mass in grams.",
+        "common_trap": "Using the amplitude exponent b/2m instead of the energy exponent b/m.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "The amplitude of a lightly damped simple pendulum falls to half its initial value in 10 s. How long does it take for the mechanical energy of the pendulum to fall to half its initial value?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 s",
+        "10 s",
+        "20 s",
+        "2.5 s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Energy decays with exponent b/m, which is twice the amplitude exponent b/2m.",
+        "steps": [
+          "Amplitude halves: $e^{-b(10)/2m} = 1/2$, so $(b/m)(5) = \\ln 2$.",
+          "Energy halves when $e^{-bt/m} = 1/2$, which gives $t = (m/b)\\ln 2$.",
+          "From the first step, $(m/b)\\ln 2 = 5$ s."
+        ],
+        "final_answer": "Option (1): 5 s",
+        "why_not_others": "10 s assumes energy decays at the same rate as amplitude. 20 s assumes energy decays more slowly. 2.5 s assumes energy decays four times as fast.",
+        "common_trap": "Forgetting that energy is proportional to $A^2$.",
+        "time_saving_tip": "Because energy goes as $A^2$, its half-life is half the half-life of the amplitude."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For a lightly damped simple pendulum, the time period remains practically unchanged even as the amplitude decreases.",
+        "R": "The mechanical energy of a damped pendulum decreases linearly with time."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For light damping, the period is nearly constant and the energy decays exponentially.",
+        "steps": [
+          "The notes state that the period is practically unchanged for light damping, so A is true.",
+          "Energy follows $E = E_0 e^{-bt/m}$, which is exponential, not linear. So R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1, 2 and 4 cannot be correct.",
+        "common_trap": "Assuming the energy or $A^2$ falls linearly with time.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a lightly damped pendulum, the mechanical energy decays twice as fast as the amplitude, because the exponents are b/m and b/2m respectively.",
+        "II": "If the amplitude of a lightly damped pendulum falls to 1/e of its initial value in time $\\tau$, its mechanical energy falls to 1/e of its initial value in time $2\\tau$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$A \\propto e^{-bt/2m}$ and $E \\propto e^{-bt/m}$.",
+        "steps": [
+          "Statement I matches the notes, so it is correct.",
+          "The amplitude reaches 1/e when $bt/2m = 1$, which gives $\\tau = 2m/b$.",
+          "The energy reaches 1/e when $bt/m = 1$, which gives $t = m/b = \\tau/2$, not $2\\tau$. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II reverses the relation. Energy decays faster, so it needs less time, not more.",
+        "common_trap": "Concluding that a faster decay needs a longer time.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A metre scale is balanced on a knife edge at its centre of gravity, the 50 cm mark. A 100 g mass is hung at the 20 cm mark, and the scale balances when an unknown mass is hung at the 90 cm mark. What is the unknown mass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "75 g",
+        "133.3 g",
+        "22.2 g",
+        "225 g"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "With the fulcrum at G, $M d_1 = m d_2$, where distances are measured from the fulcrum.",
+        "steps": [
+          "$d_1 = 50 - 20 = 30$ cm and $d_2 = 90 - 50 = 40$ cm.",
+          "$m = 100 \\times 30/40 = 75$ g."
+        ],
+        "final_answer": "Option (1): 75 g",
+        "why_not_others": "133.3 g inverts the ratio of distances. 22.2 g uses scale readings (20 and 90) instead of distances from the fulcrum. 225 g mixes a scale reading (90) with a distance (40).",
+        "common_trap": "Measuring distances from the zero end instead of from the fulcrum.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A metre scale of mass 100 g has its centre of gravity at the 50 cm mark. It is placed on a knife edge at the 40 cm mark. A 120 g mass hung at the 10 cm mark balances an unknown mass hung at the 60 cm mark. What is the unknown mass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "180 g",
+        "130 g",
+        "230 g",
+        "80 g"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "When the fulcrum is not at G, the scale's weight acting at G must be included: $M d_1 = m d_2 + m_s d_s$.",
+        "steps": [
+          "$d_1 = 30$ cm, $d_2 = 20$ cm, and $d_s = 10$ cm, with G on the same side as m.",
+          "$120 \\times 30 = 20m + 100 \\times 10$.",
+          "$3600 = 20m + 1000$, so $m = 130$ g."
+        ],
+        "final_answer": "Option (2): 130 g",
+        "why_not_others": "180 g ignores the scale's own weight. 230 g places the scale's moment on the wrong side. 80 g inverts the distances and ignores the scale's weight.",
+        "common_trap": "Forgetting the scale's weight when the fulcrum is shifted from G.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A metre scale is first balanced alone on a knife edge, and the balance point is noted. Masses are then hung on either side and balanced with the knife edge at the same point. Why does the weight of the scale not appear in the relation $m_1 d_1 = m_2 d_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The scale is light enough that its weight can always be neglected",
+        "The weight of the scale acts at G, which coincides with the fulcrum, so its moment about the fulcrum is zero",
+        "The weight of the scale acts at the zero end and cancels the moment of the known mass",
+        "The thin threads used for suspension remove the effect of the scale's weight"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A force acting through the fulcrum has zero moment about it.",
+        "steps": [
+          "Balancing the scale alone locates its centre of gravity G.",
+          "With the fulcrum at G, the line of action of the scale's weight passes through the fulcrum.",
+          "So its moment is zero and it drops out of the balance equation."
+        ],
+        "final_answer": "Option (2): The weight of the scale acts at G, which coincides with the fulcrum, so its moment about the fulcrum is zero",
+        "why_not_others": "The scale's weight is not negligible, and it must be included when the fulcrum is moved away from G. The weight acts at G, not at the zero end. Thin threads only reduce suspension errors.",
+        "common_trap": "Thinking the scale's weight can be ignored even when the fulcrum is not at G.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Fulcrum at G; 60 g mass at 20 cm from the fulcrum; unknown mass at 30 cm on the other side"
+          },
+          {
+            "label": "B",
+            "text": "Fulcrum at G; 60 g mass at 30 cm from the fulcrum; unknown mass at 20 cm on the other side"
+          },
+          {
+            "label": "C",
+            "text": "Fulcrum at G; 60 g mass at 25 cm from the fulcrum; unknown mass at 25 cm on the other side"
+          },
+          {
+            "label": "D",
+            "text": "Fulcrum at G; 60 g mass at 40 cm from the fulcrum; unknown mass at 30 cm on the other side"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "60 g"
+          },
+          {
+            "label": "II",
+            "text": "80 g"
+          },
+          {
+            "label": "III",
+            "text": "40 g"
+          },
+          {
+            "label": "IV",
+            "text": "90 g"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$m = M d_1/d_2$ when the fulcrum is at the centre of gravity.",
+        "steps": [
+          "A: $60 \\times 20/30 = 40$ g, so A-III.",
+          "B: $60 \\times 30/20 = 90$ g, so B-IV.",
+          "C: $60 \\times 25/25 = 60$ g, so C-I.",
+          "D: $60 \\times 40/30 = 80$ g, so D-II."
+        ],
+        "final_answer": "Option (2): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 1 inverts the ratio for A and B. Option 3 swaps C and D. Option 4 has no consistent basis.",
+        "common_trap": "Writing $m = M d_2/d_1$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about finding mass with a metre scale by the principle of moments are correct?",
+      "statements": {
+        "A": "In equilibrium, the sum of clockwise moments equals the sum of anticlockwise moments about the fulcrum.",
+        "B": "With the fulcrum at the centre of gravity of the scale, the unknown mass is $m = M d_1/d_2$, where $d_1$ and $d_2$ are the distances of the known and unknown masses from the fulcrum.",
+        "C": "When the fulcrum is shifted away from G, the scale's weight acts at the fulcrum and can be ignored.",
+        "D": "Thin threads are used for suspension and the scale is kept horizontal.",
+        "E": "A 50 g scale with G at 50 cm rests on a fulcrum at 45 cm. A 100 g mass at 15 cm balances an unknown mass at 65 cm, so the unknown mass is 150 g."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, D and E only",
+        "B, C and E only",
+        "A, C and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Principle of moments, including the scale's own weight when the fulcrum is not at G.",
+        "steps": [
+          "A, B and D are correct, as stated in the notes.",
+          "C is incorrect. The scale's weight acts at G, not at the fulcrum, and must be included.",
+          "E: $100 \\times 30 = 20m + 50 \\times 5$, so $3000 = 20m + 250$ and $m = 137.5$ g, not 150 g. E is incorrect.",
+          "The value 150 g comes from ignoring the scale's weight."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Every other option includes C or E, and both are false.",
+        "common_trap": "Ignoring the scale's weight when the fulcrum is not at G.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

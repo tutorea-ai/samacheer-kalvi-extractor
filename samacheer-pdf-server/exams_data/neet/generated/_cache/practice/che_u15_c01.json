@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "How many structural isomers are possible for the alkane $C_6H_{14}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Alkanes show chain isomerism from $C_4$ onwards, and the number of chain isomers grows with carbon count.",
+        "steps": [
+          "$C_6H_{14}$ has five structural isomers.",
+          "They are n-hexane, 2-methylpentane, 3-methylpentane, 2,2-dimethylbutane and 2,3-dimethylbutane."
+        ],
+        "final_answer": "Option (1): 5",
+        "why_not_others": "3 is the count for $C_5H_{12}$. 4 results from missing one dimethylbutane. 6 results from counting a repeated structure twice, such as 2-methylpentane named from the other end as 4-methylpentane.",
+        "common_trap": "Counting the same skeleton twice when it is numbered from opposite ends.",
+        "time_saving_tip": "Remember the sequence 2, 3, 5 for $C_4$, $C_5$, $C_6$."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "What is the correct IUPAC name of $CH_2=CH-CH_2-C\\equiv CH$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Pent-4-en-1-yne",
+        "Pent-4-yn-1-ene",
+        "Pent-1-en-4-yne",
+        "Pent-1-yn-4-ene"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "When a double and a triple bond would receive equal locants, the double bond gets the lower number. The suffix is written as -en-yne.",
+        "steps": [
+          "Numbering from either end gives the multiple bonds the locants 1 and 4.",
+          "Because the locants tie, the double bond takes locant 1.",
+          "The suffix order is always -en-yne, so the name is pent-1-en-4-yne."
+        ],
+        "final_answer": "Option (3): Pent-1-en-4-yne",
+        "why_not_others": "Pent-4-en-1-yne gives the triple bond the lower locant, which the tie rule forbids. Pent-4-yn-1-ene and pent-1-yn-4-ene use the wrong suffix order.",
+        "common_trap": "Giving the triple bond priority for the lower locant when the locants are equal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "What is the degree of unsaturation of a compound with the molecular formula $C_4H_4N_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4",
+        "3",
+        "2",
+        "8"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$DU = \\frac{2C + 2 + N - H - X}{2}$",
+        "steps": [
+          "Substitute the values: $DU = \\frac{2(4) + 2 + 2 - 4 - 0}{2}$.",
+          "Simplify: $DU = \\frac{8}{2} = 4$."
+        ],
+        "final_answer": "Option (1): 4",
+        "why_not_others": "3 comes from ignoring nitrogen. 2 comes from subtracting N instead of adding it. 8 comes from forgetting to divide by 2.",
+        "common_trap": "Treating nitrogen like a halogen, i.e. subtracting it instead of adding it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Buta-1,3-diene is a conjugated diene.",
+        "R": "In a conjugated diene the two double bonds are separated by exactly one single bond."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Conjugated dienes have the $C=C-C=C$ (1,3) pattern.",
+        "steps": [
+          "Buta-1,3-diene is $CH_2=CH-CH=CH_2$.",
+          "Its double bonds are separated by one single bond, so it is conjugated.",
+          "R gives the defining feature of conjugation, so it correctly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R is the very reason A holds.",
+        "common_trap": "Thinking that any diene with two or more single bonds between its double bonds is conjugated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Penta-1,2-diene is a cumulated diene, whereas penta-1,4-diene is an isolated diene.",
+        "II": "The correct IUPAC name of $CH\\equiv C-CH_2-CH_2-CH_2-CH=CH_2$ is hept-1-en-6-yne."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Dienes are classified by the spacing of their double bonds. In a double-versus-triple-bond locant tie, the double bond gets the lower number.",
+        "steps": [
+          "Penta-1,2-diene has adjacent double bonds, so it is cumulated (an allene).",
+          "Penta-1,4-diene has two single bonds between its double bonds, so it is isolated. Statement I is correct.",
+          "In the seven-carbon chain, numbering from either end gives the locants 1 and 6.",
+          "The tie is broken in favour of the double bond, giving hept-1-en-6-yne. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree with the classification and numbering rules.",
+        "common_trap": "Naming the compound hept-6-en-1-yne by giving the triple bond priority.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which hydrocarbon is formed when calcium carbide reacts with water?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Methane",
+        "Ethyne",
+        "Ethene",
+        "Propyne"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$CaC_2 + 2H_2O \\rightarrow C_2H_2 + Ca(OH)_2$",
+        "steps": [
+          "Calcium carbide is hydrolysed by water.",
+          "The products are ethyne and calcium hydroxide."
+        ],
+        "final_answer": "Option (2): Ethyne",
+        "why_not_others": "Methane, ethene and propyne are not formed from $CaC_2$ and water.",
+        "common_trap": "Confusing ethyne with ethene.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Sodium butanoate, $CH_3CH_2CH_2COONa$, is heated with soda lime. What is the main hydrocarbon product?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Butane",
+        "Propane",
+        "Hexane",
+        "Ethane"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Soda lime decarboxylation gives an alkane with one carbon fewer: $RCOONa + NaOH \\xrightarrow{CaO,\\ \\Delta} RH + Na_2CO_3$.",
+        "steps": [
+          "Here $R = CH_3CH_2CH_2-$.",
+          "So $RH = CH_3CH_2CH_3$, which is propane."
+        ],
+        "final_answer": "Option (2): Propane",
+        "why_not_others": "Butane wrongly keeps all four carbons. Hexane ($R-R$) is the product of Kolbe's electrolysis. Ethane removes one carbon too many.",
+        "common_trap": "Confusing soda lime decarboxylation with Kolbe's electrolysis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "What is the product when cis-but-2-ene is treated with cold, dilute alkaline $KMnO_4$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Racemic butane-2,3-diol",
+        "Ethanoic acid",
+        "Butan-2-one",
+        "meso-Butane-2,3-diol"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Baeyer's reagent adds two OH groups syn across the double bond. A cis alkene gives the meso diol.",
+        "steps": [
+          "Cold, dilute alkaline $KMnO_4$ adds two OH groups to the same face of the double bond.",
+          "Syn addition to cis-but-2-ene gives meso-butane-2,3-diol."
+        ],
+        "final_answer": "Option (4): meso-Butane-2,3-diol",
+        "why_not_others": "The racemic diol forms from trans-but-2-ene. Ethanoic acid forms on cleavage by hot acidic $KMnO_4$. Butan-2-one is not formed in this reaction.",
+        "common_trap": "Applying the anti-addition outcome of $Br_2$ to the syn addition by $KMnO_4$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$CH_3Br + Na$, dry ether"
+          },
+          {
+            "label": "B",
+            "text": "$CH_3COONa + NaOH$, $CaO$, heat"
+          },
+          {
+            "label": "C",
+            "text": "n-Hexane, $Cr_2O_3/V_2O_5/Mo_2O_3$, 773 K, 10-20 atm"
+          },
+          {
+            "label": "D",
+            "text": "$C_2H_5OH$, conc. $H_2SO_4$, 443 K"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Benzene"
+          },
+          {
+            "label": "II",
+            "text": "Ethene"
+          },
+          {
+            "label": "III",
+            "text": "Methane"
+          },
+          {
+            "label": "IV",
+            "text": "Ethane"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I",
+        "A-IV, B-III, C-I, D-II",
+        "A-II, B-III, C-I, D-IV"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "These are the standard preparation reactions: Wurtz, decarboxylation, aromatisation and acidic dehydration.",
+        "steps": [
+          "A: The Wurtz reaction doubles the methyl group, giving ethane (IV).",
+          "B: Decarboxylation of sodium ethanoate gives methane (III).",
+          "C: Aromatisation of n-hexane gives benzene (I).",
+          "D: Acidic dehydration of ethanol at 443 K gives ethene (II)."
+        ],
+        "final_answer": "Option (3): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option (1) swaps the Wurtz and decarboxylation products. Option (2) swaps benzene and ethene. Option (4) swaps ethene and ethane.",
+        "common_trap": "Thinking decarboxylation keeps the carbon count unchanged.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the preparation and properties of hydrocarbons are correct?",
+      "statements": {
+        "A": "Methane cannot be prepared by the Wurtz reaction.",
+        "B": "Dehydrohalogenation of 2-bromobutane with alcoholic $KOH$ gives but-2-ene as the major product.",
+        "C": "Among isomeric alkanes, boiling point increases with branching.",
+        "D": "trans-But-2-ene reacts with Baeyer's reagent to give racemic butane-2,3-diol.",
+        "E": "The Wurtz reaction of a mixture of $CH_3Br$ and $C_2H_5Br$ gives propane as the only product."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "B, D and E only",
+        "A, B and D only",
+        "A, B, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This tests Wurtz limitations, Saytzeff's rule, the effect of branching on boiling point, and the stereochemistry of syn dihydroxylation.",
+        "steps": [
+          "A is true: the Wurtz reaction always joins two alkyl groups, so it cannot give methane.",
+          "B is true: by Saytzeff's rule the more substituted alkene, but-2-ene, is major.",
+          "C is false: branching lowers the boiling point.",
+          "D is true: syn addition to a trans alkene gives the racemic diol.",
+          "E is false: mixed halides give a mixture of ethane, propane and butane."
+        ],
+        "final_answer": "Option (3): A, B and D only",
+        "why_not_others": "Option (1) includes the false statement C. Options (2) and (4) include the false statement E.",
+        "common_trap": "Assuming the Wurtz reaction works cleanly for odd-carbon alkanes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "What is the dihedral angle between C-H bonds on adjacent carbons in the staggered conformation of ethane?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60^\\circ$",
+        "$0^\\circ$",
+        "$90^\\circ$",
+        "$30^\\circ$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In staggered ethane the dihedral angle is 60 degrees. In eclipsed ethane it is 0 degrees.",
+        "steps": [
+          "In the staggered form, the hydrogens are as far apart as possible.",
+          "This corresponds to a dihedral angle of 60 degrees."
+        ],
+        "final_answer": "Option (1): $60^\\circ$",
+        "why_not_others": "0 degrees is the eclipsed form. 90 and 30 degrees correspond to skew forms.",
+        "common_trap": "Confusing the dihedral angles of the staggered and eclipsed forms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "In the Newman projection of ethane, how is the rear carbon atom represented?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A circle with bonds emerging from its edge",
+        "A point with three bonds radiating from it",
+        "The upper-right end of a slanted line",
+        "The lower-left end of a slanted line"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In a Newman projection the front carbon is a dot and the rear carbon is a circle.",
+        "steps": [
+          "The molecule is viewed along the C-C bond.",
+          "The rear carbon is hidden behind the front one, so it is drawn as a circle with its bonds coming from the edge."
+        ],
+        "final_answer": "Option (1): A circle with bonds emerging from its edge",
+        "why_not_others": "A point with three bonds is the front carbon. The ends of a slanted line describe a Sawhorse projection.",
+        "common_trap": "Mixing up Newman and Sawhorse conventions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Starting from the staggered conformation of ethane, what is the minimum rotation of one carbon about the C-C bond needed to reach an eclipsed conformation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60^\\circ$",
+        "$120^\\circ$",
+        "$180^\\circ$",
+        "$30^\\circ$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Rotating one carbon by 60 degrees interconverts the staggered and eclipsed forms.",
+        "steps": [
+          "The staggered form has a dihedral angle of 60 degrees and the eclipsed form 0 degrees.",
+          "So a rotation of 60 degrees converts one into the other."
+        ],
+        "final_answer": "Option (1): $60^\\circ$",
+        "why_not_others": "A 120 degree rotation returns the molecule to a staggered form. A 180 degree rotation also gives a staggered form. A 30 degree rotation gives a skew form.",
+        "common_trap": "Assuming a half rotation (180 degrees) is needed to reach the eclipsed form.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The staggered and eclipsed conformations of ethane can be separated at room temperature because they differ in energy.",
+        "R": "The staggered conformation of ethane has less torsional strain than the eclipsed conformation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The rotational barrier in ethane is only about 12.5 kJ/mol, so its conformers interconvert rapidly.",
+        "steps": [
+          "Because the barrier is so small, the conformers cannot be isolated. A is false.",
+          "In the staggered form the bond electron clouds are farthest apart, giving minimum torsional strain. R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, which rules out options (1), (2) and (3).",
+        "common_trap": "Believing that any energy difference allows conformers to be separated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The C-C bond length and the bond angles in eclipsed ethane differ from those in staggered ethane.",
+        "II": "In a Sawhorse projection of ethane, the front carbon is drawn at the upper-right end of the slanted C-C bond."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Conformers differ only by rotation about the sigma bond. In a Sawhorse projection the front carbon is at the lower left.",
+        "steps": [
+          "Conformers have identical bond lengths and bond angles, so Statement I is incorrect.",
+          "In a Sawhorse projection the front carbon is at the lower left and the rear carbon at the upper right, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Neither statement is correct, so options (1), (3) and (4) are ruled out.",
+        "common_trap": "Reversing the front and rear carbons in a Sawhorse drawing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Which step is the chain initiation step in the chlorination of methane in UV light?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_4 \\rightarrow CH_3^\\bullet + H^\\bullet$",
+        "$CH_3^\\bullet + Cl_2 \\rightarrow CH_3Cl + Cl^\\bullet$",
+        "$Cl_2 \\xrightarrow{h\\nu} 2Cl^\\bullet$",
+        "$CH_3^\\bullet + CH_3^\\bullet \\rightarrow C_2H_6$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Initiation is the homolysis of the weaker $Cl-Cl$ bond.",
+        "steps": [
+          "The $Cl-Cl$ bond is weaker than the $C-H$ bond.",
+          "UV light therefore splits $Cl_2$ into two $Cl^\\bullet$ radicals."
+        ],
+        "final_answer": "Option (3): $Cl_2 \\xrightarrow{h\\nu} 2Cl^\\bullet$",
+        "why_not_others": "Homolysis of the C-H bond is not the initiation step. Option (2) is a propagation step. Option (4) is a termination step.",
+        "common_trap": "Thinking the C-H bond breaks first.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "Which observation during the chlorination of methane provides evidence for a free radical mechanism?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Formation of $HCl$",
+        "Formation of small amounts of ethane",
+        "Formation of $CCl_4$ when chlorine is in excess",
+        "Chlorine reacts faster than bromine"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Ethane forms when two methyl radicals combine in a termination step.",
+        "steps": [
+          "$CH_3^\\bullet + CH_3^\\bullet \\rightarrow C_2H_6$",
+          "The presence of ethane shows that methyl radicals exist during the reaction."
+        ],
+        "final_answer": "Option (2): Formation of small amounts of ethane",
+        "why_not_others": "HCl is simply a substitution product. $CCl_4$ shows polyhalogenation. The relative reactivity of halogens does not prove a radical pathway.",
+        "common_trap": "Choosing HCl because it forms in the propagation step.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Why is iodination of methane carried out in the presence of an oxidising agent such as $HIO_3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$HIO_3$ produces iodine free radicals that initiate the chain",
+        "It prevents the reaction from becoming explosive",
+        "It makes the reaction more selective for primary hydrogens",
+        "The reaction is reversible, and $HIO_3$ removes the $HI$ formed"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$CH_4 + I_2 \\rightleftharpoons CH_3I + HI$, and $5HI + HIO_3 \\rightarrow 3I_2 + 3H_2O$",
+        "steps": [
+          "The HI formed reduces $CH_3I$ back to methane, so the reaction is reversible.",
+          "$HIO_3$ oxidises HI to $I_2$, which drives the reaction forward."
+        ],
+        "final_answer": "Option (4): The reaction is reversible, and $HIO_3$ removes the $HI$ formed",
+        "why_not_others": "$HIO_3$ is not a radical initiator. It is fluorination, not iodination, that is explosive. Selectivity is unrelated to the use of an oxidant.",
+        "common_trap": "Thinking the oxidant acts as an initiator.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Chain initiation"
+          },
+          {
+            "label": "B",
+            "text": "Chain propagation"
+          },
+          {
+            "label": "C",
+            "text": "Chain termination"
+          },
+          {
+            "label": "D",
+            "text": "Reaction with excess chlorine"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$CH_3^\\bullet + Cl_2 \\rightarrow CH_3Cl + Cl^\\bullet$"
+          },
+          {
+            "label": "II",
+            "text": "$Cl_2 \\rightarrow 2Cl^\\bullet$"
+          },
+          {
+            "label": "III",
+            "text": "$CH_3Cl + Cl_2 \\rightarrow CH_2Cl_2 + HCl$"
+          },
+          {
+            "label": "IV",
+            "text": "$CH_3^\\bullet + CH_3^\\bullet \\rightarrow C_2H_6$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The free radical chain has initiation, propagation and termination steps. Excess halogen leads to polyhalogenation.",
+        "steps": [
+          "Initiation is homolysis of $Cl_2$ (II).",
+          "Propagation forms $CH_3Cl$ and regenerates $Cl^\\bullet$ (I).",
+          "Termination is radical combination to give ethane (IV).",
+          "Excess chlorine gives further substitution, such as $CH_2Cl_2$ (III)."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option (2) swaps initiation and propagation. Option (3) swaps propagation and termination. Option (4) swaps termination and polyhalogenation.",
+        "common_trap": "Calling radical combination a propagation step.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about halogenation of alkanes are correct?",
+      "statements": {
+        "A": "The ease of hydrogen abstraction follows the order $3^\\circ > 2^\\circ > 1^\\circ > CH_4$.",
+        "B": "Bromination is less selective than chlorination.",
+        "C": "The reactivity of halogens follows the order $F_2 > Cl_2 > Br_2 > I_2$.",
+        "D": "In the initiation step, the C-H bond of methane undergoes homolysis because it is weaker than the Cl-Cl bond.",
+        "E": "Fluorination of alkanes is explosive."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only",
+        "A, C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This tests radical stability, selectivity, halogen reactivity and the initiation step.",
+        "steps": [
+          "A is true: hydrogen abstraction follows the order of radical stability.",
+          "B is false: bromination is more selective than chlorination.",
+          "C and E are true as stated in the notes.",
+          "D is false: the Cl-Cl bond is the weaker one and undergoes homolysis."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option (1) includes B. Option (2) includes B and D. Option (4) includes D.",
+        "common_trap": "Assuming the more reactive halogen is also the more selective one.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "In the Geiger–Marsden alpha-particle scattering experiment, most of the alpha particles passed through the thin gold foil undeflected or with very small deflection. This observation shows that",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the nucleus carries a negative charge",
+        "electrons are responsible for the large deflections",
+        "the positive charge of the atom is spread uniformly over its whole volume",
+        "the atom is mostly empty space"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Undeflected passage of most alpha particles means they meet nothing massive along their path.",
+        "steps": [
+          "Most alpha particles go straight through the foil.",
+          "So they encounter no significant mass or charge along their paths.",
+          "Hence most of the atom's volume is empty space."
+        ],
+        "final_answer": "Option (4): the atom is mostly empty space",
+        "why_not_others": "The nucleus is positive, not negative. Electrons are far too light to deflect alpha particles appreciably. A uniform spread of positive charge cannot produce the rare large-angle deflections that were observed.",
+        "common_trap": "Mixing up the two conclusions. Undeflected particles show empty space, while rare large-angle deflections show the tiny, massive, positive nucleus.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "In a Rutherford scattering experiment, the number of alpha particles scattered at angle $\\theta$ is $N(\\theta)$. What is the ratio $N(60^\\circ)/N(90^\\circ)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{16}{9}$",
+        "$2$",
+        "$4$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Rutherford scattering formula: $N(\\theta)\\propto 1/\\sin^4(\\theta/2)$.",
+        "steps": [
+          "$N(60^\\circ)\\propto 1/\\sin^4 30^\\circ = 1/(1/2)^4 = 16$.",
+          "$N(90^\\circ)\\propto 1/\\sin^4 45^\\circ = 1/(1/\\sqrt2)^4 = 4$.",
+          "Ratio $=16/4=4$."
+        ],
+        "final_answer": "Option (4): $4$",
+        "why_not_others": "$1/4$ is the inverted ratio. $16/9$ comes from wrongly using $\\sin^4\\theta$ instead of $\\sin^4(\\theta/2)$. $2$ comes from using $\\sin^2(\\theta/2)$.",
+        "common_trap": "Using $\\sin^4\\theta$ in place of $\\sin^4(\\theta/2)$.",
+        "time_saving_tip": "Halve the angles first: $\\sin 30^\\circ=1/2$ and $\\sin 45^\\circ=1/\\sqrt2$, then raise each to the fourth power."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "An alpha particle of kinetic energy $7.2$ MeV approaches a nucleus of atomic number $Z=50$ head-on. What is its distance of closest approach? (Take $\\frac{1}{4\\pi\\epsilon_0}=9\\times10^9$ N m$^2$ C$^{-2}$ and $e=1.6\\times10^{-19}$ C.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\times10^{-14}$ m",
+        "$4.0\\times10^{-14}$ m",
+        "$2.0\\times10^{-17}$ m",
+        "$2.0\\times10^{-14}$ m"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "At closest approach all the kinetic energy has become electrostatic potential energy: $r_0=\\frac{1}{4\\pi\\epsilon_0}\\frac{2Ze^2}{K}$.",
+        "steps": [
+          "Convert the energy: $K=7.2\\times1.6\\times10^{-13}$ J $=1.152\\times10^{-12}$ J.",
+          "Numerator: $9\\times10^9\\times2\\times50\\times(1.6\\times10^{-19})^2=2.304\\times10^{-26}$ J m.",
+          "$r_0=2.304\\times10^{-26}/1.152\\times10^{-12}=2.0\\times10^{-14}$ m."
+        ],
+        "final_answer": "Option (4): $2.0\\times10^{-14}$ m",
+        "why_not_others": "$1.0\\times10^{-14}$ m omits the alpha particle's charge $2e$. $4.0\\times10^{-14}$ m uses $4Ze^2$ by counting the factor 2 twice. $2.0\\times10^{-17}$ m comes from a wrong MeV-to-joule conversion.",
+        "common_trap": "Forgetting that the alpha particle carries charge $2e$.",
+        "time_saving_tip": "Since $K$ is in MeV, one factor of $e$ cancels: $r_0=\\frac{9\\times10^9\\times2Z\\times1.6\\times10^{-19}}{K(\\text{MeV})\\times10^6}$ m."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A very thin gold foil is used in the Geiger–Marsden alpha-particle scattering experiment.",
+        "R": "An alpha particle with a smaller impact parameter is scattered through a larger angle."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A thin foil ensures that each alpha particle undergoes essentially a single scattering.",
+        "steps": [
+          "A is true: the foil was about $2.1\\times10^{-7}$ m thick.",
+          "R is true: a smaller $b$ gives a larger $\\theta$, and $b=0$ gives $180^\\circ$.",
+          "The thin foil is used to ensure single scattering, not because of the relation between $b$ and $\\theta$. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option (1) is wrong because R does not give the reason for using a thin foil. Options (3) and (4) are wrong because both statements are true.",
+        "common_trap": "Treating any true, related-sounding Reason as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For an alpha particle of a given kinetic energy approaching a given nucleus, the impact parameter for scattering through $90^\\circ$ is half the distance of closest approach in a head-on collision.",
+        "II": "The distance of closest approach of about $4\\times10^{-14}$ m for alpha particles on gold gives a lower limit on the size of the gold nucleus."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Compare the formulas $b=\\frac{1}{4\\pi\\epsilon_0}\\frac{Ze^2\\cot(\\theta/2)}{K}$ and $r_0=\\frac{1}{4\\pi\\epsilon_0}\\frac{2Ze^2}{K}$, and recall what the closest-approach estimate tells us.",
+        "steps": [
+          "At $\\theta=90^\\circ$, $\\cot45^\\circ=1$, so $b=\\frac{1}{4\\pi\\epsilon_0}\\frac{Ze^2}{K}$.",
+          "This equals $r_0/2$, so Statement I is correct.",
+          "The alpha particle never reaches the nucleus, so the nucleus must be smaller than $r_0$.",
+          "The closest-approach estimate is therefore an upper limit, and Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II reverses the limit: actual nuclear radii ($10^{-15}$ to $10^{-14}$ m) are smaller than the closest-approach distance. This rules out options (1), (2) and (4).",
+        "common_trap": "Calling the closest-approach distance a lower limit, or the actual nuclear radius.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "According to Rutherford's nuclear model, what is the approximate ratio of the radius of an atom to the radius of its nucleus?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10^{2}$",
+        "$10^{3}$",
+        "$10^{10}$",
+        "$10^{5}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The atom's radius is about $10^{-10}$ m and the nucleus's radius is about $10^{-15}$ m.",
+        "steps": [
+          "Ratio $=10^{-10}/10^{-15}=10^5$."
+        ],
+        "final_answer": "Option (4): $10^{5}$",
+        "why_not_others": "$10^2$ and $10^3$ are far too small. $10^{10}$ confuses the atomic size of $10^{-10}$ m with the ratio itself.",
+        "common_trap": "Writing the exponent of the atomic size as the answer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "In a circular orbit, the total energy of the electron in a hydrogen atom is $-3.4$ eV. What are its kinetic energy $K$ and potential energy $U$ in this orbit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$K=6.8$ eV, $U=-3.4$ eV",
+        "$K=3.4$ eV, $U=-6.8$ eV",
+        "$K=-3.4$ eV, $U=6.8$ eV",
+        "$K=3.4$ eV, $U=-3.4$ eV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In any orbit, $K=-E$ and $U=2E$.",
+        "steps": [
+          "$K=-E=3.4$ eV.",
+          "$U=2E=-6.8$ eV.",
+          "Check: $K+U=-3.4$ eV, which equals $E$."
+        ],
+        "final_answer": "Option (2): $K=3.4$ eV, $U=-6.8$ eV",
+        "why_not_others": "Option (1) swaps the magnitudes. Option (3) gives a negative kinetic energy, which is impossible. Option (4) gives $K+U=0$, not $-3.4$ eV.",
+        "common_trap": "Getting the signs wrong. Kinetic energy is always positive.",
+        "time_saving_tip": "Check every option against $K+U=E$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "In Rutherford's model, the electron of a hydrogen atom revolves in a circular orbit of radius $1.44\\times10^{-10}$ m. What is its kinetic energy? (Take $\\frac{1}{4\\pi\\epsilon_0}=9\\times10^9$ N m$^2$ C$^{-2}$ and $e=1.6\\times10^{-19}$ C.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-5$ eV",
+        "$10$ eV",
+        "$2.5$ eV",
+        "$5$ eV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Force balance gives $K=\\frac{e^2}{8\\pi\\epsilon_0 r}=\\frac{1}{2}\\cdot\\frac{1}{4\\pi\\epsilon_0}\\frac{e^2}{r}$.",
+        "steps": [
+          "$\\frac{1}{4\\pi\\epsilon_0}e^2=9\\times10^9\\times2.56\\times10^{-38}=2.304\\times10^{-28}$ J m.",
+          "Divide by $r$: $2.304\\times10^{-28}/1.44\\times10^{-10}=1.6\\times10^{-18}$ J $=10$ eV.",
+          "$K$ is half of this, so $K=5$ eV."
+        ],
+        "final_answer": "Option (4): $5$ eV",
+        "why_not_others": "$-5$ eV is the total energy, not the kinetic energy. $10$ eV is the magnitude of the potential energy. $2.5$ eV comes from halving twice.",
+        "common_trap": "Confusing $K$ with $|U|$ or with $E$.",
+        "time_saving_tip": "Find $|U|$ in eV first, then halve it to get $K$."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Kinetic energy of the electron in an orbit of radius $r$ in hydrogen"
+          },
+          {
+            "label": "B",
+            "text": "Potential energy of the electron"
+          },
+          {
+            "label": "C",
+            "text": "Total energy of the electron"
+          },
+          {
+            "label": "D",
+            "text": "Centripetal force on the electron"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$-\\frac{e^2}{8\\pi\\epsilon_0 r}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{e^2}{8\\pi\\epsilon_0 r}$"
+          },
+          {
+            "label": "III",
+            "text": "$-\\frac{e^2}{4\\pi\\epsilon_0 r}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{e^2}{4\\pi\\epsilon_0 r^2}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "From $\\frac{mv^2}{r}=\\frac{1}{4\\pi\\epsilon_0}\\frac{e^2}{r^2}$, we get $K=\\frac{e^2}{8\\pi\\epsilon_0 r}$, $U=-\\frac{e^2}{4\\pi\\epsilon_0 r}$ and $E=-\\frac{e^2}{8\\pi\\epsilon_0 r}$.",
+        "steps": [
+          "Kinetic energy is positive: A-II.",
+          "Potential energy is $-\\frac{e^2}{4\\pi\\epsilon_0 r}$: B-III.",
+          "Total energy is $K+U=-\\frac{e^2}{8\\pi\\epsilon_0 r}$: C-I.",
+          "Centripetal force is the Coulomb force, which varies as $1/r^2$: D-IV."
+        ],
+        "final_answer": "Option (1): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Option (2) swaps the signs of $K$ and $E$. Option (3) swaps $U$ and $E$. Option (4) pairs the force expression with $K$.",
+        "common_trap": "Swapping the sign between kinetic and total energy.",
+        "time_saving_tip": "Only the force varies as $1/r^2$, so fix D-IV first."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Rutherford's model of the atom are correct?",
+      "statements": {
+        "A": "By classical electromagnetism, the revolving electron should radiate energy continuously and spiral into the nucleus.",
+        "B": "The model predicts a continuous spectrum, which contradicts the observed line spectra.",
+        "C": "The total energy of the orbiting electron is positive, which shows that it is free.",
+        "D": "In any orbit, the magnitude of the potential energy is twice the kinetic energy.",
+        "E": "The nucleus occupies about half the volume of the atom."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A and B only",
+        "A, C and D only",
+        "B, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Recall the two failures of the model and the energy relations $K=-E$ and $U=2E$.",
+        "steps": [
+          "A is true: an accelerating charge radiates, so the atom would be unstable.",
+          "B is true: the revolution frequency would change continuously, giving a continuous spectrum.",
+          "C is false: $E=-\\frac{e^2}{8\\pi\\epsilon_0 r}$ is negative, so the electron is bound.",
+          "D is true: $|U|=2K$.",
+          "E is false: the nucleus is about $10^5$ times smaller in radius than the atom."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option (2) leaves out the true statement D. Option (3) includes the false statement C. Option (4) includes the false statement E and leaves out A.",
+        "common_trap": "Thinking a negative energy is unphysical. A negative total energy simply means the electron is bound.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "According to Bohr's model, what is the ground-state energy of the electron in a $He^+$ ion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-54.4$ eV",
+        "$-27.2$ eV",
+        "$-13.6$ eV",
+        "$-122.4$ eV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$E_n=-13.6\\frac{Z^2}{n^2}$ eV.",
+        "steps": [
+          "For $He^+$, $Z=2$ and $n=1$.",
+          "$E_1=-13.6\\times4=-54.4$ eV."
+        ],
+        "final_answer": "Option (1): $-54.4$ eV",
+        "why_not_others": "$-27.2$ eV uses $Z$ instead of $Z^2$. $-13.6$ eV ignores $Z$ altogether. $-122.4$ eV is the value for $Li^{2+}$.",
+        "common_trap": "Forgetting the $Z^2$ factor for hydrogen-like ions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "Using Bohr's model, what is the radius of the second orbit ($n=2$) of a $He^+$ ion? (Take the radius of the first Bohr orbit of hydrogen as $0.529$ Å.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.116$ Å",
+        "$0.529$ Å",
+        "$0.2645$ Å",
+        "$1.058$ Å"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$r_n=0.529\\frac{n^2}{Z}$ Å.",
+        "steps": [
+          "Here $n=2$ and $Z=2$.",
+          "$r_2=0.529\\times4/2=1.058$ Å."
+        ],
+        "final_answer": "Option (4): $1.058$ Å",
+        "why_not_others": "$2.116$ Å ignores $Z$. $0.529$ Å uses $n$ instead of $n^2$. $0.2645$ Å inverts the dependence to $Z/n^2$.",
+        "common_trap": "Forgetting that the radius varies inversely with $Z$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "In a hydrogen atom, the electron moves from the first Bohr orbit to the second Bohr orbit. By what factor does its time period of revolution change?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It becomes 4 times",
+        "It becomes 8 times",
+        "It becomes 2 times",
+        "It becomes $\\frac{1}{8}$ times"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$T_n\\propto n^3/Z^2$.",
+        "steps": [
+          "$T_n=2\\pi r_n/v_n$, with $r_n\\propto n^2$ and $v_n\\propto 1/n$.",
+          "So $T_n\\propto n^3$.",
+          "$T_2/T_1=2^3=8$."
+        ],
+        "final_answer": "Option (2): It becomes 8 times",
+        "why_not_others": "4 times is the change in radius ($n^2$). 2 times is the change in $1/v$ ($n$). $1/8$ times is the change in the frequency of revolution, not the period.",
+        "common_trap": "Confusing the period ($\\propto n^3$) with the frequency ($\\propto 1/n^3$) or with the radius ($\\propto n^2$).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In Bohr's model, only those orbits are allowed in which the angular momentum of the electron is $\\frac{nh}{2\\pi}$.",
+        "R": "An orbit is allowed only if its circumference holds a whole number of de Broglie wavelengths of the electron, $2\\pi r_n=n\\lambda$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "De Broglie's standing-wave condition explains Bohr's quantisation rule.",
+        "steps": [
+          "A is Bohr's second postulate, so it is true.",
+          "R is de Broglie's condition, so it is true.",
+          "Substituting $\\lambda=\\frac{h}{mv}$ into $2\\pi r=n\\lambda$ gives $mvr=\\frac{nh}{2\\pi}$. So R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R directly derives A, so option (2) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Treating de Broglie's condition as an unrelated fact, when it is the physical explanation of the quantisation rule.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The energy required to ionise a $Li^{2+}$ ion from its ground state is $122.4$ eV.",
+        "II": "The speed of the electron in the $n=2$ orbit of $He^+$ is equal to its speed in the first orbit of hydrogen, which is about $c/137$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The ground-state ionisation energy is $13.6Z^2$ eV, and $v_n\\propto Z/n$.",
+        "steps": [
+          "For $Li^{2+}$: $13.6\\times9=122.4$ eV, so Statement I is correct.",
+          "For $He^+$ with $n=2$: $Z/n=2/2=1$, the same as hydrogen with $n=1$.",
+          "The first-orbit speed in hydrogen is $c/137$, so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out, so options (2), (3) and (4) are wrong.",
+        "common_trap": "Assuming a higher $Z$ always means a higher speed, without dividing by $n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Which series of the hydrogen spectrum lies in the visible region?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Balmer series",
+        "Lyman series",
+        "Paschen series",
+        "Pfund series"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The Balmer series ($n_1=2$) is visible, the Lyman series is ultraviolet, and the Paschen, Brackett and Pfund series are infrared.",
+        "steps": [
+          "Transitions ending on $n_1=2$ form the Balmer series, which lies in the visible region."
+        ],
+        "final_answer": "Option (1): Balmer series",
+        "why_not_others": "The Lyman series is ultraviolet. The Paschen and Pfund series are infrared.",
+        "common_trap": "Thinking the Lyman series is visible because it is the first series.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A sample contains a large number of hydrogen atoms, all excited to the level $n=5$. What is the maximum number of different spectral lines emitted as they return to the ground state?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4$",
+        "$10$",
+        "$15$",
+        "$5$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "With many atoms, the maximum number of lines is $N=\\frac{n(n-1)}{2}$.",
+        "steps": [
+          "$N=\\frac{5\\times4}{2}=10$."
+        ],
+        "final_answer": "Option (2): $10$",
+        "why_not_others": "4 ($=n-1$) is the maximum for a single atom in one cascade. 15 uses $\\frac{n(n+1)}{2}$. 5 simply equals $n$.",
+        "common_trap": "Using the single-atom result $n-1$ when many atoms are involved.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "In a $He^+$ ion, the electron makes a transition from $n=4$ to $n=2$. What is the wavelength of the emitted photon? (Use $E_n=-13.6\\frac{Z^2}{n^2}$ eV and $\\lambda(\\text{nm})=\\frac{1240}{E(\\text{eV})}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$486.3$ nm",
+        "$243.1$ nm",
+        "$121.6$ nm",
+        "$91.2$ nm"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$h\\nu=13.6Z^2\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)$ eV.",
+        "steps": [
+          "$E=13.6\\times4\\times\\left(\\frac14-\\frac1{16}\\right)=54.4\\times\\frac{3}{16}=10.2$ eV.",
+          "$\\lambda=1240/10.2\\approx121.6$ nm."
+        ],
+        "final_answer": "Option (3): $121.6$ nm",
+        "why_not_others": "486.3 nm ignores $Z^2$ ($E=2.55$ eV). 243.1 nm uses $Z$ instead of $Z^2$ ($E=5.1$ eV). 91.2 nm uses $\\frac{1}{n}$ instead of $\\frac{1}{n^2}$ ($E=13.6$ eV).",
+        "common_trap": "Forgetting the $Z^2$ factor for $He^+$.",
+        "time_saving_tip": "The $4\\to2$ line of $He^+$ has the same energy as the $2\\to1$ line of hydrogen (10.2 eV)."
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Lyman series"
+          },
+          {
+            "label": "B",
+            "text": "Balmer series"
+          },
+          {
+            "label": "C",
+            "text": "Paschen series"
+          },
+          {
+            "label": "D",
+            "text": "Pfund series"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Lower level $n_1=5$, infrared"
+          },
+          {
+            "label": "II",
+            "text": "Lower level $n_1=1$, ultraviolet"
+          },
+          {
+            "label": "III",
+            "text": "Lower level $n_1=2$, visible"
+          },
+          {
+            "label": "IV",
+            "text": "Lower level $n_1=3$, infrared"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Each series is defined by its lower level: Lyman $n_1=1$, Balmer $n_1=2$, Paschen $n_1=3$, Pfund $n_1=5$.",
+        "steps": [
+          "Lyman: $n_1=1$, ultraviolet, so A-II.",
+          "Balmer: $n_1=2$, visible, so B-III.",
+          "Paschen: $n_1=3$, infrared, so C-IV.",
+          "Pfund: $n_1=5$, infrared, so D-I."
+        ],
+        "final_answer": "Option (1): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Option (2) swaps Lyman and Balmer. Option (3) swaps Paschen and Pfund. Option (4) swaps Balmer and Paschen.",
+        "common_trap": "Mixing up Paschen and Pfund, since both lie in the infrared.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the hydrogen spectrum are correct?",
+      "statements": {
+        "A": "The series limit is the longest wavelength in a spectral series.",
+        "B": "The series limit of the Lyman series is $91.2$ nm.",
+        "C": "The ratio of the longest wavelength of the Lyman series to that of the Balmer series is $5:27$.",
+        "D": "At room temperature, the absorption spectrum of hydrogen shows mainly Balmer lines.",
+        "E": "The $H_\\alpha$ line (transition $3\\to2$) has a wavelength of $656.3$ nm and is red."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The series limit ($n_2\\to\\infty$) is the shortest wavelength, and at room temperature almost all atoms are in the ground state.",
+        "steps": [
+          "A is false: the series limit is the shortest wavelength in a series.",
+          "B is true: the Lyman series limit is 91.2 nm.",
+          "C is true: $\\lambda_L/\\lambda_B=\\frac{5/36}{3/4}=\\frac{5}{27}$.",
+          "D is false: atoms are in the ground state, so absorption shows mainly Lyman lines.",
+          "E is true: $H_\\alpha$ is at 656.3 nm and is red."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Option (1) includes the false statement A. Options (3) and (4) include the false statement D.",
+        "common_trap": "Calling the series limit the longest wavelength in the series.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

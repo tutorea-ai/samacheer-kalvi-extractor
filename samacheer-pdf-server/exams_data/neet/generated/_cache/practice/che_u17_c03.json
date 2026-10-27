@@ -1,0 +1,625 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "Which of the following compounds is the most reactive towards nucleophilic addition?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_3COCH_3$",
+        "$HCHO$",
+        "$CH_3CHO$",
+        "$C_2H_5COCH_3$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Reactivity towards nucleophilic addition falls as more, and larger, electron-releasing alkyl groups are attached to the carbonyl carbon.",
+        "steps": [
+          "HCHO has no alkyl group. Its carbonyl carbon is the least hindered and the most electron-deficient.",
+          "$CH_3CHO$ has one alkyl group, so it is less reactive than HCHO.",
+          "The ketones $CH_3COCH_3$ and $C_2H_5COCH_3$ have two alkyl groups each, so they are less reactive still.",
+          "Order: HCHO > $CH_3CHO$ > $CH_3COCH_3$ > $C_2H_5COCH_3$."
+        ],
+        "final_answer": "Option (2): $HCHO$",
+        "why_not_others": "$CH_3CHO$ has one electron-releasing methyl group. Both ketones have two alkyl groups, which add steric hindrance and reduce the positive charge on the carbonyl carbon.",
+        "common_trap": "Thinking that a larger aldehyde or ketone is more reactive. More and bulkier alkyl groups lower the reactivity.",
+        "time_saving_tip": "Count the alkyl groups on the carbonyl carbon. The fewer there are, the more reactive the compound."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "Choose the correct decreasing order of reactivity towards nucleophilic addition for p-nitrobenzaldehyde (P), benzaldehyde (B), p-tolualdehyde (T) and p-methoxybenzaldehyde (M).",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "M > T > B > P",
+        "B > P > T > M",
+        "P > B > T > M",
+        "P > T > B > M"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "An electron-withdrawing group on the ring increases the electrophilicity of the carbonyl carbon. An electron-donating group decreases it.",
+        "steps": [
+          "$-NO_2$ is electron-withdrawing, so P is the most reactive.",
+          "Benzaldehyde has no substituent and comes next.",
+          "$-CH_3$ is a weak electron donor, so T is less reactive than B.",
+          "$-OCH_3$ is a stronger electron donor, so M is the least reactive.",
+          "Order: P > B > T > M."
+        ],
+        "final_answer": "Option (3): P > B > T > M",
+        "why_not_others": "M > T > B > P is the exact reverse of the correct order. B > P > T > M ignores the activating effect of $-NO_2$. P > T > B > M wrongly treats $-CH_3$ as activating.",
+        "common_trap": "Treating every substituent as activating. Electron-donating groups such as $-CH_3$ and $-OCH_3$ reduce reactivity.",
+        "time_saving_tip": "Withdrawing groups raise reactivity and donating groups lower it. Unsubstituted benzaldehyde sits between them."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "Propanal is more reactive than benzaldehyde towards nucleophilic addition. The best explanation is that",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the benzene ring donates electrons to the carbonyl group by resonance, reducing the electrophilicity of the carbonyl carbon in benzaldehyde",
+        "the benzene ring withdraws electrons from the carbonyl group, making benzaldehyde less polar",
+        "benzaldehyde has no α-hydrogen, so its carbonyl carbon cannot be attacked by nucleophiles",
+        "propanal has two electron-releasing alkyl groups on its carbonyl carbon"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In aromatic aldehydes, resonance with the ring reduces the positive charge on the carbonyl carbon.",
+        "steps": [
+          "The phenyl ring is conjugated with the C=O group.",
+          "Resonance donates electron density from the ring to the carbonyl group.",
+          "This lowers the partial positive charge on the carbonyl carbon, so benzaldehyde is less reactive than propanal."
+        ],
+        "final_answer": "Option (1): the benzene ring donates electrons to the carbonyl group by resonance, reducing the electrophilicity of the carbonyl carbon in benzaldehyde",
+        "why_not_others": "Option (2) gives the wrong direction of electron flow. Option (3) confuses α-H acidity with nucleophilic addition; the absence of α-H does not stop addition. Option (4) is false because propanal, an aldehyde, has only one alkyl group on its carbonyl carbon.",
+        "common_trap": "Linking the absence of α-H to low reactivity in nucleophilic addition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Acetaldehyde is more reactive than acetone towards nucleophilic addition.",
+        "R": "The methyl groups in acetone are electron-withdrawing and increase the positive charge on its carbonyl carbon."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Alkyl groups are electron-releasing. They reduce the positive charge on the carbonyl carbon and also add steric hindrance.",
+        "steps": [
+          "Acetaldehyde has one alkyl group and acetone has two, so A is true.",
+          "Methyl groups release electrons. They reduce, not increase, the positive charge on the carbonyl carbon, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R reverses the electronic effect of alkyl groups. Every option that treats R as true is therefore wrong.",
+        "common_trap": "Confusing electron-releasing alkyl groups with electron-withdrawing groups.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Di-tert-butyl ketone is more reactive than acetone towards nucleophilic addition because its bulky alkyl groups release more electrons.",
+        "II": "p-Tolualdehyde is less reactive than benzaldehyde towards nucleophilic addition because the $-CH_3$ group donates electrons to the ring."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Bulky groups and electron-donating groups both lower carbonyl reactivity.",
+        "steps": [
+          "Bulky tert-butyl groups hinder the approach of the nucleophile and also release electrons. Di-tert-butyl ketone is therefore very unreactive, so Statement I is incorrect.",
+          "$-CH_3$ is an electron-donating group, so p-tolualdehyde is less reactive than benzaldehyde. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I wrongly treats greater electron release as an increase in reactivity, and it ignores steric hindrance.",
+        "common_trap": "Thinking that more electron release makes the carbonyl carbon more reactive. It does the opposite.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "The reagent used in the Clemmensen reduction of a ketone to a hydrocarbon is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Zn-Hg$ with conc. $HCl$",
+        "$NH_2NH_2$, then $KOH$ in ethylene glycol with heat",
+        "$NaBH_4$",
+        "$H_2$ with $Pd/BaSO_4$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Clemmensen reduction converts C=O into $CH_2$ in an acidic medium.",
+        "steps": [
+          "Clemmensen reduction uses zinc amalgam with conc. HCl.",
+          "It converts $>C=O$ into $>CH_2$."
+        ],
+        "final_answer": "Option (1): $Zn-Hg$ with conc. $HCl$",
+        "why_not_others": "Option (2) is the Wolff-Kishner reagent. $NaBH_4$ gives alcohols, not hydrocarbons. $H_2$ with $Pd/BaSO_4$ is not the Clemmensen reagent.",
+        "common_trap": "Interchanging the Clemmensen (acidic) and Wolff-Kishner (basic) reagents.",
+        "time_saving_tip": "Clemmensen and conc. HCl both fit the acidic medium."
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "A ketone also contains a group that decomposes in acid but is stable in base. Which method is most suitable for converting its C=O group into $CH_2$ without affecting the other group?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Clemmensen reduction with $Zn-Hg$ and conc. $HCl$",
+        "Reduction with $NaBH_4$",
+        "Wolff-Kishner reduction with $NH_2NH_2$, then $KOH$ in ethylene glycol with heat",
+        "Reduction with $LiAlH_4$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Choose the C=O to $CH_2$ method according to the acid or base sensitivity of the other groups.",
+        "steps": [
+          "The product must contain $CH_2$, so a complete reduction is needed, not reduction to an alcohol.",
+          "The other group is acid-sensitive, so Clemmensen reduction (conc. HCl) cannot be used.",
+          "Wolff-Kishner reduction works in a basic medium, so it is suitable."
+        ],
+        "final_answer": "Option (3): Wolff-Kishner reduction with $NH_2NH_2$, then $KOH$ in ethylene glycol with heat",
+        "why_not_others": "Clemmensen reduction uses acid, which would destroy the acid-sensitive group. $NaBH_4$ and $LiAlH_4$ reduce a ketone only to a 2° alcohol.",
+        "common_trap": "Choosing $NaBH_4$ or $LiAlH_4$ for the C=O to $CH_2$ change. They stop at the alcohol stage.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "Pent-4-enal, $CH_2=CHCH_2CH_2CHO$, is treated with $NaBH_4$. The product is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Pentan-1-ol",
+        "Pent-4-en-1-ol",
+        "Pent-1-ene",
+        "Pent-4-enoic acid"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$NaBH_4$ reduces aldehydes to 1° alcohols but does not reduce an isolated C=C bond.",
+        "steps": [
+          "The $-CHO$ group is reduced to $-CH_2OH$.",
+          "The isolated C=C bond is not affected by $NaBH_4$.",
+          "Product: $CH_2=CHCH_2CH_2CH_2OH$, which is pent-4-en-1-ol."
+        ],
+        "final_answer": "Option (2): Pent-4-en-1-ol",
+        "why_not_others": "Pentan-1-ol would require reduction of the C=C bond as well. Pent-1-ene would come from a complete C=O to $CH_2$ reduction such as Clemmensen or Wolff-Kishner. Pent-4-enoic acid is an oxidation product, not a reduction product.",
+        "common_trap": "Assuming $NaBH_4$ also saturates the C=C bond.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Clemmensen reduction of a ketone"
+          },
+          {
+            "label": "B",
+            "text": "Wolff-Kishner reduction of a ketone"
+          },
+          {
+            "label": "C",
+            "text": "$NaBH_4$ reduction of a ketone"
+          },
+          {
+            "label": "D",
+            "text": "Oxidation of an aldehyde with Tollens' reagent"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Basic medium, $N_2$ released, $CH_2$ formed"
+          },
+          {
+            "label": "II",
+            "text": "Secondary alcohol formed"
+          },
+          {
+            "label": "III",
+            "text": "Acidic medium, $Zn-Hg$ used, $CH_2$ formed"
+          },
+          {
+            "label": "IV",
+            "text": "Carboxylic acid formed"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-II, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Learn the medium and the product for each oxidation and reduction method.",
+        "steps": [
+          "Clemmensen reduction uses $Zn-Hg$ and conc. HCl in an acidic medium: A-III.",
+          "Wolff-Kishner reduction goes through the hydrazone, then KOH in ethylene glycol, releasing $N_2$: B-I.",
+          "$NaBH_4$ reduces a ketone to a 2° alcohol: C-II.",
+          "Tollens' reagent oxidises an aldehyde to the acid: D-IV."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-II, D-IV",
+        "why_not_others": "The other matchings swap Clemmensen with Wolff-Kishner, swap the alcohol with the acid, or do both.",
+        "common_trap": "Interchanging the acidic and basic reduction methods.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about oxidation and reduction of carbonyl compounds are correct?",
+      "statements": {
+        "A": "Aldehydes are easily oxidised to carboxylic acids even by mild oxidising agents such as Tollens' reagent.",
+        "B": "Ketones are oxidised only under vigorous conditions, with C–C bond cleavage giving acids with fewer carbon atoms.",
+        "C": "$LiAlH_4$ reduces ketones to primary alcohols.",
+        "D": "Both Clemmensen and Wolff-Kishner reductions convert a C=O group into $CH_2$, giving a hydrocarbon.",
+        "E": "$NaBH_4$ reduces an isolated C=C bond along with the C=O group."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "B, C and E only",
+        "A, B, D and E only",
+        "A, B and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Aldehydes are easily oxidised and ketones are not. Hydride reagents give alcohols, while Clemmensen and Wolff-Kishner reductions give hydrocarbons.",
+        "steps": [
+          "A is true: mild agents oxidise aldehydes.",
+          "B is true: ketones need strong oxidants and undergo C–C cleavage.",
+          "C is false: ketones give 2° alcohols, not 1° alcohols.",
+          "D is true: both methods convert C=O into $CH_2$.",
+          "E is false: $NaBH_4$ does not reduce an isolated C=C bond."
+        ],
+        "final_answer": "Option (4): A, B and D only",
+        "why_not_others": "Every other option includes C or E, which are false, or leaves out a true statement.",
+        "common_trap": "Thinking that ketones give primary alcohols on reduction.",
+        "time_saving_tip": "Rule out C first. Every option containing C is then eliminated."
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "Which of the following compounds has no α-hydrogen?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$(CH_3)_3CCHO$",
+        "$CH_3CHO$",
+        "$CH_3COCH_3$",
+        "$(CH_3)_2CHCHO$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "An α-carbon bearing three alkyl groups has no hydrogen.",
+        "steps": [
+          "In $(CH_3)_3CCHO$, the carbon next to CHO is quaternary, so there is no α-H.",
+          "Each of the other compounds has at least one H on the α-carbon."
+        ],
+        "final_answer": "Option (1): $(CH_3)_3CCHO$",
+        "why_not_others": "$CH_3CHO$ has 3 α-H, $CH_3COCH_3$ has 6 α-H, and $(CH_3)_2CHCHO$ has 1 α-H on the isopropyl carbon.",
+        "common_trap": "Assuming an isopropyl α-carbon has no α-H. It still has one.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "Which of the following hydrogens is the most acidic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A methyl hydrogen of acetone",
+        "A hydrogen of the $CH_2$ group in $CH_3COCH_2COCH_3$",
+        "A hydrogen of ethane",
+        "A terminal methyl hydrogen of $CH_3COCH_2COCH_3$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A hydrogen flanked by two carbonyl groups is much more acidic ($pK_a$ about 9–11) than an ordinary α-H.",
+        "steps": [
+          "Ethane hydrogens have $pK_a$ about 50.",
+          "Hydrogens α to a single C=O group, such as those in acetone, have $pK_a$ about 19–20.",
+          "The $CH_2$ group between the two C=O groups of a 1,3-dicarbonyl compound has $pK_a$ about 9–11, so it is the most acidic."
+        ],
+        "final_answer": "Option (2): A hydrogen of the $CH_2$ group in $CH_3COCH_2COCH_3$",
+        "why_not_others": "The terminal methyl hydrogens of $CH_3COCH_2COCH_3$ are α to only one C=O group, like those of acetone. Ethane has no carbonyl group at all.",
+        "common_trap": "Assuming every hydrogen in a 1,3-dicarbonyl compound is equally acidic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "How many α-hydrogens are present in 2,2-dimethylpentan-3-one, $(CH_3)_3C-CO-CH_2CH_3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "11",
+        "5",
+        "3",
+        "2"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "α-Hydrogens are only those attached directly to a carbon adjacent to the C=O group.",
+        "steps": [
+          "One α-carbon is the tert-butyl carbon, which is quaternary and has 0 H.",
+          "The other α-carbon is the $CH_2$ of the ethyl group, which has 2 H.",
+          "Total α-H = 2."
+        ],
+        "final_answer": "Option (4): 2",
+        "why_not_others": "11 counts the nine tert-butyl methyl hydrogens as α. 5 counts all the ethyl hydrogens. 3 counts the terminal $CH_3$ hydrogens, which are β.",
+        "common_trap": "Treating the methyl hydrogens of a tert-butyl group as α-hydrogens.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Benzophenone, $C_6H_5COC_6H_5$, cannot form an enolate ion.",
+        "R": "A hydrogen lying between two carbonyl groups in a 1,3-dicarbonyl compound is more acidic than an α-hydrogen of acetone."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Enolate formation requires an α-H. Two carbonyl groups increase α-H acidity.",
+        "steps": [
+          "Both α-carbons of benzophenone are ring carbons that carry no H, so it has no α-H. A is true.",
+          "1,3-dicarbonyl compounds have $pK_a$ about 9–11, compared with about 19–20 for acetone. R is true.",
+          "A follows from the absence of α-H, not from the acidity of 1,3-dicarbonyl compounds. R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) are wrong. R does not explain A, so option (1) is wrong.",
+        "common_trap": "Choosing option (1) just because both statements concern α-H acidity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In 2,2-dimethylpropanal, $(CH_3)_3CCHO$, the α-carbon carries one hydrogen, so the compound undergoes aldol condensation with dilute NaOH.",
+        "II": "In the enolate ion of acetone, the negative charge is shared between the α-carbon and the oxygen atom by resonance."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Enolate formation needs an α-H, and the enolate is stabilised by resonance.",
+        "steps": [
+          "The α-carbon of $(CH_3)_3CCHO$ carries three methyl groups and no H. It cannot form an enolate, so it does not undergo aldol condensation. Statement I is incorrect.",
+          "In the enolate, the negative charge is delocalised between the α-carbon and the oxygen. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I miscounts the α-hydrogens.",
+        "common_trap": "Confusing tert-butyl (no α-H) with isopropyl (one α-H).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "Ethanal is treated with dilute NaOH and the product is then heated. The final organic product is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "But-2-enal",
+        "3-Hydroxybutanal",
+        "Ethanol and sodium ethanoate",
+        "Butanal"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "On heating, the aldol loses water to give an α,β-unsaturated aldehyde.",
+        "steps": [
+          "Dilute NaOH gives the aldol, $CH_3CH(OH)CH_2CHO$.",
+          "Heating removes $H_2O$, giving $CH_3CH=CHCHO$, which is but-2-enal."
+        ],
+        "final_answer": "Option (1): But-2-enal",
+        "why_not_others": "3-Hydroxybutanal is the product before heating. Ethanol and sodium ethanoate would be Cannizzaro-type products, which do not form because ethanal has α-H. Butanal is a saturated aldehyde and does not form.",
+        "common_trap": "Stopping at the aldol stage even though heating is specified.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "A mixture of formaldehyde and benzaldehyde is heated with concentrated NaOH. The main products are",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Sodium benzoate and methanol",
+        "Benzyl alcohol and methanol",
+        "Sodium benzoate and sodium formate",
+        "Sodium formate and benzyl alcohol"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In crossed Cannizzaro reaction, HCHO is always the molecule oxidised, to formate.",
+        "steps": [
+          "Neither aldehyde has an α-H, so with conc. NaOH a Cannizzaro reaction occurs.",
+          "HCHO is oxidised to $HCOO^-$, which appears as sodium formate.",
+          "Benzaldehyde is reduced to $C_6H_5CH_2OH$."
+        ],
+        "final_answer": "Option (4): Sodium formate and benzyl alcohol",
+        "why_not_others": "Option (1) reverses which aldehyde is oxidised and which is reduced. Options (2) and (3) show both aldehydes reduced or both oxidised, which cannot happen in a disproportionation.",
+        "common_trap": "Assuming benzaldehyde is the molecule oxidised in crossed Cannizzaro.",
+        "time_saving_tip": "In crossed Cannizzaro, HCHO always becomes formate."
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "Pentan-2-one, $CH_3COCH_2CH_2CH_3$, is treated with sodium hypoiodite (NaOI). Along with iodoform, the other product is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Sodium pentanoate",
+        "Sodium butanoate",
+        "Sodium propanoate",
+        "Sodium ethanoate"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The haloform reaction gives $RCOO^-$ with one carbon fewer than the methyl ketone $RCOCH_3$.",
+        "steps": [
+          "Here R = $CH_3CH_2CH_2-$.",
+          "$RCOCH_3 + 3NaOI \\rightarrow RCOONa + CHI_3 + 2NaOH$.",
+          "The product $CH_3CH_2CH_2COONa$ is sodium butanoate."
+        ],
+        "final_answer": "Option (2): Sodium butanoate",
+        "why_not_others": "Sodium pentanoate keeps all five carbons. Sodium propanoate and sodium ethanoate remove too many carbons.",
+        "common_trap": "Forgetting that the carboxylate has one carbon fewer than the ketone.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Ethanal with dilute NaOH"
+          },
+          {
+            "label": "B",
+            "text": "Benzaldehyde with concentrated NaOH"
+          },
+          {
+            "label": "C",
+            "text": "Acetone with NaOI"
+          },
+          {
+            "label": "D",
+            "text": "Chloroform exposed to air and light"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$CHI_3 + CH_3COONa$"
+          },
+          {
+            "label": "II",
+            "text": "$COCl_2 + HCl$"
+          },
+          {
+            "label": "III",
+            "text": "$CH_3CH(OH)CH_2CHO$"
+          },
+          {
+            "label": "IV",
+            "text": "$C_6H_5CH_2OH + C_6H_5COONa$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Aldol, Cannizzaro and haloform reactions, and the oxidation of chloroform, each give characteristic products.",
+        "steps": [
+          "Ethanal with dilute NaOH gives the aldol 3-hydroxybutanal: A-III.",
+          "Benzaldehyde has no α-H, so conc. NaOH gives the Cannizzaro products benzyl alcohol and sodium benzoate: B-IV.",
+          "Acetone with NaOI gives iodoform and sodium acetate: C-I.",
+          "Chloroform in air and light gives phosgene and HCl: D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "The other matchings swap the aldol and Cannizzaro products, or swap the haloform and phosgene products.",
+        "common_trap": "Giving benzaldehyde aldol products, even though it has no α-H.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about aldol, Cannizzaro and haloform reactions are correct?",
+      "statements": {
+        "A": "Crossed aldol condensation between ethanal and propanal gives four products.",
+        "B": "In the Claisen-Schmidt condensation of benzaldehyde with acetone, the E (trans) isomer of the α,β-unsaturated ketone is favoured.",
+        "C": "The Cannizzaro reaction is a disproportionation that requires concentrated NaOH and an aldehyde without α-hydrogen.",
+        "D": "When pent-3-en-2-one, $CH_3CH=CHCOCH_3$, undergoes the haloform reaction with NaOCl, its C=C bond is also cleaved.",
+        "E": "Ethanol gives a negative iodoform test because it is not a carbonyl compound."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "B, C and E only",
+        "A, B, C and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Know the conditions and scope of aldol, Cannizzaro and haloform reactions.",
+        "steps": [
+          "A is true: both aldehydes have α-H, so four crossed aldol products form.",
+          "B is true: the E alkene is favoured in Claisen-Schmidt condensation.",
+          "C is true: Cannizzaro needs conc. NaOH and no α-H, and is a disproportionation.",
+          "D is false: a C=C bond is not attacked in the haloform reaction.",
+          "E is false: ethanol gives a positive iodoform test."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Every other option includes D or E, both of which are false.",
+        "common_trap": "Thinking that only methyl ketones give the iodoform test. Ethanol and $CH_3CH(OH)R$ alcohols also give it.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

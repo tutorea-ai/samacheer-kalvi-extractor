@@ -1,0 +1,316 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "How much heat is needed to convert 200 g of ice at $0^\\circ C$ completely into water at $0^\\circ C$? (Latent heat of fusion of ice $= 3.33\\times10^5\\,J\\,kg^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.66\\times10^4\\,J$",
+        "$4.52\\times10^5\\,J$",
+        "$6.66\\times10^7\\,J$",
+        "$1.67\\times10^3\\,J$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "During a phase change, the heat absorbed is $Q = mL$, and the temperature stays constant.",
+        "steps": [
+          "Convert the mass to SI units: $m = 200\\,g = 0.2\\,kg$.",
+          "Apply $Q = mL_f = 0.2 \\times 3.33\\times10^5$.",
+          "This gives $Q = 6.66\\times10^4\\,J$."
+        ],
+        "final_answer": "Option (1): $6.66\\times10^4\\,J$",
+        "why_not_others": "$4.52\\times10^5\\,J$ uses the latent heat of vaporisation ($0.2\\times22.6\\times10^5$). $6.66\\times10^7\\,J$ uses the mass in grams without converting to kg. $1.67\\times10^3\\,J$ divides $L$ by the mass instead of multiplying.",
+        "common_trap": "Forgetting to convert grams to kilograms when $L$ is given in $J\\,kg^{-1}$.",
+        "time_saving_tip": "Using $80\\,cal/g$: $200 \\times 80 = 16000\\,cal \\approx 6.7\\times10^4\\,J$, which confirms the answer quickly."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "100 g of ice at $0^\\circ C$ is added to 200 g of water at $30^\\circ C$ in an insulated vessel of negligible heat capacity. Take the latent heat of fusion of ice as $80\\,cal\\,g^{-1}$ and the specific heat of water as $1\\,cal\\,g^{-1}\\,^\\circ C^{-1}$. What are the final temperature and the mass of ice left unmelted?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0^\\circ C$, 75 g of ice remains",
+        "$0^\\circ C$, 25 g of ice remains",
+        "$-6.7^\\circ C$, no ice remains",
+        "$20^\\circ C$, no ice remains"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Before using the mixing formula, check whether the heat available is enough to melt all the ice.",
+        "steps": [
+          "Heat the water can give up in cooling to $0^\\circ C$: $200\\times1\\times30 = 6000\\,cal$.",
+          "Heat needed to melt all the ice: $100\\times80 = 8000\\,cal$. This is more than 6000 cal, so not all the ice melts.",
+          "The final temperature is therefore $0^\\circ C$.",
+          "Ice melted $= 6000/80 = 75\\,g$, so ice left $= 100 - 75 = 25\\,g$."
+        ],
+        "final_answer": "Option (2): $0^\\circ C$, 25 g of ice remains",
+        "why_not_others": "75 g is the mass of ice that melts, not the mass that remains. $-6.7^\\circ C$ comes from applying the mixing formula blindly, which is impossible here. $20^\\circ C$ comes from ignoring latent heat altogether.",
+        "common_trap": "Applying the mixture formula without first checking whether all the ice can melt.",
+        "time_saving_tip": "Always compare $M c_w T_0$ with $m L_f$ first."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "A solid sample is heated by a source supplying heat at a constant rate. In the solid phase its temperature rises at $4^\\circ C\\,min^{-1}$, and in the liquid phase at $2^\\circ C\\,min^{-1}$. The melting plateau lasts 3 min and the boiling plateau lasts 12 min. What are the ratios $L_v/L_f$ and $c_{solid}/c_{liquid}$, respectively?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4$ and $2$",
+        "$\\frac{1}{4}$ and $\\frac{1}{2}$",
+        "$4$ and $\\frac{1}{2}$",
+        "$\\frac{1}{4}$ and $2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "On a heating curve at constant power, the plateau length is proportional to $L$ and the slope is proportional to $1/c$.",
+        "steps": [
+          "Heat absorbed on a plateau is $P t = mL$, so $L \\propto t$. Hence $L_v/L_f = 12/3 = 4$.",
+          "In a sloped region, $P = mc\\,(dT/dt)$, so $c \\propto 1/(dT/dt)$.",
+          "Therefore $c_{solid}/c_{liquid} = 2/4 = 1/2$."
+        ],
+        "final_answer": "Option (3): $4$ and $\\frac{1}{2}$",
+        "why_not_others": "A ratio of 2 for the specific heats assumes $c$ is proportional to the slope. A ratio of $\\frac{1}{4}$ for the latent heats inverts the plateau ratio.",
+        "common_trap": "Taking specific heat as directly proportional to the slope; a steeper slope means a smaller specific heat.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Food gets cooked faster in a pressure cooker because the water inside boils at a temperature above $100^\\circ C$.",
+        "R": "The melting point of ice decreases when the pressure on it is increased."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Pressure affects the boiling point and the melting point of water in opposite ways.",
+        "steps": [
+          "Boiling point rises with pressure. The higher pressure in a cooker raises the boiling point above $100^\\circ C$, so A is true.",
+          "The melting point of ice falls with pressure, which explains regelation. So R is true.",
+          "R concerns melting, while A concerns boiling, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is a correct fact, but it describes the solid-liquid transition, not the boiling of water in the cooker. Both statements are true, so options 3 and 4 are ruled out.",
+        "common_trap": "Linking any pressure-related fact to the pressure cooker without checking which phase change is involved.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When ice melts at $0^\\circ C$, the heat absorbed increases the intermolecular potential energy of the molecules, while their average kinetic energy remains unchanged.",
+        "II": "The fusion curve of water on its phase diagram has a positive slope, so increasing the pressure raises the melting point of ice."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Latent heat changes potential energy, not kinetic energy. The fusion curve of water has a negative slope.",
+        "steps": [
+          "The temperature is constant during melting, so the average kinetic energy does not change. The heat goes into intermolecular potential energy, so I is correct.",
+          "The fusion curve of water has a negative slope: the melting point of ice falls with pressure, as seen in regelation. So II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II reverses the behaviour of water, so any option calling II correct is wrong. Statement I is correct, so the option calling both incorrect is also wrong.",
+        "common_trap": "Assuming water behaves like most substances, whose melting point rises with pressure.",
+        "time_saving_tip": "Recall regelation: pressure melts ice, so the fusion slope must be negative."
+      }
+    },
+    {
+      "slot": "t13_1",
+      "type": "single_correct",
+      "question": "A blackbody is at a temperature of $2627^\\circ C$. Taking Wien's constant $b = 2.9\\times10^{-3}\\,m\\,K$, the wavelength at which it emits maximum radiation is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\,\\mu m$",
+        "$1.1\\,\\mu m$",
+        "$10\\,\\mu m$",
+        "$0.1\\,\\mu m$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Wien's displacement law: $\\lambda_m T = b$, with $T$ in kelvin.",
+        "steps": [
+          "Convert to kelvin: $T = 2627 + 273 = 2900\\,K$.",
+          "Then $\\lambda_m = \\frac{2.9\\times10^{-3}}{2900} = 1.0\\times10^{-6}\\,m$.",
+          "This equals $1.0\\,\\mu m$."
+        ],
+        "final_answer": "Option (1): $1.0\\,\\mu m$",
+        "why_not_others": "$1.1\\,\\mu m$ comes from using 2627 directly in Celsius. $10\\,\\mu m$ and $0.1\\,\\mu m$ come from power-of-ten slips.",
+        "common_trap": "Using the Celsius temperature in radiation formulas.",
+        "time_saving_tip": "When $T = 2900\\,K$, $\\lambda_m$ is exactly $1\\,\\mu m$."
+      }
+    },
+    {
+      "slot": "t13_2",
+      "type": "single_correct",
+      "question": "Two slabs of equal thickness and equal cross-sectional area are placed in contact in series. Their thermal conductivities are $K$ and $2K$. The free face of the slab of conductivity $K$ is kept at $100^\\circ C$, and the free face of the other slab at $10^\\circ C$. In the steady state, the temperature of the interface is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$70^\\circ C$",
+        "$40^\\circ C$",
+        "$55^\\circ C$",
+        "$30^\\circ C$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In the steady state, the heat current is the same through both slabs in series.",
+        "steps": [
+          "Equate the heat currents: $\\frac{KA(100 - T)}{L} = \\frac{2KA(T - 10)}{L}$.",
+          "This gives $100 - T = 2T - 20$, so $3T = 120$.",
+          "Hence $T = 40^\\circ C$."
+        ],
+        "final_answer": "Option (2): $40^\\circ C$",
+        "why_not_others": "$70^\\circ C$ comes from swapping the two conductivities. $55^\\circ C$ is the simple average, which ignores the conductivities. $30^\\circ C$ is the temperature drop across the slab of conductivity $K$, taken as the junction temperature without adding $10^\\circ C$.",
+        "common_trap": "Assuming the larger temperature drop occurs across the better conductor. In fact, the poorer conductor takes the larger drop.",
+        "time_saving_tip": "For equal $L$ and $A$, $T = \\frac{K_1T_1 + K_2T_2}{K_1+K_2} = \\frac{100 + 20}{3} = 40^\\circ C$."
+      }
+    },
+    {
+      "slot": "t13_3",
+      "type": "single_correct",
+      "question": "A body cools from $80^\\circ C$ to $60^\\circ C$ in 5 minutes in surroundings at $20^\\circ C$. Using the average form of Newton's law of cooling, the time it takes to cool further from $60^\\circ C$ to $30^\\circ C$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7.5 min",
+        "11.25 min",
+        "15 min",
+        "5 min"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Average form of Newton's law of cooling: $\\frac{T_1 - T_2}{t} = k\\left(\\frac{T_1+T_2}{2} - T_0\\right)$.",
+        "steps": [
+          "For the first interval: $\\frac{20}{5} = k(70 - 20)$, so $k = 0.08\\,min^{-1}$.",
+          "For the second interval: $\\frac{30}{t} = 0.08\\,(45 - 20) = 2$.",
+          "Hence $t = 15\\,min$."
+        ],
+        "final_answer": "Option (3): 15 min",
+        "why_not_others": "7.5 min assumes the time is proportional only to the temperature drop. 11.25 min uses the initial excess temperature instead of the average. 5 min assumes equal times for both intervals.",
+        "common_trap": "Ignoring the fact that the rate of cooling falls as the excess temperature decreases.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Thermal conductivity $K$"
+          },
+          {
+            "label": "B",
+            "text": "Wien's constant $b$"
+          },
+          {
+            "label": "C",
+            "text": "Stefan-Boltzmann constant $\\sigma$"
+          },
+          {
+            "label": "D",
+            "text": "Thermal resistance $L/(KA)$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$m\\,K$"
+          },
+          {
+            "label": "II",
+            "text": "$W\\,m^{-2}K^{-4}$"
+          },
+          {
+            "label": "III",
+            "text": "$K\\,W^{-1}$"
+          },
+          {
+            "label": "IV",
+            "text": "$W\\,m^{-1}K^{-1}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-I, C-II, D-III",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Units follow from the defining relations $H = KA\\Delta T/L$, $\\lambda_m T = b$, $P = \\sigma A T^4$ and $R = L/(KA)$.",
+        "steps": [
+          "$K = HL/(A\\Delta T)$ has unit $W\\,m^{-1}K^{-1}$: A-IV.",
+          "$b = \\lambda_m T$ has unit $m\\,K$: B-I.",
+          "$\\sigma = P/(AT^4)$ has unit $W\\,m^{-2}K^{-4}$: C-II.",
+          "$R = L/(KA)$ has unit $m/(W\\,m^{-1}K^{-1}\\cdot m^2) = K\\,W^{-1}$: D-III."
+        ],
+        "final_answer": "Option (3): A-IV, B-I, C-II, D-III",
+        "why_not_others": "The other options swap the units of $b$ and $\\sigma$, swap those of $K$ and thermal resistance, or swap those of $K$ and $\\sigma$.",
+        "common_trap": "Confusing the unit of thermal conductivity with that of thermal resistance.",
+        "time_saving_tip": "Fix $b$ first: it is the only constant whose unit has no watt."
+      }
+    },
+    {
+      "slot": "t13_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about heat transfer are correct?",
+      "statements": {
+        "A": "For two slabs of equal length and equal area joined in series, the equivalent thermal conductivity is $\\frac{2K_1K_2}{K_1+K_2}$.",
+        "B": "If the absolute temperature of a blackbody is doubled, the power it radiates becomes 16 times and its peak wavelength becomes half.",
+        "C": "According to Newton's law of cooling, the rate of cooling is proportional to the fourth power of the excess temperature over the surroundings.",
+        "D": "A good absorber of radiation is a poor emitter of radiation.",
+        "E": "A sea breeze is an example of natural convection driven by density differences."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, B and D only",
+        "B, C and E only",
+        "A, C and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Combination of slabs, the Stefan-Boltzmann and Wien laws, Newton's law of cooling, Kirchhoff's idea of absorbers and emitters, and convection.",
+        "steps": [
+          "A is correct: this is the series result for equal lengths.",
+          "B is correct: $P \\propto T^4$ gives a factor of 16, and $\\lambda_m \\propto 1/T$ halves the peak wavelength.",
+          "C is incorrect: Newton's law makes the rate proportional to the first power of the excess temperature.",
+          "D is incorrect: good absorbers are good emitters.",
+          "E is correct: a sea breeze is natural convection."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Any combination containing C or D includes a false statement.",
+        "common_trap": "Mixing up Newton's law of cooling with the $T^4$ dependence of the Stefan-Boltzmann law.",
+        "time_saving_tip": "Eliminate C and D first; only one option contains neither."
+      }
+    }
+  ]
+}

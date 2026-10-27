@@ -1,0 +1,314 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "What is the correct ground-state electronic configuration of chromium (Z = 24)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "[Ar] $3d^5 4s^1$",
+        "[Ar] $3d^4 4s^2$",
+        "[Ar] $3d^6$",
+        "[Ar] $3d^3 4s^2 4p^1$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Cr is an exception in the 3d series because a half-filled $3d^5$ subshell gives extra stability.",
+        "steps": [
+          "Cr has 24 electrons, so it has 6 electrons beyond the [Ar] core.",
+          "The expected filling would give $3d^4 4s^2$.",
+          "One 4s electron shifts to 3d to give a half-filled $3d^5$ subshell, so the configuration is [Ar] $3d^5 4s^1$."
+        ],
+        "final_answer": "Option (1): [Ar] $3d^5 4s^1$",
+        "why_not_others": "[Ar] $3d^4 4s^2$ is the expected filling-order result and ignores the exception. [Ar] $3d^6$ leaves out 4s completely. Placing an electron in 4p before 3d is filled is wrong.",
+        "common_trap": "Following the Aufbau order mechanically and writing $3d^4 4s^2$.",
+        "time_saving_tip": "Remember the two 3d exceptions together: Cr is $3d^5 4s^1$ and Cu is $3d^{10} 4s^1$."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "Which of the following sets contains only isoelectronic species?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Na^+$, $Mg^{2+}$, $Cl^-$, Ne",
+        "$N^{3-}$, $O^{2-}$, $S^{2-}$, $Na^+$",
+        "$F^-$, Ne, $K^+$, $Na^+$",
+        "$N^{3-}$, $O^{2-}$, $F^-$, $Na^+$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Isoelectronic species have the same total number of electrons.",
+        "steps": [
+          "Electron counts: $N^{3-}$ = 7 + 3 = 10; $O^{2-}$ = 8 + 2 = 10.",
+          "$F^-$ = 9 + 1 = 10; $Na^+$ = 11 − 1 = 10.",
+          "All four species have 10 electrons, so they are isoelectronic."
+        ],
+        "final_answer": "Option (4): $N^{3-}$, $O^{2-}$, $F^-$, $Na^+$",
+        "why_not_others": "$Cl^-$ has 18 electrons, so option 1 fails. $S^{2-}$ has 18 electrons, so option 2 fails. $K^+$ has 18 electrons, so option 3 fails.",
+        "common_trap": "Assuming that ions of elements from the same group, such as $O^{2-}$ and $S^{2-}$, have the same number of electrons.",
+        "time_saving_tip": "Count electrons as Z minus the charge, and reject any set containing a species from the third period or below."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "Which of the following is the correct electronic configuration of $Fe^{2+}$ (Z of Fe = 26)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "[Ar] $3d^4 4s^2$",
+        "[Ar] $3d^5 4s^1$",
+        "[Ar] $3d^6$",
+        "[Ar] $3d^6 4s^2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "When transition-metal cations form, electrons are removed from 4s before 3d.",
+        "steps": [
+          "Neutral Fe is [Ar] $3d^6 4s^2$.",
+          "To form $Fe^{2+}$, both 4s electrons are removed first.",
+          "This gives $Fe^{2+}$ = [Ar] $3d^6$."
+        ],
+        "final_answer": "Option (3): [Ar] $3d^6$",
+        "why_not_others": "[Ar] $3d^4 4s^2$ wrongly removes the electrons from 3d. [Ar] $3d^5 4s^1$ wrongly assumes a Cr-like rearrangement. [Ar] $3d^6 4s^2$ is neutral Fe, not the ion.",
+        "common_trap": "Writing $Fe^{2+}$ as [Ar] $3d^4 4s^2$ because 4s fills first, and then assuming it also empties last.",
+        "time_saving_tip": "For transition-metal cations, strip all the 4s electrons first and then remove any remaining electrons from 3d."
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The electronic configuration of potassium is [Ar] $4s^1$ and not [Ar] $3d^1$.",
+        "R": "When transition-metal cations form, electrons are removed from the 4s orbital before the 3d orbitals."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In K and Ca the 4s orbital fills before 3d. Ionisation of transition-metal atoms is a separate fact.",
+        "steps": [
+          "For K, the 4s orbital fills before 3d, so K is [Ar] $4s^1$. A is true.",
+          "Transition-metal cations such as $Fe^{2+}$ lose their 4s electrons first. R is true.",
+          "R describes how electrons are removed from cations, not the order in which a neutral atom fills its orbitals. R therefore does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 would require R to explain the filling order in K, which it does not. Options 3 and 4 are wrong because both statements are true.",
+        "common_trap": "Linking any two correct statements about 4s and 3d and assuming one explains the other.",
+        "time_saving_tip": "Ask whether R is about filling neutral atoms or about ionisation; A here is about filling."
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The electronic configuration of $Mn^{2+}$ (Z of Mn = 25) is [Ar] $3d^3 4s^2$.",
+        "II": "Among the atoms Cr, Mn, Fe and Cu, Mn has the maximum number of unpaired electrons."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Cations lose 4s electrons first. Cr ($3d^5 4s^1$) has the most unpaired electrons in this group of atoms.",
+        "steps": [
+          "Mn is [Ar] $3d^5 4s^2$. $Mn^{2+}$ loses both 4s electrons to give [Ar] $3d^5$, so Statement I is incorrect.",
+          "Unpaired electrons: Cr has 6, Mn has 5, Fe has 4 and Cu has 1.",
+          "Cr, not Mn, has the maximum, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I removes the electrons from 3d instead of 4s. Statement II overlooks the $3d^5 4s^1$ configuration of Cr, which gives 6 unpaired electrons.",
+        "common_trap": "Counting only the 3d electrons of Cr and getting 5 unpaired electrons, which would wrongly make Mn the maximum.",
+        "time_saving_tip": "For Cr, count the single 4s electron as unpaired along with the five 3d electrons."
+      }
+    },
+    {
+      "slot": "t13_1",
+      "type": "single_correct",
+      "question": "What is the most important reason for the extra stability of half-filled and completely filled subshells?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Symmetrical distribution of electrons in the subshell",
+        "Greater mutual shielding of electrons within the subshell",
+        "Pairing of electrons with opposite spins in each orbital",
+        "Exchange energy of parallel-spin electrons in degenerate orbitals"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Exchange energy is the main reason for extra stability; symmetry is a secondary reason.",
+        "steps": [
+          "Electrons with parallel spins in degenerate orbitals can exchange positions, and each exchange releases energy.",
+          "The number of possible exchanges is greatest for half-filled and fully filled subshells.",
+          "This exchange energy is the more important source of extra stability."
+        ],
+        "final_answer": "Option (4): Exchange energy of parallel-spin electrons in degenerate orbitals",
+        "why_not_others": "Symmetrical distribution does contribute, but it is the less important reason. These arrangements actually involve less mutual shielding, not more. Pairing of opposite spins does not produce exchange energy.",
+        "common_trap": "Choosing symmetry because it is the more familiar explanation, even though exchange energy is the more important one.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_2",
+      "type": "single_correct",
+      "question": "How many exchange pairs are possible among the parallel-spin electrons in a half-filled f subshell ($f^7$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7",
+        "42",
+        "21",
+        "49"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The number of exchange pairs for n parallel-spin electrons is $\\frac{n(n-1)}{2}$.",
+        "steps": [
+          "In $f^7$, all 7 electrons have parallel spins, so n = 7.",
+          "$N_{exchange} = \\frac{7 \\times 6}{2} = 21$."
+        ],
+        "final_answer": "Option (3): 21",
+        "why_not_others": "7 is simply n. 42 is $n(n-1)$ without dividing by 2. 49 is $n^2$.",
+        "common_trap": "Forgetting to divide by 2, which counts each exchange pair twice.",
+        "time_saving_tip": "Use the known values $p^3$ = 3, $d^5$ = 10 and $f^7$ = 21."
+      }
+    },
+    {
+      "slot": "t13_3",
+      "type": "single_correct",
+      "question": "For chromium, compare the actual configuration [Ar] $3d^5 4s^1$ with the hypothetical configuration [Ar] $3d^4 4s^2$. By how much does the number of exchange pairs among parallel-spin electrons within the 3d subshell increase in the actual configuration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1",
+        "10",
+        "6",
+        "4"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$N_{exchange} = \\frac{n(n-1)}{2}$ for n parallel-spin electrons in degenerate orbitals.",
+        "steps": [
+          "For $d^5$: $\\frac{5 \\times 4}{2} = 10$ exchange pairs.",
+          "For $d^4$: $\\frac{4 \\times 3}{2} = 6$ exchange pairs.",
+          "Increase = 10 − 6 = 4."
+        ],
+        "final_answer": "Option (4): 4",
+        "why_not_others": "1 is just the extra electron added to 3d. 10 is the total for $d^5$, not the increase. 6 is the total for $d^4$.",
+        "common_trap": "Reporting the total number of exchange pairs instead of the difference between the two configurations.",
+        "time_saving_tip": "The extra parallel-spin electron can exchange with each of the existing 4 electrons, so the increase is 4 straight away."
+      }
+    },
+    {
+      "slot": "t13_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$3d^5$ subshell of $Mn^{2+}$"
+          },
+          {
+            "label": "B",
+            "text": "$2p^3$ subshell of N"
+          },
+          {
+            "label": "C",
+            "text": "$d^4$ subshell with all spins parallel"
+          },
+          {
+            "label": "D",
+            "text": "$f^7$ subshell"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "3 exchange pairs"
+          },
+          {
+            "label": "II",
+            "text": "6 exchange pairs"
+          },
+          {
+            "label": "III",
+            "text": "10 exchange pairs"
+          },
+          {
+            "label": "IV",
+            "text": "21 exchange pairs"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-II, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$N_{exchange} = \\frac{n(n-1)}{2}$, with all electrons having parallel spins.",
+        "steps": [
+          "A: $d^5$ gives n = 5, so $\\frac{5 \\times 4}{2} = 10$ (III).",
+          "B: $p^3$ gives n = 3, so $\\frac{3 \\times 2}{2} = 3$ (I).",
+          "C: $d^4$ gives n = 4, so $\\frac{4 \\times 3}{2} = 6$ (II).",
+          "D: $f^7$ gives n = 7, so $\\frac{7 \\times 6}{2} = 21$ (IV)."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 2 swaps the values for $d^5$ and $d^4$. Option 3 swaps the values for $p^3$ and $d^4$. Option 4 swaps the values for $d^5$ and $f^7$.",
+        "common_trap": "Assuming that $d^5$ and $d^4$ differ by only one exchange pair.",
+        "time_saving_tip": "Fixing the value for $p^3$ (3 pairs) alone narrows the choice to options 1, 2 and 4."
+      }
+    },
+    {
+      "slot": "t13_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the extra stability of half-filled and completely filled subshells are correct?",
+      "statements": {
+        "A": "Exchange energy is a more important reason for extra stability than symmetrical distribution of electrons.",
+        "B": "A $d^5$ configuration has 10 possible exchange pairs.",
+        "C": "N has a lower first ionisation energy than O because O has more electrons.",
+        "D": "$Fe^{3+}$ is especially stable because it has a $d^5$ configuration.",
+        "E": "P has a lower first ionisation energy than S."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and E only",
+        "B, D and E only",
+        "A and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Exchange energy stabilises half-filled subshells. This explains the extra stability of $d^5$ ions and the higher first ionisation energies of N and P.",
+        "steps": [
+          "A is correct: exchange energy is the main reason for extra stability.",
+          "B is correct: $\\frac{5 \\times 4}{2} = 10$.",
+          "C is incorrect: N ($2p^3$, half-filled) has a higher first ionisation energy than O.",
+          "D is correct: $Fe^{3+}$ is $d^5$ and especially stable. E is incorrect: P ($3p^3$) has a higher first ionisation energy than S."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option 2 includes the false statements C and E. Option 3 includes the false statement E. Option 4 leaves out the true statement B.",
+        "common_trap": "Expecting first ionisation energy to rise steadily across a period, and so placing O above N and S above P.",
+        "time_saving_tip": "Once you see that C and E are false, only option 1 avoids both of them while also including B."
+      }
+    }
+  ]
+}

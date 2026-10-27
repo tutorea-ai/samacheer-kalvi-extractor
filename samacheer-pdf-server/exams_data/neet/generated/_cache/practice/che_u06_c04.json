@@ -1,0 +1,441 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "Which of the following salts gives a basic aqueous solution because of hydrolysis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_3COONa$",
+        "$NH_4Cl$",
+        "$NaCl$",
+        "$CuSO_4$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A salt of a weak acid and a strong base undergoes anionic hydrolysis and gives a basic solution.",
+        "steps": [
+          "$CH_3COONa$ is the salt of a weak acid ($CH_3COOH$) and a strong base ($NaOH$).",
+          "$CH_3COO^-$ hydrolyses and produces $OH^-$, so pH > 7.",
+          "$NH_4Cl$ and $CuSO_4$ undergo cationic hydrolysis and give acidic solutions. $NaCl$ does not hydrolyse."
+        ],
+        "final_answer": "Option (1): $CH_3COONa$",
+        "why_not_others": "$NH_4Cl$ and $CuSO_4$ are salts of a strong acid and a weak base, so their solutions are acidic. $NaCl$ is the salt of a strong acid and a strong base, so its solution is neutral.",
+        "common_trap": "Assuming every salt solution is neutral.",
+        "time_saving_tip": "The parent that is strong decides the nature of the solution: a strong base gives a basic solution and a strong acid gives an acidic one."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "What is the pH of a 0.01 M aqueous solution of the sodium salt of a weak monobasic acid HA ($pK_a = 5$) at 298 K?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "10.5",
+        "5.5",
+        "10.0",
+        "8.5"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a salt of a weak acid and a strong base, $pH = 7 + \\frac{1}{2}(pK_a + \\log c)$.",
+        "steps": [
+          "$\\log c = \\log 0.01 = -2$.",
+          "$pH = 7 + \\frac{1}{2}(5 - 2) = 7 + 1.5 = 8.5$."
+        ],
+        "final_answer": "Option (4): 8.5",
+        "why_not_others": "10.5 comes from taking $\\log c$ as +2. 5.5 comes from using the formula for a strong acid and weak base salt. 10.0 comes from forgetting the factor $\\frac{1}{2}$.",
+        "common_trap": "Getting the sign of $\\log c$ wrong.",
+        "time_saving_tip": "The solution must be basic, so 5.5 can be rejected at once."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "What is the degree of hydrolysis of a 0.1 M $NH_4Cl$ solution? (Given: $K_b(NH_4OH) = 1\\times10^{-5}$, $K_w = 1\\times10^{-14}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\times10^{-5}$",
+        "$1\\times10^{-4}$",
+        "$1\\times10^{-8}$",
+        "$3.16\\times10^{-5}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$K_h = K_w/K_b$ and $h = \\sqrt{K_h/c}$.",
+        "steps": [
+          "$K_h = 10^{-14}/10^{-5} = 10^{-9}$.",
+          "$h = \\sqrt{10^{-9}/0.1} = \\sqrt{10^{-8}} = 10^{-4}$."
+        ],
+        "final_answer": "Option (2): $1\\times10^{-4}$",
+        "why_not_others": "$10^{-5}$ comes from using $\\sqrt{K_h c}$. $10^{-8}$ comes from omitting the square root. $3.16\\times10^{-5}$ comes from ignoring $c$ and taking $\\sqrt{K_h}$.",
+        "common_trap": "Multiplying by $c$ instead of dividing by it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The pH of an aqueous solution of ammonium acetate changes markedly when the solution is diluted tenfold.",
+        "R": "For a salt of a weak acid and a weak base, $pH = 7 + \\frac{1}{2}(pK_a - pK_b)$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The pH of a salt of a weak acid and a weak base is independent of concentration.",
+        "steps": [
+          "The expression $pH = 7 + \\frac{1}{2}(pK_a - pK_b)$ contains no concentration term, so R is true.",
+          "Dilution therefore does not change the pH of $CH_3COONH_4$, so A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Applying the concentration dependence of the weak acid and strong base case to $CH_3COONH_4$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When an aqueous solution of $CH_3COONa$ is diluted, its degree of hydrolysis decreases.",
+        "II": "The degree of hydrolysis of $CH_3COONH_4$ is independent of concentration and also independent of temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For $CH_3COONa$, $h = \\sqrt{K_h/c}$. For $CH_3COONH_4$, $h = \\sqrt{K_w/(K_aK_b)}$, and $K_w$ rises with temperature.",
+        "steps": [
+          "Dilution lowers $c$, so $h$ for $CH_3COONa$ increases. Statement I is incorrect.",
+          "For $CH_3COONH_4$, $h$ does not depend on concentration, but it increases with temperature. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contains a false claim, so options (1), (3) and (4) are ruled out.",
+        "common_trap": "Extending 'independent of dilution' to 'independent of temperature' as well.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_1",
+      "type": "single_correct",
+      "question": "If the molar solubility of $Hg_2Cl_2$ in water is $s$, its solubility product is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16s^4$",
+        "$s^2$",
+        "$4s^3$",
+        "$27s^4$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The mercurous ion is dimeric: $Hg_2Cl_2 \\rightleftharpoons Hg_2^{2+} + 2Cl^-$.",
+        "steps": [
+          "At equilibrium, $[Hg_2^{2+}] = s$ and $[Cl^-] = 2s$.",
+          "$K_{sp} = s(2s)^2 = 4s^3$."
+        ],
+        "final_answer": "Option (3): $4s^3$",
+        "why_not_others": "$16s^4$ comes from treating the salt as $2Hg^+ + 2Cl^-$. $s^2$ treats it as an AB salt. $27s^4$ is the relation for an $AB_3$ salt.",
+        "common_trap": "Writing $2Hg^+$ instead of $Hg_2^{2+}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_2",
+      "type": "single_correct",
+      "question": "The solubility product of a sparingly soluble salt $MX_2$ is $3.2\\times10^{-11}$ at 298 K. What is its molar solubility?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.7\\times10^{-6}$ M",
+        "$4.0\\times10^{-4}$ M",
+        "$2.0\\times10^{-4}$ M",
+        "$3.2\\times10^{-4}$ M"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For an $AB_2$ salt, $K_{sp} = 4s^3$.",
+        "steps": [
+          "$s^3 = 3.2\\times10^{-11}/4 = 8\\times10^{-12}$.",
+          "$s = 2\\times10^{-4}$ M."
+        ],
+        "final_answer": "Option (3): $2.0\\times10^{-4}$ M",
+        "why_not_others": "$5.7\\times10^{-6}$ comes from using $K_{sp} = s^2$. $4.0\\times10^{-4}$ is $[X^-] = 2s$, not $s$. $3.2\\times10^{-4}$ comes from omitting the factor 4.",
+        "common_trap": "Using $s^2$ for every salt type.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_3",
+      "type": "single_correct",
+      "question": "Equal volumes of $1.0\\times10^{-4}$ M $MNO_3$ and $1.0\\times10^{-4}$ M $NaX$ are mixed. The salt MX has $K_{sp} = 5.0\\times10^{-9}$. Which statement is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Precipitation occurs, since $Q_{sp} = 1.0\\times10^{-8} > K_{sp}$",
+        "The solution is just saturated, since $Q_{sp} = 5.0\\times10^{-9} = K_{sp}$",
+        "Precipitation occurs, since $Q_{sp} = 4.0\\times10^{-8} > K_{sp}$",
+        "No precipitation occurs, since $Q_{sp} = 2.5\\times10^{-9} < K_{sp}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Use the ion concentrations after mixing to calculate $Q_{sp}$.",
+        "steps": [
+          "Mixing equal volumes halves each concentration, giving $5.0\\times10^{-5}$ M for both $M^+$ and $X^-$.",
+          "$Q_{sp} = (5.0\\times10^{-5})^2 = 2.5\\times10^{-9}$.",
+          "$Q_{sp} < K_{sp}$, so the solution is unsaturated and no precipitate forms."
+        ],
+        "final_answer": "Option (4): No precipitation occurs, since $Q_{sp} = 2.5\\times10^{-9} < K_{sp}$",
+        "why_not_others": "Option (1) ignores dilution. Option (2) dilutes only one of the two ions. Option (3) doubles the concentrations instead of halving them.",
+        "common_trap": "Forgetting the dilution that happens on mixing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$AgCl$"
+          },
+          {
+            "label": "B",
+            "text": "$Ag_2CrO_4$"
+          },
+          {
+            "label": "C",
+            "text": "$Al(OH)_3$"
+          },
+          {
+            "label": "D",
+            "text": "A salt of type $A_2B_3$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$K_{sp} = s^2$"
+          },
+          {
+            "label": "II",
+            "text": "$K_{sp} = 4s^3$"
+          },
+          {
+            "label": "III",
+            "text": "$K_{sp} = 27s^4$"
+          },
+          {
+            "label": "IV",
+            "text": "$K_{sp} = 108s^5$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For $A_xB_y$, $K_{sp} = x^x y^y s^{x+y}$.",
+        "steps": [
+          "$AgCl$ is AB type: $K_{sp} = s^2$.",
+          "$Ag_2CrO_4$ is $A_2B$ type: $K_{sp} = 2^2 \\cdot s^3 = 4s^3$.",
+          "$Al(OH)_3$ is $AB_3$ type: $K_{sp} = 3^3 s^4 = 27s^4$.",
+          "$A_2B_3$: $K_{sp} = 2^2 \\cdot 3^3 s^5 = 108s^5$."
+        ],
+        "final_answer": "Option (2): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The other matchings swap the stoichiometric factors between salt types.",
+        "common_trap": "Writing $Ag_2CrO_4$ as $27s^4$ by miscounting the ions.",
+        "time_saving_tip": "The exponent of $s$ equals the total number of ions per formula unit."
+      }
+    },
+    {
+      "slot": "t13_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about solubility product are correct?",
+      "statements": {
+        "A": "$K_{sp}$ applies only to saturated solutions of sparingly soluble salts.",
+        "B": "$Ag_2CrO_4$ ($K_{sp} = 4\\times10^{-12}$) is less soluble than $AgCl$ ($K_{sp} = 1\\times10^{-10}$) because its $K_{sp}$ is smaller.",
+        "C": "The solubility of $AgCl$ is lower in aqueous $NaCl$ than in pure water.",
+        "D": "The solubility of a sparingly soluble salt of a weak acid increases when a strong acid is added.",
+        "E": "When two salts of the same formula type are precipitated selectively, the salt with the higher $K_{sp}$ precipitates first."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "B, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Compare solubilities through $s$, not $K_{sp}$, unless the salts are of the same formula type. Common ions lower solubility, and removing an ion raises it.",
+        "steps": [
+          "A is true by definition.",
+          "B is false. For $AgCl$, $s = \\sqrt{10^{-10}} = 10^{-5}$ M. For $Ag_2CrO_4$, $s = (10^{-12})^{1/3} = 10^{-4}$ M, so $Ag_2CrO_4$ is more soluble.",
+          "C is true because of the common ion effect. D is true because the acid removes the anion.",
+          "E is false. The salt with the lower $K_{sp}$ precipitates first."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) misses D. Option (2) includes the false statement B. Option (4) includes B and E, which are both false.",
+        "common_trap": "Comparing $K_{sp}$ values directly for salts of different formula types.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_1",
+      "type": "single_correct",
+      "question": "Which of the following mixtures acts as a buffer solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$HCl + NaCl$",
+        "$NaOH + NaCl$",
+        "$CH_3COOH + CH_3COONa$",
+        "$HCl + NH_4Cl$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A buffer needs a weak acid or a weak base together with its conjugate partner.",
+        "steps": [
+          "$CH_3COOH$ is a weak acid and $CH_3COO^-$ is its conjugate base, so this mixture is an acidic buffer.",
+          "Each of the other mixtures contains a strong acid or a strong base."
+        ],
+        "final_answer": "Option (3): $CH_3COOH + CH_3COONa$",
+        "why_not_others": "$HCl + NaCl$ and $NaOH + NaCl$ are a strong acid or strong base with its salt. $HCl + NH_4Cl$ contains a strong acid and no weak base.",
+        "common_trap": "Treating any acid mixed with its salt as a buffer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_2",
+      "type": "single_correct",
+      "question": "A buffer contains 0.20 M $CH_3COONa$ and 0.02 M $CH_3COOH$. What is its pH? ($pK_a$ of $CH_3COOH = 4.74$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5.74",
+        "3.74",
+        "4.74",
+        "9.26"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Henderson-Hasselbalch equation: $pH = pK_a + \\log\\frac{[\\text{salt}]}{[\\text{acid}]}$.",
+        "steps": [
+          "$\\frac{[\\text{salt}]}{[\\text{acid}]} = 0.20/0.02 = 10$.",
+          "$pH = 4.74 + \\log 10 = 5.74$."
+        ],
+        "final_answer": "Option (1): 5.74",
+        "why_not_others": "3.74 comes from inverting the ratio. 4.74 assumes equal concentrations. 9.26 is $14 - pK_a$.",
+        "common_trap": "Writing the ratio as acid/salt.",
+        "time_saving_tip": "When salt is in excess over acid, pH must be greater than $pK_a$."
+      }
+    },
+    {
+      "slot": "t14_3",
+      "type": "single_correct",
+      "question": "0.3 mol of $NH_4OH$ is mixed with 0.1 mol of $HCl$ and the volume is made up to 1 L. What is the pH of the resulting solution? ($pK_b$ of $NH_4OH = 4.74$, $\\log 2 = 0.30$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4.44",
+        "8.96",
+        "9.56",
+        "9.74"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Partially neutralising a weak base with a strong acid gives a basic buffer: $pOH = pK_b + \\log\\frac{[\\text{salt}]}{[\\text{base}]}$.",
+        "steps": [
+          "$HCl$ converts 0.1 mol of $NH_4OH$ to $NH_4Cl$, leaving 0.2 mol of $NH_4OH$.",
+          "$pOH = 4.74 + \\log(0.1/0.2) = 4.74 - 0.30 = 4.44$.",
+          "$pH = 14 - 4.44 = 9.56$."
+        ],
+        "final_answer": "Option (3): 9.56",
+        "why_not_others": "4.44 is the pOH, not the pH. 8.96 comes from inverting the ratio. 9.74 uses the initial 0.3 mol of base without subtracting the neutralised amount.",
+        "common_trap": "Not subtracting the base consumed by the acid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Diluting an acetate buffer with water does not change its pH.",
+        "R": "Dilution of a buffer increases the ratio $[\\text{salt}]/[\\text{acid}]$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "On dilution, the salt and the acid are diluted equally, so their ratio, and hence the pH, stays the same.",
+        "steps": [
+          "By the Henderson-Hasselbalch equation, pH depends only on the ratio $[\\text{salt}]/[\\text{acid}]$, so A is true.",
+          "Both concentrations fall by the same factor, so the ratio is unchanged and R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are incorrect.",
+        "common_trap": "Thinking that dilution alters the salt-to-acid ratio.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An acetic acid-sodium acetate buffer has its maximum buffer capacity when its pH equals the $pK_a$ of acetic acid.",
+        "II": "A mixture of a weak acid ($pK_a = 4.74$) and its sodium salt with $[\\text{salt}]/[\\text{acid}] = 100$ is an effective buffer at pH 6.74."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Buffer capacity is maximum at [salt] = [acid] (pH = $pK_a$), and the effective buffer range is $pK_a \\pm 1$.",
+        "steps": [
+          "At pH = $pK_a$ the ratio is 1, which gives maximum capacity, so Statement I is correct.",
+          "A ratio of 100 gives pH = 4.74 + 2 = 6.74, which lies outside the effective range of 3.74 to 5.74. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II's pH value is calculated correctly, but the buffer would not be effective at that pH, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Treating any salt-to-acid ratio as an effective buffer just because the pH calculation is correct.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

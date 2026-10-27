@@ -1,0 +1,3353 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u11",
+  "slug": "electrostatics",
+  "questions": [
+    {
+      "q_id": "neet_phy_u11_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric charges and conservation of charge",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A neutral metal sphere is given a charge of $+3.2\\,\\mu C$. How many electrons must be removed from it? (Take $e = 1.6 \\times 10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2 \\times 10^{12}$",
+        "$5 \\times 10^{12}$",
+        "$2 \\times 10^{25}$",
+        "$2 \\times 10^{13}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Quantization of charge: $q = ne$.",
+        "steps": [
+          "$n = q/e = (3.2 \\times 10^{-6})/(1.6 \\times 10^{-19})$.",
+          "$n = 2 \\times 10^{13}$ electrons.",
+          "A positive charge means these electrons are removed."
+        ],
+        "final_answer": "Option (4): $2 \\times 10^{13}$",
+        "why_not_others": "$2 \\times 10^{12}$ comes from a power-of-ten slip. $5 \\times 10^{12}$ comes from inverting the ratio of the mantissas. $2 \\times 10^{25}$ comes from ignoring the micro prefix.",
+        "common_trap": "Forgetting to convert $\\mu C$ to C.",
+        "time_saving_tip": "1 μC corresponds to $6.25 \\times 10^{12}$ electrons. Multiply this by 3.2."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric charges and conservation of charge",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following values of charge can NOT reside on an isolated body? (Take $e = 1.6 \\times 10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.4 \\times 10^{-19}\\,C$",
+        "$3.2 \\times 10^{-19}\\,C$",
+        "$4.8 \\times 10^{-19}\\,C$",
+        "$8.0 \\times 10^{-19}\\,C$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Any free charge must be an integer multiple of e.",
+        "steps": [
+          "Divide each value by $1.6 \\times 10^{-19}$.",
+          "The ratios are 1.5, 2, 3 and 5.",
+          "Only 1.5 is not an integer, so that charge cannot exist on an isolated body."
+        ],
+        "final_answer": "Option (1): $2.4 \\times 10^{-19}\\,C$",
+        "why_not_others": "$3.2 \\times 10^{-19}$, $4.8 \\times 10^{-19}$ and $8.0 \\times 10^{-19}\\,C$ equal 2e, 3e and 5e respectively, so all are allowed.",
+        "common_trap": "Thinking quark charges allow fractional values. Quarks are never found free.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric charges and conservation of charge",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two identical conducting spheres carry charges $+12\\,\\mu C$ and $-4\\,\\mu C$. They are touched together and then separated. Which statement correctly describes the electron transfer during contact? (Take $e = 1.6 \\times 10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5 \\times 10^{13}$ electrons flow from the first sphere to the second",
+        "$5 \\times 10^{13}$ electrons flow from the first sphere to the second",
+        "$2.5 \\times 10^{13}$ electrons flow from the second sphere to the first",
+        "$5 \\times 10^{13}$ electrons flow from the second sphere to the first"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Charge is conserved and is shared equally between identical spheres. Only electrons move.",
+        "steps": [
+          "The final charge on each sphere is $(12 - 4)/2 = +4\\,\\mu C$.",
+          "The first sphere changes from $+12$ to $+4\\,\\mu C$, so it gains $8\\,\\mu C$ of negative charge.",
+          "$n = 8 \\times 10^{-6}/1.6 \\times 10^{-19} = 5 \\times 10^{13}$.",
+          "These electrons come from the second sphere and go to the first."
+        ],
+        "final_answer": "Option (4): $5 \\times 10^{13}$ electrons flow from the second sphere to the first",
+        "why_not_others": "$2.5 \\times 10^{13}$ results from using $4\\,\\mu C$ as the transferred charge. A flow from the first sphere to the second reverses the direction of electron motion.",
+        "common_trap": "Imagining that positive charge (protons) moves from the first sphere to the second.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric charges and conservation of charge",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A body that acquires a negative charge by friction has slightly less mass than it had before charging.",
+        "R": "Charging always involves a transfer of electrons, and a body that gains electrons becomes negatively charged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Negative charging means a gain of electrons, and therefore a tiny gain in mass.",
+        "steps": [
+          "A negatively charged body has gained electrons.",
+          "Electrons have mass, so the body's mass increases slightly. A is therefore false.",
+          "R correctly states that charging transfers electrons and that a gain of electrons makes a body negative."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A claims a decrease in mass, which contradicts the gain of electrons. So options (1), (2) and (3) are ruled out.",
+        "common_trap": "Reversing the mass change, as though negative charging removed particles.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric charges and conservation of charge",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a photon converts into an electron-positron pair, the total charge before and after the process is zero. This shows that charge is conserved even in pair production.",
+        "II": "The charge of an electron moving with a speed close to that of light is greater than the charge of an electron at rest."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Charge is conserved in every process, and it is relativistically invariant.",
+        "steps": [
+          "Photon (0) → electron (−e) + positron (+e), so the net charge stays 0. Statement I is correct.",
+          "Charge does not depend on the speed of the body. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses charge with quantities such as relativistic mass, which do depend on speed. Statement I is a standard example of charge conservation.",
+        "common_trap": "Assuming that charge, like mass, increases at high speed.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Coulomb's law and the superposition principle",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two point charges of $2\\,\\mu C$ and $8\\,\\mu C$ are placed $0.4\\,m$ apart in vacuum. What is the magnitude of the electrostatic force between them? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.36\\,N$",
+        "$9\\,N$",
+        "$0.9\\,N$",
+        "$0.09\\,N$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Coulomb's law: $F = kq_1q_2/r^2$.",
+        "steps": [
+          "$q_1q_2 = 16 \\times 10^{-12}\\,C^2$.",
+          "$kq_1q_2 = 9 \\times 10^9 \\times 16 \\times 10^{-12} = 0.144$.",
+          "$F = 0.144/0.16 = 0.9\\,N$."
+        ],
+        "final_answer": "Option (3): $0.9\\,N$",
+        "why_not_others": "0.36 N comes from dividing by r instead of $r^2$. 9 N and 0.09 N come from power-of-ten slips.",
+        "common_trap": "Forgetting to square the distance.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Coulomb's law and the superposition principle",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two point charges separated by a distance r in air repel each other with force F. They are now placed in a medium of dielectric constant 4. What should their new separation be so that the force between them is still F?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2r$",
+        "$r/4$",
+        "$4r$",
+        "$r/2$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a medium the force is reduced by a factor of K: $F = kq_1q_2/(Kr^2)$.",
+        "steps": [
+          "Set $kq_1q_2/(4r'^2) = kq_1q_2/r^2$.",
+          "This gives $r'^2 = r^2/4$.",
+          "So $r' = r/2$."
+        ],
+        "final_answer": "Option (4): $r/2$",
+        "why_not_others": "$r/4$ ignores the square root. $2r$ and $4r$ wrongly assume the medium increases the force.",
+        "common_trap": "Thinking the force rises by K in a medium, so the charges must be moved apart.",
+        "time_saving_tip": "Use $r' = r/\\sqrt{K}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Coulomb's law and the superposition principle",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two point charges $+q$ and $+9q$ are fixed 16 cm apart. At what position on the line joining them will a third charge experience zero net force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.6 cm from $+q$, between the charges",
+        "8 cm from $+q$, between the charges",
+        "12 cm from $+q$, between the charges",
+        "4 cm from $+q$, between the charges"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For like charges, the null point lies between them and closer to the smaller charge.",
+        "steps": [
+          "Let the point be x from $+q$. Then $q/x^2 = 9q/(16 - x)^2$.",
+          "Taking square roots, $(16 - x)/x = 3$.",
+          "So $x = 4$ cm from $+q$."
+        ],
+        "final_answer": "Option (4): 4 cm from $+q$, between the charges",
+        "why_not_others": "1.6 cm comes from dropping the square root (using the ratio 1:9). 8 cm assumes the midpoint. 12 cm places the point nearer the larger charge.",
+        "common_trap": "Forgetting that the force depends on $1/r^2$, so the distance ratio is $\\sqrt{1:9}$.",
+        "time_saving_tip": "Divide the separation in the ratio $\\sqrt{q_1}:\\sqrt{q_2}$, here 1:3."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Coulomb's law and the superposition principle",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "The distance between the two charges is doubled"
+          },
+          {
+            "label": "B",
+            "text": "Both charges are doubled, with the distance unchanged"
+          },
+          {
+            "label": "C",
+            "text": "The charges are placed in a medium of dielectric constant 2, with the distance unchanged"
+          },
+          {
+            "label": "D",
+            "text": "One charge is doubled and the distance is halved"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$8F$"
+          },
+          {
+            "label": "II",
+            "text": "$F/4$"
+          },
+          {
+            "label": "III",
+            "text": "$4F$"
+          },
+          {
+            "label": "IV",
+            "text": "$F/2$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$F \\propto q_1q_2/(Kr^2)$. The initial force between the two charges in vacuum is F.",
+        "steps": [
+          "A: doubling r gives $F/4$, which is II.",
+          "B: doubling both charges gives $4F$, which is III.",
+          "C: with K = 2 the force is $F/2$, which is IV.",
+          "D: $2 \\times 4 = 8$, so the force is $8F$, which is I."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-IV, D-I",
+        "why_not_others": "The other matchings swap the inverse-square effect with the effect of the charge product, or treat the medium as increasing the force.",
+        "common_trap": "In D, halving the distance multiplies the force by 4, not 2.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Coulomb's law and the superposition principle",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Coulomb's law and superposition are correct?",
+      "statements": {
+        "A": "The electrostatic forces that two point charges exert on each other obey Newton's third law.",
+        "B": "The force between two point charges is unaffected by the presence of a third charge nearby.",
+        "C": "Two forces, each of magnitude F, acting at $60^\\circ$ to each other on a charge give a resultant of $\\sqrt{3}F$.",
+        "D": "The Coulomb force is a non-conservative force.",
+        "E": "When two charges are placed in a medium of dielectric constant K, the force between them increases K times."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "B, C and E only",
+        "A, B, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The Coulomb force is central and conservative, obeys the third law, and combines by vector superposition.",
+        "steps": [
+          "A is true: the forces are equal and opposite.",
+          "B is true: each pair interaction is independent of the other charges.",
+          "C is true: $2F\\cos 30^\\circ = \\sqrt{3}F$.",
+          "D is false: the force is conservative. E is false: the force is reduced by a factor of K."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Every other option contains D or E, and both of these are false.",
+        "common_trap": "Adding the magnitudes as 2F instead of using $2F\\cos(\\theta/2)$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Forces due to continuous charge distribution",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A thin rod of length 50 cm carries a uniform linear charge density of $4\\,\\mu C/m$. What is the total charge on the rod?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$8\\,\\mu C$",
+        "$200\\,\\mu C$",
+        "$0.125\\,\\mu C$",
+        "$2\\,\\mu C$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a uniform distribution, $Q = \\lambda L$.",
+        "steps": [
+          "L = 0.5 m.",
+          "$Q = 4 \\times 0.5 = 2\\,\\mu C$."
+        ],
+        "final_answer": "Option (4): $2\\,\\mu C$",
+        "why_not_others": "$8\\,\\mu C$ comes from dividing by L. $200\\,\\mu C$ comes from using L in cm. $0.125\\,\\mu C$ comes from computing $L/\\lambda$.",
+        "common_trap": "Not converting cm to m.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Forces due to continuous charge distribution",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A ring of radius 20 cm carries a uniformly distributed charge. At what distance from its centre, along its axis, is the electric field maximum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "At the centre of the ring",
+        "$10\\sqrt{2}$ cm",
+        "$20\\sqrt{2}$ cm",
+        "10 cm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The axial field of a ring is maximum at $x = R/\\sqrt{2}$.",
+        "steps": [
+          "$x = 20/\\sqrt{2}$.",
+          "$x = 10\\sqrt{2}$ cm, which is about 14.1 cm."
+        ],
+        "final_answer": "Option (2): $10\\sqrt{2}$ cm",
+        "why_not_others": "At the centre the field is zero. $20\\sqrt{2}$ cm comes from multiplying by $\\sqrt{2}$ instead of dividing. 10 cm comes from using R/2.",
+        "common_trap": "Assuming the field is largest at the centre because that point is closest to all the charge.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Forces due to continuous charge distribution",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A ring of radius 3 cm carries a uniformly distributed charge of $10\\,\\mu C$. A point charge of $2\\,\\mu C$ is placed on the axis of the ring at a distance of 4 cm from its centre. What is the magnitude of the force on the point charge? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "72 N",
+        "43.2 N",
+        "57.6 N",
+        "112.5 N"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Field on the axis of a ring: $E = kQx/(x^2+R^2)^{3/2}$.",
+        "steps": [
+          "$(x^2 + R^2)^{1/2} = 5$ cm, so $(x^2 + R^2)^{3/2} = (0.05)^3 = 1.25 \\times 10^{-4}\\,m^3$.",
+          "$kQx = 9 \\times 10^9 \\times 10^{-5} \\times 0.04 = 3600$.",
+          "$E = 3600/1.25 \\times 10^{-4} = 2.88 \\times 10^7\\,N/C$.",
+          "$F = qE = 2 \\times 10^{-6} \\times 2.88 \\times 10^7 = 57.6\\,N$."
+        ],
+        "final_answer": "Option (3): 57.6 N",
+        "why_not_others": "72 N treats the ring as a point charge 5 cm away and ignores the cancellation of perpendicular components. 112.5 N treats the ring as a point charge 4 cm away. 43.2 N uses R instead of x in the numerator.",
+        "common_trap": "Forgetting the factor $x/r$ that remains after the perpendicular components cancel.",
+        "time_saving_tip": "Recognise the 3-4-5 triangle, so r = 5 cm directly."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Forces due to continuous charge distribution",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The electric field on the axis of a uniformly charged ring is maximum at the centre of the ring.",
+        "R": "At the centre of a uniformly charged ring, the fields due to diametrically opposite elements of the ring cancel each other."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "By symmetry, the field at the centre of a ring is zero. The axial field is maximum at $x = R/\\sqrt{2}$.",
+        "steps": [
+          "Opposite elements produce equal and opposite fields at the centre, so R is true.",
+          "The field at the centre is therefore zero, not maximum. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are eliminated.",
+        "common_trap": "Assuming the field is largest where the point is nearest to all the charge.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Forces due to continuous charge distribution",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At a point on the axis of a uniformly charged ring at a distance much greater than its radius, the field is approximately that of a point charge equal to the ring's charge placed at its centre.",
+        "II": "A thin spherical shell of radius 10 cm with uniform surface charge density $2\\,\\mu C/m^2$ carries a total charge of $8\\pi \\times 10^{-8}\\,C$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The ring behaves like a point charge for $x \\gg R$. For a uniform shell, $Q = \\sigma \\times 4\\pi R^2$.",
+        "steps": [
+          "For $x \\gg R$, $(x^2 + R^2)^{3/2} \\approx x^3$, so $E \\approx kQ/x^2$. Statement I is correct.",
+          "$Q = 2 \\times 10^{-6} \\times 4\\pi (0.1)^2 = 8\\pi \\times 10^{-8}\\,C$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out, so the options that call either statement incorrect fail.",
+        "common_trap": "Using $\\pi R^2$ instead of $4\\pi R^2$ for the area of the shell.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric field due to a point charge; electric field lines",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the magnitude of the electric field at a distance of 30 cm from a point charge of 2 nC in vacuum? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 N/C",
+        "0.02 N/C",
+        "2000 N/C",
+        "200 N/C"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Field of a point charge: $E = kq/r^2$.",
+        "steps": [
+          "$kq = 9 \\times 10^9 \\times 2 \\times 10^{-9} = 18$.",
+          "$E = 18/(0.3)^2 = 18/0.09 = 200\\,N/C$."
+        ],
+        "final_answer": "Option (4): 200 N/C",
+        "why_not_others": "60 N/C comes from dividing by r instead of $r^2$. 0.02 N/C comes from using r in cm. 2000 N/C comes from a power-of-ten slip.",
+        "common_trap": "Not squaring r, or leaving r in cm.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric field due to a point charge; electric field lines",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle of mass 2 mg carrying a charge of $4\\,\\mu C$ is placed in a uniform electric field of 500 N/C. Neglecting gravity, what is the magnitude of its acceleration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\,m/s^2$",
+        "$1000\\,m/s^2$",
+        "$10^6\\,m/s^2$",
+        "$2 \\times 10^{-3}\\,m/s^2$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a uniform field, $a = qE/m$.",
+        "steps": [
+          "$qE = 4 \\times 10^{-6} \\times 500 = 2 \\times 10^{-3}\\,N$.",
+          "$m = 2\\,mg = 2 \\times 10^{-6}\\,kg$.",
+          "$a = 2 \\times 10^{-3}/2 \\times 10^{-6} = 1000\\,m/s^2$."
+        ],
+        "final_answer": "Option (2): $1000\\,m/s^2$",
+        "why_not_others": "$1\\,m/s^2$ comes from taking 2 mg as 2 g. $10^6\\,m/s^2$ comes from converting mg to kg with one factor of $10^3$ too many. $2 \\times 10^{-3}$ is the force in newtons, not the acceleration.",
+        "common_trap": "Incorrect conversion of milligrams to kilograms.",
+        "time_saving_tip": "1 mg = $10^{-6}$ kg."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric field due to a point charge; electric field lines",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Point charges $+4\\,\\mu C$ and $-4\\,\\mu C$ are placed 20 cm apart in vacuum. What is the electric field at the midpoint of the line joining them? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Zero",
+        "$3.6 \\times 10^6\\,N/C$ towards the positive charge",
+        "$7.2 \\times 10^6\\,N/C$ towards the negative charge",
+        "$7.2 \\times 10^6\\,N/C$ towards the positive charge"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Superposition of fields. Fields point away from positive charges and towards negative charges.",
+        "steps": [
+          "Each charge gives $E = 9 \\times 10^9 \\times 4 \\times 10^{-6}/(0.1)^2 = 3.6 \\times 10^6\\,N/C$.",
+          "At the midpoint, both fields point towards the negative charge.",
+          "$E_{net} = 7.2 \\times 10^6\\,N/C$ towards the negative charge."
+        ],
+        "final_answer": "Option (3): $7.2 \\times 10^6\\,N/C$ towards the negative charge",
+        "why_not_others": "Zero assumes the two fields cancel, which happens only for like charges. $3.6 \\times 10^6$ includes only one charge. 'Towards the positive charge' has the direction reversed.",
+        "common_trap": "Assuming equal and opposite charges always cancel at the midpoint.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric field due to a point charge; electric field lines",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Two electric field lines never cross each other"
+          },
+          {
+            "label": "B",
+            "text": "A region where field lines are crowded together"
+          },
+          {
+            "label": "C",
+            "text": "Field lines at the surface of a conductor in electrostatic equilibrium"
+          },
+          {
+            "label": "D",
+            "text": "Field lines in a region of uniform electric field"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Lines are parallel and equally spaced"
+          },
+          {
+            "label": "II",
+            "text": "The field has only one direction at each point"
+          },
+          {
+            "label": "III",
+            "text": "Lines meet the surface at right angles"
+          },
+          {
+            "label": "IV",
+            "text": "The field is strong there"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-III, D-II",
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Properties of electrostatic field lines.",
+        "steps": [
+          "A: lines cannot intersect because the field has a unique direction at each point, so A matches II.",
+          "B: crowded lines indicate a strong field, so B matches IV.",
+          "C: lines meet a conductor's surface normally, so C matches III.",
+          "D: a uniform field has parallel, equally spaced lines, so D matches I."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "The other options interchange the reason for non-intersection with the description of a uniform field, or with the field strength.",
+        "common_trap": "Linking crowding of lines to the direction of the field instead of its strength.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric field due to a point charge; electric field lines",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about electric fields and field lines are correct?",
+      "statements": {
+        "A": "Electrostatic field lines can form closed loops.",
+        "B": "The number of field lines leaving a charge is proportional to the magnitude of the charge.",
+        "C": "A negative charge placed in an electric field experiences a force opposite to the direction of the field.",
+        "D": "A charged particle entering a uniform electric field perpendicular to the field moves along a parabolic path.",
+        "E": "Field lines are crowded inside a conductor in electrostatic equilibrium."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and D only",
+        "B, D and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Properties of field lines, the relation $\\vec{F} = q\\vec{E}$, and motion in a uniform field.",
+        "steps": [
+          "A is false: electrostatic field lines never form closed loops.",
+          "B is true: the number of lines is proportional to the charge.",
+          "C is true: for negative q, $\\vec{F} = q\\vec{E}$ is opposite to $\\vec{E}$.",
+          "D is true: constant acceleration perpendicular to the initial velocity gives a parabola.",
+          "E is false: there are no field lines inside a conductor in equilibrium."
+        ],
+        "final_answer": "Option (2): B, C and D only",
+        "why_not_others": "Options (1), (3) and (4) each include the false statement A or E.",
+        "common_trap": "Carrying over the closed-loop behaviour of magnetic field lines to electrostatic field lines.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric dipole and the field due to a dipole",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two point charges of $+4\\ \\mu C$ and $-4\\ \\mu C$ are held 2 mm apart to form an electric dipole. What is the magnitude of the dipole moment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4 \\times 10^{-9}$ C m",
+        "$8 \\times 10^{-9}$ C m",
+        "$1.6 \\times 10^{-8}$ C m",
+        "$8 \\times 10^{-6}$ C m"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Dipole moment magnitude is $p = q \\times 2a$, where $2a$ is the full separation between the charges.",
+        "steps": [
+          "Here $q = 4 \\times 10^{-6}$ C and the separation is $2a = 2 \\times 10^{-3}$ m.",
+          "$p = (4 \\times 10^{-6})(2 \\times 10^{-3}) = 8 \\times 10^{-9}$ C m."
+        ],
+        "final_answer": "Option (2): $8 \\times 10^{-9}$ C m",
+        "why_not_others": "$4 \\times 10^{-9}$ uses only half the separation (a instead of 2a). $1.6 \\times 10^{-8}$ doubles the given separation a second time. $8 \\times 10^{-6}$ forgets to convert mm to m.",
+        "common_trap": "Treating the given 2 mm as 'a' and doubling it again, or using half of it.",
+        "time_saving_tip": "The given separation is already 2a, so simply multiply q by it."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric dipole and the field due to a dipole",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The electric field at a point on the axial line of a short dipole, at distance r from its centre, has magnitude E. What is the magnitude of the field at a point on its equatorial line at distance 2r from the centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$E/8$",
+        "$E/2$",
+        "$E/16$",
+        "$E/4$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a short dipole, $E_{axial} = 2kp/r^3$ and $E_{eq} = kp/r^3$. Both fall off as $1/r^3$.",
+        "steps": [
+          "$E = 2kp/r^3$.",
+          "At distance 2r on the equatorial line, $E_{eq} = kp/(2r)^3 = kp/(8r^3)$.",
+          "$E_{eq}/E = (1/8)/2 = 1/16$, so $E_{eq} = E/16$."
+        ],
+        "final_answer": "Option (3): $E/16$",
+        "why_not_others": "$E/8$ ignores the factor of 2 between the axial and equatorial fields. $E/2$ ignores the change in distance. $E/4$ wrongly uses the $1/r^2$ dependence of a point charge and also drops the factor of 2.",
+        "common_trap": "Using the $1/r^2$ law of a point charge for a dipole field.",
+        "time_saving_tip": "Multiply the two factors directly: 1/2 for equatorial versus axial, and $1/2^3$ for doubling the distance."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric dipole and the field due to a dipole",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Let $E_0 = \\frac{1}{4\\pi\\epsilon_0}\\frac{p}{r^3}$ for a short dipole of moment p. What is the magnitude of the electric field at a point at distance r from the centre of the dipole, whose position vector makes an angle of $60^\\circ$ with the dipole axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\sqrt{13}}{2}E_0$",
+        "$2E_0$",
+        "$\\frac{\\sqrt{10}}{2}E_0$",
+        "$\\frac{\\sqrt{7}}{2}E_0$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At a general angle, $E = \\frac{kp}{r^3}\\sqrt{1 + 3\\cos^2\\theta}$.",
+        "steps": [
+          "$\\cos 60^\\circ = 1/2$, so $\\cos^2 60^\\circ = 1/4$.",
+          "$\\sqrt{1 + 3/4} = \\sqrt{7/4} = \\sqrt{7}/2$.",
+          "Therefore $E = \\frac{\\sqrt{7}}{2}E_0$."
+        ],
+        "final_answer": "Option (4): $\\frac{\\sqrt{7}}{2}E_0$",
+        "why_not_others": "$\\sqrt{13}/2$ uses $\\sin^2\\theta$ instead of $\\cos^2\\theta$. $\\sqrt{10}/2$ uses $\\cos\\theta$ without squaring it. $2E_0$ is the axial value, which holds only at $\\theta = 0$.",
+        "common_trap": "Using $\\sin\\theta$ in place of $\\cos\\theta$ in the general formula.",
+        "time_saving_tip": "Check the limits: $\\theta = 0$ must give $2E_0$ and $\\theta = 90^\\circ$ must give $E_0$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric dipole and the field due to a dipole",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "At equal distances from the centre of a short electric dipole, the field on the axial line is twice the field on the equatorial line.",
+        "R": "The dipole moment of an electric dipole is directed from the negative charge to the positive charge."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$E_{axial} = 2kp/r^3$ and $E_{eq} = kp/r^3$. The direction of $\\vec{p}$ is a separate convention.",
+        "steps": [
+          "The ratio $E_{axial}/E_{eq} = 2$ at the same r, so A is true.",
+          "$\\vec{p}$ points from -q to +q, so R is true.",
+          "The 2 : 1 ratio comes from the field expressions, not from the sign convention for $\\vec{p}$. R therefore does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is true, so options (3) and (4) fail. R only fixes the direction of $\\vec{p}$ and says nothing about the magnitudes of the fields, so option (1) fails.",
+        "common_trap": "Picking option (1) just because both statements are true and concern the same dipole.",
+        "time_saving_tip": "Ask whether R actually produces the factor 2 in A. It does not."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric dipole and the field due to a dipole",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a short dipole, if the distance from its centre is doubled along any fixed direction, the magnitude of the electric field becomes one-eighth of its earlier value.",
+        "II": "At a point whose position vector makes an angle $\\theta$ with the dipole moment such that $\\tan\\theta = \\sqrt{2}$, the electric field of a short dipole is perpendicular to the dipole moment."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Along a fixed direction, $E = \\frac{kp}{r^3}\\sqrt{1+3\\cos^2\\theta}$ varies as $1/r^3$. The field is perpendicular to $\\vec{p}$ at $\\tan\\theta = \\sqrt{2}$ ($\\theta \\approx 54.7^\\circ$).",
+        "steps": [
+          "For a fixed $\\theta$, the square-root factor stays constant, so $E \\propto 1/r^3$.",
+          "Doubling r therefore reduces E by a factor of $2^3 = 8$, so Statement I is correct.",
+          "At $\\tan\\theta = \\sqrt{2}$, i.e. $\\theta \\approx 54.7^\\circ$, the field is perpendicular to $\\vec{p}$, so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I would fail only if the field followed $1/r^2$, which holds for a point charge, not a dipole. Statement II is a standard result for the dipole field geometry.",
+        "common_trap": "Applying the $1/r^2$ law and expecting the field to become one-fourth.",
+        "time_saving_tip": "Remember the pair: field $\\propto 1/r^3$, potential $\\propto 1/r^2$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Torque on a dipole in a uniform electric field",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An electric dipole of moment $2 \\times 10^{-8}$ C m is placed in a uniform electric field of $5 \\times 10^{4}$ N/C, with its axis at $30^\\circ$ to the field. What is the magnitude of the torque on it?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0 \\times 10^{-3}$ N m",
+        "$8.7 \\times 10^{-4}$ N m",
+        "zero, since the net force is zero",
+        "$5.0 \\times 10^{-4}$ N m"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\tau = pE\\sin\\theta$ for a dipole in a uniform field.",
+        "steps": [
+          "$pE = (2 \\times 10^{-8})(5 \\times 10^{4}) = 1.0 \\times 10^{-3}$ N m.",
+          "$\\tau = 1.0 \\times 10^{-3} \\times \\sin 30^\\circ = 5.0 \\times 10^{-4}$ N m."
+        ],
+        "final_answer": "Option (4): $5.0 \\times 10^{-4}$ N m",
+        "why_not_others": "$1.0 \\times 10^{-3}$ is the maximum torque pE, which occurs only at $90^\\circ$. $8.7 \\times 10^{-4}$ uses $\\cos\\theta$ instead of $\\sin\\theta$. A zero net force does not make the torque zero, because the two forces form a couple.",
+        "common_trap": "Assuming zero net force implies zero torque.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Torque on a dipole in a uniform electric field",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A dipole of moment $4 \\times 10^{-9}$ C m is initially aligned along a uniform electric field of $2 \\times 10^{5}$ N/C. How much work must an external agent do to rotate it slowly until it makes $120^\\circ$ with the field?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.2 \\times 10^{-3}$ J",
+        "$4.0 \\times 10^{-4}$ J",
+        "$1.6 \\times 10^{-3}$ J",
+        "$6.9 \\times 10^{-4}$ J"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$W = pE(\\cos\\theta_1 - \\cos\\theta_2)$.",
+        "steps": [
+          "$pE = (4 \\times 10^{-9})(2 \\times 10^{5}) = 8 \\times 10^{-4}$ J.",
+          "$\\cos 0^\\circ - \\cos 120^\\circ = 1 - (-1/2) = 3/2$.",
+          "$W = 8 \\times 10^{-4} \\times 1.5 = 1.2 \\times 10^{-3}$ J."
+        ],
+        "final_answer": "Option (1): $1.2 \\times 10^{-3}$ J",
+        "why_not_others": "$4.0 \\times 10^{-4}$ J takes $\\cos 120^\\circ$ as $+1/2$. $1.6 \\times 10^{-3}$ J is 2pE, which applies to a rotation from $0^\\circ$ to $180^\\circ$. $6.9 \\times 10^{-4}$ J wrongly uses $pE\\sin 120^\\circ$, which is the torque expression.",
+        "common_trap": "Dropping the negative sign of $\\cos 120^\\circ$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Torque on a dipole in a uniform electric field",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A dipole performs small angular oscillations about its stable equilibrium in a uniform field E with time period T. It is replaced by another dipole having twice the dipole moment but the same moment of inertia, and the field is increased to 4E. What is the new time period?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$T/8$",
+        "$T/2$",
+        "$\\frac{T}{2\\sqrt{2}}$",
+        "$2\\sqrt{2}\\,T$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T = 2\\pi\\sqrt{I/(pE)}$, so $T \\propto 1/\\sqrt{pE}$ when I is fixed.",
+        "steps": [
+          "The product pE increases by a factor of $2 \\times 4 = 8$.",
+          "$T' = T/\\sqrt{8} = \\frac{T}{2\\sqrt{2}}$."
+        ],
+        "final_answer": "Option (3): $\\frac{T}{2\\sqrt{2}}$",
+        "why_not_others": "$T/8$ forgets the square root. $T/2$ accounts only for the change in field. $2\\sqrt{2}\\,T$ inverts the dependence on pE.",
+        "common_trap": "Treating T as proportional to $1/(pE)$ instead of $1/\\sqrt{pE}$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Torque on a dipole in a uniform electric field",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Dipole at $\\theta = 0^\\circ$ to a uniform field"
+          },
+          {
+            "label": "B",
+            "text": "Dipole at $\\theta = 90^\\circ$ to a uniform field"
+          },
+          {
+            "label": "C",
+            "text": "Dipole at $\\theta = 180^\\circ$ to a uniform field"
+          },
+          {
+            "label": "D",
+            "text": "Slow rotation of the dipole from $0^\\circ$ to $180^\\circ$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "External work required equals 2pE"
+          },
+          {
+            "label": "II",
+            "text": "Torque has its maximum value pE"
+          },
+          {
+            "label": "III",
+            "text": "Unstable equilibrium with zero torque"
+          },
+          {
+            "label": "IV",
+            "text": "Stable equilibrium with zero torque"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\tau = pE\\sin\\theta$ and $W = pE(\\cos\\theta_1 - \\cos\\theta_2)$.",
+        "steps": [
+          "At $0^\\circ$, $\\vec{p}$ is along $\\vec{E}$: zero torque and stable equilibrium (A-IV).",
+          "At $90^\\circ$, $\\sin\\theta = 1$, so the torque is maximum, pE (B-II).",
+          "At $180^\\circ$, the torque is zero but the equilibrium is unstable (C-III).",
+          "$W = pE(1 - (-1)) = 2pE$ (D-I)."
+        ],
+        "final_answer": "Option (2): A-IV, B-II, C-III, D-I",
+        "why_not_others": "Option (1) swaps stable and unstable equilibrium. Option (3) swaps maximum torque and work. Option (4) mismatches every item.",
+        "common_trap": "Calling $180^\\circ$ stable simply because the torque there is zero.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Torque on a dipole in a uniform electric field",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about an electric dipole in an electric field are correct?",
+      "statements": {
+        "A": "In a uniform field, the net force on the dipole is zero.",
+        "B": "In a uniform field, the torque on the dipole is always zero.",
+        "C": "In a non-uniform field, a dipole aligned with the field is pulled toward the region of stronger field.",
+        "D": "The torque on the dipole tends to align $\\vec{p}$ with $\\vec{E}$.",
+        "E": "Rotating the dipole slowly from $90^\\circ$ to $180^\\circ$ in a uniform field requires external work 2pE."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and E only",
+        "A, C and D only",
+        "B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a uniform field there is zero net force but generally a non-zero torque $pE\\sin\\theta$. The work done is $pE(\\cos\\theta_1 - \\cos\\theta_2)$.",
+        "steps": [
+          "A is true: the two forces are equal and opposite.",
+          "B is false: the forces form a couple, giving torque $pE\\sin\\theta$.",
+          "C and D are true, as stated in the theory of dipoles.",
+          "E is false: $W = pE(\\cos 90^\\circ - \\cos 180^\\circ) = pE$, not 2pE."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options (1) and (4) include the false statement B. Option (2) includes the false statement E, which confuses this rotation with the $0^\\circ$ to $180^\\circ$ rotation.",
+        "common_trap": "Assuming any rotation that ends at $180^\\circ$ needs work 2pE.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric flux and Gauss's law",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A uniform electric field of 200 N/C passes through a flat surface of area 0.5 $m^2$. The normal to the surface makes an angle of $60^\\circ$ with the field. What is the electric flux through the surface?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "86.6 N $m^2$/C",
+        "50 N $m^2$/C",
+        "100 N $m^2$/C",
+        "50 N $C^{-1}$ $m^{-2}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Phi = EA\\cos\\theta$, where $\\theta$ is the angle between $\\vec{E}$ and the area vector (the normal).",
+        "steps": [
+          "$\\Phi = 200 \\times 0.5 \\times \\cos 60^\\circ$.",
+          "$\\Phi = 100 \\times 0.5 = 50$ N $m^2$/C."
+        ],
+        "final_answer": "Option (2): 50 N $m^2$/C",
+        "why_not_others": "86.6 uses $\\sin\\theta$. 100 ignores the angle. The last option has the right number but wrong units; flux is measured in N $m^2$/C.",
+        "common_trap": "Measuring the angle from the surface instead of from its normal.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric flux and Gauss's law",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A point charge q is placed at one corner of a cube. What is the electric flux through any one face of the cube that does not touch that corner?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{q}{24\\epsilon_0}$",
+        "$\\frac{q}{8\\epsilon_0}$",
+        "$\\frac{q}{6\\epsilon_0}$",
+        "zero"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Eight identical cubes around the corner would enclose the charge completely, so one cube receives $q/(8\\epsilon_0)$.",
+        "steps": [
+          "Total flux through this cube is $q/(8\\epsilon_0)$.",
+          "The 3 faces meeting at the corner contain the field lines, so the flux through each of them is zero.",
+          "The remaining 3 faces share the flux equally: $\\frac{q}{8\\epsilon_0} \\div 3 = \\frac{q}{24\\epsilon_0}$."
+        ],
+        "final_answer": "Option (1): $\\frac{q}{24\\epsilon_0}$",
+        "why_not_others": "$q/(8\\epsilon_0)$ is the flux through the whole cube, not through one face. $q/(6\\epsilon_0)$ applies to a charge at the centre of the cube. Zero is the flux through the faces that meet at the corner.",
+        "common_trap": "Dividing $q/(8\\epsilon_0)$ by 6 faces instead of by the 3 faces that actually carry flux.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric flux and Gauss's law",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A closed surface encloses charges of $+3\\ \\mu C$ and $-5\\ \\mu C$. A charge of $+6\\ \\mu C$ lies outside it. What is the net electric flux through the surface? (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\ C^2 N^{-1} m^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+2.26 \\times 10^{5}$ N $m^2$/C",
+        "$+4.52 \\times 10^{5}$ N $m^2$/C",
+        "$+9.04 \\times 10^{5}$ N $m^2$/C",
+        "$-2.26 \\times 10^{5}$ N $m^2$/C"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Gauss's law: $\\Phi = q_{enc}/\\epsilon_0$. Charges outside the surface give zero net flux.",
+        "steps": [
+          "$q_{enc} = +3 - 5 = -2\\ \\mu C$.",
+          "$\\Phi = \\frac{-2 \\times 10^{-6}}{8.85 \\times 10^{-12}} = -2.26 \\times 10^{5}$ N $m^2$/C."
+        ],
+        "final_answer": "Option (4): $-2.26 \\times 10^{5}$ N $m^2$/C",
+        "why_not_others": "$+2.26 \\times 10^{5}$ drops the negative sign. $+4.52 \\times 10^{5}$ wrongly includes the outside charge (net +4 $\\mu C$). $+9.04 \\times 10^{5}$ adds the magnitudes of the enclosed charges.",
+        "common_trap": "Including charges that lie outside the surface.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric flux and Gauss's law",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The net electric flux through any closed surface placed in a uniform electric field is zero.",
+        "R": "Electric flux is a scalar quantity whose SI unit is N $m^2$/C."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A uniform field gives zero net flux because the closed surface encloses no charge: every line that enters also leaves.",
+        "steps": [
+          "A is true, as a stated property of a uniform field.",
+          "R is true: flux is a scalar with unit N $m^2$/C (equivalently V m).",
+          "The scalar nature of flux does not explain why the net flux is zero, so R is not the explanation of A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R does not account for A, so option (1) fails.",
+        "common_trap": "Choosing option (1) because both statements are about flux.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric flux and Gauss's law",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If a point charge inside a closed spherical surface is shifted from the centre to an off-centre point still inside, the field on the surface changes and therefore the total flux through the surface also changes.",
+        "II": "A point charge q placed at the centre of one face of a cube produces a total flux of $\\frac{q}{2\\epsilon_0}$ through the cube."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The total flux depends only on the enclosed charge, not on where the charge sits inside the surface.",
+        "steps": [
+          "Shifting the charge does change the field distribution on the surface, but $q_{enc}$ is unchanged, so the flux stays $q/\\epsilon_0$. Statement I is incorrect.",
+          "A charge at the centre of a face is half enclosed by the cube, so the flux through the cube is $q/(2\\epsilon_0)$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I wrongly links a change in the local field to a change in the total flux. Statement II is a standard symmetry result.",
+        "common_trap": "Thinking that flux depends on where the charge sits inside the surface.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Applications of Gauss's law: infinite line charge, infinite plane sheet, thin spherical shell",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An infinitely long straight wire carries a uniform linear charge density of $3 \\times 10^{-6}$ C/m. What is the magnitude of the electric field at a distance of 0.3 m from the wire? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^{9}$ N $m^2$ $C^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.8 \\times 10^{5}$ N/C",
+        "$9.0 \\times 10^{4}$ N/C",
+        "$6.0 \\times 10^{5}$ N/C",
+        "$3.0 \\times 10^{5}$ N/C"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For an infinite line charge, $E = \\frac{\\lambda}{2\\pi\\epsilon_0 r} = \\frac{2k\\lambda}{r}$.",
+        "steps": [
+          "$2k\\lambda = 2 \\times 9 \\times 10^{9} \\times 3 \\times 10^{-6} = 5.4 \\times 10^{4}$.",
+          "$E = 5.4 \\times 10^{4} / 0.3 = 1.8 \\times 10^{5}$ N/C."
+        ],
+        "final_answer": "Option (1): $1.8 \\times 10^{5}$ N/C",
+        "why_not_others": "$9.0 \\times 10^{4}$ misses the factor of 2. $6.0 \\times 10^{5}$ divides by $r^2$. $3.0 \\times 10^{5}$ misses the factor of 2 and also divides by $r^2$.",
+        "common_trap": "Using the $1/r^2$ dependence of a point charge for a line charge.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Applications of Gauss's law: infinite line charge, infinite plane sheet, thin spherical shell",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two large parallel plane sheets carry uniform surface charge densities $+\\sigma$ and $-\\sigma$, with $\\sigma = 8.85 \\times 10^{-7}$ C/$m^2$. What are the field magnitudes in the region between the sheets and in the region outside them? (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\ C^2 N^{-1} m^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.0 \\times 10^{4}$ N/C between, zero outside",
+        "$1.0 \\times 10^{5}$ N/C between, zero outside",
+        "$1.0 \\times 10^{5}$ N/C between, $1.0 \\times 10^{5}$ N/C outside",
+        "zero between, $1.0 \\times 10^{5}$ N/C outside"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each sheet produces $\\sigma/(2\\epsilon_0)$. The two fields add between the sheets and cancel outside them.",
+        "steps": [
+          "$\\sigma/\\epsilon_0 = 8.85 \\times 10^{-7} / 8.85 \\times 10^{-12} = 1.0 \\times 10^{5}$ N/C between the sheets.",
+          "Outside the sheets, the two fields of $\\sigma/(2\\epsilon_0)$ are opposite, so E = 0."
+        ],
+        "final_answer": "Option (2): $1.0 \\times 10^{5}$ N/C between, zero outside",
+        "why_not_others": "$5.0 \\times 10^{4}$ N/C is the field of a single sheet. The third option ignores the cancellation outside. The fourth option reverses the two regions.",
+        "common_trap": "Using $\\sigma/(2\\epsilon_0)$ between the sheets.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Applications of Gauss's law: infinite line charge, infinite plane sheet, thin spherical shell",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A uniformly charged insulating solid sphere has radius R. What is the ratio of the electric field magnitude at distance R/2 from its centre to that at distance 2R from its centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "16 : 1",
+        "2 : 1",
+        "1 : 2",
+        "1 : 1"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Inside the sphere $E = kQr/R^3$. Outside it, $E = kQ/r^2$.",
+        "steps": [
+          "At r = R/2: $E_1 = kQ(R/2)/R^3 = kQ/(2R^2)$.",
+          "At r = 2R: $E_2 = kQ/(4R^2)$.",
+          "$E_1 : E_2 = (1/2) : (1/4) = 2 : 1$."
+        ],
+        "final_answer": "Option (2): 2 : 1",
+        "why_not_others": "16 : 1 wrongly applies $kQ/r^2$ inside the sphere. 1 : 2 inverts the ratio. 1 : 1 would require the two fields to be equal, but the inside value is half the surface field while the outside value is a quarter of it.",
+        "common_trap": "Using the point-charge formula at an inside point of a solid sphere.",
+        "time_saving_tip": "Express both in terms of the surface field: half of it at R/2 and a quarter of it at 2R."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Applications of Gauss's law: infinite line charge, infinite plane sheet, thin spherical shell",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Infinite line charge, at distance r"
+          },
+          {
+            "label": "B",
+            "text": "Infinite plane sheet of charge, at distance r"
+          },
+          {
+            "label": "C",
+            "text": "Thin charged spherical shell, at a point inside (r < R)"
+          },
+          {
+            "label": "D",
+            "text": "Uniformly charged insulating solid sphere, at a point inside (r < R)"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "E independent of r"
+          },
+          {
+            "label": "II",
+            "text": "E proportional to 1/r"
+          },
+          {
+            "label": "III",
+            "text": "E proportional to r"
+          },
+          {
+            "label": "IV",
+            "text": "E equal to zero"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Results from Gauss's law: line $\\lambda/(2\\pi\\epsilon_0 r)$, sheet $\\sigma/(2\\epsilon_0)$, shell interior 0, solid sphere interior $\\rho r/(3\\epsilon_0)$.",
+        "steps": [
+          "Line charge: $E \\propto 1/r$ (A-II).",
+          "Plane sheet: E is independent of r (B-I).",
+          "Inside a shell: E = 0 (C-IV).",
+          "Inside a solid sphere: $E \\propto r$ (D-III)."
+        ],
+        "final_answer": "Option (2): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option (3) swaps the shell and the solid sphere. Options (1) and (4) mismatch the line and sheet results as well.",
+        "common_trap": "Assuming the field is zero inside a solid sphere, as it is for a shell.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Applications of Gauss's law: infinite line charge, infinite plane sheet, thin spherical shell",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about fields obtained using Gauss's law are correct?",
+      "statements": {
+        "A": "For a thin charged spherical shell, the field is discontinuous at r = R, jumping from 0 to $kQ/R^2$.",
+        "B": "For a uniformly charged insulating solid sphere, the field is maximum at its centre.",
+        "C": "Just outside the surface of a charged conductor, the field is $\\sigma/\\epsilon_0$.",
+        "D": "Inside a uniformly charged solid sphere of charge density $\\rho$, the field at distance r from the centre is $\\rho r/(3\\epsilon_0)$.",
+        "E": "The field of an infinite plane sheet of charge halves when the distance from it is doubled."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C, D and E only",
+        "A, C and D only",
+        "B, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Shell: E jumps at the surface. Solid sphere: E grows linearly from zero at the centre and peaks at the surface. Plane sheet: E is independent of distance.",
+        "steps": [
+          "A is true: the shell field jumps from 0 to $kQ/R^2$ at r = R.",
+          "B is false: E is zero at the centre and maximum at the surface.",
+          "C is true: the field just outside a conductor is $\\sigma/\\epsilon_0$.",
+          "D is true: $E_{inside} = \\rho r/(3\\epsilon_0)$.",
+          "E is false: the sheet field $\\sigma/(2\\epsilon_0)$ does not depend on distance."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options (1) and (4) include the false statement B. Option (2) includes the false statement E. Option (4) also omits the true statement A.",
+        "common_trap": "Thinking the field of a solid sphere is largest at its centre.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric potential due to a point charge, a dipole and a system of charges",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the electric potential at a distance of $0.3\\,m$ from a point charge of $+2\\,nC$ placed in vacuum? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9\\times10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$200\\,V$",
+        "$60\\,V$",
+        "$6\\,V$",
+        "$18\\,V$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The potential of a point charge is $V = \\frac{kq}{r}$, which varies as $1/r$ and not $1/r^2$.",
+        "steps": [
+          "$kq = 9\\times10^9 \\times 2\\times10^{-9} = 18\\,V\\,m$.",
+          "$V = \\frac{18}{0.3} = 60\\,V$."
+        ],
+        "final_answer": "Option (2): $60\\,V$",
+        "why_not_others": "$200\\,V$ comes from dividing by $r^2$. $18\\,V$ comes from forgetting to divide by r. $6\\,V$ comes from multiplying by r instead of dividing.",
+        "common_trap": "Using the $1/r^2$ dependence of the field for the potential.",
+        "time_saving_tip": "Note that $kq$ in nC units is simply $9 \\times q$, so here $kq = 18$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric potential due to a point charge, a dipole and a system of charges",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Point charges of $+3\\,\\mu C$, $-5\\,\\mu C$, $+4\\,\\mu C$ and $+2\\,\\mu C$ are placed at the four corners of a square of side $\\sqrt{2}\\,m$. What is the electric potential at the centre of the square? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9\\times10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.26\\times10^5\\,V$",
+        "$2.55\\times10^4\\,V$",
+        "Zero",
+        "$3.6\\times10^4\\,V$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Potential is a scalar, so the potentials of the individual charges add algebraically: $V = k\\sum q_i/r_i$.",
+        "steps": [
+          "The half-diagonal is $\\frac{\\sqrt{2}\\times\\sqrt{2}}{2} = 1\\,m$, so every charge is $1\\,m$ from the centre.",
+          "The algebraic sum of the charges is $3 - 5 + 4 + 2 = 4\\,\\mu C$.",
+          "$V = \\frac{9\\times10^9\\times4\\times10^{-6}}{1} = 3.6\\times10^4\\,V$."
+        ],
+        "final_answer": "Option (4): $3.6\\times10^4\\,V$",
+        "why_not_others": "$1.26\\times10^5\\,V$ adds the magnitudes of the charges and ignores their signs. $2.55\\times10^4\\,V$ uses the side $\\sqrt{2}\\,m$ as the distance. Zero wrongly assumes that the potentials cancel at the centre.",
+        "common_trap": "Ignoring the signs of the charges, or treating potential as a vector.",
+        "time_saving_tip": "When all the charges are equidistant from the point, find the net charge first and use $V = kq_{net}/r$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric potential due to a point charge, a dipole and a system of charges",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A uniformly charged insulating solid sphere of radius R has a potential of $16\\,V$ at its surface. What is the potential at a point at a distance $R/2$ from its centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16\\,V$",
+        "$22\\,V$",
+        "$24\\,V$",
+        "$32\\,V$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Inside a uniformly charged solid sphere, $V = \\frac{kQ(3R^2 - r^2)}{2R^3}$.",
+        "steps": [
+          "The surface potential is $\\frac{kQ}{R} = 16\\,V$.",
+          "At $r = R/2$: $V = \\frac{kQ}{R}\\cdot\\frac{3 - 1/4}{2} = \\frac{kQ}{R}\\cdot\\frac{11}{8}$.",
+          "$V = 16\\times\\frac{11}{8} = 22\\,V$."
+        ],
+        "final_answer": "Option (2): $22\\,V$",
+        "why_not_others": "$16\\,V$ uses the shell result, where V is constant inside. $24\\,V$ is the value at the centre ($1.5\\times16$). $32\\,V$ treats the sphere as a point charge, using $kQ/r$ with $r = R/2$.",
+        "common_trap": "Using the shell formula inside a solid charged sphere.",
+        "time_saving_tip": "Write $V_{in} = V_s\\cdot\\frac{3 - (r/R)^2}{2}$ and substitute directly."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric potential due to a point charge, a dipole and a system of charges",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The electric field at every point on the equatorial plane of a short electric dipole is zero.",
+        "R": "The electric potential at every point on the equatorial plane of a short electric dipole is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "On the equatorial plane of a dipole $\\theta = 90^\\circ$, so $V = \\frac{kp\\cos\\theta}{r^2} = 0$. The field there is not zero.",
+        "steps": [
+          "With $\\theta = 90^\\circ$, $\\cos\\theta = 0$, so V = 0 everywhere on the equatorial plane. R is true.",
+          "The field on the equatorial plane is non-zero and directed opposite to $\\vec{p}$. A is false.",
+          "V = 0 at a point does not imply E = 0 there."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so any option that calls A true is wrong.",
+        "common_trap": "Treating V = 0 as implying E = 0.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electric potential due to a point charge, a dipole and a system of charges",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a short electric dipole, the potential at a distance r on its axis is twice the potential at the same distance r along a line making $60^\\circ$ with the dipole axis.",
+        "II": "Inside a uniformly charged thin spherical shell of radius R, the potential falls from $kQ/R$ at the surface to zero at the centre, because the electric field inside the shell is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Dipole: $V \\propto \\cos\\theta$ at a fixed r. Shell: V inside is constant and equal to $kQ/R$.",
+        "steps": [
+          "On the axis, $\\cos 0^\\circ = 1$. At $60^\\circ$, $\\cos 60^\\circ = 0.5$. The ratio is 2, so Statement I is correct.",
+          "Inside the shell E = 0, so V does not change with position. It stays equal to $kQ/R$ everywhere inside, including at the centre.",
+          "Statement II is therefore incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses E = 0 with V = 0. Zero field means constant potential, not zero potential.",
+        "common_trap": "Believing that the potential inside a charged shell is zero because the field there is zero.",
+        "time_saving_tip": "Remember that $E = -dV/dr$, so wherever E = 0 the potential is simply constant."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Potential difference and equipotential surfaces",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In a uniform electric field of magnitude $500\\,V/m$, what is the potential difference between two points separated by $4\\,cm$ along the direction of the field?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12500\\,V$",
+        "$2000\\,V$",
+        "$20\\,V$",
+        "$200\\,V$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a uniform field, V = Ed, where d is the separation measured along the field.",
+        "steps": [
+          "$d = 4\\,cm = 0.04\\,m$.",
+          "$V = 500\\times0.04 = 20\\,V$."
+        ],
+        "final_answer": "Option (3): $20\\,V$",
+        "why_not_others": "$2000\\,V$ uses d in cm without converting it. $12500\\,V$ divides E by d. $200\\,V$ is a decimal slip.",
+        "common_trap": "Not converting centimetres to metres.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Potential difference and equipotential surfaces",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The electric potential along the x-axis is given by $V(x) = 4x^2 - 3x$, where V is in volts and x is in metres. What is the electric field at $x = 2\\,m$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$13\\,V/m$ along the negative x-direction",
+        "$13\\,V/m$ along the positive x-direction",
+        "$10\\,V/m$ along the negative x-direction",
+        "$5\\,V/m$ along the positive x-direction"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$E = -\\frac{dV}{dx}$. The field points in the direction of steepest decrease of V.",
+        "steps": [
+          "$\\frac{dV}{dx} = 8x - 3$.",
+          "At $x = 2$: $\\frac{dV}{dx} = 13\\,V/m$.",
+          "$E = -13\\,V/m$, which means $13\\,V/m$ along the negative x-direction."
+        ],
+        "final_answer": "Option (1): $13\\,V/m$ along the negative x-direction",
+        "why_not_others": "The positive-direction option drops the minus sign. $10\\,V/m$ is the value of V at x = 2, not its derivative. $5\\,V/m$ comes from V/x.",
+        "common_trap": "Forgetting the negative sign in $E = -dV/dx$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Potential difference and equipotential surfaces",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A charge of $+2\\,\\mu C$ is dragged slowly through a winding tube of length $3\\,m$ from point A, where the potential is $10\\,V$, to point B, where the potential is $70\\,V$. What is the work done by the external agent?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.6\\times10^{-4}\\,J$",
+        "$-1.2\\times10^{-4}\\,J$",
+        "$3.6\\times10^{-4}\\,J$",
+        "$1.2\\times10^{-4}\\,J$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The electrostatic field is conservative, so $W = q(V_B - V_A)$ regardless of the path.",
+        "steps": [
+          "$V_B - V_A = 70 - 10 = 60\\,V$.",
+          "$W = 2\\times10^{-6}\\times60 = 1.2\\times10^{-4}\\,J$.",
+          "The length and shape of the tube are irrelevant."
+        ],
+        "final_answer": "Option (4): $1.2\\times10^{-4}\\,J$",
+        "why_not_others": "$1.6\\times10^{-4}\\,J$ adds the two potentials. $-1.2\\times10^{-4}\\,J$ has the wrong sign. $3.6\\times10^{-4}\\,J$ wrongly multiplies by the path length.",
+        "common_trap": "Thinking the work depends on the path or the length of the tube.",
+        "time_saving_tip": "Ignore any path details. Only the end-point potentials matter."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Potential difference and equipotential surfaces",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Shape of the equipotential surfaces of an isolated point charge"
+          },
+          {
+            "label": "B",
+            "text": "Shape of the equipotential surfaces of a uniform electric field"
+          },
+          {
+            "label": "C",
+            "text": "Direction of the electric field relative to an equipotential surface"
+          },
+          {
+            "label": "D",
+            "text": "Work done in moving a charge along an equipotential surface"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "Concentric spheres"
+          },
+          {
+            "label": "III",
+            "text": "Parallel planes"
+          },
+          {
+            "label": "IV",
+            "text": "Perpendicular to the surface"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-II, D-I",
+        "A-II, B-III, C-IV, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Equipotentials are concentric spheres for a point charge and parallel planes for a uniform field. E is perpendicular to them, and no work is done in moving a charge along them.",
+        "steps": [
+          "A: a point charge gives concentric spheres (II).",
+          "B: a uniform field gives parallel planes (III).",
+          "C: E is perpendicular to an equipotential surface (IV).",
+          "D: since $\\Delta V = 0$, the work done is zero (I)."
+        ],
+        "final_answer": "Option (4): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Option 1 swaps the shapes for the point charge and the uniform field. Option 2 swaps the direction and the work. Option 3 pairs the point charge with a direction and C with a shape.",
+        "common_trap": "Mixing up the spherical and planar equipotentials.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Potential difference and equipotential surfaces",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about potential difference and equipotential surfaces are correct?",
+      "statements": {
+        "A": "Two equipotential surfaces can intersect in a region where the field is strong.",
+        "B": "The surface and interior of a conductor in electrostatic equilibrium form a single equipotential volume.",
+        "C": "Equipotential surfaces crowd closer together where the electric field is stronger.",
+        "D": "The electric field points in the direction in which the potential increases most steeply.",
+        "E": "The line integral of the electrostatic field around any closed loop is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C and E only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "E points from high to low potential, equipotentials never intersect, and the electrostatic field is conservative.",
+        "steps": [
+          "A is false. Two equipotential surfaces never intersect.",
+          "B is true. A conductor in equilibrium is a single equipotential volume.",
+          "C is true. Equipotentials crowd together where the field is strong.",
+          "D is false. E points along the steepest decrease of V.",
+          "E is true. $\\oint \\vec{E}\\cdot d\\vec{l} = 0$."
+        ],
+        "final_answer": "Option (3): B, C and E only",
+        "why_not_others": "Every other combination includes A or D, and both of these are false.",
+        "common_trap": "Reversing the direction of E relative to the potential gradient.",
+        "time_saving_tip": "Spotting that A and D are false eliminates all options except (3)."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t10_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electrical potential energy of a system of two point charges and of a dipole",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Point charges of $+4\\,\\mu C$ and $-3\\,\\mu C$ are held $0.6\\,m$ apart in vacuum. What is the electrostatic potential energy of this system? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9\\times10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-0.18\\,J$",
+        "$+0.18\\,J$",
+        "$-0.30\\,J$",
+        "$-0.09\\,J$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$U = \\frac{kq_1q_2}{r}$, which is negative for unlike charges.",
+        "steps": [
+          "$kq_1q_2 = 9\\times10^9\\times(4\\times10^{-6})(-3\\times10^{-6}) = -0.108\\,J\\,m$.",
+          "$U = \\frac{-0.108}{0.6} = -0.18\\,J$."
+        ],
+        "final_answer": "Option (1): $-0.18\\,J$",
+        "why_not_others": "$+0.18\\,J$ ignores the sign of the charges. $-0.30\\,J$ divides by $r^2$. $-0.09\\,J$ wrongly includes a factor of 1/2.",
+        "common_trap": "Dropping the sign. A system of unlike charges is bound and has negative U.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t10_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electrical potential energy of a system of two point charges and of a dipole",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Charges $+q$, $+q$ and $-2q$ are placed at the three corners of an equilateral triangle of side a. What is the electrostatic potential energy of the system? (Here $k = \\frac{1}{4\\pi\\epsilon_0}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-\\frac{3kq^2}{a}$",
+        "$-\\frac{6kq^2}{a}$",
+        "$-\\frac{4kq^2}{a}$",
+        "$+\\frac{5kq^2}{a}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a system of charges, U is the sum over all distinct pairs. Three charges have 3 pairs.",
+        "steps": [
+          "The $(+q, +q)$ pair gives $+kq^2/a$.",
+          "The two $(+q, -2q)$ pairs give $2\\times(-2kq^2/a) = -4kq^2/a$.",
+          "$U = \\frac{kq^2}{a} - \\frac{4kq^2}{a} = -\\frac{3kq^2}{a}$."
+        ],
+        "final_answer": "Option (1): $-\\frac{3kq^2}{a}$",
+        "why_not_others": "$-6kq^2/a$ counts every pair twice. $-4kq^2/a$ leaves out the like-charge pair. $+5kq^2/a$ uses the magnitudes of the charges and ignores their signs.",
+        "common_trap": "Double counting pairs, or forgetting one of the pairs.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t10_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electrical potential energy of a system of two point charges and of a dipole",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An alpha particle (charge $+2e$) is released from rest at a point where the potential is $500\\,V$. It moves under electric forces alone to a point where the potential is $200\\,V$. What kinetic energy does it gain? ($e = 1.6\\times10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9.6\\times10^{-17}\\,J$",
+        "$4.8\\times10^{-17}\\,J$",
+        "$2.24\\times10^{-16}\\,J$",
+        "$6.4\\times10^{-17}\\,J$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "By energy conservation, $\\Delta K = q(V_{initial} - V_{final})$.",
+        "steps": [
+          "$V_{initial} - V_{final} = 500 - 200 = 300\\,V$.",
+          "$\\Delta K = 2e\\times300 = 600\\,eV$.",
+          "$600\\times1.6\\times10^{-19} = 9.6\\times10^{-17}\\,J$."
+        ],
+        "final_answer": "Option (1): $9.6\\times10^{-17}\\,J$",
+        "why_not_others": "$4.8\\times10^{-17}\\,J$ uses the charge e instead of 2e. $2.24\\times10^{-16}\\,J$ uses the sum of the potentials (700 V). $6.4\\times10^{-17}\\,J$ uses only the final potential.",
+        "common_trap": "Forgetting that the alpha particle carries charge 2e.",
+        "time_saving_tip": "Work in eV first: charge (in units of e) multiplied by the potential difference gives the energy in eV."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t10_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electrical potential energy of a system of two point charges and of a dipole",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "An electric dipole aligned along a uniform electric field is in stable equilibrium.",
+        "R": "The potential energy of an electric dipole in a uniform electric field is maximum when the dipole is aligned along the field."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$U = -pE\\cos\\theta$, which is minimum ($-pE$) at $\\theta = 0$ (stable) and maximum ($+pE$) at $\\theta = 180^\\circ$ (unstable).",
+        "steps": [
+          "At $\\theta = 0$, U is at its minimum, so the dipole is in stable equilibrium. A is true.",
+          "U is maximum at $180^\\circ$, not at $0^\\circ$. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Associating the aligned position with maximum energy.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t10_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Electrical potential energy of a system of two point charges and of a dipole",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The external work required to slowly rotate an electric dipole of moment p in a uniform field E from the aligned orientation to the anti-aligned orientation is pE.",
+        "II": "A system of two unlike point charges has positive potential energy, so no external work is needed to separate them to infinity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a dipole, $W = U_f - U_i$ with $U = -pE\\cos\\theta$. For two unlike charges, U is negative and the system is bound.",
+        "steps": [
+          "Rotating the dipole: $W = (+pE) - (-pE) = 2pE$, not pE. Statement I is incorrect.",
+          "Unlike charges give $U = kq_1q_2/r < 0$. The system is bound, and external work is needed to separate the charges. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contains an error, so no option that calls either statement correct can be right.",
+        "common_trap": "Taking only the change from 0 to +pE, which gives pE instead of 2pE.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t11_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Conductors and insulators",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Where does the excess charge on an isolated conductor reside when the conductor is in electrostatic equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Uniformly throughout its volume",
+        "Concentrated at its centre",
+        "On its outer surface",
+        "Divided equally between its interior and its surface"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In equilibrium E = 0 inside the conducting material, so any excess charge resides on the outer surface.",
+        "steps": [
+          "Free charges move until the field inside the material vanishes.",
+          "With E = 0 inside, there can be no net charge in the interior, so the excess charge lies on the outer surface."
+        ],
+        "final_answer": "Option (3): On its outer surface",
+        "why_not_others": "A volume distribution is what an insulator can hold, because an insulator does not redistribute charge. Charge at the centre or inside the material would produce a non-zero internal field.",
+        "common_trap": "Confusing a conductor with a uniformly charged insulator.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t11_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Conductors and insulators",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two isolated conducting spheres of radii $2\\,cm$ and $6\\,cm$ carry a total charge of $80\\,nC$. They are connected by a thin conducting wire. What is the charge on the smaller sphere after equilibrium is reached?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60\\,nC$",
+        "$20\\,nC$",
+        "$40\\,nC$",
+        "$8\\,nC$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Connected spheres come to equal potentials, so $q_1/q_2 = r_1/r_2$.",
+        "steps": [
+          "$q_1 : q_2 = 2 : 6 = 1 : 3$.",
+          "$q_1 = \\frac{1}{4}\\times80 = 20\\,nC$."
+        ],
+        "final_answer": "Option (2): $20\\,nC$",
+        "why_not_others": "$60\\,nC$ inverts the ratio. $40\\,nC$ assumes the charge divides equally. $8\\,nC$ uses the ratio of the squares of the radii (1 : 9).",
+        "common_trap": "Dividing the charge in the ratio of surface areas instead of radii.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t11_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Conductors and insulators",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The surface charge density at a point on a charged conductor in electrostatic equilibrium is $8.85\\times10^{-6}\\,C/m^2$. What is the electric field just outside the conductor at that point? ($\\epsilon_0 = 8.85\\times10^{-12}\\,C^2\\,N^{-1}\\,m^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\times10^6\\,N/C$, normal to the surface",
+        "$5.0\\times10^5\\,N/C$, normal to the surface",
+        "$1.0\\times10^6\\,N/C$, tangential to the surface",
+        "$2.0\\times10^6\\,N/C$, normal to the surface"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Just outside a conductor, $E = \\sigma/\\epsilon_0$, directed normal to the surface.",
+        "steps": [
+          "$E = \\frac{8.85\\times10^{-6}}{8.85\\times10^{-12}} = 1.0\\times10^6\\,N/C$.",
+          "The field is normal to the surface because a conductor is an equipotential."
+        ],
+        "final_answer": "Option (1): $1.0\\times10^6\\,N/C$, normal to the surface",
+        "why_not_others": "$5.0\\times10^5\\,N/C$ uses $\\sigma/2\\epsilon_0$. A tangential field would move charges along the surface, which cannot happen in equilibrium. $2.0\\times10^6\\,N/C$ wrongly doubles the result.",
+        "common_trap": "Using the result for a non-conducting sheet, $\\sigma/2\\epsilon_0$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t11_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Conductors and insulators",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Electric field just outside a charged conductor"
+          },
+          {
+            "label": "B",
+            "text": "Electric field inside a charge-free cavity in a conductor placed in an external field"
+          },
+          {
+            "label": "C",
+            "text": "Charge induced on the cavity wall when $+Q$ is placed inside the cavity of an isolated neutral conductor"
+          },
+          {
+            "label": "D",
+            "text": "Surface charge density on each of two conducting spheres joined by a wire"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$-Q$"
+          },
+          {
+            "label": "II",
+            "text": "Inversely proportional to the radius of the sphere"
+          },
+          {
+            "label": "III",
+            "text": "$\\sigma/\\epsilon_0$, normal to the surface"
+          },
+          {
+            "label": "IV",
+            "text": "Zero"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are the properties of conductors in electrostatic equilibrium, including electrostatic shielding.",
+        "steps": [
+          "A: $E = \\sigma/\\epsilon_0$, normal to the surface (III).",
+          "B: the field inside a charge-free cavity is zero, whatever the external field (IV).",
+          "C: $-Q$ is induced on the cavity wall (I).",
+          "D: for connected spheres $\\sigma \\propto 1/r$ (II)."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 2 swaps A and B. Option 3 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Thinking that an external field can penetrate an empty cavity of a conductor.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t11_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Conductors and insulators",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "A point charge $+Q$ is placed off-centre inside a cavity within an isolated, neutral, solid conducting sphere. Which of the following statements are correct?",
+      "statements": {
+        "A": "The electric field everywhere inside the cavity is zero.",
+        "B": "A charge $-Q$ is induced on the wall of the cavity.",
+        "C": "The charge on the outer surface of the sphere is distributed uniformly, irrespective of where the charge sits inside the cavity.",
+        "D": "Outside the sphere, at equal distances from its centre, the field is stronger on the side nearer to the cavity.",
+        "E": "The entire conducting material of the sphere is at the same potential."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The charge in the cavity induces $-Q$ on the cavity wall and $+Q$ on the outer surface. The outer charge spreads uniformly, so the outside field is symmetric.",
+        "steps": [
+          "A is false. The charge Q produces a non-zero field inside the cavity.",
+          "B is true. A charge $-Q$ is induced on the cavity wall.",
+          "C is true. The outer $+Q$ spreads uniformly over the sphere.",
+          "D is false. The outside field depends only on the outer charge, so it is symmetric.",
+          "E is true. A conductor in equilibrium is an equipotential."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Options (1) and (4) include A, which is false. Options (3) and (4) include D, which is false.",
+        "common_trap": "Assuming that the field inside any cavity of a conductor is zero, or that the off-centre position of the charge distorts the outside field.",
+        "time_saving_tip": "Spotting that A and D are false leaves only option (2)."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t12_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Dielectrics and electric polarization",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A linear dielectric has electric susceptibility $\\chi_e = 4$. A uniform external field $E_0$ is applied to it. What is the net electric field inside the dielectric?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$E_0/5$",
+        "$E_0/4$",
+        "$4E_0/5$",
+        "$5E_0$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Dielectric constant $K = 1 + \\chi_e$. The net field inside the dielectric is $E = E_0/K$.",
+        "steps": [
+          "$K = 1 + \\chi_e = 1 + 4 = 5$.",
+          "$E = E_0/K = E_0/5$."
+        ],
+        "final_answer": "Option (1): $E_0/5$",
+        "why_not_others": "$E_0/4$ takes K equal to $\\chi_e$. $4E_0/5$ is $E_0(1 - 1/K)$, which is the field of the bound charges, not the net field. $5E_0$ wrongly makes the field larger, but a dielectric always reduces it.",
+        "common_trap": "Taking K equal to the susceptibility instead of $1 + \\chi_e$.",
+        "time_saving_tip": "Add 1 to $\\chi_e$ to get K, then divide."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t12_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Dielectrics and electric polarization",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A parallel plate capacitor has charges $\\pm 12\\,\\mu C$ on its plates. The battery is disconnected, and the gap is then completely filled with a dielectric of dielectric constant 4. What is the magnitude of the induced (bound) charge on each face of the dielectric?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3\\,\\mu C$",
+        "$12\\,\\mu C$",
+        "$48\\,\\mu C$",
+        "$9\\,\\mu C$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Bound charge on a dielectric surface: $q_b = q(1 - 1/K)$.",
+        "steps": [
+          "The battery is disconnected, so the plate charge stays at $q = 12\\,\\mu C$.",
+          "$q_b = 12(1 - 1/4) = 12 \\times 3/4 = 9\\,\\mu C$."
+        ],
+        "final_answer": "Option (4): $9\\,\\mu C$",
+        "why_not_others": "$3\\,\\mu C$ is $q/K$, which is the net (free minus bound) charge. $12\\,\\mu C$ assumes the bound charge equals the free charge, which is true only for a metal. $48\\,\\mu C$ multiplies q by K.",
+        "common_trap": "Confusing $q/K$ (the effective charge) with the bound charge $q(1 - 1/K)$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t12_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Dielectrics and electric polarization",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The net electric field inside a linear dielectric of dielectric constant $K = 3$ is $2 \\times 10^4\\,V/m$. Find the magnitude of the polarization. (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\,C^2N^{-1}m^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.54 \\times 10^{-7}\\,C/m^2$",
+        "$5.31 \\times 10^{-7}\\,C/m^2$",
+        "$1.77 \\times 10^{-7}\\,C/m^2$",
+        "$1.18 \\times 10^{-7}\\,C/m^2$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$P = \\chi_e\\epsilon_0E$ with $\\chi_e = K - 1$, where E is the net field inside the dielectric.",
+        "steps": [
+          "$\\chi_e = K - 1 = 2$.",
+          "$\\epsilon_0E = 8.85 \\times 10^{-12} \\times 2 \\times 10^4 = 1.77 \\times 10^{-7}$.",
+          "$P = 2 \\times 1.77 \\times 10^{-7} = 3.54 \\times 10^{-7}\\,C/m^2$."
+        ],
+        "final_answer": "Option (1): $3.54 \\times 10^{-7}\\,C/m^2$",
+        "why_not_others": "$5.31 \\times 10^{-7}$ uses K in place of $\\chi_e$. $1.77 \\times 10^{-7}$ takes $\\chi_e = 1$. $1.18 \\times 10^{-7}$ also divides by K, as if the given field still had to be reduced.",
+        "common_trap": "Using K instead of $K - 1$ for the susceptibility.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t12_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Dielectrics and electric polarization",
+      "topic_index": 12,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a dielectric slab is placed in a uniform external electric field, the net field inside the slab is smaller than the applied field.",
+        "R": "The bound surface charges induced on the dielectric produce a field inside it in the same direction as the applied field."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Polarization produces bound surface charges whose field opposes the applied field, so $E = E_0/K$.",
+        "steps": [
+          "A dielectric reduces the field to $E_0/K$ with $K \\ge 1$, so A is true.",
+          "The bound charges set up a field that opposes the applied field, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) cannot be correct. A is true, so option (4) is ruled out.",
+        "common_trap": "Assuming the induced field adds to the applied field.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t12_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Dielectrics and electric polarization",
+      "topic_index": 12,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In non-polar molecules such as $O_2$ and $N_2$, a dipole moment appears only when an external field displaces the centres of positive and negative charge. In polar molecules such as $H_2O$, the external field partially aligns permanent dipoles that are otherwise randomly oriented.",
+        "II": "Water has a dielectric constant of about 80. So its electric susceptibility is about 80, and the force between two fixed charges immersed in water is reduced by a factor of about 79 compared with vacuum."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Non-polar molecules have only induced dipoles, while polar molecules have permanent dipoles. Also $K = 1 + \\chi_e$, and forces are reduced by a factor of K.",
+        "steps": [
+          "Statement I correctly describes both types of molecule.",
+          "For water, $\\chi_e = K - 1 \\approx 79$, not 80.",
+          "The force is reduced by a factor of K, which is about 80, not 79. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II swaps the roles of K and $\\chi_e$, so any option that calls it correct is wrong. Statement I is correct, so options (2) and (4) are also wrong.",
+        "common_trap": "Mixing up K and $\\chi_e$, which differ by 1.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t13_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Capacitors and capacitance; series and parallel combinations",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the capacitance of an isolated conducting sphere of radius 9 cm placed in air? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,Nm^2C^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1 pF",
+        "10 pF",
+        "20 pF",
+        "100 pF"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Capacitance of an isolated sphere: $C = 4\\pi\\epsilon_0R$.",
+        "steps": [
+          "$C = R/(9 \\times 10^9) = 0.09/(9 \\times 10^9)$.",
+          "$C = 1 \\times 10^{-11}\\,F = 10\\,pF$."
+        ],
+        "final_answer": "Option (2): 10 pF",
+        "why_not_others": "20 pF uses the diameter instead of the radius. 1 pF and 100 pF come from powers-of-ten slips when converting cm to m or F to pF.",
+        "common_trap": "Using the diameter, or forgetting to convert cm to m.",
+        "time_saving_tip": "Each 9 cm of radius gives 10 pF."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t13_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Capacitors and capacitance; series and parallel combinations",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Capacitors of $2\\,\\mu F$, $3\\,\\mu F$ and $6\\,\\mu F$ are connected in series across a 12 V battery. What is the potential difference across the $3\\,\\mu F$ capacitor in the steady state?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 V",
+        "6 V",
+        "4 V",
+        "3 V"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In series every capacitor carries the same charge, so $V_i = Q/C_i$.",
+        "steps": [
+          "$1/C_{eq} = 1/2 + 1/3 + 1/6 = 1$, so $C_{eq} = 1\\,\\mu F$.",
+          "$Q = C_{eq}V = 12\\,\\mu C$.",
+          "$V_3 = 12/3 = 4\\,V$."
+        ],
+        "final_answer": "Option (3): 4 V",
+        "why_not_others": "6 V is the voltage across the $2\\,\\mu F$ capacitor. 2 V is the voltage across the $6\\,\\mu F$ capacitor. 3 V would follow from a wrong charge or an assumed equal voltage split.",
+        "common_trap": "Assuming voltage divides in proportion to C. In series it divides in proportion to $1/C$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t13_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Capacitors and capacitance; series and parallel combinations",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Capacitors $C_1 = 4\\,\\mu F$ and $C_2 = 12\\,\\mu F$ are connected in series. This series pair is connected in parallel with $C_3 = 5\\,\\mu F$. The whole combination is then connected in series with $C_4 = 8\\,\\mu F$. What is the equivalent capacitance of the network?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$8\\,\\mu F$",
+        "$2\\,\\mu F$",
+        "$4\\,\\mu F$",
+        "$29\\,\\mu F$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Reduce the network step by step using the series and parallel rules.",
+        "steps": [
+          "$C_1$ in series with $C_2$: $4 \\times 12/16 = 3\\,\\mu F$.",
+          "In parallel with $C_3$: $3 + 5 = 8\\,\\mu F$.",
+          "In series with $C_4$: $8 \\times 8/16 = 4\\,\\mu F$."
+        ],
+        "final_answer": "Option (3): $4\\,\\mu F$",
+        "why_not_others": "$8\\,\\mu F$ stops before combining with $C_4$. $29\\,\\mu F$ simply adds all four values. $2\\,\\mu F$ comes from misplacing the series step.",
+        "common_trap": "Forgetting the last series step.",
+        "time_saving_tip": "Two equal capacitors in series give half of one."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t13_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Capacitors and capacitance; series and parallel combinations",
+      "topic_index": 13,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$3\\,\\mu F$ and $6\\,\\mu F$ in series"
+          },
+          {
+            "label": "B",
+            "text": "$3\\,\\mu F$ and $6\\,\\mu F$ in parallel"
+          },
+          {
+            "label": "C",
+            "text": "Four identical $4\\,\\mu F$ capacitors in series"
+          },
+          {
+            "label": "D",
+            "text": "Isolated conducting sphere of radius 18 cm in air"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$9\\,\\mu F$"
+          },
+          {
+            "label": "II",
+            "text": "20 pF"
+          },
+          {
+            "label": "III",
+            "text": "$2\\,\\mu F$"
+          },
+          {
+            "label": "IV",
+            "text": "$1\\,\\mu F$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-I, C-III, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series: $C_1C_2/(C_1+C_2)$. Parallel: add. n identical in series: $C/n$. Isolated sphere: $C = 4\\pi\\epsilon_0R$.",
+        "steps": [
+          "A: $18/9 = 2\\,\\mu F$, which is III.",
+          "B: $3 + 6 = 9\\,\\mu F$, which is I.",
+          "C: $4/4 = 1\\,\\mu F$, which is IV.",
+          "D: $0.18/(9 \\times 10^9) = 2 \\times 10^{-11}\\,F = 20\\,pF$, which is II."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (1) swaps the series and parallel results. Option (2) mismatches C and D. Option (3) mismatches A and C.",
+        "common_trap": "Applying the series formula to the parallel case, and the reverse.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t13_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Capacitors and capacitance; series and parallel combinations",
+      "topic_index": 13,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about capacitors and their combinations are correct?",
+      "statements": {
+        "A": "In a series combination, every capacitor carries the same charge.",
+        "B": "In a series combination, the capacitor with the larger capacitance has the larger potential difference across it.",
+        "C": "The equivalent capacitance of a series combination is smaller than the smallest individual capacitance.",
+        "D": "Doubling the charge on a capacitor doubles its capacitance.",
+        "E": "In steady DC conditions, no current flows through a branch containing a capacitor."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A and D only",
+        "A, C and E only",
+        "B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series: same Q and $V_i \\propto 1/C_i$. Capacitance depends only on geometry and the medium.",
+        "steps": [
+          "A is true, since series capacitors carry the same Q.",
+          "B is false, since $V \\propto 1/C$ and so the larger capacitor has the smaller voltage.",
+          "C is true.",
+          "D is false, since C does not depend on Q.",
+          "E is true for steady DC."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Every other option includes B or D, which are both false.",
+        "common_trap": "Thinking that $C = Q/V$ means C changes when Q changes.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t14_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Parallel plate capacitor with and without a dielectric",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An air-filled parallel plate capacitor has a capacitance of 5 pF. What is its capacitance when the gap is completely filled with a dielectric of dielectric constant 4?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.25 pF",
+        "5 pF",
+        "9 pF",
+        "20 pF"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Filling the gap completely gives $C = KC_0$.",
+        "steps": [
+          "$C = 4 \\times 5 = 20\\,pF$."
+        ],
+        "final_answer": "Option (4): 20 pF",
+        "why_not_others": "1.25 pF divides by K. 5 pF ignores the dielectric. 9 pF adds K to $C_0$.",
+        "common_trap": "Dividing by K, as is done for the field.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t14_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Parallel plate capacitor with and without a dielectric",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A parallel plate capacitor has a capacitance of $6\\,\\mu F$ with air between its plates, which are separated by d. A dielectric slab of thickness $d/2$ and dielectric constant 2 is inserted parallel to the plates. What is the new capacitance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\,\\mu F$",
+        "$8\\,\\mu F$",
+        "$9\\,\\mu F$",
+        "$4.5\\,\\mu F$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a slab partially filling the gap, $C = \\frac{\\epsilon_0A}{d - t + t/K}$.",
+        "steps": [
+          "Effective separation $= d - d/2 + d/4 = 3d/4$.",
+          "$C = \\frac{4}{3}C_0 = \\frac{4}{3} \\times 6 = 8\\,\\mu F$."
+        ],
+        "final_answer": "Option (2): $8\\,\\mu F$",
+        "why_not_others": "$12\\,\\mu F$ treats the gap as completely filled, which also equals the result for a metal slab. $9\\,\\mu F$ treats the layers as if they were in parallel. $4.5\\,\\mu F$ inverts the factor $4/3$.",
+        "common_trap": "Treating stacked layers as parallel instead of series.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t14_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Parallel plate capacitor with and without a dielectric",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A parallel plate capacitor is charged to 90 V and stores $270\\,\\mu J$. The battery is then disconnected, and a dielectric of K = 3 is inserted to fill the gap completely. What are the new potential difference and the new stored energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "30 V and $90\\,\\mu J$",
+        "90 V and $810\\,\\mu J$",
+        "30 V and $810\\,\\mu J$",
+        "270 V and $90\\,\\mu J$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "With the battery disconnected Q stays fixed, and V, E and U all fall by a factor of K.",
+        "steps": [
+          "$V = 90/3 = 30\\,V$.",
+          "$U = 270/3 = 90\\,\\mu J$."
+        ],
+        "final_answer": "Option (1): 30 V and $90\\,\\mu J$",
+        "why_not_others": "90 V and $810\\,\\mu J$ is the result when the battery stays connected. The other two options mix the two cases.",
+        "common_trap": "Confusing the battery-connected and battery-disconnected cases.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t14_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Parallel plate capacitor with and without a dielectric",
+      "topic_index": 14,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a dielectric slab of constant K is inserted to fill the gap of a parallel plate capacitor that remains connected to a battery, the charge on the plates becomes K times its initial value.",
+        "R": "With the battery connected the potential difference stays constant, while the capacitance becomes K times, so $Q = CV$ becomes K times."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Battery connected: V is fixed and C becomes KC, so Q becomes KQ.",
+        "steps": [
+          "A is true.",
+          "R is true and gives the exact reason for A through $Q = CV$."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R directly derives A, so option (2) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Applying the disconnected-battery case, where Q stays the same.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t14_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Parallel plate capacitor with and without a dielectric",
+      "topic_index": 14,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A parallel plate capacitor (plate area A, separation d) is filled with two dielectrics side by side, each covering area $A/2$ and the full thickness d, with constants $K_1$ and $K_2$. Its capacitance is $\\frac{\\epsilon_0A(K_1 + K_2)}{2d}$.",
+        "II": "The same capacitor is instead filled with two layers stacked across the gap, each of thickness $d/2$, with constants $K_1$ and $K_2$. Its capacitance is $\\frac{2\\epsilon_0AK_1K_2}{d(K_1 + K_2)}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Side-by-side fillings combine in parallel. Stacked layers combine in series.",
+        "steps": [
+          "Side by side: $\\frac{K_1\\epsilon_0A}{2d} + \\frac{K_2\\epsilon_0A}{2d} = \\frac{\\epsilon_0A(K_1 + K_2)}{2d}$. Statement I is correct.",
+          "Stacked: each layer has capacitance $\\frac{2K_i\\epsilon_0A}{d}$. In series these give $\\frac{2\\epsilon_0A}{d} \\cdot \\frac{K_1K_2}{K_1 + K_2}$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both expressions follow directly from the parallel and series rules, so no option marking either statement incorrect can be right.",
+        "common_trap": "Swapping the series and parallel treatments.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t15_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Energy stored in a capacitor",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A $4\\,\\mu F$ capacitor is charged to a potential difference of 50 V. How much energy does it store?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 mJ",
+        "10 mJ",
+        "0.1 mJ",
+        "20 mJ"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$U = \\frac{1}{2}CV^2$.",
+        "steps": [
+          "$U = 0.5 \\times 4 \\times 10^{-6} \\times 2500 = 5 \\times 10^{-3}\\,J = 5\\,mJ$."
+        ],
+        "final_answer": "Option (1): 5 mJ",
+        "why_not_others": "10 mJ drops the factor 1/2. 0.1 mJ uses $\\frac{1}{2}CV$ without squaring V. 20 mJ doubles instead of halving.",
+        "common_trap": "Forgetting the factor 1/2.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t15_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Energy stored in a capacitor",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A $3\\,\\mu F$ capacitor charged to 100 V is connected to a $6\\,\\mu F$ capacitor charged to 40 V, with positive plate joined to positive plate. How much heat is produced in the redistribution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7.2 mJ",
+        "3.6 mJ",
+        "19.6 mJ",
+        "1.8 mJ"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Energy lost on sharing charge: $\\Delta U = \\frac{C_1C_2(V_1 - V_2)^2}{2(C_1 + C_2)}$.",
+        "steps": [
+          "$\\frac{C_1C_2}{C_1 + C_2} = 18/9 = 2\\,\\mu F$.",
+          "$\\Delta U = \\frac{1}{2} \\times 2 \\times 10^{-6} \\times 60^2 = 3.6 \\times 10^{-3}\\,J$."
+        ],
+        "final_answer": "Option (2): 3.6 mJ",
+        "why_not_others": "7.2 mJ drops the factor 1/2. 19.6 mJ uses $(V_1 + V_2)$, which applies when opposite plates are joined. 1.8 mJ halves the answer once more.",
+        "common_trap": "Using the sum of voltages when like plates are joined.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t15_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Energy stored in a capacitor",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The electric field inside a dielectric of dielectric constant 2 is $2 \\times 10^5\\,V/m$. What is the energy density at that point? (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\,C^2N^{-1}m^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.177\\,J/m^3$",
+        "$0.708\\,J/m^3$",
+        "$0.354\\,J/m^3$",
+        "$0.0885\\,J/m^3$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Energy density in a dielectric: $u = \\frac{1}{2}K\\epsilon_0E^2$.",
+        "steps": [
+          "$\\epsilon_0E^2 = 8.85 \\times 10^{-12} \\times 4 \\times 10^{10} = 0.354$.",
+          "$u = \\frac{1}{2} \\times 2 \\times 0.354 = 0.354\\,J/m^3$."
+        ],
+        "final_answer": "Option (3): $0.354\\,J/m^3$",
+        "why_not_others": "0.177 omits K. 0.708 omits the 1/2. 0.0885 divides by K instead of multiplying.",
+        "common_trap": "Using the vacuum formula inside a dielectric.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t15_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Energy stored in a capacitor",
+      "topic_index": 15,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Energy stored in a $4\\,\\mu F$ capacitor charged to 10 V"
+          },
+          {
+            "label": "B",
+            "text": "Energy supplied by the battery while charging a $4\\,\\mu F$ capacitor to 10 V"
+          },
+          {
+            "label": "C",
+            "text": "Energy stored in a $4\\,\\mu F$ capacitor carrying a charge of $20\\,\\mu C$"
+          },
+          {
+            "label": "D",
+            "text": "Energy lost when a $1\\,\\mu F$ capacitor at 20 V is connected to an identical uncharged capacitor"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$50\\,\\mu J$"
+          },
+          {
+            "label": "II",
+            "text": "$100\\,\\mu J$"
+          },
+          {
+            "label": "III",
+            "text": "$200\\,\\mu J$"
+          },
+          {
+            "label": "IV",
+            "text": "$400\\,\\mu J$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Stored energy is $\\frac{1}{2}CV^2$ or $Q^2/2C$, the battery supplies QV, and the sharing loss is $\\frac{C_1C_2(V_1 - V_2)^2}{2(C_1 + C_2)}$.",
+        "steps": [
+          "A: $0.5 \\times 4 \\times 100 = 200\\,\\mu J$, which is III.",
+          "B: $QV = 40 \\times 10 = 400\\,\\mu J$, which is IV.",
+          "C: $Q^2/2C = 400/8 = 50\\,\\mu J$, which is I.",
+          "D: $\\frac{1 \\times 1 \\times 400}{2 \\times 2} = 100\\,\\mu J$, which is II."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (1) swaps the stored energy with the energy supplied by the battery. Options (2) and (4) mismatch C, D or A.",
+        "common_trap": "Equating the energy supplied by the battery with the energy stored.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u11_t15_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u11",
+      "topic": "Energy stored in a capacitor",
+      "topic_index": 15,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about energy stored in capacitors are correct?",
+      "statements": {
+        "A": "For two capacitors in series, the smaller capacitor stores more energy.",
+        "B": "For two capacitors in parallel, the larger capacitor stores more energy.",
+        "C": "When two capacitors at different potentials are connected, both the total charge and the total energy are conserved.",
+        "D": "The heat dissipated while a battery charges a capacitor through a resistor decreases as the resistance increases.",
+        "E": "The energy density at a point in an electric field depends only on the local field there."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, C and D only",
+        "B, C and E only",
+        "A and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series: $U = Q^2/2C$. Parallel: $U = \\frac{1}{2}CV^2$. The heat lost during charging is $QV/2$ whatever the resistance.",
+        "steps": [
+          "A is true, since in series $U \\propto 1/C$.",
+          "B is true, since in parallel $U \\propto C$.",
+          "C is false, since charge is conserved but energy is lost.",
+          "D is false, since the loss is $QV/2$ whatever the resistance.",
+          "E is true, since $u = \\frac{1}{2}\\epsilon_0E^2$."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other option includes C or D, which are both false.",
+        "common_trap": "Believing energy is conserved when capacitors share charge.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    }
+  ],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "expected": 80,
+    "missing_slots": []
+  }
+}

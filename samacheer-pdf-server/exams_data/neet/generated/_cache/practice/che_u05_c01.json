@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "Which of the following concentration terms changes when the temperature of a solution is changed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Molarity",
+        "Molality",
+        "Mole fraction",
+        "Mass percentage"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Molarity uses the volume of the solution, and volume changes with temperature. Terms based only on mass or moles do not change.",
+        "steps": [
+          "Molarity $= n_B / V_{solution}$. Volume expands or contracts on heating, so molarity changes.",
+          "Molality uses the mass of solvent, mole fraction uses moles and mass percentage uses masses. None of these changes with temperature."
+        ],
+        "final_answer": "Option (1): Molarity",
+        "why_not_others": "Molality, mole fraction and mass percentage depend only on mass or moles, so they are temperature independent.",
+        "common_trap": "Confusing molality with molarity and calling molality temperature dependent.",
+        "time_saving_tip": "If a term has volume in it, it depends on temperature."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "9.0 g of glucose ($C_6H_{12}O_6$, molar mass 180 g $mol^{-1}$) is dissolved in 250 g of water. What is the molality of the solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.050 mol $kg^{-1}$",
+        "0.20 mol $kg^{-1}$",
+        "0.193 mol $kg^{-1}$",
+        "2.0 mol $kg^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Molality is moles of solute per kilogram of solvent.",
+        "steps": [
+          "Moles of glucose $= 9.0/180 = 0.050$ mol.",
+          "Mass of solvent $= 250$ g $= 0.250$ kg.",
+          "$m = \\frac{0.050 \\times 1000}{250} = 0.20$ mol $kg^{-1}$."
+        ],
+        "final_answer": "Option (2): 0.20 mol $kg^{-1}$",
+        "why_not_others": "0.050 is only the number of moles, with no division by the solvent mass. 0.193 comes from using the solution mass (259 g) instead of the solvent mass. 2.0 is a factor-of-ten slip in the conversion.",
+        "common_trap": "Using the mass of solution instead of the mass of solvent.",
+        "time_saving_tip": "Divide moles by 0.25 kg directly, which is the same as multiplying by 4."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "An aqueous solution of glucose (molar mass 180 g $mol^{-1}$) has a molarity of 2.0 mol $L^{-1}$ and a density of 1.16 g $mL^{-1}$. What is its molality?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.0 mol $kg^{-1}$",
+        "1.72 mol $kg^{-1}$",
+        "2.5 mol $kg^{-1}$",
+        "0.40 mol $kg^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Converting molarity to molality requires the solution density: $m = \\frac{1000\\,M}{1000\\,d - M \\times M_B}$.",
+        "steps": [
+          "Mass of 1 L of solution $= 1000 \\times 1.16 = 1160$ g.",
+          "Mass of glucose in it $= 2.0 \\times 180 = 360$ g.",
+          "Mass of water $= 1160 - 360 = 800$ g $= 0.800$ kg.",
+          "$m = 2.0/0.800 = 2.5$ mol $kg^{-1}$."
+        ],
+        "final_answer": "Option (3): 2.5 mol $kg^{-1}$",
+        "why_not_others": "2.0 assumes molality equals molarity. 1.72 divides by the solution mass (1.16 kg) instead of the solvent mass. 0.40 is the inverted ratio, 0.800/2.0.",
+        "common_trap": "Forgetting to subtract the mass of solute from the mass of solution.",
+        "time_saving_tip": "Work with 1 L of solution and subtract $M \\times M_B$ from $1000d$."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The molality of an aqueous urea solution remains unchanged when the solution is heated from $25^\\circ C$ to $50^\\circ C$.",
+        "R": "In a binary solution, the mole fractions of the solute and the solvent always add up to 1."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Molality depends only on moles of solute and mass of solvent, and neither changes on heating.",
+        "steps": [
+          "A is true: molality uses mass, which does not change with temperature.",
+          "R is true: $x_A + x_B = 1$ for a binary solution.",
+          "R is a general property of mole fractions. It does not explain why molality is temperature independent."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct, so options (3) and (4) are wrong. The correct explanation of A is that molality involves mass, not volume, so R does not explain A and option (1) is wrong.",
+        "common_trap": "Accepting any true Reason as the explanation without checking the logical link.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The molality of a solution cannot be calculated from its molarity unless the density of the solution is known.",
+        "II": "Parts per million and mass percentage do not change with temperature, whereas volume percentage and mass by volume percentage do."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Volume-based terms depend on temperature, and moving from volume to mass requires density.",
+        "steps": [
+          "Statement I: $m = \\frac{1000\\,M}{1000\\,d - M \\times M_B}$ contains $d$, so the density is essential. This is correct.",
+          "Statement II: ppm and mass percent are mass ratios, so they are temperature independent. Volume percent and mass by volume percent involve volume, so they depend on temperature. This is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements match the facts, so any option calling either statement incorrect is wrong.",
+        "common_trap": "Thinking mass by volume percent is temperature independent because it contains mass.",
+        "time_saving_tip": "Any term with volume in it depends on temperature."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "The vapour pressure of a pure liquid kept in a closed vessel depends on",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the volume of liquid taken",
+        "the mass of liquid taken",
+        "the nature of the liquid and the temperature",
+        "the size of the container"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Vapour pressure is an equilibrium property. It depends on the nature of the liquid and the temperature, not on the amount of liquid.",
+        "steps": [
+          "At equilibrium, the rate of evaporation equals the rate of condensation.",
+          "This balance is set by the strength of intermolecular forces (the nature of the liquid) and by temperature."
+        ],
+        "final_answer": "Option (3): the nature of the liquid and the temperature",
+        "why_not_others": "The volume or mass of liquid and the size of the container do not change the equilibrium vapour pressure.",
+        "common_trap": "Assuming more liquid gives a higher vapour pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Two volatile liquids A and B form an ideal solution. At a certain temperature, $p_A^0 = 120$ mm Hg and $p_B^0 = 40$ mm Hg. What is the total vapour pressure of a solution with $x_A = 0.25$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 mm Hg",
+        "100 mm Hg",
+        "80 mm Hg",
+        "160 mm Hg"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Raoult's law with Dalton's law: $p_{total} = p_A^0 x_A + p_B^0 x_B$.",
+        "steps": [
+          "$x_B = 1 - 0.25 = 0.75$.",
+          "$p_A = 120 \\times 0.25 = 30$ mm Hg and $p_B = 40 \\times 0.75 = 30$ mm Hg.",
+          "$p_{total} = 30 + 30 = 60$ mm Hg."
+        ],
+        "final_answer": "Option (1): 60 mm Hg",
+        "why_not_others": "100 mm Hg comes from swapping the mole fractions. 80 mm Hg is the simple average of the pure vapour pressures. 160 mm Hg is their sum, with mole fractions ignored.",
+        "common_trap": "Pairing $p_A^0$ with $x_B$ by mistake.",
+        "time_saving_tip": "Use $p_{total} = p_B^0 + (p_A^0 - p_B^0)x_A = 40 + 80 \\times 0.25$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "Liquids A and B form an ideal solution with $p_A^0 = 150$ mm Hg and $p_B^0 = 50$ mm Hg. For a liquid mixture with $x_A = 0.40$, what is the mole fraction of A in the vapour in equilibrium with it?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.40",
+        "0.333",
+        "0.75",
+        "0.667"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Vapour composition follows from Dalton's law: $y_A = p_A/p_{total}$.",
+        "steps": [
+          "$p_A = 150 \\times 0.40 = 60$ mm Hg.",
+          "$p_B = 50 \\times 0.60 = 30$ mm Hg.",
+          "$p_{total} = 90$ mm Hg.",
+          "$y_A = 60/90 = 0.667$."
+        ],
+        "final_answer": "Option (4): 0.667",
+        "why_not_others": "0.40 is the liquid-phase mole fraction. 0.333 is $y_B$. 0.75 is $p_A^0/(p_A^0 + p_B^0)$, which ignores the liquid composition.",
+        "common_trap": "Assuming the vapour has the same composition as the liquid.",
+        "time_saving_tip": "A has the higher $p^0$, so $y_A$ must exceed 0.40. That leaves only 0.667 and 0.75 to check."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Partial vapour pressure of component A (Raoult's law)"
+          },
+          {
+            "label": "B",
+            "text": "Mole fraction of A in the vapour phase"
+          },
+          {
+            "label": "C",
+            "text": "Total vapour pressure of an ideal binary solution in terms of $x_B$"
+          },
+          {
+            "label": "D",
+            "text": "$\\frac{1}{p_{total}}$ in terms of vapour-phase composition"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{y_A}{p_A^0} + \\frac{y_B}{p_B^0}$"
+          },
+          {
+            "label": "II",
+            "text": "$p_A^0 x_A$"
+          },
+          {
+            "label": "III",
+            "text": "$p_A^0 + (p_B^0 - p_A^0) x_B$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{p_A}{p_{total}}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Raoult's law gives the partial pressures, and Dalton's law gives the total pressure and the vapour composition.",
+        "steps": [
+          "A: $p_A = p_A^0 x_A$, so A-II.",
+          "B: $y_A = p_A/p_{total}$, so B-IV.",
+          "C: $p_{total} = p_A^0 + (p_B^0 - p_A^0)x_B$, so C-III.",
+          "D: $1/p_{total} = y_A/p_A^0 + y_B/p_B^0$, so D-I."
+        ],
+        "final_answer": "Option (3): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option (1) swaps the vapour mole fraction with the linear pressure equation. Option (2) swaps the partial pressure with the vapour mole fraction. Option (4) swaps the partial pressure with the reciprocal-pressure expression.",
+        "common_trap": "Confusing $x_A$ (liquid phase) with $y_A$ (vapour phase).",
+        "time_saving_tip": "Fix A-II first; it is the defining form of Raoult's law."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about vapour pressure and Raoult's law are correct?",
+      "statements": {
+        "A": "Adding a non-volatile solute to a solvent lowers the vapour pressure of the solvent.",
+        "B": "Taking a larger amount of a pure liquid in the same closed vessel at the same temperature increases its vapour pressure.",
+        "C": "In a solution of two volatile liquids, the vapour is richer than the liquid in the component with the higher pure-component vapour pressure.",
+        "D": "Raoult's law can be treated as a special case of Henry's law in which $K_H = p^0$."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "B, C and D only",
+        "A, C and D only",
+        "A and C only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Vapour pressure depends on the nature of the liquid and on temperature. Solute particles reduce solvent escape, and the vapour is enriched in the more volatile component.",
+        "steps": [
+          "A: True. Solute particles occupy part of the surface, so fewer solvent molecules escape.",
+          "B: False. Vapour pressure does not depend on the amount of liquid.",
+          "C: True. The more volatile component is richer in the vapour phase.",
+          "D: True. Raoult's law is Henry's law with $K_H = p^0$."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options (1) and (2) include the false statement B. Option (4) leaves out the true statement D.",
+        "common_trap": "Believing vapour pressure grows with the quantity of liquid.",
+        "time_saving_tip": "Spotting B as false removes options (1) and (2) at once."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "Which of the following pairs of liquids forms a nearly ideal solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ethanol and water",
+        "n-Hexane and n-heptane",
+        "Chloroform and acetone",
+        "Phenol and aniline"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "An ideal solution forms when A-B interactions are similar in strength to A-A and B-B interactions.",
+        "steps": [
+          "n-Hexane and n-heptane are similar non-polar hydrocarbons, so their interactions are almost equal in strength.",
+          "Such a pair obeys Raoult's law with $\\Delta_{mix}H = 0$ and $\\Delta_{mix}V = 0$."
+        ],
+        "final_answer": "Option (2): n-Hexane and n-heptane",
+        "why_not_others": "Ethanol and water show positive deviation. Chloroform and acetone, and phenol and aniline, show negative deviation because of hydrogen bonding between the two components.",
+        "common_trap": "Thinking an ideal solution has no interactions between components; the interactions are present but similar in strength.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "When chloroform and acetone are mixed, which of the following is correct for the mixing process?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\Delta_{mix}H < 0$ and $\\Delta_{mix}V < 0$",
+        "$\\Delta_{mix}H > 0$ and $\\Delta_{mix}V > 0$",
+        "$\\Delta_{mix}H = 0$ and $\\Delta_{mix}V = 0$",
+        "$\\Delta_{mix}H < 0$ and $\\Delta_{mix}V > 0$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Chloroform and acetone show negative deviation because of hydrogen bonding between the H of $CHCl_3$ and the $C=O$ of acetone.",
+        "steps": [
+          "The new A-B hydrogen bonds are stronger than the A-A and B-B interactions.",
+          "Heat is released, so $\\Delta_{mix}H < 0$, and the volume contracts, so $\\Delta_{mix}V < 0$."
+        ],
+        "final_answer": "Option (1): $\\Delta_{mix}H < 0$ and $\\Delta_{mix}V < 0$",
+        "why_not_others": "Option (2) describes positive deviation. Option (3) describes an ideal solution. Option (4) pairs a negative enthalpy with an expansion, which does not match negative deviation.",
+        "common_trap": "Assigning positive deviation to chloroform + acetone.",
+        "time_saving_tip": "For deviations, $\\Delta_{mix}H$ and $\\Delta_{mix}V$ always carry the same sign."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Which of the following mixtures shows positive deviation from Raoult's law and forms a minimum boiling azeotrope?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Nitric acid and water",
+        "Phenol and aniline",
+        "Benzene and toluene",
+        "Ethanol and water"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Positive deviation means A-B forces are weaker than A-A and B-B forces. This raises the vapour pressure and gives a minimum boiling azeotrope.",
+        "steps": [
+          "Ethanol breaks some of the hydrogen bonds between water molecules, so the A-B interactions are weaker.",
+          "Vapour pressure is higher than Raoult's law predicts, and an azeotrope of about 95% ethanol by volume boils at a minimum temperature."
+        ],
+        "final_answer": "Option (4): Ethanol and water",
+        "why_not_others": "Nitric acid + water and phenol + aniline show negative deviation and form maximum boiling azeotropes. Benzene + toluene is nearly ideal.",
+        "common_trap": "Linking positive deviation to a maximum boiling azeotrope.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A mixture of ethanol and water shows negative deviation from Raoult's law and forms a maximum boiling azeotrope.",
+        "R": "When ethanol is added to water, ethanol molecules break some of the hydrogen bonds between water molecules."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Ethanol + water shows positive deviation and forms a minimum boiling azeotrope.",
+        "steps": [
+          "R is true: ethanol disrupts some water-water hydrogen bonds.",
+          "This weakens the overall attractions, so the vapour pressure rises and the deviation is positive.",
+          "A is therefore false, because it claims negative deviation and a maximum boiling azeotrope."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are all wrong.",
+        "common_trap": "Assuming any hydrogen-bonding mixture shows negative deviation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For the formation of an ideal solution, $\\Delta_{mix}S > 0$ and $\\Delta_{mix}G < 0$, even though $\\Delta_{mix}H = 0$.",
+        "II": "An aqueous solution containing 68% $HNO_3$ is a maximum boiling azeotrope and cannot be separated into its components by fractional distillation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Ideal mixing is driven by entropy. Azeotropes boil at constant composition.",
+        "steps": [
+          "Statement I: for an ideal solution, $\\Delta_{mix}H = 0$, $\\Delta_{mix}S > 0$ and $\\Delta_{mix}G < 0$. This is correct.",
+          "Statement II: $HNO_3$ + water shows negative deviation, and 68% $HNO_3$ is a maximum boiling azeotrope. Azeotropes cannot be separated by fractional distillation. This is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements are true, so every option that marks either one incorrect is wrong.",
+        "common_trap": "Assuming $\\Delta_{mix}H = 0$ means there is no driving force for mixing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "For an ideal solution of two volatile liquids A and B at constant temperature, the plot of total vapour pressure against mole fraction of B is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "a curve that passes through a maximum",
+        "a curve that passes through a minimum",
+        "a straight line joining $p_A^0$ and $p_B^0$",
+        "a straight line passing through the origin"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For an ideal solution, $p_{total} = p_A^0 + (p_B^0 - p_A^0)x_B$, which is linear in $x_B$.",
+        "steps": [
+          "At $x_B = 0$, $p_{total} = p_A^0$. At $x_B = 1$, $p_{total} = p_B^0$.",
+          "The plot is a straight line joining these two points."
+        ],
+        "final_answer": "Option (3): a straight line joining $p_A^0$ and $p_B^0$",
+        "why_not_others": "A maximum appears with large positive deviation and a minimum with large negative deviation. A line through the origin is the plot for a non-volatile solute against $x_{solvent}$.",
+        "common_trap": "Confusing the total pressure line with the partial pressure line or with the non-volatile solute plot.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "For an ideal solution of liquids A and B at a fixed temperature, the total vapour pressure (in mm Hg) varies with composition as $p_{total} = 120 - 75\\,x_B$. What are the vapour pressures of pure A and pure B?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$p_A^0 = 120$ mm Hg, $p_B^0 = 75$ mm Hg",
+        "$p_A^0 = 45$ mm Hg, $p_B^0 = 120$ mm Hg",
+        "$p_A^0 = 120$ mm Hg, $p_B^0 = 45$ mm Hg",
+        "$p_A^0 = 75$ mm Hg, $p_B^0 = 120$ mm Hg"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Compare with $p_{total} = p_A^0 + (p_B^0 - p_A^0)x_B$.",
+        "steps": [
+          "The intercept gives $p_A^0 = 120$ mm Hg.",
+          "The slope gives $p_B^0 - p_A^0 = -75$, so $p_B^0 = 120 - 75 = 45$ mm Hg."
+        ],
+        "final_answer": "Option (3): $p_A^0 = 120$ mm Hg, $p_B^0 = 45$ mm Hg",
+        "why_not_others": "Option (1) reads the magnitude of the slope as $p_B^0$. Options (2) and (4) assign the intercept to B instead of A.",
+        "common_trap": "Taking the slope itself as $p_B^0$; the slope is $p_B^0 - p_A^0$.",
+        "time_saving_tip": "Put $x_B = 1$ directly: $p_B^0 = 120 - 75 = 45$."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "For solutions of a non-volatile solute in a solvent, the plot of solution vapour pressure against mole fraction of solvent is a straight line through the origin with a slope of 32 mm Hg. What is the vapour pressure of a solution in which the mole fraction of the solute is 0.10?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3.2 mm Hg",
+        "32 mm Hg",
+        "28.8 mm Hg",
+        "35.2 mm Hg"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a non-volatile solute, $p = p_A^0 x_A$, so the slope of the plot is $p_A^0$.",
+        "steps": [
+          "$p_A^0 = 32$ mm Hg.",
+          "$x_{solvent} = 1 - 0.10 = 0.90$.",
+          "$p = 32 \\times 0.90 = 28.8$ mm Hg."
+        ],
+        "final_answer": "Option (3): 28.8 mm Hg",
+        "why_not_others": "3.2 mm Hg uses the solute mole fraction. 32 mm Hg is the pure solvent value. 35.2 mm Hg wrongly increases the vapour pressure by 10%.",
+        "common_trap": "Multiplying $p^0$ by the solute mole fraction instead of the solvent mole fraction.",
+        "time_saving_tip": "Adding a non-volatile solute must lower the vapour pressure below 32, so only 3.2 and 28.8 are possible."
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Ideal solution"
+          },
+          {
+            "label": "B",
+            "text": "Large positive deviation from Raoult's law"
+          },
+          {
+            "label": "C",
+            "text": "Large negative deviation from Raoult's law"
+          },
+          {
+            "label": "D",
+            "text": "Azeotropic composition"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Total vapour pressure curve shows a maximum; minimum boiling azeotrope"
+          },
+          {
+            "label": "II",
+            "text": "Liquid and vapour have identical composition"
+          },
+          {
+            "label": "III",
+            "text": "Total vapour pressure varies linearly between $p_A^0$ and $p_B^0$"
+          },
+          {
+            "label": "IV",
+            "text": "Total vapour pressure curve shows a minimum; maximum boiling azeotrope"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A higher vapour pressure means a lower boiling point. Plots for positive deviation lie above the ideal line and plots for negative deviation lie below it.",
+        "steps": [
+          "Ideal solution: the plot is linear, so A-III.",
+          "Large positive deviation: $p_{total}$ shows a maximum, giving a minimum boiling azeotrope, so B-I.",
+          "Large negative deviation: $p_{total}$ shows a minimum, giving a maximum boiling azeotrope, so C-IV.",
+          "At the azeotropic point, $x_A = y_A$, so D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) reverses the azeotrope types for positive and negative deviation. Option (3) swaps the ideal-solution and azeotrope descriptions. Option (4) swaps the descriptions for negative deviation and the azeotropic composition.",
+        "common_trap": "Linking a maximum in vapour pressure to a maximum boiling point.",
+        "time_saving_tip": "Fix B-I and C-IV first, using the inverse relation between vapour pressure and boiling point."
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about vapour pressure-composition plots are correct?",
+      "statements": {
+        "A": "For a solution showing positive deviation, the partial vapour pressure curves lie above the ideal straight lines.",
+        "B": "A minimum in the total vapour pressure curve corresponds to a minimum boiling azeotrope.",
+        "C": "At the azeotropic composition, $x_A$ in the liquid equals $y_A$ in the vapour.",
+        "D": "For an ideal solution, the total vapour pressure at any composition lies between $p_A^0$ and $p_B^0$.",
+        "E": "For a solution showing negative deviation, the total vapour pressure curve lies above the ideal straight line."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, C and D only",
+        "B, C and D only",
+        "A, B and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Positive deviation bulges above the ideal line and negative deviation sags below it. Vapour pressure and boiling point are inversely related.",
+        "steps": [
+          "A: True. Positive deviation curves lie above the ideal lines.",
+          "B: False. A minimum vapour pressure means a maximum boiling point.",
+          "C: True. The liquid and vapour compositions are identical at the azeotrope.",
+          "D: True. The ideal total pressure line joins $p_A^0$ and $p_B^0$, so it lies between them.",
+          "E: False. Negative deviation curves lie below the ideal line."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Option (1) leaves out the true statement D. Option (3) includes the false statement B. Option (4) includes the false statements B and E.",
+        "common_trap": "Equating a minimum in vapour pressure with a minimum boiling point.",
+        "time_saving_tip": "Rejecting B and E removes options (3) and (4) immediately."
+      }
+    }
+  ]
+}

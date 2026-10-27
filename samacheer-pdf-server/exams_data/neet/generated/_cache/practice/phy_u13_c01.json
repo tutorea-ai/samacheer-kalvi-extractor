@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A circular coil of 50 turns and radius 10 cm carries a current of 2 A. What is the magnitude of the magnetic field at its centre? (Take $\\mu_0 = 4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.14\\times10^{-4}\\,T$",
+        "$2.0\\times10^{-4}\\,T$",
+        "$6.28\\times10^{-4}\\,T$",
+        "$1.26\\times10^{-3}\\,T$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The field at the centre of an N-turn circular coil is $B=\\frac{\\mu_0 NI}{2R}$.",
+        "steps": [
+          "$B=\\frac{4\\pi\\times10^{-7}\\times50\\times2}{2\\times0.1}$",
+          "$B=4\\pi\\times10^{-7}\\times500=2\\pi\\times10^{-4}\\,T$",
+          "$B\\approx6.28\\times10^{-4}\\,T$"
+        ],
+        "final_answer": "Option (3): $6.28\\times10^{-4}\\,T$",
+        "why_not_others": "$3.14\\times10^{-4}\\,T$ comes from using the diameter in place of the radius. $2.0\\times10^{-4}\\,T$ comes from using the straight-wire formula $\\frac{\\mu_0 NI}{2\\pi R}$. $1.26\\times10^{-3}\\,T$ comes from dropping the factor 2 in the denominator.",
+        "common_trap": "Confusing the loop formula $\\frac{\\mu_0 I}{2R}$ with the long-wire formula $\\frac{\\mu_0 I}{2\\pi r}$.",
+        "time_saving_tip": "Write $\\mu_0=4\\pi\\times10^{-7}$ and keep $\\pi$ until the last step."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A wire carrying current I is shaped into a circular arc of radius R that subtends an angle of $270^\\circ$ at its centre O. The two ends of the arc are joined to long straight leads that point radially towards O. What is the magnitude of the magnetic field at O?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{3\\mu_0 I}{8R}$",
+        "$\\frac{\\mu_0 I}{8R}$",
+        "$\\frac{3\\mu_0 I}{4R}$",
+        "$\\frac{3\\mu_0 I}{8\\pi R}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "An arc subtending angle $\\theta$ gives $B=\\frac{\\mu_0 I\\theta}{4\\pi R}$ at its centre. Radial leads contribute nothing.",
+        "steps": [
+          "Convert the angle: $\\theta=270^\\circ=\\frac{3\\pi}{2}$ rad.",
+          "$B=\\frac{\\mu_0 I}{4\\pi R}\\cdot\\frac{3\\pi}{2}=\\frac{3\\mu_0 I}{8R}$",
+          "Each radial lead lies along the line to O, so its field at O is zero."
+        ],
+        "final_answer": "Option (1): $\\frac{3\\mu_0 I}{8R}$",
+        "why_not_others": "$\\frac{\\mu_0 I}{8R}$ uses the missing quarter instead of the arc. $\\frac{3\\mu_0 I}{4R}$ drops a factor of 2. $\\frac{3\\mu_0 I}{8\\pi R}$ leaves the angle in degrees-style fraction form, giving a stray $\\pi$.",
+        "common_trap": "Adding a field for the radial leads. Their field at the centre is zero because $\\sin\\theta=0$ along the line of each element.",
+        "time_saving_tip": "Find the arc fraction first: $\\frac{3}{4}$ of $\\frac{\\mu_0 I}{2R}$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "The magnetic field at the centre of a circular current loop of radius R is $40\\,\\mu T$. What is the magnitude of the field at a point on its axis at a distance $\\sqrt{3}R$ from the centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20\\,\\mu T$",
+        "$10\\,\\mu T$",
+        "$5\\,\\mu T$",
+        "$2.5\\,\\mu T$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "On the axis, $B_x=B_0\\frac{R^3}{(R^2+x^2)^{3/2}}$, where $B_0$ is the field at the centre.",
+        "steps": [
+          "With $x=\\sqrt{3}R$: $R^2+x^2=4R^2$.",
+          "$(4R^2)^{3/2}=8R^3$, so $B_x=\\frac{B_0}{8}$.",
+          "$B_x=\\frac{40}{8}=5\\,\\mu T$"
+        ],
+        "final_answer": "Option (3): $5\\,\\mu T$",
+        "why_not_others": "$20\\,\\mu T$ assumes the field simply halves. $10\\,\\mu T$ uses the exponent 1 instead of 3/2. $2.5\\,\\mu T$ uses the exponent 2 instead of 3/2.",
+        "common_trap": "Getting the exponent $3/2$ on $(R^2+x^2)$ wrong.",
+        "time_saving_tip": "At $x=\\sqrt{3}R$ the axial field is always $\\frac{1}{8}$ of the centre value."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a circular loop made of uniform wire, current enters at one point and leaves at another point that is not diametrically opposite. The net magnetic field at the centre of the loop is then non-zero.",
+        "R": "The field at the centre due to an arc is proportional to $I\\theta$, and for the two parallel arcs of a uniform loop the product $I\\theta$ is the same."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "When current divides between two arcs of a uniform loop, the products $I\\theta$ are equal and the fields at the centre are opposite.",
+        "steps": [
+          "Resistance is proportional to arc length, which is proportional to $\\theta$. So $I_1\\theta_1=I_2\\theta_2$.",
+          "The arc fields are proportional to $I\\theta$, so they are equal in magnitude.",
+          "The two arcs carry current in opposite senses about the centre, so their fields are opposite.",
+          "The net field is zero for any pair of entry and exit points. A is false and R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false because the net field is zero at any entry-exit pair, not only for diametrically opposite points. This rules out every option in which A is true.",
+        "common_trap": "Believing the cancellation happens only for a semicircular split.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A wire of fixed length is first bent into a single circular turn and then rewound into a two-turn circular coil, with the current unchanged. The magnetic field at the centre becomes four times its original value.",
+        "II": "The magnetic field produced by a current element at a point lying on the line of the element itself is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$B=\\frac{\\mu_0 NI}{2R}$ at the centre of a coil, and $dB\\propto\\sin\\theta$ for a current element.",
+        "steps": [
+          "For a fixed wire length, $2\\pi R\\cdot N$ is constant. Doubling N therefore halves R.",
+          "$B\\propto\\frac{N}{R}$, so B becomes $\\frac{2}{1/2}=4$ times. Statement I is correct.",
+          "On the line of the element, $\\theta=0$, so $dB=0$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I fails only if one forgets that the radius halves, which would give a factor of 2. Statement II follows directly from $\\sin0=0$.",
+        "common_trap": "Doubling the turns while keeping R fixed, and so getting a factor of 2 instead of 4.",
+        "time_saving_tip": "For a fixed wire length, $B\\propto N^2$."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "An infinitely long straight wire carries a current of 10 A. What is the magnitude of the magnetic field at a distance of 5 cm from the wire? (Take $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\times10^{-5}\\,T$",
+        "$1.26\\times10^{-4}\\,T$",
+        "$2\\times10^{-5}\\,T$",
+        "$8\\times10^{-5}\\,T$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Ampere's law for a long straight wire gives $B=\\frac{\\mu_0 I}{2\\pi r}$.",
+        "steps": [
+          "$B=\\frac{2\\times10^{-7}\\times10}{0.05}$",
+          "$B=4\\times10^{-5}\\,T$"
+        ],
+        "final_answer": "Option (1): $4\\times10^{-5}\\,T$",
+        "why_not_others": "$1.26\\times10^{-4}\\,T$ uses the loop formula $\\frac{\\mu_0 I}{2r}$. $2\\times10^{-5}\\,T$ uses r = 10 cm. $8\\times10^{-5}\\,T$ uses $\\frac{\\mu_0 I}{\\pi r}$.",
+        "common_trap": "Mixing up the formula for a straight wire with the formula for the centre of a circular loop.",
+        "time_saving_tip": "Write $\\frac{\\mu_0}{2\\pi}=2\\times10^{-7}$ directly."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A long solid cylindrical wire of radius 2 cm carries a current distributed uniformly over its cross-section. The magnetic field is $B_1$ at a distance of 1 cm from the axis and $B_2$ at a distance of 4 cm from the axis. What is the ratio $B_1/B_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4",
+        "1/4",
+        "1",
+        "2"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Inside the wire $B=\\frac{\\mu_0 Ir}{2\\pi R^2}$. Outside the wire $B=\\frac{\\mu_0 I}{2\\pi r}$.",
+        "steps": [
+          "Let $B_s$ be the field at the surface, r = R = 2 cm.",
+          "Inside, B is proportional to r. At 1 cm, $B_1=\\frac{B_s}{2}$.",
+          "Outside, B is proportional to 1/r. At 4 cm, $B_2=\\frac{B_s}{2}$.",
+          "So $\\frac{B_1}{B_2}=1$."
+        ],
+        "final_answer": "Option (3): 1",
+        "why_not_others": "4 assumes $B\\propto1/r$ at both points. 1/4 assumes $B\\propto r$ at both points. 2 uses the correct inside value but takes $B_2=B_s/4$.",
+        "common_trap": "Applying the outside-wire 1/r law to a point inside the wire.",
+        "time_saving_tip": "Measure both points relative to the surface field."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A long solenoid has 500 turns wound uniformly over a length of 0.5 m and carries a current of 2 A. What is the magnitude of the magnetic field on its axis at one end? (Take $\\mu_0=4\\pi\\times10^{-7}\\,T\\,m\\,A^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.51\\times10^{-3}\\,T$",
+        "$5.03\\times10^{-3}\\,T$",
+        "$1.26\\times10^{-3}\\,T$",
+        "zero"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The field inside a long solenoid is $\\mu_0 nI$. At either end it is half of this.",
+        "steps": [
+          "Turns per unit length: $n=\\frac{500}{0.5}=1000\\,m^{-1}$.",
+          "Central field: $\\mu_0 nI=4\\pi\\times10^{-7}\\times1000\\times2\\approx2.51\\times10^{-3}\\,T$.",
+          "Field at the end: $\\frac{2.51\\times10^{-3}}{2}\\approx1.26\\times10^{-3}\\,T$."
+        ],
+        "final_answer": "Option (3): $1.26\\times10^{-3}\\,T$",
+        "why_not_others": "$2.51\\times10^{-3}\\,T$ is the central value, not the end value. $5.03\\times10^{-3}\\,T$ doubles the field instead of halving it. Zero confuses the end of the solenoid with the region outside it.",
+        "common_trap": "Using the central field $\\mu_0 nI$ at the end of the solenoid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Field outside a long straight wire at distance r"
+          },
+          {
+            "label": "B",
+            "text": "Field inside a long solid wire carrying uniform current, at distance r from the axis"
+          },
+          {
+            "label": "C",
+            "text": "Field inside a long hollow conducting pipe carrying current along its length"
+          },
+          {
+            "label": "D",
+            "text": "Field well inside a long solenoid"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "Proportional to r"
+          },
+          {
+            "label": "III",
+            "text": "Proportional to 1/r"
+          },
+          {
+            "label": "IV",
+            "text": "Uniform, equal to $\\mu_0 nI$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Ampere's law with a suitable symmetric Amperian path gives each of these results.",
+        "steps": [
+          "A: $B=\\frac{\\mu_0 I}{2\\pi r}$, so B is proportional to 1/r (III).",
+          "B: the enclosed current is proportional to $r^2$, so B is proportional to r (II).",
+          "C: a path inside the pipe encloses no current, so B is zero (I).",
+          "D: inside a long solenoid $B=\\mu_0 nI$, which is uniform (IV)."
+        ],
+        "final_answer": "Option (4): A-III, B-II, C-I, D-IV",
+        "why_not_others": "The first option swaps the inside and outside behaviour of the wire. The second makes the field inside the solid wire zero, which is true only on the axis. The third gives the straight wire a uniform field.",
+        "common_trap": "Thinking the field inside a solid wire is zero. It is zero only on the axis and grows linearly with r.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Ampere's law and its applications are correct?",
+      "statements": {
+        "A": "The value of $\\oint\\vec{B}\\cdot d\\vec{l}$ around a closed path is not affected by currents lying outside the path.",
+        "B": "The magnetic field outside a long solenoid is nearly zero.",
+        "C": "For an ideal toroid, the field is zero both in the open space enclosed by the ring and outside it.",
+        "D": "If the length of a long solenoid is doubled while its total number of turns and current are kept the same, the field inside it doubles.",
+        "E": "For a long solid wire carrying uniform current, the magnetic field is maximum on its axis."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and C only",
+        "A, C and D only",
+        "B, C and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Only the enclosed current enters Ampere's law. The solenoid field depends on n and I, and the field of a solid wire is zero on its axis.",
+        "steps": [
+          "A is correct: only the enclosed current contributes to the line integral.",
+          "B and C are correct, as stated in the notes.",
+          "D is incorrect: doubling the length halves n, so the field halves.",
+          "E is incorrect: on the axis B = 0, and the field is maximum at the surface."
+        ],
+        "final_answer": "Option (2): A, B and C only",
+        "why_not_others": "Options containing D or E include a false statement. 'A and B only' leaves out the correct statement C.",
+        "common_trap": "Thinking a longer solenoid gives a stronger field. The field depends on turns per unit length, not on total length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "A charged particle moves in a region containing only a uniform magnetic field. Which of the following quantities remains constant during its motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Velocity",
+        "Linear momentum",
+        "Direction of motion",
+        "Kinetic energy"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The magnetic force is perpendicular to the velocity, so it does no work.",
+        "steps": [
+          "Since $\\vec{F}\\perp\\vec{v}$, the work done is zero.",
+          "The speed, and hence the kinetic energy, stays constant. Only the direction of motion changes."
+        ],
+        "final_answer": "Option (4): Kinetic energy",
+        "why_not_others": "Velocity, momentum and direction of motion all change whenever the direction changes, because they are vectors or depend on direction.",
+        "common_trap": "Thinking that constant speed means constant velocity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A proton and an alpha particle are accelerated from rest through the same potential difference. Each then enters the same uniform magnetic field perpendicular to its velocity. What is the ratio of their radii, $r_p : r_\\alpha$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1:2$",
+        "$\\sqrt{2}:1$",
+        "$1:\\sqrt{2}$",
+        "$1:1$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a particle accelerated through potential V, $r=\\frac{\\sqrt{2mqV}}{qB}=\\frac{1}{B}\\sqrt{\\frac{2mV}{q}}$, so r is proportional to $\\sqrt{m/q}$.",
+        "steps": [
+          "Proton: $\\frac{m}{q}=\\frac{m}{e}$.",
+          "Alpha particle: $\\frac{m}{q}=\\frac{4m}{2e}=\\frac{2m}{e}$.",
+          "$\\frac{r_p}{r_\\alpha}=\\sqrt{\\frac{1}{2}}$, so $r_p:r_\\alpha=1:\\sqrt{2}$."
+        ],
+        "final_answer": "Option (3): $1:\\sqrt{2}$",
+        "why_not_others": "$1:2$ omits the square root. $\\sqrt{2}:1$ inverts the ratio. $1:1$ assumes equal kinetic energy means equal radius.",
+        "common_trap": "Forgetting that the alpha particle gains twice the kinetic energy because it carries twice the charge.",
+        "time_saving_tip": "For the same accelerating voltage, compare $\\sqrt{m/q}$ directly."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A charged particle enters a uniform magnetic field with its velocity at $60^\\circ$ to the field. It moves along a helix of radius 3 cm. What is the pitch of the helix?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\sqrt{3}\\pi$ cm",
+        "$6\\sqrt{3}\\pi$ cm",
+        "$6\\pi$ cm",
+        "$\\sqrt{3}\\pi$ cm"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$r=\\frac{mv\\sin\\theta}{qB}$ and $p=\\frac{2\\pi mv\\cos\\theta}{qB}$, so $p=2\\pi r\\cot\\theta$.",
+        "steps": [
+          "$\\frac{p}{r}=2\\pi\\frac{\\cos\\theta}{\\sin\\theta}=2\\pi\\cot60^\\circ=\\frac{2\\pi}{\\sqrt{3}}$",
+          "$p=\\frac{2\\pi\\times3}{\\sqrt{3}}=2\\sqrt{3}\\pi$ cm"
+        ],
+        "final_answer": "Option (1): $2\\sqrt{3}\\pi$ cm",
+        "why_not_others": "$6\\sqrt{3}\\pi$ cm uses $\\tan\\theta$ in place of $\\cot\\theta$. $6\\pi$ cm ignores the angle and takes the pitch as $2\\pi r$. $\\sqrt{3}\\pi$ cm drops the factor 2.",
+        "common_trap": "Swapping $\\sin\\theta$ and $\\cos\\theta$ between the radius and the pitch.",
+        "time_saving_tip": "Remember $p/r=2\\pi\\cot\\theta$."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a velocity selector with crossed uniform electric and magnetic fields, only particles of one particular charge-to-mass ratio pass through undeflected.",
+        "R": "A charged particle passes undeflected through crossed fields when the electric force qE balances the magnetic force qvB."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Setting $qE=qvB$ gives $v=E/B$, which does not involve charge or mass.",
+        "steps": [
+          "The balance condition $qE=qvB$ is correct, so R is true.",
+          "The charge q cancels, leaving $v=E/B$. Selection depends only on speed, not on $q/m$.",
+          "So A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, which rules out the first three options.",
+        "common_trap": "Confusing a velocity selector with a device that separates particles by charge-to-mass ratio.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the speed of a charged particle moving perpendicular to a uniform magnetic field is doubled, its period of revolution also doubles.",
+        "II": "A proton and an electron entering the same uniform magnetic field with the same velocity perpendicular to the field circulate in the same sense."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$T=\\frac{2\\pi m}{qB}$ does not depend on speed, and the sense of circulation depends on the sign of the charge.",
+        "steps": [
+          "Doubling v doubles the radius, but T stays the same. Statement I is incorrect.",
+          "The force $q\\vec{v}\\times\\vec{B}$ reverses with the sign of q, so the proton and electron circulate in opposite senses. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contradicts a key point in the notes, so neither can be correct.",
+        "common_trap": "Thinking a faster particle takes longer to go round. The larger radius exactly compensates for the higher speed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A straight wire of length 0.5 m carries a current of 4 A. It is placed in a uniform magnetic field of 0.2 T with the wire making an angle of $30^\\circ$ with the field. What is the magnitude of the force on the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.4 N",
+        "0.2 N",
+        "0.35 N",
+        "0 N"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$F=BIl\\sin\\theta$, where $\\theta$ is the angle between the wire and the field.",
+        "steps": [
+          "$F=0.2\\times4\\times0.5\\times\\sin30^\\circ$",
+          "$F=0.4\\times0.5=0.2$ N"
+        ],
+        "final_answer": "Option (2): 0.2 N",
+        "why_not_others": "0.4 N takes the wire as perpendicular to the field. 0.35 N uses $\\cos30^\\circ$. 0 N treats the wire as parallel to the field.",
+        "common_trap": "Using cosine instead of sine of the angle between the wire and the field.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A horizontal metal rod of mass 20 g and length 0.5 m is placed in a uniform horizontal magnetic field of 0.4 T acting perpendicular to the rod. What current must flow through the rod so that the magnetic force just balances its weight? (Take $g=10\\,m\\,s^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.1 A",
+        "1000 A",
+        "1 A",
+        "0.5 A"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For levitation, the magnetic force balances the weight: $BIl=mg$.",
+        "steps": [
+          "Weight: $mg=0.02\\times10=0.2$ N.",
+          "$I=\\frac{mg}{Bl}=\\frac{0.2}{0.4\\times0.5}=1$ A"
+        ],
+        "final_answer": "Option (3): 1 A",
+        "why_not_others": "0.1 A omits g. 1000 A uses the mass in grams. 0.5 A omits the length l.",
+        "common_trap": "Not converting the mass from grams to kilograms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A semicircular wire of radius 10 cm carries a current of 5 A. It lies in a plane perpendicular to a uniform magnetic field of 0.5 T. What is the magnitude of the net force on the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.5 N",
+        "0.785 N",
+        "0.25 N",
+        "0 N"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In a uniform field, a curved wire feels the same force as the straight line joining its ends. For a semicircle this line is the diameter 2R.",
+        "steps": [
+          "Effective length: $L_{eff}=2R=0.2$ m.",
+          "$F=BIL_{eff}=0.5\\times5\\times0.2=0.5$ N"
+        ],
+        "final_answer": "Option (1): 0.5 N",
+        "why_not_others": "0.785 N uses the arc length $\\pi R$. 0.25 N uses R instead of 2R. 0 N treats the open semicircle as a closed loop.",
+        "common_trap": "Using the arc length instead of the straight-line length between the ends.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Straight wire of length l perpendicular to a uniform field B"
+          },
+          {
+            "label": "B",
+            "text": "Straight wire of length l at $30^\\circ$ to a uniform field B"
+          },
+          {
+            "label": "C",
+            "text": "Semicircular wire of radius R with its plane perpendicular to a uniform field B"
+          },
+          {
+            "label": "D",
+            "text": "Closed circular loop in a uniform field B"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "$BIl$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{BIl}{2}$"
+          },
+          {
+            "label": "IV",
+            "text": "$2BIR$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$F=BIl\\sin\\theta$. A curved wire is replaced by the straight line joining its ends, and a closed loop has zero net force.",
+        "steps": [
+          "A: $\\sin90^\\circ=1$, so F = BIl (II).",
+          "B: $\\sin30^\\circ=\\frac{1}{2}$, so F = BIl/2 (III).",
+          "C: the effective length is 2R, so F = 2BIR (IV).",
+          "D: a closed loop has zero net force (I)."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-IV, D-I",
+        "why_not_others": "The first option swaps the perpendicular and inclined wires. The third gives the semicircle zero force and the closed loop a non-zero force. The fourth gives the perpendicular straight wire the semicircle's force.",
+        "common_trap": "Thinking an open semicircle feels zero force, like a closed loop.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about forces on current-carrying conductors in a uniform magnetic field are correct?",
+      "statements": {
+        "A": "The net force on a closed current loop is zero, although it may experience a torque.",
+        "B": "The force on a straight current-carrying wire is maximum when the wire is parallel to the field.",
+        "C": "The force on a curved wire between two points equals the force on a straight wire joining those points and carrying the same current.",
+        "D": "In Fleming's left-hand rule, the first finger points along the direction of current.",
+        "E": "The force on the conductor is the sum of the Lorentz forces on its drift electrons."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "B, C and E only",
+        "A, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\vec{F}=I\\vec{l}\\times\\vec{B}$ arises from the Lorentz forces on drift electrons and depends only on the effective length of the wire.",
+        "steps": [
+          "A, C and E restate facts given in the notes, so they are correct.",
+          "B is incorrect: the force is zero when the wire is parallel to B and maximum when it is perpendicular.",
+          "D is incorrect: the first finger points along the field, and the second finger along the current."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Options containing B or D include a false statement. 'A and C only' leaves out the correct statement E.",
+        "common_trap": "Mixing up the finger assignments in Fleming's left-hand rule.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

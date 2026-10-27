@@ -1,0 +1,1874 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u04",
+  "slug": "chemical-thermodynamics",
+  "questions": [
+    {
+      "q_id": "neet_che_u04_t01_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Extensive and intensive properties",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following is an intensive property?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Volume",
+        "Temperature",
+        "Enthalpy",
+        "Mass"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An intensive property does not depend on the amount of matter present.",
+        "steps": [
+          "If the system is halved, its temperature stays the same in each half.",
+          "Volume, enthalpy and mass are each shared between the two halves, so they are extensive."
+        ],
+        "final_answer": "Option (2): Temperature",
+        "why_not_others": "Volume, enthalpy and mass all depend on the amount of matter.",
+        "common_trap": "Treating enthalpy as intensive. It is molar enthalpy that is intensive.",
+        "time_saving_tip": "Use the halving test."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t01_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Extensive and intensive properties",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following sets contains only extensive properties?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Mass, density, volume",
+        "Internal energy, temperature, entropy",
+        "Heat capacity, molar heat capacity, enthalpy",
+        "Gibbs energy, entropy, heat capacity"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "U, H, S, G, C, m, V and n are extensive. Ratios such as density and molar quantities are intensive.",
+        "steps": [
+          "Density is a ratio of two extensive properties, so it is intensive.",
+          "Temperature is intensive.",
+          "Molar heat capacity, $C_m = C/n$, is intensive.",
+          "Gibbs energy, entropy and heat capacity are all extensive."
+        ],
+        "final_answer": "Option (4): Gibbs energy, entropy, heat capacity",
+        "why_not_others": "Each of the other sets contains one intensive property: density, temperature or molar heat capacity.",
+        "common_trap": "Confusing heat capacity (extensive) with molar heat capacity (intensive).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t01_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Extensive and intensive properties",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A homogeneous sample has density $\\rho$, heat capacity $C$ and temperature $T$. It is divided into two identical halves. What are the corresponding values for each half?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Density $\\rho/2$, heat capacity $C/2$, temperature $T/2$",
+        "Density $\\rho$, heat capacity $C$, temperature $T$",
+        "Density $\\rho$, heat capacity $C/2$, temperature $T$",
+        "Density $\\rho/2$, heat capacity $C/2$, temperature $T$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Extensive properties are shared between the halves, while intensive properties stay unchanged.",
+        "steps": [
+          "Heat capacity is extensive, so each half has $C/2$.",
+          "Density is (m/2)/(V/2) = $\\rho$, so it is intensive and unchanged.",
+          "Temperature is intensive and stays $T$."
+        ],
+        "final_answer": "Option (3): Density $\\rho$, heat capacity $C/2$, temperature $T$",
+        "why_not_others": "Option 1 halves the intensive properties. Option 2 fails to halve the extensive heat capacity. Option 4 wrongly halves the density.",
+        "common_trap": "Halving the density because the mass is halved, and forgetting that the volume is halved too.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t01_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Extensive and intensive properties",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Density"
+          },
+          {
+            "label": "B",
+            "text": "Molar heat capacity, $C_m$"
+          },
+          {
+            "label": "C",
+            "text": "Molar volume"
+          },
+          {
+            "label": "D",
+            "text": "Heat capacity, $C$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Volume divided by number of moles"
+          },
+          {
+            "label": "II",
+            "text": "Extensive; shared between the two halves of a divided system"
+          },
+          {
+            "label": "III",
+            "text": "Mass divided by volume"
+          },
+          {
+            "label": "IV",
+            "text": "Heat capacity divided by number of moles"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The ratio of two extensive properties is intensive.",
+        "steps": [
+          "Density = m/V, so A-III.",
+          "$C_m = C/n$, so B-IV.",
+          "Molar volume = V/n, so C-I.",
+          "Heat capacity C is extensive, so D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 1 swaps $C$ and $C_m$. Option 2 swaps density and molar volume. Option 4 is mismatched throughout.",
+        "common_trap": "Thinking that molar heat capacity is extensive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t01_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Extensive and intensive properties",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about extensive and intensive properties are correct?",
+      "statements": {
+        "A": "The ratio of two extensive properties is always an intensive property.",
+        "B": "Specific heat is intensive, whereas heat capacity is extensive.",
+        "C": "Standard electrode potential $E^\\circ$ is extensive because it depends on the amount of substance reacting.",
+        "D": "Extensive properties are additive, whereas intensive properties are not.",
+        "E": "Surface tension and viscosity are extensive properties."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A and C only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Intensive properties do not depend on the amount of matter. Extensive properties do, and they are additive.",
+        "steps": [
+          "A is true. Examples are density = m/V and molar volume = V/n.",
+          "B is true. Specific heat c is intensive, while C is extensive.",
+          "C is false because $E^\\circ$ is intensive.",
+          "D is true.",
+          "E is false because surface tension and viscosity are intensive."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Options 2 and 4 include statement C, and option 3 includes statement E. Both of these statements are false.",
+        "common_trap": "Thinking that $E^\\circ$ doubles when the reaction is doubled. It is an intensive property.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t02_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "State functions and types of processes",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following is a path function?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Enthalpy",
+        "Entropy",
+        "Gibbs energy",
+        "Work"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Path functions depend on how a change is carried out, while state functions depend only on the initial and final states.",
+        "steps": [
+          "H, S and G are state functions.",
+          "Work w depends on the path followed."
+        ],
+        "final_answer": "Option (4): Work",
+        "why_not_others": "Enthalpy, entropy and Gibbs energy are all state functions.",
+        "common_trap": "Assuming that every energy-related quantity is a state function.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t02_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "State functions and types of processes",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A system undergoes a complete cyclic process. Which of the following quantities is NOT necessarily zero for the cycle?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\Delta U$",
+        "$\\Delta H$",
+        "Heat absorbed, $q$",
+        "$\\Delta G$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Over a complete cycle, the change in every state function is zero, but q and w need not be zero.",
+        "steps": [
+          "U, H and G are state functions, so their changes over the cycle are zero.",
+          "q is a path function, so its value over the cycle can be non-zero."
+        ],
+        "final_answer": "Option (3): Heat absorbed, $q$",
+        "why_not_others": "$\\Delta U$, $\\Delta H$ and $\\Delta G$ are each zero for any cycle.",
+        "common_trap": "Assuming that q = 0 for a cycle simply because $\\Delta U = 0$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t02_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "State functions and types of processes",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A gas changes from state X to state Y along path 1, absorbing 50 J of heat while 20 J of work is done by the gas. Along a different path 2 between the same two states, the gas absorbs 40 J of heat. What is the work $w$ for path 2 (sign convention: work done on the system is positive)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+10$ J",
+        "$-10$ J",
+        "$-20$ J",
+        "$+30$ J"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "q + w = $\\Delta U$ is a state function, so it has the same value for both paths.",
+        "steps": [
+          "Path 1: $q = +50$ J and $w = -20$ J, so $\\Delta U = +30$ J.",
+          "Path 2: $\\Delta U$ is again $+30$ J.",
+          "$w = \\Delta U - q = 30 - 40 = -10$ J."
+        ],
+        "final_answer": "Option (2): $-10$ J",
+        "why_not_others": "+10 J has the wrong sign. -20 J assumes work is the same on both paths, but work is a path function. +30 J is the value of $\\Delta U$, not w.",
+        "common_trap": "Treating w as a state function.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t02_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "State functions and types of processes",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For an ideal gas undergoing an isothermal process, $\\Delta U = 0$.",
+        "R": "In an isothermal process, no heat is exchanged between the system and the surroundings."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Isothermal means constant T. Adiabatic means q = 0.",
+        "steps": [
+          "At constant T, the internal energy of an ideal gas does not change, so $\\Delta U = 0$ and A is true.",
+          "q = 0 defines an adiabatic process. In an isothermal process heat is exchanged (q = -w), so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1, 2 and 4 cannot be correct.",
+        "common_trap": "Confusing isothermal with adiabatic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t02_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "State functions and types of processes",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Over a complete cycle, the entropy change of the system is zero, even though q and w for the cycle may be non-zero.",
+        "II": "Since q and w are path functions, their sum q + w also depends on the path followed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "State functions return to their initial values over a cycle. The sum q + w equals $\\Delta U$, which is a state function.",
+        "steps": [
+          "S is a state function, so $\\Delta S$ = 0 over a cycle, while q and w can be non-zero. Statement I is correct.",
+          "q + w = $\\Delta U$, which does not depend on the path. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is false, which rules out options 1 and 4. Statement I is true, which rules out option 2.",
+        "common_trap": "Assuming that the sum of two path functions must also be a path function.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t03_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "First law: work, heat, internal energy and enthalpy",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A gas absorbs 300 J of heat and does 120 J of work on the surroundings. What is the change in its internal energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+420$ J",
+        "$+180$ J",
+        "$-180$ J",
+        "$-420$ J"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "First law: $\\Delta U = q + w$.",
+        "steps": [
+          "Heat is absorbed, so $q = +300$ J.",
+          "Work is done by the gas, so $w = -120$ J.",
+          "$\\Delta U = 300 - 120 = +180$ J."
+        ],
+        "final_answer": "Option (2): $+180$ J",
+        "why_not_others": "+420 J takes w as positive. -180 J and -420 J reverse the signs.",
+        "common_trap": "Taking work done by the system as positive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t03_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "First law: work, heat, internal energy and enthalpy",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An ideal gas expands irreversibly from 5 L to 15 L against a constant external pressure of 2 atm. What is the work done (1 L atm = 101.3 J)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-2026$ J",
+        "$+2026$ J",
+        "$-20$ J",
+        "$-1013$ J"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$w = -p_{ext}(V_2 - V_1)$",
+        "steps": [
+          "$w = -2 \\times (15 - 5) = -20$ L atm.",
+          "$-20 \\times 101.3 = -2026$ J."
+        ],
+        "final_answer": "Option (1): $-2026$ J",
+        "why_not_others": "+2026 J has the wrong sign. -20 J leaves L atm unconverted. -1013 J uses 1 atm instead of 2 atm.",
+        "common_trap": "Forgetting the conversion from L atm to J.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t03_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "First law: work, heat, internal energy and enthalpy",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For the reaction $C_2H_5OH(l) + 3O_2(g) \\rightarrow 2CO_2(g) + 3H_2O(l)$ at 298 K, $\\Delta U = -1364.0$ kJ mol$^{-1}$. What is $\\Delta H$? ($R = 8.314$ J K$^{-1}$ mol$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-1361.5$ kJ mol$^{-1}$",
+        "$-1359.0$ kJ mol$^{-1}$",
+        "$-1364.0$ kJ mol$^{-1}$",
+        "$-1366.5$ kJ mol$^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta H = \\Delta U + \\Delta n_g RT$, counting only gaseous moles.",
+        "steps": [
+          "$\\Delta n_g = 2 - 3 = -1$, since ethanol and water are liquids.",
+          "$RT = 8.314 \\times 298 = 2477.6$ J = 2.478 kJ.",
+          "$\\Delta H = -1364.0 - 2.478 = -1366.5$ kJ mol$^{-1}$."
+        ],
+        "final_answer": "Option (4): $-1366.5$ kJ mol$^{-1}$",
+        "why_not_others": "-1361.5 uses $\\Delta n_g = +1$. -1359.0 counts water as a gas ($\\Delta n_g = +2$). -1364.0 wrongly assumes $\\Delta H = \\Delta U$.",
+        "common_trap": "Counting liquid water in $\\Delta n_g$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t03_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "First law: work, heat, internal energy and enthalpy",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Free expansion of an ideal gas"
+          },
+          {
+            "label": "B",
+            "text": "Reversible isothermal expansion of an ideal gas"
+          },
+          {
+            "label": "C",
+            "text": "Adiabatic expansion of an ideal gas"
+          },
+          {
+            "label": "D",
+            "text": "Heating a gas in a rigid closed vessel"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$q = 0$ and $\\Delta U = w \\neq 0$; the gas cools"
+          },
+          {
+            "label": "II",
+            "text": "$w = 0$ and $\\Delta U = q_V \\neq 0$"
+          },
+          {
+            "label": "III",
+            "text": "$\\Delta U = 0$ and $q = -w \\neq 0$"
+          },
+          {
+            "label": "IV",
+            "text": "$q = 0$, $w = 0$, $\\Delta U = 0$, $\\Delta T = 0$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-I, C-III, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "First-law results for standard processes.",
+        "steps": [
+          "Free expansion: w = 0, q = 0, $\\Delta U$ = 0 and $\\Delta T$ = 0, so A-IV.",
+          "Isothermal ideal gas: $\\Delta U = 0$ and q = -w, so B-III.",
+          "Adiabatic: q = 0 and $\\Delta U = w$, and the expanding gas cools, so C-I.",
+          "Constant volume: w = 0 and $\\Delta U = q_V$, so D-II."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option 1 swaps A and B. Option 2 swaps B and C. Option 3 swaps A and C.",
+        "common_trap": "Thinking that free expansion involves heat absorption, or that adiabatic expansion keeps T constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t03_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "First law: work, heat, internal energy and enthalpy",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements are correct?",
+      "statements": {
+        "A": "For the same initial and final volumes, the magnitude of reversible isothermal work exceeds that of irreversible work for the expansion of an ideal gas.",
+        "B": "The enthalpy change of a system equals the heat exchanged at constant volume.",
+        "C": "For a reaction involving only solids and liquids, $\\Delta H = \\Delta U$.",
+        "D": "In an adiabatic expansion, the temperature of an ideal gas rises because the gas does work.",
+        "E": "When 2 mol of an ideal gas expands reversibly and isothermally at 300 K from 1 L to 10 L, it absorbs about 11.5 kJ of heat ($R = 8.314$ J K$^{-1}$ mol$^{-1}$)."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "First law: $\\Delta H = q_p$, $\\Delta U = q_V$, and reversible isothermal work.",
+        "steps": [
+          "A is true. Reversible work is the maximum work obtainable in expansion.",
+          "B is false. $\\Delta H = q_p$, while $\\Delta U = q_V$.",
+          "C is true, because $\\Delta n_g = 0$.",
+          "D is false. In adiabatic expansion $\\Delta U = w < 0$, so the gas cools.",
+          "E is true. $q = -w = 2.303 \\times 2 \\times 8.314 \\times 300 \\times \\log 10 = 11488$ J, which is about 11.5 kJ."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option 1 includes statement B. Options 3 and 4 include statement D. Both B and D are false.",
+        "common_trap": "Confusing $q_p$ with $q_V$, and thinking that adiabatic expansion heats the gas.",
+        "time_saving_tip": "Since $\\log 10 = 1$, statement E reduces to $2.303nRT$."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t04_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Heat capacity and molar heat capacity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "How much heat is required to raise the temperature of 50 g of water by 10 K? (Specific heat of water = 4.18 J g$^{-1}$ K$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "209 J",
+        "20.9 kJ",
+        "41.8 J",
+        "2.09 kJ"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Heat absorbed for a temperature change: $q = mc\\Delta T$.",
+        "steps": [
+          "$q = mc\\Delta T = 50 \\times 4.18 \\times 10$",
+          "$q = 2090$ J",
+          "$q = 2.09$ kJ"
+        ],
+        "final_answer": "Option (4): 2.09 kJ",
+        "why_not_others": "209 J leaves out $\\Delta T$. 41.8 J leaves out the mass. 20.9 kJ comes from a decimal or unit conversion slip.",
+        "common_trap": "Leaving out one of the three factors (m, c, $\\Delta T$), or misconverting J to kJ.",
+        "time_saving_tip": "Note that 50 × 10 = 500, and 500 × 4.18 ≈ 2090 J."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t04_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Heat capacity and molar heat capacity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "2 mol of a monoatomic ideal gas is heated at constant pressure from 300 K to 350 K. What is the heat absorbed by the gas? (R = 8.314 J K$^{-1}$ mol$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.08 kJ",
+        "1.25 kJ",
+        "2.91 kJ",
+        "0.83 kJ"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At constant pressure, $q = \\Delta H = nC_p\\Delta T$. For a monoatomic gas, $C_p = \\frac{5}{2}R$.",
+        "steps": [
+          "$\\Delta T = 50$ K",
+          "$q_p = 2 \\times \\frac{5}{2} \\times 8.314 \\times 50$",
+          "$q_p = 2078.5$ J ≈ 2.08 kJ"
+        ],
+        "final_answer": "Option (1): 2.08 kJ",
+        "why_not_others": "1.25 kJ uses $C_V = \\frac{3}{2}R$. 2.91 kJ uses the diatomic value $C_p = \\frac{7}{2}R$. 0.83 kJ is only the expansion work $nR\\Delta T$.",
+        "common_trap": "Using $C_V$ even though the heating is at constant pressure.",
+        "time_saving_tip": "$q = 250R$, and 250 × 8.314 ≈ 2079 J."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t04_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Heat capacity and molar heat capacity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "3 mol of a diatomic ideal gas is heated at constant pressure so that its temperature rises by 20 K. What is the change in internal energy of the gas?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$210R$",
+        "$60R$",
+        "$150R$",
+        "$90R$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For an ideal gas, $\\Delta U = nC_V\\Delta T$ for any process. For a diatomic gas, $C_V = \\frac{5}{2}R$.",
+        "steps": [
+          "The relation $\\Delta U = nC_V\\Delta T$ holds even at constant pressure.",
+          "$\\Delta U = 3 \\times \\frac{5}{2}R \\times 20$",
+          "$\\Delta U = 150R$"
+        ],
+        "final_answer": "Option (3): $150R$",
+        "why_not_others": "$210R$ is $\\Delta H$ (it uses $C_p$). $60R$ is $nR\\Delta T$, the magnitude of the expansion work. $90R$ uses the monoatomic value of $C_V$.",
+        "common_trap": "Using $C_p$ for $\\Delta U$ because the process is at constant pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t04_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Heat capacity and molar heat capacity",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A coffee-cup calorimeter measures $\\Delta H$ of a reaction, while a bomb calorimeter measures $\\Delta U$.",
+        "R": "For one mole of an ideal gas, $C_p$ exceeds $C_V$ by R."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "What a calorimeter measures depends on its working condition: constant p gives $q_p = \\Delta H$, and constant V gives $q_V = \\Delta U$.",
+        "steps": [
+          "A coffee-cup calorimeter works at constant pressure, so it measures $\\Delta H$.",
+          "A bomb calorimeter works at constant volume, so it measures $\\Delta U$. A is therefore true.",
+          "The Mayer relation $C_p - C_V = R$ is true, so R is true.",
+          "R describes heat capacities of an ideal gas. It does not explain why each calorimeter measures $\\Delta H$ or $\\Delta U$."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct, which rules out options (3) and (4). R does not account for A, which rules out option (1).",
+        "common_trap": "Linking 'p versus V' in A with '$C_p$ versus $C_V$' in R and assuming R explains A.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t04_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Heat capacity and molar heat capacity",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For an ideal gas, the relation $\\Delta U = nC_V\\Delta T$ is valid only when the gas is heated at constant volume.",
+        "II": "When 1 mol of a diatomic ideal gas is heated at constant pressure through 10 K, the heat absorbed is $35R$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta U = nC_V\\Delta T$ holds for any process of an ideal gas. At constant pressure, $q = nC_p\\Delta T$.",
+        "steps": [
+          "U of an ideal gas depends only on T, so $\\Delta U = nC_V\\Delta T$ for every process. Statement I is false.",
+          "For a diatomic gas, $C_p = \\frac{7}{2}R$.",
+          "$q_p = 1 \\times \\frac{7}{2}R \\times 10 = 35R$. Statement II is true."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I restricts a general result to constant volume, so it is wrong. Statement II is correct arithmetic.",
+        "common_trap": "Thinking that $\\Delta U = nC_V\\Delta T$ needs constant volume because $C_V$ appears in it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t05_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Hess's law of constant heat summation",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Given: $C(graphite) + O_2(g) \\rightarrow CO_2(g)$; $\\Delta H = -393.5$ kJ mol$^{-1}$ and $CO(g) + \\frac{1}{2}O_2(g) \\rightarrow CO_2(g)$; $\\Delta H = -283.0$ kJ mol$^{-1}$. What is the standard enthalpy of formation of $CO(g)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-676.5$ kJ mol$^{-1}$",
+        "$+110.5$ kJ mol$^{-1}$",
+        "$-221.0$ kJ mol$^{-1}$",
+        "$-110.5$ kJ mol$^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "By Hess's law, $\\Delta_f H(CO) = \\Delta_c H(C) - \\Delta_c H(CO)$.",
+        "steps": [
+          "Write the first equation as given.",
+          "Reverse the second equation: $CO_2 \\rightarrow CO + \\frac{1}{2}O_2$; $\\Delta H = +283.0$ kJ.",
+          "Add the two: $C + \\frac{1}{2}O_2 \\rightarrow CO$; $\\Delta H = -393.5 + 283.0 = -110.5$ kJ mol$^{-1}$."
+        ],
+        "final_answer": "Option (4): $-110.5$ kJ mol$^{-1}$",
+        "why_not_others": "$-676.5$ adds the two values without reversing. $+110.5$ has the wrong sign. $-221.0$ is the value for forming 2 mol of CO.",
+        "common_trap": "Forgetting to change the sign when reversing the CO combustion equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t05_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Hess's law of constant heat summation",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The standard enthalpies of combustion of $C(graphite)$, $H_2(g)$ and $CH_4(g)$ are $-393.5$, $-285.8$ and $-890.3$ kJ mol$^{-1}$ respectively, with water formed as $H_2O(l)$. What is the standard enthalpy of formation of $CH_4(g)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+74.8$ kJ mol$^{-1}$",
+        "$-74.8$ kJ mol$^{-1}$",
+        "$+211.0$ kJ mol$^{-1}$",
+        "$-1855.4$ kJ mol$^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Hess's law: combine the combustion equations so that they add up to the formation reaction.",
+        "steps": [
+          "Target reaction: $C + 2H_2 \\rightarrow CH_4$.",
+          "$\\Delta_f H = \\Delta_c H(C) + 2\\Delta_c H(H_2) - \\Delta_c H(CH_4)$",
+          "$\\Delta_f H = -393.5 - 571.6 + 890.3 = -74.8$ kJ mol$^{-1}$"
+        ],
+        "final_answer": "Option (2): $-74.8$ kJ mol$^{-1}$",
+        "why_not_others": "$+74.8$ has the wrong sign. $+211.0$ forgets to multiply the $H_2$ value by 2. $-1855.4$ adds all three values without reversing the $CH_4$ combustion.",
+        "common_trap": "Not multiplying the $H_2$ combustion enthalpy by its coefficient of 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t05_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Hess's law of constant heat summation",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Given: $S(s) + O_2(g) \\rightarrow SO_2(g)$; $\\Delta H = -297$ kJ and $S(s) + \\frac{3}{2}O_2(g) \\rightarrow SO_3(g)$; $\\Delta H = -396$ kJ. What is $\\Delta H$ for the reaction $SO_2(g) + \\frac{1}{2}O_2(g) \\rightarrow SO_3(g)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-99$ kJ",
+        "$-693$ kJ",
+        "$+99$ kJ",
+        "$-198$ kJ"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Reverse the first equation and add it to the second (Hess's law).",
+        "steps": [
+          "Reverse the first equation: $SO_2 \\rightarrow S + O_2$; $\\Delta H = +297$ kJ.",
+          "Add the second equation: $SO_2 + \\frac{1}{2}O_2 \\rightarrow SO_3$.",
+          "$\\Delta H = -396 + 297 = -99$ kJ"
+        ],
+        "final_answer": "Option (1): $-99$ kJ",
+        "why_not_others": "$-693$ adds the values without reversing. $+99$ has the wrong sign. $-198$ is the value for 2 mol of $SO_2$.",
+        "common_trap": "Adding the given $\\Delta H$ values directly without reversing the $SO_2$ equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t05_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Hess's law of constant heat summation",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Reversing a thermochemical equation"
+          },
+          {
+            "label": "B",
+            "text": "Multiplying a thermochemical equation by 3"
+          },
+          {
+            "label": "C",
+            "text": "Adding two thermochemical equations"
+          },
+          {
+            "label": "D",
+            "text": "Born-Haber cycle"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\Delta H$ values of the two equations are summed"
+          },
+          {
+            "label": "II",
+            "text": "Used to find lattice enthalpy"
+          },
+          {
+            "label": "III",
+            "text": "Sign of $\\Delta H$ is changed"
+          },
+          {
+            "label": "IV",
+            "text": "$\\Delta H$ is multiplied by 3"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Thermochemical equations can be handled like algebraic equations, and Hess's law underlies the Born-Haber cycle.",
+        "steps": [
+          "Reversing a reaction changes the sign of $\\Delta H$: A-III.",
+          "Multiplying a reaction by a factor multiplies $\\Delta H$ by that factor: B-IV.",
+          "Adding reactions adds their $\\Delta H$ values: C-I.",
+          "The Born-Haber cycle gives lattice enthalpy: D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Each of the other options swaps at least one pair of operations and their effects.",
+        "common_trap": "Thinking that multiplying an equation changes the sign, or that reversing it changes the magnitude.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t05_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Hess's law of constant heat summation",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Hess's law are correct?",
+      "statements": {
+        "A": "Hess's law holds because enthalpy is a state function.",
+        "B": "Reversing a thermochemical equation leaves both the magnitude and the sign of $\\Delta H$ unchanged.",
+        "C": "The physical states of all species must match when thermochemical equations are combined.",
+        "D": "Hess's law allows calculation of enthalpies that cannot be measured directly, such as the enthalpy of formation of CO.",
+        "E": "The total enthalpy change of a reaction depends on the number of intermediate steps through which it is carried out."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C, D and E only",
+        "B, C and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Enthalpy is a state function, so $\\Delta H$ depends only on the initial and final states.",
+        "steps": [
+          "A is correct: it is the basis of Hess's law.",
+          "B is incorrect: reversing a reaction changes the sign of $\\Delta H$.",
+          "C is correct: $H_2O(l)$ and $H_2O(g)$, for example, have different enthalpies.",
+          "D is correct: $\\Delta_f H$ of CO is the classic example.",
+          "E is incorrect: $\\Delta H$ does not depend on the path or the number of steps."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Option (1) includes the false B. Option (2) includes the false E. Option (3) includes both B and E.",
+        "common_trap": "Believing that more steps change the total $\\Delta H$.",
+        "time_saving_tip": "Once B and E are identified as false, only option (4) is left."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t06_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization and solution",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For which of the following is the standard enthalpy of formation NOT zero?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$C(graphite)$",
+        "$C(diamond)$",
+        "$O_2(g)$",
+        "$Br_2(l)$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta_f H^\\circ = 0$ only for the reference (most stable) form of an element.",
+        "steps": [
+          "Graphite, $O_2(g)$ and $Br_2(l)$ are reference forms, so their $\\Delta_f H^\\circ = 0$.",
+          "Diamond is not the reference form of carbon, so its $\\Delta_f H^\\circ \\neq 0$."
+        ],
+        "final_answer": "Option (2): $C(diamond)$",
+        "why_not_others": "The other three are elements in their standard reference states.",
+        "common_trap": "Treating every form of an element as having $\\Delta_f H^\\circ = 0$, or overlooking that bromine's reference state is a liquid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t06_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization and solution",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Using the bond enthalpies H-H = 436 kJ mol$^{-1}$, Cl-Cl = 242 kJ mol$^{-1}$ and H-Cl = 431 kJ mol$^{-1}$, calculate $\\Delta_r H$ for the reaction as written: $H_2(g) + Cl_2(g) \\rightarrow 2HCl(g)$.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+184$ kJ",
+        "$-184$ kJ",
+        "$+247$ kJ",
+        "$-92$ kJ"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta_r H = \\sum BE(\\text{reactants}) - \\sum BE(\\text{products})$",
+        "steps": [
+          "Bonds broken: $436 + 242 = 678$ kJ.",
+          "Bonds formed: $2 \\times 431 = 862$ kJ.",
+          "$\\Delta_r H = 678 - 862 = -184$ kJ"
+        ],
+        "final_answer": "Option (2): $-184$ kJ",
+        "why_not_others": "$+184$ uses products minus reactants. $+247$ counts only one H-Cl bond. $-92$ is the value per mole of HCl, not for the reaction as written.",
+        "common_trap": "Applying the formation-enthalpy order (products minus reactants) to bond enthalpies.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t06_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization and solution",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The enthalpy of atomization of $CH_4(g)$ is 1664 kJ mol$^{-1}$. What is the average C-H bond enthalpy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "416 kJ mol$^{-1}$",
+        "1664 kJ mol$^{-1}$",
+        "832 kJ mol$^{-1}$",
+        "555 kJ mol$^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For $CH_4$, $\\Delta_a H$ = 4 × average C-H bond enthalpy.",
+        "steps": [
+          "$CH_4(g) \\rightarrow C(g) + 4H(g)$ breaks four C-H bonds.",
+          "Average C-H bond enthalpy = $1664 / 4 = 416$ kJ mol$^{-1}$"
+        ],
+        "final_answer": "Option (1): 416 kJ mol$^{-1}$",
+        "why_not_others": "1664 is the total for all four bonds. 832 divides by 2, and 555 divides by 3.",
+        "common_trap": "Equating the atomization enthalpy with a single bond enthalpy, which is true only for diatomic molecules like $H_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t06_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization and solution",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Dissolution of $NH_4Cl$ in water is endothermic.",
+        "R": "For $NH_4Cl$, the lattice enthalpy exceeds the magnitude of the hydration enthalpy."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta_{sol}H = \\Delta_{lattice}H + \\Delta_{hyd}H$",
+        "steps": [
+          "Lattice enthalpy is positive and hydration enthalpy is negative.",
+          "If the lattice enthalpy exceeds $|\\Delta_{hyd}H|$, then $\\Delta_{sol}H > 0$.",
+          "This is the case for $NH_4Cl$, so its dissolution is endothermic, and R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R gives exactly the reason for A.",
+        "common_trap": "Assuming that every dissolution is exothermic because hydration releases energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t06_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Enthalpies of bond dissociation, combustion, formation, atomization, sublimation, phase transition, hydration, ionization and solution",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Bond dissociation enthalpy, ionization enthalpy and hydration enthalpy are all positive quantities.",
+        "II": "For a given substance, the enthalpy of vaporization is greater than its enthalpy of sublimation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The sign of each enthalpy type, and the relation $\\Delta_{sub}H = \\Delta_{fus}H + \\Delta_{vap}H$.",
+        "steps": [
+          "Hydration enthalpy is negative, so Statement I is false.",
+          "$\\Delta_{sub}H = \\Delta_{fus}H + \\Delta_{vap}H$, so $\\Delta_{sub}H > \\Delta_{vap}H$.",
+          "Statement II states the reverse, so it is false."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I wrongly calls hydration enthalpy positive. Statement II reverses the correct inequality.",
+        "common_trap": "Grouping hydration enthalpy with the endothermic quantities.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t07_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Second law of thermodynamics and spontaneity",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In which of the following processes does the entropy of the system decrease?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Melting of ice",
+        "Evaporation of water",
+        "Freezing of water to ice",
+        "Dissolution of a salt in water"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Entropy order: $S_{gas} \\gg S_{liquid} > S_{solid}$. Entropy increases on melting, vaporization and dissolution.",
+        "steps": [
+          "Freezing converts a liquid into a more ordered solid.",
+          "So $\\Delta S < 0$ for freezing."
+        ],
+        "final_answer": "Option (3): Freezing of water to ice",
+        "why_not_others": "Melting, evaporation and dissolution all increase disorder, so $\\Delta S > 0$ for each.",
+        "common_trap": "Thinking that dissolution decreases entropy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t07_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Second law of thermodynamics and spontaneity",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The enthalpy of fusion of ice is 6.0 kJ mol$^{-1}$ at its melting point of 273 K. What is the molar entropy of fusion of ice?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.022 J K$^{-1}$ mol$^{-1}$",
+        "1638 J K$^{-1}$ mol$^{-1}$",
+        "22.0 J K$^{-1}$ mol$^{-1}$",
+        "$-22.0$ J K$^{-1}$ mol$^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta S_{trans} = \\frac{\\Delta H_{trans}}{T_{trans}}$",
+        "steps": [
+          "Convert to joules: $\\Delta_{fus}H = 6000$ J mol$^{-1}$.",
+          "$\\Delta_{fus}S = 6000 / 273 \\approx 22.0$ J K$^{-1}$ mol$^{-1}$"
+        ],
+        "final_answer": "Option (3): 22.0 J K$^{-1}$ mol$^{-1}$",
+        "why_not_others": "0.022 comes from keeping kJ but quoting the result in J. 1638 multiplies by T instead of dividing. $-22.0$ has the wrong sign, since melting increases entropy.",
+        "common_trap": "Not converting kJ to J before dividing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t07_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Second law of thermodynamics and spontaneity",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "1 mol of an ideal gas expands isothermally and reversibly at 300 K from 2 L to 20 L. What is the entropy change of the gas? (R = 8.314 J K$^{-1}$ mol$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0 J K$^{-1}$",
+        "8.314 J K$^{-1}$",
+        "19.15 J K$^{-1}$",
+        "$-19.15$ J K$^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta S = 2.303\\,nR\\log\\frac{V_2}{V_1}$ for isothermal expansion of an ideal gas.",
+        "steps": [
+          "$V_2/V_1 = 10$, so $\\log 10 = 1$.",
+          "$\\Delta S = 2.303 \\times 1 \\times 8.314 \\times 1$",
+          "$\\Delta S \\approx 19.15$ J K$^{-1}$"
+        ],
+        "final_answer": "Option (3): 19.15 J K$^{-1}$",
+        "why_not_others": "0 would apply to a reversible adiabatic process, not an isothermal one. 8.314 leaves out the factor 2.303. The negative value would mean a compression.",
+        "common_trap": "Thinking that an isothermal process has zero entropy change because T is constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t07_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Second law of thermodynamics and spontaneity",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Free expansion of an ideal gas"
+          },
+          {
+            "label": "B",
+            "text": "Reversible adiabatic process"
+          },
+          {
+            "label": "C",
+            "text": "Vaporization of a liquid at its boiling point"
+          },
+          {
+            "label": "D",
+            "text": "Any spontaneous process"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\Delta S = 0$ (isentropic)"
+          },
+          {
+            "label": "II",
+            "text": "$\\Delta S_{universe} > 0$"
+          },
+          {
+            "label": "III",
+            "text": "$\\Delta S_{sys} = nR\\ln\\frac{V_2}{V_1}$ and $\\Delta S_{surr} = 0$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\Delta S = \\frac{\\Delta H_{trans}}{T_{trans}}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Entropy changes for special processes and the second law.",
+        "steps": [
+          "Free expansion: $\\Delta S_{sys} = nR\\ln(V_2/V_1)$ and $\\Delta S_{surr} = 0$: A-III.",
+          "Reversible adiabatic process: $q_{rev} = 0$, so $\\Delta S = 0$: B-I.",
+          "Phase transition at its transition temperature: $\\Delta S = \\Delta H/T$: C-IV.",
+          "Second law: $\\Delta S_{universe} > 0$ for a spontaneous process: D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) gives free expansion $\\Delta S = 0$. Options (3) and (4) misplace the second-law and transition entries.",
+        "common_trap": "Taking $\\Delta S_{sys} = 0$ for free expansion because q = 0.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t07_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Second law of thermodynamics and spontaneity",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about entropy and spontaneity are correct?",
+      "statements": {
+        "A": "Every exothermic process is spontaneous.",
+        "B": "Melting of ice above 273 K is spontaneous even though it is endothermic.",
+        "C": "At equilibrium, the entropy of the universe remains constant.",
+        "D": "A given quantity of heat causes a greater entropy increase at a higher temperature than at a lower temperature.",
+        "E": "Entropy is a state function."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Second law: $\\Delta S_{universe} > 0$ for a spontaneous process and $= 0$ at equilibrium. Also $\\Delta S = q_{rev}/T$.",
+        "steps": [
+          "A is false: exothermic character alone does not decide spontaneity.",
+          "B is true: this is the standard example of a spontaneous endothermic process.",
+          "C is true: this is a statement of the second law.",
+          "D is false: since $\\Delta S = q/T$, the same q gives a larger $\\Delta S$ at lower T.",
+          "E is true."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Options (1), (3) and (4) each include the false statement A or D.",
+        "common_trap": "Thinking that a higher temperature gives a larger entropy change for the same heat.",
+        "time_saving_tip": "Rejecting A and D leaves only option (2)."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t08_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Entropy of the universe and Gibbs energy as criteria for spontaneity",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A reaction has $\\Delta H > 0$ and $\\Delta S > 0$. Assuming $\\Delta H$ and $\\Delta S$ do not change with temperature, under which condition is the reaction spontaneous at constant pressure?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "At all temperatures",
+        "At no temperature",
+        "Only at high temperatures, above $T = \\Delta H/\\Delta S$",
+        "Only at low temperatures, below $T = \\Delta H/\\Delta S$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Spontaneity at constant T and p is decided by the sign of $\\Delta G = \\Delta H - T\\Delta S$.",
+        "steps": [
+          "Here $\\Delta H > 0$ works against spontaneity, while $-T\\Delta S < 0$ works for it.",
+          "The $T\\Delta S$ term becomes larger than $\\Delta H$ only when T is high enough.",
+          "So $\\Delta G < 0$ only when $T > \\Delta H/\\Delta S$."
+        ],
+        "final_answer": "Option (3): Only at high temperatures, above $T = \\Delta H/\\Delta S$",
+        "why_not_others": "Spontaneity at all temperatures needs $\\Delta H < 0$ and $\\Delta S > 0$. Spontaneity at no temperature needs $\\Delta H > 0$ and $\\Delta S < 0$. Spontaneity only at low temperatures needs both $\\Delta H$ and $\\Delta S$ to be negative.",
+        "common_trap": "Assuming an endothermic reaction can never be spontaneous.",
+        "time_saving_tip": "When $\\Delta H$ and $\\Delta S$ have the same sign, the sign of $\\Delta S$ tells you whether the reaction is favoured at high or low temperature."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t08_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Entropy of the universe and Gibbs energy as criteria for spontaneity",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a reaction, $\\Delta H = +180\\ kJ\\ mol^{-1}$ and $\\Delta S = +150\\ J\\ K^{-1}\\ mol^{-1}$. Assuming both values are independent of temperature, the reaction is spontaneous:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "above 1.2 K",
+        "above 927 K",
+        "below 1200 K",
+        "above 1200 K"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Crossover temperature $T = \\Delta H/\\Delta S$, with both quantities in the same energy unit.",
+        "steps": [
+          "Convert $\\Delta H$ to joules: $\\Delta H = 180000\\ J\\ mol^{-1}$.",
+          "Calculate the crossover temperature: $T = 180000/150 = 1200\\ K$.",
+          "Both $\\Delta H$ and $\\Delta S$ are positive, so $\\Delta G < 0$ only above 1200 K."
+        ],
+        "final_answer": "Option (4): above 1200 K",
+        "why_not_others": "1.2 K comes from leaving $\\Delta H$ in kJ while $\\Delta S$ is in J. 927 K wrongly subtracts 273 from a temperature that is already in kelvin. 'Below 1200 K' reverses the direction that applies when $\\Delta H$ and $\\Delta S$ are both positive.",
+        "common_trap": "Mixing kJ and J when calculating $T = \\Delta H/\\Delta S$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t08_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Entropy of the universe and Gibbs energy as criteria for spontaneity",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a process at 250 K and constant pressure, $\\Delta H_{sys} = -50\\ kJ\\ mol^{-1}$ and $\\Delta S_{sys} = -150\\ J\\ K^{-1}\\ mol^{-1}$. The total entropy change of the universe and the Gibbs energy change of the process are, respectively:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-350\\ J\\ K^{-1}\\ mol^{-1}$ and $+87.5\\ kJ\\ mol^{-1}$",
+        "$+350\\ J\\ K^{-1}\\ mol^{-1}$ and $-87.5\\ kJ\\ mol^{-1}$",
+        "$+50\\ J\\ K^{-1}\\ mol^{-1}$ and $+12.5\\ kJ\\ mol^{-1}$",
+        "$+50\\ J\\ K^{-1}\\ mol^{-1}$ and $-12.5\\ kJ\\ mol^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta S_{surr} = -\\Delta H_{sys}/T$ and $\\Delta G = -T\\Delta S_{total}$.",
+        "steps": [
+          "Calculate $\\Delta S_{surr} = -(-50000)/250 = +200\\ J\\ K^{-1}\\ mol^{-1}$.",
+          "Add the system term: $\\Delta S_{total} = -150 + 200 = +50\\ J\\ K^{-1}\\ mol^{-1}$.",
+          "Then $\\Delta G = -T\\Delta S_{total} = -250 \\times 50 = -12500\\ J\\ mol^{-1} = -12.5\\ kJ\\ mol^{-1}$.",
+          "Check: $\\Delta G = \\Delta H - T\\Delta S = -50 - 250(-0.150) = -50 + 37.5 = -12.5\\ kJ\\ mol^{-1}$."
+        ],
+        "final_answer": "Option (4): $+50\\ J\\ K^{-1}\\ mol^{-1}$ and $-12.5\\ kJ\\ mol^{-1}$",
+        "why_not_others": "Option (1) takes $\\Delta S_{surr}$ with the wrong sign. Option (2) treats $\\Delta S_{sys}$ as positive. Option (3) drops the minus sign in $\\Delta G = -T\\Delta S_{total}$.",
+        "common_trap": "Writing $\\Delta S_{surr} = +\\Delta H_{sys}/T$ instead of $-\\Delta H_{sys}/T$.",
+        "time_saving_tip": "Once you have $\\Delta S_{total} > 0$, $\\Delta G$ must be negative, which eliminates options (1) and (3) straight away."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t08_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Entropy of the universe and Gibbs energy as criteria for spontaneity",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A reaction with $\\Delta G < 0$ at constant temperature and pressure may still proceed at an extremely slow rate.",
+        "R": "The decrease in Gibbs energy, $-\\Delta G$, equals the maximum useful (non-pV) work that can be obtained from a process."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Spontaneity criteria say nothing about rate, and $-\\Delta G$ is the maximum non-expansion work.",
+        "steps": [
+          "A is true because $\\Delta G < 0$ only shows that a reaction is spontaneous; it says nothing about its rate.",
+          "R is true because $-\\Delta G = w_{useful,max}$.",
+          "R describes the work interpretation of $\\Delta G$. It does not explain why a spontaneous reaction can be slow."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is not the reason for A; the correct explanation is that thermodynamics does not predict rate. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Assuming that a negative $\\Delta G$ means a fast reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t08_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Entropy of the universe and Gibbs energy as criteria for spontaneity",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At constant temperature and pressure, $\\Delta G = -T\\Delta S_{total}$, so a positive entropy change of the universe necessarily corresponds to a negative Gibbs energy change of the system.",
+        "II": "For a reaction with $\\Delta H = -120\\ kJ\\ mol^{-1}$ and $\\Delta S = -300\\ J\\ K^{-1}\\ mol^{-1}$ (both independent of temperature), $\\Delta G$ is negative at 300 K but positive at 500 K."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta G = -T\\Delta S_{total}$; when $\\Delta H$ and $\\Delta S$ are both negative, the reaction is spontaneous only below $T = \\Delta H/\\Delta S$.",
+        "steps": [
+          "Statement I: T is always positive, so $\\Delta S_{total} > 0$ gives $\\Delta G < 0$. Statement I is correct.",
+          "Statement II, crossover temperature: $T = 120000/300 = 400\\ K$.",
+          "At 300 K: $\\Delta G = -120 + 300(0.300) = -30\\ kJ\\ mol^{-1}$, which is negative.",
+          "At 500 K: $\\Delta G = -120 + 500(0.300) = +30\\ kJ\\ mol^{-1}$, which is positive. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out by calculation, so every option that marks either statement incorrect is wrong.",
+        "common_trap": "Assuming an exothermic reaction is spontaneous at every temperature.",
+        "time_saving_tip": "Find the crossover temperature (400 K) first. If both $\\Delta H$ and $\\Delta S$ are negative, the reaction is spontaneous below it and non-spontaneous above it."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t09_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Standard Gibbs energy change and equilibrium constant",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For a reaction at 298 K, the standard Gibbs energy change $\\Delta_r G^\\circ$ is positive. Which of the following is correct about its equilibrium constant K?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "K > 1 and products are favoured",
+        "K < 1 and reactants are favoured",
+        "K = 1",
+        "K is negative"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta_r G^\\circ = -RT\\ln K$",
+        "steps": [
+          "If $\\Delta_r G^\\circ > 0$, then $\\ln K < 0$.",
+          "This means $0 < K < 1$, so the equilibrium mixture favours reactants."
+        ],
+        "final_answer": "Option (2): K < 1 and reactants are favoured",
+        "why_not_others": "K > 1 requires a negative $\\Delta_r G^\\circ$. K = 1 requires $\\Delta_r G^\\circ = 0$. K is an exponential, $K = e^{-\\Delta_r G^\\circ/RT}$, so it can never be negative.",
+        "common_trap": "Confusing a negative $\\ln K$ with a negative K.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t09_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Standard Gibbs energy change and equilibrium constant",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The equilibrium constant of a reaction at 298 K is $1.0 \\times 10^{3}$. What is the standard Gibbs energy change of the reaction? ($R = 8.314\\ J\\ K^{-1}\\ mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+17.1\\ kJ\\ mol^{-1}$",
+        "$-17.1\\ kJ\\ mol^{-1}$",
+        "$-7.43\\ kJ\\ mol^{-1}$",
+        "$-17117\\ kJ\\ mol^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta_r G^\\circ = -2.303RT\\log K$",
+        "steps": [
+          "Calculate $2.303RT = 2.303 \\times 8.314 \\times 298 \\approx 5706\\ J\\ mol^{-1}$.",
+          "Here $\\log K = 3$.",
+          "So $\\Delta_r G^\\circ = -5706 \\times 3 = -17117\\ J\\ mol^{-1} \\approx -17.1\\ kJ\\ mol^{-1}$."
+        ],
+        "final_answer": "Option (2): $-17.1\\ kJ\\ mol^{-1}$",
+        "why_not_others": "$+17.1\\ kJ\\ mol^{-1}$ has the wrong sign, since K > 1 requires a negative $\\Delta_r G^\\circ$. $-7.43\\ kJ\\ mol^{-1}$ leaves out the factor 2.303. $-17117\\ kJ\\ mol^{-1}$ labels a value in joules as kJ.",
+        "common_trap": "Using $\\log K$ with $RT$ instead of $2.303RT$, or mixing up J and kJ.",
+        "time_saving_tip": "At 298 K, $\\Delta G^\\circ$ changes by about 5.7 kJ for every factor of 10 in K, so $\\Delta G^\\circ \\approx -3 \\times 5.7 = -17.1\\ kJ\\ mol^{-1}$."
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t09_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Standard Gibbs energy change and equilibrium constant",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a gas-phase reaction at 298 K, $\\Delta H^\\circ = +3.5\\ kJ\\ mol^{-1}$ and $\\Delta S^\\circ = +50\\ J\\ K^{-1}\\ mol^{-1}$. Taking $2.303RT = 5.7\\ kJ\\ mol^{-1}$ at 298 K, the equilibrium constant of the reaction is approximately:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "100",
+        "0.01",
+        "4.6",
+        "2"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$-2.303RT\\log K = \\Delta H^\\circ - T\\Delta S^\\circ$",
+        "steps": [
+          "Calculate $T\\Delta S^\\circ = 298 \\times 0.050 = 14.9\\ kJ\\ mol^{-1}$.",
+          "Then $\\Delta G^\\circ = 3.5 - 14.9 = -11.4\\ kJ\\ mol^{-1}$.",
+          "So $\\log K = 11.4/5.7 = 2$.",
+          "Therefore $K = 10^2 = 100$."
+        ],
+        "final_answer": "Option (1): 100",
+        "why_not_others": "0.01 comes from a sign error in $\\Delta G^\\circ$. 4.6 is the value of $\\ln K$, not K. 2 is the value of $\\log K$, not K.",
+        "common_trap": "Stopping at $\\log K$ or $\\ln K$ and reporting it as K.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t09_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Standard Gibbs energy change and equilibrium constant",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\Delta_r G^\\circ < 0$"
+          },
+          {
+            "label": "B",
+            "text": "$\\Delta_r G^\\circ = 0$"
+          },
+          {
+            "label": "C",
+            "text": "Reaction mixture at equilibrium"
+          },
+          {
+            "label": "D",
+            "text": "Tenfold increase in K at 298 K"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "K = 1"
+          },
+          {
+            "label": "II",
+            "text": "$\\Delta_r G^\\circ$ lowered by about $5.7\\ kJ\\ mol^{-1}$"
+          },
+          {
+            "label": "III",
+            "text": "K > 1"
+          },
+          {
+            "label": "IV",
+            "text": "$\\Delta_r G = 0$ and Q = K"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-I, C-IV, D-II",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta_r G = \\Delta_r G^\\circ + RT\\ln Q$ and $\\Delta_r G^\\circ = -2.303RT\\log K$",
+        "steps": [
+          "A: a negative $\\Delta_r G^\\circ$ gives K > 1, so A matches III.",
+          "B: $\\Delta_r G^\\circ = 0$ gives K = 1, so B matches I.",
+          "C: at equilibrium $\\Delta_r G = 0$ and Q = K, so C matches IV.",
+          "D: since $2.303RT \\approx 5.7\\ kJ\\ mol^{-1}$, each tenfold increase in K lowers $\\Delta_r G^\\circ$ by about 5.7 kJ, so D matches II."
+        ],
+        "final_answer": "Option (3): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (1) swaps K = 1 and K > 1. Option (2) wrongly treats every equilibrium as having K = 1, i.e. $\\Delta_r G^\\circ = 0$. Option (4) assigns the 5.7 kJ shift to A.",
+        "common_trap": "Believing that $\\Delta G^\\circ = 0$ at every equilibrium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u04_t09_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u04",
+      "topic": "Standard Gibbs energy change and equilibrium constant",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Gibbs energy and the equilibrium constant are correct?",
+      "statements": {
+        "A": "At equilibrium $\\Delta_r G = 0$, but $\\Delta_r G^\\circ$ is generally not zero.",
+        "B": "If equal concentrations of N and D exist at equilibrium in $N \\rightleftharpoons D$ at temperature T, then $\\Delta S^\\circ = \\Delta H^\\circ/T$.",
+        "C": "Since $\\Delta_r G = \\Delta_r G^\\circ + RT\\ln Q$, $\\Delta_r G$ is negative whenever Q < K.",
+        "D": "A reaction with $K = 10^{-3}$ at 298 K has $\\Delta_r G^\\circ \\approx -17.1\\ kJ\\ mol^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A and B only",
+        "B, C and D only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta_r G = \\Delta_r G^\\circ + RT\\ln Q$, which can be written as $RT\\ln(Q/K)$.",
+        "steps": [
+          "A is correct: $\\Delta G^\\circ$ is zero only when K = 1.",
+          "B is correct: equal concentrations give K = 1, so $\\Delta G^\\circ = 0$ and $\\Delta H^\\circ = T\\Delta S^\\circ$.",
+          "C is correct: substituting $\\Delta_r G^\\circ = -RT\\ln K$ gives $\\Delta_r G = RT\\ln(Q/K)$, which is negative when Q < K.",
+          "D is incorrect: $\\Delta_r G^\\circ = -5.7 \\times (-3) = +17.1\\ kJ\\ mol^{-1}$."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "D has the wrong sign, which rules out options (3) and (4). Option (2) leaves out C, which is correct.",
+        "common_trap": "Getting the sign of $\\Delta G^\\circ$ wrong when K < 1.",
+        "time_saving_tip": "K < 1 always means a positive $\\Delta G^\\circ$, so D can be rejected without any calculation."
+      }
+    }
+  ]
+}

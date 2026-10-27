@@ -1,0 +1,1867 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u14",
+  "slug": "electromagnetic-induction-and-alternating-currents",
+  "questions": [
+    {
+      "q_id": "neet_phy_u14_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Faraday's law of electromagnetic induction",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A coil of 100 turns is placed in a magnetic field. The magnetic flux through each turn decreases uniformly from $4\\ mWb$ to $1\\ mWb$ in $0.02\\ s$. What is the magnitude of the average emf induced in the coil?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.15\\ V$",
+        "$25\\ V$",
+        "$15\\ V$",
+        "$1.5\\ V$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Average induced emf $\\varepsilon_{avg} = N\\frac{\\Delta\\Phi}{\\Delta t}$ in magnitude.",
+        "steps": [
+          "Change in flux per turn: $\\Delta\\Phi = 4 - 1 = 3\\ mWb = 3\\times10^{-3}\\ Wb$.",
+          "$\\varepsilon = 100 \\times \\frac{3\\times10^{-3}}{0.02} = 15\\ V$."
+        ],
+        "final_answer": "Option (3): $15\\ V$",
+        "why_not_others": "$0.15\\ V$ ignores the number of turns. $25\\ V$ uses the sum of the fluxes, $5\\ mWb$, instead of their difference. $1.5\\ V$ is a powers-of-ten slip.",
+        "common_trap": "Using the sum of the initial and final flux instead of the change, or forgetting the factor N.",
+        "time_saving_tip": "Multiply N by $\\Delta\\Phi$ first: $100\\times 3\\ mWb = 0.3\\ Wb$, then divide by $0.02\\ s$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Faraday's law of electromagnetic induction",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The magnetic flux through each turn of a 20-turn coil varies with time as $\\Phi = (3t^2 - 2t)\\times10^{-3}\\ Wb$, where t is in seconds. What is the magnitude of the emf induced in the coil at $t = 2\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\ V$",
+        "$0.08\\ V$",
+        "$0.16\\ V$",
+        "$0.01\\ V$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Instantaneous emf is $\\varepsilon = -N\\frac{d\\Phi}{dt}$, which depends on the slope of the flux, not on its value.",
+        "steps": [
+          "$\\frac{d\\Phi}{dt} = (6t - 2)\\times10^{-3}\\ Wb/s$.",
+          "At $t = 2\\ s$: $\\frac{d\\Phi}{dt} = 10\\times10^{-3}\\ Wb/s$.",
+          "$|\\varepsilon| = 20 \\times 10^{-2} = 0.2\\ V$."
+        ],
+        "final_answer": "Option (1): $0.2\\ V$",
+        "why_not_others": "$0.08\\ V$ uses the average rate $\\Phi(2)/2$ instead of the derivative. $0.16\\ V$ is $N\\Phi$ itself, not its rate of change. $0.01\\ V$ omits the 20 turns.",
+        "common_trap": "Dividing the flux by time instead of differentiating it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Faraday's law of electromagnetic induction",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A coil of 200 turns and area $0.05\\ m^2$ is held with its plane perpendicular to a uniform magnetic field of $0.4\\ T$. It is then rotated so that its plane becomes parallel to the field, and the rotation takes $0.5\\ s$. What is the magnitude of the average emf induced?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16\\ V$",
+        "zero",
+        "$8\\ V$",
+        "$0.04\\ V$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Phi = BA\\cos\\theta$, where $\\theta$ is measured between B and the normal to the coil.",
+        "steps": [
+          "Plane perpendicular to B means the normal is along B, so $\\theta = 0$ and $\\Phi_i = BA = 0.4\\times0.05 = 0.02\\ Wb$.",
+          "Plane parallel to B means $\\theta = 90^\\circ$, so $\\Phi_f = 0$.",
+          "$\\varepsilon_{avg} = N\\frac{\\Delta\\Phi}{\\Delta t} = 200\\times\\frac{0.02}{0.5} = 8\\ V$."
+        ],
+        "final_answer": "Option (3): $8\\ V$",
+        "why_not_others": "$16\\ V$ corresponds to a $180^\\circ$ rotation, where the flux reverses. Zero results from swapping the initial and final orientations, which wrongly gives no flux change. $0.04\\ V$ ignores N.",
+        "common_trap": "Measuring $\\theta$ from the plane of the coil instead of from its normal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Faraday's law of electromagnetic induction",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A coil held at rest in a very strong, steady, uniform magnetic field has a large emf induced in it.",
+        "R": "The induced emf in a coil depends on the rate of change of the magnetic flux linked with it, not on the value of the flux."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Faraday's law: $\\varepsilon = -N\\frac{d\\Phi}{dt}$.",
+        "steps": [
+          "The field is steady and the coil is at rest, so the flux is constant and $\\frac{d\\Phi}{dt} = 0$.",
+          "The induced emf is therefore zero, however large the flux, so A is false.",
+          "R states Faraday's law correctly, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Believing that a large flux means a large emf.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Faraday's law of electromagnetic induction",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the flux through a coil varies as $\\Phi = \\Phi_0\\cos\\omega t$, the induced emf is zero at the instants when the flux is maximum.",
+        "II": "An emf is induced in an open coil when the flux linked with it changes, even though no current flows in it."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Emf is the negative slope of the $\\Phi$–t graph. An emf exists even in an open circuit.",
+        "steps": [
+          "$\\varepsilon = -N\\frac{d\\Phi}{dt} = N\\Phi_0\\omega\\sin\\omega t$.",
+          "When $|\\cos\\omega t| = 1$ (maximum flux), $\\sin\\omega t = 0$, so the emf is zero. Statement I is correct.",
+          "The emf is induced whenever the flux changes. A current needs a closed path, but the emf does not. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from Faraday's law, so any option calling either one incorrect is wrong.",
+        "common_trap": "Thinking the emf is maximum when the flux is maximum, or that an emf needs a closed circuit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Induced emf and current; Lenz's law",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A straight conducting rod of length $0.5\\ m$ moves with a speed of $4\\ m/s$ perpendicular to a uniform magnetic field of $0.2\\ T$. The rod, its velocity and the field are mutually perpendicular. What is the emf induced across the ends of the rod?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\ V$",
+        "$1.6\\ V$",
+        "$0.4\\ V$",
+        "$0.025\\ V$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Motional emf $\\varepsilon = Blv$.",
+        "steps": [
+          "$\\varepsilon = 0.2\\times0.5\\times4$.",
+          "$\\varepsilon = 0.4\\ V$."
+        ],
+        "final_answer": "Option (3): $0.4\\ V$",
+        "why_not_others": "$0.2\\ V$ wrongly includes the factor $\\frac{1}{2}$ from the rotating-rod formula. $1.6\\ V$ is $Bv/l$. $0.025\\ V$ is $Bl/v$.",
+        "common_trap": "Mixing up the translating-rod formula with the rotating-rod formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Induced emf and current; Lenz's law",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A coil of 100 turns has a total resistance of $20\\ \\Omega$. The flux through each turn decreases from $5\\ mWb$ to $1\\ mWb$ in $0.5\\ s$. What total charge flows through the coil?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\ C$",
+        "$0.03\\ C$",
+        "$0.02\\ C$",
+        "$2\\times10^{-4}\\ C$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Induced charge $Q = \\frac{N\\Delta\\Phi}{R}$, which is independent of the time taken.",
+        "steps": [
+          "$\\Delta\\Phi = 4\\times10^{-3}\\ Wb$ per turn.",
+          "$Q = \\frac{100\\times4\\times10^{-3}}{20} = 0.02\\ C$.",
+          "The time of $0.5\\ s$ does not affect the charge."
+        ],
+        "final_answer": "Option (3): $0.02\\ C$",
+        "why_not_others": "$0.04\\ C$ is the current $I = \\varepsilon/R = 0.04\\ A$ wrongly reported as the charge. $0.03\\ C$ uses the sum of the fluxes, $6\\ mWb$. $2\\times10^{-4}\\ C$ ignores N.",
+        "common_trap": "Thinking that the charge depends on how fast the flux changes.",
+        "time_saving_tip": "Ignore the time entirely: $Q = N\\Delta\\Phi/R$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Induced emf and current; Lenz's law",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A conducting rod of length $0.4\\ m$ slides at a constant speed of $5\\ m/s$ on two parallel rails joined by a resistor of $2\\ \\Omega$. A uniform magnetic field of $0.5\\ T$ is perpendicular to the plane of the rails. Neglect all other resistances and friction. What power must the external agent supply to keep the rod moving at constant speed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.1\\ W$",
+        "$2\\ W$",
+        "$0.5\\ W$",
+        "$1\\ W$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$P = \\frac{B^2l^2v^2}{R} = \\frac{\\varepsilon^2}{R}$.",
+        "steps": [
+          "$\\varepsilon = Blv = 0.5\\times0.4\\times5 = 1\\ V$.",
+          "$P = \\frac{\\varepsilon^2}{R} = \\frac{1}{2} = 0.5\\ W$.",
+          "Check: $F = \\frac{B^2l^2v}{R} = 0.1\\ N$, and $Fv = 0.5\\ W$."
+        ],
+        "final_answer": "Option (3): $0.5\\ W$",
+        "why_not_others": "$0.1\\ W$ treats the force value (0.1 N) as the power, forgetting to multiply by v. $2\\ W$ uses $\\varepsilon^2R$. $1\\ W$ forgets to divide by R.",
+        "common_trap": "Confusing the retarding force with the power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Induced emf and current; Lenz's law",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Emf in a straight rod moving perpendicular to B"
+          },
+          {
+            "label": "B",
+            "text": "Emf across a rod rotating about one end in a perpendicular field"
+          },
+          {
+            "label": "C",
+            "text": "Total charge induced in a coil of resistance R"
+          },
+          {
+            "label": "D",
+            "text": "Power dissipated in a circuit of resistance R"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{1}{2}B\\omega l^2$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{\\varepsilon^2}{R}$"
+          },
+          {
+            "label": "III",
+            "text": "$Blv$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{N\\Delta\\Phi}{R}$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-IV, B-I, C-III, D-II"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Standard results for motional emf, induced charge and dissipated power.",
+        "steps": [
+          "Translating rod: $Blv$, so A-III.",
+          "Rotating rod: $\\frac{1}{2}B\\omega l^2$, so B-I.",
+          "Charge: $N\\Delta\\Phi/R$, so C-IV.",
+          "Power: $\\varepsilon^2/R$, so D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other matchings swap the two emf formulas or swap the charge and power expressions.",
+        "common_trap": "Swapping $Blv$ and $\\frac{1}{2}B\\omega l^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Induced emf and current; Lenz's law",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about induced emf and Lenz's law are correct?",
+      "statements": {
+        "A": "When the north pole of a magnet approaches a coil, the near face of the coil behaves as a north pole.",
+        "B": "A magnet moving away from a coil is repelled by the coil.",
+        "C": "Lenz's law is a consequence of the conservation of energy.",
+        "D": "For a rod sliding at constant speed v on rails connected through a resistance R, the retarding force on the rod is proportional to $v^2$.",
+        "E": "If the induced emf in a resistor varies as $\\cos t$, the power dissipated varies as $\\cos^2 t$ and is never negative."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Lenz's law opposes the change in flux, and $P = \\varepsilon^2/R$.",
+        "steps": [
+          "A: correct. The coil opposes the approaching magnet, so its near face becomes a north pole.",
+          "B: incorrect. A receding magnet is attracted, not repelled.",
+          "C: correct. The work done against the opposing force appears as electrical energy.",
+          "D: incorrect. $F = \\frac{B^2l^2v}{R}$, which is proportional to v. It is the power that is proportional to $v^2$.",
+          "E: correct. $P = \\varepsilon^2/R$ varies as $\\cos^2 t$ and is never negative."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Options containing B or D include a false statement. 'A and C only' leaves out the true statement E.",
+        "common_trap": "Confusing the force, which is proportional to v, with the power, which is proportional to $v^2$; and thinking a receding magnet is repelled.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Self and mutual inductance",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A long solenoid has a self-inductance of $2\\ mH$. It is rewound with twice the number of turns on the same length and the same radius, with no core. What is its new self-inductance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\ mH$",
+        "$8\\ mH$",
+        "$16\\ mH$",
+        "$1\\ mH$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$L = \\frac{\\mu_0N^2A}{l}$, so $L \\propto N^2$.",
+        "steps": [
+          "Doubling N with the same A and l multiplies L by $2^2 = 4$.",
+          "$L' = 4\\times2 = 8\\ mH$."
+        ],
+        "final_answer": "Option (2): $8\\ mH$",
+        "why_not_others": "$4\\ mH$ assumes L is proportional to N. $16\\ mH$ assumes L is proportional to $N^3$. $1\\ mH$ assumes L is inversely proportional to N.",
+        "common_trap": "Taking L to be directly proportional to the number of turns.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Self and mutual inductance",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An emf of $12\\ V$ is induced in a coil when the current through it changes at a rate of $40\\ A/s$. How much magnetic energy is stored in the coil when it carries a steady current of $2\\ A$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.6\\ J$",
+        "$1.2\\ J$",
+        "$0.3\\ J$",
+        "$0.15\\ J$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$|\\varepsilon| = L\\frac{dI}{dt}$ and $U = \\frac{1}{2}LI^2$.",
+        "steps": [
+          "$L = \\frac{12}{40} = 0.3\\ H$.",
+          "$U = \\frac{1}{2}\\times0.3\\times2^2 = 0.6\\ J$."
+        ],
+        "final_answer": "Option (1): $0.6\\ J$",
+        "why_not_others": "$1.2\\ J$ omits the factor $\\frac{1}{2}$. $0.3\\ J$ uses I instead of $I^2$. $0.15\\ J$ uses half the current, $I = 1\\ A$, in $\\frac{1}{2}LI^2$.",
+        "common_trap": "Forgetting either the factor $\\frac{1}{2}$ or the square on I.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Self and mutual inductance",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Inductors of $2\\ mH$ and $6\\ mH$ are connected in parallel. The total current entering the combination increases at $8\\ A/s$. Neglecting mutual inductance, at what rate is the current through the $2\\ mH$ inductor increasing?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\ A/s$",
+        "$4\\ A/s$",
+        "$6\\ A/s$",
+        "$8\\ A/s$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Parallel inductors have the same emf across them, so the rates of change of current divide inversely as L.",
+        "steps": [
+          "$L_{eq} = \\frac{2\\times6}{2+6} = 1.5\\ mH$.",
+          "Common emf: $1.5\\times10^{-3}\\times8 = 12\\ mV$.",
+          "For the $2\\ mH$ inductor: $\\frac{dI_1}{dt} = \\frac{12\\times10^{-3}}{2\\times10^{-3}} = 6\\ A/s$."
+        ],
+        "final_answer": "Option (3): $6\\ A/s$",
+        "why_not_others": "$2\\ A/s$ divides the rate in direct proportion to L (it is the rate in the $6\\ mH$ inductor). $4\\ A/s$ assumes an equal split, which holds only for equal inductances. $8\\ A/s$ is the total rate.",
+        "common_trap": "Splitting the current equally or in direct proportion to L.",
+        "time_saving_tip": "The rates divide in the ratio $6:2 = 3:1$, so the $2\\ mH$ inductor gets $\\frac{3}{4}\\times8 = 6\\ A/s$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Self and mutual inductance",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Self-inductance of a long solenoid"
+          },
+          {
+            "label": "B",
+            "text": "Mutual inductance of two coaxial solenoids"
+          },
+          {
+            "label": "C",
+            "text": "Energy stored in an inductor"
+          },
+          {
+            "label": "D",
+            "text": "Magnetic energy density"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{1}{2}LI^2$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{B^2}{2\\mu_0}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\mu_0 n^2\\pi r^2 l$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\mu_0 n_1 n_2\\pi r_1^2 l$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Standard inductance and energy formulas.",
+        "steps": [
+          "Solenoid L: $\\mu_0n^2\\pi r^2l$, so A-III.",
+          "Coaxial M: $\\mu_0n_1n_2\\pi r_1^2l$, so B-IV.",
+          "Stored energy: $\\frac{1}{2}LI^2$, so C-I.",
+          "Energy density: $\\frac{B^2}{2\\mu_0}$, so D-II."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-I, D-II",
+        "why_not_others": "The other matchings swap L with M, or swap the total energy with the energy density.",
+        "common_trap": "Confusing the total stored energy with the energy per unit volume.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Self and mutual inductance",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about self and mutual inductance are correct?",
+      "statements": {
+        "A": "The self-inductance of a coil depends on the current flowing through it.",
+        "B": "Inserting a core of relative permeability $\\mu_r$ into a solenoid multiplies its self-inductance by $\\mu_r$.",
+        "C": "For any pair of coils, $M_{12} = M_{21}$.",
+        "D": "For very tightly wound coils, the coupling coefficient k can exceed 1.",
+        "E": "When two inductors are in series and mutual inductance is neglected, the emfs across them are in proportion to their inductances."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and C only",
+        "B, C and E only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "L depends only on geometry and the core material; $k \\le 1$; series inductors carry the same current.",
+        "steps": [
+          "A: incorrect. L depends only on the geometry and the core, not on the current.",
+          "B: correct. A core of relative permeability $\\mu_r$ multiplies L by $\\mu_r$.",
+          "C: correct. Mutual inductance is reciprocal.",
+          "D: incorrect. The coupling coefficient satisfies $0 \\le k \\le 1$.",
+          "E: correct. The same $dI/dt$ flows through both, so each emf $L\\,dI/dt$ is proportional to L."
+        ],
+        "final_answer": "Option (3): B, C and E only",
+        "why_not_others": "Options containing A or D include a false statement. 'B and C only' leaves out the true statement E.",
+        "common_trap": "Thinking that L changes with the current, or that k can exceed 1.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Alternating current: peak and RMS values",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An AC ammeter connected in a circuit carrying a sinusoidal current reads 5 A. What is the peak value of the current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7.07 A",
+        "3.54 A",
+        "5 A",
+        "10 A"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "AC meters read rms values. For a sinusoid, $I_0 = \\sqrt{2}I_{rms}$.",
+        "steps": [
+          "The ammeter reading is the rms value, so $I_{rms} = 5$ A.",
+          "$I_0 = \\sqrt{2}\\times 5 \\approx 7.07$ A."
+        ],
+        "final_answer": "Option (1): 7.07 A",
+        "why_not_others": "3.54 A comes from dividing by $\\sqrt{2}$ instead of multiplying. 5 A treats the reading as the peak value. 10 A doubles the reading instead of multiplying by $\\sqrt{2}$.",
+        "common_trap": "Assuming the meter reading is the peak value.",
+        "time_saving_tip": "Peak is always larger than rms: multiply by about 1.414."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Alternating current: peak and RMS values",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The mean value of a sinusoidal alternating current over a half cycle is 14 A. What is its rms value? (Take $\\pi = 22/7$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "15.6 A",
+        "14 A",
+        "22 A",
+        "9.9 A"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The half-cycle average is $2I_0/\\pi$ and the rms value is $I_0/\\sqrt{2}$.",
+        "steps": [
+          "$I_0 = \\frac{\\pi}{2}\\times 14 = \\frac{22}{7}\\times 7 = 22$ A.",
+          "$I_{rms} = 22/\\sqrt{2} \\approx 15.6$ A.",
+          "Check with the form factor: $1.11\\times 14 \\approx 15.5$ A, which agrees."
+        ],
+        "final_answer": "Option (1): 15.6 A",
+        "why_not_others": "14 A equates the rms value with the mean value. 22 A is the peak value. 9.9 A divides the mean value by $\\sqrt{2}$.",
+        "common_trap": "Treating the half-cycle average as the peak value.",
+        "time_saving_tip": "$I_{rms} = 1.11\\times I_{avg}$ gives the answer in one step."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Alternating current: peak and RMS values",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An alternating voltage is given by $V = 200\\sqrt{2}\\sin(400\\pi t)$ volt. What are its rms value and its frequency?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "282.8 V and 400 Hz",
+        "200 V and 1257 Hz",
+        "282.8 V and 200 Hz",
+        "200 V and 200 Hz"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$V_{rms} = V_0/\\sqrt{2}$, and the coefficient of t is $\\omega = 2\\pi f$.",
+        "steps": [
+          "$V_0 = 200\\sqrt{2}$ V, so $V_{rms} = 200$ V.",
+          "$\\omega = 400\\pi$ rad/s, so $f = \\omega/2\\pi = 200$ Hz."
+        ],
+        "final_answer": "Option (4): 200 V and 200 Hz",
+        "why_not_others": "282.8 V is the peak value. 400 Hz drops the $\\pi$ but forgets the factor 2. 1257 Hz takes $\\omega = 400\\pi$ itself as f.",
+        "common_trap": "Reading the coefficient of t as the frequency instead of the angular frequency.",
+        "time_saving_tip": "Divide the coefficient of t by $2\\pi$; here $400\\pi/2\\pi = 200$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Alternating current: peak and RMS values",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A square wave current that alternates between $+I_0$ and $-I_0$ has an rms value equal to $I_0$.",
+        "R": "For a sinusoidal current of peak value $I_0$, the rms value is $I_0/\\sqrt{2}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "rms is $\\sqrt{\\langle I^2\\rangle}$ for any waveform. The factor $1/\\sqrt{2}$ applies to sine waves only.",
+        "steps": [
+          "For the square wave, $I^2 = I_0^2$ at every instant, so $I_{rms} = I_0$. A is true.",
+          "For a sine wave, $I_{rms} = I_0/\\sqrt{2}$. R is true.",
+          "R describes sinusoids and does not explain the square-wave result."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R cannot explain A, because applying R to a square wave would give the wrong value. Both statements are true, so options 3 and 4 fail.",
+        "common_trap": "Applying $I_0/\\sqrt{2}$ to every waveform.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Alternating current: peak and RMS values",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a current $I = I_0\\sin\\omega t$, the mean value over one complete cycle is $2I_0/\\pi$.",
+        "II": "For a sinusoidal current, the ratio of the rms value to the half-cycle mean value is about 0.90."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The full-cycle mean is zero, the half-cycle mean is $2I_0/\\pi$, and the form factor is $\\pi/(2\\sqrt{2}) \\approx 1.11$.",
+        "steps": [
+          "Over a full cycle the positive and negative halves cancel, so the mean is zero. Statement I is incorrect.",
+          "$I_{rms}/I_{avg} = \\frac{I_0/\\sqrt{2}}{2I_0/\\pi} = \\frac{\\pi}{2\\sqrt{2}} \\approx 1.11$, not 0.90. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I uses the half-cycle result for a full cycle. Statement II gives the inverted ratio $2\\sqrt{2}/\\pi \\approx 0.90$.",
+        "common_trap": "Mixing up the full-cycle and half-cycle averages, and inverting the form factor.",
+        "time_saving_tip": "rms (0.707 $I_0$) is greater than the half-cycle mean (0.637 $I_0$), so their ratio must exceed 1."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Reactance and impedance",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "When an alternating voltage is applied across a pure capacitor, what is the phase relation between the current and the voltage?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Current leads voltage by $\\pi/2$",
+        "Voltage leads current by $\\pi/2$",
+        "Current and voltage are in phase",
+        "Current lags voltage by $\\pi$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "ICE: in a capacitor (C), the current (I) leads the voltage (E).",
+        "steps": [
+          "In a pure capacitor the current leads the voltage by $90^\\circ$."
+        ],
+        "final_answer": "Option (1): Current leads voltage by $\\pi/2$",
+        "why_not_others": "Voltage leading current is true for an inductor. Being in phase is true for a resistor. A phase difference of $\\pi$ does not occur for a single element.",
+        "common_trap": "Swapping the inductor and capacitor behaviour.",
+        "time_saving_tip": "Remember ELI the ICE man."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Reactance and impedance",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A pure inductor of inductance $\\frac{1}{\\pi}$ H is connected to a 220 V, 50 Hz AC supply. What rms current flows through it?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "13.8 A",
+        "3.11 A",
+        "1.56 A",
+        "2.2 A"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$X_L = 2\\pi fL$ and $I_{rms} = V_{rms}/X_L$.",
+        "steps": [
+          "$X_L = 2\\pi\\times 50\\times\\frac{1}{\\pi} = 100\\ \\Omega$.",
+          "$I_{rms} = 220/100 = 2.2$ A."
+        ],
+        "final_answer": "Option (4): 2.2 A",
+        "why_not_others": "13.8 A uses $X_L = fL$ and omits the $2\\pi$. 3.11 A uses the peak voltage of 311 V. 1.56 A wrongly divides the rms current by $\\sqrt{2}$ again.",
+        "common_trap": "Forgetting the $2\\pi$ in $X_L$.",
+        "time_saving_tip": "$L = 1/\\pi$ H at 50 Hz always gives $X_L = 100\\ \\Omega$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Reactance and impedance",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A series circuit has $R = 30\\ \\Omega$, $X_L = 80\\ \\Omega$ and $X_C = 40\\ \\Omega$. It is connected to a 200 V (rms) AC source. What is the rms current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4 A",
+        "1.33 A",
+        "2.86 A",
+        "2.12 A"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$; the reactances are combined as phasors.",
+        "steps": [
+          "$X_L - X_C = 40\\ \\Omega$.",
+          "$Z = \\sqrt{30^2 + 40^2} = 50\\ \\Omega$.",
+          "$I_{rms} = 200/50 = 4$ A."
+        ],
+        "final_answer": "Option (1): 4 A",
+        "why_not_others": "1.33 A adds all three arithmetically (150 $\\Omega$). 2.86 A uses $R + X_L - X_C = 70\\ \\Omega$. 2.12 A uses $\\sqrt{R^2 + X_L^2 + X_C^2}$.",
+        "common_trap": "Adding oppositions arithmetically instead of as phasors.",
+        "time_saving_tip": "Look for a 3-4-5 triangle: 30, 40 and 50."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Reactance and impedance",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Inductive reactance"
+          },
+          {
+            "label": "B",
+            "text": "Capacitive reactance"
+          },
+          {
+            "label": "C",
+            "text": "Impedance of a series LCR circuit"
+          },
+          {
+            "label": "D",
+            "text": "Peak current in a series LCR circuit"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\sqrt{R^2 + (X_L - X_C)^2}$"
+          },
+          {
+            "label": "II",
+            "text": "$V_0/Z$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{1}{\\omega C}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\omega L$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I",
+        "A-I, B-III, C-IV, D-II",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are the standard reactance, impedance and AC Ohm's law relations.",
+        "steps": [
+          "$X_L = \\omega L$, so A matches IV.",
+          "$X_C = 1/\\omega C$, so B matches III.",
+          "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$, so C matches I.",
+          "$I_0 = V_0/Z$, so D matches II."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option 1 swaps the two reactances. Option 2 swaps the impedance and the current. Option 3 assigns the impedance formula to $X_L$.",
+        "common_trap": "Writing $X_C = \\omega C$.",
+        "time_saving_tip": "Fix A and B first; only option 4 then has C and D correct."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Reactance and impedance",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about reactance and impedance are correct?",
+      "statements": {
+        "A": "Doubling the frequency doubles the inductive reactance of a coil.",
+        "B": "A capacitor blocks DC because its reactance becomes infinite when $\\omega = 0$.",
+        "C": "In a series RLC circuit, the rms voltages across R, L and C add arithmetically to give the source voltage.",
+        "D": "In a DC circuit, an ideal inductor behaves as an open circuit.",
+        "E": "Halving the frequency doubles the capacitive reactance of a capacitor."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$X_L \\propto f$, $X_C \\propto 1/f$, and series AC voltages add as phasors.",
+        "steps": [
+          "A: $X_L = 2\\pi fL$, so doubling f doubles $X_L$. True.",
+          "B: $X_C = 1/\\omega C$ becomes infinite as $\\omega \\to 0$. True.",
+          "C: The voltages add as phasors, $V = \\sqrt{V_R^2 + (V_L - V_C)^2}$. False.",
+          "D: For DC an inductor acts as a plain wire. False.",
+          "E: $X_C \\propto 1/f$, so halving f doubles $X_C$. True."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other option includes C or D, and both are false.",
+        "common_trap": "Swapping the DC behaviour of the inductor and the capacitor.",
+        "time_saving_tip": "Rejecting C and D leaves only option 1."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "LCR series circuit and resonance",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "At resonance in a series LCR circuit, what is the impedance of the circuit equal to?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Zero",
+        "R",
+        "$X_L + X_C$",
+        "$\\sqrt{R^2 + X_L^2}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At resonance $X_L = X_C$, so Z reaches its minimum value, R.",
+        "steps": [
+          "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$.",
+          "With $X_L = X_C$, this gives $Z = R$."
+        ],
+        "final_answer": "Option (2): R",
+        "why_not_others": "Z is zero only if R is zero. $X_L + X_C$ adds the reactances instead of subtracting them. $\\sqrt{R^2 + X_L^2}$ ignores the capacitor.",
+        "common_trap": "Thinking the impedance vanishes at resonance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "LCR series circuit and resonance",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A series LCR circuit has $L = 20$ mH, $C = 50\\ \\mu$F and $R = 10\\ \\Omega$. What is its resonant frequency $f_0$ (approximately)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1000 Hz",
+        "6283 Hz",
+        "$1.59\\times10^5$ Hz",
+        "159 Hz"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\omega_0 = 1/\\sqrt{LC}$ and $f_0 = \\omega_0/2\\pi$. The value of R does not matter.",
+        "steps": [
+          "$LC = 0.02\\times 50\\times10^{-6} = 10^{-6}\\ s^2$.",
+          "$\\omega_0 = 1/10^{-3} = 1000$ rad/s.",
+          "$f_0 = 1000/2\\pi \\approx 159$ Hz."
+        ],
+        "final_answer": "Option (4): 159 Hz",
+        "why_not_others": "1000 Hz is $\\omega_0$ taken as f. 6283 Hz multiplies by $2\\pi$ instead of dividing. $1.59\\times10^5$ Hz omits the square root.",
+        "common_trap": "Reporting $\\omega_0$ as the frequency.",
+        "time_saving_tip": "The resistance is given only as a distractor."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "LCR series circuit and resonance",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A series LCR circuit has $L = 0.1$ H, $C = 10\\ \\mu$F and $R = 10\\ \\Omega$. What is the quality factor of the circuit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "100",
+        "10",
+        "0.1",
+        "1000"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}} = \\frac{\\omega_0 L}{R}$.",
+        "steps": [
+          "$L/C = 0.1/10^{-5} = 10^4$, so $\\sqrt{L/C} = 100\\ \\Omega$.",
+          "$Q = 100/10 = 10$.",
+          "Check: $\\omega_0 = 1000$ rad/s, so $\\omega_0 L/R = 100/10 = 10$."
+        ],
+        "final_answer": "Option (2): 10",
+        "why_not_others": "100 omits the division by R. 0.1 uses the inverted form $R\\sqrt{C/L}$. 1000 is $\\omega_0$.",
+        "common_trap": "Forgetting the $1/R$ factor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "LCR series circuit and resonance",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a series LCR circuit at resonance, the rms voltage across the inductor can be much larger than the rms source voltage.",
+        "R": "At resonance, $V_L$ and $V_C$ are equal in magnitude and opposite in phase, so they cancel each other in the phasor sum."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At resonance $V_L$ and $V_C$ cancel, so the source only needs to supply $V_R$.",
+        "steps": [
+          "Because $V_L$ and $V_C$ cancel, the source voltage equals $V_R$. R is true.",
+          "With no constraint from the source, $V_L = I X_L$ can be large while the current is at its maximum. A is true.",
+          "The cancellation is exactly why $V_L$ can exceed the source voltage, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R directly accounts for A, so option 2 fails. Both statements are true, so options 3 and 4 fail.",
+        "common_trap": "Believing no element voltage can exceed the source voltage, which holds only for arithmetic addition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "LCR series circuit and resonance",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In a series LCR circuit driven at an angular frequency below $1/\\sqrt{LC}$, the current leads the source voltage.",
+        "II": "Increasing the resistance of a series LCR circuit lowers its resonant frequency and makes the resonance sharper."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Below $\\omega_0$, $X_C > X_L$ and the circuit is capacitive. $\\omega_0$ does not depend on R, and $Q \\propto 1/R$.",
+        "steps": [
+          "Below $\\omega_0$, $X_C > X_L$, so the circuit is capacitive and the current leads. Statement I is correct.",
+          "$\\omega_0 = 1/\\sqrt{LC}$ is independent of R.",
+          "A larger R lowers Q and makes the resonance flatter. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is wrong on both counts, so options 1 and 4 fail. Statement I is right, so option 2 fails.",
+        "common_trap": "Thinking R shifts the resonant frequency, or that a higher R sharpens resonance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Power in AC circuits; wattless current",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the average power consumed over a complete cycle when a pure inductor is connected to a sinusoidal AC source of rms voltage $V_{rms}$ that drives an rms current $I_{rms}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$V_{rms}I_{rms}$",
+        "$\\frac{V_0I_0}{2}$",
+        "$\\frac{V_{rms}I_{rms}}{\\sqrt{2}}$",
+        "Zero"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a pure inductor $\\phi = 90^\\circ$, so the power factor is zero.",
+        "steps": [
+          "$P = V_{rms}I_{rms}\\cos 90^\\circ = 0$.",
+          "The energy stored in each cycle is returned to the source."
+        ],
+        "final_answer": "Option (4): Zero",
+        "why_not_others": "$V_{rms}I_{rms}$ and $V_0I_0/2$ (which is the same quantity) both assume a power factor of 1. $V_{rms}I_{rms}/\\sqrt{2}$ assumes $\\phi = 45^\\circ$.",
+        "common_trap": "Believing pure inductors consume power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Power in AC circuits; wattless current",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In an AC circuit, the rms voltage is 200 V and the rms current is 5 A. The current lags the voltage by $60^\\circ$. What average power does the circuit consume?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1000 W",
+        "866 W",
+        "250 W",
+        "500 W"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$P = V_{rms}I_{rms}\\cos\\phi$.",
+        "steps": [
+          "$\\cos 60^\\circ = 0.5$.",
+          "$P = 200\\times 5\\times 0.5 = 500$ W."
+        ],
+        "final_answer": "Option (4): 500 W",
+        "why_not_others": "1000 W ignores the power factor. 866 W uses $\\sin 60^\\circ$. 250 W adds an extra factor of 1/2, as if peak values were used.",
+        "common_trap": "Using $\\sin\\phi$ instead of $\\cos\\phi$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Power in AC circuits; wattless current",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A circuit draws an rms current of 10 A at a power factor of 0.6. What is the wattless component of the current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "8 A",
+        "6 A",
+        "10 A",
+        "4 A"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Wattless current $= I_{rms}\\sin\\phi$.",
+        "steps": [
+          "$\\cos\\phi = 0.6$, so $\\sin\\phi = 0.8$.",
+          "Wattless current $= 10\\times 0.8 = 8$ A."
+        ],
+        "final_answer": "Option (1): 8 A",
+        "why_not_others": "6 A is the in-phase (active) component. 10 A is the total current. 4 A is $10 - 6$, an arithmetic subtraction of the components.",
+        "common_trap": "Confusing the active and wattless components.",
+        "time_saving_tip": "Use the 3-4-5 triangle: a power factor of 0.6 means $\\sin\\phi = 0.8$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Power in AC circuits; wattless current",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pure inductor"
+          },
+          {
+            "label": "B",
+            "text": "Series LCR circuit at resonance"
+          },
+          {
+            "label": "C",
+            "text": "Series circuit with $R = 30\\ \\Omega$ and net reactance $40\\ \\Omega$"
+          },
+          {
+            "label": "D",
+            "text": "Series RL circuit with $R = X_L$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Power factor 1"
+          },
+          {
+            "label": "II",
+            "text": "Power factor 0.6"
+          },
+          {
+            "label": "III",
+            "text": "Power factor 0"
+          },
+          {
+            "label": "IV",
+            "text": "Power factor about 0.707"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Power factor $\\cos\\phi = R/Z$.",
+        "steps": [
+          "Pure inductor: $\\phi = 90^\\circ$, so the power factor is 0 (A matches III).",
+          "At resonance $Z = R$, so the power factor is 1 (B matches I).",
+          "$Z = \\sqrt{30^2 + 40^2} = 50\\ \\Omega$, so the power factor is $30/50 = 0.6$ (C matches II).",
+          "With $R = X_L$, $Z = \\sqrt{2}R$, so the power factor is $1/\\sqrt{2} \\approx 0.707$ (D matches IV)."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 1 swaps the inductor and the resonant circuit. Option 2 swaps C and D. Option 3 gives the resonant circuit a power factor of 0.6.",
+        "common_trap": "Using $X/Z$ instead of $R/Z$ for the power factor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Power in AC circuits; wattless current",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about power in AC circuits are correct?",
+      "statements": {
+        "A": "The power factor of a series LCR circuit equals $R/Z$.",
+        "B": "The average power dissipated in a series LCR circuit equals $I_{rms}^2R$.",
+        "C": "A low power factor means a smaller current is needed to deliver the same power.",
+        "D": "Capacitors are used to improve the power factor of industrial loads.",
+        "E": "The wattless component of the current is in phase with the applied voltage."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and D only",
+        "B, D and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Only the resistance dissipates power. A low power factor needs a larger current. The wattless current is in quadrature with the voltage.",
+        "steps": [
+          "A: $\\cos\\phi = R/Z$. True.",
+          "B: All power is dissipated in R, so $P = I_{rms}^2R$. True.",
+          "C: A low power factor needs a larger current for the same power. False.",
+          "D: Capacitors are used for power factor improvement. True.",
+          "E: The wattless component is $90^\\circ$ out of phase with the voltage. False."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "The other options include C or E, and both are false.",
+        "common_trap": "Thinking the wattless current is in phase with the voltage.",
+        "time_saving_tip": "Rejecting C and E leaves only option 2."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "AC generator",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In an AC generator, at which position of the rotating coil is the induced emf maximum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "When the plane of the coil is parallel to the magnetic field",
+        "When the plane of the coil is perpendicular to the magnetic field",
+        "When the flux linked with the coil is maximum",
+        "When the plane of the coil makes $45^\\circ$ with the magnetic field"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The emf depends on the rate of change of flux, not on the flux itself.",
+        "steps": [
+          "Flux $\\Phi = NBA\\cos\\omega t$ gives emf $\\varepsilon = NBA\\omega\\sin\\omega t$.",
+          "The emf is maximum when the flux is zero, that is, when the coil plane is parallel to B.",
+          "At this position the flux is zero but changing fastest."
+        ],
+        "final_answer": "Option (1): When the plane of the coil is parallel to the magnetic field",
+        "why_not_others": "When the plane is perpendicular to B, the flux is maximum and the emf is zero. Options 2 and 3 describe the same zero-emf position. At $45^\\circ$ the emf is only $\\varepsilon_0/\\sqrt{2}$.",
+        "common_trap": "Thinking that maximum flux gives maximum emf.",
+        "time_saving_tip": "Remember the pairing: flux maximum means emf zero, and flux zero means emf maximum."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "AC generator",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A coil of 100 turns and area $0.02\\ \\text{m}^2$ rotates at 50 revolutions per second in a uniform magnetic field of $0.5$ T. What is the peak emf induced? (Take $\\pi = 3.14$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "314 V",
+        "50 V",
+        "222 V",
+        "3.14 V"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Peak emf is $\\varepsilon_0 = NBA\\omega$ with $\\omega = 2\\pi f$.",
+        "steps": [
+          "$\\omega = 2\\pi f = 2\\pi \\times 50 = 100\\pi$ rad/s.",
+          "$\\varepsilon_0 = NBA\\omega = 100 \\times 0.5 \\times 0.02 \\times 100\\pi$.",
+          "$\\varepsilon_0 = 100\\pi \\approx 314$ V."
+        ],
+        "final_answer": "Option (1): 314 V",
+        "why_not_others": "50 V results from using f instead of $\\omega$. 222 V is the rms value, not the peak value. 3.14 V results from leaving out N.",
+        "common_trap": "Substituting the frequency f directly in place of $\\omega$.",
+        "time_saving_tip": "First compute $NBA = 1$ Wb; the peak emf is then simply $\\omega = 100\\pi$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "AC generator",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An AC generator produces a peak emf $\\varepsilon_0$ at frequency f. The angular speed of its coil is doubled and the magnetic field is halved. What are the new peak emf and frequency?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\varepsilon_0$ and $f$",
+        "$\\varepsilon_0$ and $2f$",
+        "$2\\varepsilon_0$ and $2f$",
+        "$\\varepsilon_0/2$ and $f$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Peak emf is $\\varepsilon_0 = NBA\\omega$, and the frequency of the emf equals the rotation frequency.",
+        "steps": [
+          "New peak emf is $NA(B/2)(2\\omega) = NBA\\omega = \\varepsilon_0$.",
+          "The frequency depends only on $\\omega$, so doubling $\\omega$ doubles it to $2f$."
+        ],
+        "final_answer": "Option (2): $\\varepsilon_0$ and $2f$",
+        "why_not_others": "Option 1 ignores the change in frequency. Option 3 ignores the halving of B. Option 4 halves the emf and keeps f unchanged, which ignores the doubling of $\\omega$.",
+        "common_trap": "Assuming that the frequency also depends on B, or that an unchanged peak emf means an unchanged frequency.",
+        "time_saving_tip": "Track the two quantities separately: the emf goes as $B\\omega$, while the frequency goes as $\\omega$ alone."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "AC generator",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Doubling the angular speed of the coil of an AC generator doubles the peak emf.",
+        "R": "The frequency of the emf produced by an AC generator equals the frequency of rotation of its coil."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Peak emf $\\varepsilon_0 = NBA\\omega$ is proportional to $\\omega$; the frequency of the emf is a separate result.",
+        "steps": [
+          "Since $\\varepsilon_0 = NBA\\omega$, doubling $\\omega$ doubles the peak emf, so A is true.",
+          "Since $\\varepsilon = NBA\\omega\\sin\\omega t$, the emf has the rotation frequency, so R is true.",
+          "A is explained by $\\varepsilon_0 \\propto \\omega$ (the flux changes faster), not by the frequency relation."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R describes the frequency, not the amplitude, so it cannot explain A. Both statements are true, so options 3 and 4 are wrong.",
+        "common_trap": "Linking the two statements because both involve $\\omega$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "AC generator",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In an AC generator, the induced emf is zero at the instant the flux linked with the coil is maximum.",
+        "II": "For a generator with $\\varepsilon = NBA\\omega\\sin\\omega t$, at an instant when the emf equals half its peak value, the magnitude of the flux linked with the coil is $\\frac{\\sqrt{3}}{2}NBA$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The flux $\\Phi = NBA\\cos\\omega t$ and the emf $\\varepsilon = NBA\\omega\\sin\\omega t$ are $90^\\circ$ out of phase.",
+        "steps": [
+          "When the flux is maximum, $\\cos\\omega t = \\pm 1$, so $\\sin\\omega t = 0$ and the emf is zero. Statement I is correct.",
+          "If $\\varepsilon = \\varepsilon_0/2$, then $\\sin\\omega t = 1/2$ and $|\\cos\\omega t| = \\sqrt{3}/2$.",
+          "So $|\\Phi| = \\frac{\\sqrt{3}}{2}NBA$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from the phase relation, so options 2, 3 and 4 are wrong.",
+        "common_trap": "Assuming that half the peak emf means half the maximum flux.",
+        "time_saving_tip": "Use $\\sin^2\\omega t + \\cos^2\\omega t = 1$ to relate the emf fraction to the flux fraction."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Transformer",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following quantities is the same in the primary and secondary of an ideal step-up transformer?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Voltage",
+        "Current",
+        "Frequency",
+        "Number of turns"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A transformer changes voltage and current but does not change frequency or power.",
+        "steps": [
+          "In a step-up transformer, the voltage increases and the current decreases.",
+          "The number of turns differs, with $N_s > N_p$.",
+          "The frequency stays unchanged."
+        ],
+        "final_answer": "Option (3): Frequency",
+        "why_not_others": "Voltage increases and current decreases in a step-up transformer. The turns differ by definition.",
+        "common_trap": "Thinking a transformer can change the frequency of the AC supply.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Transformer",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A transformer of efficiency 80% steps down 220 V to 11 V. The secondary delivers a current of 4 A. What is the current in the primary?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.2 A",
+        "0.16 A",
+        "80 A",
+        "0.25 A"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Efficiency is $\\eta = \\frac{V_sI_s}{V_pI_p}$.",
+        "steps": [
+          "Output power $= 11 \\times 4 = 44$ W.",
+          "Input power $= 44/0.8 = 55$ W.",
+          "Primary current $I_p = 55/220 = 0.25$ A."
+        ],
+        "final_answer": "Option (4): 0.25 A",
+        "why_not_others": "0.2 A assumes an ideal transformer. 0.16 A multiplies by $\\eta$ instead of dividing by it. 80 A inverts the current ratio.",
+        "common_trap": "Multiplying the output power by the efficiency instead of dividing by it.",
+        "time_saving_tip": "Input power is always greater than output power in a real transformer, so $I_p$ must exceed the ideal value of 0.2 A."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Transformer",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A power of 100 kW is transmitted through lines of total resistance $5\\ \\Omega$. The transmission voltage is raised from 10 kV to 20 kV while the transmitted power is kept the same. What is the new power loss in the lines?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "250 W",
+        "1000 W",
+        "125 W",
+        "2000 W"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Line loss is $P_{loss} = I^2R$ with $I = P/V$, so the loss varies as $1/V^2$.",
+        "steps": [
+          "At 10 kV, $I = 10^5/10^4 = 10$ A, so the loss is $10^2 \\times 5 = 500$ W.",
+          "At 20 kV, $I = 10^5/(2\\times10^4) = 5$ A.",
+          "New loss $= 5^2 \\times 5 = 125$ W."
+        ],
+        "final_answer": "Option (3): 125 W",
+        "why_not_others": "250 W assumes the loss varies as $1/V$. 1000 W assumes the loss increases in proportion to V. 2000 W assumes the loss increases as $V^2$.",
+        "common_trap": "Using $V^2/R$ with the transmission voltage instead of $I^2R$ with the line current.",
+        "time_saving_tip": "Doubling the voltage cuts the loss to one-fourth: $500/4 = 125$ W."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Transformer",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Flux leakage"
+          },
+          {
+            "label": "B",
+            "text": "Copper (joule) loss"
+          },
+          {
+            "label": "C",
+            "text": "Eddy-current loss"
+          },
+          {
+            "label": "D",
+            "text": "Hysteresis loss"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Laminated core"
+          },
+          {
+            "label": "II",
+            "text": "Thick wires"
+          },
+          {
+            "label": "III",
+            "text": "Soft-iron core with a narrow hysteresis loop"
+          },
+          {
+            "label": "IV",
+            "text": "Winding the coils one over the other"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each energy loss in a real transformer has its own remedy.",
+        "steps": [
+          "Flux leakage is reduced by winding the coils one over the other: A-IV.",
+          "Copper loss is reduced by using thick wires: B-II.",
+          "Eddy-current loss is reduced by a laminated core: C-I.",
+          "Hysteresis loss is reduced by a soft-iron core with a narrow loop: D-III."
+        ],
+        "final_answer": "Option (2): A-IV, B-II, C-I, D-III",
+        "why_not_others": "Option 1 swaps the remedies for flux leakage and copper loss. Option 3 swaps the remedies for eddy-current and hysteresis losses. Option 4 assigns the laminated core to flux leakage.",
+        "common_trap": "Confusing the remedies for eddy-current loss and hysteresis loss, since both concern the core.",
+        "time_saving_tip": "Fix C-I first, because lamination is the standard remedy for eddy currents. Only options 1 and 2 keep C-I."
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Transformer",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about transformers are correct?",
+      "statements": {
+        "A": "An ideal step-up transformer increases the voltage and decreases the current.",
+        "B": "A transformer can work on steady DC if its turns ratio is large enough.",
+        "C": "The frequency of the output voltage equals the frequency of the input voltage.",
+        "D": "An ideal step-up transformer increases the power by the factor $N_s/N_p$.",
+        "E": "Transmitting power at high voltage reduces $I^2R$ losses in the lines."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "A, C and E only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An ideal transformer conserves power and frequency, and it works only on AC through mutual induction.",
+        "steps": [
+          "A is correct: since $V_pI_p = V_sI_s$, the current falls as the voltage rises.",
+          "B is incorrect: steady DC gives a constant flux, which induces no emf.",
+          "C is correct: the frequency is unchanged.",
+          "D is incorrect: an ideal transformer conserves power.",
+          "E is correct: high voltage means low current, so the $I^2R$ loss is smaller."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option 1 leaves out the true statement E. Option 2 includes the false statement B. Option 4 includes the false statement D.",
+        "common_trap": "Believing a step-up transformer increases power along with voltage.",
+        "time_saving_tip": "Eliminate any option containing B or D; only option 3 has neither and also includes A, C and E."
+      }
+    }
+  ]
+}

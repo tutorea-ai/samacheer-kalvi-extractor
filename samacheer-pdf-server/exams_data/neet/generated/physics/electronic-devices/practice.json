@@ -1,0 +1,1231 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u19",
+  "slug": "electronic-devices",
+  "questions": [
+    {
+      "q_id": "neet_phy_u19_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductors",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following impurities, when added to pure silicon, produces an n-type semiconductor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Boron",
+        "Aluminium",
+        "Arsenic",
+        "Gallium"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A pentavalent impurity (P, As, Sb) donates electrons and gives an n-type semiconductor. A trivalent impurity (B, Al, Ga, In) gives a p-type semiconductor.",
+        "steps": [
+          "An n-type semiconductor needs a donor, that is, a pentavalent impurity.",
+          "Arsenic is pentavalent.",
+          "Boron, aluminium and gallium are trivalent acceptors."
+        ],
+        "final_answer": "Option (3): Arsenic",
+        "why_not_others": "B, Al and Ga are trivalent. They create holes and give p-type material.",
+        "common_trap": "Mixing up trivalent and pentavalent dopants.",
+        "time_saving_tip": "Group 15 elements (P, As, Sb) make n-type material. Group 13 elements (B, Al, Ga, In) make p-type material."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductors",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A pure semiconductor has intrinsic carrier density $n_i = 1.5 \\times 10^{16}\\ m^{-3}$. It is doped with donors of concentration $N_D = 4.5 \\times 10^{22}\\ m^{-3}$. Assuming $N_D \\gg n_i$, what is the hole density in thermal equilibrium (in $m^{-3}$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.5 \\times 10^{22}$",
+        "$1.5 \\times 10^{16}$",
+        "$5 \\times 10^{9}$",
+        "$2 \\times 10^{-10}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Mass action law: $n_e n_h = n_i^2$, with $n_e \\approx N_D$ for n-type material.",
+        "steps": [
+          "$n_e \\approx N_D = 4.5 \\times 10^{22}\\ m^{-3}$",
+          "$n_h = n_i^2 / n_e = (2.25 \\times 10^{32}) / (4.5 \\times 10^{22})$",
+          "$n_h = 5 \\times 10^{9}\\ m^{-3}$"
+        ],
+        "final_answer": "Option (3): $5 \\times 10^{9}$",
+        "why_not_others": "$4.5 \\times 10^{22}$ is the electron (majority) density. $1.5 \\times 10^{16}$ is the intrinsic density, which no longer applies after doping. $2 \\times 10^{-10}$ comes from inverting the ratio, $N_D/n_i^2$.",
+        "common_trap": "Assuming the hole density stays equal to $n_i$ after doping.",
+        "time_saving_tip": "Minority density = $n_i^2$ / majority density."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductors",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An n-type semiconductor has electron density $10^{22}\\ m^{-3}$ and electron mobility $0.125\\ m^2 V^{-1} s^{-1}$. Neglecting the hole contribution, what is its resistivity? (Take $e = 1.6 \\times 10^{-19}$ C.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2 \\times 10^{2}\\ \\Omega\\, m$",
+        "$5 \\times 10^{-3}\\ \\Omega\\, m$",
+        "$5 \\times 10^{-2}\\ \\Omega\\, m$",
+        "$5 \\times 10^{-4}\\ \\Omega\\, m$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\sigma = e(n_e \\mu_e + n_h \\mu_h)$ and $\\rho = 1/\\sigma$",
+        "steps": [
+          "$\\sigma = 1.6 \\times 10^{-19} \\times 10^{22} \\times 0.125$",
+          "$\\sigma = 1.6 \\times 10^{3} \\times 0.125 = 200\\ S\\,m^{-1}$",
+          "$\\rho = 1/200 = 5 \\times 10^{-3}\\ \\Omega\\, m$"
+        ],
+        "final_answer": "Option (2): $5 \\times 10^{-3}\\ \\Omega\\, m$",
+        "why_not_others": "$2 \\times 10^{2}$ is the conductivity value, reported without taking the reciprocal. The other two options have power-of-ten errors.",
+        "common_trap": "Stopping at the conductivity and forgetting to invert it.",
+        "time_saving_tip": "$e n_e = 1.6 \\times 10^{3}$, so multiply by 1/8 to get $\\sigma = 200$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductors",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The resistivity of an intrinsic semiconductor decreases as its temperature rises.",
+        "R": "In a semiconductor, the mobility of electrons is greater than the mobility of holes."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A semiconductor has a negative temperature coefficient of resistance because more covalent bonds break and more carriers are generated as temperature rises.",
+        "steps": [
+          "A is true: resistivity falls with temperature because the carrier density rises.",
+          "R is true: electron mobility exceeds hole mobility.",
+          "R does not explain A. The fall in resistivity is due to more carriers, not to the mobility difference."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true facts, so options 3 and 4 fail. Option 1 fails because R gives the wrong cause.",
+        "common_trap": "Linking any true mobility statement to the temperature behaviour.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductors",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When arsenic is added to pure silicon, electrons become the majority carriers, yet the crystal as a whole remains electrically neutral.",
+        "II": "In a p-type semiconductor with $N_A \\gg n_i$ at a fixed temperature, doubling the acceptor concentration halves the equilibrium electron density."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Doped crystals are neutral. The mass action law $n_e n_h = n_i^2$ fixes the minority carrier density.",
+        "steps": [
+          "I: each donor atom stays as a fixed positive ion after releasing its electron, so the crystal stays neutral. I is correct.",
+          "II: $n_h \\approx N_A$, so $n_e = n_i^2/N_A$.",
+          "Doubling $N_A$ halves $n_e$. II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from the notes, so every option that marks one of them wrong fails.",
+        "common_trap": "Thinking n-type material is negatively charged, or that the minority density does not depend on doping.",
+        "time_saving_tip": "$n_e \\propto 1/N_A$ in p-type material."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductor diode: I-V characteristics in forward and reverse bias",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The small reverse saturation current in a reverse-biased p-n junction diode is due to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Majority carriers crossing the junction",
+        "Minority carriers crossing the junction",
+        "Immobile ions in the depletion region",
+        "Majority and minority carriers in equal numbers"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Forward current is carried by majority carriers. Reverse current is carried by minority carriers.",
+        "steps": [
+          "Reverse bias raises the barrier, which blocks majority carriers.",
+          "Minority carriers are swept across by the junction field, giving a tiny current."
+        ],
+        "final_answer": "Option (2): Minority carriers crossing the junction",
+        "why_not_others": "Majority carriers carry the forward current. Ions in the depletion region are immobile and cannot carry current. The carriers are not equally shared.",
+        "common_trap": "Assuming majority carriers carry every current.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductor diode: I-V characteristics in forward and reverse bias",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A silicon diode with barrier voltage 0.7 V is connected in forward bias in series with a $600\\ \\Omega$ resistor and a 3.7 V battery. What is the current in the circuit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6.17 mA",
+        "7.33 mA",
+        "1.17 mA",
+        "5.0 mA"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I = (V - V_0)/R$",
+        "steps": [
+          "$V - V_0 = 3.7 - 0.7 = 3.0$ V",
+          "$I = 3.0/600 = 5 \\times 10^{-3}$ A = 5.0 mA"
+        ],
+        "final_answer": "Option (4): 5.0 mA",
+        "why_not_others": "6.17 mA ignores the barrier voltage. 7.33 mA adds the barrier voltage instead of subtracting it. 1.17 mA uses only 0.7 V across the resistor.",
+        "common_trap": "Treating the Si diode as ideal when $V_0$ is given.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductor diode: I-V characteristics in forward and reverse bias",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "When the forward voltage across a diode increases from 0.70 V to 0.75 V, the current rises from 10 mA to 30 mA. What is the dynamic resistance of the diode in this range?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$25\\ \\Omega$",
+        "$2.5\\ \\Omega$",
+        "$70\\ \\Omega$",
+        "$0.4\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$r_d = \\Delta V/\\Delta I$",
+        "steps": [
+          "$\\Delta V = 0.05$ V and $\\Delta I = 20$ mA = 0.02 A",
+          "$r_d = 0.05/0.02 = 2.5\\ \\Omega$"
+        ],
+        "final_answer": "Option (2): $2.5\\ \\Omega$",
+        "why_not_others": "$25\\ \\Omega$ is the static value $0.75/0.03$. $70\\ \\Omega$ is the static value $0.70/0.01$. $0.4$ comes from inverting the ratio ($\\Delta I/\\Delta V$).",
+        "common_trap": "Using $V/I$ instead of the ratio of changes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductor diode: I-V characteristics in forward and reverse bias",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Forward bias current"
+          },
+          {
+            "label": "B",
+            "text": "Reverse saturation current"
+          },
+          {
+            "label": "C",
+            "text": "Depletion region"
+          },
+          {
+            "label": "D",
+            "text": "Electric field in the depletion region"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Contains immobile ions and no free carriers"
+          },
+          {
+            "label": "II",
+            "text": "Due to majority carriers"
+          },
+          {
+            "label": "III",
+            "text": "Due to minority carriers"
+          },
+          {
+            "label": "IV",
+            "text": "Directed from n side to p side"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Basic properties of a p-n junction.",
+        "steps": [
+          "Forward current is carried by majority carriers: A-II.",
+          "Reverse current is carried by minority carriers: B-III.",
+          "The depletion region holds immobile ions and no free carriers: C-I.",
+          "The field points from the positive ions on the n side to the negative ions on the p side: D-IV."
+        ],
+        "final_answer": "Option (1): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Option 2 swaps the carrier types. Option 3 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Taking the field direction as p to n.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Semiconductor diode: I-V characteristics in forward and reverse bias",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about a p-n junction diode are correct?",
+      "statements": {
+        "A": "In forward bias, the barrier height and the depletion width both decrease.",
+        "B": "Below breakdown, the reverse saturation current increases strongly with the reverse voltage.",
+        "C": "The reverse saturation current increases with temperature.",
+        "D": "A diode is an ohmic device because its forward current increases with voltage.",
+        "E": "In an unbiased junction at equilibrium, the diffusion current equals the drift current."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "C, D and E only",
+        "A and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "I-V behaviour of a diode.",
+        "steps": [
+          "A is true.",
+          "B is false: below breakdown the reverse current is almost independent of voltage.",
+          "C is true.",
+          "D is false: the I-V curve is non-linear, so the diode is non-ohmic.",
+          "E is true."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Options 1 and 3 include a false statement (B or D). Option 4 leaves out the true statement C.",
+        "common_trap": "Thinking reverse current grows steadily with voltage, or calling the diode ohmic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Diode as a rectifier",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A full-wave rectifier is fed from 50 Hz AC mains. What is the frequency of the ripple in its output?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "25 Hz",
+        "50 Hz",
+        "100 Hz",
+        "200 Hz"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$f_{out} = 2 f_{in}$ for a full-wave rectifier.",
+        "steps": [
+          "Both half cycles of the input give an output pulse.",
+          "$f_{out} = 2 \\times 50 = 100$ Hz"
+        ],
+        "final_answer": "Option (3): 100 Hz",
+        "why_not_others": "50 Hz is the half-wave value. 25 Hz and 200 Hz come from halving or doubling twice.",
+        "common_trap": "Taking the output frequency equal to the input frequency.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Diode as a rectifier",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A half-wave rectifier gives an output with peak voltage 31.4 V. What is the average (dc) value of the output voltage? (Take $\\pi = 3.14$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "10 V",
+        "20 V",
+        "15.7 V",
+        "22.2 V"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$V_{dc} = V_m/\\pi$ for a half-wave rectifier.",
+        "steps": [
+          "$V_{dc} = 31.4/3.14 = 10$ V"
+        ],
+        "final_answer": "Option (1): 10 V",
+        "why_not_others": "20 V uses the full-wave formula. 15.7 V is the half-wave rms value $V_m/2$. 22.2 V is $V_m/\\sqrt{2}$.",
+        "common_trap": "Confusing the average value with the rms value.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Diode as a rectifier",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a centre-tap full-wave rectifier, the peak voltage across the entire secondary winding is 62.8 V. Neglecting diode drops, what is the average dc output voltage? (Take $\\pi = 3.14$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "40 V",
+        "10 V",
+        "22.2 V",
+        "20 V"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each diode receives half of the secondary voltage, and $V_{dc} = 2V_m/\\pi$.",
+        "steps": [
+          "$V_m = 62.8/2 = 31.4$ V",
+          "$V_{dc} = 2 \\times 31.4/3.14 = 20$ V"
+        ],
+        "final_answer": "Option (4): 20 V",
+        "why_not_others": "40 V uses the whole secondary voltage as $V_m$. 10 V uses the half-wave formula. 22.2 V is the rms value $31.4/\\sqrt{2}$.",
+        "common_trap": "Forgetting to halve the secondary voltage in a centre-tap circuit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Diode as a rectifier",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a rectifier with a capacitor filter, increasing the load resistance while keeping the capacitor unchanged makes the output smoother.",
+        "R": "The filter capacitor is connected in series with the load resistor."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A larger $R_L C$ gives smaller ripple. The capacitor is placed in parallel with the load.",
+        "steps": [
+          "A larger $R_L$ means a larger time constant, so the capacitor discharges more slowly. A is true.",
+          "The filter capacitor is in parallel with the load, not in series. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1, 2 and 4 cannot be correct.",
+        "common_trap": "Thinking the capacitor is in series with the load.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Diode as a rectifier",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a 60 Hz input, a half-wave rectifier gives output pulses at 60 Hz, and its rms output voltage is $V_m/2$.",
+        "II": "The maximum efficiency of a full-wave rectifier is 40.6%, which is double that of a half-wave rectifier."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Half-wave rectifier: $f_{out} = f$ and $V_{rms} = V_m/2$. Maximum efficiencies are 40.6% (half-wave) and 81.2% (full-wave).",
+        "steps": [
+          "I is correct on both counts.",
+          "II is wrong: 40.6% is the half-wave efficiency. The full-wave efficiency is 81.2%."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "I is fully correct and II swaps the efficiency figures, so only option 3 fits.",
+        "common_trap": "Swapping the 40.6% and 81.2% values.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "I-V characteristics of LED",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For a light emitting diode to emit light, it is operated in:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Reverse bias below breakdown",
+        "Reverse bias in the breakdown region",
+        "Zero bias",
+        "Forward bias"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An LED emits light through radiative recombination of injected carriers in forward bias.",
+        "steps": [
+          "Forward bias injects minority carriers across the junction.",
+          "These recombine near the junction and emit photons."
+        ],
+        "final_answer": "Option (4): Forward bias",
+        "why_not_others": "Reverse bias (option 1) suits a photodiode, not an LED. An LED's reverse breakdown is only about 5 V, so option 2 is unsafe. Zero bias gives no carrier injection.",
+        "common_trap": "Confusing the LED with the photodiode.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "I-V characteristics of LED",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An LED is made from a semiconductor with band gap 2.48 eV. What is the approximate wavelength of the light it emits?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "500 nm",
+        "1000 nm",
+        "250 nm",
+        "3075 nm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda(\\text{nm}) \\approx 1240/E_g(\\text{eV})$",
+        "steps": [
+          "$\\lambda = 1240/2.48 = 500$ nm"
+        ],
+        "final_answer": "Option (1): 500 nm",
+        "why_not_others": "1000 nm and 250 nm come from factor-of-2 errors. 3075 nm comes from multiplying $1240 \\times 2.48$ instead of dividing.",
+        "common_trap": "Multiplying instead of dividing in the conversion.",
+        "time_saving_tip": "2.48 is 1240/500, so the answer is immediate."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "I-V characteristics of LED",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Silicon is not used to make LEDs that emit visible light because:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Its band gap is too small and it is an indirect band gap material",
+        "Its band gap is too large for visible photons",
+        "It cannot be doped to form a p-n junction",
+        "Its electron mobility is lower than its hole mobility"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Visible LEDs need a band gap of about 1.8 to 3 eV and a direct band gap.",
+        "steps": [
+          "Si has $E_g \\approx 1.1$ eV, which is below the visible range.",
+          "Si is also an indirect band gap material, so it is a poor light emitter."
+        ],
+        "final_answer": "Option (1): Its band gap is too small and it is an indirect band gap material",
+        "why_not_others": "The gap of Si is small, not large. Si is easily doped. Electron mobility is greater than hole mobility, and mobility does not decide light emission.",
+        "common_trap": "Thinking the gap is too large.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "I-V characteristics of LED",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Energy of photon emitted by an LED"
+          },
+          {
+            "label": "B",
+            "text": "Reverse breakdown voltage of a typical LED"
+          },
+          {
+            "label": "C",
+            "text": "Threshold voltage of a red LED"
+          },
+          {
+            "label": "D",
+            "text": "Threshold voltage of a blue LED"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "About 1.8 V"
+          },
+          {
+            "label": "II",
+            "text": "About 3 V"
+          },
+          {
+            "label": "III",
+            "text": "About 5 V"
+          },
+          {
+            "label": "IV",
+            "text": "Approximately equal to $E_g$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-IV, B-II, C-I, D-III",
+        "A-IV, B-III, C-II, D-I",
+        "A-I, B-III, C-IV, D-II"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Photon energy $\\approx E_g$. Reverse breakdown is about 5 V. Threshold is about 1.8 V for red and about 3 V for blue.",
+        "steps": [
+          "A-IV: the photon energy equals the band gap.",
+          "B-III: the reverse breakdown voltage is low, about 5 V.",
+          "C-I: red threshold is about 1.8 V.",
+          "D-II: blue threshold is about 3 V."
+        ],
+        "final_answer": "Option (1): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option 2 swaps B and D. Option 3 swaps the red and blue thresholds. Option 4 swaps A and C.",
+        "common_trap": "Thinking red, with its longer wavelength, needs the higher threshold voltage.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "I-V characteristics of LED",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about light emitting diodes are correct?",
+      "statements": {
+        "A": "Light is produced by radiative recombination of injected minority carriers with majority carriers near the junction.",
+        "B": "An LED emitting at 620 nm needs a higher threshold voltage than one emitting at 450 nm.",
+        "C": "The intensity of the emitted light increases with forward current up to a limit.",
+        "D": "An LED is a heavily doped p-n junction.",
+        "E": "An LED can be safely reverse biased up to several hundred volts."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Working principle and characteristics of an LED.",
+        "steps": [
+          "A is true.",
+          "B is false: a shorter wavelength (450 nm, blue) needs the higher threshold voltage.",
+          "C is true.",
+          "D is true.",
+          "E is false: the reverse breakdown voltage is only about 5 V."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Options 2, 3 and 4 each include at least one false statement (B or E).",
+        "common_trap": "Thinking a longer wavelength needs a higher threshold voltage, or that an LED tolerates large reverse voltages.",
+        "time_saving_tip": "Higher photon energy means a higher threshold voltage."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Photodiode and solar cell",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A photodiode is used as a light detector. In which mode is the p-n junction of a photodiode normally operated?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Forward bias",
+        "Zero bias, acting as a source of emf",
+        "Reverse bias",
+        "Forward bias beyond the knee voltage"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A photodiode is a p-n junction operated in reverse bias, with a window that admits light.",
+        "steps": [
+          "Light with $h\\nu > E_g$ creates electron-hole pairs near the depletion region.",
+          "The junction field separates these carriers, so the reverse current increases.",
+          "The reverse (minority-carrier) current is small, so the fractional change caused by light is large. This makes the device sensitive."
+        ],
+        "final_answer": "Option (3): Reverse bias",
+        "why_not_others": "In forward bias, the large majority-carrier current hides the small photocurrent, so options (1) and (4) are wrong. Zero bias with the device acting as an emf source describes a solar cell, not a photodiode.",
+        "common_trap": "Thinking a photodiode works in forward bias like an ordinary diode.",
+        "time_saving_tip": "Remember the pairing: photodiode is reverse biased, solar cell is unbiased."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Photodiode and solar cell",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A photodiode is made from a semiconductor of band gap $E_g = 2.0$ eV. What is the longest wavelength of light it can detect? (Take $hc = 1240$ eV nm.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "620 nm",
+        "310 nm",
+        "2480 nm",
+        "1240 nm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A photon creates an electron-hole pair only if $h\\nu \\ge E_g$. This gives $\\lambda_{max} = \\frac{hc}{E_g}$.",
+        "steps": [
+          "$\\lambda_{max} = \\frac{hc}{E_g} = \\frac{1240 \\text{ eV nm}}{2.0 \\text{ eV}}$",
+          "$\\lambda_{max} = 620$ nm"
+        ],
+        "final_answer": "Option (1): 620 nm",
+        "why_not_others": "310 nm comes from wrongly using $hc/(2E_g)$. 2480 nm comes from multiplying $hc$ by $E_g$ instead of dividing. 1240 nm comes from ignoring $E_g$ and treating it as 1 eV.",
+        "common_trap": "Multiplying by $E_g$ instead of dividing by it.",
+        "time_saving_tip": "With $hc = 1240$ eV nm, $\\lambda$ (in nm) $= 1240 / E_g$ (in eV)."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Photodiode and solar cell",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A solar cell has an open-circuit voltage of 0.6 V and a short-circuit current of 50 mA. At its maximum power point, the voltage is 0.5 V and the current is 45 mA. What is the fill factor of the cell?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.83",
+        "0.75",
+        "1.33",
+        "0.90"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Fill factor $= \\frac{V_m I_m}{V_{oc} I_{sc}}$",
+        "steps": [
+          "$V_m I_m = 0.5 \\times 45 = 22.5$ mW",
+          "$V_{oc} I_{sc} = 0.6 \\times 50 = 30$ mW",
+          "Fill factor $= \\frac{22.5}{30} = 0.75$"
+        ],
+        "final_answer": "Option (2): 0.75",
+        "why_not_others": "0.83 is only $V_m/V_{oc}$. 0.90 is only $I_m/I_{sc}$. 1.33 is the inverted ratio, and a fill factor can never exceed 1.",
+        "common_trap": "Using only the voltage ratio or only the current ratio instead of the power ratio.",
+        "time_saving_tip": "Fill factor $= (V_m/V_{oc}) \\times (I_m/I_{sc}) = 0.833 \\times 0.9 = 0.75$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Photodiode and solar cell",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A photodiode is operated in forward bias, because the photocurrent is then much larger than the current without light, which makes the device sensitive.",
+        "R": "In a photodiode, the photocurrent is proportional to the intensity of the incident light."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A photodiode works in reverse bias. Its photocurrent is proportional to light intensity.",
+        "steps": [
+          "In reverse bias, the dark current is a small minority-carrier current. The fractional change caused by light is therefore large, which makes the device sensitive.",
+          "In forward bias, the large majority-carrier current makes the change due to light negligible, so A is false.",
+          "Photogenerated carriers increase with light intensity, so the photocurrent is proportional to intensity. R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A states the wrong bias mode, so every option that treats A as true is ruled out.",
+        "common_trap": "Saying a photodiode works in forward bias.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Photodiode and solar cell",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The I-V characteristic of a solar cell is drawn in the fourth quadrant, and the open-circuit voltage $V_{oc}$ and the short-circuit current $I_{sc}$ can be read from it.",
+        "II": "A semiconductor with band gap of about 3.0 eV is preferred for solar cells, because each absorbed photon then has more energy and more electron-hole pairs are produced from sunlight."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A solar cell acts as a source, so its I-V curve lies in the fourth quadrant. Its band gap should match the solar spectrum peak near 1.5 eV.",
+        "steps": [
+          "A solar cell delivers power, so its I-V curve is drawn in the fourth quadrant. The intercepts give $V_{oc}$ and $I_{sc}$. Statement I is correct.",
+          "Only photons with $h\\nu \\ge E_g$ generate carriers.",
+          "With $E_g = 3.0$ eV, most solar photons (spectrum peak near 1.5 eV) would not be absorbed, so fewer pairs are produced. Preferred materials have $E_g$ of about 1 to 1.8 eV. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II reverses the band-gap logic. A larger gap reduces the number of usable photons. Statement I correctly describes the I-V curve.",
+        "common_trap": "Assuming a larger band gap always gives more output.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Zener diode and Zener diode as a voltage regulator",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In a Zener regulator circuit, the input voltage is 12 V, the Zener voltage is 8 V and the series resistance is 200 $\\Omega$. Assume the Zener is in breakdown. What is the current through the series resistor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 mA",
+        "40 mA",
+        "100 mA",
+        "20 mA"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The drop across the series resistor is $V_{in} - V_Z$, so $I_s = \\frac{V_{in} - V_Z}{R_s}$.",
+        "steps": [
+          "Voltage across $R_s$ $= 12 - 8 = 4$ V",
+          "$I_s = \\frac{4}{200} = 0.02$ A $= 20$ mA"
+        ],
+        "final_answer": "Option (4): 20 mA",
+        "why_not_others": "60 mA uses the full 12 V across $R_s$. 40 mA uses $V_Z$ across $R_s$. 100 mA uses $V_{in} + V_Z = 20$ V across $R_s$.",
+        "common_trap": "Using the full input voltage across the series resistor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Zener diode and Zener diode as a voltage regulator",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A Zener diode with $V_Z = 6$ V is used as a voltage regulator. The input voltage is 15 V, the series resistance is 300 $\\Omega$ and the load resistance is 1 k$\\Omega$. What is the current through the Zener diode?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "44 mA",
+        "30 mA",
+        "36 mA",
+        "24 mA"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I_Z = I_s - I_L$, with $I_s = \\frac{V_{in} - V_Z}{R_s}$ and $I_L = \\frac{V_Z}{R_L}$.",
+        "steps": [
+          "Check for breakdown: $15 \\times \\frac{1000}{1300} \\approx 11.5$ V, which exceeds 6 V, so the Zener regulates.",
+          "$I_s = \\frac{15 - 6}{300} = 30$ mA",
+          "$I_L = \\frac{6}{1000} = 6$ mA",
+          "$I_Z = 30 - 6 = 24$ mA"
+        ],
+        "final_answer": "Option (4): 24 mA",
+        "why_not_others": "44 mA uses the full 15 V across $R_s$ (50 mA) before subtracting 6 mA. 30 mA is the series current, not the Zener current. 36 mA adds the load current instead of subtracting it.",
+        "common_trap": "Taking the series-resistor current as the Zener current.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Zener diode and Zener diode as a voltage regulator",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A Zener diode with $V_Z = 5$ V is connected in reverse bias in parallel with a 500 $\\Omega$ load. The combination is connected in series with a 1 k$\\Omega$ resistor to a 10 V supply. What is the voltage across the load?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 V",
+        "$\\frac{10}{3}$ V",
+        "$\\frac{20}{3}$ V",
+        "10 V"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Before assuming regulation, find the voltage across the Zener with it removed, $V_{in}R_L/(R_s+R_L)$. If this is below $V_Z$, the Zener behaves as an open circuit.",
+        "steps": [
+          "With the Zener removed: $10 \\times \\frac{500}{1500} = \\frac{10}{3} \\approx 3.33$ V",
+          "Since $3.33$ V $< 5$ V, the Zener does not reach breakdown and acts as an open circuit.",
+          "The load voltage is set by the voltage divider: $\\frac{10}{3}$ V."
+        ],
+        "final_answer": "Option (2): $\\frac{10}{3}$ V",
+        "why_not_others": "5 V assumes the Zener always regulates. $\\frac{20}{3}$ V is the drop across the series resistor. 10 V ignores the series resistor completely.",
+        "common_trap": "Assuming the Zener always holds the load at $V_Z$.",
+        "time_saving_tip": "Always do the open-circuit divider check first. If it gives less than $V_Z$, the Zener can be ignored."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Zener diode and Zener diode as a voltage regulator",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Current through the series resistor"
+          },
+          {
+            "label": "B",
+            "text": "Current through the load"
+          },
+          {
+            "label": "C",
+            "text": "Current through the Zener diode"
+          },
+          {
+            "label": "D",
+            "text": "Power dissipated in the Zener diode"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "300 mW"
+          },
+          {
+            "label": "II",
+            "text": "40 mA"
+          },
+          {
+            "label": "III",
+            "text": "30 mA"
+          },
+          {
+            "label": "IV",
+            "text": "10 mA"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use the regulator relations: $I_s = \\frac{V_{in}-V_Z}{R_s}$, $I_L = \\frac{V_Z}{R_L}$, $I_Z = I_s - I_L$, $P_Z = V_Z I_Z$. (Circuit data: a Zener regulator with $V_{in} = 20$ V, $V_Z = 10$ V, $R_s = 250$ $\\Omega$, $R_L = 1$ k$\\Omega$.)",
+        "steps": [
+          "Check for breakdown: $20 \\times \\frac{1000}{1250} = 16$ V, which exceeds 10 V, so the Zener regulates.",
+          "$I_s = \\frac{20-10}{250} = 40$ mA, so A-II.",
+          "$I_L = \\frac{10}{1000} = 10$ mA, so B-IV.",
+          "$I_Z = 40 - 10 = 30$ mA, so C-III.",
+          "$P_Z = 10 \\times 0.03 = 0.3$ W $= 300$ mW, so D-I."
+        ],
+        "final_answer": "Option (3): A-II, B-IV, C-III, D-I",
+        "why_not_others": "The other matchings swap the load and Zener currents, or confuse the series current with the load current. Each such swap breaks $I_s = I_Z + I_L$.",
+        "common_trap": "Taking the load current equal to the series current.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Zener diode and Zener diode as a voltage regulator",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the Zener diode are correct?",
+      "statements": {
+        "A": "A Zener diode is heavily doped on both sides, so it has a very thin depletion layer and a very strong junction field, of the order of $5 \\times 10^6$ V/m.",
+        "B": "In a voltage regulator, the load is connected in series with the Zener diode.",
+        "C": "Heavier doping of a Zener diode gives a higher breakdown voltage.",
+        "D": "Reverse breakdown in a Zener diode is not destructive if the current is limited by the series resistor.",
+        "E": "In forward bias, a Zener diode behaves like an ordinary p-n junction diode."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Zener structure, how it is connected in a regulator, and how doping affects breakdown voltage.",
+        "steps": [
+          "A is correct: heavy doping gives a thin depletion layer and a strong field of about $5 \\times 10^6$ V/m.",
+          "B is incorrect: the load is in parallel with the Zener, and the resistor is in series with the input.",
+          "C is incorrect: heavier doping gives a lower breakdown voltage.",
+          "D is correct: breakdown is safe when the current is limited by $R_s$.",
+          "E is correct: in forward bias, a Zener acts like an ordinary diode."
+        ],
+        "final_answer": "Option (4): A, D and E only",
+        "why_not_others": "Every other combination contains B or C, and both of these are false.",
+        "common_trap": "Thinking heavier doping raises the breakdown voltage.",
+        "time_saving_tip": "Once B and C are seen to be false, only option (4) remains."
+      }
+    }
+  ]
+}

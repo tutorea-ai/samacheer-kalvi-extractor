@@ -1,0 +1,2467 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u12",
+  "slug": "current-electricity",
+  "questions": [
+    {
+      "q_id": "neet_phy_u12_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electric current, drift velocity and mobility",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A steady current of $0.8$ A flows through a metallic wire. How many electrons cross any cross-section of the wire in $1$ s? (Take $e = 1.6 \\times 10^{-19}$ C)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.28 \\times 10^{-19}$",
+        "$5 \\times 10^{19}$",
+        "$5 \\times 10^{18}$",
+        "$2 \\times 10^{18}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a steady current, $q = It$ and $q = Ne$, so $N = \\frac{It}{e}$.",
+        "steps": [
+          "Charge crossing in 1 s: $q = It = 0.8 \\times 1 = 0.8$ C.",
+          "Number of electrons: $N = \\frac{q}{e} = \\frac{0.8}{1.6 \\times 10^{-19}}$.",
+          "$N = 0.5 \\times 10^{19} = 5 \\times 10^{18}$."
+        ],
+        "final_answer": "Option (3): $5 \\times 10^{18}$",
+        "why_not_others": "$1.28 \\times 10^{-19}$ comes from multiplying by $e$ instead of dividing. $5 \\times 10^{19}$ is a power-of-ten slip. $2 \\times 10^{18}$ comes from computing $\\frac{e}{q}$ wrongly.",
+        "common_trap": "Writing $0.8/1.6 = 5$ instead of $0.5$, which gives an answer ten times too large.",
+        "time_saving_tip": "Since $\\frac{1}{e} = 6.25 \\times 10^{18}$, multiply: $0.8 \\times 6.25 \\times 10^{18} = 5 \\times 10^{18}$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electric current, drift velocity and mobility",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A copper wire of cross-sectional area $2 \\times 10^{-6}$ m$^2$ carries a current of $3.2$ A. The free-electron density is $5 \\times 10^{28}$ m$^{-3}$. What is the drift speed of the electrons? (Take $e = 1.6 \\times 10^{-19}$ C)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2 \\times 10^{-3}$ m/s",
+        "$2 \\times 10^{-5}$ m/s",
+        "$2 \\times 10^{-4}$ m/s",
+        "$1 \\times 10^{-4}$ m/s"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The current is related to drift speed by $I = neAv_d$.",
+        "steps": [
+          "$v_d = \\frac{I}{neA}$.",
+          "$neA = 5 \\times 10^{28} \\times 1.6 \\times 10^{-19} \\times 2 \\times 10^{-6} = 1.6 \\times 10^{4}$.",
+          "$v_d = \\frac{3.2}{1.6 \\times 10^{4}} = 2 \\times 10^{-4}$ m/s."
+        ],
+        "final_answer": "Option (3): $2 \\times 10^{-4}$ m/s",
+        "why_not_others": "$2 \\times 10^{-3}$ and $2 \\times 10^{-5}$ m/s are power-of-ten errors in the denominator. $1 \\times 10^{-4}$ m/s comes from doubling the area or dropping the factor 2 in the numerator.",
+        "common_trap": "Mismanaging the exponents when multiplying $n$, $e$ and $A$.",
+        "time_saving_tip": "Recall that drift speeds in metals are of order $10^{-4}$ m/s. This lets you check the answer quickly."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electric current, drift velocity and mobility",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A metal wire is connected across a potential difference $V$. The wire is replaced by another wire of the same material and the same cross-section, but of half the length. The new wire is connected across a potential difference $2V$. The temperature stays the same. By what factor does the drift velocity of the electrons change?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It remains unchanged",
+        "It becomes 2 times",
+        "It becomes $\\frac{1}{4}$ times",
+        "It becomes 4 times"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v_d = \\frac{eE\\tau}{m}$ with $E = \\frac{V}{l}$, so $v_d \\propto \\frac{V}{l}$ at constant temperature (constant $\\tau$).",
+        "steps": [
+          "Initially $E_1 = \\frac{V}{l}$.",
+          "Finally $E_2 = \\frac{2V}{l/2} = \\frac{4V}{l} = 4E_1$.",
+          "Since $\\tau$ is unchanged, $v_d$ becomes 4 times."
+        ],
+        "final_answer": "Option (4): It becomes 4 times",
+        "why_not_others": "'Unchanged' wrongly assumes drift velocity depends only on the material. '2 times' accounts for only the doubled voltage. '$\\frac{1}{4}$ times' inverts the dependence on $V$ and $l$.",
+        "common_trap": "Ignoring the change in length, which also changes the field $E$.",
+        "time_saving_tip": "Write $v_d \\propto \\frac{V}{l}$ and take the ratio directly: $\\frac{2}{1/2} = 4$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electric current, drift velocity and mobility",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "An electric bulb glows almost immediately after the switch is closed, even though the drift velocity of electrons is only about $10^{-4}$ m/s.",
+        "R": "Free electrons in a metal move randomly with thermal speeds of about $10^{5}$ m/s."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The bulb glows instantly because the electric field is set up throughout the wire at nearly the speed of light. It is not because individual electrons move fast.",
+        "steps": [
+          "A is true: the bulb glows almost instantly despite the tiny drift velocity.",
+          "R is true: random thermal speeds are about $10^5$ m/s.",
+          "Random thermal motion averages to zero and carries no net charge. So R does not explain A.",
+          "The real reason is that the field is established in the wire at nearly the speed of light."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option (1) wrongly links random thermal motion to the instant glow. Options (3) and (4) are ruled out because both statements are true.",
+        "common_trap": "Thinking the high thermal speed of electrons makes the bulb glow instantly.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electric current, drift velocity and mobility",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The mobility of free electrons is $\\mu = \\frac{e\\tau}{m}$, and its SI unit is $m^2V^{-1}s^{-1}$.",
+        "II": "When the temperature of a metal wire rises, the relaxation time decreases. So the drift velocity decreases, but the mobility stays unchanged because mobility depends only on the material."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\mu = \\frac{v_d}{E} = \\frac{e\\tau}{m}$, so mobility depends on $\\tau$, which decreases with temperature.",
+        "steps": [
+          "$\\mu = \\frac{v_d}{E}$ has unit $\\frac{m/s}{V/m} = m^2V^{-1}s^{-1}$, and equals $\\frac{e\\tau}{m}$. So Statement I is correct.",
+          "When temperature rises, $\\tau$ decreases.",
+          "Since $\\mu \\propto \\tau$, mobility also decreases. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is false because mobility changes with temperature through $\\tau$. This rules out options (1) and (4). Statement I is true, which rules out option (2).",
+        "common_trap": "Treating mobility as a fixed material constant that does not depend on temperature.",
+        "time_saving_tip": "Any quantity proportional to $\\tau$ ($v_d$, $\\mu$) falls as temperature rises."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Ohm's law and electrical resistance",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A uniform wire of resistance $5\\ \\Omega$ is stretched uniformly until its length becomes 3 times the original length. Its volume stays constant. What is its new resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$15\\ \\Omega$",
+        "$45\\ \\Omega$",
+        "$135\\ \\Omega$",
+        "$\\frac{5}{3}\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At constant volume, $R \\propto l^2$.",
+        "steps": [
+          "$\\frac{R'}{R} = \\left(\\frac{l'}{l}\\right)^2 = 3^2 = 9$.",
+          "$R' = 9 \\times 5 = 45\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $45\\ \\Omega$",
+        "why_not_others": "$15\\ \\Omega$ ignores the decrease in area. $135\\ \\Omega$ uses $R \\propto l^3$. $\\frac{5}{3}\\ \\Omega$ inverts the relation.",
+        "common_trap": "Using $R \\propto l$ and forgetting that the area decreases as the wire is stretched.",
+        "time_saving_tip": "Stretching to $n$ times the length gives $n^2R$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Ohm's law and electrical resistance",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A wire of resistance $4\\ \\Omega$ is drawn out so that its diameter becomes half the original value. Its volume stays constant. What is its new resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16\\ \\Omega$",
+        "$8\\ \\Omega$",
+        "$64\\ \\Omega$",
+        "$32\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At constant volume, $R \\propto \\frac{1}{A^2} \\propto \\frac{1}{r^4}$.",
+        "steps": [
+          "Halving the diameter halves the radius, so $r' = \\frac{r}{2}$.",
+          "$\\frac{R'}{R} = \\left(\\frac{r}{r'}\\right)^4 = 2^4 = 16$.",
+          "$R' = 16 \\times 4 = 64\\ \\Omega$."
+        ],
+        "final_answer": "Option (3): $64\\ \\Omega$",
+        "why_not_others": "$16\\ \\Omega$ uses $R \\propto \\frac{1}{r^2}$ and ignores the increase in length. $8\\ \\Omega$ uses $R \\propto \\frac{1}{r}$. $32\\ \\Omega$ uses a cubic dependence.",
+        "common_trap": "Accounting only for the change in area and not for the accompanying increase in length.",
+        "time_saving_tip": "Radius reduced to $\\frac{1}{n}$ at constant volume gives $n^4R$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Ohm's law and electrical resistance",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A uniform wire has length $10$ m, cross-sectional area $1 \\times 10^{-6}$ m$^2$ and resistivity $2 \\times 10^{-8}\\ \\Omega$ m. A potential difference of $1$ V is applied across its ends at constant temperature. What current flows through it?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2$ A",
+        "$5$ A",
+        "$50$ A",
+        "$0.5$ A"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$R = \\frac{\\rho l}{A}$, followed by Ohm's law $I = \\frac{V}{R}$.",
+        "steps": [
+          "$R = \\frac{2 \\times 10^{-8} \\times 10}{1 \\times 10^{-6}} = 0.2\\ \\Omega$.",
+          "$I = \\frac{V}{R} = \\frac{1}{0.2} = 5$ A."
+        ],
+        "final_answer": "Option (2): $5$ A",
+        "why_not_others": "$0.2$ A comes from using $I = VR$. $50$ A and $0.5$ A come from power-of-ten slips in computing $R$.",
+        "common_trap": "Confusing the value of $R$ with the current, or multiplying instead of dividing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Ohm's law and electrical resistance",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "A wire of resistance $R$ is stretched to twice its length at constant volume"
+          },
+          {
+            "label": "B",
+            "text": "The radius of a wire of resistance $R$ is reduced to half at constant volume"
+          },
+          {
+            "label": "C",
+            "text": "A wire of resistance $R$ is cut into 4 equal parts; resistance of each part"
+          },
+          {
+            "label": "D",
+            "text": "A wire of resistance $R$ is stretched at constant volume until its area becomes $\\frac{1}{3}$ of the original"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$9R$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{R}{4}$"
+          },
+          {
+            "label": "III",
+            "text": "$16R$"
+          },
+          {
+            "label": "IV",
+            "text": "$4R$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-III, C-II, D-I",
+        "A-IV, B-I, C-II, D-III",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At constant volume, $R \\propto l^2 \\propto \\frac{1}{A^2} \\propto \\frac{1}{r^4}$. Cutting a wire into $n$ equal parts gives each part $\\frac{R}{n}$.",
+        "steps": [
+          "A: $R' = 2^2R = 4R$, which is IV.",
+          "B: $R' = 2^4R = 16R$, which is III.",
+          "C: each part has $\\frac{R}{4}$, which is II.",
+          "D: $R' = \\left(\\frac{A}{A/3}\\right)^2R = 9R$, which is I."
+        ],
+        "final_answer": "Option (2): A-IV, B-III, C-II, D-I",
+        "why_not_others": "Option (1) swaps stretching with cutting. Option (3) uses $r^2$ for B and treats D as a radius change. Option (4) uses a squared factor of 3 for A and a squared factor of 2 for D.",
+        "common_trap": "Treating 'cut into $n$ parts' like 'stretched $n$ times', or using $\\frac{1}{r^2}$ instead of $\\frac{1}{r^4}$.",
+        "time_saving_tip": "Convert every change into a length ratio $k$ and use $R' = k^2R$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Ohm's law and electrical resistance",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Ohm's law and resistance are correct?",
+      "statements": {
+        "A": "When a metal wire is stretched to twice its length, its resistivity becomes four times.",
+        "B": "Ohm's law holds only when the temperature and other physical conditions of the conductor remain constant.",
+        "C": "Resistance arises because drifting electrons collide with lattice ions and lose energy.",
+        "D": "The microscopic form of Ohm's law is $J = \\sigma E$.",
+        "E": "The SI unit of conductance is ohm-metre."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "A, C and E only",
+        "B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Resistivity depends only on the material and temperature, not on dimensions. Conductance $G = \\frac{1}{R}$ is measured in siemens.",
+        "steps": [
+          "A is false: stretching changes $R$, not $\\rho$.",
+          "B is true: Ohm's law requires constant temperature and physical conditions.",
+          "C is true: collisions with lattice ions cause resistance.",
+          "D is true: $J = \\sigma E$ is the microscopic form.",
+          "E is false: conductance is measured in siemens (mho). Ohm-metre is the unit of resistivity."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Options (1) and (3) include the false statement A, and option (3) also includes the false statement E. Option (2) leaves out the true statement C.",
+        "common_trap": "Believing that stretching a wire changes its resistivity.",
+        "time_saving_tip": "Rule out A first. Only options (2) and (4) remain, and C is clearly true."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "V-I characteristics of ohmic and non-ohmic conductors",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following gives a straight-line V-I graph passing through the origin?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A p-n junction diode",
+        "A filament lamp",
+        "A metal wire kept at constant temperature",
+        "A water voltameter"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An ohmic conductor gives a linear V-I graph through the origin with constant slope.",
+        "steps": [
+          "A metal at constant temperature obeys Ohm's law.",
+          "Its V-I graph is a straight line through the origin."
+        ],
+        "final_answer": "Option (3): A metal wire kept at constant temperature",
+        "why_not_others": "A diode's behaviour depends on the sign of $V$. In a filament lamp, heating raises $R$, so its graph is non-linear. A water voltameter gives a non-linear graph that does not pass through the origin.",
+        "common_trap": "Assuming a filament lamp is ohmic because its filament is a metal; its temperature does not stay constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "V-I characteristics of ohmic and non-ohmic conductors",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For an ohmic conductor, the V-I graph is plotted with $V$ (in volt) on the y-axis and $I$ (in ampere) on the x-axis, using equal scales. The straight line through the origin makes an angle of $60^\\circ$ with the current axis. What is the resistance of the conductor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{1}{\\sqrt{3}}\\ \\Omega$",
+        "$\\frac{\\sqrt{3}}{2}\\ \\Omega$",
+        "$\\frac{1}{2}\\ \\Omega$",
+        "$\\sqrt{3}\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a V-I graph (V on the y-axis), slope $= R$.",
+        "steps": [
+          "Slope $= \\tan 60^\\circ = \\sqrt{3}$.",
+          "$R = $ slope $= \\sqrt{3}\\ \\Omega$."
+        ],
+        "final_answer": "Option (4): $\\sqrt{3}\\ \\Omega$",
+        "why_not_others": "$\\frac{1}{\\sqrt{3}}\\ \\Omega$ treats the slope as $\\frac{1}{R}$, which applies to an I-V graph. $\\frac{\\sqrt{3}}{2}$ and $\\frac{1}{2}$ wrongly use $\\sin 60^\\circ$ and $\\cos 60^\\circ$.",
+        "common_trap": "Mixing up V-I and I-V graphs: in an I-V graph the slope is $\\frac{1}{R}$.",
+        "time_saving_tip": "Always check which quantity is on the y-axis before reading the slope."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "V-I characteristics of ohmic and non-ohmic conductors",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The I-V graphs ($I$ on the y-axis, $V$ on the x-axis) of the same metal wire at two temperatures $T_1$ and $T_2$ are straight lines through the origin. Their slopes are $0.5$ S at $T_1$ and $0.25$ S at $T_2$. Which of the following is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$T_1 > T_2$, and the resistance at $T_2$ is $0.25\\ \\Omega$",
+        "$T_2 > T_1$, and the resistance at $T_2$ is $4\\ \\Omega$",
+        "$T_1 > T_2$, and the resistance at $T_1$ is $2\\ \\Omega$",
+        "$T_2 > T_1$, and the resistance at $T_2$ is $0.25\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In an I-V graph, slope $= \\frac{1}{R}$. For a metal, the higher-temperature line has the smaller slope.",
+        "steps": [
+          "$R_1 = \\frac{1}{0.5} = 2\\ \\Omega$ and $R_2 = \\frac{1}{0.25} = 4\\ \\Omega$.",
+          "$R_2 > R_1$. For a metal, resistance increases with temperature, so $T_2 > T_1$."
+        ],
+        "final_answer": "Option (2): $T_2 > T_1$, and the resistance at $T_2$ is $4\\ \\Omega$",
+        "why_not_others": "Options (1) and (4) take the slope itself as the resistance. Option (3) gives $R_1 = 2\\ \\Omega$ correctly but gets the temperature order wrong.",
+        "common_trap": "Reading the slope of an I-V graph as $R$ instead of $\\frac{1}{R}$.",
+        "time_saving_tip": "For a metal I-V graph, the smaller slope means the higher temperature."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "V-I characteristics of ohmic and non-ohmic conductors",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A filament bulb is an ohmic device because its V-I graph passes through the origin.",
+        "R": "In a filament bulb, heating raises the resistance as the current increases, so the V-I relation becomes non-linear."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An ohmic device needs a straight-line V-I graph through the origin. Passing through the origin alone is not enough.",
+        "steps": [
+          "A filament lamp is listed as non-ohmic, so A is false.",
+          "Heating raises $R$, which makes the graph non-linear, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options (1), (2) and (3) all require A to be true, but a filament bulb is non-ohmic.",
+        "common_trap": "Assuming any graph through the origin is ohmic; it must also be linear.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "V-I characteristics of ohmic and non-ohmic conductors",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a non-ohmic device, the dynamic resistance $\\frac{dV}{dI}$ at any operating point is always equal to the static resistance $\\frac{V}{I}$ at that point.",
+        "II": "GaAs shows a region of negative slope, called negative resistance, and the same current can occur at more than one voltage."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a non-linear graph, the slope $\\frac{dV}{dI}$ generally differs from the ratio $\\frac{V}{I}$. GaAs shows a non-unique V-I relation with a negative-resistance region.",
+        "steps": [
+          "Static resistance $\\frac{V}{I}$ is the slope of the line from the origin to the point. Dynamic resistance is the slope of the tangent at that point. These are equal only for a linear graph through the origin, so Statement I is incorrect.",
+          "GaAs has a negative-slope region, and the same current can occur at more than one voltage. So Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Options (1) and (3) accept the false Statement I. Option (2) rejects the true Statement II.",
+        "common_trap": "Equating $\\frac{dV}{dI}$ with $\\frac{V}{I}$ for non-linear devices.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical energy and power",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A bulb is rated $100$ W, $220$ V. What is its resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.2\\ \\Omega$",
+        "$484\\ \\Omega$",
+        "$22000\\ \\Omega$",
+        "$48.4\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$R = \\frac{V_{rated}^2}{P_{rated}}$.",
+        "steps": [
+          "$R = \\frac{220^2}{100} = \\frac{48400}{100}$.",
+          "$R = 484\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $484\\ \\Omega$",
+        "why_not_others": "$2.2\\ \\Omega$ comes from $\\frac{V}{P}$. $22000\\ \\Omega$ comes from $VP$. $48.4\\ \\Omega$ is a decimal slip.",
+        "common_trap": "Using $\\frac{V}{P}$ instead of $\\frac{V^2}{P}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical energy and power",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A heater is rated $1000$ W at its rated voltage. The supply voltage falls to $80\\%$ of the rated value. Assuming its resistance stays constant, what power does it consume?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$800$ W",
+        "$1250$ W",
+        "$640$ W",
+        "$894$ W"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At constant $R$, $P = \\frac{V^2}{R} \\propto V^2$.",
+        "steps": [
+          "$\\frac{P'}{P} = (0.8)^2 = 0.64$.",
+          "$P' = 0.64 \\times 1000 = 640$ W."
+        ],
+        "final_answer": "Option (3): $640$ W",
+        "why_not_others": "$800$ W assumes $P \\propto V$. $1250$ W inverts the ratio. $894$ W uses $\\sqrt{0.8}$.",
+        "common_trap": "Scaling power linearly with voltage.",
+        "time_saving_tip": "A voltage fraction $f$ gives a power fraction $f^2$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical energy and power",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A power of $100$ kW is transmitted at $10$ kV through cables of total resistance $5\\ \\Omega$. What is the power lost in the cables?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$50$ W",
+        "$500$ W",
+        "$5000$ W",
+        "$250$ W"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Line loss is $P_{loss} = I^2R_c = \\frac{P^2R_c}{V^2}$.",
+        "steps": [
+          "Current: $I = \\frac{P}{V} = \\frac{10^5}{10^4} = 10$ A.",
+          "$P_{loss} = I^2R_c = 10^2 \\times 5 = 500$ W."
+        ],
+        "final_answer": "Option (2): $500$ W",
+        "why_not_others": "$50$ W uses $IR_c$ instead of $I^2R_c$. $5000$ W comes from a power-of-ten slip in $I^2$. $250$ W wrongly halves the loss.",
+        "common_trap": "Using $\\frac{V^2}{R_c}$ with the transmission voltage; that voltage is not the drop across the cables.",
+        "time_saving_tip": "Find the line current first, then use $I^2R_c$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical energy and power",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "1 kWh expressed in joule"
+          },
+          {
+            "label": "B",
+            "text": "Total power of a $60$ W bulb and a $40$ W bulb (both rated for the supply voltage) connected in series across that supply"
+          },
+          {
+            "label": "C",
+            "text": "Total power of the same two bulbs connected in parallel across that supply"
+          },
+          {
+            "label": "D",
+            "text": "Heat produced when $3$ A flows through a $4\\ \\Omega$ resistor for $10$ s"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$24$ W"
+          },
+          {
+            "label": "II",
+            "text": "$360$ J"
+          },
+          {
+            "label": "III",
+            "text": "$3.6 \\times 10^6$ J"
+          },
+          {
+            "label": "IV",
+            "text": "$100$ W"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series bulbs: $\\frac{1}{P} = \\frac{1}{P_1} + \\frac{1}{P_2}$. Parallel bulbs: $P = P_1 + P_2$. Joule heating: $H = I^2Rt$. 1 kWh $= 3.6 \\times 10^6$ J.",
+        "steps": [
+          "A: 1 kWh $= 3.6 \\times 10^6$ J, which is III.",
+          "B: $\\frac{1}{P} = \\frac{1}{60} + \\frac{1}{40} = \\frac{5}{120}$, so $P = 24$ W, which is I.",
+          "C: $P = 60 + 40 = 100$ W, which is IV.",
+          "D: $H = 3^2 \\times 4 \\times 10 = 360$ J, which is II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) swaps the series and parallel formulas. Options (3) and (4) interchange the kWh value with the Joule heat.",
+        "common_trap": "Adding powers directly for bulbs in series.",
+        "time_saving_tip": "For two bulbs in series, $P = \\frac{P_1P_2}{P_1 + P_2}$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical energy and power",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about electrical power are correct?",
+      "statements": {
+        "A": "When two bulbs rated for the same voltage are joined in series, the lower-wattage bulb glows brighter.",
+        "B": "For two resistors in parallel, the larger resistance dissipates more power.",
+        "C": "Transmitting electric power at high voltage reduces the $I^2R$ loss in the lines.",
+        "D": "If the supply voltage falls to half the rated value, a heater's power becomes half the rated power, assuming its resistance stays constant.",
+        "E": "A bulb rated $P$ watt at $V$ volt has resistance $\\frac{V^2}{P}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use $I^2R$ when the current is common (series) and $\\frac{V^2}{R}$ when the voltage is common (parallel). At constant $R$, $P \\propto V^2$.",
+        "steps": [
+          "A is true: in series the current is common, and the lower-wattage bulb has the higher $R$, so it dissipates more power.",
+          "B is false: in parallel, $P = \\frac{V^2}{R}$, so the smaller resistance dissipates more power.",
+          "C is true: higher voltage means lower current and hence a lower $I^2R$ loss.",
+          "D is false: the power becomes $\\frac{1}{4}$ of the rated value.",
+          "E is true: $R = \\frac{V^2}{P}$."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option (1) includes the false statement B. Options (3) and (4) include the false statement D.",
+        "common_trap": "Assuming the higher-wattage bulb always glows brighter, or that power scales linearly with voltage.",
+        "time_saving_tip": "Rule out B and D, then pick the only option containing neither."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical resistivity and conductivity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the SI unit of electrical conductivity $\\sigma$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\Omega\\,m$",
+        "$\\Omega\\,m^{-1}$",
+        "$S\\,m^{-1}$",
+        "$S\\,m$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Conductivity is the reciprocal of resistivity: $\\sigma = \\frac{1}{\\rho}$.",
+        "steps": [
+          "The unit of resistivity $\\rho$ is $\\Omega\\,m$.",
+          "So $\\sigma = \\frac{1}{\\rho}$ has the unit $\\Omega^{-1}m^{-1}$.",
+          "Since $\\Omega^{-1}$ = siemens (S), the unit of $\\sigma$ is $S\\,m^{-1}$."
+        ],
+        "final_answer": "Option (3): $S\\,m^{-1}$",
+        "why_not_others": "$\\Omega\\,m$ is the unit of resistivity. $\\Omega\\,m^{-1}$ inverts only the metre and not the ohm. $S\\,m$ inverts only the ohm and not the metre.",
+        "common_trap": "Inverting only one part of the unit $\\Omega\\,m$ instead of both.",
+        "time_saving_tip": "Take the reciprocal of the whole unit of $\\rho$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical resistivity and conductivity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A wire of length $2\\ m$ and cross-sectional area $1\\ mm^2$ has a resistance of $0.034\\ \\Omega$. What is the resistivity of its material (in $\\Omega\\,m$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.8\\times10^{4}$",
+        "$3.4\\times10^{-8}$",
+        "$1.7\\times10^{-8}$",
+        "$1.7\\times10^{-2}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Resistivity from measurements: $\\rho = \\frac{RA}{l}$.",
+        "steps": [
+          "Convert the area: $A = 1\\ mm^2 = 1\\times10^{-6}\\ m^2$.",
+          "$\\rho = \\frac{0.034 \\times 10^{-6}}{2}$.",
+          "$\\rho = 1.7\\times10^{-8}\\ \\Omega\\,m$."
+        ],
+        "final_answer": "Option (3): $1.7\\times10^{-8}$",
+        "why_not_others": "$6.8\\times10^{4}$ comes from using $\\frac{Rl}{A}$. $3.4\\times10^{-8}$ comes from forgetting to divide by $l$. $1.7\\times10^{-2}$ comes from leaving the area in $mm^2$.",
+        "common_trap": "Not converting $mm^2$ to $m^2$ (1 $mm^2$ = $10^{-6}\\ m^2$).",
+        "time_saving_tip": "A value near $10^{-8}\\ \\Omega\\,m$ is typical of a metal, so it is a quick sanity check."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical resistivity and conductivity",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Metal A has twice the free-electron density of metal B. Its relaxation time is one-fourth that of B. Assuming the same electron mass and charge, what is the ratio of resistivities $\\rho_A : \\rho_B$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2$",
+        "$\\frac{1}{2}$",
+        "$8$",
+        "$\\frac{1}{8}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Free-electron model: $\\rho = \\frac{m}{ne^2\\tau}$, so $\\rho \\propto \\frac{1}{n\\tau}$.",
+        "steps": [
+          "$\\frac{\\rho_A}{\\rho_B} = \\frac{n_B\\tau_B}{n_A\\tau_A}$.",
+          "$\\frac{\\rho_A}{\\rho_B} = \\frac{1}{2 \\times \\frac{1}{4}}$.",
+          "$\\frac{\\rho_A}{\\rho_B} = 2$."
+        ],
+        "final_answer": "Option (1): $2$",
+        "why_not_others": "$\\frac{1}{2}$ is the inverted ratio. $8$ comes from taking $\\rho \\propto \\frac{n}{\\tau}$. $\\frac{1}{8}$ comes from taking $\\rho \\propto \\frac{\\tau}{n}$.",
+        "common_trap": "Treating $n$ and $\\tau$ differently. Resistivity is inversely proportional to both.",
+        "time_saving_tip": "Since $\\rho \\propto \\frac{1}{n\\tau}$, just invert the product of the two ratios."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical resistivity and conductivity",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a copper wire is stretched to twice its length, its resistivity remains unchanged.",
+        "R": "The resistivity of a conductor depends on its length and area of cross-section."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Resistivity depends only on the material and its temperature, not on the shape of the conductor.",
+        "steps": [
+          "Stretching changes $l$ and $A$, so $R$ changes; at constant volume, $R \\propto l^2$.",
+          "The material and temperature are unchanged, so $\\rho$ stays the same. A is true.",
+          "Resistivity does not depend on length or area. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is true, so option (4) is ruled out.",
+        "common_trap": "Confusing resistance, which depends on shape, with resistivity, which does not.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Electrical resistivity and conductivity",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the relaxation time of free electrons in a metal increases while the electron density stays constant, the resistivity of the metal increases.",
+        "II": "Manganin is preferred for standard resistors mainly because its resistivity is lower than that of copper."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\rho = \\frac{m}{ne^2\\tau}$. Alloys such as manganin have high resistivity and a very low temperature coefficient.",
+        "steps": [
+          "A larger $\\tau$ makes $\\rho$ smaller, so Statement I is incorrect.",
+          "Manganin has a higher resistivity than copper, because alloys exceed their constituent metals.",
+          "Manganin is chosen because its $\\alpha \\approx 0$, not for low resistivity. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I reverses the dependence of $\\rho$ on $\\tau$. Statement II gives the wrong reason and also states a false comparison with copper.",
+        "common_trap": "Thinking a longer relaxation time means more resistance; in fact it means fewer collisions per second.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Series and parallel combinations of resistors",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Resistors of $2\\ \\Omega$, $3\\ \\Omega$ and $6\\ \\Omega$ are connected in parallel. What is their equivalent resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\Omega$",
+        "$11\\ \\Omega$",
+        "$\\frac{36}{11}\\ \\Omega$",
+        "$\\frac{1}{11}\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a parallel combination, $\\frac{1}{R_p} = \\sum \\frac{1}{R_i}$.",
+        "steps": [
+          "$\\frac{1}{R_p} = \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6}$.",
+          "$\\frac{1}{R_p} = \\frac{3+2+1}{6} = 1$.",
+          "$R_p = 1\\ \\Omega$."
+        ],
+        "final_answer": "Option (1): $1\\ \\Omega$",
+        "why_not_others": "$11\\ \\Omega$ is the series value. $\\frac{36}{11}\\ \\Omega$ wrongly extends the two-resistor product/sum rule to three resistors. $\\frac{1}{11}\\ \\Omega$ is the reciprocal of the series sum.",
+        "common_trap": "Applying $\\frac{R_1R_2}{R_1+R_2}$ to more than two resistors.",
+        "time_saving_tip": "The answer must be smaller than $2\\ \\Omega$, the smallest resistor. Only $1\\ \\Omega$ and $\\frac{1}{11}\\ \\Omega$ pass this test, and the calculation picks $1\\ \\Omega$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Series and parallel combinations of resistors",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "$n$ identical resistors, each of resistance $R$, give an equivalent resistance of $100\\ \\Omega$ in series and $4\\ \\Omega$ in parallel. What are $n$ and $R$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$n = 25,\\ R = 4\\ \\Omega$",
+        "$n = 5,\\ R = 20\\ \\Omega$",
+        "$n = 5,\\ R = 0.8\\ \\Omega$",
+        "$n = 2,\\ R = 50\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For $n$ identical resistors, $\\frac{R_s}{R_p} = n^2$.",
+        "steps": [
+          "$n^2 = \\frac{100}{4} = 25$, so $n = 5$.",
+          "From $R_s = nR$: $R = \\frac{100}{5} = 20\\ \\Omega$.",
+          "Check: $R_p = \\frac{20}{5} = 4\\ \\Omega$, which matches."
+        ],
+        "final_answer": "Option (2): $n = 5,\\ R = 20\\ \\Omega$",
+        "why_not_others": "$n = 25$ takes the ratio as $n$ instead of $n^2$. $R = 0.8\\ \\Omega$ wrongly divides $R_p$ by $n$. $n = 2$ comes from $\\sqrt{4}$ and has no physical basis.",
+        "common_trap": "Taking $\\frac{R_s}{R_p} = n$ instead of $n^2$.",
+        "time_saving_tip": "Always check the answer with $R_p = \\frac{R}{n}$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Series and parallel combinations of resistors",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A $4\\ \\Omega$ resistor is connected in series with a parallel combination of $3\\ \\Omega$ and $6\\ \\Omega$. The arrangement is connected across an ideal $18\\ V$ battery. What is the current through the $6\\ \\Omega$ resistor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ A$",
+        "$2\\ A$",
+        "$3\\ A$",
+        "$1.5\\ A$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Reduce the network to one equivalent resistance, then apply the current divider rule $I_1 = \\frac{R_2}{R_1+R_2}I$.",
+        "steps": [
+          "The parallel part is $\\frac{3\\times6}{3+6} = 2\\ \\Omega$.",
+          "Total resistance $= 4 + 2 = 6\\ \\Omega$, so $I = \\frac{18}{6} = 3\\ A$.",
+          "Current in the $6\\ \\Omega$ resistor $= \\frac{3}{3+6}\\times3 = 1\\ A$."
+        ],
+        "final_answer": "Option (1): $1\\ A$",
+        "why_not_others": "$2\\ A$ is the current in the $3\\ \\Omega$ branch. $3\\ A$ is the total current. $1.5\\ A$ assumes the current splits equally.",
+        "common_trap": "Splitting current in direct proportion to resistance instead of inverse proportion.",
+        "time_saving_tip": "The larger resistor carries the smaller share of the current."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Series and parallel combinations of resistors",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Three $6\\ \\Omega$ resistors in series"
+          },
+          {
+            "label": "B",
+            "text": "Three $6\\ \\Omega$ resistors in parallel"
+          },
+          {
+            "label": "C",
+            "text": "Two $6\\ \\Omega$ resistors in parallel, in series with a third $6\\ \\Omega$ resistor"
+          },
+          {
+            "label": "D",
+            "text": "Two $6\\ \\Omega$ resistors in series, in parallel with a third $6\\ \\Omega$ resistor"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$2\\ \\Omega$"
+          },
+          {
+            "label": "II",
+            "text": "$4\\ \\Omega$"
+          },
+          {
+            "label": "III",
+            "text": "$9\\ \\Omega$"
+          },
+          {
+            "label": "IV",
+            "text": "$18\\ \\Omega$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-IV, B-I, C-II, D-III",
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series: $nR$. Parallel: $\\frac{R}{n}$. For mixed networks, use the two-resistor product/sum rule.",
+        "steps": [
+          "A: $3\\times6 = 18\\ \\Omega$ (IV).",
+          "B: $\\frac{6}{3} = 2\\ \\Omega$ (I).",
+          "C: $3 + 6 = 9\\ \\Omega$ (III).",
+          "D: $\\frac{12\\times6}{12+6} = 4\\ \\Omega$ (II)."
+        ],
+        "final_answer": "Option (1): A-IV, B-I, C-III, D-II",
+        "why_not_others": "Option (2) swaps C and D. Option (3) swaps the series and parallel values. Option (4) misassigns A and C.",
+        "common_trap": "Mixing up which pair is in parallel in combinations C and D.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Series and parallel combinations of resistors",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about series and parallel combinations of resistors are correct?",
+      "statements": {
+        "A": "In a series combination, the same current flows through every resistor.",
+        "B": "The equivalent resistance of a parallel combination is smaller than the smallest resistance in it.",
+        "C": "In a parallel combination, current divides in direct proportion to the resistances.",
+        "D": "A resistor connected between two points at equal potential carries no current and can be removed.",
+        "E": "For $n$ resistors, $R_{series}$ is always less than $n^2 R_{parallel}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series: same current. Parallel: same voltage, and current splits inversely with resistance. $R_s \\geq n^2R_p$.",
+        "steps": [
+          "A is true: the same current flows in series.",
+          "B is true: $R_p$ is less than the smallest resistance.",
+          "C is false: current divides in inverse proportion to resistance.",
+          "D is true: with zero potential difference across it, the resistor carries no current.",
+          "E is false: $R_s \\geq n^2R_p$, with equality when all resistors are equal."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Options (1) and (4) contain C, which is false. Options (3) and (4) contain E, which is false.",
+        "common_trap": "Reversing the inequality $R_s \\geq n^2R_p$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Temperature dependence of resistance",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following materials has a negative temperature coefficient of resistivity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Copper",
+        "Aluminium",
+        "Manganin",
+        "Germanium"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In semiconductors, carrier density rises with temperature, so $\\alpha < 0$.",
+        "steps": [
+          "Metals such as copper and aluminium have $\\alpha > 0$.",
+          "Manganin, an alloy, has $\\alpha \\approx 0$.",
+          "Germanium is a semiconductor, so its $\\alpha$ is negative."
+        ],
+        "final_answer": "Option (4): Germanium",
+        "why_not_others": "Copper and aluminium are metals with positive $\\alpha$. Manganin has a nearly zero $\\alpha$, not a negative one.",
+        "common_trap": "Assuming the resistance of every material increases with temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Temperature dependence of resistance",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A metal wire has a resistance of $10\\ \\Omega$ at $0^\\circ C$ and $12\\ \\Omega$ at $50^\\circ C$. What is the temperature coefficient of resistance of the metal (in $K^{-1}$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.3\\times10^{-3}$",
+        "$4.0\\times10^{-2}$",
+        "$2.0\\times10^{-1}$",
+        "$4.0\\times10^{-3}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\alpha = \\frac{R_T - R_0}{R_0\\Delta T}$.",
+        "steps": [
+          "$R_T - R_0 = 12 - 10 = 2\\ \\Omega$.",
+          "$\\alpha = \\frac{2}{10\\times50}$.",
+          "$\\alpha = 4.0\\times10^{-3}\\ K^{-1}$."
+        ],
+        "final_answer": "Option (4): $4.0\\times10^{-3}$",
+        "why_not_others": "$3.3\\times10^{-3}$ divides by $R_T$ instead of $R_0$. $4.0\\times10^{-2}$ is a decimal slip. $2.0\\times10^{-1}$ omits $\\Delta T$.",
+        "common_trap": "Using the final resistance in the denominator instead of $R_0$.",
+        "time_saving_tip": "For metals, $\\alpha$ is about $10^{-3}\\ K^{-1}$, which matches copper's $4\\times10^{-3}\\ K^{-1}$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Temperature dependence of resistance",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A $3\\ \\Omega$ resistor with temperature coefficient $4\\times10^{-3}\\ K^{-1}$ is connected in series with a $1\\ \\Omega$ resistor with temperature coefficient $-4\\times10^{-3}\\ K^{-1}$. What is the effective temperature coefficient of the combination (in $K^{-1}$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0\\times10^{-3}$",
+        "$0$",
+        "$4.0\\times10^{-3}$",
+        "$-2.0\\times10^{-3}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For two resistors in series, $\\alpha_{eq} = \\frac{R_1\\alpha_1 + R_2\\alpha_2}{R_1+R_2}$.",
+        "steps": [
+          "Numerator $= 3(4\\times10^{-3}) + 1(-4\\times10^{-3}) = 8\\times10^{-3}$.",
+          "Denominator $= 3 + 1 = 4$.",
+          "$\\alpha_{eq} = \\frac{8\\times10^{-3}}{4} = 2.0\\times10^{-3}\\ K^{-1}$."
+        ],
+        "final_answer": "Option (1): $2.0\\times10^{-3}$",
+        "why_not_others": "$0$ is the simple, unweighted average. $4.0\\times10^{-3}$ ignores the negative sign. $-2.0\\times10^{-3}$ weights each $\\alpha$ by the other resistor.",
+        "common_trap": "Averaging the coefficients without weighting them by resistance.",
+        "time_saving_tip": "Zero would need equal resistances. Here the larger resistor has positive $\\alpha$, so the result must be positive."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Temperature dependence of resistance",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The resistance of a thermistor increases as its temperature rises.",
+        "R": "In semiconductors, a rise in temperature frees more charge carriers, so the resistivity falls."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Thermistors and semiconductors have a negative $\\alpha$.",
+        "steps": [
+          "A rise in temperature increases $n$ sharply, so $\\rho$ falls. R is true.",
+          "A thermistor is a semiconductor device, so its resistance decreases with temperature. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Applying the metallic behaviour ($\\alpha > 0$) to thermistors.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Temperature dependence of resistance",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Two resistors, each of resistance $R_0$ at the initial temperature, have temperature coefficients $+\\alpha$ and $-\\alpha$. When they are connected in parallel across an ideal battery, the current drawn from the battery is independent of temperature.",
+        "II": "When the same two resistors are connected in series, their total resistance stays $2R_0$ for any temperature rise $\\Delta T$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series: $R_0(1+\\alpha\\Delta T) + R_0(1-\\alpha\\Delta T) = 2R_0$. Parallel: $R_{eq} = \\frac{R_0(1-\\alpha^2\\Delta T^2)}{2}$.",
+        "steps": [
+          "In series, the $\\alpha\\Delta T$ terms cancel, giving $2R_0$. Statement II is correct.",
+          "In parallel, $R_{eq} = \\frac{R_0^2(1-\\alpha^2\\Delta T^2)}{2R_0} = \\frac{R_0(1-\\alpha^2\\Delta T^2)}{2}$.",
+          "This decreases as $\\Delta T$ increases, so the current increases. Statement I is incorrect."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the $\\alpha^2$ term in the parallel combination. Statement II is exactly true within the linear model.",
+        "common_trap": "Assuming the parallel combination also stays constant because the first-order terms cancel.",
+        "time_saving_tip": "In the product $(1+x)(1-x) = 1 - x^2$, the $x^2$ term survives."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Internal resistance, potential difference and emf of a cell",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A cell of emf $2\\ V$ and internal resistance $0.5\\ \\Omega$ is connected to an external resistance of $3.5\\ \\Omega$. What current flows in the circuit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.5\\ A$",
+        "$0.57\\ A$",
+        "$4\\ A$",
+        "$0.67\\ A$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I = \\frac{\\varepsilon}{R+r}$.",
+        "steps": [
+          "Total resistance $= 3.5 + 0.5 = 4\\ \\Omega$.",
+          "$I = \\frac{2}{4} = 0.5\\ A$."
+        ],
+        "final_answer": "Option (1): $0.5\\ A$",
+        "why_not_others": "$0.57\\ A$ ignores $r$. $4\\ A$ is the short-circuit current $\\frac{\\varepsilon}{r}$. $0.67\\ A$ subtracts $r$ from $R$.",
+        "common_trap": "Forgetting the internal resistance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Internal resistance, potential difference and emf of a cell",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A battery of emf $12\\ V$ and internal resistance $0.2\\ \\Omega$ is being charged with a current of $5\\ A$. What is its terminal voltage?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$13\\ V$",
+        "$11\\ V$",
+        "$12\\ V$",
+        "$12.2\\ V$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "While a cell is being charged, $V = \\varepsilon + Ir$.",
+        "steps": [
+          "$Ir = 5\\times0.2 = 1\\ V$.",
+          "$V = 12 + 1 = 13\\ V$."
+        ],
+        "final_answer": "Option (1): $13\\ V$",
+        "why_not_others": "$11\\ V$ uses the discharging formula. $12\\ V$ ignores the internal resistance. $12.2\\ V$ adds $r$ instead of $Ir$.",
+        "common_trap": "Using $V = \\varepsilon - Ir$ during charging.",
+        "time_saving_tip": "During charging, the terminal voltage must exceed the emf."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Internal resistance, potential difference and emf of a cell",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A cell of emf $6\\ V$ and internal resistance $1.5\\ \\Omega$ is connected to a variable external resistor. What is the maximum power that can be delivered to the external resistor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\ W$",
+        "$24\\ W$",
+        "$12\\ W$",
+        "$3\\ W$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Maximum power is delivered when $R = r$, and $P_{max} = \\frac{\\varepsilon^2}{4r}$.",
+        "steps": [
+          "Set $R = r = 1.5\\ \\Omega$.",
+          "$P_{max} = \\frac{36}{4\\times1.5}$.",
+          "$P_{max} = 6\\ W$."
+        ],
+        "final_answer": "Option (1): $6\\ W$",
+        "why_not_others": "$24\\ W$ is $\\frac{\\varepsilon^2}{r}$. $12\\ W$ is $\\frac{\\varepsilon^2}{2r}$, the total power at $R = r$. $3\\ W$ halves the correct value again.",
+        "common_trap": "Confusing the total power generated with the power delivered to the load.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Internal resistance, potential difference and emf of a cell",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Short-circuit current of a cell with $\\varepsilon = 6\\ V$, $r = 1\\ \\Omega$"
+          },
+          {
+            "label": "B",
+            "text": "Terminal voltage of the same cell connected to $R = 2\\ \\Omega$"
+          },
+          {
+            "label": "C",
+            "text": "Terminal voltage of the same cell while being charged with $2\\ A$"
+          },
+          {
+            "label": "D",
+            "text": "Maximum power the same cell can deliver to an external resistor"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$4\\ V$"
+          },
+          {
+            "label": "II",
+            "text": "$6\\ A$"
+          },
+          {
+            "label": "III",
+            "text": "$8\\ V$"
+          },
+          {
+            "label": "IV",
+            "text": "$9\\ W$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I_{max} = \\frac{\\varepsilon}{r}$. Discharging: $V = \\varepsilon - Ir$. Charging: $V = \\varepsilon + Ir$. $P_{max} = \\frac{\\varepsilon^2}{4r}$.",
+        "steps": [
+          "A: $\\frac{6}{1} = 6\\ A$ (II).",
+          "B: $I = \\frac{6}{3} = 2\\ A$, so $V = 6 - 2 = 4\\ V$ (I).",
+          "C: $V = 6 + 2\\times1 = 8\\ V$ (III).",
+          "D: $\\frac{36}{4} = 9\\ W$ (IV)."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-III, D-IV",
+        "why_not_others": "Option (2) swaps the charging and discharging voltages. Option (3) swaps the current and the power. Option (4) assigns a power value to a voltage.",
+        "common_trap": "Swapping the signs of $Ir$ for charging and discharging.",
+        "time_saving_tip": "Matching units fixes A and D at once."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Internal resistance, potential difference and emf of a cell",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the emf and internal resistance of a cell are correct?",
+      "statements": {
+        "A": "Emf is the work done per unit charge by the non-electrostatic force in moving charge from the negative to the positive terminal inside the cell, and it is measured in volt.",
+        "B": "The V-I graph of a cell is a straight line with intercept $\\varepsilon$ on the V-axis and slope $-r$.",
+        "C": "When maximum power is delivered to the external resistor, the efficiency of power delivery is also maximum.",
+        "D": "Internal resistance decreases with larger electrode area and with higher temperature.",
+        "E": "Internal resistance decreases as the cell gets older."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Emf is energy per unit charge. $V = \\varepsilon - Ir$. At $R = r$, the efficiency is only 50%.",
+        "steps": [
+          "A is true: this is the definition of emf, measured in volt.",
+          "B is true: $V = \\varepsilon - Ir$ is a straight line with intercept $\\varepsilon$ and slope $-r$.",
+          "C is false: at $R = r$, $\\eta = \\frac{R}{R+r} = 50\\%$.",
+          "D is true, as stated in the notes.",
+          "E is false: internal resistance increases with the age of the cell."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Options (2) and (4) include C, which is false. Option (3) includes E, which is false.",
+        "common_trap": "Believing that maximum power transfer also means maximum efficiency.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Combination of cells in series and parallel",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Four identical cells, each of emf $1.5\\ \\text{V}$ and internal resistance $0.5\\ \\Omega$, are joined in series in the same sense and connected across an external resistance of $4\\ \\Omega$. The current in the external resistance is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\ \\text{A}$",
+        "$1.5\\ \\text{A}$",
+        "$1.33\\ \\text{A}$",
+        "$0.25\\ \\text{A}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For $n$ identical cells in series, $I = \\frac{n\\varepsilon}{R + nr}$.",
+        "steps": [
+          "Net emf $= 4 \\times 1.5 = 6\\ \\text{V}$.",
+          "Total internal resistance $= 4 \\times 0.5 = 2\\ \\Omega$.",
+          "$I = \\frac{6}{4 + 2} = 1.0\\ \\text{A}$."
+        ],
+        "final_answer": "Option (1): $1.0\\ \\text{A}$",
+        "why_not_others": "$1.5\\ \\text{A}$ ignores internal resistance. $1.33\\ \\text{A}$ uses the internal resistance of only one cell. $0.25\\ \\text{A}$ forgets to multiply the emf by $n$.",
+        "common_trap": "Adding the emfs but not the internal resistances.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Combination of cells in series and parallel",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Six identical cells, each of emf $2\\ \\text{V}$ and internal resistance $0.5\\ \\Omega$, are meant to be joined in series, but two of them are connected in reverse by mistake. The combination is connected to an external resistance of $7\\ \\Omega$. The current in the circuit is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ \\text{A}$",
+        "$0.5\\ \\text{A}$",
+        "$0.8\\ \\text{A}$",
+        "$1.2\\ \\text{A}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Reversing $m$ of $n$ series cells gives net emf $(n-2m)\\varepsilon$, but the internal resistance stays $nr$.",
+        "steps": [
+          "Net emf $= (6 - 2\\times 2)\\times 2 = 4\\ \\text{V}$.",
+          "Internal resistance $= 6 \\times 0.5 = 3\\ \\Omega$.",
+          "$I = \\frac{4}{7 + 3} = 0.4\\ \\text{A}$."
+        ],
+        "final_answer": "Option (1): $0.4\\ \\text{A}$",
+        "why_not_others": "$0.5\\ \\text{A}$ wrongly reduces the internal resistance to $1\\ \\Omega$. $0.8\\ \\text{A}$ uses emf $(n-m)\\varepsilon = 8\\ \\text{V}$. $1.2\\ \\text{A}$ ignores the reversal completely.",
+        "common_trap": "Subtracting the internal resistance of the reversed cells. Only the emf subtracts.",
+        "time_saving_tip": "Each reversed cell cancels one correctly connected cell, so 2 reversed out of 6 leaves the emf of just 2 cells."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Combination of cells in series and parallel",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A cell of emf $2\\ \\text{V}$ and internal resistance $1\\ \\Omega$ is connected in parallel with a cell of emf $4\\ \\text{V}$ and internal resistance $3\\ \\Omega$, with like terminals joined together. The equivalent emf and equivalent internal resistance of the combination are:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "$3.5\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "$3.0\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "$2.5\\ \\text{V}$ and $4\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\varepsilon_{eq} = \\frac{\\varepsilon_1 r_2 + \\varepsilon_2 r_1}{r_1 + r_2}$ and $r_{eq} = \\frac{r_1 r_2}{r_1 + r_2}$.",
+        "steps": [
+          "$\\varepsilon_{eq} = \\frac{2\\times 3 + 4\\times 1}{1 + 3} = \\frac{10}{4} = 2.5\\ \\text{V}$.",
+          "$r_{eq} = \\frac{1\\times 3}{1+3} = 0.75\\ \\Omega$."
+        ],
+        "final_answer": "Option (1): $2.5\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "why_not_others": "$3.5\\ \\text{V}$ pairs each emf with its own internal resistance. $3.0\\ \\text{V}$ is a simple average of the emfs. $4\\ \\Omega$ adds the internal resistances as if the cells were in series.",
+        "common_trap": "Weighting each emf by its own internal resistance instead of the other cell's.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Combination of cells in series and parallel",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When the external resistance is much larger than the internal resistance of each cell, joining $n$ identical cells in series gives a larger current than joining them in parallel.",
+        "R": "In series the emf becomes $n\\varepsilon$ while the total resistance $R + nr$ stays nearly $R$, whereas in parallel the emf remains only $\\varepsilon$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series is preferred when $R \\gg r$.",
+        "steps": [
+          "Series: $I = \\frac{n\\varepsilon}{R + nr} \\approx \\frac{n\\varepsilon}{R}$ when $R \\gg r$.",
+          "Parallel: $I = \\frac{\\varepsilon}{R + r/n} \\approx \\frac{\\varepsilon}{R}$.",
+          "The series current is about $n$ times larger, and R gives exactly this reason."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements follow from the current formulas, and R directly accounts for the larger series current.",
+        "common_trap": "Assuming parallel always gives more current because the internal resistance falls.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Combination of cells in series and parallel",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A cell of emf $3\\ \\text{V}$ and internal resistance $1\\ \\Omega$ is joined in parallel, like terminals together, with a cell of emf $1\\ \\text{V}$ and internal resistance $1\\ \\Omega$. With no external load, a current of $1\\ \\text{A}$ circulates through the two cells.",
+        "II": "Ten identical cells, each of emf $1.5\\ \\text{V}$ and internal resistance $0.2\\ \\Omega$, are joined in series with three of them reversed. The combination has net emf $6\\ \\text{V}$ and internal resistance $0.8\\ \\Omega$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Unequal emfs in parallel drive a circulating current. Reversed series cells reduce only the emf, not the internal resistance.",
+        "steps": [
+          "I: Around the loop of the two cells, the net emf is $3 - 1 = 2\\ \\text{V}$ and the resistance is $1 + 1 = 2\\ \\Omega$.",
+          "So the circulating current is $1\\ \\text{A}$, and I is correct.",
+          "II: Net emf $= (10 - 6)\\times 1.5 = 6\\ \\text{V}$, which is correct.",
+          "Internal resistance $= 10 \\times 0.2 = 2\\ \\Omega$, not $0.8\\ \\Omega$, so II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "The emf in II is right, but its internal resistance wrongly subtracts the reversed cells.",
+        "common_trap": "Writing $(n-2m)r$ for the internal resistance of a series group with reversed cells.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Kirchhoff's laws and their applications",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Four wires meet at a junction. Currents of $5\\ \\text{A}$ and $3\\ \\text{A}$ flow into the junction through two of the wires, and a current of $2\\ \\text{A}$ flows out through the third wire. The current in the fourth wire is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{A}$ leaving the junction",
+        "$6\\ \\text{A}$ leaving the junction",
+        "$4\\ \\text{A}$ leaving the junction",
+        "$2\\ \\text{A}$ entering the junction"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Junction rule: the current entering a junction equals the current leaving it.",
+        "steps": [
+          "Current entering $= 5 + 3 = 8\\ \\text{A}$.",
+          "Current leaving $= 2 + I$.",
+          "$I = 8 - 2 = 6\\ \\text{A}$, leaving the junction."
+        ],
+        "final_answer": "Option (2): $6\\ \\text{A}$ leaving the junction",
+        "why_not_others": "$10\\ \\text{A}$ adds all currents without regard to sign. $4\\ \\text{A}$ comes from $5 - 3 + 2$. $2\\ \\text{A}$ entering does not balance the junction.",
+        "common_trap": "Ignoring the directions of the currents.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Kirchhoff's laws and their applications",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In part of a circuit, a current of $2\\ \\text{A}$ flows from point A to point B. Going from A to B, it passes in turn through a $3\\ \\Omega$ resistor, then an ideal cell of emf $5\\ \\text{V}$ (the current enters its negative terminal and leaves its positive terminal), and then a $2\\ \\Omega$ resistor. The potential difference $V_A - V_B$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$15\\ \\text{V}$",
+        "$5\\ \\text{V}$",
+        "$-5\\ \\text{V}$",
+        "$10\\ \\text{V}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The potential difference between two points is the sum of the potential changes along the path joining them.",
+        "steps": [
+          "From A to B: the $3\\ \\Omega$ resistor gives $-2\\times 3 = -6\\ \\text{V}$.",
+          "The cell, crossed from negative to positive, gives $+5\\ \\text{V}$.",
+          "The $2\\ \\Omega$ resistor gives $-2\\times 2 = -4\\ \\text{V}$.",
+          "$V_B - V_A = -6 + 5 - 4 = -5\\ \\text{V}$, so $V_A - V_B = 5\\ \\text{V}$."
+        ],
+        "final_answer": "Option (2): $5\\ \\text{V}$",
+        "why_not_others": "$15\\ \\text{V}$ uses the wrong sign for the cell. $-5\\ \\text{V}$ is $V_B - V_A$. $10\\ \\text{V}$ ignores the cell.",
+        "common_trap": "Getting the sign of the emf wrong when crossing from the negative to the positive terminal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Kirchhoff's laws and their applications",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Three branches are connected between two nodes P and N. Branch 1 contains a cell of emf $12\\ \\text{V}$ and internal resistance $2\\ \\Omega$. Branch 2 contains a cell of emf $6\\ \\text{V}$ and internal resistance $2\\ \\Omega$. Branch 3 contains a $2\\ \\Omega$ resistor. The positive terminals of both cells are connected to P. The current through the $6\\ \\text{V}$ cell is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.5\\ \\text{A}$",
+        "$3\\ \\text{A}$",
+        "zero",
+        "$4.5\\ \\text{A}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Node method: take N as $0\\ \\text{V}$ and apply KCL at P.",
+        "steps": [
+          "Let the potential of P be $V$. KCL at P gives $\\frac{12 - V}{2} + \\frac{6 - V}{2} = \\frac{V}{2}$.",
+          "So $18 - 2V = V$, which gives $V = 6\\ \\text{V}$.",
+          "Current in the $6\\ \\text{V}$ branch $= \\frac{6 - 6}{2} = 0$."
+        ],
+        "final_answer": "Option (3): zero",
+        "why_not_others": "$1.5\\ \\text{A}$ ignores the external resistor, using $\\frac{12-6}{4}$. $3\\ \\text{A}$ is the current in the resistor and in the $12\\ \\text{V}$ cell. $4.5\\ \\text{A}$ adds the two emfs as if they were in series.",
+        "common_trap": "Assuming every cell in a network must supply current.",
+        "time_saving_tip": "The node method needs only one equation here."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Kirchhoff's laws and their applications",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Kirchhoff's junction rule"
+          },
+          {
+            "label": "B",
+            "text": "Kirchhoff's loop rule"
+          },
+          {
+            "label": "C",
+            "text": "Crossing a resistor in the direction of the assumed current"
+          },
+          {
+            "label": "D",
+            "text": "A negative value obtained for a current"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Potential change of $-IR$"
+          },
+          {
+            "label": "II",
+            "text": "Conservation of energy"
+          },
+          {
+            "label": "III",
+            "text": "Conservation of charge"
+          },
+          {
+            "label": "IV",
+            "text": "Actual current flows opposite to the assumed direction"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Basis and sign conventions of Kirchhoff's laws.",
+        "steps": [
+          "The junction rule follows from conservation of charge: A-III.",
+          "The loop rule follows from conservation of energy: B-II.",
+          "Crossing a resistor along the current gives $-IR$: C-I.",
+          "A negative current means the actual direction is opposite to the assumed one: D-IV."
+        ],
+        "final_answer": "Option (4): A-III, B-II, C-I, D-IV",
+        "why_not_others": "The other matchings swap the conservation laws or interchange the sign-convention entries.",
+        "common_trap": "Linking KCL with energy and KVL with charge.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Kirchhoff's laws and their applications",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Kirchhoff's laws are correct?",
+      "statements": {
+        "A": "A network with 6 branches and 4 junctions has 3 independent loop equations.",
+        "B": "The loop rule holds because the electrostatic field is conservative.",
+        "C": "Kirchhoff's laws apply only to DC circuits and never to quasi-static AC circuits.",
+        "D": "The potential difference between two points depends on the path chosen between them.",
+        "E": "In the node method, one point is taken as $0\\ \\text{V}$ and KCL is applied at the other nodes."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "B, C and E only",
+        "A and E only",
+        "A, B and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Independent loops $=$ branches $-$ junctions $+ 1$. KVL rests on energy conservation in a conservative field.",
+        "steps": [
+          "A: $6 - 4 + 1 = 3$, so A is correct.",
+          "B: correct, because the electrostatic field is conservative.",
+          "C: incorrect, since the laws also apply to quasi-static AC.",
+          "D: incorrect, since the sum of potential changes is the same along any path.",
+          "E: correct description of the node method."
+        ],
+        "final_answer": "Option (4): A, B and E only",
+        "why_not_others": "The other options include C or D, which are false, or leave out the true statement B.",
+        "common_trap": "Thinking that the potential difference depends on the path because different paths contain different elements.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t10_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Wheatstone bridge",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In a balanced Wheatstone bridge, the arms are $P = 4\\ \\Omega$, $Q = 8\\ \\Omega$ and $R = 6\\ \\Omega$, and the balance condition is $\\frac{P}{Q} = \\frac{R}{S}$. The value of $S$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3\\ \\Omega$",
+        "$5.33\\ \\Omega$",
+        "$12\\ \\Omega$",
+        "$48\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At balance, $S = \\frac{QR}{P}$.",
+        "steps": [
+          "$S = \\frac{8\\times 6}{4}$.",
+          "$S = 12\\ \\Omega$."
+        ],
+        "final_answer": "Option (3): $12\\ \\Omega$",
+        "why_not_others": "$3\\ \\Omega$ uses $\\frac{PR}{Q}$. $5.33\\ \\Omega$ uses $\\frac{PQ}{R}$. $48\\ \\Omega$ forgets to divide by $P$.",
+        "common_trap": "Inverting the ratio in the balance condition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t10_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Wheatstone bridge",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a network ABCD, the resistances are $AB = 2\\ \\Omega$, $BC = 4\\ \\Omega$, $AD = 3\\ \\Omega$ and $DC = 6\\ \\Omega$. A $10\\ \\Omega$ resistor is connected between B and D. The equivalent resistance between A and C is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$15\\ \\Omega$",
+        "$2.65\\ \\Omega$",
+        "$25\\ \\Omega$",
+        "$3.6\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A balanced bridge allows the middle arm to be removed.",
+        "steps": [
+          "Check balance: $\\frac{2}{4} = \\frac{3}{6}$, so the bridge is balanced and no current flows in BD.",
+          "Remove BD. Path ABC $= 6\\ \\Omega$ and path ADC $= 9\\ \\Omega$.",
+          "$R_{eq} = \\frac{6\\times 9}{6 + 9} = 3.6\\ \\Omega$."
+        ],
+        "final_answer": "Option (4): $3.6\\ \\Omega$",
+        "why_not_others": "$15\\ \\Omega$ puts the two paths in series. $2.65\\ \\Omega$ wrongly puts $10\\ \\Omega$ in parallel with the answer. $25\\ \\Omega$ adds all the resistors.",
+        "common_trap": "Including the middle resistor of a balanced bridge in the calculation.",
+        "time_saving_tip": "Check $PS = QR$ first. If it holds, delete the central arm straight away."
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t10_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Wheatstone bridge",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A Wheatstone bridge with arms $P$, $Q$, $R$ and $S$ is balanced according to $\\frac{P}{Q} = \\frac{R}{S}$. Which of the following changes will disturb the balance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Doubling the emf of the cell",
+        "Interchanging the cell and the galvanometer",
+        "Doubling both $P$ and $S$",
+        "Replacing the galvanometer with one of higher resistance"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Balance depends only on $PS = QR$. It does not depend on the cell, the galvanometer resistance or their interchange.",
+        "steps": [
+          "Doubling both $P$ and $S$ makes the left side $2P \\times 2S = 4PS$, while the right side stays $QR$.",
+          "So $4PS \\neq QR$ and the balance is disturbed.",
+          "The other changes do not affect the ratio of the arms."
+        ],
+        "final_answer": "Option (3): Doubling both $P$ and $S$",
+        "why_not_others": "The emf, the galvanometer resistance and interchanging the cell and galvanometer do not affect the balance condition.",
+        "common_trap": "Thinking that a stronger cell or a different galvanometer shifts the balance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t10_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Wheatstone bridge",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The balance condition of a Wheatstone bridge does not depend on the internal resistance of the cell used.",
+        "R": "A Wheatstone bridge is most sensitive when all four resistances are of the same order."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Balance depends only on the ratio of the arms. Sensitivity is a separate property.",
+        "steps": [
+          "A is true, because balance requires only $\\frac{P}{Q} = \\frac{R}{S}$.",
+          "R is true, because the bridge is most sensitive when the four arms are comparable.",
+          "Sensitivity does not explain why the balance is independent of the cell, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R is unrelated to the reason for A, so option (1) fails.",
+        "common_trap": "Treating any true reason as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t10_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Wheatstone bridge",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In a Wheatstone bridge with $P = 10\\ \\Omega$, $Q = 20\\ \\Omega$, $R = 15\\ \\Omega$ and $S = 30\\ \\Omega$, replacing a $5\\ \\Omega$ resistor in the galvanometer arm by a plain wire does not change the current drawn from the cell.",
+        "II": "If $P$ and $Q$ of this bridge are interchanged while $R$ and $S$ are left unchanged, the bridge remains balanced, because the balance does not depend on the positions of the resistors."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a balanced bridge, the middle arm carries no current and can be removed or replaced by a wire.",
+        "steps": [
+          "I: $\\frac{10}{20} = \\frac{15}{30}$, so the bridge is balanced.",
+          "The middle arm carries no current, so replacing it with a wire changes nothing. I is correct.",
+          "II: After the interchange, $\\frac{P}{Q} = \\frac{20}{10} = 2$ but $\\frac{R}{S} = 0.5$, so the bridge is unbalanced. II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses interchanging the cell and galvanometer, which keeps the balance, with interchanging two arms, which can destroy it.",
+        "common_trap": "Extending the cell–galvanometer interchange property to the resistor arms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t11_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Metre bridge",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In a metre bridge, a known resistance of $6\\ \\Omega$ is placed in the left gap and an unknown resistance $S$ in the right gap. The null point is found at $40\\ \\text{cm}$ from the left end. The value of $S$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\ \\Omega$",
+        "$9\\ \\Omega$",
+        "$2.4\\ \\Omega$",
+        "$15\\ \\Omega$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$S = R\\frac{100 - l}{l}$, with $l$ measured from the $R$ side.",
+        "steps": [
+          "$S = 6 \\times \\frac{60}{40}$.",
+          "$S = 9\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $9\\ \\Omega$",
+        "why_not_others": "$4\\ \\Omega$ inverts the length ratio. $2.4\\ \\Omega$ uses $\\frac{l}{100}$. $15\\ \\Omega$ uses $\\frac{100}{l}$.",
+        "common_trap": "Measuring the balancing length from the wrong end.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t11_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Metre bridge",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a metre bridge, the null point is at $25\\ \\text{cm}$ from the end next to the known resistance $R$. The unknown resistance $S$ in the other gap is now shunted by a resistance equal to $S$. The new null point, measured from the same end, is at:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12.5\\ \\text{cm}$",
+        "$60\\ \\text{cm}$",
+        "$75\\ \\text{cm}$",
+        "$40\\ \\text{cm}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Shunting $S$ lowers its resistance, so the null point moves towards $S$ and $l$ increases.",
+        "steps": [
+          "Initially $\\frac{R}{S} = \\frac{25}{75}$, so $S = 3R$.",
+          "After shunting with an equal resistance, $S' = \\frac{S}{2} = 1.5R$.",
+          "$\\frac{R}{1.5R} = \\frac{l}{100 - l}$ gives $2(100 - l) = 3l$, so $l = 40\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (4): $40\\ \\text{cm}$",
+        "why_not_others": "$12.5\\ \\text{cm}$ moves the null point in the wrong direction. $60\\ \\text{cm}$ is measured from the other end. $75\\ \\text{cm}$ is the result of interchanging $R$ and $S$.",
+        "common_trap": "Assuming halving $S$ halves or doubles the balancing length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t11_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Metre bridge",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A metre bridge is balanced with a known resistance $R$ and an unknown resistance $S$ in its two gaps. Which of the following changes will shift the null point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Doubling the emf of the cell",
+        "Adding a resistance in series with the cell",
+        "Replacing the galvanometer with a more sensitive one",
+        "Heating the unknown resistance $S$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The null point depends only on the ratio $\\frac{R}{S}$.",
+        "steps": [
+          "Heating $S$ raises its resistance, so the ratio $\\frac{R}{S}$ changes.",
+          "The balancing length $l$ from the $R$ end decreases, and the null point shifts towards $R$.",
+          "The cell emf, a series resistance with the cell and the galvanometer do not affect the ratio."
+        ],
+        "final_answer": "Option (4): Heating the unknown resistance $S$",
+        "why_not_others": "The other three changes affect only the current or the sensitivity, not the balance.",
+        "common_trap": "Thinking that changing the cell or galvanometer moves the null point.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t11_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Metre bridge",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Material of the metre bridge wire"
+          },
+          {
+            "label": "B",
+            "text": "Interchanging $R$ and $S$"
+          },
+          {
+            "label": "C",
+            "text": "Heating the unknown resistance $S$"
+          },
+          {
+            "label": "D",
+            "text": "Shunting the unknown resistance $S$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Null point moves from $l$ to $(100 - l)$"
+          },
+          {
+            "label": "II",
+            "text": "Null point shifts towards $R$"
+          },
+          {
+            "label": "III",
+            "text": "Null point shifts towards $S$"
+          },
+          {
+            "label": "IV",
+            "text": "Manganin or constantan"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-III, C-II, D-I",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Metre bridge construction and how the null point shifts.",
+        "steps": [
+          "The wire is made of manganin or constantan: A-IV.",
+          "Interchanging $R$ and $S$ moves the null point from $l$ to $(100 - l)$: B-I.",
+          "Heating $S$ increases it, so $l$ decreases and the null point moves towards $R$: C-II.",
+          "Shunting $S$ decreases it, so $l$ increases and the null point moves towards $S$: D-III."
+        ],
+        "final_answer": "Option (4): A-IV, B-I, C-II, D-III",
+        "why_not_others": "Option (1) reverses the effects of heating and shunting. Options (2) and (3) wrongly match the material or the interchange.",
+        "common_trap": "Getting the direction of the shift wrong when $S$ is heated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u12_t11_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u12",
+      "topic": "Metre bridge",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the metre bridge are correct?",
+      "statements": {
+        "A": "The null point gives the most accurate result when it lies near the $50\\ \\text{cm}$ mark.",
+        "B": "The bridge wire is made of copper because of its low resistivity.",
+        "C": "With end corrections $\\alpha_1$ and $\\alpha_2$, the balance condition becomes $\\frac{R}{S} = \\frac{l + \\alpha_1}{100 - l + \\alpha_2}$.",
+        "D": "The jockey should be kept pressed and slid along the wire to locate the null point.",
+        "E": "Repeating the reading with $R$ and $S$ interchanged and taking the mean reduces error."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and E only",
+        "A and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Precautions and corrections in using a metre bridge.",
+        "steps": [
+          "A: correct, since accuracy is best near the middle of the wire.",
+          "B: incorrect, since the wire is manganin or constantan, chosen for high $\\rho$ and low $\\alpha$.",
+          "C: correct form of the balance condition with end corrections.",
+          "D: incorrect, since the jockey must be pressed gently and not slid.",
+          "E: correct, since interchanging and averaging reduces error."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Options (1) and (2) include the false statement B or D. Option (4) leaves out the true statement C.",
+        "common_trap": "Assuming the bridge wire should have low resistivity like the copper strips.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

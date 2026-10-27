@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "A concave lens has a focal length of magnitude 25 cm. What is its power?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+4$ D",
+        "$-0.04$ D",
+        "$-4$ D",
+        "$+0.25$ D"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Power $P = 1/f$ with f in metres. A diverging (concave) lens has negative power.",
+        "steps": [
+          "For a concave lens, $f = -25$ cm $= -0.25$ m.",
+          "$P = 1/(-0.25) = -4$ D."
+        ],
+        "final_answer": "Option (3): $-4$ D",
+        "why_not_others": "$+4$ D has the wrong sign for a diverging lens. $-0.04$ D comes from using f in cm. $+0.25$ D is just f in metres, not its reciprocal, and it also has the wrong sign.",
+        "common_trap": "Taking f in cm or forgetting the negative sign of a concave lens.",
+        "time_saving_tip": "100 divided by f in cm gives P in dioptre directly: $100/25 = 4$, and the concave lens makes it negative."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "An object is placed 30 cm in front of a convex lens of focal length 20 cm. What are the linear magnification and the nature of the image?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+2$; virtual and erect",
+        "$-0.5$; real and inverted",
+        "$-1.5$; real and inverted",
+        "$-2$; real and inverted"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a lens, $m = f/(f+u)$. A negative m means the image is real and inverted.",
+        "steps": [
+          "Take $u = -30$ cm and $f = +20$ cm.",
+          "$m = \\frac{20}{20 + (-30)} = \\frac{20}{-10} = -2$.",
+          "Since m is negative, the image is real and inverted, and twice the size of the object."
+        ],
+        "final_answer": "Option (4): $-2$; real and inverted",
+        "why_not_others": "$+2$ comes from a sign error; a virtual image needs the object within f. $-0.5$ inverts the ratio. $-1.5$ comes from taking $u/f$.",
+        "common_trap": "Using the mirror relation $m = -v/u$ for a lens, which flips the sign.",
+        "time_saving_tip": "Check with v: $1/v = 1/20 - 1/30$ gives $v = 60$ cm, so $m = v/u = 60/(-30) = -2$."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A thin convex glass lens ($n = 1.5$) has a power of $+5$ D in air. What is its power when it is completely immersed in water of refractive index $4/3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+5$ D",
+        "$+1.25$ D",
+        "$-1.25$ D",
+        "$+20$ D"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "By the lens maker's formula, $1/f \\propto (n_{21} - 1)$, where $n_{21} = n_{lens}/n_{medium}$.",
+        "steps": [
+          "In air, $n_{21} - 1 = 1.5 - 1 = 0.5$.",
+          "In water, $n_{21} = 1.5/(4/3) = 9/8$, so $n_{21} - 1 = 1/8$.",
+          "The power scales by $(1/8)/(1/2) = 1/4$, so $P_{water} = 5/4 = +1.25$ D (f becomes 80 cm)."
+        ],
+        "final_answer": "Option (2): $+1.25$ D",
+        "why_not_others": "$+5$ D assumes the power does not change with the medium. $-1.25$ D wrongly reverses the sign; that happens only if the liquid is denser than the glass. $+20$ D multiplies by 4 instead of dividing.",
+        "common_trap": "Treating the focal length of a lens as independent of the surrounding medium.",
+        "time_saving_tip": "Take the ratio of $(n_{21} - 1)$ values directly instead of finding the radii."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A concave lens always forms a virtual, erect and diminished image of a real object.",
+        "R": "The power of a diverging lens is negative."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Image nature for a concave lens; sign convention for lens power.",
+        "steps": [
+          "For a real object, a concave lens always gives a virtual, erect, diminished image, so A is true.",
+          "Diverging lenses have negative power, so R is true.",
+          "The sign of the power is a convention. It does not explain why the image is always virtual and diminished, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R is a sign convention and does not explain the nature of the image, so option (1) fails.",
+        "common_trap": "Picking option (1) just because both statements concern a concave lens.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A single thin lens forms a real image of a small square object placed perpendicular to its axis with linear magnification of magnitude 3. The image is inverted and its area is 9 times that of the object.",
+        "II": "An object placed 15 cm from a convex lens of power $+5$ D forms a virtual, erect image with magnification $+2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A real image from a single lens has $m < 0$. Areal magnification is $m^2$. Also, $m = f/(f+u)$.",
+        "steps": [
+          "Statement I: a real image means $m = -3$, so the image is inverted. Its area ratio is $m^2 = 9$. Statement I is correct.",
+          "Statement II: $f = 1/5$ m $= 20$ cm and $u = -15$ cm.",
+          "$m = \\frac{20}{20 - 15} = +4$, not $+2$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II gives the wrong magnification, which rules out options (1) and (4). Statement I is correct, which rules out options (2) and (4).",
+        "common_trap": "Taking the areal magnification as 3 instead of $m^2$, or accepting $+2$ without calculating.",
+        "time_saving_tip": "Use $m = f/(f+u)$ directly instead of finding v first."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "A convex lens of focal length 10 cm is placed in contact with a concave lens of focal length 20 cm. What is the equivalent focal length of the combination?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+6.67$ cm",
+        "$-10$ cm",
+        "$-20$ cm",
+        "$+20$ cm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For thin lenses in contact, $1/F = 1/f_1 + 1/f_2$, with signs.",
+        "steps": [
+          "$1/F = 1/10 + 1/(-20) = 2/20 - 1/20 = 1/20$.",
+          "$F = +20$ cm, so the combination is converging."
+        ],
+        "final_answer": "Option (4): $+20$ cm",
+        "why_not_others": "$+6.67$ cm ignores the negative sign of the concave lens. $-10$ cm adds the focal lengths directly. $-20$ cm has the wrong sign.",
+        "common_trap": "Adding focal lengths instead of their reciprocals.",
+        "time_saving_tip": "Add powers: $+10$ D $- 5$ D $= +5$ D, so $F = 20$ cm."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "Two thin convex lenses of focal lengths 20 cm and 30 cm are placed coaxially, 10 cm apart, in air. What is the equivalent focal length of the system?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "12 cm",
+        "10 cm",
+        "15 cm",
+        "50 cm"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For separated lenses, $\\frac{1}{F} = \\frac{1}{f_1} + \\frac{1}{f_2} - \\frac{d}{f_1 f_2}$.",
+        "steps": [
+          "$1/F = 1/20 + 1/30 - 10/(20 \\times 30)$.",
+          "$= 3/60 + 2/60 - 1/60 = 4/60$.",
+          "$F = 15$ cm."
+        ],
+        "final_answer": "Option (3): 15 cm",
+        "why_not_others": "12 cm treats the lenses as being in contact. 10 cm adds the d term instead of subtracting it. 50 cm simply adds the focal lengths.",
+        "common_trap": "Treating separated lenses as if they were in contact.",
+        "time_saving_tip": "Use 60 as the common denominator."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "An equiconvex lens of power $+5$ D has one of its faces silvered. The silvered curved face acts as a concave mirror of focal length 10 cm. What is the focal length of the resulting system, which behaves as a concave mirror?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 cm",
+        "6.67 cm",
+        "4 cm",
+        "10 cm"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a silvered lens, $P = 2P_{lens} + P_{mirror}$. Light passes through the lens twice.",
+        "steps": [
+          "$P_{mirror} = 1/0.10 = 10$ D.",
+          "$P = 2(5) + 10 = 20$ D.",
+          "$f = 1/20$ m $= 5$ cm."
+        ],
+        "final_answer": "Option (1): 5 cm",
+        "why_not_others": "6.67 cm counts the lens power only once (15 D). 4 cm doubles the mirror power instead of the lens power (25 D). 10 cm is just the mirror alone.",
+        "common_trap": "Forgetting that light passes through the lens twice.",
+        "time_saving_tip": "Work in dioptres and convert to cm only at the end."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Lenses of power $+2$ D and $-2$ D in contact"
+          },
+          {
+            "label": "B",
+            "text": "Convex lenses of focal lengths 25 cm and 50 cm in contact"
+          },
+          {
+            "label": "C",
+            "text": "Convex lens of focal length 20 cm and concave lens of focal length 50 cm in contact"
+          },
+          {
+            "label": "D",
+            "text": "Concave lenses of focal lengths 25 cm and 100 cm in contact"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$+6$ D"
+          },
+          {
+            "label": "II",
+            "text": "$-5$ D"
+          },
+          {
+            "label": "III",
+            "text": "0 D"
+          },
+          {
+            "label": "IV",
+            "text": "$+3$ D"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For lenses in contact, $P = P_1 + P_2$, with $P = 1/f$ in metres and the correct signs.",
+        "steps": [
+          "A: $+2 - 2 = 0$ D, so the pair acts like a plane glass plate (III).",
+          "B: $+4 + 2 = +6$ D (I).",
+          "C: $+5 - 2 = +3$ D (IV).",
+          "D: $-4 - 1 = -5$ D (II)."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other matchings either swap B and C or assign the wrong sign to the diverging pair.",
+        "common_trap": "Using f in cm or dropping the negative sign of concave lenses.",
+        "time_saving_tip": "Convert each focal length to dioptres as $100/f_{cm}$, then add."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about combinations of thin lenses are correct?",
+      "statements": {
+        "A": "The powers of thin lenses in contact add algebraically.",
+        "B": "The total magnification of a combination of lenses equals the sum of the individual magnifications.",
+        "C": "A lens of power $+5$ D in contact with a lens of power $-5$ D behaves like a plane glass plate.",
+        "D": "For two separated lenses, if the image formed by the first lens lies beyond the second lens, it acts as a virtual object for the second lens with positive u.",
+        "E": "Two convex lenses, each of focal length 20 cm, placed 40 cm apart have an equivalent focal length of 10 cm."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "A, C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Powers add for lenses in contact, magnifications multiply, and separated lenses use the d term.",
+        "steps": [
+          "A is true: $P = P_1 + P_2$.",
+          "B is false: $m = m_1 m_2$, a product, not a sum.",
+          "C is true: the net power is zero.",
+          "D is true, as stated in the stepwise method for separated lenses.",
+          "E is false: $1/F = 1/20 + 1/20 - 40/400 = 0$, so F is infinite, not 10 cm."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) misses the true statement D. Option (2) includes the false statement B. Option (4) includes the false statement E.",
+        "common_trap": "Treating the lenses in E as if in contact, which gives 10 cm.",
+        "time_saving_tip": "When $d = f_1 + f_2$ for two convex lenses, the system is afocal."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "A thin prism of refracting angle $5^\\circ$ is made of glass of refractive index 1.6. What is the deviation it produces?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3^\\circ$",
+        "$8^\\circ$",
+        "$13^\\circ$",
+        "$5^\\circ$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a thin prism, $\\delta = (n-1)A$.",
+        "steps": [
+          "$\\delta = (1.6 - 1) \\times 5^\\circ = 0.6 \\times 5^\\circ = 3^\\circ$."
+        ],
+        "final_answer": "Option (1): $3^\\circ$",
+        "why_not_others": "$8^\\circ$ uses $nA$. $13^\\circ$ uses $(n+1)A$. $5^\\circ$ is just the prism angle.",
+        "common_trap": "Forgetting to subtract 1 from n.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A prism of refracting angle $60^\\circ$ has a refractive index of $\\sqrt{2}$. What is its angle of minimum deviation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$45^\\circ$",
+        "$30^\\circ$",
+        "$60^\\circ$",
+        "$15^\\circ$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$n = \\frac{\\sin\\left(\\frac{A + \\delta_m}{2}\\right)}{\\sin(A/2)}$.",
+        "steps": [
+          "$\\sqrt{2} = \\frac{\\sin\\left(\\frac{60^\\circ + \\delta_m}{2}\\right)}{\\sin 30^\\circ}$, so $\\sin\\left(\\frac{60^\\circ + \\delta_m}{2}\\right) = \\frac{\\sqrt{2}}{2} = \\frac{1}{\\sqrt{2}}$.",
+          "$\\frac{60^\\circ + \\delta_m}{2} = 45^\\circ$, so $\\delta_m = 30^\\circ$."
+        ],
+        "final_answer": "Option (2): $30^\\circ$",
+        "why_not_others": "$45^\\circ$ is the angle of incidence at minimum deviation. $60^\\circ$ is the prism angle. $15^\\circ$ comes from halving $\\delta_m$.",
+        "common_trap": "Reporting $(A + \\delta_m)/2$, which is i, as the deviation.",
+        "time_saving_tip": "At minimum deviation, $i = (A + \\delta_m)/2$, so $\\delta_m = 2i - A$."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A thin prism of angle $6^\\circ$ has refractive indices 1.56 for violet light and 1.52 for red light. What is the angular dispersion it produces?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.24^\\circ$",
+        "$0.074^\\circ$",
+        "$0.04^\\circ$",
+        "$0.24^\\circ$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Angular dispersion $= (n_v - n_r)A$.",
+        "steps": [
+          "$n_v - n_r = 1.56 - 1.52 = 0.04$.",
+          "Angular dispersion $= 0.04 \\times 6^\\circ = 0.24^\\circ$."
+        ],
+        "final_answer": "Option (4): $0.24^\\circ$",
+        "why_not_others": "$3.24^\\circ$ is the mean deviation $(n_y - 1)A$ with $n_y = 1.54$. $0.074$ is the dispersive power, which is dimensionless and not an angle. $0.04^\\circ$ forgets to multiply by A.",
+        "common_trap": "Confusing angular dispersion with dispersive power or with mean deviation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For a thin prism, the deviation increases steadily as the angle of incidence is increased.",
+        "R": "For a thin prism, the deviation is given by $\\delta = (n-1)A$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a thin prism, the deviation $(n-1)A$ is independent of i.",
+        "steps": [
+          "R is the standard thin-prism result, so R is true.",
+          "Since $\\delta = (n-1)A$ does not depend on i, the deviation does not increase with i. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Applying the U-shaped i-versus-$\\delta$ behaviour of a general prism to a thin prism.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When light passes through an equilateral prism at minimum deviation, the angle of refraction at the first face is $60^\\circ$.",
+        "II": "No ray can emerge from the second face of a prism of refracting angle $85^\\circ$ made of glass whose critical angle is $40^\\circ$, whatever the angle of incidence."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "At minimum deviation, $r = A/2$. No emergence is possible if $A > 2i_c$.",
+        "steps": [
+          "Statement I: $r_1 = A/2 = 30^\\circ$, not $60^\\circ$. Statement I is incorrect.",
+          "Statement II: $2i_c = 80^\\circ$ and $A = 85^\\circ > 80^\\circ$, so no ray can emerge. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I confuses r with A, which rules out options (1) and (3). Statement II satisfies the no-emergence condition, which rules out option (2).",
+        "common_trap": "Taking r = A instead of A/2 at minimum deviation.",
+        "time_saving_tip": "Compare A directly with $2i_c$."
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A simple microscope uses a convex lens of focal length 5 cm. What is its magnifying power when the final image is formed at the near point ($D = 25$ cm)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6",
+        "5",
+        "4",
+        "0.2"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a simple microscope with the image at the near point, $m = 1 + D/f$.",
+        "steps": [
+          "$m = 1 + 25/5 = 1 + 5 = 6$."
+        ],
+        "final_answer": "Option (1): 6",
+        "why_not_others": "5 is the value for an image at infinity ($D/f$). 4 subtracts 1 instead of adding it. 0.2 is $f/D$.",
+        "common_trap": "Using $D/f$ when the image is at the near point.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A compound microscope has an objective of focal length 2 cm and an eyepiece of focal length 5 cm, with a tube length of 20 cm. What is its magnifying power when the final image is at infinity ($D = 25$ cm)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "50",
+        "60",
+        "10",
+        "5"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a compound microscope in normal adjustment, $m = \\frac{L}{f_o}\\cdot\\frac{D}{f_e}$.",
+        "steps": [
+          "$L/f_o = 20/2 = 10$.",
+          "$D/f_e = 25/5 = 5$.",
+          "$m = 10 \\times 5 = 50$."
+        ],
+        "final_answer": "Option (1): 50",
+        "why_not_others": "60 uses $1 + D/f_e$, which applies to an image at the near point. 10 counts only the objective. 5 counts only the eyepiece.",
+        "common_trap": "Mixing the near-point and infinity formulas for the eyepiece.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "An astronomical telescope has an objective of focal length 50 cm and an eyepiece of focal length 5 cm. What is its magnifying power when the final image is formed at the near point ($D = 25$ cm)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "12",
+        "10",
+        "8",
+        "60"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a telescope with the image at the near point, $m = \\frac{f_o}{f_e}\\left(1 + \\frac{f_e}{D}\\right)$.",
+        "steps": [
+          "$f_o/f_e = 50/5 = 10$.",
+          "$1 + f_e/D = 1 + 5/25 = 1.2$.",
+          "$m = 10 \\times 1.2 = 12$."
+        ],
+        "final_answer": "Option (1): 12",
+        "why_not_others": "10 is the value for normal adjustment. 8 uses $(1 - f_e/D)$. 60 uses $(1 + D/f_e)$, which is the microscope eyepiece factor.",
+        "common_trap": "Using the microscope factor $D/f_e$ instead of $f_e/D$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Simple microscope, image at near point"
+          },
+          {
+            "label": "B",
+            "text": "Simple microscope, image at infinity"
+          },
+          {
+            "label": "C",
+            "text": "Astronomical telescope, normal adjustment"
+          },
+          {
+            "label": "D",
+            "text": "Compound microscope, normal adjustment"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$D/f$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{L}{f_o}\\cdot\\frac{D}{f_e}$"
+          },
+          {
+            "label": "III",
+            "text": "$1 + D/f$"
+          },
+          {
+            "label": "IV",
+            "text": "$f_o/f_e$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Standard magnifying-power formulas for optical instruments.",
+        "steps": [
+          "A: $1 + D/f$ (III).",
+          "B: $D/f$ (I).",
+          "C: $f_o/f_e$ (IV).",
+          "D: $(L/f_o)(D/f_e)$ (II)."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other options swap the near-point and infinity cases of the simple microscope, or swap the telescope and compound microscope formulas.",
+        "common_trap": "Associating $1 + D/f$ with an image at infinity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about microscopes and telescopes are correct?",
+      "statements": {
+        "A": "In a compound microscope, both $f_o$ and $f_e$ are small, with $f_o < f_e$.",
+        "B": "The objective of an astronomical telescope has a large focal length and a large aperture.",
+        "C": "The final image formed by an astronomical telescope is erect.",
+        "D": "Reflecting telescopes avoid chromatic aberration.",
+        "E": "Using an eyepiece of larger focal length increases the magnifying power of a telescope in normal adjustment."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B, C and D only",
+        "A, B and D only",
+        "B, D and E only",
+        "A and D only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Design features and image characteristics of optical instruments.",
+        "steps": [
+          "A is true, as stated for a compound microscope.",
+          "B is true: a large aperture improves light-gathering and resolution.",
+          "C is false: the final image is inverted.",
+          "D is true: mirrors do not produce chromatic aberration.",
+          "E is false: since $m = f_o/f_e$, a larger $f_e$ decreases m."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Option (1) includes the false statement C. Option (3) includes the false statement E and omits A. Option (4) omits the true statement B.",
+        "common_trap": "Assuming the telescope image is erect, or that a larger eyepiece focal length means more magnification.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

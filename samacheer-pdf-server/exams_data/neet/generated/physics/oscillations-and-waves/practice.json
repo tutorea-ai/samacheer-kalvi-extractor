@@ -1,0 +1,2257 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u10",
+  "slug": "oscillations-and-waves",
+  "questions": [
+    {
+      "q_id": "neet_phy_u10_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic motion: time period, frequency, displacement as a function of time",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A simple pendulum completes 40 oscillations in 20 s. What is the frequency of its oscillation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.5\\ \\text{Hz}$",
+        "$2\\ \\text{Hz}$",
+        "$4\\pi\\ \\text{Hz}$",
+        "$40\\ \\text{Hz}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The time period is the time for one oscillation, and $\\nu = 1/T$.",
+        "steps": [
+          "Time period $T = 20/40 = 0.5$ s.",
+          "Frequency $\\nu = 1/T = 1/0.5 = 2$ Hz."
+        ],
+        "final_answer": "Option (2): $2\\ \\text{Hz}$",
+        "why_not_others": "0.5 Hz is the value of T in seconds, not the frequency. $4\\pi$ is the angular frequency in rad/s, wrongly given in Hz. 40 Hz takes the total oscillation count as the frequency.",
+        "common_trap": "Writing the time period, or the angular frequency $\\omega = 2\\pi\\nu$, as the frequency.",
+        "time_saving_tip": "Frequency = number of oscillations ÷ time taken = 40/20."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic motion: time period, frequency, displacement as a function of time",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following motions is periodic but NOT oscillatory?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A simple pendulum swinging with small amplitude",
+        "A particle moving in uniform circular motion",
+        "A block oscillating at the end of a horizontal spring",
+        "The prong of a vibrating tuning fork"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Oscillatory motion is periodic to-and-fro motion about a mean position. Not every periodic motion is oscillatory.",
+        "steps": [
+          "Uniform circular motion repeats after a fixed time, so it is periodic.",
+          "It is not a to-and-fro motion about a mean position, so it is not oscillatory.",
+          "The pendulum, the spring-block and the tuning-fork prong all move to and fro about a mean position."
+        ],
+        "final_answer": "Option (2): A particle moving in uniform circular motion",
+        "why_not_others": "Each of the other three moves to and fro about an equilibrium position, so each is both periodic and oscillatory.",
+        "common_trap": "Assuming every periodic motion must also be oscillatory.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic motion: time period, frequency, displacement as a function of time",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle oscillates with an angular frequency of $10\\pi\\ \\text{rad s}^{-1}$. How many complete oscillations does it make in 3 s?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "15",
+        "30",
+        "94",
+        "7.5"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\omega = 2\\pi\\nu$, so $\\nu = \\omega/2\\pi$.",
+        "steps": [
+          "$\\nu = 10\\pi/2\\pi = 5$ Hz.",
+          "Number of oscillations in 3 s $= 5 \\times 3 = 15$."
+        ],
+        "final_answer": "Option (1): 15",
+        "why_not_others": "30 comes from taking $\\nu = \\omega/\\pi$. 94 treats $\\omega$ itself as the frequency ($10\\pi \\times 3 \\approx 94$). 7.5 comes from dividing by $4\\pi$.",
+        "common_trap": "Treating angular frequency in rad/s as frequency in Hz.",
+        "time_saving_tip": "Divide $\\omega$ by $2\\pi$ first; the $\\pi$ cancels at once."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic motion: time period, frequency, displacement as a function of time",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Every oscillatory motion is periodic.",
+        "R": "Oscillatory motion is a to-and-fro motion about a mean position that repeats itself after equal intervals of time."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Oscillatory motion is defined as periodic motion about a mean position.",
+        "steps": [
+          "By definition, an oscillation repeats after equal time intervals, so it is periodic. A is true.",
+          "R states this definition correctly, so R is true.",
+          "Because the definition itself contains the repetition, R directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 fail. R is the very reason A holds, so option 2 fails.",
+        "common_trap": "Mixing up the direction of the relationship: the converse (every periodic motion is oscillatory) is false.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic motion: time period, frequency, displacement as a function of time",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In an oscillating system, the quantity called 'displacement' need not be a linear distance; it may be an angle, a pressure change or an electric field.",
+        "II": "A body that makes 50 oscillations per second has a time period of 0.02 s and an angular frequency of $50\\ \\text{rad s}^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Displacement is a general variable whose nature depends on the system. Also, $\\omega = 2\\pi\\nu$.",
+        "steps": [
+          "Statement I: displacement can be linear, angular, a pressure change or an electric field. It is correct.",
+          "Statement II: $T = 1/50 = 0.02$ s is correct.",
+          "However, $\\omega = 2\\pi \\times 50 = 100\\pi \\approx 314\\ \\text{rad s}^{-1}$, not 50. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II has a correct period but a wrong angular frequency, so any option calling it correct fails. Statement I is fully correct, so options 2 and 4 fail.",
+        "common_trap": "Accepting Statement II after checking only its first part (the period).",
+        "time_saving_tip": "Check every number in a compound statement."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic functions",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following functions of time is non-periodic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sin\\omega t + \\cos\\omega t$",
+        "$e^{-\\omega t}$",
+        "$\\sin^2\\omega t$",
+        "$\\sin\\omega t + \\sin 2\\omega t$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A function is periodic if $f(t+T) = f(t)$. Exponential functions never repeat.",
+        "steps": [
+          "$e^{-\\omega t}$ decreases steadily and never takes the same value again, so it is non-periodic.",
+          "The other three are sinusoids or sums of sinusoids, so all are periodic."
+        ],
+        "final_answer": "Option (2): $e^{-\\omega t}$",
+        "why_not_others": "$\\sin\\omega t+\\cos\\omega t$ has period $2\\pi/\\omega$. $\\sin^2\\omega t$ has period $\\pi/\\omega$. $\\sin\\omega t+\\sin2\\omega t$ is periodic, although it is not SHM.",
+        "common_trap": "Thinking that a sum of sinusoids with different $\\omega$ is non-periodic. It is periodic but not simple harmonic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic functions",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The displacement of a particle is $x = 3\\sin(100t) + 4\\cos(100t)$, where x is in cm and t in s. What is the amplitude of its motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7$ cm",
+        "$5$ cm",
+        "$1$ cm",
+        "$\\sqrt{7}$ cm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$a\\sin\\omega t + b\\cos\\omega t$ is SHM with amplitude $\\sqrt{a^2+b^2}$.",
+        "steps": [
+          "Here $a = 3$ and $b = 4$.",
+          "Amplitude $= \\sqrt{9+16} = 5$ cm."
+        ],
+        "final_answer": "Option (2): $5$ cm",
+        "why_not_others": "7 cm adds the coefficients directly. 1 cm subtracts them. $\\sqrt{7}$ cm wrongly takes the square root of their sum.",
+        "common_trap": "Adding the coefficients as if the two terms were in phase.",
+        "time_saving_tip": "Recognise the 3-4-5 triple."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic functions",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The function $y = \\sin^2(\\pi t)$, where t is in seconds, is periodic. What is its period?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1$ s",
+        "$2$ s",
+        "$0.5$ s",
+        "$4$ s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\sin^2\\omega t = (1-\\cos2\\omega t)/2$ has period $\\pi/\\omega$.",
+        "steps": [
+          "Here $\\omega = \\pi$ rad/s.",
+          "Period $= \\pi/\\omega = \\pi/\\pi = 1$ s."
+        ],
+        "final_answer": "Option (1): $1$ s",
+        "why_not_others": "2 s is the period of $\\sin\\pi t$ itself. 0.5 s halves the period twice. 4 s doubles it instead of halving it.",
+        "common_trap": "Using $2\\pi/\\omega$ for a squared sinusoid.",
+        "time_saving_tip": "Squaring a sinusoid doubles its angular frequency, so the period is halved."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic functions",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\sin\\omega t + \\cos\\omega t$"
+          },
+          {
+            "label": "B",
+            "text": "$\\sin^2\\omega t$"
+          },
+          {
+            "label": "C",
+            "text": "$\\sin\\omega t + \\sin2\\omega t$"
+          },
+          {
+            "label": "D",
+            "text": "$e^{-\\omega t}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Non-periodic"
+          },
+          {
+            "label": "II",
+            "text": "SHM with period $2\\pi/\\omega$"
+          },
+          {
+            "label": "III",
+            "text": "SHM about mean value 1/2 with period $\\pi/\\omega$"
+          },
+          {
+            "label": "IV",
+            "text": "Periodic but not SHM"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Classify each function: combinations of the same $\\omega$ give SHM, squared sinusoids give SHM at $2\\omega$, mixed $\\omega$ gives periodic non-SHM, and exponentials are non-periodic.",
+        "steps": [
+          "A: $\\sin\\omega t + \\cos\\omega t = \\sqrt{2}\\sin(\\omega t+\\pi/4)$, which is SHM with period $2\\pi/\\omega$. So A-II.",
+          "B: $\\sin^2\\omega t = (1-\\cos2\\omega t)/2$, which is SHM about 1/2 with period $\\pi/\\omega$. So B-III.",
+          "C: the two terms have different angular frequencies, so it is periodic but not SHM. So C-IV.",
+          "D: the exponential is non-periodic. So D-I."
+        ],
+        "final_answer": "Option (1): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Option 2 calls $\\sin^2\\omega t$ non-SHM and the mixed sum SHM. Option 3 swaps the periods of A and B. Option 4 wrongly calls the mixed-frequency sum SHM.",
+        "common_trap": "Treating $\\sin^2\\omega t$ as non-SHM, or treating any sum of sinusoids as SHM.",
+        "time_saving_tip": "D-I is common to all options, so focus on A, B and C."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Periodic functions",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about periodic functions are correct?",
+      "statements": {
+        "A": "$\\cos^2\\omega t$ has a period of $\\pi/\\omega$.",
+        "B": "$\\sin\\omega t + \\sin2\\omega t$ represents simple harmonic motion.",
+        "C": "$a\\sin\\omega t + b\\cos\\omega t$ represents SHM with amplitude $\\sqrt{a^2+b^2}$.",
+        "D": "$\\log\\omega t$ is a periodic function of time.",
+        "E": "Any periodic function can be expressed as a superposition of sines and cosines of different time periods with suitable coefficients."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and E only",
+        "A, B and C only",
+        "C, D and E only",
+        "A and C only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Periodicity, the SHM condition, and the superposition of sinusoids.",
+        "steps": [
+          "A is true: $\\cos^2\\omega t = (1+\\cos2\\omega t)/2$, so its period is $\\pi/\\omega$.",
+          "B is false: the terms have different $\\omega$, so the sum is periodic but not SHM.",
+          "C is true: the two terms combine into a single sinusoid of amplitude $\\sqrt{a^2+b^2}$.",
+          "D is false: the logarithm is non-periodic.",
+          "E is true: this is the stated superposition property of periodic functions."
+        ],
+        "final_answer": "Option (1): A, C and E only",
+        "why_not_others": "Option 2 includes B, which is false. Option 3 includes D, which is false. Option 4 leaves out E, which is true.",
+        "common_trap": "Taking 'periodic' to mean 'simple harmonic'.",
+        "time_saving_tip": "Once B and D are ruled out, only options 1 and 4 remain; checking E settles it."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple harmonic motion, its equation and phase",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A particle executes SHM with amplitude 0.05 m and angular frequency $20\\ \\text{rad s}^{-1}$. What is its maximum speed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\text{m s}^{-1}$",
+        "$20\\ \\text{m s}^{-1}$",
+        "$0.0025\\ \\text{m s}^{-1}$",
+        "$2\\ \\text{m s}^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v_{max} = A\\omega$, reached at the mean position.",
+        "steps": [
+          "$v_{max} = 0.05 \\times 20 = 1\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $1\\ \\text{m s}^{-1}$",
+        "why_not_others": "20 is $A\\omega^2$, the maximum acceleration. 0.0025 is $A/\\omega$. 2 uses $2A\\omega$, wrongly taking the peak-to-peak distance as the amplitude.",
+        "common_trap": "Mixing up the formulas for maximum speed and maximum acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple harmonic motion, its equation and phase",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle executes SHM with amplitude 10 cm and angular frequency $4\\ \\text{rad s}^{-1}$. What is its speed when its displacement from the mean position is 6 cm?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$24\\ \\text{cm s}^{-1}$",
+        "$32\\ \\text{cm s}^{-1}$",
+        "$40\\ \\text{cm s}^{-1}$",
+        "$16\\ \\text{cm s}^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v = \\omega\\sqrt{A^2 - x^2}$",
+        "steps": [
+          "$A^2 - x^2 = 100 - 36 = 64$, so $\\sqrt{64} = 8$ cm.",
+          "$v = 4 \\times 8 = 32\\ \\text{cm s}^{-1}$."
+        ],
+        "final_answer": "Option (2): $32\\ \\text{cm s}^{-1}$",
+        "why_not_others": "24 uses $\\omega x$. 40 is the maximum speed $A\\omega$. 16 uses $\\omega(A - x)$.",
+        "common_trap": "Subtracting the displacements directly instead of their squares.",
+        "time_saving_tip": "6-8-10 is a Pythagorean triple."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple harmonic motion, its equation and phase",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In simple harmonic motion, by what phase angle does the acceleration of the particle lead its velocity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\pi$",
+        "$\\pi/2$",
+        "zero",
+        "$\\pi/4$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Velocity leads displacement by $\\pi/2$, and acceleration leads displacement by $\\pi$.",
+        "steps": [
+          "Phase of velocity relative to displacement = $+\\pi/2$.",
+          "Phase of acceleration relative to displacement = $+\\pi$.",
+          "So acceleration leads velocity by $\\pi - \\pi/2 = \\pi/2$."
+        ],
+        "final_answer": "Option (2): $\\pi/2$",
+        "why_not_others": "$\\pi$ is the lead of acceleration over displacement, not over velocity. Zero and $\\pi/4$ have no basis in the SHM phase relations.",
+        "common_trap": "Answering with the acceleration-displacement phase difference.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple harmonic motion, its equation and phase",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In SHM, the speed of the particle is maximum at the extreme positions.",
+        "R": "In SHM, the magnitude of acceleration is maximum at the extreme positions."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In SHM, speed is maximum at the mean position and zero at the extremes, while acceleration is maximum at the extremes.",
+        "steps": [
+          "Speed $\\omega\\sqrt{A^2-x^2}$ is zero at $x = \\pm A$, so A is false.",
+          "Acceleration $|a| = \\omega^2|x|$ is maximum ($A\\omega^2$) at $x = \\pm A$, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options 1, 2 and 3 all fail.",
+        "common_trap": "Assuming that maximum acceleration means maximum speed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple harmonic motion, its equation and phase",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A particle executing SHM with a time period of 2.4 s takes 0.2 s to move from the mean position to a point midway between the mean position and an extreme position.",
+        "II": "The graph of acceleration versus displacement for a particle in SHM is a straight line with a positive slope of $\\omega^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The time from the mean position to $A/2$ is $T/12$. Also, $a = -\\omega^2 x$.",
+        "steps": [
+          "Statement I: $T/12 = 2.4/12 = 0.2$ s, so it is correct.",
+          "Statement II: since $a = -\\omega^2 x$, the slope is $-\\omega^2$, which is negative. So it is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II has the wrong sign of slope. Statement I is numerically correct, so options 2 and 4 fail.",
+        "common_trap": "Using T/6 or T/8 for the mean-to-A/2 interval, or ignoring the minus sign in $a = -\\omega^2 x$.",
+        "time_saving_tip": "Remember: mean to A/2 takes T/12, and A/2 to the extreme takes T/6."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Oscillations of a spring: restoring force and force constant",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A block of mass 0.5 kg is attached to an ideal spring of force constant $50\\ \\text{N m}^{-1}$ on a smooth horizontal surface. What is the time period of its oscillations?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20\\pi$ s",
+        "$0.1$ s",
+        "$\\pi/10$ s",
+        "$\\pi/5$ s"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T = 2\\pi\\sqrt{m/k}$",
+        "steps": [
+          "$m/k = 0.5/50 = 0.01$, so $\\sqrt{0.01} = 0.1$ s.",
+          "$T = 2\\pi \\times 0.1 = 0.2\\pi = \\pi/5$ s."
+        ],
+        "final_answer": "Option (4): $\\pi/5$ s",
+        "why_not_others": "$20\\pi$ s uses $\\sqrt{k/m}$, i.e. the ratio inverted. 0.1 s leaves out the $2\\pi$. $\\pi/10$ s uses $\\pi$ instead of $2\\pi$.",
+        "common_trap": "Inverting the ratio of m and k.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Oscillations of a spring: restoring force and force constant",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A spring-mass system has a time period T on the Earth. It is taken to the Moon, where the acceleration due to gravity is one-sixth of that on the Earth. What is its time period on the Moon?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$T\\sqrt{6}$",
+        "$T/\\sqrt{6}$",
+        "$T$",
+        "$6T$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The period of a spring-mass system depends only on m and k: $T = 2\\pi\\sqrt{m/k}$.",
+        "steps": [
+          "Neither m nor k changes on the Moon.",
+          "So the period stays T."
+        ],
+        "final_answer": "Option (3): $T$",
+        "why_not_others": "$T\\sqrt{6}$ is what a simple pendulum would show. $T/\\sqrt{6}$ and $6T$ wrongly bring g into the formula.",
+        "common_trap": "Applying the pendulum's dependence on g to a spring-mass system.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Oscillations of a spring: restoring force and force constant",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A spring of force constant $60\\ \\text{N m}^{-1}$ is cut into three equal parts. Two of these parts are connected in parallel. What is the effective force constant of the combination?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$40\\ \\text{N m}^{-1}$",
+        "$90\\ \\text{N m}^{-1}$",
+        "$120\\ \\text{N m}^{-1}$",
+        "$360\\ \\text{N m}^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Since $k \\propto 1/l$, each of n equal parts has constant nk. In parallel, the constants add.",
+        "steps": [
+          "Each part has $k = 3 \\times 60 = 180\\ \\text{N m}^{-1}$.",
+          "In parallel: $180 + 180 = 360\\ \\text{N m}^{-1}$."
+        ],
+        "final_answer": "Option (4): $360\\ \\text{N m}^{-1}$",
+        "why_not_others": "40 takes each part as $k/3$. 90 combines the parts in series. 120 ignores the effect of cutting.",
+        "common_trap": "Thinking a shorter piece of spring is softer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Oscillations of a spring: restoring force and force constant",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Mass m on a single spring of constant k"
+          },
+          {
+            "label": "B",
+            "text": "Mass hanging from a vertical spring with static extension $\\Delta l$"
+          },
+          {
+            "label": "C",
+            "text": "Mass m on springs $k_1$ and $k_2$ in series"
+          },
+          {
+            "label": "D",
+            "text": "Mass m on springs $k_1$ and $k_2$ in parallel"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$2\\pi\\sqrt{\\frac{m}{k_1+k_2}}$"
+          },
+          {
+            "label": "II",
+            "text": "$2\\pi\\sqrt{\\frac{m}{k}}$"
+          },
+          {
+            "label": "III",
+            "text": "$2\\pi\\sqrt{\\frac{m(k_1+k_2)}{k_1k_2}}$"
+          },
+          {
+            "label": "IV",
+            "text": "$2\\pi\\sqrt{\\frac{\\Delta l}{g}}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-III, C-IV, D-I"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use $T = 2\\pi\\sqrt{m/k_{eff}}$ with the correct effective constant for each arrangement.",
+        "steps": [
+          "A: $T = 2\\pi\\sqrt{m/k}$, so A-II.",
+          "B: $k\\Delta l = mg$, so $m/k = \\Delta l/g$ and A-IV... that is, B-IV.",
+          "C: $k_{series} = k_1k_2/(k_1+k_2)$, so C-III.",
+          "D: $k_{parallel} = k_1+k_2$, so D-I."
+        ],
+        "final_answer": "Option (1): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 2 swaps the series and parallel formulas. Option 3 swaps A and B. Option 4 mismatches B and C.",
+        "common_trap": "Swapping the series and parallel effective constants.",
+        "time_saving_tip": "Series is softer, so it gives the longer period (the larger expression)."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Oscillations of a spring: restoring force and force constant",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about spring and spring-like oscillators are correct?",
+      "statements": {
+        "A": "The time period of a spring-mass system is independent of its amplitude.",
+        "B": "For a mass on a vertical spring, gravity changes the time period because it changes the equilibrium extension.",
+        "C": "When a spring of constant k is cut into n equal parts, each part has a force constant k/n.",
+        "D": "For a floating cylinder oscillating vertically, the time period is inversely proportional to the square root of the liquid's density.",
+        "E": "Two springs connected in series behave as a softer spring than either one alone."
+      },
+      "match_lists": null,
+      "options": [
+        "A and D only",
+        "A, B and D only",
+        "B, C and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Spring-mass period, spring combinations, and the general rule $T = 2\\pi\\sqrt{\\text{inertia}/\\text{restoring force per unit displacement}}$.",
+        "steps": [
+          "A is true: $T = 2\\pi\\sqrt{m/k}$ contains no amplitude.",
+          "B is false: gravity only shifts the mean position; T is unchanged.",
+          "C is false: each part has constant nk, since $k \\propto 1/l$.",
+          "D is true: $T = 2\\pi\\sqrt{L\\rho_c/(\\rho_l g)}$, so $T \\propto 1/\\sqrt{\\rho_l}$.",
+          "E is true: $k_{series} = k_1k_2/(k_1+k_2)$ is smaller than both $k_1$ and $k_2$."
+        ],
+        "final_answer": "Option (4): A, D and E only",
+        "why_not_others": "Option 1 leaves out E. Option 2 includes B, which is false. Option 3 includes B and C and leaves out A and D.",
+        "common_trap": "Believing that cutting a spring makes each piece softer, or that gravity alters the period of a vertical spring.",
+        "time_saving_tip": "Ruling out B and C leaves only options 1 and 4; check E to decide."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Energy in SHM: kinetic and potential energies",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A particle executes simple harmonic motion of amplitude $A$. When its displacement from the mean position is $A/2$, what fraction of its total mechanical energy is kinetic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$\\frac{3}{4}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In SHM, $U = \\frac{1}{2}kx^2$ and $K = \\frac{1}{2}k(A^2 - x^2)$, with total energy $E = \\frac{1}{2}kA^2$.",
+        "steps": [
+          "At $x = A/2$: $U = \\frac{1}{2}k\\frac{A^2}{4} = \\frac{E}{4}$.",
+          "So $K = E - U = \\frac{3E}{4}$.",
+          "The fraction of energy that is kinetic is $\\frac{3}{4}$."
+        ],
+        "final_answer": "Option (4): $\\frac{3}{4}$",
+        "why_not_others": "$\\frac{1}{4}$ is the potential-energy fraction. $\\frac{1}{2}$ holds only at $x = A/\\sqrt{2}$. $\\frac{\\sqrt{3}}{2}$ is the ratio of the speed to the maximum speed, not an energy ratio.",
+        "common_trap": "Swapping the K and U fractions, or using a velocity ratio in place of an energy ratio.",
+        "time_saving_tip": "Remember: at $x = A/2$, $U = E/4$ and $K = 3E/4$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Energy in SHM: kinetic and potential energies",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A block of mass 0.5 kg attached to a spring of force constant 200 N/m oscillates on a smooth horizontal surface with amplitude 0.1 m. What is its kinetic energy when its displacement is 0.06 m?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.36 J",
+        "0.16 J",
+        "0.64 J",
+        "1.00 J"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$K = \\frac{1}{2}k(A^2 - x^2)$",
+        "steps": [
+          "$A^2 - x^2 = 0.01 - 0.0036 = 0.0064\\ \\text{m}^2$.",
+          "$K = \\frac{1}{2}(200)(0.0064) = 0.64$ J.",
+          "Check: $U = 0.36$ J and $E = 1.00$ J, so $K + U = E$."
+        ],
+        "final_answer": "Option (3): 0.64 J",
+        "why_not_others": "0.36 J is the potential energy at this position. 0.16 J comes from wrongly using $(A - x)^2$ instead of $A^2 - x^2$. 1.00 J is the total energy.",
+        "common_trap": "Using $(A - x)^2$ in place of $(A^2 - x^2)$.",
+        "time_saving_tip": "Find E and U first, then take $K = E - U$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Energy in SHM: kinetic and potential energies",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The displacement of a particle executing SHM is $x = 0.05\\sin(10\\pi t)$ m, with t in seconds. What is the frequency with which its kinetic energy varies?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 Hz",
+        "2.5 Hz",
+        "10 Hz",
+        "20 Hz"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Kinetic and potential energies in SHM oscillate at twice the frequency of the motion.",
+        "steps": [
+          "$\\omega = 10\\pi$ rad/s, so $\\nu = \\omega/2\\pi = 5$ Hz.",
+          "The kinetic energy varies with frequency $2\\nu = 10$ Hz."
+        ],
+        "final_answer": "Option (3): 10 Hz",
+        "why_not_others": "5 Hz is the frequency of the displacement, not of the energy. 2.5 Hz wrongly halves it. 20 Hz comes from doubling twice.",
+        "common_trap": "Taking the frequency of the energy oscillation as $\\nu$ instead of $2\\nu$.",
+        "time_saving_tip": "Since $K \\propto \\cos^2\\omega t$, the energy frequency is $2\\nu$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Energy in SHM: kinetic and potential energies",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The kinetic energy of a particle executing SHM of time period T varies periodically with period T.",
+        "R": "The kinetic energy of a particle in SHM is maximum at the mean position, and the particle passes through the mean position twice in every cycle."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Kinetic energy in SHM varies with period T/2.",
+        "steps": [
+          "K is maximum each time the particle crosses the mean position.",
+          "This happens twice per cycle, so K repeats every T/2.",
+          "So A is false and R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so any option that calls A true is ruled out.",
+        "common_trap": "Assuming that energies share the period of the displacement.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Energy in SHM: kinetic and potential energies",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a given mass executing SHM, if the frequency is doubled while the amplitude is kept the same, the total mechanical energy becomes four times its original value.",
+        "II": "For a spring-mass oscillator, the graph of speed v against displacement x is an ellipse, which becomes a circle only when the spring constant k (in N/m) and the mass m (in kg) are numerically equal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$E = \\frac{1}{2}m\\omega^2A^2$, and the energy relation gives an ellipse in the x-v plane.",
+        "steps": [
+          "$E \\propto \\omega^2$ at fixed m and A, so doubling the frequency multiplies E by 4. Statement I is correct.",
+          "From $\\frac{1}{2}mv^2 + \\frac{1}{2}kx^2 = E$: $\\frac{v^2}{\\omega^2A^2} + \\frac{x^2}{A^2} = 1$, which is an ellipse.",
+          "It is a circle when $\\omega = 1$, that is, when k = m numerically. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from the energy relations, so no option rejecting either one is valid.",
+        "common_trap": "Thinking that energy depends only on amplitude, or picking $k = 1/m$ as the circle condition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple pendulum and its time period",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A simple pendulum of length 1 m has a time period of 2 s at a place. What is the time period of a simple pendulum of length 4 m at the same place, for small oscillations?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4 s",
+        "8 s",
+        "$2\\sqrt{2}$ s",
+        "1 s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T \\propto \\sqrt{l}$",
+        "steps": [
+          "$T_2 = T_1\\sqrt{l_2/l_1} = 2\\sqrt{4} = 4$ s."
+        ],
+        "final_answer": "Option (1): 4 s",
+        "why_not_others": "8 s assumes $T \\propto l$. $2\\sqrt{2}$ s takes the square root of the wrong factor. 1 s inverts the relation.",
+        "common_trap": "Assuming the period is proportional to the length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple pendulum and its time period",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A simple pendulum has a time period of 2 s when at rest. It is placed in a lift accelerating upward at $g/3$. What is its new time period? (Take $\\sqrt{3} = 1.73$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.31 s",
+        "1.50 s",
+        "1.73 s",
+        "2.00 s"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a lift accelerating upward, $g_{eff} = g + a$.",
+        "steps": [
+          "$g_{eff} = g + g/3 = 4g/3$.",
+          "$T' = T\\sqrt{g/g_{eff}} = 2\\sqrt{3/4} = \\sqrt{3} = 1.73$ s."
+        ],
+        "final_answer": "Option (3): 1.73 s",
+        "why_not_others": "2.31 s comes from inverting the ratio. 1.50 s takes T proportional to $1/g$ instead of $1/\\sqrt{g}$. 2.00 s ignores the acceleration of the lift.",
+        "common_trap": "Using $g - a$ for upward acceleration, or forgetting the square root.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple pendulum and its time period",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Due to a rise in temperature, the length of the pendulum of a clock increases by 0.2%. The clock was correct before the change. What happens to the clock in one day (86400 s)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It gains 86.4 s",
+        "It loses 172.8 s",
+        "It loses 43.2 s",
+        "It loses 86.4 s"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\frac{\\Delta T}{T} = \\frac{1}{2}\\frac{\\Delta l}{l}$",
+        "steps": [
+          "$\\frac{\\Delta T}{T} = \\frac{1}{2}(0.2\\%) = 0.1\\% = 0.001$.",
+          "A longer period means the clock runs slow, so it loses time.",
+          "Time lost per day $= 0.001 \\times 86400 = 86.4$ s."
+        ],
+        "final_answer": "Option (4): It loses 86.4 s",
+        "why_not_others": "'Gains' has the wrong direction. 172.8 s omits the factor $\\frac{1}{2}$. 43.2 s applies the factor $\\frac{1}{2}$ twice.",
+        "common_trap": "Forgetting the factor 1/2, or concluding that the clock gains time.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple pendulum and its time period",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pendulum in a lift accelerating upward with acceleration a"
+          },
+          {
+            "label": "B",
+            "text": "Pendulum in a lift accelerating downward with acceleration a (a < g)"
+          },
+          {
+            "label": "C",
+            "text": "Pendulum in a freely falling lift"
+          },
+          {
+            "label": "D",
+            "text": "Pendulum in a car accelerating horizontally with acceleration a"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$T = 2\\pi\\sqrt{l/(g-a)}$"
+          },
+          {
+            "label": "II",
+            "text": "Pendulum does not oscillate"
+          },
+          {
+            "label": "III",
+            "text": "$T = 2\\pi\\sqrt{l/\\sqrt{g^2+a^2}}$"
+          },
+          {
+            "label": "IV",
+            "text": "$T = 2\\pi\\sqrt{l/(g+a)}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-II, D-III",
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-I, C-III, D-II",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Replace g by $g_{eff}$ in accelerating frames.",
+        "steps": [
+          "Upward acceleration: $g_{eff} = g + a$, so A matches IV.",
+          "Downward acceleration: $g_{eff} = g - a$, so B matches I.",
+          "Free fall: $g_{eff} = 0$, so there is no oscillation and C matches II.",
+          "Horizontal acceleration: $g_{eff} = \\sqrt{g^2 + a^2}$, so D matches III."
+        ],
+        "final_answer": "Option (1): A-IV, B-I, C-II, D-III",
+        "why_not_others": "Option (2) swaps the upward and downward cases. Option (3) swaps the free-fall and horizontal cases. Option (4) assigns the horizontal formula to the upward lift.",
+        "common_trap": "Mixing up the signs for upward and downward acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Simple pendulum and its time period",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about a simple pendulum are correct?",
+      "statements": {
+        "A": "Its time period is independent of the mass of the bob.",
+        "B": "Its effective length is measured from the point of suspension to the top of the bob.",
+        "C": "A girl who stands up on a swing decreases its time period.",
+        "D": "Its time period on the Moon is smaller than on the Earth.",
+        "E": "The relation $T = 2\\pi\\sqrt{l/g}$ is valid only for small angular amplitudes."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "A, C, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T = 2\\pi\\sqrt{l/g}$ holds for small angles, with l measured to the centre of the bob.",
+        "steps": [
+          "A is true: T does not depend on the mass of the bob.",
+          "B is false: l is measured to the centre of the bob.",
+          "C is true: standing up raises the centre of mass, so l and T decrease.",
+          "D is false: g is smaller on the Moon, so T is larger.",
+          "E is true: the formula relies on $\\sin\\theta \\approx \\theta$."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option (1) omits E. Option (2) includes the false B. Option (3) includes the false D.",
+        "common_trap": "Measuring l to the top of the bob, or thinking T decreases on the Moon.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Speed of a travelling wave",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A sound wave of frequency 500 Hz has a wavelength of 0.68 m in air. What is the speed of sound in air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "735 m/s",
+        "340 m/s",
+        "$1.36 \\times 10^{-3}$ m/s",
+        "680 m/s"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v = \\nu\\lambda$",
+        "steps": [
+          "$v = 500 \\times 0.68 = 340$ m/s."
+        ],
+        "final_answer": "Option (2): 340 m/s",
+        "why_not_others": "735 m/s comes from $\\nu/\\lambda$. $1.36 \\times 10^{-3}$ m/s comes from $\\lambda/\\nu$. 680 m/s doubles the correct value.",
+        "common_trap": "Dividing instead of multiplying.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Speed of a travelling wave",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A string of mass 5 g and length 50 cm is stretched with a tension of 36 N. What is the speed of transverse waves on the string?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "600 m/s",
+        "3600 m/s",
+        "1.9 m/s",
+        "60 m/s"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v = \\sqrt{T/\\mu}$, with $\\mu$ in kg/m.",
+        "steps": [
+          "$\\mu = 0.005/0.5 = 0.01$ kg/m.",
+          "$v = \\sqrt{36/0.01} = \\sqrt{3600} = 60$ m/s."
+        ],
+        "final_answer": "Option (4): 60 m/s",
+        "why_not_others": "600 m/s comes from keeping the length in cm ($\\mu = 10^{-4}$). 3600 m/s omits the square root. 1.9 m/s comes from keeping the mass in grams ($\\mu = 10$).",
+        "common_trap": "Mixing units when computing $\\mu$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Speed of a travelling wave",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The speed of sound in a gas at $27^\\circ C$ is v. At what temperature will the speed become 2v, with the pressure kept constant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$108^\\circ C$",
+        "$927^\\circ C$",
+        "$1200^\\circ C$",
+        "$54^\\circ C$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v \\propto \\sqrt{T}$, where T is absolute temperature.",
+        "steps": [
+          "Doubling v requires $T' = 4T = 4 \\times 300 = 1200$ K.",
+          "$1200 - 273 = 927^\\circ C$."
+        ],
+        "final_answer": "Option (2): $927^\\circ C$",
+        "why_not_others": "$108^\\circ C$ multiplies the Celsius temperature by 4. $1200^\\circ C$ forgets to convert back from kelvin. $54^\\circ C$ assumes $v \\propto T$ and uses the Celsius scale.",
+        "common_trap": "Using Celsius temperature in $v \\propto \\sqrt{T}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Speed of a travelling wave",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pressure of a gas doubled at constant temperature"
+          },
+          {
+            "label": "B",
+            "text": "Absolute temperature of a gas made four times"
+          },
+          {
+            "label": "C",
+            "text": "Mass per unit length of a string made four times at the same tension"
+          },
+          {
+            "label": "D",
+            "text": "Tension in a string made nine times"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Wave speed becomes v/2"
+          },
+          {
+            "label": "II",
+            "text": "Wave speed remains v"
+          },
+          {
+            "label": "III",
+            "text": "Wave speed becomes 3v"
+          },
+          {
+            "label": "IV",
+            "text": "Wave speed becomes 2v"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a gas, $v = \\sqrt{\\gamma P/\\rho} \\propto \\sqrt{T}$. On a string, $v = \\sqrt{T/\\mu}$.",
+        "steps": [
+          "At constant temperature, $P/\\rho$ is constant, so v is unchanged: A matches II.",
+          "$v \\propto \\sqrt{T}$, so a fourfold temperature doubles v: B matches IV.",
+          "$v \\propto 1/\\sqrt{\\mu}$, so a fourfold $\\mu$ halves v: C matches I.",
+          "$v \\propto \\sqrt{T}$ (tension), so a ninefold tension triples v: D matches III."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) wrongly lets pressure change v. Option (2) inverts the string relations. Option (3) inverts the temperature dependence and the $\\mu$ dependence.",
+        "common_trap": "Believing that pressure changes the speed of sound.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Speed of a travelling wave",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the speed of waves are correct?",
+      "statements": {
+        "A": "Newton assumed isothermal compressions in sound and obtained about 280 m/s for air.",
+        "B": "Laplace treated the compressions as adiabatic, giving $v = \\sqrt{\\gamma P/\\rho}$.",
+        "C": "Sound travels slower in moist air than in dry air because moist air is denser.",
+        "D": "When a wave passes into another medium, its frequency changes while its wavelength stays the same.",
+        "E": "In general, the speed of sound is greatest in solids and least in gases."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and E only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Laplace correction, effect of humidity, and invariance of frequency across media.",
+        "steps": [
+          "A and B are true statements of the Newton and Laplace treatments.",
+          "C is false: moist air is less dense, so sound travels faster in it.",
+          "D is false: frequency stays the same, while speed and wavelength change.",
+          "E is true: $v_{solid} > v_{liquid} > v_{gas}$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Options (1) and (4) include the false C. Option (3) includes the false D and omits A.",
+        "common_trap": "Thinking moist air is denser, or that frequency changes between media.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Displacement relation for a progressive wave",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A transverse wave on a string is described by $y = 0.05\\sin(4\\pi x - 200\\pi t)$, where x and y are in metres and t is in seconds. What are the speed and direction of propagation of the wave?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "50 m/s along -x",
+        "50 m/s along +x",
+        "0.02 m/s along +x",
+        "$10\\pi$ m/s along +x"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Wave speed $v = \\omega/k$. The form $(kx-\\omega t)$ means the wave travels along +x.",
+        "steps": [
+          "Here $k = 4\\pi$ rad/m and $\\omega = 200\\pi$ rad/s.",
+          "$v = \\omega/k = 200\\pi/4\\pi = 50$ m/s.",
+          "x and t have opposite signs, so the wave moves along +x."
+        ],
+        "final_answer": "Option (2): 50 m/s along +x",
+        "why_not_others": "Option (1) has the wrong direction. Option (3) is $k/\\omega$, which is inverted. Option (4) is $a\\omega$, the maximum particle speed, not the wave speed.",
+        "common_trap": "Confusing the maximum particle speed $a\\omega$ with the wave speed $\\omega/k$.",
+        "time_saving_tip": "Wave speed = coefficient of t divided by coefficient of x."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Displacement relation for a progressive wave",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A sound wave of frequency 500 Hz travels with a speed of 360 m/s. What is the phase difference between two points on its path that are 0.12 m apart?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\pi/6$",
+        "$\\pi/3$",
+        "$2\\pi/3$",
+        "$\\pi/2$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Phase difference $\\Delta\\phi = \\frac{2\\pi}{\\lambda}\\Delta x$.",
+        "steps": [
+          "$\\lambda = v/\\nu = 360/500 = 0.72$ m.",
+          "$\\Delta\\phi = \\frac{2\\pi}{0.72}\\times 0.12 = \\frac{2\\pi}{6} = \\pi/3$."
+        ],
+        "final_answer": "Option (2): $\\pi/3$",
+        "why_not_others": "$\\pi/6$ comes from dropping the factor 2 in $2\\pi$. $2\\pi/3$ comes from doubling the path difference. $\\pi/2$ would need a separation of $\\lambda/4 = 0.18$ m.",
+        "common_trap": "Forgetting to find $\\lambda$ first, or using $\\pi/\\lambda$ in place of $2\\pi/\\lambda$.",
+        "time_saving_tip": "Since $0.12/0.72 = 1/6$ of a wavelength, the phase difference is $2\\pi/6$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Displacement relation for a progressive wave",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a progressive wave $y = 0.004\\sin(50x - 400t)$ (SI units), what is the ratio of the maximum particle speed to the wave speed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.2",
+        "5",
+        "1",
+        "0.4"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$v_{p,max} = a\\omega$ and $v = \\omega/k$, so $v_{p,max}/v = ak$.",
+        "steps": [
+          "$v_{p,max} = a\\omega = 0.004 \\times 400 = 1.6$ m/s.",
+          "$v = \\omega/k = 400/50 = 8$ m/s.",
+          "Ratio $= 1.6/8 = 0.2$. Check: $ak = 0.004\\times 50 = 0.2$."
+        ],
+        "final_answer": "Option (1): 0.2",
+        "why_not_others": "5 is the inverse ratio. 1 assumes the particle speed equals the wave speed. 0.4 uses the peak-to-peak value 2a in place of a.",
+        "common_trap": "Treating particle velocity and wave velocity as the same quantity.",
+        "time_saving_tip": "Directly use $v_{p,max}/v = ak$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Displacement relation for a progressive wave",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For a progressive wave $y = a\\sin(kx-\\omega t)$, the maximum speed of a particle of the medium is equal to the wave speed $\\omega/k$.",
+        "R": "In a progressive wave, the particle velocity equals $-v\\,\\partial y/\\partial x$, where v is the wave speed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Maximum particle speed is $a\\omega$, while wave speed is $\\omega/k$. They are linked by $v_p = -v\\,\\partial y/\\partial x$.",
+        "steps": [
+          "Maximum particle speed $= a\\omega$, which in general is not $\\omega/k$. So A is false.",
+          "$\\partial y/\\partial t = -a\\omega\\cos(kx-\\omega t)$ and $\\partial y/\\partial x = ak\\cos(kx-\\omega t)$, so $v_p = -(\\omega/k)\\,\\partial y/\\partial x$. So R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Equating particle speed with wave speed. Their ratio is $ak$, the maximum slope of the wave.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Displacement relation for a progressive wave",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If both the amplitude and the frequency of a progressive wave are doubled, its intensity becomes four times.",
+        "II": "The wave $y = 0.01\\sin(2\\pi x + 600\\pi t)$ (SI units) travels along the negative x-direction with a speed of 300 m/s."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I \\propto a^2\\omega^2$. The form $(kx+\\omega t)$ means the wave travels along -x, and $v = \\omega/k$.",
+        "steps": [
+          "Doubling a and $\\omega$ multiplies I by $2^2\\times 2^2 = 16$, not 4. So I is incorrect.",
+          "x and t have the same sign, so the wave moves along -x.",
+          "$v = 600\\pi/2\\pi = 300$ m/s. So II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the $\\omega^2$ dependence of intensity. Statement II is fully consistent with the notes.",
+        "common_trap": "Remembering only $I \\propto a^2$ and forgetting the $\\omega^2$ factor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Principle of superposition and reflection of waves",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two waves of the same frequency, with amplitudes 3 mm and 4 mm, superpose at a point with a phase difference of $\\pi/2$. What is the amplitude of the resultant wave?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 mm",
+        "7 mm",
+        "1 mm",
+        "3.5 mm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$A = \\sqrt{a_1^2+a_2^2+2a_1a_2\\cos\\phi}$.",
+        "steps": [
+          "$\\cos(\\pi/2) = 0$.",
+          "$A = \\sqrt{9+16} = 5$ mm."
+        ],
+        "final_answer": "Option (1): 5 mm",
+        "why_not_others": "7 mm is the constructive value ($\\phi = 0$). 1 mm is the destructive value ($\\phi = \\pi$). 3.5 mm is just the average of the two amplitudes.",
+        "common_trap": "Adding the amplitudes directly regardless of the phase difference.",
+        "time_saving_tip": "At $\\phi = \\pi/2$ the amplitudes add like perpendicular vectors."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Principle of superposition and reflection of waves",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two coherent waves with intensities in the ratio 9 : 1 interfere. What is the ratio of the maximum to the minimum intensity in the interference pattern?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "9",
+        "2",
+        "4",
+        "$25/16$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I_{max}/I_{min} = \\left(\\frac{a_1+a_2}{a_1-a_2}\\right)^2$, with $I \\propto a^2$.",
+        "steps": [
+          "Amplitude ratio $a_1 : a_2 = \\sqrt{9} : \\sqrt{1} = 3 : 1$.",
+          "$I_{max}/I_{min} = \\left(\\frac{3+1}{3-1}\\right)^2 = 2^2 = 4$."
+        ],
+        "final_answer": "Option (3): 4",
+        "why_not_others": "9 is just the given intensity ratio. 2 comes from forgetting to square. $25/16$ comes from putting intensities into the formula in place of amplitudes.",
+        "common_trap": "Using intensities directly in the amplitude formula.",
+        "time_saving_tip": "Always convert intensities to amplitudes by taking square roots first."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Principle of superposition and reflection of waves",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An incident wave $y_i = a\\sin(kx - \\omega t)$ is reflected from a rigid boundary at x = 0, and the reflected wave is $y_r = a\\sin(kx + \\omega t)$. Which of the following is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The reflected wave has angular frequency $2\\omega$",
+        "The reflected wave travels along the positive x-direction",
+        "The point x = 0 is an antinode of the resulting wave",
+        "The resultant is $2a\\sin kx\\cos\\omega t$, with a node at x = 0"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Reflection at a rigid end gives a node at the boundary. Frequency does not change on reflection.",
+        "steps": [
+          "$\\sin(kx-\\omega t)+\\sin(kx+\\omega t) = 2\\sin kx\\cos\\omega t$.",
+          "At x = 0, $\\sin kx = 0$, so the displacement is always zero there: x = 0 is a node.",
+          "The reflected wave has the same $\\omega$, and $(kx+\\omega t)$ means it moves along -x."
+        ],
+        "final_answer": "Option (4): The resultant is $2a\\sin kx\\cos\\omega t$, with a node at x = 0",
+        "why_not_others": "Frequency never changes on reflection. The reflected wave travels along -x. A rigid end is a node, not an antinode.",
+        "common_trap": "Thinking reflection changes frequency, or placing an antinode at a fixed end.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Principle of superposition and reflection of waves",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Two waves, each of amplitude a, superposed with phase difference 0"
+          },
+          {
+            "label": "B",
+            "text": "Two waves, each of amplitude a, superposed with phase difference $\\pi$"
+          },
+          {
+            "label": "C",
+            "text": "Two waves, each of amplitude a, superposed with phase difference $\\pi/2$"
+          },
+          {
+            "label": "D",
+            "text": "Two waves, each of amplitude a, superposed with phase difference $2\\pi/3$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Resultant amplitude a"
+          },
+          {
+            "label": "II",
+            "text": "Resultant amplitude 0"
+          },
+          {
+            "label": "III",
+            "text": "Resultant amplitude 2a"
+          },
+          {
+            "label": "IV",
+            "text": "Resultant amplitude $\\sqrt{2}a$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$A = \\sqrt{2a^2(1+\\cos\\phi)}$ for two equal amplitudes.",
+        "steps": [
+          "$\\phi = 0$: $A = 2a$.",
+          "$\\phi = \\pi$: $A = 0$.",
+          "$\\phi = \\pi/2$: $A = \\sqrt{2}a$.",
+          "$\\phi = 2\\pi/3$: $\\cos\\phi = -1/2$, so $A = \\sqrt{a^2} = a$."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "The other matchings swap the $\\pi/2$ and $2\\pi/3$ results, or swap the constructive and destructive cases.",
+        "common_trap": "Taking $\\cos(2\\pi/3)$ as +1/2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Principle of superposition and reflection of waves",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about superposition and reflection of waves are correct?",
+      "statements": {
+        "A": "A wave reflected from a rigid boundary suffers a phase change of $\\pi$.",
+        "B": "A pulse reflected from a free end is inverted.",
+        "C": "The frequency of a wave does not change on reflection.",
+        "D": "After two waves overlap, each continues to travel unaffected.",
+        "E": "For destructive interference of waves with amplitudes $a_1$ and $a_2$, the resultant amplitude is $a_1 + a_2$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and C only",
+        "B, C and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Rigid end: phase change $\\pi$. Free end: no phase change. Frequency is unchanged on reflection. Superposed waves pass through each other unaltered.",
+        "steps": [
+          "A is true: a rigid boundary gives a phase change of $\\pi$.",
+          "B is false: a free end gives no phase change, so the pulse is not inverted.",
+          "C and D are true, as stated in the principle of superposition and the rules of reflection.",
+          "E is false: destructive interference gives $|a_1 - a_2|$."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Every other option includes B or E, both of which are false.",
+        "common_trap": "Mixing up the free-end and rigid-end behaviour.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t10_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Standing waves in strings and organ pipes; fundamental mode and harmonics",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A string 0.5 m long is fixed at both ends. Transverse waves travel on it at 200 m/s. What is its fundamental frequency?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "200 Hz",
+        "100 Hz",
+        "400 Hz",
+        "50 Hz"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a string fixed at both ends, $\\nu_1 = v/2L$.",
+        "steps": [
+          "$\\nu_1 = 200/(2\\times 0.5) = 200$ Hz."
+        ],
+        "final_answer": "Option (1): 200 Hz",
+        "why_not_others": "100 Hz uses the closed-pipe formula $v/4L$. 400 Hz uses $v/L$. 50 Hz uses $v/8L$.",
+        "common_trap": "Using the closed-pipe formula for a string.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t10_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Standing waves in strings and organ pipes; fundamental mode and harmonics",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A pipe 0.85 m long is closed at one end. The speed of sound is 340 m/s; neglect end correction. What is the frequency of its second overtone?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "300 Hz",
+        "200 Hz",
+        "500 Hz",
+        "400 Hz"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A closed pipe has only odd harmonics, so its second overtone is the 5th harmonic.",
+        "steps": [
+          "Fundamental $= v/4L = 340/3.4 = 100$ Hz.",
+          "The overtones are the 3rd and 5th harmonics, so the second overtone $= 5\\times 100 = 500$ Hz."
+        ],
+        "final_answer": "Option (3): 500 Hz",
+        "why_not_others": "300 Hz is the first overtone. 200 Hz is the fundamental of an open pipe of the same length. 400 Hz assumes even harmonics are present.",
+        "common_trap": "Taking the second overtone as the 3rd harmonic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t10_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Standing waves in strings and organ pipes; fundamental mode and harmonics",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A string 1.2 m long, fixed at both ends, vibrates at 250 Hz in a standing wave pattern with 4 antinodes. What is the speed of transverse waves on the string?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "300 m/s",
+        "200 m/s",
+        "150 m/s",
+        "75 m/s"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the nth harmonic, a string fixed at both ends has n antinodes and $L = n\\lambda/2$.",
+        "steps": [
+          "4 antinodes means n = 4.",
+          "$\\lambda = 2L/n = 2.4/4 = 0.6$ m.",
+          "$v = \\nu\\lambda = 250\\times 0.6 = 150$ m/s."
+        ],
+        "final_answer": "Option (3): 150 m/s",
+        "why_not_others": "300 m/s takes $\\lambda = 1.2$ m. 200 m/s treats the 4 as nodes, giving n = 3. 75 m/s takes each antinode as spanning only $\\lambda/4$.",
+        "common_trap": "Confusing the count of nodes with the count of antinodes.",
+        "time_saving_tip": "The number of loops equals the number of antinodes, and each loop is $\\lambda/2$ long."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t10_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Standing waves in strings and organ pipes; fundamental mode and harmonics",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The fundamental frequency of a pipe closed at one end is half that of an open pipe of the same length.",
+        "R": "In a standing sound wave, pressure nodes are located at displacement antinodes."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Closed pipe: $\\nu_1 = v/4L$. Open pipe: $\\nu_1 = v/2L$.",
+        "steps": [
+          "$v/4L$ is half of $v/2L$, so A is true.",
+          "R is a true statement about where pressure and displacement nodes lie.",
+          "A follows from the closed end being a node and the open end an antinode (L = $\\lambda/4$), not from the pressure–displacement relation."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) are out. R does not explain why the closed pipe's fundamental is halved, so option (1) is out.",
+        "common_trap": "Picking option (1) simply because both statements are true.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t10_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Standing waves in strings and organ pipes; fundamental mode and harmonics",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A pipe closed at one end, vibrating in its 7th harmonic, has 4 displacement nodes, counting the closed end.",
+        "II": "A standing wave transports energy from one end of the medium to the other at the wave speed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the pth harmonic, a closed pipe has $(p+1)/2$ nodes. A standing wave transports no net energy.",
+        "steps": [
+          "Nodes $= (7+1)/2 = 4$, so I is correct.",
+          "A standing wave transports no net energy, so II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II contradicts the basic property of standing waves, and Statement I is correct.",
+        "common_trap": "Counting 7 nodes for the 7th harmonic, or forgetting to count the closed end.",
+        "time_saving_tip": "Sketch the pattern: the closed end is N and the open end is A, with $\\lambda/4$ segments in between."
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t11_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Beats",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two tuning forks of frequencies 256 Hz and 260 Hz are sounded together. How many beats are heard per second?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2",
+        "4",
+        "258",
+        "516"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Beat frequency $= |\\nu_1 - \\nu_2|$.",
+        "steps": [
+          "$|260 - 256| = 4$ beats per second."
+        ],
+        "final_answer": "Option (2): 4",
+        "why_not_others": "2 is half the difference. 258 Hz is the frequency of the tone heard. 516 is the sum of the frequencies.",
+        "common_trap": "Confusing the beat frequency with the average tone frequency.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t11_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Beats",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An unknown tuning fork produces 6 beats per second with a standard fork of 384 Hz. When the unknown fork is loaded with a little wax, the number of beats per second decreases. What was the original frequency of the unknown fork?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "378 Hz",
+        "384 Hz",
+        "396 Hz",
+        "390 Hz"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Wax lowers frequency. If the beats then decrease, the unknown fork was the higher-frequency one.",
+        "steps": [
+          "Possible frequencies: $384 \\pm 6$, that is 390 Hz or 378 Hz.",
+          "Lowering the frequency reduces the beat count only if the unknown fork was above 384 Hz.",
+          "So the unknown frequency is 390 Hz."
+        ],
+        "final_answer": "Option (4): 390 Hz",
+        "why_not_others": "With 378 Hz, wax would increase the beats. 384 Hz would give no beats. 396 Hz uses twice the beat count.",
+        "common_trap": "Getting the wax logic backwards.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t11_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Beats",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two sources of frequencies 498 Hz and 504 Hz are sounded together. What is the time interval between two successive maxima of loudness?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1/12$ s",
+        "$1/3$ s",
+        "$1/6$ s",
+        "$1/501$ s"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Beat period $= 1/|\\nu_1 - \\nu_2|$.",
+        "steps": [
+          "Beat frequency $= 504 - 498 = 6$ Hz.",
+          "Beat period $= 1/6$ s."
+        ],
+        "final_answer": "Option (3): $1/6$ s",
+        "why_not_others": "$1/12$ s halves the period. $1/3$ s is the period of the envelope factor $\\cos(\\pi\\Delta\\nu t)$, which has two loudness maxima per cycle. $1/501$ s is the period of the tone heard.",
+        "common_trap": "Taking the period of $\\cos(\\pi\\Delta\\nu t)$ as the beat period.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t11_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Beats",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Number of beats per second for frequencies $\\nu_1$ and $\\nu_2$"
+          },
+          {
+            "label": "B",
+            "text": "Frequency of the tone actually heard"
+          },
+          {
+            "label": "C",
+            "text": "Loading a tuning fork with wax"
+          },
+          {
+            "label": "D",
+            "text": "Filing the prongs of a tuning fork"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Frequency is raised"
+          },
+          {
+            "label": "II",
+            "text": "$|\\nu_1 - \\nu_2|$"
+          },
+          {
+            "label": "III",
+            "text": "$(\\nu_1 + \\nu_2)/2$"
+          },
+          {
+            "label": "IV",
+            "text": "Frequency is lowered"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Beat frequency is $|\\nu_1-\\nu_2|$ and the tone heard is $\\nu_{av}$. Wax lowers a fork's frequency; filing raises it.",
+        "steps": [
+          "A matches II and B matches III.",
+          "C matches IV (wax lowers frequency) and D matches I (filing raises frequency)."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-IV, D-I",
+        "why_not_others": "The other options swap the beat and average frequencies, or reverse the wax and file effects.",
+        "common_trap": "Reversing the effects of wax and filing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u10_t11_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u10",
+      "topic": "Beats",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about beats are correct?",
+      "statements": {
+        "A": "The ear can distinguish beats only when the frequency difference is about 10 Hz or less.",
+        "B": "Sources of 300 Hz and 306 Hz together produce a tone of 303 Hz whose loudness rises and falls 6 times per second.",
+        "C": "If loading the unknown fork with wax increases the beat count, the unknown fork had the higher frequency.",
+        "D": "The beat period equals $1/|\\nu_1 - \\nu_2|$.",
+        "E": "Filing the prongs of a tuning fork lowers its frequency."
+      },
+      "match_lists": null,
+      "options": [
+        "A and D only",
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Beat frequency is $|\\nu_1-\\nu_2|$ and the tone heard is $\\nu_{av}$. Wax lowers frequency; filing raises it.",
+        "steps": [
+          "A is true: beats are audible only up to about 10 per second.",
+          "B is true: $\\nu_{av} = 303$ Hz and the beat frequency is 6 Hz.",
+          "C is false: an increase in beats means the unknown fork had the lower frequency.",
+          "D is true. E is false, because filing raises the frequency."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Option (1) misses the true statement B. Options (3) and (4) include the false statements C or E.",
+        "common_trap": "Inverting the wax-test conclusion.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

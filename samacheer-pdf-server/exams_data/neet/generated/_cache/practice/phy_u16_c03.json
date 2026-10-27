@@ -1,0 +1,625 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "A narrow illuminated slit acts as a line source of light. The shape of the wavefront emerging from it is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Cylindrical",
+        "Spherical",
+        "Plane",
+        "Elliptical"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The shape of a wavefront depends on the geometry of the source.",
+        "steps": [
+          "A point source gives spherical wavefronts.",
+          "A line source gives cylindrical wavefronts.",
+          "A source at infinity gives plane wavefronts.",
+          "A narrow slit is a line source, so its wavefront is cylindrical."
+        ],
+        "final_answer": "Option (1): Cylindrical",
+        "why_not_others": "Spherical wavefronts come from a point source. Plane wavefronts come from a very distant source. Elliptical wavefronts are not associated with any of these sources.",
+        "common_trap": "Assuming that every source produces spherical wavefronts.",
+        "time_saving_tip": "Remember the sequence point, line, infinity: spherical, cylindrical, plane."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "The intensity of a cylindrical wavefront from a line source is $I$ at a distance of 2 m from the source. Neglecting absorption, what is the intensity at a distance of 8 m?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$I/16$",
+        "$I/2$",
+        "$4I$",
+        "$I/4$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For cylindrical waves, intensity varies as $1/r$.",
+        "steps": [
+          "Use $I \\propto 1/r$ for a cylindrical wave.",
+          "$I'/I = r_1/r_2 = 2/8 = 1/4$.",
+          "Therefore $I' = I/4$."
+        ],
+        "final_answer": "Option (4): $I/4$",
+        "why_not_others": "$I/16$ applies the $1/r^2$ law, which holds only for spherical waves. $I/2$ uses a $1/\\sqrt{r}$ dependence. $4I$ inverts the ratio.",
+        "common_trap": "Applying the inverse-square law to a line source.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "A plane wavefront travels in glass of refractive index 1.5. According to Huygens' principle, what is the radius of a secondary wavelet $2 \\times 10^{-9}$ s after it starts from a point on the wavefront? (Speed of light in vacuum $= 3 \\times 10^8$ m/s)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 cm",
+        "90 cm",
+        "20 cm",
+        "40 cm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Secondary wavelets spread with the speed of light in the medium in which they travel.",
+        "steps": [
+          "The speed in glass is $v = c/n = 3\\times10^8/1.5 = 2\\times10^8$ m/s.",
+          "The radius is $r = vt = 2\\times10^8 \\times 2\\times10^{-9} = 0.4$ m.",
+          "So $r = 40$ cm."
+        ],
+        "final_answer": "Option (4): 40 cm",
+        "why_not_others": "60 cm uses the speed in vacuum. 90 cm multiplies $c$ by $n$. 20 cm takes half the distance travelled, confusing radius with diameter.",
+        "common_trap": "Using the speed of light in vacuum for wavelets inside a medium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Light from a very distant star reaching the earth can be treated as a beam of parallel rays.",
+        "R": "Rays of light are always parallel to the wavefront."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Rays are normal to wavefronts, and a distant source produces plane wavefronts.",
+        "steps": [
+          "A source at a very large distance produces plane wavefronts.",
+          "Rays are normal to a plane wavefront, so all of them are parallel to one another. A is true.",
+          "Rays are perpendicular to the wavefront, not parallel to it. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so any option that treats R as true is wrong. A is correct because a distant source gives plane wavefronts.",
+        "common_trap": "Confusing 'rays parallel to each other' with 'rays parallel to the wavefront'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In Huygens' construction, the new wavefront is the forward envelope of the secondary wavelets, which spread with the speed of the wave in that medium; the backward wavelets are ignored.",
+        "II": "If the distance from the source is doubled, the intensity of a spherical wave falls to one-fourth, whereas that of a cylindrical wave falls to one-half."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Huygens' principle, and the variation of intensity with distance for different wavefronts.",
+        "steps": [
+          "Statement I restates Huygens' construction: the forward envelope gives the new wavefront, the wavelets move with the wave speed in that medium, and backward wavelets are ignored. It is correct.",
+          "For a spherical wave, $I \\propto 1/r^2$, so doubling $r$ gives $I/4$.",
+          "For a cylindrical wave, $I \\propto 1/r$, so doubling $r$ gives $I/2$.",
+          "Statement II is therefore correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree exactly with the principle and with the intensity laws, so no option that marks either one incorrect can be right.",
+        "common_trap": "Thinking that the backward wavelets also form a wavefront, or using $1/r^2$ for every type of wave.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "When a light wave passes from air into glass, which of the following remains unchanged?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Wavelength",
+        "Frequency",
+        "Speed",
+        "Direction of propagation for oblique incidence"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Frequency is fixed by the source and does not change across a boundary.",
+        "steps": [
+          "Speed decreases in glass.",
+          "Wavelength changes in proportion to speed.",
+          "Frequency stays the same."
+        ],
+        "final_answer": "Option (2): Frequency",
+        "why_not_others": "Speed and wavelength both decrease in glass. For oblique incidence the ray bends towards the normal, so its direction changes.",
+        "common_trap": "Thinking that wavelength stays constant while frequency changes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "Light of wavelength 600 nm in air enters a medium of refractive index 1.5. What is its wavelength in the medium? (Take the refractive index of air as 1.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "900 nm",
+        "600 nm",
+        "267 nm",
+        "400 nm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\lambda_2 = \\lambda_1 n_1/n_2$, since frequency is unchanged.",
+        "steps": [
+          "$\\lambda_2 = 600 \\times 1/1.5$.",
+          "$\\lambda_2 = 400$ nm."
+        ],
+        "final_answer": "Option (4): 400 nm",
+        "why_not_others": "900 nm multiplies by $n$ instead of dividing. 600 nm assumes the wavelength does not change. 267 nm divides by $n^2$.",
+        "common_trap": "Assuming wavelength is unchanged in the way frequency is.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "In Huygens' construction for refraction, a plane wavefront meets a plane boundary at an angle of incidence of $60^\\circ$. The speed of light in the first medium is $\\sqrt{3}$ times its speed in the second medium. What is the angle of refraction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$90^\\circ$",
+        "$30^\\circ$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\sin i/\\sin r = v_1/v_2$",
+        "steps": [
+          "$\\sin r = \\sin 60^\\circ \\times v_2/v_1 = (\\sqrt{3}/2)(1/\\sqrt{3})$.",
+          "$\\sin r = 1/2$.",
+          "$r = 30^\\circ$."
+        ],
+        "final_answer": "Option (4): $30^\\circ$",
+        "why_not_others": "$60^\\circ$ ignores the change in speed. $90^\\circ$ wrongly treats this as the critical-angle case. $45^\\circ$ results from an error in the ratio.",
+        "common_trap": "Inverting the ratio to $v_2/v_1$ in Snell's law. This gives $\\sin r > 1$, which is impossible.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Ratio $\\sin i/\\sin r$ obtained from Huygens' construction"
+          },
+          {
+            "label": "B",
+            "text": "Wavelength of light in the second medium"
+          },
+          {
+            "label": "C",
+            "text": "Quantity unchanged when light crosses a boundary"
+          },
+          {
+            "label": "D",
+            "text": "Speed of light in a denser medium as predicted by the corpuscular theory"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Frequency"
+          },
+          {
+            "label": "II",
+            "text": "$\\lambda_1 n_1/n_2$"
+          },
+          {
+            "label": "III",
+            "text": "$v_1/v_2$"
+          },
+          {
+            "label": "IV",
+            "text": "Greater than in the rarer medium"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Snell's law from wave theory, and how the wavelength and frequency of light behave at a boundary.",
+        "steps": [
+          "A: $\\sin i/\\sin r = v_1/v_2$, so A-III.",
+          "B: $\\lambda_2 = \\lambda_1 n_1/n_2$, so B-II.",
+          "C: frequency is unchanged, so C-I.",
+          "D: Newton's corpuscular theory wrongly predicted a larger speed in a denser medium, so D-IV."
+        ],
+        "final_answer": "Option (2): A-III, B-II, C-I, D-IV",
+        "why_not_others": "The other matchings swap the Snell ratio with the wavelength expression, or confuse frequency with the corpuscular prediction.",
+        "common_trap": "Believing that the corpuscular theory predicted a smaller speed in a denser medium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about reflection and refraction explained by Huygens' principle are correct?",
+      "statements": {
+        "A": "Light bends towards the normal when it slows down on entering a medium.",
+        "B": "In reflection, the incident and reflected wavelets travel equal distances in equal times, which leads to $i = r$.",
+        "C": "The ratio $\\sin i/\\sin r$ is equal to $n_1/n_2$.",
+        "D": "Reflection changes the wavelength of light but not its frequency.",
+        "E": "Huygens' construction can also explain total internal reflection and the critical angle."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, B and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Laws of reflection and refraction derived from the propagation of secondary wavelets.",
+        "steps": [
+          "A is true: a lower speed in the second medium makes the ray bend towards the normal.",
+          "B is true: equal speeds in the same medium give congruent triangles, so $i = r$.",
+          "C is false: $\\sin i/\\sin r = n_2/n_1$.",
+          "D is false: reflection changes neither the speed, the frequency nor the wavelength.",
+          "E is true: Huygens' construction also explains TIR and the critical angle."
+        ],
+        "final_answer": "Option (4): A, B and E only",
+        "why_not_others": "The options containing C or D include a false statement. 'A and B only' leaves out the true statement E.",
+        "common_trap": "Inverting the ratio of refractive indices in Snell's law.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "In Young's double-slit experiment, light of wavelength 500 nm is used. The slit separation is 0.5 mm and the screen is 1 m away. What is the fringe width?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.5 mm",
+        "2 mm",
+        "1 mm",
+        "10 mm"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\beta = \\lambda D/d$",
+        "steps": [
+          "$\\beta = (500\\times10^{-9} \\times 1)/(0.5\\times10^{-3})$.",
+          "$\\beta = 1\\times10^{-3}$ m $= 1$ mm."
+        ],
+        "final_answer": "Option (3): 1 mm",
+        "why_not_others": "0.5 mm and 2 mm come from mixing up $d$ in the formula. 10 mm comes from a power-of-ten error in unit conversion.",
+        "common_trap": "Errors in converting nm and mm to metres.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "The fringe width in a Young's double-slit experiment performed in air is 0.6 mm. The whole apparatus is then immersed in water of refractive index $4/3$. What is the new fringe width?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.8 mm",
+        "0.6 mm",
+        "0.45 mm",
+        "0.34 mm"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In a medium the wavelength becomes $\\lambda/n$, so $\\beta' = \\beta/n$.",
+        "steps": [
+          "$\\beta' = 0.6/(4/3)$.",
+          "$\\beta' = 0.6 \\times 3/4 = 0.45$ mm."
+        ],
+        "final_answer": "Option (3): 0.45 mm",
+        "why_not_others": "0.8 mm multiplies by $n$. 0.6 mm ignores the medium. 0.34 mm divides by $n^2$.",
+        "common_trap": "Thinking that immersion increases the fringe width.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "In Young's double-slit experiment, the slit separation is 1 mm and the screen is 1 m away. One slit is covered with a thin transparent film of thickness 10 $\\mu$m and refractive index 1.5. What is the shift of the fringe pattern, and in which direction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 mm away from the covered slit",
+        "15 mm towards the covered slit",
+        "5 mm towards the covered slit",
+        "10 mm towards the covered slit"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Fringe shift $= (\\mu - 1)tD/d$, towards the covered slit.",
+        "steps": [
+          "Shift $= (1.5 - 1) \\times 10\\times10^{-6} \\times 1/(1\\times10^{-3})$.",
+          "Shift $= 5\\times10^{-3}$ m $= 5$ mm.",
+          "The extra optical path makes the pattern shift towards the covered slit."
+        ],
+        "final_answer": "Option (3): 5 mm towards the covered slit",
+        "why_not_others": "'Away' gives the wrong direction. 15 mm uses $\\mu$ in place of $(\\mu - 1)$. 10 mm leaves out the refractive-index factor completely.",
+        "common_trap": "Using $\\mu t$ instead of $(\\mu - 1)t$, or getting the direction of the shift wrong.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In Young's double-slit experiment, covering one slit with a thin transparent film does not change the fringe width.",
+        "R": "The film shifts the entire fringe pattern away from the covered slit."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A film over one slit shifts the pattern but does not change $\\beta = \\lambda D/d$.",
+        "steps": [
+          "$\\lambda$, $D$ and $d$ are unchanged, so $\\beta$ is unchanged. A is true.",
+          "The pattern shifts by $(\\mu - 1)tD/d$ towards the covered slit, not away from it. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R states the wrong direction of shift, so any option that treats R as true is wrong.",
+        "common_trap": "Believing that the film changes the fringe width, or that the pattern shifts away from the covered slit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In Young's double-slit experiment with two identical slits, the intensity at a point where the path difference is $\\lambda/3$ is one-fourth of the maximum intensity.",
+        "II": "If the intensities of two coherent interfering waves are in the ratio 9 : 1, the ratio of maximum to minimum intensity is 4 : 1."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$I = 4I_0\\cos^2(\\phi/2)$ and $I_{max}/I_{min} = ((\\sqrt{I_1}+\\sqrt{I_2})/(\\sqrt{I_1}-\\sqrt{I_2}))^2$",
+        "steps": [
+          "Statement I: $\\phi = (2\\pi/\\lambda)(\\lambda/3) = 2\\pi/3$.",
+          "$I = 4I_0\\cos^2(\\pi/3) = 4I_0 \\times 1/4 = I_0 = I_{max}/4$, so I is correct.",
+          "Statement II: $\\sqrt{I_1}:\\sqrt{I_2} = 3:1$.",
+          "$I_{max}/I_{min} = (4/2)^2 = 4$, so II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both calculations confirm the statements, so no option that marks either one incorrect can be right.",
+        "common_trap": "Using $\\cos^2\\phi$ instead of $\\cos^2(\\phi/2)$, or using the intensity ratio directly without taking square roots.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "Two sources of light are said to be coherent if they have:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The same frequency and a constant phase difference",
+        "The same amplitude but different frequencies",
+        "The same intensity, whatever their phase relation",
+        "The same frequency and a randomly varying phase difference"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Coherence requires the same frequency and a constant phase difference.",
+        "steps": [
+          "A constant phase difference keeps the interference pattern stationary.",
+          "This requires the same frequency together with a fixed phase relation."
+        ],
+        "final_answer": "Option (1): The same frequency and a constant phase difference",
+        "why_not_others": "Different frequencies or a randomly varying phase destroy coherence. Equal intensity alone does not make sources coherent.",
+        "common_trap": "Equating coherence with equal amplitude or equal intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "Two independent sodium lamps produce intensities $I$ and $4I$ at a point on a screen. What is the resultant intensity observed at that point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9I$",
+        "$I$",
+        "$5I$",
+        "$3I$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Intensities from incoherent sources simply add.",
+        "steps": [
+          "Independent lamps are incoherent.",
+          "$I_{res} = I + 4I = 5I$."
+        ],
+        "final_answer": "Option (3): $5I$",
+        "why_not_others": "$9I$ and $I$ are the coherent maximum $(\\sqrt{I}+\\sqrt{4I})^2$ and minimum $(\\sqrt{4I}-\\sqrt{I})^2$. $3I$ is the difference of the intensities.",
+        "common_trap": "Applying the coherent superposition formula to independent sources.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "Two coherent sources, each of intensity $I_0$, superpose at a point with a phase difference of $\\pi/3$. What is the resultant intensity at that point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4I_0$",
+        "$2I_0$",
+        "$I_0$",
+        "$3I_0$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$I = 4I_0\\cos^2(\\phi/2)$",
+        "steps": [
+          "$\\phi/2 = \\pi/6$.",
+          "$\\cos^2(\\pi/6) = 3/4$.",
+          "$I = 4I_0 \\times 3/4 = 3I_0$."
+        ],
+        "final_answer": "Option (4): $3I_0$",
+        "why_not_others": "$4I_0$ is the maximum, at $\\phi = 0$. $2I_0$ is the incoherent sum. $I_0$ uses $\\cos^2\\phi$ instead of $\\cos^2(\\phi/2)$.",
+        "common_trap": "Forgetting to halve the phase difference.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Young's double-slit arrangement"
+          },
+          {
+            "label": "B",
+            "text": "Colours of a thin oil film"
+          },
+          {
+            "label": "C",
+            "text": "Two independent sodium lamps"
+          },
+          {
+            "label": "D",
+            "text": "Laser"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Coherent sources by division of amplitude"
+          },
+          {
+            "label": "II",
+            "text": "Coherent sources by division of wavefront"
+          },
+          {
+            "label": "III",
+            "text": "Incoherent; intensities simply add"
+          },
+          {
+            "label": "IV",
+            "text": "Highly coherent source"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-II, B-III, C-I, D-IV"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Methods of producing coherent sources, and the distinction between coherent and incoherent sources.",
+        "steps": [
+          "YDSE divides the wavefront, so A-II.",
+          "Thin films divide the amplitude, so B-I.",
+          "Independent lamps are incoherent and their intensities add, so C-III.",
+          "A laser is highly coherent, so D-IV."
+        ],
+        "final_answer": "Option (3): A-II, B-I, C-III, D-IV",
+        "why_not_others": "The other matchings swap division of wavefront with division of amplitude, or treat lamps as coherent.",
+        "common_trap": "Mixing up division of wavefront (YDSE) with division of amplitude (thin films).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about sustained interference are correct?",
+      "statements": {
+        "A": "The two sources must be coherent.",
+        "B": "Waves of equal amplitude give zero minimum intensity and hence the best contrast.",
+        "C": "A Fresnel biprism produces coherent sources by division of amplitude.",
+        "D": "The phase of light from an ordinary bulb changes roughly every $10^{-10}$ s, so two such bulbs cannot produce an observable interference pattern.",
+        "E": "Wide slits placed far apart give the most clearly resolved fringes."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Conditions for sustained, well-contrasted interference.",
+        "steps": [
+          "A is true: coherence is essential.",
+          "B is true: equal amplitudes give $I_{min} = 0$.",
+          "C is false: a biprism divides the wavefront, not the amplitude.",
+          "D is true: rapid random phase changes make the pattern shift too fast to observe.",
+          "E is false: the slits should be narrow and closely spaced so that the fringes are wide."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "The options containing C or E include a false statement. 'A and B only' leaves out the true statement D.",
+        "common_trap": "Classifying the Fresnel biprism as a division-of-amplitude device.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

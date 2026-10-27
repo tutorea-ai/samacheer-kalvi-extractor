@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A coil of 100 turns is placed in a magnetic field. The magnetic flux through each turn decreases uniformly from $4\\ mWb$ to $1\\ mWb$ in $0.02\\ s$. What is the magnitude of the average emf induced in the coil?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.15\\ V$",
+        "$25\\ V$",
+        "$15\\ V$",
+        "$1.5\\ V$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Average induced emf $\\varepsilon_{avg} = N\\frac{\\Delta\\Phi}{\\Delta t}$ in magnitude.",
+        "steps": [
+          "Change in flux per turn: $\\Delta\\Phi = 4 - 1 = 3\\ mWb = 3\\times10^{-3}\\ Wb$.",
+          "$\\varepsilon = 100 \\times \\frac{3\\times10^{-3}}{0.02} = 15\\ V$."
+        ],
+        "final_answer": "Option (3): $15\\ V$",
+        "why_not_others": "$0.15\\ V$ ignores the number of turns. $25\\ V$ uses the sum of the fluxes, $5\\ mWb$, instead of their difference. $1.5\\ V$ is a powers-of-ten slip.",
+        "common_trap": "Using the sum of the initial and final flux instead of the change, or forgetting the factor N.",
+        "time_saving_tip": "Multiply N by $\\Delta\\Phi$ first: $100\\times 3\\ mWb = 0.3\\ Wb$, then divide by $0.02\\ s$."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "The magnetic flux through each turn of a 20-turn coil varies with time as $\\Phi = (3t^2 - 2t)\\times10^{-3}\\ Wb$, where t is in seconds. What is the magnitude of the emf induced in the coil at $t = 2\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\ V$",
+        "$0.08\\ V$",
+        "$0.16\\ V$",
+        "$0.01\\ V$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Instantaneous emf is $\\varepsilon = -N\\frac{d\\Phi}{dt}$, which depends on the slope of the flux, not on its value.",
+        "steps": [
+          "$\\frac{d\\Phi}{dt} = (6t - 2)\\times10^{-3}\\ Wb/s$.",
+          "At $t = 2\\ s$: $\\frac{d\\Phi}{dt} = 10\\times10^{-3}\\ Wb/s$.",
+          "$|\\varepsilon| = 20 \\times 10^{-2} = 0.2\\ V$."
+        ],
+        "final_answer": "Option (1): $0.2\\ V$",
+        "why_not_others": "$0.08\\ V$ uses the average rate $\\Phi(2)/2$ instead of the derivative. $0.16\\ V$ is $N\\Phi$ itself, not its rate of change. $0.01\\ V$ omits the 20 turns.",
+        "common_trap": "Dividing the flux by time instead of differentiating it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A coil of 200 turns and area $0.05\\ m^2$ is held with its plane perpendicular to a uniform magnetic field of $0.4\\ T$. It is then rotated so that its plane becomes parallel to the field, and the rotation takes $0.5\\ s$. What is the magnitude of the average emf induced?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16\\ V$",
+        "zero",
+        "$8\\ V$",
+        "$0.04\\ V$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\Phi = BA\\cos\\theta$, where $\\theta$ is measured between B and the normal to the coil.",
+        "steps": [
+          "Plane perpendicular to B means the normal is along B, so $\\theta = 0$ and $\\Phi_i = BA = 0.4\\times0.05 = 0.02\\ Wb$.",
+          "Plane parallel to B means $\\theta = 90^\\circ$, so $\\Phi_f = 0$.",
+          "$\\varepsilon_{avg} = N\\frac{\\Delta\\Phi}{\\Delta t} = 200\\times\\frac{0.02}{0.5} = 8\\ V$."
+        ],
+        "final_answer": "Option (3): $8\\ V$",
+        "why_not_others": "$16\\ V$ corresponds to a $180^\\circ$ rotation, where the flux reverses. Zero results from swapping the initial and final orientations, which wrongly gives no flux change. $0.04\\ V$ ignores N.",
+        "common_trap": "Measuring $\\theta$ from the plane of the coil instead of from its normal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A coil held at rest in a very strong, steady, uniform magnetic field has a large emf induced in it.",
+        "R": "The induced emf in a coil depends on the rate of change of the magnetic flux linked with it, not on the value of the flux."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Faraday's law: $\\varepsilon = -N\\frac{d\\Phi}{dt}$.",
+        "steps": [
+          "The field is steady and the coil is at rest, so the flux is constant and $\\frac{d\\Phi}{dt} = 0$.",
+          "The induced emf is therefore zero, however large the flux, so A is false.",
+          "R states Faraday's law correctly, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Believing that a large flux means a large emf.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the flux through a coil varies as $\\Phi = \\Phi_0\\cos\\omega t$, the induced emf is zero at the instants when the flux is maximum.",
+        "II": "An emf is induced in an open coil when the flux linked with it changes, even though no current flows in it."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Emf is the negative slope of the $\\Phi$–t graph. An emf exists even in an open circuit.",
+        "steps": [
+          "$\\varepsilon = -N\\frac{d\\Phi}{dt} = N\\Phi_0\\omega\\sin\\omega t$.",
+          "When $|\\cos\\omega t| = 1$ (maximum flux), $\\sin\\omega t = 0$, so the emf is zero. Statement I is correct.",
+          "The emf is induced whenever the flux changes. A current needs a closed path, but the emf does not. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from Faraday's law, so any option calling either one incorrect is wrong.",
+        "common_trap": "Thinking the emf is maximum when the flux is maximum, or that an emf needs a closed circuit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "A straight conducting rod of length $0.5\\ m$ moves with a speed of $4\\ m/s$ perpendicular to a uniform magnetic field of $0.2\\ T$. The rod, its velocity and the field are mutually perpendicular. What is the emf induced across the ends of the rod?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\ V$",
+        "$1.6\\ V$",
+        "$0.4\\ V$",
+        "$0.025\\ V$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Motional emf $\\varepsilon = Blv$.",
+        "steps": [
+          "$\\varepsilon = 0.2\\times0.5\\times4$.",
+          "$\\varepsilon = 0.4\\ V$."
+        ],
+        "final_answer": "Option (3): $0.4\\ V$",
+        "why_not_others": "$0.2\\ V$ wrongly includes the factor $\\frac{1}{2}$ from the rotating-rod formula. $1.6\\ V$ is $Bv/l$. $0.025\\ V$ is $Bl/v$.",
+        "common_trap": "Mixing up the translating-rod formula with the rotating-rod formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A coil of 100 turns has a total resistance of $20\\ \\Omega$. The flux through each turn decreases from $5\\ mWb$ to $1\\ mWb$ in $0.5\\ s$. What total charge flows through the coil?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\ C$",
+        "$0.03\\ C$",
+        "$0.02\\ C$",
+        "$2\\times10^{-4}\\ C$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Induced charge $Q = \\frac{N\\Delta\\Phi}{R}$, which is independent of the time taken.",
+        "steps": [
+          "$\\Delta\\Phi = 4\\times10^{-3}\\ Wb$ per turn.",
+          "$Q = \\frac{100\\times4\\times10^{-3}}{20} = 0.02\\ C$.",
+          "The time of $0.5\\ s$ does not affect the charge."
+        ],
+        "final_answer": "Option (3): $0.02\\ C$",
+        "why_not_others": "$0.04\\ C$ is the current $I = \\varepsilon/R = 0.04\\ A$ wrongly reported as the charge. $0.03\\ C$ uses the sum of the fluxes, $6\\ mWb$. $2\\times10^{-4}\\ C$ ignores N.",
+        "common_trap": "Thinking that the charge depends on how fast the flux changes.",
+        "time_saving_tip": "Ignore the time entirely: $Q = N\\Delta\\Phi/R$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A conducting rod of length $0.4\\ m$ slides at a constant speed of $5\\ m/s$ on two parallel rails joined by a resistor of $2\\ \\Omega$. A uniform magnetic field of $0.5\\ T$ is perpendicular to the plane of the rails. Neglect all other resistances and friction. What power must the external agent supply to keep the rod moving at constant speed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.1\\ W$",
+        "$2\\ W$",
+        "$0.5\\ W$",
+        "$1\\ W$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$P = \\frac{B^2l^2v^2}{R} = \\frac{\\varepsilon^2}{R}$.",
+        "steps": [
+          "$\\varepsilon = Blv = 0.5\\times0.4\\times5 = 1\\ V$.",
+          "$P = \\frac{\\varepsilon^2}{R} = \\frac{1}{2} = 0.5\\ W$.",
+          "Check: $F = \\frac{B^2l^2v}{R} = 0.1\\ N$, and $Fv = 0.5\\ W$."
+        ],
+        "final_answer": "Option (3): $0.5\\ W$",
+        "why_not_others": "$0.1\\ W$ treats the force value (0.1 N) as the power, forgetting to multiply by v. $2\\ W$ uses $\\varepsilon^2R$. $1\\ W$ forgets to divide by R.",
+        "common_trap": "Confusing the retarding force with the power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Emf in a straight rod moving perpendicular to B"
+          },
+          {
+            "label": "B",
+            "text": "Emf across a rod rotating about one end in a perpendicular field"
+          },
+          {
+            "label": "C",
+            "text": "Total charge induced in a coil of resistance R"
+          },
+          {
+            "label": "D",
+            "text": "Power dissipated in a circuit of resistance R"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{1}{2}B\\omega l^2$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{\\varepsilon^2}{R}$"
+          },
+          {
+            "label": "III",
+            "text": "$Blv$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{N\\Delta\\Phi}{R}$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-IV, B-I, C-III, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Standard results for motional emf, induced charge and dissipated power.",
+        "steps": [
+          "Translating rod: $Blv$, so A-III.",
+          "Rotating rod: $\\frac{1}{2}B\\omega l^2$, so B-I.",
+          "Charge: $N\\Delta\\Phi/R$, so C-IV.",
+          "Power: $\\varepsilon^2/R$, so D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other matchings swap the two emf formulas or swap the charge and power expressions.",
+        "common_trap": "Swapping $Blv$ and $\\frac{1}{2}B\\omega l^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about induced emf and Lenz's law are correct?",
+      "statements": {
+        "A": "When the north pole of a magnet approaches a coil, the near face of the coil behaves as a north pole.",
+        "B": "A magnet moving away from a coil is repelled by the coil.",
+        "C": "Lenz's law is a consequence of the conservation of energy.",
+        "D": "For a rod sliding at constant speed v on rails connected through a resistance R, the retarding force on the rod is proportional to $v^2$.",
+        "E": "If the induced emf in a resistor varies as $\\cos t$, the power dissipated varies as $\\cos^2 t$ and is never negative."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Lenz's law opposes the change in flux, and $P = \\varepsilon^2/R$.",
+        "steps": [
+          "A: correct. The coil opposes the approaching magnet, so its near face becomes a north pole.",
+          "B: incorrect. A receding magnet is attracted, not repelled.",
+          "C: correct. The work done against the opposing force appears as electrical energy.",
+          "D: incorrect. $F = \\frac{B^2l^2v}{R}$, which is proportional to v. It is the power that is proportional to $v^2$.",
+          "E: correct. $P = \\varepsilon^2/R$ varies as $\\cos^2 t$ and is never negative."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Options containing B or D include a false statement. 'A and C only' leaves out the true statement E.",
+        "common_trap": "Confusing the force, which is proportional to v, with the power, which is proportional to $v^2$; and thinking a receding magnet is repelled.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "Why is the core of a transformer made of thin laminated sheets instead of a solid block?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To increase the magnetic flux linked with the secondary coil",
+        "To increase the resistance of the eddy-current paths and so reduce heating losses",
+        "To decrease the resistance of the core so that heat is conducted away quickly",
+        "To increase the eddy currents so that the coupling between the coils improves"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Lamination raises the resistance of the eddy-current paths, which reduces eddy-current heating.",
+        "steps": [
+          "Changing flux in the core sets up eddy currents, which waste energy as heat.",
+          "Laminations increase the resistance of the eddy-current paths, so the eddy currents and the heat loss are smaller."
+        ],
+        "final_answer": "Option (2): To increase the resistance of the eddy-current paths and so reduce heating losses",
+        "why_not_others": "Lamination does not increase the flux. Lowering the resistance would increase the eddy currents. Larger eddy currents mean more loss, not better coupling.",
+        "common_trap": "Thinking that eddy currents are useful in a transformer core.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A small bar magnet is dropped along the axis of a long vertical copper tube. Neglecting air resistance, which statement best describes its motion inside the tube?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It falls freely with acceleration g, because copper is not magnetic",
+        "It falls with acceleration less than g and can reach a terminal speed",
+        "It falls with acceleration greater than g, because the tube attracts it downward",
+        "It remains suspended at rest inside the tube"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Eddy currents induced in the tube oppose the relative motion (Lenz's law).",
+        "steps": [
+          "The falling magnet changes the flux through the tube walls, inducing eddy currents.",
+          "These currents produce a retarding force that grows with the speed of the magnet.",
+          "So the acceleration is less than g, and the magnet can reach a terminal speed."
+        ],
+        "final_answer": "Option (2): It falls with acceleration less than g and can reach a terminal speed",
+        "why_not_others": "Eddy currents arise whether or not the tube is magnetic. They oppose the motion and never aid it. A force that opposes motion cannot hold the magnet at rest.",
+        "common_trap": "Assuming that a non-magnetic metal has no effect on a moving magnet.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Two pendulums have bobs made of identical copper plates, except that one plate is solid and the other has several slots cut in it. Both swing through the gap between the poles of a strong magnet. Which observation is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The slotted plate comes to rest sooner, because the slots concentrate the eddy currents",
+        "The solid plate comes to rest sooner, because larger eddy currents flow in it",
+        "Both come to rest at the same time, because they are made of the same metal",
+        "The solid plate swings more freely, because copper is not attracted by the magnet"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Slots increase the resistance of the eddy-current paths, which reduces the damping.",
+        "steps": [
+          "Strong eddy currents circulate in the solid plate and oppose its motion.",
+          "Slots break the current loops, so the eddy currents are weaker and the plate swings more freely.",
+          "The solid plate is therefore damped faster."
+        ],
+        "final_answer": "Option (2): The solid plate comes to rest sooner, because larger eddy currents flow in it",
+        "why_not_others": "Slots reduce the eddy currents rather than concentrating them. The geometry of the plate matters, not just the material. Damping comes from induced currents, not from magnetic attraction.",
+        "common_trap": "Ignoring the role of the slots.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Eddy currents in the core of a transformer are desirable because they increase its efficiency.",
+        "R": "Eddy currents produce heating in the conductor in which they circulate."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Eddy currents in transformer cores waste energy as heat.",
+        "steps": [
+          "R is true: eddy currents cause heating.",
+          "This heating is an energy loss, so eddy currents lower the efficiency of a transformer. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Mixing up the useful applications of eddy currents, such as furnaces, with their harmful effect in cores.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Eddy currents aid the motion of a conductor moving through a magnetic field, which is why they are used for magnetic braking.",
+        "II": "Cutting slots in a metal plate decreases the resistance to eddy currents and therefore increases the electromagnetic damping of the plate."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Eddy currents oppose motion (Lenz's law). Slots increase resistance and reduce damping.",
+        "steps": [
+          "I: Eddy currents oppose the motion; this opposition is what makes braking possible. Statement I is incorrect.",
+          "II: Slots increase the resistance of the eddy-current paths, which reduces the damping. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement reverses the correct physics, so neither is correct.",
+        "common_trap": "Accepting the correct application named in each statement without checking the reasoning given for it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A long solenoid has a self-inductance of $2\\ mH$. It is rewound with twice the number of turns on the same length and the same radius, with no core. What is its new self-inductance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\ mH$",
+        "$8\\ mH$",
+        "$16\\ mH$",
+        "$1\\ mH$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$L = \\frac{\\mu_0N^2A}{l}$, so $L \\propto N^2$.",
+        "steps": [
+          "Doubling N with the same A and l multiplies L by $2^2 = 4$.",
+          "$L' = 4\\times2 = 8\\ mH$."
+        ],
+        "final_answer": "Option (2): $8\\ mH$",
+        "why_not_others": "$4\\ mH$ assumes L is proportional to N. $16\\ mH$ assumes L is proportional to $N^3$. $1\\ mH$ assumes L is inversely proportional to N.",
+        "common_trap": "Taking L to be directly proportional to the number of turns.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "An emf of $12\\ V$ is induced in a coil when the current through it changes at a rate of $40\\ A/s$. How much magnetic energy is stored in the coil when it carries a steady current of $2\\ A$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.6\\ J$",
+        "$1.2\\ J$",
+        "$0.3\\ J$",
+        "$0.15\\ J$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$|\\varepsilon| = L\\frac{dI}{dt}$ and $U = \\frac{1}{2}LI^2$.",
+        "steps": [
+          "$L = \\frac{12}{40} = 0.3\\ H$.",
+          "$U = \\frac{1}{2}\\times0.3\\times2^2 = 0.6\\ J$."
+        ],
+        "final_answer": "Option (1): $0.6\\ J$",
+        "why_not_others": "$1.2\\ J$ omits the factor $\\frac{1}{2}$. $0.3\\ J$ uses I instead of $I^2$. $0.15\\ J$ uses half the current, $I = 1\\ A$, in $\\frac{1}{2}LI^2$.",
+        "common_trap": "Forgetting either the factor $\\frac{1}{2}$ or the square on I.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Inductors of $2\\ mH$ and $6\\ mH$ are connected in parallel. The total current entering the combination increases at $8\\ A/s$. Neglecting mutual inductance, at what rate is the current through the $2\\ mH$ inductor increasing?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\ A/s$",
+        "$4\\ A/s$",
+        "$6\\ A/s$",
+        "$8\\ A/s$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Parallel inductors have the same emf across them, so the rates of change of current divide inversely as L.",
+        "steps": [
+          "$L_{eq} = \\frac{2\\times6}{2+6} = 1.5\\ mH$.",
+          "Common emf: $1.5\\times10^{-3}\\times8 = 12\\ mV$.",
+          "For the $2\\ mH$ inductor: $\\frac{dI_1}{dt} = \\frac{12\\times10^{-3}}{2\\times10^{-3}} = 6\\ A/s$."
+        ],
+        "final_answer": "Option (3): $6\\ A/s$",
+        "why_not_others": "$2\\ A/s$ divides the rate in direct proportion to L (it is the rate in the $6\\ mH$ inductor). $4\\ A/s$ assumes an equal split, which holds only for equal inductances. $8\\ A/s$ is the total rate.",
+        "common_trap": "Splitting the current equally or in direct proportion to L.",
+        "time_saving_tip": "The rates divide in the ratio $6:2 = 3:1$, so the $2\\ mH$ inductor gets $\\frac{3}{4}\\times8 = 6\\ A/s$."
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Self-inductance of a long solenoid"
+          },
+          {
+            "label": "B",
+            "text": "Mutual inductance of two coaxial solenoids"
+          },
+          {
+            "label": "C",
+            "text": "Energy stored in an inductor"
+          },
+          {
+            "label": "D",
+            "text": "Magnetic energy density"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{1}{2}LI^2$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{B^2}{2\\mu_0}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\mu_0 n^2\\pi r^2 l$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\mu_0 n_1 n_2\\pi r_1^2 l$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Standard inductance and energy formulas.",
+        "steps": [
+          "Solenoid L: $\\mu_0n^2\\pi r^2l$, so A-III.",
+          "Coaxial M: $\\mu_0n_1n_2\\pi r_1^2l$, so B-IV.",
+          "Stored energy: $\\frac{1}{2}LI^2$, so C-I.",
+          "Energy density: $\\frac{B^2}{2\\mu_0}$, so D-II."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-I, D-II",
+        "why_not_others": "The other matchings swap L with M, or swap the total energy with the energy density.",
+        "common_trap": "Confusing the total stored energy with the energy per unit volume.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about self and mutual inductance are correct?",
+      "statements": {
+        "A": "The self-inductance of a coil depends on the current flowing through it.",
+        "B": "Inserting a core of relative permeability $\\mu_r$ into a solenoid multiplies its self-inductance by $\\mu_r$.",
+        "C": "For any pair of coils, $M_{12} = M_{21}$.",
+        "D": "For very tightly wound coils, the coupling coefficient k can exceed 1.",
+        "E": "When two inductors are in series and mutual inductance is neglected, the emfs across them are in proportion to their inductances."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and C only",
+        "B, C and E only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "L depends only on geometry and the core material; $k \\le 1$; series inductors carry the same current.",
+        "steps": [
+          "A: incorrect. L depends only on the geometry and the core, not on the current.",
+          "B: correct. A core of relative permeability $\\mu_r$ multiplies L by $\\mu_r$.",
+          "C: correct. Mutual inductance is reciprocal.",
+          "D: incorrect. The coupling coefficient satisfies $0 \\le k \\le 1$.",
+          "E: correct. The same $dI/dt$ flows through both, so each emf $L\\,dI/dt$ is proportional to L."
+        ],
+        "final_answer": "Option (3): B, C and E only",
+        "why_not_others": "Options containing A or D include a false statement. 'B and C only' leaves out the true statement E.",
+        "common_trap": "Thinking that L changes with the current, or that k can exceed 1.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

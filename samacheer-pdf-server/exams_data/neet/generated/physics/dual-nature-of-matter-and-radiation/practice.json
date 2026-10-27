@@ -1,0 +1,597 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u17",
+  "slug": "dual-nature-of-matter-and-radiation",
+  "questions": [
+    {
+      "q_id": "neet_phy_u17_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Dual nature of radiation",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The intensity of a monochromatic light beam is doubled while its frequency is kept the same. What happens to the energy of each photon in the beam?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It remains unchanged",
+        "It doubles",
+        "It becomes half",
+        "It becomes four times"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Photon energy $E = h\\nu$ depends only on frequency, not on intensity.",
+        "steps": [
+          "Each photon has energy $E = h\\nu$.",
+          "The frequency is unchanged, so $E$ per photon is unchanged.",
+          "Doubling the intensity doubles the number of photons per second."
+        ],
+        "final_answer": "Option (1): It remains unchanged",
+        "why_not_others": "Options 2, 3 and 4 assume that intensity changes the energy per photon. Intensity changes only the photon flux.",
+        "common_trap": "Linking higher intensity to more energetic photons.",
+        "time_saving_tip": "Intensity changes the number of photons; frequency changes the energy per photon."
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Dual nature of radiation",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A monochromatic source of power $6.4$ W emits light of wavelength $620$ nm. How many photons does it emit per second? (Take $hc = 1240$ eV nm and $1$ eV $= 1.6 \\times 10^{-19}$ J)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4 \\times 10^{19}$",
+        "$1 \\times 10^{19}$",
+        "$2 \\times 10^{18}$",
+        "$2 \\times 10^{19}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Number of photons per second: $N = P/E$, where $E = hc/\\lambda$.",
+        "steps": [
+          "Photon energy: $E = 1240/620 = 2$ eV.",
+          "In joules: $E = 2 \\times 1.6 \\times 10^{-19} = 3.2 \\times 10^{-19}$ J.",
+          "$N = 6.4 / (3.2 \\times 10^{-19}) = 2 \\times 10^{19}$ per second."
+        ],
+        "final_answer": "Option (4): $2 \\times 10^{19}$",
+        "why_not_others": "$4 \\times 10^{19}$ comes from taking the photon energy as $1$ eV. $1 \\times 10^{19}$ comes from taking it as $4$ eV, i.e. doubling it by mistake. $2 \\times 10^{18}$ is a power-of-ten slip.",
+        "common_trap": "Dividing power in watts by photon energy in eV without converting to joules.",
+        "time_saving_tip": "Use $E(\\text{eV}) = 1240/\\lambda(\\text{nm})$ first, then convert to joules."
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Dual nature of radiation",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A photon travelling in vacuum has a linear momentum of $1.6 \\times 10^{-27}$ kg m s$^{-1}$. What is its energy? (Take $c = 3 \\times 10^8$ m s$^{-1}$ and $1$ eV $= 1.6 \\times 10^{-19}$ J)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.5$ eV",
+        "$6$ eV",
+        "$3$ eV",
+        "$4.8$ eV"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a photon, $p = E/c$, so $E = pc$.",
+        "steps": [
+          "$E = pc = 1.6 \\times 10^{-27} \\times 3 \\times 10^8 = 4.8 \\times 10^{-19}$ J.",
+          "In eV: $4.8 \\times 10^{-19} / 1.6 \\times 10^{-19} = 3$ eV."
+        ],
+        "final_answer": "Option (3): $3$ eV",
+        "why_not_others": "$1.5$ eV uses $E = pc/2$, a particle-style kinetic energy formula. $6$ eV uses $E = 2pc$. $4.8$ eV reads the joule value as eV without converting.",
+        "common_trap": "Applying $K = p^2/2m$ or $pv/2$ to a photon, which has zero rest mass.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Dual nature of radiation",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A beam of photons passing through a uniform magnetic field perpendicular to its direction of motion is deflected from its path.",
+        "R": "Photons are electrically neutral particles."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Photons carry no charge, so electric and magnetic fields do not deflect them.",
+        "steps": [
+          "Photons are electrically neutral, so R is true.",
+          "A neutral particle feels no magnetic force, so the beam goes undeflected and A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so the options claiming A is true are ruled out.",
+        "common_trap": "Assuming any moving particle with momentum is deflected by a magnetic field.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Dual nature of radiation",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Of two monochromatic sources emitting the same power, the one with the longer wavelength emits more photons per second.",
+        "II": "If the frequency of a photon is doubled, its momentum is also doubled."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$N = P\\lambda/hc$ and $p = h\\nu/c$.",
+        "steps": [
+          "At equal power, $N \\propto \\lambda$, so the longer wavelength source emits more photons per second. Statement I is correct.",
+          "$p = E/c = h\\nu/c$, so $p \\propto \\nu$. Doubling $\\nu$ doubles $p$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Each statement follows directly from the photon relations, so no option that marks either one incorrect can hold.",
+        "common_trap": "Thinking that longer-wavelength (lower-energy) light means fewer photons at the same power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Photoelectric effect; Hertz and Lenard's observations",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What did Hertz observe in his 1887 experiments that first pointed to the photoelectric effect?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Infrared light falling on the electrodes stopped sparks from forming",
+        "X-rays were emitted when sparks crossed the gap",
+        "Electrons were emitted from the electrodes only after a long exposure to visible light",
+        "Ultraviolet light falling on the electrodes of a spark gap made sparks easier to produce"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Hertz found that ultraviolet light helps spark discharge across a gap.",
+        "steps": [
+          "Hertz shone ultraviolet light on the electrodes of a spark gap.",
+          "Sparks were produced more easily, because electrons were emitted from the electrodes."
+        ],
+        "final_answer": "Option (4): Ultraviolet light falling on the electrodes of a spark gap made sparks easier to produce",
+        "why_not_others": "The infrared and X-ray options are not Hertz's observations. Emission is instantaneous, not delayed.",
+        "common_trap": "Confusing the discovery with later quantitative studies, or assuming a time lag.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Photoelectric effect; Hertz and Lenard's observations",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a photoelectric experiment, the intensity of the incident light is increased while its frequency (above threshold) is kept constant. Which of the following is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Saturation current increases; stopping potential remains unchanged",
+        "Saturation current and stopping potential both increase",
+        "Saturation current remains unchanged; stopping potential increases",
+        "Saturation current and stopping potential both remain unchanged"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Intensity controls the number of photoelectrons. Frequency and the metal fix the stopping potential.",
+        "steps": [
+          "Higher intensity means more photons per second, so more electrons are emitted and the saturation current rises.",
+          "The energy per photon is unchanged, so $K_{max}$, and hence $V_0$, stays the same."
+        ],
+        "final_answer": "Option (1): Saturation current increases; stopping potential remains unchanged",
+        "why_not_others": "Option 2 wrongly links $V_0$ to intensity. Option 3 reverses the roles of intensity and frequency. Option 4 ignores the larger number of photons.",
+        "common_trap": "Believing that brighter light gives more energetic electrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Photoelectric effect; Hertz and Lenard's observations",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A metal of threshold frequency $\\nu_0$ is illuminated with extremely dim light of frequency $1.5\\nu_0$. When are photoelectrons emitted?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "After a delay, while the electrons accumulate enough energy from the weak light",
+        "Practically instantaneously, within about $10^{-9}$ s",
+        "Never, because the intensity is too low",
+        "Only after the intensity is raised above a minimum threshold intensity"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Above threshold, emission is instantaneous even for very dim light.",
+        "steps": [
+          "The frequency $1.5\\nu_0$ is above $\\nu_0$, so each photon can free an electron.",
+          "Each photon delivers its energy at once, so there is no time lag (within about $10^{-9}$ s)."
+        ],
+        "final_answer": "Option (2): Practically instantaneously, within about $10^{-9}$ s",
+        "why_not_others": "Option 1 is the failed wave-theory prediction. There is no threshold intensity, so options 3 and 4 are wrong. Low intensity only reduces the current.",
+        "common_trap": "Expecting a time lag for weak light, as wave theory predicts.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Photoelectric effect; Hertz and Lenard's observations",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Saturation photocurrent"
+          },
+          {
+            "label": "B",
+            "text": "Stopping potential"
+          },
+          {
+            "label": "C",
+            "text": "Threshold frequency"
+          },
+          {
+            "label": "D",
+            "text": "Time lag between incidence of light and emission"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Increases with intensity at fixed frequency"
+          },
+          {
+            "label": "II",
+            "text": "Depends on frequency of light and the metal, not on intensity"
+          },
+          {
+            "label": "III",
+            "text": "Characteristic of the metal alone"
+          },
+          {
+            "label": "IV",
+            "text": "Practically zero (about $10^{-9}$ s or less)"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are Lenard's experimental observations on the photoelectric effect.",
+        "steps": [
+          "Saturation current depends on intensity: A-I.",
+          "Stopping potential depends on frequency and the metal: B-II.",
+          "Threshold frequency is a property of the metal: C-III.",
+          "Emission is instantaneous: D-IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option 2 swaps current and stopping potential. Option 3 makes $V_0$ independent of frequency. Option 4 links the time lag to intensity.",
+        "common_trap": "Thinking that stopping potential depends on intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Photoelectric effect; Hertz and Lenard's observations",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the photoelectric effect are correct?",
+      "statements": {
+        "A": "Caesium and potassium show the photoelectric effect even with visible light.",
+        "B": "Zinc and magnesium need ultraviolet light to show the photoelectric effect.",
+        "C": "Wave theory predicts that the maximum kinetic energy of photoelectrons should increase with the intensity of light.",
+        "D": "Photocurrent versus potential curves taken at the same frequency but different intensities cut the potential axis at different stopping potentials.",
+        "E": "At the same intensity, light of higher frequency gives a larger magnitude of stopping potential, while the saturation current stays about the same."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and E only",
+        "C, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are the experimental observations, and the corresponding wave-theory prediction, for the photoelectric effect.",
+        "steps": [
+          "A and B are true: alkali metals respond to visible light, while Zn, Cd and Mg need ultraviolet.",
+          "C is true: wave theory predicts that kinetic energy depends on intensity, which experiment contradicts.",
+          "D is false: at the same frequency, all the curves meet the axis at the same $-V_0$.",
+          "E is true: higher frequency gives a larger $|V_0|$ with about the same saturation current."
+        ],
+        "final_answer": "Option (2): A, B, C and E only",
+        "why_not_others": "Options 1 and 3 include the false statement D. Option 4 leaves out the true statement B.",
+        "common_trap": "Marking C false by confusing what wave theory predicts with what is actually observed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Einstein's photoelectric equation; particle nature of light",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Photons of energy $5.0$ eV fall on a metal of work function $2.0$ eV. What is the stopping potential?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7$ V",
+        "$2.5$ V",
+        "$5$ V",
+        "$3$ V"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$eV_0 = h\\nu - \\phi_0$.",
+        "steps": [
+          "$K_{max} = 5.0 - 2.0 = 3.0$ eV.",
+          "$V_0 = K_{max}/e = 3$ V."
+        ],
+        "final_answer": "Option (4): $3$ V",
+        "why_not_others": "$7$ V adds the work function instead of subtracting it. $2.5$ V divides the two energies. $5$ V ignores the work function.",
+        "common_trap": "Equating the stopping potential to the photon energy.",
+        "time_saving_tip": "With energies in eV, $V_0$ in volts equals $K_{max}$ in eV."
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Einstein's photoelectric equation; particle nature of light",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The threshold wavelength of a metal is $620$ nm. Light of wavelength $310$ nm falls on it. What is the stopping potential? (Take $hc = 1240$ eV nm)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4$ V",
+        "$6$ V",
+        "$2$ V",
+        "$0.5$ V"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$eV_0 = hc\\left(\\frac{1}{\\lambda} - \\frac{1}{\\lambda_0}\\right)$.",
+        "steps": [
+          "Photon energy: $1240/310 = 4$ eV.",
+          "Work function: $1240/620 = 2$ eV.",
+          "$V_0 = 4 - 2 = 2$ V."
+        ],
+        "final_answer": "Option (3): $2$ V",
+        "why_not_others": "$4$ V ignores the work function. $6$ V adds the two energies. $0.5$ V takes the ratio of the energies inverted.",
+        "common_trap": "Forgetting to subtract the work function obtained from the threshold wavelength.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Einstein's photoelectric equation; particle nature of light",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Photons of energy $3$ eV eject photoelectrons with maximum kinetic energy $1$ eV from a metal. If the frequency of the incident light is doubled, what is the new maximum kinetic energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4$ eV",
+        "$2$ eV",
+        "$1$ eV",
+        "$6$ eV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$K_{max} = h\\nu - \\phi_0$ is linear in $\\nu$ but not proportional to it.",
+        "steps": [
+          "$\\phi_0 = 3 - 1 = 2$ eV.",
+          "The new photon energy is $6$ eV.",
+          "New $K_{max} = 6 - 2 = 4$ eV."
+        ],
+        "final_answer": "Option (1): $4$ eV",
+        "why_not_others": "$2$ eV assumes $K_{max} \\propto \\nu$. $1$ eV assumes no change. $6$ eV ignores the work function.",
+        "common_trap": "Doubling $K_{max}$ when the frequency is doubled.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Einstein's photoelectric equation; particle nature of light",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Increasing the intensity of light of a fixed frequency above threshold increases the photocurrent but does not change the maximum kinetic energy of the photoelectrons.",
+        "R": "Most photoelectrons are emitted with kinetic energy less than $K_{max}$ because they lose energy inside the metal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Intensity changes only the number of photons, while the energy per photon fixes $K_{max}$.",
+        "steps": [
+          "A is true: more photons give more electrons, but each photon still has energy $h\\nu$.",
+          "R is true: electrons lose energy inside the metal before escaping.",
+          "R explains the spread of electron energies, not why intensity leaves $K_{max}$ unchanged."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is unrelated to the effect of intensity, so option 1 fails. Both statements are true, so options 3 and 4 fail.",
+        "common_trap": "Accepting any true reason as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Einstein's photoelectric equation; particle nature of light",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Two metals with threshold wavelengths $500$ nm and $250$ nm are both illuminated with light of wavelength $200$ nm. The metal with threshold wavelength $500$ nm gives the larger stopping potential.",
+        "II": "The slope of the stopping potential versus frequency graph is larger for a metal with a larger work function."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$V_0 = \\frac{h}{e}\\nu - \\frac{\\phi_0}{e}$: the slope $h/e$ is universal, and a smaller $\\phi_0$ gives a larger $V_0$.",
+        "steps": [
+          "A larger $\\lambda_0$ means a smaller $\\phi_0 = hc/\\lambda_0$, so the $500$ nm metal has the smaller work function and the larger $V_0$. Statement I is correct.",
+          "The slope is $h/e$ for every metal, and the lines are parallel. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II contradicts the universal slope $h/e$, and Statement I follows from $\\phi_0 = hc/\\lambda_0$.",
+        "common_trap": "Thinking that the slope of the $V_0$ vs $\\nu$ graph depends on the metal.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

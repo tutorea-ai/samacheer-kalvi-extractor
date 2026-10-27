@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Which of the following elements has the highest electronegativity on the Pauling scale?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Oxygen",
+        "Chlorine",
+        "Nitrogen",
+        "Fluorine"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Fluorine is the most electronegative element, with a Pauling value of 4.0.",
+        "steps": [
+          "Recall the Pauling values: F = 4.0, O = 3.5, N = Cl = 3.0.",
+          "The highest value belongs to fluorine."
+        ],
+        "final_answer": "Option (4): Fluorine",
+        "why_not_others": "Oxygen (3.5) comes second. Nitrogen and chlorine are both 3.0.",
+        "common_trap": "Choosing chlorine because it has a high electron gain enthalpy. Electron gain enthalpy and electronegativity are different properties.",
+        "time_saving_tip": "Memorise the order F > O > N = Cl > C > H."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "For a bond A–B, the bond energy exceeds the mean of the A–A and B–B bond energies by 25 kcal/mol. Using the Pauling relation, what is the electronegativity difference $(\\chi_A - \\chi_B)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5.20",
+        "1.04",
+        "0.52",
+        "0.0083"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Pauling relation: $\\chi_A - \\chi_B = 0.208\\sqrt{\\Delta}$, with $\\Delta$ in kcal/mol.",
+        "steps": [
+          "Here $\\Delta = 25$ kcal/mol, so $\\sqrt{\\Delta} = 5$.",
+          "$\\chi_A - \\chi_B = 0.208 \\times 5 = 1.04$."
+        ],
+        "final_answer": "Option (2): 1.04",
+        "why_not_others": "5.20 comes from forgetting the square root ($0.208 \\times 25$). 0.52 comes from wrongly halving the result. 0.0083 comes from dividing 0.208 by 25.",
+        "common_trap": "Multiplying 0.208 by $\\Delta$ directly instead of by $\\sqrt{\\Delta}$.",
+        "time_saving_tip": "Choose or spot perfect-square values of $\\Delta$ and take the root first."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "What is the correct order of electronegativity of the carbon atoms in ethane, ethene and ethyne?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ethane > Ethene > Ethyne",
+        "Ethyne > Ethene > Ethane",
+        "Ethene > Ethyne > Ethane",
+        "Ethane = Ethene = Ethyne"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The electronegativity of carbon rises with s-character: $C_{sp} > C_{sp^2} > C_{sp^3}$.",
+        "steps": [
+          "Ethyne carbon is $sp$ (50% s), ethene carbon is $sp^2$ (33% s) and ethane carbon is $sp^3$ (25% s).",
+          "More s-character means higher electronegativity, so ethyne > ethene > ethane."
+        ],
+        "final_answer": "Option (2): Ethyne > Ethene > Ethane",
+        "why_not_others": "The first option reverses the trend. The third option misplaces the $sp$ carbon. The last option ignores the effect of hybridisation.",
+        "common_trap": "Assuming one element always has the same electronegativity regardless of hybridisation.",
+        "time_saving_tip": "Rank by percentage s-character: 50 > 33 > 25."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Electronegativity of an element is the measurable energy released when an electron is added to its isolated gaseous atom.",
+        "R": "Electronegativity is a relative property of an atom in a molecule and has no units."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Electronegativity concerns a bonded atom and has no units. Electron gain enthalpy is a measurable energy change of an isolated gaseous atom.",
+        "steps": [
+          "A actually describes electron gain enthalpy, not electronegativity, so A is false.",
+          "R correctly states that electronegativity is a relative, unitless property of a bonded atom, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so the first three options, which all treat A as true, are wrong.",
+        "common_trap": "Treating electronegativity and electron gain enthalpy as the same property.",
+        "time_saving_tip": "Bonded atom means electronegativity. Isolated gaseous atom means electron gain enthalpy."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Oxygen is the second most electronegative element and has a Pauling electronegativity of 3.0.",
+        "II": "On the Pauling scale, a C–H bond is more polar than an H–Cl bond."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Pauling values are O = 3.5, N = Cl = 3.0, C = 2.5 and H = 2.1. Bond polarity depends on the electronegativity difference.",
+        "steps": [
+          "Oxygen is indeed second, but its value is 3.5, not 3.0, so Statement I is incorrect.",
+          "For C–H, $\\Delta\\chi = 2.5 - 2.1 = 0.4$. For H–Cl, $\\Delta\\chi = 3.0 - 2.1 = 0.9$.",
+          "H–Cl has the larger difference and is more polar, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I gives the wrong value for oxygen (3.0 belongs to N and Cl). Statement II reverses the polarity order.",
+        "common_trap": "Mixing up the value 3.0 (N, Cl) with 3.5 (O).",
+        "time_saving_tip": "Compute $\\Delta\\chi$ directly to compare bond polarity."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "According to Fajans' rule, which lithium halide has the maximum covalent character?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$LiF$",
+        "$LiCl$",
+        "$LiBr$",
+        "$LiI$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For the same cation, a larger anion is more polarisable, so the bond has more covalent character.",
+        "steps": [
+          "The cation $Li^+$ is common to all four compounds.",
+          "Anion size increases in the order $F^- < Cl^- < Br^- < I^-$, so $I^-$ is the most polarisable.",
+          "Hence $LiI$ is the most covalent."
+        ],
+        "final_answer": "Option (4): $LiI$",
+        "why_not_others": "$LiF$ is the least covalent because $F^-$ is the smallest anion. $LiCl$ and $LiBr$ are intermediate.",
+        "common_trap": "Picking $LiF$ because F is the most electronegative.",
+        "time_saving_tip": "Same cation: biggest anion gives the most covalent compound."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "What is the correct order of covalent character among $NaCl$, $MgCl_2$ and $AlCl_3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NaCl > MgCl_2 > AlCl_3$",
+        "$AlCl_3 > MgCl_2 > NaCl$",
+        "$MgCl_2 > AlCl_3 > NaCl$",
+        "$AlCl_3 > NaCl > MgCl_2$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A smaller, more highly charged cation has greater polarising power and gives more covalent character.",
+        "steps": [
+          "Going from $Na^+$ to $Mg^{2+}$ to $Al^{3+}$, the cation charge increases and its size decreases.",
+          "Polarising power is therefore highest for $Al^{3+}$.",
+          "Order of covalent character: $AlCl_3 > MgCl_2 > NaCl$."
+        ],
+        "final_answer": "Option (2): $AlCl_3 > MgCl_2 > NaCl$",
+        "why_not_others": "The first option is the reverse order. The third and fourth options break the steady trend in cation charge.",
+        "common_trap": "Thinking that a higher cation charge makes a compound more ionic.",
+        "time_saving_tip": "Use the ionic potential $\\phi = $ charge/radius; it increases from $Na^+$ to $Al^{3+}$."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "$CuCl$ is more covalent than $NaCl$ even though $Cu^+$ and $Na^+$ have similar ionic sizes. What is the best reason for this?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Cu^+$ has an 18-electron (pseudo noble gas) configuration whose poorly shielding d electrons make it more polarising",
+        "$Cu^+$ carries a higher charge than $Na^+$",
+        "$Cu^+$ has an 8-electron noble gas configuration like $Na^+$ but a smaller radius",
+        "The chloride ion in $CuCl$ is larger than the chloride ion in $NaCl$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Cations with an 18-electron configuration are more polarising than noble gas cations of similar size.",
+        "steps": [
+          "Both cations carry a +1 charge and have similar sizes.",
+          "The d electrons of $Cu^+$ shield the nuclear charge poorly, so its effective polarising power is higher.",
+          "It distorts $Cl^-$ more strongly, which gives $CuCl$ more covalent character."
+        ],
+        "final_answer": "Option (1): $Cu^+$ has an 18-electron (pseudo noble gas) configuration whose poorly shielding d electrons make it more polarising",
+        "why_not_others": "Both ions are +1, so charge is not the difference. $Cu^+$ is not an 8-electron ion, and the stem states the sizes are similar. The anion is $Cl^-$ in both compounds.",
+        "common_trap": "Looking only at size and charge and ignoring the electronic configuration of the cation.",
+        "time_saving_tip": "Treat $Cu^+$, $Ag^+$ and $Zn^{2+}$ as 18-electron cations that are extra polarising."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$LiCl$ is more covalent than $NaCl$"
+          },
+          {
+            "label": "B",
+            "text": "$CuCl$ is more covalent than $NaCl$"
+          },
+          {
+            "label": "C",
+            "text": "$LiI$ is more covalent than $LiF$"
+          },
+          {
+            "label": "D",
+            "text": "$AlCl_3$ is more covalent than $NaCl$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Larger, more polarisable anion"
+          },
+          {
+            "label": "II",
+            "text": "Smaller cation of the same charge, both noble gas type"
+          },
+          {
+            "label": "III",
+            "text": "18-electron configuration of the cation"
+          },
+          {
+            "label": "IV",
+            "text": "Higher charge on the cation"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-III, C-II, D-I",
+        "A-II, B-III, C-I, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Fajans' factors are cation size, cation charge, anion size and the 18-electron configuration of the cation.",
+        "steps": [
+          "A: $Li^+$ is smaller than $Na^+$, and both are +1 noble gas ions, so A matches II.",
+          "B: $Cu^+$ is an 18-electron cation, so B matches III.",
+          "C: $I^-$ is larger than $F^-$, so C matches I.",
+          "D: $Al^{3+}$ carries a higher charge than $Na^+$, so D matches IV."
+        ],
+        "final_answer": "Option (4): A-II, B-III, C-I, D-IV",
+        "why_not_others": "The other options assign the charge factor or the 18-electron factor to pairs where it does not apply.",
+        "common_trap": "Attributing the extra covalency of $CuCl$ to cation size, even though $Cu^+$ and $Na^+$ are similar in size.",
+        "time_saving_tip": "Fix B (the only 18-electron cation) and C (the only change of anion) first."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Fajans' rule are correct?",
+      "statements": {
+        "A": "A higher ionic potential (charge/radius of the cation) means greater polarising power and more covalent character.",
+        "B": "Greater covalent character increases the solubility of a compound in water.",
+        "C": "$AgCl$ has a lower solubility in water than expected because of its covalent character.",
+        "D": "A larger anion is less polarisable than a smaller anion of the same charge.",
+        "E": "Greater covalent character raises the solubility of a compound in organic solvents."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "A, C and E only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Covalent character lowers melting point and water solubility and raises solubility in organic solvents. Larger anions are more polarisable.",
+        "steps": [
+          "A is correct: a higher $\\phi$ means greater polarising power.",
+          "B is incorrect: covalent character lowers water solubility.",
+          "C is correct: covalency makes $AgCl$ poorly soluble in water.",
+          "D is incorrect: larger anions are more polarisable.",
+          "E is correct: covalent compounds dissolve better in organic solvents."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Any option containing B or D includes a false statement. 'A and C only' leaves out the true statement E.",
+        "common_trap": "Believing that a larger anion holds its electron cloud more tightly.",
+        "time_saving_tip": "Eliminate B first, which removes one option at once."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "Which of the following molecules has a non-zero dipole moment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$H_2O$",
+        "$CO_2$",
+        "$BF_3$",
+        "$CCl_4$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Symmetrical molecules have zero dipole moment because their bond dipoles cancel.",
+        "steps": [
+          "$CO_2$ (linear), $BF_3$ (trigonal planar) and $CCl_4$ (tetrahedral) are symmetrical, so their dipoles cancel.",
+          "$H_2O$ is bent, so its bond dipoles do not cancel; its dipole moment is 1.85 D."
+        ],
+        "final_answer": "Option (1): $H_2O$",
+        "why_not_others": "$CO_2$, $BF_3$ and $CCl_4$ contain polar bonds but have zero net dipole moment because of their symmetry.",
+        "common_trap": "Assuming that polar bonds always make a polar molecule.",
+        "time_saving_tip": "Check the shape: a bent molecule with lone pairs on the central atom is polar."
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A diatomic molecule HX has an observed dipole moment of 1.6 D. Its dipole moment calculated for a fully ionic bond is 6.4 D. What is the percent ionic character of the H–X bond?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "25%",
+        "75%",
+        "2.5%",
+        "400%"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\%$ ionic character $= \\frac{\\mu_{observed}}{\\mu_{ionic}} \\times 100$.",
+        "steps": [
+          "$\\frac{1.6}{6.4} = 0.25$.",
+          "$0.25 \\times 100 = 25\\%$."
+        ],
+        "final_answer": "Option (1): 25%",
+        "why_not_others": "75% is the covalent fraction, not the ionic fraction. 2.5% comes from a decimal slip. 400% comes from inverting the ratio.",
+        "common_trap": "Dividing $\\mu_{ionic}$ by $\\mu_{observed}$.",
+        "time_saving_tip": "Percent ionic character can never exceed 100%, so 400% can be rejected at once."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "What is the correct order of dipole moment among $CH_3Cl$, $CH_2Cl_2$, $CHCl_3$ and $CCl_4$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_3Cl > CH_2Cl_2 > CHCl_3 > CCl_4$",
+        "$CCl_4 > CHCl_3 > CH_2Cl_2 > CH_3Cl$",
+        "$CHCl_3 > CH_2Cl_2 > CH_3Cl > CCl_4$",
+        "$CH_2Cl_2 > CH_3Cl > CCl_4 > CHCl_3$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "As more C–Cl bonds are added around the tetrahedral carbon, their dipoles increasingly cancel. $CCl_4$ has zero dipole moment.",
+        "steps": [
+          "$CCl_4$ is perfectly symmetrical, so its dipole moment is zero.",
+          "The order is $CH_3Cl > CH_2Cl_2 > CHCl_3 > CCl_4$."
+        ],
+        "final_answer": "Option (1): $CH_3Cl > CH_2Cl_2 > CHCl_3 > CCl_4$",
+        "why_not_others": "The second option assumes that more Cl atoms give more polarity. The third and fourth options place $CHCl_3$ or $CCl_4$ wrongly.",
+        "common_trap": "Thinking that more electronegative atoms always give a larger dipole moment.",
+        "time_saving_tip": "Any option that does not place $CCl_4$ last is wrong."
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "$NH_3$ has a larger dipole moment than $NF_3$.",
+        "R": "Fluorine is more electronegative than nitrogen, while nitrogen is more electronegative than hydrogen."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In $NH_3$ the lone pair moment adds to the N–H bond moments. In $NF_3$ it opposes the N–F bond moments.",
+        "steps": [
+          "$NH_3$ (1.47 D) is more polar than $NF_3$ (0.23 D), so A is true.",
+          "The Pauling values F = 4.0, N = 3.0 and H = 2.1 make R true.",
+          "Electronegativity values alone do not explain A. The explanation is the direction of the lone pair moment relative to the bond moments."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain A, so the first option is wrong. Both statements are true, so the third and fourth options are wrong.",
+        "common_trap": "Accepting R as the explanation. Electronegativity alone would wrongly suggest that $NF_3$ is more polar.",
+        "time_saving_tip": "For $NH_3$ versus $NF_3$, the explanation must always involve the lone pair."
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "$XeF_2$ has a non-zero dipole moment because the central Xe atom carries three lone pairs.",
+        "II": "Considering dipole moment alone, ethanol has a higher dipole moment than acetone."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A linear, symmetrical $XeF_2$ has zero dipole moment. By dipole moment alone, acetone (about 2.9 D) is higher than ethanol (about 1.7 D).",
+        "steps": [
+          "In $XeF_2$ the three lone pairs sit in equatorial positions and the two F atoms are axial, so the molecule is linear and symmetrical. Its net dipole is zero, so Statement I is incorrect.",
+          "Acetone (about 2.9 D) has a higher dipole moment than ethanol (about 1.7 D), so Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements are false, so every other option fails.",
+        "common_trap": "Mixing up the polarity order based on hydrogen bonding (ethanol above acetone) with the order of actual dipole moment values.",
+        "time_saving_tip": "Lone pairs placed symmetrically do not produce a net dipole."
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "According to VSEPR theory, what is the shape of the $NH_3$ molecule?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Trigonal pyramidal",
+        "Tetrahedral",
+        "Trigonal planar",
+        "Bent"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Three bond pairs and one lone pair give a pyramidal shape.",
+        "steps": [
+          "N has 4 electron pairs: 3 bond pairs and 1 lone pair.",
+          "The electron pair geometry is tetrahedral, but the molecular shape is pyramidal, with a bond angle of about 107°."
+        ],
+        "final_answer": "Option (1): Trigonal pyramidal",
+        "why_not_others": "Tetrahedral is the electron pair geometry, not the shape. Trigonal planar requires 3 bond pairs and no lone pair. Bent requires 2 lone pairs, as in $H_2O$.",
+        "common_trap": "Confusing electron pair geometry with molecular shape.",
+        "time_saving_tip": "Count the lone pairs first: one lone pair on a tetrahedral arrangement gives a pyramid."
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "Which of the following molecules or ions is T-shaped?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$SF_4$",
+        "$ClF_3$",
+        "$I_3^-$",
+        "$BrF_5$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Three bond pairs and two lone pairs in a trigonal bipyramidal arrangement give a T-shape.",
+        "steps": [
+          "Cl in $ClF_3$ has 5 electron pairs: 3 bond pairs and 2 lone pairs.",
+          "The two lone pairs occupy equatorial positions, which leaves a T-shaped molecule."
+        ],
+        "final_answer": "Option (2): $ClF_3$",
+        "why_not_others": "$SF_4$ is see-saw (4 bond pairs + 1 lone pair). $I_3^-$ is linear (2 bond pairs + 3 lone pairs). $BrF_5$ is square pyramidal.",
+        "common_trap": "Placing lone pairs in axial positions and predicting a trigonal planar shape for $ClF_3$.",
+        "time_saving_tip": "In a trigonal bipyramid, 1, 2 and 3 lone pairs give see-saw, T-shaped and linear respectively."
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "What are the number of lone pairs on the central iodine atom and the shape of $ICl_4^-$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1, square pyramidal",
+        "2, square planar",
+        "0, tetrahedral",
+        "3, see-saw"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Electron pairs $= \\frac{1}{2}(V + M - c + a)$ and lone pairs $=$ electron pairs $-$ bonded atoms.",
+        "steps": [
+          "For I: $V = 7$, $M = 4$, $a = 1$, so electron pairs $= \\frac{1}{2}(7 + 4 + 1) = 6$.",
+          "Lone pairs $= 6 - 4 = 2$.",
+          "Four bond pairs and two lone pairs give a square planar shape."
+        ],
+        "final_answer": "Option (2): 2, square planar",
+        "why_not_others": "1 lone pair and square pyramidal is the result of ignoring the anionic charge. 0 lone pairs and tetrahedral treats $ICl_4^-$ like $BF_4^-$. 3 lone pairs and see-saw does not fit 6 electron pairs.",
+        "common_trap": "Forgetting to add the anionic charge $a$ in the formula.",
+        "time_saving_tip": "$ICl_4^-$ has the same electron count as $XeF_4$, so it is square planar."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$XeF_6$"
+          },
+          {
+            "label": "B",
+            "text": "$IF_7$"
+          },
+          {
+            "label": "C",
+            "text": "$XeOF_4$"
+          },
+          {
+            "label": "D",
+            "text": "$SF_4$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Distorted octahedral"
+          },
+          {
+            "label": "II",
+            "text": "Pentagonal bipyramidal"
+          },
+          {
+            "label": "III",
+            "text": "Square pyramidal"
+          },
+          {
+            "label": "IV",
+            "text": "See-saw"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Molecular shape follows from the numbers of bond pairs and lone pairs. A multiple bond counts as a single super pair.",
+        "steps": [
+          "$XeF_6$: 6 bond pairs + 1 lone pair, so distorted octahedral (A-I).",
+          "$IF_7$: 7 bond pairs, so pentagonal bipyramidal (B-II).",
+          "$XeOF_4$: 5 bond pairs + 1 lone pair (Xe=O counted as one pair), so square pyramidal (C-III).",
+          "$SF_4$: 4 bond pairs + 1 lone pair, so see-saw (D-IV)."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The second option swaps the shapes of $XeF_6$ and $IF_7$. The third option swaps the shapes of $XeOF_4$ and $SF_4$. The fourth option ignores the lone pair on $XeF_6$.",
+        "common_trap": "Counting the Xe=O double bond as two electron pairs.",
+        "time_saving_tip": "$IF_7$ is the only species with 7 bond pairs, so fix B-II first."
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about VSEPR theory are correct?",
+      "statements": {
+        "A": "In a trigonal bipyramidal arrangement, lone pairs occupy axial positions.",
+        "B": "The order of repulsion is lp–lp > lp–bp > bp–bp.",
+        "C": "The bond angle in $H_2O$ is smaller than that in $NH_3$.",
+        "D": "$XeF_4$ has an octahedral electron pair arrangement but a square planar shape.",
+        "E": "A double bond is counted as two electron pairs when deciding the shape."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "C, D and E only",
+        "B, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Lone pairs repel most strongly and occupy equatorial positions in a trigonal bipyramid. A multiple bond is treated as a single super pair.",
+        "steps": [
+          "A is false: lone pairs occupy equatorial positions.",
+          "B is true.",
+          "C is true: $H_2O$ is 104.5° and $NH_3$ is 107°, because two lone pairs compress the angle more.",
+          "D is true: 6 electron pairs (4 bond pairs + 2 lone pairs) give a square planar shape.",
+          "E is false: a multiple bond counts as one super pair."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Options containing A or E include a false statement. 'B and D only' leaves out the true statement C.",
+        "common_trap": "Placing lone pairs in axial positions of a trigonal bipyramid.",
+        "time_saving_tip": "Reject A and E first; only one option then remains."
+      }
+    }
+  ]
+}

@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "What are the dimensions of the coefficient of viscosity $\\eta$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$[MLT^{-1}]$",
+        "$[ML^{-1}T^{-2}]$",
+        "$[MT^{-2}]$",
+        "$[ML^{-1}T^{-1}]$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Newton's law of viscosity, $F = \\eta A\\, dv/dx$",
+        "steps": [
+          "Rearrange the law: $\\eta = \\dfrac{F}{A\\,(dv/dx)}$.",
+          "The dimensions of $F$ are $[MLT^{-2}]$ and those of $A$ are $[L^2]$.",
+          "The velocity gradient $dv/dx$ has dimensions $[T^{-1}]$.",
+          "So $\\eta = \\dfrac{[MLT^{-2}]}{[L^2][T^{-1}]} = [ML^{-1}T^{-1}]$."
+        ],
+        "final_answer": "Option (4): $[ML^{-1}T^{-1}]$",
+        "why_not_others": "$[MLT^{-1}]$ is the dimension of momentum. $[ML^{-1}T^{-2}]$ is the dimension of pressure. $[MT^{-2}]$ is the dimension of surface tension.",
+        "common_trap": "Forgetting that the velocity gradient has dimensions $[T^{-1}]$. Dropping it gives the dimension of pressure.",
+        "time_saving_tip": "Remember that the SI unit of $\\eta$ is Pa s. Multiplying $[ML^{-1}T^{-2}]$ by $[T]$ gives the answer directly."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "Eight identical small rain droplets each fall with a terminal velocity of $5\\ \\text{cm s}^{-1}$ through air. They coalesce to form a single spherical drop. What is the terminal velocity of the new drop?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{cm s}^{-1}$",
+        "$40\\ \\text{cm s}^{-1}$",
+        "$20\\ \\text{cm s}^{-1}$",
+        "$80\\ \\text{cm s}^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Terminal velocity $v_t \\propto r^2$. When $n$ drops merge, the volume is conserved.",
+        "steps": [
+          "Volume conservation gives $\\frac{4}{3}\\pi R^3 = 8 \\times \\frac{4}{3}\\pi r^3$, so $R = 2r$.",
+          "Since $v_t \\propto r^2$, $v_t' = v_t (R/r)^2 = 4 v_t$.",
+          "Equivalently, $v_t' = n^{2/3} v_t = 8^{2/3} \\times 5 = 20\\ \\text{cm s}^{-1}$."
+        ],
+        "final_answer": "Option (3): $20\\ \\text{cm s}^{-1}$",
+        "why_not_others": "$10\\ \\text{cm s}^{-1}$ uses $v \\propto r$. $40\\ \\text{cm s}^{-1}$ multiplies by $n$. $80\\ \\text{cm s}^{-1}$ wrongly assumes $v \\propto r^4$.",
+        "common_trap": "Multiplying the terminal velocity by the number of drops instead of by $n^{2/3}$.",
+        "time_saving_tip": "Use $v' = n^{2/3} v$ directly."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A metal ball of radius $1\\ \\text{mm}$ and density $5800\\ \\text{kg m}^{-3}$ falls through a liquid of density $1300\\ \\text{kg m}^{-3}$. The viscosity of the liquid is $10$ poise. Find the terminal velocity of the ball. Take $g = 10\\ \\text{m s}^{-2}$.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\ \\text{cm s}^{-1}$",
+        "$1.29\\ \\text{cm s}^{-1}$",
+        "$0.1\\ \\text{cm s}^{-1}$",
+        "$1.58\\ \\text{cm s}^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$v_t = \\dfrac{2r^2(\\sigma-\\rho)g}{9\\eta}$, with $\\eta$ in Pa s",
+        "steps": [
+          "Convert the viscosity: $\\eta = 10$ poise $= 1\\ \\text{Pa s}$.",
+          "Find the density difference: $\\sigma - \\rho = 5800 - 1300 = 4500\\ \\text{kg m}^{-3}$.",
+          "Substitute: $v_t = \\dfrac{2 \\times (10^{-3})^2 \\times 4500 \\times 10}{9 \\times 1} = \\dfrac{0.09}{9} = 0.01\\ \\text{m s}^{-1}$.",
+          "So $v_t = 1.0\\ \\text{cm s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $1.0\\ \\text{cm s}^{-1}$",
+        "why_not_others": "$1.29\\ \\text{cm s}^{-1}$ ignores buoyancy and uses $\\sigma$ alone. $0.1\\ \\text{cm s}^{-1}$ wrongly takes 10 poise as $10\\ \\text{Pa s}$. $1.58\\ \\text{cm s}^{-1}$ adds the two densities instead of subtracting them.",
+        "common_trap": "Forgetting the buoyancy factor $(\\sigma - \\rho)$, or not converting poise to Pa s.",
+        "time_saving_tip": "Note that 1 Pa s = 10 poise, so 10 poise is simply 1 Pa s."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A small steel ball and a larger steel ball, released in the same viscous oil, finally fall with the same terminal velocity.",
+        "R": "The terminal velocity of a sphere falling through a viscous fluid is proportional to the square of its radius."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$v_t = \\dfrac{2r^2(\\sigma-\\rho)g}{9\\eta}$, so $v_t \\propto r^2$",
+        "steps": [
+          "Both balls have the same $\\sigma$, and they fall through the same $\\rho$ and $\\eta$.",
+          "Since $v_t \\propto r^2$, the larger ball has a larger terminal velocity.",
+          "So A is false and R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A contradicts the $r^2$ dependence, so every option that treats A as true is wrong.",
+        "common_trap": "Carrying over the free-fall idea that all bodies fall alike. That holds only in the absence of viscous drag.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a sphere falling through a viscous liquid attains its terminal velocity, the viscous drag on it equals its weight.",
+        "II": "For spheres of the same radius falling in a given liquid, a graph of terminal velocity against $\\sigma/\\rho$ is a straight line with zero terminal velocity at $\\sigma/\\rho = 1$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "At terminal velocity, weight = buoyancy + viscous drag. Also, $v_t \\propto (\\sigma - \\rho)$.",
+        "steps": [
+          "At terminal velocity the net force is zero, so the drag equals weight minus buoyancy, not the full weight. Statement I is incorrect.",
+          "Write $v_t = \\dfrac{2r^2\\rho g}{9\\eta}\\left(\\dfrac{\\sigma}{\\rho} - 1\\right)$. This is linear in $\\sigma/\\rho$ and zero at $\\sigma/\\rho = 1$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the buoyant force, so any option calling it correct fails. Statement II follows directly from the formula.",
+        "common_trap": "Forgetting buoyancy in the force balance at terminal velocity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Which of the following is true for streamline flow of a fluid?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The velocity of the fluid at a given point changes continuously with time",
+        "The velocity of the fluid at a given point does not change with time",
+        "Two streamlines can cross each other at a point",
+        "The flow is irregular and contains eddies"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Definition of streamline (laminar) flow",
+        "steps": [
+          "In streamline flow, the velocity at any given point stays constant in time.",
+          "Streamlines never cross. Eddies are a feature of turbulent flow."
+        ],
+        "final_answer": "Option (2): The velocity of the fluid at a given point does not change with time",
+        "why_not_others": "A time-varying velocity and eddies describe turbulent flow. Crossing streamlines would mean two velocities at one point, which is impossible.",
+        "common_trap": "Confusing 'velocity constant at a point' with 'velocity the same everywhere'. The speed can still differ from point to point.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "Water flows steadily through a horizontal pipe whose diameter reduces from $4\\ \\text{cm}$ to $2\\ \\text{cm}$. The speed of water in the wider part is $0.5\\ \\text{m s}^{-1}$. What is its speed in the narrower part?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0\\ \\text{m s}^{-1}$",
+        "$1.0\\ \\text{m s}^{-1}$",
+        "$0.125\\ \\text{m s}^{-1}$",
+        "$8.0\\ \\text{m s}^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Equation of continuity: $A_1 v_1 = A_2 v_2$, with $A \\propto D^2$",
+        "steps": [
+          "Rearrange: $v_2 = v_1 (D_1/D_2)^2$.",
+          "Substitute: $v_2 = 0.5 \\times (4/2)^2 = 0.5 \\times 4 = 2.0\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $2.0\\ \\text{m s}^{-1}$",
+        "why_not_others": "$1.0\\ \\text{m s}^{-1}$ uses the diameter ratio instead of the area ratio. $0.125\\ \\text{m s}^{-1}$ inverts the ratio. $8.0\\ \\text{m s}^{-1}$ uses the fourth power of the diameter ratio.",
+        "common_trap": "Using the ratio of diameters rather than the ratio of areas.",
+        "time_saving_tip": "Halving the diameter quarters the area, so the speed becomes four times as large."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Water (density $1000\\ \\text{kg m}^{-3}$, viscosity $1.0 \\times 10^{-3}\\ \\text{Pa s}$) flows at $0.2\\ \\text{m s}^{-1}$ through a pipe of diameter $2\\ \\text{cm}$. Find the Reynolds number and the nature of the flow.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$400$; streamline",
+        "$4000$; streamline",
+        "$4000$; turbulent",
+        "$2000$; between streamline and turbulent"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$R_e = \\rho v D/\\eta$. $R_e > 2000$ indicates turbulent flow.",
+        "steps": [
+          "Substitute: $R_e = \\dfrac{1000 \\times 0.2 \\times 0.02}{1.0 \\times 10^{-3}} = \\dfrac{4}{10^{-3}} = 4000$.",
+          "Since $4000 > 2000$, the flow is turbulent."
+        ],
+        "final_answer": "Option (3): $4000$; turbulent",
+        "why_not_others": "$400$ comes from using the wrong viscosity value. $4000$ with streamline flow misreads the criterion. $2000$ comes from using the radius instead of the diameter.",
+        "common_trap": "Substituting the radius in place of the diameter $D$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Reynolds number"
+          },
+          {
+            "label": "B",
+            "text": "Critical velocity"
+          },
+          {
+            "label": "C",
+            "text": "Equation of continuity"
+          },
+          {
+            "label": "D",
+            "text": "Crowded streamlines"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Region of higher fluid speed"
+          },
+          {
+            "label": "II",
+            "text": "Conservation of mass for an incompressible fluid"
+          },
+          {
+            "label": "III",
+            "text": "Ratio of inertial force to viscous force"
+          },
+          {
+            "label": "IV",
+            "text": "Speed beyond which the flow becomes turbulent"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Basic definitions for fluid flow",
+        "steps": [
+          "The Reynolds number is the ratio of inertial force to viscous force: A-III.",
+          "Critical velocity is the speed at which turbulence sets in: B-IV.",
+          "The equation of continuity expresses mass conservation, $Av = $ constant: C-II.",
+          "Crowded streamlines indicate higher speed: D-I."
+        ],
+        "final_answer": "Option (2): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Every other option swaps at least one definition, such as the Reynolds number with critical velocity, or continuity with crowded streamlines.",
+        "common_trap": "Mixing up the Reynolds number, which is dimensionless, with critical velocity, which is a speed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about streamline and turbulent flow are correct?",
+      "statements": {
+        "A": "The critical velocity is higher for a more viscous liquid.",
+        "B": "For a given liquid, the critical velocity is higher in a wider pipe.",
+        "C": "The Reynolds number is a dimensionless quantity.",
+        "D": "In steady incompressible flow through a tube of varying cross-section, the volume flow rate is the same at every section.",
+        "E": "A denser fluid has a higher critical velocity, other factors being the same."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "B, C and E only",
+        "A, C and D only",
+        "A, B, C and D only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$v_c = R_e \\eta/(\\rho D)$; continuity gives $Q = Av = $ constant",
+        "steps": [
+          "Since $v_c \\propto \\eta$, statement A is true.",
+          "Since $v_c \\propto 1/D$, a wider pipe has a lower critical velocity, so B is false.",
+          "$R_e$ is a ratio of forces, so it is dimensionless and C is true.",
+          "$Q$ is constant along the tube, so D is true.",
+          "Since $v_c \\propto 1/\\rho$, E is false."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options containing B or E include false statements. 'A and C only' leaves out the true statement D.",
+        "common_trap": "Assuming that a denser fluid or a wider pipe resists turbulence. Both actually lower the critical velocity.",
+        "time_saving_tip": "Write $v_c \\propto \\eta/(\\rho D)$ once and read off A, B and E from it."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "A small hole is made in the side of an open water tank, $5\\ \\text{m}$ below the free surface. Find the speed of efflux of water from the hole. Take $g = 10\\ \\text{m s}^{-2}$.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$100\\ \\text{m s}^{-1}$",
+        "$7.1\\ \\text{m s}^{-1}$",
+        "$5.0\\ \\text{m s}^{-1}$",
+        "$10\\ \\text{m s}^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Torricelli's law: $v = \\sqrt{2gh}$",
+        "steps": [
+          "Substitute: $v = \\sqrt{2 \\times 10 \\times 5} = \\sqrt{100}$.",
+          "So $v = 10\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (4): $10\\ \\text{m s}^{-1}$",
+        "why_not_others": "$100\\ \\text{m s}^{-1}$ forgets the square root. $7.1\\ \\text{m s}^{-1}$ uses $\\sqrt{gh}$. $5.0\\ \\text{m s}^{-1}$ uses $\\sqrt{gh/2}$.",
+        "common_trap": "Dropping the factor of 2 in $\\sqrt{2gh}$.",
+        "time_saving_tip": "The efflux speed equals the speed of free fall from height $h$."
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A tank stands on level ground and is filled with water to a height of $2.5\\ \\text{m}$. A small hole is made in its side wall, $0.5\\ \\text{m}$ below the water surface. How far from the base of the tank does the jet strike the ground?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\ \\text{m}$",
+        "$2.24\\ \\text{m}$",
+        "$2.5\\ \\text{m}$",
+        "$2.0\\ \\text{m}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Range of the jet: $R = 2\\sqrt{h(H-h)}$",
+        "steps": [
+          "The depth is $h = 0.5\\ \\text{m}$, so the hole is at height $H - h = 2.0\\ \\text{m}$ above the ground.",
+          "Substitute: $R = 2\\sqrt{0.5 \\times 2.0} = 2\\sqrt{1} = 2.0\\ \\text{m}$."
+        ],
+        "final_answer": "Option (4): $2.0\\ \\text{m}$",
+        "why_not_others": "$1.0\\ \\text{m}$ drops the factor of 2. $2.24\\ \\text{m}$ uses $H$ in place of $H-h$. $2.5\\ \\text{m}$ is the maximum range, which occurs only for a hole at $H/2$.",
+        "common_trap": "Using the total height $H$ instead of the height of the hole above the ground.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "Water flows steadily through a horizontal pipe. The cross-section reduces from $10\\ \\text{cm}^2$ to $5\\ \\text{cm}^2$, and the speed in the wider section is $1\\ \\text{m s}^{-1}$. Find the pressure difference between the wide and narrow sections. Take the density of water as $1000\\ \\text{kg m}^{-3}$.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1500\\ \\text{Pa}$",
+        "$500\\ \\text{Pa}$",
+        "$3000\\ \\text{Pa}$",
+        "$2000\\ \\text{Pa}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Continuity plus Bernoulli: $\\Delta P = \\frac{1}{2}\\rho(v_2^2 - v_1^2)$",
+        "steps": [
+          "From continuity, $v_2 = v_1 A_1/A_2 = 1 \\times 10/5 = 2\\ \\text{m s}^{-1}$.",
+          "Then $\\Delta P = \\frac{1}{2} \\times 1000 \\times (4 - 1) = 1500\\ \\text{Pa}$."
+        ],
+        "final_answer": "Option (1): $1500\\ \\text{Pa}$",
+        "why_not_others": "$500\\ \\text{Pa}$ uses $(v_2 - v_1)^2$. $3000\\ \\text{Pa}$ omits the factor $\\frac{1}{2}$. $2000\\ \\text{Pa}$ uses $\\frac{1}{2}\\rho v_2^2$ alone.",
+        "common_trap": "Squaring the difference of the speeds instead of taking the difference of their squares.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In steady streamline flow through a horizontal pipe, the pressure at a narrow section is greater than at a wide section.",
+        "R": "In steady streamline flow through a horizontal pipe, the fluid moves faster where the cross-section is smaller."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Continuity combined with Bernoulli for a horizontal pipe",
+        "steps": [
+          "Continuity gives a higher speed at a smaller area, so R is true.",
+          "For a horizontal pipe, Bernoulli gives $P + \\frac{1}{2}\\rho v^2 = $ constant, so a higher speed means a lower pressure.",
+          "The pressure is therefore lower at the narrow section, and A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A reverses the pressure-speed relation, so every option that treats A as true is wrong.",
+        "common_trap": "Thinking that a squeezed fluid must be at higher pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Each term in Bernoulli's equation, $P + \\frac{1}{2}\\rho v^2 + \\rho g h$, has the dimensions of pressure, i.e. energy per unit volume.",
+        "II": "For a tank filled with liquid to a height $H$, a hole at depth $H/4$ gives a larger horizontal range of the jet than a hole at depth $H/2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Dimensions of the Bernoulli terms; range $R = 2\\sqrt{h(H-h)}$ is maximum at $h = H/2$",
+        "steps": [
+          "Every term of Bernoulli's equation has the dimension of pressure, which equals energy per unit volume. Statement I is correct.",
+          "At $h = H/4$: $R = 2\\sqrt{\\frac{H}{4}\\cdot\\frac{3H}{4}} = \\frac{\\sqrt{3}}{2}H \\approx 0.87H$.",
+          "At $h = H/2$: $R = H$, which is the maximum. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II contradicts the result that the range is maximum at $h = H/2$.",
+        "common_trap": "Believing that a hole nearer the top always gives the longest jet.",
+        "time_saving_tip": "The range is maximum at $h = H/2$, so any other depth gives a shorter range."
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "Which of the following units is equivalent to the SI unit of surface tension?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\text{N m}^{-2}$",
+        "$\\text{J m}^{-2}$",
+        "$\\text{J m}^{-1}$",
+        "$\\text{N m}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Surface tension equals the force per unit length, which also equals the surface energy per unit area.",
+        "steps": [
+          "Write $S = F/l$, with unit $\\text{N m}^{-1}$.",
+          "Multiplying numerator and denominator by m gives $\\text{N m}/\\text{m}^2 = \\text{J m}^{-2}$."
+        ],
+        "final_answer": "Option (2): $\\text{J m}^{-2}$",
+        "why_not_others": "$\\text{N m}^{-2}$ is the unit of pressure. $\\text{J m}^{-1}$ is a newton, the unit of force. $\\text{N m}$ is the unit of energy or torque.",
+        "common_trap": "Confusing surface tension with pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A soap film on a wire frame has surface tension $0.03\\ \\text{N m}^{-1}$. Its area is increased isothermally from $10\\ \\text{cm}^2$ to $40\\ \\text{cm}^2$. Find the work done.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9.0 \\times 10^{-5}\\ \\text{J}$",
+        "$1.8 \\times 10^{-4}\\ \\text{J}$",
+        "$2.4 \\times 10^{-4}\\ \\text{J}$",
+        "$3.6 \\times 10^{-4}\\ \\text{J}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a film with two surfaces, $W = 2S\\Delta A$",
+        "steps": [
+          "The change in area is $\\Delta A = 30\\ \\text{cm}^2 = 3 \\times 10^{-3}\\ \\text{m}^2$.",
+          "Then $W = 2 \\times 0.03 \\times 3 \\times 10^{-3} = 1.8 \\times 10^{-4}\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $1.8 \\times 10^{-4}\\ \\text{J}$",
+        "why_not_others": "$9.0 \\times 10^{-5}\\ \\text{J}$ counts only one surface. $2.4 \\times 10^{-4}\\ \\text{J}$ uses the final area instead of the change in area. $3.6 \\times 10^{-4}\\ \\text{J}$ uses $4S$.",
+        "common_trap": "Forgetting that a soap film has two surfaces.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A light straight wire of length $5\\ \\text{cm}$ rests on a horizontal rectangular frame and is pulled by the soap film formed between them. The surface tension of the soap solution is $0.04\\ \\text{N m}^{-1}$. What force is needed to hold the wire in equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0 \\times 10^{-3}\\ \\text{N}$",
+        "$8.0 \\times 10^{-3}\\ \\text{N}$",
+        "$0.40\\ \\text{N}$",
+        "$4.0 \\times 10^{-3}\\ \\text{N}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$S = F/l$; a film pulls with both of its surfaces, so $F = 2Sl$",
+        "steps": [
+          "The wire is pulled by both surfaces of the film, so $F = 2Sl$.",
+          "Substitute: $F = 2 \\times 0.04 \\times 0.05 = 4.0 \\times 10^{-3}\\ \\text{N}$."
+        ],
+        "final_answer": "Option (4): $4.0 \\times 10^{-3}\\ \\text{N}$",
+        "why_not_others": "$2.0 \\times 10^{-3}\\ \\text{N}$ counts only one surface. $8.0 \\times 10^{-3}\\ \\text{N}$ counts four surfaces. $0.40\\ \\text{N}$ leaves the length in cm.",
+        "common_trap": "Using $F = Sl$ for a film instead of $F = 2Sl$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pure water on clean glass"
+          },
+          {
+            "label": "B",
+            "text": "Mercury on glass"
+          },
+          {
+            "label": "C",
+            "text": "Adding detergent to water"
+          },
+          {
+            "label": "D",
+            "text": "Dissolving NaCl in water"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Increases surface tension"
+          },
+          {
+            "label": "II",
+            "text": "Angle of contact about $140^\\circ$"
+          },
+          {
+            "label": "III",
+            "text": "Decreases both surface tension and angle of contact"
+          },
+          {
+            "label": "IV",
+            "text": "Angle of contact about $0^\\circ$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Angle of contact and the effect of impurities on surface tension",
+        "steps": [
+          "Water on glass has $\\theta \\approx 0^\\circ$: A-IV.",
+          "Mercury on glass has $\\theta \\approx 140^\\circ$: B-II.",
+          "Detergents decrease both $S$ and $\\theta$: C-III.",
+          "Highly soluble NaCl increases $S$: D-I."
+        ],
+        "final_answer": "Option (3): A-IV, B-II, C-III, D-I",
+        "why_not_others": "The other options swap the water and mercury contact angles, or swap the effects of detergent and NaCl.",
+        "common_trap": "Assuming that every impurity lowers surface tension. Highly soluble salts raise it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about surface tension and angle of contact are correct?",
+      "statements": {
+        "A": "The surface tension of a liquid increases as its surface area is increased.",
+        "B": "The surface tension of a liquid becomes zero at its critical temperature.",
+        "C": "The angle of contact is measured inside the liquid, between the solid surface and the tangent to the liquid surface.",
+        "D": "Small liquid drops are spherical because a sphere has the minimum surface area for a given volume.",
+        "E": "When cohesion exceeds adhesion, the angle of contact is acute."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "C, D and E only",
+        "B, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Properties of surface tension and the angle of contact",
+        "steps": [
+          "Surface tension is independent of the surface area, so A is false.",
+          "Surface tension falls with temperature and vanishes at the critical temperature, so B is true.",
+          "C is the definition of the angle of contact, so it is true.",
+          "D is true because a sphere minimises surface area for a given volume.",
+          "When cohesion dominates, $\\theta$ is obtuse, as for mercury on glass, so E is false."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Options containing A or E include false statements. 'B and D only' leaves out the true statement C.",
+        "common_trap": "Thinking that stretching a surface changes its surface tension. Stretching only adds surface energy in proportion to the added area.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

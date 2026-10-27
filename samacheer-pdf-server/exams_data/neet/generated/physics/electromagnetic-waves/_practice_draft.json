@@ -1,0 +1,1041 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u15",
+  "slug": "electromagnetic-waves",
+  "questions": [
+    {
+      "q_id": "neet_phy_u15_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Displacement current",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A parallel plate capacitor is being charged by a battery. The displacement current that exists in the region between its plates arises due to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The flow of electrons across the gap from one plate to the other",
+        "A constant electric field maintained between the plates",
+        "A time-varying electric flux between the plates",
+        "A time-varying magnetic flux between the plates"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Displacement current is $i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$. It is caused by a changing electric flux, not by moving charges.",
+        "steps": [
+          "No charge crosses the gap between the plates.",
+          "While the capacitor charges, the electric field between the plates changes, so the electric flux $\\Phi_E$ changes.",
+          "This changing flux gives $i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$."
+        ],
+        "final_answer": "Option (3): A time-varying electric flux between the plates",
+        "why_not_others": "No charges flow across the gap. A constant field gives $\\frac{d\\Phi_E}{dt} = 0$, so $i_d = 0$. A changing magnetic flux belongs to Faraday's law, not to displacement current.",
+        "common_trap": "Thinking that displacement current is a physical flow of charge across the capacitor gap.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Displacement current",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A capacitor of capacitance $2\\ \\mu F$ is connected to a source whose potential difference changes at a steady rate of $5 \\times 10^{4}$ V/s. The displacement current between the plates of the capacitor is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0$ A",
+        "$0.1$ A",
+        "$0.025$ A",
+        "$10$ A"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a parallel plate capacitor, $i_d = C \\frac{dV}{dt}$.",
+        "steps": [
+          "$C = 2 \\times 10^{-6}$ F and $\\frac{dV}{dt} = 5 \\times 10^{4}$ V/s.",
+          "$i_d = 2 \\times 10^{-6} \\times 5 \\times 10^{4} = 0.1$ A."
+        ],
+        "final_answer": "Option (2): $0.1$ A",
+        "why_not_others": "$0$ A assumes no current exists between the plates. $0.025$ A comes from dividing instead of multiplying. $10$ A comes from wrong handling of the micro prefix.",
+        "common_trap": "Assuming no current exists between the plates because no charge crosses the gap.",
+        "time_saving_tip": "Displacement current between the plates equals the conduction current in the wires, which is $C \\frac{dV}{dt}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Displacement current",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A capacitor has circular plates of radius $5$ cm and is being charged so that the displacement current between the plates is $2$ A. Take $\\mu_0 = 4\\pi \\times 10^{-7}$ T m/A. The magnitude of the magnetic field between the plates at a distance of $2.5$ cm from the axis is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.6 \\times 10^{-5}$ T",
+        "$4 \\times 10^{-6}$ T",
+        "$8 \\times 10^{-6}$ T",
+        "$0$ T"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Inside the plate region ($r < R$), the field is $B = \\frac{\\mu_0 i_d r}{2\\pi R^2}$.",
+        "steps": [
+          "Here $r = 0.025$ m is less than $R = 0.05$ m, so use the inside formula.",
+          "$\\frac{\\mu_0}{2\\pi} = 2 \\times 10^{-7}$ and $\\frac{r}{R^2} = \\frac{0.025}{0.0025} = 10$ m$^{-1}$.",
+          "$B = 2 \\times 10^{-7} \\times 2 \\times 10 = 4 \\times 10^{-6}$ T."
+        ],
+        "final_answer": "Option (2): $4 \\times 10^{-6}$ T",
+        "why_not_others": "$1.6 \\times 10^{-5}$ T comes from wrongly using the outside formula $\\frac{\\mu_0 i_d}{2\\pi r}$. $8 \\times 10^{-6}$ T is the field at the plate edge, $r = R$. $0$ T assumes no magnetic field exists between the plates.",
+        "common_trap": "Applying the $\\frac{1}{r}$ formula at points inside the plate radius.",
+        "time_saving_tip": "Inside the plates, B grows linearly with r. At half the radius, B is half of the edge value $\\frac{\\mu_0 i_d}{2\\pi R}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Displacement current",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A displacement current continues to exist between the plates of a capacitor even after it has been fully charged by a steady DC source.",
+        "R": "Displacement current is proportional to the rate of change of electric flux through the region considered."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$, which is zero when the field between the plates is steady.",
+        "steps": [
+          "Once the capacitor is fully charged by a DC source, the field between the plates is constant, so $\\frac{dE}{dt} = 0$.",
+          "Hence $i_d = 0$, and A is false.",
+          "R correctly states that $i_d = \\epsilon_0 \\frac{d\\Phi_E}{dt}$, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so every option that calls A true is wrong.",
+        "common_trap": "Believing that a charged capacitor keeps a displacement current simply because an electric field is present. Only a changing field gives a displacement current.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Displacement current",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a charging capacitor with circular plates, the magnetic field between the plates is maximum on the axis and decreases as $\\frac{1}{r}$ towards the edge of the plates.",
+        "II": "During charging, the displacement current between the plates is smaller than the conduction current in the connecting wires, because part of the charge accumulates on the plates."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For $r < R$, $B = \\frac{\\mu_0 i_d r}{2\\pi R^2}$. Also, $i_d$ between the plates equals $i_c$ in the wires.",
+        "steps": [
+          "Inside the plates, B is proportional to r. So B is zero on the axis and largest at the edge, which makes Statement I incorrect.",
+          "The $\\frac{1}{r}$ fall-off applies only for $r \\ge R$.",
+          "The displacement current between the plates exactly equals the conduction current, so the total current is continuous. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements contradict the standard results, so no option that calls either statement correct can be chosen.",
+        "common_trap": "Mixing up the linear rise inside the plates with the $\\frac{1}{r}$ fall outside, and thinking $i_d < i_c$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic waves and their characteristics",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Electromagnetic waves are radiated by:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A stationary charge",
+        "A charge moving with constant velocity",
+        "A steady current in a straight wire",
+        "An accelerated charge"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Only accelerated or oscillating charges produce EM waves.",
+        "steps": [
+          "A stationary charge produces only a static electric field.",
+          "Uniformly moving charges, including a steady current, do not radiate.",
+          "An accelerated charge produces changing E and B fields that propagate as a wave."
+        ],
+        "final_answer": "Option (4): An accelerated charge",
+        "why_not_others": "Options 1, 2 and 3 involve no acceleration of charge, so there is no radiation.",
+        "common_trap": "Assuming that any moving charge radiates. Constant velocity does not produce radiation.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic waves and their characteristics",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An electromagnetic wave of frequency $5 \\times 10^{8}$ Hz travels from vacuum into a non-magnetic medium of relative permittivity $\\epsilon_r = 4$. The wavelength of the wave inside the medium is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.3$ m",
+        "$0.6$ m",
+        "$1.2$ m",
+        "$0.15$ m"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Frequency stays the same in the medium. The speed becomes $v = \\frac{c}{\\sqrt{\\epsilon_r}}$, so the wavelength reduces by the same factor.",
+        "steps": [
+          "$v = \\frac{3 \\times 10^8}{\\sqrt{4}} = 1.5 \\times 10^8$ m/s.",
+          "$\\lambda = \\frac{v}{\\nu} = \\frac{1.5 \\times 10^8}{5 \\times 10^8} = 0.3$ m."
+        ],
+        "final_answer": "Option (1): $0.3$ m",
+        "why_not_others": "$0.6$ m is the wavelength in vacuum. $1.2$ m comes from multiplying by $\\sqrt{\\epsilon_r}$ instead of dividing. $0.15$ m comes from dividing by $\\epsilon_r$ instead of $\\sqrt{\\epsilon_r}$.",
+        "common_trap": "Using $\\epsilon_r$ instead of $\\sqrt{\\epsilon_r}$, or assuming the frequency changes in the medium.",
+        "time_saving_tip": "Find the wavelength in vacuum, then divide by $n = \\sqrt{\\epsilon_r} = 2$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic waves and their characteristics",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An electromagnetic wave of intensity $900$ W m$^{-2}$ falls normally on a perfectly reflecting surface. The radiation pressure on the surface is (take $c = 3 \\times 10^8$ m/s):",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3 \\times 10^{-6}$ N m$^{-2}$",
+        "$1.5 \\times 10^{-6}$ N m$^{-2}$",
+        "$2.7 \\times 10^{11}$ N m$^{-2}$",
+        "$6 \\times 10^{-6}$ N m$^{-2}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a perfectly reflecting surface at normal incidence, $P_{rad} = \\frac{2I}{c}$.",
+        "steps": [
+          "$P_{rad} = \\frac{2 \\times 900}{3 \\times 10^8}$.",
+          "$P_{rad} = 6 \\times 10^{-6}$ N m$^{-2}$."
+        ],
+        "final_answer": "Option (4): $6 \\times 10^{-6}$ N m$^{-2}$",
+        "why_not_others": "$3 \\times 10^{-6}$ is the value for an absorbing surface. $1.5 \\times 10^{-6}$ comes from wrongly dividing by $2c$. $2.7 \\times 10^{11}$ comes from multiplying I by c.",
+        "common_trap": "Forgetting the factor 2 for complete reflection.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic waves and their characteristics",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Speed of EM waves in vacuum"
+          },
+          {
+            "label": "B",
+            "text": "Average energy density of an EM wave"
+          },
+          {
+            "label": "C",
+            "text": "Intensity of an EM wave"
+          },
+          {
+            "label": "D",
+            "text": "Momentum delivered by energy U to a completely absorbing surface"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{U}{c}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{1}{2}\\epsilon_0 c E_0^2$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{1}{2}\\epsilon_0 E_0^2$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Standard relations: $c = \\frac{1}{\\sqrt{\\mu_0\\epsilon_0}}$, $u_{av} = \\frac{1}{2}\\epsilon_0 E_0^2$, $I = u_{av}c$ and $p = \\frac{U}{c}$.",
+        "steps": [
+          "Speed in vacuum is $\\frac{1}{\\sqrt{\\mu_0\\epsilon_0}}$, so A-III.",
+          "Average energy density is $\\frac{1}{2}\\epsilon_0 E_0^2$, so B-IV.",
+          "Intensity is energy density times c, which gives $\\frac{1}{2}\\epsilon_0 c E_0^2$, so C-II.",
+          "Momentum for complete absorption is $\\frac{U}{c}$, so D-I."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option 2 swaps energy density and intensity. Option 3 swaps speed and momentum. Option 4 swaps intensity and momentum.",
+        "common_trap": "Confusing energy density with intensity, which differ by a factor of c.",
+        "time_saving_tip": "Intensity is always energy density multiplied by c."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic waves and their characteristics",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about electromagnetic waves are correct?",
+      "statements": {
+        "A": "When an EM wave passes from vacuum into glass, its frequency remains unchanged.",
+        "B": "In a non-magnetic dielectric, the ratio of field amplitudes $\\frac{E_0}{B_0}$ equals the speed of light in vacuum, c.",
+        "C": "The average energy density associated with the magnetic field equals that associated with the electric field.",
+        "D": "A strong magnetic field can deflect an EM wave because the wave consists of oscillating fields.",
+        "E": "The momentum delivered by energy U to a perfectly reflecting surface at normal incidence is $\\frac{2U}{c}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Frequency is invariant across media, $\\frac{E_0}{B_0} = v$ in a medium, energy is shared equally between the fields, EM waves are uncharged, and reflection doubles the momentum transfer.",
+        "steps": [
+          "A is true because frequency is fixed by the source.",
+          "B is false because in a medium $\\frac{E_0}{B_0} = v$, not c.",
+          "C is true because the average electric and magnetic energy densities are equal.",
+          "D is false because EM waves are uncharged and are not deflected by fields.",
+          "E is true because a perfectly reflecting surface receives momentum $\\frac{2U}{c}$."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Options 1 and 2 include B, which is false. Option 4 includes D, which is false.",
+        "common_trap": "Using $\\frac{E_0}{B_0} = c$ inside a dielectric, or thinking the magnetic energy is smaller because B is numerically small.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Transverse nature of electromagnetic waves",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A plane electromagnetic wave travels along the $+z$ direction. At a certain point and instant, its electric field points along the $+x$ direction. The magnetic field at that point and instant points along the:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+z$ direction",
+        "$+y$ direction",
+        "$-y$ direction",
+        "$+x$ direction"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The direction of propagation is along $\\vec{E} \\times \\vec{B}$, and E and B oscillate in phase.",
+        "steps": [
+          "We need $\\hat{i} \\times \\hat{B} = \\hat{k}$.",
+          "Since $\\hat{i} \\times \\hat{j} = \\hat{k}$, B must be along $+y$."
+        ],
+        "final_answer": "Option (2): $+y$ direction",
+        "why_not_others": "B cannot lie along the propagation direction ($z$) or along E ($x$). If B were along $-y$, the wave would travel along $-z$.",
+        "common_trap": "Getting the sign of the cross product wrong and choosing $-y$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Transverse nature of electromagnetic waves",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The electric field of an electromagnetic wave in vacuum is $E_y = E_0 \\sin(\\pi \\times 10^{7} z + 3\\pi \\times 10^{15} t)$, where z is in metres and t is in seconds. The wavelength of the wave and its direction of propagation are:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2 \\times 10^{-7}$ m, along $-z$",
+        "$2 \\times 10^{-7}$ m, along $+z$",
+        "$1 \\times 10^{-7}$ m, along $-z$",
+        "$3.2 \\times 10^{-8}$ m, along $+z$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda = \\frac{2\\pi}{k}$. A phase of the form $(kz + \\omega t)$ means travel along $-z$.",
+        "steps": [
+          "$k = \\pi \\times 10^{7}$ rad/m, so $\\lambda = \\frac{2\\pi}{\\pi \\times 10^7} = 2 \\times 10^{-7}$ m.",
+          "Check: $\\frac{\\omega}{k} = \\frac{3\\pi \\times 10^{15}}{\\pi \\times 10^7} = 3 \\times 10^8$ m/s, which is consistent with vacuum.",
+          "The phase is $(kz + \\omega t)$, so the wave travels along $-z$."
+        ],
+        "final_answer": "Option (1): $2 \\times 10^{-7}$ m, along $-z$",
+        "why_not_others": "Option 2 has the wrong direction. Option 3 uses $\\lambda = \\frac{\\pi}{k}$. Option 4 uses $\\lambda = \\frac{1}{k}$ and also has the wrong direction.",
+        "common_trap": "Ignoring the plus sign between the kz and $\\omega t$ terms.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Transverse nature of electromagnetic waves",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The electric field of a plane EM wave in vacuum is $\\vec{E} = 30 \\cos(kx - \\omega t)\\hat{j}$ V/m. Taking $c = 3 \\times 10^8$ m/s, the associated magnetic field is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10^{-7} \\cos(kx - \\omega t)\\hat{i}$ T",
+        "$10^{-7} \\cos(kx - \\omega t)\\hat{k}$ T",
+        "$-10^{-7} \\cos(kx - \\omega t)\\hat{k}$ T",
+        "$9 \\times 10^{9} \\cos(kx - \\omega t)\\hat{k}$ T"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$B_0 = \\frac{E_0}{c}$. B is in phase with E and satisfies $\\hat{E} \\times \\hat{B} = $ direction of propagation.",
+        "steps": [
+          "The phase $(kx - \\omega t)$ means the wave travels along $+x$.",
+          "We need $\\hat{j} \\times \\hat{B} = \\hat{i}$. Since $\\hat{j} \\times \\hat{k} = \\hat{i}$, B is along $+\\hat{k}$.",
+          "$B_0 = \\frac{30}{3 \\times 10^8} = 10^{-7}$ T, in phase with E."
+        ],
+        "final_answer": "Option (2): $10^{-7} \\cos(kx - \\omega t)\\hat{k}$ T",
+        "why_not_others": "Option 1 puts B along the direction of propagation. Option 3 has B reversed, which would make the wave travel along $-x$. Option 4 multiplies $E_0$ by c instead of dividing.",
+        "common_trap": "Writing $B_0 = E_0 c$, or choosing the wrong sign for B.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Transverse nature of electromagnetic waves",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Light waves can be polarised, whereas sound waves in air cannot.",
+        "R": "In an electromagnetic wave, the electric and magnetic fields are perpendicular to the direction of propagation, so the wave is transverse."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Only transverse waves can be polarised, and polarisation proves that EM waves are transverse.",
+        "steps": [
+          "Light is an EM wave, and EM waves can be polarised. Sound waves are longitudinal and cannot be polarised, so A is true.",
+          "E and B are perpendicular to the direction of propagation, so R is true.",
+          "Transverse nature is exactly what allows polarisation, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R directly accounts for A. The remaining options either deny the link or call a true statement false.",
+        "common_trap": "Choosing option 2 without seeing that transverse nature is the very reason polarisation is possible.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Transverse nature of electromagnetic waves",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a plane electromagnetic wave, the Poynting vector $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$ points along the direction of propagation of the wave.",
+        "II": "A wave with electric field $\\vec{E} = E_0 \\sin(kz + \\omega t)\\hat{i}$ travels along $+z$, and its magnetic field is directed along $+\\hat{j}$ whenever $E_x$ is positive."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Energy flows along $\\vec{E} \\times \\vec{B}$. A phase of $(kz + \\omega t)$ means propagation along $-z$.",
+        "steps": [
+          "The Poynting vector gives the direction of energy flow, which is the direction of propagation. Statement I is correct.",
+          "The phase $(kz + \\omega t)$ means the wave travels along $-z$, not $+z$.",
+          "For travel along $-z$ with E along $+\\hat{i}$, we need $\\hat{i} \\times \\hat{B} = -\\hat{k}$, so B is along $-\\hat{j}$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is wrong both about the direction of propagation and about the direction of B. Statement I is correct.",
+        "common_trap": "Reading $(kz + \\omega t)$ as travel along $+z$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic spectrum: radio waves to gamma rays",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following sequences arranges electromagnetic radiations in order of increasing frequency?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Infrared, microwaves, ultraviolet, X-rays",
+        "Microwaves, ultraviolet, infrared, gamma rays",
+        "Microwaves, infrared, ultraviolet, X-rays",
+        "X-rays, ultraviolet, infrared, microwaves"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The order of increasing frequency is radio, microwave, infrared, visible, ultraviolet, X-rays, gamma rays.",
+        "steps": [
+          "Microwaves have a lower frequency than infrared.",
+          "Infrared has a lower frequency than ultraviolet, which has a lower frequency than X-rays."
+        ],
+        "final_answer": "Option (3): Microwaves, infrared, ultraviolet, X-rays",
+        "why_not_others": "Option 1 places infrared before microwaves. Option 2 places ultraviolet before infrared. Option 4 is in order of decreasing frequency.",
+        "common_trap": "Reversing the order, that is, confusing increasing frequency with increasing wavelength.",
+        "time_saving_tip": "Use the mnemonic Raging Martians Invaded Venus Using X-ray Guns."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic spectrum: radio waves to gamma rays",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An electromagnetic radiation in vacuum has a frequency of $1.5 \\times 10^{18}$ Hz. Its wavelength and the region of the spectrum to which it belongs are:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2$ nm, ultraviolet",
+        "$2$ nm, ultraviolet",
+        "$0.2$ nm, X-rays",
+        "$0.2$ nm, gamma rays"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda = \\frac{c}{\\nu}$. X-rays span 1 nm to $10^{-3}$ nm.",
+        "steps": [
+          "$\\lambda = \\frac{3 \\times 10^8}{1.5 \\times 10^{18}} = 2 \\times 10^{-10}$ m $= 0.2$ nm.",
+          "Since $10^{-3}$ nm $< 0.2$ nm $< 1$ nm, the radiation is an X-ray."
+        ],
+        "final_answer": "Option (3): $0.2$ nm, X-rays",
+        "why_not_others": "Ultraviolet lies between 400 nm and 1 nm. $2$ nm is a power-of-ten slip. Gamma rays have wavelengths below $10^{-3}$ nm.",
+        "common_trap": "Errors in the powers of ten when converting metres to nanometres.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic spectrum: radio waves to gamma rays",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Microwaves used in radar and communication are produced by:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Klystron, magnetron and Gunn diode",
+        "Radioactive decay of nuclei",
+        "Inner-shell electron transitions in heavy atoms",
+        "Thermopiles and bolometers"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Characteristic sources: microwaves come from the klystron, magnetron and Gunn diode.",
+        "steps": [
+          "Microwave sources are special vacuum tubes and devices: the klystron, magnetron and Gunn diode.",
+          "The other options describe gamma-ray sources, X-ray sources and infrared detectors."
+        ],
+        "final_answer": "Option (1): Klystron, magnetron and Gunn diode",
+        "why_not_others": "Radioactive decay of nuclei produces gamma rays. Inner-shell electron transitions produce X-rays. Thermopiles and bolometers are infrared detectors, not sources.",
+        "common_trap": "Mixing up the sources of different regions, or confusing detectors with sources.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic spectrum: radio waves to gamma rays",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Radio waves"
+          },
+          {
+            "label": "B",
+            "text": "Infrared"
+          },
+          {
+            "label": "C",
+            "text": "X-rays"
+          },
+          {
+            "label": "D",
+            "text": "Gamma rays"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Radioactive decay of nuclei"
+          },
+          {
+            "label": "II",
+            "text": "Hot bodies and molecular vibrations"
+          },
+          {
+            "label": "III",
+            "text": "Bombarding a metal target with high-energy electrons"
+          },
+          {
+            "label": "IV",
+            "text": "Accelerated charges in oscillating circuits"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-I, B-III, C-II, D-IV",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each region of the spectrum has a characteristic source.",
+        "steps": [
+          "Radio waves come from accelerated charges in oscillating circuits, so A-IV.",
+          "Infrared comes from hot bodies and molecular vibrations, so B-II.",
+          "X-rays come from X-ray tubes in which electrons bombard a metal target, so C-III.",
+          "Gamma rays come from radioactive decay of nuclei, so D-I."
+        ],
+        "final_answer": "Option (4): A-IV, B-II, C-III, D-I",
+        "why_not_others": "Option 1 swaps the X-ray and gamma-ray sources. Option 2 swaps the radio and infrared sources. Option 3 matches none correctly.",
+        "common_trap": "Attributing gamma rays to electron transitions or X-rays to nuclei.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Electromagnetic spectrum: radio waves to gamma rays",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the electromagnetic spectrum are correct?",
+      "statements": {
+        "A": "The energy per photon of gamma rays is greater than that of microwaves.",
+        "B": "Most of the ultraviolet radiation from the Sun is absorbed by the ozone layer.",
+        "C": "Visible light occupies a narrow band of wavelengths from about 400 nm to 700 nm.",
+        "D": "In vacuum, X-rays travel faster than radio waves.",
+        "E": "Infrared radiation is commonly detected using point-contact diodes."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B, C and D only",
+        "B, C and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Photon energy $E = h\\nu$ rises towards gamma rays. All EM waves travel at c in vacuum. Each region has its own detectors.",
+        "steps": [
+          "A is true because gamma rays have a higher frequency, so $h\\nu$ is larger.",
+          "B is true because the ozone layer absorbs most of the ultraviolet.",
+          "C is true because visible light spans about 400 to 700 nm.",
+          "D is false because all EM waves travel at c in vacuum.",
+          "E is false because point-contact diodes detect microwaves, while infrared is detected by thermopiles and bolometers."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Options 2 and 4 include D, which is false. Options 3 and 4 include E, which is false.",
+        "common_trap": "Thinking that higher-energy radiation travels faster, or mixing up the detectors of microwaves and infrared.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Applications of electromagnetic waves",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following electromagnetic radiations is used for purifying drinking water because it kills germs?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ultraviolet rays",
+        "Infrared rays",
+        "Microwaves",
+        "Radio waves"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Ultraviolet radiation kills germs, so it is used for water purification and sterilisation.",
+        "steps": [
+          "Germ-killing (germicidal) action is a property of ultraviolet radiation.",
+          "Water purifiers therefore use UV lamps to destroy bacteria and other microbes."
+        ],
+        "final_answer": "Option (1): Ultraviolet rays",
+        "why_not_others": "Infrared is used for remote controls, physiotherapy and night vision. Microwaves heat food and are used in radar. Radio waves carry AM, FM and TV signals. None of these is used to kill germs in water.",
+        "common_trap": "Choosing microwaves because they 'heat' water. Heating is not how purifiers sterilise water; UV kills the germs directly.",
+        "time_saving_tip": "Remember: germs and sterilisation point to UV (and gamma for equipment)."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Applications of electromagnetic waves",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A household microwave oven operates at a frequency of about $2.45$ GHz, which matches the resonant frequency of water molecules. Taking $c = 3 \\times 10^8$ m s$^{-1}$, the wavelength of this radiation in air is approximately:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.22$ cm",
+        "$12.2$ cm",
+        "$122$ cm",
+        "$0.122$ cm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Wavelength is related to frequency by $\\lambda = \\frac{c}{f}$.",
+        "steps": [
+          "$f = 2.45$ GHz $= 2.45 \\times 10^9$ Hz.",
+          "$\\lambda = \\frac{3 \\times 10^8}{2.45 \\times 10^9}$ m $\\approx 0.122$ m.",
+          "$0.122$ m $= 12.2$ cm."
+        ],
+        "final_answer": "Option (2): $12.2$ cm",
+        "why_not_others": "$1.22$ cm and $0.122$ cm result from slipping one or two powers of ten when converting GHz to Hz. $122$ cm results from treating $0.122$ m as $1.22$ m, which is an m-to-cm conversion slip.",
+        "common_trap": "Taking 1 GHz as $10^{6}$ Hz or $10^{8}$ Hz instead of $10^9$ Hz.",
+        "time_saving_tip": "At about $3$ GHz the wavelength is $10$ cm, so at $2.45$ GHz it must be slightly more than $10$ cm."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Applications of electromagnetic waves",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A broadcasting station transmits electromagnetic waves of wavelength $300$ m in air. Taking $c = 3 \\times 10^8$ m s$^{-1}$, this transmission belongs to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "FM radio band",
+        "TV broadcast band",
+        "AM radio band",
+        "Microwave band used for radar"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Find the frequency from $f = \\frac{c}{\\lambda}$ and compare it with the band limits: AM $530$ to $1710$ kHz, FM $88$ to $108$ MHz, TV $54$ to $890$ MHz.",
+        "steps": [
+          "$f = \\frac{3 \\times 10^8}{300} = 10^6$ Hz $= 1000$ kHz.",
+          "$1000$ kHz lies between $530$ kHz and $1710$ kHz.",
+          "Hence the station is an AM radio station."
+        ],
+        "final_answer": "Option (3): AM radio band",
+        "why_not_others": "The FM band ($88$ to $108$ MHz) and the TV band ($54$ to $890$ MHz) are far higher than $1$ MHz. Radar microwaves are in the GHz range, which corresponds to wavelengths of only centimetres.",
+        "common_trap": "Confusing kHz with MHz and placing a $1$ MHz signal in the FM range.",
+        "time_saving_tip": "Long wavelengths of hundreds of metres always mean the kHz AM band."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Applications of electromagnetic waves",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Welders wear special glass goggles mainly to protect their eyes from the gamma rays produced during welding.",
+        "R": "Glass blocks ultraviolet radiation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Welding arcs emit harmful ultraviolet radiation, and glass absorbs UV.",
+        "steps": [
+          "The goggles worn by welders protect the eyes from UV, not from gamma rays. Gamma rays come from nuclei, not from a welding arc, so A is false.",
+          "Glass blocks UV radiation, so R is true.",
+          "R is actually the reason welders use glass goggles against UV."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options (1) and (2) need A to be true, but A names the wrong radiation. Option (3) is wrong because R is a correct fact.",
+        "common_trap": "Reading 'protective goggles' and assuming the most penetrating radiation, gamma rays, is the hazard.",
+        "time_saving_tip": "Welding goggles, glass and UV go together."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u15_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u15",
+      "topic": "Applications of electromagnetic waves",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Gamma rays used in cancer radiotherapy are produced by electron transitions in the inner shells of atoms, in the same way as X-rays.",
+        "II": "An electromagnetic wave of wavelength $3$ m in air (take $c = 3 \\times 10^8$ m s$^{-1}$) has a frequency that lies within both the FM radio band and the TV broadcast band."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Gamma rays originate in nuclei, while X-rays come from electron transitions. The FM band is $88$ to $108$ MHz and the TV band is $54$ to $890$ MHz.",
+        "steps": [
+          "Gamma rays are emitted by nuclei, not by electron transitions, so Statement I is incorrect.",
+          "$f = \\frac{3 \\times 10^8}{3} = 10^8$ Hz $= 100$ MHz.",
+          "$100$ MHz lies in the FM band ($88$ to $108$ MHz).",
+          "$100$ MHz also lies in the TV band ($54$ to $890$ MHz), so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Option (1) and option (3) wrongly accept the source given for gamma rays. Option (2) wrongly rejects Statement II, because $100$ MHz falls in both bands, which overlap.",
+        "common_trap": "Mixing up sources: X-rays come from electron transitions, but gamma rays come from nuclei. Another trap is assuming the FM and TV bands cannot overlap.",
+        "time_saving_tip": "Note that the TV band ($54$ to $890$ MHz) completely contains the FM band ($88$ to $108$ MHz). Any FM frequency is therefore also inside the TV range."
+      },
+      "review_flags": []
+    }
+  ],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "expected": 25,
+    "missing_slots": []
+  }
+}

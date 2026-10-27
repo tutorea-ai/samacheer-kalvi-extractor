@@ -1,0 +1,449 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "For a solution of a non-volatile solute in a volatile solvent, the relative lowering of vapour pressure of the solvent is equal to which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Mole fraction of the solute",
+        "Mole fraction of the solvent",
+        "Molality of the solution",
+        "Molarity of the solute"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Raoult's law for a non-volatile solute: $\\frac{p_A^0 - p_A}{p_A^0} = x_B$.",
+        "steps": [
+          "The relative lowering of vapour pressure is $\\frac{p_A^0 - p_A}{p_A^0}$.",
+          "By Raoult's law this equals $x_B$, the mole fraction of the solute."
+        ],
+        "final_answer": "Option (1): Mole fraction of the solute",
+        "why_not_others": "The solvent mole fraction $x_A$ gives $p_A/p_A^0$, not the relative lowering. Molality and molarity are concentration terms used in other colligative expressions.",
+        "common_trap": "Confusing $p_A/p_A^0 = x_A$ with the relative lowering, which equals $x_B$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "6 g of urea (molar mass 60 g $mol^{-1}$) is dissolved in 250 g of water. What is the freezing point of the solution? ($K_f$ for water $= 1.86$ K kg $mol^{-1}$, $K_b$ for water $= 0.52$ K kg $mol^{-1}$; freezing point of water $= 0\\ ^\\circ C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-0.186\\ ^\\circ C$",
+        "$-0.208\\ ^\\circ C$",
+        "$-0.744\\ ^\\circ C$",
+        "$-1.488\\ ^\\circ C$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\Delta T_f = K_f m$, with molality calculated per kg of solvent.",
+        "steps": [
+          "Moles of urea $= 6/60 = 0.1$ mol.",
+          "Molality $m = 0.1/0.250 = 0.4$ mol $kg^{-1}$.",
+          "$\\Delta T_f = 1.86 \\times 0.4 = 0.744$ K.",
+          "Freezing point $= 0 - 0.744 = -0.744\\ ^\\circ C$."
+        ],
+        "final_answer": "Option (3): $-0.744\\ ^\\circ C$",
+        "why_not_others": "$-0.186\\ ^\\circ C$ uses moles instead of molality. $-0.208\\ ^\\circ C$ uses $K_b$ instead of $K_f$. $-1.488\\ ^\\circ C$ wrongly applies $i = 2$ to urea, which is a non-electrolyte with $i = 1$.",
+        "common_trap": "Using $K_b$ in place of $K_f$, or forgetting to convert the solvent mass to kg.",
+        "time_saving_tip": "0.1 mol in 0.25 kg means multiplying by 4, so $m = 0.4$ directly."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "What is the osmotic pressure of a solution containing 0.05 mol of glucose dissolved in water to make 500 mL of solution at $27\\ ^\\circ C$? ($R = 0.083$ L bar $mol^{-1}$ $K^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.245 bar",
+        "2.49 bar",
+        "0.224 bar",
+        "4.98 bar"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\pi = CRT$, with $C$ in mol $L^{-1}$ and $T$ in kelvin.",
+        "steps": [
+          "$C = 0.05/0.5 = 0.1$ mol $L^{-1}$.",
+          "$T = 27 + 273 = 300$ K.",
+          "$\\pi = 0.1 \\times 0.083 \\times 300 = 2.49$ bar."
+        ],
+        "final_answer": "Option (2): 2.49 bar",
+        "why_not_others": "1.245 bar takes the volume as 1 L. 0.224 bar uses $T = 27$ instead of 300 K. 4.98 bar wrongly uses $i = 2$ for glucose, a non-electrolyte.",
+        "common_trap": "Substituting the temperature in Celsius, or not converting mL to L.",
+        "time_saving_tip": "$0.083 \\times 300 = 24.9$; multiply this by $C$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A 0.1 m aqueous solution of urea boils at a higher temperature than pure water at the same external pressure.",
+        "R": "The ebullioscopic constant $K_b$ depends only on the solvent and not on the nature of the solute."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Boiling point elevation arises from the lowering of vapour pressure by the solute.",
+        "steps": [
+          "A non-volatile solute lowers the vapour pressure of water, so a higher temperature is needed to reach the external pressure. A is true.",
+          "$K_b$ is characteristic of the solvent only, so R is true.",
+          "R describes a property of the constant; it does not explain why the boiling point rises. That is due to vapour pressure lowering."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option (1) fails because the cause of the elevation is vapour pressure lowering, not the solute-independence of $K_b$. Options (3) and (4) fail because both statements are true.",
+        "common_trap": "Accepting any true, related statement as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An aqueous solution of a non-volatile non-electrolyte that freezes at $-0.372\\ ^\\circ C$ will boil at $100.372\\ ^\\circ C$ at 1 atm. ($K_f = 1.86$, $K_b = 0.52$ K kg $mol^{-1}$ for water)",
+        "II": "For two solvents having the same molar mass and the same freezing point, the solvent with the larger enthalpy of fusion has the smaller cryoscopic constant."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\Delta T_f = K_f m$ and $\\Delta T_b = K_b m$. Also, $K_f = \\frac{R M_A T_f^2}{1000\\,\\Delta_{fus}H}$.",
+        "steps": [
+          "From the freezing point: $m = 0.372/1.86 = 0.2$ mol $kg^{-1}$.",
+          "$\\Delta T_b = 0.52 \\times 0.2 = 0.104$ K, so the solution boils at $100.104\\ ^\\circ C$. Statement I is incorrect.",
+          "With $M_A$ and $T_f$ fixed, $K_f \\propto 1/\\Delta_{fus}H$. A larger enthalpy of fusion therefore gives a smaller $K_f$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I wrongly assumes $\\Delta T_b = \\Delta T_f$, which ignores that $K_b$ and $K_f$ differ. Statement II follows directly from the expression for $K_f$.",
+        "common_trap": "Assuming the boiling point rises by the same amount that the freezing point falls.",
+        "time_saving_tip": "$\\Delta T_b/\\Delta T_f = K_b/K_f = 0.52/1.86$, so $\\Delta T_b$ must be much smaller than 0.372 K."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Which colligative property is preferred for determining the molar mass of proteins and other biomolecules?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Depression of freezing point",
+        "Osmotic pressure",
+        "Elevation of boiling point",
+        "Relative lowering of vapour pressure"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Osmotic pressure is the method of choice for macromolecules.",
+        "steps": [
+          "Osmotic pressure is measured at room temperature, which avoids denaturing the biomolecule.",
+          "Even dilute solutions of large molecules give a measurable $\\pi$, whereas $\\Delta T_f$ or $\\Delta T_b$ would be too small to measure accurately."
+        ],
+        "final_answer": "Option (2): Osmotic pressure",
+        "why_not_others": "Freezing point depression and boiling point elevation give changes that are too small for macromolecules, and boiling also needs heating. Vapour pressure lowering is similarly very small.",
+        "common_trap": "Choosing freezing point depression because it is preferred over boiling point elevation for ordinary solutes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A solution of 2.5 g of a non-volatile non-electrolyte in 100 g of water shows a freezing point depression of 0.465 K. What is the molar mass of the solute? ($K_f$ for water $= 1.86$ K kg $mol^{-1}$, $K_b = 0.52$ K kg $mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$28\\ g\\ mol^{-1}$",
+        "$10\\ g\\ mol^{-1}$",
+        "$100\\ g\\ mol^{-1}$",
+        "$1000\\ g\\ mol^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$M_B = \\frac{1000\\, K_f\\, w_B}{\\Delta T_f\\, w_A}$",
+        "steps": [
+          "$M_B = \\frac{1000 \\times 1.86 \\times 2.5}{0.465 \\times 100}$.",
+          "Numerator $= 4650$ and denominator $= 46.5$.",
+          "$M_B = 100$ g $mol^{-1}$."
+        ],
+        "final_answer": "Option (3): $100\\ g\\ mol^{-1}$",
+        "why_not_others": "28 g $mol^{-1}$ uses $K_b$ instead of $K_f$. 10 and 1000 g $mol^{-1}$ come from factor-of-10 slips in handling the solvent mass or the factor 1000.",
+        "common_trap": "Substituting $K_b$ for $K_f$, or mishandling the factor 1000 for molality.",
+        "time_saving_tip": "$1.86/0.465 = 4$, so $M_B = 1000 \\times 4 \\times 2.5/100 = 100$."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "1.0 g of a polymer is dissolved in water to make 500 mL of solution. Its osmotic pressure at $27\\ ^\\circ C$ is $2.49 \\times 10^{-3}$ bar. What is the molar mass of the polymer? ($R = 0.083$ L bar $mol^{-1}$ $K^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10000\\ g\\ mol^{-1}$",
+        "$20000\\ g\\ mol^{-1}$",
+        "$2000\\ g\\ mol^{-1}$",
+        "$5000\\ g\\ mol^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$M_B = \\frac{w_B R T}{\\pi V}$, with $V$ in L and $T$ in K.",
+        "steps": [
+          "$T = 300$ K and $V = 0.5$ L.",
+          "$w_B R T = 1.0 \\times 0.083 \\times 300 = 24.9$.",
+          "$\\pi V = 2.49 \\times 10^{-3} \\times 0.5 = 1.245 \\times 10^{-3}$.",
+          "$M_B = 24.9/(1.245 \\times 10^{-3}) = 20000$ g $mol^{-1}$."
+        ],
+        "final_answer": "Option (2): $20000\\ g\\ mol^{-1}$",
+        "why_not_others": "10000 g $mol^{-1}$ takes $V = 1$ L. 2000 g $mol^{-1}$ uses $T = 27$ instead of 300 K. 5000 g $mol^{-1}$ multiplies by $V$ instead of dividing by it.",
+        "common_trap": "Placing $V$ in the numerator, or using the temperature in Celsius.",
+        "time_saving_tip": "$24.9/2.49 = 10$, so $M_B = 10/(10^{-3} \\times 0.5) = 20000$."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Relative lowering of vapour pressure"
+          },
+          {
+            "label": "B",
+            "text": "Elevation of boiling point"
+          },
+          {
+            "label": "C",
+            "text": "Depression of freezing point"
+          },
+          {
+            "label": "D",
+            "text": "Osmotic pressure"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$M_B = \\frac{w_B R T}{\\pi V}$"
+          },
+          {
+            "label": "II",
+            "text": "$M_B = \\frac{1000\\, K_f\\, w_B}{\\Delta T_f\\, w_A}$"
+          },
+          {
+            "label": "III",
+            "text": "$M_B = \\frac{w_B M_A\\, p_A^0}{w_A (p_A^0 - p_A)}$"
+          },
+          {
+            "label": "IV",
+            "text": "$M_B = \\frac{1000\\, K_b\\, w_B}{\\Delta T_b\\, w_A}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each molar mass formula comes from substituting $n_B = w_B/M_B$ into the corresponding colligative equation.",
+        "steps": [
+          "Vapour pressure lowering involves $p_A^0$ and $M_A$, so A matches III.",
+          "Boiling point elevation uses $K_b$ and $\\Delta T_b$, so B matches IV.",
+          "Freezing point depression uses $K_f$ and $\\Delta T_f$, so C matches II.",
+          "Osmotic pressure uses $\\pi$, $V$ and $RT$, so D matches I."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the $K_b$ and $K_f$ formulas. Options (2) and (3) mismatch the vapour pressure and osmotic pressure expressions.",
+        "common_trap": "Interchanging the $K_b$ and $K_f$ expressions.",
+        "time_saving_tip": "Identify each formula by its unique symbol: $p_A^0$, $K_b$, $K_f$ or $\\pi$."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about determining molar mass from colligative properties are correct?",
+      "statements": {
+        "A": "Osmotic pressure is preferred for biomolecules because it is measured at room temperature, which avoids denaturation.",
+        "B": "For a dilute polymer solution, $\\Delta T_f$ may be too small to measure accurately, whereas its osmotic pressure is measurable.",
+        "C": "Boiling point elevation is generally preferred over freezing point depression because $K_b$ is larger than $K_f$.",
+        "D": "In $M_B = \\frac{1000\\, K_f\\, w_B}{\\Delta T_f\\, w_A}$, $w_A$ is the mass of the solution.",
+        "E": "When $\\pi$ is in bar and $V$ is in litres, $R = 0.083$ L bar $mol^{-1}$ $K^{-1}$ should be used."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and E only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Choice of method and consistent units in molar mass determination.",
+        "steps": [
+          "A and B are correct reasons for preferring osmotic pressure for macromolecules.",
+          "C is wrong: freezing point depression is preferred because $K_f$ is larger than $K_b$ (1.86 vs 0.52 for water).",
+          "D is wrong: $w_A$ is the mass of the solvent.",
+          "E is correct: the units of $R$ must match the pressure and volume units."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Options containing C or D include a false statement. C reverses the relative sizes of $K_b$ and $K_f$, and D uses the mass of solution instead of the solvent.",
+        "common_trap": "Using the mass of solution instead of the mass of solvent in molality-based formulas.",
+        "time_saving_tip": "Once C and D are found false, only the option without both of them remains."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "What is the van't Hoff factor for $K_3[Fe(CN)_6]$ in a dilute aqueous solution, assuming complete dissociation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For complete dissociation, $i$ equals the number of ions formed per formula unit.",
+        "steps": [
+          "$K_3[Fe(CN)_6] \\rightarrow 3K^+ + [Fe(CN)_6]^{3-}$",
+          "Total ions $= 3 + 1 = 4$, so $i = 4$."
+        ],
+        "final_answer": "Option (4): 4",
+        "why_not_others": "3 counts only the $K^+$ ions. 2 is the value for a 1:1 electrolyte. 1 is the value for a non-electrolyte.",
+        "common_trap": "Breaking the complex ion into separate ions, or forgetting to count it as one particle.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A 0.1 m aqueous solution of a salt $MX_2$, which dissociates as $MX_2 \\rightarrow M^{2+} + 2X^-$, freezes at $-0.4836\\ ^\\circ C$. What is the degree of dissociation of the salt? ($K_f$ for water $= 1.86$ K kg $mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.53",
+        "0.87",
+        "0.20",
+        "0.80"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$i = \\frac{\\text{observed } \\Delta T_f}{\\text{calculated } \\Delta T_f}$ and $i = 1 + (n-1)\\alpha$.",
+        "steps": [
+          "Calculated $\\Delta T_f = 1.86 \\times 0.1 = 0.186$ K.",
+          "$i = 0.4836/0.186 = 2.6$.",
+          "With $n = 3$: $2.6 = 1 + 2\\alpha$, so $\\alpha = 0.80$."
+        ],
+        "final_answer": "Option (4): 0.80",
+        "why_not_others": "0.53 divides $(i - 1)$ by $n$ instead of $(n - 1)$. 0.87 takes $\\alpha = i/n$. 0.20 uses $(n - i)/2$.",
+        "common_trap": "Using $n$ instead of $(n - 1)$ in the dissociation formula.",
+        "time_saving_tip": "$0.4836/0.186$ is exactly 2.6; then $\\alpha = 1.6/2$."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "Benzoic acid (molar mass 122 g $mol^{-1}$) is 75% dimerised in benzene. What apparent molar mass will a colligative property measurement give?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$195.2\\ g\\ mol^{-1}$",
+        "$76.25\\ g\\ mol^{-1}$",
+        "$244\\ g\\ mol^{-1}$",
+        "$488\\ g\\ mol^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For association, $i = 1 - \\left(1 - \\frac{1}{n}\\right)\\alpha$ and $i = \\frac{\\text{normal molar mass}}{\\text{abnormal molar mass}}$.",
+        "steps": [
+          "$i = 1 - \\left(1 - \\frac{1}{2}\\right)(0.75) = 0.625$.",
+          "Abnormal molar mass $= 122/0.625 = 195.2$ g $mol^{-1}$."
+        ],
+        "final_answer": "Option (1): $195.2\\ g\\ mol^{-1}$",
+        "why_not_others": "76.25 multiplies by $i$ instead of dividing. 244 assumes complete dimerisation. 488 uses $i = 1 - \\alpha = 0.25$.",
+        "common_trap": "Multiplying the normal molar mass by $i$; association must raise the observed molar mass.",
+        "time_saving_tip": "The answer must lie between 122 and 244, which leaves only 195.2."
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The molar mass of KCl obtained from the freezing point depression of its aqueous solution is higher than its true molar mass.",
+        "R": "KCl dissociates in water, which increases the number of solute particles in solution."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Dissociation increases the number of particles, so the observed colligative property rises and the calculated molar mass falls.",
+        "steps": [
+          "KCl dissociates into $K^+$ and $Cl^-$, so R is true.",
+          "More particles give a larger $\\Delta T_f$, and since $M_B \\propto 1/\\Delta T_f$ the calculated molar mass is lower than the true value.",
+          "A is therefore false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, which rules out options (1), (2) and (3).",
+        "common_trap": "Assuming dissociation increases the observed molar mass; it decreases it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Assuming complete dissociation, a 0.1 m aqueous solution of $CaCl_2$ and a 0.15 m aqueous solution of NaCl have the same boiling point.",
+        "II": "If ethanoic acid (molar mass 60 g $mol^{-1}$) is completely dimerised in benzene, its molar mass determined from a colligative property will be about 120 g $mol^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The effective particle concentration is $i \\times m$. Also, $i = \\frac{\\text{normal molar mass}}{\\text{abnormal molar mass}}$.",
+        "steps": [
+          "For $CaCl_2$: $i \\times m = 3 \\times 0.1 = 0.3$.",
+          "For NaCl: $i \\times m = 2 \\times 0.15 = 0.3$. Equal $i \\times m$ gives equal $\\Delta T_b$, so Statement I is correct.",
+          "Complete dimerisation gives $i = 0.5$, so the abnormal molar mass $= 60/0.5 = 120$ g $mol^{-1}$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I is judged false only if $i$ is ignored, since 0.1 and 0.15 m look unequal. Statement II is judged false only if one forgets that association raises the observed molar mass.",
+        "common_trap": "Comparing molalities directly without multiplying by the van't Hoff factor.",
+        "time_saving_tip": "Compare $i \\times m$ values directly instead of calculating each $\\Delta T_b$."
+      }
+    }
+  ]
+}

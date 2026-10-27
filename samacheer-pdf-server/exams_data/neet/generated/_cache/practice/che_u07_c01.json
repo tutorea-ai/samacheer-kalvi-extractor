@@ -1,0 +1,622 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "In the reaction $Mg + Cu^{2+} \\rightarrow Mg^{2+} + Cu$, which species acts as the oxidising agent?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Mg$",
+        "$Cu^{2+}$",
+        "$Mg^{2+}$",
+        "$Cu$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The oxidising agent accepts electrons and is itself reduced.",
+        "steps": [
+          "$Mg \\rightarrow Mg^{2+} + 2e^-$, so Mg loses electrons and is oxidised. Mg is the reductant.",
+          "$Cu^{2+} + 2e^- \\rightarrow Cu$, so $Cu^{2+}$ gains electrons and is reduced. $Cu^{2+}$ is the oxidant."
+        ],
+        "final_answer": "Option (2): $Cu^{2+}$",
+        "why_not_others": "Mg is the reducing agent. $Mg^{2+}$ and $Cu$ are products, not the reagent that accepts electrons.",
+        "common_trap": "Calling the species that gets oxidised the oxidising agent.",
+        "time_saving_tip": "The oxidant is the reactant whose charge decreases."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "In the reaction $2Al + 3Cl_2 \\rightarrow 2AlCl_3$, how many moles of electrons are transferred from aluminium to chlorine when 2 mol of Al react completely?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3 mol",
+        "6 mol",
+        "2 mol",
+        "12 mol"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Electrons lost by the reductant equal electrons gained by the oxidant.",
+        "steps": [
+          "Each Al atom forms $Al^{3+}$ by losing $3e^-$.",
+          "2 mol Al therefore lose $2 \\times 3 = 6$ mol of electrons.",
+          "Check with chlorine: 3 mol $Cl_2$ gain $3 \\times 2 = 6$ mol of electrons, which matches."
+        ],
+        "final_answer": "Option (2): 6 mol",
+        "why_not_others": "3 mol is the loss for only 1 mol of Al. 2 mol simply copies the moles of Al. 12 mol double-counts by adding the electrons lost to the electrons gained.",
+        "common_trap": "Adding the electrons lost and the electrons gained together. They are the same electrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "Which option correctly represents the two redox couples involved in the reaction $Fe + Cu^{2+} \\rightarrow Fe^{2+} + Cu$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Fe^{2+}/Fe$ and $Cu^{2+}/Cu$",
+        "$Fe/Fe^{2+}$ and $Cu/Cu^{2+}$",
+        "$Fe/Fe^{2+}$ and $Cu^{2+}/Cu$",
+        "$Fe^{2+}/Cu^{2+}$ and $Fe/Cu$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A redox couple is written as oxidised form/reduced form.",
+        "steps": [
+          "Iron half-reaction: oxidised form $Fe^{2+}$, reduced form $Fe$, so the couple is $Fe^{2+}/Fe$.",
+          "Copper half-reaction: oxidised form $Cu^{2+}$, reduced form $Cu$, so the couple is $Cu^{2+}/Cu$."
+        ],
+        "final_answer": "Option (1): $Fe^{2+}/Fe$ and $Cu^{2+}/Cu$",
+        "why_not_others": "Option (2) reverses both couples. Option (3) reverses the iron couple. Option (4) pairs species of different elements, which cannot form a couple.",
+        "common_trap": "Writing the couple in the direction the reaction proceeds instead of always as oxidised/reduced.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Magnesium acts as a reducing agent in the reaction $Mg + Cl_2 \\rightarrow MgCl_2$.",
+        "R": "In any redox reaction, the number of electrons lost equals the number of electrons gained."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The reductant is the electron donor.",
+        "steps": [
+          "Mg loses $2e^-$ to form $Mg^{2+}$, so it is the reducing agent. A is true.",
+          "Electrons lost always equal electrons gained. R is true.",
+          "R does not explain why Mg is the reductant. The reason is that Mg donates electrons."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) are ruled out. R states a conservation rule, not the cause of reducing behaviour, so option (1) is wrong.",
+        "common_trap": "Choosing option (1) just because both statements are true and relate to redox.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the reaction $2Fe^{3+} + Sn^{2+} \\rightarrow 2Fe^{2+} + Sn^{4+}$, $Sn^{2+}$ is the reducing agent and is itself oxidised.",
+        "II": "In the same reaction, the oxidant gains a total of 2 mol of electrons for every mole of $Sn^{2+}$ consumed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The reductant is oxidised, and electrons lost equal electrons gained.",
+        "steps": [
+          "$Sn^{2+} \\rightarrow Sn^{4+} + 2e^-$, so $Sn^{2+}$ is oxidised and acts as the reductant. Statement I is correct.",
+          "These $2e^-$ reduce $2Fe^{3+}$ to $2Fe^{2+}$, each $Fe^{3+}$ gaining $1e^-$.",
+          "The oxidant therefore gains 2 mol of electrons per mole of $Sn^{2+}$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements are correct, so options (2), (3) and (4) are wrong.",
+        "common_trap": "Thinking each $Fe^{3+}$ gains 2 electrons because Sn changes by 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "What is the oxidation number of oxygen in barium peroxide, $BaO_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-2$",
+        "$-1$",
+        "$-\\frac{1}{2}$",
+        "$+1$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Oxygen is $-1$ in peroxides, and alkaline earth metals are $+2$.",
+        "steps": [
+          "Ba is $+2$, so $2 + 2x = 0$.",
+          "Solving gives $x = -1$."
+        ],
+        "final_answer": "Option (2): $-1$",
+        "why_not_others": "$-2$ is the normal oxide value. $-\\frac{1}{2}$ applies to superoxides such as $KO_2$. $+1$ is the value in $O_2F_2$.",
+        "common_trap": "Taking O as $-2$ in every compound.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "What is the oxidation number of chromium in $CrO_5$, which contains peroxide linkages?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+10$",
+        "$+5$",
+        "$+6$",
+        "$+8$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Peroxo oxygen atoms are $-1$, not $-2$.",
+        "steps": [
+          "$CrO_5$ has one oxide O at $-2$ and four peroxo O atoms at $-1$ each.",
+          "$x - 2 - 4 = 0$, so $x = +6$."
+        ],
+        "final_answer": "Option (3): $+6$",
+        "why_not_others": "$+10$ comes from taking every O as $-2$. $+5$ comes from taking every O as $-1$. $+8$ is the result of a miscount of the peroxo atoms.",
+        "common_trap": "Getting $+10$ by ignoring the peroxide bonds.",
+        "time_saving_tip": "Cr cannot exceed its group valence of $+6$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "In which of the following species does the indicated atom have an oxidation number of $-1$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "O in $KO_2$",
+        "H in $H_2O$",
+        "O in $OF_2$",
+        "H in $CaH_2$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "H is $-1$ in metal hydrides. Oxygen has several exceptional values.",
+        "steps": [
+          "O in $KO_2$ (superoxide) is $-\\frac{1}{2}$.",
+          "H in $H_2O$ is $+1$.",
+          "O in $OF_2$ is $+2$.",
+          "H in $CaH_2$: Ca is $+2$, so $2 + 2x = 0$ and $x = -1$."
+        ],
+        "final_answer": "Option (4): H in $CaH_2$",
+        "why_not_others": "The other atoms have oxidation numbers of $-\\frac{1}{2}$, $+1$ and $+2$ respectively.",
+        "common_trap": "Assuming H is always $+1$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "O in $KO_2$"
+          },
+          {
+            "label": "B",
+            "text": "O in $OF_2$"
+          },
+          {
+            "label": "C",
+            "text": "O in $O_2F_2$"
+          },
+          {
+            "label": "D",
+            "text": "O in $H_2O_2$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$+2$"
+          },
+          {
+            "label": "II",
+            "text": "$-\\frac{1}{2}$"
+          },
+          {
+            "label": "III",
+            "text": "$-1$"
+          },
+          {
+            "label": "IV",
+            "text": "$+1$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-I, C-IV, D-II",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These are the exceptional oxidation numbers of oxygen.",
+        "steps": [
+          "$KO_2$ is a superoxide: $-\\frac{1}{2}$ (II).",
+          "$OF_2$: F is $-1$, so O is $+2$ (I).",
+          "$O_2F_2$: $2x - 2 = 0$, so O is $+1$ (IV).",
+          "$H_2O_2$ is a peroxide: $-1$ (III)."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-IV, D-III",
+        "why_not_others": "The other matchings swap the superoxide and peroxide values or swap the two fluoride values.",
+        "common_trap": "Confusing the values in $OF_2$ ($+2$) and $O_2F_2$ ($+1$).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about oxidation numbers are correct?",
+      "statements": {
+        "A": "S in $H_2SO_5$ has an oxidation number of $+8$.",
+        "B": "In $S_4O_6^{2-}$, two S atoms are at $+5$ and two are at 0.",
+        "C": "$2H_2O_2 \\rightarrow 2H_2O + O_2$ is a disproportionation reaction.",
+        "D": "Cl in $Cl_2O_7$ can act only as an oxidant.",
+        "E": "H has an oxidation number of $+1$ in $NaH$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and E only",
+        "A, C and D only",
+        "B, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Apply peroxide exceptions, the meaning of average ON, disproportionation and the maximum-ON rule.",
+        "steps": [
+          "A is false. The peroxo linkage keeps S at $+6$.",
+          "B is true. The average ON of $+2.5$ comes from $(5+5+0+0)/4$.",
+          "C is true. O in $H_2O_2$ ($-1$) goes both to $-2$ and to 0.",
+          "D is true. Cl is at its maximum ON of $+7$, so it can only be reduced.",
+          "E is false. H is $-1$ in metal hydrides."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Options (1) and (3) include the false statement A. Option (2) includes the false statement E and leaves out C and D.",
+        "common_trap": "Getting $+8$ for S in $H_2SO_5$ by ignoring the peroxide bond.",
+        "time_saving_tip": "Eliminate any option containing A or E first."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "In the titration of $Fe^{2+}$ with $MnO_4^-$ in acidic medium, what is the mole ratio $MnO_4^- : Fe^{2+}$ in the balanced equation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1:5",
+        "5:1",
+        "1:3",
+        "1:6"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Electrons gained by the oxidant equal electrons lost by the reductant.",
+        "steps": [
+          "In acid, $MnO_4^-$ gains $5e^-$ (Mn goes from $+7$ to $+2$).",
+          "Each $Fe^{2+}$ loses $1e^-$.",
+          "So 1 $MnO_4^-$ oxidises 5 $Fe^{2+}$."
+        ],
+        "final_answer": "Option (1): 1:5",
+        "why_not_others": "5:1 inverts the ratio. 1:3 uses the neutral-medium n-factor. 1:6 is the dichromate ratio.",
+        "common_trap": "Using the n-factor for the wrong medium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "What volume of 0.02 M $KMnO_4$ is needed to completely oxidise 50 mL of 0.1 M sodium oxalate in acidic medium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "100 mL",
+        "250 mL",
+        "50 mL",
+        "625 mL"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In acid, permanganate and oxalate react in the mole ratio 2:5.",
+        "steps": [
+          "Moles of $C_2O_4^{2-}$ = $0.1 \\times 0.050 = 0.005$ mol.",
+          "Moles of $MnO_4^-$ = $\\frac{2}{5} \\times 0.005 = 0.002$ mol.",
+          "Volume = $\\frac{0.002}{0.02} = 0.1$ L = 100 mL.",
+          "Check with equivalents: $0.002 \\times 5 = 0.005 \\times 2 = 0.01$, which matches."
+        ],
+        "final_answer": "Option (1): 100 mL",
+        "why_not_others": "250 mL assumes a 1:1 ratio. 50 mL uses the 1:5 ratio from the $Fe^{2+}$ titration. 625 mL inverts the ratio to 5:2.",
+        "common_trap": "Copying the $MnO_4^-:Fe^{2+}$ ratio for oxalate.",
+        "time_saving_tip": "Equate equivalents: $M_1 n_1 V_1 = M_2 n_2 V_2$, giving $0.02 \\times 5 \\times V = 0.1 \\times 2 \\times 50$."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "How many moles of $Fe^{2+}$ can be oxidised to $Fe^{3+}$ by 0.25 mol of $K_2Cr_2O_7$ in acidic medium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.5 mol",
+        "0.75 mol",
+        "1.25 mol",
+        "3.0 mol"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$Cr_2O_7^{2-}$ gains $6e^-$ per ion, so the ratio $Cr_2O_7^{2-}:Fe^{2+}$ is 1:6.",
+        "steps": [
+          "Each $Cr_2O_7^{2-}$ has 2 Cr going from $+6$ to $+3$, a gain of $6e^-$.",
+          "Moles of $Fe^{2+}$ = $0.25 \\times 6 = 1.5$ mol."
+        ],
+        "final_answer": "Option (1): 1.5 mol",
+        "why_not_others": "0.75 mol counts only one Cr (3 electrons). 1.25 mol uses the permanganate n-factor of 5. 3.0 mol double-counts to 12 electrons.",
+        "common_trap": "Forgetting that dichromate contains two Cr atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The n-factor of $K_2Cr_2O_7$ acting as an oxidant in acidic medium is 6.",
+        "R": "A balanced redox equation must conserve both atoms and charge."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The n-factor is the number of electrons gained or lost per formula unit.",
+        "steps": [
+          "Two Cr atoms each change from $+6$ to $+3$, giving a total of $6e^-$. A is true.",
+          "Atom and charge conservation is a true rule for balanced equations. R is true.",
+          "A follows from the change in Cr oxidation number, not from the conservation rule."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) are ruled out. R does not explain the value 6, so option (1) is wrong.",
+        "common_trap": "Treating any true general rule as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When the half-reaction $MnO_4^- \\rightarrow Mn^{2+}$ is balanced in acidic medium, $8H^+$ and $5e^-$ appear on the left side and $4H_2O$ on the right side.",
+        "II": "1 mol of $MnO_4^-$ oxidises the same number of moles of $Fe^{2+}$ in neutral medium as it does in acidic medium."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The n-factor of $MnO_4^-$ depends on the medium: 5 in acid, 3 in neutral, 1 in strongly basic.",
+        "steps": [
+          "Balance O: add $4H_2O$ on the right. Balance H: add $8H^+$ on the left.",
+          "Balance charge: $-1 + 8 = +7$ on the left against $+2$ on the right, so add $5e^-$ on the left. Statement I is correct.",
+          "In neutral medium, $MnO_4^-$ gains only $3e^-$, so 1 mol oxidises 3 mol of $Fe^{2+}$ instead of 5. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I is correct, which rules out options (2) and (4). Statement II is incorrect, which rules out option (1).",
+        "common_trap": "Assuming permanganate always gains 5 electrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Which of the following is true for metallic conduction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Current is carried by ions",
+        "Chemical changes occur at the electrodes",
+        "Conductance increases with rise in temperature",
+        "No matter is transferred and the metal undergoes no chemical change"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In metallic conduction, mobile electrons carry the current.",
+        "steps": [
+          "Electrons flow through the metal, so no matter is transferred and there is no chemical change.",
+          "Conductance falls as temperature rises because lattice vibrations increase."
+        ],
+        "final_answer": "Option (4): No matter is transferred and the metal undergoes no chemical change",
+        "why_not_others": "Options (1), (2) and (3) describe electrolytic conduction.",
+        "common_trap": "Mixing up the temperature dependence of the two types of conduction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "Why does the conductance of an electrolytic solution increase with rise in temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Lattice vibrations of the electrolyte increase",
+        "The number of free electrons in the solution increases",
+        "Solvent viscosity decreases and ionic mobility increases",
+        "The ions become more heavily hydrated"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Electrolytic conductance depends on how freely the ions move through the solvent.",
+        "steps": [
+          "A higher temperature lowers the viscosity of the solvent.",
+          "Ions then move faster, so ionic mobility and conductance rise. Weak electrolytes also dissociate more."
+        ],
+        "final_answer": "Option (3): Solvent viscosity decreases and ionic mobility increases",
+        "why_not_others": "Increased lattice vibrations lower metallic conductance and do not apply here. Free electrons are not the charge carriers in solution. Heavier hydration would slow the ions down.",
+        "common_trap": "Applying the metallic-conduction explanation to electrolytes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Which of the following ions has the lowest ionic mobility in aqueous solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$H^+$",
+        "$K^+$",
+        "$Na^+$",
+        "$Li^+$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Small ions are heavily hydrated and move slowly. $H^+$ moves exceptionally fast by proton hopping.",
+        "steps": [
+          "$Li^+$ is the smallest of these cations and carries the largest hydration shell.",
+          "This bulky hydrated ion moves most slowly, while $H^+$ moves fastest by the Grotthuss-type mechanism."
+        ],
+        "final_answer": "Option (4): $Li^+$",
+        "why_not_others": "$H^+$ has unusually high mobility. $K^+$ and $Na^+$ are larger and less hydrated than $Li^+$, so they move faster.",
+        "common_trap": "Assuming the smallest bare ion moves fastest.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Copper wire"
+          },
+          {
+            "label": "B",
+            "text": "Aqueous $CH_3COOH$"
+          },
+          {
+            "label": "C",
+            "text": "Aqueous $KNO_3$"
+          },
+          {
+            "label": "D",
+            "text": "Pure water"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Weak electrolyte, ionises only partially"
+          },
+          {
+            "label": "II",
+            "text": "Very poor conductor because its self-ionisation is tiny"
+          },
+          {
+            "label": "III",
+            "text": "Electronic conduction; conductance falls as temperature rises"
+          },
+          {
+            "label": "IV",
+            "text": "Strong electrolyte, dissociates almost completely"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-I, C-IV, D-II",
+        "A-IV, B-I, C-III, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Distinguish metallic conductors, strong and weak electrolytes, and pure water.",
+        "steps": [
+          "Copper is a metal conductor (III).",
+          "$CH_3COOH$ is a weak electrolyte (I).",
+          "$KNO_3$ is a strong electrolyte (IV).",
+          "Pure water ionises only very slightly (II)."
+        ],
+        "final_answer": "Option (3): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other options swap the strong and weak electrolytes, or swap the metal with water or the salt.",
+        "common_trap": "Treating acetic acid as a strong electrolyte.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about metallic and electrolytic conduction are correct?",
+      "statements": {
+        "A": "$H^+$ and $OH^-$ ions have unusually high ionic mobility in water.",
+        "B": "Electrolytic conductance depends on the viscosity of the solvent.",
+        "C": "The conductance of a metal increases with temperature because its electrons gain kinetic energy.",
+        "D": "$NH_4OH$ is a strong electrolyte that dissociates almost completely.",
+        "E": "In electrolytic conduction, redox changes occur at the electrodes."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, B and E only",
+        "A, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Compare the features of metallic and electrolytic conduction.",
+        "steps": [
+          "A is true because of Grotthuss-type proton hopping.",
+          "B is true. A more viscous solvent slows the ions.",
+          "C is false. Metallic conductance falls with temperature as lattice vibrations increase.",
+          "D is false. $NH_4OH$ is a weak electrolyte.",
+          "E is true. Electrolytic conduction involves redox at the electrodes."
+        ],
+        "final_answer": "Option (3): A, B and E only",
+        "why_not_others": "Options (1) and (4) include the false statement C. Option (2) includes the false statement D.",
+        "common_trap": "Believing metal conductance rises with temperature.",
+        "time_saving_tip": "Eliminate options that contain C or D."
+      }
+    }
+  ]
+}

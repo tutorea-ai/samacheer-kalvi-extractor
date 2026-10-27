@@ -1,0 +1,2044 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u08",
+  "slug": "chemical-kinetics",
+  "questions": [
+    {
+      "q_id": "neet_che_u08_t00_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate of a chemical reaction",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For the reaction $N_2 + 3H_2 \\rightarrow 2NH_3$, ammonia is formed at a rate of $0.4\\ mol\\,L^{-1}\\,s^{-1}$. What is the rate of disappearance of $H_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$0.6\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$0.2\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$1.2\\ mol\\,L^{-1}\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each rate of change is divided by its stoichiometric coefficient to give one unique rate of reaction.",
+        "steps": [
+          "$-\\frac{1}{3}\\frac{d[H_2]}{dt} = \\frac{1}{2}\\frac{d[NH_3]}{dt}$.",
+          "$-\\frac{d[H_2]}{dt} = \\frac{3}{2} \\times 0.4 = 0.6\\ mol\\,L^{-1}\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $0.6\\ mol\\,L^{-1}\\,s^{-1}$",
+        "why_not_others": "$0.4$ ignores the coefficients. $0.2$ is the rate of reaction, which is also the rate of disappearance of $N_2$. $1.2$ multiplies by 3 without dividing by 2.",
+        "common_trap": "Equating the rate of disappearance of one species with the rate of formation of another without using the coefficients.",
+        "time_saving_tip": "Ratio of rates = ratio of coefficients: $H_2 : NH_3 = 3 : 2$."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t00_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate of a chemical reaction",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For the reaction $2N_2O_5 \\rightarrow 4NO_2 + O_2$, the concentration of $N_2O_5$ falls from $0.50\\ M$ to $0.30\\ M$ in $40\\ s$. What is the average rate of formation of $NO_2$ in this interval?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.0 \\times 10^{-3}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$2.5 \\times 10^{-3}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$1.0 \\times 10^{-2}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$2.0 \\times 10^{-2}\\ mol\\,L^{-1}\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Average rate over a finite interval, scaled by the stoichiometric coefficients.",
+        "steps": [
+          "$-\\frac{\\Delta[N_2O_5]}{\\Delta t} = \\frac{0.20}{40} = 5.0 \\times 10^{-3}\\ M\\,s^{-1}$.",
+          "$\\frac{\\Delta[NO_2]}{\\Delta t} = \\frac{4}{2} \\times 5.0 \\times 10^{-3} = 1.0 \\times 10^{-2}\\ M\\,s^{-1}$."
+        ],
+        "final_answer": "Option (3): $1.0 \\times 10^{-2}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "why_not_others": "$5.0 \\times 10^{-3}$ is the rate of disappearance of $N_2O_5$. $2.5 \\times 10^{-3}$ is the rate of reaction, which is also the rate of formation of $O_2$. $2.0 \\times 10^{-2}$ multiplies by 4 without dividing by 2.",
+        "common_trap": "Using only the product coefficient and forgetting the reactant coefficient.",
+        "time_saving_tip": "$NO_2$ forms twice as fast as $N_2O_5$ disappears, because the coefficients are $4 : 2$."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t00_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate of a chemical reaction",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For the reaction $A + 2B \\rightarrow 3C$, which of the following relations is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-\\frac{d[A]}{dt} = -2\\frac{d[B]}{dt}$",
+        "$\\frac{d[C]}{dt} = -\\frac{d[A]}{dt}$",
+        "$-\\frac{d[B]}{dt} = \\frac{2}{3}\\frac{d[C]}{dt}$",
+        "$-\\frac{d[A]}{dt} = 3\\frac{d[C]}{dt}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$r = -\\frac{d[A]}{dt} = -\\frac{1}{2}\\frac{d[B]}{dt} = \\frac{1}{3}\\frac{d[C]}{dt}$.",
+        "steps": [
+          "From $-\\frac{1}{2}\\frac{d[B]}{dt} = \\frac{1}{3}\\frac{d[C]}{dt}$, multiply both sides by 2.",
+          "This gives $-\\frac{d[B]}{dt} = \\frac{2}{3}\\frac{d[C]}{dt}$."
+        ],
+        "final_answer": "Option (3): $-\\frac{d[B]}{dt} = \\frac{2}{3}\\frac{d[C]}{dt}$",
+        "why_not_others": "Option (1): the correct relation is $-\\frac{d[A]}{dt} = -\\frac{1}{2}\\frac{d[B]}{dt}$. Option (2): $\\frac{d[C]}{dt} = 3\\left(-\\frac{d[A]}{dt}\\right)$. Option (4): $-\\frac{d[A]}{dt} = \\frac{1}{3}\\frac{d[C]}{dt}$.",
+        "common_trap": "Multiplying by the coefficients instead of dividing by them.",
+        "time_saving_tip": "Write the full chain of equal rates first, then rearrange."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t00_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate of a chemical reaction",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The rate of a chemical reaction generally decreases as the reaction proceeds.",
+        "R": "The instantaneous rate of a reaction is given by the slope of the tangent to the concentration versus time curve at that instant."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Rate falls with time because reactant concentration falls. The instantaneous rate is a tangent slope.",
+        "steps": [
+          "A is true: as reactant concentration falls, the rate generally decreases.",
+          "R is true: the instantaneous rate is the tangent slope as $\\Delta t \\rightarrow 0$.",
+          "R only describes how the rate is measured; it does not explain why the rate decreases."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain A, because the cause of A is the falling concentration. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Marking R as the explanation simply because both statements are about rate.",
+        "time_saving_tip": "Ask whether R gives the cause of A; here A is caused by the falling reactant concentration."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t00_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate of a chemical reaction",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For $N_2 + 3H_2 \\rightarrow 2NH_3$, if $NH_3$ is formed at $0.10\\ M\\,s^{-1}$, the rate of reaction is $0.05\\ M\\,s^{-1}$ and $H_2$ disappears at $0.15\\ M\\,s^{-1}$.",
+        "II": "For a zero order reaction, the average rate over any time interval equals the instantaneous rate at any instant within that interval."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Stoichiometric scaling of rates, and the constant rate of a zero order reaction.",
+        "steps": [
+          "Rate of reaction $= \\frac{1}{2}(0.10) = 0.05\\ M\\,s^{-1}$.",
+          "$-\\frac{d[H_2]}{dt} = 3 \\times 0.05 = 0.15\\ M\\,s^{-1}$, so Statement I is correct.",
+          "A zero order rate does not depend on concentration, so it is constant and the average rate equals the instantaneous rate. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements are correct, so every option that calls either one incorrect is wrong.",
+        "common_trap": "Thinking the average rate equals the instantaneous rate for first order reactions as well.",
+        "time_saving_tip": "Divide by the coefficient to get the rate of reaction, then multiply by the coefficient for any other species."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t01_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Factors affecting rate: concentration, temperature, pressure and catalyst",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Addition of a catalyst to a reaction mixture changes which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Enthalpy change, $\\Delta H$",
+        "Gibbs energy change, $\\Delta G$",
+        "Equilibrium constant, $K$",
+        "Activation energy, $E_a$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A catalyst provides an alternative pathway of lower activation energy.",
+        "steps": [
+          "A catalyst lowers $E_a$.",
+          "It does not alter $\\Delta H$, $\\Delta G$ or $K$."
+        ],
+        "final_answer": "Option (4): Activation energy, $E_a$",
+        "why_not_others": "$\\Delta H$, $\\Delta G$ and $K$ are unaffected by a catalyst.",
+        "common_trap": "Believing that a catalyst shifts the equilibrium or changes $K$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t01_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Factors affecting rate: concentration, temperature, pressure and catalyst",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The temperature coefficient of a reaction is 2. By what factor does its rate constant increase when the temperature is raised from $300\\ K$ to $340\\ K$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "8",
+        "4",
+        "16",
+        "32"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\frac{k_{T_2}}{k_{T_1}} = \\mu^{\\frac{T_2 - T_1}{10}}$",
+        "steps": [
+          "$\\frac{T_2 - T_1}{10} = \\frac{40}{10} = 4$.",
+          "$\\frac{k_{340}}{k_{300}} = 2^4 = 16$."
+        ],
+        "final_answer": "Option (3): 16",
+        "why_not_others": "8 uses an exponent of 3. 4 treats the increase as linear ($2 \\times 2$) instead of exponential. 32 uses an exponent of 5.",
+        "common_trap": "Multiplying $\\mu$ by the number of 10 K intervals instead of raising $\\mu$ to that power.",
+        "time_saving_tip": "Count the 10 K steps and use that count as the exponent."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t01_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Factors affecting rate: concentration, temperature, pressure and catalyst",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For which of the following reactions will an increase in pressure appreciably increase the rate?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Hydrolysis of an ester in aqueous solution",
+        "Precipitation of $AgCl$ from $AgNO_3(aq)$ and $NaCl(aq)$",
+        "Neutralisation of $HCl(aq)$ by $NaOH(aq)$",
+        "$2NO(g) + O_2(g) \\rightarrow 2NO_2(g)$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Pressure raises the rate only for gaseous reactions, by increasing concentration.",
+        "steps": [
+          "Higher pressure reduces volume and raises the concentration of gases, so collisions become more frequent.",
+          "Pressure has a negligible effect on reactions in liquids and solids.",
+          "Only the $NO$ and $O_2$ reaction is gaseous."
+        ],
+        "final_answer": "Option (4): $2NO(g) + O_2(g) \\rightarrow 2NO_2(g)$",
+        "why_not_others": "Options (1), (2) and (3) take place in aqueous solution, where pressure has negligible effect.",
+        "common_trap": "Assuming pressure affects the rate of every reaction.",
+        "time_saving_tip": "Look for (g) in the reactants."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t01_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Factors affecting rate: concentration, temperature, pressure and catalyst",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Catalyst"
+          },
+          {
+            "label": "B",
+            "text": "Rise of temperature by 10 K"
+          },
+          {
+            "label": "C",
+            "text": "Increase of pressure in a gaseous reaction"
+          },
+          {
+            "label": "D",
+            "text": "Zero order reaction"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Rate independent of reactant concentration"
+          },
+          {
+            "label": "II",
+            "text": "Rate constant roughly doubles or triples"
+          },
+          {
+            "label": "III",
+            "text": "Lowers $E_a$ without changing $K$"
+          },
+          {
+            "label": "IV",
+            "text": "Raises concentration and hence collision frequency"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Effects of catalyst, temperature, pressure and concentration on rate.",
+        "steps": [
+          "Catalyst: lowers $E_a$ and leaves $K$ unchanged (A-III).",
+          "A 10 K rise roughly doubles or triples $k$ (B-II).",
+          "Higher pressure raises gas concentration and collision frequency (C-IV).",
+          "Zero order: rate does not depend on concentration (D-I)."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "The other options swap the catalyst and temperature effects, the temperature and pressure effects, or the pressure effect and the zero order behaviour.",
+        "common_trap": "Matching a catalyst with an increase in $k$ due to temperature.",
+        "time_saving_tip": "D-I is certain, so first discard any option that lacks it."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t01_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Factors affecting rate: concentration, temperature, pressure and catalyst",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about factors affecting reaction rate are correct?",
+      "statements": {
+        "A": "A catalyst increases the rates of the forward and backward reactions equally.",
+        "B": "A catalyst can make a reaction with $\\Delta G > 0$ take place.",
+        "C": "A catalyst remains chemically unchanged at the end of the reaction.",
+        "D": "A catalyst shifts the equilibrium towards the products and so increases the equilibrium yield.",
+        "E": "The rate of a reaction depends on the concentration of a reactant, not on its total amount."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A catalyst only lowers $E_a$, and rate depends on concentration.",
+        "steps": [
+          "A is true: the forward and backward reactions are speeded up equally.",
+          "B is false: a catalyst cannot make a non-spontaneous reaction occur.",
+          "C is true.",
+          "D is false: $K$ and the equilibrium position are unchanged; equilibrium is only reached sooner.",
+          "E is true."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option (1) omits E. Options (2) and (3) include the false statements B or D.",
+        "common_trap": "Thinking a catalyst improves the equilibrium yield.",
+        "time_saving_tip": "Rule out B and D first; only options (1) and (4) remain."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t02_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Elementary and complex reactions",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In a complex reaction, the rate determining step is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the fastest elementary step",
+        "always the first elementary step",
+        "always the last elementary step",
+        "the slowest elementary step"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The overall rate is controlled by the slowest step.",
+        "steps": [
+          "A complex reaction proceeds through a sequence of elementary steps.",
+          "The slowest of these steps controls the overall rate."
+        ],
+        "final_answer": "Option (4): the slowest elementary step",
+        "why_not_others": "The rate determining step is not the fastest step, and its position in the sequence is not fixed.",
+        "common_trap": "Assuming the first step is always rate determining.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t02_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Elementary and complex reactions",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The decomposition of $H_2O_2$ catalysed by $I^-$ in alkaline medium proceeds as follows. Step 1 (slow): $H_2O_2 + I^- \\rightarrow H_2O + IO^-$. Step 2 (fast): $H_2O_2 + IO^- \\rightarrow H_2O + I^- + O_2$. The rate law is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\text{Rate} = k[H_2O_2][I^-]$",
+        "$\\text{Rate} = k[H_2O_2]^2$",
+        "$\\text{Rate} = k[H_2O_2][IO^-]$",
+        "$\\text{Rate} = k[H_2O_2]$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The rate law follows from the slow elementary step.",
+        "steps": [
+          "Step 1 is slow and is therefore rate determining.",
+          "Being elementary, it gives $\\text{Rate} = k[H_2O_2][I^-]$, first order in each species."
+        ],
+        "final_answer": "Option (1): $\\text{Rate} = k[H_2O_2][I^-]$",
+        "why_not_others": "Option (2) is written from the overall equation $2H_2O_2 \\rightarrow 2H_2O + O_2$. Option (3) uses the fast step and contains the intermediate. Option (4) omits the catalyst $I^-$, which appears in the slow step.",
+        "common_trap": "Writing the rate law from the overall balanced equation.",
+        "time_saving_tip": "Read the rate law directly from the slow step."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t02_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Elementary and complex reactions",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A reaction $NO_2 + CO \\rightarrow NO + CO_2$ is proposed to occur by the mechanism: Step 1 (slow): $NO_2 + NO_2 \\rightarrow NO_3 + NO$. Step 2 (fast): $NO_3 + CO \\rightarrow NO_2 + CO_2$. The rate law consistent with this mechanism is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\text{Rate} = k[NO_2][CO]$",
+        "$\\text{Rate} = k[NO_2]^2$",
+        "$\\text{Rate} = k[NO_3][CO]$",
+        "$\\text{Rate} = k[NO_2]^2[CO]$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The slowest elementary step decides the rate law; $CO$ enters only after the slow step.",
+        "steps": [
+          "Step 1 is slow and is therefore rate determining.",
+          "It is elementary, so $\\text{Rate} = k[NO_2]^2$.",
+          "$NO_3$ is an intermediate, and $CO$ takes part only in the fast step."
+        ],
+        "final_answer": "Option (2): $\\text{Rate} = k[NO_2]^2$",
+        "why_not_others": "Option (1) is written from the overall equation. Option (3) uses the fast step and contains the intermediate $NO_3$. Option (4) wrongly adds $CO$ to the slow step.",
+        "common_trap": "Writing the rate law from the stoichiometry of the overall equation.",
+        "time_saving_tip": "Read the rate law directly from the slow step."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t02_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Elementary and complex reactions",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For an elementary reaction, the rate law can be written directly from its balanced equation.",
+        "R": "An elementary reaction takes place in a single step in which the reacting species collide and form products directly."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A single-step reaction has order equal to molecularity.",
+        "steps": [
+          "Because the reaction occurs in one collision step, the species that collide are exactly those in the equation.",
+          "Hence the rate law follows the stoichiometry, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and the single-step nature in R is the reason for A.",
+        "common_trap": "Extending A to complex reactions, whose rate laws must be found by experiment.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t02_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Elementary and complex reactions",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the $I^-$ catalysed decomposition of $H_2O_2$ in alkaline medium, $IO^-$ is an intermediate and does not appear in the overall equation.",
+        "II": "A catalyst that is used up in one step and regenerated in a later step may appear in the rate law, as $I^-$ does in the $I^-$ catalysed decomposition of $H_2O_2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Distinguishing intermediates from catalysts in a mechanism.",
+        "steps": [
+          "$IO^-$ is formed in step 1 and consumed in step 2, so it is an intermediate and absent from the overall equation. Statement I is correct.",
+          "$I^-$ is consumed in step 1 and regenerated in step 2, yet $\\text{Rate} = k[H_2O_2][I^-]$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements are correct, so every option that calls either one incorrect is wrong.",
+        "common_trap": "Assuming a catalyst can never appear in a rate law because it is absent from the overall equation.",
+        "time_saving_tip": "Intermediate: formed and then consumed. Catalyst: consumed and then regenerated."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t03_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Order and molecularity",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following values is NOT possible for the molecularity of an elementary step?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2",
+        "0",
+        "1",
+        "3"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Molecularity is a whole number: 1, 2 or rarely 3.",
+        "steps": [
+          "Molecularity counts the species colliding simultaneously in an elementary step.",
+          "At least one species must react, so the molecularity cannot be zero."
+        ],
+        "final_answer": "Option (2): 0",
+        "why_not_others": "1, 2 and 3 are all possible molecularities; 3 is rare but possible.",
+        "common_trap": "Confusing molecularity with order, which can be zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t03_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Order and molecularity",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The experimentally determined rate law of a reaction is $\\text{Rate} = k[A]^{3/2}[B]^{-1}$. The overall order of the reaction is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{5}{2}$",
+        "$\\frac{3}{2}$",
+        "1",
+        "$\\frac{1}{2}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Order is the sum of the exponents in the rate law, and an exponent may be negative.",
+        "steps": [
+          "Order $= \\frac{3}{2} + (-1)$.",
+          "Order $= \\frac{1}{2}$."
+        ],
+        "final_answer": "Option (4): $\\frac{1}{2}$",
+        "why_not_others": "$\\frac{5}{2}$ treats the exponent of B as $+1$. $\\frac{3}{2}$ ignores B. 1 assumes order must be a whole number.",
+        "common_trap": "Ignoring the negative sign of the exponent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t03_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Order and molecularity",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The acid catalysed hydrolysis of ethyl acetate carried out in a large excess of water follows $\\text{Rate} = k'[CH_3COOC_2H_5]$. This reaction is best described as",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "second order, because two reactants appear in the balanced equation",
+        "first order, because its molecularity is one",
+        "pseudo first order, because water is in large excess and its concentration stays practically constant",
+        "zero order, because the catalyst $H^+$ is regenerated"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Pseudo first order reactions have one reactant in large excess.",
+        "steps": [
+          "Water is present in large excess, so $[H_2O]$ stays practically constant and is absorbed into $k'$.",
+          "The rate then depends only on [ester], so the reaction is pseudo first order."
+        ],
+        "final_answer": "Option (3): pseudo first order, because water is in large excess and its concentration stays practically constant",
+        "why_not_others": "Option (1) writes the order from the balanced equation, which contradicts the observed rate law. Option (2) uses molecularity, which has no meaning for an overall complex reaction. Option (4) ignores the observed dependence of rate on [ester].",
+        "common_trap": "Deducing the order from the stoichiometry of the equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t03_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Order and molecularity",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Order of reaction"
+          },
+          {
+            "label": "B",
+            "text": "Molecularity"
+          },
+          {
+            "label": "C",
+            "text": "Pseudo first order reaction"
+          },
+          {
+            "label": "D",
+            "text": "Rate determining step"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Slowest elementary step of a mechanism"
+          },
+          {
+            "label": "II",
+            "text": "One reactant present in large excess"
+          },
+          {
+            "label": "III",
+            "text": "Experimental; can be zero or fractional"
+          },
+          {
+            "label": "IV",
+            "text": "Theoretical; whole number from 1 to 3"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Distinguishing order from molecularity, and related terms.",
+        "steps": [
+          "Order is experimental and can be zero or fractional (A-III).",
+          "Molecularity is theoretical, a whole number from 1 to 3 (B-IV).",
+          "Pseudo first order: one reactant is in large excess (C-II).",
+          "Rate determining step: the slowest step (D-I)."
+        ],
+        "final_answer": "Option (2): A-III, B-IV, C-II, D-I",
+        "why_not_others": "The other options swap the descriptions of order and molecularity, or interchange the matches for C and D, or for A and C.",
+        "common_trap": "Interchanging the descriptions of order and molecularity.",
+        "time_saving_tip": "Fix B-IV first, since only molecularity is restricted to whole numbers from 1 to 3."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t03_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Order and molecularity",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about order and molecularity are correct?",
+      "statements": {
+        "A": "The order of a reaction can be negative.",
+        "B": "For a complex reaction, the overall molecularity equals the sum of the stoichiometric coefficients of the reactants.",
+        "C": "Inversion of cane sugar in excess water is a pseudo first order reaction.",
+        "D": "Order equals molecularity for every reaction.",
+        "E": "Molecularity greater than 3 is very improbable because simultaneous collision of many species is rare."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, C and E only",
+        "B, C and D only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Order is experimental; molecularity applies only to elementary steps.",
+        "steps": [
+          "A is true: order can be a negative integer.",
+          "B is false: molecularity has no meaning for an overall complex reaction.",
+          "C is true.",
+          "D is false: order equals molecularity only for elementary reactions.",
+          "E is true."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option (1) omits E. Options (3) and (4) include the false statements B or D.",
+        "common_trap": "Assigning a molecularity to an overall complex reaction.",
+        "time_saving_tip": "Rule out B and D first; only options (1) and (2) remain."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t04_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate law, rate constant and its units",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What are the units of the rate constant $k$ for a second order reaction when concentrations are expressed in $mol\\,L^{-1}$ and time in seconds?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$mol\\,L^{-1}\\,s^{-1}$",
+        "$s^{-1}$",
+        "$L^2\\,mol^{-2}\\,s^{-1}$",
+        "$L\\,mol^{-1}\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The units of $k$ are $(mol\\,L^{-1})^{1-n}\\,s^{-1}$, where $n$ is the overall order.",
+        "steps": [
+          "For a second order reaction, $n = 2$, so $1 - n = -1$.",
+          "Units $= (mol\\,L^{-1})^{-1}\\,s^{-1} = L\\,mol^{-1}\\,s^{-1}$."
+        ],
+        "final_answer": "Option (4): $L\\,mol^{-1}\\,s^{-1}$",
+        "why_not_others": "$mol\\,L^{-1}\\,s^{-1}$ is the unit for zero order. $s^{-1}$ is the unit for first order. $L^2\\,mol^{-2}\\,s^{-1}$ is the unit for third order.",
+        "common_trap": "Using $s^{-1}$ for every order.",
+        "time_saving_tip": "The power of $L$ in the unit equals $n - 1$."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t04_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate law, rate constant and its units",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For the reaction $A + B \\rightarrow$ products, the following initial rate data were obtained. Experiment 1: $[A] = 0.1\\,M$, $[B] = 0.1\\,M$, rate $= 2.0 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. Experiment 2: $[A] = 0.2\\,M$, $[B] = 0.1\\,M$, rate $= 8.0 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. Experiment 3: $[A] = 0.1\\,M$, $[B] = 0.3\\,M$, rate $= 6.0 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. What is the rate law?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$rate = k[A][B]$",
+        "$rate = k[A][B]^2$",
+        "$rate = k[A]^2[B]$",
+        "$rate = k[A]^2[B]^3$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Initial rate method: $\\frac{r_2}{r_1} = \\left(\\frac{[A]_2}{[A]_1}\\right)^x$ when the other concentrations are kept fixed.",
+        "steps": [
+          "Experiments 1 and 2 keep $[B]$ fixed. $[A]$ doubles and the rate becomes $\\frac{8.0}{2.0} = 4$ times, so $2^x = 4$ and $x = 2$.",
+          "Experiments 1 and 3 keep $[A]$ fixed. $[B]$ triples and the rate becomes $\\frac{6.0}{2.0} = 3$ times, so $3^y = 3$ and $y = 1$.",
+          "Therefore $rate = k[A]^2[B]$."
+        ],
+        "final_answer": "Option (3): $rate = k[A]^2[B]$",
+        "why_not_others": "$k[A][B]$ ignores the fourfold rise in Experiment 2. $k[A][B]^2$ swaps the two orders. $k[A]^2[B]^3$ takes the factor of 3 as the order instead of the rate ratio.",
+        "common_trap": "Writing the order equal to the factor by which the concentration changes, rather than solving for the exponent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t04_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate law, rate constant and its units",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The rate law of a reaction is $rate = k[A][B]^2$. If the concentration of A is tripled and the concentration of B is halved, the rate becomes:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{3}{4}$ times the original rate",
+        "$\\frac{3}{2}$ times the original rate",
+        "6 times the original rate",
+        "12 times the original rate"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The rate changes by the product of each concentration factor raised to its order.",
+        "steps": [
+          "Factor from A: $3^1 = 3$.",
+          "Factor from B: $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$.",
+          "New rate $= 3 \\times \\frac{1}{4} = \\frac{3}{4}$ of the original."
+        ],
+        "final_answer": "Option (1): $\\frac{3}{4}$ times the original rate",
+        "why_not_others": "$\\frac{3}{2}$ ignores the square on $[B]$. 6 divides 3 by the halving factor instead of multiplying. 12 treats halving as doubling.",
+        "common_trap": "Forgetting to raise the change in $[B]$ to the power 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t04_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate law, rate constant and its units",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The unit of the rate constant of a first order reaction is $s^{-1}$, whatever concentration unit is used.",
+        "R": "The rate constant is equal to the rate of reaction when the concentrations of all reactants are unity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The units of $k$ are $(mol\\,L^{-1})^{1-n}\\,s^{-1}$. For $n = 1$, the concentration term is raised to the power zero.",
+        "steps": [
+          "A is true. For first order, $(conc)^{0}\\,s^{-1} = s^{-1}$, so the concentration unit cancels.",
+          "R is true. It is the definition of the specific reaction rate.",
+          "R does not explain A. The independence from concentration units comes from $1 - n = 0$, not from the definition of $k$."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct facts, so options 3 and 4 fail. R does not account for the cancellation of units, so option 1 fails.",
+        "common_trap": "Marking option 1 just because both statements concern the rate constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t04_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Rate law, rate constant and its units",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A rate constant with units $L^{1/2}\\,mol^{-1/2}\\,s^{-1}$ corresponds to an overall order of $\\frac{3}{2}$.",
+        "II": "For a reaction whose rate constant has units $mol\\,L^{-1}\\,s^{-1}$, doubling the initial concentration of the reactant leaves the initial rate unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Units of $k = (mol\\,L^{-1})^{1-n}\\,s^{-1}$.",
+        "steps": [
+          "Statement I: $L^{1/2}\\,mol^{-1/2} = (mol\\,L^{-1})^{-1/2}$, so $1 - n = -\\frac{1}{2}$ and $n = \\frac{3}{2}$. It is correct.",
+          "Statement II: $mol\\,L^{-1}\\,s^{-1}$ means $1 - n = 1$, so $n = 0$.",
+          "For zero order, the rate is independent of concentration, so doubling $[R]$ leaves the rate unchanged. It is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both unit-to-order deductions are valid, so no option that calls a statement incorrect can be right.",
+        "common_trap": "Believing the order cannot be fractional. Only molecularity must be a whole number.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t05_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Differential and integral forms of zero and first order reactions",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For a first order reaction, which plot gives a straight line with slope equal to $-k$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$[R]$ against $t$",
+        "$\\log\\frac{[R]_0}{[R]}$ against $t$",
+        "$\\ln[R]$ against $\\frac{1}{t}$",
+        "$\\ln[R]$ against $t$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The integrated first order law is $\\ln[R] = \\ln[R]_0 - kt$.",
+        "steps": [
+          "Compare $\\ln[R] = \\ln[R]_0 - kt$ with $y = c + mx$.",
+          "A plot of $\\ln[R]$ against $t$ is linear with slope $-k$."
+        ],
+        "final_answer": "Option (4): $\\ln[R]$ against $t$",
+        "why_not_others": "$[R]$ against $t$ is linear only for zero order. $\\log\\frac{[R]_0}{[R]}$ against $t$ is linear but has slope $+\\frac{k}{2.303}$. $\\ln[R]$ against $\\frac{1}{t}$ is not linear.",
+        "common_trap": "Confusing the slope $\\frac{k}{2.303}$ of the log plot with $-k$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t05_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Differential and integral forms of zero and first order reactions",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A zero order reaction has $k = 2.5 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. If the initial concentration of the reactant is $0.40\\,M$, what is its concentration after 100 s?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.25\\,M$",
+        "$0.15\\,M$",
+        "$0.65\\,M$",
+        "$0.31\\,M$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Zero order: $[R] = [R]_0 - kt$.",
+        "steps": [
+          "$kt = 2.5 \\times 10^{-3} \\times 100 = 0.25\\,M$.",
+          "$[R] = 0.40 - 0.25 = 0.15\\,M$."
+        ],
+        "final_answer": "Option (2): $0.15\\,M$",
+        "why_not_others": "$0.25\\,M$ is the amount reacted, not the amount left. $0.65\\,M$ adds $kt$ instead of subtracting it. $0.31\\,M$ comes from wrongly applying the first order form $[R]_0 e^{-kt}$.",
+        "common_trap": "Reporting $kt$ itself as the remaining concentration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t05_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Differential and integral forms of zero and first order reactions",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The first order gas phase reaction $A(g) \\rightarrow B(g) + C(g)$ is carried out at constant volume. The initial pressure of A is 0.40 atm, and the total pressure after 100 s is 0.70 atm. What is the rate constant? (Take $\\log 4 = 0.602$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.02 \\times 10^{-3}\\,s^{-1}$",
+        "$1.39 \\times 10^{-2}\\,s^{-1}$",
+        "$2.88 \\times 10^{-3}\\,s^{-1}$",
+        "$5.60 \\times 10^{-3}\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$k = \\frac{2.303}{t}\\log\\frac{p_i}{2p_i - p_t}$",
+        "steps": [
+          "$2p_i - p_t = 0.80 - 0.70 = 0.10$ atm, which is the pressure of A remaining.",
+          "$\\frac{p_i}{2p_i - p_t} = \\frac{0.40}{0.10} = 4$.",
+          "$k = \\frac{2.303}{100} \\times 0.602 = 1.386 \\times 10^{-2}\\,s^{-1} \\approx 1.39 \\times 10^{-2}\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $1.39 \\times 10^{-2}\\,s^{-1}$",
+        "why_not_others": "$6.02 \\times 10^{-3}\\,s^{-1}$ omits the factor 2.303. $2.88 \\times 10^{-3}\\,s^{-1}$ uses $\\frac{p_i}{p_t - p_i}$. $5.60 \\times 10^{-3}\\,s^{-1}$ uses $\\frac{p_t}{p_i}$.",
+        "common_trap": "Taking $p_t - p_i$ as the pressure of A left.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t05_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Differential and integral forms of zero and first order reactions",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Slope of the $[R]$ against $t$ plot for a zero order reaction"
+          },
+          {
+            "label": "B",
+            "text": "Slope of the $\\log\\frac{[R]_0}{[R]}$ against $t$ plot for a first order reaction"
+          },
+          {
+            "label": "C",
+            "text": "Time for completion of a zero order reaction"
+          },
+          {
+            "label": "D",
+            "text": "Concentration at time $t$ for a first order reaction"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$[R]_0 e^{-kt}$"
+          },
+          {
+            "label": "II",
+            "text": "$-k$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{[R]_0}{k}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{k}{2.303}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-IV, C-II, D-I",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Integrated rate laws and their linear plots.",
+        "steps": [
+          "Zero order: $[R] = [R]_0 - kt$, so the slope is $-k$ (A-II).",
+          "First order: the $\\log\\frac{[R]_0}{[R]}$ against $t$ plot has slope $\\frac{k}{2.303}$ (B-IV).",
+          "Zero order completes when $[R] = 0$, at $t = \\frac{[R]_0}{k}$ (C-III).",
+          "First order: $[R] = [R]_0 e^{-kt}$ (D-I)."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 swaps the two slopes. Option 2 swaps the completion time with the exponential expression. Option 3 mixes up the slope and the completion time.",
+        "common_trap": "Thinking the first order log plot has slope $-k$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t05_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Differential and integral forms of zero and first order reactions",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about zero and first order reactions are correct?",
+      "statements": {
+        "A": "A zero order reaction is complete at $t = \\frac{[R]_0}{k}$.",
+        "B": "For a first order reaction, $t_{99.9\\%} \\approx 10\\,t_{1/2}$.",
+        "C": "For a first order reaction, the time for 75% completion is 1.5 times the half-life.",
+        "D": "For a first order reaction, $t_{99\\%} = 2\\,t_{90\\%}$.",
+        "E": "Decomposition of HI on a gold surface is a first order reaction."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, B and D only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Fractional completion times for first order reactions, and examples of zero order reactions.",
+        "steps": [
+          "A is true. Setting $[R] = 0$ in $[R] = [R]_0 - kt$ gives $t = \\frac{[R]_0}{k}$.",
+          "B and D are true results for first order reactions.",
+          "C is false. 75% completion takes two half-lives, so $t_{75\\%} = 2\\,t_{1/2}$.",
+          "E is false. Decomposition of HI on gold is zero order."
+        ],
+        "final_answer": "Option (3): A, B and D only",
+        "why_not_others": "Options 1, 2 and 4 each include C or E, and both of those statements are false.",
+        "common_trap": "Assuming 75% completion takes 1.5 half-lives by linear reasoning.",
+        "time_saving_tip": "For first order, 50% is one half-life, 75% is two and 87.5% is three."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t06_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Half-life of zero and first order reactions",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The rate constant of a first order reaction is $3.465 \\times 10^{-3}\\,s^{-1}$. What is its half-life?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "200 s",
+        "400 s",
+        "100 s",
+        "665 s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "First order: $t_{1/2} = \\frac{0.693}{k}$.",
+        "steps": [
+          "$t_{1/2} = \\frac{0.693}{3.465 \\times 10^{-3}} = 200$ s."
+        ],
+        "final_answer": "Option (1): 200 s",
+        "why_not_others": "400 s doubles the correct value. 100 s halves it. 665 s uses $\\frac{2.303}{k}$ instead of $\\frac{0.693}{k}$.",
+        "common_trap": "Using 2.303 in place of 0.693.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t06_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Half-life of zero and first order reactions",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A zero order reaction has $k = 0.02\\,mol\\,L^{-1}\\,min^{-1}$, and the initial concentration of the reactant is $0.80\\,M$. What is its half-life?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20 min",
+        "40 min",
+        "34.65 min",
+        "10 min"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Zero order: $t_{1/2} = \\frac{[R]_0}{2k}$.",
+        "steps": [
+          "$t_{1/2} = \\frac{0.80}{2 \\times 0.02} = \\frac{0.80}{0.04} = 20$ min."
+        ],
+        "final_answer": "Option (1): 20 min",
+        "why_not_others": "40 min is $\\frac{[R]_0}{k}$, the time for completion. 34.65 min wrongly uses the first order formula $\\frac{0.693}{k}$. 10 min divides by $4k$.",
+        "common_trap": "Applying $\\frac{0.693}{k}$ to a zero order reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t06_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Half-life of zero and first order reactions",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A first order reaction has a half-life of 15 min. If the initial concentration of the reactant is $0.64\\,M$, what is its concentration after 1 hour?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\,M$",
+        "$0.16\\,M$",
+        "$0.08\\,M$",
+        "$0.02\\,M$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "After $n$ half-lives of a first order reaction, $[R] = \\frac{[R]_0}{2^n}$.",
+        "steps": [
+          "Number of half-lives: $n = \\frac{60}{15} = 4$.",
+          "$[R] = \\frac{0.64}{2^4} = \\frac{0.64}{16} = 0.04\\,M$."
+        ],
+        "final_answer": "Option (1): $0.04\\,M$",
+        "why_not_others": "$0.16\\,M$ divides by $n = 4$ instead of $2^4$. $0.08\\,M$ counts only 3 half-lives. $0.02\\,M$ counts 5 half-lives.",
+        "common_trap": "Dividing by $n$ rather than $2^n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t06_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Half-life of zero and first order reactions",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Radioactive decay is characterised by a fixed half-life.",
+        "R": "For a first order process, $t_{1/2} = \\frac{0.693}{k}$, which is independent of the initial amount."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A constant half-life is the hallmark of a first order reaction.",
+        "steps": [
+          "Radioactive decay is first order, so A is true.",
+          "For first order, $t_{1/2} = \\frac{0.693}{k}$ contains no concentration term, so R is true.",
+          "This independence from the initial amount is exactly why the half-life of radioactive decay is fixed, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 fail. R directly accounts for A, so option 2 fails.",
+        "common_trap": null,
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t06_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Half-life of zero and first order reactions",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If halving the initial concentration of a reactant also halves the half-life, the reaction is zero order.",
+        "II": "For a second order reaction, doubling the initial concentration doubles the half-life."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$t_{1/2} \\propto [R]_0^{1-n}$",
+        "steps": [
+          "Statement I: if $t_{1/2} \\propto [R]_0$, then $1 - n = 1$, so $n = 0$. It is correct.",
+          "Statement II: for $n = 2$, $t_{1/2} \\propto \\frac{1}{[R]_0}$.",
+          "Doubling $[R]_0$ therefore halves the half-life. It is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I follows from $t_{1/2} \\propto [R]_0$ for zero order. Statement II reverses the inverse relation for second order.",
+        "common_trap": "Assuming the half-life always rises with initial concentration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t07_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Effect of temperature; Arrhenius theory",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the slope of a plot of $\\ln k$ against $\\frac{1}{T}$ for a reaction obeying the Arrhenius equation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{E_a}{R}$",
+        "$-\\frac{E_a}{2.303R}$",
+        "$-\\frac{E_a}{R}$",
+        "$\\ln A$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Linear form of the Arrhenius equation: $\\ln k = \\ln A - \\frac{E_a}{RT}$.",
+        "steps": [
+          "Compare with $y = c + mx$, taking $x = \\frac{1}{T}$.",
+          "The slope is $-\\frac{E_a}{R}$."
+        ],
+        "final_answer": "Option (3): $-\\frac{E_a}{R}$",
+        "why_not_others": "$\\frac{E_a}{R}$ has the wrong sign. $-\\frac{E_a}{2.303R}$ is the slope of the $\\log k$ plot. $\\ln A$ is the intercept.",
+        "common_trap": "Mixing up the slopes of the $\\ln k$ and $\\log k$ plots.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t07_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Effect of temperature; Arrhenius theory",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A plot of $\\log k$ against $\\frac{1}{T}$ for a reaction is a straight line with slope $-2000$ K. What is the activation energy? ($R = 8.314\\,J\\,K^{-1}\\,mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16.6\\,kJ\\,mol^{-1}$",
+        "$38.3\\,J\\,mol^{-1}$",
+        "$7.2\\,kJ\\,mol^{-1}$",
+        "$38.3\\,kJ\\,mol^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The slope of $\\log k$ against $\\frac{1}{T}$ is $-\\frac{E_a}{2.303R}$.",
+        "steps": [
+          "$\\frac{E_a}{2.303R} = 2000$ K.",
+          "$E_a = 2000 \\times 2.303 \\times 8.314 = 38294\\,J\\,mol^{-1}$.",
+          "$E_a \\approx 38.3\\,kJ\\,mol^{-1}$."
+        ],
+        "final_answer": "Option (4): $38.3\\,kJ\\,mol^{-1}$",
+        "why_not_others": "$16.6\\,kJ\\,mol^{-1}$ omits the factor 2.303. $38.3\\,J\\,mol^{-1}$ has the wrong unit. $7.2\\,kJ\\,mol^{-1}$ divides by 2.303 instead of multiplying.",
+        "common_trap": "Using the $\\ln k$ slope relation for a $\\log k$ plot.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t07_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Effect of temperature; Arrhenius theory",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A reaction has an activation energy of $41.57\\,kJ\\,mol^{-1}$. At 500 K, what fraction of molecules have energy equal to or greater than $E_a$? ($R = 8.314\\,J\\,K^{-1}\\,mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$e^{-10}$",
+        "$e^{-0.01}$",
+        "$e^{-4.34}$",
+        "$e^{10}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The fraction of molecules with energy at least $E_a$ is $e^{-E_a/RT}$.",
+        "steps": [
+          "Convert $E_a$ to joules: $41570\\,J\\,mol^{-1}$.",
+          "$RT = 8.314 \\times 500 = 4157\\,J\\,mol^{-1}$.",
+          "$\\frac{E_a}{RT} = \\frac{41570}{4157} = 10$, so the fraction is $e^{-10}$."
+        ],
+        "final_answer": "Option (1): $e^{-10}$",
+        "why_not_others": "$e^{-0.01}$ keeps $E_a$ in kJ. $e^{-4.34}$ wrongly divides by 2.303. $e^{10}$ has the wrong sign and would give a fraction greater than 1.",
+        "common_trap": "Not converting kJ to J when $R$ is in $J\\,K^{-1}\\,mol^{-1}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t07_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Effect of temperature; Arrhenius theory",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pre-exponential factor A"
+          },
+          {
+            "label": "B",
+            "text": "$e^{-E_a/RT}$"
+          },
+          {
+            "label": "C",
+            "text": "Intercept of the $\\ln k$ against $\\frac{1}{T}$ plot"
+          },
+          {
+            "label": "D",
+            "text": "Activated complex"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Related to collision frequency"
+          },
+          {
+            "label": "II",
+            "text": "Fraction of molecules with energy equal to or greater than $E_a$"
+          },
+          {
+            "label": "III",
+            "text": "$\\ln A$"
+          },
+          {
+            "label": "IV",
+            "text": "Unstable, short-lived species at the energy maximum"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The terms of the Arrhenius equation $k = Ae^{-E_a/RT}$ and their meaning.",
+        "steps": [
+          "A, the frequency factor, is related to collision frequency (A-I).",
+          "$e^{-E_a/RT}$ is the fraction of molecules with energy at least $E_a$ (B-II).",
+          "In $\\ln k = \\ln A - \\frac{E_a}{RT}$, the intercept is $\\ln A$ (C-III).",
+          "The activated complex is the unstable transition state at the energy maximum (D-IV)."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option 2 swaps A and B. Option 3 swaps C and D. Option 4 links the intercept to collision frequency.",
+        "common_trap": "Confusing the frequency factor with the Boltzmann fraction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t07_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Effect of temperature; Arrhenius theory",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the effect of temperature on reaction rate are correct?",
+      "statements": {
+        "A": "Raising the temperature flattens and broadens the Maxwell-Boltzmann curve and shifts its peak to a higher energy.",
+        "B": "The total area under the Maxwell-Boltzmann curve increases with temperature.",
+        "C": "As $E_a$ approaches zero, the rate constant approaches A.",
+        "D": "A 10 K rise in temperature roughly doubles the fraction of molecules with energy at least $E_a$.",
+        "E": "The slope of the $\\log k$ against $\\frac{1}{T}$ plot is $-\\frac{E_a}{R}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "C, D and E only",
+        "A, B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The Maxwell-Boltzmann distribution and the Arrhenius equation.",
+        "steps": [
+          "A is true. This is how the curve changes with temperature.",
+          "B is false. The total area stays constant because the number of molecules is fixed.",
+          "C is true. When $E_a = 0$, $e^{0} = 1$, so $k = A$.",
+          "D is true. E is false, because the slope of the $\\log k$ plot is $-\\frac{E_a}{2.303R}$."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Options 1 and 4 include B. Option 3 includes E. Both B and E are false.",
+        "common_trap": "Thinking the area under the curve grows with temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t08_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Activation energy and its calculation",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For a reaction, the activation energy of the forward reaction is 80 kJ $mol^{-1}$ and the enthalpy change is $\\Delta H = -30$ kJ $mol^{-1}$. The activation energy of the backward reaction is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "50 kJ $mol^{-1}$",
+        "30 kJ $mol^{-1}$",
+        "80 kJ $mol^{-1}$",
+        "110 kJ $mol^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\Delta H = E_{a(f)} - E_{a(b)}$",
+        "steps": [
+          "$E_{a(b)} = E_{a(f)} - \\Delta H$.",
+          "$E_{a(b)} = 80 - (-30) = 110$ kJ $mol^{-1}$.",
+          "The reaction is exothermic, so $E_{a(b)} > E_{a(f)}$, which is consistent."
+        ],
+        "final_answer": "Option (4): 110 kJ $mol^{-1}$",
+        "why_not_others": "50 kJ $mol^{-1}$ comes from a sign error, $80 - 30$. 30 kJ $mol^{-1}$ is just the magnitude of $\\Delta H$. 80 kJ $mol^{-1}$ wrongly assumes the forward and backward barriers are equal.",
+        "common_trap": "Subtracting the magnitude of $\\Delta H$ instead of using its negative sign.",
+        "time_saving_tip": "For an exothermic reaction, $E_{a(b)}$ must be larger than $E_{a(f)}$. Only 110 kJ $mol^{-1}$ qualifies."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t08_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Activation energy and its calculation",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The rate constant of a reaction increases tenfold when the temperature is raised from 300 K to 400 K. The activation energy of the reaction is ($R = 8.314$ J $K^{-1}\\,mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "9.98 kJ $mol^{-1}$",
+        "52.92 kJ $mol^{-1}$",
+        "22.98 kJ $mol^{-1}$",
+        "$-22.98$ kJ $mol^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Two-temperature Arrhenius equation: $\\log\\frac{k_2}{k_1} = \\frac{E_a}{2.303R}\\left(\\frac{T_2 - T_1}{T_1T_2}\\right)$",
+        "steps": [
+          "$\\log 10 = 1$.",
+          "$\\frac{T_2 - T_1}{T_1T_2} = \\frac{100}{300 \\times 400} = \\frac{1}{1200}$ $K^{-1}$.",
+          "$E_a = 2.303 \\times 8.314 \\times 1200 = 22977$ J $mol^{-1}$.",
+          "$E_a \\approx 22.98$ kJ $mol^{-1}$."
+        ],
+        "final_answer": "Option (3): 22.98 kJ $mol^{-1}$",
+        "why_not_others": "9.98 kJ $mol^{-1}$ omits the factor 2.303. 52.92 kJ $mol^{-1}$ takes $\\log 10$ as 2.303. $-22.98$ kJ $mol^{-1}$ reverses the temperature order, and $E_a$ cannot be negative.",
+        "common_trap": "Mixing $\\ln$ and $\\log$ forms, which either drops or doubles the 2.303 factor.",
+        "time_saving_tip": "When $k$ increases tenfold, $E_a = 2.303R \\times \\frac{T_1T_2}{T_2 - T_1}$ directly."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t08_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Activation energy and its calculation",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a reaction, $E_{a(f)} = 120$ kJ $mol^{-1}$ and $E_{a(b)} = 90$ kJ $mol^{-1}$. A catalyst lowers $E_{a(f)}$ to 75 kJ $mol^{-1}$. What are the activation energy of the backward reaction and the enthalpy change of the reaction in the presence of the catalyst?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "90 kJ $mol^{-1}$ and +30 kJ $mol^{-1}$",
+        "45 kJ $mol^{-1}$ and $-30$ kJ $mol^{-1}$",
+        "45 kJ $mol^{-1}$ and +30 kJ $mol^{-1}$",
+        "90 kJ $mol^{-1}$ and $-15$ kJ $mol^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A catalyst lowers $E_{a(f)}$ and $E_{a(b)}$ by the same amount, so $\\Delta H$ is unchanged.",
+        "steps": [
+          "The decrease in $E_{a(f)}$ is $120 - 75 = 45$ kJ $mol^{-1}$.",
+          "The new $E_{a(b)}$ is $90 - 45 = 45$ kJ $mol^{-1}$.",
+          "$\\Delta H = 75 - 45 = +30$ kJ $mol^{-1}$, the same as $120 - 90$ without the catalyst."
+        ],
+        "final_answer": "Option (3): 45 kJ $mol^{-1}$ and +30 kJ $mol^{-1}$",
+        "why_not_others": "The 90 kJ $mol^{-1}$ options assume the backward barrier is not lowered; the $-15$ kJ $mol^{-1}$ option also wrongly lets the catalyst change $\\Delta H$. $-30$ kJ $mol^{-1}$ is a sign error, $E_{a(b)} - E_{a(f)}$.",
+        "common_trap": "Thinking a catalyst lowers only the forward barrier or alters $\\Delta H$.",
+        "time_saving_tip": "$\\Delta H$ cannot change with a catalyst, so it stays +30 kJ $mol^{-1}$. That leaves only options (1) and (3), and the backward barrier must drop."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t08_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Activation energy and its calculation",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A catalyst does not change the enthalpy change $\\Delta H$ of a reaction.",
+        "R": "A catalyst lowers only the activation energy of the forward reaction and leaves that of the backward reaction unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A catalyst reduces $E_{a(f)}$ and $E_{a(b)}$ equally.",
+        "steps": [
+          "$\\Delta H = E_{a(f)} - E_{a(b)}$.",
+          "Both barriers fall by the same amount, so their difference is unchanged. A is true.",
+          "R claims only the forward barrier falls. That is false, and it would actually change $\\Delta H$."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) fail. A is a correct statement, so option (4) fails.",
+        "common_trap": "Assuming a catalyst speeds up only the forward reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t08_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Activation energy and its calculation",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For two reactions with the same pre-exponential factor, the reaction with the larger activation energy has a rate constant that is less sensitive to a change in temperature.",
+        "II": "For a reaction with $E_{a(f)} = 50$ kJ $mol^{-1}$ and $\\Delta H = -20$ kJ $mol^{-1}$, the activation energy of the backward reaction is 30 kJ $mol^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A larger $E_a$ makes $k$ more temperature sensitive. Also, $\\Delta H = E_{a(f)} - E_{a(b)}$.",
+        "steps": [
+          "A larger $E_a$ makes $k$ more sensitive to temperature, so Statement I is incorrect.",
+          "$E_{a(b)} = E_{a(f)} - \\Delta H = 50 - (-20) = 70$ kJ $mol^{-1}$.",
+          "Statement II gives 30 kJ $mol^{-1}$, so it is incorrect. For an exothermic reaction, $E_{a(b)}$ must exceed $E_{a(f)}$."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I reverses the temperature-sensitivity rule. Statement II contains a sign error in $\\Delta H$. Neither statement is correct.",
+        "common_trap": "Writing $E_{a(b)} = E_{a(f)} + \\Delta H$, which treats the reaction as if it were endothermic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t09_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Collision theory of bimolecular gaseous reactions",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "According to collision theory, a collision between reactant molecules is effective only when the molecules",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "possess energy equal to or greater than the threshold energy and collide with proper orientation",
+        "collide with high frequency at a high temperature",
+        "possess energy equal to the enthalpy change of the reaction and collide with proper orientation",
+        "possess energy greater than the threshold energy and collide in the presence of a catalyst"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An effective collision requires sufficient energy and proper orientation.",
+        "steps": [
+          "The energy must be at least the threshold energy.",
+          "The orientation must align the bonds to be broken and formed."
+        ],
+        "final_answer": "Option (1): possess energy equal to or greater than the threshold energy and collide with proper orientation",
+        "why_not_others": "A high collision frequency alone does not make a collision fruitful. The energy criterion is the threshold energy, not $\\Delta H$. A catalyst is not a requirement of collision theory.",
+        "common_trap": "Equating the number of collisions with the number of effective collisions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t09_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Collision theory of bimolecular gaseous reactions",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a bimolecular gaseous reaction at 300 K, the collision frequency is $Z_{AB} = 5 \\times 10^{30}$ collisions per second per unit volume, the steric factor is $P = 0.2$ and $E_a = 57.44$ kJ $mol^{-1}$. Using collision theory, the number of effective collisions per second per unit volume is ($R = 8.314$ J $K^{-1}\\,mol^{-1}$, $\\ln 10 = 2.303$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5 \\times 10^{20}$",
+        "$1 \\times 10^{30}$",
+        "$2 \\times 10^{-11}$",
+        "$1 \\times 10^{20}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Rate $= PZ_{AB}e^{-E_a/RT}$",
+        "steps": [
+          "$\\frac{E_a}{RT} = \\frac{57440}{8.314 \\times 300} = \\frac{57440}{2494.2} \\approx 23.03$.",
+          "$e^{-23.03} = e^{-10 \\times 2.303} = 10^{-10}$.",
+          "Rate $= 0.2 \\times 5 \\times 10^{30} \\times 10^{-10} = 1 \\times 10^{20}$."
+        ],
+        "final_answer": "Option (4): $1 \\times 10^{20}$",
+        "why_not_others": "$5 \\times 10^{20}$ ignores the steric factor. $1 \\times 10^{30}$ ignores the energy factor and gives only $PZ_{AB}$. $2 \\times 10^{-11}$ is the fraction $Pe^{-E_a/RT}$, not the number of collisions.",
+        "common_trap": "Leaving $E_a$ in kJ, which makes the exponential factor close to 1.",
+        "time_saving_tip": "Check whether $\\frac{E_a}{RT}$ is a multiple of 2.303; if so, the exponential term becomes a power of 10."
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t09_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Collision theory of bimolecular gaseous reactions",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Collision theory deviates from experiment for reactions of complex molecules. This deviation is attributed to, and corrected by, which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Neglect of the temperature effect; corrected by the factor $e^{-E_a/RT}$",
+        "Treatment of molecules as hard spheres, ignoring their structure; corrected by the steric factor $P$",
+        "Overestimation of the activation energy; corrected by adding a catalyst",
+        "Neglect of collision frequency; corrected by introducing $Z_{AB}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The main limitation of collision theory is that it treats molecules as hard spheres and ignores their structure.",
+        "steps": [
+          "For complex molecules, orientation matters, and the hard-sphere model ignores it.",
+          "The probability or steric factor $P$ was introduced to account for proper orientation."
+        ],
+        "final_answer": "Option (2): Treatment of molecules as hard spheres, ignoring their structure; corrected by the steric factor $P$",
+        "why_not_others": "Both $e^{-E_a/RT}$ and $Z_{AB}$ are already part of the basic theory. A catalyst is not a correction to the theory.",
+        "common_trap": "Confusing the energy factor with the orientation factor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t09_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Collision theory of bimolecular gaseous reactions",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$Z_{AB}$"
+          },
+          {
+            "label": "B",
+            "text": "$P$"
+          },
+          {
+            "label": "C",
+            "text": "$e^{-E_a/RT}$"
+          },
+          {
+            "label": "D",
+            "text": "$PZ_{AB}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Fraction of molecules having sufficient energy to react"
+          },
+          {
+            "label": "II",
+            "text": "Probability factor accounting for proper orientation"
+          },
+          {
+            "label": "III",
+            "text": "Number of collisions per second per unit volume"
+          },
+          {
+            "label": "IV",
+            "text": "Arrhenius pre-exponential factor $A$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Rate $= PZ_{AB}e^{-E_a/RT}$, and comparing with the Arrhenius equation gives $A \\approx PZ_{AB}$.",
+        "steps": [
+          "$Z_{AB}$ is the collision frequency (III).",
+          "$P$ is the steric or probability factor (II).",
+          "$e^{-E_a/RT}$ is the fraction of molecules with sufficient energy (I).",
+          "$PZ_{AB}$ corresponds to $A$ (IV)."
+        ],
+        "final_answer": "Option (2): A-III, B-II, C-I, D-IV",
+        "why_not_others": "Option (1) swaps $Z_{AB}$ and $PZ_{AB}$. Option (3) swaps the energy and orientation factors. Option (4) swaps the collision frequency and the energy fraction.",
+        "common_trap": "Equating $A$ with $Z_{AB}$ alone and forgetting $P$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u08_t09_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u08",
+      "topic": "Collision theory of bimolecular gaseous reactions",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about collision theory are correct?",
+      "statements": {
+        "A": "Reacting molecules are treated as hard spheres.",
+        "B": "The steric factor $P$ can exceed 1 for complex molecules.",
+        "C": "Only a tiny fraction of the total collisions lead to products.",
+        "D": "On comparison with the Arrhenius equation, $A \\approx PZ_{AB}$.",
+        "E": "The theory works better for complex molecules than for simple atoms and molecules."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A and C only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Collision theory: hard spheres, $P \\le 1$, rate $= PZ_{AB}e^{-E_a/RT}$, and it is valid mainly for simple molecules.",
+        "steps": [
+          "A is true: the theory uses a hard-sphere model.",
+          "B is false: $P \\le 1$.",
+          "C is true: most collisions are not fruitful.",
+          "D is true: $A \\approx PZ_{AB}$.",
+          "E is false: the theory deviates for complex molecules."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Options (1) and (2) include false statements B or E. Option (3) misses the correct statement D.",
+        "common_trap": "Thinking $P$ corrects the theory upward beyond 1 for complex molecules; in fact it reduces the predicted rate.",
+        "time_saving_tip": "Once you know $P \\le 1$, statement B is false, which eliminates options (1) and (2) at once."
+      }
+    }
+  ]
+}

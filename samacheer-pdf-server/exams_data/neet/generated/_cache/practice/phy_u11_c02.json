@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Two point charges of $+4\\ \\mu C$ and $-4\\ \\mu C$ are held 2 mm apart to form an electric dipole. What is the magnitude of the dipole moment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4 \\times 10^{-9}$ C m",
+        "$8 \\times 10^{-9}$ C m",
+        "$1.6 \\times 10^{-8}$ C m",
+        "$8 \\times 10^{-6}$ C m"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Dipole moment magnitude is $p = q \\times 2a$, where $2a$ is the full separation between the charges.",
+        "steps": [
+          "Here $q = 4 \\times 10^{-6}$ C and the separation is $2a = 2 \\times 10^{-3}$ m.",
+          "$p = (4 \\times 10^{-6})(2 \\times 10^{-3}) = 8 \\times 10^{-9}$ C m."
+        ],
+        "final_answer": "Option (2): $8 \\times 10^{-9}$ C m",
+        "why_not_others": "$4 \\times 10^{-9}$ uses only half the separation (a instead of 2a). $1.6 \\times 10^{-8}$ doubles the given separation a second time. $8 \\times 10^{-6}$ forgets to convert mm to m.",
+        "common_trap": "Treating the given 2 mm as 'a' and doubling it again, or using half of it.",
+        "time_saving_tip": "The given separation is already 2a, so simply multiply q by it."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The electric field at a point on the axial line of a short dipole, at distance r from its centre, has magnitude E. What is the magnitude of the field at a point on its equatorial line at distance 2r from the centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$E/8$",
+        "$E/2$",
+        "$E/16$",
+        "$E/4$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a short dipole, $E_{axial} = 2kp/r^3$ and $E_{eq} = kp/r^3$. Both fall off as $1/r^3$.",
+        "steps": [
+          "$E = 2kp/r^3$.",
+          "At distance 2r on the equatorial line, $E_{eq} = kp/(2r)^3 = kp/(8r^3)$.",
+          "$E_{eq}/E = (1/8)/2 = 1/16$, so $E_{eq} = E/16$."
+        ],
+        "final_answer": "Option (3): $E/16$",
+        "why_not_others": "$E/8$ ignores the factor of 2 between the axial and equatorial fields. $E/2$ ignores the change in distance. $E/4$ wrongly uses the $1/r^2$ dependence of a point charge and also drops the factor of 2.",
+        "common_trap": "Using the $1/r^2$ law of a point charge for a dipole field.",
+        "time_saving_tip": "Multiply the two factors directly: 1/2 for equatorial versus axial, and $1/2^3$ for doubling the distance."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Let $E_0 = \\frac{1}{4\\pi\\epsilon_0}\\frac{p}{r^3}$ for a short dipole of moment p. What is the magnitude of the electric field at a point at distance r from the centre of the dipole, whose position vector makes an angle of $60^\\circ$ with the dipole axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\sqrt{13}}{2}E_0$",
+        "$2E_0$",
+        "$\\frac{\\sqrt{10}}{2}E_0$",
+        "$\\frac{\\sqrt{7}}{2}E_0$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "At a general angle, $E = \\frac{kp}{r^3}\\sqrt{1 + 3\\cos^2\\theta}$.",
+        "steps": [
+          "$\\cos 60^\\circ = 1/2$, so $\\cos^2 60^\\circ = 1/4$.",
+          "$\\sqrt{1 + 3/4} = \\sqrt{7/4} = \\sqrt{7}/2$.",
+          "Therefore $E = \\frac{\\sqrt{7}}{2}E_0$."
+        ],
+        "final_answer": "Option (4): $\\frac{\\sqrt{7}}{2}E_0$",
+        "why_not_others": "$\\sqrt{13}/2$ uses $\\sin^2\\theta$ instead of $\\cos^2\\theta$. $\\sqrt{10}/2$ uses $\\cos\\theta$ without squaring it. $2E_0$ is the axial value, which holds only at $\\theta = 0$.",
+        "common_trap": "Using $\\sin\\theta$ in place of $\\cos\\theta$ in the general formula.",
+        "time_saving_tip": "Check the limits: $\\theta = 0$ must give $2E_0$ and $\\theta = 90^\\circ$ must give $E_0$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "At equal distances from the centre of a short electric dipole, the field on the axial line is twice the field on the equatorial line.",
+        "R": "The dipole moment of an electric dipole is directed from the negative charge to the positive charge."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$E_{axial} = 2kp/r^3$ and $E_{eq} = kp/r^3$. The direction of $\\vec{p}$ is a separate convention.",
+        "steps": [
+          "The ratio $E_{axial}/E_{eq} = 2$ at the same r, so A is true.",
+          "$\\vec{p}$ points from -q to +q, so R is true.",
+          "The 2 : 1 ratio comes from the field expressions, not from the sign convention for $\\vec{p}$. R therefore does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is true, so options (3) and (4) fail. R only fixes the direction of $\\vec{p}$ and says nothing about the magnitudes of the fields, so option (1) fails.",
+        "common_trap": "Picking option (1) just because both statements are true and concern the same dipole.",
+        "time_saving_tip": "Ask whether R actually produces the factor 2 in A. It does not."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a short dipole, if the distance from its centre is doubled along any fixed direction, the magnitude of the electric field becomes one-eighth of its earlier value.",
+        "II": "At a point whose position vector makes an angle $\\theta$ with the dipole moment such that $\\tan\\theta = \\sqrt{2}$, the electric field of a short dipole is perpendicular to the dipole moment."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Along a fixed direction, $E = \\frac{kp}{r^3}\\sqrt{1+3\\cos^2\\theta}$ varies as $1/r^3$. The field is perpendicular to $\\vec{p}$ at $\\tan\\theta = \\sqrt{2}$ ($\\theta \\approx 54.7^\\circ$).",
+        "steps": [
+          "For a fixed $\\theta$, the square-root factor stays constant, so $E \\propto 1/r^3$.",
+          "Doubling r therefore reduces E by a factor of $2^3 = 8$, so Statement I is correct.",
+          "At $\\tan\\theta = \\sqrt{2}$, i.e. $\\theta \\approx 54.7^\\circ$, the field is perpendicular to $\\vec{p}$, so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Statement I would fail only if the field followed $1/r^2$, which holds for a point charge, not a dipole. Statement II is a standard result for the dipole field geometry.",
+        "common_trap": "Applying the $1/r^2$ law and expecting the field to become one-fourth.",
+        "time_saving_tip": "Remember the pair: field $\\propto 1/r^3$, potential $\\propto 1/r^2$."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "An electric dipole of moment $2 \\times 10^{-8}$ C m is placed in a uniform electric field of $5 \\times 10^{4}$ N/C, with its axis at $30^\\circ$ to the field. What is the magnitude of the torque on it?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0 \\times 10^{-3}$ N m",
+        "$8.7 \\times 10^{-4}$ N m",
+        "zero, since the net force is zero",
+        "$5.0 \\times 10^{-4}$ N m"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\tau = pE\\sin\\theta$ for a dipole in a uniform field.",
+        "steps": [
+          "$pE = (2 \\times 10^{-8})(5 \\times 10^{4}) = 1.0 \\times 10^{-3}$ N m.",
+          "$\\tau = 1.0 \\times 10^{-3} \\times \\sin 30^\\circ = 5.0 \\times 10^{-4}$ N m."
+        ],
+        "final_answer": "Option (4): $5.0 \\times 10^{-4}$ N m",
+        "why_not_others": "$1.0 \\times 10^{-3}$ is the maximum torque pE, which occurs only at $90^\\circ$. $8.7 \\times 10^{-4}$ uses $\\cos\\theta$ instead of $\\sin\\theta$. A zero net force does not make the torque zero, because the two forces form a couple.",
+        "common_trap": "Assuming zero net force implies zero torque.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A dipole of moment $4 \\times 10^{-9}$ C m is initially aligned along a uniform electric field of $2 \\times 10^{5}$ N/C. How much work must an external agent do to rotate it slowly until it makes $120^\\circ$ with the field?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.2 \\times 10^{-3}$ J",
+        "$4.0 \\times 10^{-4}$ J",
+        "$1.6 \\times 10^{-3}$ J",
+        "$6.9 \\times 10^{-4}$ J"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$W = pE(\\cos\\theta_1 - \\cos\\theta_2)$.",
+        "steps": [
+          "$pE = (4 \\times 10^{-9})(2 \\times 10^{5}) = 8 \\times 10^{-4}$ J.",
+          "$\\cos 0^\\circ - \\cos 120^\\circ = 1 - (-1/2) = 3/2$.",
+          "$W = 8 \\times 10^{-4} \\times 1.5 = 1.2 \\times 10^{-3}$ J."
+        ],
+        "final_answer": "Option (1): $1.2 \\times 10^{-3}$ J",
+        "why_not_others": "$4.0 \\times 10^{-4}$ J takes $\\cos 120^\\circ$ as $+1/2$. $1.6 \\times 10^{-3}$ J is 2pE, which applies to a rotation from $0^\\circ$ to $180^\\circ$. $6.9 \\times 10^{-4}$ J wrongly uses $pE\\sin 120^\\circ$, which is the torque expression.",
+        "common_trap": "Dropping the negative sign of $\\cos 120^\\circ$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A dipole performs small angular oscillations about its stable equilibrium in a uniform field E with time period T. It is replaced by another dipole having twice the dipole moment but the same moment of inertia, and the field is increased to 4E. What is the new time period?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$T/8$",
+        "$T/2$",
+        "$\\frac{T}{2\\sqrt{2}}$",
+        "$2\\sqrt{2}\\,T$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$T = 2\\pi\\sqrt{I/(pE)}$, so $T \\propto 1/\\sqrt{pE}$ when I is fixed.",
+        "steps": [
+          "The product pE increases by a factor of $2 \\times 4 = 8$.",
+          "$T' = T/\\sqrt{8} = \\frac{T}{2\\sqrt{2}}$."
+        ],
+        "final_answer": "Option (3): $\\frac{T}{2\\sqrt{2}}$",
+        "why_not_others": "$T/8$ forgets the square root. $T/2$ accounts only for the change in field. $2\\sqrt{2}\\,T$ inverts the dependence on pE.",
+        "common_trap": "Treating T as proportional to $1/(pE)$ instead of $1/\\sqrt{pE}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Dipole at $\\theta = 0^\\circ$ to a uniform field"
+          },
+          {
+            "label": "B",
+            "text": "Dipole at $\\theta = 90^\\circ$ to a uniform field"
+          },
+          {
+            "label": "C",
+            "text": "Dipole at $\\theta = 180^\\circ$ to a uniform field"
+          },
+          {
+            "label": "D",
+            "text": "Slow rotation of the dipole from $0^\\circ$ to $180^\\circ$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "External work required equals 2pE"
+          },
+          {
+            "label": "II",
+            "text": "Torque has its maximum value pE"
+          },
+          {
+            "label": "III",
+            "text": "Unstable equilibrium with zero torque"
+          },
+          {
+            "label": "IV",
+            "text": "Stable equilibrium with zero torque"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\tau = pE\\sin\\theta$ and $W = pE(\\cos\\theta_1 - \\cos\\theta_2)$.",
+        "steps": [
+          "At $0^\\circ$, $\\vec{p}$ is along $\\vec{E}$: zero torque and stable equilibrium (A-IV).",
+          "At $90^\\circ$, $\\sin\\theta = 1$, so the torque is maximum, pE (B-II).",
+          "At $180^\\circ$, the torque is zero but the equilibrium is unstable (C-III).",
+          "$W = pE(1 - (-1)) = 2pE$ (D-I)."
+        ],
+        "final_answer": "Option (2): A-IV, B-II, C-III, D-I",
+        "why_not_others": "Option (1) swaps stable and unstable equilibrium. Option (3) swaps maximum torque and work. Option (4) mismatches every item.",
+        "common_trap": "Calling $180^\\circ$ stable simply because the torque there is zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about an electric dipole in an electric field are correct?",
+      "statements": {
+        "A": "In a uniform field, the net force on the dipole is zero.",
+        "B": "In a uniform field, the torque on the dipole is always zero.",
+        "C": "In a non-uniform field, a dipole aligned with the field is pulled toward the region of stronger field.",
+        "D": "The torque on the dipole tends to align $\\vec{p}$ with $\\vec{E}$.",
+        "E": "Rotating the dipole slowly from $90^\\circ$ to $180^\\circ$ in a uniform field requires external work 2pE."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and E only",
+        "A, C and D only",
+        "B, C and D only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In a uniform field there is zero net force but generally a non-zero torque $pE\\sin\\theta$. The work done is $pE(\\cos\\theta_1 - \\cos\\theta_2)$.",
+        "steps": [
+          "A is true: the two forces are equal and opposite.",
+          "B is false: the forces form a couple, giving torque $pE\\sin\\theta$.",
+          "C and D are true, as stated in the theory of dipoles.",
+          "E is false: $W = pE(\\cos 90^\\circ - \\cos 180^\\circ) = pE$, not 2pE."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options (1) and (4) include the false statement B. Option (2) includes the false statement E, which confuses this rotation with the $0^\\circ$ to $180^\\circ$ rotation.",
+        "common_trap": "Assuming any rotation that ends at $180^\\circ$ needs work 2pE.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "A uniform electric field of 200 N/C passes through a flat surface of area 0.5 $m^2$. The normal to the surface makes an angle of $60^\\circ$ with the field. What is the electric flux through the surface?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "86.6 N $m^2$/C",
+        "50 N $m^2$/C",
+        "100 N $m^2$/C",
+        "50 N $C^{-1}$ $m^{-2}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\Phi = EA\\cos\\theta$, where $\\theta$ is the angle between $\\vec{E}$ and the area vector (the normal).",
+        "steps": [
+          "$\\Phi = 200 \\times 0.5 \\times \\cos 60^\\circ$.",
+          "$\\Phi = 100 \\times 0.5 = 50$ N $m^2$/C."
+        ],
+        "final_answer": "Option (2): 50 N $m^2$/C",
+        "why_not_others": "86.6 uses $\\sin\\theta$. 100 ignores the angle. The last option has the right number but wrong units; flux is measured in N $m^2$/C.",
+        "common_trap": "Measuring the angle from the surface instead of from its normal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A point charge q is placed at one corner of a cube. What is the electric flux through any one face of the cube that does not touch that corner?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{q}{24\\epsilon_0}$",
+        "$\\frac{q}{8\\epsilon_0}$",
+        "$\\frac{q}{6\\epsilon_0}$",
+        "zero"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Eight identical cubes around the corner would enclose the charge completely, so one cube receives $q/(8\\epsilon_0)$.",
+        "steps": [
+          "Total flux through this cube is $q/(8\\epsilon_0)$.",
+          "The 3 faces meeting at the corner contain the field lines, so the flux through each of them is zero.",
+          "The remaining 3 faces share the flux equally: $\\frac{q}{8\\epsilon_0} \\div 3 = \\frac{q}{24\\epsilon_0}$."
+        ],
+        "final_answer": "Option (1): $\\frac{q}{24\\epsilon_0}$",
+        "why_not_others": "$q/(8\\epsilon_0)$ is the flux through the whole cube, not through one face. $q/(6\\epsilon_0)$ applies to a charge at the centre of the cube. Zero is the flux through the faces that meet at the corner.",
+        "common_trap": "Dividing $q/(8\\epsilon_0)$ by 6 faces instead of by the 3 faces that actually carry flux.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A closed surface encloses charges of $+3\\ \\mu C$ and $-5\\ \\mu C$. A charge of $+6\\ \\mu C$ lies outside it. What is the net electric flux through the surface? (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\ C^2 N^{-1} m^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+2.26 \\times 10^{5}$ N $m^2$/C",
+        "$+4.52 \\times 10^{5}$ N $m^2$/C",
+        "$+9.04 \\times 10^{5}$ N $m^2$/C",
+        "$-2.26 \\times 10^{5}$ N $m^2$/C"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Gauss's law: $\\Phi = q_{enc}/\\epsilon_0$. Charges outside the surface give zero net flux.",
+        "steps": [
+          "$q_{enc} = +3 - 5 = -2\\ \\mu C$.",
+          "$\\Phi = \\frac{-2 \\times 10^{-6}}{8.85 \\times 10^{-12}} = -2.26 \\times 10^{5}$ N $m^2$/C."
+        ],
+        "final_answer": "Option (4): $-2.26 \\times 10^{5}$ N $m^2$/C",
+        "why_not_others": "$+2.26 \\times 10^{5}$ drops the negative sign. $+4.52 \\times 10^{5}$ wrongly includes the outside charge (net +4 $\\mu C$). $+9.04 \\times 10^{5}$ adds the magnitudes of the enclosed charges.",
+        "common_trap": "Including charges that lie outside the surface.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The net electric flux through any closed surface placed in a uniform electric field is zero.",
+        "R": "Electric flux is a scalar quantity whose SI unit is N $m^2$/C."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A uniform field gives zero net flux because the closed surface encloses no charge: every line that enters also leaves.",
+        "steps": [
+          "A is true, as a stated property of a uniform field.",
+          "R is true: flux is a scalar with unit N $m^2$/C (equivalently V m).",
+          "The scalar nature of flux does not explain why the net flux is zero, so R is not the explanation of A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R does not account for A, so option (1) fails.",
+        "common_trap": "Choosing option (1) because both statements are about flux.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If a point charge inside a closed spherical surface is shifted from the centre to an off-centre point still inside, the field on the surface changes and therefore the total flux through the surface also changes.",
+        "II": "A point charge q placed at the centre of one face of a cube produces a total flux of $\\frac{q}{2\\epsilon_0}$ through the cube."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The total flux depends only on the enclosed charge, not on where the charge sits inside the surface.",
+        "steps": [
+          "Shifting the charge does change the field distribution on the surface, but $q_{enc}$ is unchanged, so the flux stays $q/\\epsilon_0$. Statement I is incorrect.",
+          "A charge at the centre of a face is half enclosed by the cube, so the flux through the cube is $q/(2\\epsilon_0)$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I wrongly links a change in the local field to a change in the total flux. Statement II is a standard symmetry result.",
+        "common_trap": "Thinking that flux depends on where the charge sits inside the surface.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "An infinitely long straight wire carries a uniform linear charge density of $3 \\times 10^{-6}$ C/m. What is the magnitude of the electric field at a distance of 0.3 m from the wire? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^{9}$ N $m^2$ $C^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.8 \\times 10^{5}$ N/C",
+        "$9.0 \\times 10^{4}$ N/C",
+        "$6.0 \\times 10^{5}$ N/C",
+        "$3.0 \\times 10^{5}$ N/C"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For an infinite line charge, $E = \\frac{\\lambda}{2\\pi\\epsilon_0 r} = \\frac{2k\\lambda}{r}$.",
+        "steps": [
+          "$2k\\lambda = 2 \\times 9 \\times 10^{9} \\times 3 \\times 10^{-6} = 5.4 \\times 10^{4}$.",
+          "$E = 5.4 \\times 10^{4} / 0.3 = 1.8 \\times 10^{5}$ N/C."
+        ],
+        "final_answer": "Option (1): $1.8 \\times 10^{5}$ N/C",
+        "why_not_others": "$9.0 \\times 10^{4}$ misses the factor of 2. $6.0 \\times 10^{5}$ divides by $r^2$. $3.0 \\times 10^{5}$ misses the factor of 2 and also divides by $r^2$.",
+        "common_trap": "Using the $1/r^2$ dependence of a point charge for a line charge.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "Two large parallel plane sheets carry uniform surface charge densities $+\\sigma$ and $-\\sigma$, with $\\sigma = 8.85 \\times 10^{-7}$ C/$m^2$. What are the field magnitudes in the region between the sheets and in the region outside them? (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\ C^2 N^{-1} m^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.0 \\times 10^{4}$ N/C between, zero outside",
+        "$1.0 \\times 10^{5}$ N/C between, zero outside",
+        "$1.0 \\times 10^{5}$ N/C between, $1.0 \\times 10^{5}$ N/C outside",
+        "zero between, $1.0 \\times 10^{5}$ N/C outside"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Each sheet produces $\\sigma/(2\\epsilon_0)$. The two fields add between the sheets and cancel outside them.",
+        "steps": [
+          "$\\sigma/\\epsilon_0 = 8.85 \\times 10^{-7} / 8.85 \\times 10^{-12} = 1.0 \\times 10^{5}$ N/C between the sheets.",
+          "Outside the sheets, the two fields of $\\sigma/(2\\epsilon_0)$ are opposite, so E = 0."
+        ],
+        "final_answer": "Option (2): $1.0 \\times 10^{5}$ N/C between, zero outside",
+        "why_not_others": "$5.0 \\times 10^{4}$ N/C is the field of a single sheet. The third option ignores the cancellation outside. The fourth option reverses the two regions.",
+        "common_trap": "Using $\\sigma/(2\\epsilon_0)$ between the sheets.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A uniformly charged insulating solid sphere has radius R. What is the ratio of the electric field magnitude at distance R/2 from its centre to that at distance 2R from its centre?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "16 : 1",
+        "2 : 1",
+        "1 : 2",
+        "1 : 1"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Inside the sphere $E = kQr/R^3$. Outside it, $E = kQ/r^2$.",
+        "steps": [
+          "At r = R/2: $E_1 = kQ(R/2)/R^3 = kQ/(2R^2)$.",
+          "At r = 2R: $E_2 = kQ/(4R^2)$.",
+          "$E_1 : E_2 = (1/2) : (1/4) = 2 : 1$."
+        ],
+        "final_answer": "Option (2): 2 : 1",
+        "why_not_others": "16 : 1 wrongly applies $kQ/r^2$ inside the sphere. 1 : 2 inverts the ratio. 1 : 1 would require the two fields to be equal, but the inside value is half the surface field while the outside value is a quarter of it.",
+        "common_trap": "Using the point-charge formula at an inside point of a solid sphere.",
+        "time_saving_tip": "Express both in terms of the surface field: half of it at R/2 and a quarter of it at 2R."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Infinite line charge, at distance r"
+          },
+          {
+            "label": "B",
+            "text": "Infinite plane sheet of charge, at distance r"
+          },
+          {
+            "label": "C",
+            "text": "Thin charged spherical shell, at a point inside (r < R)"
+          },
+          {
+            "label": "D",
+            "text": "Uniformly charged insulating solid sphere, at a point inside (r < R)"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "E independent of r"
+          },
+          {
+            "label": "II",
+            "text": "E proportional to 1/r"
+          },
+          {
+            "label": "III",
+            "text": "E proportional to r"
+          },
+          {
+            "label": "IV",
+            "text": "E equal to zero"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Results from Gauss's law: line $\\lambda/(2\\pi\\epsilon_0 r)$, sheet $\\sigma/(2\\epsilon_0)$, shell interior 0, solid sphere interior $\\rho r/(3\\epsilon_0)$.",
+        "steps": [
+          "Line charge: $E \\propto 1/r$ (A-II).",
+          "Plane sheet: E is independent of r (B-I).",
+          "Inside a shell: E = 0 (C-IV).",
+          "Inside a solid sphere: $E \\propto r$ (D-III)."
+        ],
+        "final_answer": "Option (2): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option (3) swaps the shell and the solid sphere. Options (1) and (4) mismatch the line and sheet results as well.",
+        "common_trap": "Assuming the field is zero inside a solid sphere, as it is for a shell.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about fields obtained using Gauss's law are correct?",
+      "statements": {
+        "A": "For a thin charged spherical shell, the field is discontinuous at r = R, jumping from 0 to $kQ/R^2$.",
+        "B": "For a uniformly charged insulating solid sphere, the field is maximum at its centre.",
+        "C": "Just outside the surface of a charged conductor, the field is $\\sigma/\\epsilon_0$.",
+        "D": "Inside a uniformly charged solid sphere of charge density $\\rho$, the field at distance r from the centre is $\\rho r/(3\\epsilon_0)$.",
+        "E": "The field of an infinite plane sheet of charge halves when the distance from it is doubled."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C, D and E only",
+        "A, C and D only",
+        "B, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Shell: E jumps at the surface. Solid sphere: E grows linearly from zero at the centre and peaks at the surface. Plane sheet: E is independent of distance.",
+        "steps": [
+          "A is true: the shell field jumps from 0 to $kQ/R^2$ at r = R.",
+          "B is false: E is zero at the centre and maximum at the surface.",
+          "C is true: the field just outside a conductor is $\\sigma/\\epsilon_0$.",
+          "D is true: $E_{inside} = \\rho r/(3\\epsilon_0)$.",
+          "E is false: the sheet field $\\sigma/(2\\epsilon_0)$ does not depend on distance."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options (1) and (4) include the false statement B. Option (2) includes the false statement E. Option (4) also omits the true statement A.",
+        "common_trap": "Thinking the field of a solid sphere is largest at its centre.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

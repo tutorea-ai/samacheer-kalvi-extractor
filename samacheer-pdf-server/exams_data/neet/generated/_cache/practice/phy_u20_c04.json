@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "In the optical bench experiment to find the focal length of a concave mirror, the image pin is moved until there is no parallax between its tip and the tip of the image. What does the condition of no parallax indicate?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The image pin is at the principal focus of the mirror",
+        "The image and the image pin are at the same position",
+        "The image pin is at the centre of curvature of the mirror",
+        "The image is of the same size as the object pin"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "No parallax means the image and the pin lie at the same position, so they do not separate when the eye moves sideways.",
+        "steps": [
+          "Parallax is the relative shift between two objects at different distances when the eye moves sideways.",
+          "If the image tip and the pin tip stay together as the eye moves, they must be at the same location.",
+          "So the image pin marks the image position, which gives v."
+        ],
+        "final_answer": "Option (2): The image and the image pin are at the same position",
+        "why_not_others": "The pin locates the image wherever it forms, not necessarily at F or C. Equal size happens only for the special case u = v = 2f.",
+        "common_trap": "Thinking that no parallax fixes a particular point, such as F or C, rather than simply the image position.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "On an optical bench, an index rod of actual length 20.0 cm is placed between the lens upright and a pin upright. The separation read on the bench scale is 19.6 cm. For a convex lens, the object pin and image pin distances read from the scale are both 29.6 cm, and the image is the same size as the object. What is the focal length of the lens?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "14.8 cm",
+        "15.0 cm",
+        "14.6 cm",
+        "30.0 cm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Index correction = actual length - observed length. It is added to every measured distance. At u = v = 2f, the image is the same size as the object.",
+        "steps": [
+          "Index correction = 20.0 - 19.6 = +0.4 cm.",
+          "Corrected distances: 29.6 + 0.4 = 30.0 cm each.",
+          "Same size image, so 2f = 30.0 cm.",
+          "Therefore f = 15.0 cm."
+        ],
+        "final_answer": "Option (2): 15.0 cm",
+        "why_not_others": "14.8 cm ignores the index correction. 14.6 cm subtracts the correction instead of adding it. 30.0 cm takes the corrected distance itself as f, when it is actually 2f.",
+        "common_trap": "Subtracting the index correction, or forgetting that u = v corresponds to 2f and not f.",
+        "time_saving_tip": "Use u = v = 2f directly instead of applying the full lens formula."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "In finding the focal length of a convex mirror with an auxiliary convex lens, the distance from the mirror to the point where the lens-formed image coincides with its own pin is read on the bench scale as 23.5 cm. The index correction for this distance is +0.5 cm. What is the focal length of the convex mirror?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "11.75 cm",
+        "12.0 cm",
+        "11.5 cm",
+        "24.0 cm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a convex mirror, the corrected distance from the mirror to the coincidence point equals R, and f = R/2.",
+        "steps": [
+          "Corrected distance: R = 23.5 + 0.5 = 24.0 cm.",
+          "f = R/2 = 24.0/2 = 12.0 cm."
+        ],
+        "final_answer": "Option (2): 12.0 cm",
+        "why_not_others": "11.75 cm ignores the index correction. 11.5 cm subtracts the correction. 24.0 cm takes R as the focal length.",
+        "common_trap": "Equating the measured distance to f instead of R.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The focal length of a convex mirror cannot be found by directly locating its image with an image pin, so an auxiliary convex lens is used.",
+        "R": "A convex mirror forms only a virtual image of a real object."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A virtual image cannot be located on a pin directly. The convex lens forms a real image that acts as a virtual object for the mirror.",
+        "steps": [
+          "A convex mirror forms only a virtual image of a real object, so R is true.",
+          "A virtual image cannot be located directly with an image pin on the bench, so an auxiliary convex lens is needed. A is true.",
+          "The reason R is exactly why the lens is used, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R directly accounts for A, so option (2) fails.",
+        "common_trap": "Thinking the lens is used to increase the size of the image rather than to provide a real image that serves as a virtual object.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a convex lens, the u-v graph is a rectangular hyperbola, while the graph of $1/v$ against $1/u$ is a straight line whose intercepts on both axes are equal to $1/f$.",
+        "II": "For a concave mirror, when the object pin is placed so that its real image is the same size as the object, the distance of the pin from the mirror equals twice the focal length."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The $1/u$-$1/v$ graph is linear with equal intercepts $1/f$, and u = v = 2f gives an image of the same size as the object.",
+        "steps": [
+          "The lens formula is linear in $1/v$ and $1/u$, so that plot is a straight line with intercepts $1/f$ on both axes. The u-v plot is a rectangular hyperbola. Statement I is correct.",
+          "For a concave mirror, u = v = 2f gives an image of the same size as the object. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Neither statement contains an error, so options (2), (3) and (4) are ruled out.",
+        "common_trap": "Taking the u-v graph as the linear one, or placing the same-size image condition at f instead of 2f.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_1",
+      "type": "single_correct",
+      "question": "In the experiment on a triangular glass prism, which condition holds when the ray passes through the prism at the angle of minimum deviation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The angle of incidence is $90^\\circ$",
+        "The angle of incidence equals the angle of emergence and the ray inside travels parallel to the base",
+        "The first refraction angle $r_1$ equals the prism angle A",
+        "The angle of deviation equals the prism angle A"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "At minimum deviation, i = e, $r_1 = r_2 = A/2$, and the refracted ray inside the prism is parallel to the base.",
+        "steps": [
+          "At $\\delta_m$ the path through the prism is symmetric.",
+          "Therefore i = e and $r_1 = r_2 = A/2$, with the internal ray parallel to the base."
+        ],
+        "final_answer": "Option (2): The angle of incidence equals the angle of emergence and the ray inside travels parallel to the base",
+        "why_not_others": "Grazing incidence ($90^\\circ$) is not the minimum-deviation condition. At minimum deviation $r_1 = A/2$, not A. The deviation is not equal to A in general.",
+        "common_trap": "Writing $r_1 = A$ instead of $A/2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_2",
+      "type": "single_correct",
+      "question": "A prism of angle $60^\\circ$ gives an angle of minimum deviation of $30^\\circ$. What is the refractive index of the prism material?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sqrt{3}$",
+        "$2/\\sqrt{3}$",
+        "$1/\\sqrt{2}$",
+        "$\\sqrt{2}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$n = \\sin\\left(\\frac{A+\\delta_m}{2}\\right)/\\sin\\left(\\frac{A}{2}\\right)$",
+        "steps": [
+          "$(A+\\delta_m)/2 = 90^\\circ/2 = 45^\\circ$.",
+          "$A/2 = 30^\\circ$.",
+          "$n = \\sin 45^\\circ/\\sin 30^\\circ = (1/\\sqrt{2})/(1/2) = \\sqrt{2}$."
+        ],
+        "final_answer": "Option (4): $\\sqrt{2}$",
+        "why_not_others": "$\\sqrt{3}$ comes from $\\sin 60^\\circ/\\sin 30^\\circ$, which ignores $\\delta_m$. $2/\\sqrt{3}$ comes from forgetting to halve the angles ($\\sin 90^\\circ/\\sin 60^\\circ$). $1/\\sqrt{2}$ is the inverted ratio and is less than 1.",
+        "common_trap": "Forgetting to divide $(A+\\delta_m)$ and A by 2.",
+        "time_saving_tip": "A refractive index for glass must exceed 1, so $1/\\sqrt{2}$ can be rejected at once."
+      }
+    },
+    {
+      "slot": "t13_3",
+      "type": "single_correct",
+      "question": "A ray incident at $55^\\circ$ on one face of a prism of angle $60^\\circ$ emerges from the other face at $45^\\circ$. What are the angle of deviation and the other angle of incidence that would produce the same deviation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\delta = 100^\\circ$, other $i = 45^\\circ$",
+        "$\\delta = 40^\\circ$, other $i = 50^\\circ$",
+        "$\\delta = 40^\\circ$, other $i = 45^\\circ$",
+        "$\\delta = 10^\\circ$, other $i = 45^\\circ$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\delta = i + e - A$. For a given $\\delta \\neq \\delta_m$, the two angles of incidence are interchangeable as i and e.",
+        "steps": [
+          "$\\delta = 55^\\circ + 45^\\circ - 60^\\circ = 40^\\circ$.",
+          "By reversibility, incidence at $45^\\circ$ gives emergence at $55^\\circ$ and the same deviation of $40^\\circ$."
+        ],
+        "final_answer": "Option (3): $\\delta = 40^\\circ$, other $i = 45^\\circ$",
+        "why_not_others": "$100^\\circ$ forgets to subtract A. $10^\\circ$ takes $\\delta$ as $i - e$. $50^\\circ$ wrongly averages i and e.",
+        "common_trap": "Assuming the second angle is symmetric about some mean value, instead of simply swapping i and e.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$i + e$"
+          },
+          {
+            "label": "B",
+            "text": "$r_1 + r_2$"
+          },
+          {
+            "label": "C",
+            "text": "$r_1$ at minimum deviation"
+          },
+          {
+            "label": "D",
+            "text": "Angle of deviation $\\delta$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$A$"
+          },
+          {
+            "label": "II",
+            "text": "$A + \\delta$"
+          },
+          {
+            "label": "III",
+            "text": "$A/2$"
+          },
+          {
+            "label": "IV",
+            "text": "$i + e - A$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Prism relations: $i + e = A + \\delta$, $r_1 + r_2 = A$, $r_1 = r_2 = A/2$ at minimum deviation, and $\\delta = i + e - A$.",
+        "steps": [
+          "A: $i + e = A + \\delta$, so A-II.",
+          "B: $r_1 + r_2 = A$, so B-I.",
+          "C: $r_1 = A/2$ at minimum deviation, so C-III.",
+          "D: $\\delta = i + e - A$, so D-IV."
+        ],
+        "final_answer": "Option (4): A-II, B-I, C-III, D-IV",
+        "why_not_others": "The other matchings swap $i + e$ with $r_1 + r_2$, or confuse $A/2$ with A.",
+        "common_trap": "Writing $i + e = A$ by mixing it up with $r_1 + r_2 = A$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the prism δ-i experiment are correct?",
+      "statements": {
+        "A": "The δ-i graph is symmetric about its lowest point.",
+        "B": "At minimum deviation, the refracted ray inside the prism travels parallel to the base.",
+        "C": "For the same prism and angle of incidence, violet light is deviated more than red light.",
+        "D": "The pins should be kept vertical and separated by about 5 cm or more.",
+        "E": "Any angle of deviation greater than $\\delta_m$ is produced by only one angle of incidence."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The δ-i curve is U-shaped but not symmetric. Each $\\delta \\neq \\delta_m$ corresponds to two values of i.",
+        "steps": [
+          "A is false: the curve is U-shaped but not symmetric.",
+          "B is true: at $\\delta_m$ the internal ray is parallel to the base.",
+          "C is true: δ increases with refractive index, so violet deviates more than red.",
+          "D is true: this is the stated precaution for the pins.",
+          "E is false: two interchangeable values of i give the same δ."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Options (1) and (4) include a false statement (A or E). Option (2) leaves out the true statement C.",
+        "common_trap": "Treating the δ-i graph as symmetric or V-shaped.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_1",
+      "type": "single_correct",
+      "question": "In the travelling microscope experiment to find the refractive index of a glass slab, why is lycopodium powder sprinkled on the top surface of the slab?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To reduce reflection of light from the top surface",
+        "To make the top surface visible so that the microscope can be focused on it",
+        "To prevent backlash error in the microscope screw",
+        "To find the least count of the vernier scale"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Lycopodium powder or chalk dust makes the top surface visible, so the reading $R_3$ can be taken.",
+        "steps": [
+          "A clean glass surface is hard to focus on.",
+          "Fine powder particles on the surface give a sharp target for focusing, which gives the reading $R_3$."
+        ],
+        "final_answer": "Option (2): To make the top surface visible so that the microscope can be focused on it",
+        "why_not_others": "Backlash is avoided by moving the microscope in one direction only. The least count is found as in vernier calipers. Reducing reflection is not the purpose of the powder.",
+        "common_trap": "Linking the powder to backlash or to error correction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_2",
+      "type": "single_correct",
+      "question": "With a travelling microscope, the readings are 2.250 cm for a mark on paper, 3.050 cm for the same mark seen through a glass slab, and 4.650 cm for lycopodium powder on the top of the slab. What is the refractive index of the glass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3.00",
+        "2.00",
+        "1.50",
+        "0.67"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$n = (R_3 - R_1)/(R_3 - R_2)$",
+        "steps": [
+          "Real thickness = 4.650 - 2.250 = 2.400 cm.",
+          "Apparent thickness = 4.650 - 3.050 = 1.600 cm.",
+          "n = 2.400/1.600 = 1.50."
+        ],
+        "final_answer": "Option (3): 1.50",
+        "why_not_others": "3.00 divides the real thickness by the shift ($R_2 - R_1$). 2.00 divides the apparent thickness by the shift. 0.67 is the inverted ratio.",
+        "common_trap": "Using the normal shift $R_2 - R_1$ in place of the apparent thickness.",
+        "time_saving_tip": "A refractive index below 1 is impossible, so 0.67 can be rejected immediately."
+      }
+    },
+    {
+      "slot": "t14_3",
+      "type": "single_correct",
+      "question": "A glass slab of thickness 3.0 cm and refractive index 1.5 is placed over a mark. By how much must the travelling microscope be raised to refocus the mark seen through the slab?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.0 cm",
+        "4.5 cm",
+        "1.5 cm",
+        "1.0 cm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Normal shift $d = t(1 - 1/n)$.",
+        "steps": [
+          "$1/n = 1/1.5 = 2/3$.",
+          "$d = 3.0 \\times (1 - 2/3) = 1.0$ cm."
+        ],
+        "final_answer": "Option (4): 1.0 cm",
+        "why_not_others": "2.0 cm is the apparent thickness $t/n$. 4.5 cm is $tn$. 1.5 cm is $t(n-1)$.",
+        "common_trap": "Confusing the apparent thickness with the shift.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "While taking readings with a travelling microscope, the microscope should always be moved in one direction only.",
+        "R": "The least count of the travelling microscope is found in the same way as for vernier calipers."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "One-directional motion avoids backlash error. The least count method is a separate fact.",
+        "steps": [
+          "A is true: moving in one direction avoids backlash error.",
+          "R is true: the least count is found as in vernier calipers.",
+          "R does not explain why the movement must be one-directional. Backlash does."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R is unrelated to backlash, so option (1) fails.",
+        "common_trap": "Picking option (1) simply because both statements are true.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t14_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If $R_2$ is the reading for the mark seen through the slab and $R_3$ is the reading for powder on its top surface, the apparent thickness of the slab is $R_3 - R_2$.",
+        "II": "The normal shift $R_2 - R_1$ of the mark is equal to $t/n$, where t is the real thickness of the slab."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Apparent thickness = $R_3 - R_2$, and normal shift = $t(1 - 1/n)$.",
+        "steps": [
+          "Statement I matches the definition of apparent thickness, so it is correct.",
+          "The normal shift is $t(1 - 1/n)$. The quantity $t/n$ is the apparent thickness, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses the shift with the apparent thickness, so options (1) and (4) fail. Statement I is correct, so option (2) fails.",
+        "common_trap": "Treating the apparent thickness $t/n$ as the shift.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_1",
+      "type": "single_correct",
+      "question": "In the forward characteristic of a silicon p-n junction diode, the current stays negligible until the knee voltage is reached. What is the approximate knee voltage?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.3 V",
+        "1.7 V",
+        "0.7 V",
+        "7 V"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The knee voltage is about 0.7 V for Si and 0.3 V for Ge.",
+        "steps": [
+          "For a silicon diode, the forward current rises steeply beyond about 0.7 V."
+        ],
+        "final_answer": "Option (3): 0.7 V",
+        "why_not_others": "0.3 V is the value for Ge. 1.7 V and 7 V are far too large for a silicon diode.",
+        "common_trap": "Swapping the Si and Ge values.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_2",
+      "type": "single_correct",
+      "question": "In the forward characteristic of a diode, the current increases from 10 mA to 30 mA when the voltage increases from 0.70 V to 0.75 V. What is the dynamic resistance of the diode in this region?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "25 $\\Omega$",
+        "2.5 $\\Omega$",
+        "0.4 $\\Omega$",
+        "70 $\\Omega$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$r_d = \\Delta V/\\Delta I$",
+        "steps": [
+          "$\\Delta V = 0.05$ V.",
+          "$\\Delta I = 20$ mA = 0.020 A.",
+          "$r_d = 0.05/0.020 = 2.5\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): 2.5 $\\Omega$",
+        "why_not_others": "25 $\\Omega$ is the static ratio V/I at 0.75 V and 30 mA. 0.4 is $\\Delta I/\\Delta V$, the inverse. 70 $\\Omega$ is V/I at 0.70 V and 10 mA.",
+        "common_trap": "Using V/I at a single point instead of the ratio of changes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_3",
+      "type": "single_correct",
+      "question": "When a p-n junction diode is reverse biased, a microammeter records a small, nearly constant current. Which statement correctly describes this current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It is due to minority carriers and increases with temperature",
+        "It is due to majority carriers and does not depend on temperature",
+        "It is due to minority carriers and does not depend on temperature",
+        "It is due to majority carriers and increases rapidly with reverse voltage"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The reverse saturation current comes from minority carriers and increases with temperature.",
+        "steps": [
+          "In reverse bias, majority carriers are blocked, so only minority carriers drift across the junction.",
+          "The number of minority carriers increases with temperature, so this current increases with temperature."
+        ],
+        "final_answer": "Option (1): It is due to minority carriers and increases with temperature",
+        "why_not_others": "Majority carriers do not carry the reverse current. The current does depend on temperature. Below breakdown it stays nearly constant with reverse voltage.",
+        "common_trap": "Assuming the reverse saturation current is independent of temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Meter used to measure current in forward bias"
+          },
+          {
+            "label": "B",
+            "text": "Meter used to measure current in reverse bias"
+          },
+          {
+            "label": "C",
+            "text": "Knee voltage of a germanium diode"
+          },
+          {
+            "label": "D",
+            "text": "Reciprocal of the slope of the I-V curve at a point"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Dynamic resistance"
+          },
+          {
+            "label": "II",
+            "text": "Microammeter"
+          },
+          {
+            "label": "III",
+            "text": "About 0.3 V"
+          },
+          {
+            "label": "IV",
+            "text": "Milliammeter"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Forward current is of the order of mA, and reverse current is of the order of μA. The Ge knee voltage is about 0.3 V. $r_d = \\Delta V/\\Delta I$.",
+        "steps": [
+          "A: forward current is in mA, so a milliammeter is used. A-IV.",
+          "B: reverse current is in μA, so a microammeter is used. B-II.",
+          "C: Ge knee voltage is about 0.3 V. C-III.",
+          "D: the reciprocal of the slope is the dynamic resistance. D-I."
+        ],
+        "final_answer": "Option (3): A-IV, B-II, C-III, D-I",
+        "why_not_others": "The other matchings swap the two meters or mix up the knee voltage with the dynamic resistance.",
+        "common_trap": "Using the microammeter in forward bias.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t15_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about p-n junction diode characteristics are correct?",
+      "statements": {
+        "A": "In forward bias, the p side is connected to the positive terminal of the supply.",
+        "B": "The diode is an ohmic device because its current increases with applied voltage.",
+        "C": "The reverse resistance of the diode is very high compared with its forward resistance.",
+        "D": "Beyond the knee voltage, the forward current rises steeply, almost exponentially.",
+        "E": "An ordinary diode can be operated safely beyond its reverse breakdown voltage."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "B, C and D only",
+        "A, D and E only",
+        "A, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The diode is non-ohmic, with low forward and very high reverse resistance. Exceeding the breakdown voltage damages an ordinary diode.",
+        "steps": [
+          "A is true by the definition of forward bias.",
+          "B is false: the I-V curve is non-linear, so the diode is non-ohmic.",
+          "C is true: reverse resistance is very high.",
+          "D is true: the current rises almost exponentially beyond the knee.",
+          "E is false: exceeding the reverse breakdown voltage damages an ordinary diode."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Option (1) leaves out the true statement D. Options (2) and (3) include a false statement (B or E).",
+        "common_trap": "Thinking that 'current increases with voltage' makes the diode ohmic. Ohmic behaviour requires a linear I-V relation.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

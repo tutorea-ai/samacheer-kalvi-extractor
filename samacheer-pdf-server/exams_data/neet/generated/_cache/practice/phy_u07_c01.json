@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A wire of original length $2\\,m$ is stretched so that its length increases by $1\\,mm$. What is the longitudinal strain in the wire?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5\\times10^{-4}$",
+        "$5\\times10^{-1}$",
+        "$5\\times10^{-3}$",
+        "$2\\times10^{3}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Longitudinal strain is the fractional change in length, $\\Delta L/L$, and is dimensionless.",
+        "steps": [
+          "Convert the extension to metres: $\\Delta L = 1\\,mm = 1\\times10^{-3}\\,m$.",
+          "Strain $= \\Delta L/L = (1\\times10^{-3})/2 = 5\\times10^{-4}$."
+        ],
+        "final_answer": "Option (1): $5\\times10^{-4}$",
+        "why_not_others": "$5\\times10^{-1}$ comes from using $1\\,mm$ as $1$ without converting it to metres. $5\\times10^{-3}$ comes from taking $1\\,mm$ as $10^{-2}\\,m$. $2\\times10^{3}$ is the inverted ratio $L/\\Delta L$.",
+        "common_trap": "Mixing units of $\\Delta L$ and $L$. Both lengths must be in the same unit before taking the ratio.",
+        "time_saving_tip": "$1\\,mm$ out of $2\\,m$ is $1$ part in $2000$, which is $5\\times10^{-4}$."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A load of $314\\,N$ hangs from a steel wire of diameter $2\\,mm$. What is the tensile stress in the wire? (Take $\\pi = 3.14$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\times10^{8}\\,N\\,m^{-2}$",
+        "$2.5\\times10^{7}\\,N\\,m^{-2}$",
+        "$3.14\\times10^{8}\\,N\\,m^{-2}$",
+        "$4\\times10^{8}\\,N\\,m^{-2}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Stress = force / area, where the area is the cross-sectional area $\\pi r^2$.",
+        "steps": [
+          "Radius $r = 1\\,mm = 1\\times10^{-3}\\,m$.",
+          "Area $A = \\pi r^2 = 3.14\\times10^{-6}\\,m^2$.",
+          "Stress $= F/A = 314/(3.14\\times10^{-6}) = 1\\times10^{8}\\,N\\,m^{-2}$."
+        ],
+        "final_answer": "Option (1): $1\\times10^{8}\\,N\\,m^{-2}$",
+        "why_not_others": "$2.5\\times10^{7}$ comes from using the diameter as the radius. $3.14\\times10^{8}$ comes from dropping $\\pi$ in the area. $4\\times10^{8}$ comes from using half the radius, $0.5\\,mm$.",
+        "common_trap": "Using the diameter in place of the radius in $\\pi r^2$.",
+        "time_saving_tip": "Since $F = 100\\pi$, the $\\pi$ cancels: stress $= 100/r^2 = 100/10^{-6}$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "Two wires P and Q are loaded until they break. For wire P, the fracture point lies far beyond the elastic limit. For wire Q, fracture occurs soon after the elastic limit is crossed. Which description is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "P is brittle and Q is ductile",
+        "Both P and Q are elastomers like rubber",
+        "P is ductile and Q is brittle",
+        "P obeys Hooke's law right up to fracture, while Q does not obey it at all"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The gap between the elastic limit and the fracture point decides whether a material is ductile or brittle.",
+        "steps": [
+          "A large gap means a large plastic region, so P is ductile.",
+          "A small gap means the material fractures soon after the elastic limit, so Q is brittle."
+        ],
+        "final_answer": "Option (3): P is ductile and Q is brittle",
+        "why_not_others": "Option (1) reverses the classification. Elastomers have no well-defined plastic region, so option (2) does not fit. Hooke's law holds only up to the proportional limit, not up to fracture, so option (4) is wrong.",
+        "common_trap": "Thinking that early fracture means a material is ductile.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The SI unit of stress is $N\\,m^{-2}$, which is the same as the unit of pressure.",
+        "R": "Strain is the ratio of a change in dimension to the original dimension, so it is dimensionless."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Stress is restoring force per unit area. Strain is a fractional change.",
+        "steps": [
+          "Stress $= F/A$, so its unit is $N\\,m^{-2}$ (Pa), the same as pressure. A is true.",
+          "Strain is a ratio of like quantities, so it is dimensionless. R is true.",
+          "The unit of stress follows from force divided by area, not from strain being dimensionless. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct facts, which rules out options (3) and (4). R does not account for the unit of stress, which rules out option (1).",
+        "common_trap": "Linking the two statements only because both concern stress-strain quantities.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Hooke's law holds over the entire stress-strain curve of a metal wire, right up to its fracture point.",
+        "II": "Rubber has a well-defined plastic region, and this is why it can be stretched to several times its length."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Hooke's law is limited to the proportional limit. Elastomers have non-linear curves and no well-defined plastic region.",
+        "steps": [
+          "Hooke's law holds only on the initial straight portion of the curve, up to the proportional limit. Beyond the yield point the deformation is plastic. So Statement I is incorrect.",
+          "Rubber is an elastomer. It stretches a lot without obeying Hooke's law and has no well-defined plastic region. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Neither statement is true, so every option claiming that at least one statement is correct fails.",
+        "common_trap": "Attributing rubber's large stretch to plastic flow. In fact it regains its shape.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which modulus of elasticity is possessed by liquids and gases?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Young's modulus only",
+        "Modulus of rigidity only",
+        "Bulk modulus only",
+        "Young's modulus, bulk modulus and modulus of rigidity"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Fluids have no fixed shape or length, so they resist only a change in volume.",
+        "steps": [
+          "Young's modulus needs a fixed length, and the modulus of rigidity needs a fixed shape. Fluids have neither.",
+          "Fluids do resist compression, so they have only a bulk modulus."
+        ],
+        "final_answer": "Option (3): Bulk modulus only",
+        "why_not_others": "Young's modulus and the modulus of rigidity require a definite shape or length. Only solids possess all three moduli.",
+        "common_trap": "Assuming every material has all three moduli.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A wire of length $2\\,m$ and cross-sectional area $1\\times10^{-6}\\,m^2$ stretches by $1\\,mm$ when a load of $100\\,N$ is applied. What is the Young's modulus of the material?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{11}\\,N\\,m^{-2}$",
+        "$1\\times10^{11}\\,N\\,m^{-2}$",
+        "$2\\times10^{10}\\,N\\,m^{-2}$",
+        "$2\\times10^{8}\\,N\\,m^{-2}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$Y = \\dfrac{FL}{A\\,\\Delta L}$",
+        "steps": [
+          "$FL = 100\\times2 = 200\\,N\\,m$.",
+          "$A\\,\\Delta L = 10^{-6}\\times10^{-3} = 10^{-9}\\,m^3$.",
+          "$Y = 200/10^{-9} = 2\\times10^{11}\\,N\\,m^{-2}$."
+        ],
+        "final_answer": "Option (1): $2\\times10^{11}\\,N\\,m^{-2}$",
+        "why_not_others": "$1\\times10^{11}$ comes from omitting $L$. $2\\times10^{10}$ comes from taking $1\\,mm = 10^{-2}\\,m$. $2\\times10^{8}$ comes from not converting mm to m.",
+        "common_trap": "Errors in converting mm to m.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "Wire X has length $L$ and radius $r$. Wire Y, made of the same material, has length $2L$ and radius $2r$. Each wire hangs vertically and is stretched only by its own weight. What is the ratio of the extension of Y to that of X?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2$",
+        "$4$",
+        "$1/2$",
+        "$1$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a wire stretched by its own weight, $\\Delta L = \\rho g L^2/(2Y)$, which is independent of the radius.",
+        "steps": [
+          "$\\Delta L \\propto L^2$, and the radius does not appear.",
+          "Ratio $= (2L)^2/L^2 = 4$."
+        ],
+        "final_answer": "Option (2): $4$",
+        "why_not_others": "$2$ assumes $\\Delta L \\propto L$. $1/2$ uses the external-load relation $L/r^2$. $1$ assumes the length and radius effects cancel.",
+        "common_trap": "Using $\\Delta L \\propto L/r^2$, which applies only to an external load.",
+        "time_saving_tip": "Under its own weight, ignore the radius completely."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Young's modulus"
+          },
+          {
+            "label": "B",
+            "text": "Bulk modulus"
+          },
+          {
+            "label": "C",
+            "text": "Modulus of rigidity"
+          },
+          {
+            "label": "D",
+            "text": "Compressibility"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Associated with change in shape"
+          },
+          {
+            "label": "II",
+            "text": "Reciprocal of bulk modulus"
+          },
+          {
+            "label": "III",
+            "text": "Associated with change in volume"
+          },
+          {
+            "label": "IV",
+            "text": "Associated with change in length"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each modulus corresponds to one type of deformation, and compressibility $k = 1/B$.",
+        "steps": [
+          "Young's modulus relates to change in length: A-IV.",
+          "Bulk modulus relates to change in volume: B-III.",
+          "Shear modulus relates to change in shape: C-I.",
+          "Compressibility is the reciprocal of $B$: D-II."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option (1) swaps the bulk modulus and compressibility. Option (2) swaps the Young's and rigidity moduli. Option (3) mismatches all four pairs.",
+        "common_trap": "Confusing compressibility with the bulk modulus itself.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about elastic moduli are correct?",
+      "statements": {
+        "A": "For most materials, the modulus of rigidity is approximately one-third of Young's modulus.",
+        "B": "Poisson's ratio is dimensionless, and its theoretical range is $-1$ to $0.5$.",
+        "C": "If the length of a wire is doubled, its Young's modulus doubles.",
+        "D": "The elastic energy stored per unit volume in a stretched wire is $\\dfrac{(\\text{stress})^2}{2Y}$.",
+        "E": "For the same external load, a thicker wire of the same length and material extends more than a thinner one."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Properties of the elastic moduli, Poisson's ratio and stored elastic energy.",
+        "steps": [
+          "A: $G \\approx Y/3$. True.",
+          "B: Poisson's ratio is dimensionless, with range $-1$ to $0.5$. True.",
+          "C: $Y$ is a material property, independent of length and radius. False.",
+          "D: $u = \\frac{1}{2}\\,\\text{stress}\\times\\text{strain} = \\text{stress}^2/(2Y)$. True.",
+          "E: $\\Delta L \\propto L/r^2$, so the thinner wire extends more. False."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Option (1) leaves out the true statement D. Options (3) and (4) include the false statements C and E.",
+        "common_trap": "Treating Young's modulus as dependent on the wire's dimensions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "What is the gauge pressure at a depth of $5\\,m$ below the surface of a still lake? (Density of water $= 1000\\,kg\\,m^{-3}$, $g = 10\\,m\\,s^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5\\times10^{4}\\,Pa$",
+        "$1.51\\times10^{5}\\,Pa$",
+        "$5\\times10^{3}\\,Pa$",
+        "$5\\times10^{5}\\,Pa$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Gauge pressure $= P - P_a = \\rho g h$.",
+        "steps": [
+          "$\\rho g h = 1000\\times10\\times5 = 5\\times10^4\\,Pa$."
+        ],
+        "final_answer": "Option (1): $5\\times10^{4}\\,Pa$",
+        "why_not_others": "$1.51\\times10^5$ is the absolute pressure, not the gauge pressure. $5\\times10^3$ comes from omitting $g$. $5\\times10^5$ is a power-of-ten slip.",
+        "common_trap": "Adding atmospheric pressure when the question asks for gauge pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "In a hydraulic lift, the small piston has an area of $10\\,cm^2$ and the large piston an area of $500\\,cm^2$. A force of $200\\,N$ is applied on the small piston, which moves down by $25\\,cm$. Neglecting losses, what load can the large piston support, and through what distance does it rise?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\,N$; $0.5\\,cm$",
+        "$10^4\\,N$; $1250\\,cm$",
+        "$10^4\\,N$; $0.5\\,cm$",
+        "$10^4\\,N$; $25\\,cm$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Pascal's law gives $F_2 = F_1A_2/A_1$, and equal volumes give $A_1d_1 = A_2d_2$.",
+        "steps": [
+          "$F_2 = 200\\times500/10 = 10^4\\,N$.",
+          "$d_2 = A_1d_1/A_2 = 10\\times25/500 = 0.5\\,cm$.",
+          "Check: the work in is $200\\times0.25 = 50\\,J$ and the work out is $10^4\\times0.005 = 50\\,J$."
+        ],
+        "final_answer": "Option (3): $10^4\\,N$; $0.5\\,cm$",
+        "why_not_others": "$4\\,N$ inverts the area ratio. $1250\\,cm$ multiplies the distance by the area ratio instead of dividing. $25\\,cm$ assumes both pistons move equally.",
+        "common_trap": "Thinking the large piston also moves farther. A hydraulic machine multiplies force, not work.",
+        "time_saving_tip": "The force goes up by a factor of 50, so the distance goes down by a factor of 50."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Three vessels have the same base area but different shapes. The first widens upward, the second has vertical walls, and the third narrows upward. All three are filled with water to the same height. How does the water pressure at the base compare among them?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It is the same in all three vessels",
+        "It is greatest in the vessel that widens upward",
+        "It is greatest in the vessel that narrows upward",
+        "It is proportional to the volume of water in each vessel"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Hydrostatic paradox: pressure depends only on depth, $P = P_a + \\rho g h$.",
+        "steps": [
+          "All three vessels have the same liquid and the same height $h$.",
+          "So $P = P_a + \\rho g h$ is identical at all three bases."
+        ],
+        "final_answer": "Option (1): It is the same in all three vessels",
+        "why_not_others": "Pressure does not depend on the shape of the vessel or on the volume of water it holds, so options (2), (3) and (4) are wrong.",
+        "common_trap": "Equating pressure with the total weight of the liquid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a hydraulic press, a small force applied on the narrow piston can support a much larger load on the wide piston.",
+        "R": "Pressure applied to an enclosed fluid is transmitted undiminished to every part of the fluid, so $F_2 = F_1A_2/A_1$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Pascal's law and force multiplication.",
+        "steps": [
+          "The pressure $F_1/A_1$ acts equally on the large piston.",
+          "The force on the large piston is $F_1A_2/A_1$, which is larger since $A_2 > A_1$. So R directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out options (3) and (4). R is precisely the principle behind A, which rules out option (2).",
+        "common_trap": "Believing that force multiplication violates energy conservation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In an open-tube manometer, the difference in the liquid levels in the two arms gives the gauge pressure of the gas, not its absolute pressure.",
+        "II": "Since $1\\,atm = 1.013\\times10^5\\,Pa$ and $1\\,bar = 10^5\\,Pa$, one atmosphere is slightly greater than one bar, and $1\\,torr$ equals the pressure of $1\\,mm$ of mercury."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Manometer readings and pressure units.",
+        "steps": [
+          "An open-tube manometer compares the gas pressure with atmospheric pressure, so the level difference gives $P - P_a$. Statement I is correct.",
+          "$1.013\\times10^5 > 10^5$, so $1\\,atm > 1\\,bar$, and $1\\,torr = 1\\,mm$ of Hg. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements match the standard facts, so every option that marks either statement as incorrect fails.",
+        "common_trap": "Taking the manometer reading as absolute pressure, or assuming 1 atm equals exactly 1 bar.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A small solid ball is held completely submerged in a container of water inside a spacecraft orbiting the Earth. What is the buoyant force on the ball?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Equal to the weight of the displaced water as measured on Earth",
+        "Greater than the buoyant force on Earth",
+        "Zero",
+        "Equal to the weight of the ball on Earth"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Buoyancy arises from the gravity-induced pressure difference, and $g_{eff} = 0$ in orbit.",
+        "steps": [
+          "In an orbiting spacecraft, the effective gravity is zero.",
+          "So there is no depth-dependent pressure, and $F_B = V\\rho g_{eff} = 0$."
+        ],
+        "final_answer": "Option (3): Zero",
+        "why_not_others": "Options (1), (2) and (4) all assume that effective gravity is present inside the spacecraft.",
+        "common_trap": "Treating buoyancy as a fixed property of the fluid, independent of gravity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A bucket holds water to a depth of $0.5\\,m$ inside a lift that is accelerating upward at $2\\,m\\,s^{-2}$. What is the gauge pressure at the bottom of the bucket? (Density of water $= 1000\\,kg\\,m^{-3}$, $g = 10\\,m\\,s^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5000\\,Pa$",
+        "$4000\\,Pa$",
+        "$1000\\,Pa$",
+        "$6000\\,Pa$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For upward acceleration, $g_{eff} = g + a$, so the gauge pressure is $\\rho(g+a)h$.",
+        "steps": [
+          "$g_{eff} = 10 + 2 = 12\\,m\\,s^{-2}$.",
+          "$P - P_a = 1000\\times12\\times0.5 = 6000\\,Pa$."
+        ],
+        "final_answer": "Option (4): $6000\\,Pa$",
+        "why_not_others": "$5000$ ignores the acceleration. $4000$ uses $g - a$, which applies to downward acceleration. $1000$ uses only $a$.",
+        "common_trap": "Using $g - a$ for a lift accelerating upward.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "An open tank of water rests on a truck that moves along a level road with a constant acceleration of $5\\,m\\,s^{-2}$. Once the water settles, what angle does its free surface make with the horizontal? ($g = 10\\,m\\,s^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\tan^{-1}(2)$",
+        "$\\tan^{-1}(1/2)$",
+        "$30^\\circ$",
+        "$0^\\circ$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For horizontal acceleration, the free surface tilts so that $\\tan\\theta = a/g$.",
+        "steps": [
+          "$\\tan\\theta = 5/10 = 1/2$.",
+          "$\\theta = \\tan^{-1}(1/2)$."
+        ],
+        "final_answer": "Option (2): $\\tan^{-1}(1/2)$",
+        "why_not_others": "$\\tan^{-1}(2)$ inverts the ratio to $g/a$. $30^\\circ$ comes from using $\\sin\\theta = a/g$. $0^\\circ$ ignores the effect of acceleration.",
+        "common_trap": "Writing $g/a$ instead of $a/g$, or using sine instead of tangent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Liquid in a container at rest on the ground"
+          },
+          {
+            "label": "B",
+            "text": "Liquid in a lift accelerating upward with acceleration $a$"
+          },
+          {
+            "label": "C",
+            "text": "Liquid in a lift accelerating downward with acceleration $a$ ($a < g$)"
+          },
+          {
+            "label": "D",
+            "text": "Liquid in a freely falling container"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "$\\rho(g-a)h$"
+          },
+          {
+            "label": "III",
+            "text": "$\\rho g h$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\rho(g+a)h$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Gauge pressure at depth $h$ is $\\rho g_{eff} h$.",
+        "steps": [
+          "At rest, $g_{eff} = g$: A-III.",
+          "Accelerating upward, $g_{eff} = g + a$: B-IV.",
+          "Accelerating downward, $g_{eff} = g - a$: C-II.",
+          "In free fall, $g_{eff} = 0$, so the gauge pressure is zero: D-I."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the upward and downward cases. Option (2) swaps the rest and free-fall cases. Option (3) swaps the downward and free-fall cases.",
+        "common_trap": "Mixing up the signs for upward and downward acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the effect of gravity on fluid pressure are correct?",
+      "statements": {
+        "A": "For a fluid element in equilibrium, the pressure gradient with depth is $dP/dh = \\rho g$.",
+        "B": "Atmospheric pressure decreases linearly with altitude because air is incompressible.",
+        "C": "A floating block has a larger fraction of its volume submerged when the lift carrying it accelerates upward.",
+        "D": "The buoyant force is the net upward force arising from the gravity-induced pressure difference across the body.",
+        "E": "In a freely falling container, there is no depth-dependent pressure in the liquid."
+      },
+      "match_lists": null,
+      "options": [
+        "A and D only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Hydrostatic pressure gradients and buoyancy exist only because of gravity.",
+        "steps": [
+          "A: The weight of the element is balanced by the pressure difference, giving $dP/dh = \\rho g$. True.",
+          "B: Air is compressible, and pressure falls roughly exponentially with altitude. False.",
+          "C: Both the weight and the buoyancy scale with $g_{eff}$, so the submerged fraction is unchanged. False.",
+          "D: This is how Archimedes' principle arises. True.",
+          "E: In free fall $g_{eff} = 0$, so there is no pressure gradient. True."
+        ],
+        "final_answer": "Option (4): A, D and E only",
+        "why_not_others": "Option (1) leaves out the true statement E. Options (2) and (3) include the false statements C and B respectively.",
+        "common_trap": "Thinking that a floating body sinks deeper in a lift accelerating upward.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

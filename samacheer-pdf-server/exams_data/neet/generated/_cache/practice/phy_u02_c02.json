@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "A ball is thrown vertically upward with a speed of $20\\ \\text{m s}^{-1}$. Neglect air resistance and take $g = 10\\ \\text{m s}^{-2}$. What is the maximum height reached by the ball?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$40$ m",
+        "$10$ m",
+        "$20$ m",
+        "$2$ m"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For vertical projection with speed $u$, the maximum height is $H = \\frac{u^2}{2g}$.",
+        "steps": [
+          "At the highest point $v = 0$, so $0 = u^2 - 2gH$.",
+          "$H = \\frac{u^2}{2g} = \\frac{400}{20} = 20$ m."
+        ],
+        "final_answer": "Option (3): $20$ m",
+        "why_not_others": "$40$ m comes from dropping the factor 2 ($\\frac{u^2}{g}$). $10$ m comes from $\\frac{u}{2}$. $2$ m is the time of flight in seconds ($\\frac{u}{g} = 2$ s) mistaken for a height.",
+        "common_trap": "Forgetting the factor 2 in the denominator of $\\frac{u^2}{2g}$.",
+        "time_saving_tip": "With $g = 10$, $H = \\frac{u^2}{20}$ directly."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A body starts from rest and moves along a straight line with a uniform acceleration of $4\\ \\text{m s}^{-2}$. What distance does it cover during the 5th second of its motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$50$ m",
+        "$14$ m",
+        "$22$ m",
+        "$18$ m"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The displacement in the $n$th second is $s_n = u + \\frac{a}{2}(2n-1)$.",
+        "steps": [
+          "Here $u = 0$, $a = 4\\ \\text{m s}^{-2}$ and $n = 5$.",
+          "$s_5 = 0 + \\frac{4}{2}(2 \\times 5 - 1) = 2 \\times 9 = 18$ m.",
+          "Check: distance in 5 s is $50$ m and in 4 s is $32$ m, and $50 - 32 = 18$ m."
+        ],
+        "final_answer": "Option (4): $18$ m",
+        "why_not_others": "$50$ m is the total distance in the first 5 s. $14$ m is the distance in the 4th second. $22$ m comes from using $(2n+1)$ instead of $(2n-1)$.",
+        "common_trap": "Confusing the distance covered in the $n$th second with the distance covered in $n$ seconds.",
+        "time_saving_tip": "Starting from rest, the distances in successive seconds are $\\frac{a}{2}\\times(1, 3, 5, 7, 9)$, so the 5th second gives $2 \\times 9$."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A car moving at $36\\ \\text{km h}^{-1}$ is brought to rest over a distance of $10$ m by applying its brakes. If the same retardation acts, what is the stopping distance when the car moves at $72\\ \\text{km h}^{-1}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20$ m",
+        "$80$ m",
+        "$40$ m",
+        "$14.1$ m"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The stopping distance is $\\frac{u^2}{2a}$, so it is proportional to $u^2$ for a fixed retardation.",
+        "steps": [
+          "$\\frac{s_2}{s_1} = \\left(\\frac{u_2}{u_1}\\right)^2 = \\left(\\frac{72}{36}\\right)^2 = 4$.",
+          "$s_2 = 4 \\times 10 = 40$ m."
+        ],
+        "final_answer": "Option (3): $40$ m",
+        "why_not_others": "$20$ m assumes the stopping distance is proportional to $u$. $80$ m assumes it is proportional to $u^3$. $14.1$ m assumes it is proportional to $\\sqrt{u}$.",
+        "common_trap": "Assuming that doubling the speed only doubles the stopping distance.",
+        "time_saving_tip": "Only the ratio of speeds matters, so there is no need to convert km/h to m/s."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "At the highest point of its path, a ball thrown vertically upward has both zero velocity and zero acceleration.",
+        "R": "For a ball thrown vertically upward, the velocity at the highest point is zero while the acceleration remains $g$ directed downward."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In free fall the acceleration is $g$ downward at every instant, including the highest point.",
+        "steps": [
+          "At the top, the ball momentarily stops, so $v = 0$.",
+          "Gravity still acts there, so $a = g$ downward, not zero. Therefore A is false.",
+          "R states exactly this, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false because the acceleration is not zero at the top. This rules out options (1), (2) and (3), which all require A to be true.",
+        "common_trap": "Assuming that zero velocity implies zero acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A body starting from rest with uniform acceleration covers distances in the first $2$ s and the next $2$ s in the ratio $1:2$.",
+        "II": "A particle whose velocity depends on its position as $v = 3x$ (SI units) moves with constant acceleration, so the equations of uniformly accelerated motion apply to it."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Starting from rest, the distances in successive equal intervals are in the ratio $1:3:5\\dots$. For position-dependent velocity, the acceleration is $a = v\\frac{dv}{dx}$.",
+        "steps": [
+          "Statement I: by Galileo's law of odd numbers, the distances in two successive equal intervals are in the ratio $1:3$, not $1:2$. So I is incorrect.",
+          "Statement II: $a = v\\frac{dv}{dx} = (3x)(3) = 9x$, which varies with position.",
+          "Since the acceleration is not constant, the kinematic equations do not apply. So II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I contradicts the $1:3$ ratio. Statement II wrongly treats a position-dependent acceleration as constant. So no option that calls either statement correct is valid.",
+        "common_trap": "Thinking that a linear $v$-$x$ relation means constant acceleration, and using the ratio $1:2$ instead of $1:3$.",
+        "time_saving_tip": "Check whether the acceleration is constant before applying any kinematic equation."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Which one of the following physical quantities is a vector?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Momentum",
+        "Energy",
+        "Temperature",
+        "Electric current"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A vector has both magnitude and direction and obeys the triangle law of addition.",
+        "steps": [
+          "Momentum has magnitude and direction and adds by the triangle law, so it is a vector.",
+          "Energy and temperature have magnitude only.",
+          "Electric current has a direction but adds algebraically, so it is a scalar."
+        ],
+        "final_answer": "Option (1): Momentum",
+        "why_not_others": "Energy and temperature are scalars. Electric current is a scalar despite having a direction.",
+        "common_trap": "Calling electric current a vector because it has a direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "Electric current has both magnitude and direction, yet it is classified as a scalar quantity. Why?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Its direction is always fixed in space",
+        "Its magnitude can never be zero",
+        "It is measured in a fundamental SI unit",
+        "It adds algebraically and does not obey the triangle law of addition"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Having a direction is not enough to be a vector. A vector must also obey the triangle (parallelogram) law of addition.",
+        "steps": [
+          "Currents meeting at a junction combine by simple algebraic addition.",
+          "They do not follow the triangle law, so current is a scalar."
+        ],
+        "final_answer": "Option (4): It adds algebraically and does not obey the triangle law of addition",
+        "why_not_others": "A fixed direction, a non-zero magnitude or a fundamental unit has nothing to do with being a scalar or a vector. Also, current can be zero.",
+        "common_trap": "Believing that any quantity with a direction must be a vector.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A vector $\\vec{A}$ has a magnitude of $5$ units. It is multiplied by the scalar $\\lambda = -3$. What is the resulting vector $\\lambda\\vec{A}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Magnitude $-15$ units, along $\\vec{A}$",
+        "Magnitude $15$ units, along $\\vec{A}$",
+        "Magnitude $\\frac{5}{3}$ units, opposite to $\\vec{A}$",
+        "Magnitude $15$ units, opposite to $\\vec{A}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Multiplying by $\\lambda$ scales the magnitude by $|\\lambda|$ and reverses the direction if $\\lambda < 0$.",
+        "steps": [
+          "The magnitude is $|\\lambda| A = 3 \\times 5 = 15$ units.",
+          "Since $\\lambda < 0$, the direction is opposite to $\\vec{A}$."
+        ],
+        "final_answer": "Option (4): Magnitude $15$ units, opposite to $\\vec{A}$",
+        "why_not_others": "A magnitude cannot be negative. 'Along $\\vec{A}$' ignores the sign of $\\lambda$. $\\frac{5}{3}$ comes from dividing instead of multiplying.",
+        "common_trap": "Assigning the negative sign to the magnitude instead of to the direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Equal vectors"
+          },
+          {
+            "label": "B",
+            "text": "Negative of a vector"
+          },
+          {
+            "label": "C",
+            "text": "Null vector"
+          },
+          {
+            "label": "D",
+            "text": "Electric current"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Same magnitude, opposite direction"
+          },
+          {
+            "label": "II",
+            "text": "Zero magnitude, arbitrary direction"
+          },
+          {
+            "label": "III",
+            "text": "Same magnitude, same direction"
+          },
+          {
+            "label": "IV",
+            "text": "Has direction but adds algebraically"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "These are the definitions of the special types of vectors and the reason current is a scalar.",
+        "steps": [
+          "Equal vectors have the same magnitude and the same direction: A-III.",
+          "A negative vector has the same magnitude but the opposite direction: B-I.",
+          "A null vector has zero magnitude and an arbitrary direction: C-II.",
+          "Current has a direction but adds algebraically: D-IV."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option (1) swaps equal and negative vectors. Option (3) swaps the null vector and current. Option (4) gives the null vector's description to equal vectors.",
+        "common_trap": "Confusing equal vectors with negative vectors, since both have the same magnitude.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about scalars and vectors are correct?",
+      "statements": {
+        "A": "A vector can be shifted parallel to itself without changing it.",
+        "B": "Pressure is a vector because it acts normal to a surface.",
+        "C": "A null vector has zero magnitude and an indeterminate direction.",
+        "D": "Work is a vector because both force and displacement are vectors.",
+        "E": "Multiplying a vector by $-2$ doubles its magnitude and reverses its direction."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and E only",
+        "A, B and C only",
+        "C, D and E only",
+        "A and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Only quantities with direction that also obey the triangle law are vectors. Pressure and work are scalars.",
+        "steps": [
+          "A is true: parallel shifting does not change a vector's magnitude or direction.",
+          "B is false: pressure is a scalar.",
+          "C is true: by definition of the null vector.",
+          "D is false: work is a scalar, being the dot product of force and displacement.",
+          "E is true: the magnitude scales by $|-2| = 2$ and the direction reverses."
+        ],
+        "final_answer": "Option (1): A, C and E only",
+        "why_not_others": "Options (2) and (3) include a false statement (B or D). Option (4) leaves out the true statement C.",
+        "common_trap": "Calling pressure or work a vector because a direction is involved.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "Two forces of $3$ N and $4$ N act at a point at right angles to each other. What is the magnitude of their resultant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7$ N",
+        "$5$ N",
+        "$1$ N",
+        "$12$ N"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$R = \\sqrt{A^2 + B^2 + 2AB\\cos\\theta}$",
+        "steps": [
+          "With $\\theta = 90^\\circ$, $\\cos\\theta = 0$.",
+          "$R = \\sqrt{9 + 16} = 5$ N."
+        ],
+        "final_answer": "Option (2): $5$ N",
+        "why_not_others": "$7$ N is the maximum resultant ($\\theta = 0$). $1$ N is the minimum resultant ($\\theta = 180^\\circ$). $12$ N is the product $AB$.",
+        "common_trap": "Adding the magnitudes algebraically.",
+        "time_saving_tip": "Recognise the $3$-$4$-$5$ triangle."
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "Two vectors of equal magnitude $P$ act at a point. Their resultant also has magnitude $P$. What is the angle between the two vectors?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60^\\circ$",
+        "$90^\\circ$",
+        "$120^\\circ$",
+        "$180^\\circ$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For two equal vectors of magnitude $A$, the resultant is $R = 2A\\cos\\frac{\\theta}{2}$.",
+        "steps": [
+          "Set $P = 2P\\cos\\frac{\\theta}{2}$, so $\\cos\\frac{\\theta}{2} = \\frac{1}{2}$.",
+          "Then $\\frac{\\theta}{2} = 60^\\circ$, so $\\theta = 120^\\circ$."
+        ],
+        "final_answer": "Option (3): $120^\\circ$",
+        "why_not_others": "$60^\\circ$ gives $P\\sqrt{3}$. $90^\\circ$ gives $P\\sqrt{2}$. $180^\\circ$ gives zero.",
+        "common_trap": "Writing $\\cos\\theta = \\frac{1}{2}$ instead of $\\cos\\frac{\\theta}{2} = \\frac{1}{2}$, which gives $60^\\circ$.",
+        "time_saving_tip": "Remember that two equal vectors at $120^\\circ$ give a resultant equal to either vector."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A particle moving east with a speed of $5\\ \\text{m s}^{-1}$ changes its direction and moves north with the same speed. What is the change in its velocity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5\\sqrt{2}\\ \\text{m s}^{-1}$ towards north-west",
+        "$5\\sqrt{2}\\ \\text{m s}^{-1}$ towards north-east",
+        "Zero",
+        "$10\\ \\text{m s}^{-1}$ towards north"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The change in velocity is the vector difference $\\Delta\\vec{v} = \\vec{v}_2 - \\vec{v}_1$.",
+        "steps": [
+          "Take east as $\\hat{i}$ and north as $\\hat{j}$: $\\Delta\\vec{v} = 5\\hat{j} - 5\\hat{i}$.",
+          "The magnitude is $\\sqrt{25 + 25} = 5\\sqrt{2}\\ \\text{m s}^{-1}$.",
+          "The components are $-x$ (west) and $+y$ (north), so the direction is north-west."
+        ],
+        "final_answer": "Option (1): $5\\sqrt{2}\\ \\text{m s}^{-1}$ towards north-west",
+        "why_not_others": "North-east is the direction of $\\vec{v}_1 + \\vec{v}_2$. 'Zero' subtracts the speeds instead of the vectors. $10\\ \\text{m s}^{-1}$ adds the magnitudes.",
+        "common_trap": "Adding the vectors instead of subtracting them, or subtracting only the speeds.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Two forces of magnitudes $3$ N and $5$ N acting at a point can never have a resultant of $10$ N.",
+        "R": "The magnitude of the resultant of two vectors always lies between $|A-B|$ and $A+B$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The resultant is maximum ($A+B$) at $\\theta = 0$ and minimum ($|A-B|$) at $\\theta = 180^\\circ$.",
+        "steps": [
+          "For these forces, $2\\ \\text{N} \\le R \\le 8\\ \\text{N}$.",
+          "$10$ N lies outside this range, so A is true.",
+          "R is a true general result, and it directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and the range stated in R is exactly why $10$ N is impossible. So options (2), (3) and (4) are wrong.",
+        "common_trap": "Assuming any value is possible by choosing a suitable angle.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Three forces of magnitudes $4$ N, $6$ N and $9$ N acting on a particle can keep it in equilibrium.",
+        "II": "If two non-zero vectors $\\vec{A}$ and $\\vec{B}$ satisfy $|\\vec{A}+\\vec{B}| = |\\vec{A}-\\vec{B}|$, then $\\vec{A}$ is perpendicular to $\\vec{B}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Three forces give a zero resultant only if they can form a closed triangle. Compare $|\\vec{A}\\pm\\vec{B}|^2 = A^2 + B^2 \\pm 2AB\\cos\\theta$.",
+        "steps": [
+          "Statement I: $4 + 6 > 9$, $4 + 9 > 6$ and $6 + 9 > 4$, so a closed triangle can be formed. I is correct.",
+          "Statement II: equating the two magnitudes gives $2AB\\cos\\theta = -2AB\\cos\\theta$.",
+          "So $\\cos\\theta = 0$ and $\\theta = 90^\\circ$. II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Each statement holds, so any option calling one or both incorrect is wrong.",
+        "common_trap": "Thinking the largest force ($9$ N) must exceed the balancing ability of the other two, without checking the triangle inequality.",
+        "time_saving_tip": "For three forces in equilibrium, just check that the largest is not more than the sum of the other two."
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A force $\\vec{F} = (3\\hat{i} + 2\\hat{j})$ N displaces a body by $\\vec{s} = (2\\hat{i} + 4\\hat{j})$ m. What is the work done by the force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6$ J",
+        "$8$ J",
+        "$14$ J",
+        "$16.1$ J"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$W = \\vec{F}\\cdot\\vec{s} = F_xs_x + F_ys_y$",
+        "steps": [
+          "$W = (3)(2) + (2)(4) = 6 + 8$.",
+          "$W = 14$ J."
+        ],
+        "final_answer": "Option (3): $14$ J",
+        "why_not_others": "$6$ J and $8$ J each use only one component product. $16.1$ J is the product of the magnitudes, $\\sqrt{13}\\times\\sqrt{20}$, which ignores the angle between the vectors.",
+        "common_trap": "Multiplying the magnitudes instead of taking the dot product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "Two adjacent sides of a triangle are represented by the vectors $\\vec{A} = 2\\hat{i} + \\hat{j}$ and $\\vec{B} = \\hat{i} + 4\\hat{j}$. What is the area of the triangle?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7$ square units",
+        "$6$ square units",
+        "$3.5$ square units",
+        "$3$ square units"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The area of the triangle is $\\frac{1}{2}|\\vec{A}\\times\\vec{B}|$.",
+        "steps": [
+          "$\\vec{A}\\times\\vec{B} = \\hat{k}(A_xB_y - A_yB_x) = \\hat{k}(2\\times4 - 1\\times1) = 7\\hat{k}$.",
+          "Area $= \\frac{1}{2}\\times 7 = 3.5$ square units."
+        ],
+        "final_answer": "Option (3): $3.5$ square units",
+        "why_not_others": "$7$ is the area of the parallelogram. $6$ is $\\vec{A}\\cdot\\vec{B}$. $3$ is half of the dot product.",
+        "common_trap": "Forgetting the factor $\\frac{1}{2}$, or using the dot product instead of the cross product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "What is the value of $\\hat{i}\\times(\\hat{i}\\times\\hat{j})$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\hat{j}$",
+        "$-\\hat{j}$",
+        "$\\hat{k}$",
+        "$\\vec{0}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The cyclic rules are $\\hat{i}\\times\\hat{j} = \\hat{k}$ and $\\hat{k}\\times\\hat{i} = \\hat{j}$, and the cross product is anticommutative.",
+        "steps": [
+          "$\\hat{i}\\times\\hat{j} = \\hat{k}$.",
+          "$\\hat{i}\\times\\hat{k} = -(\\hat{k}\\times\\hat{i}) = -\\hat{j}$."
+        ],
+        "final_answer": "Option (2): $-\\hat{j}$",
+        "why_not_others": "$\\hat{j}$ ignores anticommutativity. $\\hat{k}$ stops after the first product. $\\vec{0}$ wrongly treats the vectors as parallel.",
+        "common_trap": "Writing $\\hat{i}\\times\\hat{k} = \\hat{j}$ instead of $-\\hat{j}$.",
+        "time_saving_tip": "Going in the cyclic order $i \\to j \\to k$ gives $+$; going against it gives $-$."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\hat{j}\\times\\hat{k}$"
+          },
+          {
+            "label": "B",
+            "text": "$\\hat{k}\\times\\hat{j}$"
+          },
+          {
+            "label": "C",
+            "text": "$\\hat{i}\\cdot\\hat{i}$"
+          },
+          {
+            "label": "D",
+            "text": "$\\hat{i}\\times\\hat{i}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\vec{0}$"
+          },
+          {
+            "label": "II",
+            "text": "$1$"
+          },
+          {
+            "label": "III",
+            "text": "$\\hat{i}$"
+          },
+          {
+            "label": "IV",
+            "text": "$-\\hat{i}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Apply the cyclic rules for unit vectors, together with $\\hat{i}\\cdot\\hat{i} = 1$ and $\\hat{i}\\times\\hat{i} = \\vec{0}$.",
+        "steps": [
+          "$\\hat{j}\\times\\hat{k} = \\hat{i}$: A-III.",
+          "$\\hat{k}\\times\\hat{j} = -\\hat{i}$: B-IV.",
+          "$\\hat{i}\\cdot\\hat{i} = 1$: C-II.",
+          "$\\hat{i}\\times\\hat{i} = \\vec{0}$: D-I."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) reverses the signs of the two cross products. Option (2) swaps the dot and cross products of $\\hat{i}$ with itself. Option (3) misplaces A and D.",
+        "common_trap": "Thinking $\\hat{i}\\times\\hat{i} = 1$, by confusing it with the dot product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about scalar and vector products are correct?",
+      "statements": {
+        "A": "$\\vec{A}\\times\\vec{B}$ is perpendicular to both $\\vec{A}$ and $\\vec{B}$.",
+        "B": "$(\\vec{A}\\times\\vec{B})\\cdot\\vec{A} = 0$ for any two vectors $\\vec{A}$ and $\\vec{B}$.",
+        "C": "$\\vec{A}\\cdot\\vec{B} = \\vec{B}\\cdot\\vec{A}$ and also $\\vec{A}\\times\\vec{B} = \\vec{B}\\times\\vec{A}$.",
+        "D": "For two non-zero vectors, $\\vec{A}\\cdot\\vec{B}$ and $|\\vec{A}\\times\\vec{B}|$ can both be zero at the same time.",
+        "E": "$|\\vec{A}\\times\\vec{B}|^2 + (\\vec{A}\\cdot\\vec{B})^2 = A^2B^2$"
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and E only",
+        "B, D and E only",
+        "A and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\vec{A}\\cdot\\vec{B} = AB\\cos\\theta$ and $|\\vec{A}\\times\\vec{B}| = AB\\sin\\theta$, with the cross product perpendicular to both vectors.",
+        "steps": [
+          "A is true by the definition of the cross product.",
+          "B is true: $\\vec{A}\\times\\vec{B}$ is perpendicular to $\\vec{A}$, so their dot product is zero.",
+          "C is false: the cross product is anticommutative, $\\vec{A}\\times\\vec{B} = -\\vec{B}\\times\\vec{A}$.",
+          "D is false: both products would need $\\cos\\theta = 0$ and $\\sin\\theta = 0$ together, which is impossible.",
+          "E is true: $A^2B^2(\\sin^2\\theta + \\cos^2\\theta) = A^2B^2$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Option (1) includes the false statement C. Option (3) includes the false statement D. Option (4) leaves out the true statement B.",
+        "common_trap": "Treating $\\vec{A}\\times\\vec{B}$ and $\\vec{B}\\times\\vec{A}$ as equal.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

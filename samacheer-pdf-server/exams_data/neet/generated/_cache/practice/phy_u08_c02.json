@@ -1,0 +1,314 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "In each cycle, a heat engine absorbs 800 J of heat from a hot source and rejects 600 J of heat to a cold sink. What is the efficiency of the engine?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "75%",
+        "33.3%",
+        "25%",
+        "300%"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The efficiency of a heat engine is $\\eta = W/Q_1 = 1 - Q_2/Q_1$, where $W = Q_1 - Q_2$.",
+        "steps": [
+          "Work done per cycle: $W = Q_1 - Q_2 = 800 - 600 = 200$ J.",
+          "Efficiency: $\\eta = W/Q_1 = 200/800 = 0.25$.",
+          "So $\\eta = 25\\%$."
+        ],
+        "final_answer": "Option (3): 25%",
+        "why_not_others": "75% is the ratio $Q_2/Q_1$, not the efficiency. 33.3% divides W by $Q_2$ instead of $Q_1$. 300% is $Q_2/W$, the coefficient-of-performance form, and an efficiency can never exceed 100%.",
+        "common_trap": "Writing $Q_2/Q_1$ directly as the efficiency, or dividing the work by the heat rejected instead of the heat absorbed.",
+        "time_saving_tip": "Use $\\eta = 1 - Q_2/Q_1 = 1 - 3/4$ directly."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "In each cycle, a refrigerator rejects 1000 J of heat to the room when 200 J of work is done on it. What is its coefficient of performance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5",
+        "0.25",
+        "0.2",
+        "4"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a refrigerator, $Q_1 = W + Q_2$ and $\\beta = Q_2/W$, where $Q_2$ is the heat extracted from the cold body.",
+        "steps": [
+          "Heat extracted from the cold body: $Q_2 = Q_1 - W = 1000 - 200 = 800$ J.",
+          "Coefficient of performance: $\\beta = Q_2/W = 800/200 = 4$."
+        ],
+        "final_answer": "Option (4): 4",
+        "why_not_others": "5 uses $Q_1/W$, which takes the heat rejected instead of the heat extracted. 0.25 is $W/Q_2$, the inverted ratio. 0.2 is $W/Q_1$.",
+        "common_trap": "Using the 1000 J rejected to the room as the useful heat $Q_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A heat engine of efficiency 25% is run in reverse as a refrigerator between the same two reservoirs. What is the coefficient of performance of the refrigerator?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3",
+        "1/3",
+        "4",
+        "0.75"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For an engine run in reverse between the same reservoirs, $\\beta = (1-\\eta)/\\eta$.",
+        "steps": [
+          "Here $\\eta = 0.25$.",
+          "$\\beta = (1 - 0.25)/0.25 = 0.75/0.25 = 3$."
+        ],
+        "final_answer": "Option (1): 3",
+        "why_not_others": "1/3 is $\\eta/(1-\\eta)$, the inverted relation. 4 is $1/\\eta$, which forgets to subtract 1. 0.75 is simply $1-\\eta$.",
+        "common_trap": "Assuming the coefficient of performance must be less than 1, as efficiency is.",
+        "time_saving_tip": "$\\beta = 1/\\eta - 1 = 4 - 1 = 3$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "If all friction and other losses are eliminated, a heat engine can convert the entire heat absorbed from its source into work.",
+        "R": "According to the Kelvin-Planck statement, no process is possible whose sole result is the absorption of heat from a reservoir and its complete conversion into work."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The Kelvin-Planck statement makes a perfect heat engine impossible, so the efficiency of any engine is always less than 1.",
+        "steps": [
+          "R is the Kelvin-Planck statement of the second law, so R is true.",
+          "Even an ideal engine with no losses must reject some heat $Q_2$ to a sink, so $W < Q_1$.",
+          "Hence A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A contradicts the Kelvin-Planck statement, so every option that treats A as true is wrong.",
+        "common_trap": "Thinking that efficiency falls below 100% only because of friction. The second law forbids 100% efficiency even for an ideal engine.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a heat engine is run in reverse as a refrigerator between the same two reservoirs, an engine of lower efficiency gives a refrigerator of higher coefficient of performance.",
+        "II": "In a refrigerator, the heat rejected to the surroundings per cycle is always greater than the heat extracted from the cold body."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Two results are needed: $\\beta = (1-\\eta)/\\eta$, and the energy balance $Q_1 = W + Q_2$ with $W > 0$ (Clausius statement).",
+        "steps": [
+          "$\\beta = (1-\\eta)/\\eta = 1/\\eta - 1$, which increases as $\\eta$ decreases. So Statement I is correct.",
+          "By the Clausius statement, a refrigerator needs external work, so $W > 0$.",
+          "Then $Q_1 = W + Q_2 > Q_2$. So Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from the given relations, so any option that marks either one as incorrect is wrong.",
+        "common_trap": "Assuming a better engine always gives a better refrigerator. The relation $\\beta = (1-\\eta)/\\eta$ shows the opposite trend.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "A Carnot engine works between a source at $227^\\circ$C and a sink at $27^\\circ$C. What is its efficiency?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60%",
+        "88.1%",
+        "11.9%",
+        "40%"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Carnot efficiency is $\\eta = 1 - T_2/T_1$, with both temperatures in kelvin.",
+        "steps": [
+          "$T_1 = 227 + 273 = 500$ K and $T_2 = 27 + 273 = 300$ K.",
+          "$\\eta = 1 - 300/500 = 0.4$.",
+          "So $\\eta = 40\\%$."
+        ],
+        "final_answer": "Option (4): 40%",
+        "why_not_others": "60% is $T_2/T_1$ rather than $1 - T_2/T_1$. 88.1% comes from using Celsius values, $1 - 27/227$. 11.9% is $27/227$, which uses Celsius values and also takes the ratio instead of 1 minus the ratio.",
+        "common_trap": "Substituting Celsius temperatures into the Carnot formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A Carnot refrigerator keeps its freezer compartment at $-23^\\circ$C while the room is at $27^\\circ$C. What is the minimum work needed to remove 1000 J of heat from the freezer?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "166.7 J",
+        "200 J",
+        "1200 J",
+        "5000 J"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a Carnot refrigerator, $\\beta = T_2/(T_1 - T_2)$ with temperatures in kelvin, and $W = Q_2/\\beta$.",
+        "steps": [
+          "$T_2 = 250$ K and $T_1 = 300$ K.",
+          "$\\beta = 250/(300 - 250) = 5$.",
+          "$W = Q_2/\\beta = 1000/5 = 200$ J."
+        ],
+        "final_answer": "Option (2): 200 J",
+        "why_not_others": "166.7 J uses $T_1/(T_1 - T_2) = 6$ as the coefficient of performance. 1200 J is the heat rejected to the room, $Q_1 = Q_2 + W$. 5000 J multiplies $Q_2$ by $\\beta$ instead of dividing.",
+        "common_trap": "Using the hot-reservoir temperature in the numerator of $\\beta$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Which one of the following processes is irreversible?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Extremely slow isothermal expansion of an ideal gas in a frictionless cylinder kept in contact with a reservoir at the same temperature",
+        "Extremely slow adiabatic compression of an ideal gas by a frictionless piston",
+        "Any one step of an ideal Carnot cycle",
+        "Flow of heat from a hot body to a cold body through a finite temperature difference"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A reversible process must be quasi-static and free of dissipation. Heat transfer through a finite temperature difference is irreversible.",
+        "steps": [
+          "Options 1 and 2 are quasi-static and frictionless, so they are idealised reversible processes.",
+          "The Carnot engine is an ideal reversible engine, so each of its steps is reversible.",
+          "Heat flow through a finite temperature difference cannot be retraced, so it is irreversible."
+        ],
+        "final_answer": "Option (4): Flow of heat from a hot body to a cold body through a finite temperature difference",
+        "why_not_others": "Options 1 to 3 all satisfy both conditions for reversibility: they are quasi-static and free of dissipation.",
+        "common_trap": "Thinking that only processes involving friction are irreversible. Heat flow across a finite temperature difference is also irreversible.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Isothermal expansion in a Carnot cycle"
+          },
+          {
+            "label": "B",
+            "text": "Adiabatic expansion in a Carnot cycle"
+          },
+          {
+            "label": "C",
+            "text": "Isothermal compression in a Carnot cycle"
+          },
+          {
+            "label": "D",
+            "text": "Adiabatic compression in a Carnot cycle"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Temperature rises from $T_2$ to $T_1$ with no heat exchange"
+          },
+          {
+            "label": "II",
+            "text": "Heat $Q_1$ is absorbed at constant temperature $T_1$"
+          },
+          {
+            "label": "III",
+            "text": "Heat $Q_2$ is rejected at constant temperature $T_2$"
+          },
+          {
+            "label": "IV",
+            "text": "Temperature falls from $T_1$ to $T_2$ with no heat exchange"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-II, B-IV, C-III, D-I",
+        "A-III, B-IV, C-II, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The Carnot cycle runs: isothermal expansion at $T_1$, adiabatic expansion from $T_1$ to $T_2$, isothermal compression at $T_2$, and adiabatic compression back to $T_1$.",
+        "steps": [
+          "A: heat $Q_1$ is absorbed at $T_1$, so A-II.",
+          "B: temperature falls from $T_1$ to $T_2$ with no heat exchange, so B-IV.",
+          "C: heat $Q_2$ is rejected at $T_2$, so C-III.",
+          "D: temperature rises from $T_2$ back to $T_1$ with no heat exchange, so D-I."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 swaps the temperature changes of the two adiabatic steps. Option 3 swaps heat absorption and heat rejection. Option 4 assigns heat rejection to the adiabatic compression.",
+        "common_trap": "Assuming temperature stays constant in the steps with no heat exchange. In adiabatic steps the temperature changes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about reversible processes and the Carnot engine are correct?",
+      "statements": {
+        "A": "The efficiency of a Carnot engine depends on the nature of its working substance.",
+        "B": "All reversible engines working between the same two temperatures have equal efficiency.",
+        "C": "Free expansion of a gas is an irreversible process.",
+        "D": "A reversible process must be quasi-static and free of dissipative effects such as friction.",
+        "E": "A Carnot engine would have 100% efficiency if its sink were kept at $0^\\circ$C."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Carnot efficiency $1 - T_2/T_1$ depends only on the reservoir temperatures in kelvin. Every real process, including free expansion, is irreversible.",
+        "steps": [
+          "A is false: Carnot efficiency is independent of the working substance.",
+          "B is true: this follows from Carnot's theorem.",
+          "C is true: free expansion is a natural, irreversible process.",
+          "D is true: these are the two conditions for reversibility.",
+          "E is false: $0^\\circ$C is 273 K, and 100% efficiency would need $T_2 = 0$ K, which is unattainable."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Option 1 includes A, which is false, and leaves out D. Option 2 leaves out C, which is true. Option 4 includes E, which is false.",
+        "common_trap": "Treating $0^\\circ$C as absolute zero. The Carnot formula needs kelvin temperatures.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

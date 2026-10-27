@@ -1,0 +1,625 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "When anhydrous $CuSO_4$ is dissolved in water in a calorimeter, which observation is made?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The temperature falls and $\\Delta_{sol}H$ is positive",
+        "The temperature remains unchanged and $\\Delta_{sol}H$ is zero",
+        "The temperature rises and $\\Delta_{sol}H$ is negative",
+        "The temperature falls and $\\Delta_{sol}H$ is negative"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Anhydrous $CuSO_4$ dissolves exothermically, at about $-66.5$ kJ/mol, because its hydration energy outweighs its lattice energy.",
+        "steps": [
+          "In anhydrous $CuSO_4$ the ions are not yet hydrated, so a large hydration energy is released on dissolving.",
+          "This energy exceeds the lattice energy, so heat is released and the temperature rises.",
+          "A temperature rise means an exothermic process, so $\\Delta_{sol}H$ is negative."
+        ],
+        "final_answer": "Option (3): The temperature rises and $\\Delta_{sol}H$ is negative",
+        "why_not_others": "A fall in temperature is seen for $CuSO_4\\cdot5H_2O$, not for the anhydrous salt. The temperature does change, so $\\Delta H$ is not zero. A fall in temperature cannot go with a negative $\\Delta H$.",
+        "common_trap": "Confusing the anhydrous salt (exothermic) with the blue pentahydrate (slightly endothermic).",
+        "time_saving_tip": "White anhydrous salt gives heat; blue hydrated salt absorbs heat."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "15.95 g of anhydrous $CuSO_4$ (molar mass 159.5 g/mol) is dissolved in 180 g of water in a calorimeter of water equivalent 20 g. The temperature rises by 8.0 K. Take the specific heat as 4.18 J g$^{-1}$ K$^{-1}$, and take the heat-absorbing mass as the water plus the water equivalent of the calorimeter. What is the molar enthalpy of solution of anhydrous $CuSO_4$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+66.9$ kJ/mol",
+        "$-60.2$ kJ/mol",
+        "$-6.69$ kJ/mol",
+        "$-66.9$ kJ/mol"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$q = (m + W)\\,s\\,\\Delta T$ and $\\Delta_{sol}H = -\\frac{q \\times M}{w}$, with the sign set by the temperature change.",
+        "steps": [
+          "$q = (180 + 20) \\times 4.18 \\times 8.0 = 6688$ J $= 6.688$ kJ.",
+          "Moles of $CuSO_4 = 15.95/159.5 = 0.100$ mol.",
+          "$|\\Delta_{sol}H| = 6.688/0.100 = 66.9$ kJ/mol.",
+          "The temperature rose, so the process is exothermic and $\\Delta_{sol}H = -66.9$ kJ/mol."
+        ],
+        "final_answer": "Option (4): $-66.9$ kJ/mol",
+        "why_not_others": "$+66.9$ has the wrong sign for a temperature rise. $-60.2$ comes from ignoring the water equivalent and using only 180 g. $-6.69$ is the heat for 0.1 mol, not per mole.",
+        "common_trap": "Leaving out the water equivalent of the calorimeter, or forgetting to convert to a per-mole value.",
+        "time_saving_tip": "The answer should be close to the known value of about $-66.5$ kJ/mol."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "The enthalpy of solution of anhydrous $CuSO_4$ is $-66.5$ kJ/mol and that of $CuSO_4\\cdot5H_2O$ is $+11.7$ kJ/mol. What is the enthalpy change for $CuSO_4(s) + 5H_2O(l) \\rightarrow CuSO_4\\cdot5H_2O(s)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-78.2$ kJ/mol",
+        "$-54.8$ kJ/mol",
+        "$+78.2$ kJ/mol",
+        "$+54.8$ kJ/mol"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Hess's law gives $\\Delta_{hyd}H = \\Delta_{sol}H(anhydrous) - \\Delta_{sol}H(hydrated)$.",
+        "steps": [
+          "Anhydrous salt to solution: $-66.5$ kJ. Hydrated salt to solution: $+11.7$ kJ.",
+          "Anhydrous salt to hydrated salt = (anhydrous to solution) minus (hydrated to solution).",
+          "$\\Delta_{hyd}H = -66.5 - (+11.7) = -78.2$ kJ/mol."
+        ],
+        "final_answer": "Option (1): $-78.2$ kJ/mol",
+        "why_not_others": "$-54.8$ comes from adding the two values instead of subtracting. $+78.2$ reverses the order of subtraction. $+54.8$ combines both errors.",
+        "common_trap": "Adding the two enthalpies of solution, or subtracting them in the wrong order.",
+        "time_saving_tip": "Hydration of the anhydrous salt releases heat, so the answer must be negative and larger in magnitude than 66.5."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Dissolution of $CuSO_4\\cdot5H_2O$ in water in a calorimeter is accompanied by a fall in temperature.",
+        "R": "For $CuSO_4\\cdot5H_2O$, the hydration energy released on dissolving far exceeds its lattice energy."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$CuSO_4\\cdot5H_2O$ dissolves slightly endothermically (about $+11.7$ kJ/mol) because its ions are already partly hydrated.",
+        "steps": [
+          "The pentahydrate absorbs heat on dissolving, so the temperature falls. A is true.",
+          "Its ions are already partly hydrated, so little extra hydration energy is released.",
+          "If hydration energy far exceeded lattice energy, the process would be exothermic, so R is false. R actually describes anhydrous $CuSO_4$."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so the options in which both statements are true are ruled out. A is true, so 'A is false but R is true' is also wrong.",
+        "common_trap": "Applying the reasoning for the anhydrous salt to the pentahydrate.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Anhydrous $CuSO_4$ dissolves exothermically because its lattice energy is greater than its hydration energy.",
+        "II": "The enthalpy of hydration of $CuSO_4$ to $CuSO_4\\cdot5H_2O$ is obtained by subtracting the enthalpy of solution of the pentahydrate from that of the anhydrous salt."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Dissolution is exothermic when hydration energy outweighs lattice energy. Hess's law gives $\\Delta_{hyd}H = \\Delta_{sol}H(anhydrous) - \\Delta_{sol}H(hydrated)$.",
+        "steps": [
+          "Anhydrous $CuSO_4$ is exothermic on dissolving because the large hydration energy outweighs the lattice energy. Statement I reverses this, so it is incorrect.",
+          "$\\Delta_{hyd}H = \\Delta_{sol}H(anhydrous) - \\Delta_{sol}H(hydrated) = -66.5 - 11.7 = -78.2$ kJ/mol, so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I gives the wrong reason for the heat release, so any option calling it correct fails. Statement II is a direct application of Hess's law, so it cannot be called incorrect.",
+        "common_trap": "Accepting Statement I because its conclusion (exothermic) is right, without checking its reasoning.",
+        "time_saving_tip": "Heat is released only when more energy is gained on hydration than is spent breaking the lattice."
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "The enthalpy of neutralisation of dilute $HNO_3$ with dilute $KOH$ is approximately",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-57.1$ kJ/mol",
+        "$-13.7$ kJ/mol",
+        "$+57.1$ kJ/mol",
+        "$-114.2$ kJ/mol"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For any strong acid with any strong base, the only net reaction is $H^+ + OH^- \\rightarrow H_2O$, with $\\Delta H \\approx -57.1$ kJ/mol.",
+        "steps": [
+          "$HNO_3$ and $KOH$ are both strong and fully ionised.",
+          "The net reaction is $H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$.",
+          "So $\\Delta_{neut}H \\approx -57.1$ kJ/mol."
+        ],
+        "final_answer": "Option (1): $-57.1$ kJ/mol",
+        "why_not_others": "13.7 is the value in kcal, not kJ. Neutralisation is exothermic, so $+57.1$ is wrong. $-114.2$ would be the heat for 2 mol of water.",
+        "common_trap": "Mixing up the kJ and kcal values, or taking the sign as positive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "100 mL of 0.5 M $HCl$ and 100 mL of 0.5 M $NaOH$, both at the same initial temperature, are mixed in a calorimeter of negligible water equivalent. The temperature rises by 3.4 K. Taking the density as 1 g/mL and the specific heat as 4.18 J g$^{-1}$ K$^{-1}$, what is the enthalpy of neutralisation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-56.8$ kJ/mol",
+        "$-28.4$ kJ/mol",
+        "$+56.8$ kJ/mol",
+        "$-2.84$ kJ/mol"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\Delta_{neut}H = -\\frac{(m + W)\\,s\\,\\Delta T}{n_{H_2O}}$",
+        "steps": [
+          "Total mass $= 200$ g and $W = 0$.",
+          "$q = 200 \\times 4.18 \\times 3.4 = 2842.4$ J.",
+          "$n_{H_2O} = 0.100 \\times 0.5 = 0.05$ mol.",
+          "$\\Delta_{neut}H = -2842.4/0.05 = -56848$ J/mol $\\approx -56.8$ kJ/mol."
+        ],
+        "final_answer": "Option (1): $-56.8$ kJ/mol",
+        "why_not_others": "$-28.4$ comes from using the mass of only one solution (100 g). $+56.8$ has the wrong sign for a temperature rise. $-2.84$ is the total heat in kJ, not divided by the moles of water.",
+        "common_trap": "Using the volume of only one solution as the mass that absorbs heat.",
+        "time_saving_tip": "For a strong acid with a strong base the answer must be close to $-57.1$ kJ/mol."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "200 mL of 0.5 M $HCl$ is mixed with 100 mL of 0.5 M $NaOH$. Taking $\\Delta_{neut}H = -57.1$ kJ/mol, what is the amount of heat released?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5.71 kJ",
+        "8.57 kJ",
+        "2.86 kJ",
+        "1.43 kJ"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The heat released depends on the moles of water formed, which are set by the limiting reagent.",
+        "steps": [
+          "Moles of $HCl = 0.200 \\times 0.5 = 0.10$ mol.",
+          "Moles of $NaOH = 0.100 \\times 0.5 = 0.05$ mol, so $NaOH$ is limiting.",
+          "Moles of water formed $= 0.05$ mol.",
+          "Heat released $= 0.05 \\times 57.1 = 2.855 \\approx 2.86$ kJ."
+        ],
+        "final_answer": "Option (3): 2.86 kJ",
+        "why_not_others": "5.71 kJ uses the moles of $HCl$, the excess reagent. 8.57 kJ adds the moles of acid and base. 1.43 kJ wrongly halves the moles of the limiting reagent.",
+        "common_trap": "Basing the heat on the reagent in excess instead of the limiting reagent.",
+        "time_saving_tip": "Find the smaller number of moles first; only that amount reacts."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$HCl$ + $NaOH$"
+          },
+          {
+            "label": "B",
+            "text": "$CH_3COOH$ + $NaOH$"
+          },
+          {
+            "label": "C",
+            "text": "$HF$ + $NaOH$"
+          },
+          {
+            "label": "D",
+            "text": "$HCl$ + $NH_4OH$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "About $-57.1$ kJ/mol, since both are fully ionised"
+          },
+          {
+            "label": "II",
+            "text": "Magnitude less than 57.1 kJ/mol, as energy is spent ionising the weak acid"
+          },
+          {
+            "label": "III",
+            "text": "Magnitude more than 57.1 kJ/mol, due to the high hydration enthalpy of the anion"
+          },
+          {
+            "label": "IV",
+            "text": "Magnitude less than 57.1 kJ/mol, as energy is spent ionising the weak base"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-II, C-I, D-IV",
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The value is about $-57.1$ kJ/mol for a strong acid with a strong base. It is smaller in magnitude with a weak electrolyte, and larger for $HF$ because $F^-$ is strongly hydrated.",
+        "steps": [
+          "$HCl$ + $NaOH$: strong acid with strong base, so I.",
+          "$CH_3COOH$ is a weak acid, so II.",
+          "$HF$: the high hydration enthalpy of $F^-$ makes the magnitude exceed 57.1, so III.",
+          "$NH_4OH$ is a weak base, so IV."
+        ],
+        "final_answer": "Option (3): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option 1 swaps the weak acid and the weak base. Option 2 puts $HF$ at the standard value. Option 4 gives acetic acid the standard value.",
+        "common_trap": "Treating $HF$ like other weak acids, whose magnitude is smaller than 57.1 kJ/mol.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about enthalpy of neutralisation are correct?",
+      "statements": {
+        "A": "The enthalpy of neutralisation of $H_2SO_4$ with $NaOH$, per g-equivalent, is about $-57.1$ kJ/mol.",
+        "B": "The acid and base solutions must be at the same initial temperature before mixing.",
+        "C": "For $CH_3COOH$ with $NaOH$ the value is $-57.1$ kJ/mol, because the acid is eventually neutralised completely.",
+        "D": "If the enthalpy of ionisation of a weak acid is 2.1 kJ/mol, the magnitude of its enthalpy of neutralisation with a strong base is 55.0 kJ/mol.",
+        "E": "The heat released depends on the moles of water formed, which are fixed by the reagent present in excess."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "B, C and D only",
+        "A, D and E only",
+        "A, B and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The value is about $-57.1$ kJ/mol per g-equivalent for strong acids and bases. $|\\Delta_{neut}H_{weak}| = 57.1 - \\Delta_{ion}H$, and the limiting reagent fixes the heat released.",
+        "steps": [
+          "A: both are strong, and the value is per g-equivalent, so it is $-57.1$ kJ/mol. Correct.",
+          "B: equal initial temperatures are required. Correct.",
+          "C: part of the heat is used to ionise acetic acid, so the magnitude is smaller. Incorrect.",
+          "D: $57.1 - 2.1 = 55.0$ kJ/mol. Correct.",
+          "E: the limiting reagent, not the excess one, fixes the moles of water. Incorrect."
+        ],
+        "final_answer": "Option (4): A, B and D only",
+        "why_not_others": "Option 1 leaves out the correct statement D. Option 2 includes the incorrect statement C. Option 3 includes the incorrect statement E and leaves out B.",
+        "common_trap": "Taking $\\Delta_{neut}H$ of acetic acid with $NaOH$ as $-57.1$ kJ/mol.",
+        "time_saving_tip": "Rule out C and E first; only one option then remains."
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "Which of the following is a lyophilic sol?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ferric hydroxide sol",
+        "Arsenious sulphide sol",
+        "Aluminium hydroxide sol",
+        "Starch sol"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Lyophilic sols, such as those of starch, gum, gelatin and egg albumin, are made directly by warming the substance with water.",
+        "steps": [
+          "Starch forms a sol when its cold-water paste is poured into boiling water.",
+          "This sol is reversible and self-stabilised by solvation, so it is lyophilic."
+        ],
+        "final_answer": "Option (4): Starch sol",
+        "why_not_others": "$Fe(OH)_3$, $As_2S_3$ and $Al(OH)_3$ sols are lyophobic. They need special methods of preparation and a stabilising ion.",
+        "common_trap": "Thinking that any sol prepared using water is lyophilic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "A ferric hydroxide sol is correctly prepared by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "passing $H_2S$ into a dilute solution of $FeCl_3$",
+        "adding $FeCl_3$ solution to cold water",
+        "warming solid $Fe(OH)_3$ directly with water, as is done for gelatin",
+        "adding $FeCl_3$ solution dropwise to boiling water"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$Fe(OH)_3$ sol is formed by hydrolysis: $FeCl_3 + 3H_2O \\xrightarrow{boil} Fe(OH)_3(sol) + 3HCl$.",
+        "steps": [
+          "Hydrolysis of $FeCl_3$ requires boiling water.",
+          "$FeCl_3$ solution is added dropwise to boiling water, giving a red-brown, positively charged sol."
+        ],
+        "final_answer": "Option (4): adding $FeCl_3$ solution dropwise to boiling water",
+        "why_not_others": "Passing $H_2S$ is the double decomposition method used for $As_2S_3$ sol, starting from $As_2O_3$. Cold water does not give the sol. Direct warming with water works only for lyophilic substances.",
+        "common_trap": "Using cold water instead of boiling water.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "Arsenious sulphide sol is prepared by passing $H_2S$ into a dilute solution of $As_2O_3$. Which electrolyte, at equal molar concentration, will coagulate this sol most effectively?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NaCl$",
+        "$Na_3PO_4$",
+        "$AlCl_3$",
+        "$BaCl_2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "By the Hardy-Schulze rule, the higher the charge of the oppositely charged ion, the greater its coagulating power.",
+        "steps": [
+          "$As_2S_3$ sol is negatively charged because it adsorbs $S^{2-}$.",
+          "So the cations are the coagulating ions.",
+          "Among $Na^+$, $Ba^{2+}$ and $Al^{3+}$, the ion $Al^{3+}$ has the highest charge, so $AlCl_3$ is most effective."
+        ],
+        "final_answer": "Option (3): $AlCl_3$",
+        "why_not_others": "$Na_3PO_4$ has a highly charged anion, but anions do not coagulate a negative sol; its cation is only $Na^+$. $NaCl$ ($Na^+$) and $BaCl_2$ ($Ba^{2+}$) have cations of lower charge.",
+        "common_trap": "Choosing $Na_3PO_4$ because of $PO_4^{3-}$, forgetting that $As_2S_3$ sol is negative.",
+        "time_saving_tip": "Find the charge on the sol first, then look for the most highly charged opposite ion."
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Ferric hydroxide sol is prepared by adding $FeCl_3$ solution to cold water.",
+        "R": "Ferric hydroxide sol is formed by the hydrolysis of $FeCl_3$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$FeCl_3 + 3H_2O \\xrightarrow{boil} Fe(OH)_3(sol) + 3HCl$ requires boiling water.",
+        "steps": [
+          "$FeCl_3$ is added to boiling water, not cold water, so A is false.",
+          "The sol does form by hydrolysis of $FeCl_3$, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so every option that calls A true is ruled out.",
+        "common_trap": "Overlooking the boiling-water condition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Excess electrolyte in a freshly prepared ferric hydroxide sol is removed by dialysis, since it would otherwise coagulate the sol.",
+        "II": "Lyophilic sols such as gelatin sol are stabilised only by the charge on their particles, and are therefore easily coagulated by small amounts of electrolyte."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Lyophobic sols are stabilised only by charge and need dialysis. Lyophilic sols are self-stabilised by solvation and are not easily coagulated.",
+        "steps": [
+          "Dialysis removes excess electrolyte, which would otherwise coagulate a lyophobic sol. Statement I is correct.",
+          "Gelatin sol is lyophilic, so it is stabilised by solvation and is highly stable. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II describes lyophobic sols, not lyophilic ones, so any option calling it correct fails. Statement I is directly supported by the notes.",
+        "common_trap": "Attributing the charge-only stabilisation of lyophobic sols to lyophilic sols.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "In the iodine clock study of the reaction between $H_2O_2$ and $I^-$ in acid medium, what is the role of the small fixed amount of $Na_2S_2O_3$ added?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It oxidises $I^-$ to $I_2$",
+        "It reduces the $I_2$ formed back to $I^-$, keeping $[I^-]$ effectively constant and acting as a clock",
+        "It gives the blue colour that marks the end of the timed interval",
+        "It supplies the $H^+$ ions needed for the reaction"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Thiosulphate reacts as $I_2 + 2S_2O_3^{2-} \\rightarrow 2I^- + S_4O_6^{2-}$, so it is both the clock and the source that regenerates $I^-$.",
+        "steps": [
+          "The $I_2$ formed is immediately reduced back to $I^-$ by thiosulphate.",
+          "This keeps the solution colourless and $[I^-]$ effectively constant.",
+          "When the thiosulphate is used up, free $I_2$ appears and the blue colour develops."
+        ],
+        "final_answer": "Option (2): It reduces the $I_2$ formed back to $I^-$, keeping $[I^-]$ effectively constant and acting as a clock",
+        "why_not_others": "$H_2O_2$, not thiosulphate, oxidises $I^-$. Starch, not thiosulphate, gives the blue colour. Thiosulphate does not supply $H^+$.",
+        "common_trap": "Confusing the role of thiosulphate with that of the starch indicator.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "In an iodine clock experiment on the reaction $H_2O_2 + 2I^- + 2H^+ \\rightarrow I_2 + 2H_2O$, the blue colour appears after 120 s. The experiment is repeated with $[H_2O_2]$ doubled and $[I^-]$ tripled, with everything else unchanged. After how long will the blue colour appear?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20 s",
+        "720 s",
+        "40 s",
+        "60 s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Rate $= k[H_2O_2][I^-]$ and rate $\\propto \\frac{1}{t}$.",
+        "steps": [
+          "The new rate is $2 \\times 3 = 6$ times the original rate.",
+          "Time is inversely proportional to rate, so $t = 120/6 = 20$ s."
+        ],
+        "final_answer": "Option (1): 20 s",
+        "why_not_others": "720 s comes from multiplying the time instead of dividing. 40 s accounts only for the change in $[I^-]$, and 60 s only for the change in $[H_2O_2]$.",
+        "common_trap": "Treating time as directly proportional to rate.",
+        "time_saving_tip": "Multiply the concentration factors to get the rate factor, then divide the time by it."
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "For the reaction of $H_2O_2$ with $I^-$ in acid medium, $k = 0.02$ L mol$^{-1}$ s$^{-1}$. What is the rate when $[H_2O_2] = 0.10$ M, $[I^-] = 0.05$ M and $[H^+] = 0.5$ M?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.0\\times10^{-6}$ mol L$^{-1}$ s$^{-1}$",
+        "$2.0\\times10^{-3}$ mol L$^{-1}$ s$^{-1}$",
+        "$5.0\\times10^{-5}$ mol L$^{-1}$ s$^{-1}$",
+        "$1.0\\times10^{-4}$ mol L$^{-1}$ s$^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The experimental rate law is rate $= k[H_2O_2][I^-]$, which is second order overall. It does not follow the stoichiometry of the balanced equation.",
+        "steps": [
+          "Rate $= 0.02 \\times 0.10 \\times 0.05$.",
+          "Rate $= 1.0\\times10^{-4}$ mol L$^{-1}$ s$^{-1}$.",
+          "$[H^+]$ does not appear in the rate law, and $[I^-]$ is raised to the first power."
+        ],
+        "final_answer": "Option (4): $1.0\\times10^{-4}$ mol L$^{-1}$ s$^{-1}$",
+        "why_not_others": "$5.0\\times10^{-6}$ squares $[I^-]$ according to the stoichiometry. $2.0\\times10^{-3}$ leaves out $[I^-]$. $5.0\\times10^{-5}$ wrongly includes $[H^+]$.",
+        "common_trap": "Writing the rate law from the coefficients of the balanced equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$Na_2S_2O_3$"
+          },
+          {
+            "label": "B",
+            "text": "Starch"
+          },
+          {
+            "label": "C",
+            "text": "Time $t$ for the blue colour to appear"
+          },
+          {
+            "label": "D",
+            "text": "Raising the temperature"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Gives a blue colour with free $I_2$"
+          },
+          {
+            "label": "II",
+            "text": "Reduces $I_2$ back to $I^-$"
+          },
+          {
+            "label": "III",
+            "text": "Shortens the time for the blue colour, consistent with the Arrhenius equation"
+          },
+          {
+            "label": "IV",
+            "text": "Inversely proportional to the rate"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In the clock set-up, thiosulphate consumes $I_2$, starch signals free $I_2$, rate $\\propto \\frac{1}{t}$, and a higher temperature gives a faster rate.",
+        "steps": [
+          "Thiosulphate reduces $I_2$ to $I^-$, so A-II.",
+          "Starch gives a blue colour with $I_2$, so B-I.",
+          "Rate $\\propto 1/t$, so C-IV.",
+          "A higher temperature gives a shorter time, so D-III."
+        ],
+        "final_answer": "Option (2): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option 1 swaps the roles of thiosulphate and starch. Option 3 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Swapping the roles of the clock reagent and the indicator.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the kinetic study of the reaction of $I^-$ with $H_2O_2$ are correct?",
+      "statements": {
+        "A": "The rate law is rate $= k[H_2O_2][I^-]^2[H^+]^2$, as given by the balanced equation.",
+        "B": "The reaction is second order overall.",
+        "C": "Thiosulphate regenerates $I^-$, so $[I^-]$ remains effectively constant during the timed interval.",
+        "D": "Doubling $[I^-]$ while keeping $[H_2O_2]$ constant doubles the time for the blue colour to appear.",
+        "E": "The blue colour appears only after all the added thiosulphate has been consumed."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "C, D and E only",
+        "B, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Rate $= k[H_2O_2][I^-]$ (overall second order), rate $\\propto 1/t$, and thiosulphate acts as the clock.",
+        "steps": [
+          "A: the experimental rate law is first order in each reactant, not stoichiometric. Incorrect.",
+          "B: $1 + 1 = 2$. Correct.",
+          "C: thiosulphate converts $I_2$ back to $I^-$. Correct.",
+          "D: doubling $[I^-]$ doubles the rate, so it halves $t$. Incorrect.",
+          "E: free $I_2$ appears only after the thiosulphate is used up. Correct."
+        ],
+        "final_answer": "Option (4): B, C and E only",
+        "why_not_others": "Options 1, 2 and 3 each include A or D, which are incorrect.",
+        "common_trap": "Assuming that a higher rate means a longer time, or using stoichiometric coefficients as the orders.",
+        "time_saving_tip": "Rule out A and D; only one option contains neither."
+      }
+    }
+  ]
+}

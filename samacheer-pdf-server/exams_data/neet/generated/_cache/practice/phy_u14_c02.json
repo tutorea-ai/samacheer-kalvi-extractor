@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "An AC ammeter connected in a circuit carrying a sinusoidal current reads 5 A. What is the peak value of the current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7.07 A",
+        "3.54 A",
+        "5 A",
+        "10 A"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "AC meters read rms values. For a sinusoid, $I_0 = \\sqrt{2}I_{rms}$.",
+        "steps": [
+          "The ammeter reading is the rms value, so $I_{rms} = 5$ A.",
+          "$I_0 = \\sqrt{2}\\times 5 \\approx 7.07$ A."
+        ],
+        "final_answer": "Option (1): 7.07 A",
+        "why_not_others": "3.54 A comes from dividing by $\\sqrt{2}$ instead of multiplying. 5 A treats the reading as the peak value. 10 A doubles the reading instead of multiplying by $\\sqrt{2}$.",
+        "common_trap": "Assuming the meter reading is the peak value.",
+        "time_saving_tip": "Peak is always larger than rms: multiply by about 1.414."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The mean value of a sinusoidal alternating current over a half cycle is 14 A. What is its rms value? (Take $\\pi = 22/7$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "15.6 A",
+        "14 A",
+        "22 A",
+        "9.9 A"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The half-cycle average is $2I_0/\\pi$ and the rms value is $I_0/\\sqrt{2}$.",
+        "steps": [
+          "$I_0 = \\frac{\\pi}{2}\\times 14 = \\frac{22}{7}\\times 7 = 22$ A.",
+          "$I_{rms} = 22/\\sqrt{2} \\approx 15.6$ A.",
+          "Check with the form factor: $1.11\\times 14 \\approx 15.5$ A, which agrees."
+        ],
+        "final_answer": "Option (1): 15.6 A",
+        "why_not_others": "14 A equates the rms value with the mean value. 22 A is the peak value. 9.9 A divides the mean value by $\\sqrt{2}$.",
+        "common_trap": "Treating the half-cycle average as the peak value.",
+        "time_saving_tip": "$I_{rms} = 1.11\\times I_{avg}$ gives the answer in one step."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "An alternating voltage is given by $V = 200\\sqrt{2}\\sin(400\\pi t)$ volt. What are its rms value and its frequency?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "282.8 V and 400 Hz",
+        "200 V and 1257 Hz",
+        "282.8 V and 200 Hz",
+        "200 V and 200 Hz"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$V_{rms} = V_0/\\sqrt{2}$, and the coefficient of t is $\\omega = 2\\pi f$.",
+        "steps": [
+          "$V_0 = 200\\sqrt{2}$ V, so $V_{rms} = 200$ V.",
+          "$\\omega = 400\\pi$ rad/s, so $f = \\omega/2\\pi = 200$ Hz."
+        ],
+        "final_answer": "Option (4): 200 V and 200 Hz",
+        "why_not_others": "282.8 V is the peak value. 400 Hz drops the $\\pi$ but forgets the factor 2. 1257 Hz takes $\\omega = 400\\pi$ itself as f.",
+        "common_trap": "Reading the coefficient of t as the frequency instead of the angular frequency.",
+        "time_saving_tip": "Divide the coefficient of t by $2\\pi$; here $400\\pi/2\\pi = 200$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A square wave current that alternates between $+I_0$ and $-I_0$ has an rms value equal to $I_0$.",
+        "R": "For a sinusoidal current of peak value $I_0$, the rms value is $I_0/\\sqrt{2}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "rms is $\\sqrt{\\langle I^2\\rangle}$ for any waveform. The factor $1/\\sqrt{2}$ applies to sine waves only.",
+        "steps": [
+          "For the square wave, $I^2 = I_0^2$ at every instant, so $I_{rms} = I_0$. A is true.",
+          "For a sine wave, $I_{rms} = I_0/\\sqrt{2}$. R is true.",
+          "R describes sinusoids and does not explain the square-wave result."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R cannot explain A, because applying R to a square wave would give the wrong value. Both statements are true, so options 3 and 4 fail.",
+        "common_trap": "Applying $I_0/\\sqrt{2}$ to every waveform.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a current $I = I_0\\sin\\omega t$, the mean value over one complete cycle is $2I_0/\\pi$.",
+        "II": "For a sinusoidal current, the ratio of the rms value to the half-cycle mean value is about 0.90."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The full-cycle mean is zero, the half-cycle mean is $2I_0/\\pi$, and the form factor is $\\pi/(2\\sqrt{2}) \\approx 1.11$.",
+        "steps": [
+          "Over a full cycle the positive and negative halves cancel, so the mean is zero. Statement I is incorrect.",
+          "$I_{rms}/I_{avg} = \\frac{I_0/\\sqrt{2}}{2I_0/\\pi} = \\frac{\\pi}{2\\sqrt{2}} \\approx 1.11$, not 0.90. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I uses the half-cycle result for a full cycle. Statement II gives the inverted ratio $2\\sqrt{2}/\\pi \\approx 0.90$.",
+        "common_trap": "Mixing up the full-cycle and half-cycle averages, and inverting the form factor.",
+        "time_saving_tip": "rms (0.707 $I_0$) is greater than the half-cycle mean (0.637 $I_0$), so their ratio must exceed 1."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "When an alternating voltage is applied across a pure capacitor, what is the phase relation between the current and the voltage?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Current leads voltage by $\\pi/2$",
+        "Voltage leads current by $\\pi/2$",
+        "Current and voltage are in phase",
+        "Current lags voltage by $\\pi$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "ICE: in a capacitor (C), the current (I) leads the voltage (E).",
+        "steps": [
+          "In a pure capacitor the current leads the voltage by $90^\\circ$."
+        ],
+        "final_answer": "Option (1): Current leads voltage by $\\pi/2$",
+        "why_not_others": "Voltage leading current is true for an inductor. Being in phase is true for a resistor. A phase difference of $\\pi$ does not occur for a single element.",
+        "common_trap": "Swapping the inductor and capacitor behaviour.",
+        "time_saving_tip": "Remember ELI the ICE man."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A pure inductor of inductance $\\frac{1}{\\pi}$ H is connected to a 220 V, 50 Hz AC supply. What rms current flows through it?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "13.8 A",
+        "3.11 A",
+        "1.56 A",
+        "2.2 A"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$X_L = 2\\pi fL$ and $I_{rms} = V_{rms}/X_L$.",
+        "steps": [
+          "$X_L = 2\\pi\\times 50\\times\\frac{1}{\\pi} = 100\\ \\Omega$.",
+          "$I_{rms} = 220/100 = 2.2$ A."
+        ],
+        "final_answer": "Option (4): 2.2 A",
+        "why_not_others": "13.8 A uses $X_L = fL$ and omits the $2\\pi$. 3.11 A uses the peak voltage of 311 V. 1.56 A wrongly divides the rms current by $\\sqrt{2}$ again.",
+        "common_trap": "Forgetting the $2\\pi$ in $X_L$.",
+        "time_saving_tip": "$L = 1/\\pi$ H at 50 Hz always gives $X_L = 100\\ \\Omega$."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A series circuit has $R = 30\\ \\Omega$, $X_L = 80\\ \\Omega$ and $X_C = 40\\ \\Omega$. It is connected to a 200 V (rms) AC source. What is the rms current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4 A",
+        "1.33 A",
+        "2.86 A",
+        "2.12 A"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$; the reactances are combined as phasors.",
+        "steps": [
+          "$X_L - X_C = 40\\ \\Omega$.",
+          "$Z = \\sqrt{30^2 + 40^2} = 50\\ \\Omega$.",
+          "$I_{rms} = 200/50 = 4$ A."
+        ],
+        "final_answer": "Option (1): 4 A",
+        "why_not_others": "1.33 A adds all three arithmetically (150 $\\Omega$). 2.86 A uses $R + X_L - X_C = 70\\ \\Omega$. 2.12 A uses $\\sqrt{R^2 + X_L^2 + X_C^2}$.",
+        "common_trap": "Adding oppositions arithmetically instead of as phasors.",
+        "time_saving_tip": "Look for a 3-4-5 triangle: 30, 40 and 50."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Inductive reactance"
+          },
+          {
+            "label": "B",
+            "text": "Capacitive reactance"
+          },
+          {
+            "label": "C",
+            "text": "Impedance of a series LCR circuit"
+          },
+          {
+            "label": "D",
+            "text": "Peak current in a series LCR circuit"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\sqrt{R^2 + (X_L - X_C)^2}$"
+          },
+          {
+            "label": "II",
+            "text": "$V_0/Z$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{1}{\\omega C}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\omega L$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I",
+        "A-I, B-III, C-IV, D-II",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "These are the standard reactance, impedance and AC Ohm's law relations.",
+        "steps": [
+          "$X_L = \\omega L$, so A matches IV.",
+          "$X_C = 1/\\omega C$, so B matches III.",
+          "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$, so C matches I.",
+          "$I_0 = V_0/Z$, so D matches II."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option 1 swaps the two reactances. Option 2 swaps the impedance and the current. Option 3 assigns the impedance formula to $X_L$.",
+        "common_trap": "Writing $X_C = \\omega C$.",
+        "time_saving_tip": "Fix A and B first; only option 4 then has C and D correct."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about reactance and impedance are correct?",
+      "statements": {
+        "A": "Doubling the frequency doubles the inductive reactance of a coil.",
+        "B": "A capacitor blocks DC because its reactance becomes infinite when $\\omega = 0$.",
+        "C": "In a series RLC circuit, the rms voltages across R, L and C add arithmetically to give the source voltage.",
+        "D": "In a DC circuit, an ideal inductor behaves as an open circuit.",
+        "E": "Halving the frequency doubles the capacitive reactance of a capacitor."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$X_L \\propto f$, $X_C \\propto 1/f$, and series AC voltages add as phasors.",
+        "steps": [
+          "A: $X_L = 2\\pi fL$, so doubling f doubles $X_L$. True.",
+          "B: $X_C = 1/\\omega C$ becomes infinite as $\\omega \\to 0$. True.",
+          "C: The voltages add as phasors, $V = \\sqrt{V_R^2 + (V_L - V_C)^2}$. False.",
+          "D: For DC an inductor acts as a plain wire. False.",
+          "E: $X_C \\propto 1/f$, so halving f doubles $X_C$. True."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other option includes C or D, and both are false.",
+        "common_trap": "Swapping the DC behaviour of the inductor and the capacitor.",
+        "time_saving_tip": "Rejecting C and D leaves only option 1."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "At resonance in a series LCR circuit, what is the impedance of the circuit equal to?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Zero",
+        "R",
+        "$X_L + X_C$",
+        "$\\sqrt{R^2 + X_L^2}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "At resonance $X_L = X_C$, so Z reaches its minimum value, R.",
+        "steps": [
+          "$Z = \\sqrt{R^2 + (X_L - X_C)^2}$.",
+          "With $X_L = X_C$, this gives $Z = R$."
+        ],
+        "final_answer": "Option (2): R",
+        "why_not_others": "Z is zero only if R is zero. $X_L + X_C$ adds the reactances instead of subtracting them. $\\sqrt{R^2 + X_L^2}$ ignores the capacitor.",
+        "common_trap": "Thinking the impedance vanishes at resonance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A series LCR circuit has $L = 20$ mH, $C = 50\\ \\mu$F and $R = 10\\ \\Omega$. What is its resonant frequency $f_0$ (approximately)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1000 Hz",
+        "6283 Hz",
+        "$1.59\\times10^5$ Hz",
+        "159 Hz"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\omega_0 = 1/\\sqrt{LC}$ and $f_0 = \\omega_0/2\\pi$. The value of R does not matter.",
+        "steps": [
+          "$LC = 0.02\\times 50\\times10^{-6} = 10^{-6}\\ s^2$.",
+          "$\\omega_0 = 1/10^{-3} = 1000$ rad/s.",
+          "$f_0 = 1000/2\\pi \\approx 159$ Hz."
+        ],
+        "final_answer": "Option (4): 159 Hz",
+        "why_not_others": "1000 Hz is $\\omega_0$ taken as f. 6283 Hz multiplies by $2\\pi$ instead of dividing. $1.59\\times10^5$ Hz omits the square root.",
+        "common_trap": "Reporting $\\omega_0$ as the frequency.",
+        "time_saving_tip": "The resistance is given only as a distractor."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A series LCR circuit has $L = 0.1$ H, $C = 10\\ \\mu$F and $R = 10\\ \\Omega$. What is the quality factor of the circuit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "100",
+        "10",
+        "0.1",
+        "1000"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}} = \\frac{\\omega_0 L}{R}$.",
+        "steps": [
+          "$L/C = 0.1/10^{-5} = 10^4$, so $\\sqrt{L/C} = 100\\ \\Omega$.",
+          "$Q = 100/10 = 10$.",
+          "Check: $\\omega_0 = 1000$ rad/s, so $\\omega_0 L/R = 100/10 = 10$."
+        ],
+        "final_answer": "Option (2): 10",
+        "why_not_others": "100 omits the division by R. 0.1 uses the inverted form $R\\sqrt{C/L}$. 1000 is $\\omega_0$.",
+        "common_trap": "Forgetting the $1/R$ factor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a series LCR circuit at resonance, the rms voltage across the inductor can be much larger than the rms source voltage.",
+        "R": "At resonance, $V_L$ and $V_C$ are equal in magnitude and opposite in phase, so they cancel each other in the phasor sum."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "At resonance $V_L$ and $V_C$ cancel, so the source only needs to supply $V_R$.",
+        "steps": [
+          "Because $V_L$ and $V_C$ cancel, the source voltage equals $V_R$. R is true.",
+          "With no constraint from the source, $V_L = I X_L$ can be large while the current is at its maximum. A is true.",
+          "The cancellation is exactly why $V_L$ can exceed the source voltage, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R directly accounts for A, so option 2 fails. Both statements are true, so options 3 and 4 fail.",
+        "common_trap": "Believing no element voltage can exceed the source voltage, which holds only for arithmetic addition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In a series LCR circuit driven at an angular frequency below $1/\\sqrt{LC}$, the current leads the source voltage.",
+        "II": "Increasing the resistance of a series LCR circuit lowers its resonant frequency and makes the resonance sharper."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Below $\\omega_0$, $X_C > X_L$ and the circuit is capacitive. $\\omega_0$ does not depend on R, and $Q \\propto 1/R$.",
+        "steps": [
+          "Below $\\omega_0$, $X_C > X_L$, so the circuit is capacitive and the current leads. Statement I is correct.",
+          "$\\omega_0 = 1/\\sqrt{LC}$ is independent of R.",
+          "A larger R lowers Q and makes the resonance flatter. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is wrong on both counts, so options 1 and 4 fail. Statement I is right, so option 2 fails.",
+        "common_trap": "Thinking R shifts the resonant frequency, or that a higher R sharpens resonance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "What is the average power consumed over a complete cycle when a pure inductor is connected to a sinusoidal AC source of rms voltage $V_{rms}$ that drives an rms current $I_{rms}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$V_{rms}I_{rms}$",
+        "$\\frac{V_0I_0}{2}$",
+        "$\\frac{V_{rms}I_{rms}}{\\sqrt{2}}$",
+        "Zero"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a pure inductor $\\phi = 90^\\circ$, so the power factor is zero.",
+        "steps": [
+          "$P = V_{rms}I_{rms}\\cos 90^\\circ = 0$.",
+          "The energy stored in each cycle is returned to the source."
+        ],
+        "final_answer": "Option (4): Zero",
+        "why_not_others": "$V_{rms}I_{rms}$ and $V_0I_0/2$ (which is the same quantity) both assume a power factor of 1. $V_{rms}I_{rms}/\\sqrt{2}$ assumes $\\phi = 45^\\circ$.",
+        "common_trap": "Believing pure inductors consume power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "In an AC circuit, the rms voltage is 200 V and the rms current is 5 A. The current lags the voltage by $60^\\circ$. What average power does the circuit consume?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1000 W",
+        "866 W",
+        "250 W",
+        "500 W"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$P = V_{rms}I_{rms}\\cos\\phi$.",
+        "steps": [
+          "$\\cos 60^\\circ = 0.5$.",
+          "$P = 200\\times 5\\times 0.5 = 500$ W."
+        ],
+        "final_answer": "Option (4): 500 W",
+        "why_not_others": "1000 W ignores the power factor. 866 W uses $\\sin 60^\\circ$. 250 W adds an extra factor of 1/2, as if peak values were used.",
+        "common_trap": "Using $\\sin\\phi$ instead of $\\cos\\phi$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A circuit draws an rms current of 10 A at a power factor of 0.6. What is the wattless component of the current?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "8 A",
+        "6 A",
+        "10 A",
+        "4 A"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Wattless current $= I_{rms}\\sin\\phi$.",
+        "steps": [
+          "$\\cos\\phi = 0.6$, so $\\sin\\phi = 0.8$.",
+          "Wattless current $= 10\\times 0.8 = 8$ A."
+        ],
+        "final_answer": "Option (1): 8 A",
+        "why_not_others": "6 A is the in-phase (active) component. 10 A is the total current. 4 A is $10 - 6$, an arithmetic subtraction of the components.",
+        "common_trap": "Confusing the active and wattless components.",
+        "time_saving_tip": "Use the 3-4-5 triangle: a power factor of 0.6 means $\\sin\\phi = 0.8$."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pure inductor"
+          },
+          {
+            "label": "B",
+            "text": "Series LCR circuit at resonance"
+          },
+          {
+            "label": "C",
+            "text": "Series circuit with $R = 30\\ \\Omega$ and net reactance $40\\ \\Omega$"
+          },
+          {
+            "label": "D",
+            "text": "Series RL circuit with $R = X_L$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Power factor 1"
+          },
+          {
+            "label": "II",
+            "text": "Power factor 0.6"
+          },
+          {
+            "label": "III",
+            "text": "Power factor 0"
+          },
+          {
+            "label": "IV",
+            "text": "Power factor about 0.707"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Power factor $\\cos\\phi = R/Z$.",
+        "steps": [
+          "Pure inductor: $\\phi = 90^\\circ$, so the power factor is 0 (A matches III).",
+          "At resonance $Z = R$, so the power factor is 1 (B matches I).",
+          "$Z = \\sqrt{30^2 + 40^2} = 50\\ \\Omega$, so the power factor is $30/50 = 0.6$ (C matches II).",
+          "With $R = X_L$, $Z = \\sqrt{2}R$, so the power factor is $1/\\sqrt{2} \\approx 0.707$ (D matches IV)."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 1 swaps the inductor and the resonant circuit. Option 2 swaps C and D. Option 3 gives the resonant circuit a power factor of 0.6.",
+        "common_trap": "Using $X/Z$ instead of $R/Z$ for the power factor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about power in AC circuits are correct?",
+      "statements": {
+        "A": "The power factor of a series LCR circuit equals $R/Z$.",
+        "B": "The average power dissipated in a series LCR circuit equals $I_{rms}^2R$.",
+        "C": "A low power factor means a smaller current is needed to deliver the same power.",
+        "D": "Capacitors are used to improve the power factor of industrial loads.",
+        "E": "The wattless component of the current is in phase with the applied voltage."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and D only",
+        "B, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Only the resistance dissipates power. A low power factor needs a larger current. The wattless current is in quadrature with the voltage.",
+        "steps": [
+          "A: $\\cos\\phi = R/Z$. True.",
+          "B: All power is dissipated in R, so $P = I_{rms}^2R$. True.",
+          "C: A low power factor needs a larger current for the same power. False.",
+          "D: Capacitors are used for power factor improvement. True.",
+          "E: The wattless component is $90^\\circ$ out of phase with the voltage. False."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "The other options include C or E, and both are false.",
+        "common_trap": "Thinking the wattless current is in phase with the voltage.",
+        "time_saving_tip": "Rejecting C and E leaves only option 2."
+      }
+    }
+  ]
+}

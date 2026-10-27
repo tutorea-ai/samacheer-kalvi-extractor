@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "In Mendel's monohybrid cross between a true-breeding tall (TT) and a true-breeding dwarf (tt) pea plant, what is the genotypic ratio of the F2 generation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3 : 1",
+        "9 : 3 : 3 : 1",
+        "1 : 1",
+        "1 : 2 : 1"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A monohybrid F2 gives 3:1 by phenotype and 1:2:1 by genotype.",
+        "steps": [
+          "The F1 plants are all Tt.",
+          "Selfing Tt x Tt gives TT, Tt and tt.",
+          "These occur in the ratio 1 TT : 2 Tt : 1 tt."
+        ],
+        "final_answer": "Option (4): 1 : 2 : 1",
+        "why_not_others": "3:1 is the F2 phenotypic ratio. 9:3:3:1 is the dihybrid F2 phenotypic ratio. 1:1 is the result of a monohybrid test cross.",
+        "common_trap": "Students often give the phenotypic ratio (3:1) when the genotypic ratio is asked.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A pea plant heterozygous for three independently assorting gene pairs (AaBbCc) is self-pollinated. How many different genotypes are expected in the F2 generation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "27",
+        "8",
+        "64",
+        "9"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The number of F2 genotypes for n heterozygous gene pairs is $3^n$.",
+        "steps": [
+          "Here n = 3.",
+          "The number of genotypes is $3^3 = 27$."
+        ],
+        "final_answer": "Option (1): 27",
+        "why_not_others": "8 is $2^3$, which gives the gamete types or the F2 phenotypes. 64 is $4^3$, the number of Punnett square boxes. 9 is $3^2$, the genotype count for a dihybrid cross.",
+        "common_trap": "Confusing the formulas $2^n$, $3^n$ and $4^n$.",
+        "time_saving_tip": "Remember the order: gametes $2^n$, genotypes $3^n$, combinations $4^n$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A pea plant with round, yellow seeds is crossed with a plant having wrinkled, green seeds (rryy). The progeny show round yellow, round green, wrinkled yellow and wrinkled green seeds in a 1 : 1 : 1 : 1 ratio. What is the genotype of the round, yellow parent?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "RRYY",
+        "RrYY",
+        "RRYy",
+        "RrYy"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A dihybrid test cross with the double recessive gives 1:1:1:1 only when the dominant-looking parent is heterozygous for both genes.",
+        "steps": [
+          "The rryy parent contributes only ry gametes.",
+          "Four equal progeny classes require four equal gamete types from the other parent.",
+          "Only RrYy produces RY, Ry, rY and ry in equal proportions."
+        ],
+        "final_answer": "Option (4): RrYy",
+        "why_not_others": "RRYY gives only round yellow progeny. RrYY gives round yellow and wrinkled yellow in a 1:1 ratio. RRYy gives round yellow and round green in a 1:1 ratio.",
+        "common_trap": "Assuming a 1:1:1:1 ratio can come from a plant heterozygous for only one gene.",
+        "time_saving_tip": "The number of progeny classes in a test cross equals the number of gamete types made by the tested parent."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The principle of independent assortment holds true for every pair of genes in an organism.",
+        "R": "During gamete formation, the two alleles of a gene separate so that each gamete receives only one allele."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Segregation is universal, but independent assortment applies only to unlinked genes.",
+        "steps": [
+          "Independent assortment does not apply to linked genes, so A is false.",
+          "R correctly states the law of segregation, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options (1) and (2) need A to be true. Option (3) wrongly treats R, the law of segregation, as false.",
+        "common_trap": "Treating independent assortment as universal in the same way as segregation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the F2 of a dihybrid cross, the Punnett square has 16 boxes, yet these represent only 9 genotypic classes and 4 phenotypic classes.",
+        "II": "Dominance is a property of an allele by itself and does not depend on the product made by each allele of the pair."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For n = 2 gene pairs there are $4^2$ boxes, $3^2$ genotypes and $2^2$ phenotypes. Dominance is a property of an allele pair.",
+        "steps": [
+          "For n = 2: $4^2 = 16$ boxes, $3^2 = 9$ genotypes and $2^2 = 4$ phenotypes, so Statement I is correct.",
+          "Dominance depends on the product each allele makes and is a property of the allele pair, not of one allele alone. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II contradicts the idea that dominance is a property of an allele pair, so options (1) and (4) are wrong. Statement I is arithmetically correct, so option (2) is wrong.",
+        "common_trap": "Believing an allele is inherently dominant regardless of its partner.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "In snapdragon (Antirrhinum), a true-breeding red-flowered plant (RR) is crossed with a true-breeding white-flowered plant (rr). What is the flower colour of the F1 plants?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Red",
+        "Pink",
+        "White",
+        "Red and white patches on the same flower"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In incomplete dominance, the heterozygote has an intermediate phenotype.",
+        "steps": [
+          "All F1 plants are Rr.",
+          "Neither allele is completely dominant, so the flowers are intermediate in colour, which is pink."
+        ],
+        "final_answer": "Option (2): Pink",
+        "why_not_others": "Red would mean complete dominance of R. White would mean dominance of r. Patches of both colours describe co-dominance-like full expression of both alleles, not an intermediate phenotype.",
+        "common_trap": "Confusing incomplete dominance with co-dominance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Which one of the following parental combinations can NEVER produce a child with blood group O?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$I^Ai$ x $I^Bi$",
+        "$I^Ai$ x $ii$",
+        "$I^Bi$ x $I^Bi$",
+        "$I^AI^B$ x $ii$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A blood group O child is ii, so both parents must carry the allele $i$.",
+        "steps": [
+          "Blood group O requires the genotype ii.",
+          "An $I^AI^B$ parent has no $i$ allele.",
+          "Its children can only be $I^Ai$ (group A) or $I^Bi$ (group B)."
+        ],
+        "final_answer": "Option (4): $I^AI^B$ x $ii$",
+        "why_not_others": "In options (1), (2) and (3), each parent carries $i$, so an ii child is possible.",
+        "common_trap": "Assuming that a parent with group O guarantees the chance of an O child.",
+        "time_saving_tip": "Look for a parent that lacks $i$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A gene has four alleles in a population of a diploid organism. How many different genotypes are possible for this gene?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6",
+        "10",
+        "16",
+        "8"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The number of genotypes for n multiple alleles is $\\frac{n(n+1)}{2}$.",
+        "steps": [
+          "Substitute n = 4.",
+          "$\\frac{4 \\times 5}{2} = 10$"
+        ],
+        "final_answer": "Option (2): 10",
+        "why_not_others": "6 is the value for 3 alleles, as in the ABO system. 16 comes from wrongly using $n^2$. 8 comes from wrongly using 2n.",
+        "common_trap": "Recalling 6 from the ABO system without recalculating for four alleles.",
+        "time_saving_tip": "The count is 4 homozygotes plus 6 heterozygote pairs, which gives 10."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Incomplete dominance"
+          },
+          {
+            "label": "B",
+            "text": "Co-dominance"
+          },
+          {
+            "label": "C",
+            "text": "Multiple alleles"
+          },
+          {
+            "label": "D",
+            "text": "Pleiotropy"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Phenylketonuria causing mental retardation and reduced hair and skin pigmentation"
+          },
+          {
+            "label": "II",
+            "text": "Pink flowers in Rr snapdragon"
+          },
+          {
+            "label": "III",
+            "text": "Gene I with alleles $I^A$, $I^B$ and $i$ in a population"
+          },
+          {
+            "label": "IV",
+            "text": "Both A and B sugars on the RBCs of an $I^AI^B$ person"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-IV, C-III, D-II",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each type of deviation from Mendelism has a standard example.",
+        "steps": [
+          "Incomplete dominance: pink Rr snapdragon (II).",
+          "Co-dominance: both A and B sugars in $I^AI^B$ (IV).",
+          "Multiple alleles: three alleles of gene I (III).",
+          "Pleiotropy: phenylketonuria (I)."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option (1) swaps co-dominance with multiple alleles. Option (2) swaps incomplete dominance with co-dominance. Option (3) swaps incomplete dominance with pleiotropy.",
+        "common_trap": "Matching the ABO system only to multiple alleles and forgetting that $I^AI^B$ also shows co-dominance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the starch synthesis gene in pea are correct?",
+      "statements": {
+        "A": "Bb seeds are round and have starch grains of intermediate size.",
+        "B": "With respect to seed shape, allele B is dominant over allele b.",
+        "C": "With respect to starch grain size, the alleles show incomplete dominance.",
+        "D": "bb seeds are wrinkled and have large starch grains."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The pea starch gene is pleiotropic, and whether it shows dominance depends on the phenotype chosen.",
+        "steps": [
+          "BB gives round seeds with large grains; bb gives wrinkled seeds with small grains; Bb gives round seeds with intermediate grains. So A is correct.",
+          "Bb seeds are round like BB, so seed shape shows dominance. B is correct.",
+          "Bb grain size is intermediate, so grain size shows incomplete dominance. C is correct.",
+          "bb seeds have small grains, not large ones. D is incorrect."
+        ],
+        "final_answer": "Option (2): A, B and C only",
+        "why_not_others": "Options (3) and (4) include the false statement D. Option (1) leaves out the correct statement C.",
+        "common_trap": "Assuming that a single gene must show the same type of dominance for every trait it affects.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "Which of the following correctly describes the pattern of variation shown by a polygenic trait such as human height?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Discrete classes in a 3 : 1 ratio",
+        "Continuous variation with a bell-shaped distribution",
+        "Two sharply distinct phenotypes in a 1 : 1 ratio",
+        "Discrete classes in a 9 : 3 : 3 : 1 ratio"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Polygenic traits are quantitative and show continuous variation.",
+        "steps": [
+          "Several genes act additively, and the environment also modifies the trait.",
+          "This produces many intergrading phenotypes that form a bell-shaped curve."
+        ],
+        "final_answer": "Option (2): Continuous variation with a bell-shaped distribution",
+        "why_not_others": "The 3:1, 1:1 and 9:3:3:1 ratios are discrete classes typical of Mendel's qualitative traits.",
+        "common_trap": "Expecting Mendelian ratios for quantitative traits.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A quantitative trait is controlled by four genes with additive effects. An individual heterozygous for all four genes is selfed. How many phenotypic classes are expected in the F2?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7",
+        "16",
+        "9",
+        "8"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The number of F2 phenotypic classes for n polygenes is 2n + 1.",
+        "steps": [
+          "Substitute n = 4.",
+          "2(4) + 1 = 9, corresponding to 0 to 8 dominant alleles."
+        ],
+        "final_answer": "Option (3): 9",
+        "why_not_others": "7 is the value for three genes. 16 is $2^4$, the count under complete dominance. 8 forgets to count the class with zero dominant alleles.",
+        "common_trap": "Using $2^n$ for an additive polygenic trait.",
+        "time_saving_tip": "Count the possible numbers of dominant alleles: 0 to 2n."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Skin colour is controlled by three genes A, B and C, and each dominant allele adds one unit of pigment. In the F2 of AaBbCc x AaBbCc, what fraction of the progeny will show either of the two extreme phenotypes (darkest or lightest)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1/32$",
+        "$1/64$",
+        "$1/16$",
+        "$20/64$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Each extreme phenotype is $(1/4)^n$ of the F2, and both extremes together make up $2 \\times (1/4)^n$.",
+        "steps": [
+          "The darkest class (AABBCC) is $(1/4)^3 = 1/64$.",
+          "The lightest class (aabbcc) is also $1/64$.",
+          "Together they make up $2/64 = 1/32$."
+        ],
+        "final_answer": "Option (1): $1/32$",
+        "why_not_others": "$1/64$ counts only one extreme. $1/16$ is the extreme fraction for two genes. $20/64$ is the intermediate class.",
+        "common_trap": "Reporting only one extreme when the question asks for both.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a three-gene additive model of skin colour, individuals of genotype AABbcc and AaBbCc have the same skin colour.",
+        "R": "In polygenic inheritance, phenotype depends on the number of dominant alleles present, not on which particular alleles they are."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In polygenic inheritance, alleles have an additive effect.",
+        "steps": [
+          "AABbcc has 3 dominant alleles.",
+          "AaBbCc also has 3 dominant alleles.",
+          "Because phenotype depends only on the number of dominant alleles, both have the same colour. R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R is the exact reason the two genotypes match, so option (2) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Thinking that different genotypes must give different phenotypes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the F2 of AaBbCc x AaBbCc for an additive skin-colour trait, the most frequent phenotypic class is the intermediate one, forming $20/64$ of the progeny.",
+        "II": "Polygenic inheritance is the opposite of pleiotropy, because in polygenic inheritance many genes control a single trait."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The F2 ratio for three polygenes is 1:6:15:20:15:6:1. Polygenic inheritance means many genes and one trait, while pleiotropy means one gene and many traits.",
+        "steps": [
+          "The ratio 1:6:15:20:15:6:1 totals 64, and the middle class is 20, so Statement I is correct.",
+          "Polygenic inheritance (many genes, one trait) is the opposite of pleiotropy (one gene, many traits), so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements match the notes, so options (2), (3) and (4) are wrong.",
+        "common_trap": "Reversing the definitions of polygenic inheritance and pleiotropy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "The chromosome theory of inheritance, which united chromosomal segregation with Mendelian principles, was proposed by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Gregor Mendel",
+        "Thomas Hunt Morgan",
+        "Walter Sutton and Theodore Boveri",
+        "de Vries, Correns and von Tschermak"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Sutton and Boveri proposed the chromosome theory of inheritance in 1902.",
+        "steps": [
+          "Sutton and Boveri connected the behaviour of chromosomes at meiosis with Mendel's factors."
+        ],
+        "final_answer": "Option (3): Walter Sutton and Theodore Boveri",
+        "why_not_others": "Mendel proposed factors without any chromosomal basis. Morgan verified the theory experimentally. de Vries, Correns and von Tschermak rediscovered Mendel's work.",
+        "common_trap": "Crediting Morgan, who verified the theory, as the one who proposed it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "According to the chromosome theory of inheritance, which meiotic event provides the physical basis of independent assortment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Pairing of homologous chromosomes during prophase I",
+        "Separation of sister chromatids at anaphase II",
+        "Separation of homologous chromosomes at anaphase I",
+        "Independent orientation of non-homologous chromosome pairs at metaphase I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Independent assortment is explained by the independent orientation of non-homologous pairs at metaphase I.",
+        "steps": [
+          "Each homologous pair lines up at metaphase I independently of the other pairs.",
+          "As a result, alleles on different chromosomes are distributed independently into gametes."
+        ],
+        "final_answer": "Option (4): Independent orientation of non-homologous chromosome pairs at metaphase I",
+        "why_not_others": "Separation of homologues at anaphase I explains segregation, not independent assortment. Pairing of homologues and separation of sister chromatids are not given as the basis of either principle.",
+        "common_trap": "Mixing up the meiotic basis of segregation with that of independent assortment.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Which one of the following is NOT a reason why Drosophila melanogaster is a convenient organism for genetic studies?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It can be grown on a simple synthetic medium",
+        "It completes its life cycle in about two weeks",
+        "Its male and female flies are clearly distinguishable",
+        "A single mating produces very few progeny, which makes counting easy"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Drosophila is useful because it is easy to culture, breeds quickly and produces many offspring with visible variations.",
+        "steps": [
+          "A single mating of Drosophila produces a large number of progeny, not a few.",
+          "So the statement about very few progeny is not a valid reason."
+        ],
+        "final_answer": "Option (4): A single mating produces very few progeny, which makes counting easy",
+        "why_not_others": "Growth on a synthetic medium, a two-week life cycle and clearly distinguishable sexes are all genuine advantages.",
+        "common_trap": "Thinking that a small number of offspring would be an advantage; large samples are what make genetic analysis reliable.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Walter Sutton and Theodore Boveri"
+          },
+          {
+            "label": "B",
+            "text": "Thomas Hunt Morgan"
+          },
+          {
+            "label": "C",
+            "text": "de Vries, Correns and von Tschermak"
+          },
+          {
+            "label": "D",
+            "text": "Reginald C. Punnett"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Rediscovery of Mendel's work in 1900"
+          },
+          {
+            "label": "II",
+            "text": "Experimental verification of the chromosome theory using Drosophila"
+          },
+          {
+            "label": "III",
+            "text": "Chromosome theory of inheritance (1902)"
+          },
+          {
+            "label": "IV",
+            "text": "Graphical checkerboard for predicting the progeny of a cross"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Each scientist is linked with a specific contribution to genetics.",
+        "steps": [
+          "Sutton and Boveri proposed the chromosome theory (III).",
+          "Morgan verified it using Drosophila (II).",
+          "de Vries, Correns and von Tschermak rediscovered Mendel's work (I).",
+          "Punnett developed the Punnett square (IV)."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-I, D-IV",
+        "why_not_others": "Option (1) swaps proposing and verifying the theory. Option (2) swaps Morgan with the rediscoverers. Option (4) swaps Sutton and Boveri with Punnett.",
+        "common_trap": "Confusing who proposed the chromosome theory with who verified it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the chromosome theory of inheritance are correct?",
+      "statements": {
+        "A": "Genes are located on chromosomes in a linear order.",
+        "B": "Separation of homologous chromosomes at anaphase I explains the law of segregation.",
+        "C": "One reason Mendel's work remained unrecognised was the absence of physical proof for his factors.",
+        "D": "Sutton and Boveri experimentally verified the chromosome theory using Drosophila.",
+        "E": "Gametes receive both chromosomes of each homologous pair."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B, C and D only",
+        "B, C and E only",
+        "A, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Genes lie on chromosomes, and chromosome behaviour at meiosis explains Mendel's laws.",
+        "steps": [
+          "A, B and C are correct statements of the theory and its background.",
+          "D is incorrect: Morgan, not Sutton and Boveri, verified the theory using Drosophila.",
+          "E is incorrect: gametes receive only one chromosome of each pair."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Option (2) includes D. Options (3) and (4) include E, and option (4) also includes D.",
+        "common_trap": "Attributing Morgan's experimental verification to Sutton and Boveri.",
+        "time_saving_tip": "Rejecting E alone eliminates options (3) and (4)."
+      }
+    }
+  ]
+}

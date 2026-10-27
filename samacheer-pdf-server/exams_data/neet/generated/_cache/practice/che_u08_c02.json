@@ -1,0 +1,617 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "What are the units of the rate constant $k$ for a second order reaction when concentrations are expressed in $mol\\,L^{-1}$ and time in seconds?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$mol\\,L^{-1}\\,s^{-1}$",
+        "$s^{-1}$",
+        "$L^2\\,mol^{-2}\\,s^{-1}$",
+        "$L\\,mol^{-1}\\,s^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The units of $k$ are $(mol\\,L^{-1})^{1-n}\\,s^{-1}$, where $n$ is the overall order.",
+        "steps": [
+          "For a second order reaction, $n = 2$, so $1 - n = -1$.",
+          "Units $= (mol\\,L^{-1})^{-1}\\,s^{-1} = L\\,mol^{-1}\\,s^{-1}$."
+        ],
+        "final_answer": "Option (4): $L\\,mol^{-1}\\,s^{-1}$",
+        "why_not_others": "$mol\\,L^{-1}\\,s^{-1}$ is the unit for zero order. $s^{-1}$ is the unit for first order. $L^2\\,mol^{-2}\\,s^{-1}$ is the unit for third order.",
+        "common_trap": "Using $s^{-1}$ for every order.",
+        "time_saving_tip": "The power of $L$ in the unit equals $n - 1$."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "For the reaction $A + B \\rightarrow$ products, the following initial rate data were obtained. Experiment 1: $[A] = 0.1\\,M$, $[B] = 0.1\\,M$, rate $= 2.0 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. Experiment 2: $[A] = 0.2\\,M$, $[B] = 0.1\\,M$, rate $= 8.0 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. Experiment 3: $[A] = 0.1\\,M$, $[B] = 0.3\\,M$, rate $= 6.0 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. What is the rate law?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$rate = k[A][B]$",
+        "$rate = k[A][B]^2$",
+        "$rate = k[A]^2[B]$",
+        "$rate = k[A]^2[B]^3$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Initial rate method: $\\frac{r_2}{r_1} = \\left(\\frac{[A]_2}{[A]_1}\\right)^x$ when the other concentrations are kept fixed.",
+        "steps": [
+          "Experiments 1 and 2 keep $[B]$ fixed. $[A]$ doubles and the rate becomes $\\frac{8.0}{2.0} = 4$ times, so $2^x = 4$ and $x = 2$.",
+          "Experiments 1 and 3 keep $[A]$ fixed. $[B]$ triples and the rate becomes $\\frac{6.0}{2.0} = 3$ times, so $3^y = 3$ and $y = 1$.",
+          "Therefore $rate = k[A]^2[B]$."
+        ],
+        "final_answer": "Option (3): $rate = k[A]^2[B]$",
+        "why_not_others": "$k[A][B]$ ignores the fourfold rise in Experiment 2. $k[A][B]^2$ swaps the two orders. $k[A]^2[B]^3$ takes the factor of 3 as the order instead of the rate ratio.",
+        "common_trap": "Writing the order equal to the factor by which the concentration changes, rather than solving for the exponent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "The rate law of a reaction is $rate = k[A][B]^2$. If the concentration of A is tripled and the concentration of B is halved, the rate becomes:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{3}{4}$ times the original rate",
+        "$\\frac{3}{2}$ times the original rate",
+        "6 times the original rate",
+        "12 times the original rate"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The rate changes by the product of each concentration factor raised to its order.",
+        "steps": [
+          "Factor from A: $3^1 = 3$.",
+          "Factor from B: $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$.",
+          "New rate $= 3 \\times \\frac{1}{4} = \\frac{3}{4}$ of the original."
+        ],
+        "final_answer": "Option (1): $\\frac{3}{4}$ times the original rate",
+        "why_not_others": "$\\frac{3}{2}$ ignores the square on $[B]$. 6 divides 3 by the halving factor instead of multiplying. 12 treats halving as doubling.",
+        "common_trap": "Forgetting to raise the change in $[B]$ to the power 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The unit of the rate constant of a first order reaction is $s^{-1}$, whatever concentration unit is used.",
+        "R": "The rate constant is equal to the rate of reaction when the concentrations of all reactants are unity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The units of $k$ are $(mol\\,L^{-1})^{1-n}\\,s^{-1}$. For $n = 1$, the concentration term is raised to the power zero.",
+        "steps": [
+          "A is true. For first order, $(conc)^{0}\\,s^{-1} = s^{-1}$, so the concentration unit cancels.",
+          "R is true. It is the definition of the specific reaction rate.",
+          "R does not explain A. The independence from concentration units comes from $1 - n = 0$, not from the definition of $k$."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct facts, so options 3 and 4 fail. R does not account for the cancellation of units, so option 1 fails.",
+        "common_trap": "Marking option 1 just because both statements concern the rate constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A rate constant with units $L^{1/2}\\,mol^{-1/2}\\,s^{-1}$ corresponds to an overall order of $\\frac{3}{2}$.",
+        "II": "For a reaction whose rate constant has units $mol\\,L^{-1}\\,s^{-1}$, doubling the initial concentration of the reactant leaves the initial rate unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Units of $k = (mol\\,L^{-1})^{1-n}\\,s^{-1}$.",
+        "steps": [
+          "Statement I: $L^{1/2}\\,mol^{-1/2} = (mol\\,L^{-1})^{-1/2}$, so $1 - n = -\\frac{1}{2}$ and $n = \\frac{3}{2}$. It is correct.",
+          "Statement II: $mol\\,L^{-1}\\,s^{-1}$ means $1 - n = 1$, so $n = 0$.",
+          "For zero order, the rate is independent of concentration, so doubling $[R]$ leaves the rate unchanged. It is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both unit-to-order deductions are valid, so no option that calls a statement incorrect can be right.",
+        "common_trap": "Believing the order cannot be fractional. Only molecularity must be a whole number.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "For a first order reaction, which plot gives a straight line with slope equal to $-k$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$[R]$ against $t$",
+        "$\\log\\frac{[R]_0}{[R]}$ against $t$",
+        "$\\ln[R]$ against $\\frac{1}{t}$",
+        "$\\ln[R]$ against $t$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The integrated first order law is $\\ln[R] = \\ln[R]_0 - kt$.",
+        "steps": [
+          "Compare $\\ln[R] = \\ln[R]_0 - kt$ with $y = c + mx$.",
+          "A plot of $\\ln[R]$ against $t$ is linear with slope $-k$."
+        ],
+        "final_answer": "Option (4): $\\ln[R]$ against $t$",
+        "why_not_others": "$[R]$ against $t$ is linear only for zero order. $\\log\\frac{[R]_0}{[R]}$ against $t$ is linear but has slope $+\\frac{k}{2.303}$. $\\ln[R]$ against $\\frac{1}{t}$ is not linear.",
+        "common_trap": "Confusing the slope $\\frac{k}{2.303}$ of the log plot with $-k$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A zero order reaction has $k = 2.5 \\times 10^{-3}\\,mol\\,L^{-1}\\,s^{-1}$. If the initial concentration of the reactant is $0.40\\,M$, what is its concentration after 100 s?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.25\\,M$",
+        "$0.15\\,M$",
+        "$0.65\\,M$",
+        "$0.31\\,M$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Zero order: $[R] = [R]_0 - kt$.",
+        "steps": [
+          "$kt = 2.5 \\times 10^{-3} \\times 100 = 0.25\\,M$.",
+          "$[R] = 0.40 - 0.25 = 0.15\\,M$."
+        ],
+        "final_answer": "Option (2): $0.15\\,M$",
+        "why_not_others": "$0.25\\,M$ is the amount reacted, not the amount left. $0.65\\,M$ adds $kt$ instead of subtracting it. $0.31\\,M$ comes from wrongly applying the first order form $[R]_0 e^{-kt}$.",
+        "common_trap": "Reporting $kt$ itself as the remaining concentration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "The first order gas phase reaction $A(g) \\rightarrow B(g) + C(g)$ is carried out at constant volume. The initial pressure of A is 0.40 atm, and the total pressure after 100 s is 0.70 atm. What is the rate constant? (Take $\\log 4 = 0.602$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.02 \\times 10^{-3}\\,s^{-1}$",
+        "$1.39 \\times 10^{-2}\\,s^{-1}$",
+        "$2.88 \\times 10^{-3}\\,s^{-1}$",
+        "$5.60 \\times 10^{-3}\\,s^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$k = \\frac{2.303}{t}\\log\\frac{p_i}{2p_i - p_t}$",
+        "steps": [
+          "$2p_i - p_t = 0.80 - 0.70 = 0.10$ atm, which is the pressure of A remaining.",
+          "$\\frac{p_i}{2p_i - p_t} = \\frac{0.40}{0.10} = 4$.",
+          "$k = \\frac{2.303}{100} \\times 0.602 = 1.386 \\times 10^{-2}\\,s^{-1} \\approx 1.39 \\times 10^{-2}\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $1.39 \\times 10^{-2}\\,s^{-1}$",
+        "why_not_others": "$6.02 \\times 10^{-3}\\,s^{-1}$ omits the factor 2.303. $2.88 \\times 10^{-3}\\,s^{-1}$ uses $\\frac{p_i}{p_t - p_i}$. $5.60 \\times 10^{-3}\\,s^{-1}$ uses $\\frac{p_t}{p_i}$.",
+        "common_trap": "Taking $p_t - p_i$ as the pressure of A left.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Slope of the $[R]$ against $t$ plot for a zero order reaction"
+          },
+          {
+            "label": "B",
+            "text": "Slope of the $\\log\\frac{[R]_0}{[R]}$ against $t$ plot for a first order reaction"
+          },
+          {
+            "label": "C",
+            "text": "Time for completion of a zero order reaction"
+          },
+          {
+            "label": "D",
+            "text": "Concentration at time $t$ for a first order reaction"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$[R]_0 e^{-kt}$"
+          },
+          {
+            "label": "II",
+            "text": "$-k$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{[R]_0}{k}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{k}{2.303}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-IV, C-II, D-I",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Integrated rate laws and their linear plots.",
+        "steps": [
+          "Zero order: $[R] = [R]_0 - kt$, so the slope is $-k$ (A-II).",
+          "First order: the $\\log\\frac{[R]_0}{[R]}$ against $t$ plot has slope $\\frac{k}{2.303}$ (B-IV).",
+          "Zero order completes when $[R] = 0$, at $t = \\frac{[R]_0}{k}$ (C-III).",
+          "First order: $[R] = [R]_0 e^{-kt}$ (D-I)."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 swaps the two slopes. Option 2 swaps the completion time with the exponential expression. Option 3 mixes up the slope and the completion time.",
+        "common_trap": "Thinking the first order log plot has slope $-k$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about zero and first order reactions are correct?",
+      "statements": {
+        "A": "A zero order reaction is complete at $t = \\frac{[R]_0}{k}$.",
+        "B": "For a first order reaction, $t_{99.9\\%} \\approx 10\\,t_{1/2}$.",
+        "C": "For a first order reaction, the time for 75% completion is 1.5 times the half-life.",
+        "D": "For a first order reaction, $t_{99\\%} = 2\\,t_{90\\%}$.",
+        "E": "Decomposition of HI on a gold surface is a first order reaction."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, B and D only",
+        "A, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Fractional completion times for first order reactions, and examples of zero order reactions.",
+        "steps": [
+          "A is true. Setting $[R] = 0$ in $[R] = [R]_0 - kt$ gives $t = \\frac{[R]_0}{k}$.",
+          "B and D are true results for first order reactions.",
+          "C is false. 75% completion takes two half-lives, so $t_{75\\%} = 2\\,t_{1/2}$.",
+          "E is false. Decomposition of HI on gold is zero order."
+        ],
+        "final_answer": "Option (3): A, B and D only",
+        "why_not_others": "Options 1, 2 and 4 each include C or E, and both of those statements are false.",
+        "common_trap": "Assuming 75% completion takes 1.5 half-lives by linear reasoning.",
+        "time_saving_tip": "For first order, 50% is one half-life, 75% is two and 87.5% is three."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "The rate constant of a first order reaction is $3.465 \\times 10^{-3}\\,s^{-1}$. What is its half-life?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "200 s",
+        "400 s",
+        "100 s",
+        "665 s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "First order: $t_{1/2} = \\frac{0.693}{k}$.",
+        "steps": [
+          "$t_{1/2} = \\frac{0.693}{3.465 \\times 10^{-3}} = 200$ s."
+        ],
+        "final_answer": "Option (1): 200 s",
+        "why_not_others": "400 s doubles the correct value. 100 s halves it. 665 s uses $\\frac{2.303}{k}$ instead of $\\frac{0.693}{k}$.",
+        "common_trap": "Using 2.303 in place of 0.693.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A zero order reaction has $k = 0.02\\,mol\\,L^{-1}\\,min^{-1}$, and the initial concentration of the reactant is $0.80\\,M$. What is its half-life?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20 min",
+        "40 min",
+        "34.65 min",
+        "10 min"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Zero order: $t_{1/2} = \\frac{[R]_0}{2k}$.",
+        "steps": [
+          "$t_{1/2} = \\frac{0.80}{2 \\times 0.02} = \\frac{0.80}{0.04} = 20$ min."
+        ],
+        "final_answer": "Option (1): 20 min",
+        "why_not_others": "40 min is $\\frac{[R]_0}{k}$, the time for completion. 34.65 min wrongly uses the first order formula $\\frac{0.693}{k}$. 10 min divides by $4k$.",
+        "common_trap": "Applying $\\frac{0.693}{k}$ to a zero order reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A first order reaction has a half-life of 15 min. If the initial concentration of the reactant is $0.64\\,M$, what is its concentration after 1 hour?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04\\,M$",
+        "$0.16\\,M$",
+        "$0.08\\,M$",
+        "$0.02\\,M$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "After $n$ half-lives of a first order reaction, $[R] = \\frac{[R]_0}{2^n}$.",
+        "steps": [
+          "Number of half-lives: $n = \\frac{60}{15} = 4$.",
+          "$[R] = \\frac{0.64}{2^4} = \\frac{0.64}{16} = 0.04\\,M$."
+        ],
+        "final_answer": "Option (1): $0.04\\,M$",
+        "why_not_others": "$0.16\\,M$ divides by $n = 4$ instead of $2^4$. $0.08\\,M$ counts only 3 half-lives. $0.02\\,M$ counts 5 half-lives.",
+        "common_trap": "Dividing by $n$ rather than $2^n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Radioactive decay is characterised by a fixed half-life.",
+        "R": "For a first order process, $t_{1/2} = \\frac{0.693}{k}$, which is independent of the initial amount."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A constant half-life is the hallmark of a first order reaction.",
+        "steps": [
+          "Radioactive decay is first order, so A is true.",
+          "For first order, $t_{1/2} = \\frac{0.693}{k}$ contains no concentration term, so R is true.",
+          "This independence from the initial amount is exactly why the half-life of radioactive decay is fixed, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 fail. R directly accounts for A, so option 2 fails.",
+        "common_trap": null,
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If halving the initial concentration of a reactant also halves the half-life, the reaction is zero order.",
+        "II": "For a second order reaction, doubling the initial concentration doubles the half-life."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$t_{1/2} \\propto [R]_0^{1-n}$",
+        "steps": [
+          "Statement I: if $t_{1/2} \\propto [R]_0$, then $1 - n = 1$, so $n = 0$. It is correct.",
+          "Statement II: for $n = 2$, $t_{1/2} \\propto \\frac{1}{[R]_0}$.",
+          "Doubling $[R]_0$ therefore halves the half-life. It is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I follows from $t_{1/2} \\propto [R]_0$ for zero order. Statement II reverses the inverse relation for second order.",
+        "common_trap": "Assuming the half-life always rises with initial concentration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "What is the slope of a plot of $\\ln k$ against $\\frac{1}{T}$ for a reaction obeying the Arrhenius equation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{E_a}{R}$",
+        "$-\\frac{E_a}{2.303R}$",
+        "$-\\frac{E_a}{R}$",
+        "$\\ln A$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Linear form of the Arrhenius equation: $\\ln k = \\ln A - \\frac{E_a}{RT}$.",
+        "steps": [
+          "Compare with $y = c + mx$, taking $x = \\frac{1}{T}$.",
+          "The slope is $-\\frac{E_a}{R}$."
+        ],
+        "final_answer": "Option (3): $-\\frac{E_a}{R}$",
+        "why_not_others": "$\\frac{E_a}{R}$ has the wrong sign. $-\\frac{E_a}{2.303R}$ is the slope of the $\\log k$ plot. $\\ln A$ is the intercept.",
+        "common_trap": "Mixing up the slopes of the $\\ln k$ and $\\log k$ plots.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A plot of $\\log k$ against $\\frac{1}{T}$ for a reaction is a straight line with slope $-2000$ K. What is the activation energy? ($R = 8.314\\,J\\,K^{-1}\\,mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16.6\\,kJ\\,mol^{-1}$",
+        "$38.3\\,J\\,mol^{-1}$",
+        "$7.2\\,kJ\\,mol^{-1}$",
+        "$38.3\\,kJ\\,mol^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The slope of $\\log k$ against $\\frac{1}{T}$ is $-\\frac{E_a}{2.303R}$.",
+        "steps": [
+          "$\\frac{E_a}{2.303R} = 2000$ K.",
+          "$E_a = 2000 \\times 2.303 \\times 8.314 = 38294\\,J\\,mol^{-1}$.",
+          "$E_a \\approx 38.3\\,kJ\\,mol^{-1}$."
+        ],
+        "final_answer": "Option (4): $38.3\\,kJ\\,mol^{-1}$",
+        "why_not_others": "$16.6\\,kJ\\,mol^{-1}$ omits the factor 2.303. $38.3\\,J\\,mol^{-1}$ has the wrong unit. $7.2\\,kJ\\,mol^{-1}$ divides by 2.303 instead of multiplying.",
+        "common_trap": "Using the $\\ln k$ slope relation for a $\\log k$ plot.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A reaction has an activation energy of $41.57\\,kJ\\,mol^{-1}$. At 500 K, what fraction of molecules have energy equal to or greater than $E_a$? ($R = 8.314\\,J\\,K^{-1}\\,mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$e^{-10}$",
+        "$e^{-0.01}$",
+        "$e^{-4.34}$",
+        "$e^{10}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The fraction of molecules with energy at least $E_a$ is $e^{-E_a/RT}$.",
+        "steps": [
+          "Convert $E_a$ to joules: $41570\\,J\\,mol^{-1}$.",
+          "$RT = 8.314 \\times 500 = 4157\\,J\\,mol^{-1}$.",
+          "$\\frac{E_a}{RT} = \\frac{41570}{4157} = 10$, so the fraction is $e^{-10}$."
+        ],
+        "final_answer": "Option (1): $e^{-10}$",
+        "why_not_others": "$e^{-0.01}$ keeps $E_a$ in kJ. $e^{-4.34}$ wrongly divides by 2.303. $e^{10}$ has the wrong sign and would give a fraction greater than 1.",
+        "common_trap": "Not converting kJ to J when $R$ is in $J\\,K^{-1}\\,mol^{-1}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pre-exponential factor A"
+          },
+          {
+            "label": "B",
+            "text": "$e^{-E_a/RT}$"
+          },
+          {
+            "label": "C",
+            "text": "Intercept of the $\\ln k$ against $\\frac{1}{T}$ plot"
+          },
+          {
+            "label": "D",
+            "text": "Activated complex"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Related to collision frequency"
+          },
+          {
+            "label": "II",
+            "text": "Fraction of molecules with energy equal to or greater than $E_a$"
+          },
+          {
+            "label": "III",
+            "text": "$\\ln A$"
+          },
+          {
+            "label": "IV",
+            "text": "Unstable, short-lived species at the energy maximum"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The terms of the Arrhenius equation $k = Ae^{-E_a/RT}$ and their meaning.",
+        "steps": [
+          "A, the frequency factor, is related to collision frequency (A-I).",
+          "$e^{-E_a/RT}$ is the fraction of molecules with energy at least $E_a$ (B-II).",
+          "In $\\ln k = \\ln A - \\frac{E_a}{RT}$, the intercept is $\\ln A$ (C-III).",
+          "The activated complex is the unstable transition state at the energy maximum (D-IV)."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option 2 swaps A and B. Option 3 swaps C and D. Option 4 links the intercept to collision frequency.",
+        "common_trap": "Confusing the frequency factor with the Boltzmann fraction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the effect of temperature on reaction rate are correct?",
+      "statements": {
+        "A": "Raising the temperature flattens and broadens the Maxwell-Boltzmann curve and shifts its peak to a higher energy.",
+        "B": "The total area under the Maxwell-Boltzmann curve increases with temperature.",
+        "C": "As $E_a$ approaches zero, the rate constant approaches A.",
+        "D": "A 10 K rise in temperature roughly doubles the fraction of molecules with energy at least $E_a$.",
+        "E": "The slope of the $\\log k$ against $\\frac{1}{T}$ plot is $-\\frac{E_a}{R}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "C, D and E only",
+        "A, B, C and D only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The Maxwell-Boltzmann distribution and the Arrhenius equation.",
+        "steps": [
+          "A is true. This is how the curve changes with temperature.",
+          "B is false. The total area stays constant because the number of molecules is fixed.",
+          "C is true. When $E_a = 0$, $e^{0} = 1$, so $k = A$.",
+          "D is true. E is false, because the slope of the $\\log k$ plot is $-\\frac{E_a}{2.303R}$."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Options 1 and 4 include B. Option 3 includes E. Both B and E are false.",
+        "common_trap": "Thinking the area under the curve grows with temperature.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

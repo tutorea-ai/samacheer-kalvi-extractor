@@ -1,0 +1,616 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "Which metal ion acts as a cofactor for the enzyme carboxypeptidase?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Iron",
+        "Magnesium",
+        "Zinc",
+        "Copper"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Metal ions are one type of enzyme cofactor. Zinc is the cofactor for carboxypeptidase.",
+        "steps": [
+          "Cofactors are of three kinds: prosthetic groups, coenzymes and metal ions.",
+          "Carboxypeptidase requires zinc as its metal ion cofactor."
+        ],
+        "final_answer": "Option (3): Zinc",
+        "why_not_others": "Iron, magnesium and copper are not the cofactor named for carboxypeptidase. Iron is part of haem, the prosthetic group of peroxidase and catalase, not a free metal cofactor of carboxypeptidase.",
+        "common_trap": "Linking the iron of haem with carboxypeptidase. Haem belongs to peroxidase and catalase.",
+        "time_saving_tip": "Memorise the pairs: haem with peroxidase and catalase, NAD/NADP with niacin, zinc with carboxypeptidase."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "An enzyme has $V_{max} = 80$ units and $K_m = 4$ mM. Using the Michaelis–Menten relation, what is the reaction velocity when the substrate concentration is 12 mM?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "40 units",
+        "60 units",
+        "20 units",
+        "240 units"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Michaelis–Menten relation: $V = \\frac{V_{max}[S]}{K_m + [S]}$",
+        "steps": [
+          "Substitute the values: $V = \\frac{80 \\times 12}{4 + 12}$.",
+          "Numerator: $80 \\times 12 = 960$. Denominator: $4 + 12 = 16$.",
+          "$V = \\frac{960}{16} = 60$ units."
+        ],
+        "final_answer": "Option (2): 60 units",
+        "why_not_others": "40 units is $V_{max}/2$, which applies only when $[S] = K_m$. 20 units comes from putting $K_m$ in place of $[S]$ in the numerator. 240 units comes from dividing by $K_m$ alone instead of $(K_m + [S])$.",
+        "common_trap": "Assuming V always equals $V_{max}/2$, or leaving $[S]$ out of the denominator.",
+        "time_saving_tip": "When $[S] = 3K_m$, $V = \\frac{3}{4}V_{max}$ directly, so $\\frac{3}{4} \\times 80 = 60$."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "An enzyme removes a group from its substrate by a mechanism other than hydrolysis, and a double bond is formed in the product. To which enzyme class does it belong?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Lyases",
+        "Hydrolases",
+        "Ligases",
+        "Isomerases"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Lyases remove groups by non-hydrolytic means, leaving double bonds.",
+        "steps": [
+          "The group is removed without water, so the enzyme is not a hydrolase.",
+          "Removing a group to form a double bond is the defining feature of lyases."
+        ],
+        "final_answer": "Option (1): Lyases",
+        "why_not_others": "Hydrolases break bonds using water. Ligases join two compounds. Isomerases interconvert isomers and do not remove groups.",
+        "common_trap": "Confusing lyases with ligases because the names sound similar.",
+        "time_saving_tip": "Lyase means removal without water plus a double bond. Ligase means joining."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Enzymes exposed to low temperature are permanently denatured and cannot regain their activity.",
+        "R": "High temperature destroys enzymatic activity because the enzyme proteins are denatured by heat."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "High temperature denatures enzymes. Low temperature only inactivates them temporarily.",
+        "steps": [
+          "Low temperature causes temporary inactivation, not permanent denaturation, so A is false.",
+          "High temperature denatures enzyme proteins and destroys activity, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options 1 and 2 need A to be true, but A is false. Option 3 calls R false, but heat denaturation is a correct fact.",
+        "common_trap": "Treating cold and heat as having the same effect. Cold-inactivated enzymes regain activity when warmed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A coenzyme is tightly bound to the apoenzyme, whereas a prosthetic group binds to the enzyme only transiently during catalysis.",
+        "II": "Haem in catalase acts as a prosthetic group, and the coenzyme NAD contains the vitamin niacin."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A prosthetic group is tightly bound to the enzyme. A coenzyme binds only transiently.",
+        "steps": [
+          "Statement I reverses the definitions, so it is incorrect.",
+          "Haem is the prosthetic group of peroxidase and catalase, so the first half of Statement II is correct.",
+          "NAD and NADP contain niacin, so the second half is also correct. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Options 1 and 3 accept Statement I, which swaps the binding behaviour of coenzymes and prosthetic groups. Option 2 rejects Statement II, which states correct facts.",
+        "common_trap": "Swapping the binding nature of coenzymes and prosthetic groups.",
+        "time_saving_tip": "Prosthetic means permanently attached. A coenzyme comes and goes."
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "In which phase of the cell cycle does DNA replication take place?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "G1 phase",
+        "G2 phase",
+        "M phase",
+        "S phase"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The S (synthesis) phase is the phase of DNA replication.",
+        "steps": [
+          "In G1 the cell grows, but its DNA does not replicate.",
+          "In S phase DNA replicates, and the DNA content rises from 2C to 4C."
+        ],
+        "final_answer": "Option (4): S phase",
+        "why_not_others": "G1 is a growth phase without replication. G2 prepares the cell for mitosis through protein synthesis. M phase is the division phase.",
+        "common_trap": "Picking G2 because the DNA content is already 4C there. The doubling itself happens in S phase.",
+        "time_saving_tip": "S stands for synthesis of DNA."
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "A diploid cell with chromosome number $2n = 14$ has a DNA content of 2C in G1 phase. What will be its DNA content and chromosome number in G2 phase?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4C and 28",
+        "4C and 14",
+        "2C and 14",
+        "2C and 28"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "S phase doubles the DNA content ($2C \\rightarrow 4C$) but leaves the chromosome number unchanged.",
+        "steps": [
+          "DNA replicates during S phase, so the DNA content in G2 becomes 4C.",
+          "Each chromosome now has two chromatids, but the number of chromosomes stays 14."
+        ],
+        "final_answer": "Option (2): 4C and 14",
+        "why_not_others": "28 chromosomes wrongly assumes the chromosome number doubles. 2C ignores the DNA replication that occurred in S phase.",
+        "common_trap": "Assuming S phase doubles the chromosome number.",
+        "time_saving_tip": "After S phase, only the DNA (C value) doubles, never the n value."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "Which of the following correctly describes cells in the G0 stage?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "They are metabolically inactive and cannot be triggered to divide",
+        "They enter G0 directly from the G2 phase",
+        "They are actively replicating their DNA",
+        "They remain metabolically active but do not proliferate unless triggered"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "G0 is a quiescent stage. Cells exit G1 into G0, stay metabolically active, and can be triggered to divide.",
+        "steps": [
+          "Cells that stop dividing, such as many heart cells, exit G1 into G0.",
+          "G0 cells remain metabolically active but do not proliferate unless triggered."
+        ],
+        "final_answer": "Option (4): They remain metabolically active but do not proliferate unless triggered",
+        "why_not_others": "Option 1 is wrong because G0 cells are active and can be triggered. Option 2 is wrong because entry into G0 is from G1, not G2. Option 3 is wrong because DNA replication occurs in S phase.",
+        "common_trap": "Equating quiescent with metabolically inactive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "G1 phase"
+          },
+          {
+            "label": "B",
+            "text": "S phase"
+          },
+          {
+            "label": "C",
+            "text": "G2 phase"
+          },
+          {
+            "label": "D",
+            "text": "G0 stage"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Quiescent, metabolically active, not proliferating"
+          },
+          {
+            "label": "II",
+            "text": "DNA replication and centriole duplication in animal cells"
+          },
+          {
+            "label": "III",
+            "text": "Cell grows; DNA content remains 2C"
+          },
+          {
+            "label": "IV",
+            "text": "Protein synthesis in preparation for mitosis; DNA content 4C"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-II, C-III, D-I",
+        "A-III, B-II, C-IV, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each phase of the cell cycle has a characteristic event.",
+        "steps": [
+          "G1: the cell grows, and DNA stays 2C because it has not yet replicated (III).",
+          "S: DNA replicates and the centriole duplicates (II).",
+          "G2: protein synthesis continues for mitosis, with DNA at 4C (IV).",
+          "G0: a quiescent but metabolically active stage (I)."
+        ],
+        "final_answer": "Option (4): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Option 1 assigns replication to G1. Option 2 swaps G2 and G0. Option 3 swaps G1 and G2, ignoring the 2C and 4C DNA contents.",
+        "common_trap": "Matching G1 and G2 interchangeably because growth occurs in both. Use the DNA content to tell them apart.",
+        "time_saving_tip": "Fix S phase first (II); the 2C/4C clue then separates G1 from G2."
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the cell cycle are correct?",
+      "statements": {
+        "A": "Interphase occupies more than 95% of the duration of the cell cycle.",
+        "B": "In animals, mitosis can occur in both haploid and diploid cells.",
+        "C": "Yeast completes its cell cycle in about 90 minutes.",
+        "D": "Many heart cells exit G1 phase and enter the G0 stage.",
+        "E": "S phase doubles the chromosome number from 2n to 4n."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B, C and D only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Facts about cell cycle duration, G0 cells and S phase.",
+        "steps": [
+          "A is true: interphase takes more than 95% of the cycle.",
+          "B is false: in animals mitosis occurs only in diploid somatic cells. It is in plants that haploid cells can also divide mitotically.",
+          "C is true: yeast takes about 90 minutes.",
+          "D is true: many heart cells enter G0.",
+          "E is false: S phase doubles DNA content (2C to 4C), not chromosome number."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option 1 leaves out the true statement D. Option 2 includes the false statement B. Option 4 includes the false statement E and leaves out A.",
+        "common_trap": "Applying the plant rule (haploid cells can divide mitotically) to animals.",
+        "time_saving_tip": "Eliminate any option containing B or E. Only option 3 remains."
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "Which stage of mitosis is considered best for studying the morphology of chromosomes?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Metaphase",
+        "Prophase",
+        "Anaphase",
+        "Telophase"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "At metaphase, condensed chromosomes align at the metaphase plate.",
+        "steps": [
+          "In metaphase, each chromosome has two sister chromatids and lies at the metaphase plate.",
+          "This makes metaphase the best stage for studying chromosome morphology."
+        ],
+        "final_answer": "Option (1): Metaphase",
+        "why_not_others": "In prophase condensation is still in progress. In anaphase the chromatids are moving apart. In telophase the chromosomes decondense.",
+        "common_trap": "Choosing prophase because chromosomes first become visible then.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "A single cell undergoes 5 successive mitotic divisions. How many cells will be formed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "32",
+        "10",
+        "25",
+        "64"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The number of cells after n mitotic divisions is $N = 2^n$.",
+        "steps": [
+          "Here $n = 5$.",
+          "$N = 2^5 = 32$."
+        ],
+        "final_answer": "Option (1): 32",
+        "why_not_others": "10 comes from multiplying $2 \\times 5$. 25 comes from calculating $5^2$. 64 is $2^6$, which counts one division too many.",
+        "common_trap": "Multiplying instead of raising 2 to the power n.",
+        "time_saving_tip": "Count the doublings: 2, 4, 8, 16, 32."
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "When karyokinesis is not followed by cytokinesis, a multinucleate condition called a syncytium is formed. Which of the following is an example of a syncytium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Liquid endosperm of coconut",
+        "Cell plate of a dividing plant cell",
+        "Meristematic cells of the shoot apex",
+        "Heart cells in the G0 stage"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A syncytium results from nuclear division without cytoplasmic division.",
+        "steps": [
+          "Repeated karyokinesis without cytokinesis gives one cytoplasm containing many nuclei.",
+          "The liquid endosperm of coconut is the classic example."
+        ],
+        "final_answer": "Option (1): Liquid endosperm of coconut",
+        "why_not_others": "The cell plate is a structure formed during plant cytokinesis, not a multinucleate cell. Meristematic cells divide normally, completing cytokinesis. G0 heart cells are non-dividing.",
+        "common_trap": "Confusing the cell plate (cytokinesis) with the syncytium (absence of cytokinesis).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Mitosis is called equational division.",
+        "R": "Mitosis helps in maintaining the nucleo-cytoplasmic ratio of cells."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Mitosis is equational because the daughter cells have the same chromosome number as the parent cell.",
+        "steps": [
+          "A is true: mitosis is equational division.",
+          "R is true: mitosis restores the nucleo-cytoplasmic ratio.",
+          "The term 'equational' refers to the chromosome number staying equal, not to the nucleo-cytoplasmic ratio, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 wrongly links the nucleo-cytoplasmic ratio to the term 'equational'. Options 3 and 4 each deny a statement that is true.",
+        "common_trap": "Accepting any true significance of mitosis as the explanation for its name.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "By the end of prophase, the Golgi complex, endoplasmic reticulum, nucleolus and nuclear envelope are no longer visible.",
+        "II": "In plants, both haploid and diploid cells can divide by mitosis, whereas in animals mitosis occurs only in diploid somatic cells."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Events at the end of prophase, and which cells can divide by mitosis.",
+        "steps": [
+          "Statement I is correct: at the end of prophase the Golgi, ER, nucleolus and nuclear envelope are not seen. They reform in telophase.",
+          "Statement II is correct: plant cells divide mitotically as n → n or 2n → 2n, while in animals mitosis occurs only in diploid somatic cells."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Every other option marks a correct statement as incorrect.",
+        "common_trap": "Thinking the nuclear envelope disappears only in metaphase, or that haploid cells can never divide by mitosis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "In which sub-stage of prophase I does crossing over occur?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Leptotene",
+        "Pachytene",
+        "Zygotene",
+        "Diplotene"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Crossing over occurs in pachytene at recombination nodules, with the help of recombinase.",
+        "steps": [
+          "Zygotene is the stage of synapsis.",
+          "Pachytene is the stage of crossing over.",
+          "Diplotene is when chiasmata become visible."
+        ],
+        "final_answer": "Option (2): Pachytene",
+        "why_not_others": "In leptotene chromosomes only become visible. Zygotene is synapsis. In diplotene the chiasmata, which result from crossing over, become visible.",
+        "common_trap": "Placing crossing over in zygotene or diplotene.",
+        "time_saving_tip": "Memorise the order L-Z-P-D-D: visible, pair, cross, chiasmata, terminalise."
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "How many meiotic divisions are needed to produce 100 haploid cells, given that each meiosis yields four haploid cells?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "100",
+        "50",
+        "25",
+        "200"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "One meiosis gives $2n \\rightarrow 4 \\times n$, that is, four haploid cells.",
+        "steps": [
+          "Number of meioses = number of haploid cells ÷ 4.",
+          "$100 \\div 4 = 25$."
+        ],
+        "final_answer": "Option (3): 25",
+        "why_not_others": "100 assumes one cell per meiosis. 50 assumes two cells per meiosis, as in mitosis. 200 multiplies by 2 instead of dividing by 4.",
+        "common_trap": "Dividing by 2 as for mitosis instead of by 4.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "Which of the following correctly distinguishes anaphase I from anaphase II of meiosis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Sister chromatids separate in anaphase I, while homologous chromosomes separate in anaphase II",
+        "Sister chromatids separate in both anaphase I and anaphase II",
+        "Homologous chromosomes separate in anaphase I, while sister chromatids separate in anaphase II",
+        "DNA replicates before anaphase II during interkinesis, but not before anaphase I"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Anaphase I is reductional (homologues separate). Anaphase II separates sister chromatids, as in mitosis.",
+        "steps": [
+          "In anaphase I, homologous chromosomes separate while sister chromatids stay together.",
+          "In anaphase II, sister chromatids separate."
+        ],
+        "final_answer": "Option (3): Homologous chromosomes separate in anaphase I, while sister chromatids separate in anaphase II",
+        "why_not_others": "Option 1 reverses the events. Option 2 ignores the separation of homologues in anaphase I. Option 4 is wrong because interkinesis has no DNA replication.",
+        "common_trap": "Thinking meiosis I resembles mitosis. It is meiosis II that resembles mitosis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Leptotene"
+          },
+          {
+            "label": "B",
+            "text": "Zygotene"
+          },
+          {
+            "label": "C",
+            "text": "Diplotene"
+          },
+          {
+            "label": "D",
+            "text": "Diakinesis"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Terminalisation of chiasmata"
+          },
+          {
+            "label": "II",
+            "text": "Dissolution of synaptonemal complex and appearance of chiasmata"
+          },
+          {
+            "label": "III",
+            "text": "Chromosomes become visible"
+          },
+          {
+            "label": "IV",
+            "text": "Synapsis through synaptonemal complex"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-II, C-IV, D-I",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each sub-stage of prophase I has a characteristic event.",
+        "steps": [
+          "Leptotene: chromosomes become visible (III).",
+          "Zygotene: synapsis through the synaptonemal complex (IV).",
+          "Diplotene: the synaptonemal complex dissolves and chiasmata appear (II).",
+          "Diakinesis: chiasmata terminalise (I)."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option 1 swaps leptotene and zygotene. Option 2 swaps diplotene and diakinesis. Option 3 swaps zygotene and diplotene.",
+        "common_trap": "Mixing up the appearance of chiasmata (diplotene) with their terminalisation (diakinesis).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about meiosis are correct?",
+      "statements": {
+        "A": "Meiosis involves two rounds of DNA replication followed by two divisions.",
+        "B": "Interkinesis is short and is not accompanied by DNA replication.",
+        "C": "In oocytes, diplotene can last for months or years.",
+        "D": "Meiosis II resembles normal mitosis.",
+        "E": "Recombinase acts during zygotene to form bivalents."
+      },
+      "match_lists": null,
+      "options": [
+        "B and D only",
+        "A, B and C only",
+        "B, C and D only",
+        "B, C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Meiosis has a single round of DNA replication followed by two divisions.",
+        "steps": [
+          "A is false: there is only one round of DNA replication.",
+          "B is true: interkinesis is short and has no DNA replication.",
+          "C is true: diplotene is long-lasting in oocytes.",
+          "D is true: meiosis II resembles mitosis.",
+          "E is false: recombinase acts in pachytene during crossing over, while zygotene is synapsis."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Option 1 leaves out the true statement C. Option 2 includes the false statement A. Option 4 includes the false statement E.",
+        "common_trap": "Assigning recombinase or crossing over to zygotene.",
+        "time_saving_tip": "Reject options containing A or E. Of the rest, only option 3 includes all of B, C and D."
+      }
+    }
+  ]
+}

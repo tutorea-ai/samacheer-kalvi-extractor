@@ -1,0 +1,140 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "In the $H_2$-$O_2$ fuel cell used in the Apollo space programme, the hydrogen and oxygen gases are bubbled through porous carbon electrodes into which electrolyte?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Dilute aqueous $H_2SO_4$",
+        "Molten NaCl",
+        "Concentrated aqueous NaOH or KOH",
+        "Dilute aqueous $CH_3COOH$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The Apollo $H_2$-$O_2$ fuel cell uses porous carbon electrodes containing a Pt or Pd catalyst. The electrolyte is concentrated aqueous KOH or NaOH.",
+        "steps": [
+          "$H_2$ and $O_2$ are bubbled through porous carbon electrodes.",
+          "The electrolyte is concentrated aqueous NaOH or KOH.",
+          "$OH^-$ ions take part in both electrode reactions, so the medium is alkaline."
+        ],
+        "final_answer": "Option (3): Concentrated aqueous NaOH or KOH",
+        "why_not_others": "An acidic electrolyte (dilute $H_2SO_4$ or $CH_3COOH$) is not the one used in this cell. Molten NaCl is an electrolyte for electrolysis, not for this fuel cell.",
+        "common_trap": "Assuming every cell uses an acidic electrolyte, by analogy with the lead storage battery.",
+        "time_saving_tip": "The electrode reactions contain $OH^-$, so the electrolyte must be alkaline."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "For the cell reaction of a fuel cell under standard conditions, $\\Delta G^\\circ = -240$ kJ $mol^{-1}$ and $\\Delta H^\\circ = -300$ kJ $mol^{-1}$. What is the theoretical (thermodynamic) efficiency of this fuel cell?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20%",
+        "80%",
+        "125%",
+        "70%"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The theoretical efficiency of a fuel cell is $\\eta = \\frac{\\Delta G}{\\Delta H}$.",
+        "steps": [
+          "$\\eta = \\frac{\\Delta G^\\circ}{\\Delta H^\\circ} = \\frac{-240}{-300}$.",
+          "$\\eta = 0.80$, which is 80%."
+        ],
+        "final_answer": "Option (2): 80%",
+        "why_not_others": "125% comes from inverting the ratio ($\\Delta H/\\Delta G$), and an efficiency cannot exceed 100%. 20% is $1 - \\eta$, the fraction of energy not converted. 70% is the typical practical efficiency quoted for fuel cells, not the value calculated from the given data.",
+        "common_trap": "Writing the ratio upside down as $\\frac{\\Delta H}{\\Delta G}$.",
+        "time_saving_tip": "Efficiency must be below 100%, so $|\\Delta G|$ goes in the numerator."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "Which of the following correctly represents the reaction taking place at the anode of the $H_2$-$O_2$ fuel cell that uses concentrated aqueous KOH as electrolyte?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$O_2 + 2H_2O + 4e^- \\rightarrow 4OH^-$",
+        "$4OH^- \\rightarrow O_2 + 2H_2O + 4e^-$",
+        "$2H_2O + 2e^- \\rightarrow H_2 + 2OH^-$",
+        "$2H_2 + 4OH^- \\rightarrow 4H_2O + 4e^-$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Oxidation always occurs at the anode. In this fuel cell, the fuel $H_2$ is oxidised in the alkaline medium.",
+        "steps": [
+          "Anode = oxidation, and the fuel being oxidised is $H_2$.",
+          "In alkaline medium: $2H_2 + 4OH^- \\rightarrow 4H_2O + 4e^-$.",
+          "Electrons are released, which confirms oxidation."
+        ],
+        "final_answer": "Option (4): $2H_2 + 4OH^- \\rightarrow 4H_2O + 4e^-$",
+        "why_not_others": "Option (1) is the reduction of $O_2$, which is the cathode reaction. Option (2) is an oxidation, but it produces $O_2$, whereas $O_2$ is consumed in the cell. Option (3) is a reduction that forms $H_2$, which is the reverse of what happens.",
+        "common_trap": "Picking the $O_2$ half-reaction because it also contains $OH^-$ and $H_2O$, without checking whether it is an oxidation or a reduction.",
+        "time_saving_tip": "Look for the half-reaction that consumes $H_2$ and releases electrons."
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The $H_2$-$O_2$ fuel cell has an efficiency of about 70%, compared with about 40% for thermal power plants.",
+        "R": "The water produced in the $H_2$-$O_2$ fuel cell of the Apollo space programme was used as drinking water by the astronauts."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A fuel cell is highly efficient because chemical energy is converted directly into electrical energy.",
+        "steps": [
+          "A is true: fuel cells are about 70% efficient, while thermal plants are about 40% efficient.",
+          "R is true: the astronauts used the water from the fuel cell as drinking water.",
+          "The high efficiency comes from direct energy conversion. The use of the product water has nothing to do with efficiency."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) are ruled out. R does not explain A, so option (1) is ruled out.",
+        "common_trap": "Treating any true fact about the same cell as the explanation of the assertion.",
+        "time_saving_tip": "Ask whether R gives the reason behind A, namely direct conversion of energy. Here it does not."
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the $H_2$-$O_2$ fuel cell, $O_2$ is reduced to $OH^-$ ions at the anode.",
+        "II": "The overall reaction of the $H_2$-$O_2$ fuel cell results in a net consumption of $OH^-$ ions from the electrolyte, since $OH^-$ appears as a reactant in the anode reaction."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In this cell, $H_2$ is oxidised at the anode and $O_2$ is reduced at the cathode. The overall reaction is $2H_2 + O_2 \\rightarrow 2H_2O$.",
+        "steps": [
+          "Reduction of $O_2$ ($O_2 + 2H_2O + 4e^- \\rightarrow 4OH^-$) occurs at the cathode, not the anode, so Statement I is incorrect.",
+          "Anode: $2H_2 + 4OH^- \\rightarrow 4H_2O + 4e^-$ consumes 4 $OH^-$.",
+          "Cathode: the reduction of $O_2$ produces 4 $OH^-$.",
+          "Adding the two gives $2H_2 + O_2 \\rightarrow 2H_2O$, with no net change in $OH^-$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I places the cathode reaction at the anode. Statement II ignores the $OH^-$ regenerated at the cathode. Since both are false, options (1), (3) and (4) are ruled out.",
+        "common_trap": "Judging the net change in electrolyte from one half-reaction alone instead of adding both half-reactions.",
+        "time_saving_tip": "The overall equation $2H_2 + O_2 \\rightarrow 2H_2O$ contains no $OH^-$, so there is no net consumption of $OH^-$."
+      }
+    }
+  ]
+}

@@ -1,0 +1,624 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A particle moving along the x-axis starts at $x = +4\\ m$ and ends at $x = -6\\ m$. What is its displacement?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-10\\ m$",
+        "$+10\\ m$",
+        "$-2\\ m$",
+        "$+2\\ m$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Displacement in 1D is $\\Delta x = x_2 - x_1$. Its sign gives the direction.",
+        "steps": [
+          "Initial position $x_1 = +4\\ m$ and final position $x_2 = -6\\ m$.",
+          "$\\Delta x = -6 - (+4) = -10\\ m$.",
+          "The negative sign means the displacement is along the negative x-direction."
+        ],
+        "final_answer": "Option (1): $-10\\ m$",
+        "why_not_others": "$+10\\ m$ drops the sign. $-2\\ m$ and $+2\\ m$ come from adding the coordinates instead of subtracting them.",
+        "common_trap": "Computing $x_1 - x_2$, or ignoring the sign of displacement in 1D motion.",
+        "time_saving_tip": "Always use final minus initial."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A particle starts at $x = 0$, moves along the x-axis to $x = +8\\ m$, then turns back and stops at $x = -3\\ m$. What are its path length and displacement, respectively?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$19\\ m$, $+3\\ m$",
+        "$19\\ m$, $-3\\ m$",
+        "$5\\ m$, $-3\\ m$",
+        "$11\\ m$, $-3\\ m$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Path length adds the lengths of every leg of the motion. Displacement depends only on the initial and final positions.",
+        "steps": [
+          "First leg: from 0 to $+8\\ m$, a length of $8\\ m$.",
+          "Second leg: from $+8\\ m$ to $-3\\ m$, a length of $11\\ m$.",
+          "Path length $= 8 + 11 = 19\\ m$.",
+          "Displacement $= -3 - 0 = -3\\ m$."
+        ],
+        "final_answer": "Option (2): $19\\ m$, $-3\\ m$",
+        "why_not_others": "$+3\\ m$ has the wrong sign. $5\\ m$ is $8 - 3$, which wrongly subtracts the legs. $11\\ m$ counts only the return leg.",
+        "common_trap": "Treating path length as $|x_2 - x_1|$ even though the particle reversed direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A passenger sits still on a seat inside a train that is moving along a straight track. Which statement correctly describes the passenger's state?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The passenger is at rest in every frame of reference",
+        "The passenger is in motion in every frame of reference",
+        "The passenger is at rest relative to the train but in motion relative to the platform",
+        "The passenger is in motion relative to the train but at rest relative to the platform"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Rest and motion are relative. They depend on the chosen frame of reference.",
+        "steps": [
+          "Relative to the train, the passenger's position does not change, so the passenger is at rest.",
+          "Relative to the platform, the passenger's position changes with time, so the passenger is in motion."
+        ],
+        "final_answer": "Option (3): The passenger is at rest relative to the train but in motion relative to the platform",
+        "why_not_others": "Options (1) and (2) treat rest or motion as absolute. Option (4) reverses the two frames.",
+        "common_trap": "Thinking that rest or motion can be stated without naming a frame.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For a body that moves along a closed path and returns to its starting point, both the displacement and the path length are zero.",
+        "R": "Displacement depends only on the initial and final positions and not on the path followed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "On a closed path, displacement is zero but path length is not.",
+        "steps": [
+          "The initial and final positions are the same, so the displacement is zero.",
+          "The body actually covered a path, so the path length is positive. A is therefore false.",
+          "R correctly states the definition of displacement, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A cannot be true, because path length is not zero for a closed path. This rules out options (1), (2) and (3).",
+        "common_trap": "Assuming that zero displacement means zero distance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the magnitude of a particle's displacement in one-dimensional motion equals its path length, the particle must have moved in the positive x-direction.",
+        "II": "If a particle moving along the x-axis has a path length greater than the magnitude of its displacement, the particle must have reversed its direction at least once."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In straight-line motion, path length equals the magnitude of displacement only when there is no reversal.",
+        "steps": [
+          "Equality requires only that the particle never reverses. It may move steadily in the negative x-direction, so I is incorrect.",
+          "In 1D motion without reversal, path length equals $|\\Delta x|$. If path length is greater than $|\\Delta x|$, there must have been a reversal, so II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I wrongly ties equality to a particular direction rather than to the absence of reversal.",
+        "common_trap": "Confusing 'no reversal' with 'positive direction'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "The position-time graph of a particle is a straight line passing through $(t = 0, x = 2\\ m)$ and $(t = 4\\ s, x = 14\\ m)$. What is the velocity of the particle?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.5\\ m\\,s^{-1}$",
+        "$3\\ m\\,s^{-1}$",
+        "$12\\ m\\,s^{-1}$",
+        "$4\\ m\\,s^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The slope of the x-t graph gives the velocity. A straight line means uniform velocity.",
+        "steps": [
+          "Slope $= \\frac{14 - 2}{4 - 0}$.",
+          "Slope $= \\frac{12}{4} = 3\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $3\\ m\\,s^{-1}$",
+        "why_not_others": "$3.5$ divides the final position by time. $12$ is the change in position, not the slope. $4$ adds the two positions before dividing.",
+        "common_trap": "Using $\\frac{x}{t}$ instead of $\\frac{\\Delta x}{\\Delta t}$ when the line does not pass through the origin.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "The velocity of a particle moving along a straight line decreases uniformly from $+10\\ m\\,s^{-1}$ at $t = 0$ to $-10\\ m\\,s^{-1}$ at $t = 4\\ s$. What distance does the particle cover from $t = 0$ to $t = 4\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0\\ m$",
+        "$20\\ m$",
+        "$40\\ m$",
+        "$10\\ m$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Distance is the sum of the absolute areas under the v-t graph.",
+        "steps": [
+          "The v-t graph is a straight line that crosses the time axis at $t = 2\\ s$.",
+          "Area from 0 to 2 s $= \\frac{1}{2}\\times 2 \\times 10 = 10\\ m$.",
+          "Area from 2 to 4 s $= -10\\ m$, which has magnitude $10\\ m$.",
+          "Distance $= 10 + 10 = 20\\ m$."
+        ],
+        "final_answer": "Option (2): $20\\ m$",
+        "why_not_others": "$0\\ m$ is the displacement. $40\\ m$ uses a rectangle instead of triangles. $10\\ m$ counts only one triangle.",
+        "common_trap": "Taking signed areas, which gives displacement, when distance is asked.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A particle moving along a straight line has initial velocity $2\\ m\\,s^{-1}$. Its acceleration is $+3\\ m\\,s^{-2}$ from $t = 0$ to $t = 4\\ s$ and $-2\\ m\\,s^{-2}$ from $t = 4\\ s$ to $t = 6\\ s$. Using the area under the acceleration-time graph, what is its velocity at $t = 6\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$8\\ m\\,s^{-1}$",
+        "$18\\ m\\,s^{-1}$",
+        "$10\\ m\\,s^{-1}$",
+        "$12\\ m\\,s^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The area under the a-t graph gives the change in velocity.",
+        "steps": [
+          "Area from 0 to 4 s $= 3 \\times 4 = 12\\ m\\,s^{-1}$.",
+          "Area from 4 to 6 s $= -2 \\times 2 = -4\\ m\\,s^{-1}$.",
+          "Change in velocity $= 12 - 4 = 8\\ m\\,s^{-1}$.",
+          "Final velocity $= 2 + 8 = 10\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (3): $10\\ m\\,s^{-1}$",
+        "why_not_others": "$8$ forgets the initial velocity. $18$ adds the magnitudes of the areas. $12$ ignores the deceleration phase.",
+        "common_trap": "Treating the area below the time axis as positive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Slope of the position-time graph"
+          },
+          {
+            "label": "B",
+            "text": "Slope of the velocity-time graph"
+          },
+          {
+            "label": "C",
+            "text": "Area under the velocity-time graph"
+          },
+          {
+            "label": "D",
+            "text": "Area under the acceleration-time graph"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Acceleration"
+          },
+          {
+            "label": "II",
+            "text": "Change in velocity"
+          },
+          {
+            "label": "III",
+            "text": "Velocity"
+          },
+          {
+            "label": "IV",
+            "text": "Displacement"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Slopes and areas of the kinematic graphs give related quantities.",
+        "steps": [
+          "The x-t slope is velocity: A-III.",
+          "The v-t slope is acceleration: B-I.",
+          "The v-t area is displacement: C-IV.",
+          "The a-t area is the change in velocity: D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) swaps the two slopes. Option (3) swaps the two areas. Option (4) mixes slopes with areas.",
+        "common_trap": "Confusing the slope of a graph with the area under it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about motion graphs are correct?",
+      "statements": {
+        "A": "A position-time graph that is a straight line parallel to the time axis represents a body at rest.",
+        "B": "For uniform acceleration, the velocity-time graph is a parabola.",
+        "C": "A position-time graph that curves upward (concave up) indicates positive acceleration.",
+        "D": "The velocity changes sign at the instant the velocity-time graph crosses the time axis.",
+        "E": "The area under the velocity-time graph, with area below the time axis taken as negative, gives the distance travelled."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Shapes, slopes and areas of the x-t and v-t graphs.",
+        "steps": [
+          "A is true: zero slope means zero velocity.",
+          "B is false: for uniform acceleration, the v-t graph is a straight line and the x-t graph is the parabola.",
+          "C is true: an x-t graph that is concave up shows positive acceleration.",
+          "D is true: crossing the time axis means the velocity changes sign.",
+          "E is false: signed area gives displacement, not distance."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Option (1) misses D. Option (2) includes B. Option (3) includes E and misses A.",
+        "common_trap": "Swapping the shapes of the x-t and v-t graphs for uniform acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "A car moves at $72\\ km\\,h^{-1}$. What is its speed in SI units?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$259.2\\ m\\,s^{-1}$",
+        "$20\\ m\\,s^{-1}$",
+        "$1.2\\ m\\,s^{-1}$",
+        "$7.2\\ m\\,s^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$1\\ km\\,h^{-1} = \\frac{5}{18}\\ m\\,s^{-1}$.",
+        "steps": [
+          "$72 \\times \\frac{5}{18} = 20\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $20\\ m\\,s^{-1}$",
+        "why_not_others": "$259.2$ multiplies by $\\frac{18}{5}$ instead of $\\frac{5}{18}$. $1.2$ divides by 60. $7.2$ divides by 10.",
+        "common_trap": "Inverting the conversion factor.",
+        "time_saving_tip": "Dividing by 3.6 is the same as multiplying by $\\frac{5}{18}$."
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "Which of the following bodies must have zero acceleration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A body moving with constant speed along a circle",
+        "A body moving with constant speed along any path",
+        "A body whose speed is constant but whose direction keeps changing",
+        "A body moving with constant velocity"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Constant velocity means zero acceleration. A change in direction alone produces acceleration.",
+        "steps": [
+          "Constant velocity means both magnitude and direction are unchanged, so the acceleration is zero.",
+          "Constant speed allows the direction to change, as in circular motion, so acceleration may be non-zero."
+        ],
+        "final_answer": "Option (4): A body moving with constant velocity",
+        "why_not_others": "Options (1) and (3) involve a changing direction, so the body accelerates. In option (2), the path may curve.",
+        "common_trap": "Equating constant speed with zero acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A car is in uniform motion along a straight road at $54\\ km\\,h^{-1}$. What is the magnitude of its displacement in 2 minutes?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6480\\ m$",
+        "$1800\\ m$",
+        "$108\\ m$",
+        "$900\\ m$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In uniform motion the velocity is constant, so displacement equals velocity times time.",
+        "steps": [
+          "$54\\ km\\,h^{-1} = 54 \\times \\frac{5}{18} = 15\\ m\\,s^{-1}$.",
+          "$t = 2\\ min = 120\\ s$.",
+          "Displacement $= 15 \\times 120 = 1800\\ m$."
+        ],
+        "final_answer": "Option (2): $1800\\ m$",
+        "why_not_others": "$6480$ uses $54$ without converting units. $108$ multiplies $54 \\times 2$. $900$ uses only 60 s.",
+        "common_trap": "Mixing $km\\,h^{-1}$ with seconds.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A body in uniform circular motion has acceleration even though its speed is constant.",
+        "R": "Constant velocity always implies constant speed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A change in direction alone produces acceleration.",
+        "steps": [
+          "A is true: the direction of velocity changes continuously in circular motion.",
+          "R is true: constant velocity means the magnitude is constant too.",
+          "R states the converse case and does not explain why constant speed can occur with acceleration."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not mention the change in direction, which is the real reason for A. Both statements are true, so options (3) and (4) fail.",
+        "common_trap": "Picking option (1) simply because both statements are true and related.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A body whose speed remains constant throughout its motion can still be accelerating.",
+        "II": "If the velocity of a body changes only in direction and not in magnitude, the body is in non-uniform motion."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Non-uniform motion means the velocity changes in magnitude, in direction, or in both.",
+        "steps": [
+          "I: a change in direction at constant speed gives acceleration, so I is correct.",
+          "II: a change in direction alone is a change in velocity, so the motion is non-uniform. II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Rejecting II assumes non-uniform motion needs a change in speed.",
+        "common_trap": "Judging uniform motion by speed instead of velocity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A cyclist moving along a straight road in one direction covers $120\\ m$ in the first $10\\ s$ and $80\\ m$ in the next $10\\ s$. What is the average speed of the cyclist?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ m\\,s^{-1}$",
+        "$20\\ m\\,s^{-1}$",
+        "$10\\ m\\,s^{-1}$",
+        "$4\\ m\\,s^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Average speed is the total path length divided by the total time.",
+        "steps": [
+          "Total path length $= 120 + 80 = 200\\ m$.",
+          "Total time $= 20\\ s$.",
+          "Average speed $= \\frac{200}{20} = 10\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (3): $10\\ m\\,s^{-1}$",
+        "why_not_others": "$12$ uses only the first interval. $20$ divides by $10\\ s$. $4$ uses the difference of the distances.",
+        "common_trap": "Dividing by one interval instead of the total time.",
+        "time_saving_tip": "For equal time intervals, average speed is the arithmetic mean: $\\frac{12+8}{2} = 10$."
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A bus covers the first half of a straight route at $30\\ km\\,h^{-1}$ and the second, equal half at $60\\ km\\,h^{-1}$. What is its average speed for the whole route?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$45\\ km\\,h^{-1}$",
+        "$42.4\\ km\\,h^{-1}$",
+        "$40\\ km\\,h^{-1}$",
+        "$90\\ km\\,h^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For equal distances, average speed $= \\frac{2v_1v_2}{v_1+v_2}$.",
+        "steps": [
+          "$\\frac{2 \\times 30 \\times 60}{30 + 60} = \\frac{3600}{90}$.",
+          "$\\frac{3600}{90} = 40\\ km\\,h^{-1}$."
+        ],
+        "final_answer": "Option (3): $40\\ km\\,h^{-1}$",
+        "why_not_others": "$45$ is the arithmetic mean, which is valid only for equal times. $42.4$ is the geometric mean. $90$ is the sum of the speeds.",
+        "common_trap": "Using $\\frac{v_1+v_2}{2}$ for equal distances.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "The position of a particle moving along the x-axis is $x(t) = t^2 - 4t + 3$, where $x$ is in metres and $t$ in seconds. What is its average speed from $t = 0$ to $t = 5\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\ m\\,s^{-1}$",
+        "$1.8\\ m\\,s^{-1}$",
+        "$6.0\\ m\\,s^{-1}$",
+        "$2.6\\ m\\,s^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Check for reversal where $v = 0$, then add the distances piece by piece.",
+        "steps": [
+          "$v = 2t - 4 = 0$ gives $t = 2\\ s$, where the particle reverses.",
+          "$x(0) = 3\\ m$, $x(2) = -1\\ m$, $x(5) = 8\\ m$.",
+          "Distance $= |{-1} - 3| + |8 - (-1)| = 4 + 9 = 13\\ m$.",
+          "Average speed $= \\frac{13}{5} = 2.6\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (4): $2.6\\ m\\,s^{-1}$",
+        "why_not_others": "$1.0$ is the magnitude of average velocity, $\\frac{8-3}{5}$. $1.8$ uses only the $9\\ m$ leg. $6.0$ is the instantaneous velocity at $t = 5\\ s$.",
+        "common_trap": "Ignoring the reversal at $t = 2\\ s$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Average speed when two equal distances are covered at $20\\ m\\,s^{-1}$ and $30\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "B",
+            "text": "Average speed when two equal time intervals are spent at $20\\ m\\,s^{-1}$ and $30\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "C",
+            "text": "Magnitude of average velocity for a straight-line round trip of $100\\ m$ each way completed in $10\\ s$"
+          },
+          {
+            "label": "D",
+            "text": "Average speed for the same round trip"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$0\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "II",
+            "text": "$20\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "III",
+            "text": "$24\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "IV",
+            "text": "$25\\ m\\,s^{-1}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Equal distances give the harmonic-type mean, equal times give the arithmetic mean, and a round trip has zero average velocity.",
+        "steps": [
+          "A: $\\frac{2\\times20\\times30}{50} = 24\\ m\\,s^{-1}$, so A-III.",
+          "B: $\\frac{20+30}{2} = 25\\ m\\,s^{-1}$, so B-IV.",
+          "C: net displacement is zero, so average velocity is 0. C-I.",
+          "D: $\\frac{200}{10} = 20\\ m\\,s^{-1}$, so D-II."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Options (1) and (3) swap the two means. Options (2) and (3) swap average speed with average velocity for the round trip.",
+        "common_trap": "Using the arithmetic mean for equal distances.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about average and instantaneous quantities are correct?",
+      "statements": {
+        "A": "Average speed is always greater than or equal to the magnitude of average velocity.",
+        "B": "Instantaneous speed equals the magnitude of instantaneous velocity.",
+        "C": "For a round trip, the average speed is zero.",
+        "D": "Instantaneous velocity is the limit of average velocity as the time interval tends to zero.",
+        "E": "If a particle reverses direction at an instant within a time interval, its average speed over that interval equals the magnitude of its average velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Path length is at least the magnitude of displacement, and the two are equal only when there is no reversal.",
+        "steps": [
+          "A is true, because path length is greater than or equal to the magnitude of displacement.",
+          "B is true by definition.",
+          "C is false: the average velocity is zero for a round trip, but the average speed is not.",
+          "D is true: $v = \\lim_{\\Delta t\\to0}\\frac{\\Delta x}{\\Delta t}$.",
+          "E is false: reversal makes the path length greater than the magnitude of displacement."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Options (1) and (4) include C. Options (3) and (4) include E.",
+        "common_trap": "Mixing up the round-trip results for average speed and average velocity.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

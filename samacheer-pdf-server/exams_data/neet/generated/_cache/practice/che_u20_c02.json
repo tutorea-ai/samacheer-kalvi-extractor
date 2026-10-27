@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Which indicator is most suitable for titrating acetic acid (a weak acid) against sodium hydroxide solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Methyl orange",
+        "Either methyl orange or phenolphthalein",
+        "Phenolphthalein",
+        "No simple indicator is suitable"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a weak acid against a strong base, the pH jump lies in the basic range, so phenolphthalein (pH 8.2-10) is used.",
+        "steps": [
+          "Acetic acid is a weak acid and $NaOH$ is a strong base.",
+          "At the equivalence point the solution is basic, and the steep part of the curve lies above pH 7.",
+          "Phenolphthalein changes colour in the range pH 8.2-10, which lies within this jump."
+        ],
+        "final_answer": "Option (3): Phenolphthalein",
+        "why_not_others": "Methyl orange (pH 3.1-4.4) changes colour too early for a weak acid. Either indicator works only for a strong acid with a strong base. No simple indicator works only for a weak acid with a weak base.",
+        "common_trap": "Assuming that any indicator works for any acid-base titration.",
+        "time_saving_tip": "Match the indicator to the stronger partner: strong base means phenolphthalein, strong acid means methyl orange."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "1.26 g of oxalic acid dihydrate ($H_2C_2O_4\\cdot2H_2O$, molar mass 126 g/mol) is dissolved in water to make 250 mL of solution. 25 mL of this solution requires 20 mL of $NaOH$ solution for complete neutralisation. The molarity of the $NaOH$ solution is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.05 M",
+        "0.064 M",
+        "0.14 M",
+        "0.10 M"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "At the equivalence point, $n_1M_1V_1 = n_2M_2V_2$. Oxalic acid has n-factor 2 as an acid.",
+        "steps": [
+          "Molarity of oxalic acid: $M = \\frac{1.26 \\times 1000}{126 \\times 250} = 0.04$ M.",
+          "Apply $n_1M_1V_1 = n_2M_2V_2$: $2 \\times 0.04 \\times 25 = 1 \\times M \\times 20$.",
+          "Solve: $M = \\frac{2}{20} = 0.10$ M."
+        ],
+        "final_answer": "Option (4): 0.10 M",
+        "why_not_others": "0.05 M comes from ignoring the n-factor of 2. 0.064 M comes from interchanging the two volumes. 0.14 M comes from using the anhydrous molar mass (90) instead of 126.",
+        "common_trap": "Forgetting that oxalic acid is dibasic, with n-factor 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Ammonium hydroxide solution in a conical flask is titrated with $HCl$ from the burette. Which indicator should be used, and what colour change marks the end point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Phenolphthalein; pink to colourless",
+        "Methyl orange; yellow to red",
+        "Methyl orange; red to yellow",
+        "Phenolphthalein; colourless to pink"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a strong acid with a weak base, the pH jump lies in the acidic range, so methyl orange is used. It is yellow in base and red in acid.",
+        "steps": [
+          "$NH_4OH$ is a weak base and $HCl$ is a strong acid, so methyl orange is the correct indicator.",
+          "The flask is initially basic, so methyl orange is yellow.",
+          "The first slight excess of acid turns it red, so the end point is yellow to red."
+        ],
+        "final_answer": "Option (2): Methyl orange; yellow to red",
+        "why_not_others": "Phenolphthalein is unsuitable for a strong acid-weak base titration. Red to yellow would be the change when base is added to acid, which is the reverse of this set-up.",
+        "common_trap": "Choosing phenolphthalein for a strong acid-weak base titration.",
+        "time_saving_tip": "The colour at the end point is the colour of the indicator in the medium being added from the burette."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Only a few drops of indicator are added in an acid-base titration.",
+        "R": "Indicators are strong electrolytes that do not react with the acid or the base being titrated."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Indicators are themselves weak acids or weak bases, so only a few drops are used to avoid consuming titrant.",
+        "steps": [
+          "In practice only a few drops of indicator are used, so A is true.",
+          "Indicators are weak acids or weak bases, not inert strong electrolytes, so R is false.",
+          "Because they react with the titrant, a large amount of indicator would introduce an error."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) cannot be correct. A is a correct practical rule, so option (4) is ruled out.",
+        "common_trap": "Thinking indicators are chemically inert.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a strong acid-strong base titration, either phenolphthalein or methyl orange can be used, because the pH jump extends roughly from 3 to 11.",
+        "II": "Methyl orange (colour change range pH 3.1-4.4) is suitable for titrating a strong acid with a weak base, because the pH jump in this titration lies in the acidic range."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The indicator's colour-change range must lie within the steep part of the titration curve.",
+        "steps": [
+          "Strong acid-strong base: the jump of about pH 3 to 11 contains both indicator ranges, so Statement I is correct.",
+          "Strong acid-weak base: the jump lies in the acidic region, which matches methyl orange (3.1-4.4), so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree with the indicator-selection rules, so no option marking either statement as incorrect is valid.",
+        "common_trap": "Believing that phenolphthalein is the only correct indicator for a strong acid-strong base titration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Which acid is used to acidify the solution in titrations with $KMnO_4$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Concentrated $HCl$",
+        "Dilute $H_2SO_4$",
+        "Dilute $HNO_3$",
+        "Concentrated $HNO_3$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Only dilute $H_2SO_4$ is used, because it is neither oxidised by $KMnO_4$ nor an oxidant itself.",
+        "steps": [
+          "$HCl$ is oxidised by $KMnO_4$ to $Cl_2$, which gives high readings.",
+          "$HNO_3$ is itself an oxidising agent and interferes with the titration.",
+          "Dilute $H_2SO_4$ does neither, so it is used."
+        ],
+        "final_answer": "Option (2): Dilute $H_2SO_4$",
+        "why_not_others": "$HCl$ consumes $KMnO_4$. Both dilute and concentrated $HNO_3$ act as oxidants.",
+        "common_trap": "Thinking that any strong acid can be used to acidify $KMnO_4$ titrations.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "20 mL of a 0.1 M $Fe^{2+}$ solution (from Mohr's salt) is titrated in acidic medium with 0.02 M $KMnO_4$. The volume of $KMnO_4$ solution required to reach the end point is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "100 mL",
+        "20 mL",
+        "40 mL",
+        "500 mL"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$MnO_4^- : Fe^{2+} = 1:5$, so $5M_{KMnO_4}V_{KMnO_4} = M_{Fe^{2+}}V_{Fe^{2+}}$.",
+        "steps": [
+          "Set up the relation: $5 \\times 0.02 \\times V = 0.1 \\times 20$.",
+          "Simplify: $0.1V = 2$.",
+          "Solve: $V = 20$ mL."
+        ],
+        "final_answer": "Option (2): 20 mL",
+        "why_not_others": "100 mL comes from assuming equal moles. 40 mL comes from using the oxalate ratio of 2:5. 500 mL comes from putting the factor 5 on the wrong side.",
+        "common_trap": "Using a 1:1 mole ratio between $KMnO_4$ and $Fe^{2+}$.",
+        "time_saving_tip": "Equivalents: $0.1 \\times 20 = 2$ meq of $Fe^{2+}$; the normality of $KMnO_4$ is $0.1$ N, so $V = 20$ mL."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "20 mL of 0.05 M oxalic acid is titrated in acidic medium and requires 25 mL of $KMnO_4$ solution to reach the end point. The molarity of the $KMnO_4$ solution is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.016 M",
+        "0.04 M",
+        "0.10 M",
+        "0.025 M"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For oxalic acid against $KMnO_4$: $5M_{KMnO_4}V_{KMnO_4} = 2M_{ox}V_{ox}$.",
+        "steps": [
+          "Set up the relation: $5 \\times M \\times 25 = 2 \\times 0.05 \\times 20$.",
+          "Simplify: $125M = 2$.",
+          "Solve: $M = 0.016$ M."
+        ],
+        "final_answer": "Option (1): 0.016 M",
+        "why_not_others": "0.04 M comes from assuming equal moles. 0.10 M comes from interchanging the factors 5 and 2. 0.025 M comes from interchanging the two volumes.",
+        "common_trap": "Using equal moles of $KMnO_4$ and oxalic acid instead of the 2:5 ratio.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Equivalent weight of $KMnO_4$ in acid medium"
+          },
+          {
+            "label": "B",
+            "text": "n-factor of oxalic acid in its reaction with $KMnO_4$"
+          },
+          {
+            "label": "C",
+            "text": "n-factor of $Fe^{2+}$ (Mohr's salt) in its reaction with $KMnO_4$"
+          },
+          {
+            "label": "D",
+            "text": "n-factor of $KMnO_4$ in acid medium"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "31.6"
+          },
+          {
+            "label": "II",
+            "text": "2"
+          },
+          {
+            "label": "III",
+            "text": "1"
+          },
+          {
+            "label": "IV",
+            "text": "5"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-III, C-II, D-IV",
+        "A-I, B-II, C-III, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In acid medium, $MnO_4^- \\rightarrow Mn^{2+}$ has n-factor 5, so $E = 158/5 = 31.6$. Oxalic acid has n-factor 2 and $Fe^{2+}$ has n-factor 1.",
+        "steps": [
+          "A: $E = 158/5 = 31.6$, so A-I.",
+          "B: $C_2O_4^{2-} \\rightarrow 2CO_2$ involves 2 electrons, so B-II.",
+          "C: $Fe^{2+} \\rightarrow Fe^{3+}$ involves 1 electron, so C-III.",
+          "D: $Mn$ changes from +7 to +2, so D-IV."
+        ],
+        "final_answer": "Option (3): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Options (1) and (4) confuse the equivalent weight with the n-factor of $KMnO_4$. Options (2) and (4) interchange the n-factors of oxalic acid and $Fe^{2+}$.",
+        "common_trap": "Confusing the equivalent weight (31.6) with the n-factor (5).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about redox titrations with $KMnO_4$ are correct?",
+      "statements": {
+        "A": "$KMnO_4$ is taken in the burette and the reducing agent in the conical flask.",
+        "B": "The end point is marked by the first permanent light pink colour.",
+        "C": "Mohr's salt solution is warmed to 60-70 °C before titration.",
+        "D": "$KMnO_4$ is a primary standard.",
+        "E": "$Mn^{2+}$ ions formed during the reaction autocatalyse the oxidation of oxalic acid."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and E only",
+        "B, D and E only",
+        "A, C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$KMnO_4$ acts as a self-indicator and is not a primary standard. Only oxalic acid is warmed; Mohr's salt is titrated cold.",
+        "steps": [
+          "A is true: $KMnO_4$ goes in the burette.",
+          "B is true: $KMnO_4$ is a self-indicator, and the first permanent light pink colour marks the end point.",
+          "C is false: heating lets air oxidise $Fe^{2+}$, so Mohr's salt is titrated at room temperature.",
+          "D is false: $KMnO_4$ is not available pure and decomposes in light.",
+          "E is true: the $Mn^{2+}$ formed autocatalyses the oxalate reaction."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Every other option includes C or D, and both of these statements are false.",
+        "common_trap": "Warming Mohr's salt solution in the same way as oxalic acid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "Which reagent gives a rosy-red precipitate with $Ni^{2+}$ ions?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Nessler's reagent",
+        "$K_4[Fe(CN)_6]$",
+        "Dimethylglyoxime",
+        "$KSCN$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$Ni^{2+}$ forms rosy-red nickel dimethylglyoximate, $[Ni(dmg)_2]$.",
+        "steps": [
+          "The reaction is $Ni^{2+} + 2\\,dmgH \\rightarrow [Ni(dmg)_2] + 2H^+$, which gives a rosy-red precipitate."
+        ],
+        "final_answer": "Option (3): Dimethylglyoxime",
+        "why_not_others": "Nessler's reagent is the test for $NH_4^+$. $K_4[Fe(CN)_6]$ is used to test for $Fe^{3+}$, $Cu^{2+}$ and $Zn^{2+}$. $KSCN$ gives a blood-red colour with $Fe^{3+}$.",
+        "common_trap": "Confusing the rosy-red $Ni$-dmg precipitate with the blood-red $Fe$-$SCN$ colour.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "In the precipitation of Group III cations, $NH_4Cl$ is added before $NH_4OH$ in order to",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "suppress the $OH^-$ concentration by the common-ion effect, so that only Group III hydroxides precipitate",
+        "increase the $S^{2-}$ concentration, so that Group IV sulphides precipitate",
+        "make the solution acidic, so that Group II sulphides precipitate",
+        "dissolve $PbCl_2$ left over from Group I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$NH_4^+$ from $NH_4Cl$ suppresses the ionisation of $NH_4OH$ by the common-ion effect.",
+        "steps": [
+          "Adding $NH_4Cl$ lowers $[OH^-]$.",
+          "Only hydroxides of very low solubility, such as $Fe(OH)_3$ and $Al(OH)_3$, precipitate at this lower $[OH^-]$."
+        ],
+        "final_answer": "Option (1): suppress the $OH^-$ concentration by the common-ion effect, so that only Group III hydroxides precipitate",
+        "why_not_others": "Raising $[S^{2-}]$ is the role of the ammoniacal medium in Group IV. Acidic medium is used in Group II. $NH_4Cl$ has no role in dissolving $PbCl_2$.",
+        "common_trap": "Mixing up the roles of the reagents used in Group III and Group IV.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A salt solution gives a yellow precipitate with $K_2CrO_4$, and the salt imparts an apple-green colour to the flame. The cation present is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Pb^{2+}$",
+        "$Ba^{2+}$",
+        "$Ca^{2+}$",
+        "$Cu^{2+}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$Ba^{2+}$ gives yellow $BaCrO_4$ and an apple-green flame.",
+        "steps": [
+          "A yellow chromate precipitate points to either $Ba^{2+}$ or $Pb^{2+}$.",
+          "The apple-green flame identifies $Ba^{2+}$."
+        ],
+        "final_answer": "Option (2): $Ba^{2+}$",
+        "why_not_others": "$Pb^{2+}$ also gives yellow $PbCrO_4$ but not an apple-green flame. $Ca^{2+}$ gives a brick-red flame. $Cu^{2+}$ gives a blue-green flame.",
+        "common_trap": "Choosing $Pb^{2+}$ on the basis of the yellow chromate alone.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When $H_2S$ is passed through a solution acidified with dilute $HCl$, $ZnS$ precipitates along with $CuS$.",
+        "R": "In the presence of dilute $HCl$, the $S^{2-}$ concentration is low, so only sulphides of very low $K_{sp}$ precipitate."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Low $[S^{2-}]$ in acid medium precipitates only Group II sulphides; $ZnS$ needs the higher $[S^{2-}]$ of an ammoniacal medium.",
+        "steps": [
+          "R is true: $H^+$ suppresses the ionisation of $H_2S$, which lowers $[S^{2-}]$.",
+          "Because of this, only very low $K_{sp}$ sulphides such as $CuS$ precipitate.",
+          "$ZnS$ precipitates in Group IV in ammoniacal medium, so A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are all ruled out.",
+        "common_trap": "Assuming that all metal sulphides precipitate whenever $H_2S$ is passed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "$Pb^{2+}$ can appear in both Group I and Group II, because $PbCl_2$ is only partly insoluble.",
+        "II": "In Group IV, the ammoniacal medium raises $[S^{2-}]$, so white $ZnS$ and black $NiS$ precipitate."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$PbCl_2$ is partly soluble, so some $Pb^{2+}$ passes into Group II. Ammoniacal $H_2S$ supplies the higher $[S^{2-}]$ needed for Group IV sulphides.",
+        "steps": [
+          "Statement I: $PbCl_2$ is partly soluble, so leftover $Pb^{2+}$ precipitates in Group II. This is correct.",
+          "Statement II: the ammoniacal medium increases $[S^{2-}]$, giving white $ZnS$ and black $NiS$. This is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree with the notes, so no option marking either statement as incorrect is valid.",
+        "common_trap": "Thinking that $Pb^{2+}$ is removed completely in Group I.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A salt gives brisk effervescence with dilute $H_2SO_4$, and the gas evolved turns lime water milky. The gas is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CO_2$",
+        "$H_2S$",
+        "$NO_2$",
+        "$HCl$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A carbonate gives $CO_2$ with dilute $H_2SO_4$, and $CO_2$ turns lime water milky by forming $CaCO_3$.",
+        "steps": [
+          "The gas comes from a carbonate reacting with dilute acid.",
+          "Lime water turns milky by the reaction $Ca(OH)_2 + CO_2 \\rightarrow CaCO_3 + H_2O$."
+        ],
+        "final_answer": "Option (1): $CO_2$",
+        "why_not_others": "$H_2S$ has a rotten-egg smell and blackens lead acetate paper. $NO_2$ appears as brown fumes. $HCl$ needs concentrated $H_2SO_4$ and gives white fumes with $NH_3$.",
+        "common_trap": null,
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "The oxidation state of iron in the brown ring complex $[Fe(H_2O)_5NO]^{2+}$ formed in the nitrate test is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "+2",
+        "+1",
+        "+3",
+        "0"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In the brown ring complex, NO is present as $NO^+$.",
+        "steps": [
+          "The overall charge is +2. Water is neutral and NO carries +1.",
+          "So the oxidation state of iron is $+2 - 1 = +1$."
+        ],
+        "final_answer": "Option (2): +1",
+        "why_not_others": "+2 comes from treating NO as neutral. +3 and 0 have no basis.",
+        "common_trap": "Assuming iron stays +2 because $FeSO_4$ is used.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A salt is heated with solid $K_2Cr_2O_7$ and concentrated $H_2SO_4$. Orange-red vapours are evolved, which give a yellow solution when passed into $NaOH$. This solution, acidified with acetic acid, gives a yellow precipitate with lead acetate. The anion present is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Br^-$",
+        "$I^-$",
+        "$NO_3^-$",
+        "$Cl^-$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "This is the chromyl chloride test, which only $Cl^-$ gives.",
+        "steps": [
+          "The orange-red vapours are $CrO_2Cl_2$.",
+          "In $NaOH$ they form yellow $Na_2CrO_4$, which gives yellow $PbCrO_4$ with lead acetate."
+        ],
+        "final_answer": "Option (4): $Cl^-$",
+        "why_not_others": "Bromides and iodides do not form $CrO_2X_2$. Nitrate is identified by the brown ring test.",
+        "common_trap": "Believing that $Br^-$ also gives the chromyl chloride test because of its reddish-brown vapours.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$S^{2-}$"
+          },
+          {
+            "label": "B",
+            "text": "$NO_2^-$"
+          },
+          {
+            "label": "C",
+            "text": "$SO_4^{2-}$"
+          },
+          {
+            "label": "D",
+            "text": "$I^-$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Violet colour with sodium nitroprusside"
+          },
+          {
+            "label": "II",
+            "text": "Turns $KI$-starch paper blue"
+          },
+          {
+            "label": "III",
+            "text": "White precipitate with $BaCl_2$, insoluble in conc. $HCl$"
+          },
+          {
+            "label": "IV",
+            "text": "Violet layer with $Cl_2$ water and $CCl_4$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each anion has its own confirmatory test.",
+        "steps": [
+          "$S^{2-}$ gives a violet colour with sodium nitroprusside, so A-I.",
+          "$NO_2^-$ turns $KI$-starch paper blue, so B-II.",
+          "$SO_4^{2-}$ gives $BaSO_4$, which is insoluble in conc. acid, so C-III.",
+          "$I^-$ releases $I_2$, which gives a violet $CCl_4$ layer, so D-IV."
+        ],
+        "final_answer": "Option (4): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option (1) interchanges the two 'violet' tests. Options (2) and (3) misassign the nitrite and sulphate tests.",
+        "common_trap": "Confusing the violet nitroprusside colour of sulphide with the violet iodine layer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about tests for anions are correct?",
+      "statements": {
+        "A": "$AgCl$ is white and soluble in $NH_4OH$.",
+        "B": "$AgI$ is yellow and readily soluble in $NH_4OH$.",
+        "C": "$NO_2^-$ interferes with the brown ring test for nitrate and is removed using sulphamic acid.",
+        "D": "$Br^-$ gives reddish-brown vapours when heated with concentrated $H_2SO_4$.",
+        "E": "$BaSO_4$ dissolves in concentrated $HCl$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only",
+        "A, C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The silver halides differ in solubility in $NH_4OH$, and $BaSO_4$ is insoluble in concentrated acids.",
+        "steps": [
+          "A is true: $AgCl$ is white and dissolves in $NH_4OH$.",
+          "B is false: $AgI$ is insoluble in $NH_4OH$.",
+          "C is true: sulphamic acid removes interfering nitrite.",
+          "D is true: $Br^-$ gives reddish-brown $Br_2$ vapours.",
+          "E is false: $BaSO_4$ is insoluble in conc. $HCl$."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Every other option includes B or E, and both of these statements are false.",
+        "common_trap": "Treating all silver halides as soluble in ammonia.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

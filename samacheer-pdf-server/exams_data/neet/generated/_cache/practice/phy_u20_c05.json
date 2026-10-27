@@ -1,0 +1,315 @@
+{
+  "questions": [
+    {
+      "slot": "t16_1",
+      "type": "single_correct",
+      "question": "A Zener diode is used as a voltage regulator. In which region of its characteristic curve is it operated for this purpose?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Forward bias, below the knee voltage",
+        "Reverse bias, in the breakdown region",
+        "Forward bias, beyond the knee voltage",
+        "Reverse bias, below the breakdown voltage"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A Zener diode is designed to work in reverse breakdown. There the voltage across it stays nearly constant at $V_Z$ over a wide range of current.",
+        "steps": [
+          "In reverse bias, the current is negligible until the voltage reaches $V_Z$.",
+          "At $V_Z$, the current rises sharply while the voltage stays almost constant.",
+          "This constant voltage over a wide current range is what makes voltage regulation possible."
+        ],
+        "final_answer": "Option (2): Reverse bias, in the breakdown region",
+        "why_not_others": "In forward bias, the Zener diode behaves like an ordinary diode and does not hold its voltage at $V_Z$. Below breakdown in reverse bias, the current is negligible, so no regulation takes place.",
+        "common_trap": "Expecting a Zener diode to regulate in forward bias, because its forward curve also looks steep beyond the knee.",
+        "time_saving_tip": "Remember the pairing: Zener regulation means reverse breakdown plus a series resistor."
+      }
+    },
+    {
+      "slot": "t16_2",
+      "type": "single_correct",
+      "question": "A Zener diode with $V_Z = 6\\ \\text{V}$ is used in a regulator circuit fed by a $15\\ \\text{V}$ supply. The total current drawn through the series resistor (Zener current plus load current) is $30\\ \\text{mA}$. What is the value of the series resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$300\\ \\Omega$",
+        "$500\\ \\Omega$",
+        "$200\\ \\Omega$",
+        "$700\\ \\Omega$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The series resistor drops the excess voltage: $R_s = \\frac{V_{in} - V_Z}{I}$, where I is the total current through it.",
+        "steps": [
+          "Voltage across the series resistor: $V_{in} - V_Z = 15 - 6 = 9\\ \\text{V}$.",
+          "$R_s = \\frac{9}{30 \\times 10^{-3}} = 300\\ \\Omega$."
+        ],
+        "final_answer": "Option (1): $300\\ \\Omega$",
+        "why_not_others": "$500\\ \\Omega$ comes from using the full $15\\ \\text{V}$. $200\\ \\Omega$ comes from using $V_Z$ alone. $700\\ \\Omega$ comes from adding $V_Z$ to $V_{in}$ instead of subtracting it.",
+        "common_trap": "Dividing the supply voltage by the current without subtracting the Zener voltage.",
+        "time_saving_tip": "Volts divided by milliamperes gives kilo-ohms directly: $9/30 = 0.3\\ \\text{k}\\Omega$."
+      }
+    },
+    {
+      "slot": "t16_3",
+      "type": "single_correct",
+      "question": "In a Zener regulator, the input voltage is $20\\ \\text{V}$, the Zener voltage is $8\\ \\text{V}$, the series resistance is $400\\ \\Omega$ and the load resistance is $1\\ \\text{k}\\Omega$. What is the current through the Zener diode?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30\\ \\text{mA}$",
+        "$38\\ \\text{mA}$",
+        "$22\\ \\text{mA}$",
+        "$8\\ \\text{mA}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$I_Z = I - I_L = \\frac{V_{in} - V_Z}{R_s} - \\frac{V_Z}{R_L}$",
+        "steps": [
+          "Total current: $I = \\frac{20 - 8}{400} = 0.030\\ \\text{A} = 30\\ \\text{mA}$.",
+          "Load current: $I_L = \\frac{8}{1000} = 8\\ \\text{mA}$.",
+          "Zener current: $I_Z = 30 - 8 = 22\\ \\text{mA}$."
+        ],
+        "final_answer": "Option (3): $22\\ \\text{mA}$",
+        "why_not_others": "$30\\ \\text{mA}$ is the total current through $R_s$. $8\\ \\text{mA}$ is the load current. $38\\ \\text{mA}$ comes from adding the load current instead of subtracting it.",
+        "common_trap": "Taking the whole series-resistor current as the Zener current and forgetting the current that flows through the load.",
+        "time_saving_tip": "Find the current through $R_s$ first, then subtract $V_Z/R_L$."
+      }
+    },
+    {
+      "slot": "t16_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A Zener diode regulates voltage when it is operated in forward bias, in the same way as an ordinary diode.",
+        "R": "The forward characteristic of a Zener diode is similar to that of an ordinary p-n junction diode."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A Zener diode regulates only in reverse breakdown. Its forward characteristic is simply like that of an ordinary diode.",
+        "steps": [
+          "Regulation needs the voltage to stay constant at $V_Z$, and this happens only beyond reverse breakdown.",
+          "So A is false.",
+          "The notes state that the forward characteristic of a Zener diode is like that of an ordinary diode, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Expecting a Zener diode to regulate in forward bias.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t16_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In a Zener regulator kept in breakdown, if the load resistance is decreased while the input voltage and series resistance stay unchanged, the current through the Zener diode decreases.",
+        "II": "The Zener voltage $V_Z$ is read from the part of the reverse characteristic where the current remains negligible as the reverse voltage is increased."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$I = \\frac{V_{in} - V_Z}{R_s}$ stays fixed, and $I_Z = I - \\frac{V_Z}{R_L}$. $V_Z$ is read from the vertical (sharply rising current) part of the reverse curve.",
+        "steps": [
+          "$V_{in}$, $V_Z$ and $R_s$ are fixed, so the total current I is constant.",
+          "Decreasing $R_L$ increases $I_L = V_Z/R_L$, so $I_Z = I - I_L$ decreases. Statement I is correct.",
+          "Where the current is negligible, the diode is still below breakdown.",
+          "$V_Z$ is read where the current rises sharply at nearly constant voltage. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II describes the pre-breakdown region, so options (1) and (4) fail. Statement I follows directly from the regulator formula, so option (2) fails.",
+        "common_trap": "Thinking the Zener current rises when the load draws more current. In fact, the fixed total current is shared, so the Zener's share falls.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t17_1",
+      "type": "single_correct",
+      "question": "While testing components with a multimeter in resistance mode, a student finds one component that shows the same steady, finite resistance when the leads are connected either way. This component is a",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "diode",
+        "LED",
+        "capacitor",
+        "resistor"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A resistor shows the same finite resistance in both directions, with no change over time.",
+        "steps": [
+          "The resistance is steady and does not change with time, so it is not a capacitor.",
+          "It is the same in both directions, so it is neither a diode nor an LED.",
+          "Therefore the component is a resistor."
+        ],
+        "final_answer": "Option (4): resistor",
+        "why_not_others": "A diode and an LED conduct in one direction only. A capacitor shows a transient deflection that decays to very high resistance.",
+        "common_trap": "Confusing a capacitor's initial deflection with a steady resistance reading.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t17_2",
+      "type": "single_correct",
+      "question": "A two-terminal component connected to a multimeter in resistance mode first shows a large deflection. The deflection gradually falls until the reading becomes very high resistance. When the leads are reversed, the same behaviour is seen again. The component is a",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "resistor",
+        "diode",
+        "LED",
+        "capacitor"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A capacitor allows a momentary charging current that decays to zero, and this happens in either direction.",
+        "steps": [
+          "A large deflection that decays to very high resistance shows charging.",
+          "The transient repeats when the leads are reversed, so the behaviour is not one-way.",
+          "This matches a capacitor."
+        ],
+        "final_answer": "Option (4): capacitor",
+        "why_not_others": "A resistor gives a steady reading that does not decay. A diode and an LED conduct steadily in one direction only and show high resistance on reversal; an LED would also glow.",
+        "common_trap": "Mistaking the high final reading for diode-like reverse blocking, and ignoring that the transient appears in both directions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t17_3",
+      "type": "single_correct",
+      "question": "When a mixed collection of components is tested with a multimeter, which observation distinguishes an LED from an ordinary diode?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It emits light while conducting in the forward direction",
+        "It shows low resistance in one direction and very high resistance on reversal",
+        "It shows the same resistance in both directions",
+        "It shows a deflection that decays with time in both directions"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "An LED behaves like a diode but also glows when forward biased.",
+        "steps": [
+          "Both a diode and an LED show one-way conduction, so that test alone cannot tell them apart.",
+          "Only the LED emits light when forward biased."
+        ],
+        "final_answer": "Option (1): It emits light while conducting in the forward direction",
+        "why_not_others": "Option (2) is common to both the diode and the LED. Option (3) describes a resistor. Option (4) describes a capacitor.",
+        "common_trap": "Choosing one-way conduction, which identifies the diode family but does not separate an LED from a diode.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t17_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Same steady finite resistance in both directions"
+          },
+          {
+            "label": "B",
+            "text": "Conducts in one direction only, with no light"
+          },
+          {
+            "label": "C",
+            "text": "Conducts in one direction only and glows"
+          },
+          {
+            "label": "D",
+            "text": "Momentary current that decays to zero in either direction"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Capacitor"
+          },
+          {
+            "label": "II",
+            "text": "LED"
+          },
+          {
+            "label": "III",
+            "text": "Resistor"
+          },
+          {
+            "label": "IV",
+            "text": "Diode"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Multimeter signatures: resistor gives a steady, two-way reading; diode conducts one way without light; LED conducts one way with light; capacitor shows a decaying transient both ways.",
+        "steps": [
+          "A: a steady reading in both directions means a resistor (III).",
+          "B: one-way conduction without light means a diode (IV).",
+          "C: one-way conduction with light means an LED (II).",
+          "D: a decaying transient in both directions means a capacitor (I)."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the resistor and diode. Option (2) swaps the diode and LED. Option (3) swaps the resistor and capacitor.",
+        "common_trap": "Swapping the diode and LED, since both show one-way conduction.",
+        "time_saving_tip": "Fix C as the LED (only it glows) and D as the capacitor (only it decays). This removes options (2) and (3) at once."
+      }
+    },
+    {
+      "slot": "t17_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about identifying components with a multimeter are correct?",
+      "statements": {
+        "A": "A diode shows low resistance in one direction and very high resistance when the leads are reversed.",
+        "B": "A capacitor shows a steady finite resistance that is the same in both directions.",
+        "C": "An LED glows when it is forward biased during the test.",
+        "D": "After a capacitor has charged and shows very high resistance, reversing the leads produces the decaying deflection again.",
+        "E": "A component with many terminals is likely to be an integrated circuit."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "B, C and D only",
+        "A, C and E only",
+        "A, C, D and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each component has a distinctive multimeter signature. An IC is recognised by having many terminals.",
+        "steps": [
+          "A is correct: a diode conducts in one direction only.",
+          "B is incorrect: a steady, equal reading in both directions is a resistor. A capacitor shows a transient that decays to very high resistance.",
+          "C is correct: an LED glows when forward biased.",
+          "D is correct: the transient reappears when the leads are reversed.",
+          "E is correct: an IC has multiple terminals."
+        ],
+        "final_answer": "Option (4): A, C, D and E only",
+        "why_not_others": "Options (1) and (2) include the false statement B. Option (3) leaves out the correct statement D.",
+        "common_trap": "Thinking a charged capacitor stays at high resistance after the leads are reversed, and so rejecting D.",
+        "time_saving_tip": "Spotting B as false removes options (1) and (2) immediately."
+      }
+    }
+  ]
+}

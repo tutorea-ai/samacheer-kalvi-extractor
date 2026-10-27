@@ -1,0 +1,1874 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u04",
+  "slug": "work-energy-and-power",
+  "questions": [
+    {
+      "q_id": "neet_phy_u04_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work done by a constant force and a variable force",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A constant force of $10\\ \\text{N}$ acts on a block that is displaced $4\\ \\text{m}$ along a straight line. The force makes an angle of $60^\\circ$ with the displacement. What is the work done by the force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$40\\ \\text{J}$",
+        "$20\\ \\text{J}$",
+        "$34.6\\ \\text{J}$",
+        "$0\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Work by a constant force is $W = Fd\\cos\\theta$.",
+        "steps": [
+          "$W = Fd\\cos\\theta = 10 \\times 4 \\times \\cos 60^\\circ$.",
+          "$W = 40 \\times 0.5 = 20\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $20\\ \\text{J}$",
+        "why_not_others": "$40\\ \\text{J}$ ignores the angle. $34.6\\ \\text{J}$ uses $\\sin 60^\\circ$ instead of $\\cos 60^\\circ$. Zero work requires the force to be perpendicular to the displacement.",
+        "common_trap": "Using $\\sin\\theta$ in place of $\\cos\\theta$.",
+        "time_saving_tip": "Since $\\cos 60^\\circ = \\tfrac{1}{2}$, the answer is half of $Fd$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work done by a constant force and a variable force",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A force $F = 6x$ (in newton, with $x$ in metre) acts on a particle along the x-axis. What is the work done by this force as the particle moves from $x = 1\\ \\text{m}$ to $x = 3\\ \\text{m}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ \\text{J}$",
+        "$24\\ \\text{J}$",
+        "$36\\ \\text{J}$",
+        "$27\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a variable force, $W = \\int_{x_i}^{x_f} F(x)\\,dx$.",
+        "steps": [
+          "$W = \\int_1^3 6x\\,dx = [3x^2]_1^3$.",
+          "$W = 27 - 3 = 24\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $24\\ \\text{J}$",
+        "why_not_others": "$36\\ \\text{J}$ comes from multiplying $F(3) = 18\\ \\text{N}$ by the $2\\ \\text{m}$ displacement. $27\\ \\text{J}$ evaluates only the upper limit. $12\\ \\text{J}$ comes from $3(x_2 - x_1)^2$.",
+        "common_trap": "Treating a variable force as constant, i.e. writing $W = Fd$.",
+        "time_saving_tip": "For a linear force, use the average force: $\\frac{6 + 18}{2} \\times 2 = 24\\ \\text{J}$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work done by a constant force and a variable force",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A force acting along the x-axis on a particle varies with position as follows. It rises linearly from $0$ at $x = 0$ to $10\\ \\text{N}$ at $x = 4\\ \\text{m}$. It stays constant at $10\\ \\text{N}$ up to $x = 6\\ \\text{m}$. It then decreases linearly to $-10\\ \\text{N}$ at $x = 10\\ \\text{m}$, passing through zero at $x = 8\\ \\text{m}$. What is the net work done by the force from $x = 0$ to $x = 10\\ \\text{m}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60\\ \\text{J}$",
+        "$40\\ \\text{J}$",
+        "$50\\ \\text{J}$",
+        "$20\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Work equals the area under the F-x graph, and area below the axis counts as negative.",
+        "steps": [
+          "From $0$ to $4\\ \\text{m}$: $\\tfrac{1}{2}(4)(10) = 20\\ \\text{J}$.",
+          "From $4$ to $6\\ \\text{m}$: $2 \\times 10 = 20\\ \\text{J}$.",
+          "From $6$ to $8\\ \\text{m}$: $\\tfrac{1}{2}(2)(10) = +10\\ \\text{J}$.",
+          "From $8$ to $10\\ \\text{m}$: $-\\tfrac{1}{2}(2)(10) = -10\\ \\text{J}$.",
+          "Net work $= 20 + 20 + 10 - 10 = 40\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $40\\ \\text{J}$",
+        "why_not_others": "$60\\ \\text{J}$ adds the area below the axis as positive. $50\\ \\text{J}$ stops the calculation at $x = 8\\ \\text{m}$. $20\\ \\text{J}$ counts only the first triangle.",
+        "common_trap": "Ignoring the negative sign of the area below the x-axis.",
+        "time_saving_tip": "The triangles from $6$ to $8\\ \\text{m}$ and from $8$ to $10\\ \\text{m}$ cancel, so only $20 + 20$ remains."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work done by a constant force and a variable force",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A coolie carrying a load on his head and walking on a level horizontal road does positive work on the load against gravity.",
+        "R": "The work done by a force is zero when the force is perpendicular to the displacement."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$W = Fd\\cos\\theta$ is zero when $\\theta = 90^\\circ$.",
+        "steps": [
+          "The coolie applies a vertical force on the load, while the displacement is horizontal.",
+          "With $\\theta = 90^\\circ$, the work done on the load is zero, so A is false.",
+          "R is a correct general statement."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Equating physical effort with work done in the physics sense.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work done by a constant force and a variable force",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A block of mass $m$ slides from $x = 0$ to $x = L$ on a horizontal floor where the coefficient of friction is $\\mu(x) = \\mu_0\\left(1 - \\frac{x}{L}\\right)$. The work done by friction is $-\\mu_0 mgL$.",
+        "II": "A constant force $\\vec{F} = (2\\hat{i} + 3\\hat{j} - \\hat{k})\\ \\text{N}$ moves a particle from the origin to the point $(1, -2, 3)\\ \\text{m}$. The work done by the force is $-7\\ \\text{J}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Integrate a position-dependent friction force. For constant vectors, $W = F_x d_x + F_y d_y + F_z d_z$.",
+        "steps": [
+          "Statement I: $W = -\\int_0^L \\mu_0\\left(1 - \\frac{x}{L}\\right) mg\\,dx = -\\mu_0 mg\\left(L - \\frac{L}{2}\\right) = -\\frac{\\mu_0 mgL}{2}$. So I is incorrect.",
+          "Statement II: $W = 2(1) + 3(-2) + (-1)(3) = 2 - 6 - 3 = -7\\ \\text{J}$. So II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I applies $W = Fd$ to a variable force, which fails. Statement II is computed correctly.",
+        "common_trap": "Using $\\mu_0$ throughout instead of integrating $\\mu(x)$.",
+        "time_saving_tip": "For linearly varying $\\mu$, use the average value $\\mu_0/2$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Kinetic and potential energies",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The linear momentum of a body is increased by $100\\%$. What is the percentage increase in its kinetic energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$100\\%$",
+        "$300\\%$",
+        "$200\\%$",
+        "$400\\%$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$K = \\frac{p^2}{2m}$, so $K \\propto p^2$ for a fixed mass.",
+        "steps": [
+          "A $100\\%$ increase means $p$ becomes $2p$.",
+          "So $K$ becomes $4K$.",
+          "The increase is $3K$, which is $300\\%$."
+        ],
+        "final_answer": "Option (2): $300\\%$",
+        "why_not_others": "$100\\%$ assumes $K \\propto p$. $400\\%$ confuses 'becomes 4 times' with 'increases by 400%'. $200\\%$ has no physical basis here.",
+        "common_trap": "Confusing the final multiple with the percentage increase.",
+        "time_saving_tip": "Percentage increase $= (\\text{factor} - 1) \\times 100\\%$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Kinetic and potential energies",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The potential energy of a particle moving along the x-axis is $U(x) = \\frac{x^3}{3} - 4x$ (in joule, with $x$ in metre). At which position is the particle in stable equilibrium?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$x = +2\\ \\text{m}$",
+        "$x = -2\\ \\text{m}$",
+        "$x = 0$",
+        "$x = 2\\sqrt{3}\\ \\text{m}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Equilibrium requires $\\frac{dU}{dx} = 0$. It is stable if $\\frac{d^2U}{dx^2} > 0$.",
+        "steps": [
+          "$\\frac{dU}{dx} = x^2 - 4 = 0$ gives $x = \\pm 2\\ \\text{m}$.",
+          "$\\frac{d^2U}{dx^2} = 2x$.",
+          "At $x = +2$ this is $4 > 0$, so the equilibrium is stable. At $x = -2$ it is negative, so that equilibrium is unstable."
+        ],
+        "final_answer": "Option (1): $x = +2\\ \\text{m}$",
+        "why_not_others": "$x = -2\\ \\text{m}$ is a maximum of $U$, so it is unstable. At $x = 0$ the force is not zero. $x = 2\\sqrt{3}\\ \\text{m}$ is where $U = 0$, which is not an equilibrium point.",
+        "common_trap": "Taking $U = 0$ as the equilibrium condition instead of $\\frac{dU}{dx} = 0$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Kinetic and potential energies",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two bodies of masses $1\\ \\text{kg}$ and $4\\ \\text{kg}$ have equal linear momenta. What is the ratio of their kinetic energies $K_1 : K_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1:4$",
+        "$1:2$",
+        "$2:1$",
+        "$4:1$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$K = \\frac{p^2}{2m}$, so at equal momentum $K \\propto \\frac{1}{m}$.",
+        "steps": [
+          "$\\frac{K_1}{K_2} = \\frac{m_2}{m_1} = \\frac{4}{1}$."
+        ],
+        "final_answer": "Option (4): $4:1$",
+        "why_not_others": "$1:4$ assumes $K \\propto m$. The ratios $1:2$ and $2:1$ wrongly use $\\sqrt{m}$.",
+        "common_trap": "Thinking the heavier body must have more kinetic energy.",
+        "time_saving_tip": "At equal momentum, the lighter body has more kinetic energy."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Kinetic and potential energies",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Minimum of the U-x curve"
+          },
+          {
+            "label": "B",
+            "text": "Maximum of the U-x curve"
+          },
+          {
+            "label": "C",
+            "text": "Region where U is constant"
+          },
+          {
+            "label": "D",
+            "text": "Point where $\\frac{dU}{dx} > 0$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Neutral equilibrium"
+          },
+          {
+            "label": "II",
+            "text": "Force acts along the negative x-direction"
+          },
+          {
+            "label": "III",
+            "text": "Stable equilibrium"
+          },
+          {
+            "label": "IV",
+            "text": "Unstable equilibrium"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The force is $F = -\\frac{dU}{dx}$. A minimum of $U$ is stable, a maximum is unstable, and constant $U$ is neutral.",
+        "steps": [
+          "A minimum of $U$ gives stable equilibrium: A-III.",
+          "A maximum of $U$ gives unstable equilibrium: B-IV.",
+          "Constant $U$ gives neutral equilibrium: C-I.",
+          "If $\\frac{dU}{dx} > 0$, then $F < 0$, so the force acts along $-x$: D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (1) swaps stable and unstable. Option (2) swaps C and D. Option (4) swaps A and C.",
+        "common_trap": "Forgetting the minus sign in $F = -\\frac{dU}{dx}$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Kinetic and potential energies",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about kinetic and potential energy are correct?",
+      "statements": {
+        "A": "Kinetic energy of a body can never be negative.",
+        "B": "Potential energy can be negative, depending on the choice of reference level.",
+        "C": "A potential energy can be defined for the kinetic friction force.",
+        "D": "For equal momenta, the heavier body has greater kinetic energy.",
+        "E": "If the speed of a body is tripled, its kinetic energy becomes 9 times."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$K = \\frac{1}{2}mv^2 \\ge 0$. Potential energy is defined only for conservative forces, and its reference level is arbitrary.",
+        "steps": [
+          "A is true because $v^2 \\ge 0$.",
+          "B is true because only changes in $U$ matter, so $U$ can be negative.",
+          "C is false because friction is non-conservative.",
+          "D is false because $K = \\frac{p^2}{2m}$, so the lighter body has more kinetic energy.",
+          "E is true because $K \\propto v^2$."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other option includes C or D, and both are false.",
+        "common_trap": "Assuming potential energy exists for every force.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work-energy theorem",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A block of mass $2\\ \\text{kg}$ slides on a rough horizontal floor with an initial speed of $6\\ \\text{m s}^{-1}$. The coefficient of kinetic friction is $0.3$. How far does it travel before stopping? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ \\text{m}$",
+        "$3\\ \\text{m}$",
+        "$6\\ \\text{m}$",
+        "$2\\ \\text{m}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "By the work-energy theorem, $\\mu mgs = \\frac{1}{2}mu^2$, so $s = \\frac{u^2}{2\\mu g}$.",
+        "steps": [
+          "$s = \\frac{36}{2 \\times 0.3 \\times 10} = \\frac{36}{6} = 6\\ \\text{m}$."
+        ],
+        "final_answer": "Option (3): $6\\ \\text{m}$",
+        "why_not_others": "$12\\ \\text{m}$ drops the factor of 2. $3\\ \\text{m}$ doubles the denominator. $2\\ \\text{m}$ is $\\frac{u}{\\mu g}$, which is the stopping time in seconds, not a distance.",
+        "common_trap": "Thinking the mass matters. It cancels out.",
+        "time_saving_tip": "Stopping distance does not depend on mass for frictional retardation."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work-energy theorem",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A bullet of mass $20\\ \\text{g}$ moving at $300\\ \\text{m s}^{-1}$ penetrates $0.15\\ \\text{m}$ into a fixed wooden block before coming to rest. What is the average resistive force exerted by the wood?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12000\\ \\text{N}$",
+        "$3000\\ \\text{N}$",
+        "$6000\\ \\text{N}$",
+        "$40\\ \\text{N}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "By the work-energy theorem, $Fs = \\frac{1}{2}mu^2$, so $F = \\frac{mu^2}{2s}$.",
+        "steps": [
+          "$\\frac{1}{2}mu^2 = \\frac{1}{2}(0.02)(90000) = 900\\ \\text{J}$.",
+          "$F = \\frac{900}{0.15} = 6000\\ \\text{N}$."
+        ],
+        "final_answer": "Option (3): $6000\\ \\text{N}$",
+        "why_not_others": "$12000\\ \\text{N}$ omits the $\\frac{1}{2}$. $3000\\ \\text{N}$ uses twice the penetration depth. $40\\ \\text{N}$ divides momentum by distance.",
+        "common_trap": "Forgetting the factor $\\frac{1}{2}$ in kinetic energy.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work-energy theorem",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A body of mass $2\\ \\text{kg}$ is released from rest at a height of $5\\ \\text{m}$ on a rough curved track. It reaches the bottom with a speed of $8\\ \\text{m s}^{-1}$. What is the work done by friction? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-36\\ \\text{J}$",
+        "$+36\\ \\text{J}$",
+        "$-64\\ \\text{J}$",
+        "$-100\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$W_c + W_{nc} = \\Delta K$.",
+        "steps": [
+          "Work by gravity: $W_g = mgh = 2 \\times 10 \\times 5 = 100\\ \\text{J}$.",
+          "Change in kinetic energy: $\\Delta K = \\frac{1}{2}(2)(64) = 64\\ \\text{J}$.",
+          "Work by friction: $W_f = 64 - 100 = -36\\ \\text{J}$."
+        ],
+        "final_answer": "Option (1): $-36\\ \\text{J}$",
+        "why_not_others": "$+36\\ \\text{J}$ has the wrong sign, since friction opposes motion. $-64\\ \\text{J}$ uses only the kinetic energy. $-100\\ \\text{J}$ uses only the gravitational work.",
+        "common_trap": "Giving the magnitude without the negative sign.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work-energy theorem",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Two bodies of different masses with equal kinetic energies are brought to rest by equal constant retarding forces. They travel equal distances before stopping.",
+        "R": "The work-energy theorem is valid only for conservative forces."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$Fs = K$, so $s = \\frac{K}{F}$ does not depend on mass.",
+        "steps": [
+          "Equal $K$ and equal $F$ give equal $s$, so A is true.",
+          "The work-energy theorem holds for all forces, including non-conservative ones, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Restricting the work-energy theorem to conservative forces.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Work-energy theorem",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the initial speed of a car is doubled and the retarding force is unchanged, its stopping distance becomes four times.",
+        "II": "A particle of mass $1\\ \\text{kg}$ starts from rest at $x = 0$ and is acted upon by a single force $F = x$ (in newton, with $x$ in metre) along the x-axis. Its speed at $x = 3\\ \\text{m}$ is $3\\ \\text{m s}^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$W_{net} = \\Delta K$, and for a constant retarding force the stopping distance is proportional to $u^2$.",
+        "steps": [
+          "Statement I: $s \\propto u^2$, so doubling $u$ makes $s$ four times. I is correct.",
+          "Statement II: $W = \\int_0^3 x\\,dx = 4.5\\ \\text{J}$.",
+          "Then $\\frac{1}{2}(1)v^2 = 4.5$, so $v = 3\\ \\text{m s}^{-1}$. II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out, so options (2), (3) and (4) are ruled out.",
+        "common_trap": "Writing $W = F(3) \\times 3 = 9\\ \\text{J}$ for a variable force.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Power",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A motor lifts a load of $50\\ \\text{kg}$ vertically through $10\\ \\text{m}$ at a steady rate in $20\\ \\text{s}$. What is the power delivered by the motor? (Take $g = 10\\ \\text{m s}^{-2}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$25\\ \\text{W}$",
+        "$5000\\ \\text{W}$",
+        "$500\\ \\text{W}$",
+        "$250\\ \\text{W}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Power to lift a mass is $P = \\frac{mgh}{t}$.",
+        "steps": [
+          "$P = \\frac{50 \\times 10 \\times 10}{20} = \\frac{5000}{20} = 250\\ \\text{W}$."
+        ],
+        "final_answer": "Option (4): $250\\ \\text{W}$",
+        "why_not_others": "$25\\ \\text{W}$ omits $g$. $5000\\ \\text{W}$ is the work in joules, not divided by time. $500\\ \\text{W}$ divides by $10\\ \\text{s}$ instead of $20\\ \\text{s}$.",
+        "common_trap": "Reporting the work done as the power.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Power",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A pump ejects water at a rate of $10\\ \\text{kg s}^{-1}$ with a speed of $20\\ \\text{m s}^{-1}$. What power is required to impart this kinetic energy to the water?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\ \\text{kW}$",
+        "$200\\ \\text{W}$",
+        "$2\\ \\text{kW}$",
+        "$1\\ \\text{kW}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$P = \\frac{1}{2}\\frac{dm}{dt}v^2$.",
+        "steps": [
+          "$P = \\frac{1}{2} \\times 10 \\times 400 = 2000\\ \\text{W} = 2\\ \\text{kW}$."
+        ],
+        "final_answer": "Option (3): $2\\ \\text{kW}$",
+        "why_not_others": "$4\\ \\text{kW}$ omits the $\\frac{1}{2}$. $200\\ \\text{W}$ uses $\\frac{dm}{dt}\\,v$ instead of $v^2$. $1\\ \\text{kW}$ introduces an extra factor of $\\frac{1}{2}$.",
+        "common_trap": "Forgetting the $\\frac{1}{2}$ from kinetic energy.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Power",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A body starts from rest and is driven by an engine delivering constant power. It covers a distance $s$ in time $t$. What distance does it cover, measured from the start, in time $4t$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16s$",
+        "$8s$",
+        "$4s$",
+        "$2s$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For constant power from rest, $\\frac{1}{2}mv^2 = Pt$, so $v \\propto t^{1/2}$ and $s \\propto t^{3/2}$.",
+        "steps": [
+          "$\\frac{s'}{s} = \\left(\\frac{4t}{t}\\right)^{3/2} = 4^{3/2} = 8$."
+        ],
+        "final_answer": "Option (2): $8s$",
+        "why_not_others": "$16s$ assumes $s \\propto t^2$, which holds for constant acceleration. $4s$ assumes $s \\propto t$. $2s$ assumes $s \\propto \\sqrt{t}$.",
+        "common_trap": "Treating constant-power motion as uniformly accelerated motion.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Power",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Dimensions of power"
+          },
+          {
+            "label": "B",
+            "text": "Dimensions of work"
+          },
+          {
+            "label": "C",
+            "text": "$1\\ \\text{kWh}$"
+          },
+          {
+            "label": "D",
+            "text": "$1\\ \\text{hp}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$746\\ \\text{W}$"
+          },
+          {
+            "label": "II",
+            "text": "$[ML^2T^{-2}]$"
+          },
+          {
+            "label": "III",
+            "text": "$[ML^2T^{-3}]$"
+          },
+          {
+            "label": "IV",
+            "text": "$3.6 \\times 10^6\\ \\text{J}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Power is work per unit time. The kWh is a unit of energy, and the hp is a unit of power.",
+        "steps": [
+          "Power has dimensions $[ML^2T^{-3}]$: A-III.",
+          "Work has dimensions $[ML^2T^{-2}]$: B-II.",
+          "$1\\ \\text{kWh} = 3.6 \\times 10^6\\ \\text{J}$: C-IV.",
+          "$1\\ \\text{hp} = 746\\ \\text{W}$: D-I."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Options (1) and (4) swap the dimensions of power and work. Options (2) and (4) treat the kWh as a power.",
+        "common_trap": "Treating the kWh as a unit of power.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Power",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about power are correct?",
+      "statements": {
+        "A": "Power is a vector quantity because $P = \\vec{F}\\cdot\\vec{v}$.",
+        "B": "For a body starting from rest under a constant force, the instantaneous power delivered is proportional to time.",
+        "C": "The area under a power-time graph gives the work done.",
+        "D": "For a body starting from rest under constant power, its velocity is proportional to time.",
+        "E": "Efficiency of a machine is output power divided by input power."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Power is the scalar $\\vec{F}\\cdot\\vec{v}$. For constant power from rest, $v \\propto \\sqrt{t}$.",
+        "steps": [
+          "A is false because a dot product gives a scalar.",
+          "B is true because $v = at$, so $P = Fv = Fat \\propto t$.",
+          "C is true because $W = \\int P\\,dt$.",
+          "D is false because $v \\propto \\sqrt{t}$, not $t$.",
+          "E is true by the definition of efficiency."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Every other option includes A or D, and both are false.",
+        "common_trap": "Treating power as a vector because force and velocity are vectors.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Potential energy of a spring",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An ideal spring of spring constant $200\\ \\text{N/m}$ is compressed by $0.1\\ \\text{m}$ from its natural length. The elastic potential energy stored in the spring is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\text{J}$",
+        "$2\\ \\text{J}$",
+        "$10\\ \\text{J}$",
+        "$20\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Elastic potential energy of a spring is $U = \\frac{1}{2}kx^2$. It is the same for compression and extension.",
+        "steps": [
+          "$U = \\frac{1}{2}kx^2$",
+          "$U = \\frac{1}{2}(200)(0.1)^2 = 100 \\times 0.01$",
+          "$U = 1\\ \\text{J}$"
+        ],
+        "final_answer": "Option (1): $1\\ \\text{J}$",
+        "why_not_others": "$2\\ \\text{J}$ comes from dropping the factor $\\frac{1}{2}$ ($kx^2$). $10\\ \\text{J}$ comes from $\\frac{1}{2}kx$, which forgets to square x. $20\\ \\text{J}$ is $kx$, which is the force in newtons, not an energy.",
+        "common_trap": "Forgetting to square the deformation, or omitting the factor $\\frac{1}{2}$.",
+        "time_saving_tip": "Square x first: $x^2 = 0.01$. Then $\\frac{1}{2}k \\times 0.01 = 1$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Potential energy of a spring",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A spring of spring constant $500\\ \\text{N/m}$ is already stretched by $2\\ \\text{cm}$. The work done by an external agent to slowly increase the extension from $2\\ \\text{cm}$ to $6\\ \\text{cm}$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ \\text{J}$",
+        "$0.9\\ \\text{J}$",
+        "$1.6\\ \\text{J}$",
+        "$0.8\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The external work to stretch a spring from $x_1$ to $x_2$ is $W = \\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "steps": [
+          "Convert to metres: $x_1 = 0.02\\ \\text{m}$ and $x_2 = 0.06\\ \\text{m}$.",
+          "$x_2^2 - x_1^2 = 0.0036 - 0.0004 = 0.0032\\ \\text{m}^2$",
+          "$W = \\frac{1}{2}(500)(0.0032) = 0.8\\ \\text{J}$"
+        ],
+        "final_answer": "Option (4): $0.8\\ \\text{J}$",
+        "why_not_others": "$0.4\\ \\text{J}$ uses $\\frac{1}{2}k(x_2 - x_1)^2$. $0.9\\ \\text{J}$ ignores the initial extension and uses $\\frac{1}{2}kx_2^2$. $1.6\\ \\text{J}$ drops the factor $\\frac{1}{2}$.",
+        "common_trap": "Writing the work as $\\frac{1}{2}k(x_2 - x_1)^2$ instead of $\\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Potential energy of a spring",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A block of mass $0.5\\ \\text{kg}$ slides with speed $2\\ \\text{m/s}$ on a smooth horizontal surface. It strikes a light spring of spring constant $50\\ \\text{N/m}$ fixed at the other end. The maximum compression of the spring is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.28\\ \\text{m}$",
+        "$0.10\\ \\text{m}$",
+        "$0.04\\ \\text{m}$",
+        "$0.20\\ \\text{m}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "On a smooth surface, the kinetic energy of the block is fully stored in the spring at maximum compression: $\\frac{1}{2}mv^2 = \\frac{1}{2}kx_{max}^2$.",
+        "steps": [
+          "$x_{max} = v\\sqrt{\\frac{m}{k}}$",
+          "$\\sqrt{\\frac{0.5}{50}} = \\sqrt{0.01} = 0.1$",
+          "$x_{max} = 2 \\times 0.1 = 0.20\\ \\text{m}$"
+        ],
+        "final_answer": "Option (4): $0.20\\ \\text{m}$",
+        "why_not_others": "$0.28\\ \\text{m}$ comes from dropping the $\\frac{1}{2}$ on the kinetic energy side only, giving $mv^2 = \\frac{1}{2}kx^2$. $0.10\\ \\text{m}$ is $\\sqrt{\\frac{m}{k}}$ without the factor v. $0.04\\ \\text{m}$ is $x_{max}^2$, left without taking the square root.",
+        "common_trap": "Mismatching the $\\frac{1}{2}$ factors on the two sides, or forgetting the square root.",
+        "time_saving_tip": "Use $x_{max} = v\\sqrt{\\frac{m}{k}}$ directly."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Potential energy of a spring",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "An ideal spring compressed by a distance x stores the same elastic potential energy as when it is stretched by the same distance x.",
+        "R": "The work done by the spring force when its deformation changes from $x_1$ to $x_2$ is $-\\frac{1}{2}k(x_2 - x_1)^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$U = \\frac{1}{2}kx^2$ depends on $x^2$, so it is the same for compression and extension. The spring force does work $-\\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "steps": [
+          "Since U depends on $x^2$, the energy for $+x$ and $-x$ is equal, so A is true.",
+          "The correct work by the spring force is $-\\frac{1}{2}k(x_2^2 - x_1^2)$, not $-\\frac{1}{2}k(x_2 - x_1)^2$, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R uses the wrong expression, so options (1) and (2) fail. A is a correct statement, so option (4) fails.",
+        "common_trap": "Accepting $\\frac{1}{2}k(x_2 - x_1)^2$ as the spring work.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Potential energy of a spring",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An ideal spring is cut into two equal halves. When one half is stretched by a force F, the energy stored in it is half the energy stored in the original uncut spring stretched by the same force F.",
+        "II": "The work needed to stretch an ideal spring from an extension x to an extension 2x is three times the work needed to stretch it from zero to x."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$U = \\frac{F^2}{2k}$, with $k \\propto \\frac{1}{\\text{length}}$. Also, $W = \\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "steps": [
+          "Halving the length doubles k, giving $2k$.",
+          "For the same force, $U = \\frac{F^2}{2(2k)}$, which is half the original. So I is correct.",
+          "Stretching from 0 to x needs $W_1 = \\frac{1}{2}kx^2$.",
+          "Stretching from x to 2x needs $W_2 = \\frac{1}{2}k(4x^2 - x^2) = \\frac{3}{2}kx^2 = 3W_1$. So II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out by direct calculation, so any option calling either one incorrect is wrong.",
+        "common_trap": "Using $\\frac{1}{2}kx^2$ with a fixed x for Statement I, which wrongly suggests the energy doubles. Using $(2x - x)^2$ for Statement II, which wrongly gives equal work.",
+        "time_saving_tip": "For a fixed force, use $U = \\frac{F^2}{2k}$. For a fixed extension, use $U = \\frac{1}{2}kx^2$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservation of mechanical energy",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A stone is dropped from rest from a height of $20\\ \\text{m}$. Neglecting air resistance and taking $g = 10\\ \\text{m/s}^2$, its speed just before hitting the ground is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{m/s}$",
+        "$14.1\\ \\text{m/s}$",
+        "$20\\ \\text{m/s}$",
+        "$40\\ \\text{m/s}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Mechanical energy is conserved: $mgh = \\frac{1}{2}mv^2$, so $v = \\sqrt{2gh}$.",
+        "steps": [
+          "$v = \\sqrt{2 \\times 10 \\times 20}$",
+          "$v = \\sqrt{400} = 20\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (3): $20\\ \\text{m/s}$",
+        "why_not_others": "$14.1\\ \\text{m/s}$ uses $\\sqrt{gh}$. $10\\ \\text{m/s}$ uses $\\sqrt{2g \\times \\frac{h}{2}}$. $40\\ \\text{m/s}$ is $2h$ and is not a valid speed calculation.",
+        "common_trap": "Dropping the factor 2 inside the square root.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservation of mechanical energy",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A simple pendulum of length $2.5\\ \\text{m}$ is released from rest with the string making an angle of $60^\\circ$ with the vertical. Taking $g = 10\\ \\text{m/s}^2$, the speed of the bob at the lowest point is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.0\\ \\text{m/s}$",
+        "$7.1\\ \\text{m/s}$",
+        "$3.5\\ \\text{m/s}$",
+        "$2.6\\ \\text{m/s}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The speed at the lowest point is $v = \\sqrt{2gL(1 - \\cos\\theta_0)}$.",
+        "steps": [
+          "$1 - \\cos 60^\\circ = 0.5$",
+          "$v^2 = 2 \\times 10 \\times 2.5 \\times 0.5 = 25$",
+          "$v = 5.0\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (1): $5.0\\ \\text{m/s}$",
+        "why_not_others": "$7.1\\ \\text{m/s}$ uses $\\sqrt{2gL}$, as if the bob fell through the full length L. $3.5\\ \\text{m/s}$ drops the factor 2. $2.6\\ \\text{m/s}$ uses $1 - \\cos 30^\\circ$, measuring the angle from the horizontal.",
+        "common_trap": "Taking the height drop as L instead of $L(1 - \\cos\\theta_0)$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservation of mechanical energy",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A block of mass $2\\ \\text{kg}$ is released from rest at the top of a rough incline of vertical height $5\\ \\text{m}$. It reaches the bottom with a speed of $8\\ \\text{m/s}$. Taking $g = 10\\ \\text{m/s}^2$, the work done by friction on the block is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-36\\ \\text{J}$",
+        "$+36\\ \\text{J}$",
+        "$-64\\ \\text{J}$",
+        "$-100\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The work by non-conservative forces equals the change in mechanical energy: $W_{nc} = \\Delta K + \\Delta U$.",
+        "steps": [
+          "$\\Delta K = \\frac{1}{2}(2)(8)^2 - 0 = 64\\ \\text{J}$",
+          "$\\Delta U = 0 - (2)(10)(5) = -100\\ \\text{J}$",
+          "$W_f = 64 - 100 = -36\\ \\text{J}$"
+        ],
+        "final_answer": "Option (1): $-36\\ \\text{J}$",
+        "why_not_others": "$+36\\ \\text{J}$ has the wrong sign, but kinetic friction always does negative work here. $-64\\ \\text{J}$ uses only the kinetic energy. $-100\\ \\text{J}$ uses only the potential energy.",
+        "common_trap": "Getting the sign wrong. The mechanical energy lost to heat appears as negative work by friction.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservation of mechanical energy",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Kinetic energy at height $\\frac{H}{2}$"
+          },
+          {
+            "label": "B",
+            "text": "Potential energy at height $\\frac{H}{4}$"
+          },
+          {
+            "label": "C",
+            "text": "Kinetic energy at height $\\frac{H}{4}$"
+          },
+          {
+            "label": "D",
+            "text": "Total mechanical energy at any height"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{mgH}{4}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{mgH}{2}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{3mgH}{4}$"
+          },
+          {
+            "label": "IV",
+            "text": "$mgH$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-I, C-III, D-II",
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A body of mass m is dropped from rest from height H, with the ground as the reference level and air resistance neglected. Since $K + U = mgH$ throughout, $K = mg(H - h)$ at height h.",
+        "steps": [
+          "Total mechanical energy is $mgH$ at every point, so D-IV.",
+          "At $\\frac{H}{2}$: $K = mgH - \\frac{mgH}{2} = \\frac{mgH}{2}$, so A-II.",
+          "At $\\frac{H}{4}$: $U = \\frac{mgH}{4}$, so B-I.",
+          "At $\\frac{H}{4}$: $K = mgH - \\frac{mgH}{4} = \\frac{3mgH}{4}$, so C-III."
+        ],
+        "final_answer": "Option (4): A-II, B-I, C-III, D-IV",
+        "why_not_others": "Option (1) swaps the potential and kinetic energies at $\\frac{H}{4}$. Option (2) wrongly treats the total energy as $\\frac{mgH}{2}$. Option (3) gives the kinetic energy at $\\frac{H}{2}$ as $\\frac{mgH}{4}$, which is wrong.",
+        "common_trap": "Confusing the height reached with the height fallen. At height h, the body has fallen $H - h$.",
+        "time_saving_tip": "Find U first as $mgh$, then use $K = mgH - U$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservation of mechanical energy",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about conservation of mechanical energy are correct?",
+      "statements": {
+        "A": "On smooth surfaces, the speed acquired by a body released from rest depends only on the height descended, not on the shape of the path.",
+        "B": "Of two bodies released from rest from the same height on a smooth track, the heavier one reaches the bottom with the greater speed.",
+        "C": "When kinetic friction acts on a sliding body, the work done by friction equals the change in mechanical energy and is negative.",
+        "D": "In an isolated system where friction acts, the total energy including all forms is not conserved.",
+        "E": "For a body falling freely from height h, its kinetic energy equals its potential energy at height $\\frac{h}{2}$, with the ground as reference."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "A, C and E only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "When only conservative forces do work, $K + U$ is constant. With friction, $W_{nc} = \\Delta E_{mech}$. The total energy of an isolated system is always conserved.",
+        "steps": [
+          "A is true: the speed is $v = \\sqrt{2gh}$, which is path independent on smooth surfaces.",
+          "B is false: $\\sqrt{2gh}$ is independent of mass.",
+          "C is true: $W_f = E_f - E_i$, which is less than zero.",
+          "D is false: the lost mechanical energy appears as heat or sound, so the total energy is still conserved.",
+          "E is true: at $\\frac{h}{2}$, $U = \\frac{mgh}{2}$ and $K = \\frac{mgh}{2}$."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option (1) misses the correct statement E. Option (2) includes the false statement B. Option (4) includes the false statement D and misses A.",
+        "common_trap": "Confusing non-conservation of mechanical energy with non-conservation of total energy.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservative and non-conservative forces",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following is a non-conservative force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Gravitational force",
+        "Air resistance",
+        "Electrostatic force",
+        "Force of an ideal spring"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A non-conservative force does path-dependent work and dissipates mechanical energy.",
+        "steps": [
+          "Gravity, the electrostatic force and the ideal spring force do path-independent work, so they are conservative.",
+          "Air resistance dissipates energy as heat and does path-dependent work, so it is non-conservative."
+        ],
+        "final_answer": "Option (2): Air resistance",
+        "why_not_others": "The other three are the standard examples of conservative forces.",
+        "common_trap": "Thinking a variable force such as the spring force must be non-conservative.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservative and non-conservative forces",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A block of mass $5\\ \\text{kg}$ is pushed along a straight line on a rough horizontal floor from point P to point Q, $4\\ \\text{m}$ away, and then back to P along the same line. The coefficient of kinetic friction is $0.2$ and $g = 10\\ \\text{m/s}^2$. The total work done by friction on the block over the round trip is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-80\\ \\text{J}$",
+        "$0\\ \\text{J}$",
+        "$-40\\ \\text{J}$",
+        "$+80\\ \\text{J}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Friction always opposes the relative motion, so its work over a closed path is not zero. The magnitude grows with path length.",
+        "steps": [
+          "Friction force: $f = \\mu mg = 0.2 \\times 5 \\times 10 = 10\\ \\text{N}$",
+          "Total path length: $4 + 4 = 8\\ \\text{m}$",
+          "$W = -f \\times 8 = -80\\ \\text{J}$"
+        ],
+        "final_answer": "Option (1): $-80\\ \\text{J}$",
+        "why_not_others": "$0\\ \\text{J}$ treats friction as conservative. $-40\\ \\text{J}$ counts only one leg of the trip. $+80\\ \\text{J}$ has the wrong sign.",
+        "common_trap": "Using the zero net displacement to conclude the work is zero.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservative and non-conservative forces",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The potential energy of a particle moving along the x-axis under a conservative force is $U(x) = 3x^2 - 2x$, where U is in joules and x is in metres. The force on the particle at $x = 2\\ \\text{m}$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+10\\ \\text{N}$",
+        "$-10\\ \\text{N}$",
+        "$-8\\ \\text{N}$",
+        "$-12\\ \\text{N}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a conservative force, $F = -\\frac{dU}{dx}$.",
+        "steps": [
+          "$\\frac{dU}{dx} = 6x - 2$",
+          "At $x = 2$: $\\frac{dU}{dx} = 10$",
+          "$F = -10\\ \\text{N}$"
+        ],
+        "final_answer": "Option (2): $-10\\ \\text{N}$",
+        "why_not_others": "$+10\\ \\text{N}$ misses the negative sign. $-8\\ \\text{N}$ is $-U(2)$, which uses U instead of its derivative. $-12\\ \\text{N}$ drops the derivative of the linear term.",
+        "common_trap": "Forgetting the minus sign in $F = -\\frac{dU}{dx}$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservative and non-conservative forces",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "No potential energy function can be defined for the force of kinetic friction.",
+        "R": "The work done by kinetic friction on a body moving around any closed path is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Potential energy exists only for conservative forces, whose closed-loop work is zero. Friction is non-conservative.",
+        "steps": [
+          "Friction is non-conservative, so no potential energy can be defined for it. A is true.",
+          "Friction does negative work over a closed loop, and this work grows with path length. Its closed-loop work is not zero, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is true, so option (4) is ruled out.",
+        "common_trap": "Attributing the zero closed-loop work property of conservative forces to friction.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Conservative and non-conservative forces",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The work done by a conservative force on a body equals the increase in its potential energy, that is, $W_c = U_f - U_i$.",
+        "II": "The work done by gravity on a body moved between two fixed points depends on the path followed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a conservative force, $W_c = -\\Delta U = U_i - U_f$, and the work is path independent.",
+        "steps": [
+          "Statement I has the wrong sign: $W_c = U_i - U_f$. So I is incorrect.",
+          "Gravity is conservative, so its work depends only on the end points. So II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements contradict the defining properties of conservative forces.",
+        "common_trap": "Missing the sign in $W_c = -\\Delta U$.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Motion in a vertical circle",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A small bob is tied to a light inextensible string of length $2\\ \\text{m}$. Taking $g = 10\\ \\text{m/s}^2$, the minimum speed that must be given to the bob at the lowest point so that it just completes a vertical circle is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{m/s}$",
+        "$8.9\\ \\text{m/s}$",
+        "$4.5\\ \\text{m/s}$",
+        "$6.3\\ \\text{m/s}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a string, the minimum speed at the bottom is $v_{bottom} = \\sqrt{5gL}$.",
+        "steps": [
+          "$v = \\sqrt{5 \\times 10 \\times 2}$",
+          "$v = \\sqrt{100} = 10\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (1): $10\\ \\text{m/s}$",
+        "why_not_others": "$8.9\\ \\text{m/s}$ is $\\sqrt{4gL}$, which applies to a rod. $4.5\\ \\text{m/s}$ is $\\sqrt{gL}$, the minimum speed at the top. $6.3\\ \\text{m/s}$ is $\\sqrt{2gL}$, which only reaches the horizontal.",
+        "common_trap": "Using the rod condition $\\sqrt{4gL}$ for a string.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Motion in a vertical circle",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A small ball is fixed at one end of a light rigid rod of length $0.4\\ \\text{m}$. The rod is free to rotate in a vertical plane about its other end. Taking $g = 10\\ \\text{m/s}^2$, the minimum speed at the lowest point for the ball to complete the vertical circle is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.5\\ \\text{m/s}$",
+        "$2.0\\ \\text{m/s}$",
+        "$2.8\\ \\text{m/s}$",
+        "$4.0\\ \\text{m/s}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A rod can push as well as pull, so the minimum speed at the top is zero. This gives $v_{bottom} = \\sqrt{4gL}$.",
+        "steps": [
+          "Energy conservation: $\\frac{1}{2}mu^2 = mg(2L)$",
+          "$u = \\sqrt{4 \\times 10 \\times 0.4} = \\sqrt{16} = 4.0\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (4): $4.0\\ \\text{m/s}$",
+        "why_not_others": "$4.5\\ \\text{m/s}$ is $\\sqrt{5gL}$, which applies to a string. $2.0\\ \\text{m/s}$ is $\\sqrt{gL}$. $2.8\\ \\text{m/s}$ is $\\sqrt{2gL}$.",
+        "common_trap": "Applying the string result $\\sqrt{5gL}$ to a rod.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Motion in a vertical circle",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A bob of mass $0.5\\ \\text{kg}$ tied to a string of length $1\\ \\text{m}$ moves in a vertical circle. Its speed at the lowest point is $8\\ \\text{m/s}$. Taking $g = 10\\ \\text{m/s}^2$, the tension in the string at the highest point is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ \\text{N}$",
+        "$7\\ \\text{N}$",
+        "$17\\ \\text{N}$",
+        "$37\\ \\text{N}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use $v^2 = u^2 - 2gL(1 - \\cos\\theta)$ to find the speed, then $T = \\frac{mv^2}{L} + mg\\cos\\theta$ with $\\theta = 180^\\circ$.",
+        "steps": [
+          "At the top: $v_{top}^2 = 64 - 4 \\times 10 \\times 1 = 24\\ \\text{m}^2/\\text{s}^2$",
+          "$T_{top} = \\frac{mv_{top}^2}{L} - mg = 0.5 \\times 24 - 5$",
+          "$T_{top} = 7\\ \\text{N}$",
+          "Check: $T_{bottom} = 32 + 5 = 37\\ \\text{N}$, and $37 - 7 = 30\\ \\text{N} = 6mg$."
+        ],
+        "final_answer": "Option (2): $7\\ \\text{N}$",
+        "why_not_others": "$12\\ \\text{N}$ ignores gravity at the top. $17\\ \\text{N}$ adds mg instead of subtracting it. $37\\ \\text{N}$ is the tension at the bottom.",
+        "common_trap": "Getting the sign of mg wrong at the top, where gravity points towards the centre.",
+        "time_saving_tip": "Find $T_{bottom} = \\frac{mu^2}{L} + mg$, then use $T_{top} = T_{bottom} - 6mg$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Motion in a vertical circle",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Tension at the lowest point"
+          },
+          {
+            "label": "B",
+            "text": "Tension when the string is horizontal"
+          },
+          {
+            "label": "C",
+            "text": "Tension at the highest point"
+          },
+          {
+            "label": "D",
+            "text": "Speed when the string is horizontal"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "$\\sqrt{3gL}$"
+          },
+          {
+            "label": "III",
+            "text": "$6mg$"
+          },
+          {
+            "label": "IV",
+            "text": "$3mg$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A bob of mass m on a string of length L is given the critical speed $\\sqrt{5gL}$ at the lowest point, so it just completes the vertical circle. Combine $v^2 = u^2 - 2gL(1 - \\cos\\theta)$ with $T = \\frac{mv^2}{L} + mg\\cos\\theta$.",
+        "steps": [
+          "Lowest point: $T = 5mg + mg = 6mg$, so A-III.",
+          "Horizontal: $v^2 = 5gL - 2gL = 3gL$, so D-II. Then $T = 3mg$, so B-IV.",
+          "Top: $v^2 = gL$, so $T = mg - mg = 0$, giving C-I."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (2) swaps the tensions at the bottom and the horizontal. Option (3) assigns zero tension to the horizontal position. Option (4) pairs a tension with a speed.",
+        "common_trap": "Forgetting to add mg at the bottom and getting 5mg.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Motion in a vertical circle",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about motion in a vertical circle are correct?",
+      "statements": {
+        "A": "A bob on a string of length L given speed $\\sqrt{3gL}$ at the lowest point will have its string slacken somewhere above the horizontal position.",
+        "B": "A bob on a string of length L given speed $\\sqrt{gL}$ at the lowest point oscillates below the horizontal position.",
+        "C": "The relation $T_{bottom} - T_{top} = 6mg$ holds only when the speed at the bottom is exactly $\\sqrt{5gL}$.",
+        "D": "A bead threaded on a smooth vertical ring of radius R completes the circle if its speed at the bottom is at least $\\sqrt{4gR}$.",
+        "E": "A string whirled in a vertical circle is most likely to break at the highest point."
+      },
+      "match_lists": null,
+      "options": [
+        "A and D only",
+        "B, C and D only",
+        "A, B and D only",
+        "A, B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a string: if $v_{bottom} \\le \\sqrt{2gL}$, the bob oscillates; if $\\sqrt{2gL} < v_{bottom} < \\sqrt{5gL}$, the string slackens above the horizontal. For a ring or rod, $v_{bottom} \\ge \\sqrt{4gL}$.",
+        "steps": [
+          "A is true: $\\sqrt{3gL}$ lies between $\\sqrt{2gL}$ and $\\sqrt{5gL}$.",
+          "B is true: $\\sqrt{gL}$ is less than $\\sqrt{2gL}$.",
+          "C is false: the $6mg$ difference holds for any speed, provided the circle is completed.",
+          "D is true: a ring can push, so the minimum speed at the top is zero.",
+          "E is false: tension is maximum at the bottom, so the string is most likely to break there."
+        ],
+        "final_answer": "Option (3): A, B and D only",
+        "why_not_others": "Option (1) misses B. Option (2) includes the false statement C and misses A. Option (4) includes the false statement E.",
+        "common_trap": "Thinking the $6mg$ result applies only in the critical case, or that tension is largest at the top.",
+        "time_saving_tip": null
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Elastic and inelastic collisions in one and two dimensions",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A body of mass $m$ moving with speed $u$ collides head-on and elastically with an identical body that is at rest. Which of the following correctly describes the motion just after the collision?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Both bodies move together with speed $\\frac{u}{2}$",
+        "The first body rebounds with speed $u$ and the second body stays at rest",
+        "The first body comes to rest and the second body moves with speed $2u$",
+        "The first body comes to rest and the second body moves with speed $u$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a 1D elastic collision between equal masses, the bodies exchange velocities.",
+        "steps": [
+          "Use $v_1 = \\frac{(m_1-m_2)u_1 + 2m_2u_2}{m_1+m_2}$ with $m_1 = m_2 = m$, $u_1 = u$ and $u_2 = 0$. This gives $v_1 = 0$.",
+          "Use $v_2 = \\frac{(m_2-m_1)u_2 + 2m_1u_1}{m_1+m_2}$. This gives $v_2 = \\frac{2mu}{2m} = u$.",
+          "So the velocities are exchanged: the first body stops and the second moves off with speed $u$."
+        ],
+        "final_answer": "Option (4): The first body comes to rest and the second body moves with speed $u$",
+        "why_not_others": "Moving together at $\\frac{u}{2}$ describes a perfectly inelastic collision. Rebounding with speed $u$ happens only when a light body hits a very heavy one. A speed of $2u$ for the struck body applies when a heavy body hits a light one; with equal masses it would also violate momentum conservation.",
+        "common_trap": "Confusing the equal-mass result with the heavy-hits-light case, where the light body moves off at about $2u$.",
+        "time_saving_tip": "Equal masses in a 1D elastic collision: simply swap the velocities."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Elastic and inelastic collisions in one and two dimensions",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A block of mass $2\\ kg$ moving at $6\\ m\\,s^{-1}$ on a smooth horizontal surface collides with a block of mass $4\\ kg$ at rest. The two blocks stick together. The loss in kinetic energy during the collision is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$24\\ J$",
+        "$12\\ J$",
+        "$36\\ J$",
+        "$0\\ J$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a perfectly inelastic collision momentum is conserved, and the kinetic energy loss is $\\Delta K = \\frac{m_1m_2(u_1-u_2)^2}{2(m_1+m_2)}$.",
+        "steps": [
+          "Initial kinetic energy $= \\frac{1}{2}(2)(6)^2 = 36\\ J$.",
+          "Common velocity $v = \\frac{2 \\times 6}{6} = 2\\ m\\,s^{-1}$, so the final kinetic energy is $\\frac{1}{2}(6)(2)^2 = 12\\ J$.",
+          "Loss $= 36 - 12 = 24\\ J$.",
+          "Check with the formula: $\\Delta K = \\frac{2 \\times 4 \\times 36}{2 \\times 6} = 24\\ J$."
+        ],
+        "final_answer": "Option (1): $24\\ J$",
+        "why_not_others": "$12\\ J$ is the kinetic energy that remains, not the energy lost. $36\\ J$ assumes all the kinetic energy is lost. $0\\ J$ assumes kinetic energy is conserved, which is not true for an inelastic collision.",
+        "common_trap": "Reporting the final kinetic energy instead of the loss, or assuming kinetic energy is conserved.",
+        "time_saving_tip": "Plug directly into $\\Delta K = \\frac{m_1m_2u^2}{2(m_1+m_2)}$ when the target is at rest."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Elastic and inelastic collisions in one and two dimensions",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A ball moving with speed $u$ collides elastically and obliquely with an identical ball at rest. After the collision, the first ball moves at $30^\\circ$ to its original direction. The speed of the second ball after the collision is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\sqrt{3}u}{2}$",
+        "$\\frac{u}{2}$",
+        "$u$",
+        "$\\frac{u}{\\sqrt{2}}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For an elastic oblique collision of equal masses with one at rest, the final velocities are perpendicular. Momentum is conserved separately along x and y.",
+        "steps": [
+          "The velocities after collision are at $90^\\circ$, so the second ball moves at $60^\\circ$ to the original direction, on the other side.",
+          "y-momentum: $v_1\\sin 30^\\circ = v_2\\sin 60^\\circ$, which gives $v_1 = \\sqrt{3}v_2$.",
+          "x-momentum: $u = v_1\\cos 30^\\circ + v_2\\cos 60^\\circ = \\frac{3v_2}{2} + \\frac{v_2}{2} = 2v_2$.",
+          "Therefore $v_2 = \\frac{u}{2}$ (and $v_1 = \\frac{\\sqrt{3}u}{2}$)."
+        ],
+        "final_answer": "Option (2): $\\frac{u}{2}$",
+        "why_not_others": "$\\frac{\\sqrt{3}u}{2}$ is the speed of the first ball. $u$ would be correct only for a head-on collision, where velocities are exchanged. $\\frac{u}{\\sqrt{2}}$ applies only when both balls move at $45^\\circ$.",
+        "common_trap": "Assuming the second ball also moves at $30^\\circ$, or mixing up which ball has which speed.",
+        "time_saving_tip": "With perpendicular final velocities, $v_2 = u\\sin\\theta_1$ and $v_1 = u\\cos\\theta_1$."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Elastic and inelastic collisions in one and two dimensions",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In every perfectly inelastic collision between two bodies, the entire kinetic energy of the system is lost.",
+        "R": "In a perfectly inelastic collision, the bodies stick together and move with a common velocity, and linear momentum is conserved."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a perfectly inelastic collision the kinetic energy loss is maximum, $\\Delta K = \\frac{m_1m_2(u_1-u_2)^2}{2(m_1+m_2)}$, but it is generally not the entire kinetic energy.",
+        "steps": [
+          "Momentum is conserved, so the combined body moves with $v = \\frac{m_1u_1+m_2u_2}{m_1+m_2}$. This is generally non-zero, so some kinetic energy remains. Hence A is false.",
+          "R correctly states that the bodies stick together, move with a common velocity and conserve momentum. Hence R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Confusing 'maximum loss of kinetic energy' with 'total loss of kinetic energy'.",
+        "time_saving_tip": "If the system has non-zero total momentum, the final velocity cannot be zero, so some kinetic energy must remain."
+      },
+      "review_flags": []
+    },
+    {
+      "q_id": "neet_phy_u04_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u04",
+      "topic": "Elastic and inelastic collisions in one and two dimensions",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a $1\\ kg$ ball moving at $10\\ m\\,s^{-1}$ collides head-on and elastically with a $4\\ kg$ ball at rest, the $1\\ kg$ ball rebounds with a speed of $10\\ m\\,s^{-1}$.",
+        "II": "In a head-on elastic collision of a $1\\ kg$ ball moving at $10\\ m\\,s^{-1}$ with a $4\\ kg$ ball at rest, $64\\%$ of the initial kinetic energy is transferred to the $4\\ kg$ ball."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "1D elastic collision formulas, and the fraction of kinetic energy transferred to a stationary target, $\\frac{4m_1m_2}{(m_1+m_2)^2}$.",
+        "steps": [
+          "$v_1 = \\frac{(1-4)(10)}{5} = -6\\ m\\,s^{-1}$. The $1\\ kg$ ball rebounds at $6\\ m\\,s^{-1}$, not $10\\ m\\,s^{-1}$, so Statement I is incorrect.",
+          "Fraction transferred $= \\frac{4(1)(4)}{(1+4)^2} = \\frac{16}{25} = 64\\%$.",
+          "Check: $v_2 = \\frac{2(1)(10)}{5} = 4\\ m\\,s^{-1}$, so $KE_2 = \\frac{1}{2}(4)(16) = 32\\ J$. Since $\\frac{32}{50} = 64\\%$, Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I uses the 'rebounds with nearly the same speed' result, which holds only when the target is much heavier than the projectile. A mass ratio of 4 is not large enough, so options (1) and (3) fail. Statement II is correct, so option (2) fails.",
+        "common_trap": "Applying the light-hits-very-heavy approximation to a finite mass ratio.",
+        "time_saving_tip": "Use $\\frac{4m_1m_2}{(m_1+m_2)^2}$ directly for the fraction of energy transferred."
+      },
+      "review_flags": []
+    }
+  ],
+  "_meta": {
+    "model": "claude-opus-5-5",
+    "expected": 45,
+    "missing_slots": []
+  }
+}

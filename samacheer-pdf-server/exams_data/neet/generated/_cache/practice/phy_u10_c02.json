@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "A particle executes simple harmonic motion of amplitude $A$. When its displacement from the mean position is $A/2$, what fraction of its total mechanical energy is kinetic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$\\frac{3}{4}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In SHM, $U = \\frac{1}{2}kx^2$ and $K = \\frac{1}{2}k(A^2 - x^2)$, with total energy $E = \\frac{1}{2}kA^2$.",
+        "steps": [
+          "At $x = A/2$: $U = \\frac{1}{2}k\\frac{A^2}{4} = \\frac{E}{4}$.",
+          "So $K = E - U = \\frac{3E}{4}$.",
+          "The fraction of energy that is kinetic is $\\frac{3}{4}$."
+        ],
+        "final_answer": "Option (4): $\\frac{3}{4}$",
+        "why_not_others": "$\\frac{1}{4}$ is the potential-energy fraction. $\\frac{1}{2}$ holds only at $x = A/\\sqrt{2}$. $\\frac{\\sqrt{3}}{2}$ is the ratio of the speed to the maximum speed, not an energy ratio.",
+        "common_trap": "Swapping the K and U fractions, or using a velocity ratio in place of an energy ratio.",
+        "time_saving_tip": "Remember: at $x = A/2$, $U = E/4$ and $K = 3E/4$."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A block of mass 0.5 kg attached to a spring of force constant 200 N/m oscillates on a smooth horizontal surface with amplitude 0.1 m. What is its kinetic energy when its displacement is 0.06 m?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.36 J",
+        "0.16 J",
+        "0.64 J",
+        "1.00 J"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$K = \\frac{1}{2}k(A^2 - x^2)$",
+        "steps": [
+          "$A^2 - x^2 = 0.01 - 0.0036 = 0.0064\\ \\text{m}^2$.",
+          "$K = \\frac{1}{2}(200)(0.0064) = 0.64$ J.",
+          "Check: $U = 0.36$ J and $E = 1.00$ J, so $K + U = E$."
+        ],
+        "final_answer": "Option (3): 0.64 J",
+        "why_not_others": "0.36 J is the potential energy at this position. 0.16 J comes from wrongly using $(A - x)^2$ instead of $A^2 - x^2$. 1.00 J is the total energy.",
+        "common_trap": "Using $(A - x)^2$ in place of $(A^2 - x^2)$.",
+        "time_saving_tip": "Find E and U first, then take $K = E - U$."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "The displacement of a particle executing SHM is $x = 0.05\\sin(10\\pi t)$ m, with t in seconds. What is the frequency with which its kinetic energy varies?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 Hz",
+        "2.5 Hz",
+        "10 Hz",
+        "20 Hz"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Kinetic and potential energies in SHM oscillate at twice the frequency of the motion.",
+        "steps": [
+          "$\\omega = 10\\pi$ rad/s, so $\\nu = \\omega/2\\pi = 5$ Hz.",
+          "The kinetic energy varies with frequency $2\\nu = 10$ Hz."
+        ],
+        "final_answer": "Option (3): 10 Hz",
+        "why_not_others": "5 Hz is the frequency of the displacement, not of the energy. 2.5 Hz wrongly halves it. 20 Hz comes from doubling twice.",
+        "common_trap": "Taking the frequency of the energy oscillation as $\\nu$ instead of $2\\nu$.",
+        "time_saving_tip": "Since $K \\propto \\cos^2\\omega t$, the energy frequency is $2\\nu$."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The kinetic energy of a particle executing SHM of time period T varies periodically with period T.",
+        "R": "The kinetic energy of a particle in SHM is maximum at the mean position, and the particle passes through the mean position twice in every cycle."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Kinetic energy in SHM varies with period T/2.",
+        "steps": [
+          "K is maximum each time the particle crosses the mean position.",
+          "This happens twice per cycle, so K repeats every T/2.",
+          "So A is false and R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so any option that calls A true is ruled out.",
+        "common_trap": "Assuming that energies share the period of the displacement.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a given mass executing SHM, if the frequency is doubled while the amplitude is kept the same, the total mechanical energy becomes four times its original value.",
+        "II": "For a spring-mass oscillator, the graph of speed v against displacement x is an ellipse, which becomes a circle only when the spring constant k (in N/m) and the mass m (in kg) are numerically equal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$E = \\frac{1}{2}m\\omega^2A^2$, and the energy relation gives an ellipse in the x-v plane.",
+        "steps": [
+          "$E \\propto \\omega^2$ at fixed m and A, so doubling the frequency multiplies E by 4. Statement I is correct.",
+          "From $\\frac{1}{2}mv^2 + \\frac{1}{2}kx^2 = E$: $\\frac{v^2}{\\omega^2A^2} + \\frac{x^2}{A^2} = 1$, which is an ellipse.",
+          "It is a circle when $\\omega = 1$, that is, when k = m numerically. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from the energy relations, so no option rejecting either one is valid.",
+        "common_trap": "Thinking that energy depends only on amplitude, or picking $k = 1/m$ as the circle condition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "A simple pendulum of length 1 m has a time period of 2 s at a place. What is the time period of a simple pendulum of length 4 m at the same place, for small oscillations?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4 s",
+        "8 s",
+        "$2\\sqrt{2}$ s",
+        "1 s"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$T \\propto \\sqrt{l}$",
+        "steps": [
+          "$T_2 = T_1\\sqrt{l_2/l_1} = 2\\sqrt{4} = 4$ s."
+        ],
+        "final_answer": "Option (1): 4 s",
+        "why_not_others": "8 s assumes $T \\propto l$. $2\\sqrt{2}$ s takes the square root of the wrong factor. 1 s inverts the relation.",
+        "common_trap": "Assuming the period is proportional to the length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A simple pendulum has a time period of 2 s when at rest. It is placed in a lift accelerating upward at $g/3$. What is its new time period? (Take $\\sqrt{3} = 1.73$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.31 s",
+        "1.50 s",
+        "1.73 s",
+        "2.00 s"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In a lift accelerating upward, $g_{eff} = g + a$.",
+        "steps": [
+          "$g_{eff} = g + g/3 = 4g/3$.",
+          "$T' = T\\sqrt{g/g_{eff}} = 2\\sqrt{3/4} = \\sqrt{3} = 1.73$ s."
+        ],
+        "final_answer": "Option (3): 1.73 s",
+        "why_not_others": "2.31 s comes from inverting the ratio. 1.50 s takes T proportional to $1/g$ instead of $1/\\sqrt{g}$. 2.00 s ignores the acceleration of the lift.",
+        "common_trap": "Using $g - a$ for upward acceleration, or forgetting the square root.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Due to a rise in temperature, the length of the pendulum of a clock increases by 0.2%. The clock was correct before the change. What happens to the clock in one day (86400 s)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It gains 86.4 s",
+        "It loses 172.8 s",
+        "It loses 43.2 s",
+        "It loses 86.4 s"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\frac{\\Delta T}{T} = \\frac{1}{2}\\frac{\\Delta l}{l}$",
+        "steps": [
+          "$\\frac{\\Delta T}{T} = \\frac{1}{2}(0.2\\%) = 0.1\\% = 0.001$.",
+          "A longer period means the clock runs slow, so it loses time.",
+          "Time lost per day $= 0.001 \\times 86400 = 86.4$ s."
+        ],
+        "final_answer": "Option (4): It loses 86.4 s",
+        "why_not_others": "'Gains' has the wrong direction. 172.8 s omits the factor $\\frac{1}{2}$. 43.2 s applies the factor $\\frac{1}{2}$ twice.",
+        "common_trap": "Forgetting the factor 1/2, or concluding that the clock gains time.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pendulum in a lift accelerating upward with acceleration a"
+          },
+          {
+            "label": "B",
+            "text": "Pendulum in a lift accelerating downward with acceleration a (a < g)"
+          },
+          {
+            "label": "C",
+            "text": "Pendulum in a freely falling lift"
+          },
+          {
+            "label": "D",
+            "text": "Pendulum in a car accelerating horizontally with acceleration a"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$T = 2\\pi\\sqrt{l/(g-a)}$"
+          },
+          {
+            "label": "II",
+            "text": "Pendulum does not oscillate"
+          },
+          {
+            "label": "III",
+            "text": "$T = 2\\pi\\sqrt{l/\\sqrt{g^2+a^2}}$"
+          },
+          {
+            "label": "IV",
+            "text": "$T = 2\\pi\\sqrt{l/(g+a)}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-II, D-III",
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-I, C-III, D-II",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Replace g by $g_{eff}$ in accelerating frames.",
+        "steps": [
+          "Upward acceleration: $g_{eff} = g + a$, so A matches IV.",
+          "Downward acceleration: $g_{eff} = g - a$, so B matches I.",
+          "Free fall: $g_{eff} = 0$, so there is no oscillation and C matches II.",
+          "Horizontal acceleration: $g_{eff} = \\sqrt{g^2 + a^2}$, so D matches III."
+        ],
+        "final_answer": "Option (1): A-IV, B-I, C-II, D-III",
+        "why_not_others": "Option (2) swaps the upward and downward cases. Option (3) swaps the free-fall and horizontal cases. Option (4) assigns the horizontal formula to the upward lift.",
+        "common_trap": "Mixing up the signs for upward and downward acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about a simple pendulum are correct?",
+      "statements": {
+        "A": "Its time period is independent of the mass of the bob.",
+        "B": "Its effective length is measured from the point of suspension to the top of the bob.",
+        "C": "A girl who stands up on a swing decreases its time period.",
+        "D": "Its time period on the Moon is smaller than on the Earth.",
+        "E": "The relation $T = 2\\pi\\sqrt{l/g}$ is valid only for small angular amplitudes."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "A, C, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$T = 2\\pi\\sqrt{l/g}$ holds for small angles, with l measured to the centre of the bob.",
+        "steps": [
+          "A is true: T does not depend on the mass of the bob.",
+          "B is false: l is measured to the centre of the bob.",
+          "C is true: standing up raises the centre of mass, so l and T decrease.",
+          "D is false: g is smaller on the Moon, so T is larger.",
+          "E is true: the formula relies on $\\sin\\theta \\approx \\theta$."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option (1) omits E. Option (2) includes the false B. Option (3) includes the false D.",
+        "common_trap": "Measuring l to the top of the bob, or thinking T decreases on the Moon.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "Which of the following cannot propagate through the bulk of air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Transverse mechanical waves",
+        "Longitudinal mechanical waves",
+        "Electromagnetic waves",
+        "Waves consisting of compressions and rarefactions"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Transverse mechanical waves need shear rigidity, which fluids lack.",
+        "steps": [
+          "Air has no shear rigidity, so transverse mechanical waves cannot travel through its bulk.",
+          "Longitudinal waves (compressions and rarefactions) and EM waves can travel through air."
+        ],
+        "final_answer": "Option (1): Transverse mechanical waves",
+        "why_not_others": "Sound in air is longitudinal, and option (4) describes the same type of wave. EM waves need no medium at all.",
+        "common_trap": "Thinking that EM waves, being transverse, cannot pass through air.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "Which of the following can be exhibited by transverse waves but never by longitudinal waves?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Transfer of energy",
+        "Transfer of momentum",
+        "Polarisation",
+        "Propagation through solids"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Polarisation is possible only for transverse waves.",
+        "steps": [
+          "All waves transport energy and momentum.",
+          "Longitudinal waves also travel through solids.",
+          "Only transverse waves can be polarised."
+        ],
+        "final_answer": "Option (3): Polarisation",
+        "why_not_others": "Energy transfer, momentum transfer and propagation through solids are shared by both wave types.",
+        "common_trap": "Thinking that longitudinal waves cannot travel in solids.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "Ripples on the surface of water are best described as:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Purely transverse waves",
+        "Purely longitudinal waves",
+        "A combination of transverse and longitudinal waves",
+        "Electromagnetic waves"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In surface ripples, water particles move both perpendicular to and along the direction of propagation.",
+        "steps": [
+          "Surface water waves combine transverse and longitudinal motion."
+        ],
+        "final_answer": "Option (3): A combination of transverse and longitudinal waves",
+        "why_not_others": "The visible crests suggest purely transverse waves, but the particles also move along the direction of propagation. The waves are not purely longitudinal, and they are mechanical, not electromagnetic.",
+        "common_trap": "Calling ripples purely transverse because crests and troughs are visible.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Sound cannot travel through vacuum, whereas light can.",
+        "R": "Sound waves are transverse, while light waves are longitudinal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Sound is a mechanical wave that needs a medium; light is an EM wave that needs none.",
+        "steps": [
+          "A is true: sound needs a medium, while light does not.",
+          "R is false: sound in air is longitudinal, and light (EM) is transverse."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R reverses the nature of the two waves, so any option calling R true is wrong.",
+        "common_trap": "Linking the need for a medium to the wave being transverse or longitudinal rather than mechanical or EM.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Transverse mechanical waves can travel through the bulk of a liquid because a liquid possesses inertia.",
+        "II": "The propagation of a mechanical wave requires the medium to possess both elasticity and inertia."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Transverse mechanical waves need shear rigidity; every mechanical wave needs elasticity and inertia.",
+        "steps": [
+          "A liquid lacks shear rigidity, so transverse waves cannot travel through its bulk. Statement I is incorrect.",
+          "Mechanical waves need both elasticity and inertia. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Inertia alone cannot support a transverse wave without shear rigidity, so Statement I is false. Statement II is correct.",
+        "common_trap": "Assuming any material medium can carry transverse waves.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A sound wave of frequency 500 Hz has a wavelength of 0.68 m in air. What is the speed of sound in air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "735 m/s",
+        "340 m/s",
+        "$1.36 \\times 10^{-3}$ m/s",
+        "680 m/s"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$v = \\nu\\lambda$",
+        "steps": [
+          "$v = 500 \\times 0.68 = 340$ m/s."
+        ],
+        "final_answer": "Option (2): 340 m/s",
+        "why_not_others": "735 m/s comes from $\\nu/\\lambda$. $1.36 \\times 10^{-3}$ m/s comes from $\\lambda/\\nu$. 680 m/s doubles the correct value.",
+        "common_trap": "Dividing instead of multiplying.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A string of mass 5 g and length 50 cm is stretched with a tension of 36 N. What is the speed of transverse waves on the string?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "600 m/s",
+        "3600 m/s",
+        "1.9 m/s",
+        "60 m/s"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$v = \\sqrt{T/\\mu}$, with $\\mu$ in kg/m.",
+        "steps": [
+          "$\\mu = 0.005/0.5 = 0.01$ kg/m.",
+          "$v = \\sqrt{36/0.01} = \\sqrt{3600} = 60$ m/s."
+        ],
+        "final_answer": "Option (4): 60 m/s",
+        "why_not_others": "600 m/s comes from keeping the length in cm ($\\mu = 10^{-4}$). 3600 m/s omits the square root. 1.9 m/s comes from keeping the mass in grams ($\\mu = 10$).",
+        "common_trap": "Mixing units when computing $\\mu$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "The speed of sound in a gas at $27^\\circ C$ is v. At what temperature will the speed become 2v, with the pressure kept constant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$108^\\circ C$",
+        "$927^\\circ C$",
+        "$1200^\\circ C$",
+        "$54^\\circ C$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$v \\propto \\sqrt{T}$, where T is absolute temperature.",
+        "steps": [
+          "Doubling v requires $T' = 4T = 4 \\times 300 = 1200$ K.",
+          "$1200 - 273 = 927^\\circ C$."
+        ],
+        "final_answer": "Option (2): $927^\\circ C$",
+        "why_not_others": "$108^\\circ C$ multiplies the Celsius temperature by 4. $1200^\\circ C$ forgets to convert back from kelvin. $54^\\circ C$ assumes $v \\propto T$ and uses the Celsius scale.",
+        "common_trap": "Using Celsius temperature in $v \\propto \\sqrt{T}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Pressure of a gas doubled at constant temperature"
+          },
+          {
+            "label": "B",
+            "text": "Absolute temperature of a gas made four times"
+          },
+          {
+            "label": "C",
+            "text": "Mass per unit length of a string made four times at the same tension"
+          },
+          {
+            "label": "D",
+            "text": "Tension in a string made nine times"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Wave speed becomes v/2"
+          },
+          {
+            "label": "II",
+            "text": "Wave speed remains v"
+          },
+          {
+            "label": "III",
+            "text": "Wave speed becomes 3v"
+          },
+          {
+            "label": "IV",
+            "text": "Wave speed becomes 2v"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In a gas, $v = \\sqrt{\\gamma P/\\rho} \\propto \\sqrt{T}$. On a string, $v = \\sqrt{T/\\mu}$.",
+        "steps": [
+          "At constant temperature, $P/\\rho$ is constant, so v is unchanged: A matches II.",
+          "$v \\propto \\sqrt{T}$, so a fourfold temperature doubles v: B matches IV.",
+          "$v \\propto 1/\\sqrt{\\mu}$, so a fourfold $\\mu$ halves v: C matches I.",
+          "$v \\propto \\sqrt{T}$ (tension), so a ninefold tension triples v: D matches III."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) wrongly lets pressure change v. Option (2) inverts the string relations. Option (3) inverts the temperature dependence and the $\\mu$ dependence.",
+        "common_trap": "Believing that pressure changes the speed of sound.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the speed of waves are correct?",
+      "statements": {
+        "A": "Newton assumed isothermal compressions in sound and obtained about 280 m/s for air.",
+        "B": "Laplace treated the compressions as adiabatic, giving $v = \\sqrt{\\gamma P/\\rho}$.",
+        "C": "Sound travels slower in moist air than in dry air because moist air is denser.",
+        "D": "When a wave passes into another medium, its frequency changes while its wavelength stays the same.",
+        "E": "In general, the speed of sound is greatest in solids and least in gases."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and E only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Laplace correction, effect of humidity, and invariance of frequency across media.",
+        "steps": [
+          "A and B are true statements of the Newton and Laplace treatments.",
+          "C is false: moist air is less dense, so sound travels faster in it.",
+          "D is false: frequency stays the same, while speed and wavelength change.",
+          "E is true: $v_{solid} > v_{liquid} > v_{gas}$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Options (1) and (4) include the false C. Option (3) includes the false D and omits A.",
+        "common_trap": "Thinking moist air is denser, or that frequency changes between media.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

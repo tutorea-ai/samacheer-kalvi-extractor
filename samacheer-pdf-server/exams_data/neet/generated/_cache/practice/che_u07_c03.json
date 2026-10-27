@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "A galvanic cell is represented as $Zn|Zn^{2+}(1M)||Ag^+(1M)|Ag$. What is its standard emf at 298 K? (Given: $E^\\circ(Zn^{2+}/Zn) = -0.76$ V and $E^\\circ(Ag^+/Ag) = +0.80$ V)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.04$ V",
+        "$2.36$ V",
+        "$1.56$ V",
+        "$-1.56$ V"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Standard emf is the cathode reduction potential minus the anode reduction potential, written as $E^\\circ_{right} - E^\\circ_{left}$.",
+        "steps": [
+          "In the cell notation, Zn is on the left, so it is the anode. Ag is on the right, so it is the cathode.",
+          "$E^\\circ_{cell} = E^\\circ_{cathode} - E^\\circ_{anode} = 0.80 - (-0.76)$.",
+          "$E^\\circ_{cell} = 1.56$ V."
+        ],
+        "final_answer": "Option (3): $1.56$ V",
+        "why_not_others": "$0.04$ V comes from adding the two reduction potentials as they are. $2.36$ V comes from doubling the Ag potential because the balanced reaction needs $2Ag^+$. $-1.56$ V comes from subtracting in the reverse order.",
+        "common_trap": "Multiplying $E^\\circ(Ag^+/Ag)$ by 2 because the balanced reaction contains $2Ag^+$. Electrode potential does not depend on stoichiometric coefficients.",
+        "time_saving_tip": "Right minus left, with both values taken as reduction potentials."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "A galvanic cell is built from a $Ni^{2+}(1M)/Ni$ half-cell and a $Cu^{2+}(1M)/Cu$ half-cell. Which statement about this cell is correct? (Given: $E^\\circ(Ni^{2+}/Ni) = -0.25$ V and $E^\\circ(Cu^{2+}/Cu) = +0.34$ V)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ni electrode is the cathode and $E^\\circ_{cell} = 0.09$ V",
+        "Cu electrode is the anode and $E^\\circ_{cell} = 0.59$ V",
+        "Cu electrode is the cathode and $E^\\circ_{cell} = 0.09$ V",
+        "Cu electrode is the cathode and $E^\\circ_{cell} = 0.59$ V"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The half-cell with the higher reduction potential becomes the cathode.",
+        "steps": [
+          "The Cu half-cell has the higher $E^\\circ$ (+0.34 V), so Cu is the cathode and Ni is the anode.",
+          "$E^\\circ_{cell} = 0.34 - (-0.25) = 0.59$ V."
+        ],
+        "final_answer": "Option (4): Cu electrode is the cathode and $E^\\circ_{cell} = 0.59$ V",
+        "why_not_others": "Ni has the lower reduction potential, so it cannot be the cathode. Cu cannot be the anode. A value of 0.09 V comes from adding the two potentials instead of subtracting them.",
+        "common_trap": "Treating the more negative potential as the cathode, or adding the two reduction potentials.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "What is the standard emf of the cell in which the reaction $2Al(s) + 3Cu^{2+}(aq) \\rightarrow 2Al^{3+}(aq) + 3Cu(s)$ takes place at 298 K? (Given: $E^\\circ(Al^{3+}/Al) = -1.66$ V and $E^\\circ(Cu^{2+}/Cu) = +0.34$ V)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.32$ V",
+        "$2.00$ V",
+        "$4.34$ V",
+        "$-2.00$ V"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$E^\\circ$ is intensive, so it is never multiplied by stoichiometric coefficients.",
+        "steps": [
+          "Al is oxidised, so it is the anode. $Cu^{2+}$ is reduced, so Cu is the cathode.",
+          "$E^\\circ_{cell} = 0.34 - (-1.66) = 2.00$ V.",
+          "The coefficients 2 and 3 have no effect on $E^\\circ$."
+        ],
+        "final_answer": "Option (2): $2.00$ V",
+        "why_not_others": "$1.32$ V comes from computing $1.66 - 0.34$. $4.34$ V comes from multiplying by the coefficients ($3 \\times 0.34 + 2 \\times 1.66$). $-2.00$ V comes from reversing the subtraction.",
+        "common_trap": "Multiplying each $E^\\circ$ by its stoichiometric coefficient when balancing the cell reaction.",
+        "time_saving_tip": "Ignore the coefficients completely when calculating $E^\\circ_{cell}$."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The emf of a galvanic cell is the potential difference measured between its electrodes while a large current is being drawn from the cell.",
+        "R": "The emf of a cell is greater than the potential difference between its electrodes measured while current is being drawn."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Emf is defined as the potential difference between the electrodes when no current flows.",
+        "steps": [
+          "Emf is the potential difference when no current is drawn, so A is false.",
+          "The potential difference measured while current flows is less than the emf, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A misstates the definition of emf, so every option that treats A as true is wrong.",
+        "common_trap": "Confusing emf with the terminal voltage measured while current flows.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For the cell $Mg|Mg^{2+}(1M)||Ag^+(1M)|Ag$, $E^\\circ_{cell} = 3.17$ V, and the reaction $Mg + 2Ag^+ \\rightarrow Mg^{2+} + 2Ag$ is spontaneous under standard conditions. (Given: $E^\\circ(Mg^{2+}/Mg) = -2.37$ V, $E^\\circ(Ag^+/Ag) = +0.80$ V)",
+        "II": "For a cell written as $Cu|Cu^{2+}(1M)||Zn^{2+}(1M)|Zn$, $E^\\circ_{cell} = +1.10$ V, so the reaction $Cu + Zn^{2+} \\rightarrow Cu^{2+} + Zn$ is spontaneous under standard conditions. (Given: $E^\\circ(Zn^{2+}/Zn) = -0.76$ V, $E^\\circ(Cu^{2+}/Cu) = +0.34$ V)"
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$E^\\circ_{cell} = E^\\circ_{right} - E^\\circ_{left}$. A positive value means the reaction as written is spontaneous; a negative value means the reverse is spontaneous.",
+        "steps": [
+          "Statement I: $E^\\circ_{cell} = 0.80 - (-2.37) = 3.17$ V. The value is positive, so the reaction is spontaneous and I is correct.",
+          "Statement II: $E^\\circ_{cell} = E^\\circ_{right} - E^\\circ_{left} = -0.76 - 0.34 = -1.10$ V.",
+          "The emf is negative, so the reverse reaction ($Zn + Cu^{2+}$) is spontaneous. II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II reports the magnitude of the Daniell cell emf with the wrong sign for the cell as written, so any option calling II correct fails.",
+        "common_trap": "Assuming any cell built from Zn and Cu has $E^\\circ = +1.10$ V, whichever way the cell is written.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "What is the electrode potential of a $Cu^{2+}/Cu$ electrode dipped in $0.01$ M $Cu^{2+}$ solution at 298 K? (Given: $E^\\circ(Cu^{2+}/Cu) = +0.34$ V)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.281$ V",
+        "$0.399$ V",
+        "$0.222$ V",
+        "$0.458$ V"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For $M^{n+} + ne^- \\rightarrow M$, $E = E^\\circ - \\frac{0.059}{n}\\log\\frac{1}{[M^{n+}]}$.",
+        "steps": [
+          "Here n = 2 and $\\log\\frac{1}{0.01} = 2$.",
+          "$E = 0.34 - \\frac{0.059}{2} \\times 2 = 0.34 - 0.059$.",
+          "$E = 0.281$ V."
+        ],
+        "final_answer": "Option (1): $0.281$ V",
+        "why_not_others": "$0.399$ V comes from adding the correction term instead of subtracting it. $0.222$ V comes from using n = 1. $0.458$ V combines n = 1 with the wrong sign.",
+        "common_trap": "Using $\\log[M^{n+}]$ in place of $\\log\\frac{1}{[M^{n+}]}$, which flips the sign of the correction.",
+        "time_saving_tip": "A dilute metal-ion solution always lowers the reduction potential below $E^\\circ$."
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "A hydrogen electrode with $H_2$ gas at 1 bar shows a potential of $-0.236$ V at 298 K. What is the pH of its solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2$",
+        "$4$",
+        "$10$",
+        "$0.4$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "At 1 bar $H_2$ and 298 K, $E_{H^+/H_2} = -0.059\\,pH$.",
+        "steps": [
+          "$-0.236 = -0.059\\,pH$.",
+          "$pH = \\frac{0.236}{0.059} = 4$."
+        ],
+        "final_answer": "Option (2): $4$",
+        "why_not_others": "$2$ comes from dividing by 0.118, as if n = 2 were used. $10$ comes from wrongly taking $14 - 4$. $0.4$ comes from a decimal slip.",
+        "common_trap": "Including n = 2 for $2H^+ + 2e^- \\rightarrow H_2$ but forgetting that $[H^+]^2$ appears in Q, which cancels the 2.",
+        "time_saving_tip": "Each unit of pH lowers the hydrogen electrode potential by 0.059 V."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "The standard emf of a cell for a two-electron cell reaction is $0.295$ V at 298 K. What is the equilibrium constant $K_c$ of the cell reaction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10^{5}$",
+        "$10^{10}$",
+        "$10^{20}$",
+        "$10^{-10}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\log K_c = \\frac{nE^\\circ_{cell}}{0.059}$ at 298 K.",
+        "steps": [
+          "$\\log K_c = \\frac{2 \\times 0.295}{0.059} = 10$.",
+          "$K_c = 10^{10}$."
+        ],
+        "final_answer": "Option (2): $10^{10}$",
+        "why_not_others": "$10^{5}$ comes from ignoring n. $10^{20}$ comes from using $n^2$. $10^{-10}$ is a sign error, since a positive $E^\\circ$ gives K > 1.",
+        "common_trap": "Dropping n from the expression.",
+        "time_saving_tip": "Each 0.059 V multiplied by n adds one power of ten to K."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Emf of $Cu|Cu^{2+}(0.001M)||Cu^{2+}(0.1M)|Cu$ at 298 K"
+          },
+          {
+            "label": "B",
+            "text": "Potential of a hydrogen electrode (1 bar $H_2$) in a solution of pH 3 at 298 K"
+          },
+          {
+            "label": "C",
+            "text": "$E^\\circ_{cell}$ of a one-electron cell reaction with $K_c = 10^{10}$ at 298 K"
+          },
+          {
+            "label": "D",
+            "text": "$E^\\circ_{cell}$ of a two-electron cell reaction with $K_c = 10^{10}$ at 298 K"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$-0.177$ V"
+          },
+          {
+            "label": "II",
+            "text": "$0.295$ V"
+          },
+          {
+            "label": "III",
+            "text": "$0.059$ V"
+          },
+          {
+            "label": "IV",
+            "text": "$0.59$ V"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "This uses three Nernst applications: concentration cells, the hydrogen electrode, and the link between K and $E^\\circ$.",
+        "steps": [
+          "A: $E = \\frac{0.059}{2}\\log\\frac{0.1}{0.001} = 0.0295 \\times 2 = 0.059$ V, which is III.",
+          "B: $E = -0.059 \\times 3 = -0.177$ V, which is I.",
+          "C: $E^\\circ = \\frac{0.059}{1} \\times 10 = 0.59$ V, which is IV.",
+          "D: $E^\\circ = \\frac{0.059}{2} \\times 10 = 0.295$ V, which is II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) swaps C and D, which means the role of n was ignored. Options (3) and (4) mismatch the concentration cell and hydrogen electrode values.",
+        "common_trap": "Forgetting that a larger n gives a smaller $E^\\circ$ for the same K.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the Nernst equation and its applications are correct?",
+      "statements": {
+        "A": "In a concentration cell, the electrode in the more dilute solution acts as the anode.",
+        "B": "The standard emf of a concentration cell is zero.",
+        "C": "Decreasing the concentration of a product decreases $E_{cell}$.",
+        "D": "Pure solids and pure liquids are taken as 1 in the reaction quotient Q.",
+        "E": "Gases enter the reaction quotient Q as their molar concentrations, not as partial pressures."
+      },
+      "match_lists": null,
+      "options": [
+        "A and D only",
+        "B, C and E only",
+        "A, B and D only",
+        "A, B, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "These statements test the rules for Q and for concentration cells in the Nernst equation.",
+        "steps": [
+          "A is true: the dilute side is the anode.",
+          "B is true: both electrodes are identical, so $E^\\circ = 0$.",
+          "C is false: decreasing product concentration lowers Q and therefore increases $E_{cell}$.",
+          "D is true.",
+          "E is false: gases enter Q as partial pressure in bar."
+        ],
+        "final_answer": "Option (3): A, B and D only",
+        "why_not_others": "Option (1) leaves out B. Option (2) includes C and E, which are false. Option (4) includes E, which is false.",
+        "common_trap": "Getting the direction wrong for how a product concentration change affects $E_{cell}$.",
+        "time_saving_tip": "Smaller Q means larger E."
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "For a cell reaction involving the transfer of 2 electrons, $E^\\circ_{cell} = 0.50$ V at 298 K. What is $\\Delta G^\\circ$ for the reaction? (Take F = 96500 C mol$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-48.25$ kJ mol$^{-1}$",
+        "$+96.5$ kJ mol$^{-1}$",
+        "$-96.5$ kJ mol$^{-1}$",
+        "$-96500$ kJ mol$^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\Delta G^\\circ = -nFE^\\circ_{cell}$.",
+        "steps": [
+          "$\\Delta G^\\circ = -2 \\times 96500 \\times 0.50 = -96500$ J mol$^{-1}$.",
+          "Converting to kilojoules: $-96.5$ kJ mol$^{-1}$."
+        ],
+        "final_answer": "Option (3): $-96.5$ kJ mol$^{-1}$",
+        "why_not_others": "$-48.25$ kJ comes from using n = 1. $+96.5$ kJ has the wrong sign, since positive $E^\\circ$ means negative $\\Delta G^\\circ$. $-96500$ kJ comes from not converting J to kJ.",
+        "common_trap": "Forgetting that $-nFE$ gives the answer in joules.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "For a metal M, $E^\\circ(M^{2+}/M) = -0.20$ V and $E^\\circ(M^{3+}/M^{2+}) = +0.70$ V at 298 K. What is $E^\\circ(M^{3+}/M)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+0.50$ V",
+        "$+0.25$ V",
+        "$-0.90$ V",
+        "$+0.10$ V"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Half-cell potentials are combined through their $nE^\\circ$ values, which are proportional to $\\Delta G^\\circ$. The $E^\\circ$ values themselves are not added.",
+        "steps": [
+          "$M^{3+} + e^- \\rightarrow M^{2+}$: $nE^\\circ = 1 \\times 0.70 = 0.70$.",
+          "$M^{2+} + 2e^- \\rightarrow M$: $nE^\\circ = 2 \\times (-0.20) = -0.40$.",
+          "$M^{3+} + 3e^- \\rightarrow M$: $3E^\\circ = 0.70 - 0.40 = 0.30$.",
+          "$E^\\circ = 0.10$ V."
+        ],
+        "final_answer": "Option (4): $+0.10$ V",
+        "why_not_others": "$0.50$ V comes from adding the $E^\\circ$ values directly. $0.25$ V comes from averaging them. $-0.90$ V comes from subtracting them.",
+        "common_trap": "Adding $E^\\circ$ values directly when combining half-reactions into a new half-reaction.",
+        "time_saving_tip": "New $E^\\circ$ equals the sum of $nE^\\circ$ divided by the total n."
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "The standard Gibbs energy change for a cell reaction involving 2 electrons is $-57.9$ kJ mol$^{-1}$ at 298 K. What is the standard emf of the cell? (Take F = 96500 C mol$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.60$ V",
+        "$3.0 \\times 10^{-4}$ V",
+        "$-0.30$ V",
+        "$0.30$ V"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$E^\\circ_{cell} = -\\frac{\\Delta G^\\circ}{nF}$, with $\\Delta G^\\circ$ in joules.",
+        "steps": [
+          "$\\Delta G^\\circ = -57900$ J mol$^{-1}$.",
+          "$E^\\circ = \\frac{57900}{2 \\times 96500} = \\frac{57900}{193000} = 0.30$ V."
+        ],
+        "final_answer": "Option (4): $0.30$ V",
+        "why_not_others": "$0.60$ V comes from using n = 1. $3.0 \\times 10^{-4}$ V comes from leaving $\\Delta G^\\circ$ in kJ. $-0.30$ V has the wrong sign, since negative $\\Delta G^\\circ$ means positive $E^\\circ$.",
+        "common_trap": "Not converting kJ to J before using F in C mol$^{-1}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When the equation of a cell reaction is multiplied by 2, its $\\Delta G^\\circ$ doubles but its $E^\\circ_{cell}$ remains unchanged.",
+        "R": "$\\Delta G^\\circ$ is an extensive property while $E^\\circ_{cell}$ is intensive; in $\\Delta G^\\circ = -nFE^\\circ_{cell}$, doubling the equation doubles n."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\Delta G$ is extensive and E is intensive. The relation $\\Delta G = -nFE$ connects them through n.",
+        "steps": [
+          "Doubling the equation doubles n, so $\\Delta G^\\circ = -(2n)FE^\\circ$ doubles while $E^\\circ$ stays the same. A is true.",
+          "R gives exactly this reason, so R is true and explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements match the notes, and R directly accounts for A, so options (2), (3) and (4) fail.",
+        "common_trap": "Thinking that $E^\\circ$ also doubles when the equation is doubled.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a cell reaction with $E^\\circ_{cell} > 0$, $\\Delta G^\\circ$ is negative and the equilibrium constant K is less than 1.",
+        "II": "Writing the Daniell cell reaction as $2Zn + 2Cu^{2+} \\rightarrow 2Zn^{2+} + 2Cu$ changes its $E^\\circ_{cell}$ to 2.20 V and its $\\Delta G^\\circ$ to $-424.6$ kJ."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$E^\\circ > 0$ means $\\Delta G^\\circ < 0$ and K > 1. $E^\\circ$ is intensive and $\\Delta G^\\circ$ is extensive.",
+        "steps": [
+          "Statement I: a positive $E^\\circ$ gives a negative $\\Delta G^\\circ$, which gives K > 1, not K < 1. I is incorrect.",
+          "Statement II: doubling the equation doubles $\\Delta G^\\circ$ to $-424.6$ kJ, but $E^\\circ$ stays 1.10 V. Because the emf is wrong, II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I gets the relation between $E^\\circ$ and K backwards. Statement II wrongly doubles an intensive quantity, even though its $\\Delta G^\\circ$ value is right.",
+        "common_trap": "Accepting Statement II because its $\\Delta G^\\circ$ value is correct.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "In a dry (Leclanche) cell, which component acts as the anode?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Zinc container",
+        "Carbon (graphite) rod",
+        "Powdered $MnO_2$",
+        "Moist paste of $NH_4Cl$ and $ZnCl_2$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The anode is where oxidation occurs: $Zn \\rightarrow Zn^{2+} + 2e^-$.",
+        "steps": [
+          "Zinc is oxidised, so the zinc container is the anode."
+        ],
+        "final_answer": "Option (1): Zinc container",
+        "why_not_others": "The carbon rod with $MnO_2$ forms the cathode. The $NH_4Cl$ and $ZnCl_2$ paste is the electrolyte.",
+        "common_trap": "Calling the central carbon rod the anode.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "In the cathode reaction of a dry cell, $MnO_2 + NH_4^+ + e^- \\rightarrow MnO(OH) + NH_3$, how does the oxidation state of manganese change?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+4$ to $+2$",
+        "$+4$ to $+3$",
+        "$+3$ to $+4$",
+        "$+7$ to $+4$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "This is a one-electron reduction of Mn at the cathode.",
+        "steps": [
+          "In $MnO_2$, Mn is $+4$.",
+          "In $MnO(OH)$: $x - 2 - 1 = 0$, so $x = +3$.",
+          "Mn changes from $+4$ to $+3$, which matches the one electron gained."
+        ],
+        "final_answer": "Option (2): $+4$ to $+3$",
+        "why_not_others": "$+4$ to $+2$ is the change for $MnO_2$ acting as an oxidant with a halide and acid, not in the dry cell. $+3$ to $+4$ would be oxidation, but reduction occurs at the cathode. $+7$ to $+4$ is a permanganate change.",
+        "common_trap": "Recalling the $+4$ to $+2$ change of $MnO_2$ from other redox reactions.",
+        "time_saving_tip": "One electron gained means the oxidation state drops by 1."
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "Which statement correctly describes a lead storage battery during discharge?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The density of the sulphuric acid increases",
+        "Both electrodes become coated with $PbSO_4$ and $H_2SO_4$ is consumed",
+        "The lead grid packed with $PbO_2$ acts as the anode",
+        "$PbSO_4$ is converted into Pb and $PbO_2$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Overall discharge reaction: $Pb + PbO_2 + 2H_2SO_4 \\rightarrow 2PbSO_4 + 2H_2O$.",
+        "steps": [
+          "Pb is oxidised to $PbSO_4$ and $PbO_2$ is reduced to $PbSO_4$.",
+          "$H_2SO_4$ is consumed and water is formed, so the acid density falls."
+        ],
+        "final_answer": "Option (2): Both electrodes become coated with $PbSO_4$ and $H_2SO_4$ is consumed",
+        "why_not_others": "Acid density decreases on discharge, not increases. $PbO_2$ is the cathode. Conversion of $PbSO_4$ to Pb and $PbO_2$ happens on charging.",
+        "common_trap": "Mixing up the charging and discharging reactions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Anode of the dry cell"
+          },
+          {
+            "label": "B",
+            "text": "Electrolyte of the lead accumulator"
+          },
+          {
+            "label": "C",
+            "text": "Cathode of the lead accumulator"
+          },
+          {
+            "label": "D",
+            "text": "Electrolyte of the dry cell"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Lead grid packed with $PbO_2$"
+          },
+          {
+            "label": "II",
+            "text": "Moist paste of $NH_4Cl$ and $ZnCl_2$"
+          },
+          {
+            "label": "III",
+            "text": "Zinc container"
+          },
+          {
+            "label": "IV",
+            "text": "About 38% $H_2SO_4$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-II, C-I, D-IV",
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "This tests the components of the dry cell and the lead accumulator.",
+        "steps": [
+          "Dry cell anode: zinc container, so A-III.",
+          "Lead accumulator electrolyte: about 38% $H_2SO_4$, so B-IV.",
+          "Lead accumulator cathode: lead grid packed with $PbO_2$, so C-I.",
+          "Dry cell electrolyte: $NH_4Cl$ and $ZnCl_2$ paste, so D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (2) swaps the two electrolytes. Option (3) swaps the two electrodes. Option (4) mixes an electrolyte with an electrode.",
+        "common_trap": "Mixing up which electrolyte belongs to which cell.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the dry cell and the lead accumulator are correct?",
+      "statements": {
+        "A": "The dry cell is a primary cell and cannot be recharged.",
+        "B": "In the dry cell, the $NH_3$ formed at the cathode forms the complex $[Zn(NH_3)_4]^{2+}$.",
+        "C": "Each cell of a lead accumulator gives about 1.5 V.",
+        "D": "On charging a lead accumulator, $PbSO_4$ is converted back to Pb and $PbO_2$.",
+        "E": "The density of the acid in a lead accumulator increases during discharge."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and D only",
+        "A, B and D only",
+        "B, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This tests the features and reactions of primary and secondary cells.",
+        "steps": [
+          "A is true: the dry cell is a primary cell.",
+          "B is true: $NH_3$ complexes $Zn^{2+}$.",
+          "C is false: each lead cell gives about 2 V. About 1.5 V is the dry cell value.",
+          "D is true.",
+          "E is false: $H_2SO_4$ is consumed, so the density falls."
+        ],
+        "final_answer": "Option (3): A, B and D only",
+        "why_not_others": "Option (1) leaves out D. Option (2) includes C, which is false. Option (4) includes E, which is false, and leaves out A.",
+        "common_trap": "Swapping the voltages of the two cells, about 1.5 V for the dry cell and about 2 V per lead cell.",
+        "time_saving_tip": "Discharge consumes acid, so the density drops."
+      }
+    }
+  ]
+}

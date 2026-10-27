@@ -1,0 +1,623 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A neutral metal sphere is given a charge of $+3.2\\,\\mu C$. How many electrons must be removed from it? (Take $e = 1.6 \\times 10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2 \\times 10^{12}$",
+        "$5 \\times 10^{12}$",
+        "$2 \\times 10^{25}$",
+        "$2 \\times 10^{13}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Quantization of charge: $q = ne$.",
+        "steps": [
+          "$n = q/e = (3.2 \\times 10^{-6})/(1.6 \\times 10^{-19})$.",
+          "$n = 2 \\times 10^{13}$ electrons.",
+          "A positive charge means these electrons are removed."
+        ],
+        "final_answer": "Option (4): $2 \\times 10^{13}$",
+        "why_not_others": "$2 \\times 10^{12}$ comes from a power-of-ten slip. $5 \\times 10^{12}$ comes from inverting the ratio of the mantissas. $2 \\times 10^{25}$ comes from ignoring the micro prefix.",
+        "common_trap": "Forgetting to convert $\\mu C$ to C.",
+        "time_saving_tip": "1 μC corresponds to $6.25 \\times 10^{12}$ electrons. Multiply this by 3.2."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "Which of the following values of charge can NOT reside on an isolated body? (Take $e = 1.6 \\times 10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.4 \\times 10^{-19}\\,C$",
+        "$3.2 \\times 10^{-19}\\,C$",
+        "$4.8 \\times 10^{-19}\\,C$",
+        "$8.0 \\times 10^{-19}\\,C$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Any free charge must be an integer multiple of e.",
+        "steps": [
+          "Divide each value by $1.6 \\times 10^{-19}$.",
+          "The ratios are 1.5, 2, 3 and 5.",
+          "Only 1.5 is not an integer, so that charge cannot exist on an isolated body."
+        ],
+        "final_answer": "Option (1): $2.4 \\times 10^{-19}\\,C$",
+        "why_not_others": "$3.2 \\times 10^{-19}$, $4.8 \\times 10^{-19}$ and $8.0 \\times 10^{-19}\\,C$ equal 2e, 3e and 5e respectively, so all are allowed.",
+        "common_trap": "Thinking quark charges allow fractional values. Quarks are never found free.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "Two identical conducting spheres carry charges $+12\\,\\mu C$ and $-4\\,\\mu C$. They are touched together and then separated. Which statement correctly describes the electron transfer during contact? (Take $e = 1.6 \\times 10^{-19}\\,C$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5 \\times 10^{13}$ electrons flow from the first sphere to the second",
+        "$5 \\times 10^{13}$ electrons flow from the first sphere to the second",
+        "$2.5 \\times 10^{13}$ electrons flow from the second sphere to the first",
+        "$5 \\times 10^{13}$ electrons flow from the second sphere to the first"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Charge is conserved and is shared equally between identical spheres. Only electrons move.",
+        "steps": [
+          "The final charge on each sphere is $(12 - 4)/2 = +4\\,\\mu C$.",
+          "The first sphere changes from $+12$ to $+4\\,\\mu C$, so it gains $8\\,\\mu C$ of negative charge.",
+          "$n = 8 \\times 10^{-6}/1.6 \\times 10^{-19} = 5 \\times 10^{13}$.",
+          "These electrons come from the second sphere and go to the first."
+        ],
+        "final_answer": "Option (4): $5 \\times 10^{13}$ electrons flow from the second sphere to the first",
+        "why_not_others": "$2.5 \\times 10^{13}$ results from using $4\\,\\mu C$ as the transferred charge. A flow from the first sphere to the second reverses the direction of electron motion.",
+        "common_trap": "Imagining that positive charge (protons) moves from the first sphere to the second.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A body that acquires a negative charge by friction has slightly less mass than it had before charging.",
+        "R": "Charging always involves a transfer of electrons, and a body that gains electrons becomes negatively charged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Negative charging means a gain of electrons, and therefore a tiny gain in mass.",
+        "steps": [
+          "A negatively charged body has gained electrons.",
+          "Electrons have mass, so the body's mass increases slightly. A is therefore false.",
+          "R correctly states that charging transfers electrons and that a gain of electrons makes a body negative."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A claims a decrease in mass, which contradicts the gain of electrons. So options (1), (2) and (3) are ruled out.",
+        "common_trap": "Reversing the mass change, as though negative charging removed particles.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a photon converts into an electron-positron pair, the total charge before and after the process is zero. This shows that charge is conserved even in pair production.",
+        "II": "The charge of an electron moving with a speed close to that of light is greater than the charge of an electron at rest."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Charge is conserved in every process, and it is relativistically invariant.",
+        "steps": [
+          "Photon (0) → electron (−e) + positron (+e), so the net charge stays 0. Statement I is correct.",
+          "Charge does not depend on the speed of the body. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses charge with quantities such as relativistic mass, which do depend on speed. Statement I is a standard example of charge conservation.",
+        "common_trap": "Assuming that charge, like mass, increases at high speed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Two point charges of $2\\,\\mu C$ and $8\\,\\mu C$ are placed $0.4\\,m$ apart in vacuum. What is the magnitude of the electrostatic force between them? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.36\\,N$",
+        "$9\\,N$",
+        "$0.9\\,N$",
+        "$0.09\\,N$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Coulomb's law: $F = kq_1q_2/r^2$.",
+        "steps": [
+          "$q_1q_2 = 16 \\times 10^{-12}\\,C^2$.",
+          "$kq_1q_2 = 9 \\times 10^9 \\times 16 \\times 10^{-12} = 0.144$.",
+          "$F = 0.144/0.16 = 0.9\\,N$."
+        ],
+        "final_answer": "Option (3): $0.9\\,N$",
+        "why_not_others": "0.36 N comes from dividing by r instead of $r^2$. 9 N and 0.09 N come from power-of-ten slips.",
+        "common_trap": "Forgetting to square the distance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Two point charges separated by a distance r in air repel each other with force F. They are now placed in a medium of dielectric constant 4. What should their new separation be so that the force between them is still F?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2r$",
+        "$r/4$",
+        "$4r$",
+        "$r/2$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In a medium the force is reduced by a factor of K: $F = kq_1q_2/(Kr^2)$.",
+        "steps": [
+          "Set $kq_1q_2/(4r'^2) = kq_1q_2/r^2$.",
+          "This gives $r'^2 = r^2/4$.",
+          "So $r' = r/2$."
+        ],
+        "final_answer": "Option (4): $r/2$",
+        "why_not_others": "$r/4$ ignores the square root. $2r$ and $4r$ wrongly assume the medium increases the force.",
+        "common_trap": "Thinking the force rises by K in a medium, so the charges must be moved apart.",
+        "time_saving_tip": "Use $r' = r/\\sqrt{K}$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "Two point charges $+q$ and $+9q$ are fixed 16 cm apart. At what position on the line joining them will a third charge experience zero net force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.6 cm from $+q$, between the charges",
+        "8 cm from $+q$, between the charges",
+        "12 cm from $+q$, between the charges",
+        "4 cm from $+q$, between the charges"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For like charges, the null point lies between them and closer to the smaller charge.",
+        "steps": [
+          "Let the point be x from $+q$. Then $q/x^2 = 9q/(16 - x)^2$.",
+          "Taking square roots, $(16 - x)/x = 3$.",
+          "So $x = 4$ cm from $+q$."
+        ],
+        "final_answer": "Option (4): 4 cm from $+q$, between the charges",
+        "why_not_others": "1.6 cm comes from dropping the square root (using the ratio 1:9). 8 cm assumes the midpoint. 12 cm places the point nearer the larger charge.",
+        "common_trap": "Forgetting that the force depends on $1/r^2$, so the distance ratio is $\\sqrt{1:9}$.",
+        "time_saving_tip": "Divide the separation in the ratio $\\sqrt{q_1}:\\sqrt{q_2}$, here 1:3."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "The distance between the two charges is doubled"
+          },
+          {
+            "label": "B",
+            "text": "Both charges are doubled, with the distance unchanged"
+          },
+          {
+            "label": "C",
+            "text": "The charges are placed in a medium of dielectric constant 2, with the distance unchanged"
+          },
+          {
+            "label": "D",
+            "text": "One charge is doubled and the distance is halved"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$8F$"
+          },
+          {
+            "label": "II",
+            "text": "$F/4$"
+          },
+          {
+            "label": "III",
+            "text": "$4F$"
+          },
+          {
+            "label": "IV",
+            "text": "$F/2$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$F \\propto q_1q_2/(Kr^2)$. The initial force between the two charges in vacuum is F.",
+        "steps": [
+          "A: doubling r gives $F/4$, which is II.",
+          "B: doubling both charges gives $4F$, which is III.",
+          "C: with K = 2 the force is $F/2$, which is IV.",
+          "D: $2 \\times 4 = 8$, so the force is $8F$, which is I."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-IV, D-I",
+        "why_not_others": "The other matchings swap the inverse-square effect with the effect of the charge product, or treat the medium as increasing the force.",
+        "common_trap": "In D, halving the distance multiplies the force by 4, not 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Coulomb's law and superposition are correct?",
+      "statements": {
+        "A": "The electrostatic forces that two point charges exert on each other obey Newton's third law.",
+        "B": "The force between two point charges is unaffected by the presence of a third charge nearby.",
+        "C": "Two forces, each of magnitude F, acting at $60^\\circ$ to each other on a charge give a resultant of $\\sqrt{3}F$.",
+        "D": "The Coulomb force is a non-conservative force.",
+        "E": "When two charges are placed in a medium of dielectric constant K, the force between them increases K times."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "B, C and E only",
+        "A, B, C and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The Coulomb force is central and conservative, obeys the third law, and combines by vector superposition.",
+        "steps": [
+          "A is true: the forces are equal and opposite.",
+          "B is true: each pair interaction is independent of the other charges.",
+          "C is true: $2F\\cos 30^\\circ = \\sqrt{3}F$.",
+          "D is false: the force is conservative. E is false: the force is reduced by a factor of K."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Every other option contains D or E, and both of these are false.",
+        "common_trap": "Adding the magnitudes as 2F instead of using $2F\\cos(\\theta/2)$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "A thin rod of length 50 cm carries a uniform linear charge density of $4\\,\\mu C/m$. What is the total charge on the rod?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$8\\,\\mu C$",
+        "$200\\,\\mu C$",
+        "$0.125\\,\\mu C$",
+        "$2\\,\\mu C$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a uniform distribution, $Q = \\lambda L$.",
+        "steps": [
+          "L = 0.5 m.",
+          "$Q = 4 \\times 0.5 = 2\\,\\mu C$."
+        ],
+        "final_answer": "Option (4): $2\\,\\mu C$",
+        "why_not_others": "$8\\,\\mu C$ comes from dividing by L. $200\\,\\mu C$ comes from using L in cm. $0.125\\,\\mu C$ comes from computing $L/\\lambda$.",
+        "common_trap": "Not converting cm to m.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A ring of radius 20 cm carries a uniformly distributed charge. At what distance from its centre, along its axis, is the electric field maximum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "At the centre of the ring",
+        "$10\\sqrt{2}$ cm",
+        "$20\\sqrt{2}$ cm",
+        "10 cm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The axial field of a ring is maximum at $x = R/\\sqrt{2}$.",
+        "steps": [
+          "$x = 20/\\sqrt{2}$.",
+          "$x = 10\\sqrt{2}$ cm, which is about 14.1 cm."
+        ],
+        "final_answer": "Option (2): $10\\sqrt{2}$ cm",
+        "why_not_others": "At the centre the field is zero. $20\\sqrt{2}$ cm comes from multiplying by $\\sqrt{2}$ instead of dividing. 10 cm comes from using R/2.",
+        "common_trap": "Assuming the field is largest at the centre because that point is closest to all the charge.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A ring of radius 3 cm carries a uniformly distributed charge of $10\\,\\mu C$. A point charge of $2\\,\\mu C$ is placed on the axis of the ring at a distance of 4 cm from its centre. What is the magnitude of the force on the point charge? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "72 N",
+        "43.2 N",
+        "57.6 N",
+        "112.5 N"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Field on the axis of a ring: $E = kQx/(x^2+R^2)^{3/2}$.",
+        "steps": [
+          "$(x^2 + R^2)^{1/2} = 5$ cm, so $(x^2 + R^2)^{3/2} = (0.05)^3 = 1.25 \\times 10^{-4}\\,m^3$.",
+          "$kQx = 9 \\times 10^9 \\times 10^{-5} \\times 0.04 = 3600$.",
+          "$E = 3600/1.25 \\times 10^{-4} = 2.88 \\times 10^7\\,N/C$.",
+          "$F = qE = 2 \\times 10^{-6} \\times 2.88 \\times 10^7 = 57.6\\,N$."
+        ],
+        "final_answer": "Option (3): 57.6 N",
+        "why_not_others": "72 N treats the ring as a point charge 5 cm away and ignores the cancellation of perpendicular components. 112.5 N treats the ring as a point charge 4 cm away. 43.2 N uses R instead of x in the numerator.",
+        "common_trap": "Forgetting the factor $x/r$ that remains after the perpendicular components cancel.",
+        "time_saving_tip": "Recognise the 3-4-5 triangle, so r = 5 cm directly."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The electric field on the axis of a uniformly charged ring is maximum at the centre of the ring.",
+        "R": "At the centre of a uniformly charged ring, the fields due to diametrically opposite elements of the ring cancel each other."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "By symmetry, the field at the centre of a ring is zero. The axial field is maximum at $x = R/\\sqrt{2}$.",
+        "steps": [
+          "Opposite elements produce equal and opposite fields at the centre, so R is true.",
+          "The field at the centre is therefore zero, not maximum. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are eliminated.",
+        "common_trap": "Assuming the field is largest where the point is nearest to all the charge.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At a point on the axis of a uniformly charged ring at a distance much greater than its radius, the field is approximately that of a point charge equal to the ring's charge placed at its centre.",
+        "II": "A thin spherical shell of radius 10 cm with uniform surface charge density $2\\,\\mu C/m^2$ carries a total charge of $8\\pi \\times 10^{-8}\\,C$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The ring behaves like a point charge for $x \\gg R$. For a uniform shell, $Q = \\sigma \\times 4\\pi R^2$.",
+        "steps": [
+          "For $x \\gg R$, $(x^2 + R^2)^{3/2} \\approx x^3$, so $E \\approx kQ/x^2$. Statement I is correct.",
+          "$Q = 2 \\times 10^{-6} \\times 4\\pi (0.1)^2 = 8\\pi \\times 10^{-8}\\,C$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out, so the options that call either statement incorrect fail.",
+        "common_trap": "Using $\\pi R^2$ instead of $4\\pi R^2$ for the area of the shell.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "What is the magnitude of the electric field at a distance of 30 cm from a point charge of 2 nC in vacuum? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 N/C",
+        "0.02 N/C",
+        "2000 N/C",
+        "200 N/C"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Field of a point charge: $E = kq/r^2$.",
+        "steps": [
+          "$kq = 9 \\times 10^9 \\times 2 \\times 10^{-9} = 18$.",
+          "$E = 18/(0.3)^2 = 18/0.09 = 200\\,N/C$."
+        ],
+        "final_answer": "Option (4): 200 N/C",
+        "why_not_others": "60 N/C comes from dividing by r instead of $r^2$. 0.02 N/C comes from using r in cm. 2000 N/C comes from a power-of-ten slip.",
+        "common_trap": "Not squaring r, or leaving r in cm.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A particle of mass 2 mg carrying a charge of $4\\,\\mu C$ is placed in a uniform electric field of 500 N/C. Neglecting gravity, what is the magnitude of its acceleration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\,m/s^2$",
+        "$1000\\,m/s^2$",
+        "$10^6\\,m/s^2$",
+        "$2 \\times 10^{-3}\\,m/s^2$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In a uniform field, $a = qE/m$.",
+        "steps": [
+          "$qE = 4 \\times 10^{-6} \\times 500 = 2 \\times 10^{-3}\\,N$.",
+          "$m = 2\\,mg = 2 \\times 10^{-6}\\,kg$.",
+          "$a = 2 \\times 10^{-3}/2 \\times 10^{-6} = 1000\\,m/s^2$."
+        ],
+        "final_answer": "Option (2): $1000\\,m/s^2$",
+        "why_not_others": "$1\\,m/s^2$ comes from taking 2 mg as 2 g. $10^6\\,m/s^2$ comes from converting mg to kg with one factor of $10^3$ too many. $2 \\times 10^{-3}$ is the force in newtons, not the acceleration.",
+        "common_trap": "Incorrect conversion of milligrams to kilograms.",
+        "time_saving_tip": "1 mg = $10^{-6}$ kg."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Point charges $+4\\,\\mu C$ and $-4\\,\\mu C$ are placed 20 cm apart in vacuum. What is the electric field at the midpoint of the line joining them? (Take $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\,N\\,m^2\\,C^{-2}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Zero",
+        "$3.6 \\times 10^6\\,N/C$ towards the positive charge",
+        "$7.2 \\times 10^6\\,N/C$ towards the negative charge",
+        "$7.2 \\times 10^6\\,N/C$ towards the positive charge"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Superposition of fields. Fields point away from positive charges and towards negative charges.",
+        "steps": [
+          "Each charge gives $E = 9 \\times 10^9 \\times 4 \\times 10^{-6}/(0.1)^2 = 3.6 \\times 10^6\\,N/C$.",
+          "At the midpoint, both fields point towards the negative charge.",
+          "$E_{net} = 7.2 \\times 10^6\\,N/C$ towards the negative charge."
+        ],
+        "final_answer": "Option (3): $7.2 \\times 10^6\\,N/C$ towards the negative charge",
+        "why_not_others": "Zero assumes the two fields cancel, which happens only for like charges. $3.6 \\times 10^6$ includes only one charge. 'Towards the positive charge' has the direction reversed.",
+        "common_trap": "Assuming equal and opposite charges always cancel at the midpoint.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Two electric field lines never cross each other"
+          },
+          {
+            "label": "B",
+            "text": "A region where field lines are crowded together"
+          },
+          {
+            "label": "C",
+            "text": "Field lines at the surface of a conductor in electrostatic equilibrium"
+          },
+          {
+            "label": "D",
+            "text": "Field lines in a region of uniform electric field"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Lines are parallel and equally spaced"
+          },
+          {
+            "label": "II",
+            "text": "The field has only one direction at each point"
+          },
+          {
+            "label": "III",
+            "text": "Lines meet the surface at right angles"
+          },
+          {
+            "label": "IV",
+            "text": "The field is strong there"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-III, D-II",
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Properties of electrostatic field lines.",
+        "steps": [
+          "A: lines cannot intersect because the field has a unique direction at each point, so A matches II.",
+          "B: crowded lines indicate a strong field, so B matches IV.",
+          "C: lines meet a conductor's surface normally, so C matches III.",
+          "D: a uniform field has parallel, equally spaced lines, so D matches I."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "The other options interchange the reason for non-intersection with the description of a uniform field, or with the field strength.",
+        "common_trap": "Linking crowding of lines to the direction of the field instead of its strength.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about electric fields and field lines are correct?",
+      "statements": {
+        "A": "Electrostatic field lines can form closed loops.",
+        "B": "The number of field lines leaving a charge is proportional to the magnitude of the charge.",
+        "C": "A negative charge placed in an electric field experiences a force opposite to the direction of the field.",
+        "D": "A charged particle entering a uniform electric field perpendicular to the field moves along a parabolic path.",
+        "E": "Field lines are crowded inside a conductor in electrostatic equilibrium."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and D only",
+        "B, D and E only",
+        "A, C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Properties of field lines, the relation $\\vec{F} = q\\vec{E}$, and motion in a uniform field.",
+        "steps": [
+          "A is false: electrostatic field lines never form closed loops.",
+          "B is true: the number of lines is proportional to the charge.",
+          "C is true: for negative q, $\\vec{F} = q\\vec{E}$ is opposite to $\\vec{E}$.",
+          "D is true: constant acceleration perpendicular to the initial velocity gives a parabola.",
+          "E is false: there are no field lines inside a conductor in equilibrium."
+        ],
+        "final_answer": "Option (2): B, C and D only",
+        "why_not_others": "Options (1), (3) and (4) each include the false statement A or E.",
+        "common_trap": "Carrying over the closed-loop behaviour of magnetic field lines to electrostatic field lines.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

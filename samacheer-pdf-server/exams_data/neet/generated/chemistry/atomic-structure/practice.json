@@ -1,0 +1,2418 @@
+{
+  "exam": "neet",
+  "subject": "chemistry",
+  "unit_id": "che_u02",
+  "slug": "atomic-structure",
+  "questions": [
+    {
+      "q_id": "neet_che_u02_t00_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Nature of electromagnetic radiation; photoelectric effect",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In a photoelectric experiment, light of a fixed frequency greater than the threshold frequency falls on a metal surface. If the intensity of this light is increased, which quantity increases?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Maximum kinetic energy of the photoelectrons",
+        "Number of photoelectrons emitted per second",
+        "Threshold frequency of the metal",
+        "Work function of the metal"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the photoelectric effect, intensity controls the number of photoelectrons and frequency controls their kinetic energy.",
+        "steps": [
+          "Higher intensity at the same frequency means more photons strike the surface per second.",
+          "Each photon can eject one electron, so more electrons are ejected per second.",
+          "Each photon still has the same energy $h\\nu$, so the maximum kinetic energy does not change.",
+          "The threshold frequency and the work function are properties of the metal and do not change."
+        ],
+        "final_answer": "Option (2): Number of photoelectrons emitted per second",
+        "why_not_others": "The maximum KE depends only on $\\nu - \\nu_0$. The threshold frequency and $W_0$ are fixed for a given metal.",
+        "common_trap": "Assuming that brighter light gives faster photoelectrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t00_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Nature of electromagnetic radiation; photoelectric effect",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the energy of one photon of radiation of wavelength 300 nm? (Take $h = 6.626 \\times 10^{-34}$ J s and $c = 3 \\times 10^8$ m $s^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.626 \\times 10^{-28}$ J",
+        "$6.626 \\times 10^{-18}$ J",
+        "$6.626 \\times 10^{-21}$ J",
+        "$6.626 \\times 10^{-19}$ J"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Energy of one photon is $E = hc/\\lambda$, with $\\lambda$ in metres.",
+        "steps": [
+          "Convert the wavelength: $\\lambda = 300$ nm $= 3 \\times 10^{-7}$ m.",
+          "Calculate $hc = 6.626 \\times 10^{-34} \\times 3 \\times 10^8 = 1.9878 \\times 10^{-25}$ J m.",
+          "Then $E = 1.9878 \\times 10^{-25} / 3 \\times 10^{-7} = 6.626 \\times 10^{-19}$ J."
+        ],
+        "final_answer": "Option (4): $6.626 \\times 10^{-19}$ J",
+        "why_not_others": "$10^{-28}$ comes from using 300 m (no conversion). $10^{-18}$ comes from converting to $3 \\times 10^{-8}$ m. $10^{-21}$ comes from using the wavelength in cm.",
+        "common_trap": "Errors in converting nm to m.",
+        "time_saving_tip": "$hc \\approx 1.99 \\times 10^{-25}$ J m; divide this by $\\lambda$ in metres."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t00_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Nature of electromagnetic radiation; photoelectric effect",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The threshold frequency of a metal is $4.0 \\times 10^{14}$ Hz. Light of frequency $1.0 \\times 10^{15}$ Hz falls on it. What is the maximum kinetic energy of the emitted photoelectrons? ($h = 6.626 \\times 10^{-34}$ J s)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.63 \\times 10^{-19}$ J",
+        "$2.65 \\times 10^{-19}$ J",
+        "$9.28 \\times 10^{-19}$ J",
+        "$3.98 \\times 10^{-19}$ J"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Einstein photoelectric equation: $KE_{max} = h(\\nu - \\nu_0)$.",
+        "steps": [
+          "Find the frequency difference: $\\nu - \\nu_0 = 10 \\times 10^{14} - 4 \\times 10^{14} = 6.0 \\times 10^{14}$ Hz.",
+          "Then $KE_{max} = 6.626 \\times 10^{-34} \\times 6.0 \\times 10^{14} = 3.98 \\times 10^{-19}$ J."
+        ],
+        "final_answer": "Option (4): $3.98 \\times 10^{-19}$ J",
+        "why_not_others": "$6.63 \\times 10^{-19}$ J is $h\\nu$, the full photon energy. $2.65 \\times 10^{-19}$ J is $h\\nu_0$, the work function. $9.28 \\times 10^{-19}$ J comes from wrongly adding the two frequencies.",
+        "common_trap": "Forgetting to subtract the work function from the photon energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t00_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Nature of electromagnetic radiation; photoelectric effect",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "No photoelectrons are emitted from a metal when light of frequency below its threshold frequency falls on it, even if the light is very intense.",
+        "R": "The number of photoelectrons emitted is proportional to the intensity of the incident light."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Emission requires $\\nu \\ge \\nu_0$. Intensity affects only the number of electrons once emission occurs.",
+        "steps": [
+          "A is true: below $\\nu_0$, each photon has less energy than $W_0$, so no electron can be ejected.",
+          "R is true: above threshold, more intensity means more photons and therefore more photoelectrons.",
+          "R does not explain A. A depends on the energy of each photon, not on the number of photons."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct facts, so options 3 and 4 are ruled out. R deals with intensity above threshold, not with the threshold condition itself, so option 1 is ruled out.",
+        "common_trap": "Linking the two statements only because both mention intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t00_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Nature of electromagnetic radiation; photoelectric effect",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The wavenumber of radiation of wavelength 500 nm is $2.0 \\times 10^4$ $cm^{-1}$.",
+        "II": "When light of frequency $2\\nu_0$ falls on a metal of threshold frequency $\\nu_0$, the maximum kinetic energy of the photoelectrons is twice the work function of the metal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Wavenumber is $\\bar{\\nu} = 1/\\lambda$, and $KE_{max} = h(\\nu - \\nu_0)$.",
+        "steps": [
+          "Convert the wavelength: 500 nm $= 5 \\times 10^{-5}$ cm.",
+          "So $\\bar{\\nu} = 1/(5 \\times 10^{-5}) = 2.0 \\times 10^4$ $cm^{-1}$. Statement I is correct.",
+          "For Statement II: $KE_{max} = h(2\\nu_0 - \\nu_0) = h\\nu_0 = W_0$.",
+          "The KE equals the work function, not twice it. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I checks out numerically, so options 2 and 4 are ruled out. Statement II overstates the KE by a factor of 2, so option 1 is ruled out.",
+        "common_trap": "Assuming that doubling the frequency doubles the KE relative to $W_0$, without subtracting $h\\nu_0$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t02_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Bohr model: postulates, energy and radii relations, limitations",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the radius of the second Bohr orbit of the hydrogen atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "105.8 pm",
+        "211.6 pm",
+        "13.2 pm",
+        "476.1 pm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Bohr radius formula: $r_n = 52.9\\, n^2/Z$ pm.",
+        "steps": [
+          "For H, Z = 1 and n = 2.",
+          "So $r_2 = 52.9 \\times 4 = 211.6$ pm."
+        ],
+        "final_answer": "Option (2): 211.6 pm",
+        "why_not_others": "105.8 pm uses n instead of $n^2$. 13.2 pm divides by $n^2$ instead of multiplying. 476.1 pm is the radius for n = 3.",
+        "common_trap": "Taking the radius as proportional to n rather than $n^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t02_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Bohr model: postulates, energy and radii relations, limitations",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the energy of the electron in the second Bohr orbit of $Li^{2+}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-30.6$ eV",
+        "$-10.2$ eV",
+        "$+30.6$ eV",
+        "$-61.2$ eV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Bohr energy formula: $E_n = -13.6\\, Z^2/n^2$ eV.",
+        "steps": [
+          "For $Li^{2+}$, Z = 3, so $Z^2 = 9$. Here n = 2, so $n^2 = 4$.",
+          "So $E_2 = -13.6 \\times 9/4 = -30.6$ eV."
+        ],
+        "final_answer": "Option (1): $-30.6$ eV",
+        "why_not_others": "$-10.2$ eV uses Z instead of $Z^2$. $+30.6$ eV has the wrong sign. $-61.2$ eV uses n instead of $n^2$.",
+        "common_trap": "Using Z in place of $Z^2$ for energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t02_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Bohr model: postulates, energy and radii relations, limitations",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The total energy of the electron in the ground state of the hydrogen atom is $-13.6$ eV. What are its kinetic energy and potential energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "KE $= +13.6$ eV, PE $= -27.2$ eV",
+        "KE $= -13.6$ eV, PE $= +27.2$ eV",
+        "KE $= +6.8$ eV, PE $= -20.4$ eV",
+        "KE $= +13.6$ eV, PE $= -13.6$ eV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a Bohr orbit, KE $= -E$ and PE $= 2E$.",
+        "steps": [
+          "KE $= -(-13.6) = +13.6$ eV.",
+          "PE $= 2 \\times (-13.6) = -27.2$ eV.",
+          "Check: KE + PE $= -13.6$ eV, which matches the total energy."
+        ],
+        "final_answer": "Option (1): KE $= +13.6$ eV, PE $= -27.2$ eV",
+        "why_not_others": "Kinetic energy can never be negative, which rules out option 2. Option 3 halves the KE. Option 4 gives a total energy of zero.",
+        "common_trap": "Mixing up the signs, or taking PE as equal to E.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t02_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Bohr model: postulates, energy and radii relations, limitations",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the hydrogen atom, the energy gap between n = 2 and n = 3 is smaller than the energy gap between n = 1 and n = 2.",
+        "R": "The radius of a Bohr orbit increases in proportion to $n^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Energy varies as $-1/n^2$, so the gaps between successive levels shrink as n increases.",
+        "steps": [
+          "Gap from n = 1 to 2: $13.6(1 - 1/4) = 10.2$ eV.",
+          "Gap from n = 2 to 3: $13.6(1/4 - 1/9) = 1.89$ eV. So A is true.",
+          "R is true, since $r_n \\propto n^2$.",
+          "A follows from $E_n \\propto -1/n^2$, not from the radius relation. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct, so options 3 and 4 are ruled out. The explanation of A lies in the energy relation, not the radius relation, so option 1 is ruled out.",
+        "common_trap": "Accepting any true $n^2$ relation as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t02_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Bohr model: postulates, energy and radii relations, limitations",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The velocity of the electron in the first Bohr orbit of $He^+$ is half the velocity of the electron in the first Bohr orbit of H.",
+        "II": "The radius of the second Bohr orbit of $Be^{3+}$ is equal to the radius of the first Bohr orbit of H."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Velocity varies as $Z/n$; radius varies as $n^2/Z$.",
+        "steps": [
+          "For $He^+$ (Z = 2, n = 1): $v \\propto 2/1 = 2$, so the velocity is twice that of H, not half. Statement I is incorrect.",
+          "For $Be^{3+}$ (Z = 4, n = 2): $r \\propto 4/4 = 1$, so $r = 52.9$ pm, the same as the first orbit of H. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I inverts the dependence of velocity on Z, so options 1 and 3 are ruled out. Statement II is correct, so option 2 is ruled out.",
+        "common_trap": "Inverting the Z dependence of velocity, which actually increases with Z.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t03_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Dual nature of matter; de Broglie relationship",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which observation provides experimental proof of the wave nature of electrons?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Photoelectric effect",
+        "Line spectrum of hydrogen",
+        "Electron diffraction",
+        "Black-body radiation"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Diffraction is a wave property, and electron diffraction confirmed de Broglie's hypothesis.",
+        "steps": [
+          "Electrons produce diffraction patterns, which shows that they behave as waves."
+        ],
+        "final_answer": "Option (3): Electron diffraction",
+        "why_not_others": "The photoelectric effect and black-body radiation support the particle (photon) nature of light. The line spectrum supports quantised energy levels.",
+        "common_trap": "Choosing the photoelectric effect because it involves electrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t03_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Dual nature of matter; de Broglie relationship",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the de Broglie wavelength of an electron that has been accelerated from rest through a potential difference of 100 V?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.1227 Å",
+        "122.7 Å",
+        "12.27 Å",
+        "1.227 Å"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For an electron accelerated through V volts, $\\lambda \\approx 12.27/\\sqrt{V}$ Å.",
+        "steps": [
+          "$\\sqrt{100} = 10$.",
+          "So $\\lambda = 12.27/10 = 1.227$ Å."
+        ],
+        "final_answer": "Option (4): 1.227 Å",
+        "why_not_others": "0.1227 Å divides by V instead of $\\sqrt{V}$. 122.7 Å multiplies by $\\sqrt{V}$. 12.27 Å ignores V altogether.",
+        "common_trap": "Forgetting the square root of V.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t03_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Dual nature of matter; de Broglie relationship",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A proton and an $\\alpha$-particle have the same kinetic energy. Taking the mass of the $\\alpha$-particle as 4 times that of the proton, what is the ratio $\\lambda_{proton} : \\lambda_{\\alpha}$ of their de Broglie wavelengths?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 : 1",
+        "1 : 2",
+        "4 : 1",
+        "1 : 4"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a given kinetic energy, $\\lambda = h/\\sqrt{2m\\,KE}$, so $\\lambda \\propto 1/\\sqrt{m}$.",
+        "steps": [
+          "$\\lambda_p/\\lambda_\\alpha = \\sqrt{m_\\alpha/m_p} = \\sqrt{4} = 2$.",
+          "The ratio is 2 : 1. The lighter proton has the longer wavelength."
+        ],
+        "final_answer": "Option (1): 2 : 1",
+        "why_not_others": "1 : 2 inverts the ratio. 4 : 1 and 1 : 4 ignore the square root.",
+        "common_trap": "Using $\\lambda \\propto 1/m$, which holds only at equal velocity, not at equal kinetic energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t03_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Dual nature of matter; de Broglie relationship",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\lambda = h/mv$"
+          },
+          {
+            "label": "B",
+            "text": "$2\\pi r = n\\lambda$"
+          },
+          {
+            "label": "C",
+            "text": "$\\lambda = 12.27/\\sqrt{V}$ Å"
+          },
+          {
+            "label": "D",
+            "text": "$\\lambda = h/\\sqrt{2m\\,KE}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Condition for a stable orbit that leads to $mvr = nh/2\\pi$"
+          },
+          {
+            "label": "II",
+            "text": "Wavelength of an electron accelerated through a potential difference"
+          },
+          {
+            "label": "III",
+            "text": "Wavelength in terms of momentum"
+          },
+          {
+            "label": "IV",
+            "text": "Wavelength in terms of kinetic energy"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-II, D-III",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-I, B-III, C-IV, D-II"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Forms of the de Broglie relation and its application to Bohr orbits.",
+        "steps": [
+          "A: $h/mv = h/p$ gives the wavelength in terms of momentum (III).",
+          "B: a whole number of waves fitting the circumference gives Bohr's quantisation condition (I).",
+          "C: $12.27/\\sqrt{V}$ Å is for an electron accelerated through V volts (II).",
+          "D: $h/\\sqrt{2m\\,KE}$ gives the wavelength from kinetic energy (IV)."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 1 swaps the momentum and kinetic-energy forms. Option 3 swaps the orbit condition and the accelerated-electron formula. Option 4 mismatches all four items.",
+        "common_trap": "Confusing the momentum form with the kinetic-energy form.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t03_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Dual nature of matter; de Broglie relationship",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the dual nature of matter are correct?",
+      "statements": {
+        "A": "For the same velocity, a proton has a longer de Broglie wavelength than an electron.",
+        "B": "The electron microscope is based on the wave nature of electrons.",
+        "C": "In the third Bohr orbit, exactly three de Broglie wavelengths of the electron fit around the circumference.",
+        "D": "The wave nature of a moving cricket ball is not observed because its large mass makes its wavelength negligibly small.",
+        "E": "The de Broglie wavelength of a particle is directly proportional to its momentum."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C, D and E only",
+        "B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "De Broglie wavelength is $\\lambda = h/mv$, and the Bohr orbit condition is $2\\pi r = n\\lambda$.",
+        "steps": [
+          "A is false: the proton is heavier, so at the same velocity its $\\lambda$ is shorter.",
+          "B is true: the electron microscope uses electron waves.",
+          "C is true: $2\\pi r = n\\lambda$ with n = 3.",
+          "D is true: for macroscopic objects the wavelength is negligible.",
+          "E is false: $\\lambda$ is inversely proportional to momentum."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Option 1 includes the false statement A. Option 2 misses the true statement C. Option 3 includes the false statement E.",
+        "common_trap": "Thinking that a heavier particle has a longer wavelength, or that $\\lambda$ is directly proportional to momentum.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t04_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Heisenberg uncertainty principle",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "According to Heisenberg's uncertainty principle, the product of the uncertainties in position and momentum of a microscopic particle, $\\Delta x \\cdot \\Delta p$, is always greater than or equal to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{h}{2\\pi}$",
+        "$\\frac{h}{4\\pi}$",
+        "$\\frac{h}{\\pi}$",
+        "$4\\pi h$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The uncertainty relation is $\\Delta x \\cdot \\Delta p \\geq \\frac{h}{4\\pi}$.",
+        "steps": [
+          "Heisenberg's principle sets a lower limit on the product $\\Delta x \\cdot \\Delta p$.",
+          "That lower limit is $h/4\\pi$."
+        ],
+        "final_answer": "Option (2): $\\frac{h}{4\\pi}$",
+        "why_not_others": "$h/2\\pi$ is a common confusion with the reduced Planck constant. $h/\\pi$ and $4\\pi h$ are incorrect forms of the relation.",
+        "common_trap": "Writing $h/2\\pi$ in place of $h/4\\pi$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t04_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Heisenberg uncertainty principle",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The position of an electron is known with an uncertainty of $0.1$ nm. What is the minimum uncertainty in its momentum? (Take $h = 6.626 \\times 10^{-34}$ J s.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.27 \\times 10^{-25}$ kg m s$^{-1}$",
+        "$1.05 \\times 10^{-24}$ kg m s$^{-1}$",
+        "$6.63 \\times 10^{-24}$ kg m s$^{-1}$",
+        "$5.27 \\times 10^{-26}$ kg m s$^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The minimum uncertainty in momentum is $\\Delta p = \\frac{h}{4\\pi \\Delta x}$.",
+        "steps": [
+          "Convert the position uncertainty: $\\Delta x = 0.1$ nm $= 1 \\times 10^{-10}$ m.",
+          "Calculate $h/4\\pi = 6.626 \\times 10^{-34} / 12.566 = 5.27 \\times 10^{-35}$ J s.",
+          "Divide by $\\Delta x$: $\\Delta p = 5.27 \\times 10^{-35} / 10^{-10} = 5.27 \\times 10^{-25}$ kg m s$^{-1}$."
+        ],
+        "final_answer": "Option (1): $5.27 \\times 10^{-25}$ kg m s$^{-1}$",
+        "why_not_others": "$1.05 \\times 10^{-24}$ comes from using $h/2\\pi$. $6.63 \\times 10^{-24}$ comes from using $h$ alone. $5.27 \\times 10^{-26}$ comes from wrongly converting 0.1 nm to $10^{-9}$ m.",
+        "common_trap": "Errors in the nm-to-m conversion, or using $h/2\\pi$ instead of $h/4\\pi$.",
+        "time_saving_tip": "Remember $h/4\\pi \\approx 5.27 \\times 10^{-35}$ J s."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t04_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Heisenberg uncertainty principle",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An electron and a proton are confined so that both have the same uncertainty in position. The mass of a proton is about 1836 times the mass of an electron. What is the approximate ratio of the minimum uncertainty in velocity of the electron to that of the proton?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1",
+        "1836",
+        "$\\frac{1}{1836}$",
+        "$\\sqrt{1836}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "From $\\Delta x \\cdot \\Delta v \\geq \\frac{h}{4\\pi m}$, the uncertainty in velocity varies as $1/m$ when $\\Delta x$ is fixed.",
+        "steps": [
+          "Write $\\Delta v = \\frac{h}{4\\pi m \\Delta x}$ for each particle.",
+          "With the same $\\Delta x$, the ratio is $\\Delta v_e / \\Delta v_p = m_p / m_e$.",
+          "Therefore $\\Delta v_e / \\Delta v_p \\approx 1836$."
+        ],
+        "final_answer": "Option (2): 1836",
+        "why_not_others": "1 ignores the mass term. $1/1836$ inverts the ratio. $\\sqrt{1836}$ assumes a square-root dependence that does not exist.",
+        "common_trap": "Assuming equal $\\Delta x$ gives equal $\\Delta v$. That is true only for $\\Delta p$, not for $\\Delta v$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t04_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Heisenberg uncertainty principle",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Heisenberg's uncertainty principle has a significant practical effect on predicting the path of a moving cricket ball.",
+        "R": "Since $\\Delta x \\cdot \\Delta v \\geq \\frac{h}{4\\pi m}$, the uncertainties become negligible for objects of large mass."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The uncertainty principle is significant only for microscopic particles.",
+        "steps": [
+          "A cricket ball is macroscopic, so its large mass makes $h/4\\pi m$ extremely small.",
+          "Its uncertainties are therefore negligible, and the principle has no practical effect on it, so A is false.",
+          "R correctly states the relation and its consequence, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Assuming the principle matters equally for all objects.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t04_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Heisenberg uncertainty principle",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "To locate an electron precisely, it must be illuminated with light of wavelength larger than its dimensions; such low-energy photons leave its momentum unchanged.",
+        "II": "If the uncertainty in position of an electron is reduced to one-fourth, the minimum uncertainty in its velocity becomes four times."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Precise location requires short-wavelength, high-energy light, and $\\Delta v \\propto 1/\\Delta x$.",
+        "steps": [
+          "Locating an electron precisely requires light of wavelength smaller than its dimensions.",
+          "Such high-energy photons change the electron's momentum on impact, so Statement I is incorrect.",
+          "From $\\Delta v = \\frac{h}{4\\pi m \\Delta x}$, reducing $\\Delta x$ to $\\Delta x/4$ makes $\\Delta v$ four times larger, so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I reverses both the wavelength condition and its effect on momentum, so any option calling it correct is wrong. Statement II follows directly from the inverse relation, so option (2) is also wrong.",
+        "common_trap": "Thinking that observing an electron does not disturb it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t05_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum mechanical model of the atom",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the Schrödinger wave equation written as $\\hat{H}\\psi = E\\psi$, the symbol $\\hat{H}$ represents:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the wave function of the electron",
+        "the probability density of the electron",
+        "the Hamiltonian operator, which corresponds to the total energy",
+        "the operator for kinetic energy only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\hat{H}$ is the Hamiltonian, the total energy operator.",
+        "steps": [
+          "In $\\hat{H}\\psi = E\\psi$, $\\psi$ is the wave function and $E$ is the energy.",
+          "$\\hat{H}$ is the Hamiltonian, the operator for total energy."
+        ],
+        "final_answer": "Option (3): the Hamiltonian operator, which corresponds to the total energy",
+        "why_not_others": "The wave function is $\\psi$. Probability density is $|\\psi|^2$. The Hamiltonian represents total energy, not kinetic energy alone.",
+        "common_trap": "Confusing $\\hat{H}$ with $\\psi$, or with the kinetic energy part only.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t05_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum mechanical model of the atom",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "According to the quantum mechanical model, which of the following pairs of orbitals are degenerate in the hydrogen atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2s and 2p",
+        "2p and 3p",
+        "1s and 2s",
+        "3s and 4s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In hydrogen, orbital energy depends only on n.",
+        "steps": [
+          "Degenerate orbitals have the same energy.",
+          "In H, orbitals with the same n have the same energy.",
+          "2s and 2p both have $n = 2$, so they are degenerate."
+        ],
+        "final_answer": "Option (1): 2s and 2p",
+        "why_not_others": "Each of the other pairs has different n values, so the two orbitals differ in energy.",
+        "common_trap": "Assuming 2s is lower than 2p in hydrogen. That ordering holds only for multi-electron atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t05_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum mechanical model of the atom",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes the relative energies of 2s and 2p orbitals in a multi-electron atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2s and 2p have equal energy because energy depends only on n",
+        "2s is lower in energy than 2p because of shielding and penetration effects",
+        "2s is higher in energy than 2p because it has a smaller l value",
+        "The energies of 2s and 2p depend only on l and not on n"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In multi-electron atoms, orbital energy depends on both n and l.",
+        "steps": [
+          "In a multi-electron atom, orbital energy depends on both n and l.",
+          "Shielding and penetration effects make 2s lower in energy than 2p."
+        ],
+        "final_answer": "Option (2): 2s is lower in energy than 2p because of shielding and penetration effects",
+        "why_not_others": "Option (1) describes hydrogen, not a multi-electron atom. Option (3) reverses the order. Option (4) wrongly ignores the dependence on n.",
+        "common_trap": "Applying the hydrogen degeneracy rule to multi-electron atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t05_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum mechanical model of the atom",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\hat{H}$"
+          },
+          {
+            "label": "B",
+            "text": "$\\psi$"
+          },
+          {
+            "label": "C",
+            "text": "$|\\psi|^2$"
+          },
+          {
+            "label": "D",
+            "text": "Orbital"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Probability density of finding the electron"
+          },
+          {
+            "label": "II",
+            "text": "Total energy operator"
+          },
+          {
+            "label": "III",
+            "text": "Region where the probability of finding the electron is maximum"
+          },
+          {
+            "label": "IV",
+            "text": "Wave function with no physical meaning by itself"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each term of the quantum mechanical model has a distinct meaning.",
+        "steps": [
+          "$\\hat{H}$ is the total energy operator, so A-II.",
+          "$\\psi$ has no physical meaning by itself, so B-IV.",
+          "$|\\psi|^2$ gives probability density, so C-I.",
+          "An orbital is the region of maximum probability of finding the electron, so D-III."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) swaps $\\hat{H}$ and $\\psi$. Option (2) swaps $\\psi$ and $|\\psi|^2$. Option (3) swaps $|\\psi|^2$ and the orbital.",
+        "common_trap": "Assigning probability meaning to $\\psi$ instead of $|\\psi|^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t05_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum mechanical model of the atom",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the quantum mechanical model of the atom are correct?",
+      "statements": {
+        "A": "Solving the Schrödinger equation for an atom gives only certain allowed, quantised energy levels.",
+        "B": "The quantum numbers n, l and $m_l$ arise naturally from the solutions of the Schrödinger equation.",
+        "C": "The model allows the exact path of an electron around the nucleus to be determined.",
+        "D": "For the hydrogen atom, the energy of an orbital depends on both n and l.",
+        "E": "The model is based on wave-particle duality and the uncertainty principle."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and D only",
+        "A, B and E only",
+        "B, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Main features of the quantum mechanical model.",
+        "steps": [
+          "A is true: solving the equation gives quantised energies.",
+          "B is true: n, l and $m_l$ are introduced automatically by the solutions.",
+          "C is false: the exact path of an electron cannot be determined.",
+          "D is false: for H, energy depends only on n.",
+          "E is true: the model rests on wave-particle duality and the uncertainty principle."
+        ],
+        "final_answer": "Option (3): A, B and E only",
+        "why_not_others": "Option (1) omits the true statement E. Option (2) includes the false statement D. Option (4) includes the false statement C and omits A.",
+        "common_trap": "Thinking hydrogen orbital energy depends on l.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t06_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Atomic orbitals as one-electron wave functions",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "How many angular nodes are present in a 3d orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The number of angular nodes equals l.",
+        "steps": [
+          "For a d orbital, $l = 2$.",
+          "Angular nodes $= l = 2$."
+        ],
+        "final_answer": "Option (3): 2",
+        "why_not_others": "0 is the number of radial nodes in 3d. 1 is the value of l for a p orbital. 3 is the value of n.",
+        "common_trap": "Using n or $n - l - 1$ instead of l.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t06_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Atomic orbitals as one-electron wave functions",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The numbers of radial and angular nodes in a 5d orbital are, respectively:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 and 2",
+        "4 and 0",
+        "3 and 2",
+        "2 and 3"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Radial nodes $= n - l - 1$ and angular nodes $= l$.",
+        "steps": [
+          "For 5d, $n = 5$ and $l = 2$.",
+          "Radial nodes $= 5 - 2 - 1 = 2$.",
+          "Angular nodes $= 2$."
+        ],
+        "final_answer": "Option (1): 2 and 2",
+        "why_not_others": "4 and 0 puts all $n - 1$ nodes as radial. 3 and 2 uses $n - l$ for radial nodes. 2 and 3 takes the wrong l value.",
+        "common_trap": "Forgetting the '−1' in $n - l - 1$.",
+        "time_saving_tip": "Check your answer: total nodes $= n - 1 = 4$."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t06_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Atomic orbitals as one-electron wave functions",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An atomic orbital has two radial nodes and one angular node. The orbital is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3p",
+        "3d",
+        "2p",
+        "4p"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use angular nodes $= l$ and radial nodes $= n - l - 1$.",
+        "steps": [
+          "One angular node means $l = 1$, a p orbital.",
+          "Two radial nodes give $n - 1 - 1 = 2$, so $n = 4$.",
+          "The orbital is 4p."
+        ],
+        "final_answer": "Option (4): 4p",
+        "why_not_others": "3p has only 1 radial node. 3d has 0 radial and 2 angular nodes. 2p has no radial node.",
+        "common_trap": "Taking total nodes as $n$ instead of $n - 1$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t06_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Atomic orbitals as one-electron wave functions",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A 2p orbital has no radial node.",
+        "R": "The number of radial nodes equals $n - l - 1$, which is zero for $n = 2$, $l = 1$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Radial nodes $= n - l - 1$.",
+        "steps": [
+          "For 2p, radial nodes $= 2 - 1 - 1 = 0$, so A is true.",
+          "R states the formula correctly and applies it correctly.",
+          "R directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true and R is the direct reason for A, so options (2), (3) and (4) are wrong.",
+        "common_trap": "Counting the zero of $\\psi$ at $r = 0$ as a radial node for p orbitals.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t06_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Atomic orbitals as one-electron wave functions",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An orbital specified by n, l and $m_l$ can hold up to two electrons, and a 3s orbital has a total of three nodes.",
+        "II": "Radial nodes are planes or cones, whereas angular nodes are spherical surfaces."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Total nodes $= n - 1$. Radial nodes are spherical surfaces; angular nodes are planes or cones.",
+        "steps": [
+          "For 3s, total nodes $= n - 1 = 2$, not 3, so Statement I is incorrect even though its first part is true.",
+          "Radial nodes are spherical surfaces and angular nodes are planes or cones.",
+          "Statement II reverses these descriptions, so it is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I contains a wrong node count, and Statement II swaps the two node shapes, so options (1), (3) and (4) are wrong.",
+        "common_trap": "Accepting Statement I because its first half is correct.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t08_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum numbers and their significance",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the total number of orbitals present in the shell with principal quantum number $n = 4$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "16",
+        "32",
+        "8",
+        "4"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A shell with principal quantum number n contains $n^2$ orbitals.",
+        "steps": [
+          "Number of orbitals in a shell is $n^2$.",
+          "For $n = 4$, this gives $4^2 = 16$ orbitals."
+        ],
+        "final_answer": "Option (1): 16",
+        "why_not_others": "32 is the electron capacity, $2n^2$. 8 comes from using $2n$. 4 is the number of subshells, which equals n.",
+        "common_trap": "Confusing the number of orbitals ($n^2$) with the number of electrons ($2n^2$) or with the number of subshells (n).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t08_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum numbers and their significance",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the magnitude of the orbital angular momentum of an electron in a 3d orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sqrt{6}\\frac{h}{2\\pi}$",
+        "$\\sqrt{12}\\frac{h}{2\\pi}$",
+        "$\\sqrt{2}\\frac{h}{2\\pi}$",
+        "$2\\frac{h}{2\\pi}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Orbital angular momentum is $L = \\sqrt{l(l+1)}\\frac{h}{2\\pi}$. It depends on l, not on n.",
+        "steps": [
+          "For a d orbital, $l = 2$.",
+          "$L = \\sqrt{2 \\times 3}\\frac{h}{2\\pi} = \\sqrt{6}\\frac{h}{2\\pi}$."
+        ],
+        "final_answer": "Option (1): $\\sqrt{6}\\frac{h}{2\\pi}$",
+        "why_not_others": "$\\sqrt{12}$ comes from wrongly using $n = 3$ in place of l. $\\sqrt{2}$ comes from using $l = 1$ (a p orbital). $2\\frac{h}{2\\pi}$ comes from writing $l\\frac{h}{2\\pi}$ instead of $\\sqrt{l(l+1)}\\frac{h}{2\\pi}$.",
+        "common_trap": "Substituting the principal quantum number into the orbital angular momentum formula.",
+        "time_saving_tip": "s, p, d and f give $\\sqrt{0}$, $\\sqrt{2}$, $\\sqrt{6}$ and $\\sqrt{12}$ in units of $\\frac{h}{2\\pi}$."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t08_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum numbers and their significance",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following sets of quantum numbers $(n, l, m_l, m_s)$ is permitted for an electron in an atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$n = 2, l = 2, m_l = 0, m_s = +\\frac{1}{2}$",
+        "$n = 3, l = 1, m_l = +2, m_s = -\\frac{1}{2}$",
+        "$n = 4, l = 3, m_l = -3, m_s = -\\frac{1}{2}$",
+        "$n = 1, l = 1, m_l = 0, m_s = +\\frac{1}{2}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "l ranges from 0 to $n-1$, $m_l$ ranges from $-l$ to $+l$, and $m_s = \\pm\\frac{1}{2}$.",
+        "steps": [
+          "For $n = 4$, l can be 0, 1, 2 or 3, so $l = 3$ is allowed.",
+          "For $l = 3$, $m_l$ can take values from $-3$ to $+3$, so $m_l = -3$ is allowed.",
+          "$m_s = -\\frac{1}{2}$ is allowed, so the whole set is valid."
+        ],
+        "final_answer": "Option (3): $n = 4, l = 3, m_l = -3, m_s = -\\frac{1}{2}$",
+        "why_not_others": "With $n = 2$, the largest allowed l is 1. With $l = 1$, $m_l$ cannot be $+2$. With $n = 1$, only $l = 0$ is allowed.",
+        "common_trap": "Allowing l to equal n, or letting $m_l$ exceed l.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t08_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum numbers and their significance",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the hydrogen atom, the 2s and 2p orbitals have the same energy.",
+        "R": "A p subshell contains three orbitals."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In hydrogen, orbital energy depends only on n. A subshell contains $2l + 1$ orbitals.",
+        "steps": [
+          "In H, energy depends only on n, so 2s and 2p are degenerate. A is true.",
+          "For $l = 1$, the number of orbitals is $2l + 1 = 3$. R is true.",
+          "The number of p orbitals has nothing to do with why 2s and 2p have equal energy. That follows from energy depending only on n."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is a correct fact, but it does not explain A, so option (1) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Thinking that 2s and 2p differ in energy in hydrogen, as they do in multi-electron atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t08_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Quantum numbers and their significance",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The maximum number of electrons in an atom that can have $n = 3$ and $l = 2$ is 10.",
+        "II": "The total number of orbitals in the shell with $n = 5$ is 50."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A subshell holds $2(2l+1)$ electrons. A shell has $n^2$ orbitals and holds up to $2n^2$ electrons.",
+        "steps": [
+          "$n = 3, l = 2$ is the 3d subshell. It has $2l + 1 = 5$ orbitals, so it holds up to 10 electrons. Statement I is correct.",
+          "The number of orbitals for $n = 5$ is $5^2 = 25$. The value 50 is the electron capacity, $2n^2$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses orbitals with electrons, which rules out options (1) and (4). Statement I is correct, which rules out option (2).",
+        "common_trap": "Mixing up the $n^2$ formula for orbitals with the $2n^2$ formula for electrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t09_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Shapes of s, p and d orbitals",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the shape of an orbital with azimuthal quantum number $l = 0$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Spherical",
+        "Dumbbell",
+        "Cloverleaf",
+        "Two lobes along an axis with a doughnut-shaped ring"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$l = 0$ corresponds to an s orbital, which is spherically symmetric.",
+        "steps": [
+          "$l = 0$ means an s orbital.",
+          "s orbitals are spherically symmetric and have no angular node."
+        ],
+        "final_answer": "Option (1): Spherical",
+        "why_not_others": "A dumbbell is the shape of a p orbital ($l = 1$). Cloverleaf is the shape of most d orbitals. Two lobes with a doughnut-shaped ring describes $d_{z^2}$.",
+        "common_trap": "Mixing up which shape belongs to which l value.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t09_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Shapes of s, p and d orbitals",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following d orbitals has its lobes lying along the x and y axes?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$d_{xy}$",
+        "$d_{z^2}$",
+        "$d_{x^2-y^2}$",
+        "$d_{yz}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$d_{x^2-y^2}$ and $d_{z^2}$ have their lobes along the axes. $d_{xy}$, $d_{yz}$ and $d_{zx}$ have their lobes between the axes.",
+        "steps": [
+          "$d_{x^2-y^2}$ has its four lobes along the x and y axes.",
+          "$d_{z^2}$ has its lobes along the z-axis only."
+        ],
+        "final_answer": "Option (3): $d_{x^2-y^2}$",
+        "why_not_others": "The lobes of $d_{xy}$ lie between the x and y axes. The lobes of $d_{z^2}$ lie along the z-axis. The lobes of $d_{yz}$ lie between the y and z axes.",
+        "common_trap": "Thinking that the subscript xy means the lobes lie along x and y. In $d_{xy}$, they lie between those axes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t09_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Shapes of s, p and d orbitals",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which plane is the nodal plane of the $p_z$ orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "yz-plane",
+        "xy-plane",
+        "xz-plane",
+        "It has no nodal plane, only a conical node"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each p orbital has one nodal plane through the nucleus, perpendicular to the axis of its lobes.",
+        "steps": [
+          "The lobes of $p_z$ point along the z-axis.",
+          "Its nodal plane passes through the nucleus perpendicular to z, so it is the xy-plane."
+        ],
+        "final_answer": "Option (2): xy-plane",
+        "why_not_others": "The yz-plane is the nodal plane of $p_x$. The xz-plane is the nodal plane of $p_y$. Conical nodes belong to $d_{z^2}$, not to p orbitals.",
+        "common_trap": "Choosing a plane that contains the axis of the lobes instead of the plane perpendicular to it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t09_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Shapes of s, p and d orbitals",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "s orbital"
+          },
+          {
+            "label": "B",
+            "text": "$p_z$ orbital"
+          },
+          {
+            "label": "C",
+            "text": "$d_{z^2}$ orbital"
+          },
+          {
+            "label": "D",
+            "text": "$d_{xy}$ orbital"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Spherically symmetric with no angular node"
+          },
+          {
+            "label": "II",
+            "text": "One nodal plane, the xy-plane"
+          },
+          {
+            "label": "III",
+            "text": "Two conical nodal surfaces"
+          },
+          {
+            "label": "IV",
+            "text": "Lobes lying between the axes"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each orbital type has a characteristic shape and nodal pattern.",
+        "steps": [
+          "An s orbital is spherical with no angular node: A-I.",
+          "$p_z$ has the xy-plane as its nodal plane: B-II.",
+          "$d_{z^2}$ has two conical nodal surfaces: C-III.",
+          "$d_{xy}$ has its lobes between the axes: D-IV."
+        ],
+        "final_answer": "Option (2): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option (1) gives $p_z$ conical nodes. Option (3) gives the s orbital a nodal plane. Option (4) gives $d_{z^2}$ lobes between the axes.",
+        "common_trap": "Giving $d_{z^2}$ nodal planes like the other d orbitals.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t09_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Shapes of s, p and d orbitals",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the shapes of atomic orbitals are correct?",
+      "statements": {
+        "A": "All five 3d orbitals have the same energy in an isolated atom.",
+        "B": "The $d_{z^2}$ orbital has two nodal planes.",
+        "C": "Each p orbital has one nodal plane passing through the nucleus.",
+        "D": "The lobes of the $d_{x^2-y^2}$ orbital lie between the x and y axes.",
+        "E": "The size of the s orbital increases in the order 1s < 2s < 3s."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, C and E only",
+        "B, C and E only",
+        "A, B and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "This question tests degeneracy of the d set, nodal planes of p and d orbitals, and the directions of d-orbital lobes.",
+        "steps": [
+          "A is true: the 3d orbitals are degenerate in an isolated atom.",
+          "B is false: the angular nodes of $d_{z^2}$ are conical surfaces, not planes.",
+          "C is true: each p orbital has one nodal plane.",
+          "D is false: the lobes of $d_{x^2-y^2}$ lie along the x and y axes.",
+          "E is true: the size of an s orbital increases with n."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option (1) includes D, which is false. Option (3) includes B, which is false. Option (4) includes B and leaves out C.",
+        "common_trap": "Treating $d_{z^2}$ like the other four d orbitals, which do have two nodal planes each.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t10_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electron spin and spin quantum number",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which values can the spin quantum number $m_s$ of an electron take?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0 and 1",
+        "$+\\frac{1}{2}$ and $-\\frac{1}{2}$",
+        "All integers from $-l$ to $+l$",
+        "$+1$ and $-1$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Electron spin has only two orientations, described by $m_s = \\pm\\frac{1}{2}$.",
+        "steps": [
+          "For every electron, $s = \\frac{1}{2}$.",
+          "The two possible orientations give $m_s = +\\frac{1}{2}$ or $m_s = -\\frac{1}{2}$."
+        ],
+        "final_answer": "Option (2): $+\\frac{1}{2}$ and $-\\frac{1}{2}$",
+        "why_not_others": "Integer values such as 0, 1 or $\\pm 1$ are not allowed for $m_s$. The range $-l$ to $+l$ applies to $m_l$, not $m_s$.",
+        "common_trap": "Mixing up the allowed values of $m_l$ and $m_s$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t10_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electron spin and spin quantum number",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the spin-only magnetic moment of the $Fe^{2+}$ ion (atomic number of Fe = 26)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.83 BM",
+        "3.87 BM",
+        "4.90 BM",
+        "5.92 BM"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\mu = \\sqrt{n(n+2)}$ BM, where n is the number of unpaired electrons.",
+        "steps": [
+          "Fe is [Ar] $3d^6 4s^2$. Electrons leave the 4s orbital first, so $Fe^{2+}$ is [Ar] $3d^6$.",
+          "By Hund's rule, five 3d electrons occupy the five orbitals singly and the 6th electron pairs. This leaves 4 unpaired electrons.",
+          "$\\mu = \\sqrt{4 \\times 6} = \\sqrt{24} \\approx 4.90$ BM."
+        ],
+        "final_answer": "Option (3): 4.90 BM",
+        "why_not_others": "2.83 BM corresponds to 2 unpaired electrons, which comes from writing [Ar] $3d^4 4s^2$. 3.87 BM corresponds to 3 unpaired electrons. 5.92 BM corresponds to 5 unpaired electrons, which is the value for $Fe^{3+}$.",
+        "common_trap": "Removing the two electrons from 3d instead of 4s.",
+        "time_saving_tip": "Memorise these values: 1, 2, 3, 4 and 5 unpaired electrons give 1.73, 2.83, 3.87, 4.90 and 5.92 BM."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t10_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electron spin and spin quantum number",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the magnitude of the spin angular momentum of an electron?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\sqrt{3}}{2}\\frac{h}{2\\pi}$",
+        "$\\frac{1}{2}\\frac{h}{2\\pi}$",
+        "$\\sqrt{2}\\frac{h}{2\\pi}$",
+        "$\\frac{3}{4}\\frac{h}{2\\pi}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Spin angular momentum is $\\sqrt{s(s+1)}\\frac{h}{2\\pi}$, with $s = \\frac{1}{2}$.",
+        "steps": [
+          "$s(s+1) = \\frac{1}{2} \\times \\frac{3}{2} = \\frac{3}{4}$.",
+          "$\\sqrt{\\frac{3}{4}} = \\frac{\\sqrt{3}}{2}$, so the spin angular momentum is $\\frac{\\sqrt{3}}{2}\\frac{h}{2\\pi}$."
+        ],
+        "final_answer": "Option (1): $\\frac{\\sqrt{3}}{2}\\frac{h}{2\\pi}$",
+        "why_not_others": "$\\frac{1}{2}\\frac{h}{2\\pi}$ uses $s\\frac{h}{2\\pi}$ directly. $\\sqrt{2}$ comes from taking $s = 1$. $\\frac{3}{4}$ comes from forgetting to take the square root.",
+        "common_trap": "Writing $s\\frac{h}{2\\pi}$ instead of $\\sqrt{s(s+1)}\\frac{h}{2\\pi}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t10_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electron spin and spin quantum number",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The nitrogen atom ($1s^2 2s^2 2p^3$) is paramagnetic.",
+        "R": "An orbital can hold at most two electrons, and they must have opposite spins."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Paramagnetism comes from unpaired electrons. Hund's rule decides how electrons occupy degenerate orbitals.",
+        "steps": [
+          "By Hund's rule, the three 2p electrons occupy the three p orbitals singly. N therefore has 3 unpaired electrons and is paramagnetic. A is true.",
+          "R is the Pauli limit on electrons in one orbital, which is true.",
+          "The reason N has unpaired electrons is Hund's rule, not the Pauli limit. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is true but does not account for the unpaired electrons, so option (1) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Accepting any true statement about spin as the explanation for paramagnetism.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t10_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electron spin and spin quantum number",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A species with two unpaired electrons has a total spin of 1 and a spin multiplicity of 3.",
+        "II": "A species with three unpaired electrons has a spin multiplicity of 3."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Total spin is $S = n \\times \\frac{1}{2}$ for n unpaired electrons, and spin multiplicity is $2S + 1$.",
+        "steps": [
+          "For 2 unpaired electrons, $S = 1$ and $2S + 1 = 3$. Statement I is correct.",
+          "For 3 unpaired electrons, $S = \\frac{3}{2}$ and $2S + 1 = 4$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "The multiplicity for 3 unpaired electrons is 4, not 3, which rules out options (1) and (4). Statement I is correct, which rules out option (2).",
+        "common_trap": "Taking the multiplicity to be equal to the number of unpaired electrons. It is actually $n + 1$.",
+        "time_saving_tip": "Spin multiplicity equals (number of unpaired electrons + 1)."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t11_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Aufbau principle, Pauli's exclusion principle and Hund's rule",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "According to the Aufbau principle, which orbital is filled immediately after the 4s orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3d",
+        "4p",
+        "4d",
+        "5s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Orbitals fill in increasing order of (n + l).",
+        "steps": [
+          "4s has $n + l = 4$, 3d has $n + l = 5$, and 4p also has $n + l = 5$.",
+          "3d and 4p tie at 5, so the one with lower n, which is 3d, fills first."
+        ],
+        "final_answer": "Option (1): 3d",
+        "why_not_others": "4p comes after 3d because of its higher n. 4d has $n + l = 6$ and 5s has $n + l = 5$ with $n = 5$, so both come later.",
+        "common_trap": "Assuming that orbitals of the same shell (4s, then 4p) fill consecutively.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t11_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Aufbau principle, Pauli's exclusion principle and Hund's rule",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Using the (n + l) rule, which of the following orbitals has the highest energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6p",
+        "5d",
+        "4f",
+        "6s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A higher (n + l) means higher energy. If (n + l) is equal, the orbital with higher n has higher energy.",
+        "steps": [
+          "The (n + l) values are 6p = 7, 5d = 7, 4f = 7 and 6s = 6.",
+          "Among the orbitals with $n + l = 7$, 6p has the highest n, so it has the highest energy."
+        ],
+        "final_answer": "Option (1): 6p",
+        "why_not_others": "5d and 4f have the same (n + l) as 6p but lower n, so they are lower in energy. 6s has $n + l = 6$, which is the lowest of the four.",
+        "common_trap": "Breaking the tie in the wrong direction, by assuming the larger l gives the higher energy.",
+        "time_saving_tip": "Recall the filling order 6s, 4f, 5d, 6p. The last orbital in this list is the highest in energy."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t11_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Aufbau principle, Pauli's exclusion principle and Hund's rule",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "How many unpaired electrons are present in a ground-state cobalt atom (atomic number 27)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1",
+        "5",
+        "3",
+        "7"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Fill orbitals using the Aufbau principle, then place electrons in degenerate orbitals using Hund's rule.",
+        "steps": [
+          "The configuration is $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^7$, giving a total of 27 electrons.",
+          "In $3d^7$, five electrons occupy the five orbitals singly. The 6th and 7th electrons then pair up.",
+          "This leaves 3 unpaired electrons."
+        ],
+        "final_answer": "Option (3): 3",
+        "why_not_others": "7 assumes no pairing at all, which is impossible with only five d orbitals. 5 counts only the singly filled stage. 1 assumes maximum pairing, which violates Hund's rule.",
+        "common_trap": "Pairing electrons before every d orbital is singly occupied.",
+        "time_saving_tip": "For $d^n$ with $n > 5$, the number of unpaired electrons is $10 - n$."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t11_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Aufbau principle, Pauli's exclusion principle and Hund's rule",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Electron with which pairing begins in a p subshell"
+          },
+          {
+            "label": "B",
+            "text": "Electron with which pairing begins in a d subshell"
+          },
+          {
+            "label": "C",
+            "text": "Electron with which pairing begins in an f subshell"
+          },
+          {
+            "label": "D",
+            "text": "Maximum number of electrons in a single orbital"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "8th electron"
+          },
+          {
+            "label": "II",
+            "text": "2"
+          },
+          {
+            "label": "III",
+            "text": "6th electron"
+          },
+          {
+            "label": "IV",
+            "text": "4th electron"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "By Hund's rule, pairing starts only after each degenerate orbital is singly occupied. Pauli's principle limits each orbital to 2 electrons.",
+        "steps": [
+          "A p subshell has 3 orbitals, so pairing starts with the 4th electron: A-IV.",
+          "A d subshell has 5 orbitals, so pairing starts with the 6th electron: B-III.",
+          "An f subshell has 7 orbitals, so pairing starts with the 8th electron: C-I.",
+          "Pauli's principle allows at most 2 electrons per orbital: D-II."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option (1) swaps the d and f entries. Option (2) swaps the p and d entries. Option (3) mismatches the p and orbital-capacity entries.",
+        "common_trap": "Equating the pairing electron with the number of orbitals instead of (number of orbitals + 1).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t11_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Aufbau principle, Pauli's exclusion principle and Hund's rule",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about electron filling in atoms are correct?",
+      "statements": {
+        "A": "The 4s orbital is filled before 3d because it has a lower value of (n + l).",
+        "B": "Hund's rule governs the filling of the 1s and 2s orbitals.",
+        "C": "Pauli's exclusion principle limits each orbital to two electrons of opposite spin.",
+        "D": "The 4d orbital is filled before the 5s orbital.",
+        "E": "The ground-state configuration of $Fe^{2+}$ is [Ar] $3d^6$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and E only",
+        "A, C and E only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "This question tests the (n + l) rule, the scope of Hund's rule, Pauli's limit, and the order in which ions lose electrons.",
+        "steps": [
+          "A is true: 4s has $n + l = 4$, while 3d has $n + l = 5$.",
+          "B is false: Hund's rule applies only to degenerate orbitals (p, d, f).",
+          "C is true: this is the statement of Pauli's principle.",
+          "D is false: 5s has $n + l = 5$, which is lower than 4d with $n + l = 6$, so 5s fills first.",
+          "E is true: Fe loses its 4s electrons first."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option (1) includes D, which is false. Option (2) includes B, which is false. Option (4) includes D and leaves out A.",
+        "common_trap": "Applying Hund's rule to s orbitals, or writing $Fe^{2+}$ as [Ar] $3d^4 4s^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t12_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electronic configuration of elements",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the correct ground-state electronic configuration of chromium (Z = 24)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "[Ar] $3d^5 4s^1$",
+        "[Ar] $3d^4 4s^2$",
+        "[Ar] $3d^6$",
+        "[Ar] $3d^3 4s^2 4p^1$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Cr is an exception in the 3d series because a half-filled $3d^5$ subshell gives extra stability.",
+        "steps": [
+          "Cr has 24 electrons, so it has 6 electrons beyond the [Ar] core.",
+          "The expected filling would give $3d^4 4s^2$.",
+          "One 4s electron shifts to 3d to give a half-filled $3d^5$ subshell, so the configuration is [Ar] $3d^5 4s^1$."
+        ],
+        "final_answer": "Option (1): [Ar] $3d^5 4s^1$",
+        "why_not_others": "[Ar] $3d^4 4s^2$ is the expected filling-order result and ignores the exception. [Ar] $3d^6$ leaves out 4s completely. Placing an electron in 4p before 3d is filled is wrong.",
+        "common_trap": "Following the Aufbau order mechanically and writing $3d^4 4s^2$.",
+        "time_saving_tip": "Remember the two 3d exceptions together: Cr is $3d^5 4s^1$ and Cu is $3d^{10} 4s^1$."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t12_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electronic configuration of elements",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following sets contains only isoelectronic species?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Na^+$, $Mg^{2+}$, $Cl^-$, Ne",
+        "$N^{3-}$, $O^{2-}$, $S^{2-}$, $Na^+$",
+        "$F^-$, Ne, $K^+$, $Na^+$",
+        "$N^{3-}$, $O^{2-}$, $F^-$, $Na^+$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Isoelectronic species have the same total number of electrons.",
+        "steps": [
+          "Electron counts: $N^{3-}$ = 7 + 3 = 10; $O^{2-}$ = 8 + 2 = 10.",
+          "$F^-$ = 9 + 1 = 10; $Na^+$ = 11 − 1 = 10.",
+          "All four species have 10 electrons, so they are isoelectronic."
+        ],
+        "final_answer": "Option (4): $N^{3-}$, $O^{2-}$, $F^-$, $Na^+$",
+        "why_not_others": "$Cl^-$ has 18 electrons, so option 1 fails. $S^{2-}$ has 18 electrons, so option 2 fails. $K^+$ has 18 electrons, so option 3 fails.",
+        "common_trap": "Assuming that ions of elements from the same group, such as $O^{2-}$ and $S^{2-}$, have the same number of electrons.",
+        "time_saving_tip": "Count electrons as Z minus the charge, and reject any set containing a species from the third period or below."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t12_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electronic configuration of elements",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following is the correct electronic configuration of $Fe^{2+}$ (Z of Fe = 26)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "[Ar] $3d^4 4s^2$",
+        "[Ar] $3d^5 4s^1$",
+        "[Ar] $3d^6$",
+        "[Ar] $3d^6 4s^2$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "When transition-metal cations form, electrons are removed from 4s before 3d.",
+        "steps": [
+          "Neutral Fe is [Ar] $3d^6 4s^2$.",
+          "To form $Fe^{2+}$, both 4s electrons are removed first.",
+          "This gives $Fe^{2+}$ = [Ar] $3d^6$."
+        ],
+        "final_answer": "Option (3): [Ar] $3d^6$",
+        "why_not_others": "[Ar] $3d^4 4s^2$ wrongly removes the electrons from 3d. [Ar] $3d^5 4s^1$ wrongly assumes a Cr-like rearrangement. [Ar] $3d^6 4s^2$ is neutral Fe, not the ion.",
+        "common_trap": "Writing $Fe^{2+}$ as [Ar] $3d^4 4s^2$ because 4s fills first, and then assuming it also empties last.",
+        "time_saving_tip": "For transition-metal cations, strip all the 4s electrons first and then remove any remaining electrons from 3d."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t12_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electronic configuration of elements",
+      "topic_index": 12,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The electronic configuration of potassium is [Ar] $4s^1$ and not [Ar] $3d^1$.",
+        "R": "When transition-metal cations form, electrons are removed from the 4s orbital before the 3d orbitals."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In K and Ca the 4s orbital fills before 3d. Ionisation of transition-metal atoms is a separate fact.",
+        "steps": [
+          "For K, the 4s orbital fills before 3d, so K is [Ar] $4s^1$. A is true.",
+          "Transition-metal cations such as $Fe^{2+}$ lose their 4s electrons first. R is true.",
+          "R describes how electrons are removed from cations, not the order in which a neutral atom fills its orbitals. R therefore does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 would require R to explain the filling order in K, which it does not. Options 3 and 4 are wrong because both statements are true.",
+        "common_trap": "Linking any two correct statements about 4s and 3d and assuming one explains the other.",
+        "time_saving_tip": "Ask whether R is about filling neutral atoms or about ionisation; A here is about filling."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t12_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Electronic configuration of elements",
+      "topic_index": 12,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The electronic configuration of $Mn^{2+}$ (Z of Mn = 25) is [Ar] $3d^3 4s^2$.",
+        "II": "Among the atoms Cr, Mn, Fe and Cu, Mn has the maximum number of unpaired electrons."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Cations lose 4s electrons first. Cr ($3d^5 4s^1$) has the most unpaired electrons in this group of atoms.",
+        "steps": [
+          "Mn is [Ar] $3d^5 4s^2$. $Mn^{2+}$ loses both 4s electrons to give [Ar] $3d^5$, so Statement I is incorrect.",
+          "Unpaired electrons: Cr has 6, Mn has 5, Fe has 4 and Cu has 1.",
+          "Cr, not Mn, has the maximum, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I removes the electrons from 3d instead of 4s. Statement II overlooks the $3d^5 4s^1$ configuration of Cr, which gives 6 unpaired electrons.",
+        "common_trap": "Counting only the 3d electrons of Cr and getting 5 unpaired electrons, which would wrongly make Mn the maximum.",
+        "time_saving_tip": "For Cr, count the single 4s electron as unpaired along with the five 3d electrons."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t13_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Extra stability of half-filled and completely filled orbitals",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the most important reason for the extra stability of half-filled and completely filled subshells?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Symmetrical distribution of electrons in the subshell",
+        "Greater mutual shielding of electrons within the subshell",
+        "Pairing of electrons with opposite spins in each orbital",
+        "Exchange energy of parallel-spin electrons in degenerate orbitals"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Exchange energy is the main reason for extra stability; symmetry is a secondary reason.",
+        "steps": [
+          "Electrons with parallel spins in degenerate orbitals can exchange positions, and each exchange releases energy.",
+          "The number of possible exchanges is greatest for half-filled and fully filled subshells.",
+          "This exchange energy is the more important source of extra stability."
+        ],
+        "final_answer": "Option (4): Exchange energy of parallel-spin electrons in degenerate orbitals",
+        "why_not_others": "Symmetrical distribution does contribute, but it is the less important reason. These arrangements actually involve less mutual shielding, not more. Pairing of opposite spins does not produce exchange energy.",
+        "common_trap": "Choosing symmetry because it is the more familiar explanation, even though exchange energy is the more important one.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t13_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Extra stability of half-filled and completely filled orbitals",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "How many exchange pairs are possible among the parallel-spin electrons in a half-filled f subshell ($f^7$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7",
+        "42",
+        "21",
+        "49"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The number of exchange pairs for n parallel-spin electrons is $\\frac{n(n-1)}{2}$.",
+        "steps": [
+          "In $f^7$, all 7 electrons have parallel spins, so n = 7.",
+          "$N_{exchange} = \\frac{7 \\times 6}{2} = 21$."
+        ],
+        "final_answer": "Option (3): 21",
+        "why_not_others": "7 is simply n. 42 is $n(n-1)$ without dividing by 2. 49 is $n^2$.",
+        "common_trap": "Forgetting to divide by 2, which counts each exchange pair twice.",
+        "time_saving_tip": "Use the known values $p^3$ = 3, $d^5$ = 10 and $f^7$ = 21."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t13_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Extra stability of half-filled and completely filled orbitals",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For chromium, compare the actual configuration [Ar] $3d^5 4s^1$ with the hypothetical configuration [Ar] $3d^4 4s^2$. By how much does the number of exchange pairs among parallel-spin electrons within the 3d subshell increase in the actual configuration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1",
+        "10",
+        "6",
+        "4"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$N_{exchange} = \\frac{n(n-1)}{2}$ for n parallel-spin electrons in degenerate orbitals.",
+        "steps": [
+          "For $d^5$: $\\frac{5 \\times 4}{2} = 10$ exchange pairs.",
+          "For $d^4$: $\\frac{4 \\times 3}{2} = 6$ exchange pairs.",
+          "Increase = 10 − 6 = 4."
+        ],
+        "final_answer": "Option (4): 4",
+        "why_not_others": "1 is just the extra electron added to 3d. 10 is the total for $d^5$, not the increase. 6 is the total for $d^4$.",
+        "common_trap": "Reporting the total number of exchange pairs instead of the difference between the two configurations.",
+        "time_saving_tip": "The extra parallel-spin electron can exchange with each of the existing 4 electrons, so the increase is 4 straight away."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t13_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Extra stability of half-filled and completely filled orbitals",
+      "topic_index": 13,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$3d^5$ subshell of $Mn^{2+}$"
+          },
+          {
+            "label": "B",
+            "text": "$2p^3$ subshell of N"
+          },
+          {
+            "label": "C",
+            "text": "$d^4$ subshell with all spins parallel"
+          },
+          {
+            "label": "D",
+            "text": "$f^7$ subshell"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "3 exchange pairs"
+          },
+          {
+            "label": "II",
+            "text": "6 exchange pairs"
+          },
+          {
+            "label": "III",
+            "text": "10 exchange pairs"
+          },
+          {
+            "label": "IV",
+            "text": "21 exchange pairs"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-II, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$N_{exchange} = \\frac{n(n-1)}{2}$, with all electrons having parallel spins.",
+        "steps": [
+          "A: $d^5$ gives n = 5, so $\\frac{5 \\times 4}{2} = 10$ (III).",
+          "B: $p^3$ gives n = 3, so $\\frac{3 \\times 2}{2} = 3$ (I).",
+          "C: $d^4$ gives n = 4, so $\\frac{4 \\times 3}{2} = 6$ (II).",
+          "D: $f^7$ gives n = 7, so $\\frac{7 \\times 6}{2} = 21$ (IV)."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 2 swaps the values for $d^5$ and $d^4$. Option 3 swaps the values for $p^3$ and $d^4$. Option 4 swaps the values for $d^5$ and $f^7$.",
+        "common_trap": "Assuming that $d^5$ and $d^4$ differ by only one exchange pair.",
+        "time_saving_tip": "Fixing the value for $p^3$ (3 pairs) alone narrows the choice to options 1, 2 and 4."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t13_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Extra stability of half-filled and completely filled orbitals",
+      "topic_index": 13,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the extra stability of half-filled and completely filled subshells are correct?",
+      "statements": {
+        "A": "Exchange energy is a more important reason for extra stability than symmetrical distribution of electrons.",
+        "B": "A $d^5$ configuration has 10 possible exchange pairs.",
+        "C": "N has a lower first ionisation energy than O because O has more electrons.",
+        "D": "$Fe^{3+}$ is especially stable because it has a $d^5$ configuration.",
+        "E": "P has a lower first ionisation energy than S."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and E only",
+        "B, D and E only",
+        "A and D only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Exchange energy stabilises half-filled subshells. This explains the extra stability of $d^5$ ions and the higher first ionisation energies of N and P.",
+        "steps": [
+          "A is correct: exchange energy is the main reason for extra stability.",
+          "B is correct: $\\frac{5 \\times 4}{2} = 10$.",
+          "C is incorrect: N ($2p^3$, half-filled) has a higher first ionisation energy than O.",
+          "D is correct: $Fe^{3+}$ is $d^5$ and especially stable. E is incorrect: P ($3p^3$) has a higher first ionisation energy than S."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option 2 includes the false statements C and E. Option 3 includes the false statement E. Option 4 leaves out the true statement B.",
+        "common_trap": "Expecting first ionisation energy to rise steadily across a period, and so placing O above N and S above P.",
+        "time_saving_tip": "Once you see that C and E are false, only option 1 avoids both of them while also including B."
+      }
+    }
+  ]
+}

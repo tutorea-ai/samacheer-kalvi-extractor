@@ -1,0 +1,314 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "A uniform disc of mass $2\\ \\text{kg}$ rolls without slipping on a horizontal floor. Its centre of mass moves at $3\\ \\text{m s}^{-1}$. What is the total kinetic energy of the disc?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9\\ \\text{J}$",
+        "$4.5\\ \\text{J}$",
+        "$13.5\\ \\text{J}$",
+        "$18\\ \\text{J}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In rolling without slipping, the total kinetic energy is $K = \\frac{1}{2}mv^2\\left(1+\\frac{K^2}{R^2}\\right)$.",
+        "steps": [
+          "For a disc, $\\frac{K^2}{R^2} = \\frac{1}{2}$.",
+          "Translational KE $= \\frac{1}{2}(2)(3)^2 = 9\\ \\text{J}$.",
+          "Total KE $= 9 \\times \\left(1+\\frac{1}{2}\\right) = 13.5\\ \\text{J}$."
+        ],
+        "final_answer": "Option (3): $13.5\\ \\text{J}$",
+        "why_not_others": "$9\\ \\text{J}$ is the translational KE alone. $4.5\\ \\text{J}$ is the rotational KE alone. $18\\ \\text{J}$ would be correct for a ring, which has $\\frac{K^2}{R^2} = 1$.",
+        "common_trap": "Forgetting to add the rotational KE to the translational KE for a rolling body.",
+        "time_saving_tip": "For a disc, total KE $= \\frac{3}{4}mv^2$ directly."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "A light rope is wound around a pulley that is a uniform disc of mass $4\\ \\text{kg}$ and radius $0.2\\ \\text{m}$. The pulley can rotate freely about a fixed horizontal axis through its centre. A block of mass $2\\ \\text{kg}$ hangs from the free end of the rope and is released from rest. The rope does not slip. Taking $g = 10\\ \\text{m s}^{-2}$, what is the acceleration of the block?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{m s}^{-2}$",
+        "$3.33\\ \\text{m s}^{-2}$",
+        "$5\\ \\text{m s}^{-2}$",
+        "$6.67\\ \\text{m s}^{-2}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a mass hanging from a rope wound on a pulley, $a = \\frac{mg}{m + I/R^2}$.",
+        "steps": [
+          "The moment of inertia of the disc pulley is $I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.2)^2 = 0.08\\ \\text{kg m}^2$.",
+          "Then $\\frac{I}{R^2} = \\frac{0.08}{0.04} = 2\\ \\text{kg}$.",
+          "So $a = \\frac{2 \\times 10}{2 + 2} = 5\\ \\text{m s}^{-2}$."
+        ],
+        "final_answer": "Option (3): $5\\ \\text{m s}^{-2}$",
+        "why_not_others": "$10\\ \\text{m s}^{-2}$ ignores the rotational inertia of the pulley. $3.33\\ \\text{m s}^{-2}$ treats the pulley as a ring, taking $I = MR^2$. $6.67\\ \\text{m s}^{-2}$ comes from wrongly taking $\\frac{I}{R^2} = \\frac{M}{4}$.",
+        "common_trap": "Treating the block as freely falling and ignoring the moment of inertia of the pulley.",
+        "time_saving_tip": "For a disc pulley, $\\frac{I}{R^2} = \\frac{M}{2}$, so you never need the radius."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "A uniform solid cylinder is released from rest at a height of $1.2\\ \\text{m}$ on a rough incline. It rolls down without slipping. Taking $g = 10\\ \\text{m s}^{-2}$, what is the speed of its centre of mass at the bottom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\sqrt{6}\\ \\text{m s}^{-1}$",
+        "$2\\sqrt{3}\\ \\text{m s}^{-1}$",
+        "$4\\sqrt{3}\\ \\text{m s}^{-1}$",
+        "$4\\ \\text{m s}^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a body rolling down a height $h$, $v = \\sqrt{\\frac{2gh}{1+K^2/R^2}}$.",
+        "steps": [
+          "For a solid cylinder, $\\frac{K^2}{R^2} = \\frac{1}{2}$.",
+          "$v^2 = \\frac{2 \\times 10 \\times 1.2}{1.5} = \\frac{24}{1.5} = 16$.",
+          "So $v = 4\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (4): $4\\ \\text{m s}^{-1}$",
+        "why_not_others": "$2\\sqrt{6}$ is $\\sqrt{2gh}$, which ignores rotation and applies only to sliding. $2\\sqrt{3}$ is $\\sqrt{gh}$, which is correct for a ring. $4\\sqrt{3}$ comes from dividing $2gh$ by $\\frac{1}{2}$ instead of by $1+\\frac{1}{2}$.",
+        "common_trap": "Dividing by $\\frac{K^2}{R^2}$ instead of by $1+\\frac{K^2}{R^2}$.",
+        "time_saving_tip": "For a disc or cylinder, $v = \\sqrt{\\frac{4gh}{3}}$."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a body rolls without slipping down a rough incline, its total mechanical energy is conserved.",
+        "R": "A body placed on an incline needs static friction in order to roll on it."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In pure rolling, static friction acts at the instantaneously stationary contact point and does no work.",
+        "steps": [
+          "In pure rolling, the contact point is momentarily at rest, so static friction does no work. Mechanical energy is therefore conserved, and A is true.",
+          "Without friction the body cannot roll; on a smooth incline it simply slides. So R is true.",
+          "R only states that friction is needed. It does not explain energy conservation, which follows from friction doing no work."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain A, so option 1 is wrong. Both statements are true, so options 3 and 4 are wrong.",
+        "common_trap": "Assuming that because friction is present, it must dissipate energy in rolling.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A solid sphere and a ring are released together from rest at the top of the same rough incline, and both roll without slipping. The sphere reaches the bottom first, whatever their masses and radii.",
+        "II": "If the same incline is made perfectly frictionless, the ring reaches the bottom later than the solid sphere because its $\\frac{K^2}{R^2}$ is larger."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The rolling acceleration is $a = \\frac{g\\sin\\theta}{1+K^2/R^2}$. On a frictionless incline there is no rolling, and every body slides with $g\\sin\\theta$.",
+        "steps": [
+          "For the solid sphere $\\frac{K^2}{R^2} = \\frac{2}{5}$, and for the ring it is $1$. The sphere therefore has the larger acceleration.",
+          "This acceleration does not depend on mass or radius, so Statement I is correct.",
+          "On a frictionless incline neither body can roll. Both slide with $g\\sin\\theta$ and reach the bottom together, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II wrongly applies the rolling result to a frictionless surface, where $\\frac{K^2}{R^2}$ plays no role. That rules out options 1 and 4. Statement I is correct, which rules out option 2.",
+        "common_trap": "Using $\\frac{K^2}{R^2}$ even when there is no friction, so that the bodies only slide.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "Which relation is the rotational analogue of the linear relation $p = mv$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\tau = I\\alpha$",
+        "$K = \\frac{1}{2}I\\omega^2$",
+        "$\\tau = \\frac{dL}{dt}$",
+        "$L = I\\omega$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Under the linear-rotational correspondence, $p \\to L$, $m \\to I$ and $v \\to \\omega$.",
+        "steps": [
+          "Replace $p$ with $L$, $m$ with $I$, and $v$ with $\\omega$.",
+          "This gives $L = I\\omega$."
+        ],
+        "final_answer": "Option (4): $L = I\\omega$",
+        "why_not_others": "$\\tau = I\\alpha$ is the analogue of $F = ma$. $\\frac{1}{2}I\\omega^2$ is the analogue of $\\frac{1}{2}mv^2$. $\\tau = \\frac{dL}{dt}$ is the analogue of $F = \\frac{dp}{dt}$.",
+        "common_trap": "Confusing the analogue of momentum with the analogue of Newton's second law.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "A flywheel with moment of inertia $3\\ \\text{kg m}^2$ rotates about a fixed axis. Its angular momentum is $6\\ \\text{kg m}^2\\text{s}^{-1}$. What is its rotational kinetic energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\ \\text{J}$",
+        "$12\\ \\text{J}$",
+        "$3\\ \\text{J}$",
+        "$1\\ \\text{J}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The relation $KE = \\frac{p^2}{2m}$ has the rotational analogue $KE = \\frac{L^2}{2I}$.",
+        "steps": [
+          "$KE = \\frac{L^2}{2I} = \\frac{36}{2 \\times 3}$.",
+          "So $KE = 6\\ \\text{J}$."
+        ],
+        "final_answer": "Option (1): $6\\ \\text{J}$",
+        "why_not_others": "$12\\ \\text{J}$ omits the factor of 2 in the denominator. $3\\ \\text{J}$ comes from writing $\\frac{L}{2} \\times \\frac{L}{I} \\times \\frac{1}{2}$, which halves the result again. $1\\ \\text{J}$ comes from using $\\frac{L}{2I}$ without squaring $L$.",
+        "common_trap": "Forgetting to square $L$, or dropping the factor of 2.",
+        "time_saving_tip": "Find $\\omega = \\frac{L}{I} = 2\\ \\text{rad s}^{-1}$. Then $KE = \\frac{1}{2}L\\omega = 6\\ \\text{J}$."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "A constant torque of $4\\ \\text{N m}$ acts for $3\\ \\text{s}$ on a wheel that is initially at rest. The wheel can rotate about a fixed axis, and its moment of inertia about that axis is $2\\ \\text{kg m}^2$. What is the final angular speed of the wheel?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\ \\text{rad s}^{-1}$",
+        "$12\\ \\text{rad s}^{-1}$",
+        "$24\\ \\text{rad s}^{-1}$",
+        "$3\\ \\text{rad s}^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Angular impulse equals the change in angular momentum: $\\int\\tau\\,dt = \\Delta L$.",
+        "steps": [
+          "Angular impulse $= \\tau t = 4 \\times 3 = 12\\ \\text{kg m}^2\\text{s}^{-1} = \\Delta L$.",
+          "The wheel starts from rest, so $L = I\\omega = 12$.",
+          "Therefore $\\omega = \\frac{12}{2} = 6\\ \\text{rad s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $6\\ \\text{rad s}^{-1}$",
+        "why_not_others": "$12\\ \\text{rad s}^{-1}$ treats the angular impulse itself as the angular speed. $24\\ \\text{rad s}^{-1}$ multiplies by $I$ instead of dividing. $3\\ \\text{rad s}^{-1}$ inserts a spurious factor of $\\frac{1}{2}$.",
+        "common_trap": "Equating the angular impulse directly with $\\omega$ instead of with $I\\omega$.",
+        "time_saving_tip": "Use $\\alpha = \\frac{\\tau}{I} = 2\\ \\text{rad s}^{-2}$. Then $\\omega = \\alpha t = 6\\ \\text{rad s}^{-1}$."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Force $F$"
+          },
+          {
+            "label": "B",
+            "text": "Mass $m$"
+          },
+          {
+            "label": "C",
+            "text": "Linear momentum $p$"
+          },
+          {
+            "label": "D",
+            "text": "Power $Fv$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Angular momentum $L$"
+          },
+          {
+            "label": "II",
+            "text": "$\\tau\\omega$"
+          },
+          {
+            "label": "III",
+            "text": "Torque $\\tau$"
+          },
+          {
+            "label": "IV",
+            "text": "Moment of inertia $I$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The linear quantities $F$, $m$, $p$ and $Fv$ correspond to the rotational quantities $\\tau$, $I$, $L$ and $\\tau\\omega$.",
+        "steps": [
+          "Force corresponds to torque: A-III.",
+          "Mass corresponds to moment of inertia: B-IV.",
+          "Linear momentum corresponds to angular momentum: C-I.",
+          "Power $Fv$ corresponds to $\\tau\\omega$: D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 1 swaps force and momentum. Option 2 pairs mass with power. Option 4 pairs force with power.",
+        "common_trap": "Confusing torque with angular momentum because both involve a cross product with $r$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the analogy between linear and rotational motion are correct?",
+      "statements": {
+        "A": "Like mass, the moment of inertia of a body has the same value about every axis.",
+        "B": "Angular impulse $\\int\\tau\\,dt$ equals the change in angular momentum.",
+        "C": "For constant angular acceleration about a fixed axis, $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$, which has the same form as its linear counterpart.",
+        "D": "When the net external torque on a body is zero, its angular momentum is conserved.",
+        "E": "The work done by a torque $\\tau$ rotating a body at angular speed $\\omega$ is given by $\\tau\\omega$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and D only",
+        "B and D only",
+        "C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Rotational relations mirror linear ones term by term. However, $I$ depends on the axis, and $\\tau\\omega$ is power, not work.",
+        "steps": [
+          "A is false. Mass is intrinsic, but $I$ changes with the choice of axis.",
+          "B is true, since $\\int\\tau\\,dt = \\Delta L$.",
+          "C is true, because the rotational kinematic equations have the same form as the linear ones.",
+          "D is true. It is the analogue of conservation of linear momentum when the net force is zero.",
+          "E is false. $\\tau\\omega$ is power, while work is $\\int\\tau\\,d\\theta$."
+        ],
+        "final_answer": "Option (2): B, C and D only",
+        "why_not_others": "Option 1 includes the false statement A. Option 3 leaves out the true statement C. Option 4 includes the false statement E.",
+        "common_trap": "Extending the mass analogy too far and assuming $I$ is fixed, or mixing up work and power.",
+        "time_saving_tip": "Spot A and E as false first. Only one option excludes both."
+      }
+    }
+  ]
+}

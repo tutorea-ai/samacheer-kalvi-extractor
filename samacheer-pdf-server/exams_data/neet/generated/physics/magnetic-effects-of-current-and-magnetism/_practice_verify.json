@@ -1,0 +1,786 @@
+{
+  "unit_id": "phy_u13",
+  "model": "claude-opus-5-5",
+  "results": [
+    {
+      "q_id": "neet_phy_u13_t00_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "At the centre, B = μ0·N·I/(2R) = 4π×10⁻⁷ × 50 × 2 / 0.2 = 6.28×10⁻⁴ T."
+    },
+    {
+      "q_id": "neet_phy_u13_t00_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "The radial leads point at O, so they give no field there. For the arc, B = (μ0·I/4πR)·θ with θ = 3π/2, giving B = 3μ0·I/(8R)."
+    },
+    {
+      "q_id": "neet_phy_u13_t00_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "On the axis, B = B0·R³/(R²+x²)^(3/2). With x = √3R this is B0·R³/(2R)³ = B0/8 = 40/8 = 5 μT."
+    },
+    {
+      "q_id": "neet_phy_u13_t00_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "The two arcs are in parallel, so I1·R1 = I2·R2. Resistance is proportional to θ, so I1·θ1 = I2·θ2. The arc fields are equal and opposite, making the net field zero. So A is false and R is true."
+    },
+    {
+      "q_id": "neet_phy_u13_t00_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "Rewinding into two turns halves the radius and doubles N. Since B ∝ N/R, B becomes 4 times larger, so I is correct. For a point on the element's own line, dl × r = 0, so dB = 0; II is correct."
+    },
+    {
+      "q_id": "neet_phy_u13_t01_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "B = μ0I/(2πr) = (2×10^-7 × 10)/0.05 = 4×10^-5 T"
+    },
+    {
+      "q_id": "neet_phy_u13_t01_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "Inside the wire, B = μ0Ir/(2πR²). At r = 1 cm, R = 2 cm this is μ0I/(2π)×25. Outside, B = μ0I/(2πr); at r = 4 cm this is μ0I/(2π)×25. So B1/B2 = 1."
+    },
+    {
+      "q_id": "neet_phy_u13_t01_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "n = 500/0.5 = 1000 per m. Field at the centre = μ0nI = 2.51×10^-3 T. At the end the field is half of this, 1.26×10^-3 T."
+    },
+    {
+      "q_id": "neet_phy_u13_t01_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "Outside a straight wire B ∝ 1/r (A-III). Inside a solid wire B ∝ r (B-II). Inside a hollow pipe no current is enclosed, so B = 0 (C-I). Inside a solenoid B = μ0nI (D-IV)."
+    },
+    {
+      "q_id": "neet_phy_u13_t01_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "A is true: the line integral depends only on enclosed current. B is true. C is true. D is false: doubling length halves n, so the field halves. E is false: the field is zero on the axis. Correct set is A, B, C."
+    },
+    {
+      "q_id": "neet_phy_u13_t02_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "The magnetic force qv×B is always perpendicular to the velocity, so it does no work. Speed and kinetic energy stay constant, while the direction of velocity (and momentum) changes."
+    },
+    {
+      "q_id": "neet_phy_u13_t02_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "From qV = p²/2m, p = √(2mqV). Then r = p/(qB) = √(2mV/q)/B, so r ∝ √(m/q). For the proton m/q = 1; for the alpha particle m/q = 4/2 = 2. So r_p : r_α = 1 : √2."
+    },
+    {
+      "q_id": "neet_phy_u13_t02_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "The radius is r = v sin60°/ω = 3 cm. The pitch is p = v cos60° · 2π/ω = 2πr·cot60° = 2π·3/√3 = 2√3π cm."
+    },
+    {
+      "q_id": "neet_phy_u13_t02_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "The undeflected condition qE = qvB gives v = E/B, which is independent of q and m. So the selector picks a speed, not a charge-to-mass ratio. A is false and R is true."
+    },
+    {
+      "q_id": "neet_phy_u13_t02_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "The period T = 2πm/(qB) does not depend on speed, so Statement I is false. The proton and electron have opposite charges, so they circulate in opposite senses; Statement II is false."
+    },
+    {
+      "q_id": "neet_phy_u13_t03_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "F = BIL sin30° = 0.2 × 4 × 0.5 × 0.5 = 0.2 N"
+    },
+    {
+      "q_id": "neet_phy_u13_t03_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "Weight mg = 0.02 × 10 = 0.2 N. Set BIL = mg, so I = 0.2 / (0.4 × 0.5) = 1 A"
+    },
+    {
+      "q_id": "neet_phy_u13_t03_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "Effective length is the diameter 2R = 0.2 m, so F = BI(2R) = 0.5 × 5 × 0.2 = 0.5 N"
+    },
+    {
+      "q_id": "neet_phy_u13_t03_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "A: perpendicular wire gives BIl. B: sin30° gives BIl/2. C: semicircle acts as its diameter, giving 2BIR. D: closed loop gives zero. So A-II, B-III, C-IV, D-I"
+    },
+    {
+      "q_id": "neet_phy_u13_t03_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "A is true. B is false because the force is maximum when the wire is perpendicular to the field. C is true. D is false because the first finger points along the field. E is true. So A, C and E"
+    },
+    {
+      "q_id": "neet_phy_u13_t04_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "F/L = μ0·I1·I2/(2πd) = 2×10⁻⁷ × 5 × 8 / 0.2 = 4×10⁻⁵ N/m. Currents in the same direction attract."
+    },
+    {
+      "q_id": "neet_phy_u13_t04_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "Opposite currents repel, so the upward magnetic force balances Q's weight. 2×10⁻⁷ × 50 × 20 / d = 0.002 × 10 = 0.02 N/m, so d = 2×10⁻⁴ / 0.02 = 0.01 m = 1 cm."
+    },
+    {
+      "q_id": "neet_phy_u13_t04_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "F/L ∝ I1·I2/d. New force = (2 × 3 / 2) F = 3F."
+    },
+    {
+      "q_id": "neet_phy_u13_t04_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "A is true because the forces form a Newton's third-law pair. R is true, but attraction does not explain why the magnitudes are equal."
+    },
+    {
+      "q_id": "neet_phy_u13_t04_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "I (reading 'parallel current' as same direction): the upward attraction must not exceed λg, and raising the fixed wire weakens the force, so I is correct. II: F/L = 2×10⁻⁷ × 2 × 2 / 1 = 8×10⁻⁷ N/m, not 4×10⁻⁷, so II is incorrect."
+    },
+    {
+      "q_id": "neet_phy_u13_t05_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "The plane is parallel to B, so the normal is at 90° to B. τ = NIAB = 50×2×4×10⁻³×0.5 = 0.2 N m."
+    },
+    {
+      "q_id": "neet_phy_u13_t05_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "For wire length L, the circle has area L²/(4π) and the square has area L²/16. Maximum torque is proportional to area, so the ratio is (L²/(4π))/(L²/16) = 4/π."
+    },
+    {
+      "q_id": "neet_phy_u13_t05_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "Work from θ = 0 to θ = 180° is W = 2NIAB = 2×20×0.5×0.01×0.4 = 0.08 J."
+    },
+    {
+      "q_id": "neet_phy_u13_t05_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "Parallel: τ = 0, U = −mB. Antiparallel: τ = 0, U = +mB. Plane parallel to B (θ = 90°): τ = mB, U = 0. θ = 60°: τ = (√3/2)mB, U = −mB/2."
+    },
+    {
+      "q_id": "neet_phy_u13_t05_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "A is true: net force in a uniform field is zero. B is true: the formula holds for any planar shape. C is false: torque is maximum when the plane is parallel to B. D is true: the antiparallel position is an unstable equilibrium. E is false: U is minimum when the plane is perpendicular to B."
+    },
+    {
+      "q_id": "neet_phy_u13_t06_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "In a radial field the plane of the coil stays parallel to B at every position. So the torque is NIAB, which is balanced by kθ. This gives θ = (NAB/k)·I, so deflection is proportional to current."
+    },
+    {
+      "q_id": "neet_phy_u13_t06_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "S = Ig·G/(I − Ig) = 0.01×99/0.99 = 1 Ω. The shunt is connected in parallel."
+    },
+    {
+      "q_id": "neet_phy_u13_t06_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "R = V/Ig − G = 10/0.005 − 40 = 2000 − 40 = 1960 Ω. The resistance is connected in series."
+    },
+    {
+      "q_id": "neet_phy_u13_t06_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "The soft iron core concentrates the field and raises B. Current sensitivity is NAB/k, so it increases with B. Both statements are true and R explains A."
+    },
+    {
+      "q_id": "neet_phy_u13_t06_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "I: Doubling N with the same wire doubles the wire length, so R doubles. Voltage sensitivity NAB/(kR) is therefore unchanged, so I is false. II: A parallel combination has resistance less than either resistor, so II is true."
+    },
+    {
+      "q_id": "neet_phy_u13_t07_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "m = NIA = 50 × 2 × (0.1)^2 = 1 A m^2."
+    },
+    {
+      "q_id": "neet_phy_u13_t07_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "I = qω/2π, so m = Iπr^2 = qωr^2/2 = 4e-6 × 50 × 0.01 / 2 = 1e-6 A m^2."
+    },
+    {
+      "q_id": "neet_phy_u13_t07_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "μ = (e/2m_e)L in magnitude; it is antiparallel to L because the electron's charge is negative."
+    },
+    {
+      "q_id": "neet_phy_u13_t07_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "A: NIA → III. B: μ0·2m/(4πx^3) → IV. C: eh/(4πm_e) → II. D: evr/2 → I."
+    },
+    {
+      "q_id": "neet_phy_u13_t07_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "A true. B false: clockwise current gives a south pole. C true: e/2m_e ≈ 8.8e10 C/kg. D true. E false: the axial field varies as 1/x^3."
+    },
+    {
+      "q_id": "neet_phy_u13_t08_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "Field lines form closed loops. Outside the magnet they run N to S, so inside they run S to N."
+    },
+    {
+      "q_id": "neet_phy_u13_t08_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "A cut perpendicular to the axis keeps the pole strength at m = 5 A m and halves the length to 0.05 m. So M = 5 × 0.05 = 0.25 A m^2."
+    },
+    {
+      "q_id": "neet_phy_u13_t08_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "M = NIA = 200 × 2 × 5e-4 = 0.2 A m^2. Pole strength m = M/l = 0.2/0.04 = 5 A m."
+    },
+    {
+      "q_id": "neet_phy_u13_t08_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "By Gauss's law for magnetism, the net flux through any closed surface is zero, so A is false. Field lines are closed loops, so R is true."
+    },
+    {
+      "q_id": "neet_phy_u13_t08_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "A cut along the axis halves the cross-section, so both pole strength and moment are halved; Statement I is wrong. Fields superpose into a single net field, so field lines never intersect; Statement II is wrong."
+    },
+    {
+      "q_id": "neet_phy_u13_t09_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "For a short magnet, B_axial = (μ0/4π)·2m/r³ and B_eq = (μ0/4π)·m/r³, so the ratio is 2:1."
+    },
+    {
+      "q_id": "neet_phy_u13_t09_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "B = (μ0/4π)·2m/r³ = 1e-7 × 0.8 / 1e-3 = 8e-5 T."
+    },
+    {
+      "q_id": "neet_phy_u13_t09_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "B = (μ0/4π)(m/r³)√(1+3cos²θ) = B0√(1+3cos²θ). With θ=60°, 1+3/4 = 7/4, so B = (√7/2)B0."
+    },
+    {
+      "q_id": "neet_phy_u13_t09_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "A = 2m/r³ → II. B = m/r³ → IV. C = 2m/(8r³) = m/4r³ → III. D = m/8r³ → I."
+    },
+    {
+      "q_id": "neet_phy_u13_t09_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "A true. B false: the equatorial field is opposite to m. C true: B ∝ 1/r³, so doubling r gives 1/8. D true: for r≫l the denominator becomes r⁴. E false: the field is minimum at θ=90°."
+    },
+    {
+      "q_id": "neet_phy_u13_t10_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "τ = mB sinθ = 2 × 0.5 × sin30° = 0.5 N m"
+    },
+    {
+      "q_id": "neet_phy_u13_t10_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "W = mB(cos60° − cos180°) = 1.5 × 0.4 × (0.5 + 1) = 0.9 J"
+    },
+    {
+      "q_id": "neet_phy_u13_t10_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "T ∝ 1/√B; B becomes 9 times larger, so T becomes 3/3 = 1 s"
+    },
+    {
+      "q_id": "neet_phy_u13_t10_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "U = −mB cosθ is maximum at θ = 180°, so antiparallel is unstable equilibrium; R correctly explains A"
+    },
+    {
+      "q_id": "neet_phy_u13_t10_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "Net force in a uniform field is zero, so I is false. W(0→90°) = mB and W(0→180°) = 2mB, so II is true"
+    },
+    {
+      "q_id": "neet_phy_u13_t11_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "Bismuth is the classic diamagnetic material. Aluminium and sodium are paramagnetic, and nickel is ferromagnetic."
+    },
+    {
+      "q_id": "neet_phy_u13_t11_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "chi = M/H = 2.5e5/1000 = 250, so mu_r = 1 + chi = 251."
+    },
+    {
+      "q_id": "neet_phy_u13_t11_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "The level falls because the liquid is repelled from the strong-field region, so it is diamagnetic. Water is diamagnetic. Liquid O2, CuCl2 solution and Al are paramagnetic."
+    },
+    {
+      "q_id": "neet_phy_u13_t11_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "Superconductor: chi = -1 (perfect diamagnet). Copper: small negative chi. Aluminium: small positive chi. Iron: chi >> 1."
+    },
+    {
+      "q_id": "neet_phy_u13_t11_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "medium",
+      "blind_working": "A is true. B is false (mu_r < 1). C is true. D is false (it aligns parallel). E is true (diamagnetic chi is nearly independent of temperature). So A, C and E are correct."
+    },
+    {
+      "q_id": "neet_phy_u13_t12_1",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "Diamagnetic susceptibility arises from induced orbital moments, not from thermal alignment of permanent dipoles. So it is essentially independent of temperature. Paramagnetic and ferromagnetic susceptibilities both depend on temperature."
+    },
+    {
+      "q_id": "neet_phy_u13_t12_2",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        1
+      ],
+      "blind_answer": 1,
+      "confidence": "high",
+      "blind_working": "By Curie's law, χ ∝ 1/T. So χ = 3.0e-4 × 300/200 = 4.5e-4."
+    },
+    {
+      "q_id": "neet_phy_u13_t12_3",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        2
+      ],
+      "blind_answer": 2,
+      "confidence": "high",
+      "blind_working": "By the Curie-Weiss law, χ = C/(T − Tc). At 731 K, T − Tc = 100 K. Halving χ requires T − Tc = 200 K, so T = 831 K."
+    },
+    {
+      "q_id": "neet_phy_u13_t12_4",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        3
+      ],
+      "blind_answer": 3,
+      "confidence": "high",
+      "blind_working": "Above Tc, ferromagnets become paramagnetic, so A is true. Their susceptibility follows χ = C/(T − Tc) and still depends on temperature, so R is false."
+    },
+    {
+      "q_id": "neet_phy_u13_t12_5",
+      "published": true,
+      "reason": null,
+      "manual_approved": false,
+      "our_answer": [
+        4
+      ],
+      "blind_answer": 4,
+      "confidence": "high",
+      "blind_working": "Gadolinium has Tc ≈ 293 K, so at 330 K it is paramagnetic. Nickel has Tc = 631 K, so at 330 K it is ferromagnetic. Statement I is false. In a weak field M = C·B/T, so doubling both B and T leaves M unchanged. Statement II is true."
+    }
+  ]
+}

@@ -1,0 +1,623 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "The trivial name 'formic acid' reflects the natural source from which the acid was first obtained. That source is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Vinegar (Latin acetum)",
+        "Marshes (as in marsh gas)",
+        "Ants (Latin formica)",
+        "Butter (Latin butyrum)"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Trivial names usually reflect the source of a compound.",
+        "steps": [
+          "Formic acid was first obtained from ants.",
+          "The Latin word for ant is formica, which gives the name formic acid."
+        ],
+        "final_answer": "Option (3): Ants (Latin formica)",
+        "why_not_others": "Vinegar (acetum) gives acetic acid. Marsh gas is the trivial name of methane. Butter is not the source of formic acid.",
+        "common_trap": "Mixing up the sources of formic acid and acetic acid.",
+        "time_saving_tip": "Link the 'form' in formic to formica (ant)."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The correct IUPAC name of $CH\\equiv C-CH_2-CH=CH_2$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "pent-4-en-1-yne",
+        "pent-1-yn-4-ene",
+        "pent-4-yn-1-ene",
+        "pent-1-en-4-yne"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "When ene and yne get the same locants from either end, the double bond gets the lower number. In the name, ene is written before yne.",
+        "steps": [
+          "The chain has 5 carbons, so the word root is pent.",
+          "Numbering from the left gives the triple bond at 1 and the double bond at 4, so the set is {1,4}.",
+          "Numbering from the right gives the double bond at 1 and the triple bond at 4, which is also {1,4}.",
+          "The sets tie, so the double bond takes locant 1. The name is pent-1-en-4-yne."
+        ],
+        "final_answer": "Option (4): pent-1-en-4-yne",
+        "why_not_others": "In pent-4-en-1-yne the triple bond gets the lower number, which breaks the tie rule. Pent-1-yn-4-ene and pent-4-yn-1-ene write yne before ene, which is the wrong order.",
+        "common_trap": "Giving the triple bond the lower number because it looks like the more 'important' bond.",
+        "time_saving_tip": "Ene always comes before yne in the name. That alone rules out options 2 and 3."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "The correct IUPAC name of $CH_3-C(CH_3)_2-CH(CH_2CH_3)-CH_2-CH_3$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3-ethyl-2,2-dimethylpentane",
+        "2,2-dimethyl-3-ethylpentane",
+        "3-ethyl-4,4-dimethylpentane",
+        "3,3-dimethyl-4-ethylpentane"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Number the chain to give the lowest locant set. Write prefixes in alphabetical order, ignoring di.",
+        "steps": [
+          "The longest chain has 5 carbons, so the parent is pentane.",
+          "Numbering from the left gives the set {2,2,3}. Numbering from the right gives {3,4,4}. So number from the left.",
+          "The substituents are two methyl groups on C-2 and an ethyl group on C-3.",
+          "Ignoring di, 'ethyl' comes before 'methyl' alphabetically. The name is 3-ethyl-2,2-dimethylpentane."
+        ],
+        "final_answer": "Option (1): 3-ethyl-2,2-dimethylpentane",
+        "why_not_others": "Option 2 alphabetises dimethyl under 'd'. Options 3 and 4 number the chain from the wrong end, giving higher locants.",
+        "common_trap": "Counting the 'di' in dimethyl when alphabetising.",
+        "time_saving_tip": "Fix the locant set first, then fix the alphabetical order."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In $CH_2=CH-CH_2-OH$, the carbon bearing the $-OH$ group is numbered C-1, giving the name prop-2-en-1-ol.",
+        "R": "When a double bond and a triple bond tie in position, the double bond is given the lower number."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The principal functional group gets the lowest locant before any multiple bond does.",
+        "steps": [
+          "The $-OH$ group is the principal group, so it gets the lowest locant (1). The double bond then falls at C-2. So A is true.",
+          "The ene/yne tie rule is a correct rule, so R is true.",
+          "This molecule has no triple bond. A follows from the principal-group priority, not from the ene/yne tie rule."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain A, so option 1 is wrong. Both statements are true, so options 3 and 4 are wrong.",
+        "common_trap": "Thinking the double bond should get locant 1 in place of the $-OH$ group.",
+        "time_saving_tip": "Check whether the molecule contains what R talks about. There is no yne here."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When alphabetising substituent prefixes, isopropyl is listed under 'p', in the same way that sec-butyl is listed under 'b'.",
+        "II": "The locant set {2,3,5} is preferred over {2,4,4} because the sets are compared at the first point of difference, where 3 is lower than 4."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Sec and tert are ignored when alphabetising, but iso and neo are counted. Locant sets are compared at the first point of difference.",
+        "steps": [
+          "Iso is counted, so isopropyl is listed under 'i'. Sec is ignored, so sec-butyl is listed under 'b'. Statement I is incorrect.",
+          "Compare {2,3,5} with {2,4,4}. The first locants are equal (2). At the second position, 3 is lower than 4, so {2,3,5} is preferred. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I treats iso like sec, which is wrong. Statement II applies the first-point-of-difference rule correctly.",
+        "common_trap": "Adding up locants (2+3+5 = 10 against 2+4+4 = 10) in place of comparing them at the first point of difference.",
+        "time_saving_tip": "Remember: sec and tert are ignored, iso and neo are counted."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Which of the following conditions favours homolytic fission of a covalent bond?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Use of a highly polar solvent",
+        "A large electronegativity difference between the bonded atoms",
+        "Exposure to UV light or the presence of peroxides",
+        "An ionising aqueous medium"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Homolysis is favoured by heat, UV light, peroxides, non-polar solvents and the gas phase.",
+        "steps": [
+          "In homolysis, each atom takes one electron and free radicals form.",
+          "UV light and peroxides supply the energy or radicals needed for this, so they favour homolysis."
+        ],
+        "final_answer": "Option (3): Exposure to UV light or the presence of peroxides",
+        "why_not_others": "Polar solvents, a large electronegativity difference and ionising aqueous media all favour heterolysis, which produces ions.",
+        "common_trap": "Thinking that any polar condition helps a bond break evenly.",
+        "time_saving_tip": "Radical conditions are light, heat, peroxides and non-polar media. Ionic conditions are polar media."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "Which of the following correctly represents heterolytic fission of a bond?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_3-CH_3 \\rightarrow 2CH_3^{\\bullet}$",
+        "$Br_2 \\rightarrow 2Br^{\\bullet}$",
+        "$(CH_3)_2CH-Cl \\rightarrow (CH_3)_2CH^- + Cl^+$",
+        "$(CH_3)_2CH-Cl \\rightarrow (CH_3)_2CH^+ + Cl^-$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In heterolysis, the more electronegative atom keeps the bonding pair.",
+        "steps": [
+          "Options 1 and 2 produce free radicals, so they are homolysis.",
+          "Chlorine is more electronegative than carbon, so chlorine keeps both electrons and becomes $Cl^-$.",
+          "This leaves the carbon as a carbocation, $(CH_3)_2CH^+$."
+        ],
+        "final_answer": "Option (4): $(CH_3)_2CH-Cl \\rightarrow (CH_3)_2CH^+ + Cl^-$",
+        "why_not_others": "Options 1 and 2 are homolytic. Option 3 gives the bonding pair to the less electronegative carbon, which is the wrong direction.",
+        "common_trap": "Picking any equation that shows ions, without checking which atom keeps the electron pair.",
+        "time_saving_tip": "Radicals mean homolysis. For ions, the negative charge must sit on the more electronegative atom."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Homolytic fission of the $C-Br$ bond in $CH_3-Br$ is correctly shown by:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Two half-headed (fish-hook) arrows, giving $CH_3^{\\bullet}$ and $Br^{\\bullet}$",
+        "One full-headed arrow towards Br, giving $CH_3^+$ and $Br^-$",
+        "Two full-headed arrows, giving $CH_3^{\\bullet}$ and $Br^{\\bullet}$",
+        "One fish-hook arrow, giving $CH_3^+$ and $Br^-$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A fish-hook arrow shows the movement of one electron. In homolysis, each atom takes one electron of the shared pair.",
+        "steps": [
+          "Homolysis gives neutral free radicals, here $CH_3^{\\bullet}$ and $Br^{\\bullet}$.",
+          "Each of the two bonding electrons moves to a different atom, so two half-headed arrows are drawn."
+        ],
+        "final_answer": "Option (1): Two half-headed (fish-hook) arrows, giving $CH_3^{\\bullet}$ and $Br^{\\bullet}$",
+        "why_not_others": "Option 2 describes heterolysis. A full arrow means two electrons move, so option 3 is wrong. Option 4 pairs a one-electron arrow with ionic products, which is inconsistent.",
+        "common_trap": "Using full arrows to show the formation of radicals.",
+        "time_saving_tip": "Half arrow means one electron, which means radicals. Full arrow means two electrons, which means ions."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Fish-hook arrow"
+          },
+          {
+            "label": "B",
+            "text": "Full-headed curved arrow"
+          },
+          {
+            "label": "C",
+            "text": "Heat, UV light or peroxides"
+          },
+          {
+            "label": "D",
+            "text": "Polar solvent"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Two-electron movement"
+          },
+          {
+            "label": "II",
+            "text": "Favours heterolysis"
+          },
+          {
+            "label": "III",
+            "text": "One-electron movement"
+          },
+          {
+            "label": "IV",
+            "text": "Favours homolysis"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Arrow types and the conditions that favour each mode of bond fission.",
+        "steps": [
+          "A fish-hook arrow shows one electron moving: A-III.",
+          "A full arrow shows an electron pair moving: B-I.",
+          "Heat, UV light and peroxides favour homolysis: C-IV.",
+          "A polar solvent favours heterolysis: D-II."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Options 1 and 3 swap the meanings of the two arrows. Options 2 and 3 swap the conditions for homolysis and heterolysis.",
+        "common_trap": "Reversing the meanings of the half arrow and the full arrow.",
+        "time_saving_tip": "Fixing A-III alone removes options 1 and 3."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about bond fission are correct?",
+      "statements": {
+        "A": "Homolytic fission of a covalent bond gives neutral free radicals.",
+        "B": "In heterolytic fission, the less electronegative atom keeps the bonding pair.",
+        "C": "Heterolysis of a bond to carbon can give either a carbocation or a carbanion.",
+        "D": "Free-radical reactions proceed through heterolytic fission.",
+        "E": "Heterolysis is favoured by polar solvents and a large electronegativity difference between the bonded atoms."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "C, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Homolysis gives radicals. Heterolysis gives ions, with the more electronegative atom keeping the bonding pair.",
+        "steps": [
+          "A is true: homolysis gives neutral free radicals.",
+          "B is false: the more electronegative atom keeps the bonding pair.",
+          "C is true: carbon ends up as a cation or an anion, depending on the other atom.",
+          "D is false: free-radical reactions involve homolysis.",
+          "E is true: polar solvents and a large electronegativity difference favour heterolysis."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option 1 leaves out the true statement E. Option 2 includes the false statement B. Option 3 includes the false statement D.",
+        "common_trap": "Linking free-radical reactions with heterolysis.",
+        "time_saving_tip": "Spotting that B and D are false leaves only A, C and E."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "A simple alkyl carbocation such as $CH_3^+$ is best described as:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$sp^2$ hybridised, planar, with 6 valence electrons on carbon",
+        "$sp^3$ hybridised, pyramidal, with 8 valence electrons on carbon",
+        "$sp^2$ hybridised, planar, with 7 valence electrons on carbon",
+        "$sp^3$ hybridised, pyramidal, with 6 valence electrons on carbon"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A carbocation is $sp^2$ and planar, with an empty p orbital and 6 valence electrons.",
+        "steps": [
+          "The carbon has three bonds and no lone pair, which is 6 electrons.",
+          "It is $sp^2$ hybridised and trigonal planar, with the empty p orbital perpendicular to the plane."
+        ],
+        "final_answer": "Option (1): $sp^2$ hybridised, planar, with 6 valence electrons on carbon",
+        "why_not_others": "Option 2 describes a carbanion. Option 3 describes a free radical. Option 4 has the right electron count but the wrong hybridisation and shape.",
+        "common_trap": "Mixing up the electron counts: 6 for a carbocation, 7 for a radical, 8 for a carbanion.",
+        "time_saving_tip": "Remember 6-7-8 for cation, radical, anion."
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "The correct decreasing order of stability of the carbanions $CH_3^-$, $CH_3CH_2^-$, $(CH_3)_2CH^-$ and $(CH_3)_3C^-$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$(CH_3)_3C^- > (CH_3)_2CH^- > CH_3CH_2^- > CH_3^-$",
+        "$(CH_3)_2CH^- > CH_3CH_2^- > (CH_3)_3C^- > CH_3^-$",
+        "$CH_3CH_2^- > CH_3^- > (CH_3)_2CH^- > (CH_3)_3C^-$",
+        "$CH_3^- > CH_3CH_2^- > (CH_3)_2CH^- > (CH_3)_3C^-$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Alkyl groups (+I) destabilise a negative charge, so the carbanion order is the reverse of the carbocation order.",
+        "steps": [
+          "Each extra alkyl group pushes more electron density onto the negatively charged carbon.",
+          "More alkyl groups therefore make the carbanion less stable.",
+          "The order is $CH_3^- > 1^{\\circ} > 2^{\\circ} > 3^{\\circ}$."
+        ],
+        "final_answer": "Option (4): $CH_3^- > CH_3CH_2^- > (CH_3)_2CH^- > (CH_3)_3C^-$",
+        "why_not_others": "Option 1 is the carbocation order. Options 2 and 3 are jumbled orders that follow no consistent rule.",
+        "common_trap": "Applying the carbocation order to carbanions.",
+        "time_saving_tip": "For anions, fewer alkyl groups means more stable."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "How many $\\alpha$-hydrogen atoms are available for hyperconjugation in the carbocation $(CH_3)_2\\overset{+}{C}-CH_2CH_3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "11",
+        "8",
+        "6",
+        "9"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Only H atoms on carbons directly attached to the positive carbon ($\\alpha$-H) count for hyperconjugation.",
+        "steps": [
+          "Three carbons are attached to $C^+$: two $CH_3$ groups and one $CH_2$ of the ethyl group.",
+          "The two methyl groups contribute $3 + 3 = 6$ hydrogens.",
+          "The $CH_2$ group contributes 2 hydrogens.",
+          "The total is $6 + 2 = 8$ $\\alpha$-H."
+        ],
+        "final_answer": "Option (2): 8",
+        "why_not_others": "11 counts every H, including the terminal $CH_3$ of the ethyl group. 6 leaves out the $CH_2$ hydrogens. 9 assumes the ion is $(CH_3)_3C^+$.",
+        "common_trap": "Counting all the hydrogen atoms in place of only the $\\alpha$-hydrogens.",
+        "time_saving_tip": "Look only at the carbons bonded directly to $C^+$ and add up their H atoms."
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The tert-butyl carbocation, $(CH_3)_3C^+$, is more stable than the methyl carbocation, $CH_3^+$.",
+        "R": "A carbocation is $sp^2$ hybridised and has an empty p orbital."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Carbocation stability comes from electron donation by +I effect, hyperconjugation and resonance.",
+        "steps": [
+          "$(CH_3)_3C^+$ is stabilised by the +I effect of three methyl groups and by hyperconjugation with 9 $\\alpha$-H. So A is true.",
+          "Every carbocation, including $CH_3^+$, is $sp^2$ with an empty p orbital. So R is true.",
+          "R is common to both ions, so it cannot explain why one is more stable than the other."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not account for the difference in stability, so option 1 is wrong. Both statements are true, so options 3 and 4 are wrong.",
+        "common_trap": "Accepting a true structural fact as the explanation for a stability order.",
+        "time_saving_tip": "If R applies equally to both species being compared, it cannot explain the difference between them."
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the cation $CH_2=CH-\\overset{+}{C}H-CH_3$, the empty p orbital is stabilised both by overlap with the adjacent filled $\\pi$ orbital and by hyperconjugation with the filled $C-H$ $\\sigma$ orbitals of the methyl group.",
+        "II": "Benzylic and allylic carbanions remain $sp^3$ hybridised and pyramidal, because every carbanion carries a lone pair."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A substituted allylic cation is stabilised by both resonance and hyperconjugation. Carbanions conjugated with a $\\pi$ system become $sp^2$.",
+        "steps": [
+          "In statement I, the cation is allylic, so its empty p orbital overlaps the filled C=C $\\pi$ orbital (resonance). The attached $CH_3$ also supplies 3 $\\alpha$-H for hyperconjugation. Statement I is correct.",
+          "In statement II, benzylic and allylic carbanions become $sp^2$ so that the lone pair can be delocalised by resonance. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I correctly names both stabilising interactions. Statement II wrongly applies the $sp^3$ geometry to all carbanions.",
+        "common_trap": "Assuming every carbanion is $sp^3$, or thinking resonance and hyperconjugation cannot act together.",
+        "time_saving_tip": "Conjugated carbanion means $sp^2$. That alone makes statement II false."
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "Which of the following is a neutral electrophile?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$SO_3$",
+        "$NH_3$",
+        "$H_2O$",
+        "$CN^-$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Electrophiles are electron-deficient Lewis acids. Some, such as $SO_3$, are neutral.",
+        "steps": [
+          "$SO_3$ accepts an electron pair, so it is a neutral electrophile.",
+          "$NH_3$ and $H_2O$ have lone pairs that they donate, so they are neutral nucleophiles."
+        ],
+        "final_answer": "Option (1): $SO_3$",
+        "why_not_others": "$NH_3$ and $H_2O$ are neutral nucleophiles. $CN^-$ is a negative nucleophile.",
+        "common_trap": "Thinking that every neutral species with polar bonds is an electrophile.",
+        "time_saving_tip": "A lone-pair donor is a nucleophile. An electron-pair acceptor is an electrophile."
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "Which of the following is an ambident nucleophile?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NH_3$",
+        "$OH^-$",
+        "$NO_2^-$",
+        "$BF_3$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "An ambident nucleophile has two different donor sites.",
+        "steps": [
+          "$NO_2^-$ can donate an electron pair through either nitrogen or oxygen.",
+          "So it is ambident."
+        ],
+        "final_answer": "Option (3): $NO_2^-$",
+        "why_not_others": "$NH_3$ donates only through N, and $OH^-$ only through O. $BF_3$ is an electrophile, not a nucleophile.",
+        "common_trap": "Calling $OH^-$ ambident because it contains two different atoms, even though only oxygen donates.",
+        "time_saving_tip": "The standard ambident examples are $CN^-$ (C or N) and $NO_2^-$ (N or O)."
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "In the attack of $CN^-$ on the carbonyl group of $CH_3CHO$, the curved arrow showing formation of the new bond should:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Start at an electron pair on $CN^-$ and point to the carbonyl carbon",
+        "Start at the carbonyl carbon and point to $CN^-$",
+        "Start at the carbonyl oxygen and point to $CN^-$",
+        "Start at a lone pair on the carbonyl oxygen and point to the carbonyl carbon"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A curved arrow starts at the electron source (the nucleophile) and points to the electron sink (the electrophilic centre).",
+        "steps": [
+          "$CN^-$ is the nucleophile, so it is the electron source.",
+          "The carbonyl carbon is electrophilic, so it is the electron sink.",
+          "The arrow therefore runs from the electron pair on $CN^-$ to the carbonyl carbon."
+        ],
+        "final_answer": "Option (1): Start at an electron pair on $CN^-$ and point to the carbonyl carbon",
+        "why_not_others": "Option 2 reverses the direction of the arrow. Option 3 treats oxygen as the site of attack and also points the arrow the wrong way. Option 4 does not involve the attacking nucleophile at all.",
+        "common_trap": "Drawing the arrow from the electrophile to the nucleophile.",
+        "time_saving_tip": "Arrows always start at the electrons."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$NO_2^+$"
+          },
+          {
+            "label": "B",
+            "text": "$AlCl_3$"
+          },
+          {
+            "label": "C",
+            "text": "$CH_3O^-$"
+          },
+          {
+            "label": "D",
+            "text": "$NH_3$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Neutral nucleophile"
+          },
+          {
+            "label": "II",
+            "text": "Positive electrophile"
+          },
+          {
+            "label": "III",
+            "text": "Neutral electrophile"
+          },
+          {
+            "label": "IV",
+            "text": "Negative nucleophile"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Electrophiles and nucleophiles can each be charged or neutral.",
+        "steps": [
+          "$NO_2^+$ is a positive electrophile: A-II.",
+          "$AlCl_3$ is an electron-pair acceptor, so it is a neutral electrophile: B-III.",
+          "$CH_3O^-$ is an alkoxide ($RO^-$), a negative nucleophile: C-IV.",
+          "$NH_3$ donates its lone pair, so it is a neutral nucleophile: D-I."
+        ],
+        "final_answer": "Option (1): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Option 2 swaps the two electrophiles. Option 3 swaps the two nucleophiles. Option 4 reverses the electrophile and nucleophile roles.",
+        "common_trap": "Thinking that a neutral species such as $AlCl_3$ cannot be an electrophile.",
+        "time_saving_tip": "Fix the charged species first; the neutral ones then follow."
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about electrophiles and nucleophiles are correct?",
+      "statements": {
+        "A": "Electrophiles are Lewis acids.",
+        "B": "Dichlorocarbene, $:CCl_2$, is a neutral nucleophile.",
+        "C": "A curved arrow starts at the electron source and points to the electron sink.",
+        "D": "Carbanions act as nucleophiles.",
+        "E": "$BF_3$ attacks electron-deficient centres."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and D only",
+        "A, C and D only",
+        "B, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Electrophiles accept electron pairs (Lewis acids). Nucleophiles donate electron pairs (Lewis bases).",
+        "steps": [
+          "A is true: electrophiles accept electron pairs, so they are Lewis acids.",
+          "B is false: $:CCl_2$ is a neutral electrophile.",
+          "C is true: this is the curved-arrow convention.",
+          "D is true: carbanions are electron-rich nucleophiles.",
+          "E is false: $BF_3$ is an electrophile, so it attacks electron-rich centres."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option 1 leaves out the true statement D. Option 2 includes the false statement B. Option 4 includes the false statements B and E.",
+        "common_trap": "Calling dichlorocarbene a nucleophile because it has a lone pair, even though its carbon is electron-deficient.",
+        "time_saving_tip": "Spotting that B and E are false leaves only option 3."
+      }
+    }
+  ]
+}

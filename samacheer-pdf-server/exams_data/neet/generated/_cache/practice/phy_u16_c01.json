@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "An object is placed 30 cm in front of a concave mirror of focal length 20 cm. Where is the image formed, and what is its nature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 cm in front of the mirror, real and inverted",
+        "12 cm in front of the mirror, real and inverted",
+        "60 cm behind the mirror, virtual and erect",
+        "12 cm behind the mirror, virtual and erect"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Mirror formula $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$ with the Cartesian sign convention.",
+        "steps": [
+          "For the concave mirror, $u = -30$ cm and $f = -20$ cm.",
+          "$\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = -\\frac{1}{20} + \\frac{1}{30} = -\\frac{1}{60}$.",
+          "So $v = -60$ cm. The negative sign means the image is in front of the mirror, so it is real and inverted."
+        ],
+        "final_answer": "Option (1): 60 cm in front of the mirror, real and inverted",
+        "why_not_others": "A distance of 12 cm comes from adding the reciprocals wrongly. An image behind the mirror would need the object to lie between F and P, but here the object lies beyond F.",
+        "common_trap": "Writing $\\frac{1}{v} = \\frac{1}{f} + \\frac{1}{u}$, which gives 12 cm.",
+        "time_saving_tip": "The object lies between F and C, so the real image must form beyond C (beyond 40 cm)."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "An object 6 cm tall is placed 30 cm in front of a convex mirror of focal length 15 cm. What are the size, nature and position of the image?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 cm, inverted, real, 10 cm in front of the mirror",
+        "6 cm, erect, virtual, 30 cm behind the mirror",
+        "2 cm, erect, virtual, 10 cm behind the mirror",
+        "6 cm, inverted, real, 30 cm in front of the mirror"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A convex mirror ($f > 0$) always forms a virtual, erect and diminished image.",
+        "steps": [
+          "Take $u = -30$ cm and $f = +15$ cm.",
+          "$\\frac{1}{v} = \\frac{1}{15} + \\frac{1}{30} = \\frac{1}{10}$, so $v = +10$ cm, which is behind the mirror.",
+          "$m = -\\frac{v}{u} = -\\frac{10}{-30} = +\\frac{1}{3}$.",
+          "Image height $= 6 \\times \\frac{1}{3} = 2$ cm, and the image is erect and virtual."
+        ],
+        "final_answer": "Option (3): 2 cm, erect, virtual, 10 cm behind the mirror",
+        "why_not_others": "Option (1) has the wrong sign of m and v. Option (2) comes from taking u as positive. Option (4) comes from treating the convex mirror's f as negative.",
+        "common_trap": "Using $f = -15$ cm for a convex mirror.",
+        "time_saving_tip": "A convex mirror can never give a real or magnified image, so options (1), (2) and (4) can be rejected at once."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A concave mirror of focal length 15 cm forms a real image that is three times the size of the object. What is the distance of the object from the mirror?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "10 cm",
+        "20 cm",
+        "30 cm",
+        "60 cm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A real image has negative magnification, $m = -\\frac{v}{u}$.",
+        "steps": [
+          "For a real image, $m = -3$, so $v = 3u$.",
+          "$\\frac{1}{3u} + \\frac{1}{u} = \\frac{4}{3u} = -\\frac{1}{15}$.",
+          "This gives $u = -20$ cm, so the object is 20 cm from the mirror."
+        ],
+        "final_answer": "Option (2): 20 cm",
+        "why_not_others": "10 cm would give a virtual image with $m = +3$. 30 cm is the centre of curvature, where $m = -1$. 60 cm is the image distance, not the object distance.",
+        "common_trap": "Taking $m = +3$, which gives the virtual-image answer of 10 cm.",
+        "time_saving_tip": "A real magnified image needs the object between F and C, that is, between 15 cm and 30 cm. Only 20 cm lies in this range."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A concave mirror of radius of curvature 40 cm has a focal length of magnitude 20 cm both in air and when immersed in water.",
+        "R": "The focal length of a spherical mirror depends on the refractive index of the surrounding medium."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a mirror, $f = R/2$, which depends only on geometry.",
+        "steps": [
+          "$f = R/2 = 20$ cm whatever the medium, so A is true.",
+          "Reflection does not involve the refractive index, so the focal length of a mirror is independent of the medium. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Confusing mirrors with lenses, whose focal length does change with the surrounding medium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An object placed 20 cm in front of a convex mirror of focal length 20 cm forms its image at infinity.",
+        "II": "If a plane mirror is rotated through $15^\\circ$ while the incident ray is kept fixed, the reflected ray turns through $15^\\circ$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A convex mirror always forms a virtual image within its focal length. Rotating a mirror by $\\theta$ turns the reflected ray by $2\\theta$.",
+        "steps": [
+          "Statement I: $u = -20$ cm and $f = +20$ cm, so $\\frac{1}{v} = \\frac{1}{20} + \\frac{1}{20}$, giving $v = +10$ cm. The image is not at infinity, so I is incorrect.",
+          "Statement II: the reflected ray turns through $2 \\times 15^\\circ = 30^\\circ$, so II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements are false, so every option that calls either one correct is wrong.",
+        "common_trap": "Applying the concave-mirror rule (object at F gives image at infinity) to a convex mirror, and forgetting the factor of 2 for a rotating mirror.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Light of wavelength 600 nm in air enters glass of refractive index 1.5. What are its wavelength and frequency inside the glass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "400 nm; frequency unchanged",
+        "900 nm; frequency unchanged",
+        "400 nm; frequency reduced by a factor of 1.5",
+        "600 nm; frequency reduced by a factor of 1.5"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Frequency does not change on refraction, while $\\lambda_{medium} = \\lambda/n$.",
+        "steps": [
+          "$\\lambda_{glass} = 600/1.5 = 400$ nm.",
+          "The frequency is set by the source, so it stays the same."
+        ],
+        "final_answer": "Option (1): 400 nm; frequency unchanged",
+        "why_not_others": "900 nm comes from multiplying by n. Options (3) and (4) wrongly let the frequency change.",
+        "common_trap": "Thinking the frequency falls when the light slows down.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A tank contains a 9 cm layer of a liquid of refractive index 1.5, with a 12 cm layer of water (refractive index $4/3$) floating on top of it. What is the apparent depth of the bottom of the tank when viewed from air near the normal?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "15 cm",
+        "6 cm",
+        "21 cm",
+        "29.5 cm"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For layered media seen from outside, apparent depth $= \\sum t_i/n_i$.",
+        "steps": [
+          "Water layer: $12/(4/3) = 9$ cm.",
+          "Liquid layer: $9/1.5 = 6$ cm.",
+          "Total apparent depth $= 9 + 6 = 15$ cm."
+        ],
+        "final_answer": "Option (1): 15 cm",
+        "why_not_others": "6 cm is the shift, not the apparent depth. 21 cm is the real depth. 29.5 cm comes from multiplying each thickness by n.",
+        "common_trap": "Multiplying by the refractive index instead of dividing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A convex spherical surface of radius of curvature 10 cm separates air (object side) from glass of refractive index 1.5. A point object in air lies on the axis 40 cm from the surface. How far from the surface, inside the glass, is the image formed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20 cm",
+        "40 cm",
+        "30 cm",
+        "60 cm"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Refraction at a single spherical surface: $\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$.",
+        "steps": [
+          "$n_1 = 1$, $n_2 = 1.5$, $u = -40$ cm and $R = +10$ cm.",
+          "$\\frac{1.5}{v} + \\frac{1}{40} = \\frac{0.5}{10} = \\frac{1}{20}$.",
+          "$\\frac{1.5}{v} = \\frac{1}{40}$, so $v = 60$ cm."
+        ],
+        "final_answer": "Option (4): 60 cm",
+        "why_not_others": "20 cm comes from a sign error in the u term. 40 cm comes from dropping $n_2$. 30 cm comes from ignoring the object term, which treats the object as being at infinity.",
+        "common_trap": "Taking u as positive for a real object.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Normal shift produced by a glass slab of thickness 9 cm and refractive index 1.5 (observer in air)"
+          },
+          {
+            "label": "B",
+            "text": "Apparent depth of a coin under 8 cm of water ($n = 4/3$), viewed from air near the normal"
+          },
+          {
+            "label": "C",
+            "text": "Apparent height above the surface of a bird 12 cm above water, as seen by a fish just below the surface ($n_{water} = 4/3$)"
+          },
+          {
+            "label": "D",
+            "text": "Apparent depth of the bottom of 4 cm of water ($n = 4/3$) resting on 6 cm of glass ($n = 1.5$), viewed from air"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "6 cm"
+          },
+          {
+            "label": "II",
+            "text": "16 cm"
+          },
+          {
+            "label": "III",
+            "text": "3 cm"
+          },
+          {
+            "label": "IV",
+            "text": "7 cm"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Apparent depth $= h_{real}/n_{rel}$, with $n_{rel}$ = (index of object medium)/(index of observer medium). The normal shift of a slab is $t(1 - 1/n)$.",
+        "steps": [
+          "A: $9(1 - 2/3) = 3$ cm, so A matches III.",
+          "B: $8/(4/3) = 6$ cm, so B matches I.",
+          "C: $n_{rel} = 1/(4/3) = 3/4$, so the apparent height is $12/(3/4) = 16$ cm. C matches II.",
+          "D: $4/(4/3) + 6/1.5 = 3 + 4 = 7$ cm, so D matches IV."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Every other option mismatches at least one pair. For example, option (1) confuses the slab shift (3 cm) with the apparent depth of the coin (6 cm).",
+        "common_trap": "For the fish, multiplying by $3/4$ gives 9 cm. Objects viewed from a denser medium actually appear farther away.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about refraction are correct?",
+      "statements": {
+        "A": "When light passes from vacuum into a medium of refractive index n, both its speed and its wavelength decrease by a factor of n.",
+        "B": "The normal shift produced by a glass slab depends on the distance of the object from the slab.",
+        "C": "A glass slab with parallel faces produces a lateral displacement of a ray but no deviation.",
+        "D": "A fish looking up from under water sees an object above the surface as farther away than it really is.",
+        "E": "In the relation $\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$, R is positive when the centre of curvature lies on the incident-light side."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "These statements test basic refraction facts, the slab shift and the sign convention for spherical surfaces.",
+        "steps": [
+          "A is true: $v = c/n$ and $\\lambda_{medium} = \\lambda/n$.",
+          "B is false: the shift $t(1 - 1/n)$ does not depend on object position.",
+          "C is true: emergent rays are parallel to incident rays.",
+          "D is true: viewing from a denser into a rarer medium makes objects appear farther away.",
+          "E is false: R is positive when the centre lies on the refracted-light side."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) leaves out D. Option (2) includes the false B. Option (4) includes the false E and leaves out A.",
+        "common_trap": "Thinking that a slab's shift changes with object distance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "An equiconvex lens is made of glass of refractive index 1.5, and each surface has a radius of curvature of 20 cm. What is the power of the lens in air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "+0.05 D",
+        "-5 D",
+        "+5 D",
+        "+2.5 D"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For an equiconvex lens, $f = R/[2(n-1)]$, and $P = 1/f$ with f in metres.",
+        "steps": [
+          "$f = 20/[2(0.5)] = 20$ cm $= 0.2$ m.",
+          "$P = 1/0.2 = +5$ D."
+        ],
+        "final_answer": "Option (3): +5 D",
+        "why_not_others": "+0.05 D comes from using f in cm. -5 D has the wrong sign for a convex lens. +2.5 D comes from using the plano-convex formula.",
+        "common_trap": "Using f in centimetres when calculating power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "An object is placed 10 cm from a convex lens of focal length 15 cm. What are the position of the image and the magnification?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "30 cm on the other side of the lens, magnification $-3$",
+        "6 cm on the same side as the object, magnification $+0.6$",
+        "30 cm on the same side as the object, magnification $+3$",
+        "30 cm on the same side as the object, magnification $-3$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Thin lens formula $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$, with $m = v/u$.",
+        "steps": [
+          "Take $u = -10$ cm and $f = +15$ cm.",
+          "$\\frac{1}{v} = \\frac{1}{15} - \\frac{1}{10} = -\\frac{1}{30}$, so $v = -30$ cm, on the same side as the object.",
+          "$m = v/u = (-30)/(-10) = +3$. The image is virtual, erect and magnified."
+        ],
+        "final_answer": "Option (3): 30 cm on the same side as the object, magnification $+3$",
+        "why_not_others": "Option (1) has the wrong sign of v. Option (2) comes from using the mirror formula. Option (4) uses the mirror magnification $-v/u$.",
+        "common_trap": "Using $1/v + 1/u = 1/f$ or $m = -v/u$ for a lens.",
+        "time_saving_tip": "An object inside the focal length of a convex lens always gives a virtual, erect, magnified image."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A thin convex lens made of glass of refractive index 1.5 has a focal length of 20 cm in air. What is its focal length when it is completely immersed in water of refractive index $4/3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "26.7 cm",
+        "80 cm",
+        "40 cm",
+        "-80 cm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "From the lens maker's formula, $f_{liquid}/f_{air} = (n_g - 1)/(n_g/n_l - 1)$.",
+        "steps": [
+          "$n_g/n_l = 1.5/(4/3) = 9/8$.",
+          "Ratio $= 0.5/(9/8 - 1) = 0.5/0.125 = 4$.",
+          "$f_{water} = 4 \\times 20 = 80$ cm, and it is still converging because $n_g > n_l$."
+        ],
+        "final_answer": "Option (2): 80 cm",
+        "why_not_others": "26.7 cm comes from simply multiplying by $n_l$. 40 cm is a wrong ratio. -80 cm reverses the sign, which happens only when the liquid is denser than the glass.",
+        "common_trap": "Assuming the lens becomes diverging in any liquid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A convex lens made of glass of refractive index 1.5 behaves as a diverging lens when immersed in a liquid of refractive index 1.6.",
+        "R": "For a given lens, the focal length for violet light is shorter than that for red light."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "When $n_{21} < 1$, the sign of f reverses. Chromatic dispersion makes f depend on wavelength.",
+        "steps": [
+          "Here $n_{21} = 1.5/1.6 < 1$, so $(n_{21} - 1)$ is negative and f becomes negative. A is true.",
+          "Violet light has a larger n, so its f is shorter. R is true.",
+          "R deals with wavelength dependence, not with the effect of the medium, so it does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain the sign reversal, which ruins option (1). Both statements are true, which rules out options (3) and (4).",
+        "common_trap": "Choosing option (1) just because both statements are about lenses.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A plano-convex lens of refractive index 1.5 with a curved surface of radius 15 cm has a focal length of 30 cm in air.",
+        "II": "When an equiconvex lens of focal length 20 cm is cut into two halves by a plane perpendicular to its principal axis, each half has a focal length of 10 cm."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a plano-convex lens, $f = R/(n-1)$. Cutting a lens perpendicular to the axis doubles f for each half.",
+        "steps": [
+          "Statement I: $f = 15/0.5 = 30$ cm, so I is correct.",
+          "Statement II: each half is plano-convex, so $f = 2 \\times 20 = 40$ cm, not 10 cm. II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "II halves f instead of doubling it, so options (1) and (4) are wrong. I is correct, so option (2) is wrong.",
+        "common_trap": "Thinking that halving the lens halves its focal length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "What is the critical angle for light going from a medium of refractive index 2 into air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30^\\circ$",
+        "$60^\\circ$",
+        "$45^\\circ$",
+        "$15^\\circ$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The critical angle is given by $\\sin i_c = n_{rarer}/n_{denser}$.",
+        "steps": [
+          "$\\sin i_c = 1/2$.",
+          "$i_c = 30^\\circ$."
+        ],
+        "final_answer": "Option (1): $30^\\circ$",
+        "why_not_others": "$60^\\circ$ comes from using cosine instead of sine. $45^\\circ$ corresponds to $n = \\sqrt{2}$. $15^\\circ$ has no basis.",
+        "common_trap": "Writing $\\cos i_c = 1/n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A point source of light is placed 8 cm below the surface of a liquid of refractive index $5/3$. What is the radius of the circle on the surface through which light emerges into air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6 cm",
+        "10.7 cm",
+        "4.8 cm",
+        "13.3 cm"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The radius of the circle of emergence is $r = \\frac{h}{\\sqrt{n^2 - 1}}$.",
+        "steps": [
+          "$n^2 - 1 = 25/9 - 1 = 16/9$, so $\\sqrt{n^2 - 1} = 4/3$.",
+          "$r = 8/(4/3) = 6$ cm."
+        ],
+        "final_answer": "Option (1): 6 cm",
+        "why_not_others": "10.7 cm comes from multiplying h by $4/3$. 4.8 cm is $h/n$. 13.3 cm is $hn$.",
+        "common_trap": "Inverting the factor $\\sqrt{n^2 - 1}$.",
+        "time_saving_tip": "Here $\\sin i_c = 3/5$, so $\\tan i_c = 3/4$ and $r = h \\tan i_c = 6$ cm."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A right-angled isosceles glass prism is to be used in a periscope to turn light through $90^\\circ$ by total internal reflection. Light falls on the hypotenuse face at $45^\\circ$. Which of the following refractive indices of the prism material would make this possible?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.50",
+        "1.33",
+        "1.20",
+        "1.40"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "TIR at $45^\\circ$ requires $i_c < 45^\\circ$, which means $n > \\sqrt{2} \\approx 1.414$.",
+        "steps": [
+          "The condition is $\\sin i_c = 1/n < \\sin 45^\\circ = 1/\\sqrt{2}$.",
+          "So $n > 1.414$. Only 1.50 satisfies this."
+        ],
+        "final_answer": "Option (1): 1.50",
+        "why_not_others": "1.33, 1.20 and 1.40 are all below $\\sqrt{2}$. With these, $i_c > 45^\\circ$ and light would escape by refraction.",
+        "common_trap": "Picking 1.40 because it looks close enough to $\\sqrt{2}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Brilliant sparkle of a diamond"
+          },
+          {
+            "label": "B",
+            "text": "Optical fibre"
+          },
+          {
+            "label": "C",
+            "text": "Mirage in a desert"
+          },
+          {
+            "label": "D",
+            "text": "Totally reflecting prism in a periscope"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Core has a higher refractive index than the cladding"
+          },
+          {
+            "label": "II",
+            "text": "Right-angled isosceles prism with $n > \\sqrt{2}$"
+          },
+          {
+            "label": "III",
+            "text": "Very small critical angle, about $24.4^\\circ$"
+          },
+          {
+            "label": "IV",
+            "text": "Total internal reflection at rarer layers of hot air near the ground"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-II, C-IV, D-I",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Each application relies on a different feature of total internal reflection.",
+        "steps": [
+          "Diamond sparkles because its critical angle is small, about $24.4^\\circ$, so A matches III.",
+          "An optical fibre needs a core of higher index than the cladding, so B matches I.",
+          "A mirage is TIR at the rarer, hot air near the ground, so C matches IV.",
+          "A periscope uses a $45^\\circ$ prism with $n > \\sqrt{2}$, so D matches II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) swaps diamond and fibre. Option (3) swaps fibre and prism. Option (4) swaps mirage and prism.",
+        "common_trap": "Linking the high refractive index of diamond with optical fibres.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about total internal reflection are correct?",
+      "statements": {
+        "A": "Total internal reflection can occur only when light travels from a denser medium to a rarer medium.",
+        "B": "In a given glass, violet light has a smaller critical angle than red light.",
+        "C": "During total internal reflection, a small part of the light is always refracted into the rarer medium.",
+        "D": "The critical angle at a glass-water interface is smaller than at a glass-air interface.",
+        "E": "Optical fibres are used in endoscopy."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, B and D only",
+        "A, C and E only",
+        "B, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The critical angle is given by $\\sin i_c = n_{rarer}/n_{denser}$, and TIR involves no loss.",
+        "steps": [
+          "A is true: this is the first condition for TIR.",
+          "B is true: violet light has a larger n, so its $i_c$ is smaller.",
+          "C is false: in TIR all the light is reflected with no loss.",
+          "D is false: water has a higher index than air, so $\\sin i_c$ is larger and $i_c$ is larger.",
+          "E is true: endoscopy is a stated application of optical fibres."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Options (2) and (4) include the false D. Option (3) includes the false C.",
+        "common_trap": "Thinking that a denser surrounding medium lowers the critical angle.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

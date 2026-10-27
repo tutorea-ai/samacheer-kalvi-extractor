@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "Which of the following is a homogeneous mixture?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Sand in water",
+        "Sugar solution",
+        "Water",
+        "Sodium metal"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A homogeneous mixture has a uniform composition throughout but a variable composition overall. Pure substances (elements and compounds) have a fixed composition.",
+        "steps": [
+          "Sand in water has a non-uniform composition, so it is a heterogeneous mixture.",
+          "Sugar solution has a uniform composition, so it is a homogeneous mixture.",
+          "Water ($H_2O$) is a compound and sodium is an element. Both are pure substances, not mixtures."
+        ],
+        "final_answer": "Option (2): Sugar solution",
+        "why_not_others": "Sand in water is heterogeneous. Water is a compound with a fixed composition. Sodium is an element.",
+        "common_trap": "Choosing water because it looks uniform. Being uniform does not make something a mixture; water is a pure compound.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "The sum $12.11 + 18.0 + 1.012$, reported with the correct number of significant figures, is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$31.122$",
+        "$31.12$",
+        "$31.1$",
+        "$31$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In addition and subtraction, round the result to the least number of decimal places present in the data.",
+        "steps": [
+          "The raw sum is $12.11 + 18.0 + 1.012 = 31.122$.",
+          "The decimal places in the data are 2, 1 and 3, so the least is 1 (from $18.0$).",
+          "Round $31.122$ to one decimal place to get $31.1$."
+        ],
+        "final_answer": "Option (3): $31.1$",
+        "why_not_others": "$31.122$ is unrounded. $31.12$ keeps two decimal places. $31$ applies the significant-figure rule for multiplication instead of the decimal-place rule.",
+        "common_trap": "Using the least number of significant figures, which is the rule for multiplication and division, in an addition problem.",
+        "time_saving_tip": "Find the term with the fewest decimal places first; the answer keeps exactly that many."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A solid sample of mass $25.0$ g occupies a volume of $10.0\\,cm^3$. Its density in SI units ($kg\\,m^{-3}$) is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.50 \\times 10^{3}\\,kg\\,m^{-3}$",
+        "$2.50 \\times 10^{-3}\\,kg\\,m^{-3}$",
+        "$2.50\\,kg\\,m^{-3}$",
+        "$2.50 \\times 10^{6}\\,kg\\,m^{-3}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Density is $d = m/V$. Converting units: $1\\,g\\,cm^{-3} = 10^{-3}\\,kg / 10^{-6}\\,m^3 = 10^{3}\\,kg\\,m^{-3}$.",
+        "steps": [
+          "Calculate $d = 25.0\\,g / 10.0\\,cm^3 = 2.50\\,g\\,cm^{-3}$, keeping 3 significant figures.",
+          "Convert: $2.50\\,g\\,cm^{-3} = 2.50 \\times 10^{-3}\\,kg / 10^{-6}\\,m^3$.",
+          "This gives $d = 2.50 \\times 10^{3}\\,kg\\,m^{-3}$."
+        ],
+        "final_answer": "Option (1): $2.50 \\times 10^{3}\\,kg\\,m^{-3}$",
+        "why_not_others": "$2.50 \\times 10^{-3}$ applies the conversion factor in the wrong direction. $2.50$ skips the conversion entirely. $2.50 \\times 10^{6}$ converts the volume but leaves the mass in grams.",
+        "common_trap": "Converting only one of the two units, mass or volume, when changing to SI.",
+        "time_saving_tip": "Remember that $1\\,g\\,cm^{-3} = 1000\\,kg\\,m^{-3}$."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The number $2500$ (written without a decimal point) contains four significant figures.",
+        "R": "Trailing zeros in a number are significant only when a decimal point is present."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Trailing zeros are significant only when a decimal point is present.",
+        "steps": [
+          "$2500$ has no decimal point, so its two trailing zeros are not significant.",
+          "Only the digits 2 and 5 count, so the number has 2 significant figures. A is false.",
+          "R states the correct rule for trailing zeros, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so every option that treats A as true is ruled out.",
+        "common_trap": "Counting the trailing zeros in $2500$ as significant even though there is no decimal point.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When $6.345$ is rounded to three significant figures, the result is $6.35$.",
+        "II": "The product $2.0 \\times 1.234$ should be reported as $2.468$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "When the dropped digit is exactly 5, the preceding digit is raised only if it is odd. In multiplication, the result keeps the least number of significant figures in the data.",
+        "steps": [
+          "Statement I: the dropped digit is 5 and the preceding digit is 4, which is even. It stays unchanged, giving $6.34$, so I is incorrect.",
+          "Statement II: $2.0$ has 2 significant figures, so the product must have 2 significant figures.",
+          "$2.468$ rounds to $2.5$, so II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I wrongly raises an even digit before a terminal 5. Statement II keeps too many significant figures.",
+        "common_trap": "Always raising the preceding digit when the dropped digit is 5.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which of the following could NOT be explained by Dalton's atomic theory?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Law of conservation of mass",
+        "Gay-Lussac's law of gaseous volumes",
+        "Law of definite proportions",
+        "Law of multiple proportions"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Dalton's theory explained the three mass laws but failed to explain the law of gaseous volumes.",
+        "steps": [
+          "The postulates that atoms are not created or destroyed and that they combine in fixed ratios explain the three mass laws.",
+          "Gay-Lussac's volume relationships needed Avogadro's idea of molecules, which Dalton's theory lacked."
+        ],
+        "final_answer": "Option (2): Gay-Lussac's law of gaseous volumes",
+        "why_not_others": "Conservation of mass, definite proportions and multiple proportions are all explained by Dalton's theory.",
+        "common_trap": "Assuming Dalton's theory explained every law of chemical combination.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Which of the following molecules has the highest atomicity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$S_8$",
+        "$P_4$",
+        "$O_3$",
+        "$NH_3$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Atomicity is the number of atoms in one molecule.",
+        "steps": [
+          "Count the atoms in each molecule: $S_8$ has 8, $P_4$ has 4, $O_3$ has 3 and $NH_3$ has $1 + 3 = 4$.",
+          "The highest atomicity is 8, for $S_8$."
+        ],
+        "final_answer": "Option (1): $S_8$",
+        "why_not_others": "$P_4$ and $NH_3$ each have atomicity 4, and $O_3$ has atomicity 3.",
+        "common_trap": "Counting only the kinds of atoms, so that $NH_3$ appears to have atomicity 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "The existence of isotopes directly contradicts which postulate of Dalton's atomic theory?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Matter consists of indivisible atoms",
+        "All atoms of a given element are identical in mass and properties",
+        "Compounds are formed when atoms of different elements combine in a fixed ratio",
+        "Chemical reactions only rearrange atoms; atoms are neither created nor destroyed"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Isotopes are atoms of the same element that have different masses.",
+        "steps": [
+          "Isotopes show that atoms of one element can differ in mass.",
+          "This contradicts the postulate that all atoms of an element are identical in mass."
+        ],
+        "final_answer": "Option (2): All atoms of a given element are identical in mass and properties",
+        "why_not_others": "Indivisibility was contradicted by the discovery of subatomic particles, not by isotopes. Isotopes do not contradict the postulates on fixed combining ratios or on the rearrangement of atoms.",
+        "common_trap": "Linking isotopes to atomic divisibility instead of to identical atomic mass.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$Ar$"
+          },
+          {
+            "label": "B",
+            "text": "$O_3$"
+          },
+          {
+            "label": "C",
+            "text": "$P_4$"
+          },
+          {
+            "label": "D",
+            "text": "$CO_2$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Monoatomic molecule of an element"
+          },
+          {
+            "label": "II",
+            "text": "Triatomic molecule of an element"
+          },
+          {
+            "label": "III",
+            "text": "Tetratomic molecule of an element"
+          },
+          {
+            "label": "IV",
+            "text": "Molecule of a compound"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Molecules of elements contain one kind of atom. Molecules of compounds contain different kinds of atoms.",
+        "steps": [
+          "$Ar$ is a noble gas, so it is a monoatomic element: A-I.",
+          "$O_3$ has three oxygen atoms: B-II.",
+          "$P_4$ has four phosphorus atoms: C-III.",
+          "$CO_2$ contains carbon and oxygen, so it is a compound: D-IV."
+        ],
+        "final_answer": "Option (4): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The other matchings swap the atomicities of $O_3$ and $P_4$, or label $P_4$ as a compound.",
+        "common_trap": "Matching $CO_2$ to 'triatomic molecule of an element' because it has three atoms, even though it contains two different elements.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Dalton's atomic theory and related terms are correct?",
+      "statements": {
+        "A": "Dalton's atomic theory explains the law of multiple proportions.",
+        "B": "The discovery of electrons, protons and neutrons showed that atoms are divisible.",
+        "C": "Isobars show that atoms of different elements can have the same mass.",
+        "D": "Dalton's atomic theory clearly distinguished between atoms and molecules.",
+        "E": "An atom is the smallest particle of a substance that can exist independently and has all its properties."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B, C and D only",
+        "A, B and C only",
+        "B, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "These statements test the successes and limitations of Dalton's theory and the definitions of atom and molecule.",
+        "steps": [
+          "A is true: the theory explains all three mass laws.",
+          "B is true: the discovery of subatomic particles disproved indivisibility.",
+          "C is true, by the definition of isobars.",
+          "D is false: Avogadro removed this gap later.",
+          "E is false: this is the definition of a molecule, not an atom."
+        ],
+        "final_answer": "Option (3): A, B and C only",
+        "why_not_others": "Option (1) leaves out true statement C. Option (2) includes false statement D. Option (4) includes false statement E and leaves out true statement A.",
+        "common_trap": "Swapping the definitions of atom and molecule.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "The law stating that a given compound always contains the same elements in the same proportion by mass, irrespective of its source, was given by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Lavoisier",
+        "Dalton",
+        "Gay-Lussac",
+        "Proust"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "This is the law of definite proportions.",
+        "steps": [
+          "The law described is the law of definite proportions.",
+          "It was proposed by Proust."
+        ],
+        "final_answer": "Option (4): Proust",
+        "why_not_others": "Lavoisier gave the law of conservation of mass. Dalton gave the law of multiple proportions. Gay-Lussac gave the law of gaseous volumes.",
+        "common_trap": "Confusing definite proportions (Proust) with multiple proportions (Dalton).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "Hydrogen and oxygen react to give water vapour, with all gases at the same temperature and pressure. The volume of $O_2$ required to react completely with $50$ mL of $H_2$, and the volume of water vapour formed, are respectively",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$25$ mL and $50$ mL",
+        "$50$ mL and $50$ mL",
+        "$25$ mL and $75$ mL",
+        "$100$ mL and $100$ mL"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "By Gay-Lussac's law, the volume ratio of gases equals the ratio of their stoichiometric coefficients. Here 2 volumes of $H_2$, 1 volume of $O_2$ and 2 volumes of $H_2O(g)$.",
+        "steps": [
+          "The volume ratio is $H_2 : O_2 : H_2O(g) = 2 : 1 : 2$.",
+          "$O_2$ needed $= 50/2 = 25$ mL.",
+          "Water vapour formed $= 50$ mL."
+        ],
+        "final_answer": "Option (1): $25$ mL and $50$ mL",
+        "why_not_others": "$50$ mL of $O_2$ assumes a 1:1 ratio. $75$ mL wrongly adds the reactant volumes as if gas volumes were conserved. $100$ mL inverts the ratio.",
+        "common_trap": "Assuming the total gas volume is conserved like mass.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Two oxides of nitrogen contain $46.67\\%$ and $30.43\\%$ nitrogen by mass, respectively. The masses of oxygen that combine with a fixed mass of nitrogen in the two oxides are in the ratio",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1:1$",
+        "$1:2$",
+        "$3:2$",
+        "$1:3$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For the law of multiple proportions, compare the masses of oxygen per fixed mass of nitrogen.",
+        "steps": [
+          "Oxide 1: mass of O per g of N $= 53.33/46.67 = 1.143$ g.",
+          "Oxide 2: mass of O per g of N $= 69.57/30.43 = 2.286$ g.",
+          "Ratio $= 1.143 : 2.286 = 1 : 2$."
+        ],
+        "final_answer": "Option (2): $1:2$",
+        "why_not_others": "$3:2$ is the ratio of the nitrogen percentages taken directly. $1:1$ and $1:3$ come from arithmetic slips.",
+        "common_trap": "Comparing percentages directly instead of taking a fixed mass of nitrogen.",
+        "time_saving_tip": "These percentages match $NO$ ($14/30$) and $NO_2$ ($14/46$), so the oxygen ratio is $1:2$."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "At the same temperature and pressure, 2 volumes of $H_2$ react with 1 volume of $O_2$ to give 2 volumes of water vapour, which is a simple whole-number ratio.",
+        "R": "Gay-Lussac's law of gaseous volumes applies to the volumes of all reactants and products, including solids and liquids."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Gay-Lussac's law is a volume relationship that applies only to gases at the same temperature and pressure.",
+        "steps": [
+          "A correctly states the $2:1:2$ volume relationship, so A is true.",
+          "R wrongly extends the law to solids and liquids, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Applying volume ratios to liquid water instead of water vapour.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Avogadro's law explains Gay-Lussac's law, because at the same temperature and pressure the volume ratio of reacting gases equals their mole ratio.",
+        "II": "$CO$ and $CO_2$ illustrate the law of definite proportions, since the masses of oxygen combining with 12 g of carbon in them are 16 g and 32 g."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Avogadro's law gives $V \\propto n$. Two compounds of the same pair of elements illustrate the law of multiple proportions.",
+        "steps": [
+          "Statement I: by Avogadro's law, the volume ratio equals the mole ratio, which accounts for Gay-Lussac's law. I is correct.",
+          "Statement II: the oxygen masses 16 g and 32 g are in a $1:2$ ratio. This illustrates multiple proportions, not definite proportions. II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II names the wrong law, and Statement I is correct.",
+        "common_trap": "Mixing up definite proportions (one compound) with multiple proportions (two or more compounds of the same elements).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "The mass of one atom of $^{12}C$ is exactly",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1$ u",
+        "$12$ u",
+        "$1.66056 \\times 10^{-24}$ g",
+        "$12$ g"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "1 u is defined as one-twelfth of the mass of one $^{12}C$ atom.",
+        "steps": [
+          "By this definition, one $^{12}C$ atom has a mass of exactly 12 u."
+        ],
+        "final_answer": "Option (2): $12$ u",
+        "why_not_others": "1 u and $1.66056 \\times 10^{-24}$ g are both the value of one atomic mass unit, which is only one-twelfth of the atom's mass. 12 g is the mass of a mole of $^{12}C$ atoms, not of one atom.",
+        "common_trap": "Confusing the mass of one atom with the molar mass in grams.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "An element occurs as two isotopes of masses $10$ u (natural abundance $20\\%$) and $11$ u (natural abundance $80\\%$). Its average atomic mass is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10.5$ u",
+        "$10.2$ u",
+        "$10.8$ u",
+        "$21.0$ u"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The average atomic mass is the abundance-weighted mean of the isotopic masses.",
+        "steps": [
+          "$\\bar{A} = (20 \\times 10 + 80 \\times 11)/100$.",
+          "$\\bar{A} = (200 + 880)/100 = 10.8$ u."
+        ],
+        "final_answer": "Option (3): $10.8$ u",
+        "why_not_others": "$10.5$ u is the simple unweighted mean. $10.2$ u swaps the two abundances. $21.0$ u adds the isotopic masses.",
+        "common_trap": "Taking a simple average and ignoring abundance.",
+        "time_saving_tip": "The average must lie closer to the more abundant isotope."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "The molecular mass of water is $18$ u. Given $1\\,u = 1.66 \\times 10^{-24}$ g, the mass of one water molecule is approximately",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.66 \\times 10^{-24}$ g",
+        "$2.99 \\times 10^{-23}$ g",
+        "$1.08 \\times 10^{25}$ g",
+        "$18$ g"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Mass of one molecule in grams = molecular mass in u $\\times 1.66 \\times 10^{-24}$ g.",
+        "steps": [
+          "Mass $= 18 \\times 1.66 \\times 10^{-24}$ g.",
+          "Mass $= 29.88 \\times 10^{-24}$ g $\\approx 2.99 \\times 10^{-23}$ g."
+        ],
+        "final_answer": "Option (2): $2.99 \\times 10^{-23}$ g",
+        "why_not_others": "$1.66 \\times 10^{-24}$ g is the value of just 1 u. $1.08 \\times 10^{25}$ g multiplies by $N_A$ instead of dividing. $18$ g is the mass of a mole of water.",
+        "common_trap": "Multiplying by $N_A$ instead of dividing the molar mass by $N_A$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer. (Atomic masses: H = 1, C = 12, O = 16, Na = 23, Cl = 35.5 u)",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$H_2O$"
+          },
+          {
+            "label": "B",
+            "text": "$NaCl$"
+          },
+          {
+            "label": "C",
+            "text": "$CO_2$"
+          },
+          {
+            "label": "D",
+            "text": "$O_3$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$44$ u"
+          },
+          {
+            "label": "II",
+            "text": "$48$ u"
+          },
+          {
+            "label": "III",
+            "text": "$18$ u"
+          },
+          {
+            "label": "IV",
+            "text": "$58.5$ u (formula mass)"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Molecular mass or formula mass is the sum of the atomic masses in one molecule or one formula unit.",
+        "steps": [
+          "$H_2O = 2(1) + 16 = 18$ u: A-III.",
+          "$NaCl = 23 + 35.5 = 58.5$ u, a formula mass: B-IV.",
+          "$CO_2 = 12 + 32 = 44$ u: C-I.",
+          "$O_3 = 3 \\times 16 = 48$ u: D-II."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (1) swaps $CO_2$ and $O_3$. Option (2) swaps $H_2O$ and $NaCl$. Option (4) swaps $NaCl$ and $CO_2$.",
+        "common_trap": "Calling the mass of $NaCl$ a molecular mass, although ionic solids have no discrete molecules.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about atomic and molecular masses are correct?",
+      "statements": {
+        "A": "1 u is exactly one-twelfth of the mass of one $^{12}C$ atom.",
+        "B": "Average atomic masses are usually non-integral because they are abundance-weighted averages of isotopic masses.",
+        "C": "The term molecular mass is appropriate for $NaCl$ because solid $NaCl$ consists of discrete $NaCl$ molecules.",
+        "D": "Mass spectrometry is used to determine isotopic masses and their abundances.",
+        "E": "The average atomic mass of chlorine (75.77% $^{35}Cl$, 24.23% $^{37}Cl$) is $36.0$ u, the simple mean of the two isotopic masses."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A and C only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "This tests the definition of u, average atomic mass, formula mass and mass spectrometry.",
+        "steps": [
+          "A is true, by the definition of 1 u.",
+          "B is true: weighting by abundance gives non-integral values.",
+          "C is false: ionic solids have no discrete molecules, so formula mass is used.",
+          "D is true.",
+          "E is false: the weighted average is about $35.45$ u, not the simple mean."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option (2) includes false statement C. Option (3) includes false statement E. Option (4) includes C and leaves out true statements B and D.",
+        "common_trap": "Using a simple mean instead of an abundance-weighted average.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "Which of the following elements is NOT regarded as a transition element?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Zn$",
+        "$Cu$",
+        "$Cr$",
+        "$Fe$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A transition element has an incompletely filled d subshell either in the atom or in one of its common ions.",
+        "steps": [
+          "$Zn$ is $3d^{10}4s^2$ and $Zn^{2+}$ is $3d^{10}$. Its d subshell is full in both the atom and the common ion.",
+          "$Cu^{2+}$ is $3d^9$, $Cr$ is $3d^54s^1$ and $Fe$ is $3d^64s^2$. Each has an incomplete d subshell in the atom or a common ion."
+        ],
+        "final_answer": "Option (1): $Zn$",
+        "why_not_others": "$Cu$ qualifies through $Cu^{2+}$ ($3d^9$). $Cr$ and $Fe$ have partly filled 3d subshells even as atoms.",
+        "common_trap": "Students exclude $Cu$ because its atom is $3d^{10}$. They forget that the $Cu^{2+}$ ion is $3d^9$.",
+        "time_saving_tip": "Group 12 elements ($Zn$, $Cd$, $Hg$) are never true transition elements."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "The ground-state electronic configuration of chromium ($Z = 24$) is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$[Ar]3d^44s^2$",
+        "$[Ar]3d^6$",
+        "$[Ar]3d^54s^1$",
+        "$[Ar]3d^34s^24p^1$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A half-filled d subshell has extra stability, which gives $Cr$ an exceptional configuration.",
+        "steps": [
+          "The expected filling would be $[Ar]3d^44s^2$.",
+          "One 4s electron shifts into 3d. This gives a half-filled $3d^5$ subshell, which is more stable.",
+          "So the configuration of $Cr$ is $[Ar]3d^54s^1$."
+        ],
+        "final_answer": "Option (3): $[Ar]3d^54s^1$",
+        "why_not_others": "$[Ar]3d^44s^2$ is the expected configuration, not the actual one. $[Ar]3d^6$ leaves 4s empty without any stability reason. Placing an electron in 4p is not a ground state.",
+        "common_trap": "Writing the Aufbau-predicted $3d^44s^2$ and ignoring the stability of the half-filled subshell.",
+        "time_saving_tip": "Remember the two 3d exceptions together: $Cr$ $3d^54s^1$ and $Cu$ $3d^{10}4s^1$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "The electronic configuration of the $Fe^{2+}$ ion (atomic number of $Fe$ = 26) is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$[Ar]3d^6$",
+        "$[Ar]3d^44s^2$",
+        "$[Ar]3d^54s^1$",
+        "$[Ar]3d^5$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The 4s orbital fills before 3d, but the 4s electrons are removed first on ionisation.",
+        "steps": [
+          "$Fe$ is $[Ar]3d^64s^2$.",
+          "To form $Fe^{2+}$, both 4s electrons are removed.",
+          "This leaves $Fe^{2+}$ as $[Ar]3d^6$."
+        ],
+        "final_answer": "Option (1): $[Ar]3d^6$",
+        "why_not_others": "$[Ar]3d^44s^2$ comes from removing the 3d electrons first. $[Ar]3d^54s^1$ wrongly removes one electron from each subshell. $[Ar]3d^5$ is the configuration of $Fe^{3+}$.",
+        "common_trap": "Removing 3d electrons before 4s electrons when writing ion configurations.",
+        "time_saving_tip": "For $M^{2+}$ ions of the 3d series, simply drop the 4s electrons."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Copper is regarded as a transition element.",
+        "R": "The ground-state configuration of the copper atom is $[Ar]3d^{10}4s^1$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "An element is a transition element if its d subshell is incomplete in the atom or in a common ion.",
+        "steps": [
+          "$Cu^{2+}$ is $3d^9$, which is an incomplete d subshell. So A is true.",
+          "The $Cu$ atom is $[Ar]3d^{10}4s^1$, so R is true.",
+          "A full $3d^{10}$ atom by itself would argue against transition character. The real reason for A is the $3d^9$ configuration of $Cu^{2+}$, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are factually correct, which rules out options (3) and (4). R does not explain A, which rules out option (1).",
+        "common_trap": "Accepting R as the explanation simply because it describes copper's configuration.",
+        "time_saving_tip": "Ask yourself whether R alone would make copper a transition element. A full $d^{10}$ shell would not."
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Within each transition series, the melting point increases continuously across the series and is highest for the group 12 element.",
+        "II": "Palladium is an exception to the general configuration $(n-1)d^{1-10}ns^{1-2}$, since its outer configuration is $4d^{10}5s^0$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Melting points peak near $d^5$, and group 12 metals have low melting points. $Pd$ has no ns electron.",
+        "steps": [
+          "Melting point rises to a maximum near the middle of the series ($d^5$) and then falls.",
+          "The group 12 metals $Zn$, $Cd$ and $Hg$ have low melting points, and $Hg$ is a liquid. So Statement I is incorrect.",
+          "$Pd$ is $4d^{10}5s^0$, which does not fit the $ns^{1-2}$ pattern. So Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I contradicts the observed maximum near $d^5$ and the low melting points of the group 12 metals. Statement II is a stated fact.",
+        "common_trap": "Assuming melting point rises steadily with atomic number across a series.",
+        "time_saving_tip": "Recall that $Hg$ is a liquid. That alone shows Statement I is false."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which element of the first transition series shows the largest number of oxidation states?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Mn$",
+        "$Fe$",
+        "$Cr$",
+        "$Cu$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The number of oxidation states rises up to $Mn$ and then falls.",
+        "steps": [
+          "$Mn$ ($3d^54s^2$) can use all seven of its 4s and 3d electrons.",
+          "So $Mn$ shows oxidation states from $+2$ to $+7$, for example $+7$ in $MnO_4^-$."
+        ],
+        "final_answer": "Option (1): $Mn$",
+        "why_not_others": "$Cr$ reaches only $+6$. After $Mn$, fewer oxidation states are available, so $Fe$ and $Cu$ show fewer.",
+        "common_trap": "Choosing $Fe$ because its compounds are so common.",
+        "time_saving_tip": "The middle of the series, at $d^5$, gives the widest range of oxidation states."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Which 3d metal has a positive standard electrode potential $E^\\circ_{M^{2+}/M}$ and therefore does not liberate $H_2$ from dilute acids?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Cu$",
+        "$Zn$",
+        "$Fe$",
+        "$Ni$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$Cu$ is the only 3d metal with a positive $E^\\circ_{M^{2+}/M}$, which is $+0.34$ V.",
+        "steps": [
+          "A positive $E^\\circ$ means the metal is a weaker reducing agent than $H_2$.",
+          "So $Cu$ cannot displace $H_2$ from dilute acids."
+        ],
+        "final_answer": "Option (1): $Cu$",
+        "why_not_others": "$Zn$, $Fe$ and $Ni$ all have negative $E^\\circ_{M^{2+}/M}$ values and liberate $H_2$ from dilute acids.",
+        "common_trap": "Thinking $Ni$ is unreactive towards acids because it is used in corrosion-resistant alloys.",
+        "time_saving_tip": "Remember the single number $+0.34$ V for $Cu^{2+}/Cu$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "Among the following, the element with the highest second ionisation enthalpy is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Mn$",
+        "$Cr$",
+        "$V$",
+        "$Fe$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The second ionisation enthalpy is very high when the second electron must come from a stable $d^5$ or $d^{10}$ core.",
+        "steps": [
+          "$Cr^+$ is $3d^5$, a half-filled subshell.",
+          "Removing the second electron breaks this stable $d^5$ core, so $Cr$ has a very high second ionisation enthalpy.",
+          "$V^+$, $Mn^+$ and $Fe^+$ do not have such a stable core to disturb."
+        ],
+        "final_answer": "Option (2): $Cr$",
+        "why_not_others": "$Mn^+$ is $3d^54s^1$, so its second electron comes from 4s and is easier to remove. $V$ and $Fe$ have no special stability to overcome.",
+        "common_trap": "Picking $Mn$ because it contains a $d^5$ subshell, without noticing that its second electron leaves from 4s.",
+        "time_saving_tip": "High second ionisation enthalpy belongs to $Cr$ and $Cu$. High third ionisation enthalpy belongs to $Mn$ and $Zn$."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$Mn_2O_7$"
+          },
+          {
+            "label": "B",
+            "text": "$MnO$"
+          },
+          {
+            "label": "C",
+            "text": "$Co^{3+}$"
+          },
+          {
+            "label": "D",
+            "text": "$Cr^{2+}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Strong reducing agent"
+          },
+          {
+            "label": "II",
+            "text": "Acidic oxide"
+          },
+          {
+            "label": "III",
+            "text": "Strong oxidising agent"
+          },
+          {
+            "label": "IV",
+            "text": "Basic oxide"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Higher oxides are acidic and lower oxides are basic. $Co^{3+}$ is a strong oxidant and $Cr^{2+}$ is a strong reductant.",
+        "steps": [
+          "$Mn_2O_7$ has $Mn$ in $+7$, the highest state, so it is an acidic oxide: A-II.",
+          "$MnO$ has $Mn$ in $+2$, a low state, so it is a basic oxide: B-IV.",
+          "$Co^{3+}$ is a strong oxidising agent: C-III.",
+          "$Cr^{2+}$ is a strong reducing agent: D-I."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Options (1) and (3) reverse the acid-base nature of the oxides. Options (2) and (3) swap the oxidising and reducing roles.",
+        "common_trap": "Assuming any metal oxide must be basic, even when the metal is in the $+7$ state.",
+        "time_saving_tip": "A higher oxidation state makes an oxide more acidic."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about first-row transition elements are correct?",
+      "statements": {
+        "A": "$Sc$ shows only the $+3$ oxidation state.",
+        "B": "$Cu^+$ is stable in aqueous solution.",
+        "C": "$Zr$ and $Hf$ have nearly equal atomic radii because of lanthanoid contraction.",
+        "D": "The ionic radius of a given metal increases as its oxidation state increases.",
+        "E": "$Mn$ and $Zn$ have high third ionisation enthalpies."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "A, C and E only",
+        "B, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This question checks key facts on oxidation states, ion stability, radii and ionisation enthalpy trends.",
+        "steps": [
+          "A is true: $Sc$ shows only $+3$.",
+          "B is false: $Cu^+$ disproportionates in water, $2Cu^+\\rightarrow Cu^{2+}+Cu$.",
+          "C is true: lanthanoid contraction makes $Zr\\approx Hf$.",
+          "D is false: ionic radius decreases as the oxidation state increases.",
+          "E is true: the third electron would come from a stable $d^5$ ($Mn^{2+}$) or $d^{10}$ ($Zn^{2+}$) core."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Every other option includes statement B or statement D, and both are false.",
+        "common_trap": "Believing $Cu^+$ is stable because $d^{10}$ configurations are usually stable. In water it disproportionates.",
+        "time_saving_tip": "Spot B as false first. That removes options (1) and (4) at once."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "Which of the following ions is colourless in aqueous solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Cu^{2+}$",
+        "$Ti^{3+}$",
+        "$Zn^{2+}$",
+        "$Fe^{3+}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Ions with $d^0$ or $d^{10}$ configurations cannot undergo d-d transitions and are colourless.",
+        "steps": [
+          "$Zn^{2+}$ is $3d^{10}$, so no d-d transition is possible and it is colourless.",
+          "$Cu^{2+}$ ($d^9$) is blue, $Ti^{3+}$ ($d^1$) is purple and $Fe^{3+}$ ($d^5$) is yellow."
+        ],
+        "final_answer": "Option (3): $Zn^{2+}$",
+        "why_not_others": "Each of the other ions has unpaired d electrons, so d-d transitions are possible and the ion is coloured.",
+        "common_trap": "Assuming every transition-metal ion is coloured.",
+        "time_saving_tip": "Look for a $d^0$ or $d^{10}$ ion among the options."
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "The spin-only magnetic moment of the $Co^{2+}$ ion (atomic number of $Co$ = 27) is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.90$ BM",
+        "$5.92$ BM",
+        "$2.83$ BM",
+        "$3.87$ BM"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\mu=\\sqrt{n(n+2)}$ BM, where $n$ is the number of unpaired electrons. The 4s electrons are lost first.",
+        "steps": [
+          "$Co$ is $[Ar]3d^74s^2$, so $Co^{2+}$ is $[Ar]3d^7$.",
+          "In $d^7$, five electrons occupy the five d orbitals singly and two of them pair up. This leaves $n = 3$ unpaired electrons.",
+          "$\\mu=\\sqrt{3\\times5}=\\sqrt{15}=3.87$ BM."
+        ],
+        "final_answer": "Option (4): $3.87$ BM",
+        "why_not_others": "$5.92$ BM comes from wrongly removing two 3d electrons, giving $3d^54s^2$ with $n = 5$. $4.90$ BM corresponds to $n = 4$ and $2.83$ BM to $n = 2$, both miscounts.",
+        "common_trap": "Removing the 3d electrons before the 4s electrons.",
+        "time_saving_tip": "For $d^6$ to $d^9$, unpaired electrons equal $10$ minus the number of d electrons."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "The catalyst used in the contact process for the manufacture of sulphuric acid is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Fe$",
+        "$Ni$",
+        "$TiCl_4+Al(CH_3)_3$",
+        "$V_2O_5$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Transition metals and their compounds are used as industrial catalysts.",
+        "steps": [
+          "In the contact process, $SO_2$ is oxidised to $SO_3$ using $V_2O_5$ as the catalyst.",
+          "Vanadium can change its oxidation state, which lets it carry oxygen in the cycle."
+        ],
+        "final_answer": "Option (4): $V_2O_5$",
+        "why_not_others": "$Fe$ is the catalyst in the Haber process. $Ni$ is used in hydrogenation. $TiCl_4+Al(CH_3)_3$ is the Ziegler-Natta catalyst for polythene.",
+        "common_trap": "Mixing up the Haber process catalyst ($Fe$) with the contact process catalyst.",
+        "time_saving_tip": "Pair them in memory: contact process with $V_2O_5$, Haber process with $Fe$."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "$KMnO_4$ is intensely coloured even though manganese in it has a $d^0$ configuration.",
+        "R": "The colour of $MnO_4^-$ arises from ligand-to-metal charge transfer and not from d-d transitions."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Some $d^0$ species such as $MnO_4^-$ and $Cr_2O_7^{2-}$ are coloured because of charge transfer.",
+        "steps": [
+          "$Mn$ in $MnO_4^-$ is in the $+7$ state, which is $d^0$. Yet $KMnO_4$ is intensely coloured, so A is true.",
+          "With no d electrons, a d-d transition is impossible. The colour comes from ligand-to-metal charge transfer, so R is true.",
+          "R directly explains why a $d^0$ species can be coloured."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are correct, which rules out options (3) and (4). R is exactly the reason for A, which rules out option (2).",
+        "common_trap": "Assuming every coloured compound owes its colour to d-d transitions.",
+        "time_saving_tip": "Treat $d^0$ plus intense colour as a signal for charge transfer."
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Compounds containing $Ti^{4+}$ are colourless and diamagnetic.",
+        "II": "The spin-only magnetic moment of $Mn^{2+}$ is $4.90$ BM."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$d^0$ ions are colourless and diamagnetic. Use $\\mu=\\sqrt{n(n+2)}$ BM for the magnetic moment.",
+        "steps": [
+          "$Ti^{4+}$ is $3d^0$. It has no d-d transition and no unpaired electrons, so Statement I is correct.",
+          "$Mn^{2+}$ is $3d^5$ with $n = 5$, so $\\mu=\\sqrt{35}=5.92$ BM.",
+          "$4.90$ BM corresponds to $n = 4$, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I is correct, which rules out options (2) and (4). Statement II gives the value for 4 unpaired electrons, which rules out option (1).",
+        "common_trap": "Counting 4 unpaired electrons for $Mn^{2+}$ after wrongly removing two 3d electrons, which gives $3d^34s^2$.",
+        "time_saving_tip": "$d^5$ ions such as $Mn^{2+}$ and $Fe^{3+}$ always give $5.92$ BM."
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Brass is an alloy of",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Cu$ and $Sn$",
+        "$Cu$ and $Zn$",
+        "$Fe$, $Cr$ and $Ni$",
+        "$Cu$ and $Ni$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "This tests the compositions of common alloys.",
+        "steps": [
+          "Brass is made of copper and zinc."
+        ],
+        "final_answer": "Option (2): $Cu$ and $Zn$",
+        "why_not_others": "$Cu+Sn$ is bronze. $Fe+Cr+Ni$ is stainless steel. $Cu+Ni$ is not brass.",
+        "common_trap": "Confusing brass with bronze.",
+        "time_saving_tip": "Bronze has tin. Brass does not."
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "Which of the following is NOT a characteristic property of interstitial compounds such as $TiC$ and $Mn_4N$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "They are very hard",
+        "They have lower melting points than the pure metal",
+        "They retain metallic conductivity",
+        "They are chemically inert"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Interstitial compounds form when small atoms occupy voids in the metal lattice. They are hard, high-melting, conducting and inert.",
+        "steps": [
+          "Small atoms such as $C$ and $N$ sit in the lattice voids and make the lattice more rigid.",
+          "As a result, interstitial compounds have higher, not lower, melting points than the pure metal."
+        ],
+        "final_answer": "Option (2): They have lower melting points than the pure metal",
+        "why_not_others": "High hardness, metallic conductivity and chemical inertness are all listed properties of interstitial compounds.",
+        "common_trap": "Thinking that impurity atoms always lower the melting point.",
+        "time_saving_tip": "Interstitial compounds are hard, high-melting, conducting and inert."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Transition metals readily form alloys with one another mainly because they",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "have high ionisation enthalpies",
+        "show variable oxidation states",
+        "are paramagnetic",
+        "have similar atomic radii, so one metal can substitute for another in the lattice"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Alloy formation depends on atomic size similarity, with radii within about 15 percent.",
+        "steps": [
+          "Transition metals have similar atomic radii.",
+          "So atoms of one metal can replace atoms of another in the crystal lattice, which forms substitutional alloys."
+        ],
+        "final_answer": "Option (4): have similar atomic radii, so one metal can substitute for another in the lattice",
+        "why_not_others": "Ionisation enthalpy, variable oxidation states and paramagnetism are real properties, but they do not explain alloy formation.",
+        "common_trap": "Picking variable oxidation states, which explains catalysis rather than alloy formation.",
+        "time_saving_tip": "Alloy formation is a size argument."
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Stainless steel"
+          },
+          {
+            "label": "B",
+            "text": "Bronze"
+          },
+          {
+            "label": "C",
+            "text": "$VH_{0.56}$"
+          },
+          {
+            "label": "D",
+            "text": "$[Ni(CN)_4]^{2-}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$Fe$, $Cr$ and $Ni$"
+          },
+          {
+            "label": "II",
+            "text": "$Cu$ and $Sn$"
+          },
+          {
+            "label": "III",
+            "text": "Non-stoichiometric interstitial compound"
+          },
+          {
+            "label": "IV",
+            "text": "Complex formed by ligands donating lone pairs to the metal ion"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "This tests alloy compositions, interstitial compounds and complexes.",
+        "steps": [
+          "Stainless steel is $Fe+Cr+Ni$: A-I.",
+          "Bronze is $Cu+Sn$: B-II.",
+          "$VH_{0.56}$ has hydrogen trapped in the lattice voids and a non-whole-number formula, so it is a non-stoichiometric interstitial compound: C-III.",
+          "$[Ni(CN)_4]^{2-}$ is a complex in which $CN^-$ ligands donate lone pairs to $Ni^{2+}$: D-IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Options (2) and (4) swap the alloy compositions. Options (3) and (4) swap the interstitial compound and the complex.",
+        "common_trap": "Treating a fractional formula like $VH_{0.56}$ as an error, instead of recognising it as a non-stoichiometric interstitial compound.",
+        "time_saving_tip": "A fractional subscript points to an interstitial compound."
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about complexes, interstitial compounds and alloys of transition metals are correct?",
+      "statements": {
+        "A": "Transition metal ions form complexes readily because of their small size, high charge and vacant d orbitals of suitable energy.",
+        "B": "Interstitial compounds such as $TiC$ and $Mn_4N$ are typically ionic in nature.",
+        "C": "Some interstitial borides approach diamond in hardness.",
+        "D": "Transition-metal alloys generally melt at higher temperatures than all of their component metals.",
+        "E": "Interstitial compounds are often non-stoichiometric, for example $TiH_{1.7}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "This tests the properties of complexes, interstitial compounds and alloys.",
+        "steps": [
+          "A is true: complex formation depends on a high charge/size ratio and vacant d orbitals.",
+          "B is false: interstitial compounds are neither typically ionic nor covalent.",
+          "C is true: some borides approach diamond in hardness.",
+          "D is false: transition-metal alloys do not, in general, melt higher than their component metals.",
+          "E is true: $TiH_{1.7}$ and $VH_{0.56}$ are non-stoichiometric."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Every other option includes statement B or statement D, and both are false.",
+        "common_trap": "Assuming an alloy must melt higher than its components because transition-metal alloys are hard.",
+        "time_saving_tip": "Rule out B and D first. Only one option contains neither."
+      }
+    }
+  ]
+}

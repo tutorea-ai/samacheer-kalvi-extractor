@@ -1,0 +1,625 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "What is the SI unit of electrical conductivity $\\sigma$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\Omega\\,m$",
+        "$\\Omega\\,m^{-1}$",
+        "$S\\,m^{-1}$",
+        "$S\\,m$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Conductivity is the reciprocal of resistivity: $\\sigma = \\frac{1}{\\rho}$.",
+        "steps": [
+          "The unit of resistivity $\\rho$ is $\\Omega\\,m$.",
+          "So $\\sigma = \\frac{1}{\\rho}$ has the unit $\\Omega^{-1}m^{-1}$.",
+          "Since $\\Omega^{-1}$ = siemens (S), the unit of $\\sigma$ is $S\\,m^{-1}$."
+        ],
+        "final_answer": "Option (3): $S\\,m^{-1}$",
+        "why_not_others": "$\\Omega\\,m$ is the unit of resistivity. $\\Omega\\,m^{-1}$ inverts only the metre and not the ohm. $S\\,m$ inverts only the ohm and not the metre.",
+        "common_trap": "Inverting only one part of the unit $\\Omega\\,m$ instead of both.",
+        "time_saving_tip": "Take the reciprocal of the whole unit of $\\rho$."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A wire of length $2\\ m$ and cross-sectional area $1\\ mm^2$ has a resistance of $0.034\\ \\Omega$. What is the resistivity of its material (in $\\Omega\\,m$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.8\\times10^{4}$",
+        "$3.4\\times10^{-8}$",
+        "$1.7\\times10^{-8}$",
+        "$1.7\\times10^{-2}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Resistivity from measurements: $\\rho = \\frac{RA}{l}$.",
+        "steps": [
+          "Convert the area: $A = 1\\ mm^2 = 1\\times10^{-6}\\ m^2$.",
+          "$\\rho = \\frac{0.034 \\times 10^{-6}}{2}$.",
+          "$\\rho = 1.7\\times10^{-8}\\ \\Omega\\,m$."
+        ],
+        "final_answer": "Option (3): $1.7\\times10^{-8}$",
+        "why_not_others": "$6.8\\times10^{4}$ comes from using $\\frac{Rl}{A}$. $3.4\\times10^{-8}$ comes from forgetting to divide by $l$. $1.7\\times10^{-2}$ comes from leaving the area in $mm^2$.",
+        "common_trap": "Not converting $mm^2$ to $m^2$ (1 $mm^2$ = $10^{-6}\\ m^2$).",
+        "time_saving_tip": "A value near $10^{-8}\\ \\Omega\\,m$ is typical of a metal, so it is a quick sanity check."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Metal A has twice the free-electron density of metal B. Its relaxation time is one-fourth that of B. Assuming the same electron mass and charge, what is the ratio of resistivities $\\rho_A : \\rho_B$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2$",
+        "$\\frac{1}{2}$",
+        "$8$",
+        "$\\frac{1}{8}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Free-electron model: $\\rho = \\frac{m}{ne^2\\tau}$, so $\\rho \\propto \\frac{1}{n\\tau}$.",
+        "steps": [
+          "$\\frac{\\rho_A}{\\rho_B} = \\frac{n_B\\tau_B}{n_A\\tau_A}$.",
+          "$\\frac{\\rho_A}{\\rho_B} = \\frac{1}{2 \\times \\frac{1}{4}}$.",
+          "$\\frac{\\rho_A}{\\rho_B} = 2$."
+        ],
+        "final_answer": "Option (1): $2$",
+        "why_not_others": "$\\frac{1}{2}$ is the inverted ratio. $8$ comes from taking $\\rho \\propto \\frac{n}{\\tau}$. $\\frac{1}{8}$ comes from taking $\\rho \\propto \\frac{\\tau}{n}$.",
+        "common_trap": "Treating $n$ and $\\tau$ differently. Resistivity is inversely proportional to both.",
+        "time_saving_tip": "Since $\\rho \\propto \\frac{1}{n\\tau}$, just invert the product of the two ratios."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a copper wire is stretched to twice its length, its resistivity remains unchanged.",
+        "R": "The resistivity of a conductor depends on its length and area of cross-section."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Resistivity depends only on the material and its temperature, not on the shape of the conductor.",
+        "steps": [
+          "Stretching changes $l$ and $A$, so $R$ changes; at constant volume, $R \\propto l^2$.",
+          "The material and temperature are unchanged, so $\\rho$ stays the same. A is true.",
+          "Resistivity does not depend on length or area. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is true, so option (4) is ruled out.",
+        "common_trap": "Confusing resistance, which depends on shape, with resistivity, which does not.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the relaxation time of free electrons in a metal increases while the electron density stays constant, the resistivity of the metal increases.",
+        "II": "Manganin is preferred for standard resistors mainly because its resistivity is lower than that of copper."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\rho = \\frac{m}{ne^2\\tau}$. Alloys such as manganin have high resistivity and a very low temperature coefficient.",
+        "steps": [
+          "A larger $\\tau$ makes $\\rho$ smaller, so Statement I is incorrect.",
+          "Manganin has a higher resistivity than copper, because alloys exceed their constituent metals.",
+          "Manganin is chosen because its $\\alpha \\approx 0$, not for low resistivity. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I reverses the dependence of $\\rho$ on $\\tau$. Statement II gives the wrong reason and also states a false comparison with copper.",
+        "common_trap": "Thinking a longer relaxation time means more resistance; in fact it means fewer collisions per second.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Resistors of $2\\ \\Omega$, $3\\ \\Omega$ and $6\\ \\Omega$ are connected in parallel. What is their equivalent resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\Omega$",
+        "$11\\ \\Omega$",
+        "$\\frac{36}{11}\\ \\Omega$",
+        "$\\frac{1}{11}\\ \\Omega$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a parallel combination, $\\frac{1}{R_p} = \\sum \\frac{1}{R_i}$.",
+        "steps": [
+          "$\\frac{1}{R_p} = \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{6}$.",
+          "$\\frac{1}{R_p} = \\frac{3+2+1}{6} = 1$.",
+          "$R_p = 1\\ \\Omega$."
+        ],
+        "final_answer": "Option (1): $1\\ \\Omega$",
+        "why_not_others": "$11\\ \\Omega$ is the series value. $\\frac{36}{11}\\ \\Omega$ wrongly extends the two-resistor product/sum rule to three resistors. $\\frac{1}{11}\\ \\Omega$ is the reciprocal of the series sum.",
+        "common_trap": "Applying $\\frac{R_1R_2}{R_1+R_2}$ to more than two resistors.",
+        "time_saving_tip": "The answer must be smaller than $2\\ \\Omega$, the smallest resistor. Only $1\\ \\Omega$ and $\\frac{1}{11}\\ \\Omega$ pass this test, and the calculation picks $1\\ \\Omega$."
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "$n$ identical resistors, each of resistance $R$, give an equivalent resistance of $100\\ \\Omega$ in series and $4\\ \\Omega$ in parallel. What are $n$ and $R$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$n = 25,\\ R = 4\\ \\Omega$",
+        "$n = 5,\\ R = 20\\ \\Omega$",
+        "$n = 5,\\ R = 0.8\\ \\Omega$",
+        "$n = 2,\\ R = 50\\ \\Omega$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For $n$ identical resistors, $\\frac{R_s}{R_p} = n^2$.",
+        "steps": [
+          "$n^2 = \\frac{100}{4} = 25$, so $n = 5$.",
+          "From $R_s = nR$: $R = \\frac{100}{5} = 20\\ \\Omega$.",
+          "Check: $R_p = \\frac{20}{5} = 4\\ \\Omega$, which matches."
+        ],
+        "final_answer": "Option (2): $n = 5,\\ R = 20\\ \\Omega$",
+        "why_not_others": "$n = 25$ takes the ratio as $n$ instead of $n^2$. $R = 0.8\\ \\Omega$ wrongly divides $R_p$ by $n$. $n = 2$ comes from $\\sqrt{4}$ and has no physical basis.",
+        "common_trap": "Taking $\\frac{R_s}{R_p} = n$ instead of $n^2$.",
+        "time_saving_tip": "Always check the answer with $R_p = \\frac{R}{n}$."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A $4\\ \\Omega$ resistor is connected in series with a parallel combination of $3\\ \\Omega$ and $6\\ \\Omega$. The arrangement is connected across an ideal $18\\ V$ battery. What is the current through the $6\\ \\Omega$ resistor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ A$",
+        "$2\\ A$",
+        "$3\\ A$",
+        "$1.5\\ A$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Reduce the network to one equivalent resistance, then apply the current divider rule $I_1 = \\frac{R_2}{R_1+R_2}I$.",
+        "steps": [
+          "The parallel part is $\\frac{3\\times6}{3+6} = 2\\ \\Omega$.",
+          "Total resistance $= 4 + 2 = 6\\ \\Omega$, so $I = \\frac{18}{6} = 3\\ A$.",
+          "Current in the $6\\ \\Omega$ resistor $= \\frac{3}{3+6}\\times3 = 1\\ A$."
+        ],
+        "final_answer": "Option (1): $1\\ A$",
+        "why_not_others": "$2\\ A$ is the current in the $3\\ \\Omega$ branch. $3\\ A$ is the total current. $1.5\\ A$ assumes the current splits equally.",
+        "common_trap": "Splitting current in direct proportion to resistance instead of inverse proportion.",
+        "time_saving_tip": "The larger resistor carries the smaller share of the current."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Three $6\\ \\Omega$ resistors in series"
+          },
+          {
+            "label": "B",
+            "text": "Three $6\\ \\Omega$ resistors in parallel"
+          },
+          {
+            "label": "C",
+            "text": "Two $6\\ \\Omega$ resistors in parallel, in series with a third $6\\ \\Omega$ resistor"
+          },
+          {
+            "label": "D",
+            "text": "Two $6\\ \\Omega$ resistors in series, in parallel with a third $6\\ \\Omega$ resistor"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$2\\ \\Omega$"
+          },
+          {
+            "label": "II",
+            "text": "$4\\ \\Omega$"
+          },
+          {
+            "label": "III",
+            "text": "$9\\ \\Omega$"
+          },
+          {
+            "label": "IV",
+            "text": "$18\\ \\Omega$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-IV, B-I, C-II, D-III",
+        "A-I, B-IV, C-III, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Series: $nR$. Parallel: $\\frac{R}{n}$. For mixed networks, use the two-resistor product/sum rule.",
+        "steps": [
+          "A: $3\\times6 = 18\\ \\Omega$ (IV).",
+          "B: $\\frac{6}{3} = 2\\ \\Omega$ (I).",
+          "C: $3 + 6 = 9\\ \\Omega$ (III).",
+          "D: $\\frac{12\\times6}{12+6} = 4\\ \\Omega$ (II)."
+        ],
+        "final_answer": "Option (1): A-IV, B-I, C-III, D-II",
+        "why_not_others": "Option (2) swaps C and D. Option (3) swaps the series and parallel values. Option (4) misassigns A and C.",
+        "common_trap": "Mixing up which pair is in parallel in combinations C and D.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about series and parallel combinations of resistors are correct?",
+      "statements": {
+        "A": "In a series combination, the same current flows through every resistor.",
+        "B": "The equivalent resistance of a parallel combination is smaller than the smallest resistance in it.",
+        "C": "In a parallel combination, current divides in direct proportion to the resistances.",
+        "D": "A resistor connected between two points at equal potential carries no current and can be removed.",
+        "E": "For $n$ resistors, $R_{series}$ is always less than $n^2 R_{parallel}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Series: same current. Parallel: same voltage, and current splits inversely with resistance. $R_s \\geq n^2R_p$.",
+        "steps": [
+          "A is true: the same current flows in series.",
+          "B is true: $R_p$ is less than the smallest resistance.",
+          "C is false: current divides in inverse proportion to resistance.",
+          "D is true: with zero potential difference across it, the resistor carries no current.",
+          "E is false: $R_s \\geq n^2R_p$, with equality when all resistors are equal."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Options (1) and (4) contain C, which is false. Options (3) and (4) contain E, which is false.",
+        "common_trap": "Reversing the inequality $R_s \\geq n^2R_p$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "Which of the following materials has a negative temperature coefficient of resistivity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Copper",
+        "Aluminium",
+        "Manganin",
+        "Germanium"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In semiconductors, carrier density rises with temperature, so $\\alpha < 0$.",
+        "steps": [
+          "Metals such as copper and aluminium have $\\alpha > 0$.",
+          "Manganin, an alloy, has $\\alpha \\approx 0$.",
+          "Germanium is a semiconductor, so its $\\alpha$ is negative."
+        ],
+        "final_answer": "Option (4): Germanium",
+        "why_not_others": "Copper and aluminium are metals with positive $\\alpha$. Manganin has a nearly zero $\\alpha$, not a negative one.",
+        "common_trap": "Assuming the resistance of every material increases with temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A metal wire has a resistance of $10\\ \\Omega$ at $0^\\circ C$ and $12\\ \\Omega$ at $50^\\circ C$. What is the temperature coefficient of resistance of the metal (in $K^{-1}$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.3\\times10^{-3}$",
+        "$4.0\\times10^{-2}$",
+        "$2.0\\times10^{-1}$",
+        "$4.0\\times10^{-3}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\alpha = \\frac{R_T - R_0}{R_0\\Delta T}$.",
+        "steps": [
+          "$R_T - R_0 = 12 - 10 = 2\\ \\Omega$.",
+          "$\\alpha = \\frac{2}{10\\times50}$.",
+          "$\\alpha = 4.0\\times10^{-3}\\ K^{-1}$."
+        ],
+        "final_answer": "Option (4): $4.0\\times10^{-3}$",
+        "why_not_others": "$3.3\\times10^{-3}$ divides by $R_T$ instead of $R_0$. $4.0\\times10^{-2}$ is a decimal slip. $2.0\\times10^{-1}$ omits $\\Delta T$.",
+        "common_trap": "Using the final resistance in the denominator instead of $R_0$.",
+        "time_saving_tip": "For metals, $\\alpha$ is about $10^{-3}\\ K^{-1}$, which matches copper's $4\\times10^{-3}\\ K^{-1}$."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "A $3\\ \\Omega$ resistor with temperature coefficient $4\\times10^{-3}\\ K^{-1}$ is connected in series with a $1\\ \\Omega$ resistor with temperature coefficient $-4\\times10^{-3}\\ K^{-1}$. What is the effective temperature coefficient of the combination (in $K^{-1}$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.0\\times10^{-3}$",
+        "$0$",
+        "$4.0\\times10^{-3}$",
+        "$-2.0\\times10^{-3}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For two resistors in series, $\\alpha_{eq} = \\frac{R_1\\alpha_1 + R_2\\alpha_2}{R_1+R_2}$.",
+        "steps": [
+          "Numerator $= 3(4\\times10^{-3}) + 1(-4\\times10^{-3}) = 8\\times10^{-3}$.",
+          "Denominator $= 3 + 1 = 4$.",
+          "$\\alpha_{eq} = \\frac{8\\times10^{-3}}{4} = 2.0\\times10^{-3}\\ K^{-1}$."
+        ],
+        "final_answer": "Option (1): $2.0\\times10^{-3}$",
+        "why_not_others": "$0$ is the simple, unweighted average. $4.0\\times10^{-3}$ ignores the negative sign. $-2.0\\times10^{-3}$ weights each $\\alpha$ by the other resistor.",
+        "common_trap": "Averaging the coefficients without weighting them by resistance.",
+        "time_saving_tip": "Zero would need equal resistances. Here the larger resistor has positive $\\alpha$, so the result must be positive."
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The resistance of a thermistor increases as its temperature rises.",
+        "R": "In semiconductors, a rise in temperature frees more charge carriers, so the resistivity falls."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Thermistors and semiconductors have a negative $\\alpha$.",
+        "steps": [
+          "A rise in temperature increases $n$ sharply, so $\\rho$ falls. R is true.",
+          "A thermistor is a semiconductor device, so its resistance decreases with temperature. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Applying the metallic behaviour ($\\alpha > 0$) to thermistors.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Two resistors, each of resistance $R_0$ at the initial temperature, have temperature coefficients $+\\alpha$ and $-\\alpha$. When they are connected in parallel across an ideal battery, the current drawn from the battery is independent of temperature.",
+        "II": "When the same two resistors are connected in series, their total resistance stays $2R_0$ for any temperature rise $\\Delta T$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Series: $R_0(1+\\alpha\\Delta T) + R_0(1-\\alpha\\Delta T) = 2R_0$. Parallel: $R_{eq} = \\frac{R_0(1-\\alpha^2\\Delta T^2)}{2}$.",
+        "steps": [
+          "In series, the $\\alpha\\Delta T$ terms cancel, giving $2R_0$. Statement II is correct.",
+          "In parallel, $R_{eq} = \\frac{R_0^2(1-\\alpha^2\\Delta T^2)}{2R_0} = \\frac{R_0(1-\\alpha^2\\Delta T^2)}{2}$.",
+          "This decreases as $\\Delta T$ increases, so the current increases. Statement I is incorrect."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the $\\alpha^2$ term in the parallel combination. Statement II is exactly true within the linear model.",
+        "common_trap": "Assuming the parallel combination also stays constant because the first-order terms cancel.",
+        "time_saving_tip": "In the product $(1+x)(1-x) = 1 - x^2$, the $x^2$ term survives."
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A cell of emf $2\\ V$ and internal resistance $0.5\\ \\Omega$ is connected to an external resistance of $3.5\\ \\Omega$. What current flows in the circuit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.5\\ A$",
+        "$0.57\\ A$",
+        "$4\\ A$",
+        "$0.67\\ A$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$I = \\frac{\\varepsilon}{R+r}$.",
+        "steps": [
+          "Total resistance $= 3.5 + 0.5 = 4\\ \\Omega$.",
+          "$I = \\frac{2}{4} = 0.5\\ A$."
+        ],
+        "final_answer": "Option (1): $0.5\\ A$",
+        "why_not_others": "$0.57\\ A$ ignores $r$. $4\\ A$ is the short-circuit current $\\frac{\\varepsilon}{r}$. $0.67\\ A$ subtracts $r$ from $R$.",
+        "common_trap": "Forgetting the internal resistance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A battery of emf $12\\ V$ and internal resistance $0.2\\ \\Omega$ is being charged with a current of $5\\ A$. What is its terminal voltage?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$13\\ V$",
+        "$11\\ V$",
+        "$12\\ V$",
+        "$12.2\\ V$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "While a cell is being charged, $V = \\varepsilon + Ir$.",
+        "steps": [
+          "$Ir = 5\\times0.2 = 1\\ V$.",
+          "$V = 12 + 1 = 13\\ V$."
+        ],
+        "final_answer": "Option (1): $13\\ V$",
+        "why_not_others": "$11\\ V$ uses the discharging formula. $12\\ V$ ignores the internal resistance. $12.2\\ V$ adds $r$ instead of $Ir$.",
+        "common_trap": "Using $V = \\varepsilon - Ir$ during charging.",
+        "time_saving_tip": "During charging, the terminal voltage must exceed the emf."
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A cell of emf $6\\ V$ and internal resistance $1.5\\ \\Omega$ is connected to a variable external resistor. What is the maximum power that can be delivered to the external resistor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\ W$",
+        "$24\\ W$",
+        "$12\\ W$",
+        "$3\\ W$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Maximum power is delivered when $R = r$, and $P_{max} = \\frac{\\varepsilon^2}{4r}$.",
+        "steps": [
+          "Set $R = r = 1.5\\ \\Omega$.",
+          "$P_{max} = \\frac{36}{4\\times1.5}$.",
+          "$P_{max} = 6\\ W$."
+        ],
+        "final_answer": "Option (1): $6\\ W$",
+        "why_not_others": "$24\\ W$ is $\\frac{\\varepsilon^2}{r}$. $12\\ W$ is $\\frac{\\varepsilon^2}{2r}$, the total power at $R = r$. $3\\ W$ halves the correct value again.",
+        "common_trap": "Confusing the total power generated with the power delivered to the load.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Short-circuit current of a cell with $\\varepsilon = 6\\ V$, $r = 1\\ \\Omega$"
+          },
+          {
+            "label": "B",
+            "text": "Terminal voltage of the same cell connected to $R = 2\\ \\Omega$"
+          },
+          {
+            "label": "C",
+            "text": "Terminal voltage of the same cell while being charged with $2\\ A$"
+          },
+          {
+            "label": "D",
+            "text": "Maximum power the same cell can deliver to an external resistor"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$4\\ V$"
+          },
+          {
+            "label": "II",
+            "text": "$6\\ A$"
+          },
+          {
+            "label": "III",
+            "text": "$8\\ V$"
+          },
+          {
+            "label": "IV",
+            "text": "$9\\ W$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$I_{max} = \\frac{\\varepsilon}{r}$. Discharging: $V = \\varepsilon - Ir$. Charging: $V = \\varepsilon + Ir$. $P_{max} = \\frac{\\varepsilon^2}{4r}$.",
+        "steps": [
+          "A: $\\frac{6}{1} = 6\\ A$ (II).",
+          "B: $I = \\frac{6}{3} = 2\\ A$, so $V = 6 - 2 = 4\\ V$ (I).",
+          "C: $V = 6 + 2\\times1 = 8\\ V$ (III).",
+          "D: $\\frac{36}{4} = 9\\ W$ (IV)."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-III, D-IV",
+        "why_not_others": "Option (2) swaps the charging and discharging voltages. Option (3) swaps the current and the power. Option (4) assigns a power value to a voltage.",
+        "common_trap": "Swapping the signs of $Ir$ for charging and discharging.",
+        "time_saving_tip": "Matching units fixes A and D at once."
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the emf and internal resistance of a cell are correct?",
+      "statements": {
+        "A": "Emf is the work done per unit charge by the non-electrostatic force in moving charge from the negative to the positive terminal inside the cell, and it is measured in volt.",
+        "B": "The V-I graph of a cell is a straight line with intercept $\\varepsilon$ on the V-axis and slope $-r$.",
+        "C": "When maximum power is delivered to the external resistor, the efficiency of power delivery is also maximum.",
+        "D": "Internal resistance decreases with larger electrode area and with higher temperature.",
+        "E": "Internal resistance decreases as the cell gets older."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, B, C and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Emf is energy per unit charge. $V = \\varepsilon - Ir$. At $R = r$, the efficiency is only 50%.",
+        "steps": [
+          "A is true: this is the definition of emf, measured in volt.",
+          "B is true: $V = \\varepsilon - Ir$ is a straight line with intercept $\\varepsilon$ and slope $-r$.",
+          "C is false: at $R = r$, $\\eta = \\frac{R}{R+r} = 50\\%$.",
+          "D is true, as stated in the notes.",
+          "E is false: internal resistance increases with the age of the cell."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Options (2) and (4) include C, which is false. Option (3) includes E, which is false.",
+        "common_trap": "Believing that maximum power transfer also means maximum efficiency.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

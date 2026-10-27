@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A steady current of $0.8$ A flows through a metallic wire. How many electrons cross any cross-section of the wire in $1$ s? (Take $e = 1.6 \\times 10^{-19}$ C)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.28 \\times 10^{-19}$",
+        "$5 \\times 10^{19}$",
+        "$5 \\times 10^{18}$",
+        "$2 \\times 10^{18}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a steady current, $q = It$ and $q = Ne$, so $N = \\frac{It}{e}$.",
+        "steps": [
+          "Charge crossing in 1 s: $q = It = 0.8 \\times 1 = 0.8$ C.",
+          "Number of electrons: $N = \\frac{q}{e} = \\frac{0.8}{1.6 \\times 10^{-19}}$.",
+          "$N = 0.5 \\times 10^{19} = 5 \\times 10^{18}$."
+        ],
+        "final_answer": "Option (3): $5 \\times 10^{18}$",
+        "why_not_others": "$1.28 \\times 10^{-19}$ comes from multiplying by $e$ instead of dividing. $5 \\times 10^{19}$ is a power-of-ten slip. $2 \\times 10^{18}$ comes from computing $\\frac{e}{q}$ wrongly.",
+        "common_trap": "Writing $0.8/1.6 = 5$ instead of $0.5$, which gives an answer ten times too large.",
+        "time_saving_tip": "Since $\\frac{1}{e} = 6.25 \\times 10^{18}$, multiply: $0.8 \\times 6.25 \\times 10^{18} = 5 \\times 10^{18}$."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A copper wire of cross-sectional area $2 \\times 10^{-6}$ m$^2$ carries a current of $3.2$ A. The free-electron density is $5 \\times 10^{28}$ m$^{-3}$. What is the drift speed of the electrons? (Take $e = 1.6 \\times 10^{-19}$ C)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2 \\times 10^{-3}$ m/s",
+        "$2 \\times 10^{-5}$ m/s",
+        "$2 \\times 10^{-4}$ m/s",
+        "$1 \\times 10^{-4}$ m/s"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The current is related to drift speed by $I = neAv_d$.",
+        "steps": [
+          "$v_d = \\frac{I}{neA}$.",
+          "$neA = 5 \\times 10^{28} \\times 1.6 \\times 10^{-19} \\times 2 \\times 10^{-6} = 1.6 \\times 10^{4}$.",
+          "$v_d = \\frac{3.2}{1.6 \\times 10^{4}} = 2 \\times 10^{-4}$ m/s."
+        ],
+        "final_answer": "Option (3): $2 \\times 10^{-4}$ m/s",
+        "why_not_others": "$2 \\times 10^{-3}$ and $2 \\times 10^{-5}$ m/s are power-of-ten errors in the denominator. $1 \\times 10^{-4}$ m/s comes from doubling the area or dropping the factor 2 in the numerator.",
+        "common_trap": "Mismanaging the exponents when multiplying $n$, $e$ and $A$.",
+        "time_saving_tip": "Recall that drift speeds in metals are of order $10^{-4}$ m/s. This lets you check the answer quickly."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A metal wire is connected across a potential difference $V$. The wire is replaced by another wire of the same material and the same cross-section, but of half the length. The new wire is connected across a potential difference $2V$. The temperature stays the same. By what factor does the drift velocity of the electrons change?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It remains unchanged",
+        "It becomes 2 times",
+        "It becomes $\\frac{1}{4}$ times",
+        "It becomes 4 times"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$v_d = \\frac{eE\\tau}{m}$ with $E = \\frac{V}{l}$, so $v_d \\propto \\frac{V}{l}$ at constant temperature (constant $\\tau$).",
+        "steps": [
+          "Initially $E_1 = \\frac{V}{l}$.",
+          "Finally $E_2 = \\frac{2V}{l/2} = \\frac{4V}{l} = 4E_1$.",
+          "Since $\\tau$ is unchanged, $v_d$ becomes 4 times."
+        ],
+        "final_answer": "Option (4): It becomes 4 times",
+        "why_not_others": "'Unchanged' wrongly assumes drift velocity depends only on the material. '2 times' accounts for only the doubled voltage. '$\\frac{1}{4}$ times' inverts the dependence on $V$ and $l$.",
+        "common_trap": "Ignoring the change in length, which also changes the field $E$.",
+        "time_saving_tip": "Write $v_d \\propto \\frac{V}{l}$ and take the ratio directly: $\\frac{2}{1/2} = 4$."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "An electric bulb glows almost immediately after the switch is closed, even though the drift velocity of electrons is only about $10^{-4}$ m/s.",
+        "R": "Free electrons in a metal move randomly with thermal speeds of about $10^{5}$ m/s."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The bulb glows instantly because the electric field is set up throughout the wire at nearly the speed of light. It is not because individual electrons move fast.",
+        "steps": [
+          "A is true: the bulb glows almost instantly despite the tiny drift velocity.",
+          "R is true: random thermal speeds are about $10^5$ m/s.",
+          "Random thermal motion averages to zero and carries no net charge. So R does not explain A.",
+          "The real reason is that the field is established in the wire at nearly the speed of light."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option (1) wrongly links random thermal motion to the instant glow. Options (3) and (4) are ruled out because both statements are true.",
+        "common_trap": "Thinking the high thermal speed of electrons makes the bulb glow instantly.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The mobility of free electrons is $\\mu = \\frac{e\\tau}{m}$, and its SI unit is $m^2V^{-1}s^{-1}$.",
+        "II": "When the temperature of a metal wire rises, the relaxation time decreases. So the drift velocity decreases, but the mobility stays unchanged because mobility depends only on the material."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\mu = \\frac{v_d}{E} = \\frac{e\\tau}{m}$, so mobility depends on $\\tau$, which decreases with temperature.",
+        "steps": [
+          "$\\mu = \\frac{v_d}{E}$ has unit $\\frac{m/s}{V/m} = m^2V^{-1}s^{-1}$, and equals $\\frac{e\\tau}{m}$. So Statement I is correct.",
+          "When temperature rises, $\\tau$ decreases.",
+          "Since $\\mu \\propto \\tau$, mobility also decreases. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is false because mobility changes with temperature through $\\tau$. This rules out options (1) and (4). Statement I is true, which rules out option (2).",
+        "common_trap": "Treating mobility as a fixed material constant that does not depend on temperature.",
+        "time_saving_tip": "Any quantity proportional to $\\tau$ ($v_d$, $\\mu$) falls as temperature rises."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "A uniform wire of resistance $5\\ \\Omega$ is stretched uniformly until its length becomes 3 times the original length. Its volume stays constant. What is its new resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$15\\ \\Omega$",
+        "$45\\ \\Omega$",
+        "$135\\ \\Omega$",
+        "$\\frac{5}{3}\\ \\Omega$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "At constant volume, $R \\propto l^2$.",
+        "steps": [
+          "$\\frac{R'}{R} = \\left(\\frac{l'}{l}\\right)^2 = 3^2 = 9$.",
+          "$R' = 9 \\times 5 = 45\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $45\\ \\Omega$",
+        "why_not_others": "$15\\ \\Omega$ ignores the decrease in area. $135\\ \\Omega$ uses $R \\propto l^3$. $\\frac{5}{3}\\ \\Omega$ inverts the relation.",
+        "common_trap": "Using $R \\propto l$ and forgetting that the area decreases as the wire is stretched.",
+        "time_saving_tip": "Stretching to $n$ times the length gives $n^2R$."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A wire of resistance $4\\ \\Omega$ is drawn out so that its diameter becomes half the original value. Its volume stays constant. What is its new resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$16\\ \\Omega$",
+        "$8\\ \\Omega$",
+        "$64\\ \\Omega$",
+        "$32\\ \\Omega$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "At constant volume, $R \\propto \\frac{1}{A^2} \\propto \\frac{1}{r^4}$.",
+        "steps": [
+          "Halving the diameter halves the radius, so $r' = \\frac{r}{2}$.",
+          "$\\frac{R'}{R} = \\left(\\frac{r}{r'}\\right)^4 = 2^4 = 16$.",
+          "$R' = 16 \\times 4 = 64\\ \\Omega$."
+        ],
+        "final_answer": "Option (3): $64\\ \\Omega$",
+        "why_not_others": "$16\\ \\Omega$ uses $R \\propto \\frac{1}{r^2}$ and ignores the increase in length. $8\\ \\Omega$ uses $R \\propto \\frac{1}{r}$. $32\\ \\Omega$ uses a cubic dependence.",
+        "common_trap": "Accounting only for the change in area and not for the accompanying increase in length.",
+        "time_saving_tip": "Radius reduced to $\\frac{1}{n}$ at constant volume gives $n^4R$."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A uniform wire has length $10$ m, cross-sectional area $1 \\times 10^{-6}$ m$^2$ and resistivity $2 \\times 10^{-8}\\ \\Omega$ m. A potential difference of $1$ V is applied across its ends at constant temperature. What current flows through it?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2$ A",
+        "$5$ A",
+        "$50$ A",
+        "$0.5$ A"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$R = \\frac{\\rho l}{A}$, followed by Ohm's law $I = \\frac{V}{R}$.",
+        "steps": [
+          "$R = \\frac{2 \\times 10^{-8} \\times 10}{1 \\times 10^{-6}} = 0.2\\ \\Omega$.",
+          "$I = \\frac{V}{R} = \\frac{1}{0.2} = 5$ A."
+        ],
+        "final_answer": "Option (2): $5$ A",
+        "why_not_others": "$0.2$ A comes from using $I = VR$. $50$ A and $0.5$ A come from power-of-ten slips in computing $R$.",
+        "common_trap": "Confusing the value of $R$ with the current, or multiplying instead of dividing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "A wire of resistance $R$ is stretched to twice its length at constant volume"
+          },
+          {
+            "label": "B",
+            "text": "The radius of a wire of resistance $R$ is reduced to half at constant volume"
+          },
+          {
+            "label": "C",
+            "text": "A wire of resistance $R$ is cut into 4 equal parts; resistance of each part"
+          },
+          {
+            "label": "D",
+            "text": "A wire of resistance $R$ is stretched at constant volume until its area becomes $\\frac{1}{3}$ of the original"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$9R$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{R}{4}$"
+          },
+          {
+            "label": "III",
+            "text": "$16R$"
+          },
+          {
+            "label": "IV",
+            "text": "$4R$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-III, C-II, D-I",
+        "A-IV, B-I, C-II, D-III",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "At constant volume, $R \\propto l^2 \\propto \\frac{1}{A^2} \\propto \\frac{1}{r^4}$. Cutting a wire into $n$ equal parts gives each part $\\frac{R}{n}$.",
+        "steps": [
+          "A: $R' = 2^2R = 4R$, which is IV.",
+          "B: $R' = 2^4R = 16R$, which is III.",
+          "C: each part has $\\frac{R}{4}$, which is II.",
+          "D: $R' = \\left(\\frac{A}{A/3}\\right)^2R = 9R$, which is I."
+        ],
+        "final_answer": "Option (2): A-IV, B-III, C-II, D-I",
+        "why_not_others": "Option (1) swaps stretching with cutting. Option (3) uses $r^2$ for B and treats D as a radius change. Option (4) uses a squared factor of 3 for A and a squared factor of 2 for D.",
+        "common_trap": "Treating 'cut into $n$ parts' like 'stretched $n$ times', or using $\\frac{1}{r^2}$ instead of $\\frac{1}{r^4}$.",
+        "time_saving_tip": "Convert every change into a length ratio $k$ and use $R' = k^2R$."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Ohm's law and resistance are correct?",
+      "statements": {
+        "A": "When a metal wire is stretched to twice its length, its resistivity becomes four times.",
+        "B": "Ohm's law holds only when the temperature and other physical conditions of the conductor remain constant.",
+        "C": "Resistance arises because drifting electrons collide with lattice ions and lose energy.",
+        "D": "The microscopic form of Ohm's law is $J = \\sigma E$.",
+        "E": "The SI unit of conductance is ohm-metre."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "A, C and E only",
+        "B, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Resistivity depends only on the material and temperature, not on dimensions. Conductance $G = \\frac{1}{R}$ is measured in siemens.",
+        "steps": [
+          "A is false: stretching changes $R$, not $\\rho$.",
+          "B is true: Ohm's law requires constant temperature and physical conditions.",
+          "C is true: collisions with lattice ions cause resistance.",
+          "D is true: $J = \\sigma E$ is the microscopic form.",
+          "E is false: conductance is measured in siemens (mho). Ohm-metre is the unit of resistivity."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Options (1) and (3) include the false statement A, and option (3) also includes the false statement E. Option (2) leaves out the true statement C.",
+        "common_trap": "Believing that stretching a wire changes its resistivity.",
+        "time_saving_tip": "Rule out A first. Only options (2) and (4) remain, and C is clearly true."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "Which of the following gives a straight-line V-I graph passing through the origin?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A p-n junction diode",
+        "A filament lamp",
+        "A metal wire kept at constant temperature",
+        "A water voltameter"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "An ohmic conductor gives a linear V-I graph through the origin with constant slope.",
+        "steps": [
+          "A metal at constant temperature obeys Ohm's law.",
+          "Its V-I graph is a straight line through the origin."
+        ],
+        "final_answer": "Option (3): A metal wire kept at constant temperature",
+        "why_not_others": "A diode's behaviour depends on the sign of $V$. In a filament lamp, heating raises $R$, so its graph is non-linear. A water voltameter gives a non-linear graph that does not pass through the origin.",
+        "common_trap": "Assuming a filament lamp is ohmic because its filament is a metal; its temperature does not stay constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "For an ohmic conductor, the V-I graph is plotted with $V$ (in volt) on the y-axis and $I$ (in ampere) on the x-axis, using equal scales. The straight line through the origin makes an angle of $60^\\circ$ with the current axis. What is the resistance of the conductor?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{1}{\\sqrt{3}}\\ \\Omega$",
+        "$\\frac{\\sqrt{3}}{2}\\ \\Omega$",
+        "$\\frac{1}{2}\\ \\Omega$",
+        "$\\sqrt{3}\\ \\Omega$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In a V-I graph (V on the y-axis), slope $= R$.",
+        "steps": [
+          "Slope $= \\tan 60^\\circ = \\sqrt{3}$.",
+          "$R = $ slope $= \\sqrt{3}\\ \\Omega$."
+        ],
+        "final_answer": "Option (4): $\\sqrt{3}\\ \\Omega$",
+        "why_not_others": "$\\frac{1}{\\sqrt{3}}\\ \\Omega$ treats the slope as $\\frac{1}{R}$, which applies to an I-V graph. $\\frac{\\sqrt{3}}{2}$ and $\\frac{1}{2}$ wrongly use $\\sin 60^\\circ$ and $\\cos 60^\\circ$.",
+        "common_trap": "Mixing up V-I and I-V graphs: in an I-V graph the slope is $\\frac{1}{R}$.",
+        "time_saving_tip": "Always check which quantity is on the y-axis before reading the slope."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "The I-V graphs ($I$ on the y-axis, $V$ on the x-axis) of the same metal wire at two temperatures $T_1$ and $T_2$ are straight lines through the origin. Their slopes are $0.5$ S at $T_1$ and $0.25$ S at $T_2$. Which of the following is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$T_1 > T_2$, and the resistance at $T_2$ is $0.25\\ \\Omega$",
+        "$T_2 > T_1$, and the resistance at $T_2$ is $4\\ \\Omega$",
+        "$T_1 > T_2$, and the resistance at $T_1$ is $2\\ \\Omega$",
+        "$T_2 > T_1$, and the resistance at $T_2$ is $0.25\\ \\Omega$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In an I-V graph, slope $= \\frac{1}{R}$. For a metal, the higher-temperature line has the smaller slope.",
+        "steps": [
+          "$R_1 = \\frac{1}{0.5} = 2\\ \\Omega$ and $R_2 = \\frac{1}{0.25} = 4\\ \\Omega$.",
+          "$R_2 > R_1$. For a metal, resistance increases with temperature, so $T_2 > T_1$."
+        ],
+        "final_answer": "Option (2): $T_2 > T_1$, and the resistance at $T_2$ is $4\\ \\Omega$",
+        "why_not_others": "Options (1) and (4) take the slope itself as the resistance. Option (3) gives $R_1 = 2\\ \\Omega$ correctly but gets the temperature order wrong.",
+        "common_trap": "Reading the slope of an I-V graph as $R$ instead of $\\frac{1}{R}$.",
+        "time_saving_tip": "For a metal I-V graph, the smaller slope means the higher temperature."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A filament bulb is an ohmic device because its V-I graph passes through the origin.",
+        "R": "In a filament bulb, heating raises the resistance as the current increases, so the V-I relation becomes non-linear."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "An ohmic device needs a straight-line V-I graph through the origin. Passing through the origin alone is not enough.",
+        "steps": [
+          "A filament lamp is listed as non-ohmic, so A is false.",
+          "Heating raises $R$, which makes the graph non-linear, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options (1), (2) and (3) all require A to be true, but a filament bulb is non-ohmic.",
+        "common_trap": "Assuming any graph through the origin is ohmic; it must also be linear.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a non-ohmic device, the dynamic resistance $\\frac{dV}{dI}$ at any operating point is always equal to the static resistance $\\frac{V}{I}$ at that point.",
+        "II": "GaAs shows a region of negative slope, called negative resistance, and the same current can occur at more than one voltage."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For a non-linear graph, the slope $\\frac{dV}{dI}$ generally differs from the ratio $\\frac{V}{I}$. GaAs shows a non-unique V-I relation with a negative-resistance region.",
+        "steps": [
+          "Static resistance $\\frac{V}{I}$ is the slope of the line from the origin to the point. Dynamic resistance is the slope of the tangent at that point. These are equal only for a linear graph through the origin, so Statement I is incorrect.",
+          "GaAs has a negative-slope region, and the same current can occur at more than one voltage. So Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Options (1) and (3) accept the false Statement I. Option (2) rejects the true Statement II.",
+        "common_trap": "Equating $\\frac{dV}{dI}$ with $\\frac{V}{I}$ for non-linear devices.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A bulb is rated $100$ W, $220$ V. What is its resistance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.2\\ \\Omega$",
+        "$484\\ \\Omega$",
+        "$22000\\ \\Omega$",
+        "$48.4\\ \\Omega$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$R = \\frac{V_{rated}^2}{P_{rated}}$.",
+        "steps": [
+          "$R = \\frac{220^2}{100} = \\frac{48400}{100}$.",
+          "$R = 484\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $484\\ \\Omega$",
+        "why_not_others": "$2.2\\ \\Omega$ comes from $\\frac{V}{P}$. $22000\\ \\Omega$ comes from $VP$. $48.4\\ \\Omega$ is a decimal slip.",
+        "common_trap": "Using $\\frac{V}{P}$ instead of $\\frac{V^2}{P}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A heater is rated $1000$ W at its rated voltage. The supply voltage falls to $80\\%$ of the rated value. Assuming its resistance stays constant, what power does it consume?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$800$ W",
+        "$1250$ W",
+        "$640$ W",
+        "$894$ W"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "At constant $R$, $P = \\frac{V^2}{R} \\propto V^2$.",
+        "steps": [
+          "$\\frac{P'}{P} = (0.8)^2 = 0.64$.",
+          "$P' = 0.64 \\times 1000 = 640$ W."
+        ],
+        "final_answer": "Option (3): $640$ W",
+        "why_not_others": "$800$ W assumes $P \\propto V$. $1250$ W inverts the ratio. $894$ W uses $\\sqrt{0.8}$.",
+        "common_trap": "Scaling power linearly with voltage.",
+        "time_saving_tip": "A voltage fraction $f$ gives a power fraction $f^2$."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A power of $100$ kW is transmitted at $10$ kV through cables of total resistance $5\\ \\Omega$. What is the power lost in the cables?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$50$ W",
+        "$500$ W",
+        "$5000$ W",
+        "$250$ W"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Line loss is $P_{loss} = I^2R_c = \\frac{P^2R_c}{V^2}$.",
+        "steps": [
+          "Current: $I = \\frac{P}{V} = \\frac{10^5}{10^4} = 10$ A.",
+          "$P_{loss} = I^2R_c = 10^2 \\times 5 = 500$ W."
+        ],
+        "final_answer": "Option (2): $500$ W",
+        "why_not_others": "$50$ W uses $IR_c$ instead of $I^2R_c$. $5000$ W comes from a power-of-ten slip in $I^2$. $250$ W wrongly halves the loss.",
+        "common_trap": "Using $\\frac{V^2}{R_c}$ with the transmission voltage; that voltage is not the drop across the cables.",
+        "time_saving_tip": "Find the line current first, then use $I^2R_c$."
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "1 kWh expressed in joule"
+          },
+          {
+            "label": "B",
+            "text": "Total power of a $60$ W bulb and a $40$ W bulb (both rated for the supply voltage) connected in series across that supply"
+          },
+          {
+            "label": "C",
+            "text": "Total power of the same two bulbs connected in parallel across that supply"
+          },
+          {
+            "label": "D",
+            "text": "Heat produced when $3$ A flows through a $4\\ \\Omega$ resistor for $10$ s"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$24$ W"
+          },
+          {
+            "label": "II",
+            "text": "$360$ J"
+          },
+          {
+            "label": "III",
+            "text": "$3.6 \\times 10^6$ J"
+          },
+          {
+            "label": "IV",
+            "text": "$100$ W"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Series bulbs: $\\frac{1}{P} = \\frac{1}{P_1} + \\frac{1}{P_2}$. Parallel bulbs: $P = P_1 + P_2$. Joule heating: $H = I^2Rt$. 1 kWh $= 3.6 \\times 10^6$ J.",
+        "steps": [
+          "A: 1 kWh $= 3.6 \\times 10^6$ J, which is III.",
+          "B: $\\frac{1}{P} = \\frac{1}{60} + \\frac{1}{40} = \\frac{5}{120}$, so $P = 24$ W, which is I.",
+          "C: $P = 60 + 40 = 100$ W, which is IV.",
+          "D: $H = 3^2 \\times 4 \\times 10 = 360$ J, which is II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) swaps the series and parallel formulas. Options (3) and (4) interchange the kWh value with the Joule heat.",
+        "common_trap": "Adding powers directly for bulbs in series.",
+        "time_saving_tip": "For two bulbs in series, $P = \\frac{P_1P_2}{P_1 + P_2}$."
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about electrical power are correct?",
+      "statements": {
+        "A": "When two bulbs rated for the same voltage are joined in series, the lower-wattage bulb glows brighter.",
+        "B": "For two resistors in parallel, the larger resistance dissipates more power.",
+        "C": "Transmitting electric power at high voltage reduces the $I^2R$ loss in the lines.",
+        "D": "If the supply voltage falls to half the rated value, a heater's power becomes half the rated power, assuming its resistance stays constant.",
+        "E": "A bulb rated $P$ watt at $V$ volt has resistance $\\frac{V^2}{P}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Use $I^2R$ when the current is common (series) and $\\frac{V^2}{R}$ when the voltage is common (parallel). At constant $R$, $P \\propto V^2$.",
+        "steps": [
+          "A is true: in series the current is common, and the lower-wattage bulb has the higher $R$, so it dissipates more power.",
+          "B is false: in parallel, $P = \\frac{V^2}{R}$, so the smaller resistance dissipates more power.",
+          "C is true: higher voltage means lower current and hence a lower $I^2R$ loss.",
+          "D is false: the power becomes $\\frac{1}{4}$ of the rated value.",
+          "E is true: $R = \\frac{V^2}{P}$."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option (1) includes the false statement B. Options (3) and (4) include the false statement D.",
+        "common_trap": "Assuming the higher-wattage bulb always glows brighter, or that power scales linearly with voltage.",
+        "time_saving_tip": "Rule out B and D, then pick the only option containing neither."
+      }
+    }
+  ]
+}

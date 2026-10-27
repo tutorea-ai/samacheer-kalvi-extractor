@@ -1,0 +1,629 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "One mole of $H_2SO_4$ contains",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4 mol of oxygen atoms",
+        "2 mol of sulfur atoms",
+        "1 mol of hydrogen atoms",
+        "$7N_A$ molecules of $H_2SO_4$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "One mole of a compound contains, for each element, as many moles of atoms as its subscript in the formula.",
+        "steps": [
+          "One formula unit of $H_2SO_4$ has 2 H atoms, 1 S atom and 4 O atoms.",
+          "So 1 mol of $H_2SO_4$ contains 2 mol H, 1 mol S and 4 mol O.",
+          "The number of molecules in 1 mol is $N_A$, not $7N_A$."
+        ],
+        "final_answer": "Option (1): 4 mol of oxygen atoms",
+        "why_not_others": "Option (2): there is only 1 mol of S. Option (3): there are 2 mol of H. Option (4): $7N_A$ is the total number of atoms, not the number of molecules.",
+        "common_trap": "Confusing the number of molecules with the number of atoms.",
+        "time_saving_tip": "Read the subscripts directly as moles of each atom per mole of compound."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The total number of atoms present in 4.9 g of $H_2SO_4$ is (Given: H = 1, S = 32, O = 16; $N_A = 6.022 \\times 10^{23}\\,mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.011 \\times 10^{22}$",
+        "$1.204 \\times 10^{23}$",
+        "$6.022 \\times 10^{22}$",
+        "$2.108 \\times 10^{23}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Number of atoms = moles of molecules × atoms per molecule × $N_A$.",
+        "steps": [
+          "Molar mass of $H_2SO_4$ = 2 + 32 + 64 = 98 g mol$^{-1}$.",
+          "Moles = 4.9/98 = 0.05 mol.",
+          "Each molecule has 7 atoms, so moles of atoms = 0.05 × 7 = 0.35 mol.",
+          "Number of atoms = $0.35 \\times 6.022 \\times 10^{23} = 2.108 \\times 10^{23}$."
+        ],
+        "final_answer": "Option (4): $2.108 \\times 10^{23}$",
+        "why_not_others": "Option (1) is the number of molecules. Option (2) counts only the O atoms (0.2 mol). Option (3) counts only the H atoms (0.1 mol).",
+        "common_trap": "Stopping at the number of molecules or counting only one element.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "The volume occupied by 16 g of oxygen gas ($O_2$) at STP (273.15 K, 1 bar), assuming ideal behaviour, is (Given: O = 16)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "11.2 L",
+        "22.7 L",
+        "11.35 L",
+        "363.2 L"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "At 273.15 K and 1 bar, 1 mol of an ideal gas occupies 22.7 L.",
+        "steps": [
+          "Molar mass of $O_2$ = 32 g mol$^{-1}$.",
+          "Moles = 16/32 = 0.5 mol.",
+          "Volume = 0.5 × 22.7 = 11.35 L."
+        ],
+        "final_answer": "Option (3): 11.35 L",
+        "why_not_others": "Option (1) uses 22.4 L, which applies at 1 atm, not 1 bar. Option (2) treats 16 g as 1 mol, i.e. uses the atomic mass of O. Option (4) multiplies the mass by 22.7 without converting to moles.",
+        "common_trap": "Mixing up the two molar volume values (22.4 L vs 22.7 L).",
+        "time_saving_tip": "Check the pressure given: 1 bar means 22.7 L, 1 atm means 22.4 L."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "One mole of ozone ($O_3$) contains $3N_A$ oxygen atoms.",
+        "R": "One mole of $O_3$ contains $N_A$ molecules, and each $O_3$ molecule contains three oxygen atoms."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Atoms = moles × atomicity × $N_A$.",
+        "steps": [
+          "1 mol of $O_3$ contains $N_A$ molecules, so R is true.",
+          "Each molecule has 3 O atoms, so the number of atoms = $3N_A$. A is true.",
+          "A follows directly from R, so R correctly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out options (3) and (4). R is exactly the reasoning that gives A, which rules out option (2).",
+        "common_trap": "Treating 1 mol of $O_3$ as $N_A$ atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The number of electrons present in 1.8 g of water is $6.022 \\times 10^{23}$ (take H = 1, O = 16).",
+        "II": "2.8 g of $N_2$ and 3.2 g of $O_2$ contain the same number of atoms (take N = 14, O = 16)."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Electrons or atoms = moles × entities per formula × $N_A$.",
+        "steps": [
+          "Moles of $H_2O$ = 1.8/18 = 0.1 mol. Each molecule has 2 + 8 = 10 electrons.",
+          "Moles of electrons = 0.1 × 10 = 1 mol, i.e. $6.022 \\times 10^{23}$ electrons. Statement I is correct.",
+          "Moles of $N_2$ = 2.8/28 = 0.1 mol and moles of $O_2$ = 3.2/32 = 0.1 mol.",
+          "Both gases are diatomic, so each sample contains 0.2 mol of atoms. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both calculations check out, so every option that marks either statement as incorrect is wrong.",
+        "common_trap": "Assuming that different masses cannot contain equal numbers of particles, or forgetting to multiply by 10 electrons per water molecule.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "The mass percentage of carbon in methane ($CH_4$) is (Given: C = 12, H = 1)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "75%",
+        "25%",
+        "20%",
+        "80%"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "% element = (mass of the element in 1 mol ÷ molar mass) × 100.",
+        "steps": [
+          "Molar mass of $CH_4$ = 12 + 4 = 16 g mol$^{-1}$.",
+          "% C = (12/16) × 100 = 75%."
+        ],
+        "final_answer": "Option (1): 75%",
+        "why_not_others": "Option (2) is the % of H. Options (3) and (4) are atom fractions (1/5 and 4/5), not mass fractions.",
+        "common_trap": "Calculating the percentage from the number of atoms instead of mass.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "The mass percentage of oxygen in calcium carbonate ($CaCO_3$) is (Given: Ca = 40, C = 12, O = 16)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "16%",
+        "60%",
+        "40%",
+        "48%"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Multiply the atomic mass by the number of atoms of the element in the formula.",
+        "steps": [
+          "Molar mass of $CaCO_3$ = 40 + 12 + 48 = 100 g mol$^{-1}$.",
+          "Mass of O in 1 mol = 3 × 16 = 48 g.",
+          "% O = (48/100) × 100 = 48%."
+        ],
+        "final_answer": "Option (4): 48%",
+        "why_not_others": "Option (1) counts only one O atom. Option (2) is the atom fraction 3/5. Option (3) is the % of Ca.",
+        "common_trap": "Forgetting to multiply by the number of oxygen atoms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A sample of urea, $CO(NH_2)_2$, is found to contain 42% nitrogen by mass. If the impurities contain no nitrogen, the percentage purity of the sample is (Given: C = 12, O = 16, N = 14, H = 1)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "42%",
+        "58%",
+        "90%",
+        "46.67%"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Percentage composition can be used to check the purity of a sample.",
+        "steps": [
+          "Molar mass of urea = 12 + 16 + 2(14 + 2) = 60 g mol$^{-1}$.",
+          "% N in pure urea = (28/60) × 100 = 46.67%.",
+          "Purity = (42/46.67) × 100 = 90%."
+        ],
+        "final_answer": "Option (3): 90%",
+        "why_not_others": "Option (1) takes the N % as the purity. Option (2) is 100 − 42. Option (4) is the N % of pure urea, not the purity.",
+        "common_trap": "Equating the nitrogen percentage with the purity.",
+        "time_saving_tip": "Purity = observed % ÷ theoretical % × 100."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "% carbon in $CH_4$"
+          },
+          {
+            "label": "B",
+            "text": "% carbon in $C_2H_6$"
+          },
+          {
+            "label": "C",
+            "text": "% carbon in $CO_2$"
+          },
+          {
+            "label": "D",
+            "text": "% carbon in $CO$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "42.86%"
+          },
+          {
+            "label": "II",
+            "text": "80%"
+          },
+          {
+            "label": "III",
+            "text": "27.27%"
+          },
+          {
+            "label": "IV",
+            "text": "75%"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "% C = (mass of carbon ÷ molar mass) × 100, using C = 12, H = 1, O = 16.",
+        "steps": [
+          "$CH_4$: 12/16 = 75% (A-IV).",
+          "$C_2H_6$: 24/30 = 80% (B-II).",
+          "$CO_2$: 12/44 = 27.27% (C-III).",
+          "$CO$: 12/28 = 42.86% (D-I)."
+        ],
+        "final_answer": "Option (4): A-IV, B-II, C-III, D-I",
+        "why_not_others": "Option (1) swaps the hydrocarbon values. Option (2) swaps the two oxides. Option (3) mismatches $CH_4$ and $CO_2$.",
+        "common_trap": "Swapping the values for $CO$ and $CO_2$.",
+        "time_saving_tip": "Carbon % is higher when the molar mass is smaller, so $CO$ must have a higher C % than $CO_2$."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about percentage composition are correct?",
+      "statements": {
+        "A": "$C_2H_2$ and $C_6H_6$ have the same percentage composition.",
+        "B": "Percentage composition is based on the number of atoms of each element in the formula, not on mass.",
+        "C": "If a compound of C, H and O contains 40% C and 6.7% H, its oxygen content is 53.3%.",
+        "D": "The mass percentage of carbon in ethanol ($C_2H_5OH$) is about 52.14%.",
+        "E": "For compounds containing many elements, the sum of the elemental percentages can exceed 100%."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and C only",
+        "B, C and D only",
+        "A, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Percentage composition is mass-based, totals 100%, and is the same for compounds that share an empirical formula.",
+        "steps": [
+          "A: both compounds have the empirical formula CH, so their percentage composition is identical. Correct.",
+          "B: percentage composition is based on mass, not on the number of atoms. Incorrect.",
+          "C: O % = 100 − (40 + 6.7) = 53.3%. Correct.",
+          "D: (24.02/46.07) × 100 = 52.14%. Correct.",
+          "E: the percentages always add up to exactly 100%. Incorrect."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Options (2) and (3) include B, which is false. Option (4) includes E, which is false.",
+        "common_trap": "Thinking that different molecular formulas must have different percentage compositions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "The empirical formula of butane, whose molecular formula is $C_4H_{10}$, is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$C_4H_{10}$",
+        "$CH_{2.5}$",
+        "$CH_3$",
+        "$C_2H_5$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The empirical formula is the simplest whole-number ratio of atoms.",
+        "steps": [
+          "C : H = 4 : 10.",
+          "Divide by the common factor 2 to get 2 : 5.",
+          "Empirical formula = $C_2H_5$ (n = 2)."
+        ],
+        "final_answer": "Option (4): $C_2H_5$",
+        "why_not_others": "Option (1) is the molecular formula. Option (2) is not a whole-number ratio. Option (3) wrongly rounds the 1 : 2.5 ratio.",
+        "common_trap": "Writing fractional subscripts instead of multiplying to reach whole numbers.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "An organic compound contains 40% C, 6.67% H and 53.33% O by mass. Its vapour density is 30. The molecular formula of the compound is (Given: C = 12, H = 1, O = 16)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$C_2H_4O_2$",
+        "$CH_2O$",
+        "$C_3H_6O_3$",
+        "$C_4H_8O_4$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Find the empirical formula from the percentages, then use $M = 2 \\times VD$ to get n.",
+        "steps": [
+          "Moles in a 100 g sample: C = 40/12 = 3.33, H = 6.67/1 = 6.67, O = 53.33/16 = 3.33.",
+          "Dividing by 3.33 gives 1 : 2 : 1, so the empirical formula is $CH_2O$ (mass 30).",
+          "M = 2 × 30 = 60 g mol$^{-1}$, so n = 60/30 = 2.",
+          "Molecular formula = $C_2H_4O_2$."
+        ],
+        "final_answer": "Option (1): $C_2H_4O_2$",
+        "why_not_others": "Option (2) results from taking the vapour density as the molar mass (n = 1). Options (3) and (4) correspond to molar masses of 90 and 120, which do not fit the data.",
+        "common_trap": "Forgetting to double the vapour density.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "An oxide of iron contains 70% Fe and 30% O by mass. Its empirical formula is (Given: Fe = 56, O = 16)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$FeO$",
+        "$FeO_2$",
+        "$Fe_3O_4$",
+        "$Fe_2O_3$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "When a mole ratio comes out near 1.5, multiply all values by 2.",
+        "steps": [
+          "Moles in a 100 g sample: Fe = 70/56 = 1.25, O = 30/16 = 1.875.",
+          "Dividing by 1.25 gives Fe : O = 1 : 1.5.",
+          "Multiplying by 2 gives 2 : 3, so the formula is $Fe_2O_3$."
+        ],
+        "final_answer": "Option (4): $Fe_2O_3$",
+        "why_not_others": "Option (1) rounds 1.5 down to 1. Option (2) rounds 1.5 up to 2. Option (3) corresponds to a ratio of 1 : 1.33, which does not match the data.",
+        "common_trap": "Rounding 1.5 to the nearest integer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Glucose and acetic acid have the same percentage composition by mass.",
+        "R": "The molecular formula of glucose is six times its empirical formula."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Compounds that share an empirical formula have the same percentage composition.",
+        "steps": [
+          "Glucose ($C_6H_{12}O_6$) and acetic acid ($C_2H_4O_2$) both have the empirical formula $CH_2O$, so A is true.",
+          "$C_6H_{12}O_6 = 6 \\times CH_2O$, so R is true.",
+          "A holds because the two compounds share the empirical formula $CH_2O$. R states only the multiplier for glucose and says nothing about acetic acid, so it does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out options (3) and (4). The value n = 6 for glucose alone cannot explain a comparison with acetic acid, which rules out option (1).",
+        "common_trap": "Choosing option (1) merely because both statements mention glucose and formulae.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In empirical formula determination, if the mole ratio of two elements comes out as 1 : 1.33, it should be rounded to 1 : 1.",
+        "II": "A hydrocarbon with empirical formula $CH$ and vapour density 39 has the molecular formula $C_6H_6$ (C = 12, H = 1)."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A ratio near 1.33 must be multiplied by 3. Molar mass = 2 × VD.",
+        "steps": [
+          "I: 1 : 1.33 multiplied by 3 gives 3 : 4. Rounding to 1 : 1 is wrong, so Statement I is incorrect.",
+          "II: M = 2 × 39 = 78 g mol$^{-1}$. The empirical formula mass of $CH$ is 13.",
+          "n = 78/13 = 6, giving $C_6H_6$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I contradicts the multiply-by-3 rule, and Statement II is verified by calculation. Every other combination is therefore wrong.",
+        "common_trap": "Rounding 1.33 to 1.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "The number of moles of $CO_2$ produced on complete combustion of 2 mol of propane ($C_3H_8$) is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3 mol",
+        "6 mol",
+        "8 mol",
+        "10 mol"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Each mole of $C_xH_y$ gives x mol of $CO_2$ on complete combustion.",
+        "steps": [
+          "$C_3H_8 + 5O_2 \\rightarrow 3CO_2 + 4H_2O$.",
+          "1 mol of propane gives 3 mol of $CO_2$, so 2 mol gives 6 mol."
+        ],
+        "final_answer": "Option (2): 6 mol",
+        "why_not_others": "Option (1) is the value for 1 mol of propane. Option (3) is the moles of $H_2O$. Option (4) is the moles of $O_2$ consumed.",
+        "common_trap": "Confusing the moles of $CO_2$ with the moles of $H_2O$ or $O_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "28 g of $N_2$ is reacted with 4 g of $H_2$ according to $N_2 + 3H_2 \\rightarrow 2NH_3$. The maximum mass of $NH_3$ that can be formed is (Given: N = 14, H = 1)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "34 g",
+        "22.67 g",
+        "32 g",
+        "11.33 g"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The limiting reagent has the smallest value of moles ÷ coefficient.",
+        "steps": [
+          "$N_2$: 28/28 = 1 mol, and 1/1 = 1. $H_2$: 4/2 = 2 mol, and 2/3 = 0.667.",
+          "$H_2$ gives the smaller value, so it is the limiting reagent.",
+          "$NH_3$ formed = 2 × (2/3) = 4/3 mol.",
+          "Mass = (4/3) × 17 = 22.67 g."
+        ],
+        "final_answer": "Option (2): 22.67 g",
+        "why_not_others": "Option (1) assumes $N_2$ is limiting. Option (3) adds the masses of the reactants, ignoring the excess $N_2$. Option (4) skips the 2 : 3 ratio and takes the moles of $NH_3$ as 2/3.",
+        "common_trap": "Choosing $N_2$ as limiting because it has fewer moles.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "Which of the following concentration terms of a solution changes with temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Molality",
+        "Mole fraction",
+        "Mass percent",
+        "Molarity"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Molarity is defined per litre of solution, and the volume of a solution changes with temperature.",
+        "steps": [
+          "Molarity = $n_{solute}/V_{solution}$, and V varies with T.",
+          "Molality, mole fraction and mass percent depend only on moles or masses, which do not change with temperature."
+        ],
+        "final_answer": "Option (4): Molarity",
+        "why_not_others": "Molality, mole fraction and mass percent contain no volume term, so they are independent of temperature.",
+        "common_trap": "Treating molarity as temperature independent.",
+        "time_saving_tip": "Any concentration term with volume in its definition depends on temperature."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Molarity"
+          },
+          {
+            "label": "B",
+            "text": "Molality"
+          },
+          {
+            "label": "C",
+            "text": "Mole fraction of A"
+          },
+          {
+            "label": "D",
+            "text": "Percentage yield"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{n_{solute}}{W_{solvent}(kg)}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{n_{solute}}{V_{solution}(L)}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{n_A}{n_A + n_B}$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-IV, B-I, C-III, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Standard definitions of the concentration terms and of percentage yield.",
+        "steps": [
+          "Molarity: moles of solute per litre of solution (A-III).",
+          "Molality: moles of solute per kg of solvent (B-I).",
+          "Mole fraction: $n_A/(n_A + n_B)$ (C-IV).",
+          "Percentage yield: actual ÷ theoretical × 100 (D-II)."
+        ],
+        "final_answer": "Option (3): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (1) swaps molarity and molality. Option (2) swaps mole fraction and percentage yield. Option (4) swaps molarity and mole fraction.",
+        "common_trap": "Confusing molarity (per litre of solution) with molality (per kg of solvent).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about stoichiometry are correct?",
+      "statements": {
+        "A": "At the same temperature and pressure, 1 volume of $CH_4$ requires 2 volumes of $O_2$ for complete combustion.",
+        "B": "The limiting reagent is always the reactant present in the smaller mass.",
+        "C": "The sum of the mole fractions of all components of a solution equals 1.",
+        "D": "The coefficients in a balanced equation give the mass ratios of the reactants.",
+        "E": "The molality of a solution is independent of temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and E only",
+        "A, B, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Coefficients give mole (and gas volume) ratios. The limiting reagent is found from moles ÷ coefficient.",
+        "steps": [
+          "A: $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O$, and for gases the volume ratio equals the coefficient ratio, so 1 : 2. Correct.",
+          "B: the limiting reagent is decided by moles ÷ coefficient, not by mass. Incorrect.",
+          "C: the mole fractions of all components add up to 1. Correct.",
+          "D: coefficients give mole ratios, not mass ratios. Incorrect.",
+          "E: molality depends only on moles and mass, so it does not change with temperature. Correct."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Options (1) and (4) include B, and option (2) includes D. Both B and D are false.",
+        "common_trap": "Picking the reactant with the smaller mass as the limiting reagent.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Ammonia ($NH_3$) is treated as a rigid non-linear polyatomic molecule. How many degrees of freedom does one molecule have?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A rigid non-linear polyatomic molecule has 3 translational and 3 rotational degrees of freedom.",
+        "steps": [
+          "Translational degrees of freedom = 3.",
+          "A non-linear molecule can rotate about all three axes, so rotational degrees of freedom = 3.",
+          "The molecule is rigid, so there is no vibration. Hence $f = 3 + 3 = 6$."
+        ],
+        "final_answer": "Option (3): 6",
+        "why_not_others": "3 is the monatomic value. 5 is the value for a rigid diatomic or linear molecule. 7 is the value for a diatomic molecule with vibration.",
+        "common_trap": "Treating every molecule like a diatomic one ($f = 5$) and ignoring the third rotational axis of a non-linear molecule.",
+        "time_saving_tip": "Non-linear rigid gives 6. Linear rigid gives 5."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A non-linear polyatomic molecule has all 3 translational and 3 rotational degrees of freedom active, and in addition 2 vibrational modes are active. What is the total number of degrees of freedom (energy terms) of the molecule?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "8",
+        "7",
+        "10",
+        "6"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$f = f_{trans} + f_{rot} + 2f_{vib}$, because each vibrational mode contributes 2 terms (KE and PE).",
+        "steps": [
+          "$f_{trans} = 3$ and $f_{rot} = 3$.",
+          "Each vibrational mode contributes 2 terms, so the vibrational contribution is $2 \\times 2 = 4$.",
+          "$f = 3 + 3 + 4 = 10$."
+        ],
+        "final_answer": "Option (3): 10",
+        "why_not_others": "8 comes from counting each vibrational mode as 1. 7 comes from using 2 rotational degrees of freedom and counting each vibration as 1. 6 ignores vibration completely.",
+        "common_trap": "Counting a vibrational mode as a single degree of freedom.",
+        "time_saving_tip": "Double the number of vibrational modes before adding."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Three point atoms are held at the corners of a triangle. The three interatomic distances are fixed, so they act as 3 independent constraints. Using $f = 3N - k$, the number of degrees of freedom of this system is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "9",
+        "3",
+        "7",
+        "6"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For $N$ particles with $k$ independent constraints, $f = 3N - k$.",
+        "steps": [
+          "$N = 3$, so $3N = 9$.",
+          "The three fixed distances give $k = 3$.",
+          "$f = 9 - 3 = 6$. This matches a rigid non-linear polyatomic molecule."
+        ],
+        "final_answer": "Option (4): 6",
+        "why_not_others": "9 ignores the constraints. 3 counts only the translational motion. 7 comes from taking $k = 2$ by mistake.",
+        "common_trap": "Forgetting to subtract the constraints, or miscounting how many there are.",
+        "time_saving_tip": "The answer must agree with the known value $f = 6$ for a rigid non-linear molecule."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "At high temperature, a diatomic molecule with its vibrational mode active has 7 degrees of freedom.",
+        "R": "A single vibrational mode contributes 2 degrees of freedom, one for kinetic energy and one for potential energy."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Each vibrational mode adds 2 energy terms.",
+        "steps": [
+          "A rigid diatomic molecule has $3 + 2 = 5$ degrees of freedom.",
+          "One active vibrational mode adds 2 terms (KE and PE), so $f = 7$. A is true.",
+          "R is true, and it is exactly why the count rises from 5 to 7."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are correct, and R directly accounts for the extra 2 degrees of freedom in A, so options 2, 3 and 4 fail.",
+        "common_trap": "Counting the vibration as 1 and getting $f = 6$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A rigid linear polyatomic molecule such as $CO_2$ has 6 degrees of freedom because it contains more than two atoms.",
+        "II": "The vibrational modes of $O_2$ are fully active at room temperature, so $O_2$ has 7 degrees of freedom at 300 K."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Linear rigid molecules have $f = 5$. Vibrational modes are usually frozen at room temperature.",
+        "steps": [
+          "$CO_2$ is linear, so it has only 2 effective rotational degrees of freedom: $f = 3 + 2 = 5$. Statement I is incorrect.",
+          "At room temperature the vibrational modes are usually frozen, so $O_2$ has $f = 5$, not 7. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I wrongly applies the non-linear count. Statement II wrongly treats vibration as active at room temperature.",
+        "common_trap": "Deciding $f$ from the number of atoms instead of the molecule's geometry.",
+        "time_saving_tip": "Ask whether the molecule is linear, then whether the temperature is high."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "According to the law of equipartition of energy, the molar heat capacity at constant volume of an ideal monatomic gas is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{5}{2}R$",
+        "$\\frac{3}{2}R$",
+        "$3R$",
+        "$\\frac{1}{2}R$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$C_V = \\frac{f}{2}R$",
+        "steps": [
+          "A monatomic gas has $f = 3$.",
+          "$C_V = \\frac{3}{2}R$."
+        ],
+        "final_answer": "Option (2): $\\frac{3}{2}R$",
+        "why_not_others": "$\\frac{5}{2}R$ is $C_P$ for a monatomic gas (or $C_V$ for a rigid diatomic gas). $3R$ is the Dulong-Petit value for solids. $\\frac{1}{2}R$ is the contribution of just one degree of freedom.",
+        "common_trap": "Mixing up $C_V$ and $C_P$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A mixture contains 2 mol of helium and 3 mol of nitrogen, treated as a rigid diatomic gas. What is the molar heat capacity at constant volume of the mixture?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2R$",
+        "$3.1R$",
+        "$1.9R$",
+        "$2.1R$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The $C_V$ of a mixture is the mole-weighted average of the individual $C_V$ values.",
+        "steps": [
+          "For He, $C_V = 1.5R$. For $N_2$, $C_V = 2.5R$.",
+          "$C_{V,mix} = \\frac{2(1.5R) + 3(2.5R)}{5} = \\frac{3R + 7.5R}{5}$.",
+          "$C_{V,mix} = 2.1R$."
+        ],
+        "final_answer": "Option (4): $2.1R$",
+        "why_not_others": "$2R$ is the simple unweighted average. $3.1R$ is $C_P$ of the mixture. $1.9R$ comes from swapping the mole numbers.",
+        "common_trap": "Averaging without weighting by the number of moles.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "What is the internal energy of 2 mol of oxygen, treated as a rigid diatomic ideal gas, at 300 K? (Take $R = 8.3\\ J\\ mol^{-1}K^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7470 J",
+        "17430 J",
+        "6225 J",
+        "12450 J"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$U = \\frac{f}{2}nRT$ with $f = 5$ for a rigid diatomic gas.",
+        "steps": [
+          "$U = \\frac{5}{2} \\times 2 \\times 8.3 \\times 300$.",
+          "$2 \\times 8.3 \\times 300 = 4980$.",
+          "$U = 2.5 \\times 4980 = 12450\\ J$."
+        ],
+        "final_answer": "Option (4): 12450 J",
+        "why_not_others": "7470 J uses $f = 3$. 17430 J uses $f = 7$, counting vibration. 6225 J uses $n = 1$.",
+        "common_trap": "Using the monatomic value $f = 3$, or including frozen vibrational modes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$C_V$ of a monatomic gas"
+          },
+          {
+            "label": "B",
+            "text": "$C_P$ of a rigid diatomic gas"
+          },
+          {
+            "label": "C",
+            "text": "Molar heat capacity of a solid (Dulong-Petit law)"
+          },
+          {
+            "label": "D",
+            "text": "$C_P$ of a monatomic gas"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{5}{2}R$"
+          },
+          {
+            "label": "II",
+            "text": "$3R$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{3}{2}R$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{7}{2}R$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$C_V = \\frac{f}{2}R$, $C_P = C_V + R$, and for solids $C = 3R$.",
+        "steps": [
+          "Monatomic: $C_V = \\frac{3}{2}R$, so A-III.",
+          "Rigid diatomic: $C_P = \\frac{5}{2}R + R = \\frac{7}{2}R$, so B-IV.",
+          "Solid: $3R$, so C-II.",
+          "Monatomic: $C_P = \\frac{5}{2}R$, so D-I."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option 1 swaps $C_V$ and $C_P$ of the monatomic gas. Option 2 gives the diatomic gas its $C_V$ instead of $C_P$. Option 3 confuses the solid value with $\\frac{5}{2}R$.",
+        "common_trap": "Confusing $C_P$ with $C_V$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about equipartition and specific heats are correct?",
+      "statements": {
+        "A": "For a rigid non-linear polyatomic gas, $\\gamma = \\frac{4}{3}$.",
+        "B": "The $\\gamma$ of a gas mixture equals the mole-weighted average of the individual $\\gamma$ values.",
+        "C": "Each active vibrational mode carries an average energy of $k_BT$ per molecule.",
+        "D": "For every ideal gas, $1 < \\gamma \\le \\frac{5}{3}$.",
+        "E": "The molar heat capacity of water is about $3R$, the same as for solids."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only",
+        "A, C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\gamma = 1 + \\frac{2}{f}$. Each vibrational mode carries 2 quadratic terms. Mixtures are handled by averaging $C_V$ and $C_P$.",
+        "steps": [
+          "A: $f = 6$, so $\\gamma = 1 + \\frac{2}{6} = \\frac{4}{3}$. True.",
+          "B: average $C_V$ and $C_P$ weighted by moles, then take the ratio; do not average $\\gamma$ directly. False.",
+          "C: KE + PE terms give $2 \\times \\frac{1}{2}k_BT = k_BT$. True.",
+          "D: $\\gamma$ is largest for $f = 3$ ($\\frac{5}{3}$) and always exceeds 1. True.",
+          "E: water is about $9R$ per mole, since each molecule has 3 atoms. False."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Every other option includes B or E, both of which are false.",
+        "common_trap": "Averaging $\\gamma$ values directly for a mixture.",
+        "time_saving_tip": "Rule out B first; that removes options 1 and 2 at once."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "The molecular diameter of a gas is doubled while its number density stays the same. If the original mean free path is $\\lambda$, the new mean free path is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\lambda}{2}$",
+        "$2\\lambda$",
+        "$\\frac{\\lambda}{4}$",
+        "$4\\lambda$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\lambda = \\frac{1}{\\sqrt{2}\\pi d^2 n}$, so $\\lambda \\propto \\frac{1}{d^2}$.",
+        "steps": [
+          "When $d$ doubles, $d^2$ becomes 4 times larger.",
+          "So $\\lambda$ becomes $\\frac{\\lambda}{4}$."
+        ],
+        "final_answer": "Option (3): $\\frac{\\lambda}{4}$",
+        "why_not_others": "$\\frac{\\lambda}{2}$ assumes $\\lambda \\propto \\frac{1}{d}$. $2\\lambda$ and $4\\lambda$ wrongly assume $\\lambda$ increases with $d$.",
+        "common_trap": "Treating $\\lambda$ as proportional to $\\frac{1}{d}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "An ideal gas has mean free path $\\lambda$ at $27^\\circ C$. It is heated to $327^\\circ C$ at constant pressure. Its new mean free path is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\lambda}{2}$",
+        "$12.1\\lambda$",
+        "$2\\lambda$",
+        "$\\sqrt{2}\\lambda$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\lambda = \\frac{k_BT}{\\sqrt{2}\\pi d^2 P}$, so $\\lambda \\propto T$ (in kelvin) at constant $P$.",
+        "steps": [
+          "$T_1 = 300\\ K$ and $T_2 = 600\\ K$.",
+          "$\\frac{\\lambda_2}{\\lambda_1} = \\frac{600}{300} = 2$.",
+          "New mean free path $= 2\\lambda$."
+        ],
+        "final_answer": "Option (3): $2\\lambda$",
+        "why_not_others": "$12.1\\lambda$ uses Celsius temperatures ($\\frac{327}{27}$). $\\frac{\\lambda}{2}$ inverts the dependence. $\\sqrt{2}\\lambda$ wrongly uses the square-root dependence that applies to speed.",
+        "common_trap": "Using degrees Celsius instead of kelvin.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "Gas molecules have an average speed of $400\\ m/s$ and a mean free path of $2 \\times 10^{-7}\\ m$. What is the collision frequency of a molecule?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$8 \\times 10^{-5}\\ s^{-1}$",
+        "$2 \\times 10^{9}\\ s^{-1}$",
+        "$5 \\times 10^{-10}\\ s^{-1}$",
+        "$1 \\times 10^{9}\\ s^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\nu = \\frac{\\bar{v}}{\\lambda}$",
+        "steps": [
+          "$\\nu = \\frac{400}{2 \\times 10^{-7}}$.",
+          "$\\nu = 2 \\times 10^{9}\\ s^{-1}$."
+        ],
+        "final_answer": "Option (2): $2 \\times 10^{9}\\ s^{-1}$",
+        "why_not_others": "$8 \\times 10^{-5}$ multiplies speed by $\\lambda$. $5 \\times 10^{-10}$ is the mean time between collisions, $\\tau = \\frac{\\lambda}{\\bar{v}}$ in seconds, not a frequency. $1 \\times 10^{9}$ comes from wrongly halving the result.",
+        "common_trap": "Confusing the collision frequency $\\nu$ with the mean free time $\\tau$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When an ideal gas in a closed rigid container is heated, the mean free path of its molecules increases.",
+        "R": "Mean free path is $\\lambda = \\frac{1}{\\sqrt{2}\\pi d^2 n}$, and the number density $n$ stays constant in a closed rigid container."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\lambda$ depends on $n$ and $d$. In a rigid closed container $n$ is fixed, so $\\lambda$ does not depend on $T$.",
+        "steps": [
+          "In a closed rigid container, $N$ and $V$ are fixed, so $n$ is constant.",
+          "Since $\\lambda = \\frac{1}{\\sqrt{2}\\pi d^2 n}$, $\\lambda$ stays the same on heating. A is false.",
+          "R states the formula and the constancy of $n$ correctly. R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options 1, 2 and 3 cannot be correct.",
+        "common_trap": "Assuming $\\lambda$ always increases with temperature; that is true only at constant pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At constant pressure, the mean free path of a gas is inversely proportional to its absolute temperature, because hotter molecules move faster and collide more often.",
+        "II": "If the pressure of an ideal gas is halved and its absolute temperature is doubled, its mean free path becomes four times the original value."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\lambda = \\frac{k_BT}{\\sqrt{2}\\pi d^2 P}$, so $\\lambda \\propto \\frac{T}{P}$.",
+        "steps": [
+          "At constant $P$, $\\lambda \\propto T$, not $\\frac{1}{T}$. Statement I is incorrect.",
+          "$\\frac{\\lambda_2}{\\lambda_1} = \\frac{2T/T}{(P/2)/P} = \\frac{2}{1/2} = 4$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I reverses the temperature dependence; a higher speed raises the collision frequency, not $\\lambda$. Statement II follows directly from $\\lambda \\propto \\frac{T}{P}$.",
+        "common_trap": "Confusing collision frequency with mean free path.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "The Boltzmann constant $k_B$ is related to the molar gas constant $R$ and Avogadro's number $N_A$ by:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$k_B = \\frac{R}{N_A}$",
+        "$k_B = RN_A$",
+        "$k_B = \\frac{N_A}{R}$",
+        "$k_B = \\frac{R}{N_AT}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$k_B$ is the gas constant per molecule.",
+        "steps": [
+          "$R$ is per mole, and one mole contains $N_A$ molecules.",
+          "So $k_B = \\frac{R}{N_A}$."
+        ],
+        "final_answer": "Option (1): $k_B = \\frac{R}{N_A}$",
+        "why_not_others": "$RN_A$ and $\\frac{N_A}{R}$ give the wrong magnitude and units. Dividing by $T$ gives the wrong units.",
+        "common_trap": "Multiplying by $N_A$ instead of dividing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "How many molecules are present in 8 g of oxygen gas ($O_2$, molar mass $32\\ g\\ mol^{-1}$)? (Take $N_A = 6.022 \\times 10^{23}\\ mol^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.01 \\times 10^{23}$",
+        "$1.51 \\times 10^{23}$",
+        "$4.82 \\times 10^{24}$",
+        "$7.53 \\times 10^{22}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$N = \\frac{m}{M}N_A$",
+        "steps": [
+          "$n = \\frac{8}{32} = 0.25\\ mol$.",
+          "$N = 0.25 \\times 6.022 \\times 10^{23} = 1.51 \\times 10^{23}$."
+        ],
+        "final_answer": "Option (2): $1.51 \\times 10^{23}$",
+        "why_not_others": "$3.01 \\times 10^{23}$ uses the atomic mass 16 instead of 32. $4.82 \\times 10^{24}$ multiplies the mass in grams by $N_A$. $7.53 \\times 10^{22}$ uses $M = 64$.",
+        "common_trap": "Using the atomic mass instead of the molecular mass of $O_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "What is the mass of one helium atom? (Molar mass of He $= 4\\ g\\ mol^{-1}$, $N_A = 6.022 \\times 10^{23}\\ mol^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.64 \\times 10^{-27}\\ kg$",
+        "$6.64 \\times 10^{-24}\\ kg$",
+        "$1.51 \\times 10^{26}\\ kg$",
+        "$1.66 \\times 10^{-27}\\ kg$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$m = \\frac{M}{N_A}$, with $M$ in kg/mol.",
+        "steps": [
+          "$M = 4 \\times 10^{-3}\\ kg\\ mol^{-1}$.",
+          "$m = \\frac{4 \\times 10^{-3}}{6.022 \\times 10^{23}} = 6.64 \\times 10^{-27}\\ kg$."
+        ],
+        "final_answer": "Option (1): $6.64 \\times 10^{-27}\\ kg$",
+        "why_not_others": "$6.64 \\times 10^{-24}$ is the mass in grams labelled as kg. $1.51 \\times 10^{26}$ inverts the ratio ($\\frac{N_A}{M}$). $1.66 \\times 10^{-27}$ drops the factor 4.",
+        "common_trap": "Leaving the molar mass in g/mol when the answer is wanted in kg.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Avogadro's number"
+          },
+          {
+            "label": "B",
+            "text": "Loschmidt number"
+          },
+          {
+            "label": "C",
+            "text": "Molar volume of an ideal gas at STP"
+          },
+          {
+            "label": "D",
+            "text": "Boltzmann constant"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$2.69 \\times 10^{25}\\ m^{-3}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{R}{N_A}$"
+          },
+          {
+            "label": "III",
+            "text": "$6.022 \\times 10^{23}\\ mol^{-1}$"
+          },
+          {
+            "label": "IV",
+            "text": "$22.4 \\times 10^{-3}\\ m^3\\ mol^{-1}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Standard constants linked to Avogadro's number.",
+        "steps": [
+          "$N_A = 6.022 \\times 10^{23}\\ mol^{-1}$, so A-III.",
+          "The Loschmidt number (molecules per $m^3$ at STP) is $2.69 \\times 10^{25}\\ m^{-3}$, so B-I.",
+          "The molar volume at STP is $22.4\\ L = 22.4 \\times 10^{-3}\\ m^3$, so C-IV.",
+          "$k_B = \\frac{R}{N_A}$, so D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option 2 swaps Avogadro's and Loschmidt numbers. Option 3 swaps the Loschmidt number and the molar volume. Option 4 swaps Avogadro's number and $k_B$.",
+        "common_trap": "Confusing the Loschmidt number (per unit volume) with Avogadro's number (per mole).",
+        "time_saving_tip": "Check the units: $m^{-3}$ is per volume and $mol^{-1}$ is per mole."
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Avogadro's number are correct?",
+      "statements": {
+        "A": "Equal volumes of all gases at the same temperature and pressure contain the same number of molecules.",
+        "B": "The Loschmidt number is approximately equal to $\\frac{N_A}{22.4 \\times 10^{-3}\\ m^3}$, which is about $2.69 \\times 10^{25}\\ m^{-3}$.",
+        "C": "The number of molecules in a sample of mass $m$ and molar mass $M$ is $\\frac{m}{M}N_A$.",
+        "D": "One mole of any ideal gas at STP occupies $22.4\\ m^3$.",
+        "E": "The Boltzmann constant is given by $k_B = RN_A$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "B, C and E only",
+        "A, B, C and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Avogadro's hypothesis, molar volume, $N = \\frac{m}{M}N_A$ and $k_B = \\frac{R}{N_A}$.",
+        "steps": [
+          "A is Avogadro's hypothesis. True.",
+          "B: $\\frac{6.022 \\times 10^{23}}{0.0224} \\approx 2.69 \\times 10^{25}\\ m^{-3}$. True.",
+          "C is the standard relation. True.",
+          "D: the molar volume is $22.4\\ L = 22.4 \\times 10^{-3}\\ m^3$, not $22.4\\ m^3$. False.",
+          "E: $k_B = \\frac{R}{N_A}$. False."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Options 2 and 4 include D, which has the wrong unit. Option 3 includes E, which has the wrong relation.",
+        "common_trap": "Writing 22.4 in $m^3$ instead of litres.",
+        "time_saving_tip": "Spotting that D and E are false leaves only option 1."
+      }
+    }
+  ]
+}

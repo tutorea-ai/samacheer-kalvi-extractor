@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "In Lassaigne's test, the sodium fusion extract is boiled with $FeSO_4$, acidified and then treated with $Fe^{3+}$. A Prussian blue colour is obtained. This confirms the presence of",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Sulphur",
+        "Chlorine",
+        "Both nitrogen and sulphur",
+        "Nitrogen"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "During sodium fusion, nitrogen is converted to $NaCN$. This $NaCN$ finally gives Prussian blue $Fe_4[Fe(CN)_6]_3$.",
+        "steps": [
+          "During fusion, nitrogen forms $NaCN$: $Na + C + N \\rightarrow NaCN$.",
+          "Boiling with $FeSO_4$ gives $Na_4[Fe(CN)_6]$.",
+          "Acidifying and adding $Fe^{3+}$ gives Prussian blue $Fe_4[Fe(CN)_6]_3$."
+        ],
+        "final_answer": "Option (4): Nitrogen",
+        "why_not_others": "Sulphur gives a violet colour with sodium nitroprusside. Chlorine gives a white $AgCl$ precipitate. When N and S are both present, a blood-red colour forms with $Fe^{3+}$, not Prussian blue.",
+        "common_trap": "Confusing the blood-red test for N and S together with the Prussian blue test for N alone.",
+        "time_saving_tip": "Prussian blue contains cyanide, and cyanide comes from nitrogen."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "Before testing for halogens with $AgNO_3$, the sodium fusion extract is boiled with dilute $HNO_3$. The purpose of this step is to",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Decompose $NaCN$ and $Na_2S$, which would otherwise interfere with the test",
+        "Convert the sodium halide into the free halogen",
+        "Precipitate sulphur as black $PbS$",
+        "Oxidise $Fe^{2+}$ to $Fe^{3+}$ for the Prussian blue test"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$NaCN$ and $Na_2S$ also react with $AgNO_3$. They must therefore be destroyed before the halide test is done.",
+        "steps": [
+          "The extract may contain $NaCN$ and $Na_2S$ along with $NaX$.",
+          "These would give precipitates with $AgNO_3$ and mask the result.",
+          "Boiling with $HNO_3$ destroys them, so only the silver halide precipitates."
+        ],
+        "final_answer": "Option (1): Decompose $NaCN$ and $Na_2S$, which would otherwise interfere with the test",
+        "why_not_others": "The halide must stay as $X^-$ to react with $Ag^+$. $PbS$ forms only with lead acetate. The Prussian blue test is a separate test for nitrogen.",
+        "common_trap": "Thinking $HNO_3$ is added only to acidify the solution, without seeing why the interfering ions must be removed.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "The sodium fusion extract of an organic compound gives a blood-red colour with $Fe^{3+}$ ions. The species responsible for this colour is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Fe_4[Fe(CN)_6]_3$",
+        "$[Fe(SCN)]^{2+}$",
+        "$Na_4[Fe(CN)_5NOS]$",
+        "$PbS$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "When N and S are both present, $NaSCN$ forms. It gives blood-red $[Fe(SCN)]^{2+}$ with $Fe^{3+}$.",
+        "steps": [
+          "N and S together form $NaSCN$ during fusion.",
+          "The reaction is $NaSCN + Fe^{3+} \\rightarrow [Fe(SCN)]^{2+}$, which is blood red."
+        ],
+        "final_answer": "Option (2): $[Fe(SCN)]^{2+}$",
+        "why_not_others": "$Fe_4[Fe(CN)_6]_3$ is Prussian blue, the test for N. $Na_4[Fe(CN)_5NOS]$ is the violet product in the test for S. $PbS$ is a black precipitate.",
+        "common_trap": "Matching the colour to the Prussian blue complex just because $Fe^{3+}$ is used in both tests.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Hydrazine ($N_2H_4$) does not give Lassaigne's test for nitrogen.",
+        "R": "Hydrazine contains no carbon, so $CN^-$ cannot form during sodium fusion."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The Lassaigne test for N depends on forming $NaCN$, and this needs both carbon and nitrogen.",
+        "steps": [
+          "The fusion reaction is $Na + C + N \\rightarrow NaCN$.",
+          "Hydrazine has nitrogen but no carbon.",
+          "No $NaCN$ forms, so no Prussian blue appears. R therefore explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are factually true, and R gives the direct cause of A.",
+        "common_trap": "Assuming that any compound containing nitrogen will give the Lassaigne test.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The violet colour obtained when the sodium fusion extract is treated with sodium nitroprusside is due to $Na_4[Fe(CN)_5NOS]$.",
+        "II": "A yellow precipitate obtained with $AgNO_3$ that is insoluble in $NH_4OH$ indicates iodine."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "This question tests the products and colours of the sulphur and halogen tests.",
+        "steps": [
+          "The sulphur test is $Na_2S + Na_2[Fe(CN)_5NO] \\rightarrow Na_4[Fe(CN)_5NOS]$, which is violet. Statement I is correct.",
+          "$AgI$ is yellow and insoluble in $NH_4OH$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree with the standard observations, so no option that marks either one incorrect can be right.",
+        "common_trap": "Confusing pale yellow $AgBr$, which is sparingly soluble, with yellow $AgI$, which is insoluble.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which reagent gives a violet colour with phenol but does not respond to alcohols?",
+      "statement": null,
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Lucas reagent",
+        "Neutral $FeCl_3$ solution",
+        "Tollens' reagent",
+        "2,4-DNP"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Phenolic $-OH$ gives a violet colour with neutral $FeCl_3$; alcohols do not respond.",
+        "steps": [
+          "Phenol reacts with neutral $FeCl_3$ to give a violet colour.",
+          "Alcohols give no such colour."
+        ],
+        "final_answer": "Option (2): Neutral $FeCl_3$ solution",
+        "why_not_others": "Lucas reagent is used to classify alcohols. Tollens' reagent tests for aldehydes. 2,4-DNP tests for carbonyl compounds.",
+        "common_trap": "Choosing Lucas reagent just because it is linked with the $-OH$ group.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Which of the following alcohols produces turbidity with Lucas reagent in about 5 minutes at room temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ethanol",
+        "Propan-2-ol",
+        "2-Methylpropan-2-ol",
+        "Methanol"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "With Lucas reagent, 3° alcohols give turbidity immediately, 2° alcohols in about 5 minutes, and 1° alcohols not at room temperature.",
+        "steps": [
+          "Propan-2-ol, $CH_3CH(OH)CH_3$, is a secondary alcohol.",
+          "Secondary alcohols give turbidity in about 5 minutes."
+        ],
+        "final_answer": "Option (2): Propan-2-ol",
+        "why_not_others": "2-Methylpropan-2-ol is 3° and gives turbidity immediately. Ethanol and methanol are 1° and give no turbidity at room temperature.",
+        "common_trap": "Mixing up the response times of 2° and 3° alcohols.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "Benzoic acid and phenol can be distinguished from each other by treating them with",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NaHCO_3$ solution",
+        "Lucas reagent",
+        "2,4-DNP",
+        "Tollens' reagent"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A carboxylic acid releases $CO_2$ with $NaHCO_3$, but phenol is too weak an acid to react.",
+        "steps": [
+          "The reaction is $RCOOH + NaHCO_3 \\rightarrow RCOONa + H_2O + CO_2$, which gives brisk effervescence.",
+          "Phenol gives no effervescence, so the two compounds are distinguished."
+        ],
+        "final_answer": "Option (1): $NaHCO_3$ solution",
+        "why_not_others": "Lucas reagent is for alcohols. 2,4-DNP is for carbonyl compounds. Tollens' reagent is for aldehydes. None of these separates benzoic acid from phenol.",
+        "common_trap": "Assuming phenol also releases $CO_2$ because it is acidic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Ceric ammonium nitrate test on an alcohol"
+          },
+          {
+            "label": "B",
+            "text": "Schiff's reagent test on an aldehyde"
+          },
+          {
+            "label": "C",
+            "text": "2,4-DNP test on a ketone"
+          },
+          {
+            "label": "D",
+            "text": "Azo dye test on an aromatic primary amine"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Yellow-orange precipitate"
+          },
+          {
+            "label": "II",
+            "text": "Orange-red dye"
+          },
+          {
+            "label": "III",
+            "text": "Pink colour"
+          },
+          {
+            "label": "IV",
+            "text": "Red colour"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each functional-group test gives its own characteristic observation.",
+        "steps": [
+          "Ceric ammonium nitrate gives a red colour with an alcohol: A-IV.",
+          "Schiff's reagent gives a pink colour with an aldehyde: B-III.",
+          "2,4-DNP gives a yellow-orange precipitate with a ketone: C-I.",
+          "The azo dye test gives an orange-red dye: D-II."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option (1) swaps the alcohol and aldehyde results. Option (2) swaps the results of B and C. Option (3) swaps the results of A and D.",
+        "common_trap": "Confusing the red colour of the ceric ammonium nitrate test with the orange-red azo dye.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about tests for functional groups are correct?",
+      "statements": {
+        "A": "Benzaldehyde gives a silver mirror with Tollens' reagent but does not give a red precipitate with Fehling's solution.",
+        "B": "The carbylamine test is given by both primary and secondary amines.",
+        "C": "Acetone gives a red colour with sodium nitroprusside in alkaline medium.",
+        "D": "Phenol gives a white precipitate of 2,4,6-tribromophenol with bromine water.",
+        "E": "Phenol gives brisk effervescence of $CO_2$ with $NaHCO_3$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "C, D and E only",
+        "A and C only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "This question tests the scope of the aldehyde, methyl ketone, amine and phenol tests.",
+        "steps": [
+          "A is correct: the Fehling's test works only for aliphatic aldehydes.",
+          "B is incorrect: only primary amines give the carbylamine test.",
+          "C is correct: methyl ketones give a red colour with alkaline sodium nitroprusside.",
+          "D is correct.",
+          "E is incorrect: phenol is too weak an acid to react with $NaHCO_3$."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Option (1) includes B, which is false. Option (3) includes E, which is false. Option (4) leaves out D, which is true.",
+        "common_trap": "Thinking secondary amines also give the isocyanide smell.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "The number of water molecules of crystallisation in one formula unit of Mohr's salt is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7",
+        "6",
+        "12",
+        "24"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The formula of Mohr's salt is $FeSO_4\\cdot(NH_4)_2SO_4\\cdot6H_2O$.",
+        "steps": [
+          "Reading the formula, there are 6 water molecules per formula unit."
+        ],
+        "final_answer": "Option (2): 6",
+        "why_not_others": "7 is the number in $FeSO_4\\cdot7H_2O$, green vitriol. 12 and 24 belong to potash alum, as $KAl(SO_4)_2\\cdot12H_2O$ and $K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$.",
+        "common_trap": "Recalling the hydrate count of ferrous sulphate or of alum instead.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "In the preparation of Mohr's salt, a little dilute $H_2SO_4$ is added to the water used to dissolve ferrous sulphate and ammonium sulphate. This is done to",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Oxidise $Fe^{2+}$ to $Fe^{3+}$",
+        "Suppress the hydrolysis of $Fe^{2+}$ ions",
+        "Remove the water of crystallisation",
+        "Precipitate the ammonium ions as ammonium bisulphate"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Acid is added to suppress the hydrolysis of the metal ions.",
+        "steps": [
+          "$Fe^{2+}$ undergoes hydrolysis in water.",
+          "Adding dilute $H_2SO_4$ suppresses this hydrolysis, so pure crystals can form."
+        ],
+        "final_answer": "Option (2): Suppress the hydrolysis of $Fe^{2+}$ ions",
+        "why_not_others": "Oxidation to $Fe^{3+}$ is unwanted, because it makes the product yellowish. The water of crystallisation must stay in the crystals. No ammonium precipitate is formed.",
+        "common_trap": "Assuming the acid acts as an oxidant or a dehydrating agent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "How many moles of $SO_4^{2-}$ ions are present in 94.8 g of potash alum, $K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$ (molar mass 948 g/mol)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.1 mol",
+        "0.2 mol",
+        "0.4 mol",
+        "0.8 mol"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "One formula unit $K_2SO_4\\cdot Al_2(SO_4)_3\\cdot24H_2O$ contains 4 sulphate ions.",
+        "steps": [
+          "Moles of alum = 94.8 / 948 = 0.1 mol.",
+          "Each unit has 1 + 3 = 4 $SO_4^{2-}$ ions.",
+          "Moles of $SO_4^{2-}$ = 0.1 × 4 = 0.4 mol."
+        ],
+        "final_answer": "Option (3): 0.4 mol",
+        "why_not_others": "0.1 mol is the number of moles of alum, not of sulphate. 0.2 mol assumes only 2 sulphates per 948 g unit. 0.8 mol uses 474 g/mol together with 4 sulphates.",
+        "common_trap": "Mixing the two formula units: 474 g/mol goes with 2 sulphates and 948 g/mol goes with 4.",
+        "time_saving_tip": "Either unit works: 94.8/474 × 2 also gives 0.4 mol."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Prolonged heating of the solution is avoided during the preparation of Mohr's salt.",
+        "R": "Prolonged heating oxidises $Fe^{2+}$ to $Fe^{3+}$, which makes the product yellowish."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Pale green $Fe^{2+}$ must be protected from oxidation during the preparation.",
+        "steps": [
+          "The solution is concentrated only by gentle heating.",
+          "Prolonged heating converts $Fe^{2+}$ to $Fe^{3+}$, which gives a yellowish product.",
+          "R is the reason for A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R directly explains A.",
+        "common_trap": "Thinking heating is avoided only to protect the water of crystallisation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Potash alum is a double salt, and in aqueous solution it gives $K^+$, $Al^{3+}$ and $SO_4^{2-}$ ions in the ratio 1:1:2.",
+        "II": "Mohr's salt is used as a primary standard in redox titrations because the $Fe^{2+}$ in it is stable to air oxidation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Double salts dissociate completely into their constituent ions, and the $Fe^{2+}$ in Mohr's salt is stable in air.",
+        "steps": [
+          "In $KAl(SO_4)_2\\cdot12H_2O$, $K^+:Al^{3+}:SO_4^{2-} = 1:1:2$, and all these ions are released in water. Statement I is correct.",
+          "The $Fe^{2+}$ in Mohr's salt resists air oxidation, which makes it a primary standard. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Neither statement contains an error.",
+        "common_trap": "Taking the ion ratio from the $K_2SO_4\\cdot Al_2(SO_4)_3$ formula as 2:2:4 and judging it different from 1:1:2. The two ratios are the same.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Aniline yellow, prepared by coupling benzenediazonium chloride with aniline, is chemically",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Benzenediazonium chloride",
+        "Acetanilide",
+        "p-Aminoazobenzene",
+        "p-Nitroaniline"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Aniline yellow is p-aminoazobenzene, $C_6H_5N=NC_6H_4NH_2$.",
+        "steps": [
+          "The coupling reaction is $C_6H_5N_2^+Cl^- + C_6H_5NH_2 \\rightarrow p\\text{-}H_2NC_6H_4N=NC_6H_5 + HCl$.",
+          "The product is p-aminoazobenzene."
+        ],
+        "final_answer": "Option (3): p-Aminoazobenzene",
+        "why_not_others": "Benzenediazonium chloride is the reactant. Acetanilide is the acetylation product of aniline. p-Nitroaniline contains no azo group.",
+        "common_trap": "Naming the diazonium intermediate instead of the coupled product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "In the preparation of p-nitroacetanilide, aniline is first converted to acetanilide and only then nitrated. The main reason for this is that acetylation",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Makes the ring more strongly activated towards nitration",
+        "Directs the nitro group mainly to the meta position",
+        "Makes the compound highly soluble in the nitrating mixture",
+        "Moderates the activating effect of $-NH_2$ and protects it from oxidation"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$-NHCOCH_3$ is moderately activating, whereas $-NH_2$ is strongly activating and easily oxidised.",
+        "steps": [
+          "Direct nitration of aniline causes oxidation and over-substitution.",
+          "Acetylation gives the moderately activating $-NHCOCH_3$ group and protects nitrogen from oxidation.",
+          "Steric hindrance at the ortho positions then favours para substitution."
+        ],
+        "final_answer": "Option (4): Moderates the activating effect of $-NH_2$ and protects it from oxidation",
+        "why_not_others": "Acetylation reduces activation rather than increasing it. The $-NHCOCH_3$ group directs ortho/para, mainly para, not meta. Solubility is not the reason.",
+        "common_trap": "Thinking acetylation increases activation or changes the directing effect to meta.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Which of the following compounds gives yellow crystals of iodoform when warmed with $I_2$ and $NaOH$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Methanol",
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "Pentan-3-one"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The iodoform reaction is given by compounds that contain $CH_3CO-$ or $CH_3CH(OH)-$.",
+        "steps": [
+          "Propan-2-ol, $CH_3CH(OH)CH_3$, contains the $CH_3CH(OH)-$ unit.",
+          "It therefore gives $CHI_3$."
+        ],
+        "final_answer": "Option (3): Propan-2-ol",
+        "why_not_others": "Methanol and propan-1-ol lack the $CH_3CH(OH)-$ unit. Pentan-3-one, $C_2H_5COC_2H_5$, has no $CH_3CO-$ group.",
+        "common_trap": "Assuming every ketone or every alcohol gives the iodoform test.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Acetanilide"
+          },
+          {
+            "label": "B",
+            "text": "p-Nitroacetanilide"
+          },
+          {
+            "label": "C",
+            "text": "Aniline yellow"
+          },
+          {
+            "label": "D",
+            "text": "Iodoform"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Yellow crystals with an antiseptic smell, m.p. about 119 °C"
+          },
+          {
+            "label": "II",
+            "text": "White crystals, m.p. about 114 °C"
+          },
+          {
+            "label": "III",
+            "text": "Formed by coupling a diazonium salt with aniline"
+          },
+          {
+            "label": "IV",
+            "text": "Pale yellow crystals, m.p. about 214 °C"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-IV, C-III, D-II",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "This question tests the characteristic appearance, melting point or method of preparation of each product.",
+        "steps": [
+          "Acetanilide forms white crystals with m.p. about 114 °C: A-II.",
+          "p-Nitroacetanilide forms pale yellow crystals with m.p. about 214 °C: B-IV.",
+          "Aniline yellow is formed by diazo coupling: C-III.",
+          "Iodoform forms yellow crystals with m.p. about 119 °C and an antiseptic smell: D-I."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option (1) swaps the melting points of acetanilide (114 °C) and iodoform (119 °C). Option (3) swaps iodoform and p-nitroacetanilide. Option (4) swaps acetanilide and p-nitroacetanilide.",
+        "common_trap": "Confusing the close melting points 114 °C and 119 °C.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the preparation of organic compounds are correct?",
+      "statements": {
+        "A": "Nitration of acetanilide is carried out below 10 °C to avoid polynitration and oxidation.",
+        "B": "o-Nitroacetanilide crystallises out from ethanol, while the p-isomer remains in the filtrate.",
+        "C": "Diazotisation of aniline is done at 0-5 °C because diazonium salts decompose at higher temperatures.",
+        "D": "Iodoform can be prepared from acetone using $KI$ and $NaOCl$.",
+        "E": "In the preparation of iodoform from ethanol, 3 mol of $I_2$ are consumed per mole of ethanol."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This question tests the reaction conditions, separation method and stoichiometry of these preparations.",
+        "steps": [
+          "A is correct.",
+          "B is incorrect: the o-isomer stays in the ethanol filtrate and the p-isomer crystallises.",
+          "C is correct.",
+          "D is correct: $KI$ with $NaOCl$ can replace $I_2$ with $NaOH$.",
+          "E is incorrect: $CH_3CH_2OH + 4I_2 + 6NaOH \\rightarrow CHI_3 + HCOONa + 5NaI + 5H_2O$ uses 4 mol of $I_2$. The 3 mol figure applies to acetone."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) leaves out D, which is true. Option (2) includes B, which is false. Option (4) includes E, which is false.",
+        "common_trap": "Using the acetone stoichiometry (3 mol $I_2$) for ethanol, which needs 4 mol because it is first oxidised.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "In the embryo sac of an angiosperm, the fusion of a male gamete with the two polar nuclei of the central cell is called:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Syngamy",
+        "Double fertilization",
+        "Triple fusion",
+        "Parthenocarpy"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "One male gamete fuses with the egg. This is syngamy. The other male gamete fuses with the two polar nuclei. This is triple fusion.",
+        "steps": [
+          "Triple fusion involves three haploid nuclei: one male gamete and two polar nuclei.",
+          "It forms the triploid primary endosperm nucleus (PEN).",
+          "Syngamy together with triple fusion makes up double fertilization."
+        ],
+        "final_answer": "Option (3): Triple fusion",
+        "why_not_others": "Syngamy is the fusion of a male gamete with the egg. Double fertilization is the name for both fusions together. Parthenocarpy is fruit formation without fertilization.",
+        "common_trap": "Calling this single fusion 'double fertilization', which is the term for both fusions taken together.",
+        "time_saving_tip": "Count the nuclei. Three nuclei fuse, so it is triple fusion."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The leaf cells of an angiosperm contain 24 chromosomes. How many chromosomes will be present in its primary endosperm nucleus?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "24",
+        "36",
+        "12",
+        "48"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The endosperm is triploid. It forms from one male gamete ($n$) plus two polar nuclei ($2n$).",
+        "steps": [
+          "Leaf cells are diploid, so $2n = 24$ and $n = 12$.",
+          "PEN $= n_{male} + 2n_{polar} = 3n$.",
+          "$3 \\times 12 = 36$."
+        ],
+        "final_answer": "Option (2): 36",
+        "why_not_others": "24 assumes the endosperm is diploid. 12 is the gamete number. 48 treats the endosperm as $4n$.",
+        "common_trap": "Taking the endosperm as diploid like the zygote.",
+        "time_saving_tip": "Endosperm number = 1.5 times the somatic number."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A fruit contains 50 seeds, each formed from a fertilized ovule by double fertilization. What is the minimum number of male gametes involved in forming these seeds?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "50",
+        "25",
+        "100",
+        "200"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Each fertilized ovule uses two male gametes, one for syngamy and one for triple fusion.",
+        "steps": [
+          "Male gametes required $= 2 \\times$ number of seeds.",
+          "$2 \\times 50 = 100$."
+        ],
+        "final_answer": "Option (3): 100",
+        "why_not_others": "50 is the number of pollen grains, not male gametes. 25 halves the seed number instead of doubling it. 200 wrongly assumes four gametes per ovule.",
+        "common_trap": "Confusing the number of pollen grains (one per ovule) with the number of male gametes (two per ovule).",
+        "time_saving_tip": "Pollen grains = seeds. Male gametes = 2 times the seeds."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In angiosperms, the primary endosperm nucleus is triploid.",
+        "R": "The zygote formed by syngamy is diploid and develops into the embryo."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The PEN is $3n$ because it comes from triple fusion. The zygote ($2n$) comes from a separate fusion.",
+        "steps": [
+          "A is true. The PEN forms from one male gamete plus two polar nuclei, giving $3n$.",
+          "R is true. Syngamy of a male gamete with the egg gives a $2n$ zygote, which becomes the embryo.",
+          "R describes the other fusion and does not explain why the PEN is triploid."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Option 1 is wrong because the ploidy of the zygote does not explain the triploidy of the PEN. Options 3 and 4 are wrong because both statements are true.",
+        "common_trap": "Linking two true facts about double fertilization as cause and effect.",
+        "time_saving_tip": "Ask whether R mentions the polar nuclei. It does not, so it cannot explain $3n$."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The pollen tube releases two male gametes into the cytoplasm of a synergid, and one pollen grain is enough to fertilize one ovule.",
+        "II": "If the endosperm of a plant has 45 chromosomes, the egg cell of the same plant has 30 chromosomes."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "One pollen grain carries 2 male gametes, enough for one ovule. The endosperm is $3n$ and the egg is $n$.",
+        "steps": [
+          "Statement I is correct as stated in double fertilization.",
+          "For Statement II, endosperm $3n = 45$, so $n = 15$.",
+          "The egg is haploid and has 15 chromosomes, not 30. 30 is the $2n$ value.",
+          "So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II gives the diploid number for the egg. Statement I is fully correct.",
+        "common_trap": "Dividing 45 by 3 and then doubling, which treats the egg as diploid.",
+        "time_saving_tip": "Egg number = endosperm number divided by 3."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "After fertilization in angiosperms, which part of the ovule develops into the seed coats?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ovary wall",
+        "Nucellus",
+        "Integuments",
+        "Thalamus"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Ovule becomes the seed, integuments become the seed coats, ovary becomes the fruit, and the ovary wall becomes the pericarp.",
+        "steps": [
+          "The integuments surround the ovule.",
+          "After fertilization they harden into the seed coats."
+        ],
+        "final_answer": "Option (3): Integuments",
+        "why_not_others": "The ovary wall becomes the pericarp. A persistent nucellus becomes the perisperm. The thalamus forms part of false fruits.",
+        "common_trap": "Confusing the ovary wall (which becomes the pericarp) with the integuments (which become the seed coats).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "In which of the following is the endosperm retained in the mature seed, making it albuminous?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Pea",
+        "Groundnut",
+        "Beans",
+        "Castor"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Albuminous seeds keep their endosperm. Non-albuminous seeds use it up before maturity.",
+        "steps": [
+          "Pea, groundnut and beans consume the endosperm fully, so they are non-albuminous.",
+          "Castor retains its endosperm, so it is albuminous."
+        ],
+        "final_answer": "Option (4): Castor",
+        "why_not_others": "Pea, groundnut and beans are all examples of exalbuminous seeds.",
+        "common_trap": "Assuming all dicot seeds are non-albuminous. Castor is a dicot with a persistent endosperm.",
+        "time_saving_tip": "Remember the albuminous list: wheat, maize, barley, castor, coconut."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "In a monocot embryo, the radicle and root cap are enclosed in a sheath called the:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Coleoptile",
+        "Scutellum",
+        "Coleorhiza",
+        "Epicotyl"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In a monocot embryo, the radicle is enclosed in the coleorhiza and the plumule in the coleoptile.",
+        "steps": [
+          "'Rhiza' refers to root, so the coleorhiza covers the radicle.",
+          "The coleoptile covers the plumule. The scutellum is the single cotyledon."
+        ],
+        "final_answer": "Option (3): Coleorhiza",
+        "why_not_others": "The coleoptile sheathes the plumule. The scutellum is the cotyledon. The epicotyl is the axis part ending in the plumule.",
+        "common_trap": "Swapping coleoptile and coleorhiza.",
+        "time_saving_tip": "Rhiza = root, so coleorhiza covers the radicle."
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Perisperm"
+          },
+          {
+            "label": "B",
+            "text": "False fruit"
+          },
+          {
+            "label": "C",
+            "text": "Free-nuclear endosperm"
+          },
+          {
+            "label": "D",
+            "text": "Seed that germinated after about 10,000 years"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Apple"
+          },
+          {
+            "label": "II",
+            "text": "Lupinus arcticus"
+          },
+          {
+            "label": "III",
+            "text": "Black pepper"
+          },
+          {
+            "label": "IV",
+            "text": "Coconut water"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-I, C-III, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These are standard examples of seed and fruit features.",
+        "steps": [
+          "Perisperm is persistent nucellus, as in black pepper, so A-III.",
+          "A false fruit develops from the thalamus, as in apple, so B-I.",
+          "Coconut water is free-nuclear endosperm, so C-IV.",
+          "Lupinus arcticus seed germinated after about 10,000 years, so D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option 2 swaps perisperm and false fruit. Option 3 swaps coconut water and Lupinus. Option 4 assigns coconut water to perisperm, but it is endosperm.",
+        "common_trap": "Thinking coconut water is perisperm, or treating the white kernel and the water as the same type of endosperm.",
+        "time_saving_tip": "Fix the most certain pair first (Lupinus with D), then eliminate options."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about post-fertilization events are correct?",
+      "statements": {
+        "A": "Endosperm development precedes embryo development.",
+        "B": "In coconut, the white kernel is free-nuclear endosperm.",
+        "C": "Perisperm is persistent nucellus and is diploid.",
+        "D": "In a dicot embryo, the hypocotyl terminates in the plumule.",
+        "E": "Mature seeds generally contain about 10-15% moisture."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only",
+        "A, C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Covers the sequence of endosperm and embryo development, ploidy of seed parts and embryo structure.",
+        "steps": [
+          "A is correct. Endosperm always develops first.",
+          "B is incorrect. The kernel is cellular endosperm; the water is free-nuclear endosperm.",
+          "C is correct. Perisperm is nucellar tissue and is $2n$.",
+          "D is incorrect. The hypocotyl ends in the radicle; the epicotyl ends in the plumule.",
+          "E is correct. Mature seeds have about 10-15% moisture."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Options 1 and 2 include B, which is false. Options 2 and 4 include D, which is false.",
+        "common_trap": "Mixing up epicotyl/plumule with hypocotyl/radicle, and the kernel with the water in coconut.",
+        "time_saving_tip": "Spot that B and D are false; only option 3 excludes both."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "The formation of a fruit without fertilization, giving seedless fruits, is called:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Apomixis",
+        "Polyembryony",
+        "Parthenocarpy",
+        "Syngamy"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Parthenocarpy is fruit formation without fertilization, as in banana.",
+        "steps": [
+          "No fertilization occurs, so no seeds form.",
+          "Banana is the classic example, and growth hormones can induce it."
+        ],
+        "final_answer": "Option (3): Parthenocarpy",
+        "why_not_others": "Apomixis produces seeds, not seedless fruits, without fertilization. Polyembryony means more than one embryo per seed. Syngamy is the fusion of a male gamete with the egg.",
+        "common_trap": "Confusing apomixis (seeds without fertilization) with parthenocarpy (fruits without fertilization).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "The occurrence of more than one embryo in a seed, often arising from nucellar cells, is commonly seen in:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Banana",
+        "Wheat",
+        "Groundnut",
+        "Citrus"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Polyembryony from nucellar embryos occurs in Citrus and mango.",
+        "steps": [
+          "Polyembryony means more than one embryo per seed.",
+          "Citrus is a standard example."
+        ],
+        "final_answer": "Option (4): Citrus",
+        "why_not_others": "Banana is an example of parthenocarpy. Wheat is an example of an albuminous seed. Groundnut is an example of a non-albuminous seed.",
+        "common_trap": "Choosing banana by confusing parthenocarpy with polyembryony.",
+        "time_saving_tip": "Remember polyembryony as Citrus and mango."
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "Crop scientists aim to introduce apomictic genes into hybrid varieties mainly because:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the offspring would then show greater genetic variation than the parents",
+        "seedless fruits could then be produced without hormone application",
+        "the endosperm of such seeds would become triploid",
+        "hybrid characters would not segregate, so farmers could reuse the seed each year"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Hybrid characters segregate in the next generation, so hybrid seed must be bought fresh every year. Apomictic hybrids would not segregate.",
+        "steps": [
+          "Apomixis produces seeds without fertilization, so the offspring are clones.",
+          "Clones keep the hybrid traits unchanged.",
+          "Farmers could therefore save and resow the hybrid seed."
+        ],
+        "final_answer": "Option (4): hybrid characters would not segregate, so farmers could reuse the seed each year",
+        "why_not_others": "Apomixis produces clones, which reduces variation rather than increasing it. Seedless fruits come from parthenocarpy. Triploid endosperm results from fertilization, not from apomixis.",
+        "common_trap": "Thinking apomixis increases variation. It is asexual and gives clones.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Offspring produced by apomixis are clones of the parent plant.",
+        "R": "In apomixis, seeds are formed without fertilization, for example from a diploid egg cell formed without reduction division."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Apomixis is asexual reproduction that mimics sexual reproduction.",
+        "steps": [
+          "Without meiosis and fertilization, no new combination of genes arises.",
+          "The embryo therefore has the same genetic makeup as the parent, making it a clone.",
+          "So R correctly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R directly accounts for the clonal nature, so option 2 is wrong. Both statements are true, so options 3 and 4 are wrong.",
+        "common_trap": "Assuming any seed must come from sexual reproduction and so must vary.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In one route of apomixis, cells of the nucellus or integument divide and protrude into the embryo sac to develop into embryos.",
+        "II": "Parthenocarpy can be induced by applying growth hormones and results in seedless fruits."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Both apomixis and parthenocarpy bypass fertilization, but they produce different products.",
+        "steps": [
+          "Statement I correctly describes the route of apomixis that starts from nucellus or integument cells.",
+          "Statement II is correct. Parthenocarpic fruits are seedless and can be induced by growth hormones."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Neither statement contains an error.",
+        "common_trap": "Believing nucellar embryos form only in polyembryony and not in apomixis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "The scrotum helps maintain the temperature of the testes below the normal body temperature by about:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5-6 degrees C",
+        "2-2.5 degrees C",
+        "0.5-1 degrees C",
+        "8-10 degrees C"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Spermatogenesis needs a temperature 2-2.5 degrees C below body temperature.",
+        "steps": [
+          "The testes lie outside the abdominal cavity in the scrotum.",
+          "This keeps them 2-2.5 degrees C cooler than the body."
+        ],
+        "final_answer": "Option (2): 2-2.5 degrees C",
+        "why_not_others": "The other ranges are not the stated value.",
+        "common_trap": "Confusing this value with the size of the testis (4-5 cm long, 2-3 cm wide).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "Which of the following correctly shows the sequence of ducts through which sperms pass after leaving the seminiferous tubules?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Vasa efferentia → rete testis → epididymis → vas deferens",
+        "Rete testis → epididymis → vasa efferentia → vas deferens",
+        "Rete testis → vasa efferentia → epididymis → vas deferens",
+        "Rete testis → vasa efferentia → vas deferens → epididymis"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The male duct pathway is seminiferous tubules, rete testis, vasa efferentia, epididymis, vas deferens, ejaculatory duct, urethra.",
+        "steps": [
+          "The rete testis comes first, followed by the vasa efferentia.",
+          "The vasa efferentia lead into the epididymis, which continues as the vas deferens."
+        ],
+        "final_answer": "Option (3): Rete testis → vasa efferentia → epididymis → vas deferens",
+        "why_not_others": "Option 1 reverses the first two ducts. Option 2 places the epididymis before the vasa efferentia. Option 4 places the vas deferens before the epididymis.",
+        "common_trap": "Swapping rete testis and vasa efferentia.",
+        "time_saving_tip": "Recall the order as 'R-V-E-V': Rete, Vasa efferentia, Epididymis, Vas deferens."
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "Which layer of the uterine wall exhibits strong contractions during parturition?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Endometrium",
+        "Myometrium",
+        "Perimetrium",
+        "Fimbriae"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The uterine wall has three layers: perimetrium, myometrium and endometrium.",
+        "steps": [
+          "The myometrium is the muscular middle layer.",
+          "It contracts strongly during parturition."
+        ],
+        "final_answer": "Option (2): Myometrium",
+        "why_not_others": "The endometrium undergoes cyclical changes in the menstrual cycle. The perimetrium is the outer layer. Fimbriae belong to the infundibulum of the oviduct, not the uterine wall.",
+        "common_trap": "Choosing the endometrium, which is the layer that changes cyclically, not the one that contracts.",
+        "time_saving_tip": "'Myo' means muscle, and muscle contracts."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Bulbourethral gland"
+          },
+          {
+            "label": "B",
+            "text": "Testicular lobule"
+          },
+          {
+            "label": "C",
+            "text": "Endometrium"
+          },
+          {
+            "label": "D",
+            "text": "Myometrium"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Strong contractions during parturition"
+          },
+          {
+            "label": "II",
+            "text": "Secretion helps lubricate the penis"
+          },
+          {
+            "label": "III",
+            "text": "Undergoes cyclical changes during the menstrual cycle"
+          },
+          {
+            "label": "IV",
+            "text": "Contains 1-3 seminiferous tubules"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-III, B-IV, C-II, D-I",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each structure is matched to its stated function or feature.",
+        "steps": [
+          "Bulbourethral secretion lubricates the penis, so A-II.",
+          "Each testicular lobule has 1-3 seminiferous tubules, so B-IV.",
+          "The endometrium changes cyclically, so C-III.",
+          "The myometrium contracts in parturition, so D-I."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 swaps the two uterine layers. Option 2 swaps the bulbourethral gland and the lobule. Option 3 gives the cyclical change to the gland.",
+        "common_trap": "Swapping the functions of the endometrium and myometrium.",
+        "time_saving_tip": "A-II and B-IV are easy to fix first; then only options 1 and 4 remain."
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about human reproductive systems are correct?",
+      "statements": {
+        "A": "Each testis has about 250 testicular lobules.",
+        "B": "The prostate is a paired accessory gland of the male.",
+        "C": "Seminal plasma is rich in fructose, calcium and enzymes.",
+        "D": "The ampulla is a part of the male duct system lying between the epididymis and the vas deferens.",
+        "E": "Milk passes from the mammary tubules to the mammary duct, then to the mammary ampulla and finally to the lactiferous duct."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "B, C and D only",
+        "A, C and E only",
+        "A, B, C and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Covers the structure of the testis, the accessory glands, the parts of the oviduct and the mammary duct sequence.",
+        "steps": [
+          "A is correct. There are about 250 lobules per testis.",
+          "B is incorrect. The prostate is single; the seminal vesicles and bulbourethral glands are paired.",
+          "C is correct. Seminal plasma is rich in fructose, calcium and enzymes.",
+          "D is incorrect. The ampulla is a part of the oviduct; the epididymis leads directly into the vas deferens.",
+          "E is correct. This is the stated mammary duct sequence."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Options 2 and 4 include B, which is false, and option 2 also includes D, which is false. Option 1 omits the correct statement E.",
+        "common_trap": "Placing oviduct parts such as the ampulla or infundibulum in the male system, and thinking the prostate is paired.",
+        "time_saving_tip": "Rule out B and D, then check whether E is true."
+      }
+    }
+  ]
+}

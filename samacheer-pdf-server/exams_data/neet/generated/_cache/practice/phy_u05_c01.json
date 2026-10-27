@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "Two point masses of $2\\ \\text{kg}$ and $3\\ \\text{kg}$ are held $1.0\\ \\text{m}$ apart. How far is the centre of mass of the system from the $2\\ \\text{kg}$ mass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ \\text{m}$",
+        "$0.5\\ \\text{m}$",
+        "$0.6\\ \\text{m}$",
+        "$1.5\\ \\text{m}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For two particles separated by $d$, the COM is at $r_1 = \\frac{m_2 d}{m_1+m_2}$ from $m_1$.",
+        "steps": [
+          "Take $m_1 = 2\\ \\text{kg}$, $m_2 = 3\\ \\text{kg}$ and $d = 1.0\\ \\text{m}$.",
+          "$r_1 = \\frac{3 \\times 1.0}{2+3} = 0.6\\ \\text{m}$.",
+          "Check: $m_1 r_1 = 2 \\times 0.6 = 1.2$ and $m_2 r_2 = 3 \\times 0.4 = 1.2$, so the moments balance."
+        ],
+        "final_answer": "Option (3): $0.6\\ \\text{m}$",
+        "why_not_others": "$0.4\\ \\text{m}$ is the distance from the $3\\ \\text{kg}$ mass. $0.5\\ \\text{m}$ wrongly assumes equal masses. $1.5\\ \\text{m}$ comes from dividing the masses instead of using the inverse ratio.",
+        "common_trap": "Using $m_1$ instead of $m_2$ in the numerator, which places the COM nearer the lighter mass.",
+        "time_saving_tip": "The COM divides the separation in the inverse ratio $3:2$, so the $2\\ \\text{kg}$ mass gets $\\frac{3}{5}$ of $d$."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A shell at rest at the origin explodes into two fragments of masses $1\\ \\text{kg}$ and $3\\ \\text{kg}$ that move along the x-axis. Ignore gravity and all other external forces. At some instant the $1\\ \\text{kg}$ fragment is at $x = +9\\ \\text{m}$. Where is the $3\\ \\text{kg}$ fragment at that instant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$x = +3\\ \\text{m}$",
+        "$x = -27\\ \\text{m}$",
+        "$x = -9\\ \\text{m}$",
+        "$x = -3\\ \\text{m}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Internal forces such as those in an explosion cannot shift the COM. A COM that starts at rest stays at rest.",
+        "steps": [
+          "The COM stays at the origin, so $x_{cm} = 0$.",
+          "$\\frac{1 \\times 9 + 3 \\times x}{1+3} = 0$.",
+          "$3x = -9$, which gives $x = -3\\ \\text{m}$."
+        ],
+        "final_answer": "Option (4): $x = -3\\ \\text{m}$",
+        "why_not_others": "$+3\\ \\text{m}$ has a sign error, because the fragments must lie on opposite sides. $-27\\ \\text{m}$ multiplies by the mass ratio instead of dividing. $-9\\ \\text{m}$ wrongly assumes equal masses.",
+        "common_trap": "Thinking that the explosion forces move the COM.",
+        "time_saving_tip": "Use $m_1 x_1 = -m_2 x_2$ directly: $9 = 3|x_2|$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "A thin uniform wire is bent into a semicircular arc of radius $11\\ \\text{cm}$. How far is its centre of mass from the centre of the arc? (Take $\\pi = \\frac{22}{7}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.5\\ \\text{cm}$",
+        "$4.67\\ \\text{cm}$",
+        "$7\\ \\text{cm}$",
+        "$5.5\\ \\text{cm}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The COM of a uniform semicircular ring is at $\\frac{2R}{\\pi}$ from the centre.",
+        "steps": [
+          "A bent wire is a semicircular ring, not a disc.",
+          "$\\frac{2R}{\\pi} = \\frac{2 \\times 11 \\times 7}{22} = 7\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (3): $7\\ \\text{cm}$",
+        "why_not_others": "$3.5\\ \\text{cm}$ drops the factor 2 and uses $\\frac{R}{\\pi}$. $4.67\\ \\text{cm}$ uses the semicircular disc formula $\\frac{4R}{3\\pi}$. $5.5\\ \\text{cm}$ uses $\\frac{R}{2}$, which belongs to the hollow hemisphere.",
+        "common_trap": "Mixing up the ring result $\\frac{2R}{\\pi}$ with the disc result $\\frac{4R}{3\\pi}$.",
+        "time_saving_tip": "With $\\pi = \\frac{22}{7}$, $\\frac{2R}{\\pi} = \\frac{14R}{22}$, which is clean for $R = 11$."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The centre of mass of a uniform circular ring lies at a point where no material of the ring is present.",
+        "R": "In a uniform gravitational field, the centre of gravity of a body coincides with its centre of mass."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The COM of a symmetric uniform body is at its geometric centre and can lie outside the material.",
+        "steps": [
+          "By symmetry, the ring's COM is at its geometric centre, which is empty space. So A is true.",
+          "In a uniform field the centre of gravity coincides with the COM. So R is true.",
+          "R does not explain why the COM lies in empty space. Symmetry does."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R is a true statement but says nothing about where the COM lies. Neither A nor R is false.",
+        "common_trap": "Believing that the COM must lie inside the material.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A uniform solid hemisphere and a uniform hollow hemisphere have the same radius R. Measured from the centre along the symmetry axis, their centres of mass are separated by $\\frac{R}{8}$.",
+        "II": "When a projectile explodes in mid-air, the centre of mass of its fragments leaves the original parabolic path, because the explosion forces are much larger than gravity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Use the standard hemisphere COM results, and remember that internal forces cannot change the motion of the COM.",
+        "steps": [
+          "The solid hemisphere's COM is at $\\frac{3R}{8}$ and the hollow hemisphere's is at $\\frac{R}{2}$.",
+          "Their separation is $\\frac{R}{2} - \\frac{3R}{8} = \\frac{R}{8}$, so Statement I is correct.",
+          "Explosion forces are internal and cancel in pairs. Only gravity acts externally, so the COM keeps following the parabola. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses the size of a force with its type. Internal forces, however large, cannot shift the COM.",
+        "common_trap": "Swapping $\\frac{3R}{8}$ and $\\frac{R}{2}$ between the solid and hollow hemispheres, or thinking that a large explosion force moves the COM.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "A wheel starts from rest and rotates with a constant angular acceleration of $2\\ \\text{rad/s}^2$. Through what angle does it turn in the first $5\\ \\text{s}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$25\\ \\text{rad}$",
+        "$50\\ \\text{rad}$",
+        "$10\\ \\text{rad}$",
+        "$12.5\\ \\text{rad}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "At constant angular acceleration, $\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2$.",
+        "steps": [
+          "The wheel starts from rest, so $\\omega_0 = 0$.",
+          "$\\theta = \\frac{1}{2} \\times 2 \\times 5^2 = 25\\ \\text{rad}$."
+        ],
+        "final_answer": "Option (1): $25\\ \\text{rad}$",
+        "why_not_others": "$50\\ \\text{rad}$ drops the factor $\\frac{1}{2}$. $10\\ \\text{rad}$ is the final angular velocity in rad/s, not an angle. $12.5\\ \\text{rad}$ applies the factor $\\frac{1}{2}$ twice.",
+        "common_trap": "Leaving out the $\\frac{1}{2}$ in the displacement equation.",
+        "time_saving_tip": "Average angular velocity is $\\frac{0+10}{2} = 5\\ \\text{rad/s}$, and $5 \\times 5 = 25\\ \\text{rad}$."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A particle on a rigid body is $1\\ \\text{m}$ from the fixed rotation axis. At one instant the body's angular velocity is $2\\ \\text{rad/s}$ and its angular acceleration is $3\\ \\text{rad/s}^2$. What is the magnitude of the particle's net linear acceleration at that instant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7\\ \\text{m/s}^2$",
+        "$5\\ \\text{m/s}^2$",
+        "$1\\ \\text{m/s}^2$",
+        "$4\\ \\text{m/s}^2$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The tangential acceleration $\\alpha r$ and the centripetal acceleration $\\omega^2 r$ are perpendicular, so they add as vectors.",
+        "steps": [
+          "$a_t = \\alpha r = 3 \\times 1 = 3\\ \\text{m/s}^2$.",
+          "$a_c = \\omega^2 r = 4 \\times 1 = 4\\ \\text{m/s}^2$.",
+          "$a = \\sqrt{3^2 + 4^2} = 5\\ \\text{m/s}^2$."
+        ],
+        "final_answer": "Option (2): $5\\ \\text{m/s}^2$",
+        "why_not_others": "$7\\ \\text{m/s}^2$ adds the two components as scalars. $1\\ \\text{m/s}^2$ subtracts them. $4\\ \\text{m/s}^2$ keeps only the centripetal part.",
+        "common_trap": "Adding perpendicular components arithmetically instead of vectorially.",
+        "time_saving_tip": "Spot the 3-4-5 triangle."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A rigid body rotates about a fixed axis. Particle P is at distance r from the axis and particle Q is at distance 2r. Which statement correctly compares their motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "They have the same angular velocity, and Q's linear speed is twice P's",
+        "They have the same linear speed, and Q's angular velocity is half P's",
+        "Q's angular velocity is twice P's, and they have the same centripetal acceleration",
+        "They have the same linear speed, and Q's centripetal acceleration is twice P's"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In fixed-axis rotation, $\\omega$ is the same for every particle and $v = \\omega r$.",
+        "steps": [
+          "Every particle of a rigid body shares the same $\\omega$.",
+          "With $v = \\omega r$, Q at $2r$ moves twice as fast as P."
+        ],
+        "final_answer": "Option (1): They have the same angular velocity, and Q's linear speed is twice P's",
+        "why_not_others": "Angular velocity cannot differ between particles of a rigid body. Linear speed is not equal, because it grows with r. Centripetal acceleration $\\omega^2 r$ also doubles, so it is not equal either.",
+        "common_trap": "Treating linear speed, rather than angular velocity, as the common quantity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Tangential acceleration of a particle"
+          },
+          {
+            "label": "B",
+            "text": "Centripetal acceleration of a particle"
+          },
+          {
+            "label": "C",
+            "text": "Linear velocity of a particle"
+          },
+          {
+            "label": "D",
+            "text": "Angular displacement at constant angular acceleration"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\omega^2 r$"
+          },
+          {
+            "label": "II",
+            "text": "$\\alpha r$"
+          },
+          {
+            "label": "III",
+            "text": "$\\omega_0 t + \\frac{1}{2}\\alpha t^2$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\vec{\\omega}\\times\\vec{r}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These are the standard relations between linear and angular quantities, plus the rotational kinematic equations.",
+        "steps": [
+          "$a_t = \\alpha r$, so A-II.",
+          "$a_c = \\omega^2 r$, so B-I.",
+          "$\\vec{v} = \\vec{\\omega}\\times\\vec{r}$, so C-IV.",
+          "$\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2$, so D-III."
+        ],
+        "final_answer": "Option (1): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option (2) swaps the tangential and centripetal accelerations. Option (3) swaps velocity and displacement. Option (4) pairs tangential acceleration with $\\vec{\\omega}\\times\\vec{r}$, which is a velocity.",
+        "common_trap": "Confusing $\\alpha r$ with $\\omega^2 r$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about rotational motion are correct?",
+      "statements": {
+        "A": "In fixed-axis rotation of a rigid body, all particles undergo the same angular displacement in a given time.",
+        "B": "The angular velocity vector lies in the plane of rotation, tangent to the path of the particle.",
+        "C": "For a particle on a rotating body, the tangential and centripetal accelerations act at right angles to each other.",
+        "D": "Rolling can be described as translation of the centre of mass combined with rotation about the centre of mass.",
+        "E": "A particle lying on the axis of rotation has the maximum linear speed."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "These statements test the basic kinematics of rigid-body rotation.",
+        "steps": [
+          "A is true, because $\\theta$ is common to all particles.",
+          "B is false, because $\\vec{\\omega}$ points along the axis by the right-hand rule.",
+          "C is true, because $a_t$ and $a_c$ are perpendicular.",
+          "D is true, because rolling is translation of the COM plus rotation about it.",
+          "E is false, because $v = \\omega r$ is zero on the axis."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Every other option includes B or E, and both of those are false.",
+        "common_trap": "Placing $\\vec{\\omega}$ along the velocity instead of along the axis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "A force of $20\\ \\text{N}$ is applied at the end of a spanner $0.5\\ \\text{m}$ long. The force makes an angle of $30^\\circ$ with the spanner. What is the magnitude of the torque about the bolt?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{N m}$",
+        "$8.66\\ \\text{N m}$",
+        "$5\\ \\text{N m}$",
+        "$40\\ \\text{N m}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\tau = rF\\sin\\theta$, where $\\theta$ is the angle between $\\vec{r}$ and $\\vec{F}$.",
+        "steps": [
+          "$\\tau = 0.5 \\times 20 \\times \\sin 30^\\circ$.",
+          "$\\tau = 10 \\times 0.5 = 5\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (3): $5\\ \\text{N m}$",
+        "why_not_others": "$10\\ \\text{N m}$ ignores the angle. $8.66\\ \\text{N m}$ uses $\\cos 30^\\circ$ instead of $\\sin 30^\\circ$. $40\\ \\text{N m}$ divides F by r instead of multiplying.",
+        "common_trap": "Using cosine of the angle between the force and the arm.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A force $\\vec{F} = (4\\hat{i} + \\hat{j})\\ \\text{N}$ acts at a point whose position vector is $\\vec{r} = (2\\hat{i} + 3\\hat{j})\\ \\text{m}$. What is the torque of this force about the origin?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\hat{k}\\ \\text{N m}$",
+        "$14\\hat{k}\\ \\text{N m}$",
+        "$-14\\hat{k}\\ \\text{N m}$",
+        "$-10\\hat{k}\\ \\text{N m}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\vec{\\tau} = \\vec{r}\\times\\vec{F}$, taken in that order.",
+        "steps": [
+          "For vectors in the xy-plane, $\\tau_z = xF_y - yF_x$.",
+          "$\\tau_z = 2 \\times 1 - 3 \\times 4 = -10$.",
+          "So $\\vec{\\tau} = -10\\hat{k}\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (4): $-10\\hat{k}\\ \\text{N m}$",
+        "why_not_others": "$+10\\hat{k}$ comes from computing $\\vec{F}\\times\\vec{r}$. $\\pm 14\\hat{k}$ comes from adding the two terms instead of subtracting.",
+        "common_trap": "Reversing the order of the cross product, which flips the sign.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Two equal and opposite forces of $10\\ \\text{N}$ each act on a rigid body along parallel lines $0.3\\ \\text{m}$ apart. What is the magnitude of their net torque about a point lying on the line of action of one of the forces?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3\\ \\text{N m}$",
+        "$0$",
+        "$6\\ \\text{N m}$",
+        "$1.5\\ \\text{N m}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The torque of a couple is $Fd$ and is the same about every point.",
+        "steps": [
+          "The two forces form a couple.",
+          "$\\tau = Fd = 10 \\times 0.3 = 3\\ \\text{N m}$, about any point.",
+          "Check: the force through the point gives zero torque, and the other force gives $10 \\times 0.3 = 3\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (1): $3\\ \\text{N m}$",
+        "why_not_others": "Zero wrongly applies 'zero net force' to torque. $6\\ \\text{N m}$ counts both forces at the full separation. $1.5\\ \\text{N m}$ uses half the separation for one force only.",
+        "common_trap": "Thinking a couple's torque depends on the reference point.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A force whose line of action passes through the axis of rotation produces the maximum possible torque about that axis.",
+        "R": "The magnitude of a torque equals the force multiplied by the perpendicular distance from the reference point to the line of action of the force."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\tau = F r_{\\perp}$.",
+        "steps": [
+          "If the line of action passes through the axis, then $r_{\\perp} = 0$ and $\\tau = 0$. So A is false.",
+          "R is the correct definition of the magnitude of torque, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so every option that treats A as true is ruled out.",
+        "common_trap": "Confusing 'perpendicular to the arm' (maximum torque) with 'through the axis' (zero torque).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Torque has the same dimensions as work, so torque, like work, is a scalar quantity.",
+        "II": "The torque of a couple depends on the point about which it is calculated, and it is least about the midpoint between the two forces."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Torque is an axial vector, and the torque of a couple is independent of the reference point.",
+        "steps": [
+          "Torque and work share the dimensions $[ML^2T^{-2}]$, but torque is a vector. So Statement I is incorrect.",
+          "A couple's torque $Fd$ is the same about every point. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Neither statement holds, so any option calling one of them correct is wrong.",
+        "common_trap": "Concluding that quantities with the same dimensions must have the same nature, scalar or vector.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A skater spins at $2\\ \\text{rad/s}$ with moment of inertia $6\\ \\text{kg m}^2$. She pulls in her arms, reducing her moment of inertia to $2\\ \\text{kg m}^2$. Neglecting external torques, what is her new angular velocity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.67\\ \\text{rad/s}$",
+        "$6\\ \\text{rad/s}$",
+        "$2\\ \\text{rad/s}$",
+        "$12\\ \\text{rad/s}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "With zero external torque, $I_1\\omega_1 = I_2\\omega_2$.",
+        "steps": [
+          "$6 \\times 2 = 2 \\times \\omega_2$.",
+          "$\\omega_2 = 6\\ \\text{rad/s}$."
+        ],
+        "final_answer": "Option (2): $6\\ \\text{rad/s}$",
+        "why_not_others": "$0.67\\ \\text{rad/s}$ inverts the ratio of moments of inertia. $2\\ \\text{rad/s}$ assumes $\\omega$ stays unchanged. $12\\ \\text{rad/s}$ multiplies $I_1\\omega_1$ without dividing by $I_2$.",
+        "common_trap": "Inverting the ratio, so that $\\omega$ wrongly decreases as I decreases.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A person on a freely rotating stool has a total moment of inertia of $4\\ \\text{kg m}^2$ and spins at $3\\ \\text{rad/s}$. They pull in their arms, reducing the moment of inertia to $2\\ \\text{kg m}^2$. What is the final rotational kinetic energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$18\\ \\text{J}$",
+        "$36\\ \\text{J}$",
+        "$72\\ \\text{J}$",
+        "$9\\ \\text{J}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Angular momentum is conserved. Kinetic energy is not, and $K = \\frac{L^2}{2I}$.",
+        "steps": [
+          "$L = 4 \\times 3 = 12\\ \\text{kg m}^2\\text{/s}$.",
+          "$K_2 = \\frac{L^2}{2I_2} = \\frac{144}{4} = 36\\ \\text{J}$.",
+          "The initial KE was $18\\ \\text{J}$. The increase comes from work done by internal forces."
+        ],
+        "final_answer": "Option (2): $36\\ \\text{J}$",
+        "why_not_others": "$18\\ \\text{J}$ assumes KE is conserved. $72\\ \\text{J}$ uses the old I with the new $\\omega = 6\\ \\text{rad/s}$. $9\\ \\text{J}$ uses the new I with the old $\\omega$.",
+        "common_trap": "Assuming kinetic energy is conserved when I changes.",
+        "time_saving_tip": "At constant L, $K \\propto \\frac{1}{I}$. Halving I doubles K: $18 \\rightarrow 36\\ \\text{J}$."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A particle of mass $2\\ \\text{kg}$ moves with a constant velocity of $3\\ \\text{m/s}$ along the line $y = 4\\ \\text{m}$, parallel to the x-axis. What is the magnitude of its angular momentum about the origin when it is at $x = 3\\ \\text{m}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$24\\ \\text{kg m}^2\\text{/s}$",
+        "$30\\ \\text{kg m}^2\\text{/s}$",
+        "$18\\ \\text{kg m}^2\\text{/s}$",
+        "$12\\ \\text{kg m}^2\\text{/s}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For uniform straight-line motion, $L = mvd$, where d is the perpendicular distance of the line from the point. This L is constant.",
+        "steps": [
+          "The perpendicular distance of the line $y = 4\\ \\text{m}$ from the origin is $d = 4\\ \\text{m}$.",
+          "$L = 2 \\times 3 \\times 4 = 24\\ \\text{kg m}^2\\text{/s}$, the same at every x."
+        ],
+        "final_answer": "Option (1): $24\\ \\text{kg m}^2\\text{/s}$",
+        "why_not_others": "$30$ uses the full distance $r = 5\\ \\text{m}$. $18$ uses $x = 3\\ \\text{m}$ as the lever arm. $12$ multiplies only $m$ and $d$, dropping $v$ and giving $mvd/v$.",
+        "common_trap": "Using the position distance r instead of the perpendicular distance d.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Skater pulling in her arms while spinning"
+          },
+          {
+            "label": "B",
+            "text": "Planet moving around the sun"
+          },
+          {
+            "label": "C",
+            "text": "Disc rotating about its fixed centre, with L calculated about different points"
+          },
+          {
+            "label": "D",
+            "text": "Particle moving uniformly in a straight line"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Angular velocity and rotational kinetic energy both increase"
+          },
+          {
+            "label": "II",
+            "text": "Areal velocity remains constant"
+          },
+          {
+            "label": "III",
+            "text": "Angular momentum is the same about every point"
+          },
+          {
+            "label": "IV",
+            "text": "Angular momentum $mvd$ is constant about any chosen point"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These are standard applications of the conservation of angular momentum.",
+        "steps": [
+          "Skater: I decreases, so $\\omega$ and $\\frac{L^2}{2I}$ increase. A-I.",
+          "Planet: a central force gives zero torque, so the areal velocity is constant. B-II.",
+          "Disc with its COM at rest: total momentum is zero, so L is independent of the point. C-III.",
+          "Straight-line motion: $L = mvd$ is constant. D-IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The other options swap pairs. For example, the 'same about every point' property needs zero total linear momentum, which the moving particle in D does not have.",
+        "common_trap": "Thinking a rotating disc has different angular momentum about different points.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about angular momentum are correct?",
+      "statements": {
+        "A": "Angular momentum is conserved when the net external torque is zero, even if internal forces change the moment of inertia.",
+        "B": "When a person on a freely rotating stool stretches the arms outward, the rotational kinetic energy increases.",
+        "C": "A central force produces zero torque about the centre of force.",
+        "D": "The net external torque on a system equals the rate of change of its angular momentum.",
+        "E": "When a skater pulls in her arms, her rotational kinetic energy is conserved."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and D only",
+        "B, C and E only",
+        "A, C, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "L is conserved when the external torque is zero, and $K = \\frac{L^2}{2I}$ changes when I changes.",
+        "steps": [
+          "A is true, because internal forces can change I but not L.",
+          "B is false, because stretching the arms increases I, so K decreases.",
+          "C is true, because the force is along $\\vec{r}$, so $\\vec{r}\\times\\vec{F} = 0$.",
+          "D is true, because $\\vec{\\tau}_{ext} = \\frac{d\\vec{L}}{dt}$.",
+          "E is false, because K increases when I decreases."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Every other option includes B or E, and both are false.",
+        "common_trap": "Assuming rotational KE is conserved along with angular momentum.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

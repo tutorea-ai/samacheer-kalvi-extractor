@@ -1,0 +1,2866 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u16",
+  "slug": "optics",
+  "questions": [
+    {
+      "q_id": "neet_phy_u16_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction at plane and spherical surfaces",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Light of wavelength 600 nm in air enters glass of refractive index 1.5. What are its wavelength and frequency inside the glass?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "400 nm; frequency unchanged",
+        "900 nm; frequency unchanged",
+        "400 nm; frequency reduced by a factor of 1.5",
+        "600 nm; frequency reduced by a factor of 1.5"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Frequency does not change on refraction, while $\\lambda_{medium} = \\lambda/n$.",
+        "steps": [
+          "$\\lambda_{glass} = 600/1.5 = 400$ nm.",
+          "The frequency is set by the source, so it stays the same."
+        ],
+        "final_answer": "Option (1): 400 nm; frequency unchanged",
+        "why_not_others": "900 nm comes from multiplying by n. Options (3) and (4) wrongly let the frequency change.",
+        "common_trap": "Thinking the frequency falls when the light slows down.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction at plane and spherical surfaces",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A tank contains a 9 cm layer of a liquid of refractive index 1.5, with a 12 cm layer of water (refractive index $4/3$) floating on top of it. What is the apparent depth of the bottom of the tank when viewed from air near the normal?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "15 cm",
+        "6 cm",
+        "21 cm",
+        "29.5 cm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For layered media seen from outside, apparent depth $= \\sum t_i/n_i$.",
+        "steps": [
+          "Water layer: $12/(4/3) = 9$ cm.",
+          "Liquid layer: $9/1.5 = 6$ cm.",
+          "Total apparent depth $= 9 + 6 = 15$ cm."
+        ],
+        "final_answer": "Option (1): 15 cm",
+        "why_not_others": "6 cm is the shift, not the apparent depth. 21 cm is the real depth. 29.5 cm comes from multiplying each thickness by n.",
+        "common_trap": "Multiplying by the refractive index instead of dividing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction at plane and spherical surfaces",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A convex spherical surface of radius of curvature 10 cm separates air (object side) from glass of refractive index 1.5. A point object in air lies on the axis 40 cm from the surface. How far from the surface, inside the glass, is the image formed?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20 cm",
+        "40 cm",
+        "30 cm",
+        "60 cm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Refraction at a single spherical surface: $\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$.",
+        "steps": [
+          "$n_1 = 1$, $n_2 = 1.5$, $u = -40$ cm and $R = +10$ cm.",
+          "$\\frac{1.5}{v} + \\frac{1}{40} = \\frac{0.5}{10} = \\frac{1}{20}$.",
+          "$\\frac{1.5}{v} = \\frac{1}{40}$, so $v = 60$ cm."
+        ],
+        "final_answer": "Option (4): 60 cm",
+        "why_not_others": "20 cm comes from a sign error in the u term. 40 cm comes from dropping $n_2$. 30 cm comes from ignoring the object term, which treats the object as being at infinity.",
+        "common_trap": "Taking u as positive for a real object.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction at plane and spherical surfaces",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Normal shift produced by a glass slab of thickness 9 cm and refractive index 1.5 (observer in air)"
+          },
+          {
+            "label": "B",
+            "text": "Apparent depth of a coin under 8 cm of water ($n = 4/3$), viewed from air near the normal"
+          },
+          {
+            "label": "C",
+            "text": "Apparent height above the surface of a bird 12 cm above water, as seen by a fish just below the surface ($n_{water} = 4/3$)"
+          },
+          {
+            "label": "D",
+            "text": "Apparent depth of the bottom of 4 cm of water ($n = 4/3$) resting on 6 cm of glass ($n = 1.5$), viewed from air"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "6 cm"
+          },
+          {
+            "label": "II",
+            "text": "16 cm"
+          },
+          {
+            "label": "III",
+            "text": "3 cm"
+          },
+          {
+            "label": "IV",
+            "text": "7 cm"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Apparent depth $= h_{real}/n_{rel}$, with $n_{rel}$ = (index of object medium)/(index of observer medium). The normal shift of a slab is $t(1 - 1/n)$.",
+        "steps": [
+          "A: $9(1 - 2/3) = 3$ cm, so A matches III.",
+          "B: $8/(4/3) = 6$ cm, so B matches I.",
+          "C: $n_{rel} = 1/(4/3) = 3/4$, so the apparent height is $12/(3/4) = 16$ cm. C matches II.",
+          "D: $4/(4/3) + 6/1.5 = 3 + 4 = 7$ cm, so D matches IV."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Every other option mismatches at least one pair. For example, option (1) confuses the slab shift (3 cm) with the apparent depth of the coin (6 cm).",
+        "common_trap": "For the fish, multiplying by $3/4$ gives 9 cm. Objects viewed from a denser medium actually appear farther away.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction at plane and spherical surfaces",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about refraction are correct?",
+      "statements": {
+        "A": "When light passes from vacuum into a medium of refractive index n, both its speed and its wavelength decrease by a factor of n.",
+        "B": "The normal shift produced by a glass slab depends on the distance of the object from the slab.",
+        "C": "A glass slab with parallel faces produces a lateral displacement of a ray but no deviation.",
+        "D": "A fish looking up from under water sees an object above the surface as farther away than it really is.",
+        "E": "In the relation $\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$, R is positive when the centre of curvature lies on the incident-light side."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These statements test basic refraction facts, the slab shift and the sign convention for spherical surfaces.",
+        "steps": [
+          "A is true: $v = c/n$ and $\\lambda_{medium} = \\lambda/n$.",
+          "B is false: the shift $t(1 - 1/n)$ does not depend on object position.",
+          "C is true: emergent rays are parallel to incident rays.",
+          "D is true: viewing from a denser into a rarer medium makes objects appear farther away.",
+          "E is false: R is positive when the centre lies on the refracted-light side."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) leaves out D. Option (2) includes the false B. Option (4) includes the false E and leaves out A.",
+        "common_trap": "Thinking that a slab's shift changes with object distance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Thin lens formula and lens maker formula",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An equiconvex lens is made of glass of refractive index 1.5, and each surface has a radius of curvature of 20 cm. What is the power of the lens in air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "+0.05 D",
+        "-5 D",
+        "+5 D",
+        "+2.5 D"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For an equiconvex lens, $f = R/[2(n-1)]$, and $P = 1/f$ with f in metres.",
+        "steps": [
+          "$f = 20/[2(0.5)] = 20$ cm $= 0.2$ m.",
+          "$P = 1/0.2 = +5$ D."
+        ],
+        "final_answer": "Option (3): +5 D",
+        "why_not_others": "+0.05 D comes from using f in cm. -5 D has the wrong sign for a convex lens. +2.5 D comes from using the plano-convex formula.",
+        "common_trap": "Using f in centimetres when calculating power.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Thin lens formula and lens maker formula",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An object is placed 10 cm from a convex lens of focal length 15 cm. What are the position of the image and the magnification?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "30 cm on the other side of the lens, magnification $-3$",
+        "6 cm on the same side as the object, magnification $+0.6$",
+        "30 cm on the same side as the object, magnification $+3$",
+        "30 cm on the same side as the object, magnification $-3$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Thin lens formula $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$, with $m = v/u$.",
+        "steps": [
+          "Take $u = -10$ cm and $f = +15$ cm.",
+          "$\\frac{1}{v} = \\frac{1}{15} - \\frac{1}{10} = -\\frac{1}{30}$, so $v = -30$ cm, on the same side as the object.",
+          "$m = v/u = (-30)/(-10) = +3$. The image is virtual, erect and magnified."
+        ],
+        "final_answer": "Option (3): 30 cm on the same side as the object, magnification $+3$",
+        "why_not_others": "Option (1) has the wrong sign of v. Option (2) comes from using the mirror formula. Option (4) uses the mirror magnification $-v/u$.",
+        "common_trap": "Using $1/v + 1/u = 1/f$ or $m = -v/u$ for a lens.",
+        "time_saving_tip": "An object inside the focal length of a convex lens always gives a virtual, erect, magnified image."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Thin lens formula and lens maker formula",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A thin convex lens made of glass of refractive index 1.5 has a focal length of 20 cm in air. What is its focal length when it is completely immersed in water of refractive index $4/3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "26.7 cm",
+        "80 cm",
+        "40 cm",
+        "-80 cm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "From the lens maker's formula, $f_{liquid}/f_{air} = (n_g - 1)/(n_g/n_l - 1)$.",
+        "steps": [
+          "$n_g/n_l = 1.5/(4/3) = 9/8$.",
+          "Ratio $= 0.5/(9/8 - 1) = 0.5/0.125 = 4$.",
+          "$f_{water} = 4 \\times 20 = 80$ cm, and it is still converging because $n_g > n_l$."
+        ],
+        "final_answer": "Option (2): 80 cm",
+        "why_not_others": "26.7 cm comes from simply multiplying by $n_l$. 40 cm is a wrong ratio. -80 cm reverses the sign, which happens only when the liquid is denser than the glass.",
+        "common_trap": "Assuming the lens becomes diverging in any liquid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Thin lens formula and lens maker formula",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A convex lens made of glass of refractive index 1.5 behaves as a diverging lens when immersed in a liquid of refractive index 1.6.",
+        "R": "For a given lens, the focal length for violet light is shorter than that for red light."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "When $n_{21} < 1$, the sign of f reverses. Chromatic dispersion makes f depend on wavelength.",
+        "steps": [
+          "Here $n_{21} = 1.5/1.6 < 1$, so $(n_{21} - 1)$ is negative and f becomes negative. A is true.",
+          "Violet light has a larger n, so its f is shorter. R is true.",
+          "R deals with wavelength dependence, not with the effect of the medium, so it does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain the sign reversal, which ruins option (1). Both statements are true, which rules out options (3) and (4).",
+        "common_trap": "Choosing option (1) just because both statements are about lenses.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Thin lens formula and lens maker formula",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A plano-convex lens of refractive index 1.5 with a curved surface of radius 15 cm has a focal length of 30 cm in air.",
+        "II": "When an equiconvex lens of focal length 20 cm is cut into two halves by a plane perpendicular to its principal axis, each half has a focal length of 10 cm."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a plano-convex lens, $f = R/(n-1)$. Cutting a lens perpendicular to the axis doubles f for each half.",
+        "steps": [
+          "Statement I: $f = 15/0.5 = 30$ cm, so I is correct.",
+          "Statement II: each half is plano-convex, so $f = 2 \\times 20 = 40$ cm, not 10 cm. II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "II halves f instead of doubling it, so options (1) and (4) are wrong. I is correct, so option (2) is wrong.",
+        "common_trap": "Thinking that halving the lens halves its focal length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Total internal reflection and its applications",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "What is the critical angle for light going from a medium of refractive index 2 into air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30^\\circ$",
+        "$60^\\circ$",
+        "$45^\\circ$",
+        "$15^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The critical angle is given by $\\sin i_c = n_{rarer}/n_{denser}$.",
+        "steps": [
+          "$\\sin i_c = 1/2$.",
+          "$i_c = 30^\\circ$."
+        ],
+        "final_answer": "Option (1): $30^\\circ$",
+        "why_not_others": "$60^\\circ$ comes from using cosine instead of sine. $45^\\circ$ corresponds to $n = \\sqrt{2}$. $15^\\circ$ has no basis.",
+        "common_trap": "Writing $\\cos i_c = 1/n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Total internal reflection and its applications",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A point source of light is placed 8 cm below the surface of a liquid of refractive index $5/3$. What is the radius of the circle on the surface through which light emerges into air?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6 cm",
+        "10.7 cm",
+        "4.8 cm",
+        "13.3 cm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The radius of the circle of emergence is $r = \\frac{h}{\\sqrt{n^2 - 1}}$.",
+        "steps": [
+          "$n^2 - 1 = 25/9 - 1 = 16/9$, so $\\sqrt{n^2 - 1} = 4/3$.",
+          "$r = 8/(4/3) = 6$ cm."
+        ],
+        "final_answer": "Option (1): 6 cm",
+        "why_not_others": "10.7 cm comes from multiplying h by $4/3$. 4.8 cm is $h/n$. 13.3 cm is $hn$.",
+        "common_trap": "Inverting the factor $\\sqrt{n^2 - 1}$.",
+        "time_saving_tip": "Here $\\sin i_c = 3/5$, so $\\tan i_c = 3/4$ and $r = h \\tan i_c = 6$ cm."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Total internal reflection and its applications",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A right-angled isosceles glass prism is to be used in a periscope to turn light through $90^\\circ$ by total internal reflection. Light falls on the hypotenuse face at $45^\\circ$. Which of the following refractive indices of the prism material would make this possible?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.50",
+        "1.33",
+        "1.20",
+        "1.40"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "TIR at $45^\\circ$ requires $i_c < 45^\\circ$, which means $n > \\sqrt{2} \\approx 1.414$.",
+        "steps": [
+          "The condition is $\\sin i_c = 1/n < \\sin 45^\\circ = 1/\\sqrt{2}$.",
+          "So $n > 1.414$. Only 1.50 satisfies this."
+        ],
+        "final_answer": "Option (1): 1.50",
+        "why_not_others": "1.33, 1.20 and 1.40 are all below $\\sqrt{2}$. With these, $i_c > 45^\\circ$ and light would escape by refraction.",
+        "common_trap": "Picking 1.40 because it looks close enough to $\\sqrt{2}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Total internal reflection and its applications",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Brilliant sparkle of a diamond"
+          },
+          {
+            "label": "B",
+            "text": "Optical fibre"
+          },
+          {
+            "label": "C",
+            "text": "Mirage in a desert"
+          },
+          {
+            "label": "D",
+            "text": "Totally reflecting prism in a periscope"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Core has a higher refractive index than the cladding"
+          },
+          {
+            "label": "II",
+            "text": "Right-angled isosceles prism with $n > \\sqrt{2}$"
+          },
+          {
+            "label": "III",
+            "text": "Very small critical angle, about $24.4^\\circ$"
+          },
+          {
+            "label": "IV",
+            "text": "Total internal reflection at rarer layers of hot air near the ground"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-II, C-IV, D-I",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each application relies on a different feature of total internal reflection.",
+        "steps": [
+          "Diamond sparkles because its critical angle is small, about $24.4^\\circ$, so A matches III.",
+          "An optical fibre needs a core of higher index than the cladding, so B matches I.",
+          "A mirage is TIR at the rarer, hot air near the ground, so C matches IV.",
+          "A periscope uses a $45^\\circ$ prism with $n > \\sqrt{2}$, so D matches II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) swaps diamond and fibre. Option (3) swaps fibre and prism. Option (4) swaps mirage and prism.",
+        "common_trap": "Linking the high refractive index of diamond with optical fibres.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Total internal reflection and its applications",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about total internal reflection are correct?",
+      "statements": {
+        "A": "Total internal reflection can occur only when light travels from a denser medium to a rarer medium.",
+        "B": "In a given glass, violet light has a smaller critical angle than red light.",
+        "C": "During total internal reflection, a small part of the light is always refracted into the rarer medium.",
+        "D": "The critical angle at a glass-water interface is smaller than at a glass-air interface.",
+        "E": "Optical fibres are used in endoscopy."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, B and D only",
+        "A, C and E only",
+        "B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The critical angle is given by $\\sin i_c = n_{rarer}/n_{denser}$, and TIR involves no loss.",
+        "steps": [
+          "A is true: this is the first condition for TIR.",
+          "B is true: violet light has a larger n, so its $i_c$ is smaller.",
+          "C is false: in TIR all the light is reflected with no loss.",
+          "D is false: water has a higher index than air, so $\\sin i_c$ is larger and $i_c$ is larger.",
+          "E is true: endoscopy is a stated application of optical fibres."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Options (2) and (4) include the false D. Option (3) includes the false C.",
+        "common_trap": "Thinking that a denser surrounding medium lowers the critical angle.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Magnification and power of a lens",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A concave lens has a focal length of magnitude 25 cm. What is its power?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+4$ D",
+        "$-0.04$ D",
+        "$-4$ D",
+        "$+0.25$ D"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Power $P = 1/f$ with f in metres. A diverging (concave) lens has negative power.",
+        "steps": [
+          "For a concave lens, $f = -25$ cm $= -0.25$ m.",
+          "$P = 1/(-0.25) = -4$ D."
+        ],
+        "final_answer": "Option (3): $-4$ D",
+        "why_not_others": "$+4$ D has the wrong sign for a diverging lens. $-0.04$ D comes from using f in cm. $+0.25$ D is just f in metres, not its reciprocal, and it also has the wrong sign.",
+        "common_trap": "Taking f in cm or forgetting the negative sign of a concave lens.",
+        "time_saving_tip": "100 divided by f in cm gives P in dioptre directly: $100/25 = 4$, and the concave lens makes it negative."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Magnification and power of a lens",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An object is placed 30 cm in front of a convex lens of focal length 20 cm. What are the linear magnification and the nature of the image?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+2$; virtual and erect",
+        "$-0.5$; real and inverted",
+        "$-1.5$; real and inverted",
+        "$-2$; real and inverted"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a lens, $m = f/(f+u)$. A negative m means the image is real and inverted.",
+        "steps": [
+          "Take $u = -30$ cm and $f = +20$ cm.",
+          "$m = \\frac{20}{20 + (-30)} = \\frac{20}{-10} = -2$.",
+          "Since m is negative, the image is real and inverted, and twice the size of the object."
+        ],
+        "final_answer": "Option (4): $-2$; real and inverted",
+        "why_not_others": "$+2$ comes from a sign error; a virtual image needs the object within f. $-0.5$ inverts the ratio. $-1.5$ comes from taking $u/f$.",
+        "common_trap": "Using the mirror relation $m = -v/u$ for a lens, which flips the sign.",
+        "time_saving_tip": "Check with v: $1/v = 1/20 - 1/30$ gives $v = 60$ cm, so $m = v/u = 60/(-30) = -2$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Magnification and power of a lens",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A thin convex glass lens ($n = 1.5$) has a power of $+5$ D in air. What is its power when it is completely immersed in water of refractive index $4/3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+5$ D",
+        "$+1.25$ D",
+        "$-1.25$ D",
+        "$+20$ D"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "By the lens maker's formula, $1/f \\propto (n_{21} - 1)$, where $n_{21} = n_{lens}/n_{medium}$.",
+        "steps": [
+          "In air, $n_{21} - 1 = 1.5 - 1 = 0.5$.",
+          "In water, $n_{21} = 1.5/(4/3) = 9/8$, so $n_{21} - 1 = 1/8$.",
+          "The power scales by $(1/8)/(1/2) = 1/4$, so $P_{water} = 5/4 = +1.25$ D (f becomes 80 cm)."
+        ],
+        "final_answer": "Option (2): $+1.25$ D",
+        "why_not_others": "$+5$ D assumes the power does not change with the medium. $-1.25$ D wrongly reverses the sign; that happens only if the liquid is denser than the glass. $+20$ D multiplies by 4 instead of dividing.",
+        "common_trap": "Treating the focal length of a lens as independent of the surrounding medium.",
+        "time_saving_tip": "Take the ratio of $(n_{21} - 1)$ values directly instead of finding the radii."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Magnification and power of a lens",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A concave lens always forms a virtual, erect and diminished image of a real object.",
+        "R": "The power of a diverging lens is negative."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Image nature for a concave lens; sign convention for lens power.",
+        "steps": [
+          "For a real object, a concave lens always gives a virtual, erect, diminished image, so A is true.",
+          "Diverging lenses have negative power, so R is true.",
+          "The sign of the power is a convention. It does not explain why the image is always virtual and diminished, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R is a sign convention and does not explain the nature of the image, so option (1) fails.",
+        "common_trap": "Picking option (1) just because both statements concern a concave lens.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Magnification and power of a lens",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A single thin lens forms a real image of a small square object placed perpendicular to its axis with linear magnification of magnitude 3. The image is inverted and its area is 9 times that of the object.",
+        "II": "An object placed 15 cm from a convex lens of power $+5$ D forms a virtual, erect image with magnification $+2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A real image from a single lens has $m < 0$. Areal magnification is $m^2$. Also, $m = f/(f+u)$.",
+        "steps": [
+          "Statement I: a real image means $m = -3$, so the image is inverted. Its area ratio is $m^2 = 9$. Statement I is correct.",
+          "Statement II: $f = 1/5$ m $= 20$ cm and $u = -15$ cm.",
+          "$m = \\frac{20}{20 - 15} = +4$, not $+2$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II gives the wrong magnification, which rules out options (1) and (4). Statement I is correct, which rules out options (2) and (4).",
+        "common_trap": "Taking the areal magnification as 3 instead of $m^2$, or accepting $+2$ without calculating.",
+        "time_saving_tip": "Use $m = f/(f+u)$ directly instead of finding v first."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Combination of thin lenses in contact",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A convex lens of focal length 10 cm is placed in contact with a concave lens of focal length 20 cm. What is the equivalent focal length of the combination?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+6.67$ cm",
+        "$-10$ cm",
+        "$-20$ cm",
+        "$+20$ cm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For thin lenses in contact, $1/F = 1/f_1 + 1/f_2$, with signs.",
+        "steps": [
+          "$1/F = 1/10 + 1/(-20) = 2/20 - 1/20 = 1/20$.",
+          "$F = +20$ cm, so the combination is converging."
+        ],
+        "final_answer": "Option (4): $+20$ cm",
+        "why_not_others": "$+6.67$ cm ignores the negative sign of the concave lens. $-10$ cm adds the focal lengths directly. $-20$ cm has the wrong sign.",
+        "common_trap": "Adding focal lengths instead of their reciprocals.",
+        "time_saving_tip": "Add powers: $+10$ D $- 5$ D $= +5$ D, so $F = 20$ cm."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Combination of thin lenses in contact",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two thin convex lenses of focal lengths 20 cm and 30 cm are placed coaxially, 10 cm apart, in air. What is the equivalent focal length of the system?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "12 cm",
+        "10 cm",
+        "15 cm",
+        "50 cm"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For separated lenses, $\\frac{1}{F} = \\frac{1}{f_1} + \\frac{1}{f_2} - \\frac{d}{f_1 f_2}$.",
+        "steps": [
+          "$1/F = 1/20 + 1/30 - 10/(20 \\times 30)$.",
+          "$= 3/60 + 2/60 - 1/60 = 4/60$.",
+          "$F = 15$ cm."
+        ],
+        "final_answer": "Option (3): 15 cm",
+        "why_not_others": "12 cm treats the lenses as being in contact. 10 cm adds the d term instead of subtracting it. 50 cm simply adds the focal lengths.",
+        "common_trap": "Treating separated lenses as if they were in contact.",
+        "time_saving_tip": "Use 60 as the common denominator."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Combination of thin lenses in contact",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An equiconvex lens of power $+5$ D has one of its faces silvered. The silvered curved face acts as a concave mirror of focal length 10 cm. What is the focal length of the resulting system, which behaves as a concave mirror?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 cm",
+        "6.67 cm",
+        "4 cm",
+        "10 cm"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a silvered lens, $P = 2P_{lens} + P_{mirror}$. Light passes through the lens twice.",
+        "steps": [
+          "$P_{mirror} = 1/0.10 = 10$ D.",
+          "$P = 2(5) + 10 = 20$ D.",
+          "$f = 1/20$ m $= 5$ cm."
+        ],
+        "final_answer": "Option (1): 5 cm",
+        "why_not_others": "6.67 cm counts the lens power only once (15 D). 4 cm doubles the mirror power instead of the lens power (25 D). 10 cm is just the mirror alone.",
+        "common_trap": "Forgetting that light passes through the lens twice.",
+        "time_saving_tip": "Work in dioptres and convert to cm only at the end."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Combination of thin lenses in contact",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Lenses of power $+2$ D and $-2$ D in contact"
+          },
+          {
+            "label": "B",
+            "text": "Convex lenses of focal lengths 25 cm and 50 cm in contact"
+          },
+          {
+            "label": "C",
+            "text": "Convex lens of focal length 20 cm and concave lens of focal length 50 cm in contact"
+          },
+          {
+            "label": "D",
+            "text": "Concave lenses of focal lengths 25 cm and 100 cm in contact"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$+6$ D"
+          },
+          {
+            "label": "II",
+            "text": "$-5$ D"
+          },
+          {
+            "label": "III",
+            "text": "0 D"
+          },
+          {
+            "label": "IV",
+            "text": "$+3$ D"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For lenses in contact, $P = P_1 + P_2$, with $P = 1/f$ in metres and the correct signs.",
+        "steps": [
+          "A: $+2 - 2 = 0$ D, so the pair acts like a plane glass plate (III).",
+          "B: $+4 + 2 = +6$ D (I).",
+          "C: $+5 - 2 = +3$ D (IV).",
+          "D: $-4 - 1 = -5$ D (II)."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other matchings either swap B and C or assign the wrong sign to the diverging pair.",
+        "common_trap": "Using f in cm or dropping the negative sign of concave lenses.",
+        "time_saving_tip": "Convert each focal length to dioptres as $100/f_{cm}$, then add."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Combination of thin lenses in contact",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about combinations of thin lenses are correct?",
+      "statements": {
+        "A": "The powers of thin lenses in contact add algebraically.",
+        "B": "The total magnification of a combination of lenses equals the sum of the individual magnifications.",
+        "C": "A lens of power $+5$ D in contact with a lens of power $-5$ D behaves like a plane glass plate.",
+        "D": "For two separated lenses, if the image formed by the first lens lies beyond the second lens, it acts as a virtual object for the second lens with positive u.",
+        "E": "Two convex lenses, each of focal length 20 cm, placed 40 cm apart have an equivalent focal length of 10 cm."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Powers add for lenses in contact, magnifications multiply, and separated lenses use the d term.",
+        "steps": [
+          "A is true: $P = P_1 + P_2$.",
+          "B is false: $m = m_1 m_2$, a product, not a sum.",
+          "C is true: the net power is zero.",
+          "D is true, as stated in the stepwise method for separated lenses.",
+          "E is false: $1/F = 1/20 + 1/20 - 40/400 = 0$, so F is infinite, not 10 cm."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) misses the true statement D. Option (2) includes the false statement B. Option (4) includes the false statement E.",
+        "common_trap": "Treating the lenses in E as if in contact, which gives 10 cm.",
+        "time_saving_tip": "When $d = f_1 + f_2$ for two convex lenses, the system is afocal."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction of light through a prism",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A thin prism of refracting angle $5^\\circ$ is made of glass of refractive index 1.6. What is the deviation it produces?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3^\\circ$",
+        "$8^\\circ$",
+        "$13^\\circ$",
+        "$5^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a thin prism, $\\delta = (n-1)A$.",
+        "steps": [
+          "$\\delta = (1.6 - 1) \\times 5^\\circ = 0.6 \\times 5^\\circ = 3^\\circ$."
+        ],
+        "final_answer": "Option (1): $3^\\circ$",
+        "why_not_others": "$8^\\circ$ uses $nA$. $13^\\circ$ uses $(n+1)A$. $5^\\circ$ is just the prism angle.",
+        "common_trap": "Forgetting to subtract 1 from n.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction of light through a prism",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A prism of refracting angle $60^\\circ$ has a refractive index of $\\sqrt{2}$. What is its angle of minimum deviation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$45^\\circ$",
+        "$30^\\circ$",
+        "$60^\\circ$",
+        "$15^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$n = \\frac{\\sin\\left(\\frac{A + \\delta_m}{2}\\right)}{\\sin(A/2)}$.",
+        "steps": [
+          "$\\sqrt{2} = \\frac{\\sin\\left(\\frac{60^\\circ + \\delta_m}{2}\\right)}{\\sin 30^\\circ}$, so $\\sin\\left(\\frac{60^\\circ + \\delta_m}{2}\\right) = \\frac{\\sqrt{2}}{2} = \\frac{1}{\\sqrt{2}}$.",
+          "$\\frac{60^\\circ + \\delta_m}{2} = 45^\\circ$, so $\\delta_m = 30^\\circ$."
+        ],
+        "final_answer": "Option (2): $30^\\circ$",
+        "why_not_others": "$45^\\circ$ is the angle of incidence at minimum deviation. $60^\\circ$ is the prism angle. $15^\\circ$ comes from halving $\\delta_m$.",
+        "common_trap": "Reporting $(A + \\delta_m)/2$, which is i, as the deviation.",
+        "time_saving_tip": "At minimum deviation, $i = (A + \\delta_m)/2$, so $\\delta_m = 2i - A$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction of light through a prism",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A thin prism of angle $6^\\circ$ has refractive indices 1.56 for violet light and 1.52 for red light. What is the angular dispersion it produces?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.24^\\circ$",
+        "$0.074^\\circ$",
+        "$0.04^\\circ$",
+        "$0.24^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Angular dispersion $= (n_v - n_r)A$.",
+        "steps": [
+          "$n_v - n_r = 1.56 - 1.52 = 0.04$.",
+          "Angular dispersion $= 0.04 \\times 6^\\circ = 0.24^\\circ$."
+        ],
+        "final_answer": "Option (4): $0.24^\\circ$",
+        "why_not_others": "$3.24^\\circ$ is the mean deviation $(n_y - 1)A$ with $n_y = 1.54$. $0.074$ is the dispersive power, which is dimensionless and not an angle. $0.04^\\circ$ forgets to multiply by A.",
+        "common_trap": "Confusing angular dispersion with dispersive power or with mean deviation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction of light through a prism",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For a thin prism, the deviation increases steadily as the angle of incidence is increased.",
+        "R": "For a thin prism, the deviation is given by $\\delta = (n-1)A$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a thin prism, the deviation $(n-1)A$ is independent of i.",
+        "steps": [
+          "R is the standard thin-prism result, so R is true.",
+          "Since $\\delta = (n-1)A$ does not depend on i, the deviation does not increase with i. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Applying the U-shaped i-versus-$\\delta$ behaviour of a general prism to a thin prism.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Refraction of light through a prism",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When light passes through an equilateral prism at minimum deviation, the angle of refraction at the first face is $60^\\circ$.",
+        "II": "No ray can emerge from the second face of a prism of refracting angle $85^\\circ$ made of glass whose critical angle is $40^\\circ$, whatever the angle of incidence."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At minimum deviation, $r = A/2$. No emergence is possible if $A > 2i_c$.",
+        "steps": [
+          "Statement I: $r_1 = A/2 = 30^\\circ$, not $60^\\circ$. Statement I is incorrect.",
+          "Statement II: $2i_c = 80^\\circ$ and $A = 85^\\circ > 80^\\circ$, so no ray can emerge. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I confuses r with A, which rules out options (1) and (3). Statement II satisfies the no-emergence condition, which rules out option (2).",
+        "common_trap": "Taking r = A instead of A/2 at minimum deviation.",
+        "time_saving_tip": "Compare A directly with $2i_c$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Microscope and astronomical telescope and their magnifying powers",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A simple microscope uses a convex lens of focal length 5 cm. What is its magnifying power when the final image is formed at the near point ($D = 25$ cm)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6",
+        "5",
+        "4",
+        "0.2"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a simple microscope with the image at the near point, $m = 1 + D/f$.",
+        "steps": [
+          "$m = 1 + 25/5 = 1 + 5 = 6$."
+        ],
+        "final_answer": "Option (1): 6",
+        "why_not_others": "5 is the value for an image at infinity ($D/f$). 4 subtracts 1 instead of adding it. 0.2 is $f/D$.",
+        "common_trap": "Using $D/f$ when the image is at the near point.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Microscope and astronomical telescope and their magnifying powers",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A compound microscope has an objective of focal length 2 cm and an eyepiece of focal length 5 cm, with a tube length of 20 cm. What is its magnifying power when the final image is at infinity ($D = 25$ cm)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "50",
+        "60",
+        "10",
+        "5"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a compound microscope in normal adjustment, $m = \\frac{L}{f_o}\\cdot\\frac{D}{f_e}$.",
+        "steps": [
+          "$L/f_o = 20/2 = 10$.",
+          "$D/f_e = 25/5 = 5$.",
+          "$m = 10 \\times 5 = 50$."
+        ],
+        "final_answer": "Option (1): 50",
+        "why_not_others": "60 uses $1 + D/f_e$, which applies to an image at the near point. 10 counts only the objective. 5 counts only the eyepiece.",
+        "common_trap": "Mixing the near-point and infinity formulas for the eyepiece.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Microscope and astronomical telescope and their magnifying powers",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An astronomical telescope has an objective of focal length 50 cm and an eyepiece of focal length 5 cm. What is its magnifying power when the final image is formed at the near point ($D = 25$ cm)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "12",
+        "10",
+        "8",
+        "60"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a telescope with the image at the near point, $m = \\frac{f_o}{f_e}\\left(1 + \\frac{f_e}{D}\\right)$.",
+        "steps": [
+          "$f_o/f_e = 50/5 = 10$.",
+          "$1 + f_e/D = 1 + 5/25 = 1.2$.",
+          "$m = 10 \\times 1.2 = 12$."
+        ],
+        "final_answer": "Option (1): 12",
+        "why_not_others": "10 is the value for normal adjustment. 8 uses $(1 - f_e/D)$. 60 uses $(1 + D/f_e)$, which is the microscope eyepiece factor.",
+        "common_trap": "Using the microscope factor $D/f_e$ instead of $f_e/D$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Microscope and astronomical telescope and their magnifying powers",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Simple microscope, image at near point"
+          },
+          {
+            "label": "B",
+            "text": "Simple microscope, image at infinity"
+          },
+          {
+            "label": "C",
+            "text": "Astronomical telescope, normal adjustment"
+          },
+          {
+            "label": "D",
+            "text": "Compound microscope, normal adjustment"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$D/f$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{L}{f_o}\\cdot\\frac{D}{f_e}$"
+          },
+          {
+            "label": "III",
+            "text": "$1 + D/f$"
+          },
+          {
+            "label": "IV",
+            "text": "$f_o/f_e$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Standard magnifying-power formulas for optical instruments.",
+        "steps": [
+          "A: $1 + D/f$ (III).",
+          "B: $D/f$ (I).",
+          "C: $f_o/f_e$ (IV).",
+          "D: $(L/f_o)(D/f_e)$ (II)."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other options swap the near-point and infinity cases of the simple microscope, or swap the telescope and compound microscope formulas.",
+        "common_trap": "Associating $1 + D/f$ with an image at infinity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Microscope and astronomical telescope and their magnifying powers",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about microscopes and telescopes are correct?",
+      "statements": {
+        "A": "In a compound microscope, both $f_o$ and $f_e$ are small, with $f_o < f_e$.",
+        "B": "The objective of an astronomical telescope has a large focal length and a large aperture.",
+        "C": "The final image formed by an astronomical telescope is erect.",
+        "D": "Reflecting telescopes avoid chromatic aberration.",
+        "E": "Using an eyepiece of larger focal length increases the magnifying power of a telescope in normal adjustment."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B, C and D only",
+        "A, B and D only",
+        "B, D and E only",
+        "A and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Design features and image characteristics of optical instruments.",
+        "steps": [
+          "A is true, as stated for a compound microscope.",
+          "B is true: a large aperture improves light-gathering and resolution.",
+          "C is false: the final image is inverted.",
+          "D is true: mirrors do not produce chromatic aberration.",
+          "E is false: since $m = f_o/f_e$, a larger $f_e$ decreases m."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Option (1) includes the false statement C. Option (3) includes the false statement E and omits A. Option (4) omits the true statement B.",
+        "common_trap": "Assuming the telescope image is erect, or that a larger eyepiece focal length means more magnification.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Wavefront and Huygens' principle",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A narrow illuminated slit acts as a line source of light. The shape of the wavefront emerging from it is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Cylindrical",
+        "Spherical",
+        "Plane",
+        "Elliptical"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The shape of a wavefront depends on the geometry of the source.",
+        "steps": [
+          "A point source gives spherical wavefronts.",
+          "A line source gives cylindrical wavefronts.",
+          "A source at infinity gives plane wavefronts.",
+          "A narrow slit is a line source, so its wavefront is cylindrical."
+        ],
+        "final_answer": "Option (1): Cylindrical",
+        "why_not_others": "Spherical wavefronts come from a point source. Plane wavefronts come from a very distant source. Elliptical wavefronts are not associated with any of these sources.",
+        "common_trap": "Assuming that every source produces spherical wavefronts.",
+        "time_saving_tip": "Remember the sequence point, line, infinity: spherical, cylindrical, plane."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Wavefront and Huygens' principle",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The intensity of a cylindrical wavefront from a line source is $I$ at a distance of 2 m from the source. Neglecting absorption, what is the intensity at a distance of 8 m?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$I/16$",
+        "$I/2$",
+        "$4I$",
+        "$I/4$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For cylindrical waves, intensity varies as $1/r$.",
+        "steps": [
+          "Use $I \\propto 1/r$ for a cylindrical wave.",
+          "$I'/I = r_1/r_2 = 2/8 = 1/4$.",
+          "Therefore $I' = I/4$."
+        ],
+        "final_answer": "Option (4): $I/4$",
+        "why_not_others": "$I/16$ applies the $1/r^2$ law, which holds only for spherical waves. $I/2$ uses a $1/\\sqrt{r}$ dependence. $4I$ inverts the ratio.",
+        "common_trap": "Applying the inverse-square law to a line source.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Wavefront and Huygens' principle",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A plane wavefront travels in glass of refractive index 1.5. According to Huygens' principle, what is the radius of a secondary wavelet $2 \\times 10^{-9}$ s after it starts from a point on the wavefront? (Speed of light in vacuum $= 3 \\times 10^8$ m/s)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 cm",
+        "90 cm",
+        "20 cm",
+        "40 cm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Secondary wavelets spread with the speed of light in the medium in which they travel.",
+        "steps": [
+          "The speed in glass is $v = c/n = 3\\times10^8/1.5 = 2\\times10^8$ m/s.",
+          "The radius is $r = vt = 2\\times10^8 \\times 2\\times10^{-9} = 0.4$ m.",
+          "So $r = 40$ cm."
+        ],
+        "final_answer": "Option (4): 40 cm",
+        "why_not_others": "60 cm uses the speed in vacuum. 90 cm multiplies $c$ by $n$. 20 cm takes half the distance travelled, confusing radius with diameter.",
+        "common_trap": "Using the speed of light in vacuum for wavelets inside a medium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Wavefront and Huygens' principle",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Light from a very distant star reaching the earth can be treated as a beam of parallel rays.",
+        "R": "Rays of light are always parallel to the wavefront."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Rays are normal to wavefronts, and a distant source produces plane wavefronts.",
+        "steps": [
+          "A source at a very large distance produces plane wavefronts.",
+          "Rays are normal to a plane wavefront, so all of them are parallel to one another. A is true.",
+          "Rays are perpendicular to the wavefront, not parallel to it. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so any option that treats R as true is wrong. A is correct because a distant source gives plane wavefronts.",
+        "common_trap": "Confusing 'rays parallel to each other' with 'rays parallel to the wavefront'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Wavefront and Huygens' principle",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In Huygens' construction, the new wavefront is the forward envelope of the secondary wavelets, which spread with the speed of the wave in that medium; the backward wavelets are ignored.",
+        "II": "If the distance from the source is doubled, the intensity of a spherical wave falls to one-fourth, whereas that of a cylindrical wave falls to one-half."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Huygens' principle, and the variation of intensity with distance for different wavefronts.",
+        "steps": [
+          "Statement I restates Huygens' construction: the forward envelope gives the new wavefront, the wavelets move with the wave speed in that medium, and backward wavelets are ignored. It is correct.",
+          "For a spherical wave, $I \\propto 1/r^2$, so doubling $r$ gives $I/4$.",
+          "For a cylindrical wave, $I \\propto 1/r$, so doubling $r$ gives $I/2$.",
+          "Statement II is therefore correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree exactly with the principle and with the intensity laws, so no option that marks either one incorrect can be right.",
+        "common_trap": "Thinking that the backward wavelets also form a wavefront, or using $1/r^2$ for every type of wave.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Laws of reflection and refraction using Huygens' principle",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "When a light wave passes from air into glass, which of the following remains unchanged?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Wavelength",
+        "Frequency",
+        "Speed",
+        "Direction of propagation for oblique incidence"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Frequency is fixed by the source and does not change across a boundary.",
+        "steps": [
+          "Speed decreases in glass.",
+          "Wavelength changes in proportion to speed.",
+          "Frequency stays the same."
+        ],
+        "final_answer": "Option (2): Frequency",
+        "why_not_others": "Speed and wavelength both decrease in glass. For oblique incidence the ray bends towards the normal, so its direction changes.",
+        "common_trap": "Thinking that wavelength stays constant while frequency changes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Laws of reflection and refraction using Huygens' principle",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Light of wavelength 600 nm in air enters a medium of refractive index 1.5. What is its wavelength in the medium? (Take the refractive index of air as 1.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "900 nm",
+        "600 nm",
+        "267 nm",
+        "400 nm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda_2 = \\lambda_1 n_1/n_2$, since frequency is unchanged.",
+        "steps": [
+          "$\\lambda_2 = 600 \\times 1/1.5$.",
+          "$\\lambda_2 = 400$ nm."
+        ],
+        "final_answer": "Option (4): 400 nm",
+        "why_not_others": "900 nm multiplies by $n$ instead of dividing. 600 nm assumes the wavelength does not change. 267 nm divides by $n^2$.",
+        "common_trap": "Assuming wavelength is unchanged in the way frequency is.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Laws of reflection and refraction using Huygens' principle",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In Huygens' construction for refraction, a plane wavefront meets a plane boundary at an angle of incidence of $60^\\circ$. The speed of light in the first medium is $\\sqrt{3}$ times its speed in the second medium. What is the angle of refraction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$90^\\circ$",
+        "$30^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\sin i/\\sin r = v_1/v_2$",
+        "steps": [
+          "$\\sin r = \\sin 60^\\circ \\times v_2/v_1 = (\\sqrt{3}/2)(1/\\sqrt{3})$.",
+          "$\\sin r = 1/2$.",
+          "$r = 30^\\circ$."
+        ],
+        "final_answer": "Option (4): $30^\\circ$",
+        "why_not_others": "$60^\\circ$ ignores the change in speed. $90^\\circ$ wrongly treats this as the critical-angle case. $45^\\circ$ results from an error in the ratio.",
+        "common_trap": "Inverting the ratio to $v_2/v_1$ in Snell's law. This gives $\\sin r > 1$, which is impossible.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Laws of reflection and refraction using Huygens' principle",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Ratio $\\sin i/\\sin r$ obtained from Huygens' construction"
+          },
+          {
+            "label": "B",
+            "text": "Wavelength of light in the second medium"
+          },
+          {
+            "label": "C",
+            "text": "Quantity unchanged when light crosses a boundary"
+          },
+          {
+            "label": "D",
+            "text": "Speed of light in a denser medium as predicted by the corpuscular theory"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Frequency"
+          },
+          {
+            "label": "II",
+            "text": "$\\lambda_1 n_1/n_2$"
+          },
+          {
+            "label": "III",
+            "text": "$v_1/v_2$"
+          },
+          {
+            "label": "IV",
+            "text": "Greater than in the rarer medium"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Snell's law from wave theory, and how the wavelength and frequency of light behave at a boundary.",
+        "steps": [
+          "A: $\\sin i/\\sin r = v_1/v_2$, so A-III.",
+          "B: $\\lambda_2 = \\lambda_1 n_1/n_2$, so B-II.",
+          "C: frequency is unchanged, so C-I.",
+          "D: Newton's corpuscular theory wrongly predicted a larger speed in a denser medium, so D-IV."
+        ],
+        "final_answer": "Option (2): A-III, B-II, C-I, D-IV",
+        "why_not_others": "The other matchings swap the Snell ratio with the wavelength expression, or confuse frequency with the corpuscular prediction.",
+        "common_trap": "Believing that the corpuscular theory predicted a smaller speed in a denser medium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Laws of reflection and refraction using Huygens' principle",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about reflection and refraction explained by Huygens' principle are correct?",
+      "statements": {
+        "A": "Light bends towards the normal when it slows down on entering a medium.",
+        "B": "In reflection, the incident and reflected wavelets travel equal distances in equal times, which leads to $i = r$.",
+        "C": "The ratio $\\sin i/\\sin r$ is equal to $n_1/n_2$.",
+        "D": "Reflection changes the wavelength of light but not its frequency.",
+        "E": "Huygens' construction can also explain total internal reflection and the critical angle."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, B and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Laws of reflection and refraction derived from the propagation of secondary wavelets.",
+        "steps": [
+          "A is true: a lower speed in the second medium makes the ray bend towards the normal.",
+          "B is true: equal speeds in the same medium give congruent triangles, so $i = r$.",
+          "C is false: $\\sin i/\\sin r = n_2/n_1$.",
+          "D is false: reflection changes neither the speed, the frequency nor the wavelength.",
+          "E is true: Huygens' construction also explains TIR and the critical angle."
+        ],
+        "final_answer": "Option (4): A, B and E only",
+        "why_not_others": "The options containing C or D include a false statement. 'A and B only' leaves out the true statement E.",
+        "common_trap": "Inverting the ratio of refractive indices in Snell's law.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t10_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Interference; Young's double-slit experiment and fringe width",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In Young's double-slit experiment, light of wavelength 500 nm is used. The slit separation is 0.5 mm and the screen is 1 m away. What is the fringe width?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.5 mm",
+        "2 mm",
+        "1 mm",
+        "10 mm"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\beta = \\lambda D/d$",
+        "steps": [
+          "$\\beta = (500\\times10^{-9} \\times 1)/(0.5\\times10^{-3})$.",
+          "$\\beta = 1\\times10^{-3}$ m $= 1$ mm."
+        ],
+        "final_answer": "Option (3): 1 mm",
+        "why_not_others": "0.5 mm and 2 mm come from mixing up $d$ in the formula. 10 mm comes from a power-of-ten error in unit conversion.",
+        "common_trap": "Errors in converting nm and mm to metres.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t10_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Interference; Young's double-slit experiment and fringe width",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The fringe width in a Young's double-slit experiment performed in air is 0.6 mm. The whole apparatus is then immersed in water of refractive index $4/3$. What is the new fringe width?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.8 mm",
+        "0.6 mm",
+        "0.45 mm",
+        "0.34 mm"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a medium the wavelength becomes $\\lambda/n$, so $\\beta' = \\beta/n$.",
+        "steps": [
+          "$\\beta' = 0.6/(4/3)$.",
+          "$\\beta' = 0.6 \\times 3/4 = 0.45$ mm."
+        ],
+        "final_answer": "Option (3): 0.45 mm",
+        "why_not_others": "0.8 mm multiplies by $n$. 0.6 mm ignores the medium. 0.34 mm divides by $n^2$.",
+        "common_trap": "Thinking that immersion increases the fringe width.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t10_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Interference; Young's double-slit experiment and fringe width",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In Young's double-slit experiment, the slit separation is 1 mm and the screen is 1 m away. One slit is covered with a thin transparent film of thickness 10 $\\mu$m and refractive index 1.5. What is the shift of the fringe pattern, and in which direction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5 mm away from the covered slit",
+        "15 mm towards the covered slit",
+        "5 mm towards the covered slit",
+        "10 mm towards the covered slit"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Fringe shift $= (\\mu - 1)tD/d$, towards the covered slit.",
+        "steps": [
+          "Shift $= (1.5 - 1) \\times 10\\times10^{-6} \\times 1/(1\\times10^{-3})$.",
+          "Shift $= 5\\times10^{-3}$ m $= 5$ mm.",
+          "The extra optical path makes the pattern shift towards the covered slit."
+        ],
+        "final_answer": "Option (3): 5 mm towards the covered slit",
+        "why_not_others": "'Away' gives the wrong direction. 15 mm uses $\\mu$ in place of $(\\mu - 1)$. 10 mm leaves out the refractive-index factor completely.",
+        "common_trap": "Using $\\mu t$ instead of $(\\mu - 1)t$, or getting the direction of the shift wrong.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t10_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Interference; Young's double-slit experiment and fringe width",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In Young's double-slit experiment, covering one slit with a thin transparent film does not change the fringe width.",
+        "R": "The film shifts the entire fringe pattern away from the covered slit."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A film over one slit shifts the pattern but does not change $\\beta = \\lambda D/d$.",
+        "steps": [
+          "$\\lambda$, $D$ and $d$ are unchanged, so $\\beta$ is unchanged. A is true.",
+          "The pattern shifts by $(\\mu - 1)tD/d$ towards the covered slit, not away from it. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R states the wrong direction of shift, so any option that treats R as true is wrong.",
+        "common_trap": "Believing that the film changes the fringe width, or that the pattern shifts away from the covered slit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t10_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Interference; Young's double-slit experiment and fringe width",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In Young's double-slit experiment with two identical slits, the intensity at a point where the path difference is $\\lambda/3$ is one-fourth of the maximum intensity.",
+        "II": "If the intensities of two coherent interfering waves are in the ratio 9 : 1, the ratio of maximum to minimum intensity is 4 : 1."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I = 4I_0\\cos^2(\\phi/2)$ and $I_{max}/I_{min} = ((\\sqrt{I_1}+\\sqrt{I_2})/(\\sqrt{I_1}-\\sqrt{I_2}))^2$",
+        "steps": [
+          "Statement I: $\\phi = (2\\pi/\\lambda)(\\lambda/3) = 2\\pi/3$.",
+          "$I = 4I_0\\cos^2(\\pi/3) = 4I_0 \\times 1/4 = I_0 = I_{max}/4$, so I is correct.",
+          "Statement II: $\\sqrt{I_1}:\\sqrt{I_2} = 3:1$.",
+          "$I_{max}/I_{min} = (4/2)^2 = 4$, so II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both calculations confirm the statements, so no option that marks either one incorrect can be right.",
+        "common_trap": "Using $\\cos^2\\phi$ instead of $\\cos^2(\\phi/2)$, or using the intensity ratio directly without taking square roots.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t11_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Coherent sources and sustained interference",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two sources of light are said to be coherent if they have:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The same frequency and a constant phase difference",
+        "The same amplitude but different frequencies",
+        "The same intensity, whatever their phase relation",
+        "The same frequency and a randomly varying phase difference"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Coherence requires the same frequency and a constant phase difference.",
+        "steps": [
+          "A constant phase difference keeps the interference pattern stationary.",
+          "This requires the same frequency together with a fixed phase relation."
+        ],
+        "final_answer": "Option (1): The same frequency and a constant phase difference",
+        "why_not_others": "Different frequencies or a randomly varying phase destroy coherence. Equal intensity alone does not make sources coherent.",
+        "common_trap": "Equating coherence with equal amplitude or equal intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t11_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Coherent sources and sustained interference",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two independent sodium lamps produce intensities $I$ and $4I$ at a point on a screen. What is the resultant intensity observed at that point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$9I$",
+        "$I$",
+        "$5I$",
+        "$3I$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Intensities from incoherent sources simply add.",
+        "steps": [
+          "Independent lamps are incoherent.",
+          "$I_{res} = I + 4I = 5I$."
+        ],
+        "final_answer": "Option (3): $5I$",
+        "why_not_others": "$9I$ and $I$ are the coherent maximum $(\\sqrt{I}+\\sqrt{4I})^2$ and minimum $(\\sqrt{4I}-\\sqrt{I})^2$. $3I$ is the difference of the intensities.",
+        "common_trap": "Applying the coherent superposition formula to independent sources.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t11_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Coherent sources and sustained interference",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two coherent sources, each of intensity $I_0$, superpose at a point with a phase difference of $\\pi/3$. What is the resultant intensity at that point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4I_0$",
+        "$2I_0$",
+        "$I_0$",
+        "$3I_0$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$I = 4I_0\\cos^2(\\phi/2)$",
+        "steps": [
+          "$\\phi/2 = \\pi/6$.",
+          "$\\cos^2(\\pi/6) = 3/4$.",
+          "$I = 4I_0 \\times 3/4 = 3I_0$."
+        ],
+        "final_answer": "Option (4): $3I_0$",
+        "why_not_others": "$4I_0$ is the maximum, at $\\phi = 0$. $2I_0$ is the incoherent sum. $I_0$ uses $\\cos^2\\phi$ instead of $\\cos^2(\\phi/2)$.",
+        "common_trap": "Forgetting to halve the phase difference.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t11_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Coherent sources and sustained interference",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Young's double-slit arrangement"
+          },
+          {
+            "label": "B",
+            "text": "Colours of a thin oil film"
+          },
+          {
+            "label": "C",
+            "text": "Two independent sodium lamps"
+          },
+          {
+            "label": "D",
+            "text": "Laser"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Coherent sources by division of amplitude"
+          },
+          {
+            "label": "II",
+            "text": "Coherent sources by division of wavefront"
+          },
+          {
+            "label": "III",
+            "text": "Incoherent; intensities simply add"
+          },
+          {
+            "label": "IV",
+            "text": "Highly coherent source"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-II, B-III, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Methods of producing coherent sources, and the distinction between coherent and incoherent sources.",
+        "steps": [
+          "YDSE divides the wavefront, so A-II.",
+          "Thin films divide the amplitude, so B-I.",
+          "Independent lamps are incoherent and their intensities add, so C-III.",
+          "A laser is highly coherent, so D-IV."
+        ],
+        "final_answer": "Option (3): A-II, B-I, C-III, D-IV",
+        "why_not_others": "The other matchings swap division of wavefront with division of amplitude, or treat lamps as coherent.",
+        "common_trap": "Mixing up division of wavefront (YDSE) with division of amplitude (thin films).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t11_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Coherent sources and sustained interference",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about sustained interference are correct?",
+      "statements": {
+        "A": "The two sources must be coherent.",
+        "B": "Waves of equal amplitude give zero minimum intensity and hence the best contrast.",
+        "C": "A Fresnel biprism produces coherent sources by division of amplitude.",
+        "D": "The phase of light from an ordinary bulb changes roughly every $10^{-10}$ s, so two such bulbs cannot produce an observable interference pattern.",
+        "E": "Wide slits placed far apart give the most clearly resolved fringes."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Conditions for sustained, well-contrasted interference.",
+        "steps": [
+          "A is true: coherence is essential.",
+          "B is true: equal amplitudes give $I_{min} = 0$.",
+          "C is false: a biprism divides the wavefront, not the amplitude.",
+          "D is true: rapid random phase changes make the pattern shift too fast to observe.",
+          "E is false: the slits should be narrow and closely spaced so that the fringes are wide."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "The options containing C or E include a false statement. 'A and B only' leaves out the true statement D.",
+        "common_trap": "Classifying the Fresnel biprism as a division-of-amplitude device.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t12_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Diffraction due to a single slit; width of central maximum",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Monochromatic light of wavelength $600\\ \\text{nm}$ falls normally on a single slit of width $0.2\\ \\text{mm}$. What is the linear width of the central maximum on a screen placed $1\\ \\text{m}$ from the slit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3 mm",
+        "6 mm",
+        "12 mm",
+        "0.6 mm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The linear width of the central maximum is $W = 2\\lambda D/a$.",
+        "steps": [
+          "$W = \\dfrac{2\\lambda D}{a} = \\dfrac{2 \\times 600\\times10^{-9} \\times 1}{0.2\\times10^{-3}}$",
+          "$W = 6\\times10^{-3}\\ \\text{m} = 6\\ \\text{mm}$"
+        ],
+        "final_answer": "Option (2): 6 mm",
+        "why_not_others": "3 mm comes from using $\\lambda D/a$, which is only the half-width. 12 mm comes from wrongly using $4\\lambda D/a$. 0.6 mm is a powers-of-ten slip.",
+        "common_trap": "Taking the central maximum width as $\\lambda D/a$ instead of $2\\lambda D/a$.",
+        "time_saving_tip": "Compute $\\lambda D/a$ first (3 mm), then double it."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t12_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Diffraction due to a single slit; width of central maximum",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In air, a single-slit set-up gives a central maximum of linear width $4.0\\ \\text{mm}$ on a screen. The entire apparatus is then immersed in a liquid of refractive index $4/3$, with the slit and screen positions unchanged. What is the new width of the central maximum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "5.33 mm",
+        "3.0 mm",
+        "4.0 mm",
+        "1.5 mm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In a liquid of refractive index $n$, the wavelength becomes $\\lambda/n$. Since $W \\propto \\lambda$, the width also falls by a factor of $n$.",
+        "steps": [
+          "$W' = \\dfrac{W}{n} = \\dfrac{4.0}{4/3}$",
+          "$W' = 3.0\\ \\text{mm}$"
+        ],
+        "final_answer": "Option (2): 3.0 mm",
+        "why_not_others": "5.33 mm comes from multiplying by $n$ instead of dividing. 4.0 mm assumes the medium has no effect. 1.5 mm comes from halving and then dividing by $n$.",
+        "common_trap": "Thinking the pattern spreads out in a denser medium. In fact the wavelength decreases, so the central maximum narrows.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t12_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Diffraction due to a single slit; width of central maximum",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Light of wavelength $600\\ \\text{nm}$ falls normally on a single slit. The second minimum of the diffraction pattern is observed at an angle of $30^\\circ$ from the central direction. What is the width of the slit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "1.2 μm",
+        "2.4 μm",
+        "0.6 μm",
+        "3.0 μm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The minima of single-slit diffraction satisfy $a\\sin\\theta = n\\lambda$.",
+        "steps": [
+          "For the second minimum, $n = 2$.",
+          "$a = \\dfrac{2\\lambda}{\\sin 30^\\circ} = \\dfrac{2\\times 600\\ \\text{nm}}{0.5} = 2400\\ \\text{nm}$",
+          "$a = 2.4\\ \\mu\\text{m}$"
+        ],
+        "final_answer": "Option (2): 2.4 μm",
+        "why_not_others": "1.2 μm uses $n = 1$. 3.0 μm uses the secondary-maximum condition $(n+\\frac{1}{2})\\lambda$ with $n = 2$. 0.6 μm comes from multiplying by $\\sin 30^\\circ$ instead of dividing.",
+        "common_trap": "Mixing up the minimum condition $a\\sin\\theta = n\\lambda$ with the approximate secondary-maximum condition $a\\sin\\theta = (n+\\frac{1}{2})\\lambda$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t12_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Diffraction due to a single slit; width of central maximum",
+      "topic_index": 12,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In single-slit diffraction, the central maximum becomes wider when the slit is made narrower.",
+        "R": "The intensity of the secondary maxima decreases rapidly as their order increases."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The width of the central maximum is $2\\lambda D/a$, so it varies inversely with the slit width $a$.",
+        "steps": [
+          "A is true: $W = 2\\lambda D/a$ increases as $a$ decreases.",
+          "R is true: the secondary maxima fall off rapidly in intensity.",
+          "R describes intensity, not width. It therefore does not explain why the central maximum widens."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are factually correct, so options (3) and (4) are ruled out. Option (1) fails because R gives no reason for the width depending on $a$.",
+        "common_trap": "Picking option (1) just because both statements are about the diffraction pattern.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t12_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Diffraction due to a single slit; width of central maximum",
+      "topic_index": 12,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a slit of width $1\\ \\text{mm}$ illuminated by light of wavelength $500\\ \\text{nm}$, the Fresnel distance is $2\\ \\text{m}$.",
+        "II": "If the slit width and the wavelength are both doubled, the Fresnel distance remains unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The Fresnel distance is $z_F = a^2/\\lambda$.",
+        "steps": [
+          "Statement I: $z_F = \\dfrac{(10^{-3})^2}{5\\times10^{-7}} = 2\\ \\text{m}$. It is correct.",
+          "Statement II: the new distance is $\\dfrac{(2a)^2}{2\\lambda} = 2\\,\\dfrac{a^2}{\\lambda}$.",
+          "So the Fresnel distance doubles, and Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I checks out numerically, and Statement II ignores the square on $a$. So options (1), (2) and (4) are wrong.",
+        "common_trap": "Treating $z_F$ as proportional to $a/\\lambda$ rather than $a^2/\\lambda$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t13_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Polarization, plane-polarized light and Brewster's law",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Unpolarized light falls on the surface of a transparent medium of refractive index $\\sqrt{3}$. At what angle of incidence will the reflected light be completely plane-polarized?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$60^\\circ$",
+        "$90^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Brewster's law states $\\tan i_B = n$.",
+        "steps": [
+          "$\\tan i_B = \\sqrt{3}$",
+          "$i_B = 60^\\circ$"
+        ],
+        "final_answer": "Option (3): $60^\\circ$",
+        "why_not_others": "$30^\\circ$ is the refraction angle at the Brewster angle, or the result of using $\\cot i_B = n$. $45^\\circ$ corresponds to $n = 1$. $90^\\circ$ is grazing incidence.",
+        "common_trap": "Using $\\sin i_B = 1/n$, which is the critical-angle relation, instead of $\\tan i_B = n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t13_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Polarization, plane-polarized light and Brewster's law",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Unpolarized light of intensity $I_0$ passes through two ideal polaroids whose pass axes are inclined at $30^\\circ$ to each other. What is the intensity of the light emerging from the second polaroid?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3I_0/4$",
+        "$3I_0/8$",
+        "$I_0/8$",
+        "$I_0/2$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The first polaroid transmits $I_0/2$. Malus' law then applies to the second polaroid.",
+        "steps": [
+          "After the first polaroid: $I_1 = I_0/2$.",
+          "After the second: $I = I_1\\cos^2 30^\\circ = \\dfrac{I_0}{2}\\times\\dfrac{3}{4}$",
+          "$I = \\dfrac{3I_0}{8}$"
+        ],
+        "final_answer": "Option (2): $3I_0/8$",
+        "why_not_others": "$3I_0/4$ applies Malus' law directly to the unpolarized light. $I_0/8$ uses $\\sin^2 30^\\circ$ in place of $\\cos^2 30^\\circ$. $I_0/2$ ignores the second polaroid.",
+        "common_trap": "Applying $\\cos^2\\theta$ to unpolarized light without first halving the intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t13_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Polarization, plane-polarized light and Brewster's law",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A ray of unpolarized light strikes a transparent slab at the Brewster angle. The angle of refraction inside the slab is $37^\\circ$. What is the refractive index of the slab? (Take $\\tan 53^\\circ = 4/3$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3/4$",
+        "$3/5$",
+        "$5/3$",
+        "$4/3$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At the Brewster angle, $i_B + r = 90^\\circ$ and $\\tan i_B = n$.",
+        "steps": [
+          "$i_B = 90^\\circ - 37^\\circ = 53^\\circ$",
+          "$n = \\tan 53^\\circ = 4/3$"
+        ],
+        "final_answer": "Option (4): $4/3$",
+        "why_not_others": "$3/4$ is $\\tan 37^\\circ$, taking the refraction angle as $i_B$. $3/5$ is $\\sin 37^\\circ$. $5/3$ is $1/\\sin 37^\\circ$, which wrongly uses the critical-angle relation.",
+        "common_trap": "Substituting the refraction angle directly into $\\tan i_B = n$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t13_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Polarization, plane-polarized light and Brewster's law",
+      "topic_index": 13,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Unpolarized light of intensity $I_0$ through one ideal polaroid"
+          },
+          {
+            "label": "B",
+            "text": "Unpolarized light of intensity $I_0$ through two crossed polaroids"
+          },
+          {
+            "label": "C",
+            "text": "Unpolarized light of intensity $I_0$ through two polaroids with pass axes at $45^\\circ$"
+          },
+          {
+            "label": "D",
+            "text": "Unpolarized light of intensity $I_0$ through two crossed polaroids with a third placed between them at $45^\\circ$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$I_0/8$"
+          },
+          {
+            "label": "II",
+            "text": "Zero"
+          },
+          {
+            "label": "III",
+            "text": "$I_0/2$"
+          },
+          {
+            "label": "IV",
+            "text": "$I_0/4$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-II, C-III, D-I",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-II, C-IV, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The first polaroid transmits $I_0/2$. Each later polaroid multiplies the intensity by $\\cos^2\\theta$.",
+        "steps": [
+          "A: one polaroid gives $I_0/2$, so A matches III.",
+          "B: crossed polaroids give $\\frac{I_0}{2}\\cos^2 90^\\circ = 0$, so B matches II.",
+          "C: $\\frac{I_0}{2}\\cos^2 45^\\circ = I_0/4$, so C matches IV.",
+          "D: $\\frac{I_0}{2}\\cdot\\frac{1}{2}\\cdot\\frac{1}{2} = I_0/8$, so D matches I."
+        ],
+        "final_answer": "Option (4): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Option (1) swaps C and D. Option (2) applies Malus' law to unpolarized light in A and C. Option (3) assigns $I_0/8$ to crossed polaroids, ignoring that they transmit zero.",
+        "common_trap": "Thinking that inserting a third polaroid between crossed polaroids cannot let any light through.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t13_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Polarization, plane-polarized light and Brewster's law",
+      "topic_index": 13,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about polarization are correct?",
+      "statements": {
+        "A": "Sound waves in air cannot be polarized.",
+        "B": "At the Brewster angle, the reflected light is completely plane-polarized, with vibrations perpendicular to the plane of incidence.",
+        "C": "For glass of refractive index 1.5, the Brewster angle is about $33.7^\\circ$.",
+        "D": "Sunlight scattered at $90^\\circ$ to the incident direction is plane-polarized.",
+        "E": "Rotating a single polaroid in a beam of unpolarized light changes the transmitted intensity."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Only transverse waves can be polarized. Brewster's law is $\\tan i_B = n$. One polaroid transmits $I_0/2$ whatever its orientation.",
+        "steps": [
+          "A is true: sound in air is longitudinal.",
+          "B is true: this is the standard Brewster-angle result.",
+          "C is false: $\\tan^{-1}(1.5) \\approx 56.3^\\circ$, while $33.7^\\circ$ is the refraction angle.",
+          "D is true: scattering polarizes light, and light scattered at $90^\\circ$ is plane-polarized.",
+          "E is false: the intensity stays at $I_0/2$ for every orientation."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option (2) includes the false statement C. Options (3) and (4) include the false statement E, and option (3) also leaves out the true statement A.",
+        "common_trap": "Confusing the Brewster angle with the corresponding refraction angle, $90^\\circ - i_B$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t14_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Uses of plane-polarized light and Polaroid",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Polaroid sunglasses are effective in reducing glare from a wet road mainly because the light reflected from the road is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "completely unpolarized",
+        "of shorter wavelength than the incident light",
+        "diffracted strongly by the road surface",
+        "partly polarized horizontally"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Light reflected from horizontal surfaces is partly plane-polarized horizontally.",
+        "steps": [
+          "Reflection from a horizontal surface partly polarizes the light horizontally.",
+          "The Polaroid lenses block this horizontal component, which cuts the glare."
+        ],
+        "final_answer": "Option (4): partly polarized horizontally",
+        "why_not_others": "If the reflected light were unpolarized, a Polaroid would only halve it and would not remove glare selectively. Reflection does not change the wavelength. Diffraction plays no role in glare.",
+        "common_trap": "Thinking sunglasses work simply by darkening, without using polarization.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t14_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Uses of plane-polarized light and Polaroid",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A Polaroid sheet consists of long-chain molecules aligned in one direction. The light transmitted by the sheet has its electric vector",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "parallel to the direction of the molecular chains",
+        "along the direction of propagation of light",
+        "vibrating in all directions perpendicular to propagation",
+        "perpendicular to the direction of the molecular chains"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The aligned chains absorb the electric-field component parallel to them and transmit the perpendicular component.",
+        "steps": [
+          "The component of E parallel to the chains is absorbed.",
+          "The component perpendicular to the chains passes through, so the pass axis is perpendicular to the chains."
+        ],
+        "final_answer": "Option (4): perpendicular to the direction of the molecular chains",
+        "why_not_others": "The parallel component is the one absorbed, not transmitted. Light is transverse, so E never lies along the direction of propagation. Vibration in all perpendicular directions describes unpolarized light.",
+        "common_trap": "Assuming the pass axis lies along the chains.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t14_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Uses of plane-polarized light and Polaroid",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An adjustable train window is made of two ideal Polaroid sheets. Unpolarized sunlight of intensity $800\\ \\text{W m}^{-2}$ falls on it, and the transmitted intensity is $100\\ \\text{W m}^{-2}$. What is the angle between the pass axes of the two sheets?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30^\\circ$",
+        "$45^\\circ$",
+        "$90^\\circ$",
+        "$60^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The first sheet transmits $I_0/2$. The second sheet then follows Malus' law.",
+        "steps": [
+          "After the first sheet: $800/2 = 400\\ \\text{W m}^{-2}$.",
+          "$400\\cos^2\\theta = 100$, so $\\cos^2\\theta = 1/4$.",
+          "$\\cos\\theta = 1/2$, giving $\\theta = 60^\\circ$."
+        ],
+        "final_answer": "Option (4): $60^\\circ$",
+        "why_not_others": "$30^\\circ$ comes from using $\\sin^2\\theta$ instead of $\\cos^2\\theta$. $45^\\circ$ would transmit $200\\ \\text{W m}^{-2}$. $90^\\circ$ would transmit nothing.",
+        "common_trap": "Writing $800\\cos^2\\theta = 100$ without first halving the unpolarized intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t14_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Uses of plane-polarized light and Polaroid",
+      "topic_index": 14,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "3D movies use two oppositely polarized images that are viewed through polarizing glasses.",
+        "R": "Polarized light is used in photoelasticity to reveal stress patterns in transparent models."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "3D movies and photoelasticity are two separate applications of polarized light.",
+        "steps": [
+          "A is true: each eye receives only one of the two oppositely polarized images.",
+          "R is true: photoelasticity reveals stress in transparent models.",
+          "R describes an unrelated application, so it does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct, which rules out options (3) and (4). There is no causal link between them, which rules out option (1).",
+        "common_trap": "Choosing option (1) because both statements involve polarized light.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t14_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Uses of plane-polarized light and Polaroid",
+      "topic_index": 14,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a single Polaroid is rotated in a beam of unpolarized light, the transmitted intensity varies between a maximum and zero.",
+        "II": "Polaroid sunglasses cut glare from roads because light reflected from horizontal surfaces is partly polarized vertically."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Unpolarized light through one Polaroid gives a constant $I_0/2$. Light reflected from horizontal surfaces is partly polarized horizontally.",
+        "steps": [
+          "Statement I: the intensity stays at $I_0/2$ for every orientation. It varies only when the incident light is already polarized. Statement I is incorrect.",
+          "Statement II: reflected glare is partly polarized horizontally, not vertically. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I describes what happens with polarized incident light, not unpolarized light. Statement II has the wrong direction of polarization. Since both are false, options (1), (3) and (4) fail.",
+        "common_trap": "Confusing the behaviour of a rotating analyser in polarized light with that of a single Polaroid in unpolarized light.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

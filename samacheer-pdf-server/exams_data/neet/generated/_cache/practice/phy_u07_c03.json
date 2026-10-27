@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "A soap bubble of radius $2\\ \\text{cm}$ is formed in air from a soap solution of surface tension $0.03\\ \\text{N m}^{-1}$. What is the excess pressure inside the bubble?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.5\\ \\text{Pa}$",
+        "$3\\ \\text{Pa}$",
+        "$0.06\\ \\text{Pa}$",
+        "$6\\ \\text{Pa}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A soap bubble in air has two surfaces, so the excess pressure is $\\Delta P = 4S/R$.",
+        "steps": [
+          "Convert the radius: $R = 2\\ \\text{cm} = 0.02\\ \\text{m}$.",
+          "$\\Delta P = 4S/R = 4 \\times 0.03 / 0.02$.",
+          "$\\Delta P = 0.12/0.02 = 6\\ \\text{Pa}$."
+        ],
+        "final_answer": "Option (4): $6\\ \\text{Pa}$",
+        "why_not_others": "$1.5\\ \\text{Pa}$ uses $S/R$, which applies to a cylindrical surface. $3\\ \\text{Pa}$ uses $2S/R$, which treats the bubble as having one surface. $0.06\\ \\text{Pa}$ comes from leaving the radius in cm.",
+        "common_trap": "Using $2S/R$ for a soap bubble and forgetting its second surface.",
+        "time_saving_tip": "Soap bubble in air: $4S/R$. Drop, or air bubble in a liquid: $2S/R$."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "An air bubble of radius $0.1\\ \\text{mm}$ is at a depth of $10\\ \\text{cm}$ below the free surface of water. The atmospheric pressure is $1.0 \\times 10^5\\ \\text{Pa}$, the surface tension of water is $0.07\\ \\text{N m}^{-1}$, the density of water is $1000\\ \\text{kg m}^{-3}$ and $g = 10\\ \\text{m s}^{-2}$. What is the pressure inside the bubble?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.017 \\times 10^5\\ \\text{Pa}$",
+        "$1.024 \\times 10^5\\ \\text{Pa}$",
+        "$1.038 \\times 10^5\\ \\text{Pa}$",
+        "$1.014 \\times 10^5\\ \\text{Pa}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Pressure inside an air bubble at depth $h$: $P_{in} = P_a + \\rho g h + 2S/R$.",
+        "steps": [
+          "Hydrostatic term: $\\rho g h = 1000 \\times 10 \\times 0.1 = 1000\\ \\text{Pa}$.",
+          "Surface tension term: $2S/R = 2 \\times 0.07 / 10^{-4} = 1400\\ \\text{Pa}$.",
+          "$P_{in} = 1.0 \\times 10^5 + 1000 + 1400 = 1.024 \\times 10^5\\ \\text{Pa}$."
+        ],
+        "final_answer": "Option (2): $1.024 \\times 10^5\\ \\text{Pa}$",
+        "why_not_others": "$1.017 \\times 10^5$ uses $S/R$. $1.038 \\times 10^5$ uses $4S/R$. $1.014 \\times 10^5$ leaves out the $\\rho g h$ term.",
+        "common_trap": "Using $4S/R$ for an air bubble inside water, which has only one surface.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "Two soap bubbles of radii $4\\ \\text{cm}$ and $6\\ \\text{cm}$ are stuck together and share a common interface. What is the radius of curvature of this interface?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.4\\ \\text{cm}$",
+        "$10\\ \\text{cm}$",
+        "$12\\ \\text{cm}$",
+        "$2\\ \\text{cm}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a double bubble, the interface radius is $r = \\dfrac{r_1 r_2}{r_2 - r_1}$.",
+        "steps": [
+          "The excess pressure across the interface equals the difference of the two bubbles' excess pressures: $4S/r = 4S/r_1 - 4S/r_2$.",
+          "$r = \\dfrac{4 \\times 6}{6 - 4} = \\dfrac{24}{2} = 12\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (3): $12\\ \\text{cm}$",
+        "why_not_others": "$2.4\\ \\text{cm}$ uses $r_1 + r_2$ in the denominator. $10\\ \\text{cm}$ is the sum of the radii. $2\\ \\text{cm}$ is their difference.",
+        "common_trap": "Adding the excess pressures instead of subtracting them, which puts $r_1 + r_2$ in the denominator.",
+        "time_saving_tip": "The interface radius is always larger than the bigger bubble's radius, because the interface is flatter than either bubble."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When two soap bubbles of different radii are connected by a narrow tube, air flows from the smaller bubble into the larger bubble.",
+        "R": "The excess pressure inside a soap bubble is directly proportional to its radius."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The excess pressure in a soap bubble is $4S/R$, which is inversely proportional to $R$.",
+        "steps": [
+          "The smaller bubble has the higher internal pressure, so air flows from the smaller bubble to the larger one. A is true.",
+          "$\\Delta P = 4S/R$ varies as $1/R$, not as $R$. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R states a direct proportionality, which is wrong, so every option that calls R true is ruled out.",
+        "common_trap": "Assuming the larger bubble has the higher pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Two soap bubbles of radii $3\\ \\text{cm}$ and $4\\ \\text{cm}$ coalesce isothermally in vacuum to form a single bubble of radius $7\\ \\text{cm}$.",
+        "II": "The excess pressure across a cylindrical liquid surface of radius $R$ is $S/R$, which is half the excess pressure inside a spherical liquid drop of the same radius."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Isothermal coalescence in vacuum gives $R^2 = R_1^2 + R_2^2$. A cylindrical surface has $\\Delta P = S/R$; a drop has $2S/R$.",
+        "steps": [
+          "$R = \\sqrt{3^2 + 4^2} = 5\\ \\text{cm}$, not $7\\ \\text{cm}$. Statement I is incorrect.",
+          "$S/R$ is half of $2S/R$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I adds the radii directly, so every option that calls Statement I correct is ruled out.",
+        "common_trap": "Adding radii directly instead of using $R^2 = R_1^2 + R_2^2$.",
+        "time_saving_tip": "Radii of 3 and 4 form a 3-4-5 triple, so the combined radius is 5."
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "Water rises to a height of $6\\ \\text{cm}$ in a capillary tube of radius $0.5\\ \\text{mm}$. To what height will it rise in a tube of radius $0.25\\ \\text{mm}$ made of the same glass, under the same conditions?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3\\ \\text{cm}$",
+        "$12\\ \\text{cm}$",
+        "$24\\ \\text{cm}$",
+        "$6\\ \\text{cm}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Jurin's law: $hr$ is constant for a given liquid.",
+        "steps": [
+          "$h_2 = h_1 r_1 / r_2$.",
+          "$h_2 = 6 \\times 0.5 / 0.25 = 12\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (2): $12\\ \\text{cm}$",
+        "why_not_others": "$3\\ \\text{cm}$ assumes $h \\propto r$. $24\\ \\text{cm}$ assumes $h \\propto 1/r^2$. $6\\ \\text{cm}$ assumes the rise does not depend on the radius.",
+        "common_trap": "Taking capillary rise to be proportional to $1/r^2$, as if it depended on area.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "A clean glass capillary tube of radius $0.2\\ \\text{mm}$ is dipped vertically in water. The surface tension of water is $0.072\\ \\text{N m}^{-1}$, the angle of contact is $0^\\circ$, the density is $1000\\ \\text{kg m}^{-3}$ and $g = 10\\ \\text{m s}^{-2}$. What is the height of the capillary rise?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7.2\\ \\text{cm}$",
+        "$3.6\\ \\text{cm}$",
+        "$14.4\\ \\text{cm}$",
+        "$0.72\\ \\text{cm}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Capillary rise: $h = \\dfrac{2S\\cos\\theta}{\\rho g r}$.",
+        "steps": [
+          "Convert the radius: $r = 0.2\\ \\text{mm} = 2 \\times 10^{-4}\\ \\text{m}$, and $\\cos 0^\\circ = 1$.",
+          "$h = \\dfrac{2 \\times 0.072}{1000 \\times 10 \\times 2 \\times 10^{-4}} = \\dfrac{0.144}{2} = 0.072\\ \\text{m}$.",
+          "$h = 7.2\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (1): $7.2\\ \\text{cm}$",
+        "why_not_others": "$3.6\\ \\text{cm}$ drops the factor 2. $14.4\\ \\text{cm}$ uses $4S$, as for a soap bubble. $0.72\\ \\text{cm}$ comes from a unit-conversion slip.",
+        "common_trap": "Dropping the factor 2 in the capillary-rise formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "A water drop of radius $1\\ \\text{mm}$ is split into $1000$ identical droplets. The surface tension of water is $0.07\\ \\text{N m}^{-1}$. What is the energy required for this process?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.52\\pi \\times 10^{-6}\\ \\text{J}$",
+        "$2.8\\pi \\times 10^{-6}\\ \\text{J}$",
+        "$0.28\\pi \\times 10^{-6}\\ \\text{J}$",
+        "$279.7\\pi \\times 10^{-6}\\ \\text{J}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$W = 4\\pi R^2 S (n^{1/3} - 1)$.",
+        "steps": [
+          "$n^{1/3} = 1000^{1/3} = 10$, so $n^{1/3} - 1 = 9$.",
+          "$4\\pi R^2 S = 4\\pi \\times 10^{-6} \\times 0.07 = 0.28\\pi \\times 10^{-6}\\ \\text{J}$.",
+          "$W = 0.28\\pi \\times 10^{-6} \\times 9 = 2.52\\pi \\times 10^{-6}\\ \\text{J}$."
+        ],
+        "final_answer": "Option (1): $2.52\\pi \\times 10^{-6}\\ \\text{J}$",
+        "why_not_others": "$2.8\\pi \\times 10^{-6}$ omits the $-1$. $0.28\\pi \\times 10^{-6}$ is only the surface energy of the original drop. $279.7\\pi \\times 10^{-6}$ uses $n - 1$ instead of $n^{1/3} - 1$.",
+        "common_trap": "Forgetting to subtract the surface area of the original drop.",
+        "time_saving_tip": "Each droplet has radius $R n^{-1/3}$, so the total area becomes $n^{1/3}$ times the original area."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Radius of a capillary tube is halved, with the same liquid"
+          },
+          {
+            "label": "B",
+            "text": "Capillary tube held in water inside a freely falling lift"
+          },
+          {
+            "label": "C",
+            "text": "Glass capillary tube dipped in mercury"
+          },
+          {
+            "label": "D",
+            "text": "Capillary tube shorter than the normal rise height $h$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Height of capillary rise doubles"
+          },
+          {
+            "label": "II",
+            "text": "Liquid rises to the full length of the tube"
+          },
+          {
+            "label": "III",
+            "text": "Liquid is depressed and forms a convex meniscus"
+          },
+          {
+            "label": "IV",
+            "text": "No overflow; meniscus radius increases so that $hR$ stays constant"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$h = 2S\\cos\\theta/(\\rho g r)$ together with Jurin's law, $hR = \\text{constant}$.",
+        "steps": [
+          "A: since $h \\propto 1/r$, halving $r$ doubles $h$. A-I.",
+          "B: in free fall $g_{eff} = 0$, so the liquid rises to the full length of the tube. B-II.",
+          "C: mercury has an obtuse angle of contact, so it is depressed with a convex meniscus. C-III.",
+          "D: the liquid does not overflow; the meniscus radius adjusts so that $R'h' = Rh$. D-IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The other matchings swap the free-fall and halved-radius cases, or the mercury and short-tube cases.",
+        "common_trap": "Believing that liquid overflows from a short capillary tube.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about capillarity and drops are correct?",
+      "statements": {
+        "A": "Capillary rise of a liquid is greater at a lower temperature because its surface tension is larger.",
+        "B": "For $\\theta = 0$, the work done by surface tension in capillary rise is $2\\pi r S h$, and all of it is stored as gravitational potential energy of the liquid column.",
+        "C": "When many small droplets merge into one drop, energy is released.",
+        "D": "Water forms a concave meniscus in a clean glass tube because its angle of contact is acute.",
+        "E": "When a drop of radius $R$ splits into $27$ identical droplets, each droplet has radius $R/9$."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Facts about capillary rise, its energy balance, and the splitting and merging of drops.",
+        "steps": [
+          "A is correct: $S$ is larger at a lower temperature, so the rise is greater.",
+          "B is incorrect: only half of $2\\pi r S h$ is stored as potential energy; the other half is lost as heat.",
+          "C is correct: merging reduces the surface area and releases energy.",
+          "D is correct: an acute $\\theta$ gives a rise with a concave meniscus.",
+          "E is incorrect: $r = R n^{-1/3} = R/3$."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "\"A and C only\" leaves out the true statement D. The options containing B or E include a false statement.",
+        "common_trap": "Assuming all the work done by surface tension is stored as potential energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "A temperature of $77^\\circ\\text{F}$ corresponds to which temperature on the Celsius scale?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$45^\\circ\\text{C}$",
+        "$25^\\circ\\text{C}$",
+        "$42.8^\\circ\\text{C}$",
+        "$60.6^\\circ\\text{C}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\dfrac{C}{5} = \\dfrac{F - 32}{9}$.",
+        "steps": [
+          "$C = \\dfrac{5}{9}(77 - 32)$.",
+          "$C = \\dfrac{5}{9} \\times 45 = 25^\\circ\\text{C}$."
+        ],
+        "final_answer": "Option (2): $25^\\circ\\text{C}$",
+        "why_not_others": "$45^\\circ\\text{C}$ omits the $5/9$ factor. $42.8^\\circ\\text{C}$ omits subtracting 32. $60.6^\\circ\\text{C}$ adds 32 instead of subtracting it.",
+        "common_trap": "Forgetting to subtract 32 before scaling.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "A steel rod is clamped between two rigid supports and heated by $50\\ \\text{K}$. For steel, Young's modulus $Y = 2 \\times 10^{11}\\ \\text{N m}^{-2}$ and $\\alpha = 1.2 \\times 10^{-5}\\ \\text{K}^{-1}$. What is the thermal stress developed in the rod?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.2 \\times 10^8\\ \\text{N m}^{-2}$",
+        "$2.4 \\times 10^8\\ \\text{N m}^{-2}$",
+        "$3.6 \\times 10^8\\ \\text{N m}^{-2}$",
+        "$6.0 \\times 10^7\\ \\text{N m}^{-2}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Thermal stress $= Y\\alpha\\Delta T$.",
+        "steps": [
+          "Stress $= 2 \\times 10^{11} \\times 1.2 \\times 10^{-5} \\times 50$.",
+          "$= 2.4 \\times 10^6 \\times 50 = 1.2 \\times 10^8\\ \\text{N m}^{-2}$."
+        ],
+        "final_answer": "Option (1): $1.2 \\times 10^8\\ \\text{N m}^{-2}$",
+        "why_not_others": "$2.4 \\times 10^8$ uses $2\\alpha$. $3.6 \\times 10^8$ uses $3\\alpha$. $6.0 \\times 10^7$ wrongly halves the result.",
+        "common_trap": "Using the area or volume coefficient instead of $\\alpha$ for a rod.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "A pendulum clock with a brass pendulum ($\\alpha = 2 \\times 10^{-5}\\ \\text{K}^{-1}$) keeps correct time at a certain temperature. If the temperature rises by $20^\\circ\\text{C}$, approximately how much time does the clock lose in one day?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$34.56\\ \\text{s}$",
+        "$8.64\\ \\text{s}$",
+        "$17.28\\ \\text{s}$",
+        "$25.92\\ \\text{s}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\dfrac{\\Delta T_p}{T_p} = \\dfrac{1}{2}\\alpha\\Delta\\theta$.",
+        "steps": [
+          "$\\dfrac{\\Delta T_p}{T_p} = \\dfrac{1}{2} \\times 2 \\times 10^{-5} \\times 20 = 2 \\times 10^{-4}$.",
+          "One day $= 86400\\ \\text{s}$.",
+          "Time lost $= 86400 \\times 2 \\times 10^{-4} = 17.28\\ \\text{s}$."
+        ],
+        "final_answer": "Option (3): $17.28\\ \\text{s}$",
+        "why_not_others": "$34.56\\ \\text{s}$ omits the factor $1/2$. $8.64\\ \\text{s}$ uses $1/4$ instead of $1/2$. $25.92\\ \\text{s}$ uses $3\\alpha/2$.",
+        "common_trap": "Forgetting that $T_p \\propto \\sqrt{L}$, which introduces the factor $1/2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In very cold weather, lakes freeze from the top surface while aquatic life survives in the water below.",
+        "R": "Water has a very high specific heat capacity of about $4186\\ \\text{J kg}^{-1}\\text{K}^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Anomalous expansion of water: its density is maximum at $4^\\circ\\text{C}$.",
+        "steps": [
+          "A is true: lakes freeze from the top.",
+          "R is true: water's specific heat is $4186\\ \\text{J kg}^{-1}\\text{K}^{-1}$.",
+          "The real reason for A is anomalous expansion. Water at $4^\\circ\\text{C}$ is densest and sinks, while colder water and ice stay on top. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out options (3) and (4). High specific heat explains coolants and coastal climates, not top-down freezing, which rules out option (1).",
+        "common_trap": "Linking any true property of water to the freezing of lakes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "On heating, a bimetallic strip bends towards the metal with the larger coefficient of linear expansion.",
+        "II": "When an isotropic solid of density $\\rho$ is heated through a small $\\Delta T$, its density becomes approximately $\\rho(1 - 3\\alpha\\Delta T)$, where $\\alpha$ is its coefficient of linear expansion."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A bimetallic strip bends towards the metal with the smaller $\\alpha$. Density follows $\\rho' \\approx \\rho(1 - \\gamma\\Delta T)$ with $\\gamma = 3\\alpha$.",
+        "steps": [
+          "The metal with the larger $\\alpha$ lengthens more and lies on the outer, convex side. The strip therefore bends towards the metal with the smaller $\\alpha$, so Statement I is incorrect.",
+          "Since $\\gamma = 3\\alpha$, $\\rho' \\approx \\rho(1 - 3\\alpha\\Delta T)$. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I reverses the bending direction, so every option that calls Statement I correct is ruled out.",
+        "common_trap": "Thinking the strip bends towards the metal that expands more.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "How much heat is needed to raise the temperature of $0.5\\ \\text{kg}$ of water from $20^\\circ\\text{C}$ to $60^\\circ\\text{C}$? Take the specific heat of water as $4186\\ \\text{J kg}^{-1}\\text{K}^{-1}$.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$41860\\ \\text{J}$",
+        "$83720\\ \\text{J}$",
+        "$125580\\ \\text{J}$",
+        "$20000\\ \\text{J}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$Q = mc\\Delta T$.",
+        "steps": [
+          "$\\Delta T = 60 - 20 = 40\\ \\text{K}$.",
+          "$Q = 0.5 \\times 4186 \\times 40 = 83720\\ \\text{J}$."
+        ],
+        "final_answer": "Option (2): $83720\\ \\text{J}$",
+        "why_not_others": "$41860\\ \\text{J}$ uses $\\Delta T = 20$. $125580\\ \\text{J}$ uses $\\Delta T = 60$. $20000$ is the answer in calories ($500 \\times 1 \\times 40$) wrongly labelled as joules.",
+        "common_trap": "Using the final temperature instead of the temperature change.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "A $200\\ \\text{g}$ metal block of specific heat $0.25\\ \\text{cal g}^{-1}\\,^\\circ\\text{C}^{-1}$ at $100^\\circ\\text{C}$ is dropped into $200\\ \\text{g}$ of water at $20^\\circ\\text{C}$. Neglect heat losses and the heat capacity of the container. What is the final temperature of the mixture?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60^\\circ\\text{C}$",
+        "$84^\\circ\\text{C}$",
+        "$40^\\circ\\text{C}$",
+        "$36^\\circ\\text{C}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Mixture temperature: $T = \\dfrac{m_1 c_1 T_1 + m_2 c_2 T_2}{m_1 c_1 + m_2 c_2}$.",
+        "steps": [
+          "Heat capacity of the metal: $200 \\times 0.25 = 50\\ \\text{cal}/^\\circ\\text{C}$. Heat capacity of the water: $200\\ \\text{cal}/^\\circ\\text{C}$.",
+          "$T = \\dfrac{50 \\times 100 + 200 \\times 20}{50 + 200} = \\dfrac{9000}{250}$.",
+          "$T = 36^\\circ\\text{C}$."
+        ],
+        "final_answer": "Option (4): $36^\\circ\\text{C}$",
+        "why_not_others": "$60^\\circ\\text{C}$ ignores the specific heats and averages the temperatures. $84^\\circ\\text{C}$ swaps the two temperatures. $40^\\circ\\text{C}$ divides the heat released by the metal by the water's heat capacity alone.",
+        "common_trap": "Taking a simple average without weighting by $mc$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "$100\\ \\text{g}$ of ice at $0^\\circ\\text{C}$ is added to $200\\ \\text{g}$ of water at $30^\\circ\\text{C}$ in an insulated container of negligible heat capacity. The latent heat of fusion of ice is $80\\ \\text{cal g}^{-1}$ and the specific heat of water is $1\\ \\text{cal g}^{-1}\\,^\\circ\\text{C}^{-1}$. What is the final temperature of the contents?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20^\\circ\\text{C}$",
+        "$-6.7^\\circ\\text{C}$",
+        "$15^\\circ\\text{C}$",
+        "$0^\\circ\\text{C}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Before using the mixture formula, check whether the available heat can melt all the ice.",
+        "steps": [
+          "Heat released if the water cools to $0^\\circ\\text{C}$: $200 \\times 1 \\times 30 = 6000\\ \\text{cal}$.",
+          "Heat needed to melt all the ice: $100 \\times 80 = 8000\\ \\text{cal}$.",
+          "Since $6000 < 8000$, only $75\\ \\text{g}$ of ice melts, and ice and water coexist at $0^\\circ\\text{C}$."
+        ],
+        "final_answer": "Option (4): $0^\\circ\\text{C}$",
+        "why_not_others": "$20^\\circ\\text{C}$ ignores latent heat. $-6.7^\\circ\\text{C}$ assumes all the ice melts and gives an impossible temperature for liquid water. $15^\\circ\\text{C}$ is a simple average of the two temperatures.",
+        "common_trap": "Applying the mixture formula blindly without checking for incomplete melting.",
+        "time_saving_tip": "Always compare the heat available with $mL$ first."
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Specific heat of a gas in an isothermal process"
+          },
+          {
+            "label": "B",
+            "text": "Specific heat of a gas in an adiabatic process"
+          },
+          {
+            "label": "C",
+            "text": "$C_p - C_v$ for an ideal gas"
+          },
+          {
+            "label": "D",
+            "text": "Specific heat of water"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$R$"
+          },
+          {
+            "label": "II",
+            "text": "Infinite"
+          },
+          {
+            "label": "III",
+            "text": "Zero"
+          },
+          {
+            "label": "IV",
+            "text": "$1\\ \\text{cal g}^{-1}\\,^\\circ\\text{C}^{-1}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$c = Q/(m\\Delta T)$, Mayer's relation, and the specific heat of water.",
+        "steps": [
+          "Isothermal: $\\Delta T = 0$ while $Q \\neq 0$, so $c$ is infinite. A-II.",
+          "Adiabatic: $Q = 0$, so $c = 0$. B-III.",
+          "Mayer's relation: $C_p - C_v = R$. C-I.",
+          "Water: $1\\ \\text{cal g}^{-1}\\,^\\circ\\text{C}^{-1}$. D-IV."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Option (1) swaps the isothermal and adiabatic values. Options (3) and (4) misplace $R$.",
+        "common_trap": "Reversing the infinite and zero specific heats.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about specific heat and calorimetry are correct?",
+      "statements": {
+        "A": "The water equivalent of a container of mass $m$ and specific heat $c$ is $mc/c_w$, where $c_w$ is the specific heat of water.",
+        "B": "Calorimetry is based on the conservation of energy: in an isolated system, heat lost by hot bodies equals heat gained by cold bodies.",
+        "C": "The specific heat of ice is about $0.5\\ \\text{cal g}^{-1}\\,^\\circ\\text{C}^{-1}$.",
+        "D": "For an ideal gas, $C_v$ is greater than $C_p$.",
+        "E": "Heat capacity is the heat required to raise the temperature of unit mass of a substance by $1\\ \\text{K}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B, C and D only",
+        "B, C and E only",
+        "A and D only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Definitions of heat capacity, specific heat and water equivalent, and Mayer's relation.",
+        "steps": [
+          "A is correct: the water equivalent is $mc/c_w$.",
+          "B is correct: this is the principle of calorimetry.",
+          "C is correct: ice has about half the specific heat of water.",
+          "D is incorrect: $C_p > C_v$, since $C_p - C_v = R$.",
+          "E is incorrect: heat capacity refers to the whole body; the per-unit-mass quantity is specific heat."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "The other combinations include D or E, which are false, or leave out true statements.",
+        "common_trap": "Confusing heat capacity with specific heat capacity.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

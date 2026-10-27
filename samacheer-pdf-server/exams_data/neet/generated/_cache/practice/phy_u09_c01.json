@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "A fixed mass of an ideal gas at $27^\\circ C$ is heated at constant pressure until its volume becomes double the initial volume. The final temperature of the gas is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$54^\\circ C$",
+        "$600^\\circ C$",
+        "$327^\\circ C$",
+        "$13.5^\\circ C$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Charles' law: at constant pressure, $V \\propto T$, with $T$ in kelvin.",
+        "steps": [
+          "Initial temperature: $T_1 = 27 + 273 = 300\\ K$.",
+          "At constant pressure $\\frac{V_2}{V_1} = \\frac{T_2}{T_1}$, so $T_2 = 2 \\times 300 = 600\\ K$.",
+          "Convert back to Celsius: $600 - 273 = 327^\\circ C$."
+        ],
+        "final_answer": "Option (3): $327^\\circ C$",
+        "why_not_others": "$54^\\circ C$ comes from doubling the Celsius temperature. $600^\\circ C$ leaves the kelvin value labelled as Celsius. $13.5^\\circ C$ halves the temperature instead of doubling it.",
+        "common_trap": "Applying $V \\propto T$ to Celsius temperatures.",
+        "time_saving_tip": "Convert to kelvin first, scale by the volume ratio, then convert back."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "Oxygen gas (molar mass $32\\ g\\ mol^{-1}$) is kept at a pressure of $8.314 \\times 10^4\\ Pa$ and a temperature of $127^\\circ C$. Treating it as an ideal gas, its density is ($R = 8.314\\ J\\ mol^{-1}K^{-1}$):",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.52\\ kg\\ m^{-3}$",
+        "$0.8\\ kg\\ m^{-3}$",
+        "$800\\ kg\\ m^{-3}$",
+        "$1.25\\ kg\\ m^{-3}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Density form of the ideal gas equation: $\\rho = \\frac{PM}{RT}$.",
+        "steps": [
+          "$T = 127 + 273 = 400\\ K$ and $M = 0.032\\ kg\\ mol^{-1}$.",
+          "$\\rho = \\frac{8.314 \\times 10^4 \\times 0.032}{8.314 \\times 400}$.",
+          "$\\rho = \\frac{10^4 \\times 0.032}{400} = \\frac{320}{400} = 0.8\\ kg\\ m^{-3}$."
+        ],
+        "final_answer": "Option (2): $0.8\\ kg\\ m^{-3}$",
+        "why_not_others": "$2.52$ uses $T = 127$ instead of $400\\ K$. $800$ uses $M$ in g/mol. $1.25$ is the inverted ratio $\\frac{RT}{PM}$.",
+        "common_trap": "Using Celsius temperature or molar mass in g/mol.",
+        "time_saving_tip": "Since $P = 10^4 R$ numerically, $R$ cancels at once."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "Vessel X of volume $2\\ L$ contains an ideal gas at $3\\ atm$. Vessel Y of volume $3\\ L$ contains another non-reacting ideal gas at $2\\ atm$. The vessels are connected by a tube of negligible volume, and the temperature stays constant. The final total pressure of the mixture is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5\\ atm$",
+        "$5.0\\ atm$",
+        "$1.2\\ atm$",
+        "$2.4\\ atm$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Boyle's law for each gas, combined with Dalton's law of partial pressures.",
+        "steps": [
+          "Each gas now fills $5\\ L$.",
+          "Partial pressure of gas from X: $\\frac{3 \\times 2}{5} = 1.2\\ atm$.",
+          "Partial pressure of gas from Y: $\\frac{2 \\times 3}{5} = 1.2\\ atm$.",
+          "Total pressure: $1.2 + 1.2 = 2.4\\ atm$."
+        ],
+        "final_answer": "Option (4): $2.4\\ atm$",
+        "why_not_others": "$5.0\\ atm$ adds the initial pressures directly. $2.5\\ atm$ is a simple average of the pressures. $1.2\\ atm$ is only one partial pressure.",
+        "common_trap": "Adding initial pressures without accounting for the change in volume.",
+        "time_saving_tip": "Use $P = \\frac{P_1V_1 + P_2V_2}{V_1 + V_2}$ directly."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Real gases show behaviour closest to that of an ideal gas at low pressure and high temperature.",
+        "R": "At low pressure and high temperature the molecules are far apart, so their size and the intermolecular forces become negligible."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "An ideal gas has point molecules and no intermolecular forces; real gases approach this when the molecules are far apart.",
+        "steps": [
+          "Real gases approach ideal behaviour at low $P$ and high $T$, so A is true.",
+          "Under these conditions the molecular separation is large, so molecular size and attractions become negligible. R is true.",
+          "These are exactly the ideal-gas assumptions, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R directly gives the reason for A, so options (2), (3) and (4) fail.",
+        "common_trap": "Thinking high pressure makes gases more ideal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At the same pressure and temperature, the density of an ideal gas is proportional to its molar mass, so oxygen ($M = 32\\ g\\ mol^{-1}$) is 16 times as dense as hydrogen ($M = 2\\ g\\ mol^{-1}$).",
+        "II": "If a fixed mass of an ideal gas is heated at constant volume from $100^\\circ C$ to $200^\\circ C$, its pressure doubles."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\rho = \\frac{PM}{RT}$ and Gay-Lussac's law $P \\propto T$, with $T$ in kelvin.",
+        "steps": [
+          "At the same $P$ and $T$, $\\rho \\propto M$, so $\\frac{\\rho_{O_2}}{\\rho_{H_2}} = \\frac{32}{2} = 16$. Statement I is correct.",
+          "At constant volume, $\\frac{P_2}{P_1} = \\frac{473}{373} \\approx 1.27$, not 2. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II doubles the Celsius temperature rather than the absolute temperature, so any option calling it correct fails.",
+        "common_trap": "Treating a doubling of Celsius temperature as a doubling of absolute temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "An ideal gas is compressed at a constant pressure of $2 \\times 10^5\\ Pa$ from a volume of $5\\ L$ to $2\\ L$. The work done on the gas is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-600\\ J$",
+        "$1400\\ J$",
+        "$600\\ J$",
+        "$6 \\times 10^5\\ J$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "At constant pressure, $W_{by} = P(V_2 - V_1)$, and $W_{on} = -W_{by}$.",
+        "steps": [
+          "$\\Delta V = 2 - 5 = -3\\ L = -3 \\times 10^{-3}\\ m^3$.",
+          "$W_{by} = 2 \\times 10^5 \\times (-3 \\times 10^{-3}) = -600\\ J$.",
+          "$W_{on} = +600\\ J$."
+        ],
+        "final_answer": "Option (3): $600\\ J$",
+        "why_not_others": "$-600\\ J$ is the work done by the gas. $1400\\ J$ uses the sum of the volumes. $6 \\times 10^5\\ J$ does not convert litres to $m^3$.",
+        "common_trap": "Sign confusion between work done by the gas and work done on it.",
+        "time_saving_tip": "$1\\ L = 10^{-3}\\ m^3$."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "One mole of an ideal gas is compressed isothermally at $300\\ K$ from $10\\ L$ to $5\\ L$. The work done on the gas is ($R = 8.314\\ J\\ mol^{-1}K^{-1}$, $\\ln 2 = 0.693$):",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-1.73\\ kJ$",
+        "$2.49\\ kJ$",
+        "$1.73\\ kJ$",
+        "$0.75\\ kJ$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Isothermal compression: $W_{on} = nRT\\ln\\frac{V_1}{V_2}$.",
+        "steps": [
+          "$nRT = 1 \\times 8.314 \\times 300 = 2494.2\\ J$.",
+          "$\\frac{V_1}{V_2} = 2$, so $\\ln 2 = 0.693$.",
+          "$W_{on} = 2494.2 \\times 0.693 \\approx 1728\\ J \\approx 1.73\\ kJ$."
+        ],
+        "final_answer": "Option (3): $1.73\\ kJ$",
+        "why_not_others": "$-1.73\\ kJ$ is the work done by the gas. $2.49\\ kJ$ omits the logarithm. $0.75\\ kJ$ uses $\\log_{10}2$ without the factor 2.303.",
+        "common_trap": "Using $\\log_{10}$ in place of $\\ln$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "One mole of an ideal gas with $\\gamma = 1.4$ is compressed adiabatically, and its temperature rises from $300\\ K$ to $400\\ K$. The work done on the gas is approximately ($R = 8.314\\ J\\ mol^{-1}K^{-1}$):",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$831\\ J$",
+        "$332\\ J$",
+        "$2078\\ J$",
+        "$594\\ J$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Adiabatic compression: $W_{on} = \\frac{nR(T_2 - T_1)}{\\gamma - 1}$.",
+        "steps": [
+          "$nR\\Delta T = 8.314 \\times 100 = 831.4\\ J$.",
+          "$W_{on} = \\frac{831.4}{0.4} \\approx 2078\\ J$."
+        ],
+        "final_answer": "Option (3): $2078\\ J$",
+        "why_not_others": "$831\\ J$ ignores the factor $\\gamma - 1$. $332\\ J$ multiplies by $\\gamma - 1$ instead of dividing. $594\\ J$ divides by $\\gamma$ instead of $\\gamma - 1$.",
+        "common_trap": "Mishandling the $(\\gamma - 1)$ denominator.",
+        "time_saving_tip": "Dividing by 0.4 is the same as multiplying by 2.5."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Work done by the gas in an isochoric process"
+          },
+          {
+            "label": "B",
+            "text": "Work done by the gas at constant pressure $P$ as volume changes from $V_1$ to $V_2$"
+          },
+          {
+            "label": "C",
+            "text": "Work done on the gas in isothermal compression from $V_1$ to $V_2$"
+          },
+          {
+            "label": "D",
+            "text": "Work done on the gas in adiabatic compression from state $(P_1, V_1)$ to $(P_2, V_2)$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "$P(V_2 - V_1)$"
+          },
+          {
+            "label": "III",
+            "text": "$nRT\\ln\\frac{V_1}{V_2}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{P_2V_2 - P_1V_1}{\\gamma - 1}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-I, B-II, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Standard work expressions for the different thermodynamic processes.",
+        "steps": [
+          "Isochoric: $dV = 0$, so $W = 0$ (A-I).",
+          "Isobaric: $W = P(V_2 - V_1)$ (B-II).",
+          "Isothermal compression: $W_{on} = nRT\\ln\\frac{V_1}{V_2}$ (C-III).",
+          "Adiabatic compression: $W_{on} = \\frac{P_2V_2 - P_1V_1}{\\gamma - 1}$ (D-IV)."
+        ],
+        "final_answer": "Option (2): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The other options either swap the isothermal and adiabatic expressions or assign non-zero work to the isochoric process.",
+        "common_trap": "Confusing the isothermal and adiabatic work formulas.",
+        "time_saving_tip": "Once A-I is fixed, only the C/D pairing needs checking."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about work done in compressing a gas are correct?",
+      "statements": {
+        "A": "The work done by a gas equals the area under its P-V curve.",
+        "B": "For the same compression ratio, isothermal compression requires more work than adiabatic compression.",
+        "C": "In a cyclic process, the net work equals the area enclosed by the loop on the P-V diagram.",
+        "D": "The work done by a gas during compression is positive.",
+        "E": "The work done on a gas in isothermal compression from $P_1$ to $P_2$ is $2.303\\,nRT\\log\\frac{P_2}{P_1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "A, D and E only",
+        "C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Work is the area under the P-V curve; its sign depends on whether the gas expands or is compressed.",
+        "steps": [
+          "A is true: $W = \\int P\\,dV$, which is the area under the curve.",
+          "B is false: adiabatic compression needs more work because the gas also heats up.",
+          "C is true: net work in a cycle equals the enclosed area.",
+          "D is false: work done by the gas is negative in compression.",
+          "E is true: for an isothermal process, $\\frac{V_1}{V_2} = \\frac{P_2}{P_1}$."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Every other option includes B or D, and both are false.",
+        "common_trap": "Assuming isothermal compression is harder than adiabatic compression.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "In the kinetic theory derivation of pressure, a molecule of mass $m$ strikes a wall elastically with velocity component $v_x$ normal to the wall. The magnitude of its change in momentum is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$mv_x$",
+        "$2mv_x$",
+        "zero",
+        "$\\frac{1}{2}mv_x$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In an elastic collision, the normal velocity component reverses.",
+        "steps": [
+          "Momentum before the collision: $mv_x$. Momentum after: $-mv_x$.",
+          "Magnitude of the change: $2mv_x$."
+        ],
+        "final_answer": "Option (2): $2mv_x$",
+        "why_not_others": "$mv_x$ ignores the reversal of direction. Zero confuses momentum with speed. $\\frac{1}{2}mv_x$ has no basis.",
+        "common_trap": "Forgetting that the velocity reverses direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "A gas has density $1.0\\ kg\\ m^{-3}$, and the rms speed of its molecules is $600\\ m\\ s^{-1}$. According to kinetic theory, the pressure exerted by the gas is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.2 \\times 10^5\\ Pa$",
+        "$3.6 \\times 10^5\\ Pa$",
+        "$2.0 \\times 10^2\\ Pa$",
+        "$1.8 \\times 10^5\\ Pa$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$P = \\frac{1}{3}\\rho v_{rms}^2$.",
+        "steps": [
+          "$v_{rms}^2 = 3.6 \\times 10^5\\ m^2s^{-2}$.",
+          "$P = \\frac{1}{3} \\times 1.0 \\times 3.6 \\times 10^5 = 1.2 \\times 10^5\\ Pa$."
+        ],
+        "final_answer": "Option (1): $1.2 \\times 10^5\\ Pa$",
+        "why_not_others": "$3.6 \\times 10^5$ omits the factor $\\frac{1}{3}$. $2.0 \\times 10^2$ uses $v$ instead of $v^2$. $1.8 \\times 10^5$ uses $\\frac{1}{2}$ instead of $\\frac{1}{3}$.",
+        "common_trap": "Confusing $\\frac{1}{3}\\rho v^2$ with the kinetic energy density $\\frac{1}{2}\\rho v^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "An ideal gas exerts a pressure of $1.5 \\times 10^5\\ Pa$. The translational kinetic energy per unit volume of the gas is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0 \\times 10^5\\ J\\ m^{-3}$",
+        "$0.5 \\times 10^5\\ J\\ m^{-3}$",
+        "$4.5 \\times 10^5\\ J\\ m^{-3}$",
+        "$2.25 \\times 10^5\\ J\\ m^{-3}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$P = \\frac{2}{3}E$, where $E$ is the translational KE per unit volume.",
+        "steps": [
+          "Rearrange: $E = \\frac{3}{2}P$.",
+          "$E = 1.5 \\times 1.5 \\times 10^5 = 2.25 \\times 10^5\\ J\\ m^{-3}$."
+        ],
+        "final_answer": "Option (4): $2.25 \\times 10^5\\ J\\ m^{-3}$",
+        "why_not_others": "$1.0 \\times 10^5$ uses $E = \\frac{2}{3}P$. $0.5 \\times 10^5$ uses $\\frac{P}{3}$. $4.5 \\times 10^5$ uses $3P$.",
+        "common_trap": "Inverting the factor $\\frac{2}{3}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the kinetic theory derivation of pressure, $\\overline{v_x^2} = \\frac{1}{3}\\overline{v^2}$.",
+        "R": "The size of gas molecules is negligible compared with the separation between them."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The relation $\\overline{v_x^2} = \\frac{1}{3}\\overline{v^2}$ follows from isotropy of the random motion.",
+        "steps": [
+          "Random motion makes the three directions equivalent, so $\\overline{v_x^2} = \\overline{v_y^2} = \\overline{v_z^2} = \\frac{1}{3}\\overline{v^2}$. A is true.",
+          "Negligible molecular size is a valid assumption of kinetic theory. R is true.",
+          "The relation comes from isotropy, not from molecular size, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out (3) and (4). R is unrelated to the isotropy argument, which rules out (1).",
+        "common_trap": "Picking option (1) because both statements are valid kinetic theory facts.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the number density of a gas is doubled and the rms speed of its molecules is halved, with the molecular mass unchanged, the pressure of the gas doubles.",
+        "II": "Because kinetic theory assumes no forces between molecules except during collisions, a molecule moves in a straight line with constant velocity between collisions."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$P = \\frac{1}{3}nm\\overline{v^2}$, and Newton's first law applies between collisions.",
+        "steps": [
+          "$P \\propto n v_{rms}^2$, so the new pressure is $2 \\times \\frac{1}{4} = \\frac{1}{2}$ of the original. Pressure halves, so Statement I is incorrect.",
+          "With no force acting, Newton's first law gives uniform straight-line motion. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the square on the speed, so options (1) and (3) fail. Statement II is valid, so option (2) fails.",
+        "common_trap": "Treating pressure as proportional to $v_{rms}$ instead of $v_{rms}^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "The temperature of an ideal gas is raised from $27^\\circ C$ to $927^\\circ C$. The rms speed of its molecules becomes:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 times",
+        "4 times",
+        "$\\sqrt{2}$ times",
+        "about 5.9 times"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$v_{rms} \\propto \\sqrt{T}$, with $T$ in kelvin.",
+        "steps": [
+          "$T_1 = 300\\ K$ and $T_2 = 1200\\ K$.",
+          "$\\frac{v_2}{v_1} = \\sqrt{\\frac{1200}{300}} = \\sqrt{4} = 2$."
+        ],
+        "final_answer": "Option (1): 2 times",
+        "why_not_others": "4 times is the ratio of temperatures, not of speeds. $\\sqrt{2}$ times assumes the temperature doubles. About 5.9 times uses Celsius values: $\\sqrt{927/27}$.",
+        "common_trap": "Using Celsius temperatures in the ratio.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "The rms speed of oxygen molecules (molar mass $32\\ g\\ mol^{-1}$) at $320\\ K$ is approximately ($R = 8.314\\ J\\ mol^{-1}K^{-1}$):",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$499\\ m\\ s^{-1}$",
+        "$15.8\\ m\\ s^{-1}$",
+        "$460\\ m\\ s^{-1}$",
+        "$408\\ m\\ s^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$v_{rms} = \\sqrt{\\frac{3RT}{M}}$, with $M$ in kg/mol.",
+        "steps": [
+          "$M = 0.032\\ kg\\ mol^{-1}$.",
+          "$\\frac{3RT}{M} = \\frac{3 \\times 8.314 \\times 320}{0.032} = 2.494 \\times 10^5\\ m^2s^{-2}$.",
+          "$v_{rms} = \\sqrt{2.494 \\times 10^5} \\approx 499\\ m\\ s^{-1}$."
+        ],
+        "final_answer": "Option (1): $499\\ m\\ s^{-1}$",
+        "why_not_others": "$15.8$ uses $M$ in g/mol. $460$ is the average speed. $408$ is the most probable speed.",
+        "common_trap": "Using molar mass in g/mol, which is off by a factor of $\\sqrt{1000}$.",
+        "time_saving_tip": "$\\frac{320}{0.032} = 10^4$, so $v_{rms} = \\sqrt{3 \\times 8.314 \\times 10^4}$."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Hydrogen ($M = 2\\ g\\ mol^{-1}$) and oxygen ($M = 32\\ g\\ mol^{-1}$) are at the same temperature. The ratio of rms speeds $v_{H_2} : v_{O_2}$ and the ratio of average translational kinetic energies per molecule $KE_{H_2} : KE_{O_2}$ are, respectively:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4 : 1$ and $1 : 1$",
+        "$16 : 1$ and $1 : 1$",
+        "$4 : 1$ and $1 : 16$",
+        "$1 : 4$ and $16 : 1$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$v_{rms} \\propto \\frac{1}{\\sqrt{M}}$ at fixed $T$, while the average KE per molecule $\\frac{3}{2}k_BT$ depends only on $T$.",
+        "steps": [
+          "$\\frac{v_{H_2}}{v_{O_2}} = \\sqrt{\\frac{32}{2}} = 4$.",
+          "Both gases have KE per molecule $\\frac{3}{2}k_BT$, so the ratio is $1 : 1$."
+        ],
+        "final_answer": "Option (1): $4 : 1$ and $1 : 1$",
+        "why_not_others": "$16 : 1$ forgets the square root. $1 : 16$ wrongly makes KE depend on the gas. $1 : 4$ inverts the speed ratio.",
+        "common_trap": "Thinking a lighter gas has more average KE at the same temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "RMS speed"
+          },
+          {
+            "label": "B",
+            "text": "Average speed"
+          },
+          {
+            "label": "C",
+            "text": "Most probable speed"
+          },
+          {
+            "label": "D",
+            "text": "Average translational KE per molecule"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\sqrt{\\frac{2RT}{M}}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\sqrt{\\frac{3RT}{M}}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\sqrt{\\frac{8RT}{\\pi M}}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{3}{2}k_BT$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Formulas for the characteristic molecular speeds and the average KE.",
+        "steps": [
+          "$v_{rms} = \\sqrt{\\frac{3RT}{M}}$ (A-II).",
+          "$v_{avg} = \\sqrt{\\frac{8RT}{\\pi M}}$ (B-III).",
+          "$v_{mp} = \\sqrt{\\frac{2RT}{M}}$ (C-I).",
+          "$\\overline{KE} = \\frac{3}{2}k_BT$ (D-IV)."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-I, D-IV",
+        "why_not_others": "The other options interchange the three speed formulas.",
+        "common_trap": "Mixing up the factors 2, 3 and $\\frac{8}{\\pi}$.",
+        "time_saving_tip": "The order $v_{rms} > v_{avg} > v_{mp}$ matches $3 > \\frac{8}{\\pi} \\approx 2.55 > 2$."
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the kinetic interpretation of temperature are correct?",
+      "statements": {
+        "A": "The translational kinetic energy per mole of an ideal gas is $\\frac{3}{2}RT$.",
+        "B": "At the same temperature, the average translational KE per molecule of helium is greater than that of nitrogen.",
+        "C": "For a gas, $v_{rms} > v_{avg} > v_{mp}$.",
+        "D": "If the absolute temperature of a gas is doubled, its rms speed doubles.",
+        "E": "Hydrogen escapes Earth's atmosphere readily because, at a given temperature, lighter molecules move faster."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\overline{KE} = \\frac{3}{2}k_BT$, independent of the gas, and $v_{rms} \\propto \\sqrt{T/M}$.",
+        "steps": [
+          "A is true: $N_A \\times \\frac{3}{2}k_BT = \\frac{3}{2}RT$.",
+          "B is false: the average KE depends only on $T$.",
+          "C is true: the ratio is about $1.73 : 1.60 : 1.41$.",
+          "D is false: doubling $T$ multiplies $v_{rms}$ by $\\sqrt{2}$.",
+          "E is true: lighter molecules have a higher $v_{rms}$."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Every other option includes B or D, and both are false.",
+        "common_trap": "Assuming $v_{rms} \\propto T$ rather than $\\sqrt{T}$.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

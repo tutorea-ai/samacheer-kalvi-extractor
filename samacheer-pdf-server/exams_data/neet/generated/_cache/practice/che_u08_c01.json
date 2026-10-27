@@ -1,0 +1,616 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "For the reaction $N_2 + 3H_2 \\rightarrow 2NH_3$, ammonia is formed at a rate of $0.4\\ mol\\,L^{-1}\\,s^{-1}$. What is the rate of disappearance of $H_2$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$0.6\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$0.2\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$1.2\\ mol\\,L^{-1}\\,s^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Each rate of change is divided by its stoichiometric coefficient to give one unique rate of reaction.",
+        "steps": [
+          "$-\\frac{1}{3}\\frac{d[H_2]}{dt} = \\frac{1}{2}\\frac{d[NH_3]}{dt}$.",
+          "$-\\frac{d[H_2]}{dt} = \\frac{3}{2} \\times 0.4 = 0.6\\ mol\\,L^{-1}\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $0.6\\ mol\\,L^{-1}\\,s^{-1}$",
+        "why_not_others": "$0.4$ ignores the coefficients. $0.2$ is the rate of reaction, which is also the rate of disappearance of $N_2$. $1.2$ multiplies by 3 without dividing by 2.",
+        "common_trap": "Equating the rate of disappearance of one species with the rate of formation of another without using the coefficients.",
+        "time_saving_tip": "Ratio of rates = ratio of coefficients: $H_2 : NH_3 = 3 : 2$."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "For the reaction $2N_2O_5 \\rightarrow 4NO_2 + O_2$, the concentration of $N_2O_5$ falls from $0.50\\ M$ to $0.30\\ M$ in $40\\ s$. What is the average rate of formation of $NO_2$ in this interval?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.0 \\times 10^{-3}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$2.5 \\times 10^{-3}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$1.0 \\times 10^{-2}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "$2.0 \\times 10^{-2}\\ mol\\,L^{-1}\\,s^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Average rate over a finite interval, scaled by the stoichiometric coefficients.",
+        "steps": [
+          "$-\\frac{\\Delta[N_2O_5]}{\\Delta t} = \\frac{0.20}{40} = 5.0 \\times 10^{-3}\\ M\\,s^{-1}$.",
+          "$\\frac{\\Delta[NO_2]}{\\Delta t} = \\frac{4}{2} \\times 5.0 \\times 10^{-3} = 1.0 \\times 10^{-2}\\ M\\,s^{-1}$."
+        ],
+        "final_answer": "Option (3): $1.0 \\times 10^{-2}\\ mol\\,L^{-1}\\,s^{-1}$",
+        "why_not_others": "$5.0 \\times 10^{-3}$ is the rate of disappearance of $N_2O_5$. $2.5 \\times 10^{-3}$ is the rate of reaction, which is also the rate of formation of $O_2$. $2.0 \\times 10^{-2}$ multiplies by 4 without dividing by 2.",
+        "common_trap": "Using only the product coefficient and forgetting the reactant coefficient.",
+        "time_saving_tip": "$NO_2$ forms twice as fast as $N_2O_5$ disappears, because the coefficients are $4 : 2$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "For the reaction $A + 2B \\rightarrow 3C$, which of the following relations is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-\\frac{d[A]}{dt} = -2\\frac{d[B]}{dt}$",
+        "$\\frac{d[C]}{dt} = -\\frac{d[A]}{dt}$",
+        "$-\\frac{d[B]}{dt} = \\frac{2}{3}\\frac{d[C]}{dt}$",
+        "$-\\frac{d[A]}{dt} = 3\\frac{d[C]}{dt}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$r = -\\frac{d[A]}{dt} = -\\frac{1}{2}\\frac{d[B]}{dt} = \\frac{1}{3}\\frac{d[C]}{dt}$.",
+        "steps": [
+          "From $-\\frac{1}{2}\\frac{d[B]}{dt} = \\frac{1}{3}\\frac{d[C]}{dt}$, multiply both sides by 2.",
+          "This gives $-\\frac{d[B]}{dt} = \\frac{2}{3}\\frac{d[C]}{dt}$."
+        ],
+        "final_answer": "Option (3): $-\\frac{d[B]}{dt} = \\frac{2}{3}\\frac{d[C]}{dt}$",
+        "why_not_others": "Option (1): the correct relation is $-\\frac{d[A]}{dt} = -\\frac{1}{2}\\frac{d[B]}{dt}$. Option (2): $\\frac{d[C]}{dt} = 3\\left(-\\frac{d[A]}{dt}\\right)$. Option (4): $-\\frac{d[A]}{dt} = \\frac{1}{3}\\frac{d[C]}{dt}$.",
+        "common_trap": "Multiplying by the coefficients instead of dividing by them.",
+        "time_saving_tip": "Write the full chain of equal rates first, then rearrange."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The rate of a chemical reaction generally decreases as the reaction proceeds.",
+        "R": "The instantaneous rate of a reaction is given by the slope of the tangent to the concentration versus time curve at that instant."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Rate falls with time because reactant concentration falls. The instantaneous rate is a tangent slope.",
+        "steps": [
+          "A is true: as reactant concentration falls, the rate generally decreases.",
+          "R is true: the instantaneous rate is the tangent slope as $\\Delta t \\rightarrow 0$.",
+          "R only describes how the rate is measured; it does not explain why the rate decreases."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not explain A, because the cause of A is the falling concentration. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Marking R as the explanation simply because both statements are about rate.",
+        "time_saving_tip": "Ask whether R gives the cause of A; here A is caused by the falling reactant concentration."
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For $N_2 + 3H_2 \\rightarrow 2NH_3$, if $NH_3$ is formed at $0.10\\ M\\,s^{-1}$, the rate of reaction is $0.05\\ M\\,s^{-1}$ and $H_2$ disappears at $0.15\\ M\\,s^{-1}$.",
+        "II": "For a zero order reaction, the average rate over any time interval equals the instantaneous rate at any instant within that interval."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Stoichiometric scaling of rates, and the constant rate of a zero order reaction.",
+        "steps": [
+          "Rate of reaction $= \\frac{1}{2}(0.10) = 0.05\\ M\\,s^{-1}$.",
+          "$-\\frac{d[H_2]}{dt} = 3 \\times 0.05 = 0.15\\ M\\,s^{-1}$, so Statement I is correct.",
+          "A zero order rate does not depend on concentration, so it is constant and the average rate equals the instantaneous rate. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements are correct, so every option that calls either one incorrect is wrong.",
+        "common_trap": "Thinking the average rate equals the instantaneous rate for first order reactions as well.",
+        "time_saving_tip": "Divide by the coefficient to get the rate of reaction, then multiply by the coefficient for any other species."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Addition of a catalyst to a reaction mixture changes which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Enthalpy change, $\\Delta H$",
+        "Gibbs energy change, $\\Delta G$",
+        "Equilibrium constant, $K$",
+        "Activation energy, $E_a$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A catalyst provides an alternative pathway of lower activation energy.",
+        "steps": [
+          "A catalyst lowers $E_a$.",
+          "It does not alter $\\Delta H$, $\\Delta G$ or $K$."
+        ],
+        "final_answer": "Option (4): Activation energy, $E_a$",
+        "why_not_others": "$\\Delta H$, $\\Delta G$ and $K$ are unaffected by a catalyst.",
+        "common_trap": "Believing that a catalyst shifts the equilibrium or changes $K$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "The temperature coefficient of a reaction is 2. By what factor does its rate constant increase when the temperature is raised from $300\\ K$ to $340\\ K$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "8",
+        "4",
+        "16",
+        "32"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\frac{k_{T_2}}{k_{T_1}} = \\mu^{\\frac{T_2 - T_1}{10}}$",
+        "steps": [
+          "$\\frac{T_2 - T_1}{10} = \\frac{40}{10} = 4$.",
+          "$\\frac{k_{340}}{k_{300}} = 2^4 = 16$."
+        ],
+        "final_answer": "Option (3): 16",
+        "why_not_others": "8 uses an exponent of 3. 4 treats the increase as linear ($2 \\times 2$) instead of exponential. 32 uses an exponent of 5.",
+        "common_trap": "Multiplying $\\mu$ by the number of 10 K intervals instead of raising $\\mu$ to that power.",
+        "time_saving_tip": "Count the 10 K steps and use that count as the exponent."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "For which of the following reactions will an increase in pressure appreciably increase the rate?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Hydrolysis of an ester in aqueous solution",
+        "Precipitation of $AgCl$ from $AgNO_3(aq)$ and $NaCl(aq)$",
+        "Neutralisation of $HCl(aq)$ by $NaOH(aq)$",
+        "$2NO(g) + O_2(g) \\rightarrow 2NO_2(g)$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Pressure raises the rate only for gaseous reactions, by increasing concentration.",
+        "steps": [
+          "Higher pressure reduces volume and raises the concentration of gases, so collisions become more frequent.",
+          "Pressure has a negligible effect on reactions in liquids and solids.",
+          "Only the $NO$ and $O_2$ reaction is gaseous."
+        ],
+        "final_answer": "Option (4): $2NO(g) + O_2(g) \\rightarrow 2NO_2(g)$",
+        "why_not_others": "Options (1), (2) and (3) take place in aqueous solution, where pressure has negligible effect.",
+        "common_trap": "Assuming pressure affects the rate of every reaction.",
+        "time_saving_tip": "Look for (g) in the reactants."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Catalyst"
+          },
+          {
+            "label": "B",
+            "text": "Rise of temperature by 10 K"
+          },
+          {
+            "label": "C",
+            "text": "Increase of pressure in a gaseous reaction"
+          },
+          {
+            "label": "D",
+            "text": "Zero order reaction"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Rate independent of reactant concentration"
+          },
+          {
+            "label": "II",
+            "text": "Rate constant roughly doubles or triples"
+          },
+          {
+            "label": "III",
+            "text": "Lowers $E_a$ without changing $K$"
+          },
+          {
+            "label": "IV",
+            "text": "Raises concentration and hence collision frequency"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Effects of catalyst, temperature, pressure and concentration on rate.",
+        "steps": [
+          "Catalyst: lowers $E_a$ and leaves $K$ unchanged (A-III).",
+          "A 10 K rise roughly doubles or triples $k$ (B-II).",
+          "Higher pressure raises gas concentration and collision frequency (C-IV).",
+          "Zero order: rate does not depend on concentration (D-I)."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "The other options swap the catalyst and temperature effects, the temperature and pressure effects, or the pressure effect and the zero order behaviour.",
+        "common_trap": "Matching a catalyst with an increase in $k$ due to temperature.",
+        "time_saving_tip": "D-I is certain, so first discard any option that lacks it."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about factors affecting reaction rate are correct?",
+      "statements": {
+        "A": "A catalyst increases the rates of the forward and backward reactions equally.",
+        "B": "A catalyst can make a reaction with $\\Delta G > 0$ take place.",
+        "C": "A catalyst remains chemically unchanged at the end of the reaction.",
+        "D": "A catalyst shifts the equilibrium towards the products and so increases the equilibrium yield.",
+        "E": "The rate of a reaction depends on the concentration of a reactant, not on its total amount."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A catalyst only lowers $E_a$, and rate depends on concentration.",
+        "steps": [
+          "A is true: the forward and backward reactions are speeded up equally.",
+          "B is false: a catalyst cannot make a non-spontaneous reaction occur.",
+          "C is true.",
+          "D is false: $K$ and the equilibrium position are unchanged; equilibrium is only reached sooner.",
+          "E is true."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option (1) omits E. Options (2) and (3) include the false statements B or D.",
+        "common_trap": "Thinking a catalyst improves the equilibrium yield.",
+        "time_saving_tip": "Rule out B and D first; only options (1) and (4) remain."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "In a complex reaction, the rate determining step is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the fastest elementary step",
+        "always the first elementary step",
+        "always the last elementary step",
+        "the slowest elementary step"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The overall rate is controlled by the slowest step.",
+        "steps": [
+          "A complex reaction proceeds through a sequence of elementary steps.",
+          "The slowest of these steps controls the overall rate."
+        ],
+        "final_answer": "Option (4): the slowest elementary step",
+        "why_not_others": "The rate determining step is not the fastest step, and its position in the sequence is not fixed.",
+        "common_trap": "Assuming the first step is always rate determining.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "The decomposition of $H_2O_2$ catalysed by $I^-$ in alkaline medium proceeds as follows. Step 1 (slow): $H_2O_2 + I^- \\rightarrow H_2O + IO^-$. Step 2 (fast): $H_2O_2 + IO^- \\rightarrow H_2O + I^- + O_2$. The rate law is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\text{Rate} = k[H_2O_2][I^-]$",
+        "$\\text{Rate} = k[H_2O_2]^2$",
+        "$\\text{Rate} = k[H_2O_2][IO^-]$",
+        "$\\text{Rate} = k[H_2O_2]$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The rate law follows from the slow elementary step.",
+        "steps": [
+          "Step 1 is slow and is therefore rate determining.",
+          "Being elementary, it gives $\\text{Rate} = k[H_2O_2][I^-]$, first order in each species."
+        ],
+        "final_answer": "Option (1): $\\text{Rate} = k[H_2O_2][I^-]$",
+        "why_not_others": "Option (2) is written from the overall equation $2H_2O_2 \\rightarrow 2H_2O + O_2$. Option (3) uses the fast step and contains the intermediate. Option (4) omits the catalyst $I^-$, which appears in the slow step.",
+        "common_trap": "Writing the rate law from the overall balanced equation.",
+        "time_saving_tip": "Read the rate law directly from the slow step."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A reaction $NO_2 + CO \\rightarrow NO + CO_2$ is proposed to occur by the mechanism: Step 1 (slow): $NO_2 + NO_2 \\rightarrow NO_3 + NO$. Step 2 (fast): $NO_3 + CO \\rightarrow NO_2 + CO_2$. The rate law consistent with this mechanism is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\text{Rate} = k[NO_2][CO]$",
+        "$\\text{Rate} = k[NO_2]^2$",
+        "$\\text{Rate} = k[NO_3][CO]$",
+        "$\\text{Rate} = k[NO_2]^2[CO]$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The slowest elementary step decides the rate law; $CO$ enters only after the slow step.",
+        "steps": [
+          "Step 1 is slow and is therefore rate determining.",
+          "It is elementary, so $\\text{Rate} = k[NO_2]^2$.",
+          "$NO_3$ is an intermediate, and $CO$ takes part only in the fast step."
+        ],
+        "final_answer": "Option (2): $\\text{Rate} = k[NO_2]^2$",
+        "why_not_others": "Option (1) is written from the overall equation. Option (3) uses the fast step and contains the intermediate $NO_3$. Option (4) wrongly adds $CO$ to the slow step.",
+        "common_trap": "Writing the rate law from the stoichiometry of the overall equation.",
+        "time_saving_tip": "Read the rate law directly from the slow step."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For an elementary reaction, the rate law can be written directly from its balanced equation.",
+        "R": "An elementary reaction takes place in a single step in which the reacting species collide and form products directly."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A single-step reaction has order equal to molecularity.",
+        "steps": [
+          "Because the reaction occurs in one collision step, the species that collide are exactly those in the equation.",
+          "Hence the rate law follows the stoichiometry, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and the single-step nature in R is the reason for A.",
+        "common_trap": "Extending A to complex reactions, whose rate laws must be found by experiment.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the $I^-$ catalysed decomposition of $H_2O_2$ in alkaline medium, $IO^-$ is an intermediate and does not appear in the overall equation.",
+        "II": "A catalyst that is used up in one step and regenerated in a later step may appear in the rate law, as $I^-$ does in the $I^-$ catalysed decomposition of $H_2O_2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Distinguishing intermediates from catalysts in a mechanism.",
+        "steps": [
+          "$IO^-$ is formed in step 1 and consumed in step 2, so it is an intermediate and absent from the overall equation. Statement I is correct.",
+          "$I^-$ is consumed in step 1 and regenerated in step 2, yet $\\text{Rate} = k[H_2O_2][I^-]$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements are correct, so every option that calls either one incorrect is wrong.",
+        "common_trap": "Assuming a catalyst can never appear in a rate law because it is absent from the overall equation.",
+        "time_saving_tip": "Intermediate: formed and then consumed. Catalyst: consumed and then regenerated."
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Which of the following values is NOT possible for the molecularity of an elementary step?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2",
+        "0",
+        "1",
+        "3"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Molecularity is a whole number: 1, 2 or rarely 3.",
+        "steps": [
+          "Molecularity counts the species colliding simultaneously in an elementary step.",
+          "At least one species must react, so the molecularity cannot be zero."
+        ],
+        "final_answer": "Option (2): 0",
+        "why_not_others": "1, 2 and 3 are all possible molecularities; 3 is rare but possible.",
+        "common_trap": "Confusing molecularity with order, which can be zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "The experimentally determined rate law of a reaction is $\\text{Rate} = k[A]^{3/2}[B]^{-1}$. The overall order of the reaction is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{5}{2}$",
+        "$\\frac{3}{2}$",
+        "1",
+        "$\\frac{1}{2}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Order is the sum of the exponents in the rate law, and an exponent may be negative.",
+        "steps": [
+          "Order $= \\frac{3}{2} + (-1)$.",
+          "Order $= \\frac{1}{2}$."
+        ],
+        "final_answer": "Option (4): $\\frac{1}{2}$",
+        "why_not_others": "$\\frac{5}{2}$ treats the exponent of B as $+1$. $\\frac{3}{2}$ ignores B. 1 assumes order must be a whole number.",
+        "common_trap": "Ignoring the negative sign of the exponent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "The acid catalysed hydrolysis of ethyl acetate carried out in a large excess of water follows $\\text{Rate} = k'[CH_3COOC_2H_5]$. This reaction is best described as",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "second order, because two reactants appear in the balanced equation",
+        "first order, because its molecularity is one",
+        "pseudo first order, because water is in large excess and its concentration stays practically constant",
+        "zero order, because the catalyst $H^+$ is regenerated"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Pseudo first order reactions have one reactant in large excess.",
+        "steps": [
+          "Water is present in large excess, so $[H_2O]$ stays practically constant and is absorbed into $k'$.",
+          "The rate then depends only on [ester], so the reaction is pseudo first order."
+        ],
+        "final_answer": "Option (3): pseudo first order, because water is in large excess and its concentration stays practically constant",
+        "why_not_others": "Option (1) writes the order from the balanced equation, which contradicts the observed rate law. Option (2) uses molecularity, which has no meaning for an overall complex reaction. Option (4) ignores the observed dependence of rate on [ester].",
+        "common_trap": "Deducing the order from the stoichiometry of the equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Order of reaction"
+          },
+          {
+            "label": "B",
+            "text": "Molecularity"
+          },
+          {
+            "label": "C",
+            "text": "Pseudo first order reaction"
+          },
+          {
+            "label": "D",
+            "text": "Rate determining step"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Slowest elementary step of a mechanism"
+          },
+          {
+            "label": "II",
+            "text": "One reactant present in large excess"
+          },
+          {
+            "label": "III",
+            "text": "Experimental; can be zero or fractional"
+          },
+          {
+            "label": "IV",
+            "text": "Theoretical; whole number from 1 to 3"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Distinguishing order from molecularity, and related terms.",
+        "steps": [
+          "Order is experimental and can be zero or fractional (A-III).",
+          "Molecularity is theoretical, a whole number from 1 to 3 (B-IV).",
+          "Pseudo first order: one reactant is in large excess (C-II).",
+          "Rate determining step: the slowest step (D-I)."
+        ],
+        "final_answer": "Option (2): A-III, B-IV, C-II, D-I",
+        "why_not_others": "The other options swap the descriptions of order and molecularity, or interchange the matches for C and D, or for A and C.",
+        "common_trap": "Interchanging the descriptions of order and molecularity.",
+        "time_saving_tip": "Fix B-IV first, since only molecularity is restricted to whole numbers from 1 to 3."
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about order and molecularity are correct?",
+      "statements": {
+        "A": "The order of a reaction can be negative.",
+        "B": "For a complex reaction, the overall molecularity equals the sum of the stoichiometric coefficients of the reactants.",
+        "C": "Inversion of cane sugar in excess water is a pseudo first order reaction.",
+        "D": "Order equals molecularity for every reaction.",
+        "E": "Molecularity greater than 3 is very improbable because simultaneous collision of many species is rare."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, C and E only",
+        "B, C and D only",
+        "A, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Order is experimental; molecularity applies only to elementary steps.",
+        "steps": [
+          "A is true: order can be a negative integer.",
+          "B is false: molecularity has no meaning for an overall complex reaction.",
+          "C is true.",
+          "D is false: order equals molecularity only for elementary reactions.",
+          "E is true."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Option (1) omits E. Options (3) and (4) include the false statements B or D.",
+        "common_trap": "Assigning a molecularity to an overall complex reaction.",
+        "time_saving_tip": "Rule out B and D first; only options (1) and (2) remain."
+      }
+    }
+  ]
+}

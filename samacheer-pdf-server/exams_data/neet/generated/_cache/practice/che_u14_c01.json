@@ -1,0 +1,613 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "What is the $H-C-C$ bond angle in ethyne ($HC\\equiv CH$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$109^{\\circ}28'$",
+        "$120^{\\circ}$",
+        "$90^{\\circ}$",
+        "$180^{\\circ}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Each carbon in ethyne is $sp$ hybridised, and two $sp$ hybrids are arranged linearly.",
+        "steps": [
+          "Each carbon in $HC\\equiv CH$ forms 2 $\\sigma$ bonds and has no lone pairs, so its steric number is 2 and it is $sp$ hybridised.",
+          "Two $sp$ hybrid orbitals point in opposite directions, giving a linear molecule with a $180^{\\circ}$ angle."
+        ],
+        "final_answer": "Option (4): $180^{\\circ}$",
+        "why_not_others": "$109^{\\circ}28'$ is the $sp^3$ angle, as in $CH_4$. $120^{\\circ}$ is the $sp^2$ angle, as in $C_2H_4$. $90^{\\circ}$ is the angle between unhybridised p orbitals, not a bond angle here.",
+        "common_trap": "Assigning the $sp^2$ angle because ethyne has $\\pi$ bonds, as ethene does.",
+        "time_saving_tip": "A triple bond means $sp$ carbon, which means a linear $180^{\\circ}$ geometry."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "What is the hybridization of carbons C1, C2 and C3, respectively, in allene ($CH_2=C=CH_2$)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$sp^3$, $sp^2$, $sp^3$",
+        "$sp$, $sp^2$, $sp$",
+        "$sp^2$, $sp$, $sp^2$",
+        "$sp^2$, $sp^2$, $sp^2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Hybridization follows from the steric number, which is the number of $\\sigma$ bonds plus the number of lone pairs.",
+        "steps": [
+          "Each terminal carbon forms 3 $\\sigma$ bonds (two $C-H$ and one $C-C$), so its steric number is 3 and it is $sp^2$.",
+          "The central carbon forms 2 $\\sigma$ bonds and 2 $\\pi$ bonds, so its steric number is 2 and it is $sp$.",
+          "The sequence is therefore $sp^2$, $sp$, $sp^2$."
+        ],
+        "final_answer": "Option (3): $sp^2$, $sp$, $sp^2$",
+        "why_not_others": "No carbon in allene has four $\\sigma$ bonds, so $sp^3$ is impossible. The central carbon carries two $\\pi$ bonds, so it cannot be $sp^2$. The terminal carbons carry only one $\\pi$ bond each, so they cannot be $sp$.",
+        "common_trap": "Treating every carbon that bears a double bond as $sp^2$ and overlooking the two $\\pi$ bonds on the central carbon.",
+        "time_saving_tip": "The allenic central carbon is always $sp$."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "Which order correctly ranks the carbon-carbon bond lengths in ethane, ethene, ethyne and benzene?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "ethane > ethene > benzene > ethyne",
+        "ethyne > ethene > benzene > ethane",
+        "ethane > benzene > ethene > ethyne",
+        "benzene > ethane > ethene > ethyne"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Bond length falls as bond order and s-character rise. Benzene's $C-C$ bond lies between a single and a double bond.",
+        "steps": [
+          "The bond lengths are: $C-C$ 154 pm, benzene 139 pm, $C=C$ 134 pm, $C\\equiv C$ 120 pm.",
+          "This gives the order ethane > benzene > ethene > ethyne."
+        ],
+        "final_answer": "Option (3): ethane > benzene > ethene > ethyne",
+        "why_not_others": "Option 1 wrongly places benzene (139 pm) shorter than ethene (134 pm). Option 2 reverses the trend. Option 4 makes benzene longer than a pure single bond.",
+        "common_trap": "Forgetting that benzene's bond (139 pm) is intermediate between a single bond (154 pm) and a double bond (134 pm).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The $sp$ hybridised carbon of ethyne is more electronegative than the $sp^3$ hybridised carbon of ethane.",
+        "R": "An $sp$ hybrid orbital has 25% s-character, so its electrons are held farther from the nucleus."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Greater s-character holds electrons closer to the nucleus, so electronegativity follows the order $sp > sp^2 > sp^3$.",
+        "steps": [
+          "Carbon electronegativity follows $sp > sp^2 > sp^3$, so A is true.",
+          "An $sp$ orbital has $\\frac{1}{2} \\times 100 = 50\\%$ s-character, not 25%; 25% belongs to $sp^3$.",
+          "Higher s-character keeps electrons closer to the nucleus, not farther, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R contains two errors: the s-character value and the direction of the effect. It therefore cannot be true or serve as an explanation.",
+        "common_trap": "Mixing up the s-character values of $sp$ (50%) and $sp^3$ (25%).",
+        "time_saving_tip": "Use $\\%s = 100/(\\text{number of hybrid orbitals})$."
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the methyl carbanion ($CH_3^-$), the carbon is $sp^2$ hybridised and the ion is planar.",
+        "II": "In the methyl free radical ($CH_3^{\\bullet}$), the carbon is $sp^3$ hybridised and the radical is pyramidal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$CH_3^-$ is $sp^3$ hybridised and pyramidal, while $CH_3^+$ and $CH_3^{\\bullet}$ are $sp^2$ hybridised and planar.",
+        "steps": [
+          "$CH_3^-$ has 3 $\\sigma$ bonds and 1 lone pair, giving a steric number of 4. It is therefore $sp^3$ and pyramidal, so I is incorrect.",
+          "$CH_3^{\\bullet}$ is listed among $sp^2$ species with a trigonal planar shape, so II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement swaps the correct geometries of the two species, so neither statement is correct.",
+        "common_trap": "Forgetting that the lone pair of $CH_3^-$ counts towards the steric number.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which of the following is a heterocyclic aromatic compound?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Cyclohexane",
+        "Pyridine",
+        "Naphthalene",
+        "Tropolone"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A heterocyclic compound has a heteroatom, such as O, S or N, within the ring.",
+        "steps": [
+          "Pyridine has a nitrogen atom in an aromatic ring, so it is a heterocyclic aromatic compound."
+        ],
+        "final_answer": "Option (2): Pyridine",
+        "why_not_others": "Cyclohexane is alicyclic. Naphthalene is a benzenoid aromatic compound. Tropolone is a non-benzenoid aromatic compound with an all-carbon ring.",
+        "common_trap": "Calling tropolone heterocyclic because it contains oxygen; its oxygen atoms are not part of the ring.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Which group is always cited as a prefix and never as a suffix in IUPAC naming?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-CHO$",
+        "$-NO_2$",
+        "$-OH$",
+        "$-CN$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Halo ($-X$), nitro ($-NO_2$) and alkoxy ($-OR$) groups are always written as prefixes.",
+        "steps": [
+          "$-CHO$, $-OH$ and $-CN$ appear in the seniority list and can serve as suffixes (-al, -ol, -nitrile).",
+          "$-NO_2$ is always named with the prefix 'nitro'."
+        ],
+        "final_answer": "Option (2): $-NO_2$",
+        "why_not_others": "Aldehyde, alcohol and nitrile groups take suffixes when they are the senior group present.",
+        "common_trap": "Assuming that $-CN$ is only ever named as the prefix 'cyano'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A compound contains $-CN$, $-CHO$, $-OH$ and $-NH_2$ groups. Which group is named as the suffix in its IUPAC name?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-CN$",
+        "$-CHO$",
+        "$-OH$",
+        "$-NH_2$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The most senior functional group becomes the suffix.",
+        "steps": [
+          "The relevant seniority order is $-CN > -CHO > >C=O > -OH > -NH_2$.",
+          "$-CN$ is the most senior group, so it takes the suffix (nitrile) and the others become prefixes."
+        ],
+        "final_answer": "Option (1): $-CN$",
+        "why_not_others": "$-CHO$, $-OH$ and $-NH_2$ all rank below $-CN$, so they are named as prefixes.",
+        "common_trap": "Placing the aldehyde group above the nitrile group in the seniority order.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Furan"
+          },
+          {
+            "label": "B",
+            "text": "Tropolone"
+          },
+          {
+            "label": "C",
+            "text": "Cyclohexane"
+          },
+          {
+            "label": "D",
+            "text": "Naphthalene"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Alicyclic compound"
+          },
+          {
+            "label": "II",
+            "text": "Benzenoid aromatic compound"
+          },
+          {
+            "label": "III",
+            "text": "Non-benzenoid aromatic compound"
+          },
+          {
+            "label": "IV",
+            "text": "Heterocyclic compound"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Cyclic compounds are classified as alicyclic, aromatic (benzenoid or non-benzenoid) or heterocyclic.",
+        "steps": [
+          "Furan has an O atom in the ring, so it is heterocyclic (IV).",
+          "Tropolone is a non-benzenoid aromatic compound (III).",
+          "Cyclohexane is a carbocyclic ring that behaves like an aliphatic compound, so it is alicyclic (I).",
+          "Naphthalene is a benzenoid aromatic compound (II)."
+        ],
+        "final_answer": "Option (1): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option 2 swaps tropolone and naphthalene. Option 3 treats furan as non-benzenoid and tropolone as heterocyclic. Option 4 swaps cyclohexane and naphthalene.",
+        "common_trap": "Placing tropolone in the benzenoid category.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about functional-group seniority are correct?",
+      "statements": {
+        "A": "$-SO_3H$ is senior to $-COOR$.",
+        "B": "$-CHO$ is senior to $-CN$.",
+        "C": "The alkoxy group ($-OR$) is always written as a prefix.",
+        "D": "A $C=C$ bond is senior to $-NH_2$.",
+        "E": "$-COX$ is senior to $-CONH_2$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The seniority order is $-COOH > -SO_3H >$ anhydride $> -COOR > -COX > -CONH_2 > -CN > -CHO > >C=O > -OH > -NH_2 > C=C > C\\equiv C$.",
+        "steps": [
+          "A is true because $-SO_3H$ ranks above $-COOR$.",
+          "B is false because $-CN$ ranks above $-CHO$.",
+          "C is true because $-OR$ is an always-prefix group.",
+          "D is false because $-NH_2$ ranks above $C=C$.",
+          "E is true because acyl halide ranks above amide."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Every other combination includes B or D, both of which are false.",
+        "common_trap": "Assuming that multiple bonds outrank amines.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "What is the molecular mass difference between two adjacent members of a homologous series?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "14 u",
+        "12 u",
+        "16 u",
+        "28 u"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Adjacent homologues differ by one $-CH_2-$ unit.",
+        "steps": [
+          "The mass of one $CH_2$ unit is $12 + 2(1) = 14$ u."
+        ],
+        "final_answer": "Option (1): 14 u",
+        "why_not_others": "12 u counts only the carbon atom. 16 u is the mass of $CH_4$ or of an O atom. 28 u corresponds to two $CH_2$ units.",
+        "common_trap": "Counting only the carbon atom and getting 12 u.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "Which of the following pairs are homologues?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_3OH$ and $CH_3OCH_3$",
+        "$C_2H_4$ and $C_2H_6$",
+        "$CH_3CHO$ and $CH_3COCH_3$",
+        "$HCOOH$ and $CH_3COOH$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Homologues share the same functional group and general formula and differ by $CH_2$.",
+        "steps": [
+          "$HCOOH$ and $CH_3COOH$ are both carboxylic acids with the formula $C_nH_{2n}O_2$, and they differ by one $CH_2$ unit."
+        ],
+        "final_answer": "Option (4): $HCOOH$ and $CH_3COOH$",
+        "why_not_others": "$CH_3OH$ is an alcohol and $CH_3OCH_3$ is an ether, so their functional groups differ. $C_2H_4$ and $C_2H_6$ belong to different series. $CH_3CHO$ is an aldehyde and $CH_3COCH_3$ is a ketone, so they belong to different series despite differing by $CH_2$.",
+        "common_trap": "Checking only the $CH_2$ difference and ignoring whether the functional group is the same.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "What is the degree of unsaturation of a compound with molecular formula $C_5H_7N$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.5",
+        "3",
+        "6",
+        "2"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$DU = \\frac{2C + 2 + N - H - X}{2}$",
+        "steps": [
+          "Substituting: $DU = \\frac{2(5) + 2 + 1 - 7 - 0}{2}$.",
+          "$DU = \\frac{6}{2} = 3$."
+        ],
+        "final_answer": "Option (2): 3",
+        "why_not_others": "2.5 results from ignoring N. 2 results from subtracting N instead of adding it. 6 results from forgetting to divide by 2.",
+        "common_trap": "Subtracting nitrogen as if it were a halogen.",
+        "time_saving_tip": "A DU value must be a whole number, so 2.5 can be ruled out immediately."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Ethanol and propan-1-ol show very similar chemical properties.",
+        "R": "In a homologous series, boiling point increases with molecular mass."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Similar chemical properties arise from a shared functional group, while physical properties change gradually with mass.",
+        "steps": [
+          "Ethanol and propan-1-ol are homologous alcohols with the same $-OH$ group, so A is true.",
+          "Boiling point does rise along a homologous series, so R is true.",
+          "R describes a trend in physical properties and does not explain chemical similarity, which comes from the common functional group."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 fail. R does not explain A, so option 1 fails.",
+        "common_trap": "Linking any true statement about homologous series to A as its explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Cyclohexane ($C_6H_{12}$) fits the general formula $C_nH_{2n-2}$.",
+        "II": "In the alkanol series, solubility in water decreases as the chain length increases."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Cycloalkanes share the formula $C_nH_{2n}$ with alkenes. Water solubility falls along a homologous series.",
+        "steps": [
+          "For $n = 6$, $C_nH_{2n} = C_6H_{12}$, so cyclohexane fits $C_nH_{2n}$, not $C_nH_{2n-2}$. Statement I is incorrect.",
+          "Solubility in water falls along the series as chain length increases, so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I misassigns the general formula, which rules out options 1 and 3. Statement II correctly describes the solubility trend, which rules out option 2.",
+        "common_trap": "Assuming that the ring in a cycloalkane removes extra hydrogens, as an alkyne does.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Which of the following compounds shows geometrical (cis-trans) isomerism?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_3CH=CHCH_3$",
+        "$CH_3CH=CH_2$",
+        "$CH_2=CHCl$",
+        "$(CH_3)_2C=CH_2$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Cis-trans isomerism requires two different groups on each doubly bonded carbon.",
+        "steps": [
+          "In but-2-ene, each alkene carbon carries $H$ and $CH_3$, which are different groups, so it shows cis-trans isomerism."
+        ],
+        "final_answer": "Option (1): $CH_3CH=CHCH_3$",
+        "why_not_others": "Propene and vinyl chloride each have a $=CH_2$ end with two identical H atoms. 2-Methylpropene has two $CH_3$ groups on one carbon and two H atoms on the other.",
+        "common_trap": "Assuming that every alkene shows cis-trans isomerism.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "How many structural isomers are possible for the molecular formula $C_4H_{10}O$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4",
+        "7",
+        "3",
+        "6"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$C_4H_{10}O$ fits the formula $C_nH_{2n+1}OH$, which covers both alcohols and ethers.",
+        "steps": [
+          "There are 4 alcohols: butan-1-ol, butan-2-ol, 2-methylpropan-1-ol and 2-methylpropan-2-ol.",
+          "There are 3 ethers: methoxypropane, 2-methoxypropane and ethoxyethane.",
+          "The total is $4 + 3 = 7$."
+        ],
+        "final_answer": "Option (2): 7",
+        "why_not_others": "4 counts only the alcohols. 3 counts only the ethers. 6 misses one structure.",
+        "common_trap": "Forgetting that ethers are functional isomers of alcohols.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "How many stereoisomers are possible for 3-chlorobutan-2-ol, $CH_3CH(OH)CH(Cl)CH_3$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2",
+        "4",
+        "3",
+        "8"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "An unsymmetrical molecule with $n$ stereocentres has $2^n$ stereoisomers.",
+        "steps": [
+          "C2 carries $CH_3$, $OH$, $H$ and $CH(Cl)CH_3$, which are four different groups, so it is chiral.",
+          "C3 carries $CH_3$, $Cl$, $H$ and $CH(OH)CH_3$, which are four different groups, so it is chiral.",
+          "The two ends differ (one bears $OH$, the other $Cl$), so the molecule is unsymmetrical and no meso form exists. The number of stereoisomers is $2^2 = 4$."
+        ],
+        "final_answer": "Option (2): 4",
+        "why_not_others": "2 counts only one stereocentre. 3 wrongly assumes a meso form, as in a symmetric molecule. 8 assumes three stereocentres.",
+        "common_trap": "Applying the meso reduction to a molecule that is not symmetric.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Butane and 2-methylpropane"
+          },
+          {
+            "label": "B",
+            "text": "1-Chloropropane and 2-chloropropane"
+          },
+          {
+            "label": "C",
+            "text": "Propanal and propanone"
+          },
+          {
+            "label": "D",
+            "text": "$CH_3OC_4H_9$ and $C_2H_5OC_3H_7$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Metamerism"
+          },
+          {
+            "label": "II",
+            "text": "Position isomerism"
+          },
+          {
+            "label": "III",
+            "text": "Chain isomerism"
+          },
+          {
+            "label": "IV",
+            "text": "Functional isomerism"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The types of structural isomerism are chain, position, functional and metamerism.",
+        "steps": [
+          "Butane and 2-methylpropane differ in carbon skeleton, so they are chain isomers (III).",
+          "The two chloropropanes differ in the position of Cl, so they are position isomers (II).",
+          "Propanal is an aldehyde and propanone is a ketone, so they are functional isomers (IV).",
+          "The two ethers differ in the alkyl groups on either side of $-O-$, so they are metamers (I)."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Option 1 swaps chain and position isomerism. Option 2 swaps functional isomerism and metamerism. Option 4 swaps chain and functional isomerism.",
+        "common_trap": "Calling ether metamers chain isomers.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about isomerism are correct?",
+      "statements": {
+        "A": "$CH_2=CHCl$ shows geometrical isomerism.",
+        "B": "The cis isomer generally has a higher dipole moment than the trans isomer.",
+        "C": "A racemic mixture is optically inactive.",
+        "D": "$C_5H_{12}$ has 3 structural isomers.",
+        "E": "Enantiomers rotate plane-polarised light in the same direction."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and E only",
+        "C, D and E only",
+        "B, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "This question tests the conditions for cis-trans isomerism, optical activity and isomer counts.",
+        "steps": [
+          "A is false because $=CH_2$ carries two identical H atoms.",
+          "B is true because like groups on the same side give the cis isomer a higher dipole moment.",
+          "C is true because an equimolar mixture of enantiomers is optically inactive.",
+          "D is true: the three isomers are n-pentane, isopentane and neopentane.",
+          "E is false because enantiomers rotate plane-polarised light in opposite directions."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Every other option includes A or E, both of which are false.",
+        "common_trap": "Thinking that enantiomers have identical optical rotation because their other physical properties are identical.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

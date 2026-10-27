@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "Which physical quantity is the quantitative measure of the linear inertia of a body?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Velocity",
+        "Linear momentum",
+        "Weight",
+        "Mass"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Inertia is the tendency to resist a change in the state of rest or uniform motion. Mass is its quantitative measure.",
+        "steps": [
+          "Inertia is the resistance to change in the state of motion.",
+          "A body of greater mass has greater inertia, so mass measures linear inertia."
+        ],
+        "final_answer": "Option (4): Mass",
+        "why_not_others": "Velocity describes the state of motion, not the resistance to changing it. Momentum depends on velocity as well as mass. Weight is a force that changes with g, while inertia does not.",
+        "common_trap": "Confusing weight with mass. Weight is the gravitational force on a body, whereas mass is the measure of its inertia.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "A body moves with a constant velocity of $5\\ m/s$ while three forces act on it. Two of them are $3\\ N$ towards east and $4\\ N$ towards north. What is the magnitude of the third force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7\\ N$",
+        "$1\\ N$",
+        "$5\\ N$",
+        "$0\\ N$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Constant velocity means the net force is zero (first law).",
+        "steps": [
+          "Constant velocity gives $\\vec{F}_{net} = 0$.",
+          "The resultant of the two given forces is $\\sqrt{3^2 + 4^2} = 5\\ N$.",
+          "The third force must balance this resultant, so its magnitude is $5\\ N$, directed towards south-west."
+        ],
+        "final_answer": "Option (3): $5\\ N$",
+        "why_not_others": "7 N comes from adding the forces as scalars. 1 N comes from subtracting them. 0 N wrongly assumes that motion at constant velocity means no force acts at all, when it only requires the net force to be zero.",
+        "common_trap": "Adding perpendicular forces as scalars instead of vectors.",
+        "time_saving_tip": "Recognise the 3-4-5 triangle immediately."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "In which of the following cases is the net force on the body NOT zero?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A book lying at rest on a table",
+        "A puck sliding with constant velocity on frictionless ice",
+        "A car moving with constant speed on a circular track",
+        "A raindrop falling vertically with constant velocity"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Zero net force means constant velocity, which requires both constant speed and constant direction.",
+        "steps": [
+          "The book, the puck and the raindrop each have constant velocity, so the net force on each is zero.",
+          "The car has constant speed, but the direction of its velocity keeps changing, so it accelerates.",
+          "An accelerating body has a non-zero net force acting on it."
+        ],
+        "final_answer": "Option (3): A car moving with constant speed on a circular track",
+        "why_not_others": "In the other three cases both the magnitude and the direction of velocity are constant, so the acceleration and the net force are both zero.",
+        "common_trap": "Equating constant speed with constant velocity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A body moving with constant speed along a circular path is in translational equilibrium, since no net force acts on it.",
+        "R": "A body accelerates whenever the direction of its velocity changes, even if its speed remains constant."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Velocity is a vector, so a change in its direction alone is an acceleration.",
+        "steps": [
+          "In circular motion the direction of velocity changes continuously, so the body accelerates.",
+          "An accelerating body has a non-zero net force on it, so A is false.",
+          "R correctly states that a change in direction is an acceleration, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, which rules out every option that treats A as true.",
+        "common_trap": "Believing that uniform circular motion needs no net force.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A frame of reference attached to a bus that is accelerating from rest is an inertial frame.",
+        "II": "Dust leaving a carpet when it is beaten is an example of inertia of motion, because the dust keeps moving after the carpet stops."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Inertial frames are frames in which the first law holds. Inertia of rest is the tendency of a body at rest to stay at rest.",
+        "steps": [
+          "An accelerating frame is non-inertial, so I is incorrect.",
+          "When the carpet is beaten, the carpet moves suddenly while the dust tends to stay at rest. The dust therefore separates from the carpet.",
+          "This is inertia of rest, not inertia of motion, so II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Neither statement is correct, so every option that accepts either statement is wrong.",
+        "common_trap": "Mislabelling the carpet example as inertia of motion.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "A constant force acting on a $5\\ kg$ body changes its velocity from $2\\ m/s$ to $8\\ m/s$ in $3\\ s$, without changing its direction. What is the magnitude of the force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30\\ N$",
+        "$10\\ N$",
+        "$13.3\\ N$",
+        "$16.7\\ N$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "By the second law, force equals the rate of change of momentum.",
+        "steps": [
+          "The change in momentum is $\\Delta p = 5(8 - 2) = 30\\ kg\\,m/s$.",
+          "The force is $F = \\Delta p/\\Delta t = 30/3 = 10\\ N$."
+        ],
+        "final_answer": "Option (2): $10\\ N$",
+        "why_not_others": "30 N forgets to divide by the time. 13.3 N uses only the final velocity. 16.7 N adds the two velocities instead of subtracting them.",
+        "common_trap": "Using the final momentum in place of the change in momentum.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "A ball of mass $0.2\\ kg$ strikes a wall normally at $15\\ m/s$ and rebounds with the same speed. The contact lasts $0.02\\ s$. What is the magnitude of the average force exerted by the wall on the ball?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$150\\ N$",
+        "$300\\ N$",
+        "$0\\ N$",
+        "$600\\ N$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a normal rebound with the same speed, $|\\Delta p| = 2mv$.",
+        "steps": [
+          "The change in momentum is $|\\Delta p| = 2(0.2)(15) = 6\\ kg\\,m/s$.",
+          "The average force is $F = 6/0.02 = 300\\ N$."
+        ],
+        "final_answer": "Option (2): $300\\ N$",
+        "why_not_others": "150 N uses $mv$ instead of $2mv$. 0 N ignores the reversal of direction. 600 N doubles the correct value.",
+        "common_trap": "Ignoring the sign of velocity and taking the change in momentum as zero or as $mv$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "A person of mass $60\\ kg$ stands on a weighing machine in a lift that is accelerating downward at $2\\ m/s^2$. Taking $g = 10\\ m/s^2$, what is the reading of the machine?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$720\\ N$",
+        "$600\\ N$",
+        "$480\\ N$",
+        "$120\\ N$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Apparent weight is $m(g - a)$ when the lift accelerates downward.",
+        "steps": [
+          "The reading is $N = m(g - a)$.",
+          "Substituting, $N = 60(10 - 2) = 480\\ N$."
+        ],
+        "final_answer": "Option (3): $480\\ N$",
+        "why_not_others": "720 N uses the upward-acceleration formula. 600 N ignores the acceleration. 120 N computes only $ma$.",
+        "common_trap": "Using $m(g + a)$ for downward acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Acceleration (in SI units) of an ideal Atwood machine with masses $3\\ kg$ and $2\\ kg$, taking $g = 10\\ m/s^2$"
+          },
+          {
+            "label": "B",
+            "text": "String tension (in SI units) in the same Atwood machine"
+          },
+          {
+            "label": "C",
+            "text": "Force (in SI units) needed to keep a conveyor belt moving at $3\\ m/s$ while sand drops on it at $2\\ kg/s$"
+          },
+          {
+            "label": "D",
+            "text": "Impulse (in SI units) of a constant force of $4\\ N$ acting for $3\\ s$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "6"
+          },
+          {
+            "label": "II",
+            "text": "24"
+          },
+          {
+            "label": "III",
+            "text": "2"
+          },
+          {
+            "label": "IV",
+            "text": "12"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-I, B-II, C-III, D-IV",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Atwood machine formulas, the variable-mass force $F = v\\,dm/dt$, and impulse $J = F\\Delta t$.",
+        "steps": [
+          "Acceleration: $a = (3 - 2)(10)/5 = 2\\ m/s^2$, so A-III.",
+          "Tension: $T = 2(3)(2)(10)/5 = 24\\ N$, so B-II.",
+          "Conveyor force: $F = v\\,dm/dt = 3 \\times 2 = 6\\ N$, so C-I.",
+          "Impulse: $J = 4 \\times 3 = 12\\ N\\,s$, so D-IV."
+        ],
+        "final_answer": "Option (2): A-III, B-II, C-I, D-IV",
+        "why_not_others": "Option 1 swaps the tension and the conveyor force. Option 3 swaps the acceleration and the conveyor force. Option 4 swaps the tension and the impulse.",
+        "common_trap": "Taking the tension in an Atwood machine as $m_1 g$ or $m_2 g$ instead of $2m_1m_2g/(m_1 + m_2)$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about momentum and impulse are correct?",
+      "statements": {
+        "A": "Impulse and linear momentum have the same SI unit.",
+        "B": "Drawing the hands back while catching a ball reduces the impulse delivered to the hands.",
+        "C": "Newton's second law is local: the force at an instant fixes the acceleration at that instant.",
+        "D": "The area under a force-time graph equals the change in momentum.",
+        "E": "A person in a lift accelerating upward has an apparent weight of $m(g - a)$."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, C and D only",
+        "A, B, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The impulse-momentum theorem and apparent weight in a lift.",
+        "steps": [
+          "A is true, since $N\\,s = kg\\,m/s$.",
+          "B is false. The impulse equals $\\Delta p$, which is fixed; drawing the hands back increases the contact time and so reduces the force.",
+          "C and D are true, as stated in the notes.",
+          "E is false, because upward acceleration gives an apparent weight of $m(g + a)$."
+        ],
+        "final_answer": "Option (2): A, C and D only",
+        "why_not_others": "Option 1 misses D. Option 3 wrongly includes B. Option 4 includes E and misses A.",
+        "common_trap": "Thinking that a longer contact time reduces the impulse rather than the force.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "The action and reaction forces of Newton's third law:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "act on different bodies and hence never cancel each other",
+        "act on the same body and cancel each other",
+        "act on different bodies but still cancel each other",
+        "are equal in magnitude only when the bodies are at rest"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Third-law pairs act on different bodies.",
+        "steps": [
+          "Since $\\vec{F}_{AB} = -\\vec{F}_{BA}$, one force acts on A and the other acts on B.",
+          "Forces acting on different bodies cannot cancel each other."
+        ],
+        "final_answer": "Option (1): act on different bodies and hence never cancel each other",
+        "why_not_others": "The two forces never act on the same body, and cancellation would require them to act on the same body. They are also equal in magnitude at every instant, whether the bodies are moving or at rest.",
+        "common_trap": "Thinking that equal and opposite forces must always cancel.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "Two blocks of masses $4\\ kg$ and $6\\ kg$ are placed in contact on a smooth horizontal surface. A horizontal force of $20\\ N$ pushes the $4\\ kg$ block. What is the contact force between the blocks?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$8\\ N$",
+        "$20\\ N$",
+        "$10\\ N$",
+        "$12\\ N$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The contact force equals the force needed to accelerate the front block: $F_{contact} = \\frac{m_2}{m_1 + m_2}F$.",
+        "steps": [
+          "The common acceleration is $a = 20/10 = 2\\ m/s^2$.",
+          "The contact force on the $6\\ kg$ block is $6 \\times 2 = 12\\ N$."
+        ],
+        "final_answer": "Option (4): $12\\ N$",
+        "why_not_others": "8 N uses the mass of the pushed block. 20 N assumes the whole applied force is transmitted. 10 N simply splits the force equally.",
+        "common_trap": "Using the mass of the pushed block in the numerator.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A book rests on a horizontal table. Which force is the third-law reaction to the normal force exerted by the table on the book?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The weight of the book",
+        "The gravitational pull of the book on the Earth",
+        "The force of the Earth on the table",
+        "The force exerted by the book on the table"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Third-law partners act on the two interacting bodies and are of the same nature.",
+        "steps": [
+          "The normal force is the table pushing the book, which is a contact force.",
+          "Its partner must be the book pushing the table, also a contact force."
+        ],
+        "final_answer": "Option (4): The force exerted by the book on the table",
+        "why_not_others": "The weight acts on the same body (the book), and it balances the normal force because of the first law. The book's pull on the Earth is the partner of the weight. The Earth's force on the table does not involve the book at all.",
+        "common_trap": "Treating weight and normal force as an action-reaction pair.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When a person walks, the ground exerts a forward force on the person's foot.",
+        "R": "The foot pushes the ground in the forward direction, and the ground reacts on the foot in the same direction."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In walking, the foot pushes the ground backward and the ground pushes the foot forward.",
+        "steps": [
+          "A is true: the forward force from the ground propels the person.",
+          "R is false on two counts. The foot pushes the ground backward, not forward, and a reaction is always opposite to the action, never in the same direction."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so the options that treat both statements as true are wrong. A is true, so the last option is also wrong.",
+        "common_trap": "Getting the direction of the foot's push wrong.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The gravitational pull of the Earth on a falling stone and the pull of the stone on the Earth are equal in magnitude at every instant, even though the Earth's acceleration is negligible.",
+        "II": "The weight of a book resting on a table and the normal force on the book form an action-reaction pair, which shows that a gravitational force and a contact force can be third-law partners."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Third-law partners are equal, simultaneous, act on different bodies and are of the same nature.",
+        "steps": [
+          "I is correct. The forces are equal, but the Earth's huge mass makes its acceleration negligible.",
+          "II is incorrect. Weight and normal force act on the same body, and third-law partners are always of the same nature."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "II is false, so both options accepting II are wrong. I is true, so the option rejecting both statements is also wrong.",
+        "common_trap": "Thinking a smaller body exerts a smaller force on a larger body.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "A gun of mass $4\\ kg$ fires a bullet of mass $20\\ g$ with a speed of $400\\ m/s$. What is the recoil speed of the gun?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\ m/s$",
+        "$2000\\ m/s$",
+        "$2\\ m/s$",
+        "$20\\ m/s$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Conservation of momentum in gun recoil gives $V = mv/M$.",
+        "steps": [
+          "Convert the bullet's mass: $20\\ g = 0.02\\ kg$.",
+          "The recoil speed is $V = (0.02 \\times 400)/4 = 2\\ m/s$."
+        ],
+        "final_answer": "Option (3): $2\\ m/s$",
+        "why_not_others": "0.2 m/s converts 20 g to 0.002 kg. 20 m/s converts it to 0.2 kg. 2000 m/s uses the mass in grams without converting.",
+        "common_trap": "Making an error in converting grams to kilograms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "A shell at rest explodes into two fragments of masses $2\\ kg$ and $3\\ kg$. The $2\\ kg$ fragment moves with a speed of $30\\ m/s$. What is the kinetic energy of the $3\\ kg$ fragment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$900\\ J$",
+        "$1350\\ J$",
+        "$600\\ J$",
+        "$1200\\ J$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Both fragments have equal momentum magnitudes, and $K = p^2/2m$.",
+        "steps": [
+          "The momentum of each fragment is $p = 2 \\times 30 = 60\\ kg\\,m/s$.",
+          "The kinetic energy of the heavier fragment is $K = 60^2/(2 \\times 3) = 600\\ J$."
+        ],
+        "final_answer": "Option (3): $600\\ J$",
+        "why_not_others": "900 J is the kinetic energy of the 2 kg fragment. 1350 J assumes both fragments have the same speed. 1200 J omits the factor 2 in $p^2/2m$.",
+        "common_trap": "Assuming equal speeds or equal kinetic energies for the two fragments.",
+        "time_saving_tip": "Kinetic energies are in the inverse ratio of the masses: $900 \\times 2/3 = 600\\ J$."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A body at rest explodes into three fragments. Two of them fly off with momenta of $6\\ kg\\,m/s$ each, at an angle of $120^\\circ$ to each other. What is the magnitude of the momentum of the third fragment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ kg\\,m/s$",
+        "$6\\sqrt{3}\\ kg\\,m/s$",
+        "$0\\ kg\\,m/s$",
+        "$6\\ kg\\,m/s$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The total momentum stays zero, so the third fragment balances the resultant of the other two.",
+        "steps": [
+          "The resultant of the two momenta is $2p\\cos(\\phi/2) = 2(6)\\cos 60^\\circ = 6\\ kg\\,m/s$.",
+          "The third fragment must have an equal and opposite momentum, of magnitude $6\\ kg\\,m/s$."
+        ],
+        "final_answer": "Option (4): $6\\ kg\\,m/s$",
+        "why_not_others": "12 adds the momenta as scalars. $6\\sqrt{3}$ results from using an angle of $60^\\circ$ between the momenta. 0 assumes the two fragments move antiparallel.",
+        "common_trap": "Adding momenta as scalars instead of as vectors.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Total linear momentum of a system with zero net external force"
+          },
+          {
+            "label": "B",
+            "text": "Total kinetic energy in an inelastic collision"
+          },
+          {
+            "label": "C",
+            "text": "Vector sum of the momenta of the fragments of a shell that explodes from rest"
+          },
+          {
+            "label": "D",
+            "text": "Momentum of a system acted upon only by a vertical external force"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "Remains constant"
+          },
+          {
+            "label": "III",
+            "text": "Not conserved"
+          },
+          {
+            "label": "IV",
+            "text": "Conserved only along the horizontal direction"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-IV, B-III, C-I, D-II",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-III, C-I, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Momentum is conserved when the net external force is zero, either overall or along a chosen axis. Kinetic energy is conserved only in elastic collisions.",
+        "steps": [
+          "A: with zero net external force the momentum remains constant, so A-II.",
+          "B: kinetic energy is not conserved in an inelastic collision, so B-III.",
+          "C: the initial momentum is zero, so the vector sum of the fragments' momenta is zero, so C-I.",
+          "D: there is no horizontal external force, so momentum is conserved only horizontally, so D-IV."
+        ],
+        "final_answer": "Option (4): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Option 1 swaps B and C. Option 2 swaps A and D. Option 3 swaps A and C.",
+        "common_trap": "Assuming kinetic energy is conserved in every collision.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about conservation of linear momentum are correct?",
+      "statements": {
+        "A": "Internal forces cannot change the total momentum of a system.",
+        "B": "When a body at rest explodes into two pieces, the lighter piece gets the larger kinetic energy.",
+        "C": "Kinetic energy is conserved in every collision.",
+        "D": "Two bodies with equal momentum magnitudes moving antiparallel have zero total momentum.",
+        "E": "The recoil speed of a gun does not depend on the mass of the gun."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and D only",
+        "A, C and D only",
+        "B, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Internal forces cancel in third-law pairs, momentum adds as a vector, and $K = p^2/2m$.",
+        "steps": [
+          "A is true, because internal forces cancel in pairs.",
+          "B is true. The momentum magnitudes are equal, so $K \\propto 1/m$ and the lighter piece has more kinetic energy.",
+          "C is false, since kinetic energy is conserved only in elastic collisions.",
+          "D is true, as equal antiparallel momenta add to zero.",
+          "E is false, because $V = mv/M$ depends on the gun's mass M."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Option 1 misses D. Option 3 includes the false statement C and misses B. Option 4 includes the false statement E and misses A.",
+        "common_trap": "Assuming equal momenta imply equal kinetic energies.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

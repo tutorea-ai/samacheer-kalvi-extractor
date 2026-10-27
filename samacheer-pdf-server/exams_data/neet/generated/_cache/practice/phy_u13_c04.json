@@ -1,0 +1,140 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "The magnetic susceptibility of which of the following types of material is essentially independent of temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Paramagnetic materials",
+        "Ferromagnetic materials heated above their Curie temperature",
+        "Diamagnetic materials",
+        "Ferromagnetic materials below their Curie temperature"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Diamagnetism comes from induced moments, which thermal agitation does not disturb. Its susceptibility is therefore essentially independent of temperature.",
+        "steps": [
+          "Paramagnets follow Curie's law, $\\chi=\\frac{C\\mu_0}{T}$, so their $\\chi$ depends on $T$.",
+          "A ferromagnet above $T_C$ follows $\\chi=\\frac{C}{T-T_C}$, so its $\\chi$ depends on $T$.",
+          "Below $T_C$, heating a ferromagnet disturbs its domain alignment and weakens it, so its behaviour also depends on $T$.",
+          "Diamagnetic susceptibility arises from induced moments and is essentially temperature independent."
+        ],
+        "final_answer": "Option (3): Diamagnetic materials",
+        "why_not_others": "Paramagnets obey Curie's law. Ferromagnets above $T_C$ obey the Curie-Weiss law. Ferromagnets below $T_C$ weaken on heating. All three are temperature dependent.",
+        "common_trap": "Assuming every material's susceptibility depends on temperature.",
+        "time_saving_tip": "Induced moments mean the susceptibility is temperature independent. Permanent dipoles mean the susceptibility is temperature dependent."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "A paramagnetic salt has a magnetic susceptibility of $3.0\\times10^{-4}$ at 300 K. Assuming Curie's law holds, what is its susceptibility at 200 K?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.5\\times10^{-4}$",
+        "$2.0\\times10^{-4}$",
+        "$3.0\\times10^{-4}$",
+        "$6.75\\times10^{-4}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Curie's law: $\\chi\\propto\\frac{1}{T}$ for a paramagnet.",
+        "steps": [
+          "Write the ratio: $\\frac{\\chi_2}{\\chi_1}=\\frac{T_1}{T_2}=\\frac{300}{200}=1.5$.",
+          "Then $\\chi_2=1.5\\times3.0\\times10^{-4}=4.5\\times10^{-4}$."
+        ],
+        "final_answer": "Option (1): $4.5\\times10^{-4}$",
+        "why_not_others": "$2.0\\times10^{-4}$ treats $\\chi$ as directly proportional to $T$. $3.0\\times10^{-4}$ treats $\\chi$ as temperature independent, which applies to diamagnets. $6.75\\times10^{-4}$ wrongly uses $\\chi\\propto1/T^2$.",
+        "common_trap": "Thinking that cooling reduces susceptibility. In fact, cooling reduces thermal agitation, so alignment and $\\chi$ increase.",
+        "time_saving_tip": "The product $\\chi T$ stays constant: $3.0\\times10^{-4}\\times300=\\chi_2\\times200$."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "Nickel has a Curie temperature of 631 K. At 731 K, its susceptibility is $\\chi_0$. Assuming the Curie-Weiss law holds, at what temperature will its susceptibility become $\\frac{\\chi_0}{2}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "681 K",
+        "831 K",
+        "1462 K",
+        "772 K"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Above $T_C$, a ferromagnet obeys $\\chi=\\frac{C}{T-T_C}$.",
+        "steps": [
+          "At 731 K: $T-T_C=731-631=100$ K.",
+          "Halving $\\chi$ requires doubling $T-T_C$, so $T-T_C=200$ K.",
+          "Therefore $T=631+200=831$ K."
+        ],
+        "final_answer": "Option (2): 831 K",
+        "why_not_others": "681 K comes from taking $\\chi\\propto(T-T_C)$, which halves $T-T_C$. 1462 K comes from applying Curie's law ($\\chi\\propto1/T$) and doubling the absolute temperature. 772 K comes from wrongly using $\\chi\\propto1/(T-T_C)^2$, which gives $T-T_C=100\\sqrt2\\approx141$ K.",
+        "common_trap": "Using Curie's law instead of the Curie-Weiss law for a ferromagnet above $T_C$.",
+        "time_saving_tip": "Work only with the temperature excess $T-T_C$ and scale it inversely with $\\chi$."
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A ferromagnetic material heated above its Curie temperature behaves as a paramagnetic material.",
+        "R": "Above the Curie temperature, the susceptibility of a ferromagnetic material becomes independent of temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Above $T_C$, spontaneous domain alignment is lost and the material becomes paramagnetic, with $\\chi=\\frac{C}{T-T_C}$.",
+        "steps": [
+          "Heating above $T_C$ destroys domain alignment, so the ferromagnet becomes paramagnetic. A is true.",
+          "Above $T_C$, $\\chi=\\frac{C}{T-T_C}$, which clearly depends on $T$. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is true, so option (4) is ruled out.",
+        "common_trap": "Confusing ferromagnets above $T_C$ with diamagnets, whose susceptibility is temperature independent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "At 330 K, a gadolinium sample is ferromagnetic while a nickel sample is paramagnetic.",
+        "II": "For a paramagnetic sample in a weak field, if both the applied magnetic field and the absolute temperature are doubled, its magnetization remains unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A material is ferromagnetic only below its Curie temperature. For a paramagnet in a weak field, $M\\propto\\frac{B}{T}$.",
+        "steps": [
+          "The Curie temperature of Gd is 317 K, which is below 330 K, so Gd is paramagnetic at 330 K.",
+          "The Curie temperature of Ni is 631 K, which is above 330 K, so Ni is still ferromagnetic at 330 K.",
+          "Statement I has the two behaviours reversed, so it is incorrect.",
+          "With $M\\propto\\frac{B}{T}$, doubling both $B$ and $T$ leaves $M$ unchanged. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I reverses the behaviours of Gd and Ni, which rules out options (1) and (3). Statement II follows directly from $M\\propto B/T$, which rules out option (2).",
+        "common_trap": "Assuming all common ferromagnets remain ferromagnetic near room temperature. Gd has a low Curie temperature of 317 K.",
+        "time_saving_tip": "Compare the given temperature with each $T_C$: below $T_C$ the material is ferromagnetic, above $T_C$ it is paramagnetic."
+      }
+    }
+  ]
+}

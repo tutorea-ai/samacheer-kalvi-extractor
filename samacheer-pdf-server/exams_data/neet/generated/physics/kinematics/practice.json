@@ -1,0 +1,2641 @@
+{
+  "exam": "neet",
+  "subject": "physics",
+  "unit_id": "phy_u02",
+  "slug": "kinematics",
+  "questions": [
+    {
+      "q_id": "neet_phy_u02_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Frame of reference and motion in a straight line",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A particle moving along the x-axis starts at $x = +4\\ m$ and ends at $x = -6\\ m$. What is its displacement?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-10\\ m$",
+        "$+10\\ m$",
+        "$-2\\ m$",
+        "$+2\\ m$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Displacement in 1D is $\\Delta x = x_2 - x_1$. Its sign gives the direction.",
+        "steps": [
+          "Initial position $x_1 = +4\\ m$ and final position $x_2 = -6\\ m$.",
+          "$\\Delta x = -6 - (+4) = -10\\ m$.",
+          "The negative sign means the displacement is along the negative x-direction."
+        ],
+        "final_answer": "Option (1): $-10\\ m$",
+        "why_not_others": "$+10\\ m$ drops the sign. $-2\\ m$ and $+2\\ m$ come from adding the coordinates instead of subtracting them.",
+        "common_trap": "Computing $x_1 - x_2$, or ignoring the sign of displacement in 1D motion.",
+        "time_saving_tip": "Always use final minus initial."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Frame of reference and motion in a straight line",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle starts at $x = 0$, moves along the x-axis to $x = +8\\ m$, then turns back and stops at $x = -3\\ m$. What are its path length and displacement, respectively?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$19\\ m$, $+3\\ m$",
+        "$19\\ m$, $-3\\ m$",
+        "$5\\ m$, $-3\\ m$",
+        "$11\\ m$, $-3\\ m$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Path length adds the lengths of every leg of the motion. Displacement depends only on the initial and final positions.",
+        "steps": [
+          "First leg: from 0 to $+8\\ m$, a length of $8\\ m$.",
+          "Second leg: from $+8\\ m$ to $-3\\ m$, a length of $11\\ m$.",
+          "Path length $= 8 + 11 = 19\\ m$.",
+          "Displacement $= -3 - 0 = -3\\ m$."
+        ],
+        "final_answer": "Option (2): $19\\ m$, $-3\\ m$",
+        "why_not_others": "$+3\\ m$ has the wrong sign. $5\\ m$ is $8 - 3$, which wrongly subtracts the legs. $11\\ m$ counts only the return leg.",
+        "common_trap": "Treating path length as $|x_2 - x_1|$ even though the particle reversed direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Frame of reference and motion in a straight line",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A passenger sits still on a seat inside a train that is moving along a straight track. Which statement correctly describes the passenger's state?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The passenger is at rest in every frame of reference",
+        "The passenger is in motion in every frame of reference",
+        "The passenger is at rest relative to the train but in motion relative to the platform",
+        "The passenger is in motion relative to the train but at rest relative to the platform"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Rest and motion are relative. They depend on the chosen frame of reference.",
+        "steps": [
+          "Relative to the train, the passenger's position does not change, so the passenger is at rest.",
+          "Relative to the platform, the passenger's position changes with time, so the passenger is in motion."
+        ],
+        "final_answer": "Option (3): The passenger is at rest relative to the train but in motion relative to the platform",
+        "why_not_others": "Options (1) and (2) treat rest or motion as absolute. Option (4) reverses the two frames.",
+        "common_trap": "Thinking that rest or motion can be stated without naming a frame.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Frame of reference and motion in a straight line",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "For a body that moves along a closed path and returns to its starting point, both the displacement and the path length are zero.",
+        "R": "Displacement depends only on the initial and final positions and not on the path followed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "On a closed path, displacement is zero but path length is not.",
+        "steps": [
+          "The initial and final positions are the same, so the displacement is zero.",
+          "The body actually covered a path, so the path length is positive. A is therefore false.",
+          "R correctly states the definition of displacement, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A cannot be true, because path length is not zero for a closed path. This rules out options (1), (2) and (3).",
+        "common_trap": "Assuming that zero displacement means zero distance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Frame of reference and motion in a straight line",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the magnitude of a particle's displacement in one-dimensional motion equals its path length, the particle must have moved in the positive x-direction.",
+        "II": "If a particle moving along the x-axis has a path length greater than the magnitude of its displacement, the particle must have reversed its direction at least once."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In straight-line motion, path length equals the magnitude of displacement only when there is no reversal.",
+        "steps": [
+          "Equality requires only that the particle never reverses. It may move steadily in the negative x-direction, so I is incorrect.",
+          "In 1D motion without reversal, path length equals $|\\Delta x|$. If path length is greater than $|\\Delta x|$, there must have been a reversal, so II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I wrongly ties equality to a particular direction rather than to the absence of reversal.",
+        "common_trap": "Confusing 'no reversal' with 'positive direction'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Position-time and velocity-time graphs",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The position-time graph of a particle is a straight line passing through $(t = 0, x = 2\\ m)$ and $(t = 4\\ s, x = 14\\ m)$. What is the velocity of the particle?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3.5\\ m\\,s^{-1}$",
+        "$3\\ m\\,s^{-1}$",
+        "$12\\ m\\,s^{-1}$",
+        "$4\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The slope of the x-t graph gives the velocity. A straight line means uniform velocity.",
+        "steps": [
+          "Slope $= \\frac{14 - 2}{4 - 0}$.",
+          "Slope $= \\frac{12}{4} = 3\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $3\\ m\\,s^{-1}$",
+        "why_not_others": "$3.5$ divides the final position by time. $12$ is the change in position, not the slope. $4$ adds the two positions before dividing.",
+        "common_trap": "Using $\\frac{x}{t}$ instead of $\\frac{\\Delta x}{\\Delta t}$ when the line does not pass through the origin.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Position-time and velocity-time graphs",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The velocity of a particle moving along a straight line decreases uniformly from $+10\\ m\\,s^{-1}$ at $t = 0$ to $-10\\ m\\,s^{-1}$ at $t = 4\\ s$. What distance does the particle cover from $t = 0$ to $t = 4\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0\\ m$",
+        "$20\\ m$",
+        "$40\\ m$",
+        "$10\\ m$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Distance is the sum of the absolute areas under the v-t graph.",
+        "steps": [
+          "The v-t graph is a straight line that crosses the time axis at $t = 2\\ s$.",
+          "Area from 0 to 2 s $= \\frac{1}{2}\\times 2 \\times 10 = 10\\ m$.",
+          "Area from 2 to 4 s $= -10\\ m$, which has magnitude $10\\ m$.",
+          "Distance $= 10 + 10 = 20\\ m$."
+        ],
+        "final_answer": "Option (2): $20\\ m$",
+        "why_not_others": "$0\\ m$ is the displacement. $40\\ m$ uses a rectangle instead of triangles. $10\\ m$ counts only one triangle.",
+        "common_trap": "Taking signed areas, which gives displacement, when distance is asked.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Position-time and velocity-time graphs",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle moving along a straight line has initial velocity $2\\ m\\,s^{-1}$. Its acceleration is $+3\\ m\\,s^{-2}$ from $t = 0$ to $t = 4\\ s$ and $-2\\ m\\,s^{-2}$ from $t = 4\\ s$ to $t = 6\\ s$. Using the area under the acceleration-time graph, what is its velocity at $t = 6\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$8\\ m\\,s^{-1}$",
+        "$18\\ m\\,s^{-1}$",
+        "$10\\ m\\,s^{-1}$",
+        "$12\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The area under the a-t graph gives the change in velocity.",
+        "steps": [
+          "Area from 0 to 4 s $= 3 \\times 4 = 12\\ m\\,s^{-1}$.",
+          "Area from 4 to 6 s $= -2 \\times 2 = -4\\ m\\,s^{-1}$.",
+          "Change in velocity $= 12 - 4 = 8\\ m\\,s^{-1}$.",
+          "Final velocity $= 2 + 8 = 10\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (3): $10\\ m\\,s^{-1}$",
+        "why_not_others": "$8$ forgets the initial velocity. $18$ adds the magnitudes of the areas. $12$ ignores the deceleration phase.",
+        "common_trap": "Treating the area below the time axis as positive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Position-time and velocity-time graphs",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Slope of the position-time graph"
+          },
+          {
+            "label": "B",
+            "text": "Slope of the velocity-time graph"
+          },
+          {
+            "label": "C",
+            "text": "Area under the velocity-time graph"
+          },
+          {
+            "label": "D",
+            "text": "Area under the acceleration-time graph"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Acceleration"
+          },
+          {
+            "label": "II",
+            "text": "Change in velocity"
+          },
+          {
+            "label": "III",
+            "text": "Velocity"
+          },
+          {
+            "label": "IV",
+            "text": "Displacement"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Slopes and areas of the kinematic graphs give related quantities.",
+        "steps": [
+          "The x-t slope is velocity: A-III.",
+          "The v-t slope is acceleration: B-I.",
+          "The v-t area is displacement: C-IV.",
+          "The a-t area is the change in velocity: D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) swaps the two slopes. Option (3) swaps the two areas. Option (4) mixes slopes with areas.",
+        "common_trap": "Confusing the slope of a graph with the area under it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Position-time and velocity-time graphs",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about motion graphs are correct?",
+      "statements": {
+        "A": "A position-time graph that is a straight line parallel to the time axis represents a body at rest.",
+        "B": "For uniform acceleration, the velocity-time graph is a parabola.",
+        "C": "A position-time graph that curves upward (concave up) indicates positive acceleration.",
+        "D": "The velocity changes sign at the instant the velocity-time graph crosses the time axis.",
+        "E": "The area under the velocity-time graph, with area below the time axis taken as negative, gives the distance travelled."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Shapes, slopes and areas of the x-t and v-t graphs.",
+        "steps": [
+          "A is true: zero slope means zero velocity.",
+          "B is false: for uniform acceleration, the v-t graph is a straight line and the x-t graph is the parabola.",
+          "C is true: an x-t graph that is concave up shows positive acceleration.",
+          "D is true: crossing the time axis means the velocity changes sign.",
+          "E is false: signed area gives displacement, not distance."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Option (1) misses D. Option (2) includes B. Option (3) includes E and misses A.",
+        "common_trap": "Swapping the shapes of the x-t and v-t graphs for uniform acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Speed and velocity; uniform and non-uniform motion",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A car moves at $72\\ km\\,h^{-1}$. What is its speed in SI units?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$259.2\\ m\\,s^{-1}$",
+        "$20\\ m\\,s^{-1}$",
+        "$1.2\\ m\\,s^{-1}$",
+        "$7.2\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$1\\ km\\,h^{-1} = \\frac{5}{18}\\ m\\,s^{-1}$.",
+        "steps": [
+          "$72 \\times \\frac{5}{18} = 20\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (2): $20\\ m\\,s^{-1}$",
+        "why_not_others": "$259.2$ multiplies by $\\frac{18}{5}$ instead of $\\frac{5}{18}$. $1.2$ divides by 60. $7.2$ divides by 10.",
+        "common_trap": "Inverting the conversion factor.",
+        "time_saving_tip": "Dividing by 3.6 is the same as multiplying by $\\frac{5}{18}$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Speed and velocity; uniform and non-uniform motion",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following bodies must have zero acceleration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A body moving with constant speed along a circle",
+        "A body moving with constant speed along any path",
+        "A body whose speed is constant but whose direction keeps changing",
+        "A body moving with constant velocity"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Constant velocity means zero acceleration. A change in direction alone produces acceleration.",
+        "steps": [
+          "Constant velocity means both magnitude and direction are unchanged, so the acceleration is zero.",
+          "Constant speed allows the direction to change, as in circular motion, so acceleration may be non-zero."
+        ],
+        "final_answer": "Option (4): A body moving with constant velocity",
+        "why_not_others": "Options (1) and (3) involve a changing direction, so the body accelerates. In option (2), the path may curve.",
+        "common_trap": "Equating constant speed with zero acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Speed and velocity; uniform and non-uniform motion",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A car is in uniform motion along a straight road at $54\\ km\\,h^{-1}$. What is the magnitude of its displacement in 2 minutes?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6480\\ m$",
+        "$1800\\ m$",
+        "$108\\ m$",
+        "$900\\ m$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In uniform motion the velocity is constant, so displacement equals velocity times time.",
+        "steps": [
+          "$54\\ km\\,h^{-1} = 54 \\times \\frac{5}{18} = 15\\ m\\,s^{-1}$.",
+          "$t = 2\\ min = 120\\ s$.",
+          "Displacement $= 15 \\times 120 = 1800\\ m$."
+        ],
+        "final_answer": "Option (2): $1800\\ m$",
+        "why_not_others": "$6480$ uses $54$ without converting units. $108$ multiplies $54 \\times 2$. $900$ uses only 60 s.",
+        "common_trap": "Mixing $km\\,h^{-1}$ with seconds.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Speed and velocity; uniform and non-uniform motion",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A body in uniform circular motion has acceleration even though its speed is constant.",
+        "R": "Constant velocity always implies constant speed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A change in direction alone produces acceleration.",
+        "steps": [
+          "A is true: the direction of velocity changes continuously in circular motion.",
+          "R is true: constant velocity means the magnitude is constant too.",
+          "R states the converse case and does not explain why constant speed can occur with acceleration."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R does not mention the change in direction, which is the real reason for A. Both statements are true, so options (3) and (4) fail.",
+        "common_trap": "Picking option (1) simply because both statements are true and related.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Speed and velocity; uniform and non-uniform motion",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A body whose speed remains constant throughout its motion can still be accelerating.",
+        "II": "If the velocity of a body changes only in direction and not in magnitude, the body is in non-uniform motion."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Non-uniform motion means the velocity changes in magnitude, in direction, or in both.",
+        "steps": [
+          "I: a change in direction at constant speed gives acceleration, so I is correct.",
+          "II: a change in direction alone is a change in velocity, so the motion is non-uniform. II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Rejecting II assumes non-uniform motion needs a change in speed.",
+        "common_trap": "Judging uniform motion by speed instead of velocity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Average speed and instantaneous velocity",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A cyclist moving along a straight road in one direction covers $120\\ m$ in the first $10\\ s$ and $80\\ m$ in the next $10\\ s$. What is the average speed of the cyclist?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ m\\,s^{-1}$",
+        "$20\\ m\\,s^{-1}$",
+        "$10\\ m\\,s^{-1}$",
+        "$4\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Average speed is the total path length divided by the total time.",
+        "steps": [
+          "Total path length $= 120 + 80 = 200\\ m$.",
+          "Total time $= 20\\ s$.",
+          "Average speed $= \\frac{200}{20} = 10\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (3): $10\\ m\\,s^{-1}$",
+        "why_not_others": "$12$ uses only the first interval. $20$ divides by $10\\ s$. $4$ uses the difference of the distances.",
+        "common_trap": "Dividing by one interval instead of the total time.",
+        "time_saving_tip": "For equal time intervals, average speed is the arithmetic mean: $\\frac{12+8}{2} = 10$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Average speed and instantaneous velocity",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A bus covers the first half of a straight route at $30\\ km\\,h^{-1}$ and the second, equal half at $60\\ km\\,h^{-1}$. What is its average speed for the whole route?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$45\\ km\\,h^{-1}$",
+        "$42.4\\ km\\,h^{-1}$",
+        "$40\\ km\\,h^{-1}$",
+        "$90\\ km\\,h^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For equal distances, average speed $= \\frac{2v_1v_2}{v_1+v_2}$.",
+        "steps": [
+          "$\\frac{2 \\times 30 \\times 60}{30 + 60} = \\frac{3600}{90}$.",
+          "$\\frac{3600}{90} = 40\\ km\\,h^{-1}$."
+        ],
+        "final_answer": "Option (3): $40\\ km\\,h^{-1}$",
+        "why_not_others": "$45$ is the arithmetic mean, which is valid only for equal times. $42.4$ is the geometric mean. $90$ is the sum of the speeds.",
+        "common_trap": "Using $\\frac{v_1+v_2}{2}$ for equal distances.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Average speed and instantaneous velocity",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The position of a particle moving along the x-axis is $x(t) = t^2 - 4t + 3$, where $x$ is in metres and $t$ in seconds. What is its average speed from $t = 0$ to $t = 5\\ s$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\ m\\,s^{-1}$",
+        "$1.8\\ m\\,s^{-1}$",
+        "$6.0\\ m\\,s^{-1}$",
+        "$2.6\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Check for reversal where $v = 0$, then add the distances piece by piece.",
+        "steps": [
+          "$v = 2t - 4 = 0$ gives $t = 2\\ s$, where the particle reverses.",
+          "$x(0) = 3\\ m$, $x(2) = -1\\ m$, $x(5) = 8\\ m$.",
+          "Distance $= |{-1} - 3| + |8 - (-1)| = 4 + 9 = 13\\ m$.",
+          "Average speed $= \\frac{13}{5} = 2.6\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (4): $2.6\\ m\\,s^{-1}$",
+        "why_not_others": "$1.0$ is the magnitude of average velocity, $\\frac{8-3}{5}$. $1.8$ uses only the $9\\ m$ leg. $6.0$ is the instantaneous velocity at $t = 5\\ s$.",
+        "common_trap": "Ignoring the reversal at $t = 2\\ s$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Average speed and instantaneous velocity",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Average speed when two equal distances are covered at $20\\ m\\,s^{-1}$ and $30\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "B",
+            "text": "Average speed when two equal time intervals are spent at $20\\ m\\,s^{-1}$ and $30\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "C",
+            "text": "Magnitude of average velocity for a straight-line round trip of $100\\ m$ each way completed in $10\\ s$"
+          },
+          {
+            "label": "D",
+            "text": "Average speed for the same round trip"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$0\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "II",
+            "text": "$20\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "III",
+            "text": "$24\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "IV",
+            "text": "$25\\ m\\,s^{-1}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Equal distances give the harmonic-type mean, equal times give the arithmetic mean, and a round trip has zero average velocity.",
+        "steps": [
+          "A: $\\frac{2\\times20\\times30}{50} = 24\\ m\\,s^{-1}$, so A-III.",
+          "B: $\\frac{20+30}{2} = 25\\ m\\,s^{-1}$, so B-IV.",
+          "C: net displacement is zero, so average velocity is 0. C-I.",
+          "D: $\\frac{200}{10} = 20\\ m\\,s^{-1}$, so D-II."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Options (1) and (3) swap the two means. Options (2) and (3) swap average speed with average velocity for the round trip.",
+        "common_trap": "Using the arithmetic mean for equal distances.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Average speed and instantaneous velocity",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about average and instantaneous quantities are correct?",
+      "statements": {
+        "A": "Average speed is always greater than or equal to the magnitude of average velocity.",
+        "B": "Instantaneous speed equals the magnitude of instantaneous velocity.",
+        "C": "For a round trip, the average speed is zero.",
+        "D": "Instantaneous velocity is the limit of average velocity as the time interval tends to zero.",
+        "E": "If a particle reverses direction at an instant within a time interval, its average speed over that interval equals the magnitude of its average velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Path length is at least the magnitude of displacement, and the two are equal only when there is no reversal.",
+        "steps": [
+          "A is true, because path length is greater than or equal to the magnitude of displacement.",
+          "B is true by definition.",
+          "C is false: the average velocity is zero for a round trip, but the average speed is not.",
+          "D is true: $v = \\lim_{\\Delta t\\to0}\\frac{\\Delta x}{\\Delta t}$.",
+          "E is false: reversal makes the path length greater than the magnitude of displacement."
+        ],
+        "final_answer": "Option (2): A, B and D only",
+        "why_not_others": "Options (1) and (4) include C. Options (3) and (4) include E.",
+        "common_trap": "Mixing up the round-trip results for average speed and average velocity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t04_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniformly accelerated motion and its relations",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A ball is thrown vertically upward with a speed of $20\\ \\text{m s}^{-1}$. Neglect air resistance and take $g = 10\\ \\text{m s}^{-2}$. What is the maximum height reached by the ball?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$40$ m",
+        "$10$ m",
+        "$20$ m",
+        "$2$ m"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For vertical projection with speed $u$, the maximum height is $H = \\frac{u^2}{2g}$.",
+        "steps": [
+          "At the highest point $v = 0$, so $0 = u^2 - 2gH$.",
+          "$H = \\frac{u^2}{2g} = \\frac{400}{20} = 20$ m."
+        ],
+        "final_answer": "Option (3): $20$ m",
+        "why_not_others": "$40$ m comes from dropping the factor 2 ($\\frac{u^2}{g}$). $10$ m comes from $\\frac{u}{2}$. $2$ m is the time of flight in seconds ($\\frac{u}{g} = 2$ s) mistaken for a height.",
+        "common_trap": "Forgetting the factor 2 in the denominator of $\\frac{u^2}{2g}$.",
+        "time_saving_tip": "With $g = 10$, $H = \\frac{u^2}{20}$ directly."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t04_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniformly accelerated motion and its relations",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A body starts from rest and moves along a straight line with a uniform acceleration of $4\\ \\text{m s}^{-2}$. What distance does it cover during the 5th second of its motion?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$50$ m",
+        "$14$ m",
+        "$22$ m",
+        "$18$ m"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The displacement in the $n$th second is $s_n = u + \\frac{a}{2}(2n-1)$.",
+        "steps": [
+          "Here $u = 0$, $a = 4\\ \\text{m s}^{-2}$ and $n = 5$.",
+          "$s_5 = 0 + \\frac{4}{2}(2 \\times 5 - 1) = 2 \\times 9 = 18$ m.",
+          "Check: distance in 5 s is $50$ m and in 4 s is $32$ m, and $50 - 32 = 18$ m."
+        ],
+        "final_answer": "Option (4): $18$ m",
+        "why_not_others": "$50$ m is the total distance in the first 5 s. $14$ m is the distance in the 4th second. $22$ m comes from using $(2n+1)$ instead of $(2n-1)$.",
+        "common_trap": "Confusing the distance covered in the $n$th second with the distance covered in $n$ seconds.",
+        "time_saving_tip": "Starting from rest, the distances in successive seconds are $\\frac{a}{2}\\times(1, 3, 5, 7, 9)$, so the 5th second gives $2 \\times 9$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t04_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniformly accelerated motion and its relations",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A car moving at $36\\ \\text{km h}^{-1}$ is brought to rest over a distance of $10$ m by applying its brakes. If the same retardation acts, what is the stopping distance when the car moves at $72\\ \\text{km h}^{-1}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$20$ m",
+        "$80$ m",
+        "$40$ m",
+        "$14.1$ m"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The stopping distance is $\\frac{u^2}{2a}$, so it is proportional to $u^2$ for a fixed retardation.",
+        "steps": [
+          "$\\frac{s_2}{s_1} = \\left(\\frac{u_2}{u_1}\\right)^2 = \\left(\\frac{72}{36}\\right)^2 = 4$.",
+          "$s_2 = 4 \\times 10 = 40$ m."
+        ],
+        "final_answer": "Option (3): $40$ m",
+        "why_not_others": "$20$ m assumes the stopping distance is proportional to $u$. $80$ m assumes it is proportional to $u^3$. $14.1$ m assumes it is proportional to $\\sqrt{u}$.",
+        "common_trap": "Assuming that doubling the speed only doubles the stopping distance.",
+        "time_saving_tip": "Only the ratio of speeds matters, so there is no need to convert km/h to m/s."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t04_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniformly accelerated motion and its relations",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "At the highest point of its path, a ball thrown vertically upward has both zero velocity and zero acceleration.",
+        "R": "For a ball thrown vertically upward, the velocity at the highest point is zero while the acceleration remains $g$ directed downward."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In free fall the acceleration is $g$ downward at every instant, including the highest point.",
+        "steps": [
+          "At the top, the ball momentarily stops, so $v = 0$.",
+          "Gravity still acts there, so $a = g$ downward, not zero. Therefore A is false.",
+          "R states exactly this, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false because the acceleration is not zero at the top. This rules out options (1), (2) and (3), which all require A to be true.",
+        "common_trap": "Assuming that zero velocity implies zero acceleration.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t04_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniformly accelerated motion and its relations",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A body starting from rest with uniform acceleration covers distances in the first $2$ s and the next $2$ s in the ratio $1:2$.",
+        "II": "A particle whose velocity depends on its position as $v = 3x$ (SI units) moves with constant acceleration, so the equations of uniformly accelerated motion apply to it."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Starting from rest, the distances in successive equal intervals are in the ratio $1:3:5\\dots$. For position-dependent velocity, the acceleration is $a = v\\frac{dv}{dx}$.",
+        "steps": [
+          "Statement I: by Galileo's law of odd numbers, the distances in two successive equal intervals are in the ratio $1:3$, not $1:2$. So I is incorrect.",
+          "Statement II: $a = v\\frac{dv}{dx} = (3x)(3) = 9x$, which varies with position.",
+          "Since the acceleration is not constant, the kinematic equations do not apply. So II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I contradicts the $1:3$ ratio. Statement II wrongly treats a position-dependent acceleration as constant. So no option that calls either statement correct is valid.",
+        "common_trap": "Thinking that a linear $v$-$x$ relation means constant acceleration, and using the ratio $1:2$ instead of $1:3$.",
+        "time_saving_tip": "Check whether the acceleration is constant before applying any kinematic equation."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t05_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalars and vectors",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which one of the following physical quantities is a vector?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Momentum",
+        "Energy",
+        "Temperature",
+        "Electric current"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A vector has both magnitude and direction and obeys the triangle law of addition.",
+        "steps": [
+          "Momentum has magnitude and direction and adds by the triangle law, so it is a vector.",
+          "Energy and temperature have magnitude only.",
+          "Electric current has a direction but adds algebraically, so it is a scalar."
+        ],
+        "final_answer": "Option (1): Momentum",
+        "why_not_others": "Energy and temperature are scalars. Electric current is a scalar despite having a direction.",
+        "common_trap": "Calling electric current a vector because it has a direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t05_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalars and vectors",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Electric current has both magnitude and direction, yet it is classified as a scalar quantity. Why?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Its direction is always fixed in space",
+        "Its magnitude can never be zero",
+        "It is measured in a fundamental SI unit",
+        "It adds algebraically and does not obey the triangle law of addition"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Having a direction is not enough to be a vector. A vector must also obey the triangle (parallelogram) law of addition.",
+        "steps": [
+          "Currents meeting at a junction combine by simple algebraic addition.",
+          "They do not follow the triangle law, so current is a scalar."
+        ],
+        "final_answer": "Option (4): It adds algebraically and does not obey the triangle law of addition",
+        "why_not_others": "A fixed direction, a non-zero magnitude or a fundamental unit has nothing to do with being a scalar or a vector. Also, current can be zero.",
+        "common_trap": "Believing that any quantity with a direction must be a vector.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t05_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalars and vectors",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A vector $\\vec{A}$ has a magnitude of $5$ units. It is multiplied by the scalar $\\lambda = -3$. What is the resulting vector $\\lambda\\vec{A}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Magnitude $-15$ units, along $\\vec{A}$",
+        "Magnitude $15$ units, along $\\vec{A}$",
+        "Magnitude $\\frac{5}{3}$ units, opposite to $\\vec{A}$",
+        "Magnitude $15$ units, opposite to $\\vec{A}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Multiplying by $\\lambda$ scales the magnitude by $|\\lambda|$ and reverses the direction if $\\lambda < 0$.",
+        "steps": [
+          "The magnitude is $|\\lambda| A = 3 \\times 5 = 15$ units.",
+          "Since $\\lambda < 0$, the direction is opposite to $\\vec{A}$."
+        ],
+        "final_answer": "Option (4): Magnitude $15$ units, opposite to $\\vec{A}$",
+        "why_not_others": "A magnitude cannot be negative. 'Along $\\vec{A}$' ignores the sign of $\\lambda$. $\\frac{5}{3}$ comes from dividing instead of multiplying.",
+        "common_trap": "Assigning the negative sign to the magnitude instead of to the direction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t05_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalars and vectors",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Equal vectors"
+          },
+          {
+            "label": "B",
+            "text": "Negative of a vector"
+          },
+          {
+            "label": "C",
+            "text": "Null vector"
+          },
+          {
+            "label": "D",
+            "text": "Electric current"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Same magnitude, opposite direction"
+          },
+          {
+            "label": "II",
+            "text": "Zero magnitude, arbitrary direction"
+          },
+          {
+            "label": "III",
+            "text": "Same magnitude, same direction"
+          },
+          {
+            "label": "IV",
+            "text": "Has direction but adds algebraically"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-I, C-IV, D-II",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are the definitions of the special types of vectors and the reason current is a scalar.",
+        "steps": [
+          "Equal vectors have the same magnitude and the same direction: A-III.",
+          "A negative vector has the same magnitude but the opposite direction: B-I.",
+          "A null vector has zero magnitude and an arbitrary direction: C-II.",
+          "Current has a direction but adds algebraically: D-IV."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option (1) swaps equal and negative vectors. Option (3) swaps the null vector and current. Option (4) gives the null vector's description to equal vectors.",
+        "common_trap": "Confusing equal vectors with negative vectors, since both have the same magnitude.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t05_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalars and vectors",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about scalars and vectors are correct?",
+      "statements": {
+        "A": "A vector can be shifted parallel to itself without changing it.",
+        "B": "Pressure is a vector because it acts normal to a surface.",
+        "C": "A null vector has zero magnitude and an indeterminate direction.",
+        "D": "Work is a vector because both force and displacement are vectors.",
+        "E": "Multiplying a vector by $-2$ doubles its magnitude and reverses its direction."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and E only",
+        "A, B and C only",
+        "C, D and E only",
+        "A and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Only quantities with direction that also obey the triangle law are vectors. Pressure and work are scalars.",
+        "steps": [
+          "A is true: parallel shifting does not change a vector's magnitude or direction.",
+          "B is false: pressure is a scalar.",
+          "C is true: by definition of the null vector.",
+          "D is false: work is a scalar, being the dot product of force and displacement.",
+          "E is true: the magnitude scales by $|-2| = 2$ and the direction reverses."
+        ],
+        "final_answer": "Option (1): A, C and E only",
+        "why_not_others": "Options (2) and (3) include a false statement (B or D). Option (4) leaves out the true statement C.",
+        "common_trap": "Calling pressure or work a vector because a direction is involved.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Vector addition and subtraction",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two forces of $3$ N and $4$ N act at a point at right angles to each other. What is the magnitude of their resultant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7$ N",
+        "$5$ N",
+        "$1$ N",
+        "$12$ N"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$R = \\sqrt{A^2 + B^2 + 2AB\\cos\\theta}$",
+        "steps": [
+          "With $\\theta = 90^\\circ$, $\\cos\\theta = 0$.",
+          "$R = \\sqrt{9 + 16} = 5$ N."
+        ],
+        "final_answer": "Option (2): $5$ N",
+        "why_not_others": "$7$ N is the maximum resultant ($\\theta = 0$). $1$ N is the minimum resultant ($\\theta = 180^\\circ$). $12$ N is the product $AB$.",
+        "common_trap": "Adding the magnitudes algebraically.",
+        "time_saving_tip": "Recognise the $3$-$4$-$5$ triangle."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Vector addition and subtraction",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two vectors of equal magnitude $P$ act at a point. Their resultant also has magnitude $P$. What is the angle between the two vectors?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60^\\circ$",
+        "$90^\\circ$",
+        "$120^\\circ$",
+        "$180^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For two equal vectors of magnitude $A$, the resultant is $R = 2A\\cos\\frac{\\theta}{2}$.",
+        "steps": [
+          "Set $P = 2P\\cos\\frac{\\theta}{2}$, so $\\cos\\frac{\\theta}{2} = \\frac{1}{2}$.",
+          "Then $\\frac{\\theta}{2} = 60^\\circ$, so $\\theta = 120^\\circ$."
+        ],
+        "final_answer": "Option (3): $120^\\circ$",
+        "why_not_others": "$60^\\circ$ gives $P\\sqrt{3}$. $90^\\circ$ gives $P\\sqrt{2}$. $180^\\circ$ gives zero.",
+        "common_trap": "Writing $\\cos\\theta = \\frac{1}{2}$ instead of $\\cos\\frac{\\theta}{2} = \\frac{1}{2}$, which gives $60^\\circ$.",
+        "time_saving_tip": "Remember that two equal vectors at $120^\\circ$ give a resultant equal to either vector."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Vector addition and subtraction",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle moving east with a speed of $5\\ \\text{m s}^{-1}$ changes its direction and moves north with the same speed. What is the change in its velocity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5\\sqrt{2}\\ \\text{m s}^{-1}$ towards north-west",
+        "$5\\sqrt{2}\\ \\text{m s}^{-1}$ towards north-east",
+        "Zero",
+        "$10\\ \\text{m s}^{-1}$ towards north"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The change in velocity is the vector difference $\\Delta\\vec{v} = \\vec{v}_2 - \\vec{v}_1$.",
+        "steps": [
+          "Take east as $\\hat{i}$ and north as $\\hat{j}$: $\\Delta\\vec{v} = 5\\hat{j} - 5\\hat{i}$.",
+          "The magnitude is $\\sqrt{25 + 25} = 5\\sqrt{2}\\ \\text{m s}^{-1}$.",
+          "The components are $-x$ (west) and $+y$ (north), so the direction is north-west."
+        ],
+        "final_answer": "Option (1): $5\\sqrt{2}\\ \\text{m s}^{-1}$ towards north-west",
+        "why_not_others": "North-east is the direction of $\\vec{v}_1 + \\vec{v}_2$. 'Zero' subtracts the speeds instead of the vectors. $10\\ \\text{m s}^{-1}$ adds the magnitudes.",
+        "common_trap": "Adding the vectors instead of subtracting them, or subtracting only the speeds.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Vector addition and subtraction",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Two forces of magnitudes $3$ N and $5$ N acting at a point can never have a resultant of $10$ N.",
+        "R": "The magnitude of the resultant of two vectors always lies between $|A-B|$ and $A+B$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The resultant is maximum ($A+B$) at $\\theta = 0$ and minimum ($|A-B|$) at $\\theta = 180^\\circ$.",
+        "steps": [
+          "For these forces, $2\\ \\text{N} \\le R \\le 8\\ \\text{N}$.",
+          "$10$ N lies outside this range, so A is true.",
+          "R is a true general result, and it directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and the range stated in R is exactly why $10$ N is impossible. So options (2), (3) and (4) are wrong.",
+        "common_trap": "Assuming any value is possible by choosing a suitable angle.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Vector addition and subtraction",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Three forces of magnitudes $4$ N, $6$ N and $9$ N acting on a particle can keep it in equilibrium.",
+        "II": "If two non-zero vectors $\\vec{A}$ and $\\vec{B}$ satisfy $|\\vec{A}+\\vec{B}| = |\\vec{A}-\\vec{B}|$, then $\\vec{A}$ is perpendicular to $\\vec{B}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Three forces give a zero resultant only if they can form a closed triangle. Compare $|\\vec{A}\\pm\\vec{B}|^2 = A^2 + B^2 \\pm 2AB\\cos\\theta$.",
+        "steps": [
+          "Statement I: $4 + 6 > 9$, $4 + 9 > 6$ and $6 + 9 > 4$, so a closed triangle can be formed. I is correct.",
+          "Statement II: equating the two magnitudes gives $2AB\\cos\\theta = -2AB\\cos\\theta$.",
+          "So $\\cos\\theta = 0$ and $\\theta = 90^\\circ$. II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Each statement holds, so any option calling one or both incorrect is wrong.",
+        "common_trap": "Thinking the largest force ($9$ N) must exceed the balancing ability of the other two, without checking the triangle inequality.",
+        "time_saving_tip": "For three forces in equilibrium, just check that the largest is not more than the sum of the other two."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t07_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalar and vector products",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A force $\\vec{F} = (3\\hat{i} + 2\\hat{j})$ N displaces a body by $\\vec{s} = (2\\hat{i} + 4\\hat{j})$ m. What is the work done by the force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6$ J",
+        "$8$ J",
+        "$14$ J",
+        "$16.1$ J"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$W = \\vec{F}\\cdot\\vec{s} = F_xs_x + F_ys_y$",
+        "steps": [
+          "$W = (3)(2) + (2)(4) = 6 + 8$.",
+          "$W = 14$ J."
+        ],
+        "final_answer": "Option (3): $14$ J",
+        "why_not_others": "$6$ J and $8$ J each use only one component product. $16.1$ J is the product of the magnitudes, $\\sqrt{13}\\times\\sqrt{20}$, which ignores the angle between the vectors.",
+        "common_trap": "Multiplying the magnitudes instead of taking the dot product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t07_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalar and vector products",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two adjacent sides of a triangle are represented by the vectors $\\vec{A} = 2\\hat{i} + \\hat{j}$ and $\\vec{B} = \\hat{i} + 4\\hat{j}$. What is the area of the triangle?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$7$ square units",
+        "$6$ square units",
+        "$3.5$ square units",
+        "$3$ square units"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The area of the triangle is $\\frac{1}{2}|\\vec{A}\\times\\vec{B}|$.",
+        "steps": [
+          "$\\vec{A}\\times\\vec{B} = \\hat{k}(A_xB_y - A_yB_x) = \\hat{k}(2\\times4 - 1\\times1) = 7\\hat{k}$.",
+          "Area $= \\frac{1}{2}\\times 7 = 3.5$ square units."
+        ],
+        "final_answer": "Option (3): $3.5$ square units",
+        "why_not_others": "$7$ is the area of the parallelogram. $6$ is $\\vec{A}\\cdot\\vec{B}$. $3$ is half of the dot product.",
+        "common_trap": "Forgetting the factor $\\frac{1}{2}$, or using the dot product instead of the cross product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t07_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalar and vector products",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the value of $\\hat{i}\\times(\\hat{i}\\times\\hat{j})$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\hat{j}$",
+        "$-\\hat{j}$",
+        "$\\hat{k}$",
+        "$\\vec{0}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The cyclic rules are $\\hat{i}\\times\\hat{j} = \\hat{k}$ and $\\hat{k}\\times\\hat{i} = \\hat{j}$, and the cross product is anticommutative.",
+        "steps": [
+          "$\\hat{i}\\times\\hat{j} = \\hat{k}$.",
+          "$\\hat{i}\\times\\hat{k} = -(\\hat{k}\\times\\hat{i}) = -\\hat{j}$."
+        ],
+        "final_answer": "Option (2): $-\\hat{j}$",
+        "why_not_others": "$\\hat{j}$ ignores anticommutativity. $\\hat{k}$ stops after the first product. $\\vec{0}$ wrongly treats the vectors as parallel.",
+        "common_trap": "Writing $\\hat{i}\\times\\hat{k} = \\hat{j}$ instead of $-\\hat{j}$.",
+        "time_saving_tip": "Going in the cyclic order $i \\to j \\to k$ gives $+$; going against it gives $-$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t07_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalar and vector products",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\hat{j}\\times\\hat{k}$"
+          },
+          {
+            "label": "B",
+            "text": "$\\hat{k}\\times\\hat{j}$"
+          },
+          {
+            "label": "C",
+            "text": "$\\hat{i}\\cdot\\hat{i}$"
+          },
+          {
+            "label": "D",
+            "text": "$\\hat{i}\\times\\hat{i}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\vec{0}$"
+          },
+          {
+            "label": "II",
+            "text": "$1$"
+          },
+          {
+            "label": "III",
+            "text": "$\\hat{i}$"
+          },
+          {
+            "label": "IV",
+            "text": "$-\\hat{i}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Apply the cyclic rules for unit vectors, together with $\\hat{i}\\cdot\\hat{i} = 1$ and $\\hat{i}\\times\\hat{i} = \\vec{0}$.",
+        "steps": [
+          "$\\hat{j}\\times\\hat{k} = \\hat{i}$: A-III.",
+          "$\\hat{k}\\times\\hat{j} = -\\hat{i}$: B-IV.",
+          "$\\hat{i}\\cdot\\hat{i} = 1$: C-II.",
+          "$\\hat{i}\\times\\hat{i} = \\vec{0}$: D-I."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) reverses the signs of the two cross products. Option (2) swaps the dot and cross products of $\\hat{i}$ with itself. Option (3) misplaces A and D.",
+        "common_trap": "Thinking $\\hat{i}\\times\\hat{i} = 1$, by confusing it with the dot product.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t07_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Scalar and vector products",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about scalar and vector products are correct?",
+      "statements": {
+        "A": "$\\vec{A}\\times\\vec{B}$ is perpendicular to both $\\vec{A}$ and $\\vec{B}$.",
+        "B": "$(\\vec{A}\\times\\vec{B})\\cdot\\vec{A} = 0$ for any two vectors $\\vec{A}$ and $\\vec{B}$.",
+        "C": "$\\vec{A}\\cdot\\vec{B} = \\vec{B}\\cdot\\vec{A}$ and also $\\vec{A}\\times\\vec{B} = \\vec{B}\\times\\vec{A}$.",
+        "D": "For two non-zero vectors, $\\vec{A}\\cdot\\vec{B}$ and $|\\vec{A}\\times\\vec{B}|$ can both be zero at the same time.",
+        "E": "$|\\vec{A}\\times\\vec{B}|^2 + (\\vec{A}\\cdot\\vec{B})^2 = A^2B^2$"
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and E only",
+        "B, D and E only",
+        "A and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\vec{A}\\cdot\\vec{B} = AB\\cos\\theta$ and $|\\vec{A}\\times\\vec{B}| = AB\\sin\\theta$, with the cross product perpendicular to both vectors.",
+        "steps": [
+          "A is true by the definition of the cross product.",
+          "B is true: $\\vec{A}\\times\\vec{B}$ is perpendicular to $\\vec{A}$, so their dot product is zero.",
+          "C is false: the cross product is anticommutative, $\\vec{A}\\times\\vec{B} = -\\vec{B}\\times\\vec{A}$.",
+          "D is false: both products would need $\\cos\\theta = 0$ and $\\sin\\theta = 0$ together, which is impossible.",
+          "E is true: $A^2B^2(\\sin^2\\theta + \\cos^2\\theta) = A^2B^2$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Option (1) includes the false statement C. Option (3) includes the false statement D. Option (4) leaves out the true statement B.",
+        "common_trap": "Treating $\\vec{A}\\times\\vec{B}$ and $\\vec{B}\\times\\vec{A}$ as equal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t08_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Unit vector and resolution of a vector",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The unit vector along the vector $\\vec{A} = 3\\hat{i}+4\\hat{j}$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{3\\hat{i}+4\\hat{j}}{5}$",
+        "$\\frac{3\\hat{i}+4\\hat{j}}{7}$",
+        "$\\frac{3\\hat{i}+4\\hat{j}}{25}$",
+        "$\\frac{4\\hat{i}+3\\hat{j}}{5}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A unit vector is the vector divided by its own magnitude: $\\hat{A} = \\frac{\\vec{A}}{|\\vec{A}|}$.",
+        "steps": [
+          "Magnitude: $A = \\sqrt{3^2+4^2} = 5$.",
+          "Unit vector: $\\hat{A} = \\frac{3\\hat{i}+4\\hat{j}}{5}$, whose magnitude is exactly 1."
+        ],
+        "final_answer": "Option (1): $\\frac{3\\hat{i}+4\\hat{j}}{5}$",
+        "why_not_others": "Dividing by 7 adds the components instead of finding the magnitude. Dividing by 25 uses $A^2$ instead of $A$. Option (4) swaps the components, which changes the direction.",
+        "common_trap": "Dividing by the sum of the components, or by the square of the magnitude.",
+        "time_saving_tip": "Recognise the 3-4-5 triangle so the magnitude is 5 at once."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t08_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Unit vector and resolution of a vector",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The component of $\\vec{A} = 2\\hat{i}+3\\hat{j}+6\\hat{k}$ along the direction of $\\vec{B} = 3\\hat{i}+4\\hat{j}$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$18$",
+        "$\\frac{18}{7}$",
+        "$3.6$",
+        "$7$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The component of $\\vec{A}$ along $\\vec{B}$ is $\\vec{A}\\cdot\\hat{B} = \\frac{\\vec{A}\\cdot\\vec{B}}{B}$.",
+        "steps": [
+          "$\\vec{A}\\cdot\\vec{B} = 2(3)+3(4)+6(0) = 18$.",
+          "$B = \\sqrt{3^2+4^2} = 5$.",
+          "Component $= \\frac{18}{5} = 3.6$."
+        ],
+        "final_answer": "Option (3): $3.6$",
+        "why_not_others": "18 is the dot product without dividing by $B$. $\\frac{18}{7}$ divides by $|\\vec{A}| = 7$, which gives the component of $\\vec{B}$ along $\\vec{A}$. 7 is simply the magnitude of $\\vec{A}$.",
+        "common_trap": "Dividing by the magnitude of the wrong vector.",
+        "time_saving_tip": "Always divide by the magnitude of the vector you are projecting onto."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t08_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Unit vector and resolution of a vector",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A vector makes an angle of $60^\\circ$ with the x-axis and $45^\\circ$ with the y-axis. The acute angle it makes with the z-axis is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$60^\\circ$",
+        "$45^\\circ$",
+        "$75^\\circ$",
+        "$90^\\circ$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For direction cosines, $\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma = 1$.",
+        "steps": [
+          "$\\cos^2 60^\\circ = \\frac{1}{4}$ and $\\cos^2 45^\\circ = \\frac{1}{2}$.",
+          "$\\cos^2\\gamma = 1-\\frac{1}{4}-\\frac{1}{2} = \\frac{1}{4}$.",
+          "$\\cos\\gamma = \\frac{1}{2}$, so $\\gamma = 60^\\circ$."
+        ],
+        "final_answer": "Option (1): $60^\\circ$",
+        "why_not_others": "$75^\\circ$ comes from wrongly assuming the three angles add up to $180^\\circ$. $90^\\circ$ would need $\\cos^2\\alpha+\\cos^2\\beta = 1$, which is not the case here. $45^\\circ$ has no basis in the given data.",
+        "common_trap": "Treating direction angles like the angles of a triangle that sum to $180^\\circ$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t08_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Unit vector and resolution of a vector",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A vector of magnitude 10 units can have a rectangular component of magnitude 12 units.",
+        "R": "A rectangular component of a vector of magnitude $A$ is $A\\cos\\theta$, and $|\\cos\\theta| \\le 1$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A rectangular (perpendicular) component can never exceed the magnitude of the vector.",
+        "steps": [
+          "A rectangular component equals $A\\cos\\theta$, and $|\\cos\\theta| \\le 1$, so R is true.",
+          "The component therefore cannot exceed 10 units, so a 12-unit component is impossible and A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are all ruled out.",
+        "common_trap": "Confusing rectangular components with components along non-perpendicular directions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t08_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Unit vector and resolution of a vector",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The unit vector along $2\\hat{i}-\\hat{j}+2\\hat{k}$ is $\\frac{2\\hat{i}-\\hat{j}+2\\hat{k}}{3}$, and the squares of its direction cosines add up to 1.",
+        "II": "The component of $\\vec{A} = 2\\hat{i}+\\hat{j}-2\\hat{k}$ along the direction of $\\hat{i}+\\hat{j}$ is $\\frac{3}{\\sqrt{2}}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Unit vector $= \\frac{\\vec{A}}{A}$; direction cosines satisfy $\\sum\\cos^2 = 1$; the projection is $\\frac{\\vec{A}\\cdot\\vec{B}}{B}$.",
+        "steps": [
+          "Statement I: the magnitude is $\\sqrt{4+1+4} = 3$, so the unit vector is $\\frac{2\\hat{i}-\\hat{j}+2\\hat{k}}{3}$.",
+          "Its direction cosines are $\\frac{2}{3}, -\\frac{1}{3}, \\frac{2}{3}$, and $\\frac{4}{9}+\\frac{1}{9}+\\frac{4}{9} = 1$. Statement I is correct.",
+          "Statement II: $\\vec{A}\\cdot(\\hat{i}+\\hat{j}) = 2+1 = 3$ and $|\\hat{i}+\\hat{j}| = \\sqrt{2}$.",
+          "The component is $\\frac{3}{\\sqrt{2}}$, so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out exactly, so any option marking either one as incorrect is wrong.",
+        "common_trap": "Forgetting to divide by $\\sqrt{2}$, or including the $\\hat{k}$ term in the dot product with $\\hat{i}+\\hat{j}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t09_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Relative velocity",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Two trains move on parallel tracks in opposite directions with speeds $54\\ km\\,h^{-1}$ and $36\\ km\\,h^{-1}$. The speed of one train relative to the other, in $m\\,s^{-1}$, is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$25$",
+        "$5$",
+        "$15$",
+        "$90$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For opposite directions, the relative speed is the sum of the speeds.",
+        "steps": [
+          "Relative speed $= 54+36 = 90\\ km\\,h^{-1}$.",
+          "Convert: $90\\times\\frac{5}{18} = 25\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (1): $25$",
+        "why_not_others": "5 is the difference of the speeds (15 and 10 m/s), which applies to the same direction. 15 is the speed of one train alone. 90 is not converted to m/s.",
+        "common_trap": "Subtracting the speeds for opposite directions, or forgetting the unit conversion.",
+        "time_saving_tip": "Convert each speed first: 15 m/s and 10 m/s."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t09_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Relative velocity",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A river 120 m wide flows at $3\\ m\\,s^{-1}$. A swimmer whose speed in still water is $5\\ m\\,s^{-1}$ wants to reach the point directly opposite the starting point. The time taken to cross is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$24$ s",
+        "$40$ s",
+        "$15$ s",
+        "$30$ s"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For the shortest path (zero drift), the swimmer heads upstream and $t = \\frac{d}{\\sqrt{v^2-u^2}}$.",
+        "steps": [
+          "The speed across the river is $\\sqrt{5^2-3^2} = 4\\ m\\,s^{-1}$.",
+          "$t = \\frac{120}{4} = 30$ s."
+        ],
+        "final_answer": "Option (4): $30$ s",
+        "why_not_others": "24 s is the minimum-time crossing, $\\frac{d}{v}$, which involves drift. 40 s divides by the river speed. 15 s divides by $v+u$.",
+        "common_trap": "Using $\\frac{d}{v}$, which is the shortest time, not the shortest path.",
+        "time_saving_tip": "A 3-4-5 triangle gives the speed across immediately."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t09_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Relative velocity",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Rain falls vertically at $6\\ m\\,s^{-1}$. A man walks horizontally at $2\\sqrt{3}\\ m\\,s^{-1}$. To protect himself, he should hold his umbrella:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "at $30^\\circ$ to the vertical, tilted backward",
+        "at $60^\\circ$ to the vertical, tilted forward",
+        "at $30^\\circ$ to the vertical, tilted forward",
+        "vertically"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The umbrella is held along the velocity of rain relative to the man, $\\vec{v}_r-\\vec{v}_m$.",
+        "steps": [
+          "The relative velocity has a vertical component of 6 m/s downward and a horizontal component of $2\\sqrt{3}$ m/s opposite to his walking direction.",
+          "$\\tan\\theta = \\frac{2\\sqrt{3}}{6} = \\frac{1}{\\sqrt{3}}$, so $\\theta = 30^\\circ$ from the vertical.",
+          "The rain appears to come from the front, so he tilts the umbrella forward."
+        ],
+        "final_answer": "Option (3): at $30^\\circ$ to the vertical, tilted forward",
+        "why_not_others": "Tilting backward gets the direction wrong. $60^\\circ$ is the angle measured from the horizontal. Holding it vertically follows the actual rain direction, not the relative one.",
+        "common_trap": "Holding the umbrella along the actual direction of the rain.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t09_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Relative velocity",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Relative speed of two cars moving in the same direction at $20\\ m\\,s^{-1}$ and $15\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "B",
+            "text": "Relative speed of two cars moving in opposite directions at $20\\ m\\,s^{-1}$ and $15\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "C",
+            "text": "Ground speed of a swimmer (speed $12\\ m\\,s^{-1}$ in still water) heading perpendicular to a river flowing at $5\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "D",
+            "text": "Speed across the river of a swimmer (speed $5\\ m\\,s^{-1}$ in still water) taking the shortest path in a river flowing at $3\\ m\\,s^{-1}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$13\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "II",
+            "text": "$4\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "III",
+            "text": "$35\\ m\\,s^{-1}$"
+          },
+          {
+            "label": "IV",
+            "text": "$5\\ m\\,s^{-1}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Speeds subtract for the same direction and add for opposite directions. Perpendicular velocities combine as $\\sqrt{v^2+u^2}$, and the shortest-path speed across is $\\sqrt{v^2-u^2}$.",
+        "steps": [
+          "A: $20-15 = 5$, so A-IV.",
+          "B: $20+15 = 35$, so B-III.",
+          "C: $\\sqrt{12^2+5^2} = 13$, so C-I.",
+          "D: $\\sqrt{5^2-3^2} = 4$, so D-II."
+        ],
+        "final_answer": "Option (3): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Options (1) and (4) swap the same-direction and opposite-direction cases. Option (2) swaps the perpendicular-heading result with the shortest-path result.",
+        "common_trap": "Using $\\sqrt{v^2+u^2}$ for the shortest path instead of $\\sqrt{v^2-u^2}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t09_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Relative velocity",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about relative velocity are correct?",
+      "statements": {
+        "A": "$\\vec{v}_{AB} = -\\vec{v}_{BA}$",
+        "B": "Two bodies in free fall have zero relative acceleration, so their relative motion is uniform.",
+        "C": "A swimmer can cross a river with zero drift even when his speed in still water is less than the river speed, by heading upstream.",
+        "D": "For minimum crossing time, the swimmer heads perpendicular to the flow, and the downstream drift is $\\frac{ud}{v}$.",
+        "E": "A person walking in rain should hold the umbrella along the actual direction of fall of the rain."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and D only",
+        "B, D and E only",
+        "A, B and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\vec{v}_{AB} = \\vec{v}_A-\\vec{v}_B$. Zero drift needs $v>u$. The umbrella follows the relative velocity of the rain.",
+        "steps": [
+          "A is true: swapping A and B reverses the relative velocity.",
+          "B is true: both bodies have acceleration $g$, so their relative acceleration is zero.",
+          "C is false: zero drift requires $\\sin\\theta = \\frac{u}{v} \\le 1$, i.e. $v>u$.",
+          "D is true: $t = \\frac{d}{v}$ and the drift is $\\frac{ud}{v}$.",
+          "E is false: the umbrella must be held along the velocity of rain relative to the person."
+        ],
+        "final_answer": "Option (4): A, B and D only",
+        "why_not_others": "Options (2) and (3) include the false statements C or E. Option (1) leaves out the true statement D.",
+        "common_trap": "Believing zero drift is always possible by heading upstream.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t10_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Motion in a plane",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The position of a particle is $\\vec{r} = 3t\\hat{i}+2t^2\\hat{j}$ (in SI units). Its velocity at $t = 2$ s is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\hat{i}+8\\hat{j}\\ m\\,s^{-1}$",
+        "$3\\hat{i}+4\\hat{j}\\ m\\,s^{-1}$",
+        "$3\\hat{i}+8\\hat{j}\\ m\\,s^{-1}$",
+        "$4\\hat{j}\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\vec{v} = \\frac{d\\vec{r}}{dt}$, taken component by component.",
+        "steps": [
+          "$\\vec{v} = 3\\hat{i}+4t\\hat{j}$.",
+          "At $t = 2$ s: $\\vec{v} = 3\\hat{i}+8\\hat{j}\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (3): $3\\hat{i}+8\\hat{j}\\ m\\,s^{-1}$",
+        "why_not_others": "$6\\hat{i}+8\\hat{j}$ is the position at $t = 2$ s, not the velocity. $3\\hat{i}+4\\hat{j}$ uses $2t$ in place of $4t$ for the y-component. $4\\hat{j}$ is the acceleration.",
+        "common_trap": "Substituting $t$ into $\\vec{r}$ instead of differentiating.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t10_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Motion in a plane",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle starts from the origin with velocity $4\\hat{i}\\ m\\,s^{-1}$ and has constant acceleration $2\\hat{j}\\ m\\,s^{-2}$. The equation of its path is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$y = \\frac{x^2}{8}$",
+        "$y = \\frac{x^2}{16}$",
+        "$y = \\frac{x^2}{4}$",
+        "$y = \\frac{x}{2}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Write $x(t)$ and $y(t)$ separately, then eliminate $t$.",
+        "steps": [
+          "$x = 4t$ and $y = \\frac{1}{2}(2)t^2 = t^2$.",
+          "Substitute $t = \\frac{x}{4}$: $y = \\frac{x^2}{16}$."
+        ],
+        "final_answer": "Option (2): $y = \\frac{x^2}{16}$",
+        "why_not_others": "$\\frac{x^2}{8}$ comes from dropping the $\\frac{1}{2}$ in $\\frac{1}{2}at^2$. $\\frac{x^2}{4}$ uses $t = \\frac{x}{2}$. $y = \\frac{x}{2}$ is a straight line, which is wrong because the acceleration is perpendicular to the initial velocity.",
+        "common_trap": "Forgetting the factor $\\frac{1}{2}$ in the displacement equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t10_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Motion in a plane",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle has initial velocity $(2\\hat{i}-3\\hat{j})\\ m\\,s^{-1}$ and constant acceleration $(\\hat{i}+3\\hat{j})\\ m\\,s^{-2}$. Its speed at $t = 2$ s is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3\\ m\\,s^{-1}$",
+        "$7\\ m\\,s^{-1}$",
+        "$\\sqrt{13}\\ m\\,s^{-1}$",
+        "$5\\ m\\,s^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\vec{v} = \\vec{v}_0+\\vec{a}t$ applies component-wise for constant acceleration.",
+        "steps": [
+          "$\\vec{v} = (2+2)\\hat{i}+(-3+6)\\hat{j} = 4\\hat{i}+3\\hat{j}$.",
+          "Speed $= \\sqrt{16+9} = 5\\ m\\,s^{-1}$."
+        ],
+        "final_answer": "Option (4): $5\\ m\\,s^{-1}$",
+        "why_not_others": "3 m/s comes from $\\vec{v}_0+\\vec{a}$, which forgets to multiply by $t$. 7 m/s adds the components arithmetically. $\\sqrt{13}$ m/s is the initial speed.",
+        "common_trap": "Adding components directly instead of using $\\sqrt{v_x^2+v_y^2}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t10_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Motion in a plane",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In two-dimensional motion, the acceleration of a particle need not be along its velocity.",
+        "R": "The component of acceleration perpendicular to the velocity changes the speed of the particle."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Tangential acceleration changes speed; normal acceleration changes direction.",
+        "steps": [
+          "A is true: in a plane, the acceleration can point in any direction relative to the velocity.",
+          "R is false: the perpendicular component changes the direction of motion, not the speed."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Swapping the roles of the tangential and normal components.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t10_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Motion in a plane",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a particle with $x = 2t$ and $y = 4t-t^2$ (in SI units), the velocity at $t = 2$ s is zero.",
+        "II": "For the same particle, at $t = 2$ s the acceleration is perpendicular to the velocity."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Differentiate each component separately. A zero y-velocity does not mean zero velocity.",
+        "steps": [
+          "$\\vec{v} = 2\\hat{i}+(4-2t)\\hat{j}$. At $t = 2$ s, $\\vec{v} = 2\\hat{i} \\neq 0$, so Statement I is incorrect.",
+          "$\\vec{a} = -2\\hat{j}$ is constant.",
+          "$\\vec{v}\\cdot\\vec{a} = 0$ at $t = 2$ s, so the two are perpendicular and Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I ignores the constant x-velocity, so options (1) and (3) fail. Statement II is verified true, so option (2) fails.",
+        "common_trap": "Setting only $v_y = 0$ and concluding that the whole velocity is zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t11_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Projectile motion",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A ball is projected with a speed of $20\\ m\\,s^{-1}$ at $30^\\circ$ above the horizontal. Its time of flight on level ground is ($g = 10\\ m\\,s^{-2}$):",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2$ s",
+        "$1$ s",
+        "$3.46$ s",
+        "$4$ s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$T = \\frac{2u\\sin\\theta}{g}$.",
+        "steps": [
+          "$T = \\frac{2\\times20\\times0.5}{10} = 2$ s."
+        ],
+        "final_answer": "Option (1): $2$ s",
+        "why_not_others": "1 s is only the time to reach the top. 3.46 s uses $\\cos30^\\circ$ instead of $\\sin30^\\circ$. 4 s leaves out $\\sin\\theta$ altogether.",
+        "common_trap": "Using $\\cos\\theta$ for the vertical component.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t11_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Projectile motion",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A projectile is launched at an angle $\\theta$ with $\\tan\\theta = \\frac{4}{3}$, and its horizontal range is 120 m. Its maximum height is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$30$ m",
+        "$40$ m",
+        "$160$ m",
+        "$22.5$ m"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\frac{H}{R} = \\frac{\\tan\\theta}{4}$.",
+        "steps": [
+          "$H = \\frac{R\\tan\\theta}{4} = \\frac{120\\times\\frac{4}{3}}{4}$.",
+          "$H = 40$ m."
+        ],
+        "final_answer": "Option (2): $40$ m",
+        "why_not_others": "30 m uses $R = 4H$, which holds only at $45^\\circ$. 160 m forgets to divide by 4. 22.5 m uses $\\tan\\theta = \\frac{3}{4}$.",
+        "common_trap": "Applying $R = 4H$ at every angle.",
+        "time_saving_tip": "Use the ratio $\\frac{H}{R}$ directly; there is no need to find $u$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t11_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Projectile motion",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A stone is thrown horizontally at $15\\ m\\,s^{-1}$ from the top of a 45 m high tower. The horizontal distance from the foot of the tower to where it lands is ($g = 10\\ m\\,s^{-2}$):",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$31.8$ m",
+        "$67.5$ m",
+        "$45$ m",
+        "$135$ m"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For horizontal projection, $t = \\sqrt{\\frac{2h}{g}}$ and $R = ut$.",
+        "steps": [
+          "$t = \\sqrt{\\frac{2\\times45}{10}} = 3$ s.",
+          "$R = 15\\times3 = 45$ m."
+        ],
+        "final_answer": "Option (3): $45$ m",
+        "why_not_others": "31.8 m uses $t = \\sqrt{\\frac{h}{g}}$. 67.5 m uses $t = \\frac{h}{g}$. 135 m uses $t = \\frac{2h}{g}$ without the square root.",
+        "common_trap": "Dropping the factor 2 or the square root in the time of fall.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t11_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Projectile motion",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Speed of a projectile at its highest point (launch speed $u$, angle $\\theta$)"
+          },
+          {
+            "label": "B",
+            "text": "Magnitude of the acceleration at the highest point"
+          },
+          {
+            "label": "C",
+            "text": "Maximum height when projected at $45^\\circ$"
+          },
+          {
+            "label": "D",
+            "text": "Maximum horizontal range for launch speed $u$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{u^2}{g}$"
+          },
+          {
+            "label": "II",
+            "text": "$u\\cos\\theta$"
+          },
+          {
+            "label": "III",
+            "text": "$g$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{u^2}{4g}$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "At the top, $v = u\\cos\\theta$ and $a = g$. At $45^\\circ$, $H = \\frac{u^2}{4g}$ and $R_{max} = \\frac{u^2}{g}$.",
+        "steps": [
+          "A: only the horizontal velocity remains, $u\\cos\\theta$, so A-II.",
+          "B: the acceleration is still $g$, so B-III.",
+          "C: $H = \\frac{u^2\\sin^2 45^\\circ}{2g} = \\frac{u^2}{4g}$, so C-IV.",
+          "D: $R_{max} = \\frac{u^2}{g}$, so D-I."
+        ],
+        "final_answer": "Option (1): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Options (2) and (4) swap the height at $45^\\circ$ with the maximum range. Options (3) and (4) swap the speed and acceleration at the top.",
+        "common_trap": "Thinking the speed or the acceleration is zero at the top.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t11_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Projectile motion",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about projectile motion are correct?",
+      "statements": {
+        "A": "Projectiles launched with the same speed at complementary angles have equal ranges.",
+        "B": "At the highest point, the velocity is perpendicular to the acceleration.",
+        "C": "The kinetic energy at the highest point is $K\\cos^2\\theta$, where $K$ is the initial kinetic energy.",
+        "D": "For horizontal projection from a height, the time of fall increases with the horizontal speed.",
+        "E": "The range equals the maximum height when the angle of projection is $45^\\circ$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and D only",
+        "B, C and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Horizontal and vertical motions are independent. At the top only $u\\cos\\theta$ remains.",
+        "steps": [
+          "A is true because $\\sin2\\theta = \\sin(180^\\circ-2\\theta)$.",
+          "B is true: at the top the velocity is horizontal and $g$ acts vertically.",
+          "C is true because $\\frac{1}{2}m(u\\cos\\theta)^2 = K\\cos^2\\theta$.",
+          "D is false: $t = \\sqrt{\\frac{2h}{g}}$ does not depend on $u$.",
+          "E is false: at $45^\\circ$, $R = 4H$; $R = H$ only when $\\tan\\theta = 4$."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Options (2), (3) and (4) each include the false statement D or E.",
+        "common_trap": "Believing that a faster horizontal throw stays in the air longer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t12_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniform circular motion",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A small ball tied to a string moves in a horizontal circle of radius $0.5\\ \\text{m}$ with a constant speed of $3\\ \\text{m s}^{-1}$. What is the magnitude of its centripetal acceleration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6\\ \\text{m s}^{-2}$",
+        "$18\\ \\text{m s}^{-2}$",
+        "$4.5\\ \\text{m s}^{-2}$",
+        "$36\\ \\text{m s}^{-2}$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In uniform circular motion, the centripetal acceleration has magnitude $a_c = \\frac{v^2}{r}$ and is directed towards the centre.",
+        "steps": [
+          "Write the formula: $a_c = \\frac{v^2}{r}$.",
+          "Substitute the values: $a_c = \\frac{3^2}{0.5} = \\frac{9}{0.5}$.",
+          "Simplify: $a_c = 18\\ \\text{m s}^{-2}$."
+        ],
+        "final_answer": "Option (2): $18\\ \\text{m s}^{-2}$",
+        "why_not_others": "$6$ comes from $\\frac{v}{r}$, which is the angular speed in $\\text{rad s}^{-1}$, not the acceleration. $4.5$ comes from $v^2 r$. $36$ comes from wrongly using $\\frac{2v^2}{r}$.",
+        "common_trap": "Confusing $\\frac{v}{r}$ (angular speed) with $\\frac{v^2}{r}$ (centripetal acceleration).",
+        "time_saving_tip": "Dividing by $0.5$ is the same as multiplying by $2$, so $a_c = 9 \\times 2 = 18$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t12_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniform circular motion",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A particle moves on a circle with a constant speed of $10\\ \\text{m s}^{-1}$ and completes one revolution in $12\\ \\text{s}$. What is the magnitude of the change in its velocity during a time interval of $2\\ \\text{s}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{m s}^{-1}$",
+        "$20\\ \\text{m s}^{-1}$",
+        "$0$",
+        "$10\\sqrt{3}\\ \\text{m s}^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "After the velocity turns through an angle $\\theta$, the magnitude of the change in velocity is $|\\Delta\\vec{v}| = 2v\\sin\\frac{\\theta}{2}$.",
+        "steps": [
+          "Find the angular speed: $\\omega = \\frac{2\\pi}{T} = \\frac{2\\pi}{12} = \\frac{\\pi}{6}\\ \\text{rad s}^{-1}$.",
+          "Find the angle turned in $2\\ \\text{s}$: $\\theta = \\omega t = \\frac{\\pi}{3}$, which is $60^\\circ$.",
+          "Apply the formula: $|\\Delta\\vec{v}| = 2(10)\\sin 30^\\circ = 10\\ \\text{m s}^{-1}$."
+        ],
+        "final_answer": "Option (1): $10\\ \\text{m s}^{-1}$",
+        "why_not_others": "$20$ is $2v$, which is correct only after half a revolution. $0$ assumes that velocity is unchanged because the speed is constant. $10\\sqrt{3}$ comes from using $\\sin\\theta$ instead of $\\sin\\frac{\\theta}{2}$.",
+        "common_trap": "Thinking velocity does not change because the speed is constant. In fact, the direction of velocity changes continuously.",
+        "time_saving_tip": "When $\\theta = 60^\\circ$, the initial velocity, the final velocity and $\\Delta\\vec{v}$ form an equilateral triangle, so $|\\Delta\\vec{v}| = v$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t12_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniform circular motion",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A car moves on a circular track of radius $50\\ \\text{m}$. At a certain instant, its speed is $10\\ \\text{m s}^{-1}$ and it is speeding up at the rate of $1.5\\ \\text{m s}^{-2}$. What is the magnitude of the net acceleration of the car at that instant?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5\\ \\text{m s}^{-2}$",
+        "$3.5\\ \\text{m s}^{-2}$",
+        "$2\\ \\text{m s}^{-2}$",
+        "$0.5\\ \\text{m s}^{-2}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In non-uniform circular motion, the tangential and centripetal accelerations are perpendicular, so the net acceleration is $a = \\sqrt{a_t^2 + a_c^2}$.",
+        "steps": [
+          "Find the centripetal acceleration: $a_c = \\frac{v^2}{r} = \\frac{100}{50} = 2\\ \\text{m s}^{-2}$.",
+          "The rate of speeding up is the tangential acceleration: $a_t = 1.5\\ \\text{m s}^{-2}$.",
+          "Combine them: $a = \\sqrt{1.5^2 + 2^2} = \\sqrt{6.25} = 2.5\\ \\text{m s}^{-2}$."
+        ],
+        "final_answer": "Option (1): $2.5\\ \\text{m s}^{-2}$",
+        "why_not_others": "$3.5$ adds the two components as if they were scalars. $2$ ignores the tangential acceleration. $0.5$ subtracts the components.",
+        "common_trap": "Adding $a_t$ and $a_c$ directly, even though they are perpendicular to each other.",
+        "time_saving_tip": "The numbers $1.5$, $2$ and $2.5$ form a $3$-$4$-$5$ triple scaled by $0.5$."
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t12_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniform circular motion",
+      "topic_index": 12,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The kinetic energy of a particle in uniform circular motion remains constant.",
+        "R": "The centripetal acceleration of a particle in uniform circular motion is a constant vector."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In uniform circular motion, the centripetal force is perpendicular to the velocity, so it does no work. The acceleration has constant magnitude, but its direction keeps changing.",
+        "steps": [
+          "The speed is constant and the centripetal force does zero work, so the kinetic energy stays constant. A is true.",
+          "The acceleration always points towards the centre, so its direction changes continuously. It is not a constant vector, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is true, so option (4) is ruled out.",
+        "common_trap": "Believing uniform circular motion has constant acceleration. Only the magnitude $\\frac{v^2}{r}$ is constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u02_t12_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u02",
+      "topic": "Uniform circular motion",
+      "topic_index": 12,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For a disc rotating uniformly about its axis, a point at distance $2r$ from the axis has four times the centripetal acceleration of a point at distance $r$.",
+        "II": "For a particle in uniform circular motion with speed $v$, the magnitude of the average velocity over half a revolution is equal to $v$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "All points of a rotating rigid body have the same $\\omega$, so $a_c = \\omega^2 r$ is proportional to $r$. Average velocity equals displacement divided by time.",
+        "steps": [
+          "Since $\\omega$ is the same for both points, $a_c = \\omega^2 r$ doubles when $r$ doubles. It does not become four times, so Statement I is incorrect.",
+          "Over half a revolution, the displacement is $2r$ and the time taken is $\\frac{T}{2} = \\frac{\\pi r}{v}$.",
+          "The magnitude of the average velocity is $\\frac{2r}{\\pi r / v} = \\frac{2v}{\\pi}$, which is not $v$. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I wrongly treats $v$ as the same for both points in $\\frac{v^2}{r}$, or squares the radius ratio. Statement II confuses average speed, which is $v$, with the magnitude of average velocity, which is $\\frac{2v}{\\pi}$.",
+        "common_trap": "Using $a_c = \\frac{v^2}{r}$ without noticing that $v = \\omega r$ also doubles. Also, taking average speed as equal to the magnitude of average velocity.",
+        "time_saving_tip": "For a rigid body, always use $a_c = \\omega^2 r$, because $\\omega$ is common to all points."
+      }
+    }
+  ]
+}

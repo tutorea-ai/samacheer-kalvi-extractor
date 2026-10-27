@@ -1,0 +1,625 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "How much heat is required to raise the temperature of 50 g of water by 10 K? (Specific heat of water = 4.18 J g$^{-1}$ K$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "209 J",
+        "20.9 kJ",
+        "41.8 J",
+        "2.09 kJ"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Heat absorbed for a temperature change: $q = mc\\Delta T$.",
+        "steps": [
+          "$q = mc\\Delta T = 50 \\times 4.18 \\times 10$",
+          "$q = 2090$ J",
+          "$q = 2.09$ kJ"
+        ],
+        "final_answer": "Option (4): 2.09 kJ",
+        "why_not_others": "209 J leaves out $\\Delta T$. 41.8 J leaves out the mass. 20.9 kJ comes from a decimal or unit conversion slip.",
+        "common_trap": "Leaving out one of the three factors (m, c, $\\Delta T$), or misconverting J to kJ.",
+        "time_saving_tip": "Note that 50 × 10 = 500, and 500 × 4.18 ≈ 2090 J."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "2 mol of a monoatomic ideal gas is heated at constant pressure from 300 K to 350 K. What is the heat absorbed by the gas? (R = 8.314 J K$^{-1}$ mol$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.08 kJ",
+        "1.25 kJ",
+        "2.91 kJ",
+        "0.83 kJ"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "At constant pressure, $q = \\Delta H = nC_p\\Delta T$. For a monoatomic gas, $C_p = \\frac{5}{2}R$.",
+        "steps": [
+          "$\\Delta T = 50$ K",
+          "$q_p = 2 \\times \\frac{5}{2} \\times 8.314 \\times 50$",
+          "$q_p = 2078.5$ J ≈ 2.08 kJ"
+        ],
+        "final_answer": "Option (1): 2.08 kJ",
+        "why_not_others": "1.25 kJ uses $C_V = \\frac{3}{2}R$. 2.91 kJ uses the diatomic value $C_p = \\frac{7}{2}R$. 0.83 kJ is only the expansion work $nR\\Delta T$.",
+        "common_trap": "Using $C_V$ even though the heating is at constant pressure.",
+        "time_saving_tip": "$q = 250R$, and 250 × 8.314 ≈ 2079 J."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "3 mol of a diatomic ideal gas is heated at constant pressure so that its temperature rises by 20 K. What is the change in internal energy of the gas?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$210R$",
+        "$60R$",
+        "$150R$",
+        "$90R$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For an ideal gas, $\\Delta U = nC_V\\Delta T$ for any process. For a diatomic gas, $C_V = \\frac{5}{2}R$.",
+        "steps": [
+          "The relation $\\Delta U = nC_V\\Delta T$ holds even at constant pressure.",
+          "$\\Delta U = 3 \\times \\frac{5}{2}R \\times 20$",
+          "$\\Delta U = 150R$"
+        ],
+        "final_answer": "Option (3): $150R$",
+        "why_not_others": "$210R$ is $\\Delta H$ (it uses $C_p$). $60R$ is $nR\\Delta T$, the magnitude of the expansion work. $90R$ uses the monoatomic value of $C_V$.",
+        "common_trap": "Using $C_p$ for $\\Delta U$ because the process is at constant pressure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A coffee-cup calorimeter measures $\\Delta H$ of a reaction, while a bomb calorimeter measures $\\Delta U$.",
+        "R": "For one mole of an ideal gas, $C_p$ exceeds $C_V$ by R."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "What a calorimeter measures depends on its working condition: constant p gives $q_p = \\Delta H$, and constant V gives $q_V = \\Delta U$.",
+        "steps": [
+          "A coffee-cup calorimeter works at constant pressure, so it measures $\\Delta H$.",
+          "A bomb calorimeter works at constant volume, so it measures $\\Delta U$. A is therefore true.",
+          "The Mayer relation $C_p - C_V = R$ is true, so R is true.",
+          "R describes heat capacities of an ideal gas. It does not explain why each calorimeter measures $\\Delta H$ or $\\Delta U$."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct, which rules out options (3) and (4). R does not account for A, which rules out option (1).",
+        "common_trap": "Linking 'p versus V' in A with '$C_p$ versus $C_V$' in R and assuming R explains A.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For an ideal gas, the relation $\\Delta U = nC_V\\Delta T$ is valid only when the gas is heated at constant volume.",
+        "II": "When 1 mol of a diatomic ideal gas is heated at constant pressure through 10 K, the heat absorbed is $35R$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\Delta U = nC_V\\Delta T$ holds for any process of an ideal gas. At constant pressure, $q = nC_p\\Delta T$.",
+        "steps": [
+          "U of an ideal gas depends only on T, so $\\Delta U = nC_V\\Delta T$ for every process. Statement I is false.",
+          "For a diatomic gas, $C_p = \\frac{7}{2}R$.",
+          "$q_p = 1 \\times \\frac{7}{2}R \\times 10 = 35R$. Statement II is true."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I restricts a general result to constant volume, so it is wrong. Statement II is correct arithmetic.",
+        "common_trap": "Thinking that $\\Delta U = nC_V\\Delta T$ needs constant volume because $C_V$ appears in it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Given: $C(graphite) + O_2(g) \\rightarrow CO_2(g)$; $\\Delta H = -393.5$ kJ mol$^{-1}$ and $CO(g) + \\frac{1}{2}O_2(g) \\rightarrow CO_2(g)$; $\\Delta H = -283.0$ kJ mol$^{-1}$. What is the standard enthalpy of formation of $CO(g)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-676.5$ kJ mol$^{-1}$",
+        "$+110.5$ kJ mol$^{-1}$",
+        "$-221.0$ kJ mol$^{-1}$",
+        "$-110.5$ kJ mol$^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "By Hess's law, $\\Delta_f H(CO) = \\Delta_c H(C) - \\Delta_c H(CO)$.",
+        "steps": [
+          "Write the first equation as given.",
+          "Reverse the second equation: $CO_2 \\rightarrow CO + \\frac{1}{2}O_2$; $\\Delta H = +283.0$ kJ.",
+          "Add the two: $C + \\frac{1}{2}O_2 \\rightarrow CO$; $\\Delta H = -393.5 + 283.0 = -110.5$ kJ mol$^{-1}$."
+        ],
+        "final_answer": "Option (4): $-110.5$ kJ mol$^{-1}$",
+        "why_not_others": "$-676.5$ adds the two values without reversing. $+110.5$ has the wrong sign. $-221.0$ is the value for forming 2 mol of CO.",
+        "common_trap": "Forgetting to change the sign when reversing the CO combustion equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "The standard enthalpies of combustion of $C(graphite)$, $H_2(g)$ and $CH_4(g)$ are $-393.5$, $-285.8$ and $-890.3$ kJ mol$^{-1}$ respectively, with water formed as $H_2O(l)$. What is the standard enthalpy of formation of $CH_4(g)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+74.8$ kJ mol$^{-1}$",
+        "$-74.8$ kJ mol$^{-1}$",
+        "$+211.0$ kJ mol$^{-1}$",
+        "$-1855.4$ kJ mol$^{-1}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Hess's law: combine the combustion equations so that they add up to the formation reaction.",
+        "steps": [
+          "Target reaction: $C + 2H_2 \\rightarrow CH_4$.",
+          "$\\Delta_f H = \\Delta_c H(C) + 2\\Delta_c H(H_2) - \\Delta_c H(CH_4)$",
+          "$\\Delta_f H = -393.5 - 571.6 + 890.3 = -74.8$ kJ mol$^{-1}$"
+        ],
+        "final_answer": "Option (2): $-74.8$ kJ mol$^{-1}$",
+        "why_not_others": "$+74.8$ has the wrong sign. $+211.0$ forgets to multiply the $H_2$ value by 2. $-1855.4$ adds all three values without reversing the $CH_4$ combustion.",
+        "common_trap": "Not multiplying the $H_2$ combustion enthalpy by its coefficient of 2.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Given: $S(s) + O_2(g) \\rightarrow SO_2(g)$; $\\Delta H = -297$ kJ and $S(s) + \\frac{3}{2}O_2(g) \\rightarrow SO_3(g)$; $\\Delta H = -396$ kJ. What is $\\Delta H$ for the reaction $SO_2(g) + \\frac{1}{2}O_2(g) \\rightarrow SO_3(g)$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-99$ kJ",
+        "$-693$ kJ",
+        "$+99$ kJ",
+        "$-198$ kJ"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Reverse the first equation and add it to the second (Hess's law).",
+        "steps": [
+          "Reverse the first equation: $SO_2 \\rightarrow S + O_2$; $\\Delta H = +297$ kJ.",
+          "Add the second equation: $SO_2 + \\frac{1}{2}O_2 \\rightarrow SO_3$.",
+          "$\\Delta H = -396 + 297 = -99$ kJ"
+        ],
+        "final_answer": "Option (1): $-99$ kJ",
+        "why_not_others": "$-693$ adds the values without reversing. $+99$ has the wrong sign. $-198$ is the value for 2 mol of $SO_2$.",
+        "common_trap": "Adding the given $\\Delta H$ values directly without reversing the $SO_2$ equation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Reversing a thermochemical equation"
+          },
+          {
+            "label": "B",
+            "text": "Multiplying a thermochemical equation by 3"
+          },
+          {
+            "label": "C",
+            "text": "Adding two thermochemical equations"
+          },
+          {
+            "label": "D",
+            "text": "Born-Haber cycle"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\Delta H$ values of the two equations are summed"
+          },
+          {
+            "label": "II",
+            "text": "Used to find lattice enthalpy"
+          },
+          {
+            "label": "III",
+            "text": "Sign of $\\Delta H$ is changed"
+          },
+          {
+            "label": "IV",
+            "text": "$\\Delta H$ is multiplied by 3"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-I, B-IV, C-III, D-II"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Thermochemical equations can be handled like algebraic equations, and Hess's law underlies the Born-Haber cycle.",
+        "steps": [
+          "Reversing a reaction changes the sign of $\\Delta H$: A-III.",
+          "Multiplying a reaction by a factor multiplies $\\Delta H$ by that factor: B-IV.",
+          "Adding reactions adds their $\\Delta H$ values: C-I.",
+          "The Born-Haber cycle gives lattice enthalpy: D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Each of the other options swaps at least one pair of operations and their effects.",
+        "common_trap": "Thinking that multiplying an equation changes the sign, or that reversing it changes the magnitude.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Hess's law are correct?",
+      "statements": {
+        "A": "Hess's law holds because enthalpy is a state function.",
+        "B": "Reversing a thermochemical equation leaves both the magnitude and the sign of $\\Delta H$ unchanged.",
+        "C": "The physical states of all species must match when thermochemical equations are combined.",
+        "D": "Hess's law allows calculation of enthalpies that cannot be measured directly, such as the enthalpy of formation of CO.",
+        "E": "The total enthalpy change of a reaction depends on the number of intermediate steps through which it is carried out."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C, D and E only",
+        "B, C and E only",
+        "A, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Enthalpy is a state function, so $\\Delta H$ depends only on the initial and final states.",
+        "steps": [
+          "A is correct: it is the basis of Hess's law.",
+          "B is incorrect: reversing a reaction changes the sign of $\\Delta H$.",
+          "C is correct: $H_2O(l)$ and $H_2O(g)$, for example, have different enthalpies.",
+          "D is correct: $\\Delta_f H$ of CO is the classic example.",
+          "E is incorrect: $\\Delta H$ does not depend on the path or the number of steps."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Option (1) includes the false B. Option (2) includes the false E. Option (3) includes both B and E.",
+        "common_trap": "Believing that more steps change the total $\\Delta H$.",
+        "time_saving_tip": "Once B and E are identified as false, only option (4) is left."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "For which of the following is the standard enthalpy of formation NOT zero?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$C(graphite)$",
+        "$C(diamond)$",
+        "$O_2(g)$",
+        "$Br_2(l)$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\Delta_f H^\\circ = 0$ only for the reference (most stable) form of an element.",
+        "steps": [
+          "Graphite, $O_2(g)$ and $Br_2(l)$ are reference forms, so their $\\Delta_f H^\\circ = 0$.",
+          "Diamond is not the reference form of carbon, so its $\\Delta_f H^\\circ \\neq 0$."
+        ],
+        "final_answer": "Option (2): $C(diamond)$",
+        "why_not_others": "The other three are elements in their standard reference states.",
+        "common_trap": "Treating every form of an element as having $\\Delta_f H^\\circ = 0$, or overlooking that bromine's reference state is a liquid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "Using the bond enthalpies H-H = 436 kJ mol$^{-1}$, Cl-Cl = 242 kJ mol$^{-1}$ and H-Cl = 431 kJ mol$^{-1}$, calculate $\\Delta_r H$ for the reaction as written: $H_2(g) + Cl_2(g) \\rightarrow 2HCl(g)$.",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+184$ kJ",
+        "$-184$ kJ",
+        "$+247$ kJ",
+        "$-92$ kJ"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$\\Delta_r H = \\sum BE(\\text{reactants}) - \\sum BE(\\text{products})$",
+        "steps": [
+          "Bonds broken: $436 + 242 = 678$ kJ.",
+          "Bonds formed: $2 \\times 431 = 862$ kJ.",
+          "$\\Delta_r H = 678 - 862 = -184$ kJ"
+        ],
+        "final_answer": "Option (2): $-184$ kJ",
+        "why_not_others": "$+184$ uses products minus reactants. $+247$ counts only one H-Cl bond. $-92$ is the value per mole of HCl, not for the reaction as written.",
+        "common_trap": "Applying the formation-enthalpy order (products minus reactants) to bond enthalpies.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "The enthalpy of atomization of $CH_4(g)$ is 1664 kJ mol$^{-1}$. What is the average C-H bond enthalpy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "416 kJ mol$^{-1}$",
+        "1664 kJ mol$^{-1}$",
+        "832 kJ mol$^{-1}$",
+        "555 kJ mol$^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For $CH_4$, $\\Delta_a H$ = 4 × average C-H bond enthalpy.",
+        "steps": [
+          "$CH_4(g) \\rightarrow C(g) + 4H(g)$ breaks four C-H bonds.",
+          "Average C-H bond enthalpy = $1664 / 4 = 416$ kJ mol$^{-1}$"
+        ],
+        "final_answer": "Option (1): 416 kJ mol$^{-1}$",
+        "why_not_others": "1664 is the total for all four bonds. 832 divides by 2, and 555 divides by 3.",
+        "common_trap": "Equating the atomization enthalpy with a single bond enthalpy, which is true only for diatomic molecules like $H_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Dissolution of $NH_4Cl$ in water is endothermic.",
+        "R": "For $NH_4Cl$, the lattice enthalpy exceeds the magnitude of the hydration enthalpy."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\Delta_{sol}H = \\Delta_{lattice}H + \\Delta_{hyd}H$",
+        "steps": [
+          "Lattice enthalpy is positive and hydration enthalpy is negative.",
+          "If the lattice enthalpy exceeds $|\\Delta_{hyd}H|$, then $\\Delta_{sol}H > 0$.",
+          "This is the case for $NH_4Cl$, so its dissolution is endothermic, and R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R gives exactly the reason for A.",
+        "common_trap": "Assuming that every dissolution is exothermic because hydration releases energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Bond dissociation enthalpy, ionization enthalpy and hydration enthalpy are all positive quantities.",
+        "II": "For a given substance, the enthalpy of vaporization is greater than its enthalpy of sublimation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The sign of each enthalpy type, and the relation $\\Delta_{sub}H = \\Delta_{fus}H + \\Delta_{vap}H$.",
+        "steps": [
+          "Hydration enthalpy is negative, so Statement I is false.",
+          "$\\Delta_{sub}H = \\Delta_{fus}H + \\Delta_{vap}H$, so $\\Delta_{sub}H > \\Delta_{vap}H$.",
+          "Statement II states the reverse, so it is false."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I wrongly calls hydration enthalpy positive. Statement II reverses the correct inequality.",
+        "common_trap": "Grouping hydration enthalpy with the endothermic quantities.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "In which of the following processes does the entropy of the system decrease?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Melting of ice",
+        "Evaporation of water",
+        "Freezing of water to ice",
+        "Dissolution of a salt in water"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Entropy order: $S_{gas} \\gg S_{liquid} > S_{solid}$. Entropy increases on melting, vaporization and dissolution.",
+        "steps": [
+          "Freezing converts a liquid into a more ordered solid.",
+          "So $\\Delta S < 0$ for freezing."
+        ],
+        "final_answer": "Option (3): Freezing of water to ice",
+        "why_not_others": "Melting, evaporation and dissolution all increase disorder, so $\\Delta S > 0$ for each.",
+        "common_trap": "Thinking that dissolution decreases entropy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "The enthalpy of fusion of ice is 6.0 kJ mol$^{-1}$ at its melting point of 273 K. What is the molar entropy of fusion of ice?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.022 J K$^{-1}$ mol$^{-1}$",
+        "1638 J K$^{-1}$ mol$^{-1}$",
+        "22.0 J K$^{-1}$ mol$^{-1}$",
+        "$-22.0$ J K$^{-1}$ mol$^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\Delta S_{trans} = \\frac{\\Delta H_{trans}}{T_{trans}}$",
+        "steps": [
+          "Convert to joules: $\\Delta_{fus}H = 6000$ J mol$^{-1}$.",
+          "$\\Delta_{fus}S = 6000 / 273 \\approx 22.0$ J K$^{-1}$ mol$^{-1}$"
+        ],
+        "final_answer": "Option (3): 22.0 J K$^{-1}$ mol$^{-1}$",
+        "why_not_others": "0.022 comes from keeping kJ but quoting the result in J. 1638 multiplies by T instead of dividing. $-22.0$ has the wrong sign, since melting increases entropy.",
+        "common_trap": "Not converting kJ to J before dividing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "1 mol of an ideal gas expands isothermally and reversibly at 300 K from 2 L to 20 L. What is the entropy change of the gas? (R = 8.314 J K$^{-1}$ mol$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0 J K$^{-1}$",
+        "8.314 J K$^{-1}$",
+        "19.15 J K$^{-1}$",
+        "$-19.15$ J K$^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\Delta S = 2.303\\,nR\\log\\frac{V_2}{V_1}$ for isothermal expansion of an ideal gas.",
+        "steps": [
+          "$V_2/V_1 = 10$, so $\\log 10 = 1$.",
+          "$\\Delta S = 2.303 \\times 1 \\times 8.314 \\times 1$",
+          "$\\Delta S \\approx 19.15$ J K$^{-1}$"
+        ],
+        "final_answer": "Option (3): 19.15 J K$^{-1}$",
+        "why_not_others": "0 would apply to a reversible adiabatic process, not an isothermal one. 8.314 leaves out the factor 2.303. The negative value would mean a compression.",
+        "common_trap": "Thinking that an isothermal process has zero entropy change because T is constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Free expansion of an ideal gas"
+          },
+          {
+            "label": "B",
+            "text": "Reversible adiabatic process"
+          },
+          {
+            "label": "C",
+            "text": "Vaporization of a liquid at its boiling point"
+          },
+          {
+            "label": "D",
+            "text": "Any spontaneous process"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\Delta S = 0$ (isentropic)"
+          },
+          {
+            "label": "II",
+            "text": "$\\Delta S_{universe} > 0$"
+          },
+          {
+            "label": "III",
+            "text": "$\\Delta S_{sys} = nR\\ln\\frac{V_2}{V_1}$ and $\\Delta S_{surr} = 0$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\Delta S = \\frac{\\Delta H_{trans}}{T_{trans}}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Entropy changes for special processes and the second law.",
+        "steps": [
+          "Free expansion: $\\Delta S_{sys} = nR\\ln(V_2/V_1)$ and $\\Delta S_{surr} = 0$: A-III.",
+          "Reversible adiabatic process: $q_{rev} = 0$, so $\\Delta S = 0$: B-I.",
+          "Phase transition at its transition temperature: $\\Delta S = \\Delta H/T$: C-IV.",
+          "Second law: $\\Delta S_{universe} > 0$ for a spontaneous process: D-II."
+        ],
+        "final_answer": "Option (1): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option (2) gives free expansion $\\Delta S = 0$. Options (3) and (4) misplace the second-law and transition entries.",
+        "common_trap": "Taking $\\Delta S_{sys} = 0$ for free expansion because q = 0.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about entropy and spontaneity are correct?",
+      "statements": {
+        "A": "Every exothermic process is spontaneous.",
+        "B": "Melting of ice above 273 K is spontaneous even though it is endothermic.",
+        "C": "At equilibrium, the entropy of the universe remains constant.",
+        "D": "A given quantity of heat causes a greater entropy increase at a higher temperature than at a lower temperature.",
+        "E": "Entropy is a state function."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "B, D and E only",
+        "C, D and E only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Second law: $\\Delta S_{universe} > 0$ for a spontaneous process and $= 0$ at equilibrium. Also $\\Delta S = q_{rev}/T$.",
+        "steps": [
+          "A is false: exothermic character alone does not decide spontaneity.",
+          "B is true: this is the standard example of a spontaneous endothermic process.",
+          "C is true: this is a statement of the second law.",
+          "D is false: since $\\Delta S = q/T$, the same q gives a larger $\\Delta S$ at lower T.",
+          "E is true."
+        ],
+        "final_answer": "Option (2): B, C and E only",
+        "why_not_others": "Options (1), (3) and (4) each include the false statement A or D.",
+        "common_trap": "Thinking that a higher temperature gives a larger entropy change for the same heat.",
+        "time_saving_tip": "Rejecting A and D leaves only option (2)."
+      }
+    }
+  ]
+}

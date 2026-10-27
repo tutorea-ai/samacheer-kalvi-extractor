@@ -1,0 +1,622 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "In which of the following molecules does the central atom have an incomplete octet?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$BF_3$",
+        "$NH_3$",
+        "$CH_4$",
+        "$H_2O$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Incomplete octet is a limitation of the octet rule. In $BF_3$, boron has only 6 valence electrons.",
+        "steps": [
+          "Boron has 3 valence electrons and forms three single bonds with F.",
+          "This gives 6 electrons around B, which is less than an octet.",
+          "N in $NH_3$, C in $CH_4$ and O in $H_2O$ all have 8 electrons around them."
+        ],
+        "final_answer": "Option (1): $BF_3$",
+        "why_not_others": "$NH_3$, $CH_4$ and $H_2O$ all obey the octet rule around the central atom.",
+        "common_trap": "Counting only bond pairs and ignoring lone pairs. N in $NH_3$ has 3 bond pairs and 1 lone pair, which completes 8 electrons.",
+        "time_saving_tip": "Group 13 central atoms with three single bonds ($BF_3$, $BCl_3$) always have 6 electrons."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "What is the formal charge on the oxygen atom in the hydronium ion, $H_3O^+$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0$",
+        "$-1$",
+        "$+1$",
+        "$-2$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Formal charge is given by $FC = V - L - \\frac{1}{2}S$.",
+        "steps": [
+          "Oxygen has V = 6 valence electrons.",
+          "In $H_3O^+$, O has one lone pair, so L = 2.",
+          "O forms three O–H bonds, so S = 6.",
+          "$FC = 6 - 2 - \\frac{1}{2}(6) = +1$."
+        ],
+        "final_answer": "Option (3): $+1$",
+        "why_not_others": "0 assumes O is neutral as in water. $-1$ is a sign error. $-2$ comes from not halving the shared electrons: $6 - 2 - 6 = -2$.",
+        "common_trap": "Forgetting to take only half of the shared electrons.",
+        "time_saving_tip": "An atom with one more bond than its usual valence (O with 3 bonds) carries a formal charge of +1."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "Which of the following pairs consists only of odd-electron molecules?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$NO$ and $CO$",
+        "$NO$ and $NO_2$",
+        "$NO_2$ and $SO_2$",
+        "$N_2O$ and $NO$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Odd-electron molecules have an odd total number of valence electrons, so the octet cannot be satisfied for every atom.",
+        "steps": [
+          "$NO$ has 5 + 6 = 11 valence electrons, which is odd.",
+          "$NO_2$ has 5 + 12 = 17 valence electrons, which is odd.",
+          "$CO$ has 10, $SO_2$ has 18 and $N_2O$ has 16 valence electrons, all even."
+        ],
+        "final_answer": "Option (2): $NO$ and $NO_2$",
+        "why_not_others": "Each of the other pairs contains at least one even-electron molecule: $CO$, $SO_2$ or $N_2O$.",
+        "common_trap": "Assuming every nitrogen oxide is odd-electron. $N_2O$ has 16 valence electrons.",
+        "time_saving_tip": "Add up the valence electrons. An odd total means an odd-electron molecule."
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Noble gases are completely inert and do not form any compounds.",
+        "R": "Noble gases have a stable octet (a duplet in the case of helium) in their valence shell."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Noble gases do form compounds such as $XeF_2$ and $XeF_4$. This is one of the limitations of the octet rule.",
+        "steps": [
+          "Xenon forms compounds such as $XeF_2$ and $XeF_4$, so A is false.",
+          "Noble gases do have a filled octet (duplet for He), so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Equating a stable octet with complete chemical inertness.",
+        "time_saving_tip": "Recall $XeF_2$ and $XeF_4$ as direct counterexamples to noble gas inertness."
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The formal charge on an atom in a molecule represents the actual charge present on that atom.",
+        "II": "In $IF_7$, the central iodine atom has 14 electrons in its valence shell, which is an example of an expanded octet."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Formal charge is only a bookkeeping charge. Expanded octets occur in $PF_5$ (10 electrons), $SF_6$ (12 electrons) and $IF_7$ (14 electrons).",
+        "steps": [
+          "Formal charge does not represent the real charge on an atom, so Statement I is incorrect.",
+          "I forms 7 bonds in $IF_7$, giving 7 × 2 = 14 electrons around it, so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I is false and Statement II is true, so options (1), (2) and (3) do not fit.",
+        "common_trap": "Treating formal charge as a real charge, or assuming 12 electrons is the maximum, as in $SF_6$.",
+        "time_saving_tip": "Electrons around a central atom with only single bonds and no lone pairs = 2 × number of bonds."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which of the following is a characteristic property of ionic compounds?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "High melting point and electrical conduction in the molten state",
+        "Low melting point and solubility in non-polar solvents",
+        "Good electrical conduction in the solid state",
+        "Directional bonding that gives definite molecular shapes"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Ionic compounds have strong non-directional electrostatic lattices. Their ions become mobile only on melting or dissolving.",
+        "steps": [
+          "Strong lattice forces give ionic compounds high melting points.",
+          "In the molten state the ions are free to move, so the compound conducts electricity."
+        ],
+        "final_answer": "Option (1): High melting point and electrical conduction in the molten state",
+        "why_not_others": "A low melting point and solubility in non-polar solvents are typical of covalent compounds. Ions are fixed in the solid, so ionic solids do not conduct. Directional bonding is a feature of covalent bonds.",
+        "common_trap": "Thinking ionic solids conduct electricity because they contain ions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "How many sigma and pi bonds are present in a molecule of hydrogen cyanide, $H-C\\equiv N$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 sigma and 2 pi",
+        "3 sigma and 1 pi",
+        "1 sigma and 3 pi",
+        "2 sigma and 1 pi"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A single bond is 1 sigma. A triple bond is 1 sigma + 2 pi.",
+        "steps": [
+          "The H–C single bond contributes 1 sigma bond.",
+          "The C≡N triple bond contributes 1 sigma and 2 pi bonds.",
+          "Total: 2 sigma and 2 pi bonds."
+        ],
+        "final_answer": "Option (1): 2 sigma and 2 pi",
+        "why_not_others": "3 sigma and 1 pi treats the triple bond as 2σ + 1π. 1 sigma and 3 pi treats all three bonds of the triple bond as pi. 2 sigma and 1 pi miscounts the triple bond as a double bond.",
+        "common_trap": "Forgetting that every multiple bond contains exactly one sigma bond.",
+        "time_saving_tip": "Number of sigma bonds = number of bonded atom pairs."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "The electronegativities of four elements are X = 0.9, Y = 3.0, Z = 2.1 and W = 2.5. Which bond is expected to be predominantly ionic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "X–Y",
+        "X–Z",
+        "Z–Y",
+        "W–Y"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "An electronegativity difference greater than about 1.7 suggests predominantly ionic character.",
+        "steps": [
+          "X–Y: 3.0 − 0.9 = 2.1, which is greater than 1.7.",
+          "X–Z: 1.2; Z–Y: 0.9; W–Y: 0.5. All are below 1.7.",
+          "Only X–Y is predominantly ionic."
+        ],
+        "final_answer": "Option (1): X–Y",
+        "why_not_others": "X–Z, Z–Y and W–Y have differences below 1.7, so these bonds are polar covalent.",
+        "common_trap": "Picking a bond only because it contains the most electronegative element, without calculating the difference.",
+        "time_saving_tip": "Pair the lowest and highest electronegativity values to get the largest difference."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Bond in $Cl_2$"
+          },
+          {
+            "label": "B",
+            "text": "Bond in $HCl$"
+          },
+          {
+            "label": "C",
+            "text": "Bond in $NaCl$"
+          },
+          {
+            "label": "D",
+            "text": "Bond in $N_2$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Ionic, non-directional"
+          },
+          {
+            "label": "II",
+            "text": "Non-polar covalent single bond"
+          },
+          {
+            "label": "III",
+            "text": "Covalent triple bond with 1 sigma and 2 pi bonds"
+          },
+          {
+            "label": "IV",
+            "text": "Polar covalent bond with partial charges"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Classify each bond by electronegativity difference and bond order.",
+        "steps": [
+          "$Cl_2$ has a single bond between identical atoms, so it is non-polar covalent (II).",
+          "$HCl$ has a polar covalent bond, $H^{\\delta+}-Cl^{\\delta-}$ (IV).",
+          "$NaCl$ forms by electron transfer and has a non-directional ionic bond (I).",
+          "$N_2$ has a triple bond, made of 1σ and 2π (III)."
+        ],
+        "final_answer": "Option (3): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) calls $Cl_2$ polar. Option (2) calls $HCl$ ionic and $NaCl$ polar covalent. Option (4) gives $Cl_2$ a triple bond and $N_2$ a single bond.",
+        "common_trap": "Treating $HCl$ as ionic because it ionises in water.",
+        "time_saving_tip": "Fix the unique matches first: $NaCl$ is ionic and $N_2$ has the triple bond."
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about ionic and covalent bonds are correct?",
+      "statements": {
+        "A": "Ionic solids conduct electricity in the solid state because they are made of ions.",
+        "B": "Covalent bonds are directional, so covalent compounds can show isomerism.",
+        "C": "A double bond consists of one sigma bond and one pi bond.",
+        "D": "Ionic bonds are directional, so ionic compounds show isomerism.",
+        "E": "Most ionic bonds have some covalent character."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "A, C and E only",
+        "B, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Ionic bonds are non-directional and covalent bonds are directional. Most real bonds are intermediate in character.",
+        "steps": [
+          "A is false: ions are fixed in the lattice, so ionic solids do not conduct.",
+          "B is true: directional covalent bonds give definite geometry and allow isomerism.",
+          "C is true: a double bond is 1σ + 1π.",
+          "D is false: ionic bonds are non-directional and show no isomerism.",
+          "E is true: ionic bonds generally have some covalent character."
+        ],
+        "final_answer": "Option (4): B, C and E only",
+        "why_not_others": "Options (1) and (3) include the false statement A. Option (2) includes the false statement D and leaves out C and E.",
+        "common_trap": "Assuming that the presence of ions means conduction even in the solid state.",
+        "time_saving_tip": "Rule out A and D first. Only one option contains neither of them."
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "Which of the following factors favours the formation of an ionic bond?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "High ionisation enthalpy of the metal",
+        "Positive electron gain enthalpy of the non-metal",
+        "Low lattice enthalpy of the compound formed",
+        "Low ionisation enthalpy of the metal"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Ionic bonding is favoured by low ionisation enthalpy of the metal, highly negative electron gain enthalpy of the non-metal and high lattice enthalpy.",
+        "steps": [
+          "A metal with low ionisation enthalpy forms a cation easily.",
+          "This favours ionic bond formation."
+        ],
+        "final_answer": "Option (4): Low ionisation enthalpy of the metal",
+        "why_not_others": "High ionisation enthalpy makes cation formation difficult. A positive electron gain enthalpy disfavours anion formation. Low lattice enthalpy gives a less stable solid.",
+        "common_trap": "Mixing up the required trends for ionisation enthalpy and lattice enthalpy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "For a hypothetical ionic solid MX, the data (in kJ/mol) are: sublimation enthalpy of M = +100, ionisation enthalpy of M = +500, bond dissociation enthalpy of $X_2$ = +240, electron gain enthalpy of X = −350, and lattice enthalpy U = +800 (energy needed to separate the lattice). What is the enthalpy of formation of MX?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-310$ kJ/mol",
+        "$+1170$ kJ/mol",
+        "$+270$ kJ/mol",
+        "$-430$ kJ/mol"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Born-Haber cycle: $\\Delta_f H = \\Delta_{sub}H + IE + \\frac{1}{2}\\Delta_{diss}H + \\Delta_{eg}H - U$.",
+        "steps": [
+          "Half of the dissociation enthalpy: $\\frac{1}{2}(240) = 120$.",
+          "Sum of the endothermic steps: $100 + 500 + 120 = 720$.",
+          "$\\Delta_f H = 720 - 350 - 800 = -430$ kJ/mol."
+        ],
+        "final_answer": "Option (4): $-430$ kJ/mol",
+        "why_not_others": "$-310$ uses the full dissociation enthalpy (240). $+1170$ adds U instead of subtracting it. $+270$ takes the electron gain enthalpy as +350.",
+        "common_trap": "Forgetting that only half a mole of $X_2$ is needed per mole of MX.",
+        "time_saving_tip": "Add all the steps that need energy, then subtract the steps that release energy."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "The conversion $Na(g) + Cl(g) \\rightarrow Na^+(g) + Cl^-(g)$ is endothermic, yet the formation of solid NaCl is exothermic overall. This is mainly due to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the large lattice enthalpy released when the gaseous ions pack into the crystal",
+        "the electron gain enthalpy of chlorine alone exceeding the ionisation enthalpy of sodium",
+        "the release of energy when both ions attain the octet configuration",
+        "the energy released during the sublimation of sodium"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Lattice enthalpy, not the octet alone, is the real driving force for forming ionic solids.",
+        "steps": [
+          "IE of Na (+495.8) plus $\\Delta_{eg}H$ of Cl (−348.7) gives +147.1 kJ/mol, which is endothermic.",
+          "Packing the gaseous ions into the lattice releases a large amount of energy (788 kJ/mol).",
+          "This makes the overall process exothermic."
+        ],
+        "final_answer": "Option (1): the large lattice enthalpy released when the gaseous ions pack into the crystal",
+        "why_not_others": "Option (2) is false: 348.7 is less than 495.8. Option (3) is false: attaining the octet does not by itself release enough energy. Option (4) is false: sublimation absorbs energy.",
+        "common_trap": "Crediting the octet configuration as the energy source.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The process $Na(g) + Cl(g) \\rightarrow Na^+(g) + Cl^-(g)$ is endothermic.",
+        "R": "The energy released when chlorine gains an electron is greater in magnitude than the energy required to ionise sodium."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "IE of Na is +495.8 kJ/mol and $\\Delta_{eg}H$ of Cl is −348.7 kJ/mol, so the net change is +147.1 kJ/mol.",
+        "steps": [
+          "The net energy change is positive, so the process is endothermic and A is true.",
+          "348.7 is less than 495.8, so R is false. If R were true, the process would be exothermic."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Believing chlorine's highly negative electron gain enthalpy outweighs the ionisation of sodium.",
+        "time_saving_tip": "Compare magnitudes: 495.8 is greater than 348.7."
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The attainment of an octet by $Na^+$ and $Cl^-$ is by itself sufficient to make the formation of solid NaCl from gaseous Na and Cl atoms energetically favourable.",
+        "II": "The Born-Haber cycle applies Hess's law to ionic compound formation and is used to determine lattice enthalpy indirectly."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The ion-forming steps are endothermic. Lattice enthalpy makes the overall process favourable, and it is found using the Born-Haber cycle.",
+        "steps": [
+          "Forming the gaseous ions needs +147.1 kJ/mol, so the octet alone does not make the process favourable. Statement I is incorrect.",
+          "The Born-Haber cycle is based on Hess's law. Lattice enthalpy cannot be measured directly and is obtained from it. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I is false and Statement II is true, so options (1), (2) and (3) do not fit.",
+        "common_trap": "Overrating the octet rule as the driving force for ionic bonding.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "The lattice enthalpy of an ionic compound is the energy:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "released when one mole of the compound is formed from its elements in their standard states",
+        "required to convert one mole of the solid into its constituent gaseous atoms",
+        "required to completely separate one mole of the solid ionic compound into its gaseous constituent ions",
+        "released when one mole of the compound dissolves in water"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Lattice enthalpy is the energy needed to completely separate one mole of a solid ionic compound into its gaseous ions. For NaCl it is +788 kJ/mol.",
+        "steps": [
+          "The definition refers to gaseous ions, not atoms.",
+          "It is an energy required, so it is positive in this convention."
+        ],
+        "final_answer": "Option (3): required to completely separate one mole of the solid ionic compound into its gaseous constituent ions",
+        "why_not_others": "Option (1) defines enthalpy of formation. Option (2) gives atoms instead of ions. Option (4) describes enthalpy of solution.",
+        "common_trap": "Confusing gaseous atoms with gaseous ions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "Which of the following represents the correct order of lattice enthalpy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$KCl > NaCl > NaF > CaO$",
+        "$NaF > MgO > CaO > NaCl$",
+        "$MgO > CaO > NaF > NaCl$",
+        "$CaO > MgO > NaCl > NaF$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$U \\propto \\frac{z_+ z_-}{r_+ + r_-}$. Ionic charge has the larger effect, and smaller ions give higher U.",
+        "steps": [
+          "MgO and CaO have charges of +2 and −2, so they have the highest values. $Mg^{2+}$ is smaller than $Ca^{2+}$, so MgO > CaO.",
+          "NaF and NaCl have charges of +1 and −1. $F^-$ is smaller than $Cl^-$, so NaF > NaCl.",
+          "Order: MgO > CaO > NaF > NaCl."
+        ],
+        "final_answer": "Option (3): $MgO > CaO > NaF > NaCl$",
+        "why_not_others": "Option (1) is fully reversed. Option (2) places a 1:1 halide above the 2:2 oxides. Option (4) reverses the size effect in both pairs.",
+        "common_trap": "Thinking larger ions give larger lattice enthalpy.",
+        "time_saving_tip": "Rank by charge product first, then by size within each group."
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Using $U \\propto \\frac{z_+ z_-}{r_+ + r_-}$, consider ionic compound AB (made of $A^+$ and $B^-$) with $r_+ + r_- = 300$ pm, and ionic compound CD (made of $C^{2+}$ and $D^{2-}$) with $r_+ + r_- = 200$ pm. What is the ratio of the lattice enthalpy of CD to that of AB?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.5$",
+        "$2.67$",
+        "$6.0$",
+        "$3.0$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Lattice enthalpy is proportional to the product of the ionic charges and inversely proportional to the interionic distance.",
+        "steps": [
+          "For CD: $\\frac{2 \\times 2}{200} = \\frac{4}{200}$.",
+          "For AB: $\\frac{1 \\times 1}{300} = \\frac{1}{300}$.",
+          "Ratio = $\\frac{4}{200} \\times \\frac{300}{1} = 6.0$."
+        ],
+        "final_answer": "Option (3): $6.0$",
+        "why_not_others": "1.5 ignores the charges. 2.67 inverts the distance ratio ($4 \\times 200/300$). 3.0 uses the sum of the charges instead of their product.",
+        "common_trap": "Adding the ionic charges instead of multiplying them.",
+        "time_saving_tip": "Ratio = (charge product ratio) × (inverse distance ratio) = 4 × 1.5."
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Lattice enthalpy of NaCl"
+          },
+          {
+            "label": "B",
+            "text": "Alkali halide with the highest lattice enthalpy"
+          },
+          {
+            "label": "C",
+            "text": "Alkali halide with the lowest lattice enthalpy"
+          },
+          {
+            "label": "D",
+            "text": "Method used to determine lattice enthalpy"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "+788 kJ/mol"
+          },
+          {
+            "label": "II",
+            "text": "$LiF$"
+          },
+          {
+            "label": "III",
+            "text": "$CsI$"
+          },
+          {
+            "label": "IV",
+            "text": "Born-Haber cycle"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Smallest ions give the highest lattice enthalpy. Lattice enthalpy is obtained indirectly from the Born-Haber cycle.",
+        "steps": [
+          "The lattice enthalpy of NaCl is +788 kJ/mol (A-I).",
+          "$Li^+$ and $F^-$ are the smallest ions, so LiF has the highest value (B-II).",
+          "$Cs^+$ and $I^-$ are the largest ions, so CsI has the lowest value (C-III).",
+          "Lattice enthalpy is found using the Born-Haber cycle (D-IV)."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option (2) swaps LiF and CsI. Option (3) swaps the numerical value with the method. Option (4) swaps CsI with the Born-Haber cycle.",
+        "common_trap": "Assuming heavier ions give stronger lattices.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about lattice enthalpy are correct?",
+      "statements": {
+        "A": "Lattice enthalpy increases as the interionic distance increases.",
+        "B": "A higher lattice enthalpy generally means a higher melting point and greater hardness.",
+        "C": "An ionic compound dissolves in water if its hydration enthalpy can compensate its lattice enthalpy.",
+        "D": "Lattice enthalpy can be measured directly by experiment.",
+        "E": "Lattice enthalpy is proportional to the product of the ionic charges."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "C, D and E only",
+        "B, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$U \\propto \\frac{z_+ z_-}{r_+ + r_-}$. Lattice enthalpy governs melting point and hardness, and together with hydration enthalpy it governs solubility.",
+        "steps": [
+          "A is false: U is inversely proportional to the interionic distance.",
+          "B is true: a strong lattice gives a high melting point and greater hardness.",
+          "C is true: solubility depends on hydration enthalpy compensating lattice enthalpy.",
+          "D is false: lattice enthalpy cannot be measured directly and is found from the Born-Haber cycle.",
+          "E is true: U is proportional to $z_+ z_-$."
+        ],
+        "final_answer": "Option (4): B, C and E only",
+        "why_not_others": "Option (1) includes the false statement A. Options (2) and (3) include the false statement D.",
+        "common_trap": "Thinking lattice enthalpy is measured directly, like enthalpy of combustion.",
+        "time_saving_tip": "Rule out A and D first. Only one option contains neither of them."
+      }
+    }
+  ]
+}

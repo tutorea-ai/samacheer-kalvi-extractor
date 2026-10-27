@@ -1,0 +1,627 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "Four identical cells, each of emf $1.5\\ \\text{V}$ and internal resistance $0.5\\ \\Omega$, are joined in series in the same sense and connected across an external resistance of $4\\ \\Omega$. The current in the external resistance is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.0\\ \\text{A}$",
+        "$1.5\\ \\text{A}$",
+        "$1.33\\ \\text{A}$",
+        "$0.25\\ \\text{A}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For $n$ identical cells in series, $I = \\frac{n\\varepsilon}{R + nr}$.",
+        "steps": [
+          "Net emf $= 4 \\times 1.5 = 6\\ \\text{V}$.",
+          "Total internal resistance $= 4 \\times 0.5 = 2\\ \\Omega$.",
+          "$I = \\frac{6}{4 + 2} = 1.0\\ \\text{A}$."
+        ],
+        "final_answer": "Option (1): $1.0\\ \\text{A}$",
+        "why_not_others": "$1.5\\ \\text{A}$ ignores internal resistance. $1.33\\ \\text{A}$ uses the internal resistance of only one cell. $0.25\\ \\text{A}$ forgets to multiply the emf by $n$.",
+        "common_trap": "Adding the emfs but not the internal resistances.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "Six identical cells, each of emf $2\\ \\text{V}$ and internal resistance $0.5\\ \\Omega$, are meant to be joined in series, but two of them are connected in reverse by mistake. The combination is connected to an external resistance of $7\\ \\Omega$. The current in the circuit is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ \\text{A}$",
+        "$0.5\\ \\text{A}$",
+        "$0.8\\ \\text{A}$",
+        "$1.2\\ \\text{A}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Reversing $m$ of $n$ series cells gives net emf $(n-2m)\\varepsilon$, but the internal resistance stays $nr$.",
+        "steps": [
+          "Net emf $= (6 - 2\\times 2)\\times 2 = 4\\ \\text{V}$.",
+          "Internal resistance $= 6 \\times 0.5 = 3\\ \\Omega$.",
+          "$I = \\frac{4}{7 + 3} = 0.4\\ \\text{A}$."
+        ],
+        "final_answer": "Option (1): $0.4\\ \\text{A}$",
+        "why_not_others": "$0.5\\ \\text{A}$ wrongly reduces the internal resistance to $1\\ \\Omega$. $0.8\\ \\text{A}$ uses emf $(n-m)\\varepsilon = 8\\ \\text{V}$. $1.2\\ \\text{A}$ ignores the reversal completely.",
+        "common_trap": "Subtracting the internal resistance of the reversed cells. Only the emf subtracts.",
+        "time_saving_tip": "Each reversed cell cancels one correctly connected cell, so 2 reversed out of 6 leaves the emf of just 2 cells."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "A cell of emf $2\\ \\text{V}$ and internal resistance $1\\ \\Omega$ is connected in parallel with a cell of emf $4\\ \\text{V}$ and internal resistance $3\\ \\Omega$, with like terminals joined together. The equivalent emf and equivalent internal resistance of the combination are:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2.5\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "$3.5\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "$3.0\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "$2.5\\ \\text{V}$ and $4\\ \\Omega$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\varepsilon_{eq} = \\frac{\\varepsilon_1 r_2 + \\varepsilon_2 r_1}{r_1 + r_2}$ and $r_{eq} = \\frac{r_1 r_2}{r_1 + r_2}$.",
+        "steps": [
+          "$\\varepsilon_{eq} = \\frac{2\\times 3 + 4\\times 1}{1 + 3} = \\frac{10}{4} = 2.5\\ \\text{V}$.",
+          "$r_{eq} = \\frac{1\\times 3}{1+3} = 0.75\\ \\Omega$."
+        ],
+        "final_answer": "Option (1): $2.5\\ \\text{V}$ and $0.75\\ \\Omega$",
+        "why_not_others": "$3.5\\ \\text{V}$ pairs each emf with its own internal resistance. $3.0\\ \\text{V}$ is a simple average of the emfs. $4\\ \\Omega$ adds the internal resistances as if the cells were in series.",
+        "common_trap": "Weighting each emf by its own internal resistance instead of the other cell's.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When the external resistance is much larger than the internal resistance of each cell, joining $n$ identical cells in series gives a larger current than joining them in parallel.",
+        "R": "In series the emf becomes $n\\varepsilon$ while the total resistance $R + nr$ stays nearly $R$, whereas in parallel the emf remains only $\\varepsilon$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Series is preferred when $R \\gg r$.",
+        "steps": [
+          "Series: $I = \\frac{n\\varepsilon}{R + nr} \\approx \\frac{n\\varepsilon}{R}$ when $R \\gg r$.",
+          "Parallel: $I = \\frac{\\varepsilon}{R + r/n} \\approx \\frac{\\varepsilon}{R}$.",
+          "The series current is about $n$ times larger, and R gives exactly this reason."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements follow from the current formulas, and R directly accounts for the larger series current.",
+        "common_trap": "Assuming parallel always gives more current because the internal resistance falls.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A cell of emf $3\\ \\text{V}$ and internal resistance $1\\ \\Omega$ is joined in parallel, like terminals together, with a cell of emf $1\\ \\text{V}$ and internal resistance $1\\ \\Omega$. With no external load, a current of $1\\ \\text{A}$ circulates through the two cells.",
+        "II": "Ten identical cells, each of emf $1.5\\ \\text{V}$ and internal resistance $0.2\\ \\Omega$, are joined in series with three of them reversed. The combination has net emf $6\\ \\text{V}$ and internal resistance $0.8\\ \\Omega$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Unequal emfs in parallel drive a circulating current. Reversed series cells reduce only the emf, not the internal resistance.",
+        "steps": [
+          "I: Around the loop of the two cells, the net emf is $3 - 1 = 2\\ \\text{V}$ and the resistance is $1 + 1 = 2\\ \\Omega$.",
+          "So the circulating current is $1\\ \\text{A}$, and I is correct.",
+          "II: Net emf $= (10 - 6)\\times 1.5 = 6\\ \\text{V}$, which is correct.",
+          "Internal resistance $= 10 \\times 0.2 = 2\\ \\Omega$, not $0.8\\ \\Omega$, so II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "The emf in II is right, but its internal resistance wrongly subtracts the reversed cells.",
+        "common_trap": "Writing $(n-2m)r$ for the internal resistance of a series group with reversed cells.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "Four wires meet at a junction. Currents of $5\\ \\text{A}$ and $3\\ \\text{A}$ flow into the junction through two of the wires, and a current of $2\\ \\text{A}$ flows out through the third wire. The current in the fourth wire is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{A}$ leaving the junction",
+        "$6\\ \\text{A}$ leaving the junction",
+        "$4\\ \\text{A}$ leaving the junction",
+        "$2\\ \\text{A}$ entering the junction"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Junction rule: the current entering a junction equals the current leaving it.",
+        "steps": [
+          "Current entering $= 5 + 3 = 8\\ \\text{A}$.",
+          "Current leaving $= 2 + I$.",
+          "$I = 8 - 2 = 6\\ \\text{A}$, leaving the junction."
+        ],
+        "final_answer": "Option (2): $6\\ \\text{A}$ leaving the junction",
+        "why_not_others": "$10\\ \\text{A}$ adds all currents without regard to sign. $4\\ \\text{A}$ comes from $5 - 3 + 2$. $2\\ \\text{A}$ entering does not balance the junction.",
+        "common_trap": "Ignoring the directions of the currents.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "In part of a circuit, a current of $2\\ \\text{A}$ flows from point A to point B. Going from A to B, it passes in turn through a $3\\ \\Omega$ resistor, then an ideal cell of emf $5\\ \\text{V}$ (the current enters its negative terminal and leaves its positive terminal), and then a $2\\ \\Omega$ resistor. The potential difference $V_A - V_B$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$15\\ \\text{V}$",
+        "$5\\ \\text{V}$",
+        "$-5\\ \\text{V}$",
+        "$10\\ \\text{V}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The potential difference between two points is the sum of the potential changes along the path joining them.",
+        "steps": [
+          "From A to B: the $3\\ \\Omega$ resistor gives $-2\\times 3 = -6\\ \\text{V}$.",
+          "The cell, crossed from negative to positive, gives $+5\\ \\text{V}$.",
+          "The $2\\ \\Omega$ resistor gives $-2\\times 2 = -4\\ \\text{V}$.",
+          "$V_B - V_A = -6 + 5 - 4 = -5\\ \\text{V}$, so $V_A - V_B = 5\\ \\text{V}$."
+        ],
+        "final_answer": "Option (2): $5\\ \\text{V}$",
+        "why_not_others": "$15\\ \\text{V}$ uses the wrong sign for the cell. $-5\\ \\text{V}$ is $V_B - V_A$. $10\\ \\text{V}$ ignores the cell.",
+        "common_trap": "Getting the sign of the emf wrong when crossing from the negative to the positive terminal.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "Three branches are connected between two nodes P and N. Branch 1 contains a cell of emf $12\\ \\text{V}$ and internal resistance $2\\ \\Omega$. Branch 2 contains a cell of emf $6\\ \\text{V}$ and internal resistance $2\\ \\Omega$. Branch 3 contains a $2\\ \\Omega$ resistor. The positive terminals of both cells are connected to P. The current through the $6\\ \\text{V}$ cell is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.5\\ \\text{A}$",
+        "$3\\ \\text{A}$",
+        "zero",
+        "$4.5\\ \\text{A}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Node method: take N as $0\\ \\text{V}$ and apply KCL at P.",
+        "steps": [
+          "Let the potential of P be $V$. KCL at P gives $\\frac{12 - V}{2} + \\frac{6 - V}{2} = \\frac{V}{2}$.",
+          "So $18 - 2V = V$, which gives $V = 6\\ \\text{V}$.",
+          "Current in the $6\\ \\text{V}$ branch $= \\frac{6 - 6}{2} = 0$."
+        ],
+        "final_answer": "Option (3): zero",
+        "why_not_others": "$1.5\\ \\text{A}$ ignores the external resistor, using $\\frac{12-6}{4}$. $3\\ \\text{A}$ is the current in the resistor and in the $12\\ \\text{V}$ cell. $4.5\\ \\text{A}$ adds the two emfs as if they were in series.",
+        "common_trap": "Assuming every cell in a network must supply current.",
+        "time_saving_tip": "The node method needs only one equation here."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Kirchhoff's junction rule"
+          },
+          {
+            "label": "B",
+            "text": "Kirchhoff's loop rule"
+          },
+          {
+            "label": "C",
+            "text": "Crossing a resistor in the direction of the assumed current"
+          },
+          {
+            "label": "D",
+            "text": "A negative value obtained for a current"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Potential change of $-IR$"
+          },
+          {
+            "label": "II",
+            "text": "Conservation of energy"
+          },
+          {
+            "label": "III",
+            "text": "Conservation of charge"
+          },
+          {
+            "label": "IV",
+            "text": "Actual current flows opposite to the assumed direction"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Basis and sign conventions of Kirchhoff's laws.",
+        "steps": [
+          "The junction rule follows from conservation of charge: A-III.",
+          "The loop rule follows from conservation of energy: B-II.",
+          "Crossing a resistor along the current gives $-IR$: C-I.",
+          "A negative current means the actual direction is opposite to the assumed one: D-IV."
+        ],
+        "final_answer": "Option (4): A-III, B-II, C-I, D-IV",
+        "why_not_others": "The other matchings swap the conservation laws or interchange the sign-convention entries.",
+        "common_trap": "Linking KCL with energy and KVL with charge.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about Kirchhoff's laws are correct?",
+      "statements": {
+        "A": "A network with 6 branches and 4 junctions has 3 independent loop equations.",
+        "B": "The loop rule holds because the electrostatic field is conservative.",
+        "C": "Kirchhoff's laws apply only to DC circuits and never to quasi-static AC circuits.",
+        "D": "The potential difference between two points depends on the path chosen between them.",
+        "E": "In the node method, one point is taken as $0\\ \\text{V}$ and KCL is applied at the other nodes."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "B, C and E only",
+        "A and E only",
+        "A, B and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Independent loops $=$ branches $-$ junctions $+ 1$. KVL rests on energy conservation in a conservative field.",
+        "steps": [
+          "A: $6 - 4 + 1 = 3$, so A is correct.",
+          "B: correct, because the electrostatic field is conservative.",
+          "C: incorrect, since the laws also apply to quasi-static AC.",
+          "D: incorrect, since the sum of potential changes is the same along any path.",
+          "E: correct description of the node method."
+        ],
+        "final_answer": "Option (4): A, B and E only",
+        "why_not_others": "The other options include C or D, which are false, or leave out the true statement B.",
+        "common_trap": "Thinking that the potential difference depends on the path because different paths contain different elements.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "In a balanced Wheatstone bridge, the arms are $P = 4\\ \\Omega$, $Q = 8\\ \\Omega$ and $R = 6\\ \\Omega$, and the balance condition is $\\frac{P}{Q} = \\frac{R}{S}$. The value of $S$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$3\\ \\Omega$",
+        "$5.33\\ \\Omega$",
+        "$12\\ \\Omega$",
+        "$48\\ \\Omega$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "At balance, $S = \\frac{QR}{P}$.",
+        "steps": [
+          "$S = \\frac{8\\times 6}{4}$.",
+          "$S = 12\\ \\Omega$."
+        ],
+        "final_answer": "Option (3): $12\\ \\Omega$",
+        "why_not_others": "$3\\ \\Omega$ uses $\\frac{PR}{Q}$. $5.33\\ \\Omega$ uses $\\frac{PQ}{R}$. $48\\ \\Omega$ forgets to divide by $P$.",
+        "common_trap": "Inverting the ratio in the balance condition.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "In a network ABCD, the resistances are $AB = 2\\ \\Omega$, $BC = 4\\ \\Omega$, $AD = 3\\ \\Omega$ and $DC = 6\\ \\Omega$. A $10\\ \\Omega$ resistor is connected between B and D. The equivalent resistance between A and C is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$15\\ \\Omega$",
+        "$2.65\\ \\Omega$",
+        "$25\\ \\Omega$",
+        "$3.6\\ \\Omega$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A balanced bridge allows the middle arm to be removed.",
+        "steps": [
+          "Check balance: $\\frac{2}{4} = \\frac{3}{6}$, so the bridge is balanced and no current flows in BD.",
+          "Remove BD. Path ABC $= 6\\ \\Omega$ and path ADC $= 9\\ \\Omega$.",
+          "$R_{eq} = \\frac{6\\times 9}{6 + 9} = 3.6\\ \\Omega$."
+        ],
+        "final_answer": "Option (4): $3.6\\ \\Omega$",
+        "why_not_others": "$15\\ \\Omega$ puts the two paths in series. $2.65\\ \\Omega$ wrongly puts $10\\ \\Omega$ in parallel with the answer. $25\\ \\Omega$ adds all the resistors.",
+        "common_trap": "Including the middle resistor of a balanced bridge in the calculation.",
+        "time_saving_tip": "Check $PS = QR$ first. If it holds, delete the central arm straight away."
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "A Wheatstone bridge with arms $P$, $Q$, $R$ and $S$ is balanced according to $\\frac{P}{Q} = \\frac{R}{S}$. Which of the following changes will disturb the balance?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Doubling the emf of the cell",
+        "Interchanging the cell and the galvanometer",
+        "Doubling both $P$ and $S$",
+        "Replacing the galvanometer with one of higher resistance"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Balance depends only on $PS = QR$. It does not depend on the cell, the galvanometer resistance or their interchange.",
+        "steps": [
+          "Doubling both $P$ and $S$ makes the left side $2P \\times 2S = 4PS$, while the right side stays $QR$.",
+          "So $4PS \\neq QR$ and the balance is disturbed.",
+          "The other changes do not affect the ratio of the arms."
+        ],
+        "final_answer": "Option (3): Doubling both $P$ and $S$",
+        "why_not_others": "The emf, the galvanometer resistance and interchanging the cell and galvanometer do not affect the balance condition.",
+        "common_trap": "Thinking that a stronger cell or a different galvanometer shifts the balance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The balance condition of a Wheatstone bridge does not depend on the internal resistance of the cell used.",
+        "R": "A Wheatstone bridge is most sensitive when all four resistances are of the same order."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Balance depends only on the ratio of the arms. Sensitivity is a separate property.",
+        "steps": [
+          "A is true, because balance requires only $\\frac{P}{Q} = \\frac{R}{S}$.",
+          "R is true, because the bridge is most sensitive when the four arms are comparable.",
+          "Sensitivity does not explain why the balance is independent of the cell, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. R is unrelated to the reason for A, so option (1) fails.",
+        "common_trap": "Treating any true reason as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In a Wheatstone bridge with $P = 10\\ \\Omega$, $Q = 20\\ \\Omega$, $R = 15\\ \\Omega$ and $S = 30\\ \\Omega$, replacing a $5\\ \\Omega$ resistor in the galvanometer arm by a plain wire does not change the current drawn from the cell.",
+        "II": "If $P$ and $Q$ of this bridge are interchanged while $R$ and $S$ are left unchanged, the bridge remains balanced, because the balance does not depend on the positions of the resistors."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "In a balanced bridge, the middle arm carries no current and can be removed or replaced by a wire.",
+        "steps": [
+          "I: $\\frac{10}{20} = \\frac{15}{30}$, so the bridge is balanced.",
+          "The middle arm carries no current, so replacing it with a wire changes nothing. I is correct.",
+          "II: After the interchange, $\\frac{P}{Q} = \\frac{20}{10} = 2$ but $\\frac{R}{S} = 0.5$, so the bridge is unbalanced. II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II confuses interchanging the cell and galvanometer, which keeps the balance, with interchanging two arms, which can destroy it.",
+        "common_trap": "Extending the cell–galvanometer interchange property to the resistor arms.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "In a metre bridge, a known resistance of $6\\ \\Omega$ is placed in the left gap and an unknown resistance $S$ in the right gap. The null point is found at $40\\ \\text{cm}$ from the left end. The value of $S$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\ \\Omega$",
+        "$9\\ \\Omega$",
+        "$2.4\\ \\Omega$",
+        "$15\\ \\Omega$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "$S = R\\frac{100 - l}{l}$, with $l$ measured from the $R$ side.",
+        "steps": [
+          "$S = 6 \\times \\frac{60}{40}$.",
+          "$S = 9\\ \\Omega$."
+        ],
+        "final_answer": "Option (2): $9\\ \\Omega$",
+        "why_not_others": "$4\\ \\Omega$ inverts the length ratio. $2.4\\ \\Omega$ uses $\\frac{l}{100}$. $15\\ \\Omega$ uses $\\frac{100}{l}$.",
+        "common_trap": "Measuring the balancing length from the wrong end.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "In a metre bridge, the null point is at $25\\ \\text{cm}$ from the end next to the known resistance $R$. The unknown resistance $S$ in the other gap is now shunted by a resistance equal to $S$. The new null point, measured from the same end, is at:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12.5\\ \\text{cm}$",
+        "$60\\ \\text{cm}$",
+        "$75\\ \\text{cm}$",
+        "$40\\ \\text{cm}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Shunting $S$ lowers its resistance, so the null point moves towards $S$ and $l$ increases.",
+        "steps": [
+          "Initially $\\frac{R}{S} = \\frac{25}{75}$, so $S = 3R$.",
+          "After shunting with an equal resistance, $S' = \\frac{S}{2} = 1.5R$.",
+          "$\\frac{R}{1.5R} = \\frac{l}{100 - l}$ gives $2(100 - l) = 3l$, so $l = 40\\ \\text{cm}$."
+        ],
+        "final_answer": "Option (4): $40\\ \\text{cm}$",
+        "why_not_others": "$12.5\\ \\text{cm}$ moves the null point in the wrong direction. $60\\ \\text{cm}$ is measured from the other end. $75\\ \\text{cm}$ is the result of interchanging $R$ and $S$.",
+        "common_trap": "Assuming halving $S$ halves or doubles the balancing length.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "A metre bridge is balanced with a known resistance $R$ and an unknown resistance $S$ in its two gaps. Which of the following changes will shift the null point?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Doubling the emf of the cell",
+        "Adding a resistance in series with the cell",
+        "Replacing the galvanometer with a more sensitive one",
+        "Heating the unknown resistance $S$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The null point depends only on the ratio $\\frac{R}{S}$.",
+        "steps": [
+          "Heating $S$ raises its resistance, so the ratio $\\frac{R}{S}$ changes.",
+          "The balancing length $l$ from the $R$ end decreases, and the null point shifts towards $R$.",
+          "The cell emf, a series resistance with the cell and the galvanometer do not affect the ratio."
+        ],
+        "final_answer": "Option (4): Heating the unknown resistance $S$",
+        "why_not_others": "The other three changes affect only the current or the sensitivity, not the balance.",
+        "common_trap": "Thinking that changing the cell or galvanometer moves the null point.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Material of the metre bridge wire"
+          },
+          {
+            "label": "B",
+            "text": "Interchanging $R$ and $S$"
+          },
+          {
+            "label": "C",
+            "text": "Heating the unknown resistance $S$"
+          },
+          {
+            "label": "D",
+            "text": "Shunting the unknown resistance $S$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Null point moves from $l$ to $(100 - l)$"
+          },
+          {
+            "label": "II",
+            "text": "Null point shifts towards $R$"
+          },
+          {
+            "label": "III",
+            "text": "Null point shifts towards $S$"
+          },
+          {
+            "label": "IV",
+            "text": "Manganin or constantan"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-III, D-II",
+        "A-I, B-IV, C-II, D-III",
+        "A-IV, B-III, C-II, D-I",
+        "A-IV, B-I, C-II, D-III"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Metre bridge construction and how the null point shifts.",
+        "steps": [
+          "The wire is made of manganin or constantan: A-IV.",
+          "Interchanging $R$ and $S$ moves the null point from $l$ to $(100 - l)$: B-I.",
+          "Heating $S$ increases it, so $l$ decreases and the null point moves towards $R$: C-II.",
+          "Shunting $S$ decreases it, so $l$ increases and the null point moves towards $S$: D-III."
+        ],
+        "final_answer": "Option (4): A-IV, B-I, C-II, D-III",
+        "why_not_others": "Option (1) reverses the effects of heating and shunting. Options (2) and (3) wrongly match the material or the interchange.",
+        "common_trap": "Getting the direction of the shift wrong when $S$ is heated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the metre bridge are correct?",
+      "statements": {
+        "A": "The null point gives the most accurate result when it lies near the $50\\ \\text{cm}$ mark.",
+        "B": "The bridge wire is made of copper because of its low resistivity.",
+        "C": "With end corrections $\\alpha_1$ and $\\alpha_2$, the balance condition becomes $\\frac{R}{S} = \\frac{l + \\alpha_1}{100 - l + \\alpha_2}$.",
+        "D": "The jockey should be kept pressed and slid along the wire to locate the null point.",
+        "E": "Repeating the reading with $R$ and $S$ interchanged and taking the mean reduces error."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "C, D and E only",
+        "A, C and E only",
+        "A and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Precautions and corrections in using a metre bridge.",
+        "steps": [
+          "A: correct, since accuracy is best near the middle of the wire.",
+          "B: incorrect, since the wire is manganin or constantan, chosen for high $\\rho$ and low $\\alpha$.",
+          "C: correct form of the balance condition with end corrections.",
+          "D: incorrect, since the jockey must be pressed gently and not slid.",
+          "E: correct, since interchanging and averaging reduces error."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Options (1) and (2) include the false statement B or D. Option (4) leaves out the true statement C.",
+        "common_trap": "Assuming the bridge wire should have low resistivity like the copper strips.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

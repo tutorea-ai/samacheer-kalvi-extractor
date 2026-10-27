@@ -1,0 +1,622 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "An ideal spring of spring constant $200\\ \\text{N/m}$ is compressed by $0.1\\ \\text{m}$ from its natural length. The elastic potential energy stored in the spring is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\ \\text{J}$",
+        "$2\\ \\text{J}$",
+        "$10\\ \\text{J}$",
+        "$20\\ \\text{J}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Elastic potential energy of a spring is $U = \\frac{1}{2}kx^2$. It is the same for compression and extension.",
+        "steps": [
+          "$U = \\frac{1}{2}kx^2$",
+          "$U = \\frac{1}{2}(200)(0.1)^2 = 100 \\times 0.01$",
+          "$U = 1\\ \\text{J}$"
+        ],
+        "final_answer": "Option (1): $1\\ \\text{J}$",
+        "why_not_others": "$2\\ \\text{J}$ comes from dropping the factor $\\frac{1}{2}$ ($kx^2$). $10\\ \\text{J}$ comes from $\\frac{1}{2}kx$, which forgets to square x. $20\\ \\text{J}$ is $kx$, which is the force in newtons, not an energy.",
+        "common_trap": "Forgetting to square the deformation, or omitting the factor $\\frac{1}{2}$.",
+        "time_saving_tip": "Square x first: $x^2 = 0.01$. Then $\\frac{1}{2}k \\times 0.01 = 1$."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A spring of spring constant $500\\ \\text{N/m}$ is already stretched by $2\\ \\text{cm}$. The work done by an external agent to slowly increase the extension from $2\\ \\text{cm}$ to $6\\ \\text{cm}$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.4\\ \\text{J}$",
+        "$0.9\\ \\text{J}$",
+        "$1.6\\ \\text{J}$",
+        "$0.8\\ \\text{J}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The external work to stretch a spring from $x_1$ to $x_2$ is $W = \\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "steps": [
+          "Convert to metres: $x_1 = 0.02\\ \\text{m}$ and $x_2 = 0.06\\ \\text{m}$.",
+          "$x_2^2 - x_1^2 = 0.0036 - 0.0004 = 0.0032\\ \\text{m}^2$",
+          "$W = \\frac{1}{2}(500)(0.0032) = 0.8\\ \\text{J}$"
+        ],
+        "final_answer": "Option (4): $0.8\\ \\text{J}$",
+        "why_not_others": "$0.4\\ \\text{J}$ uses $\\frac{1}{2}k(x_2 - x_1)^2$. $0.9\\ \\text{J}$ ignores the initial extension and uses $\\frac{1}{2}kx_2^2$. $1.6\\ \\text{J}$ drops the factor $\\frac{1}{2}$.",
+        "common_trap": "Writing the work as $\\frac{1}{2}k(x_2 - x_1)^2$ instead of $\\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A block of mass $0.5\\ \\text{kg}$ slides with speed $2\\ \\text{m/s}$ on a smooth horizontal surface. It strikes a light spring of spring constant $50\\ \\text{N/m}$ fixed at the other end. The maximum compression of the spring is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.28\\ \\text{m}$",
+        "$0.10\\ \\text{m}$",
+        "$0.04\\ \\text{m}$",
+        "$0.20\\ \\text{m}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "On a smooth surface, the kinetic energy of the block is fully stored in the spring at maximum compression: $\\frac{1}{2}mv^2 = \\frac{1}{2}kx_{max}^2$.",
+        "steps": [
+          "$x_{max} = v\\sqrt{\\frac{m}{k}}$",
+          "$\\sqrt{\\frac{0.5}{50}} = \\sqrt{0.01} = 0.1$",
+          "$x_{max} = 2 \\times 0.1 = 0.20\\ \\text{m}$"
+        ],
+        "final_answer": "Option (4): $0.20\\ \\text{m}$",
+        "why_not_others": "$0.28\\ \\text{m}$ comes from dropping the $\\frac{1}{2}$ on the kinetic energy side only, giving $mv^2 = \\frac{1}{2}kx^2$. $0.10\\ \\text{m}$ is $\\sqrt{\\frac{m}{k}}$ without the factor v. $0.04\\ \\text{m}$ is $x_{max}^2$, left without taking the square root.",
+        "common_trap": "Mismatching the $\\frac{1}{2}$ factors on the two sides, or forgetting the square root.",
+        "time_saving_tip": "Use $x_{max} = v\\sqrt{\\frac{m}{k}}$ directly."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "An ideal spring compressed by a distance x stores the same elastic potential energy as when it is stretched by the same distance x.",
+        "R": "The work done by the spring force when its deformation changes from $x_1$ to $x_2$ is $-\\frac{1}{2}k(x_2 - x_1)^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$U = \\frac{1}{2}kx^2$ depends on $x^2$, so it is the same for compression and extension. The spring force does work $-\\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "steps": [
+          "Since U depends on $x^2$, the energy for $+x$ and $-x$ is equal, so A is true.",
+          "The correct work by the spring force is $-\\frac{1}{2}k(x_2^2 - x_1^2)$, not $-\\frac{1}{2}k(x_2 - x_1)^2$, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R uses the wrong expression, so options (1) and (2) fail. A is a correct statement, so option (4) fails.",
+        "common_trap": "Accepting $\\frac{1}{2}k(x_2 - x_1)^2$ as the spring work.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An ideal spring is cut into two equal halves. When one half is stretched by a force F, the energy stored in it is half the energy stored in the original uncut spring stretched by the same force F.",
+        "II": "The work needed to stretch an ideal spring from an extension x to an extension 2x is three times the work needed to stretch it from zero to x."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$U = \\frac{F^2}{2k}$, with $k \\propto \\frac{1}{\\text{length}}$. Also, $W = \\frac{1}{2}k(x_2^2 - x_1^2)$.",
+        "steps": [
+          "Halving the length doubles k, giving $2k$.",
+          "For the same force, $U = \\frac{F^2}{2(2k)}$, which is half the original. So I is correct.",
+          "Stretching from 0 to x needs $W_1 = \\frac{1}{2}kx^2$.",
+          "Stretching from x to 2x needs $W_2 = \\frac{1}{2}k(4x^2 - x^2) = \\frac{3}{2}kx^2 = 3W_1$. So II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out by direct calculation, so any option calling either one incorrect is wrong.",
+        "common_trap": "Using $\\frac{1}{2}kx^2$ with a fixed x for Statement I, which wrongly suggests the energy doubles. Using $(2x - x)^2$ for Statement II, which wrongly gives equal work.",
+        "time_saving_tip": "For a fixed force, use $U = \\frac{F^2}{2k}$. For a fixed extension, use $U = \\frac{1}{2}kx^2$."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "A stone is dropped from rest from a height of $20\\ \\text{m}$. Neglecting air resistance and taking $g = 10\\ \\text{m/s}^2$, its speed just before hitting the ground is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{m/s}$",
+        "$14.1\\ \\text{m/s}$",
+        "$20\\ \\text{m/s}$",
+        "$40\\ \\text{m/s}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Mechanical energy is conserved: $mgh = \\frac{1}{2}mv^2$, so $v = \\sqrt{2gh}$.",
+        "steps": [
+          "$v = \\sqrt{2 \\times 10 \\times 20}$",
+          "$v = \\sqrt{400} = 20\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (3): $20\\ \\text{m/s}$",
+        "why_not_others": "$14.1\\ \\text{m/s}$ uses $\\sqrt{gh}$. $10\\ \\text{m/s}$ uses $\\sqrt{2g \\times \\frac{h}{2}}$. $40\\ \\text{m/s}$ is $2h$ and is not a valid speed calculation.",
+        "common_trap": "Dropping the factor 2 inside the square root.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "A simple pendulum of length $2.5\\ \\text{m}$ is released from rest with the string making an angle of $60^\\circ$ with the vertical. Taking $g = 10\\ \\text{m/s}^2$, the speed of the bob at the lowest point is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5.0\\ \\text{m/s}$",
+        "$7.1\\ \\text{m/s}$",
+        "$3.5\\ \\text{m/s}$",
+        "$2.6\\ \\text{m/s}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The speed at the lowest point is $v = \\sqrt{2gL(1 - \\cos\\theta_0)}$.",
+        "steps": [
+          "$1 - \\cos 60^\\circ = 0.5$",
+          "$v^2 = 2 \\times 10 \\times 2.5 \\times 0.5 = 25$",
+          "$v = 5.0\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (1): $5.0\\ \\text{m/s}$",
+        "why_not_others": "$7.1\\ \\text{m/s}$ uses $\\sqrt{2gL}$, as if the bob fell through the full length L. $3.5\\ \\text{m/s}$ drops the factor 2. $2.6\\ \\text{m/s}$ uses $1 - \\cos 30^\\circ$, measuring the angle from the horizontal.",
+        "common_trap": "Taking the height drop as L instead of $L(1 - \\cos\\theta_0)$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "A block of mass $2\\ \\text{kg}$ is released from rest at the top of a rough incline of vertical height $5\\ \\text{m}$. It reaches the bottom with a speed of $8\\ \\text{m/s}$. Taking $g = 10\\ \\text{m/s}^2$, the work done by friction on the block is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-36\\ \\text{J}$",
+        "$+36\\ \\text{J}$",
+        "$-64\\ \\text{J}$",
+        "$-100\\ \\text{J}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The work by non-conservative forces equals the change in mechanical energy: $W_{nc} = \\Delta K + \\Delta U$.",
+        "steps": [
+          "$\\Delta K = \\frac{1}{2}(2)(8)^2 - 0 = 64\\ \\text{J}$",
+          "$\\Delta U = 0 - (2)(10)(5) = -100\\ \\text{J}$",
+          "$W_f = 64 - 100 = -36\\ \\text{J}$"
+        ],
+        "final_answer": "Option (1): $-36\\ \\text{J}$",
+        "why_not_others": "$+36\\ \\text{J}$ has the wrong sign, but kinetic friction always does negative work here. $-64\\ \\text{J}$ uses only the kinetic energy. $-100\\ \\text{J}$ uses only the potential energy.",
+        "common_trap": "Getting the sign wrong. The mechanical energy lost to heat appears as negative work by friction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Kinetic energy at height $\\frac{H}{2}$"
+          },
+          {
+            "label": "B",
+            "text": "Potential energy at height $\\frac{H}{4}$"
+          },
+          {
+            "label": "C",
+            "text": "Kinetic energy at height $\\frac{H}{4}$"
+          },
+          {
+            "label": "D",
+            "text": "Total mechanical energy at any height"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{mgH}{4}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{mgH}{2}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{3mgH}{4}$"
+          },
+          {
+            "label": "IV",
+            "text": "$mgH$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-I, C-III, D-II",
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A body of mass m is dropped from rest from height H, with the ground as the reference level and air resistance neglected. Since $K + U = mgH$ throughout, $K = mg(H - h)$ at height h.",
+        "steps": [
+          "Total mechanical energy is $mgH$ at every point, so D-IV.",
+          "At $\\frac{H}{2}$: $K = mgH - \\frac{mgH}{2} = \\frac{mgH}{2}$, so A-II.",
+          "At $\\frac{H}{4}$: $U = \\frac{mgH}{4}$, so B-I.",
+          "At $\\frac{H}{4}$: $K = mgH - \\frac{mgH}{4} = \\frac{3mgH}{4}$, so C-III."
+        ],
+        "final_answer": "Option (4): A-II, B-I, C-III, D-IV",
+        "why_not_others": "Option (1) swaps the potential and kinetic energies at $\\frac{H}{4}$. Option (2) wrongly treats the total energy as $\\frac{mgH}{2}$. Option (3) gives the kinetic energy at $\\frac{H}{2}$ as $\\frac{mgH}{4}$, which is wrong.",
+        "common_trap": "Confusing the height reached with the height fallen. At height h, the body has fallen $H - h$.",
+        "time_saving_tip": "Find U first as $mgh$, then use $K = mgH - U$."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about conservation of mechanical energy are correct?",
+      "statements": {
+        "A": "On smooth surfaces, the speed acquired by a body released from rest depends only on the height descended, not on the shape of the path.",
+        "B": "Of two bodies released from rest from the same height on a smooth track, the heavier one reaches the bottom with the greater speed.",
+        "C": "When kinetic friction acts on a sliding body, the work done by friction equals the change in mechanical energy and is negative.",
+        "D": "In an isolated system where friction acts, the total energy including all forms is not conserved.",
+        "E": "For a body falling freely from height h, its kinetic energy equals its potential energy at height $\\frac{h}{2}$, with the ground as reference."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "A, C and E only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "When only conservative forces do work, $K + U$ is constant. With friction, $W_{nc} = \\Delta E_{mech}$. The total energy of an isolated system is always conserved.",
+        "steps": [
+          "A is true: the speed is $v = \\sqrt{2gh}$, which is path independent on smooth surfaces.",
+          "B is false: $\\sqrt{2gh}$ is independent of mass.",
+          "C is true: $W_f = E_f - E_i$, which is less than zero.",
+          "D is false: the lost mechanical energy appears as heat or sound, so the total energy is still conserved.",
+          "E is true: at $\\frac{h}{2}$, $U = \\frac{mgh}{2}$ and $K = \\frac{mgh}{2}$."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option (1) misses the correct statement E. Option (2) includes the false statement B. Option (4) includes the false statement D and misses A.",
+        "common_trap": "Confusing non-conservation of mechanical energy with non-conservation of total energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "Which of the following is a non-conservative force?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Gravitational force",
+        "Air resistance",
+        "Electrostatic force",
+        "Force of an ideal spring"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A non-conservative force does path-dependent work and dissipates mechanical energy.",
+        "steps": [
+          "Gravity, the electrostatic force and the ideal spring force do path-independent work, so they are conservative.",
+          "Air resistance dissipates energy as heat and does path-dependent work, so it is non-conservative."
+        ],
+        "final_answer": "Option (2): Air resistance",
+        "why_not_others": "The other three are the standard examples of conservative forces.",
+        "common_trap": "Thinking a variable force such as the spring force must be non-conservative.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "A block of mass $5\\ \\text{kg}$ is pushed along a straight line on a rough horizontal floor from point P to point Q, $4\\ \\text{m}$ away, and then back to P along the same line. The coefficient of kinetic friction is $0.2$ and $g = 10\\ \\text{m/s}^2$. The total work done by friction on the block over the round trip is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-80\\ \\text{J}$",
+        "$0\\ \\text{J}$",
+        "$-40\\ \\text{J}$",
+        "$+80\\ \\text{J}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Friction always opposes the relative motion, so its work over a closed path is not zero. The magnitude grows with path length.",
+        "steps": [
+          "Friction force: $f = \\mu mg = 0.2 \\times 5 \\times 10 = 10\\ \\text{N}$",
+          "Total path length: $4 + 4 = 8\\ \\text{m}$",
+          "$W = -f \\times 8 = -80\\ \\text{J}$"
+        ],
+        "final_answer": "Option (1): $-80\\ \\text{J}$",
+        "why_not_others": "$0\\ \\text{J}$ treats friction as conservative. $-40\\ \\text{J}$ counts only one leg of the trip. $+80\\ \\text{J}$ has the wrong sign.",
+        "common_trap": "Using the zero net displacement to conclude the work is zero.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "The potential energy of a particle moving along the x-axis under a conservative force is $U(x) = 3x^2 - 2x$, where U is in joules and x is in metres. The force on the particle at $x = 2\\ \\text{m}$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$+10\\ \\text{N}$",
+        "$-10\\ \\text{N}$",
+        "$-8\\ \\text{N}$",
+        "$-12\\ \\text{N}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a conservative force, $F = -\\frac{dU}{dx}$.",
+        "steps": [
+          "$\\frac{dU}{dx} = 6x - 2$",
+          "At $x = 2$: $\\frac{dU}{dx} = 10$",
+          "$F = -10\\ \\text{N}$"
+        ],
+        "final_answer": "Option (2): $-10\\ \\text{N}$",
+        "why_not_others": "$+10\\ \\text{N}$ misses the negative sign. $-8\\ \\text{N}$ is $-U(2)$, which uses U instead of its derivative. $-12\\ \\text{N}$ drops the derivative of the linear term.",
+        "common_trap": "Forgetting the minus sign in $F = -\\frac{dU}{dx}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "No potential energy function can be defined for the force of kinetic friction.",
+        "R": "The work done by kinetic friction on a body moving around any closed path is zero."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Potential energy exists only for conservative forces, whose closed-loop work is zero. Friction is non-conservative.",
+        "steps": [
+          "Friction is non-conservative, so no potential energy can be defined for it. A is true.",
+          "Friction does negative work over a closed loop, and this work grows with path length. Its closed-loop work is not zero, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is true, so option (4) is ruled out.",
+        "common_trap": "Attributing the zero closed-loop work property of conservative forces to friction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The work done by a conservative force on a body equals the increase in its potential energy, that is, $W_c = U_f - U_i$.",
+        "II": "The work done by gravity on a body moved between two fixed points depends on the path followed."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a conservative force, $W_c = -\\Delta U = U_i - U_f$, and the work is path independent.",
+        "steps": [
+          "Statement I has the wrong sign: $W_c = U_i - U_f$. So I is incorrect.",
+          "Gravity is conservative, so its work depends only on the end points. So II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements contradict the defining properties of conservative forces.",
+        "common_trap": "Missing the sign in $W_c = -\\Delta U$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "A small bob is tied to a light inextensible string of length $2\\ \\text{m}$. Taking $g = 10\\ \\text{m/s}^2$, the minimum speed that must be given to the bob at the lowest point so that it just completes a vertical circle is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$10\\ \\text{m/s}$",
+        "$8.9\\ \\text{m/s}$",
+        "$4.5\\ \\text{m/s}$",
+        "$6.3\\ \\text{m/s}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a string, the minimum speed at the bottom is $v_{bottom} = \\sqrt{5gL}$.",
+        "steps": [
+          "$v = \\sqrt{5 \\times 10 \\times 2}$",
+          "$v = \\sqrt{100} = 10\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (1): $10\\ \\text{m/s}$",
+        "why_not_others": "$8.9\\ \\text{m/s}$ is $\\sqrt{4gL}$, which applies to a rod. $4.5\\ \\text{m/s}$ is $\\sqrt{gL}$, the minimum speed at the top. $6.3\\ \\text{m/s}$ is $\\sqrt{2gL}$, which only reaches the horizontal.",
+        "common_trap": "Using the rod condition $\\sqrt{4gL}$ for a string.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "A small ball is fixed at one end of a light rigid rod of length $0.4\\ \\text{m}$. The rod is free to rotate in a vertical plane about its other end. Taking $g = 10\\ \\text{m/s}^2$, the minimum speed at the lowest point for the ball to complete the vertical circle is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4.5\\ \\text{m/s}$",
+        "$2.0\\ \\text{m/s}$",
+        "$2.8\\ \\text{m/s}$",
+        "$4.0\\ \\text{m/s}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A rod can push as well as pull, so the minimum speed at the top is zero. This gives $v_{bottom} = \\sqrt{4gL}$.",
+        "steps": [
+          "Energy conservation: $\\frac{1}{2}mu^2 = mg(2L)$",
+          "$u = \\sqrt{4 \\times 10 \\times 0.4} = \\sqrt{16} = 4.0\\ \\text{m/s}$"
+        ],
+        "final_answer": "Option (4): $4.0\\ \\text{m/s}$",
+        "why_not_others": "$4.5\\ \\text{m/s}$ is $\\sqrt{5gL}$, which applies to a string. $2.0\\ \\text{m/s}$ is $\\sqrt{gL}$. $2.8\\ \\text{m/s}$ is $\\sqrt{2gL}$.",
+        "common_trap": "Applying the string result $\\sqrt{5gL}$ to a rod.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "A bob of mass $0.5\\ \\text{kg}$ tied to a string of length $1\\ \\text{m}$ moves in a vertical circle. Its speed at the lowest point is $8\\ \\text{m/s}$. Taking $g = 10\\ \\text{m/s}^2$, the tension in the string at the highest point is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$12\\ \\text{N}$",
+        "$7\\ \\text{N}$",
+        "$17\\ \\text{N}$",
+        "$37\\ \\text{N}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Use $v^2 = u^2 - 2gL(1 - \\cos\\theta)$ to find the speed, then $T = \\frac{mv^2}{L} + mg\\cos\\theta$ with $\\theta = 180^\\circ$.",
+        "steps": [
+          "At the top: $v_{top}^2 = 64 - 4 \\times 10 \\times 1 = 24\\ \\text{m}^2/\\text{s}^2$",
+          "$T_{top} = \\frac{mv_{top}^2}{L} - mg = 0.5 \\times 24 - 5$",
+          "$T_{top} = 7\\ \\text{N}$",
+          "Check: $T_{bottom} = 32 + 5 = 37\\ \\text{N}$, and $37 - 7 = 30\\ \\text{N} = 6mg$."
+        ],
+        "final_answer": "Option (2): $7\\ \\text{N}$",
+        "why_not_others": "$12\\ \\text{N}$ ignores gravity at the top. $17\\ \\text{N}$ adds mg instead of subtracting it. $37\\ \\text{N}$ is the tension at the bottom.",
+        "common_trap": "Getting the sign of mg wrong at the top, where gravity points towards the centre.",
+        "time_saving_tip": "Find $T_{bottom} = \\frac{mu^2}{L} + mg$, then use $T_{top} = T_{bottom} - 6mg$."
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Tension at the lowest point"
+          },
+          {
+            "label": "B",
+            "text": "Tension when the string is horizontal"
+          },
+          {
+            "label": "C",
+            "text": "Tension at the highest point"
+          },
+          {
+            "label": "D",
+            "text": "Speed when the string is horizontal"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Zero"
+          },
+          {
+            "label": "II",
+            "text": "$\\sqrt{3gL}$"
+          },
+          {
+            "label": "III",
+            "text": "$6mg$"
+          },
+          {
+            "label": "IV",
+            "text": "$3mg$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A bob of mass m on a string of length L is given the critical speed $\\sqrt{5gL}$ at the lowest point, so it just completes the vertical circle. Combine $v^2 = u^2 - 2gL(1 - \\cos\\theta)$ with $T = \\frac{mv^2}{L} + mg\\cos\\theta$.",
+        "steps": [
+          "Lowest point: $T = 5mg + mg = 6mg$, so A-III.",
+          "Horizontal: $v^2 = 5gL - 2gL = 3gL$, so D-II. Then $T = 3mg$, so B-IV.",
+          "Top: $v^2 = gL$, so $T = mg - mg = 0$, giving C-I."
+        ],
+        "final_answer": "Option (1): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option (2) swaps the tensions at the bottom and the horizontal. Option (3) assigns zero tension to the horizontal position. Option (4) pairs a tension with a speed.",
+        "common_trap": "Forgetting to add mg at the bottom and getting 5mg.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about motion in a vertical circle are correct?",
+      "statements": {
+        "A": "A bob on a string of length L given speed $\\sqrt{3gL}$ at the lowest point will have its string slacken somewhere above the horizontal position.",
+        "B": "A bob on a string of length L given speed $\\sqrt{gL}$ at the lowest point oscillates below the horizontal position.",
+        "C": "The relation $T_{bottom} - T_{top} = 6mg$ holds only when the speed at the bottom is exactly $\\sqrt{5gL}$.",
+        "D": "A bead threaded on a smooth vertical ring of radius R completes the circle if its speed at the bottom is at least $\\sqrt{4gR}$.",
+        "E": "A string whirled in a vertical circle is most likely to break at the highest point."
+      },
+      "match_lists": null,
+      "options": [
+        "A and D only",
+        "B, C and D only",
+        "A, B and D only",
+        "A, B, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For a string: if $v_{bottom} \\le \\sqrt{2gL}$, the bob oscillates; if $\\sqrt{2gL} < v_{bottom} < \\sqrt{5gL}$, the string slackens above the horizontal. For a ring or rod, $v_{bottom} \\ge \\sqrt{4gL}$.",
+        "steps": [
+          "A is true: $\\sqrt{3gL}$ lies between $\\sqrt{2gL}$ and $\\sqrt{5gL}$.",
+          "B is true: $\\sqrt{gL}$ is less than $\\sqrt{2gL}$.",
+          "C is false: the $6mg$ difference holds for any speed, provided the circle is completed.",
+          "D is true: a ring can push, so the minimum speed at the top is zero.",
+          "E is false: tension is maximum at the bottom, so the string is most likely to break there."
+        ],
+        "final_answer": "Option (3): A, B and D only",
+        "why_not_others": "Option (1) misses B. Option (2) includes the false statement C and misses A. Option (4) includes the false statement E.",
+        "common_trap": "Thinking the $6mg$ result applies only in the critical case, or that tension is largest at the top.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

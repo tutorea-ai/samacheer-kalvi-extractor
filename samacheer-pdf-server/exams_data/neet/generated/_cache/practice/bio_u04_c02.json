@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "According to the chemiosmotic hypothesis, protons accumulate in which compartment of the chloroplast during the light reaction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Stroma",
+        "Intermembrane space",
+        "Cytoplasm",
+        "Thylakoid lumen"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In chloroplasts, the proton gradient forms across the thylakoid membrane. The lumen is the side with the high $H^+$ concentration.",
+        "steps": [
+          "Water splitting releases $H^+$ inside the lumen.",
+          "The electron carrier moves $H^+$ from the stroma into the lumen.",
+          "NADP reductase removes $H^+$ from the stroma.",
+          "So $H^+$ accumulates in the thylakoid lumen, and the pH there falls."
+        ],
+        "final_answer": "Option (4): Thylakoid lumen",
+        "why_not_others": "The stroma loses protons. The intermembrane space is where protons accumulate in mitochondria, not chloroplasts. The cytoplasm is outside the chloroplast.",
+        "common_trap": "Confusing the chloroplast with the mitochondrion, where protons accumulate in the intermembrane space.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "Which part of chloroplast ATP synthase changes shape to synthesise ATP, and where is it located?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CF_1$, projecting into the stroma",
+        "$CF_0$, embedded in the thylakoid membrane",
+        "$CF_1$, projecting into the thylakoid lumen",
+        "$F_1$, projecting into the intermembrane space"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "ATP synthase has two parts. $CF_0$ is the transmembrane proton channel, and $CF_1$ projects into the stroma.",
+        "steps": [
+          "Protons flow from the lumen to the stroma through $CF_0$.",
+          "This flow changes the shape of $CF_1$.",
+          "$CF_1$ faces the stroma, so ATP is made on the stroma side."
+        ],
+        "final_answer": "Option (1): $CF_1$, projecting into the stroma",
+        "why_not_others": "$CF_0$ is only the proton channel; it does not make ATP. $CF_1$ does not face the lumen. $F_1$ and the intermembrane space belong to mitochondria.",
+        "common_trap": "Placing $CF_1$ in the lumen, where the protons accumulate.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Which of the following does NOT contribute to building the proton gradient across the thylakoid membrane?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Splitting of water on the lumen side of the membrane",
+        "Flow of protons through $CF_0$ into the stroma",
+        "Transfer of protons from the stroma into the lumen by the electron carrier",
+        "Removal of $H^+$ from the stroma by NADP reductase"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Three processes build the gradient. The flow of $H^+$ through $CF_0$ breaks it down.",
+        "steps": [
+          "Water splitting adds $H^+$ to the lumen, so it builds the gradient.",
+          "The electron carrier pumps $H^+$ from the stroma into the lumen, so it builds the gradient.",
+          "NADP reductase removes stromal $H^+$, so it builds the gradient.",
+          "Flow through $CF_0$ returns $H^+$ to the stroma, so it dissipates the gradient."
+        ],
+        "final_answer": "Option (2): Flow of protons through $CF_0$ into the stroma",
+        "why_not_others": "Options 1, 3 and 4 are the three listed ways in which protons build up in the lumen relative to the stroma.",
+        "common_trap": "Thinking that proton movement through ATP synthase builds the gradient. It actually uses up the gradient to make ATP.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In chloroplasts, ATP is synthesised on the stroma side of the thylakoid membrane.",
+        "R": "The $CF_1$ portion of ATP synthase projects into the thylakoid lumen."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$CF_1$ projects into the stroma, so ATP is made and released in the stroma.",
+        "steps": [
+          "ATP is made by $CF_1$ on the stroma side, so A is true.",
+          "$CF_1$ faces the stroma, not the lumen, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1 and 2 are ruled out. A is true, so option 4 is ruled out.",
+        "common_trap": "Placing $CF_1$ in the lumen because protons accumulate there.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "During chemiosmotic ATP synthesis in mitochondria, protons accumulate in the matrix, just as they accumulate in the lumen of chloroplasts.",
+        "II": "NADP reductase, located on the stroma side of the thylakoid membrane, lowers the proton concentration of the stroma while reducing $NADP^+$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In mitochondria, protons accumulate in the intermembrane space. NADP reductase removes $H^+$ from the stroma.",
+        "steps": [
+          "In mitochondria, protons accumulate in the intermembrane space, not the matrix, so Statement I is incorrect.",
+          "NADP reductase on the stroma side uses stromal $H^+$ while reducing $NADP^+$, so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I gives the wrong mitochondrial compartment, so options 1 and 3 fail. Statement II is correct, so option 2 fails.",
+        "common_trap": "Assuming protons collect in the innermost compartment of both organelles.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "Photorespiration results from which enzymatic activity?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Carboxylase activity of PEPcase",
+        "Oxygenase activity of RuBisCO",
+        "Carboxylase activity of RuBisCO",
+        "Oxygenase activity of PEPcase"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Photorespiration is the oxygenase activity of RuBisCO.",
+        "steps": [
+          "RuBisCO can bind both $CO_2$ and $O_2$.",
+          "When $O_2$ is high, RuBP is oxygenated, and this starts photorespiration."
+        ],
+        "final_answer": "Option (2): Oxygenase activity of RuBisCO",
+        "why_not_others": "PEPcase has no oxygenase activity, and its carboxylase activity is C4 fixation. The carboxylase activity of RuBisCO is normal Calvin cycle fixation.",
+        "common_trap": "Attributing oxygenase activity to PEPcase.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "When one molecule of RuBP combines with $O_2$ instead of $CO_2$, the products formed are:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Two molecules of 3-PGA (3C each)",
+        "One molecule of OAA (4C) and one molecule of 3-PGA (3C)",
+        "One molecule of 3-PGA (3C) and one molecule of 2-phosphoglycolate (2C)",
+        "Two molecules of 2-phosphoglycolate (2C each)"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$RuBP + O_2 \\rightarrow 3\\text{-PGA} + 2\\text{-phosphoglycolate}$",
+        "steps": [
+          "Carboxylation gives $2 \\times 3\\text{-PGA}$.",
+          "Oxygenation gives one 3-PGA (3C) and one 2-phosphoglycolate (2C) instead."
+        ],
+        "final_answer": "Option (3): One molecule of 3-PGA (3C) and one molecule of 2-phosphoglycolate (2C)",
+        "why_not_others": "Option 1 is the carboxylation product. OAA is formed by PEPcase in C4 plants. Only one phosphoglycolate is formed per RuBP.",
+        "common_trap": "Writing the carboxylation products for the oxygenation reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Which set of organelles takes part in the photorespiratory pathway?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Chloroplast, mitochondria and Golgi body",
+        "Chloroplast, peroxisome and mitochondria",
+        "Chloroplast, glyoxysome and endoplasmic reticulum",
+        "Peroxisome, ribosome and mitochondria"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Photorespiration involves three organelles: the chloroplast, the peroxisome and the mitochondria.",
+        "steps": [
+          "Oxygenation of RuBP occurs in the chloroplast.",
+          "The pathway then continues through the peroxisome and the mitochondria."
+        ],
+        "final_answer": "Option (2): Chloroplast, peroxisome and mitochondria",
+        "why_not_others": "The Golgi body, glyoxysome, endoplasmic reticulum and ribosome are not part of the pathway. Option 4 also leaves out the chloroplast.",
+        "common_trap": "Confusing the peroxisome with the glyoxysome.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "2-phosphoglycolate"
+          },
+          {
+            "label": "B",
+            "text": "3-PGA"
+          },
+          {
+            "label": "C",
+            "text": "Peroxisome"
+          },
+          {
+            "label": "D",
+            "text": "C4 plants"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Organelle that works with the chloroplast and mitochondria in photorespiration"
+          },
+          {
+            "label": "II",
+            "text": "2-carbon product of RuBP oxygenation"
+          },
+          {
+            "label": "III",
+            "text": "Photorespiration absent because $CO_2$ is concentrated around RuBisCO in bundle sheath cells"
+          },
+          {
+            "label": "IV",
+            "text": "3-carbon product formed in both oxygenation and carboxylation of RuBP"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-I, B-IV, C-II, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Oxygenation gives 3-PGA (3C) and 2-phosphoglycolate (2C). Photorespiration involves three organelles and is absent in C4 plants.",
+        "steps": [
+          "2-phosphoglycolate is the 2C product, so A-II.",
+          "3-PGA is formed in both reactions, so B-IV.",
+          "The peroxisome is the third organelle, so C-I.",
+          "C4 plants concentrate $CO_2$ in the bundle sheath, so D-III."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option 1 swaps the 2C and 3C products. Option 3 swaps C and D. Option 4 wrongly pairs the peroxisome with a product.",
+        "common_trap": "Thinking 3-PGA forms only in carboxylation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about photorespiration are correct?",
+      "statements": {
+        "A": "Photorespiration produces ATP and NADPH.",
+        "B": "Photorespiration releases $CO_2$.",
+        "C": "RuBisCO has a higher affinity for $O_2$ than for $CO_2$.",
+        "D": "Photorespiration is common in C3 plants, especially at high temperature and high $O_2$ concentration.",
+        "E": "The absence of photorespiration is one reason for the higher productivity of C4 plants."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "B, D and E only",
+        "B, C and E only",
+        "A, C and D only"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Photorespiration consumes ATP, releases $CO_2$ and forms no ATP or NADPH. RuBisCO prefers $CO_2$.",
+        "steps": [
+          "A is false: photorespiration consumes ATP and forms neither ATP nor NADPH.",
+          "B is true: $CO_2$ is released.",
+          "C is false: RuBisCO's affinity for $CO_2$ is higher.",
+          "D and E are true."
+        ],
+        "final_answer": "Option (2): B, D and E only",
+        "why_not_others": "Options 1 and 4 include A. Options 3 and 4 include C.",
+        "common_trap": "Believing photorespiration yields ATP like respiration does.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "In the mesophyll cells of C4 plants, the primary acceptor of $CO_2$ is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "RuBP",
+        "Oxaloacetic acid",
+        "3-PGA",
+        "Phosphoenolpyruvate"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$PEP + CO_2 \\xrightarrow{\\text{PEPcase}} OAA$",
+        "steps": [
+          "In C4 mesophyll cells, PEP (3C) accepts $CO_2$.",
+          "The reaction forms OAA, the first stable product."
+        ],
+        "final_answer": "Option (4): Phosphoenolpyruvate",
+        "why_not_others": "RuBP is the acceptor in C3 plants. OAA is the product, not the acceptor. 3-PGA is the first stable product in C3 plants.",
+        "common_trap": "Confusing the acceptor (PEP) with the first stable product (OAA).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "In the leaf of a C4 plant, RuBisCO and PEPcase are located, respectively, in:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Mesophyll cells and bundle sheath cells",
+        "Mesophyll cells and mesophyll cells",
+        "Bundle sheath cells and mesophyll cells",
+        "Bundle sheath cells and bundle sheath cells"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "C4 mesophyll cells lack RuBisCO, and C4 bundle sheath cells lack PEPcase.",
+        "steps": [
+          "The Calvin cycle, which needs RuBisCO, runs in the bundle sheath cells.",
+          "PEPcase fixes $CO_2$ in the mesophyll cells."
+        ],
+        "final_answer": "Option (3): Bundle sheath cells and mesophyll cells",
+        "why_not_others": "Option 1 reverses the locations. Options 2 and 4 place both enzymes in one cell type, which is not the case.",
+        "common_trap": "Assuming RuBisCO is in the mesophyll cells, as it is in C3 plants.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "Which of the following is NOT a feature of the bundle sheath cells in Kranz anatomy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Large cells arranged around the vascular bundles",
+        "Presence of a large number of chloroplasts",
+        "Thick walls that are impervious to gases",
+        "Numerous intercellular spaces for gaseous exchange"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Bundle sheath cells are large, have many chloroplasts and gas-impervious thick walls, and have no intercellular spaces.",
+        "steps": [
+          "Options 1, 2 and 3 are stated features of these cells.",
+          "The cells have no intercellular spaces, which helps keep $CO_2$ concentrated inside."
+        ],
+        "final_answer": "Option (4): Numerous intercellular spaces for gaseous exchange",
+        "why_not_others": "The other three are true features of Kranz bundle sheath cells.",
+        "common_trap": "Assuming photosynthetic cells must have air spaces, as mesophyll cells do.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The Calvin cycle is absent in C4 plants.",
+        "R": "The mesophyll cells of C4 plants lack RuBisCO."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The Calvin cycle occurs in the bundle sheath cells of C4 plants. Only their mesophyll cells lack RuBisCO.",
+        "steps": [
+          "The Calvin cycle runs in the bundle sheath cells, so A is false.",
+          "C4 mesophyll cells lack RuBisCO, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options 1, 2 and 3 are all ruled out.",
+        "common_trap": "Concluding that the Calvin cycle is absent in C4 plants because the mesophyll cells lack RuBisCO.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In C4 plants, $CO_2$ released by decarboxylation in the bundle sheath cells enters the Calvin cycle, while the remaining 3C molecule returns to the mesophyll cells to regenerate PEP.",
+        "II": "Like RuBisCO, PEPcase can bind $O_2$, so the mesophyll cells of C4 plants carry out photorespiration."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "This is the Hatch and Slack pathway. PEPcase has no oxygenase activity, and photorespiration is absent in C4 plants.",
+        "steps": [
+          "Malate or aspartate is decarboxylated in the bundle sheath, and the $CO_2$ goes into the Calvin cycle.",
+          "The 3C molecule returns to the mesophyll to regenerate PEP, so Statement I is correct.",
+          "PEPcase has no oxygenase activity, and C4 plants lack photorespiration, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II is false, so options 1 and 4 fail. Statement I is true, so option 2 fails.",
+        "common_trap": "Assuming every carboxylase also has oxygenase activity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "Which external factor is the major limiting factor for photosynthesis in nature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Light",
+        "Water",
+        "Carbon dioxide",
+        "Temperature"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Air contains only about 0.03 to 0.04% $CO_2$, which makes $CO_2$ the major limiting factor.",
+        "steps": [
+          "Light saturates at about 10% of full sunlight, so it is rarely limiting.",
+          "The $CO_2$ concentration in air is very low, so it limits the rate most often."
+        ],
+        "final_answer": "Option (3): Carbon dioxide",
+        "why_not_others": "Light limits only plants in shade or dense forests. Water acts indirectly through stomatal closure. Temperature mainly affects the enzymatic dark reactions.",
+        "common_trap": "Picking light because it drives the light reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "According to Blackman's law of limiting factors (1905), when a chemical process depends on several factors, its rate is determined by:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The factor nearest to its minimal value",
+        "The factor present at its maximum value",
+        "All the factors acting equally",
+        "Temperature alone, whatever the other factors"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The rate is set by the factor nearest its minimal value. A change in that factor alone changes the rate.",
+        "steps": [
+          "Identify the factor in shortest supply relative to its minimum.",
+          "Changing only that factor changes the rate."
+        ],
+        "final_answer": "Option (1): The factor nearest to its minimal value",
+        "why_not_others": "A factor present at its maximum is not limiting. The factors do not act equally. Temperature is only one of several factors.",
+        "common_trap": "Thinking the most abundant factor controls the rate.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "Which statement correctly compares the response of C3 and C4 plants to increasing $CO_2$ concentration?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "C4 plants saturate at about 360 $\\mu L/L$ $CO_2$, while C3 plants continue to respond to higher concentrations",
+        "C3 plants saturate at about 360 $\\mu L/L$ $CO_2$, while C4 plants continue to respond to higher concentrations",
+        "Both C3 and C4 plants saturate at about 0.03% $CO_2$",
+        "Neither C3 nor C4 plants respond to $CO_2$ above the atmospheric level"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "C4 plants saturate at about 360 $\\mu L/L$ $CO_2$, while C3 plants keep responding to higher $CO_2$.",
+        "steps": [
+          "C4 plants already concentrate $CO_2$, so they saturate early, at about 360 $\\mu L/L$.",
+          "C3 plants keep responding to higher $CO_2$, which is why greenhouse crops are given $CO_2$-enriched air."
+        ],
+        "final_answer": "Option (1): C4 plants saturate at about 360 $\\mu L/L$ $CO_2$, while C3 plants continue to respond to higher concentrations",
+        "why_not_others": "Option 2 reverses the two plant types. Option 3 is wrong because raising $CO_2$ up to 0.05% increases fixation. Option 4 is contradicted by the use of $CO_2$ enrichment.",
+        "common_trap": "Assuming the more efficient C4 plants respond more to extra $CO_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Light saturation"
+          },
+          {
+            "label": "B",
+            "text": "$CO_2$ content of air"
+          },
+          {
+            "label": "C",
+            "text": "Very high light intensity"
+          },
+          {
+            "label": "D",
+            "text": "Water stress"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Closure of stomata and wilting of leaves"
+          },
+          {
+            "label": "II",
+            "text": "About 10% of full sunlight"
+          },
+          {
+            "label": "III",
+            "text": "Breakdown of chlorophyll"
+          },
+          {
+            "label": "IV",
+            "text": "About 0.03 to 0.04%"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "These are the facts for each external factor affecting photosynthesis.",
+        "steps": [
+          "Light saturation occurs at about 10% of full sunlight, so A-II.",
+          "Air contains about 0.03 to 0.04% $CO_2$, so B-IV.",
+          "Very high light intensity breaks down chlorophyll, so C-III.",
+          "Water stress closes stomata and causes wilting, so D-I."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 swaps the two percentages. Option 3 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Mixing up the 10% light saturation value with the $CO_2$ percentage.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about factors affecting photosynthesis are correct?",
+      "statements": {
+        "A": "Dark reactions are enzymatic and are therefore sensitive to temperature.",
+        "B": "Water stress affects photosynthesis indirectly by closing stomata and causing leaves to wilt.",
+        "C": "C3 plants have a higher temperature optimum than C4 plants.",
+        "D": "Greenhouse crops such as tomato and bell pepper are grown in $CO_2$-enriched air for higher yields.",
+        "E": "Light is frequently the limiting factor for most plants in nature."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "B, D and E only",
+        "A, B, C and D only",
+        "A, B and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Temperature acts on the enzymatic dark reactions, and water acts indirectly. C4 plants have the higher temperature optimum, and light is rarely limiting in nature.",
+        "steps": [
+          "A, B and D are true as stated.",
+          "C is false: C3 plants have a lower temperature optimum than C4 plants.",
+          "E is false: light is rarely limiting, except in shade or dense forests."
+        ],
+        "final_answer": "Option (4): A, B and D only",
+        "why_not_others": "Options 1 and 3 include C. Option 2 includes E and leaves out A.",
+        "common_trap": "Reversing the temperature optima of C3 and C4 plants.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

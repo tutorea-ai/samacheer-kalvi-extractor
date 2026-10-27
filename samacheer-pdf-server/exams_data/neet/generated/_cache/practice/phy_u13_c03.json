@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "Inside a bar magnet, the direction of the magnetic field lines is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "From the N-pole to the S-pole",
+        "From the S-pole to the N-pole",
+        "Undefined, because the field inside a magnet is zero",
+        "Perpendicular to the axis of the magnet"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Magnetic field lines are closed loops. They run N to S outside the magnet and S to N inside it.",
+        "steps": [
+          "Outside the magnet, the lines leave the N-pole and enter the S-pole.",
+          "Field lines are continuous closed loops, so they must return from S to N inside the magnet."
+        ],
+        "final_answer": "Option (2): From the S-pole to the N-pole",
+        "why_not_others": "N to S is the direction outside the magnet only. The field inside is not zero, because the lines pass through the magnet. The lines inside run along the axis, not perpendicular to it.",
+        "common_trap": "Assuming field lines run N to S everywhere, as electric lines run from + to -.",
+        "time_saving_tip": "Closed loops mean the inside direction must be opposite to the outside direction."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "A bar magnet has pole strength $5\\ \\text{A m}$ and magnetic length $10\\ \\text{cm}$. It is cut into two equal halves by a cut perpendicular to its axis. What are the pole strength and magnetic moment of each piece?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5\\ \\text{A m}$ and $0.25\\ \\text{A m}^2$",
+        "$2.5\\ \\text{A m}$ and $0.25\\ \\text{A m}^2$",
+        "$2.5\\ \\text{A m}$ and $0.125\\ \\text{A m}^2$",
+        "$5\\ \\text{A m}$ and $0.5\\ \\text{A m}^2$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A cut perpendicular to the axis keeps the pole strength the same and halves the length, so the moment is halved.",
+        "steps": [
+          "Original moment: $m=q_m(2l)=5\\times0.10=0.5\\ \\text{A m}^2$.",
+          "Each piece keeps $q_m=5\\ \\text{A m}$ and has length $5\\ \\text{cm}$.",
+          "New moment: $m'=5\\times0.05=0.25\\ \\text{A m}^2$."
+        ],
+        "final_answer": "Option (1): $5\\ \\text{A m}$ and $0.25\\ \\text{A m}^2$",
+        "why_not_others": "Halving the pole strength applies to a cut along the axis, not perpendicular to it. Halving both the pole strength and the length would quarter the moment. Keeping the moment at 0.5 ignores the reduced length.",
+        "common_trap": "Mixing up the effects of an axial cut and a perpendicular cut.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "A solenoid of 200 turns, each of area $5\\ \\text{cm}^2$, carries a current of $2\\ \\text{A}$. It is to be replaced by a bar magnet of equal magnetic moment and magnetic length $4\\ \\text{cm}$. The pole strength of the magnet must be:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.2\\ \\text{A m}$",
+        "$10\\ \\text{A m}$",
+        "$5\\ \\text{A m}$",
+        "$0.008\\ \\text{A m}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A solenoid has moment $NIA$, and an equivalent magnet satisfies $m=q_m(2l)$.",
+        "steps": [
+          "$m=NIA=200\\times2\\times5\\times10^{-4}=0.2\\ \\text{A m}^2$.",
+          "$q_m=\\dfrac{m}{2l}=\\dfrac{0.2}{0.04}=5\\ \\text{A m}$."
+        ],
+        "final_answer": "Option (3): $5\\ \\text{A m}$",
+        "why_not_others": "0.2 is the moment itself, not the pole strength. 10 A m comes from dividing by l (2 cm) instead of 2l. 0.008 comes from multiplying by the length instead of dividing.",
+        "common_trap": "Using the half-length l in place of the magnetic length 2l.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The net magnetic flux through a closed surface that encloses only the N-pole of a long bar magnet is positive.",
+        "R": "Magnetic field lines are continuous closed loops."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Gauss's law for magnetism: $\\oint\\vec{B}\\cdot d\\vec{A}=0$ for every closed surface.",
+        "steps": [
+          "Field lines form closed loops, so every line leaving a closed surface also enters it.",
+          "The net flux through any closed surface is therefore zero, even one drawn around a single pole.",
+          "A is false and R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false because the flux is zero, not positive. This rules out options (1), (2) and (3).",
+        "common_trap": "Treating a magnetic pole like an electric charge that acts as a source of net flux.",
+        "time_saving_tip": "Magnetic flux through any closed surface is always zero."
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a bar magnet is cut along its axis into two equal halves, the pole strength of each half stays the same and its magnetic moment is halved.",
+        "II": "Two magnetic field lines may intersect at a point where the fields of two different magnets superpose."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "An axial cut halves both pole strength and moment. Field lines never cross.",
+        "steps": [
+          "Cutting along the axis halves the pole area, so $q_m$ is halved. The length is unchanged, so $m$ is also halved. Statement I is incorrect.",
+          "The resultant field has a unique direction at every point, so lines cannot intersect. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I describes a perpendicular cut, not an axial cut. Statement II ignores the fact that superposed fields give a single net direction at each point.",
+        "common_trap": "Swapping the results of perpendicular and axial cuts.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "For a short bar magnet, the ratio of the magnitude of the field at a point on its axial line to that at a point on its equatorial line at the same distance from the centre is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2:1$",
+        "$1:2$",
+        "$1:1$",
+        "$4:1$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a short magnet, $B_{ax}=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$ and $B_{eq}=\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$.",
+        "steps": [
+          "Divide the two expressions at the same r.",
+          "$B_{ax}/B_{eq}=2$."
+        ],
+        "final_answer": "Option (1): $2:1$",
+        "why_not_others": "$1:2$ inverts the ratio. $1:1$ ignores the factor 2. $4:1$ squares the ratio.",
+        "common_trap": "Inverting the ratio.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "A short bar magnet has magnetic moment $0.4\\ \\text{A m}^2$. The magnitude of its magnetic field at a point on its axial line $10\\ \\text{cm}$ from its centre is: (take $\\frac{\\mu_0}{4\\pi}=10^{-7}\\ \\text{T m A}^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\times10^{-5}\\ \\text{T}$",
+        "$8\\times10^{-6}\\ \\text{T}$",
+        "$1.0\\times10^{-3}\\ \\text{T}$",
+        "$8\\times10^{-5}\\ \\text{T}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Axial field of a short magnet: $B=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$.",
+        "steps": [
+          "$r^3=(0.1)^3=10^{-3}\\ \\text{m}^3$.",
+          "$B=10^{-7}\\times\\dfrac{2\\times0.4}{10^{-3}}=8\\times10^{-5}\\ \\text{T}$."
+        ],
+        "final_answer": "Option (4): $8\\times10^{-5}\\ \\text{T}$",
+        "why_not_others": "$4\\times10^{-5}$ T uses the equatorial formula. $8\\times10^{-6}$ T uses $r^2$ instead of $r^3$. $1.0\\times10^{-3}$ T uses $\\mu_0$ in place of $\\mu_0/4\\pi$.",
+        "common_trap": "Dropping the factor 2 in the axial formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "A short bar magnet produces a field of magnitude $B_0$ at a point on its equatorial line at distance r from its centre. What is the magnitude of the field at a point at the same distance r on a line making $60^\\circ$ with the magnetic axis?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sqrt{7}\\,B_0$",
+        "$\\dfrac{\\sqrt{13}}{2}B_0$",
+        "$\\dfrac{7}{4}B_0$",
+        "$\\dfrac{\\sqrt{7}}{2}B_0$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$B=\\frac{\\mu_0 m}{4\\pi r^3}\\sqrt{3\\cos^2\\theta+1}$, and $B_0=\\frac{\\mu_0 m}{4\\pi r^3}$.",
+        "steps": [
+          "$\\cos60^\\circ=\\tfrac12$, so $3\\cos^2\\theta+1=\\tfrac34+1=\\tfrac74$.",
+          "$B=B_0\\sqrt{7/4}=\\dfrac{\\sqrt7}{2}B_0$."
+        ],
+        "final_answer": "Option (4): $\\dfrac{\\sqrt{7}}{2}B_0$",
+        "why_not_others": "$\\frac{\\sqrt{13}}{2}B_0$ uses $\\cos30^\\circ$, measuring the angle from the equator instead of the axis. $\\frac74B_0$ forgets the square root. $\\sqrt7B_0$ drops the factor $\\frac12$.",
+        "common_trap": "Measuring $\\theta$ from the equatorial line instead of the axis.",
+        "time_saving_tip": "Check the limits: $\\theta=90^\\circ$ gives $B_0$ and $\\theta=0$ gives $2B_0$, so the answer must lie between them."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Axial field of a short magnet of moment m at distance r"
+          },
+          {
+            "label": "B",
+            "text": "Equatorial field of the same magnet at distance r"
+          },
+          {
+            "label": "C",
+            "text": "Axial field of the same magnet at distance 2r"
+          },
+          {
+            "label": "D",
+            "text": "Equatorial field of the same magnet at distance 2r"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{m}{8r^3}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{m}{4r^3}$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-IV, C-III, D-I",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For a short magnet, $B_{ax}=\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$ and $B_{eq}=\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$. Both vary as $1/r^3$.",
+        "steps": [
+          "A: $\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$, which is II.",
+          "B: $\\frac{\\mu_0}{4\\pi}\\frac{m}{r^3}$, which is IV.",
+          "C: $\\frac{\\mu_0}{4\\pi}\\frac{2m}{8r^3}=\\frac{\\mu_0}{4\\pi}\\frac{m}{4r^3}$, which is III.",
+          "D: $\\frac{\\mu_0}{4\\pi}\\frac{m}{8r^3}$, which is I."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Options (1) and (4) swap the axial and equatorial forms. Option (3) forgets the factor 2 at distance 2r and mismatches C and D.",
+        "common_trap": "Assuming the field halves or quarters when the distance doubles, instead of falling to 1/8.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the field of a bar magnet are correct?",
+      "statements": {
+        "A": "For a short magnet, the field on the axial line is directed along $\\vec{m}$.",
+        "B": "For a short magnet, the field on the equatorial line is directed along $\\vec{m}$.",
+        "C": "Doubling the distance from a short magnet reduces its field to one-eighth.",
+        "D": "The exact axial expression $\\frac{\\mu_0}{4\\pi}\\frac{2mr}{(r^2-l^2)^2}$ reduces to $\\frac{\\mu_0}{4\\pi}\\frac{2m}{r^3}$ when $r\\gg l$.",
+        "E": "At a fixed distance, the field of a short magnet is maximum on the equatorial line ($\\theta=90^\\circ$)."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Axial field: along m, $\\propto 2m/r^3$. Equatorial field: opposite to m, $\\propto m/r^3$.",
+        "steps": [
+          "A is true: the axial field points along m.",
+          "B is false: the equatorial field points opposite to m.",
+          "C is true: since $B\\propto1/r^3$, doubling r gives 1/8 of the field.",
+          "D is true: for $r\\gg l$, $(r^2-l^2)^2\\approx r^4$, giving $\\frac{2m}{r^3}$.",
+          "E is false: $\\sqrt{3\\cos^2\\theta+1}$ is largest at $\\theta=0$, on the axis."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Option (1) misses the true statement D. Option (2) includes the false statement B. Option (4) includes the false statement E and omits A.",
+        "common_trap": "Assuming the equatorial field is along m, as the axial field is.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_1",
+      "type": "single_correct",
+      "question": "A bar magnet of magnetic moment $2\\ \\text{A m}^2$ is placed in a uniform field of $0.5\\ \\text{T}$ with its axis at $30^\\circ$ to the field. The magnitude of the torque on it is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.87\\ \\text{N m}$",
+        "$1.0\\ \\text{N m}$",
+        "$0.5\\ \\text{N m}$",
+        "$0.25\\ \\text{N m}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$\\tau=mB\\sin\\theta$.",
+        "steps": [
+          "$\\tau=2\\times0.5\\times\\sin30^\\circ$.",
+          "$\\tau=1\\times0.5=0.5\\ \\text{N m}$."
+        ],
+        "final_answer": "Option (3): $0.5\\ \\text{N m}$",
+        "why_not_others": "0.87 N m uses $\\cos30^\\circ$. 1.0 N m omits $\\sin\\theta$. 0.25 N m applies the factor 0.5 twice.",
+        "common_trap": "Using cosine in place of sine.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_2",
+      "type": "single_correct",
+      "question": "A magnetic dipole of moment $1.5\\ \\text{A m}^2$ is in a uniform field of $0.4\\ \\text{T}$. The work required to rotate it from $\\theta=60^\\circ$ to $\\theta=180^\\circ$ with respect to the field is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.3\\ \\text{J}$",
+        "$1.2\\ \\text{J}$",
+        "$0.9\\ \\text{J}$",
+        "$0.6\\ \\text{J}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "$W=mB(\\cos\\theta_1-\\cos\\theta_2)$.",
+        "steps": [
+          "$mB=1.5\\times0.4=0.6\\ \\text{J}$.",
+          "$W=0.6(\\cos60^\\circ-\\cos180^\\circ)=0.6(0.5+1)=0.9\\ \\text{J}$."
+        ],
+        "final_answer": "Option (3): $0.9\\ \\text{J}$",
+        "why_not_others": "0.3 J comes from the sign error $\\cos180^\\circ=+1$. 1.2 J is the work from $0^\\circ$ to $180^\\circ$. 0.6 J is just mB, the work from $0^\\circ$ to $90^\\circ$.",
+        "common_trap": "Making a sign error with $\\cos180^\\circ=-1$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_3",
+      "type": "single_correct",
+      "question": "A freely suspended magnet performs small angular oscillations with a period of $3\\ \\text{s}$ in a uniform magnetic field. If the field is made nine times stronger, the new period is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$27\\ \\text{s}$",
+        "$9\\ \\text{s}$",
+        "$\\frac{1}{3}\\ \\text{s}$",
+        "$1\\ \\text{s}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$T=2\\pi\\sqrt{\\frac{I}{mB}}$, so $T\\propto\\frac{1}{\\sqrt B}$.",
+        "steps": [
+          "$T'/T=\\sqrt{B/9B}=\\tfrac13$.",
+          "$T'=3\\times\\tfrac13=1\\ \\text{s}$."
+        ],
+        "final_answer": "Option (4): $1\\ \\text{s}$",
+        "why_not_others": "27 s assumes $T\\propto B$. 9 s assumes $T\\propto\\sqrt B$. $\\frac13$ s assumes $T\\propto1/B$.",
+        "common_trap": "Forgetting the square root in the period formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A bar magnet placed in a uniform magnetic field with its moment antiparallel to the field is in unstable equilibrium.",
+        "R": "The potential energy $U=-mB\\cos\\theta$ of the magnet is maximum at $\\theta=180^\\circ$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Equilibrium at maximum potential energy is unstable.",
+        "steps": [
+          "At $\\theta=180^\\circ$, the torque $mB\\sin\\theta=0$, so the magnet is in equilibrium.",
+          "$U=+mB$ is the maximum value, so any small displacement lowers U and the magnet turns away.",
+          "R therefore explains why A is true."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options (3) and (4) fail. The maximum potential energy in R is exactly why the equilibrium in A is unstable, so option (2) fails.",
+        "common_trap": "Thinking zero torque always means stable equilibrium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t10_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A bar magnet placed in a uniform magnetic field experiences a net force along the field in addition to a torque.",
+        "II": "In a uniform field, the work needed to rotate a magnetic dipole from $\\theta=0^\\circ$ to $90^\\circ$ is half the work needed to rotate it from $0^\\circ$ to $180^\\circ$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In a uniform field the net force is zero, and $W=mB(\\cos\\theta_1-\\cos\\theta_2)$.",
+        "steps": [
+          "In a uniform field the forces on the two poles are equal and opposite, so the net force is zero. Statement I is incorrect.",
+          "$W_{0\\to90}=mB$ and $W_{0\\to180}=2mB$, so the first is half the second. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "A net force acts only in a non-uniform field, so Statement I is false. The ratio of works is exactly 1:2, so Statement II is true.",
+        "common_trap": "Assuming any magnetic field must exert a net force on a magnet.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_1",
+      "type": "single_correct",
+      "question": "Which of the following substances is diamagnetic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Bismuth",
+        "Aluminium",
+        "Sodium",
+        "Nickel"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Diamagnetic substances have small negative susceptibility. Examples are Bi, Cu, Pb, Si, water, $N_2$ and NaCl.",
+        "steps": [
+          "Bismuth is a standard diamagnetic substance.",
+          "Al and Na are paramagnetic, and Ni is ferromagnetic."
+        ],
+        "final_answer": "Option (1): Bismuth",
+        "why_not_others": "Aluminium and sodium are paramagnetic. Nickel is ferromagnetic.",
+        "common_trap": "Assuming every metal is para- or ferromagnetic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_2",
+      "type": "single_correct",
+      "question": "A magnetic material placed in a magnetic intensity of $1000\\ \\text{A m}^{-1}$ acquires a magnetisation of $2.5\\times10^{5}\\ \\text{A m}^{-1}$. Its relative permeability is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$251$",
+        "$250$",
+        "$249$",
+        "$4\\times10^{-3}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "$\\chi=M/H$ and $\\mu_r=1+\\chi$.",
+        "steps": [
+          "$\\chi=\\dfrac{2.5\\times10^5}{1000}=250$.",
+          "$\\mu_r=1+250=251$."
+        ],
+        "final_answer": "Option (1): $251$",
+        "why_not_others": "250 is the susceptibility, not $\\mu_r$. 249 comes from $\\chi-1$. $4\\times10^{-3}$ is $H/M$, the inverted ratio.",
+        "common_trap": "Reporting $\\chi$ as $\\mu_r$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_3",
+      "type": "single_correct",
+      "question": "A liquid is filled in a U-tube, and one limb is placed between the poles of a strong electromagnet. When the field is switched on, the liquid level in that limb falls. The liquid could be:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Liquid oxygen",
+        "Aqueous $CuCl_2$ solution",
+        "Water",
+        "Molten aluminium"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A diamagnetic liquid is depressed in the limb placed in the field, while a paramagnetic liquid rises.",
+        "steps": [
+          "A falling level means the liquid moves from the stronger field to the weaker field, so it is diamagnetic.",
+          "Water is diamagnetic."
+        ],
+        "final_answer": "Option (3): Water",
+        "why_not_others": "Oxygen, $CuCl_2$ and aluminium are paramagnetic, so their level would rise in the field.",
+        "common_trap": "Reversing the U-tube behaviour of para- and diamagnetic liquids.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Superconductor"
+          },
+          {
+            "label": "B",
+            "text": "Copper"
+          },
+          {
+            "label": "C",
+            "text": "Aluminium"
+          },
+          {
+            "label": "D",
+            "text": "Iron"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\chi=-1$"
+          },
+          {
+            "label": "II",
+            "text": "Small negative $\\chi$"
+          },
+          {
+            "label": "III",
+            "text": "Small positive $\\chi$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\chi\\gg1$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Each class of magnetic material has a characteristic susceptibility.",
+        "steps": [
+          "A superconductor is a perfect diamagnet, with $\\chi=-1$: I.",
+          "Copper is diamagnetic, with small negative $\\chi$: II.",
+          "Aluminium is paramagnetic, with small positive $\\chi$: III.",
+          "Iron is ferromagnetic, with $\\chi\\gg1$: IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Options (2) and (4) swap the superconductor and copper. Option (3) swaps copper and aluminium. Option (4) also swaps aluminium and iron.",
+        "common_trap": "Treating copper as paramagnetic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t11_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about magnetic materials are correct?",
+      "statements": {
+        "A": "Diamagnetism is present in all materials but is masked when para- or ferromagnetism exists.",
+        "B": "For a diamagnetic substance, the relative permeability is slightly greater than 1.",
+        "C": "The fields are related by $B=\\mu_0(H+M)$, and $\\mu_r=1+\\chi$.",
+        "D": "A paramagnetic rod suspended freely in a uniform field aligns perpendicular to the field.",
+        "E": "Diamagnetic susceptibility does not depend on temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Properties of dia-, para- and ferromagnetic materials and the relations among B, H, M and $\\chi$.",
+        "steps": [
+          "A is true, as stated in the properties of diamagnetism.",
+          "B is false: for a diamagnet, $\\mu_r<1$.",
+          "C is true: these are the standard relations.",
+          "D is false: a paramagnetic rod aligns parallel to the field, and a diamagnetic rod aligns perpendicular.",
+          "E is true: only paramagnets follow Curie's law, and diamagnetic $\\chi$ is temperature-independent."
+        ],
+        "final_answer": "Option (4): A, C and E only",
+        "why_not_others": "Option (1) misses the true statement E. Option (2) includes the false statement B. Option (3) includes the false statements B and D.",
+        "common_trap": "Swapping the alignment of para- and diamagnetic rods.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

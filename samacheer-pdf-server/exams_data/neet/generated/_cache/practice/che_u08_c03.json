@@ -1,0 +1,315 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "For a reaction, the activation energy of the forward reaction is 80 kJ $mol^{-1}$ and the enthalpy change is $\\Delta H = -30$ kJ $mol^{-1}$. The activation energy of the backward reaction is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "50 kJ $mol^{-1}$",
+        "30 kJ $mol^{-1}$",
+        "80 kJ $mol^{-1}$",
+        "110 kJ $mol^{-1}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "$\\Delta H = E_{a(f)} - E_{a(b)}$",
+        "steps": [
+          "$E_{a(b)} = E_{a(f)} - \\Delta H$.",
+          "$E_{a(b)} = 80 - (-30) = 110$ kJ $mol^{-1}$.",
+          "The reaction is exothermic, so $E_{a(b)} > E_{a(f)}$, which is consistent."
+        ],
+        "final_answer": "Option (4): 110 kJ $mol^{-1}$",
+        "why_not_others": "50 kJ $mol^{-1}$ comes from a sign error, $80 - 30$. 30 kJ $mol^{-1}$ is just the magnitude of $\\Delta H$. 80 kJ $mol^{-1}$ wrongly assumes the forward and backward barriers are equal.",
+        "common_trap": "Subtracting the magnitude of $\\Delta H$ instead of using its negative sign.",
+        "time_saving_tip": "For an exothermic reaction, $E_{a(b)}$ must be larger than $E_{a(f)}$. Only 110 kJ $mol^{-1}$ qualifies."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "The rate constant of a reaction increases tenfold when the temperature is raised from 300 K to 400 K. The activation energy of the reaction is ($R = 8.314$ J $K^{-1}\\,mol^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "9.98 kJ $mol^{-1}$",
+        "52.92 kJ $mol^{-1}$",
+        "22.98 kJ $mol^{-1}$",
+        "$-22.98$ kJ $mol^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Two-temperature Arrhenius equation: $\\log\\frac{k_2}{k_1} = \\frac{E_a}{2.303R}\\left(\\frac{T_2 - T_1}{T_1T_2}\\right)$",
+        "steps": [
+          "$\\log 10 = 1$.",
+          "$\\frac{T_2 - T_1}{T_1T_2} = \\frac{100}{300 \\times 400} = \\frac{1}{1200}$ $K^{-1}$.",
+          "$E_a = 2.303 \\times 8.314 \\times 1200 = 22977$ J $mol^{-1}$.",
+          "$E_a \\approx 22.98$ kJ $mol^{-1}$."
+        ],
+        "final_answer": "Option (3): 22.98 kJ $mol^{-1}$",
+        "why_not_others": "9.98 kJ $mol^{-1}$ omits the factor 2.303. 52.92 kJ $mol^{-1}$ takes $\\log 10$ as 2.303. $-22.98$ kJ $mol^{-1}$ reverses the temperature order, and $E_a$ cannot be negative.",
+        "common_trap": "Mixing $\\ln$ and $\\log$ forms, which either drops or doubles the 2.303 factor.",
+        "time_saving_tip": "When $k$ increases tenfold, $E_a = 2.303R \\times \\frac{T_1T_2}{T_2 - T_1}$ directly."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "For a reaction, $E_{a(f)} = 120$ kJ $mol^{-1}$ and $E_{a(b)} = 90$ kJ $mol^{-1}$. A catalyst lowers $E_{a(f)}$ to 75 kJ $mol^{-1}$. What are the activation energy of the backward reaction and the enthalpy change of the reaction in the presence of the catalyst?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "90 kJ $mol^{-1}$ and +30 kJ $mol^{-1}$",
+        "45 kJ $mol^{-1}$ and $-30$ kJ $mol^{-1}$",
+        "45 kJ $mol^{-1}$ and +30 kJ $mol^{-1}$",
+        "90 kJ $mol^{-1}$ and $-15$ kJ $mol^{-1}$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A catalyst lowers $E_{a(f)}$ and $E_{a(b)}$ by the same amount, so $\\Delta H$ is unchanged.",
+        "steps": [
+          "The decrease in $E_{a(f)}$ is $120 - 75 = 45$ kJ $mol^{-1}$.",
+          "The new $E_{a(b)}$ is $90 - 45 = 45$ kJ $mol^{-1}$.",
+          "$\\Delta H = 75 - 45 = +30$ kJ $mol^{-1}$, the same as $120 - 90$ without the catalyst."
+        ],
+        "final_answer": "Option (3): 45 kJ $mol^{-1}$ and +30 kJ $mol^{-1}$",
+        "why_not_others": "The 90 kJ $mol^{-1}$ options assume the backward barrier is not lowered; the $-15$ kJ $mol^{-1}$ option also wrongly lets the catalyst change $\\Delta H$. $-30$ kJ $mol^{-1}$ is a sign error, $E_{a(b)} - E_{a(f)}$.",
+        "common_trap": "Thinking a catalyst lowers only the forward barrier or alters $\\Delta H$.",
+        "time_saving_tip": "$\\Delta H$ cannot change with a catalyst, so it stays +30 kJ $mol^{-1}$. That leaves only options (1) and (3), and the backward barrier must drop."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A catalyst does not change the enthalpy change $\\Delta H$ of a reaction.",
+        "R": "A catalyst lowers only the activation energy of the forward reaction and leaves that of the backward reaction unchanged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A catalyst reduces $E_{a(f)}$ and $E_{a(b)}$ equally.",
+        "steps": [
+          "$\\Delta H = E_{a(f)} - E_{a(b)}$.",
+          "Both barriers fall by the same amount, so their difference is unchanged. A is true.",
+          "R claims only the forward barrier falls. That is false, and it would actually change $\\Delta H$."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) fail. A is a correct statement, so option (4) fails.",
+        "common_trap": "Assuming a catalyst speeds up only the forward reaction.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "For two reactions with the same pre-exponential factor, the reaction with the larger activation energy has a rate constant that is less sensitive to a change in temperature.",
+        "II": "For a reaction with $E_{a(f)} = 50$ kJ $mol^{-1}$ and $\\Delta H = -20$ kJ $mol^{-1}$, the activation energy of the backward reaction is 30 kJ $mol^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A larger $E_a$ makes $k$ more temperature sensitive. Also, $\\Delta H = E_{a(f)} - E_{a(b)}$.",
+        "steps": [
+          "A larger $E_a$ makes $k$ more sensitive to temperature, so Statement I is incorrect.",
+          "$E_{a(b)} = E_{a(f)} - \\Delta H = 50 - (-20) = 70$ kJ $mol^{-1}$.",
+          "Statement II gives 30 kJ $mol^{-1}$, so it is incorrect. For an exothermic reaction, $E_{a(b)}$ must exceed $E_{a(f)}$."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I reverses the temperature-sensitivity rule. Statement II contains a sign error in $\\Delta H$. Neither statement is correct.",
+        "common_trap": "Writing $E_{a(b)} = E_{a(f)} + \\Delta H$, which treats the reaction as if it were endothermic.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "According to collision theory, a collision between reactant molecules is effective only when the molecules",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "possess energy equal to or greater than the threshold energy and collide with proper orientation",
+        "collide with high frequency at a high temperature",
+        "possess energy equal to the enthalpy change of the reaction and collide with proper orientation",
+        "possess energy greater than the threshold energy and collide in the presence of a catalyst"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "An effective collision requires sufficient energy and proper orientation.",
+        "steps": [
+          "The energy must be at least the threshold energy.",
+          "The orientation must align the bonds to be broken and formed."
+        ],
+        "final_answer": "Option (1): possess energy equal to or greater than the threshold energy and collide with proper orientation",
+        "why_not_others": "A high collision frequency alone does not make a collision fruitful. The energy criterion is the threshold energy, not $\\Delta H$. A catalyst is not a requirement of collision theory.",
+        "common_trap": "Equating the number of collisions with the number of effective collisions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "For a bimolecular gaseous reaction at 300 K, the collision frequency is $Z_{AB} = 5 \\times 10^{30}$ collisions per second per unit volume, the steric factor is $P = 0.2$ and $E_a = 57.44$ kJ $mol^{-1}$. Using collision theory, the number of effective collisions per second per unit volume is ($R = 8.314$ J $K^{-1}\\,mol^{-1}$, $\\ln 10 = 2.303$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$5 \\times 10^{20}$",
+        "$1 \\times 10^{30}$",
+        "$2 \\times 10^{-11}$",
+        "$1 \\times 10^{20}$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Rate $= PZ_{AB}e^{-E_a/RT}$",
+        "steps": [
+          "$\\frac{E_a}{RT} = \\frac{57440}{8.314 \\times 300} = \\frac{57440}{2494.2} \\approx 23.03$.",
+          "$e^{-23.03} = e^{-10 \\times 2.303} = 10^{-10}$.",
+          "Rate $= 0.2 \\times 5 \\times 10^{30} \\times 10^{-10} = 1 \\times 10^{20}$."
+        ],
+        "final_answer": "Option (4): $1 \\times 10^{20}$",
+        "why_not_others": "$5 \\times 10^{20}$ ignores the steric factor. $1 \\times 10^{30}$ ignores the energy factor and gives only $PZ_{AB}$. $2 \\times 10^{-11}$ is the fraction $Pe^{-E_a/RT}$, not the number of collisions.",
+        "common_trap": "Leaving $E_a$ in kJ, which makes the exponential factor close to 1.",
+        "time_saving_tip": "Check whether $\\frac{E_a}{RT}$ is a multiple of 2.303; if so, the exponential term becomes a power of 10."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "Collision theory deviates from experiment for reactions of complex molecules. This deviation is attributed to, and corrected by, which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Neglect of the temperature effect; corrected by the factor $e^{-E_a/RT}$",
+        "Treatment of molecules as hard spheres, ignoring their structure; corrected by the steric factor $P$",
+        "Overestimation of the activation energy; corrected by adding a catalyst",
+        "Neglect of collision frequency; corrected by introducing $Z_{AB}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The main limitation of collision theory is that it treats molecules as hard spheres and ignores their structure.",
+        "steps": [
+          "For complex molecules, orientation matters, and the hard-sphere model ignores it.",
+          "The probability or steric factor $P$ was introduced to account for proper orientation."
+        ],
+        "final_answer": "Option (2): Treatment of molecules as hard spheres, ignoring their structure; corrected by the steric factor $P$",
+        "why_not_others": "Both $e^{-E_a/RT}$ and $Z_{AB}$ are already part of the basic theory. A catalyst is not a correction to the theory.",
+        "common_trap": "Confusing the energy factor with the orientation factor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$Z_{AB}$"
+          },
+          {
+            "label": "B",
+            "text": "$P$"
+          },
+          {
+            "label": "C",
+            "text": "$e^{-E_a/RT}$"
+          },
+          {
+            "label": "D",
+            "text": "$PZ_{AB}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Fraction of molecules having sufficient energy to react"
+          },
+          {
+            "label": "II",
+            "text": "Probability factor accounting for proper orientation"
+          },
+          {
+            "label": "III",
+            "text": "Number of collisions per second per unit volume"
+          },
+          {
+            "label": "IV",
+            "text": "Arrhenius pre-exponential factor $A$"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-II, C-I, D-III",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Rate $= PZ_{AB}e^{-E_a/RT}$, and comparing with the Arrhenius equation gives $A \\approx PZ_{AB}$.",
+        "steps": [
+          "$Z_{AB}$ is the collision frequency (III).",
+          "$P$ is the steric or probability factor (II).",
+          "$e^{-E_a/RT}$ is the fraction of molecules with sufficient energy (I).",
+          "$PZ_{AB}$ corresponds to $A$ (IV)."
+        ],
+        "final_answer": "Option (2): A-III, B-II, C-I, D-IV",
+        "why_not_others": "Option (1) swaps $Z_{AB}$ and $PZ_{AB}$. Option (3) swaps the energy and orientation factors. Option (4) swaps the collision frequency and the energy fraction.",
+        "common_trap": "Equating $A$ with $Z_{AB}$ alone and forgetting $P$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about collision theory are correct?",
+      "statements": {
+        "A": "Reacting molecules are treated as hard spheres.",
+        "B": "The steric factor $P$ can exceed 1 for complex molecules.",
+        "C": "Only a tiny fraction of the total collisions lead to products.",
+        "D": "On comparison with the Arrhenius equation, $A \\approx PZ_{AB}$.",
+        "E": "The theory works better for complex molecules than for simple atoms and molecules."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A and C only",
+        "A, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Collision theory: hard spheres, $P \\le 1$, rate $= PZ_{AB}e^{-E_a/RT}$, and it is valid mainly for simple molecules.",
+        "steps": [
+          "A is true: the theory uses a hard-sphere model.",
+          "B is false: $P \\le 1$.",
+          "C is true: most collisions are not fruitful.",
+          "D is true: $A \\approx PZ_{AB}$.",
+          "E is false: the theory deviates for complex molecules."
+        ],
+        "final_answer": "Option (4): A, C and D only",
+        "why_not_others": "Options (1) and (2) include false statements B or E. Option (3) misses the correct statement D.",
+        "common_trap": "Thinking $P$ corrects the theory upward beyond 1 for complex molecules; in fact it reduces the predicted rate.",
+        "time_saving_tip": "Once you know $P \\le 1$, statement B is false, which eliminates options (1) and (2) at once."
+      }
+    }
+  ]
+}

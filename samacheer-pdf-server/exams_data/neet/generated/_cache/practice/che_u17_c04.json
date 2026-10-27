@@ -1,0 +1,316 @@
+{
+  "questions": [
+    {
+      "slot": "t12_1",
+      "type": "single_correct",
+      "question": "Benzaldehyde gives a positive result with which one of the following tests?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Fehling's solution, giving a red-brown precipitate",
+        "Tollens' reagent, giving a silver mirror",
+        "Iodine and NaOH, giving a yellow precipitate",
+        "Benedict's solution, giving a red-brown precipitate"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Tollens' reagent is reduced by all aldehydes, aliphatic and aromatic. Fehling's and Benedict's solutions respond only to aliphatic aldehydes.",
+        "steps": [
+          "Benzaldehyde is an aromatic aldehyde, so it reduces Tollens' reagent and deposits a silver mirror.",
+          "Fehling's and Benedict's solutions give $Cu_2O$ only with aliphatic aldehydes, so benzaldehyde gives no precipitate.",
+          "The iodoform test needs a $CH_3CO-$ group or acetaldehyde, and $C_6H_5CHO$ has neither."
+        ],
+        "final_answer": "Option (2): Tollens' reagent, giving a silver mirror",
+        "why_not_others": "Fehling's and Benedict's solutions are negative for aromatic aldehydes. The iodoform test is negative because benzaldehyde is not a methyl ketone and is not acetaldehyde.",
+        "common_trap": "Assuming every aldehyde reduces Fehling's or Benedict's solution.",
+        "time_saving_tip": "Aromatic aldehyde means Tollens' is positive and Fehling's is negative."
+      }
+    },
+    {
+      "slot": "t12_2",
+      "type": "single_correct",
+      "question": "Which of the following compounds gives a yellow precipitate with $I_2$/NaOH but does NOT give a silver mirror with Tollens' reagent?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ethanal, $CH_3CHO$",
+        "Ethanoic acid, $CH_3COOH$",
+        "Propan-2-one, $CH_3COCH_3$",
+        "Propanal, $CH_3CH_2CHO$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The iodoform test is positive for methyl ketones and for acetaldehyde. Tollens' reagent is positive only for aldehydes.",
+        "steps": [
+          "Propanone is a methyl ketone, so it forms yellow $CHI_3$ with $I_2$/NaOH.",
+          "Propanone is a ketone and does not reduce Tollens' reagent.",
+          "Ethanal is positive in both tests, so it fails the second condition.",
+          "Propanal and ethanoic acid are both negative in the iodoform test."
+        ],
+        "final_answer": "Option (3): Propan-2-one, $CH_3COCH_3$",
+        "why_not_others": "Ethanal also gives a silver mirror. Ethanoic acid does not give the iodoform test even though it contains $CH_3CO-$. Propanal gives a silver mirror but no iodoform.",
+        "common_trap": "Thinking acetic acid gives the iodoform test because it contains a $CH_3CO-$ group.",
+        "time_saving_tip": "Iodoform positive and Tollens' negative together point to a methyl ketone."
+      }
+    },
+    {
+      "slot": "t12_3",
+      "type": "single_correct",
+      "question": "Which of the following reagents CANNOT be used to distinguish propanal from propanone?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Tollens' reagent",
+        "Fehling's solution",
+        "2,4-Dinitrophenylhydrazine (2,4-DNP)",
+        "Iodine and sodium hydroxide"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "2,4-DNP gives an orange-yellow precipitate with both aldehydes and ketones. It confirms a carbonyl group but cannot tell the two classes apart.",
+        "steps": [
+          "Tollens' reagent gives a silver mirror with propanal only.",
+          "Fehling's solution gives red-brown $Cu_2O$ with propanal, an aliphatic aldehyde, but not with propanone.",
+          "$I_2$/NaOH gives yellow $CHI_3$ with propanone, a methyl ketone, but not with propanal.",
+          "2,4-DNP gives an orange-yellow precipitate with both compounds."
+        ],
+        "final_answer": "Option (3): 2,4-Dinitrophenylhydrazine (2,4-DNP)",
+        "why_not_others": "Each of the other three reagents gives a positive result with only one of the two compounds, so each can distinguish them.",
+        "common_trap": "Assuming 2,4-DNP distinguishes aldehydes from ketones.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Fructose reduces Tollens' reagent and Fehling's solution even though it contains a ketone group.",
+        "R": "α-Hydroxy ketones are able to reduce Tollens' reagent and Fehling's solution."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Ketones are generally not reducing agents, but α-hydroxy ketones such as fructose reduce Tollens' and Fehling's reagents.",
+        "steps": [
+          "Fructose gives a positive Tollens' test and a positive Fehling's test, so A is true.",
+          "α-Hydroxy ketones reduce both reagents, so R is true.",
+          "Fructose is an α-hydroxy ketone, so R correctly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true and directly connected, which rules out options 2, 3 and 4.",
+        "common_trap": "Concluding that no compound with a ketone group can reduce Tollens' or Fehling's reagent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t12_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Benedict's solution gives a red-brown precipitate of $Cu_2O$ with benzaldehyde, because all aldehydes are reducing agents.",
+        "II": "Ethyl acetate gives a yellow precipitate of $CHI_3$ with $I_2$/NaOH, because it contains a $CH_3CO-$ group."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Benedict's and Fehling's solutions respond only to aliphatic aldehydes. The iodoform test is negative for acetic acid and its esters.",
+        "steps": [
+          "Benzaldehyde is aromatic and does not respond to Benedict's solution, so Statement I is incorrect.",
+          "Esters of acetic acid do not give the iodoform test even though they contain $CH_3CO-$, so Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements are false, so every option that calls either one correct is wrong.",
+        "common_trap": "Treating every $CH_3CO-$ compound as iodoform positive, and treating every aldehyde as Fehling's or Benedict's positive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_1",
+      "type": "single_correct",
+      "question": "Which of the following is the strongest acid?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_3COOH$",
+        "$ClCH_2COOH$",
+        "$CCl_3COOH$",
+        "$CHCl_2COOH$"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Acidity increases with the number of electron-withdrawing groups attached near the COOH group.",
+        "steps": [
+          "Each Cl atom withdraws electron density by the -I effect and stabilises the carboxylate anion.",
+          "The order is $CCl_3COOH > CHCl_2COOH > ClCH_2COOH > CH_3COOH$."
+        ],
+        "final_answer": "Option (3): $CCl_3COOH$",
+        "why_not_others": "The other acids carry fewer Cl atoms, or none in the case of acetic acid, so their anions are less stabilised.",
+        "common_trap": null,
+        "time_saving_tip": "More electronegative substituents near COOH mean a stronger acid."
+      }
+    },
+    {
+      "slot": "t13_2",
+      "type": "single_correct",
+      "question": "Which of the following represents the correct decreasing order of acidic strength?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$HCOOH > C_6H_5COOH > CH_3COOH > (CH_3)_2CHCOOH$",
+        "$C_6H_5COOH > HCOOH > CH_3COOH > (CH_3)_2CHCOOH$",
+        "$HCOOH > CH_3COOH > C_6H_5COOH > (CH_3)_2CHCOOH$",
+        "$CH_3COOH > HCOOH > C_6H_5COOH > (CH_3)_2CHCOOH$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Electron-donating alkyl groups decrease acidity. A phenyl group attached directly to COOH increases acidity.",
+        "steps": [
+          "The $pK_a$ values are $HCOOH$ 3.75, $C_6H_5COOH$ 4.19 and $CH_3COOH$ 4.76.",
+          "An isopropyl group donates more electron density than a methyl group, so $(CH_3)_2CHCOOH$ is the weakest.",
+          "The decreasing order is $HCOOH > C_6H_5COOH > CH_3COOH > (CH_3)_2CHCOOH$."
+        ],
+        "final_answer": "Option (1): $HCOOH > C_6H_5COOH > CH_3COOH > (CH_3)_2CHCOOH$",
+        "why_not_others": "Benzoic acid is weaker than formic acid but stronger than acetic acid. Options 2, 3 and 4 misplace at least one of these acids.",
+        "common_trap": "Placing benzoic acid below acetic acid by ignoring the effect of the directly attached $sp^2$ phenyl group.",
+        "time_saving_tip": "A lower $pK_a$ means a stronger acid."
+      }
+    },
+    {
+      "slot": "t13_3",
+      "type": "single_correct",
+      "question": "Which of the following acids has the largest acid dissociation constant $K_a$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2-Chlorobutanoic acid",
+        "3-Chlorobutanoic acid",
+        "4-Chlorobutanoic acid",
+        "Butanoic acid"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The -I effect of a substituent weakens with distance from COOH. The closer the electron-withdrawing group, the stronger the acid.",
+        "steps": [
+          "In 2-chlorobutanoic acid, Cl sits on the carbon next to COOH, so the anion is stabilised most.",
+          "The order is 2-chloro > 3-chloro > 4-chloro > butanoic acid.",
+          "The strongest acid has the largest $K_a$."
+        ],
+        "final_answer": "Option (1): 2-Chlorobutanoic acid",
+        "why_not_others": "In the 3- and 4-chloro acids the Cl is farther from COOH, so the -I effect is weaker. Butanoic acid has no electron-withdrawing group.",
+        "common_trap": "Thinking that a larger $K_a$ means a weaker acid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Carboxylate ion"
+          },
+          {
+            "label": "B",
+            "text": "Phenoxide ion"
+          },
+          {
+            "label": "C",
+            "text": "$-NO_2$ group at the para position of benzoic acid"
+          },
+          {
+            "label": "D",
+            "text": "$-OCH_3$ group at the para position of benzoic acid"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Negative charge delocalised onto less electronegative carbon atoms"
+          },
+          {
+            "label": "II",
+            "text": "Two equivalent resonance structures with the charge on two oxygen atoms"
+          },
+          {
+            "label": "III",
+            "text": "Decreases acidic strength"
+          },
+          {
+            "label": "IV",
+            "text": "Increases acidic strength"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Carboxylic acids are stronger acids than phenols because of resonance in the carboxylate ion. Substituents on the benzoic acid ring change acidity through electron withdrawal or donation.",
+        "steps": [
+          "Carboxylate has two equivalent resonance structures, giving A-II.",
+          "In phenoxide the charge spreads onto ring carbons, which are less electronegative, giving B-I.",
+          "p-Nitrobenzoic acid is stronger than benzoic acid, giving C-IV.",
+          "p-Methoxybenzoic acid is weaker than benzoic acid, giving D-III."
+        ],
+        "final_answer": "Option (2): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option 1 interchanges the two ions. Option 3 interchanges the effects of the two substituents. Option 4 interchanges both pairs.",
+        "common_trap": "Treating $-OCH_3$ as acid-strengthening and overlooking that at the para position it decreases acidity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t13_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the acidic strength of carboxylic acids are correct?",
+      "statements": {
+        "A": "$FCH_2COOH$ is a stronger acid than $BrCH_2COOH$.",
+        "B": "Phenol liberates $CO_2$ when treated with aqueous $NaHCO_3$.",
+        "C": "Most ortho-substituted benzoic acids are stronger acids than benzoic acid.",
+        "D": "p-Methoxybenzoic acid is a stronger acid than benzoic acid.",
+        "E": "Benzoic acid ($pK_a$ 4.19) has a larger $K_a$ than acetic acid ($pK_a$ 4.76)."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and E only",
+        "A, B and C only",
+        "C, D and E only",
+        "A, D and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Electronegativity of substituents, the ortho effect, ring substituents and $pK_a$ values together decide relative acidity.",
+        "steps": [
+          "A is true because F is more electronegative than Br, so its -I effect is stronger.",
+          "B is false because phenol is weaker than carbonic acid and gives no effervescence with $NaHCO_3$.",
+          "C is true because of the ortho effect.",
+          "D is false because a para $-OCH_3$ group decreases acidity.",
+          "E is true because a lower $pK_a$ corresponds to a larger $K_a$."
+        ],
+        "final_answer": "Option (1): A, C and E only",
+        "why_not_others": "The other options all include B or D, and both of those statements are false.",
+        "common_trap": "Thinking phenol reacts with $NaHCO_3$ to give $CO_2$.",
+        "time_saving_tip": "Eliminate B first. That removes option 2, and D then removes options 3 and 4."
+      }
+    }
+  ]
+}

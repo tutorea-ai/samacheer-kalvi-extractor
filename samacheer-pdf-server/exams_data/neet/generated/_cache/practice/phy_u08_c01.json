@@ -1,0 +1,628 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "Which physical quantity is introduced through the zeroth law of thermodynamics?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Internal energy",
+        "Heat",
+        "Work",
+        "Temperature"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The zeroth law defines temperature as the property that has the same value for all systems in thermal equilibrium with one another.",
+        "steps": [
+          "Zeroth law: if A and B are each in thermal equilibrium with C, then A and B are in thermal equilibrium with each other.",
+          "The quantity common to all systems in mutual thermal equilibrium is temperature.",
+          "So the zeroth law introduces temperature."
+        ],
+        "final_answer": "Option (4): Temperature",
+        "why_not_others": "Internal energy is linked to the first law. Heat and work are modes of energy transfer, not quantities defined by the zeroth law.",
+        "common_trap": "Choosing heat because the zeroth law talks about heat flow. Heat is a transfer of energy, not the equilibrium property.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "An ideal monatomic gas is heated from $27^{\\circ}C$ to $327^{\\circ}C$. What is the ratio of its final internal energy to its initial internal energy? (Take $T(K) = t(^{\\circ}C) + 273$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "12.1",
+        "2",
+        "4",
+        "0.5"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For an ideal gas, $U = \\frac{f}{2}nRT$, so $U \\propto T$, where T is the absolute temperature.",
+        "steps": [
+          "Convert to kelvin: $T_1 = 27 + 273 = 300$ K and $T_2 = 327 + 273 = 600$ K.",
+          "Since $U \\propto T$, $\\frac{U_2}{U_1} = \\frac{600}{300}$.",
+          "$\\frac{U_2}{U_1} = 2$"
+        ],
+        "final_answer": "Option (2): 2",
+        "why_not_others": "12.1 comes from using Celsius values ($327/27$). 0.5 is the inverted ratio. 4 wrongly treats U as proportional to $T^2$.",
+        "common_trap": "Using Celsius temperatures directly in the ratio instead of kelvin.",
+        "time_saving_tip": "Convert to kelvin before taking any temperature ratio."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "System A is found to be in thermal equilibrium with system C. System B is also found to be in thermal equilibrium with system C. Which of the following must be true for systems A and B?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "They have equal internal energies",
+        "They have equal pressures",
+        "They have equal temperatures",
+        "Heat flows from A to B when they are brought into contact"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Zeroth law: systems in thermal equilibrium with a common third system are in thermal equilibrium with each other, so they have equal temperatures.",
+        "steps": [
+          "A and C are in equilibrium, so $T_A = T_C$.",
+          "B and C are in equilibrium, so $T_B = T_C$.",
+          "Therefore $T_A = T_B$, and A and B are in thermal equilibrium with each other."
+        ],
+        "final_answer": "Option (3): They have equal temperatures",
+        "why_not_others": "Internal energy and pressure depend on amount of substance, volume and so on, so they need not be equal. Because the temperatures are equal, no net heat flows between A and B.",
+        "common_trap": "Equating thermal equilibrium with equal internal energy instead of equal temperature.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A thermometer can be used to decide whether two bodies are at the same temperature without bringing the two bodies into contact with each other.",
+        "R": "If two systems are each separately in thermal equilibrium with a third system, they are in thermal equilibrium with each other."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "A thermometer works because of the zeroth law; it acts as the third system C.",
+        "steps": [
+          "R is the statement of the zeroth law, so R is true.",
+          "The thermometer is brought into equilibrium with each body in turn.",
+          "If it gives the same reading for both, both bodies are in equilibrium with the thermometer. By the zeroth law they are then in equilibrium with each other, so A is true.",
+          "Hence R correctly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and the zeroth law is exactly the working principle of a thermometer. Options 2, 3 and 4 are therefore wrong.",
+        "common_trap": "Thinking R is unrelated to A because R does not mention a thermometer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A rise in temperature of $10^{\\circ}C$ is equal to a rise in temperature of $283.15$ K.",
+        "II": "When two bodies are placed in thermal contact, heat flows spontaneously from the body with larger internal energy to the body with smaller internal energy until their internal energies become equal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "A change of 1 degree Celsius equals a change of 1 K. Heat flows from higher to lower temperature, not from higher to lower internal energy.",
+        "steps": [
+          "A temperature difference of $10^{\\circ}C$ equals 10 K. The offset 273.15 applies only to temperature values, not to differences. So Statement I is incorrect.",
+          "Heat flows from higher to lower temperature until the temperatures become equal. Internal energy does not decide the direction of flow. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Statement I wrongly adds 273.15 to a temperature difference. Statement II wrongly replaces temperature with internal energy as the condition for equilibrium.",
+        "common_trap": "Adding 273 to a temperature change, and confusing internal energy with temperature.",
+        "time_saving_tip": "Temperature differences have the same numerical value in kelvin and in degrees Celsius."
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which of the following is a state function for a gas?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Heat absorbed by the gas",
+        "Work done by the gas",
+        "Internal energy of the gas",
+        "Area under the P-V curve of the process"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Internal energy is a state function. Heat and work are path functions.",
+        "steps": [
+          "A state function depends only on the state of the system, not on how the state was reached.",
+          "Internal energy U satisfies this, so its change depends only on the initial and final states.",
+          "Heat and work depend on the process followed."
+        ],
+        "final_answer": "Option (3): Internal energy of the gas",
+        "why_not_others": "Heat and work are path functions. The area under the P-V curve is the work done, which is also path dependent.",
+        "common_trap": "Treating heat as a property contained in the system.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "The pressure of a gas increases linearly with its volume, from $1 \\times 10^5$ Pa to $3 \\times 10^5$ Pa, as the volume changes from $1 \\times 10^{-3}\\,m^3$ to $3 \\times 10^{-3}\\,m^3$. What is the work done by the gas?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "400 J",
+        "600 J",
+        "200 J",
+        "800 J"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Work done by a gas equals the area under the P-V curve.",
+        "steps": [
+          "The P-V graph is a straight line, so the area under it is a trapezium.",
+          "$W = \\frac{(1+3)\\times 10^5}{2} \\times (3-1)\\times 10^{-3}$",
+          "$W = 2\\times 10^5 \\times 2\\times 10^{-3} = 400$ J"
+        ],
+        "final_answer": "Option (1): 400 J",
+        "why_not_others": "600 J uses only the final pressure. 200 J uses only the initial pressure. 800 J comes from wrongly calculating $P_2V_2 - P_1V_1$.",
+        "common_trap": "Using a single pressure value when the pressure is not constant.",
+        "time_saving_tip": "For a linear process, use the average pressure multiplied by the change in volume."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "Two moles of an ideal diatomic gas undergo a process, not necessarily at constant volume, in which the temperature rises by 10 K. What is the change in internal energy of the gas? (Take $R = 8.3$ J mol$^{-1}$ K$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "249 J",
+        "415 J",
+        "581 J",
+        "830 J"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For an ideal gas, $\\Delta U = nC_v\\Delta T$ in any process, since U depends only on temperature.",
+        "steps": [
+          "For a diatomic gas, $C_v = \\frac{5}{2}R$.",
+          "$\\Delta U = 2 \\times \\frac{5}{2} \\times 8.3 \\times 10$",
+          "$\\Delta U = 415$ J"
+        ],
+        "final_answer": "Option (2): 415 J",
+        "why_not_others": "581 J uses $C_p = \\frac{7}{2}R$. 249 J uses the monatomic value $\\frac{3}{2}R$. 830 J drops the factor $\\frac{1}{2}$ in $\\frac{f}{2}R$.",
+        "common_trap": "Thinking $\\Delta U = nC_v\\Delta T$ applies only to constant-volume processes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Expansion of a gas"
+          },
+          {
+            "label": "B",
+            "text": "Compression of a gas"
+          },
+          {
+            "label": "C",
+            "text": "Process at constant volume"
+          },
+          {
+            "label": "D",
+            "text": "Cyclic process traced clockwise on a P-V diagram"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Work done by the gas is zero"
+          },
+          {
+            "label": "II",
+            "text": "Work done by the gas is negative"
+          },
+          {
+            "label": "III",
+            "text": "Net work done by the gas is positive and equals the area enclosed"
+          },
+          {
+            "label": "IV",
+            "text": "Work done by the gas is positive"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The sign of work follows the change in volume, and the net work in a cycle equals the enclosed area, with its sign set by the direction of the cycle.",
+        "steps": [
+          "Expansion: $\\Delta V > 0$, so W is positive (A-IV).",
+          "Compression: $\\Delta V < 0$, so W is negative (B-II).",
+          "Constant volume: $\\Delta V = 0$, so W = 0 (C-I).",
+          "Clockwise cycle: net work is positive and equals the enclosed area (D-III)."
+        ],
+        "final_answer": "Option (4): A-IV, B-II, C-I, D-III",
+        "why_not_others": "Option 1 reverses the signs for expansion and compression. Option 2 swaps the matches for constant volume and the cycle. Option 3 gives expansion the cyclic area statement.",
+        "common_trap": "Mixing up the sign convention for work done by the gas.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about heat, work and internal energy are correct?",
+      "statements": {
+        "A": "The internal energy of an ideal gas depends only on its temperature.",
+        "B": "Heat and work are both path functions.",
+        "C": "The net work done by a gas in a cyclic process traced anticlockwise on a P-V diagram is positive.",
+        "D": "The internal energy of one mole of an ideal monatomic gas at absolute temperature T is $\\frac{3}{2}RT$.",
+        "E": "The change in internal energy between two given states depends on the path followed."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A and C only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "U is a state function that depends only on T for an ideal gas. Q and W are path functions. The sign of the net work in a cycle depends on the direction of the cycle.",
+        "steps": [
+          "A is true: for an ideal gas, U depends only on T.",
+          "B is true: heat and work depend on the process.",
+          "C is false: an anticlockwise cycle gives negative net work.",
+          "D is true: $U = \\frac{f}{2}nRT$ with f = 3 and n = 1.",
+          "E is false: U is a state function, so its change is independent of path."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option 2 includes C, which is false. Option 3 includes E, which is false, and omits A. Option 4 includes C and omits B and D.",
+        "common_trap": "Taking the net work of an anticlockwise cycle as positive.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "A gas absorbs 450 J of heat and does 150 J of work on its surroundings. What is the change in its internal energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Increase of 300 J",
+        "Increase of 600 J",
+        "Decrease of 300 J",
+        "Increase of 150 J"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "First law: $\\Delta Q = \\Delta U + \\Delta W$, with heat absorbed and work done by the gas both positive.",
+        "steps": [
+          "$\\Delta Q = +450$ J and $\\Delta W = +150$ J.",
+          "$\\Delta U = \\Delta Q - \\Delta W = 450 - 150 = 300$ J",
+          "The positive value means the internal energy increases by 300 J."
+        ],
+        "final_answer": "Option (1): Increase of 300 J",
+        "why_not_others": "600 J adds the work instead of subtracting it. A decrease of 300 J is a sign error. 150 J simply copies the work value.",
+        "common_trap": "Mixing sign conventions for the work term.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "An ideal monatomic gas is heated at constant pressure, and 750 J of heat is supplied to it. How much work is done by the gas?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "450 J",
+        "214 J",
+        "300 J",
+        "750 J"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For isobaric heating of a monatomic gas, $\\Delta U : W : Q = 3 : 2 : 5$.",
+        "steps": [
+          "$Q = nC_p\\Delta T = \\frac{5}{2}nR\\Delta T$ and $W = nR\\Delta T$.",
+          "$\\frac{W}{Q} = \\frac{2}{5}$",
+          "$W = \\frac{2}{5} \\times 750 = 300$ J"
+        ],
+        "final_answer": "Option (3): 300 J",
+        "why_not_others": "450 J is $\\Delta U$, not W. 214 J uses the diatomic ratio $\\frac{2}{7}$. 750 J assumes all the heat becomes work, which is true only for an isothermal process.",
+        "common_trap": "Confusing $\\Delta U$ with W, or using diatomic heat capacities.",
+        "time_saving_tip": "Remember the ratio $3:2:5$ for monatomic isobaric heating."
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "A gas starts at pressure $2 \\times 10^5$ Pa and volume $1 \\times 10^{-3}\\,m^3$. It expands at constant pressure to $3 \\times 10^{-3}\\,m^3$. Its pressure is then raised at constant volume to $4 \\times 10^5$ Pa. It is then compressed at constant pressure back to $1 \\times 10^{-3}\\,m^3$. Finally, its pressure is lowered at constant volume to the initial value. For this complete cycle, which statement is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "400 J of heat is rejected by the gas",
+        "400 J of heat is absorbed by the gas",
+        "800 J of heat is rejected by the gas",
+        "No net heat is exchanged, since $\\Delta U = 0$ in a cycle"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In a cyclic process, $\\Delta U = 0$, so $Q_{net} = W_{net}$, which equals the area enclosed by the loop.",
+        "steps": [
+          "Expansion at $2\\times10^5$ Pa: $W_1 = 2\\times10^5 \\times 2\\times10^{-3} = +400$ J.",
+          "Compression at $4\\times10^5$ Pa: $W_2 = -4\\times10^5 \\times 2\\times10^{-3} = -800$ J.",
+          "The constant-volume steps do zero work, so $W_{net} = -400$ J.",
+          "$Q_{net} = W_{net} = -400$ J, so 400 J of heat is rejected."
+        ],
+        "final_answer": "Option (1): 400 J of heat is rejected by the gas",
+        "why_not_others": "Absorbing 400 J ignores the negative sign of an anticlockwise cycle. 800 J counts only the compression step. Zero net heat confuses $\\Delta U = 0$ with Q = 0.",
+        "common_trap": "Taking the net work of an anticlockwise cycle as positive.",
+        "time_saving_tip": "Expansion at the lower pressure means an anticlockwise cycle, so the net work is negative."
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In an isochoric process, all the heat supplied to an ideal gas goes into increasing its internal energy.",
+        "R": "The internal energy of an ideal gas depends only on its temperature."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In an isochoric process W = 0, so by the first law $Q = \\Delta U$.",
+        "steps": [
+          "A is true: at constant volume, W = 0, so $Q = \\Delta U$.",
+          "R is true: for an ideal gas, U depends only on T.",
+          "A follows from W = 0 at constant volume, not from U depending on T, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 are wrong. R does not give the reason (zero work at constant volume), so option 1 is wrong.",
+        "common_trap": "Accepting any true, related statement as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When an ideal diatomic gas is heated at constant pressure, the fraction of the supplied heat that is converted into work is $\\frac{2}{7}$.",
+        "II": "When 2 moles of an ideal gas are heated at constant pressure through 50 K, the work done by the gas is 831 J (take $R = 8.31$ J mol$^{-1}$ K$^{-1}$)."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In an isobaric process, $W = nR\\Delta T$ and $Q = nC_p\\Delta T$.",
+        "steps": [
+          "For a diatomic gas, $C_p = \\frac{7}{2}R$, so $\\frac{W}{Q} = \\frac{nR\\Delta T}{\\frac{7}{2}nR\\Delta T} = \\frac{2}{7}$. Statement I is correct.",
+          "$W = nR\\Delta T = 2 \\times 8.31 \\times 50 = 831$ J. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both calculations check out. Using monatomic values would give $\\frac{2}{5}$, which might make Statement I look wrong.",
+        "common_trap": "Using $C_v$ instead of $C_p$ for Q, or applying monatomic ratios to a diatomic gas.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "When an ideal gas expands adiabatically, which of the following happens?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Its temperature remains constant",
+        "It absorbs heat from the surroundings",
+        "Its internal energy increases",
+        "Its temperature decreases"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In an adiabatic process Q = 0, so $W = -\\Delta U$.",
+        "steps": [
+          "In expansion, the gas does positive work.",
+          "Since Q = 0, $\\Delta U = -W < 0$.",
+          "U decreases, so the temperature falls and the gas cools."
+        ],
+        "final_answer": "Option (4): Its temperature decreases",
+        "why_not_others": "Constant temperature describes an isothermal process. No heat is exchanged in an adiabatic process. The internal energy decreases, not increases.",
+        "common_trap": "Assuming Q = 0 means the temperature stays constant.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "One mole of an ideal gas at $27^{\\circ}C$ expands isothermally until its pressure falls from 10 atm to 1 atm. What is the work done by the gas? (Take $R = 8.3$ J mol$^{-1}$ K$^{-1}$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2.49 kJ",
+        "5.73 kJ",
+        "0.52 kJ",
+        "$-5.73$ kJ"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Isothermal work: $W = 2.303\\,nRT\\log_{10}\\frac{P_1}{P_2}$, with T in kelvin.",
+        "steps": [
+          "T = 27 + 273 = 300 K.",
+          "$W = 2.303 \\times 1 \\times 8.3 \\times 300 \\times \\log_{10} 10$",
+          "$W = 2.303 \\times 2490 \\approx 5734$ J, which is about 5.73 kJ."
+        ],
+        "final_answer": "Option (2): 5.73 kJ",
+        "why_not_others": "2.49 kJ drops the factor 2.303. 0.52 kJ uses T = 27 instead of 300 K. $-5.73$ kJ has the wrong sign, since work done by an expanding gas is positive.",
+        "common_trap": "Using Celsius temperature in the formula.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "An ideal monatomic gas at 300 K is compressed adiabatically to one-eighth of its initial volume. What is its final temperature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "300 K",
+        "689 K",
+        "1200 K",
+        "2400 K"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For an adiabatic process, $TV^{\\gamma-1}$ = constant, with $\\gamma = 5/3$ for a monatomic gas.",
+        "steps": [
+          "$T_2 = T_1\\left(\\frac{V_1}{V_2}\\right)^{\\gamma-1} = 300 \\times 8^{2/3}$",
+          "$8^{2/3} = 4$",
+          "$T_2 = 300 \\times 4 = 1200$ K"
+        ],
+        "final_answer": "Option (3): 1200 K",
+        "why_not_others": "300 K assumes an isothermal process. 689 K uses the diatomic value $\\gamma = 7/5$. 2400 K treats T as varying with the full volume ratio of 8.",
+        "common_trap": "Using the wrong $\\gamma$, or assuming the temperature stays constant because Q = 0.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Molar heat capacity in an isothermal process"
+          },
+          {
+            "label": "B",
+            "text": "Molar heat capacity in an adiabatic process"
+          },
+          {
+            "label": "C",
+            "text": "Adiabatic bulk modulus of a gas at pressure P"
+          },
+          {
+            "label": "D",
+            "text": "Ratio of the slope of an adiabatic curve to that of an isothermal curve at the same point on a P-V diagram"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\gamma P$"
+          },
+          {
+            "label": "II",
+            "text": "Infinite"
+          },
+          {
+            "label": "III",
+            "text": "Zero"
+          },
+          {
+            "label": "IV",
+            "text": "$\\gamma$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-II, B-III, C-I, D-IV",
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-IV, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The molar heat capacity is infinite for an isothermal process and zero for an adiabatic one. The adiabatic bulk modulus is $\\gamma P$, and the adiabatic slope is $\\gamma$ times the isothermal slope.",
+        "steps": [
+          "Isothermal: heat flows with $\\Delta T = 0$, so C is infinite (A-II).",
+          "Adiabatic: Q = 0, so C = 0 (B-III).",
+          "Adiabatic bulk modulus = $\\gamma P$ (C-I).",
+          "Ratio of the slopes = $\\gamma$ (D-IV)."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-I, D-IV",
+        "why_not_others": "Options 1 and 4 swap the heat capacities of the two processes. Options 3 and 4 swap the matches for $\\gamma P$ and $\\gamma$.",
+        "common_trap": "Thinking that zero temperature change gives zero heat capacity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about isothermal and adiabatic processes of an ideal gas are correct?",
+      "statements": {
+        "A": "For the same expansion from the same initial state, the work done by the gas is greater in the adiabatic process than in the isothermal process.",
+        "B": "The ratio of specific heats $\\gamma$ for a diatomic gas is $\\frac{7}{5}$.",
+        "C": "In an isothermal expansion, the heat absorbed by the gas equals the work done by it.",
+        "D": "In an adiabatic process, the work done by the gas is $nC_v(T_1 - T_2)$.",
+        "E": "An adiabatic process is carried out slowly in a container with conducting walls."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "For the same expansion, $W_{isothermal} > W_{adiabatic}$. In an isothermal process Q = W. In an adiabatic process $W = nC_v(T_1 - T_2)$.",
+        "steps": [
+          "A is false: for the same expansion, the isothermal work is greater.",
+          "B is true: $\\gamma = \\frac{7}{5}$ for a diatomic gas.",
+          "C is true: $\\Delta U = 0$, so Q = W.",
+          "D is true: $W = \\frac{nR(T_1 - T_2)}{\\gamma - 1} = nC_v(T_1 - T_2)$.",
+          "E is false: slow processes in conducting containers are isothermal. Adiabatic processes are fast or take place in insulated containers."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Option 1 includes A, which is false. Option 2 leaves out C, which is true. Option 4 includes E, which is false, and leaves out B.",
+        "common_trap": "Swapping the conditions needed for isothermal and adiabatic processes.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

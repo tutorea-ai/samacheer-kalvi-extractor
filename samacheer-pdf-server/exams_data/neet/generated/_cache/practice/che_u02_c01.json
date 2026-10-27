@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "In a photoelectric experiment, light of a fixed frequency greater than the threshold frequency falls on a metal surface. If the intensity of this light is increased, which quantity increases?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Maximum kinetic energy of the photoelectrons",
+        "Number of photoelectrons emitted per second",
+        "Threshold frequency of the metal",
+        "Work function of the metal"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In the photoelectric effect, intensity controls the number of photoelectrons and frequency controls their kinetic energy.",
+        "steps": [
+          "Higher intensity at the same frequency means more photons strike the surface per second.",
+          "Each photon can eject one electron, so more electrons are ejected per second.",
+          "Each photon still has the same energy $h\\nu$, so the maximum kinetic energy does not change.",
+          "The threshold frequency and the work function are properties of the metal and do not change."
+        ],
+        "final_answer": "Option (2): Number of photoelectrons emitted per second",
+        "why_not_others": "The maximum KE depends only on $\\nu - \\nu_0$. The threshold frequency and $W_0$ are fixed for a given metal.",
+        "common_trap": "Assuming that brighter light gives faster photoelectrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "What is the energy of one photon of radiation of wavelength 300 nm? (Take $h = 6.626 \\times 10^{-34}$ J s and $c = 3 \\times 10^8$ m $s^{-1}$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.626 \\times 10^{-28}$ J",
+        "$6.626 \\times 10^{-18}$ J",
+        "$6.626 \\times 10^{-21}$ J",
+        "$6.626 \\times 10^{-19}$ J"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Energy of one photon is $E = hc/\\lambda$, with $\\lambda$ in metres.",
+        "steps": [
+          "Convert the wavelength: $\\lambda = 300$ nm $= 3 \\times 10^{-7}$ m.",
+          "Calculate $hc = 6.626 \\times 10^{-34} \\times 3 \\times 10^8 = 1.9878 \\times 10^{-25}$ J m.",
+          "Then $E = 1.9878 \\times 10^{-25} / 3 \\times 10^{-7} = 6.626 \\times 10^{-19}$ J."
+        ],
+        "final_answer": "Option (4): $6.626 \\times 10^{-19}$ J",
+        "why_not_others": "$10^{-28}$ comes from using 300 m (no conversion). $10^{-18}$ comes from converting to $3 \\times 10^{-8}$ m. $10^{-21}$ comes from using the wavelength in cm.",
+        "common_trap": "Errors in converting nm to m.",
+        "time_saving_tip": "$hc \\approx 1.99 \\times 10^{-25}$ J m; divide this by $\\lambda$ in metres."
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "The threshold frequency of a metal is $4.0 \\times 10^{14}$ Hz. Light of frequency $1.0 \\times 10^{15}$ Hz falls on it. What is the maximum kinetic energy of the emitted photoelectrons? ($h = 6.626 \\times 10^{-34}$ J s)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$6.63 \\times 10^{-19}$ J",
+        "$2.65 \\times 10^{-19}$ J",
+        "$9.28 \\times 10^{-19}$ J",
+        "$3.98 \\times 10^{-19}$ J"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Einstein photoelectric equation: $KE_{max} = h(\\nu - \\nu_0)$.",
+        "steps": [
+          "Find the frequency difference: $\\nu - \\nu_0 = 10 \\times 10^{14} - 4 \\times 10^{14} = 6.0 \\times 10^{14}$ Hz.",
+          "Then $KE_{max} = 6.626 \\times 10^{-34} \\times 6.0 \\times 10^{14} = 3.98 \\times 10^{-19}$ J."
+        ],
+        "final_answer": "Option (4): $3.98 \\times 10^{-19}$ J",
+        "why_not_others": "$6.63 \\times 10^{-19}$ J is $h\\nu$, the full photon energy. $2.65 \\times 10^{-19}$ J is $h\\nu_0$, the work function. $9.28 \\times 10^{-19}$ J comes from wrongly adding the two frequencies.",
+        "common_trap": "Forgetting to subtract the work function from the photon energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "No photoelectrons are emitted from a metal when light of frequency below its threshold frequency falls on it, even if the light is very intense.",
+        "R": "The number of photoelectrons emitted is proportional to the intensity of the incident light."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Emission requires $\\nu \\ge \\nu_0$. Intensity affects only the number of electrons once emission occurs.",
+        "steps": [
+          "A is true: below $\\nu_0$, each photon has less energy than $W_0$, so no electron can be ejected.",
+          "R is true: above threshold, more intensity means more photons and therefore more photoelectrons.",
+          "R does not explain A. A depends on the energy of each photon, not on the number of photons."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct facts, so options 3 and 4 are ruled out. R deals with intensity above threshold, not with the threshold condition itself, so option 1 is ruled out.",
+        "common_trap": "Linking the two statements only because both mention intensity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The wavenumber of radiation of wavelength 500 nm is $2.0 \\times 10^4$ $cm^{-1}$.",
+        "II": "When light of frequency $2\\nu_0$ falls on a metal of threshold frequency $\\nu_0$, the maximum kinetic energy of the photoelectrons is twice the work function of the metal."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Wavenumber is $\\bar{\\nu} = 1/\\lambda$, and $KE_{max} = h(\\nu - \\nu_0)$.",
+        "steps": [
+          "Convert the wavelength: 500 nm $= 5 \\times 10^{-5}$ cm.",
+          "So $\\bar{\\nu} = 1/(5 \\times 10^{-5}) = 2.0 \\times 10^4$ $cm^{-1}$. Statement I is correct.",
+          "For Statement II: $KE_{max} = h(2\\nu_0 - \\nu_0) = h\\nu_0 = W_0$.",
+          "The KE equals the work function, not twice it. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement I checks out numerically, so options 2 and 4 are ruled out. Statement II overstates the KE by a factor of 2, so option 1 is ruled out.",
+        "common_trap": "Assuming that doubling the frequency doubles the KE relative to $W_0$, without subtracting $h\\nu_0$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "Which series of the hydrogen emission spectrum lies in the visible region?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Lyman series",
+        "Paschen series",
+        "Brackett series",
+        "Balmer series"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Series regions: Lyman is UV, Balmer is visible, and Paschen, Brackett and Pfund are IR.",
+        "steps": [
+          "The Balmer series ($n_1 = 2$) is the only series in the visible region."
+        ],
+        "final_answer": "Option (4): Balmer series",
+        "why_not_others": "Lyman lies in the UV region. Paschen and Brackett lie in the IR region.",
+        "common_trap": "Confusing Lyman with the visible series.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "An electron in a hydrogen atom falls from the level n = 6 down to the level n = 2, and it may stop at any intermediate level. What is the maximum number of spectral lines that can be emitted?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "10",
+        "15",
+        "4",
+        "6"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Use $N = \\frac{(n_2 - n_1)(n_2 - n_1 + 1)}{2}$.",
+        "steps": [
+          "Here $n_2 - n_1 = 6 - 2 = 4$.",
+          "So $N = \\frac{4 \\times 5}{2} = 10$."
+        ],
+        "final_answer": "Option (1): 10",
+        "why_not_others": "15 is $n(n-1)/2$ for a fall to the ground state. 4 is just $n_2 - n_1$. 6 corresponds to a difference of 3.",
+        "common_trap": "Using the ground-state formula $n(n-1)/2$ when the final level is not n = 1.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "What is the ratio of the wavelength of the first line of the Lyman series to that of the first line of the Balmer series in the hydrogen spectrum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$27/5$",
+        "$5/27$",
+        "$1/4$",
+        "$36/5$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Wavelength is $\\lambda = 1/\\bar{\\nu}$, with $\\bar{\\nu} \\propto (1/n_1^2 - 1/n_2^2)$.",
+        "steps": [
+          "Lyman first line ($2 \\rightarrow 1$): $1 - 1/4 = 3/4$.",
+          "Balmer first line ($3 \\rightarrow 2$): $1/4 - 1/9 = 5/36$.",
+          "Since $\\lambda \\propto 1/\\bar{\\nu}$: $\\lambda_L/\\lambda_B = (5/36)/(3/4) = 5/27$."
+        ],
+        "final_answer": "Option (2): $5/27$",
+        "why_not_others": "$27/5$ is the inverted ratio, which is the ratio of wavenumbers. $1/4$ compares only the $1/n_1^2$ terms. $36/5$ is $1/\\bar{\\nu}$ for the Balmer line alone.",
+        "common_trap": "Taking the ratio of wavenumbers instead of wavelengths.",
+        "time_saving_tip": "Lyman lines are higher in energy, so the ratio must be less than 1."
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Transition $n = 2 \\rightarrow n = 1$ in H"
+          },
+          {
+            "label": "B",
+            "text": "Transition $n = 3 \\rightarrow n = 2$ in H"
+          },
+          {
+            "label": "C",
+            "text": "Transition $n = 5 \\rightarrow n = 3$ in H"
+          },
+          {
+            "label": "D",
+            "text": "Transition $n = \\infty \\rightarrow n = 1$ in H"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "A line of the Paschen series, in the IR region"
+          },
+          {
+            "label": "II",
+            "text": "First line of the Balmer series, in the visible region"
+          },
+          {
+            "label": "III",
+            "text": "Shortest-wavelength line of the Lyman series"
+          },
+          {
+            "label": "IV",
+            "text": "Longest-wavelength line of the Lyman series"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The series is set by the final level $n_1$. In each series the first line has the longest wavelength and the series limit has the shortest.",
+        "steps": [
+          "A: $2 \\rightarrow 1$ is the first Lyman line, which has the longest wavelength (IV).",
+          "B: $3 \\rightarrow 2$ is the first Balmer line, in the visible region (II).",
+          "C: the final level is $n = 3$, so this is a Paschen line in the IR region (I).",
+          "D: $\\infty \\rightarrow 1$ is the Lyman series limit, which has the shortest wavelength (III)."
+        ],
+        "final_answer": "Option (4): A-IV, B-II, C-I, D-III",
+        "why_not_others": "Option 1 swaps the first line and the series limit. Option 2 puts the Balmer and Paschen lines in each other's series. Option 3 mismatches all four items.",
+        "common_trap": "Thinking that the series limit has the longest wavelength.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about atomic hydrogen-like spectra are correct?",
+      "statements": {
+        "A": "The series limit of the Balmer series has the longest wavelength in that series.",
+        "B": "The wavenumber of the first Lyman line of $He^+$ is four times that of the first Lyman line of H.",
+        "C": "Pfund series lines arise from transitions ending at n = 5 and lie in the IR region.",
+        "D": "The maximum number of spectral lines when an electron in n = 5 returns to the ground state is 10.",
+        "E": "The wavenumber of the Lyman series limit of H is $109677/4$ $cm^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "B and C only",
+        "A, B and D only",
+        "B, C and D only",
+        "B, C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Use the Rydberg formula with the $Z^2$ factor, the line-count formula and the series regions.",
+        "steps": [
+          "A is false: the series limit has the shortest wavelength.",
+          "B is true: $\\bar{\\nu} \\propto Z^2$, and $Z^2 = 4$ for $He^+$.",
+          "C is true: Pfund has $n_1 = 5$ and lies in the IR region.",
+          "D is true: $5 \\times 4/2 = 10$.",
+          "E is false: for $n_1 = 1$ and $n_2 = \\infty$, $\\bar{\\nu} = 109677$ $cm^{-1}$, not one-fourth of it."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Option 1 misses the true statement D. Option 2 includes the false statement A. Option 4 includes the false statement E.",
+        "common_trap": "Using Z instead of $Z^2$, or dividing by 4 for the Lyman limit as if it were the Balmer limit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "What is the radius of the second Bohr orbit of the hydrogen atom?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "105.8 pm",
+        "211.6 pm",
+        "13.2 pm",
+        "476.1 pm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Bohr radius formula: $r_n = 52.9\\, n^2/Z$ pm.",
+        "steps": [
+          "For H, Z = 1 and n = 2.",
+          "So $r_2 = 52.9 \\times 4 = 211.6$ pm."
+        ],
+        "final_answer": "Option (2): 211.6 pm",
+        "why_not_others": "105.8 pm uses n instead of $n^2$. 13.2 pm divides by $n^2$ instead of multiplying. 476.1 pm is the radius for n = 3.",
+        "common_trap": "Taking the radius as proportional to n rather than $n^2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "What is the energy of the electron in the second Bohr orbit of $Li^{2+}$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$-30.6$ eV",
+        "$-10.2$ eV",
+        "$+30.6$ eV",
+        "$-61.2$ eV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Bohr energy formula: $E_n = -13.6\\, Z^2/n^2$ eV.",
+        "steps": [
+          "For $Li^{2+}$, Z = 3, so $Z^2 = 9$. Here n = 2, so $n^2 = 4$.",
+          "So $E_2 = -13.6 \\times 9/4 = -30.6$ eV."
+        ],
+        "final_answer": "Option (1): $-30.6$ eV",
+        "why_not_others": "$-10.2$ eV uses Z instead of $Z^2$. $+30.6$ eV has the wrong sign. $-61.2$ eV uses n instead of $n^2$.",
+        "common_trap": "Using Z in place of $Z^2$ for energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "The total energy of the electron in the ground state of the hydrogen atom is $-13.6$ eV. What are its kinetic energy and potential energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "KE $= +13.6$ eV, PE $= -27.2$ eV",
+        "KE $= -13.6$ eV, PE $= +27.2$ eV",
+        "KE $= +6.8$ eV, PE $= -20.4$ eV",
+        "KE $= +13.6$ eV, PE $= -13.6$ eV"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In a Bohr orbit, KE $= -E$ and PE $= 2E$.",
+        "steps": [
+          "KE $= -(-13.6) = +13.6$ eV.",
+          "PE $= 2 \\times (-13.6) = -27.2$ eV.",
+          "Check: KE + PE $= -13.6$ eV, which matches the total energy."
+        ],
+        "final_answer": "Option (1): KE $= +13.6$ eV, PE $= -27.2$ eV",
+        "why_not_others": "Kinetic energy can never be negative, which rules out option 2. Option 3 halves the KE. Option 4 gives a total energy of zero.",
+        "common_trap": "Mixing up the signs, or taking PE as equal to E.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In the hydrogen atom, the energy gap between n = 2 and n = 3 is smaller than the energy gap between n = 1 and n = 2.",
+        "R": "The radius of a Bohr orbit increases in proportion to $n^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Energy varies as $-1/n^2$, so the gaps between successive levels shrink as n increases.",
+        "steps": [
+          "Gap from n = 1 to 2: $13.6(1 - 1/4) = 10.2$ eV.",
+          "Gap from n = 2 to 3: $13.6(1/4 - 1/9) = 1.89$ eV. So A is true.",
+          "R is true, since $r_n \\propto n^2$.",
+          "A follows from $E_n \\propto -1/n^2$, not from the radius relation. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are correct, so options 3 and 4 are ruled out. The explanation of A lies in the energy relation, not the radius relation, so option 1 is ruled out.",
+        "common_trap": "Accepting any true $n^2$ relation as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The velocity of the electron in the first Bohr orbit of $He^+$ is half the velocity of the electron in the first Bohr orbit of H.",
+        "II": "The radius of the second Bohr orbit of $Be^{3+}$ is equal to the radius of the first Bohr orbit of H."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Velocity varies as $Z/n$; radius varies as $n^2/Z$.",
+        "steps": [
+          "For $He^+$ (Z = 2, n = 1): $v \\propto 2/1 = 2$, so the velocity is twice that of H, not half. Statement I is incorrect.",
+          "For $Be^{3+}$ (Z = 4, n = 2): $r \\propto 4/4 = 1$, so $r = 52.9$ pm, the same as the first orbit of H. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I inverts the dependence of velocity on Z, so options 1 and 3 are ruled out. Statement II is correct, so option 2 is ruled out.",
+        "common_trap": "Inverting the Z dependence of velocity, which actually increases with Z.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "Which observation provides experimental proof of the wave nature of electrons?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Photoelectric effect",
+        "Line spectrum of hydrogen",
+        "Electron diffraction",
+        "Black-body radiation"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Diffraction is a wave property, and electron diffraction confirmed de Broglie's hypothesis.",
+        "steps": [
+          "Electrons produce diffraction patterns, which shows that they behave as waves."
+        ],
+        "final_answer": "Option (3): Electron diffraction",
+        "why_not_others": "The photoelectric effect and black-body radiation support the particle (photon) nature of light. The line spectrum supports quantised energy levels.",
+        "common_trap": "Choosing the photoelectric effect because it involves electrons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "What is the de Broglie wavelength of an electron that has been accelerated from rest through a potential difference of 100 V?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.1227 Å",
+        "122.7 Å",
+        "12.27 Å",
+        "1.227 Å"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "For an electron accelerated through V volts, $\\lambda \\approx 12.27/\\sqrt{V}$ Å.",
+        "steps": [
+          "$\\sqrt{100} = 10$.",
+          "So $\\lambda = 12.27/10 = 1.227$ Å."
+        ],
+        "final_answer": "Option (4): 1.227 Å",
+        "why_not_others": "0.1227 Å divides by V instead of $\\sqrt{V}$. 122.7 Å multiplies by $\\sqrt{V}$. 12.27 Å ignores V altogether.",
+        "common_trap": "Forgetting the square root of V.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "A proton and an $\\alpha$-particle have the same kinetic energy. Taking the mass of the $\\alpha$-particle as 4 times that of the proton, what is the ratio $\\lambda_{proton} : \\lambda_{\\alpha}$ of their de Broglie wavelengths?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 : 1",
+        "1 : 2",
+        "4 : 1",
+        "1 : 4"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "For a given kinetic energy, $\\lambda = h/\\sqrt{2m\\,KE}$, so $\\lambda \\propto 1/\\sqrt{m}$.",
+        "steps": [
+          "$\\lambda_p/\\lambda_\\alpha = \\sqrt{m_\\alpha/m_p} = \\sqrt{4} = 2$.",
+          "The ratio is 2 : 1. The lighter proton has the longer wavelength."
+        ],
+        "final_answer": "Option (1): 2 : 1",
+        "why_not_others": "1 : 2 inverts the ratio. 4 : 1 and 1 : 4 ignore the square root.",
+        "common_trap": "Using $\\lambda \\propto 1/m$, which holds only at equal velocity, not at equal kinetic energy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\lambda = h/mv$"
+          },
+          {
+            "label": "B",
+            "text": "$2\\pi r = n\\lambda$"
+          },
+          {
+            "label": "C",
+            "text": "$\\lambda = 12.27/\\sqrt{V}$ Å"
+          },
+          {
+            "label": "D",
+            "text": "$\\lambda = h/\\sqrt{2m\\,KE}$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Condition for a stable orbit that leads to $mvr = nh/2\\pi$"
+          },
+          {
+            "label": "II",
+            "text": "Wavelength of an electron accelerated through a potential difference"
+          },
+          {
+            "label": "III",
+            "text": "Wavelength in terms of momentum"
+          },
+          {
+            "label": "IV",
+            "text": "Wavelength in terms of kinetic energy"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-I, C-II, D-III",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-I, B-III, C-IV, D-II"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Forms of the de Broglie relation and its application to Bohr orbits.",
+        "steps": [
+          "A: $h/mv = h/p$ gives the wavelength in terms of momentum (III).",
+          "B: a whole number of waves fitting the circumference gives Bohr's quantisation condition (I).",
+          "C: $12.27/\\sqrt{V}$ Å is for an electron accelerated through V volts (II).",
+          "D: $h/\\sqrt{2m\\,KE}$ gives the wavelength from kinetic energy (IV)."
+        ],
+        "final_answer": "Option (2): A-III, B-I, C-II, D-IV",
+        "why_not_others": "Option 1 swaps the momentum and kinetic-energy forms. Option 3 swaps the orbit condition and the accelerated-electron formula. Option 4 mismatches all four items.",
+        "common_trap": "Confusing the momentum form with the kinetic-energy form.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the dual nature of matter are correct?",
+      "statements": {
+        "A": "For the same velocity, a proton has a longer de Broglie wavelength than an electron.",
+        "B": "The electron microscope is based on the wave nature of electrons.",
+        "C": "In the third Bohr orbit, exactly three de Broglie wavelengths of the electron fit around the circumference.",
+        "D": "The wave nature of a moving cricket ball is not observed because its large mass makes its wavelength negligibly small.",
+        "E": "The de Broglie wavelength of a particle is directly proportional to its momentum."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B and D only",
+        "B, C, D and E only",
+        "B, C and D only"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "De Broglie wavelength is $\\lambda = h/mv$, and the Bohr orbit condition is $2\\pi r = n\\lambda$.",
+        "steps": [
+          "A is false: the proton is heavier, so at the same velocity its $\\lambda$ is shorter.",
+          "B is true: the electron microscope uses electron waves.",
+          "C is true: $2\\pi r = n\\lambda$ with n = 3.",
+          "D is true: for macroscopic objects the wavelength is negligible.",
+          "E is false: $\\lambda$ is inversely proportional to momentum."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Option 1 includes the false statement A. Option 2 misses the true statement C. Option 3 includes the false statement E.",
+        "common_trap": "Thinking that a heavier particle has a longer wavelength, or that $\\lambda$ is directly proportional to momentum.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

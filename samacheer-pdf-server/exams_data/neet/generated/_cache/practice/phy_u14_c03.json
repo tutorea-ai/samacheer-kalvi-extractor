@@ -1,0 +1,315 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "In an AC generator, at which position of the rotating coil is the induced emf maximum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "When the plane of the coil is parallel to the magnetic field",
+        "When the plane of the coil is perpendicular to the magnetic field",
+        "When the flux linked with the coil is maximum",
+        "When the plane of the coil makes $45^\\circ$ with the magnetic field"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The emf depends on the rate of change of flux, not on the flux itself.",
+        "steps": [
+          "Flux $\\Phi = NBA\\cos\\omega t$ gives emf $\\varepsilon = NBA\\omega\\sin\\omega t$.",
+          "The emf is maximum when the flux is zero, that is, when the coil plane is parallel to B.",
+          "At this position the flux is zero but changing fastest."
+        ],
+        "final_answer": "Option (1): When the plane of the coil is parallel to the magnetic field",
+        "why_not_others": "When the plane is perpendicular to B, the flux is maximum and the emf is zero. Options 2 and 3 describe the same zero-emf position. At $45^\\circ$ the emf is only $\\varepsilon_0/\\sqrt{2}$.",
+        "common_trap": "Thinking that maximum flux gives maximum emf.",
+        "time_saving_tip": "Remember the pairing: flux maximum means emf zero, and flux zero means emf maximum."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "A coil of 100 turns and area $0.02\\ \\text{m}^2$ rotates at 50 revolutions per second in a uniform magnetic field of $0.5$ T. What is the peak emf induced? (Take $\\pi = 3.14$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "314 V",
+        "50 V",
+        "222 V",
+        "3.14 V"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Peak emf is $\\varepsilon_0 = NBA\\omega$ with $\\omega = 2\\pi f$.",
+        "steps": [
+          "$\\omega = 2\\pi f = 2\\pi \\times 50 = 100\\pi$ rad/s.",
+          "$\\varepsilon_0 = NBA\\omega = 100 \\times 0.5 \\times 0.02 \\times 100\\pi$.",
+          "$\\varepsilon_0 = 100\\pi \\approx 314$ V."
+        ],
+        "final_answer": "Option (1): 314 V",
+        "why_not_others": "50 V results from using f instead of $\\omega$. 222 V is the rms value, not the peak value. 3.14 V results from leaving out N.",
+        "common_trap": "Substituting the frequency f directly in place of $\\omega$.",
+        "time_saving_tip": "First compute $NBA = 1$ Wb; the peak emf is then simply $\\omega = 100\\pi$."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "An AC generator produces a peak emf $\\varepsilon_0$ at frequency f. The angular speed of its coil is doubled and the magnetic field is halved. What are the new peak emf and frequency?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\varepsilon_0$ and $f$",
+        "$\\varepsilon_0$ and $2f$",
+        "$2\\varepsilon_0$ and $2f$",
+        "$\\varepsilon_0/2$ and $f$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Peak emf is $\\varepsilon_0 = NBA\\omega$, and the frequency of the emf equals the rotation frequency.",
+        "steps": [
+          "New peak emf is $NA(B/2)(2\\omega) = NBA\\omega = \\varepsilon_0$.",
+          "The frequency depends only on $\\omega$, so doubling $\\omega$ doubles it to $2f$."
+        ],
+        "final_answer": "Option (2): $\\varepsilon_0$ and $2f$",
+        "why_not_others": "Option 1 ignores the change in frequency. Option 3 ignores the halving of B. Option 4 halves the emf and keeps f unchanged, which ignores the doubling of $\\omega$.",
+        "common_trap": "Assuming that the frequency also depends on B, or that an unchanged peak emf means an unchanged frequency.",
+        "time_saving_tip": "Track the two quantities separately: the emf goes as $B\\omega$, while the frequency goes as $\\omega$ alone."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Doubling the angular speed of the coil of an AC generator doubles the peak emf.",
+        "R": "The frequency of the emf produced by an AC generator equals the frequency of rotation of its coil."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Peak emf $\\varepsilon_0 = NBA\\omega$ is proportional to $\\omega$; the frequency of the emf is a separate result.",
+        "steps": [
+          "Since $\\varepsilon_0 = NBA\\omega$, doubling $\\omega$ doubles the peak emf, so A is true.",
+          "Since $\\varepsilon = NBA\\omega\\sin\\omega t$, the emf has the rotation frequency, so R is true.",
+          "A is explained by $\\varepsilon_0 \\propto \\omega$ (the flux changes faster), not by the frequency relation."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "R describes the frequency, not the amplitude, so it cannot explain A. Both statements are true, so options 3 and 4 are wrong.",
+        "common_trap": "Linking the two statements because both involve $\\omega$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In an AC generator, the induced emf is zero at the instant the flux linked with the coil is maximum.",
+        "II": "For a generator with $\\varepsilon = NBA\\omega\\sin\\omega t$, at an instant when the emf equals half its peak value, the magnitude of the flux linked with the coil is $\\frac{\\sqrt{3}}{2}NBA$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The flux $\\Phi = NBA\\cos\\omega t$ and the emf $\\varepsilon = NBA\\omega\\sin\\omega t$ are $90^\\circ$ out of phase.",
+        "steps": [
+          "When the flux is maximum, $\\cos\\omega t = \\pm 1$, so $\\sin\\omega t = 0$ and the emf is zero. Statement I is correct.",
+          "If $\\varepsilon = \\varepsilon_0/2$, then $\\sin\\omega t = 1/2$ and $|\\cos\\omega t| = \\sqrt{3}/2$.",
+          "So $|\\Phi| = \\frac{\\sqrt{3}}{2}NBA$. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from the phase relation, so options 2, 3 and 4 are wrong.",
+        "common_trap": "Assuming that half the peak emf means half the maximum flux.",
+        "time_saving_tip": "Use $\\sin^2\\omega t + \\cos^2\\omega t = 1$ to relate the emf fraction to the flux fraction."
+      }
+    },
+    {
+      "slot": "t09_1",
+      "type": "single_correct",
+      "question": "Which of the following quantities is the same in the primary and secondary of an ideal step-up transformer?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Voltage",
+        "Current",
+        "Frequency",
+        "Number of turns"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "A transformer changes voltage and current but does not change frequency or power.",
+        "steps": [
+          "In a step-up transformer, the voltage increases and the current decreases.",
+          "The number of turns differs, with $N_s > N_p$.",
+          "The frequency stays unchanged."
+        ],
+        "final_answer": "Option (3): Frequency",
+        "why_not_others": "Voltage increases and current decreases in a step-up transformer. The turns differ by definition.",
+        "common_trap": "Thinking a transformer can change the frequency of the AC supply.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t09_2",
+      "type": "single_correct",
+      "question": "A transformer of efficiency 80% steps down 220 V to 11 V. The secondary delivers a current of 4 A. What is the current in the primary?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.2 A",
+        "0.16 A",
+        "80 A",
+        "0.25 A"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Efficiency is $\\eta = \\frac{V_sI_s}{V_pI_p}$.",
+        "steps": [
+          "Output power $= 11 \\times 4 = 44$ W.",
+          "Input power $= 44/0.8 = 55$ W.",
+          "Primary current $I_p = 55/220 = 0.25$ A."
+        ],
+        "final_answer": "Option (4): 0.25 A",
+        "why_not_others": "0.2 A assumes an ideal transformer. 0.16 A multiplies by $\\eta$ instead of dividing by it. 80 A inverts the current ratio.",
+        "common_trap": "Multiplying the output power by the efficiency instead of dividing by it.",
+        "time_saving_tip": "Input power is always greater than output power in a real transformer, so $I_p$ must exceed the ideal value of 0.2 A."
+      }
+    },
+    {
+      "slot": "t09_3",
+      "type": "single_correct",
+      "question": "A power of 100 kW is transmitted through lines of total resistance $5\\ \\Omega$. The transmission voltage is raised from 10 kV to 20 kV while the transmitted power is kept the same. What is the new power loss in the lines?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "250 W",
+        "1000 W",
+        "125 W",
+        "2000 W"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Line loss is $P_{loss} = I^2R$ with $I = P/V$, so the loss varies as $1/V^2$.",
+        "steps": [
+          "At 10 kV, $I = 10^5/10^4 = 10$ A, so the loss is $10^2 \\times 5 = 500$ W.",
+          "At 20 kV, $I = 10^5/(2\\times10^4) = 5$ A.",
+          "New loss $= 5^2 \\times 5 = 125$ W."
+        ],
+        "final_answer": "Option (3): 125 W",
+        "why_not_others": "250 W assumes the loss varies as $1/V$. 1000 W assumes the loss increases in proportion to V. 2000 W assumes the loss increases as $V^2$.",
+        "common_trap": "Using $V^2/R$ with the transmission voltage instead of $I^2R$ with the line current.",
+        "time_saving_tip": "Doubling the voltage cuts the loss to one-fourth: $500/4 = 125$ W."
+      }
+    },
+    {
+      "slot": "t09_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Flux leakage"
+          },
+          {
+            "label": "B",
+            "text": "Copper (joule) loss"
+          },
+          {
+            "label": "C",
+            "text": "Eddy-current loss"
+          },
+          {
+            "label": "D",
+            "text": "Hysteresis loss"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Laminated core"
+          },
+          {
+            "label": "II",
+            "text": "Thick wires"
+          },
+          {
+            "label": "III",
+            "text": "Soft-iron core with a narrow hysteresis loop"
+          },
+          {
+            "label": "IV",
+            "text": "Winding the coils one over the other"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Each energy loss in a real transformer has its own remedy.",
+        "steps": [
+          "Flux leakage is reduced by winding the coils one over the other: A-IV.",
+          "Copper loss is reduced by using thick wires: B-II.",
+          "Eddy-current loss is reduced by a laminated core: C-I.",
+          "Hysteresis loss is reduced by a soft-iron core with a narrow loop: D-III."
+        ],
+        "final_answer": "Option (2): A-IV, B-II, C-I, D-III",
+        "why_not_others": "Option 1 swaps the remedies for flux leakage and copper loss. Option 3 swaps the remedies for eddy-current and hysteresis losses. Option 4 assigns the laminated core to flux leakage.",
+        "common_trap": "Confusing the remedies for eddy-current loss and hysteresis loss, since both concern the core.",
+        "time_saving_tip": "Fix C-I first, because lamination is the standard remedy for eddy currents. Only options 1 and 2 keep C-I."
+      }
+    },
+    {
+      "slot": "t09_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about transformers are correct?",
+      "statements": {
+        "A": "An ideal step-up transformer increases the voltage and decreases the current.",
+        "B": "A transformer can work on steady DC if its turns ratio is large enough.",
+        "C": "The frequency of the output voltage equals the frequency of the input voltage.",
+        "D": "An ideal step-up transformer increases the power by the factor $N_s/N_p$.",
+        "E": "Transmitting power at high voltage reduces $I^2R$ losses in the lines."
+      },
+      "match_lists": null,
+      "options": [
+        "A and C only",
+        "A, B and E only",
+        "A, C and E only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "An ideal transformer conserves power and frequency, and it works only on AC through mutual induction.",
+        "steps": [
+          "A is correct: since $V_pI_p = V_sI_s$, the current falls as the voltage rises.",
+          "B is incorrect: steady DC gives a constant flux, which induces no emf.",
+          "C is correct: the frequency is unchanged.",
+          "D is incorrect: an ideal transformer conserves power.",
+          "E is correct: high voltage means low current, so the $I^2R$ loss is smaller."
+        ],
+        "final_answer": "Option (3): A, C and E only",
+        "why_not_others": "Option 1 leaves out the true statement E. Option 2 includes the false statement B. Option 4 includes the false statement D.",
+        "common_trap": "Believing a step-up transformer increases power along with voltage.",
+        "time_saving_tip": "Eliminate any option containing B or D; only option 3 has neither and also includes A, C and E."
+      }
+    }
+  ]
+}

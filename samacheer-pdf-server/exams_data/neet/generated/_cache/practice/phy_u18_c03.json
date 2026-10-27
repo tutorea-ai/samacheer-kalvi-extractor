@@ -1,0 +1,138 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "In a nuclear reactor using $^{235}U$, what is the function of the rods made of cadmium or boron?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To slow down the fast neutrons released in fission",
+        "To remove the heat generated in the core",
+        "To supply extra neutrons to start the chain reaction",
+        "To absorb excess neutrons and control the chain reaction"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A reactor has three controlling components. The moderator slows neutrons, the control rods absorb neutrons and the coolant removes heat.",
+        "steps": [
+          "Cadmium and boron are strong neutron absorbers.",
+          "Rods made of them absorb excess neutrons, so the multiplication factor stays at $K=1$ (steady operation)."
+        ],
+        "final_answer": "Option (4): To absorb excess neutrons and control the chain reaction",
+        "why_not_others": "Slowing neutrons is the moderator's job (heavy water or graphite). Removing heat is the coolant's job. Control rods remove neutrons rather than supply them.",
+        "common_trap": "Confusing the moderator, which slows neutrons, with the control rods, which absorb them.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "A nuclear reactor delivers a power of 3.2 MW. Each fission of $^{235}U$ releases 200 MeV. How many fissions occur per second? (Take $1\\,eV=1.6\\times10^{-19}$ J)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1\\times10^{17}$",
+        "$1\\times10^{23}$",
+        "$1\\times10^{14}$",
+        "$1\\times10^{20}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Number of fissions per second = power / energy per fission.",
+        "steps": [
+          "Energy per fission: $200\\times10^{6}\\times1.6\\times10^{-19}=3.2\\times10^{-11}$ J.",
+          "Power: $P=3.2\\times10^{6}$ W.",
+          "Fissions per second: $N=\\frac{3.2\\times10^{6}}{3.2\\times10^{-11}}=1\\times10^{17}$."
+        ],
+        "final_answer": "Option (1): $1\\times10^{17}$",
+        "why_not_others": "$10^{23}$ comes from treating 200 MeV as 200 eV. $10^{14}$ comes from reading MW as kW. $10^{20}$ comes from a wrong power of ten when converting MeV to joules.",
+        "common_trap": "Dropping the factor $10^6$ when converting MeV to joules.",
+        "time_saving_tip": "Note that $200\\,MeV=3.2\\times10^{-11}$ J. The 3.2 cancels directly with 3.2 MW."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "In the D-T fusion reaction $^2_1H+^3_1H\\to^4_2He+^1_0n+17.6$ MeV, what is the energy released per nucleon taking part in the reaction?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4.4 MeV",
+        "3.52 MeV",
+        "8.8 MeV",
+        "5.87 MeV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Energy per nucleon = Q value / total number of nucleons involved.",
+        "steps": [
+          "Count the nucleons on the reactant side: $2+3=5$.",
+          "Energy per nucleon: $\\frac{17.6}{5}=3.52$ MeV."
+        ],
+        "final_answer": "Option (2): 3.52 MeV",
+        "why_not_others": "4.4 MeV divides by 4, counting only the helium nucleus. 8.8 MeV divides by 2, counting nuclei instead of nucleons. 5.87 MeV divides by 3, counting only tritium.",
+        "common_trap": "Dividing by the mass number of the product helium instead of the total number of nucleons.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Fusion of light nuclei is called thermonuclear fusion.",
+        "R": "The energy released per unit mass of fuel is larger in fusion than in fission."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Fusion needs a temperature of about $10^7$ K to overcome Coulomb repulsion, which is why it is called thermonuclear.",
+        "steps": [
+          "A is true. Fusion requires very high temperatures of about $10^7$ K, hence the name 'thermonuclear'.",
+          "R is true. Fusion releases more energy per unit mass than fission.",
+          "The name comes from the high temperature needed to overcome Coulomb repulsion, not from the energy yield. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are factually correct, so options (3) and (4) fail. R does not give the reason for the name, so option (1) fails.",
+        "common_trap": "Linking the larger energy yield to the term 'thermonuclear'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the fission reaction $^{235}_{92}U+^1_0n\\to^{140}_{54}Xe+^{94}_{38}Sr+x\\,^1_0n$, the value of $x$ is 2.",
+        "II": "If the control rods of a reactor running at $K=1$ are partially withdrawn so that fewer neutrons are absorbed, $K$ becomes greater than 1 and the reactor becomes supercritical."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Mass number and atomic number are conserved in a nuclear reaction. The multiplication factor $K$ fixes whether a reactor is critical, supercritical or subcritical.",
+        "steps": [
+          "Mass number: $235+1=140+94+x$, so $x=2$.",
+          "Atomic number check: $92=54+38$. Statement I is correct.",
+          "Withdrawing the control rods reduces neutron absorption. More neutrons then survive into each generation, so $K>1$, which is supercritical. Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements check out, so every option that calls either one incorrect is wrong.",
+        "common_trap": "Assuming $x=3$ as in the familiar Ba-Kr reaction without balancing the mass numbers for these products.",
+        "time_saving_tip": "Balance only the mass numbers to find $x$, then quickly confirm $Z$."
+      }
+    }
+  ]
+}

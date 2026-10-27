@@ -1,0 +1,140 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Which of the following electromagnetic radiations is used for purifying drinking water because it kills germs?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ultraviolet rays",
+        "Infrared rays",
+        "Microwaves",
+        "Radio waves"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Ultraviolet radiation kills germs, so it is used for water purification and sterilisation.",
+        "steps": [
+          "Germ-killing (germicidal) action is a property of ultraviolet radiation.",
+          "Water purifiers therefore use UV lamps to destroy bacteria and other microbes."
+        ],
+        "final_answer": "Option (1): Ultraviolet rays",
+        "why_not_others": "Infrared is used for remote controls, physiotherapy and night vision. Microwaves heat food and are used in radar. Radio waves carry AM, FM and TV signals. None of these is used to kill germs in water.",
+        "common_trap": "Choosing microwaves because they 'heat' water. Heating is not how purifiers sterilise water; UV kills the germs directly.",
+        "time_saving_tip": "Remember: germs and sterilisation point to UV (and gamma for equipment)."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "A household microwave oven operates at a frequency of about $2.45$ GHz, which matches the resonant frequency of water molecules. Taking $c = 3 \\times 10^8$ m s$^{-1}$, the wavelength of this radiation in air is approximately:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.22$ cm",
+        "$12.2$ cm",
+        "$122$ cm",
+        "$0.122$ cm"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Wavelength is related to frequency by $\\lambda = \\frac{c}{f}$.",
+        "steps": [
+          "$f = 2.45$ GHz $= 2.45 \\times 10^9$ Hz.",
+          "$\\lambda = \\frac{3 \\times 10^8}{2.45 \\times 10^9}$ m $\\approx 0.122$ m.",
+          "$0.122$ m $= 12.2$ cm."
+        ],
+        "final_answer": "Option (2): $12.2$ cm",
+        "why_not_others": "$1.22$ cm and $0.122$ cm result from slipping one or two powers of ten when converting GHz to Hz. $122$ cm results from treating $0.122$ m as $1.22$ m, which is an m-to-cm conversion slip.",
+        "common_trap": "Taking 1 GHz as $10^{6}$ Hz or $10^{8}$ Hz instead of $10^9$ Hz.",
+        "time_saving_tip": "At about $3$ GHz the wavelength is $10$ cm, so at $2.45$ GHz it must be slightly more than $10$ cm."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "A broadcasting station transmits electromagnetic waves of wavelength $300$ m in air. Taking $c = 3 \\times 10^8$ m s$^{-1}$, this transmission belongs to:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "FM radio band",
+        "TV broadcast band",
+        "AM radio band",
+        "Microwave band used for radar"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Find the frequency from $f = \\frac{c}{\\lambda}$ and compare it with the band limits: AM $530$ to $1710$ kHz, FM $88$ to $108$ MHz, TV $54$ to $890$ MHz.",
+        "steps": [
+          "$f = \\frac{3 \\times 10^8}{300} = 10^6$ Hz $= 1000$ kHz.",
+          "$1000$ kHz lies between $530$ kHz and $1710$ kHz.",
+          "Hence the station is an AM radio station."
+        ],
+        "final_answer": "Option (3): AM radio band",
+        "why_not_others": "The FM band ($88$ to $108$ MHz) and the TV band ($54$ to $890$ MHz) are far higher than $1$ MHz. Radar microwaves are in the GHz range, which corresponds to wavelengths of only centimetres.",
+        "common_trap": "Confusing kHz with MHz and placing a $1$ MHz signal in the FM range.",
+        "time_saving_tip": "Long wavelengths of hundreds of metres always mean the kHz AM band."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Welders wear special glass goggles mainly to protect their eyes from the gamma rays produced during welding.",
+        "R": "Glass blocks ultraviolet radiation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Welding arcs emit harmful ultraviolet radiation, and glass absorbs UV.",
+        "steps": [
+          "The goggles worn by welders protect the eyes from UV, not from gamma rays. Gamma rays come from nuclei, not from a welding arc, so A is false.",
+          "Glass blocks UV radiation, so R is true.",
+          "R is actually the reason welders use glass goggles against UV."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options (1) and (2) need A to be true, but A names the wrong radiation. Option (3) is wrong because R is a correct fact.",
+        "common_trap": "Reading 'protective goggles' and assuming the most penetrating radiation, gamma rays, is the hazard.",
+        "time_saving_tip": "Welding goggles, glass and UV go together."
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Gamma rays used in cancer radiotherapy are produced by electron transitions in the inner shells of atoms, in the same way as X-rays.",
+        "II": "An electromagnetic wave of wavelength $3$ m in air (take $c = 3 \\times 10^8$ m s$^{-1}$) has a frequency that lies within both the FM radio band and the TV broadcast band."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Gamma rays originate in nuclei, while X-rays come from electron transitions. The FM band is $88$ to $108$ MHz and the TV band is $54$ to $890$ MHz.",
+        "steps": [
+          "Gamma rays are emitted by nuclei, not by electron transitions, so Statement I is incorrect.",
+          "$f = \\frac{3 \\times 10^8}{3} = 10^8$ Hz $= 100$ MHz.",
+          "$100$ MHz lies in the FM band ($88$ to $108$ MHz).",
+          "$100$ MHz also lies in the TV band ($54$ to $890$ MHz), so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Option (1) and option (3) wrongly accept the source given for gamma rays. Option (2) wrongly rejects Statement II, because $100$ MHz falls in both bands, which overlap.",
+        "common_trap": "Mixing up sources: X-rays come from electron transitions, but gamma rays come from nuclei. Another trap is assuming the FM and TV bands cannot overlap.",
+        "time_saving_tip": "Note that the TV band ($54$ to $890$ MHz) completely contains the FM band ($88$ to $108$ MHz). Any FM frequency is therefore also inside the TV range."
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "In the Carius method, 0.20 g of an organic compound gives 0.287 g of $AgCl$. What is the percentage of chlorine in the compound?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "35.5%",
+        "17.75%",
+        "71.0%",
+        "61.1%"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In gravimetric estimation, the mass of the element equals the mass of precipitate multiplied by the mass fraction of the element in it. For Cl in $AgCl$ this fraction is 35.5/143.5.",
+        "steps": [
+          "Mass of Cl = $0.287 \\times \\frac{35.5}{143.5} = 0.071$ g.",
+          "%Cl = $\\frac{0.071}{0.20} \\times 100 = 35.5\\%$."
+        ],
+        "final_answer": "Option (1): 35.5%",
+        "why_not_others": "17.75% and 71.0% come from wrongly halving or doubling the correct value. 61.1% comes from using the bromine fraction 80/188 instead of 35.5/143.5.",
+        "common_trap": "Using the wrong precipitate fraction, such as the one for $AgBr$, or mishandling the factor for chlorine.",
+        "time_saving_tip": "0.287/143.5 = 0.002 mol exactly, so the mass of Cl is $0.002 \\times 35.5 = 0.071$ g."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "In Dumas method, 0.25 g of an organic compound gives 30 mL of moist nitrogen collected at 300 K and 787 mm Hg. The aqueous tension at 300 K is 27 mm Hg. What is the percentage of nitrogen in the compound?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "14.13%",
+        "15.00%",
+        "27.30%",
+        "13.65%"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "First subtract the aqueous tension from the observed pressure. Then convert the dry gas volume to STP, where 28 g of $N_2$ occupies 22400 mL.",
+        "steps": [
+          "Pressure of dry $N_2$ = 787 - 27 = 760 mm Hg.",
+          "$V_{STP} = \\frac{760 \\times 30 \\times 273}{760 \\times 300} = 27.3$ mL.",
+          "Mass of $N_2$ = $\\frac{28 \\times 27.3}{22400} = 0.034125$ g.",
+          "%N = $\\frac{0.034125}{0.25} \\times 100 = 13.65\\%$."
+        ],
+        "final_answer": "Option (4): 13.65%",
+        "why_not_others": "14.13% results from using 787 mm Hg without subtracting the aqueous tension. 15.00% results from using 30 mL directly, without converting to STP. 27.30% results from taking 14 g of nitrogen per 22400 mL instead of 28 g.",
+        "common_trap": "Using the moist gas pressure directly instead of subtracting the aqueous tension.",
+        "time_saving_tip": "The dry pressure is exactly 760 mm Hg, so only the temperature correction (273/300) is needed."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "In Kjeldahl's method, the ammonia evolved from 0.40 g of an organic compound is absorbed in 50 mL of 0.1 M $H_2SO_4$. The unreacted acid requires 60 mL of 0.1 M $NaOH$ for complete neutralisation. What is the percentage of nitrogen in the compound?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7%",
+        "35%",
+        "14%",
+        "28%"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The acid used by $NH_3$ equals the total acid minus the acid neutralised by $NaOH$. Since $H_2SO_4$ is dibasic, 1 M $H_2SO_4$ = 2 N.",
+        "steps": [
+          "Total acid = $50 \\times 0.1 \\times 2 = 10$ milliequivalents.",
+          "Acid neutralised by $NaOH$ = $60 \\times 0.1 = 6$ milliequivalents.",
+          "Acid used by $NH_3$ = 4 milliequivalents. This corresponds to $4 \\times 14 = 56$ mg of N.",
+          "%N = $\\frac{0.056}{0.40} \\times 100 = 14\\%$. The formula $\\frac{1.4 \\times 0.1 \\times 2(50 - 30)}{0.40}$ gives the same result."
+        ],
+        "final_answer": "Option (3): 14%",
+        "why_not_others": "7% comes from omitting the factor 2 for dibasic $H_2SO_4$ in the formula. 35% comes from ignoring the back titration. 28% comes from using 28 instead of 14 per milliequivalent of nitrogen.",
+        "common_trap": "Forgetting that $H_2SO_4$ is dibasic, or forgetting to subtract the acid neutralised by $NaOH$.",
+        "time_saving_tip": "Work in milliequivalents: 10 - 6 = 4, so the mass of N is 56 mg."
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A sample of nitrogen collected over water at 273 K and a total pressure of 760 mm Hg occupies a larger volume than the same amount of dry nitrogen at STP.",
+        "R": "In Dumas method, the aqueous tension is added to the observed pressure to obtain the pressure of dry nitrogen."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The pressure of dry $N_2$ equals the observed pressure minus the aqueous tension: $p_1 = p - f$.",
+        "steps": [
+          "In the moist sample, $N_2$ exerts only (760 - f) mm Hg, which is less than 760 mm Hg.",
+          "At the same temperature and amount of gas, a lower pressure means a larger volume, so A is true.",
+          "The aqueous tension is subtracted from the observed pressure, not added, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) are ruled out. A is correct, so option (4) is ruled out.",
+        "common_trap": "Adding the aqueous tension, or ignoring it altogether.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the Carius method, 0.40 g of an organic compound gives 0.466 g of $BaSO_4$, so the percentage of sulphur in the compound is 13.7%.",
+        "II": "A compound containing 54.5% carbon and 9.1% hydrogen, the rest being oxygen, has the empirical formula $C_2H_4O$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "%S is found as $\\frac{32}{233} \\times \\frac{\\text{mass of } BaSO_4}{\\text{mass of compound}} \\times 100$. An empirical formula comes from mole ratios after finding oxygen by difference.",
+        "steps": [
+          "Mass of S = $0.466 \\times \\frac{32}{233} = 0.064$ g, so %S = $\\frac{0.064}{0.40} \\times 100 = 16\\%$. Statement I is incorrect.",
+          "The 13.7% value comes from dividing 0.064 by the precipitate mass (0.466 g) instead of the compound mass.",
+          "For Statement II, %O = 100 - 54.5 - 9.1 = 36.4.",
+          "Mole ratios are C : H : O = 54.5/12 : 9.1/1 : 36.4/16 = 4.54 : 9.1 : 2.275, which simplifies to 2 : 4 : 1. Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I gives a wrong %S (the correct value is 16%), which rules out options (1) and (3). Statement II is verified as correct, which rules out option (2).",
+        "common_trap": "Dividing by the precipitate mass instead of the compound mass. Another trap is forgetting to find oxygen by difference.",
+        "time_saving_tip": "0.466/233 = 0.002 mol, so the mass of S is $0.002 \\times 32 = 0.064$ g."
+      }
+    }
+  ]
+}

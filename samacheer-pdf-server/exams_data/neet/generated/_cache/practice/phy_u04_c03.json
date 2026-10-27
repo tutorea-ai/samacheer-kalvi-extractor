@@ -1,0 +1,141 @@
+{
+  "questions": [
+    {
+      "slot": "t08_1",
+      "type": "single_correct",
+      "question": "A body of mass $m$ moving with speed $u$ collides head-on and elastically with an identical body that is at rest. Which of the following correctly describes the motion just after the collision?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Both bodies move together with speed $\\frac{u}{2}$",
+        "The first body rebounds with speed $u$ and the second body stays at rest",
+        "The first body comes to rest and the second body moves with speed $2u$",
+        "The first body comes to rest and the second body moves with speed $u$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In a 1D elastic collision between equal masses, the bodies exchange velocities.",
+        "steps": [
+          "Use $v_1 = \\frac{(m_1-m_2)u_1 + 2m_2u_2}{m_1+m_2}$ with $m_1 = m_2 = m$, $u_1 = u$ and $u_2 = 0$. This gives $v_1 = 0$.",
+          "Use $v_2 = \\frac{(m_2-m_1)u_2 + 2m_1u_1}{m_1+m_2}$. This gives $v_2 = \\frac{2mu}{2m} = u$.",
+          "So the velocities are exchanged: the first body stops and the second moves off with speed $u$."
+        ],
+        "final_answer": "Option (4): The first body comes to rest and the second body moves with speed $u$",
+        "why_not_others": "Moving together at $\\frac{u}{2}$ describes a perfectly inelastic collision. Rebounding with speed $u$ happens only when a light body hits a very heavy one. A speed of $2u$ for the struck body applies when a heavy body hits a light one; with equal masses it would also violate momentum conservation.",
+        "common_trap": "Confusing the equal-mass result with the heavy-hits-light case, where the light body moves off at about $2u$.",
+        "time_saving_tip": "Equal masses in a 1D elastic collision: simply swap the velocities."
+      }
+    },
+    {
+      "slot": "t08_2",
+      "type": "single_correct",
+      "question": "A block of mass $2\\ kg$ moving at $6\\ m\\,s^{-1}$ on a smooth horizontal surface collides with a block of mass $4\\ kg$ at rest. The two blocks stick together. The loss in kinetic energy during the collision is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$24\\ J$",
+        "$12\\ J$",
+        "$36\\ J$",
+        "$0\\ J$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "In a perfectly inelastic collision momentum is conserved, and the kinetic energy loss is $\\Delta K = \\frac{m_1m_2(u_1-u_2)^2}{2(m_1+m_2)}$.",
+        "steps": [
+          "Initial kinetic energy $= \\frac{1}{2}(2)(6)^2 = 36\\ J$.",
+          "Common velocity $v = \\frac{2 \\times 6}{6} = 2\\ m\\,s^{-1}$, so the final kinetic energy is $\\frac{1}{2}(6)(2)^2 = 12\\ J$.",
+          "Loss $= 36 - 12 = 24\\ J$.",
+          "Check with the formula: $\\Delta K = \\frac{2 \\times 4 \\times 36}{2 \\times 6} = 24\\ J$."
+        ],
+        "final_answer": "Option (1): $24\\ J$",
+        "why_not_others": "$12\\ J$ is the kinetic energy that remains, not the energy lost. $36\\ J$ assumes all the kinetic energy is lost. $0\\ J$ assumes kinetic energy is conserved, which is not true for an inelastic collision.",
+        "common_trap": "Reporting the final kinetic energy instead of the loss, or assuming kinetic energy is conserved.",
+        "time_saving_tip": "Plug directly into $\\Delta K = \\frac{m_1m_2u^2}{2(m_1+m_2)}$ when the target is at rest."
+      }
+    },
+    {
+      "slot": "t08_3",
+      "type": "single_correct",
+      "question": "A ball moving with speed $u$ collides elastically and obliquely with an identical ball at rest. After the collision, the first ball moves at $30^\\circ$ to its original direction. The speed of the second ball after the collision is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\frac{\\sqrt{3}u}{2}$",
+        "$\\frac{u}{2}$",
+        "$u$",
+        "$\\frac{u}{\\sqrt{2}}$"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "For an elastic oblique collision of equal masses with one at rest, the final velocities are perpendicular. Momentum is conserved separately along x and y.",
+        "steps": [
+          "The velocities after collision are at $90^\\circ$, so the second ball moves at $60^\\circ$ to the original direction, on the other side.",
+          "y-momentum: $v_1\\sin 30^\\circ = v_2\\sin 60^\\circ$, which gives $v_1 = \\sqrt{3}v_2$.",
+          "x-momentum: $u = v_1\\cos 30^\\circ + v_2\\cos 60^\\circ = \\frac{3v_2}{2} + \\frac{v_2}{2} = 2v_2$.",
+          "Therefore $v_2 = \\frac{u}{2}$ (and $v_1 = \\frac{\\sqrt{3}u}{2}$)."
+        ],
+        "final_answer": "Option (2): $\\frac{u}{2}$",
+        "why_not_others": "$\\frac{\\sqrt{3}u}{2}$ is the speed of the first ball. $u$ would be correct only for a head-on collision, where velocities are exchanged. $\\frac{u}{\\sqrt{2}}$ applies only when both balls move at $45^\\circ$.",
+        "common_trap": "Assuming the second ball also moves at $30^\\circ$, or mixing up which ball has which speed.",
+        "time_saving_tip": "With perpendicular final velocities, $v_2 = u\\sin\\theta_1$ and $v_1 = u\\cos\\theta_1$."
+      }
+    },
+    {
+      "slot": "t08_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In every perfectly inelastic collision between two bodies, the entire kinetic energy of the system is lost.",
+        "R": "In a perfectly inelastic collision, the bodies stick together and move with a common velocity, and linear momentum is conserved."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "In a perfectly inelastic collision the kinetic energy loss is maximum, $\\Delta K = \\frac{m_1m_2(u_1-u_2)^2}{2(m_1+m_2)}$, but it is generally not the entire kinetic energy.",
+        "steps": [
+          "Momentum is conserved, so the combined body moves with $v = \\frac{m_1u_1+m_2u_2}{m_1+m_2}$. This is generally non-zero, so some kinetic energy remains. Hence A is false.",
+          "R correctly states that the bodies stick together, move with a common velocity and conserve momentum. Hence R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) cannot be correct.",
+        "common_trap": "Confusing 'maximum loss of kinetic energy' with 'total loss of kinetic energy'.",
+        "time_saving_tip": "If the system has non-zero total momentum, the final velocity cannot be zero, so some kinetic energy must remain."
+      }
+    },
+    {
+      "slot": "t08_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "When a $1\\ kg$ ball moving at $10\\ m\\,s^{-1}$ collides head-on and elastically with a $4\\ kg$ ball at rest, the $1\\ kg$ ball rebounds with a speed of $10\\ m\\,s^{-1}$.",
+        "II": "In a head-on elastic collision of a $1\\ kg$ ball moving at $10\\ m\\,s^{-1}$ with a $4\\ kg$ ball at rest, $64\\%$ of the initial kinetic energy is transferred to the $4\\ kg$ ball."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "1D elastic collision formulas, and the fraction of kinetic energy transferred to a stationary target, $\\frac{4m_1m_2}{(m_1+m_2)^2}$.",
+        "steps": [
+          "$v_1 = \\frac{(1-4)(10)}{5} = -6\\ m\\,s^{-1}$. The $1\\ kg$ ball rebounds at $6\\ m\\,s^{-1}$, not $10\\ m\\,s^{-1}$, so Statement I is incorrect.",
+          "Fraction transferred $= \\frac{4(1)(4)}{(1+4)^2} = \\frac{16}{25} = 64\\%$.",
+          "Check: $v_2 = \\frac{2(1)(10)}{5} = 4\\ m\\,s^{-1}$, so $KE_2 = \\frac{1}{2}(4)(16) = 32\\ J$. Since $\\frac{32}{50} = 64\\%$, Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I uses the 'rebounds with nearly the same speed' result, which holds only when the target is much heavier than the projectile. A mass ratio of 4 is not large enough, so options (1) and (3) fail. Statement II is correct, so option (2) fails.",
+        "common_trap": "Applying the light-hits-very-heavy approximation to a finite mass ratio.",
+        "time_saving_tip": "Use $\\frac{4m_1m_2}{(m_1+m_2)^2}$ directly for the fraction of energy transferred."
+      }
+    }
+  ]
+}

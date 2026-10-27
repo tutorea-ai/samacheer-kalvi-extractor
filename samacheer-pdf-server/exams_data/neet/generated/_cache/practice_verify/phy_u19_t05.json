@@ -1,0 +1,32 @@
+{
+  "neet_phy_u19_t05_1": {
+    "id": "Q1",
+    "working": "I = (12 - 8)/200 = 4/200 A = 20 mA.",
+    "answer": 4,
+    "confidence": "high"
+  },
+  "neet_phy_u19_t05_2": {
+    "id": "Q2",
+    "working": "Series current I_S = (15 - 6)/300 = 30 mA. Load current I_L = 6/1000 = 6 mA. Zener current I_Z = I_S - I_L = 24 mA.",
+    "answer": 4,
+    "confidence": "high"
+  },
+  "neet_phy_u19_t05_3": {
+    "id": "Q3",
+    "working": "Remove the Zener and find the open-circuit load voltage: 10 x 500/1500 = 10/3 V, which is about 3.33 V. This is below V_Z = 5 V, so the Zener stays off. The load voltage is therefore 10/3 V.",
+    "answer": 2,
+    "confidence": "high"
+  },
+  "neet_phy_u19_t05_4": {
+    "id": "Q4",
+    "working": "No circuit is given, so this assumes a consistent set of values. The series current must equal load current plus Zener current: 40 = 10 + 30 mA. Power 300 mW with I_Z = 30 mA gives V_Z = 10 V, which is consistent. So A-II, B-IV, C-III, D-I.",
+    "answer": 3,
+    "confidence": "medium"
+  },
+  "neet_phy_u19_t05_5": {
+    "id": "Q5",
+    "working": "A is true: both sides are heavily doped, the depletion layer is thin and the field is about 5x10^6 V/m. B is false: the load is connected in parallel with the Zener. C is false: heavier doping gives a lower breakdown voltage. D is true: breakdown is not destructive if the current is limited. E is true: in forward bias it acts like an ordinary diode. Correct set is A, D, E.",
+    "answer": 4,
+    "confidence": "high"
+  }
+}

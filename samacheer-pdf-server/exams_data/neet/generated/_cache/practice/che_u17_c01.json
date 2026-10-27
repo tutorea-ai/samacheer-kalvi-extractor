@@ -1,0 +1,627 @@
+{
+  "questions": [
+    {
+      "slot": "t00_1",
+      "type": "single_correct",
+      "question": "Which of the following alcohols gives turbidity immediately at room temperature when treated with Lucas reagent?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Ethanol",
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "2-Methylpropan-2-ol"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Lucas test (conc. $HCl$ + anhydrous $ZnCl_2$) proceeds by an $S_N1$-type path, so the reactivity order is 3° > 2° > 1°.",
+        "steps": [
+          "2-Methylpropan-2-ol, $(CH_3)_3COH$, is a tertiary alcohol.",
+          "It forms the most stable (3°) carbocation, so the insoluble alkyl chloride separates at once as turbidity.",
+          "Propan-2-ol (2°) takes about 5 minutes. Ethanol and propan-1-ol (1°) give no turbidity at room temperature."
+        ],
+        "final_answer": "Option (4): 2-Methylpropan-2-ol",
+        "why_not_others": "Ethanol and propan-1-ol are primary and react only on heating. Propan-2-ol is secondary and gives turbidity only within about 5 minutes.",
+        "common_trap": "Picking propan-2-ol because it reacts at room temperature. It does, but not immediately.",
+        "time_saving_tip": "Immediate turbidity in the Lucas test means look for a carbinol carbon bonded to three carbons."
+      }
+    },
+    {
+      "slot": "t00_2",
+      "type": "single_correct",
+      "question": "An alcohol of molecular formula $C_4H_{10}O$ gives a ketone when its vapours are passed over heated copper at 573 K. The alcohol is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Butan-2-ol",
+        "Butan-1-ol",
+        "2-Methylpropan-2-ol",
+        "2-Methylpropan-1-ol"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Over Cu at 573 K, a 1° alcohol gives an aldehyde, a 2° alcohol gives a ketone and a 3° alcohol gives an alkene.",
+        "steps": [
+          "Formation of a ketone shows that the alcohol is secondary.",
+          "Among the $C_4H_{10}O$ isomers listed, only butan-2-ol, $CH_3CH(OH)CH_2CH_3$, is secondary.",
+          "It is dehydrogenated to butanone."
+        ],
+        "final_answer": "Option (1): Butan-2-ol",
+        "why_not_others": "Butan-1-ol and 2-methylpropan-1-ol are primary and give aldehydes. 2-Methylpropan-2-ol is tertiary and gives 2-methylpropene.",
+        "common_trap": "Expecting the tertiary alcohol to give a ketone. Its carbinol carbon has no H, so it dehydrates to an alkene instead.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_3",
+      "type": "single_correct",
+      "question": "An alcohol X ($C_4H_{10}O$) gives turbidity immediately with Lucas reagent at room temperature. What is the main product when the vapours of X are passed over heated copper at 573 K?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2-Methylpropanal",
+        "Butanone",
+        "2-Methylpropene",
+        "Butanal"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Immediate Lucas turbidity identifies a 3° alcohol. A 3° alcohol undergoes dehydration over Cu at 573 K.",
+        "steps": [
+          "The only tertiary alcohol with formula $C_4H_{10}O$ is 2-methylpropan-2-ol, $(CH_3)_3COH$.",
+          "Its carbinol carbon has no H, so dehydrogenation is not possible.",
+          "Over Cu at 573 K it loses water and gives $(CH_3)_2C=CH_2$, which is 2-methylpropene."
+        ],
+        "final_answer": "Option (3): 2-Methylpropene",
+        "why_not_others": "2-Methylpropanal and butanal would come from primary alcohols. Butanone would come from butan-2-ol, a secondary alcohol, which gives turbidity only after about 5 minutes.",
+        "common_trap": "Assuming that Cu at 573 K always gives a carbonyl compound. For 3° alcohols the product is an alkene.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Tertiary alcohols give turbidity immediately with Lucas reagent at room temperature.",
+        "R": "Tertiary alcohols react with conc. $HCl$/anhydrous $ZnCl_2$ through the most stable carbocation, and the insoluble alkyl chloride formed separates out."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The Lucas test follows an $S_N1$-type path, and the rate depends on carbocation stability.",
+        "steps": [
+          "A is true: 3° alcohols show turbidity at once.",
+          "R is true: a 3° carbocation forms fastest, and the alkyl chloride produced is insoluble, which causes the turbidity.",
+          "R explains both why the reaction is fast and why turbidity appears, so it correctly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are factually correct, which rules out options 3 and 4. R directly accounts for A, which rules out option 2.",
+        "common_trap": "Thinking the turbidity comes from $ZnCl_2$. It is actually due to the insoluble alkyl chloride.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t00_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Oxidation of propan-1-ol with PCC stops at propanal and does not give propanoic acid.",
+        "II": "2-Methylpropan-2-ol is readily oxidised by mild oxidising agents to a ketone because its carbinol carbon carries one hydrogen atom."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "PCC oxidises a 1° alcohol only as far as the aldehyde. A 3° alcohol resists mild oxidation because its carbinol carbon has no H.",
+        "steps": [
+          "Statement I: propan-1-ol is a 1° alcohol, and PCC stops at the aldehyde stage, giving propanal. Statement I is correct.",
+          "Statement II: in 2-methylpropan-2-ol the carbinol carbon is bonded to three $CH_3$ groups and OH, so it has no H.",
+          "Because it has no H on the carbinol carbon, it is not oxidised by mild oxidants. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II misidentifies the structure (the carbinol carbon has no H) and wrongly claims that a ketone is formed. Statement I is correct as written.",
+        "common_trap": "Confusing 2-methylpropan-2-ol (3°) with butan-2-ol (2°), which is oxidised to a ketone.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_1",
+      "type": "single_correct",
+      "question": "In the acid-catalysed dehydration of a tertiary alcohol, the rate-determining step is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Protonation of the $-OH$ group",
+        "Loss of a β-proton to form the alkene",
+        "Loss of a water molecule to form a carbocation",
+        "Regeneration of the acid catalyst"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "E1 dehydration has three steps: protonation (fast), carbocation formation (slow) and deprotonation.",
+        "steps": [
+          "Step 1, fast protonation of OH, converts it into a good leaving group ($H_2O$).",
+          "Step 2, loss of $H_2O$ to give a carbocation, is slow and therefore rate-determining.",
+          "Step 3 is loss of a β-proton to give the alkene, which also regenerates the acid."
+        ],
+        "final_answer": "Option (3): Loss of a water molecule to form a carbocation",
+        "why_not_others": "Protonation is fast. Deprotonation and regeneration of the catalyst occur after the slow step.",
+        "common_trap": "Choosing protonation because it is the first step. The first step is not necessarily the slowest.",
+        "time_saving_tip": "Since ease of dehydration follows carbocation stability, the slow step must be the one that forms the carbocation."
+      }
+    },
+    {
+      "slot": "t01_2",
+      "type": "single_correct",
+      "question": "Which set of conditions converts ethanol mainly into diethyl ether?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Conc. $H_2SO_4$ at 443 K",
+        "20% $H_3PO_4$ at about 358 K",
+        "Excess ethanol with $H_2SO_4$ at 413 K",
+        "Heated Cu at 573 K"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Ethanol dehydrates intramolecularly to an alkene at 443 K but intermolecularly to an ether at 413 K when excess alcohol is used.",
+        "steps": [
+          "At 413 K with excess ethanol, a second ethanol molecule attacks the protonated alcohol by an $S_N2$ path.",
+          "Water is eliminated, giving $C_2H_5OC_2H_5$.",
+          "At 443 K the same acid gives ethene instead."
+        ],
+        "final_answer": "Option (3): Excess ethanol with $H_2SO_4$ at 413 K",
+        "why_not_others": "Conc. $H_2SO_4$ at 443 K gives ethene. 20% $H_3PO_4$ at 358 K is the condition used for 3° alcohols. Cu at 573 K dehydrogenates ethanol to ethanal.",
+        "common_trap": "Mixing up the two temperatures: 413 K gives the ether, 443 K gives the alkene.",
+        "time_saving_tip": "Remember that the lower temperature (413 K) gives the ether and the higher temperature (443 K) gives the alkene."
+      }
+    },
+    {
+      "slot": "t01_3",
+      "type": "single_correct",
+      "question": "What is the major product formed when 2-methylbutan-2-ol is heated with dilute phosphoric acid?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2-Methylbut-1-ene",
+        "3-Methylbut-1-ene",
+        "Pent-2-ene",
+        "2-Methylbut-2-ene"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "E1 dehydration follows the Saytzeff rule: the more substituted alkene is the major product.",
+        "steps": [
+          "Loss of water from $(CH_3)_2C(OH)CH_2CH_3$ gives the 3° carbocation $(CH_3)_2C^+CH_2CH_3$.",
+          "β-Protons are available on the $CH_3$ groups and on the $CH_2$ group.",
+          "Loss of H from the $CH_2$ group gives the trisubstituted alkene $(CH_3)_2C=CHCH_3$, which is the major product."
+        ],
+        "final_answer": "Option (4): 2-Methylbut-2-ene",
+        "why_not_others": "2-Methylbut-1-ene is the less substituted, minor product. 3-Methylbut-1-ene and pent-2-ene have skeletons that cannot arise from this 3° carbocation.",
+        "common_trap": "Choosing the terminal alkene because more β-hydrogens are available on the methyl groups.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Step 1 of acid-catalysed dehydration of an alcohol"
+          },
+          {
+            "label": "B",
+            "text": "Step 2 of acid-catalysed dehydration of an alcohol"
+          },
+          {
+            "label": "C",
+            "text": "Step 3 of acid-catalysed dehydration of an alcohol"
+          },
+          {
+            "label": "D",
+            "text": "Heating excess ethanol with $H_2SO_4$ at 413 K"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Slow loss of $H_2O$ giving a carbocation"
+          },
+          {
+            "label": "II",
+            "text": "$S_N2$ attack by a second alcohol molecule giving an ether"
+          },
+          {
+            "label": "III",
+            "text": "Fast protonation of the $-OH$ group"
+          },
+          {
+            "label": "IV",
+            "text": "Loss of a β-proton giving an alkene"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "The dehydration mechanism is protonation, then carbocation formation (rate-determining), then deprotonation. At 413 K with excess ethanol, ether formation occurs by $S_N2$.",
+        "steps": [
+          "A: protonation of OH is fast, so A-III.",
+          "B: loss of water to give the carbocation is the slow step, so B-I.",
+          "C: removal of a β-proton gives the alkene, so C-IV.",
+          "D: excess ethanol at 413 K gives diethyl ether by $S_N2$ attack, so D-II."
+        ],
+        "final_answer": "Option (4): A-III, B-I, C-IV, D-II",
+        "why_not_others": "Option 1 swaps protonation and carbocation formation. Option 2 places deprotonation before carbocation formation. Option 3 assigns ether formation to step 1.",
+        "common_trap": "Thinking protonation is the slow step simply because it comes first.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t01_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about the acid-catalysed dehydration of alcohols are correct?",
+      "statements": {
+        "A": "The ease of dehydration follows the order 3° > 2° > 1°.",
+        "B": "The acid is consumed in the reaction and is not regenerated.",
+        "C": "When two alkenes are possible, the more substituted alkene is the major product.",
+        "D": "The carbocation intermediate may undergo a 1,2-hydride or 1,2-methyl shift, giving a rearranged alkene.",
+        "E": "Tertiary alcohols require conc. $H_2SO_4$ at 443 K, while ethanol dehydrates with 20% $H_3PO_4$ at 358 K."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A and C only",
+        "A, C and D only",
+        "C, D and E only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Dehydration rates follow carbocation stability, the acid acts as a catalyst, the Saytzeff rule applies and rearrangements are possible.",
+        "steps": [
+          "A is true: the order matches carbocation stability.",
+          "B is false: the acid is a catalyst and is regenerated at the end.",
+          "C is true: this is the Saytzeff rule.",
+          "D is true: carbocations can rearrange by 1,2-H or 1,2-$CH_3$ shifts.",
+          "E is false: the conditions are reversed. Ethanol needs conc. $H_2SO_4$ at 443 K, while 3° alcohols need only 20% $H_3PO_4$ at about 358 K."
+        ],
+        "final_answer": "Option (3): A, C and D only",
+        "why_not_others": "Options 1 and 4 include a false statement (B or E). Option 2 leaves out the true statement D.",
+        "common_trap": "Reversing the dehydration conditions: the more reactive 3° alcohol needs the milder conditions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_1",
+      "type": "single_correct",
+      "question": "Phenol does NOT react with which of the following?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Sodium metal",
+        "Aqueous sodium hydrogencarbonate",
+        "Aqueous sodium hydroxide",
+        "Aqueous potassium hydroxide"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Phenol is a weaker acid than carbonic acid but is acidic enough to react with active metals and strong bases.",
+        "steps": [
+          "Phenol reacts with Na to liberate $H_2$.",
+          "Phenol is neutralised by $NaOH$ or $KOH$ to form phenoxide.",
+          "Because phenol is weaker than $H_2CO_3$, it cannot decompose $NaHCO_3$, so no $CO_2$ is evolved."
+        ],
+        "final_answer": "Option (2): Aqueous sodium hydrogencarbonate",
+        "why_not_others": "Sodium, NaOH and KOH all react with phenol, as described above.",
+        "common_trap": "Assuming that every acidic OH compound liberates $CO_2$ from $NaHCO_3$.",
+        "time_saving_tip": "Effervescence with $NaHCO_3$ points to a carboxylic acid, not ordinary phenol."
+      }
+    },
+    {
+      "slot": "t02_2",
+      "type": "single_correct",
+      "question": "The correct decreasing order of acidic strength is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "o-nitrophenol > p-nitrophenol > m-nitrophenol > phenol",
+        "m-nitrophenol > p-nitrophenol > o-nitrophenol > phenol",
+        "p-nitrophenol > m-nitrophenol > o-nitrophenol > phenol",
+        "p-nitrophenol > o-nitrophenol > m-nitrophenol > phenol"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "An ortho or para $-NO_2$ group acts by the -R effect, while a meta $-NO_2$ acts only by the -I effect. Intramolecular H-bonding slightly weakens the ortho isomer.",
+        "steps": [
+          "The $pK_a$ values are: p-nitrophenol 7.1, o-nitrophenol 7.2, m-nitrophenol 8.3, phenol 10.0.",
+          "A lower $pK_a$ means a stronger acid.",
+          "Therefore the order is p > o > m > phenol."
+        ],
+        "final_answer": "Option (4): p-nitrophenol > o-nitrophenol > m-nitrophenol > phenol",
+        "why_not_others": "Option 1 ignores the effect of intramolecular H-bonding in the ortho isomer. Options 2 and 3 overrate the meta isomer, which lacks the -R effect.",
+        "common_trap": "Placing o-nitrophenol above the para isomer because the nitro group is closer to OH.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_3",
+      "type": "single_correct",
+      "question": "Which of the following is the least acidic?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "m-Nitrophenol",
+        "p-Cresol",
+        "Phenol",
+        "o-Nitrophenol"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Electron-donating groups decrease the acidity of phenol, while electron-withdrawing groups increase it.",
+        "steps": [
+          "The $-CH_3$ group in p-cresol releases electrons by the +I effect and hyperconjugation, which destabilises the phenoxide ion.",
+          "p-Cresol is therefore less acidic than phenol.",
+          "Both nitrophenols are more acidic than phenol."
+        ],
+        "final_answer": "Option (2): p-Cresol",
+        "why_not_others": "m-Nitrophenol ($pK_a$ 8.3) and o-nitrophenol ($pK_a$ 7.2) are stronger acids than phenol ($pK_a$ 10), and phenol is stronger than p-cresol.",
+        "common_trap": "Choosing m-nitrophenol because the meta nitro group has only a weak effect. A weak electron-withdrawing effect still increases acidity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Phenol is a stronger acid than ethanol.",
+        "R": "Delocalisation of charge is more effective in phenol than in the phenoxide ion, because resonance in phenol involves no charge separation."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "The phenoxide ion is stabilised by charge delocalisation, which is more effective than delocalisation in phenol, where resonance involves charge separation.",
+        "steps": [
+          "A is true: the $pK_a$ of phenol is about 10, against about 15.9 for ethanol.",
+          "R reverses the fact. Resonance in phenol requires charge separation, so delocalisation is more effective in the phenoxide ion.",
+          "Hence R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "Because R is false, options 1 and 2 are ruled out. Because A is true, option 4 is ruled out.",
+        "common_trap": "Not noticing that R swaps phenol and phenoxide.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t02_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "o-Nitrophenol is more acidic than p-nitrophenol because the nitro group is closer to the $-OH$ group.",
+        "II": "A nitro group at the meta position increases the acidity of phenol more than one at the para position, because at the meta position it acts through the -R effect."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "p-Nitrophenol (7.1) > o-nitrophenol (7.2) > m-nitrophenol (8.3) in acidity. A meta $-NO_2$ acts only through the -I effect.",
+        "steps": [
+          "Statement I: intramolecular H-bonding makes o-nitrophenol slightly weaker than the para isomer, so Statement I is incorrect.",
+          "Statement II: a meta $-NO_2$ cannot exert the -R effect and acts only by the -I effect, so it raises acidity less than a para $-NO_2$. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contradicts the known order of acidity, so no option that marks either statement as correct can be right.",
+        "common_trap": "Assuming that proximity of the nitro group to OH always means greater acidity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_1",
+      "type": "single_correct",
+      "question": "When phenol is treated with bromine water, the product obtained is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "o-Bromophenol as a colourless liquid",
+        "2,4,6-Tribromophenol as a white precipitate",
+        "p-Bromophenol as the only product",
+        "Bromobenzene"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "In a polar solvent, phenol ionises to the strongly activating phenoxide ion and undergoes tribromination without any Lewis acid.",
+        "steps": [
+          "Water increases ionisation of phenol to phenoxide, which is even more activating than phenol.",
+          "Bromine substitutes all the ortho and para positions.",
+          "The product, $C_6H_2Br_3OH$, separates as a white precipitate."
+        ],
+        "final_answer": "Option (2): 2,4,6-Tribromophenol as a white precipitate",
+        "why_not_others": "Monobromophenols form only with $Br_2$ in $CS_2$ or $CHCl_3$ at low temperature. Bromobenzene would require replacement of the OH group, which does not occur.",
+        "common_trap": "Confusing the bromine water reaction with mono-bromination in $CS_2$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_2",
+      "type": "single_correct",
+      "question": "Nitration of phenol with dilute $HNO_3$ at 298 K gives a mixture of o- and p-nitrophenol. Which statement correctly describes how they are separated?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "By steam distillation; the para isomer distils over because of intramolecular H-bonding",
+        "By steam distillation; the ortho isomer distils over because of intramolecular H-bonding",
+        "By steam distillation; the ortho isomer distils over because of intermolecular H-bonding",
+        "By steam distillation; the para isomer distils over because of intermolecular H-bonding"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Intramolecular H-bonding prevents molecular association and makes o-nitrophenol steam volatile.",
+        "steps": [
+          "In o-nitrophenol, the OH group forms an H-bond with the adjacent $NO_2$ group within the same molecule.",
+          "As a result, its molecules do not associate with each other, and it is volatile in steam.",
+          "p-Nitrophenol is intermolecularly H-bonded, so it is less volatile and remains behind."
+        ],
+        "final_answer": "Option (2): By steam distillation; the ortho isomer distils over because of intramolecular H-bonding",
+        "why_not_others": "The para isomer cannot form an intramolecular H-bond, which rules out option 1. Intermolecular H-bonding lowers volatility rather than raising it, which rules out options 3 and 4.",
+        "common_trap": "Interchanging the terms intramolecular and intermolecular.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_3",
+      "type": "single_correct",
+      "question": "Phenol is heated with conc. $H_2SO_4$ at about 373 K. What is the major product?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "o-Phenolsulphonic acid",
+        "m-Phenolsulphonic acid",
+        "p-Phenolsulphonic acid",
+        "2,4,6-Trinitrophenol"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Sulphonation of phenol is kinetically controlled near room temperature (ortho product) and thermodynamically controlled at about 373 K (para product).",
+        "steps": [
+          "OH is an ortho/para director, so the meta product is ruled out.",
+          "Near room temperature, the ortho isomer dominates (kinetic control).",
+          "At about 373 K, the para isomer is the major product (thermodynamic control)."
+        ],
+        "final_answer": "Option (3): p-Phenolsulphonic acid",
+        "why_not_others": "The ortho isomer is the low-temperature product. The meta position is not activated by OH. Picric acid requires nitration.",
+        "common_trap": "Mixing up which temperature favours the ortho isomer and which favours the para isomer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Phenol + $Br_2$ in $CS_2$ at low temperature"
+          },
+          {
+            "label": "B",
+            "text": "Phenol + bromine water"
+          },
+          {
+            "label": "C",
+            "text": "Phenol + dilute $HNO_3$ at 298 K"
+          },
+          {
+            "label": "D",
+            "text": "Phenol + conc. $HNO_3$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "2,4,6-Trinitrophenol"
+          },
+          {
+            "label": "II",
+            "text": "p-Bromophenol as the major product"
+          },
+          {
+            "label": "III",
+            "text": "2,4,6-Tribromophenol"
+          },
+          {
+            "label": "IV",
+            "text": "Mixture of o- and p-nitrophenol"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-II, B-III, C-IV, D-I",
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The product of electrophilic substitution in phenol depends on the solvent and on the concentration of the reagent.",
+        "steps": [
+          "A: a low-polarity solvent at low temperature gives mono-bromination, mainly para, so A-II.",
+          "B: bromine water gives 2,4,6-tribromophenol, so B-III.",
+          "C: dilute $HNO_3$ gives o- and p-nitrophenol, so C-IV.",
+          "D: conc. $HNO_3$ gives picric acid, so D-I."
+        ],
+        "final_answer": "Option (2): A-II, B-III, C-IV, D-I",
+        "why_not_others": "Options 1 and 4 swap the two bromination products. Options 3 and 4 swap the dilute and concentrated $HNO_3$ products.",
+        "common_trap": "Assuming that bromination always gives the tribromo product, whatever the solvent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t03_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about electrophilic substitution in phenol are correct?",
+      "statements": {
+        "A": "The $-OH$ group activates the ring and directs incoming electrophiles to the ortho and para positions through its +R effect.",
+        "B": "Bromination of phenol requires a Lewis acid such as $FeBr_3$.",
+        "C": "In bromine water, the increased ionisation of phenol to the more activating phenoxide ion leads to tribromination.",
+        "D": "Picric acid is better prepared by sulphonation of phenol followed by nitration, because this gives a higher yield.",
+        "E": "Sulphonation of phenol near room temperature gives mainly p-phenolsulphonic acid."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and D only",
+        "C, D and E only",
+        "A and C only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "OH is a strongly activating, ortho/para-directing group. Phenol needs no Lewis acid for halogenation, and sulphonation shows temperature control.",
+        "steps": [
+          "A is true: OH activates the ring by the +R effect.",
+          "B is false: the ring is so activated that no Lewis acid is needed.",
+          "C is true: the polar solvent promotes formation of the phenoxide ion, leading to 2,4,6-tribromophenol.",
+          "D is true: sulphonation followed by nitration gives picric acid in better yield.",
+          "E is false: near room temperature the ortho isomer is the major product."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Options 2 and 3 include a false statement (B or E). Option 4 leaves out the true statement D.",
+        "common_trap": "Carrying the benzene halogenation conditions (Lewis acid catalyst) over to phenol.",
+        "time_saving_tip": null
+      }
+    }
+  ]
+}

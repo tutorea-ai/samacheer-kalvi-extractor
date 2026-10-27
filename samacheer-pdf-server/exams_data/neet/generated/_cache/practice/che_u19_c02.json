@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "slot": "t04_1",
+      "type": "single_correct",
+      "question": "Which one of the following naturally occurring alpha-amino acids is optically inactive?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Alanine",
+        "Valine",
+        "Glycine",
+        "Leucine"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "All natural alpha-amino acids except glycine are optically active.",
+        "steps": [
+          "The general formula of an alpha-amino acid is $R-CH(NH_2)-COOH$.",
+          "In glycine $R = H$, so the alpha carbon carries two identical H atoms and is not chiral.",
+          "Alanine ($R = CH_3$), valine and leucine have a chiral alpha carbon and are optically active."
+        ],
+        "final_answer": "Option (3): Glycine",
+        "why_not_others": "Alanine, valine and leucine each have four different groups on the alpha carbon, so they are optically active.",
+        "common_trap": "Choosing alanine because it is the next simplest amino acid. Its $CH_3$ group still makes the alpha carbon chiral.",
+        "time_saving_tip": "Remember that glycine is the only natural alpha-amino acid that is not optically active."
+      }
+    },
+    {
+      "slot": "t04_2",
+      "type": "single_correct",
+      "question": "The correct structure of the dipeptide glycylalanine (Gly-Ala) is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$H_2N-CH(CH_3)-CO-NH-CH_2-COOH$",
+        "$H_2N-CH_2-CO-O-CH(CH_3)-COOH$",
+        "$HOOC-CH_2-NH-CO-CH(CH_3)-NH_2$",
+        "$H_2N-CH_2-CO-NH-CH(CH_3)-COOH$"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A peptide bond is the amide link $-CO-NH-$ formed between the $-COOH$ of one amino acid and the $-NH_2$ of the next, with loss of water.",
+        "steps": [
+          "In Gly-Ala, glycine is the residue with the free $-NH_2$ group and alanine is the residue with the free $-COOH$ group.",
+          "The $-COOH$ of glycine joins the $-NH_2$ of alanine to form $-CO-NH-$.",
+          "This gives $H_2N-CH_2-CO-NH-CH(CH_3)-COOH$."
+        ],
+        "final_answer": "Option (4): $H_2N-CH_2-CO-NH-CH(CH_3)-COOH$",
+        "why_not_others": "Option (1) is Ala-Gly, with the order reversed. Option (2) contains an ester link instead of an amide link. In option (3), the carboxyl group of alanine has formed the amide with the amino group of glycine, so the free $-NH_2$ is on alanine and the free $-COOH$ is on glycine. That is again Ala-Gly, not Gly-Ala.",
+        "common_trap": "Ignoring the sequence and accepting Ala-Gly as Gly-Ala.",
+        "time_saving_tip": "Check which residue has the free $NH_2$. That residue is named first."
+      }
+    },
+    {
+      "slot": "t04_3",
+      "type": "single_correct",
+      "question": "Alpha-amino acids are amphoteric, crystalline solids with high melting points. This is mainly because",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "they are optically active",
+        "most of them have the L-configuration",
+        "they exist as dipolar ions, $H_3N^+-CHR-COO^-$",
+        "their $-NH_2$ and $-COOH$ groups are attached to different carbon atoms"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "Zwitterion formation explains the amphoteric nature and high melting points of amino acids.",
+        "steps": [
+          "The acidic $-COOH$ group transfers a proton to the basic $-NH_2$ group: $R-CH(NH_2)-COOH \\rightleftharpoons R-CH(NH_3^+)-COO^-$.",
+          "The dipolar ion has both an acidic part ($-NH_3^+$) and a basic part ($-COO^-$), so the compound is amphoteric.",
+          "Its ionic character makes amino acids crystalline solids with high melting points."
+        ],
+        "final_answer": "Option (3): they exist as dipolar ions, $H_3N^+-CHR-COO^-$",
+        "why_not_others": "Optical activity and L-configuration describe stereochemistry and do not explain these properties. In alpha-amino acids both groups are on the same alpha carbon, so option (4) is factually wrong.",
+        "common_trap": "Linking physical properties to optical activity instead of to ionic character.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Glycine is the only naturally occurring alpha-amino acid that is optically inactive.",
+        "R": "In glycine the side chain R is a hydrogen atom, so its alpha carbon carries two identical hydrogen atoms and is not chiral."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Optical activity requires a chiral alpha carbon. Glycine ($R = H$) does not have one.",
+        "steps": [
+          "All natural alpha-amino acids except glycine are optically active, so A is true.",
+          "Glycine is $H_2N-CH_2-COOH$; its alpha carbon has two H atoms, so R is true.",
+          "A carbon with two identical groups is not chiral, so R directly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R gives the structural reason for A, so options (2), (3) and (4) are ruled out.",
+        "common_trap": "Thinking R is only a description of glycine and not the explanation of its optical inactivity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t04_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A peptide formed by linking eleven alpha-amino acid molecules is classified as a polypeptide.",
+        "II": "A polypeptide containing more than about 100 amino acid residues and having a molecular mass above 10000 u is called a protein."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Peptides are classified by the number of amino acid units they contain.",
+        "steps": [
+          "Two amino acids form a dipeptide. More than ten amino acids form a polypeptide.",
+          "Eleven is more than ten, so Statement I is correct.",
+          "A polypeptide with more than about 100 residues and molecular mass above 10000 u is a protein, so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements agree with the definitions, so no option that marks either statement as incorrect can be right.",
+        "common_trap": "Thinking a polypeptide needs about 100 residues. That figure is the threshold for a protein, not for a polypeptide.",
+        "time_saving_tip": "Remember the cut-offs: more than 10 residues for a polypeptide; more than about 100 residues and above 10000 u for a protein."
+      }
+    },
+    {
+      "slot": "t05_1",
+      "type": "single_correct",
+      "question": "The primary structure of a protein refers to",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the twisting of the chain into a helix",
+        "the sequence of amino acids in the polypeptide chain",
+        "the spatial arrangement of two or more polypeptide subunits",
+        "the overall folding of the chain into a globular shape"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "The primary structure is the amino acid sequence, held by peptide bonds.",
+        "steps": [
+          "The four levels are primary (sequence), secondary (helix or sheet), tertiary (overall folding) and quaternary (arrangement of subunits).",
+          "The sequence of amino acids is the primary structure."
+        ],
+        "final_answer": "Option (2): the sequence of amino acids in the polypeptide chain",
+        "why_not_others": "Option (1) describes secondary structure, option (3) quaternary structure and option (4) tertiary structure.",
+        "common_trap": "Confusing the overall folded shape with the primary structure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_2",
+      "type": "single_correct",
+      "question": "Which of the following correctly describes the alpha-helix structure of proteins?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A right-handed screw held by intramolecular hydrogen bonds between the $-NH$ of one residue and the $>C=O$ of an adjacent turn",
+        "A left-handed screw held by intramolecular hydrogen bonds between the $-NH$ and $>C=O$ groups",
+        "A right-handed screw held by intermolecular hydrogen bonds between neighbouring chains",
+        "A left-handed screw held mainly by disulphide linkages"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The alpha-helix is right-handed and is stabilised by intramolecular hydrogen bonds.",
+        "steps": [
+          "In the alpha-helix, the polypeptide chain twists into a right-handed screw.",
+          "The $-NH$ of one residue hydrogen-bonds to the $>C=O$ of an adjacent turn of the same chain, so the bonds are intramolecular."
+        ],
+        "final_answer": "Option (1): A right-handed screw held by intramolecular hydrogen bonds between the $-NH$ of one residue and the $>C=O$ of an adjacent turn",
+        "why_not_others": "Options (2) and (4) wrongly make the helix left-handed. Option (3) describes the intermolecular hydrogen bonding of the beta-pleated sheet.",
+        "common_trap": "Calling the alpha-helix left-handed.",
+        "time_saving_tip": "Pair the terms: helix goes with intramolecular hydrogen bonds; sheet goes with intermolecular hydrogen bonds."
+      }
+    },
+    {
+      "slot": "t05_3",
+      "type": "single_correct",
+      "question": "Which statement about the quaternary structure of proteins is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It exists only in proteins made of two or more polypeptide subunits, as in haemoglobin, which has four subunits",
+        "Every biologically active protein must possess a quaternary structure",
+        "It refers to the sequence of amino acids joined by peptide bonds",
+        "It is the side-by-side arrangement of stretched chains held by intermolecular hydrogen bonds"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Quaternary structure is the spatial arrangement of two or more polypeptide subunits.",
+        "steps": [
+          "Quaternary structure requires at least two subunits; haemoglobin has four.",
+          "Proteins with only tertiary structure can also be fully biologically active, so quaternary structure is not essential for activity."
+        ],
+        "final_answer": "Option (1): It exists only in proteins made of two or more polypeptide subunits, as in haemoglobin, which has four subunits",
+        "why_not_others": "Option (2) is false because single-chain proteins can be fully active. Option (3) describes primary structure. Option (4) describes the beta-pleated sheet.",
+        "common_trap": "Assuming every biologically active protein needs a quaternary structure.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t05_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Primary structure"
+          },
+          {
+            "label": "B",
+            "text": "Alpha-helix"
+          },
+          {
+            "label": "C",
+            "text": "Beta-pleated sheet"
+          },
+          {
+            "label": "D",
+            "text": "Quaternary structure"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Chains stretched almost to maximum extension, laid side by side and held by intermolecular hydrogen bonds"
+          },
+          {
+            "label": "II",
+            "text": "Sequence of amino acids linked by peptide bonds"
+          },
+          {
+            "label": "III",
+            "text": "Spatial arrangement of two or more polypeptide subunits"
+          },
+          {
+            "label": "IV",
+            "text": "Right-handed coil stabilised by intramolecular hydrogen bonds"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Each level of protein structure has a characteristic feature.",
+        "steps": [
+          "Primary structure is the amino acid sequence: A-II.",
+          "Alpha-helix is a right-handed coil with intramolecular hydrogen bonds: B-IV.",
+          "Beta-pleated sheet has side-by-side chains with intermolecular hydrogen bonds: C-I.",
+          "Quaternary structure is the arrangement of subunits: D-III."
+        ],
+        "final_answer": "Option (2): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) swaps the helix and the sheet. Option (3) swaps the primary and quaternary structures. Option (4) swaps the sheet and the quaternary structure.",
+        "common_trap": "Interchanging intramolecular hydrogen bonding (helix) with intermolecular hydrogen bonding (sheet).",
+        "time_saving_tip": "Once A-II and B-IV are fixed, only option (2) remains."
+      }
+    },
+    {
+      "slot": "t05_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about protein structure are correct?",
+      "statements": {
+        "A": "A change of even a single amino acid in the sequence can alter the function of a protein.",
+        "B": "Tertiary structure is stabilised by hydrogen bonds, disulphide linkages, van der Waals forces and electrostatic attractions.",
+        "C": "A protein that has only a tertiary structure cannot be biologically active.",
+        "D": "In the beta-pleated sheet, polypeptide chains are stretched almost to maximum extension.",
+        "E": "Haemoglobin is made up of two polypeptide subunits."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and D only",
+        "A, B, C and D only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "These statements test the features of each level of protein structure.",
+        "steps": [
+          "A is true: the primary structure determines function.",
+          "B is true: these four forces stabilise tertiary structure.",
+          "C is false: proteins with only tertiary structure can be fully biologically active.",
+          "D is true: in the sheet, chains are nearly fully extended and laid side by side.",
+          "E is false: haemoglobin has four subunits."
+        ],
+        "final_answer": "Option (1): A, B and D only",
+        "why_not_others": "Option (2) includes C, option (3) includes E, and option (4) includes both C and E. Each of these contains a false statement.",
+        "common_trap": "Believing that quaternary structure is required for biological activity, or miscounting the subunits in haemoglobin.",
+        "time_saving_tip": "Rejecting C and E removes every option except (1)."
+      }
+    },
+    {
+      "slot": "t06_1",
+      "type": "single_correct",
+      "question": "When a protein is denatured, which level of its structure remains intact?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Primary structure",
+        "Secondary structure",
+        "Tertiary structure",
+        "Both secondary and tertiary structures"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Denaturation destroys secondary and tertiary structure but not the peptide bonds.",
+        "steps": [
+          "Heat or a change in pH disturbs the hydrogen bonds, so helices uncoil and globules unfold.",
+          "Peptide bonds are not broken, so the amino acid sequence (primary structure) is retained."
+        ],
+        "final_answer": "Option (1): Primary structure",
+        "why_not_others": "Secondary and tertiary structures are exactly the levels destroyed during denaturation.",
+        "common_trap": "Thinking that denaturation breaks peptide bonds.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_2",
+      "type": "single_correct",
+      "question": "Curdling of milk is an example of protein denaturation. It is caused by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "breaking of peptide bonds in milk proteins by bacterial enzymes",
+        "destruction of the primary structure of milk proteins by heat",
+        "a rise in pH due to bases released by bacteria",
+        "a change in pH due to lactic acid produced by bacteria"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "A change in pH is a chemical cause of denaturation.",
+        "steps": [
+          "Bacteria in milk produce lactic acid.",
+          "The acid changes the pH, which disturbs the hydrogen bonds in the milk proteins.",
+          "The proteins lose their secondary and tertiary structure, and the milk curdles."
+        ],
+        "final_answer": "Option (4): a change in pH due to lactic acid produced by bacteria",
+        "why_not_others": "Options (1) and (2) involve breaking peptide bonds or the primary structure, which does not happen in denaturation. Option (3) is wrong because lactic acid lowers the pH; it does not raise it.",
+        "common_trap": "Assuming curdling involves breaking peptide bonds.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_3",
+      "type": "single_correct",
+      "question": "When a protein is denatured by heat or by a change in pH, the interactions mainly disturbed are",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "peptide bonds",
+        "hydrogen bonds",
+        "carbon-carbon bonds of the backbone",
+        "glycosidic linkages"
+      ],
+      "answer": 2,
+      "solution": {
+        "key_concept": "Denaturation acts by disturbing hydrogen bonds.",
+        "steps": [
+          "Heat or a change in pH disturbs the hydrogen bonds.",
+          "As a result, globules unfold, helices uncoil and biological activity is lost.",
+          "Covalent peptide bonds remain unbroken."
+        ],
+        "final_answer": "Option (2): hydrogen bonds",
+        "why_not_others": "Peptide bonds and backbone C-C bonds remain intact during denaturation. Glycosidic linkages occur in carbohydrates, not in proteins.",
+        "common_trap": "Choosing peptide bonds because the protein loses its activity.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_4",
+      "type": "assertion_reason",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Egg white coagulated by boiling still contains the same sequence of amino acids as the native egg-white protein.",
+        "R": "Denaturation destroys the secondary and tertiary structures of a protein but does not break its peptide bonds."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "The primary structure survives denaturation.",
+        "steps": [
+          "Boiling egg white is a case of denaturation.",
+          "Because peptide bonds are not broken, the amino acid sequence is unchanged, so A is true.",
+          "R is true and is the very reason the sequence is unchanged, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true and R directly accounts for A, so options (2), (3) and (4) are ruled out.",
+        "common_trap": "Assuming that boiling breaks the protein down into fragments.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t06_5",
+      "type": "statement_pair",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A denatured protein retains its biological activity because its primary structure remains unchanged.",
+        "II": "During denaturation, the globules of a protein unfold and its helices uncoil."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "Denaturation causes loss of biological activity even though the primary structure is retained.",
+        "steps": [
+          "The primary structure is retained, but the loss of secondary and tertiary structure makes the protein lose its biological activity. Statement I is therefore incorrect.",
+          "When hydrogen bonds are disturbed, globules unfold and helices uncoil, so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I contradicts the loss of activity on denaturation, and Statement II matches the notes. No other option fits this combination.",
+        "common_trap": "Concluding that an intact primary structure keeps the protein active.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_1",
+      "type": "single_correct",
+      "question": "The enzyme that converts maltose into glucose is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "maltase",
+        "invertase",
+        "lactase",
+        "amylase"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Enzymes are highly specific for their substrate.",
+        "steps": [
+          "Maltase acts specifically on maltose, converting it to glucose.",
+          "Invertase (sucrase) hydrolyses sucrose instead."
+        ],
+        "final_answer": "Option (1): maltase",
+        "why_not_others": "Invertase acts on sucrose. Lactase and amylase act on other substrates, not on maltose.",
+        "common_trap": "Confusing invertase with maltase.",
+        "time_saving_tip": "The name of the enzyme usually reflects its substrate: malt-ase acts on maltose."
+      }
+    },
+    {
+      "slot": "t07_2",
+      "type": "single_correct",
+      "question": "The activation energy for the acid hydrolysis of sucrose is about 6.22 kJ mol$^{-1}$. With the enzyme sucrase it is about 2.15 kJ mol$^{-1}$. By how much does the enzyme lower the activation energy?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "4.07 kJ mol$^{-1}$",
+        "8.37 kJ mol$^{-1}$",
+        "2.89 kJ mol$^{-1}$",
+        "6.22 kJ mol$^{-1}$"
+      ],
+      "answer": 1,
+      "solution": {
+        "key_concept": "Enzymes act by lowering the activation energy.",
+        "steps": [
+          "Decrease = $6.22 - 2.15$.",
+          "Decrease = $4.07$ kJ mol$^{-1}$."
+        ],
+        "final_answer": "Option (1): 4.07 kJ mol$^{-1}$",
+        "why_not_others": "8.37 comes from adding the two values. 2.89 is their ratio ($6.22/2.15$), which is a pure number and not an energy. 6.22 is simply the uncatalysed value.",
+        "common_trap": "Dividing the two values instead of subtracting them.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_3",
+      "type": "single_correct",
+      "question": "Which of the following statements about enzyme action is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Enzymes raise the activation energy of the reactions they catalyse",
+        "Enzymes shift the position of equilibrium towards the products",
+        "Enzymes lower the activation energy without changing the position of equilibrium",
+        "Enzymes act efficiently only at high temperatures and extreme pH"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "As catalysts, enzymes lower the activation energy and leave the equilibrium unchanged.",
+        "steps": [
+          "An enzyme provides a lower-energy path through an enzyme-substrate complex.",
+          "Catalysts speed up a reaction without altering its equilibrium.",
+          "Enzymes work under mild conditions, at an optimum temperature and pH."
+        ],
+        "final_answer": "Option (3): Enzymes lower the activation energy without changing the position of equilibrium",
+        "why_not_others": "Option (1) gets the direction of the energy change backwards. Option (2) wrongly says enzymes alter the equilibrium. Option (4) contradicts the mild conditions under which enzymes work.",
+        "common_trap": "Believing that catalysts shift the equilibrium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_4",
+      "type": "match_list",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Maltase"
+          },
+          {
+            "label": "B",
+            "text": "Invertase"
+          },
+          {
+            "label": "C",
+            "text": "Oxidoreductase"
+          },
+          {
+            "label": "D",
+            "text": "Active site"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Region where the substrate binds to form the enzyme-substrate complex"
+          },
+          {
+            "label": "II",
+            "text": "Catalyses oxidation of one substrate with simultaneous reduction of another"
+          },
+          {
+            "label": "III",
+            "text": "Hydrolyses sucrose"
+          },
+          {
+            "label": "IV",
+            "text": "Converts maltose into glucose"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-II, D-I",
+        "A-IV, B-III, C-I, D-II",
+        "A-IV, B-II, C-III, D-I",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "answer": 4,
+      "solution": {
+        "key_concept": "This question tests enzyme names, their specificity and the mechanism of action.",
+        "steps": [
+          "Maltase converts maltose to glucose: A-IV.",
+          "Invertase hydrolyses sucrose: B-III.",
+          "Oxidoreductases catalyse coupled oxidation and reduction: C-II.",
+          "The substrate binds at the active site to form the ES complex: D-I."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-II, D-I",
+        "why_not_others": "Option (1) swaps maltase and invertase. Option (2) swaps the oxidoreductase and the active site. Option (3) swaps invertase and the oxidoreductase.",
+        "common_trap": "Mixing up the substrates of maltase and invertase.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "slot": "t07_5",
+      "type": "multi_statement",
+      "question": "Which of the following statements about enzymes are correct?",
+      "statements": {
+        "A": "Most enzymes are globular proteins.",
+        "B": "Enzymes are highly specific for their substrate and for the reaction they catalyse.",
+        "C": "Enzyme action can be represented as $E + S \\rightleftharpoons ES \\rightarrow E + P$, with the complex formed at the active site.",
+        "D": "Enzymes work best at high temperatures and at extreme pH.",
+        "E": "Enzymes change the equilibrium constant of the reactions they catalyse."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B, C and E only",
+        "A, B and C only",
+        "B, C and D only"
+      ],
+      "answer": 3,
+      "solution": {
+        "key_concept": "These statements test the nature, specificity, mechanism and operating conditions of enzymes.",
+        "steps": [
+          "A is true: most enzymes are globular proteins.",
+          "B is true: enzymes are highly specific.",
+          "C is true: this is the enzyme-substrate complex mechanism.",
+          "D is false: enzymes work under mild conditions, at an optimum temperature and pH.",
+          "E is false: enzymes lower the activation energy without changing the equilibrium."
+        ],
+        "final_answer": "Option (3): A, B and C only",
+        "why_not_others": "Option (1) leaves out the true statement C. Option (2) includes the false statement E. Option (4) includes the false statement D and leaves out A.",
+        "common_trap": "Thinking that a catalyst alters the equilibrium constant.",
+        "time_saving_tip": "Rejecting D and E leaves A, B and C."
+      }
+    }
+  ]
+}
