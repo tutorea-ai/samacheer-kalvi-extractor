@@ -1226,6 +1226,192 @@
         "common_trap": "Thinking heavier doping raises the breakdown voltage.",
         "time_saving_tip": "Once B and C are seen to be false, only option (4) remains."
       }
+    },
+    {
+      "q_id": "neet_phy_u19_t06_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Logic gates: OR, AND, NOT, NAND and NOR",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which logic gate gives an output of 1 only when all of its inputs are 0?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "AND",
+        "NAND",
+        "OR",
+        "NOR"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "NOR gate: $Y = \\overline{A + B}$, with outputs 1, 0, 0, 0 for inputs 00, 01, 10, 11.",
+        "steps": [
+          "For input 00, $A + B = 0$, so $Y = 1$.",
+          "For any input containing a 1, $A + B = 1$, so $Y = 0$."
+        ],
+        "final_answer": "Option (4): NOR",
+        "why_not_others": "AND gives 1 only for input 11. NAND gives 0 only for input 11, so it gives 1 for three inputs. OR gives 0 for input 00.",
+        "common_trap": "Confusing NAND with NOR.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t06_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Logic gates: OR, AND, NOT, NAND and NOR",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Inputs A and B are each passed through a separate NOT gate. The two outputs are then fed to the inputs of a NAND gate. The complete circuit is equivalent to which single gate?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "AND",
+        "NOR",
+        "OR",
+        "NAND"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Write the expression stage by stage and simplify it using De Morgan's theorem $\\overline{X \\cdot Y} = \\overline{X} + \\overline{Y}$.",
+        "steps": [
+          "After the NOT gates, the inputs are $\\overline{A}$ and $\\overline{B}$.",
+          "NAND output: $Y = \\overline{\\overline{A} \\cdot \\overline{B}}$",
+          "By De Morgan: $Y = \\overline{\\overline{A}} + \\overline{\\overline{B}} = A + B$, which is an OR gate."
+        ],
+        "final_answer": "Option (3): OR",
+        "why_not_others": "AND would need the expression $A \\cdot B$. NOR and NAND are the inverted forms, which would come from forgetting the double negation.",
+        "common_trap": "Assuming two inversions plus a NAND gives NOR.",
+        "time_saving_tip": "Check one input: for 00, NOT gives 11, and NAND of 11 is 0. Only OR gives 0 for input 00."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t06_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Logic gates: OR, AND, NOT, NAND and NOR",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Inputs A and B are fed to an OR gate. The output of the OR gate and input B are then fed to a NAND gate, whose output is Y. For the inputs (A, B) = 00, 01, 10, 11 in that order, what are the outputs Y?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0, 1, 0, 1",
+        "1, 0, 1, 0",
+        "1, 1, 1, 0",
+        "1, 0, 0, 0"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Write the Boolean expression stage by stage: $Y = \\overline{(A + B) \\cdot B}$.",
+        "steps": [
+          "00: OR gives 0, and NAND(0, 0) = 1.",
+          "01: OR gives 1, and NAND(1, 1) = 0.",
+          "10: OR gives 1, and NAND(1, 0) = 1.",
+          "11: OR gives 1, and NAND(1, 1) = 0.",
+          "So $Y = 1, 0, 1, 0$, which is simply $\\overline{B}$."
+        ],
+        "final_answer": "Option (2): 1, 0, 1, 0",
+        "why_not_others": "0, 1, 0, 1 is $B$, which ignores the final inversion. 1, 1, 1, 0 is a plain NAND of A and B. 1, 0, 0, 0 is a NOR of A and B.",
+        "common_trap": "Treating the circuit as a plain NAND of A and B.",
+        "time_saving_tip": "$(A + B) \\cdot B = B$, so $Y = \\overline{B}$ directly."
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t06_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Logic gates: OR, AND, NOT, NAND and NOR",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A NAND gate is called a universal gate.",
+        "R": "The output of a NAND gate is 0 only when all of its inputs are 1."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A gate is universal because any other gate can be built from it. Its truth table alone does not explain this.",
+        "steps": [
+          "NAND gates alone can build NOT, AND, OR and every other gate, so A is true.",
+          "The NAND truth table is 1, 1, 1, 0, so R is true.",
+          "R only describes the truth table. It does not explain why NAND can build every other gate."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are factually correct, which rules out options (3) and (4). Universality comes from the ability to build any gate, not from the output pattern, which rules out option (1).",
+        "common_trap": "Accepting any true reason as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u19_t06_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u19",
+      "topic": "Logic gates: OR, AND, NOT, NAND and NOR",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "If the output of a NAND gate is fed to both inputs of a second NAND gate, the overall circuit behaves as an AND gate.",
+        "II": "A NOR gate gives the same output as an AND gate whose two inputs are each first passed through a NOT gate."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A NAND gate with its inputs shorted acts as a NOT gate. De Morgan's theorem gives $\\overline{A + B} = \\overline{A} \\cdot \\overline{B}$.",
+        "steps": [
+          "Statement I: the second NAND with its inputs shorted is a NOT gate. So the circuit gives $\\overline{\\overline{A \\cdot B}} = A \\cdot B$, which is AND. Correct.",
+          "Statement II: an AND gate with inverted inputs gives $\\overline{A} \\cdot \\overline{B}$. This equals $\\overline{A + B}$, which is NOR. Correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements follow directly from the shorted-NAND rule and De Morgan's theorem, so any option calling either statement incorrect is wrong.",
+        "common_trap": "Thinking that inverting both inputs of an AND gives NAND, when it actually gives NOR.",
+        "time_saving_tip": "Check input 00 for II: the inverted inputs are 11, and AND gives 1. This matches NOR, whose output is 1 for 00."
+      }
     }
   ]
 }

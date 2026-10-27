@@ -186,6 +186,229 @@
       }
     },
     {
+      "q_id": "neet_phy_u01_t01_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u01",
+      "topic": "SI units, fundamental and derived units",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following is NOT an SI base unit?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "kelvin",
+        "candela",
+        "mole",
+        "newton"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "SI has seven base units: m, kg, s, A, K, mol and cd.",
+        "steps": [
+          "Kelvin, candela and mole are all among the seven base units.",
+          "The newton equals $kg\\,m\\,s^{-2}$, so it is a derived unit."
+        ],
+        "final_answer": "Option (4): newton",
+        "why_not_others": "Kelvin (temperature), candela (luminous intensity) and mole (amount of substance) are base units.",
+        "common_trap": "Treating force as fundamental because the newton is so commonly used.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u01_t01_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u01",
+      "topic": "SI units, fundamental and derived units",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The volt, expressed in SI base units, is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$kg\\,m^{2}\\,s^{-3}\\,A^{-1}$",
+        "$kg\\,m^{2}\\,s^{-2}\\,A^{-1}$",
+        "$kg\\,m^{2}\\,s^{-3}\\,A$",
+        "$kg\\,m\\,s^{-3}\\,A^{-1}$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use $1\\,V = 1\\,J\\,C^{-1}$, $1\\,J = 1\\,N\\,m$, $1\\,N = 1\\,kg\\,m\\,s^{-2}$ and $1\\,C = 1\\,A\\,s$.",
+        "steps": [
+          "$1\\,J = kg\\,m^{2}\\,s^{-2}$",
+          "$1\\,V = \\frac{kg\\,m^{2}\\,s^{-2}}{A\\,s} = kg\\,m^{2}\\,s^{-3}\\,A^{-1}$"
+        ],
+        "final_answer": "Option (1): $kg\\,m^{2}\\,s^{-3}\\,A^{-1}$",
+        "why_not_others": "Option (2) forgets the second inside the coulomb. Option (3) multiplies by the ampere instead of dividing. Option (4) uses the newton in place of the joule.",
+        "common_trap": "Writing the coulomb as A instead of $A\\,s$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u01_t01_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u01",
+      "topic": "SI units, fundamental and derived units",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A patch of area $0.36\\ m^{2}$ lies on the surface of a sphere of radius 3 m. The solid angle it subtends at the centre of the sphere is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0.12 sr",
+        "0.04 sr",
+        "0.36 sr",
+        "1.08 sr"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Solid angle is $\\Omega = \\frac{A}{r^{2}}$.",
+        "steps": [
+          "$\\Omega = \\frac{0.36}{3^{2}}$",
+          "$\\Omega = \\frac{0.36}{9} = 0.04$ sr"
+        ],
+        "final_answer": "Option (2): 0.04 sr",
+        "why_not_others": "0.12 sr comes from dividing by $r$ instead of $r^{2}$. 0.36 sr ignores the radius. 1.08 sr comes from multiplying by $r$.",
+        "common_trap": "Using the plane angle formula $\\frac{l}{r}$ for a solid angle.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u01_t01_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u01",
+      "topic": "SI units, fundamental and derived units",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "newton"
+          },
+          {
+            "label": "B",
+            "text": "joule"
+          },
+          {
+            "label": "C",
+            "text": "watt"
+          },
+          {
+            "label": "D",
+            "text": "pascal"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$kg\\,m^{-1}\\,s^{-2}$"
+          },
+          {
+            "label": "II",
+            "text": "$kg\\,m^{2}\\,s^{-3}$"
+          },
+          {
+            "label": "III",
+            "text": "$kg\\,m\\,s^{-2}$"
+          },
+          {
+            "label": "IV",
+            "text": "$kg\\,m^{2}\\,s^{-2}$"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use $N = kg\\,m\\,s^{-2}$, $J = N\\,m$, $W = J\\,s^{-1}$ and $Pa = N\\,m^{-2}$.",
+        "steps": [
+          "newton $= kg\\,m\\,s^{-2}$ (III)",
+          "joule $= kg\\,m^{2}\\,s^{-2}$ (IV)",
+          "watt $= kg\\,m^{2}\\,s^{-3}$ (II)",
+          "pascal $= kg\\,m^{-1}\\,s^{-2}$ (I)"
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the joule and the watt. Option (2) swaps the newton and the pascal. Option (4) swaps the watt and the pascal.",
+        "common_trap": "Confusing the joule with the watt, which differ only by one factor of $s^{-1}$.",
+        "time_saving_tip": "Fix the newton first, then derive each of the others from it."
+      }
+    },
+    {
+      "q_id": "neet_phy_u01_t01_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u01",
+      "topic": "SI units, fundamental and derived units",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about SI units are correct?",
+      "statements": {
+        "A": "The kilogram is the only SI base unit that carries a prefix.",
+        "B": "The radian and the steradian are dimensionless.",
+        "C": "A mass of ten kilograms is correctly written as 10 Kgs.",
+        "D": "The full name of a unit named after a person is written with a capital first letter, as in 'Newton'.",
+        "E": "$1\\,\\Omega = 1\\,V\\,A^{-1}$"
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and E only",
+        "A, C and E only",
+        "B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are SI base unit facts, dimensionless angle units, and the rules for writing SI units.",
+        "steps": [
+          "A is true: kilo is part of the base unit kilogram.",
+          "B is true: the radian and steradian are dimensionless.",
+          "C is false: the correct form is 10 kg, since symbols are not pluralised or capitalised.",
+          "D is false: the full name is lowercase (newton); only the symbol N is capital.",
+          "E is true: $1\\,\\Omega = 1\\,V\\,A^{-1}$."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Options containing C or D include false statements. Option (1) leaves out the true statement E.",
+        "common_trap": "Capitalising the full name of a unit that is named after a person.",
+        "time_saving_tip": null
+      }
+    },
+    {
       "q_id": "neet_phy_u01_t02_1",
       "source": "generated",
       "subject": "physics",

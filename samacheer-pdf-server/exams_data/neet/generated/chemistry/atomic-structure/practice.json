@@ -192,6 +192,229 @@
       }
     },
     {
+      "q_id": "neet_che_u02_t01_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Spectrum of the hydrogen atom",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which series of the hydrogen emission spectrum lies in the visible region?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Lyman series",
+        "Paschen series",
+        "Brackett series",
+        "Balmer series"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Series regions: Lyman is UV, Balmer is visible, and Paschen, Brackett and Pfund are IR.",
+        "steps": [
+          "The Balmer series ($n_1 = 2$) is the only series in the visible region."
+        ],
+        "final_answer": "Option (4): Balmer series",
+        "why_not_others": "Lyman lies in the UV region. Paschen and Brackett lie in the IR region.",
+        "common_trap": "Confusing Lyman with the visible series.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t01_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Spectrum of the hydrogen atom",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An electron in a hydrogen atom falls from the level n = 6 down to the level n = 2, and it may stop at any intermediate level. What is the maximum number of spectral lines that can be emitted?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "10",
+        "15",
+        "4",
+        "6"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use $N = \\frac{(n_2 - n_1)(n_2 - n_1 + 1)}{2}$.",
+        "steps": [
+          "Here $n_2 - n_1 = 6 - 2 = 4$.",
+          "So $N = \\frac{4 \\times 5}{2} = 10$."
+        ],
+        "final_answer": "Option (1): 10",
+        "why_not_others": "15 is $n(n-1)/2$ for a fall to the ground state. 4 is just $n_2 - n_1$. 6 corresponds to a difference of 3.",
+        "common_trap": "Using the ground-state formula $n(n-1)/2$ when the final level is not n = 1.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t01_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Spectrum of the hydrogen atom",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "What is the ratio of the wavelength of the first line of the Lyman series to that of the first line of the Balmer series in the hydrogen spectrum?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$27/5$",
+        "$5/27$",
+        "$1/4$",
+        "$36/5$"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Wavelength is $\\lambda = 1/\\bar{\\nu}$, with $\\bar{\\nu} \\propto (1/n_1^2 - 1/n_2^2)$.",
+        "steps": [
+          "Lyman first line ($2 \\rightarrow 1$): $1 - 1/4 = 3/4$.",
+          "Balmer first line ($3 \\rightarrow 2$): $1/4 - 1/9 = 5/36$.",
+          "Since $\\lambda \\propto 1/\\bar{\\nu}$: $\\lambda_L/\\lambda_B = (5/36)/(3/4) = 5/27$."
+        ],
+        "final_answer": "Option (2): $5/27$",
+        "why_not_others": "$27/5$ is the inverted ratio, which is the ratio of wavenumbers. $1/4$ compares only the $1/n_1^2$ terms. $36/5$ is $1/\\bar{\\nu}$ for the Balmer line alone.",
+        "common_trap": "Taking the ratio of wavenumbers instead of wavelengths.",
+        "time_saving_tip": "Lyman lines are higher in energy, so the ratio must be less than 1."
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t01_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Spectrum of the hydrogen atom",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Transition $n = 2 \\rightarrow n = 1$ in H"
+          },
+          {
+            "label": "B",
+            "text": "Transition $n = 3 \\rightarrow n = 2$ in H"
+          },
+          {
+            "label": "C",
+            "text": "Transition $n = 5 \\rightarrow n = 3$ in H"
+          },
+          {
+            "label": "D",
+            "text": "Transition $n = \\infty \\rightarrow n = 1$ in H"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "A line of the Paschen series, in the IR region"
+          },
+          {
+            "label": "II",
+            "text": "First line of the Balmer series, in the visible region"
+          },
+          {
+            "label": "III",
+            "text": "Shortest-wavelength line of the Lyman series"
+          },
+          {
+            "label": "IV",
+            "text": "Longest-wavelength line of the Lyman series"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-I, C-II, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The series is set by the final level $n_1$. In each series the first line has the longest wavelength and the series limit has the shortest.",
+        "steps": [
+          "A: $2 \\rightarrow 1$ is the first Lyman line, which has the longest wavelength (IV).",
+          "B: $3 \\rightarrow 2$ is the first Balmer line, in the visible region (II).",
+          "C: the final level is $n = 3$, so this is a Paschen line in the IR region (I).",
+          "D: $\\infty \\rightarrow 1$ is the Lyman series limit, which has the shortest wavelength (III)."
+        ],
+        "final_answer": "Option (4): A-IV, B-II, C-I, D-III",
+        "why_not_others": "Option 1 swaps the first line and the series limit. Option 2 puts the Balmer and Paschen lines in each other's series. Option 3 mismatches all four items.",
+        "common_trap": "Thinking that the series limit has the longest wavelength.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t01_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Spectrum of the hydrogen atom",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about atomic hydrogen-like spectra are correct?",
+      "statements": {
+        "A": "The series limit of the Balmer series has the longest wavelength in that series.",
+        "B": "The wavenumber of the first Lyman line of $He^+$ is four times that of the first Lyman line of H.",
+        "C": "Pfund series lines arise from transitions ending at n = 5 and lie in the IR region.",
+        "D": "The maximum number of spectral lines when an electron in n = 5 returns to the ground state is 10.",
+        "E": "The wavenumber of the Lyman series limit of H is $109677/4$ $cm^{-1}$."
+      },
+      "match_lists": null,
+      "options": [
+        "B and C only",
+        "A, B and D only",
+        "B, C and D only",
+        "B, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Use the Rydberg formula with the $Z^2$ factor, the line-count formula and the series regions.",
+        "steps": [
+          "A is false: the series limit has the shortest wavelength.",
+          "B is true: $\\bar{\\nu} \\propto Z^2$, and $Z^2 = 4$ for $He^+$.",
+          "C is true: Pfund has $n_1 = 5$ and lies in the IR region.",
+          "D is true: $5 \\times 4/2 = 10$.",
+          "E is false: for $n_1 = 1$ and $n_2 = \\infty$, $\\bar{\\nu} = 109677$ $cm^{-1}$, not one-fourth of it."
+        ],
+        "final_answer": "Option (3): B, C and D only",
+        "why_not_others": "Option 1 misses the true statement D. Option 2 includes the false statement A. Option 4 includes the false statement E.",
+        "common_trap": "Using Z instead of $Z^2$, or dividing by 4 for the Lyman limit as if it were the Balmer limit.",
+        "time_saving_tip": null
+      }
+    },
+    {
       "q_id": "neet_che_u02_t02_1",
       "source": "generated",
       "subject": "chemistry",
@@ -1188,6 +1411,231 @@
         "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
         "why_not_others": "Statement I contains a wrong node count, and Statement II swaps the two node shapes, so options (1), (3) and (4) are wrong.",
         "common_trap": "Accepting Statement I because its first half is correct.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t07_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Variation of psi and psi-squared with r for 1s and 2s orbitals",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "For the 1s orbital of the hydrogen atom, the radial probability function $4\\pi r^2 \\psi^2$ is maximum at a distance from the nucleus of:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$r = 0$",
+        "105.8 pm",
+        "26.45 pm",
+        "52.9 pm"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The radial probability for 1s peaks at the Bohr radius, $a_0 = 52.9$ pm.",
+        "steps": [
+          "$4\\pi r^2 \\psi^2$ is zero at the nucleus because of the $r^2$ factor.",
+          "For 1s, this function peaks at $a_0 = 52.9$ pm."
+        ],
+        "final_answer": "Option (4): 52.9 pm",
+        "why_not_others": "$r = 0$ is where $\\psi^2$ is maximum, not the radial probability. 105.8 pm and 26.45 pm come from doubling or halving $a_0$.",
+        "common_trap": "Confusing the maximum of $\\psi^2$ (at the nucleus) with the maximum of the radial probability.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t07_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Variation of psi and psi-squared with r for 1s and 2s orbitals",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A plot of the wave function $\\psi$ against r for an orbital starts at zero at $r = 0$, rises to a maximum, crosses zero once at a finite r, and then approaches zero. The orbital is:",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3p",
+        "2p",
+        "2s",
+        "3s"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A plot starting at zero indicates a p or d orbital, and each zero crossing at finite r is a radial node.",
+        "steps": [
+          "Starting from zero at $r = 0$ rules out s orbitals.",
+          "One crossing at finite r means one radial node.",
+          "For a p orbital, $n - 1 - 1 = 1$ gives $n = 3$, so the orbital is 3p."
+        ],
+        "final_answer": "Option (1): 3p",
+        "why_not_others": "2p has no radial node. 2s and 3s start at a non-zero value at $r = 0$.",
+        "common_trap": "Counting $r = 0$ as a node, which leads to the wrong n.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t07_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Variation of psi and psi-squared with r for 1s and 2s orbitals",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes the variation of $\\psi^2$ with distance r from the nucleus for a 2s orbital?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It is zero at the nucleus, rises to a single maximum and then decays to zero",
+        "It is maximum at the nucleus, falls to zero, becomes negative and then approaches zero",
+        "It is maximum at the nucleus, drops to zero at one value of r and rises to a second, smaller maximum before decreasing",
+        "It is maximum at the nucleus and decreases steadily without becoming zero at any finite r"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For 2s, $\\psi^2$ is maximum at the nucleus, is zero at the radial node, and shows a second smaller maximum.",
+        "steps": [
+          "For s orbitals, $\\psi^2$ is maximum at the nucleus.",
+          "The single radial node of 2s makes $\\psi^2$ zero at one value of r.",
+          "Beyond the node, $\\psi^2$ rises to a second, smaller maximum and then decreases."
+        ],
+        "final_answer": "Option (3): It is maximum at the nucleus, drops to zero at one value of r and rises to a second, smaller maximum before decreasing",
+        "why_not_others": "Option (1) describes a radial probability curve. Option (2) describes $\\psi$, since $\\psi^2$ is never negative. Option (4) describes 1s.",
+        "common_trap": "Confusing the $\\psi$ curve with the $\\psi^2$ curve.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t07_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Variation of psi and psi-squared with r for 1s and 2s orbitals",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$\\psi$ for 1s"
+          },
+          {
+            "label": "B",
+            "text": "$\\psi$ for 2s"
+          },
+          {
+            "label": "C",
+            "text": "$\\psi$ for 3s"
+          },
+          {
+            "label": "D",
+            "text": "$4\\pi r^2 \\psi^2$ for 1s"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Crosses zero twice at finite r"
+          },
+          {
+            "label": "II",
+            "text": "Maximum at the nucleus, decreases steadily, never zero at finite r"
+          },
+          {
+            "label": "III",
+            "text": "Zero at the nucleus, maximum at 52.9 pm"
+          },
+          {
+            "label": "IV",
+            "text": "Crosses zero once, becomes negative and then approaches zero"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The number of zero crossings of $\\psi$ equals the number of radial nodes, and the 1s radial probability peaks at $a_0$.",
+        "steps": [
+          "1s has no node and $\\psi$ is maximum at the nucleus, so A-II.",
+          "2s has one node, so B-IV.",
+          "3s has two nodes, so C-I.",
+          "The 1s radial probability is zero at the nucleus and peaks at 52.9 pm, so D-III."
+        ],
+        "final_answer": "Option (3): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option (1) swaps 2s and 3s. Option (2) swaps the 1s $\\psi$ curve with the radial probability curve. Option (4) swaps 1s and 2s.",
+        "common_trap": "Mixing up the $\\psi$ plot and the radial probability plot for 1s.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u02_t07_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u02",
+      "topic": "Variation of psi and psi-squared with r for 1s and 2s orbitals",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the variation of $\\psi$ and $\\psi^2$ with r are correct?",
+      "statements": {
+        "A": "$\\psi^2$ is never negative.",
+        "B": "For a 2s orbital, $\\psi^2$ has two maxima, the one at the nucleus being larger.",
+        "C": "The radial probability function $4\\pi r^2 \\psi^2$ for 1s is maximum at the nucleus.",
+        "D": "For a 2p orbital, $\\psi$ has a non-zero value at $r = 0$.",
+        "E": "The number of times $\\psi$ crosses zero, excluding $r = 0$, equals the number of radial nodes."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, B and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Features of the $\\psi$, $\\psi^2$ and radial probability plots.",
+        "steps": [
+          "A is true: a square can never be negative.",
+          "B is true: for 2s, $\\psi^2$ has a larger maximum at the nucleus and a second, smaller maximum.",
+          "C is false: $4\\pi r^2 \\psi^2$ is zero at the nucleus and peaks at 52.9 pm.",
+          "D is false: for p orbitals, $\\psi$ starts from zero at $r = 0$.",
+          "E is true: zero crossings at finite r count as radial nodes."
+        ],
+        "final_answer": "Option (4): A, B and E only",
+        "why_not_others": "Option (1) omits the true statement E. Option (2) includes the false statement C. Option (3) includes the false statement D.",
+        "common_trap": "Thinking the radial probability is maximum at the nucleus, as $\\psi^2$ is.",
         "time_saving_tip": null
       }
     },

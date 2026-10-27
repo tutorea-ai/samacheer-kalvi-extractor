@@ -415,6 +415,189 @@
       }
     },
     {
+      "q_id": "neet_phy_u14_t02_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Eddy currents",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Why is the core of a transformer made of thin laminated sheets instead of a solid block?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "To increase the magnetic flux linked with the secondary coil",
+        "To increase the resistance of the eddy-current paths and so reduce heating losses",
+        "To decrease the resistance of the core so that heat is conducted away quickly",
+        "To increase the eddy currents so that the coupling between the coils improves"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Lamination raises the resistance of the eddy-current paths, which reduces eddy-current heating.",
+        "steps": [
+          "Changing flux in the core sets up eddy currents, which waste energy as heat.",
+          "Laminations increase the resistance of the eddy-current paths, so the eddy currents and the heat loss are smaller."
+        ],
+        "final_answer": "Option (2): To increase the resistance of the eddy-current paths and so reduce heating losses",
+        "why_not_others": "Lamination does not increase the flux. Lowering the resistance would increase the eddy currents. Larger eddy currents mean more loss, not better coupling.",
+        "common_trap": "Thinking that eddy currents are useful in a transformer core.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t02_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Eddy currents",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A small bar magnet is dropped along the axis of a long vertical copper tube. Neglecting air resistance, which statement best describes its motion inside the tube?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It falls freely with acceleration g, because copper is not magnetic",
+        "It falls with acceleration less than g and can reach a terminal speed",
+        "It falls with acceleration greater than g, because the tube attracts it downward",
+        "It remains suspended at rest inside the tube"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Eddy currents induced in the tube oppose the relative motion (Lenz's law).",
+        "steps": [
+          "The falling magnet changes the flux through the tube walls, inducing eddy currents.",
+          "These currents produce a retarding force that grows with the speed of the magnet.",
+          "So the acceleration is less than g, and the magnet can reach a terminal speed."
+        ],
+        "final_answer": "Option (2): It falls with acceleration less than g and can reach a terminal speed",
+        "why_not_others": "Eddy currents arise whether or not the tube is magnetic. They oppose the motion and never aid it. A force that opposes motion cannot hold the magnet at rest.",
+        "common_trap": "Assuming that a non-magnetic metal has no effect on a moving magnet.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t02_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Eddy currents",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Two pendulums have bobs made of identical copper plates, except that one plate is solid and the other has several slots cut in it. Both swing through the gap between the poles of a strong magnet. Which observation is correct?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The slotted plate comes to rest sooner, because the slots concentrate the eddy currents",
+        "The solid plate comes to rest sooner, because larger eddy currents flow in it",
+        "Both come to rest at the same time, because they are made of the same metal",
+        "The solid plate swings more freely, because copper is not attracted by the magnet"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Slots increase the resistance of the eddy-current paths, which reduces the damping.",
+        "steps": [
+          "Strong eddy currents circulate in the solid plate and oppose its motion.",
+          "Slots break the current loops, so the eddy currents are weaker and the plate swings more freely.",
+          "The solid plate is therefore damped faster."
+        ],
+        "final_answer": "Option (2): The solid plate comes to rest sooner, because larger eddy currents flow in it",
+        "why_not_others": "Slots reduce the eddy currents rather than concentrating them. The geometry of the plate matters, not just the material. Damping comes from induced currents, not from magnetic attraction.",
+        "common_trap": "Ignoring the role of the slots.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t02_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Eddy currents",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Eddy currents in the core of a transformer are desirable because they increase its efficiency.",
+        "R": "Eddy currents produce heating in the conductor in which they circulate."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Eddy currents in transformer cores waste energy as heat.",
+        "steps": [
+          "R is true: eddy currents cause heating.",
+          "This heating is an energy loss, so eddy currents lower the efficiency of a transformer. A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so options (1), (2) and (3) are ruled out.",
+        "common_trap": "Mixing up the useful applications of eddy currents, such as furnaces, with their harmful effect in cores.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u14_t02_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u14",
+      "topic": "Eddy currents",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Eddy currents aid the motion of a conductor moving through a magnetic field, which is why they are used for magnetic braking.",
+        "II": "Cutting slots in a metal plate decreases the resistance to eddy currents and therefore increases the electromagnetic damping of the plate."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Eddy currents oppose motion (Lenz's law). Slots increase resistance and reduce damping.",
+        "steps": [
+          "I: Eddy currents oppose the motion; this opposition is what makes braking possible. Statement I is incorrect.",
+          "II: Slots increase the resistance of the eddy-current paths, which reduces the damping. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement reverses the correct physics, so neither is correct.",
+        "common_trap": "Accepting the correct application named in each statement without checking the reasoning given for it.",
+        "time_saving_tip": null
+      }
+    },
+    {
       "q_id": "neet_phy_u14_t03_1",
       "source": "generated",
       "subject": "physics",

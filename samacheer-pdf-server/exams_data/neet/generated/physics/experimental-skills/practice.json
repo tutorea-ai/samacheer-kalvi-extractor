@@ -3471,6 +3471,231 @@
         "common_trap": "Thinking the Zener current rises when the load draws more current. In fact, the fixed total current is shared, so the Zener's share falls.",
         "time_saving_tip": null
       }
+    },
+    {
+      "q_id": "neet_phy_u20_t17_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Identification of diode, LED, resistor and capacitor from a mixed collection",
+      "topic_index": 17,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "While testing components with a multimeter in resistance mode, a student finds one component that shows the same steady, finite resistance when the leads are connected either way. This component is a",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "diode",
+        "LED",
+        "capacitor",
+        "resistor"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A resistor shows the same finite resistance in both directions, with no change over time.",
+        "steps": [
+          "The resistance is steady and does not change with time, so it is not a capacitor.",
+          "It is the same in both directions, so it is neither a diode nor an LED.",
+          "Therefore the component is a resistor."
+        ],
+        "final_answer": "Option (4): resistor",
+        "why_not_others": "A diode and an LED conduct in one direction only. A capacitor shows a transient deflection that decays to very high resistance.",
+        "common_trap": "Confusing a capacitor's initial deflection with a steady resistance reading.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t17_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Identification of diode, LED, resistor and capacitor from a mixed collection",
+      "topic_index": 17,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A two-terminal component connected to a multimeter in resistance mode first shows a large deflection. The deflection gradually falls until the reading becomes very high resistance. When the leads are reversed, the same behaviour is seen again. The component is a",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "resistor",
+        "diode",
+        "LED",
+        "capacitor"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A capacitor allows a momentary charging current that decays to zero, and this happens in either direction.",
+        "steps": [
+          "A large deflection that decays to very high resistance shows charging.",
+          "The transient repeats when the leads are reversed, so the behaviour is not one-way.",
+          "This matches a capacitor."
+        ],
+        "final_answer": "Option (4): capacitor",
+        "why_not_others": "A resistor gives a steady reading that does not decay. A diode and an LED conduct steadily in one direction only and show high resistance on reversal; an LED would also glow.",
+        "common_trap": "Mistaking the high final reading for diode-like reverse blocking, and ignoring that the transient appears in both directions.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t17_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Identification of diode, LED, resistor and capacitor from a mixed collection",
+      "topic_index": 17,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "When a mixed collection of components is tested with a multimeter, which observation distinguishes an LED from an ordinary diode?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It emits light while conducting in the forward direction",
+        "It shows low resistance in one direction and very high resistance on reversal",
+        "It shows the same resistance in both directions",
+        "It shows a deflection that decays with time in both directions"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An LED behaves like a diode but also glows when forward biased.",
+        "steps": [
+          "Both a diode and an LED show one-way conduction, so that test alone cannot tell them apart.",
+          "Only the LED emits light when forward biased."
+        ],
+        "final_answer": "Option (1): It emits light while conducting in the forward direction",
+        "why_not_others": "Option (2) is common to both the diode and the LED. Option (3) describes a resistor. Option (4) describes a capacitor.",
+        "common_trap": "Choosing one-way conduction, which identifies the diode family but does not separate an LED from a diode.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t17_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Identification of diode, LED, resistor and capacitor from a mixed collection",
+      "topic_index": 17,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Same steady finite resistance in both directions"
+          },
+          {
+            "label": "B",
+            "text": "Conducts in one direction only, with no light"
+          },
+          {
+            "label": "C",
+            "text": "Conducts in one direction only and glows"
+          },
+          {
+            "label": "D",
+            "text": "Momentary current that decays to zero in either direction"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Capacitor"
+          },
+          {
+            "label": "II",
+            "text": "LED"
+          },
+          {
+            "label": "III",
+            "text": "Resistor"
+          },
+          {
+            "label": "IV",
+            "text": "Diode"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-II, D-I",
+        "A-III, B-II, C-IV, D-I",
+        "A-I, B-IV, C-II, D-III",
+        "A-III, B-IV, C-II, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Multimeter signatures: resistor gives a steady, two-way reading; diode conducts one way without light; LED conducts one way with light; capacitor shows a decaying transient both ways.",
+        "steps": [
+          "A: a steady reading in both directions means a resistor (III).",
+          "B: one-way conduction without light means a diode (IV).",
+          "C: one-way conduction with light means an LED (II).",
+          "D: a decaying transient in both directions means a capacitor (I)."
+        ],
+        "final_answer": "Option (4): A-III, B-IV, C-II, D-I",
+        "why_not_others": "Option (1) swaps the resistor and diode. Option (2) swaps the diode and LED. Option (3) swaps the resistor and capacitor.",
+        "common_trap": "Swapping the diode and LED, since both show one-way conduction.",
+        "time_saving_tip": "Fix C as the LED (only it glows) and D as the capacitor (only it decays). This removes options (2) and (3) at once."
+      }
+    },
+    {
+      "q_id": "neet_phy_u20_t17_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u20",
+      "topic": "Identification of diode, LED, resistor and capacitor from a mixed collection",
+      "topic_index": 17,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about identifying components with a multimeter are correct?",
+      "statements": {
+        "A": "A diode shows low resistance in one direction and very high resistance when the leads are reversed.",
+        "B": "A capacitor shows a steady finite resistance that is the same in both directions.",
+        "C": "An LED glows when it is forward biased during the test.",
+        "D": "After a capacitor has charged and shows very high resistance, reversing the leads produces the decaying deflection again.",
+        "E": "A component with many terminals is likely to be an integrated circuit."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "B, C and D only",
+        "A, C and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each component has a distinctive multimeter signature. An IC is recognised by having many terminals.",
+        "steps": [
+          "A is correct: a diode conducts in one direction only.",
+          "B is incorrect: a steady, equal reading in both directions is a resistor. A capacitor shows a transient that decays to very high resistance.",
+          "C is correct: an LED glows when forward biased.",
+          "D is correct: the transient reappears when the leads are reversed.",
+          "E is correct: an IC has multiple terminals."
+        ],
+        "final_answer": "Option (4): A, C, D and E only",
+        "why_not_others": "Options (1) and (2) include the false statement B. Option (3) leaves out the correct statement D.",
+        "common_trap": "Thinking a charged capacitor stays at high resistance after the leads are reversed, and so rejecting D.",
+        "time_saving_tip": "Spotting B as false removes options (1) and (2) immediately."
+      }
     }
   ]
 }

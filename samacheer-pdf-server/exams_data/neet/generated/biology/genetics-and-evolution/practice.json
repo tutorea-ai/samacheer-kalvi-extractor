@@ -3,5 +3,4421 @@
   "subject": "biology",
   "unit_id": "bio_u07",
   "slug": "genetics-and-evolution",
-  "questions": []
+  "questions": [
+    {
+      "q_id": "neet_bio_u07_t00_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian inheritance",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In Mendel's monohybrid cross between a true-breeding tall (TT) and a true-breeding dwarf (tt) pea plant, what is the genotypic ratio of the F2 generation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "3 : 1",
+        "9 : 3 : 3 : 1",
+        "1 : 1",
+        "1 : 2 : 1"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A monohybrid F2 gives 3:1 by phenotype and 1:2:1 by genotype.",
+        "steps": [
+          "The F1 plants are all Tt.",
+          "Selfing Tt x Tt gives TT, Tt and tt.",
+          "These occur in the ratio 1 TT : 2 Tt : 1 tt."
+        ],
+        "final_answer": "Option (4): 1 : 2 : 1",
+        "why_not_others": "3:1 is the F2 phenotypic ratio. 9:3:3:1 is the dihybrid F2 phenotypic ratio. 1:1 is the result of a monohybrid test cross.",
+        "common_trap": "Students often give the phenotypic ratio (3:1) when the genotypic ratio is asked.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t00_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian inheritance",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A pea plant heterozygous for three independently assorting gene pairs (AaBbCc) is self-pollinated. How many different genotypes are expected in the F2 generation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "27",
+        "8",
+        "64",
+        "9"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The number of F2 genotypes for n heterozygous gene pairs is $3^n$.",
+        "steps": [
+          "Here n = 3.",
+          "The number of genotypes is $3^3 = 27$."
+        ],
+        "final_answer": "Option (1): 27",
+        "why_not_others": "8 is $2^3$, which gives the gamete types or the F2 phenotypes. 64 is $4^3$, the number of Punnett square boxes. 9 is $3^2$, the genotype count for a dihybrid cross.",
+        "common_trap": "Confusing the formulas $2^n$, $3^n$ and $4^n$.",
+        "time_saving_tip": "Remember the order: gametes $2^n$, genotypes $3^n$, combinations $4^n$."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t00_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian inheritance",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A pea plant with round, yellow seeds is crossed with a plant having wrinkled, green seeds (rryy). The progeny show round yellow, round green, wrinkled yellow and wrinkled green seeds in a 1 : 1 : 1 : 1 ratio. What is the genotype of the round, yellow parent?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "RRYY",
+        "RrYY",
+        "RRYy",
+        "RrYy"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A dihybrid test cross with the double recessive gives 1:1:1:1 only when the dominant-looking parent is heterozygous for both genes.",
+        "steps": [
+          "The rryy parent contributes only ry gametes.",
+          "Four equal progeny classes require four equal gamete types from the other parent.",
+          "Only RrYy produces RY, Ry, rY and ry in equal proportions."
+        ],
+        "final_answer": "Option (4): RrYy",
+        "why_not_others": "RRYY gives only round yellow progeny. RrYY gives round yellow and wrinkled yellow in a 1:1 ratio. RRYy gives round yellow and round green in a 1:1 ratio.",
+        "common_trap": "Assuming a 1:1:1:1 ratio can come from a plant heterozygous for only one gene.",
+        "time_saving_tip": "The number of progeny classes in a test cross equals the number of gamete types made by the tested parent."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t00_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian inheritance",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The principle of independent assortment holds true for every pair of genes in an organism.",
+        "R": "During gamete formation, the two alleles of a gene separate so that each gamete receives only one allele."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Segregation is universal, but independent assortment applies only to unlinked genes.",
+        "steps": [
+          "Independent assortment does not apply to linked genes, so A is false.",
+          "R correctly states the law of segregation, so R is true."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "Options (1) and (2) need A to be true. Option (3) wrongly treats R, the law of segregation, as false.",
+        "common_trap": "Treating independent assortment as universal in the same way as segregation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t00_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian inheritance",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the F2 of a dihybrid cross, the Punnett square has 16 boxes, yet these represent only 9 genotypic classes and 4 phenotypic classes.",
+        "II": "Dominance is a property of an allele by itself and does not depend on the product made by each allele of the pair."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For n = 2 gene pairs there are $4^2$ boxes, $3^2$ genotypes and $2^2$ phenotypes. Dominance is a property of an allele pair.",
+        "steps": [
+          "For n = 2: $4^2 = 16$ boxes, $3^2 = 9$ genotypes and $2^2 = 4$ phenotypes, so Statement I is correct.",
+          "Dominance depends on the product each allele makes and is a property of the allele pair, not of one allele alone. So Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II contradicts the idea that dominance is a property of an allele pair, so options (1) and (4) are wrong. Statement I is arithmetically correct, so option (2) is wrong.",
+        "common_trap": "Believing an allele is inherently dominant regardless of its partner.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t01_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Deviations from Mendelism: incomplete dominance, co-dominance, multiple alleles, blood groups, pleiotropy",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In snapdragon (Antirrhinum), a true-breeding red-flowered plant (RR) is crossed with a true-breeding white-flowered plant (rr). What is the flower colour of the F1 plants?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Red",
+        "Pink",
+        "White",
+        "Red and white patches on the same flower"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In incomplete dominance, the heterozygote has an intermediate phenotype.",
+        "steps": [
+          "All F1 plants are Rr.",
+          "Neither allele is completely dominant, so the flowers are intermediate in colour, which is pink."
+        ],
+        "final_answer": "Option (2): Pink",
+        "why_not_others": "Red would mean complete dominance of R. White would mean dominance of r. Patches of both colours describe co-dominance-like full expression of both alleles, not an intermediate phenotype.",
+        "common_trap": "Confusing incomplete dominance with co-dominance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t01_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Deviations from Mendelism: incomplete dominance, co-dominance, multiple alleles, blood groups, pleiotropy",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which one of the following parental combinations can NEVER produce a child with blood group O?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$I^Ai$ x $I^Bi$",
+        "$I^Ai$ x $ii$",
+        "$I^Bi$ x $I^Bi$",
+        "$I^AI^B$ x $ii$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A blood group O child is ii, so both parents must carry the allele $i$.",
+        "steps": [
+          "Blood group O requires the genotype ii.",
+          "An $I^AI^B$ parent has no $i$ allele.",
+          "Its children can only be $I^Ai$ (group A) or $I^Bi$ (group B)."
+        ],
+        "final_answer": "Option (4): $I^AI^B$ x $ii$",
+        "why_not_others": "In options (1), (2) and (3), each parent carries $i$, so an ii child is possible.",
+        "common_trap": "Assuming that a parent with group O guarantees the chance of an O child.",
+        "time_saving_tip": "Look for a parent that lacks $i$."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t01_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Deviations from Mendelism: incomplete dominance, co-dominance, multiple alleles, blood groups, pleiotropy",
+      "topic_index": 1,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A gene has four alleles in a population of a diploid organism. How many different genotypes are possible for this gene?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "6",
+        "10",
+        "16",
+        "8"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The number of genotypes for n multiple alleles is $\\frac{n(n+1)}{2}$.",
+        "steps": [
+          "Substitute n = 4.",
+          "$\\frac{4 \\times 5}{2} = 10$"
+        ],
+        "final_answer": "Option (2): 10",
+        "why_not_others": "6 is the value for 3 alleles, as in the ABO system. 16 comes from wrongly using $n^2$. 8 comes from wrongly using 2n.",
+        "common_trap": "Recalling 6 from the ABO system without recalculating for four alleles.",
+        "time_saving_tip": "The count is 4 homozygotes plus 6 heterozygote pairs, which gives 10."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t01_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Deviations from Mendelism: incomplete dominance, co-dominance, multiple alleles, blood groups, pleiotropy",
+      "topic_index": 1,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Incomplete dominance"
+          },
+          {
+            "label": "B",
+            "text": "Co-dominance"
+          },
+          {
+            "label": "C",
+            "text": "Multiple alleles"
+          },
+          {
+            "label": "D",
+            "text": "Pleiotropy"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Phenylketonuria causing mental retardation and reduced hair and skin pigmentation"
+          },
+          {
+            "label": "II",
+            "text": "Pink flowers in Rr snapdragon"
+          },
+          {
+            "label": "III",
+            "text": "Gene I with alleles $I^A$, $I^B$ and $i$ in a population"
+          },
+          {
+            "label": "IV",
+            "text": "Both A and B sugars on the RBCs of an $I^AI^B$ person"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-IV, C-III, D-II",
+        "A-II, B-IV, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each type of deviation from Mendelism has a standard example.",
+        "steps": [
+          "Incomplete dominance: pink Rr snapdragon (II).",
+          "Co-dominance: both A and B sugars in $I^AI^B$ (IV).",
+          "Multiple alleles: three alleles of gene I (III).",
+          "Pleiotropy: phenylketonuria (I)."
+        ],
+        "final_answer": "Option (4): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option (1) swaps co-dominance with multiple alleles. Option (2) swaps incomplete dominance with co-dominance. Option (3) swaps incomplete dominance with pleiotropy.",
+        "common_trap": "Matching the ABO system only to multiple alleles and forgetting that $I^AI^B$ also shows co-dominance.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t01_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Deviations from Mendelism: incomplete dominance, co-dominance, multiple alleles, blood groups, pleiotropy",
+      "topic_index": 1,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the starch synthesis gene in pea are correct?",
+      "statements": {
+        "A": "Bb seeds are round and have starch grains of intermediate size.",
+        "B": "With respect to seed shape, allele B is dominant over allele b.",
+        "C": "With respect to starch grain size, the alleles show incomplete dominance.",
+        "D": "bb seeds are wrinkled and have large starch grains."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The pea starch gene is pleiotropic, and whether it shows dominance depends on the phenotype chosen.",
+        "steps": [
+          "BB gives round seeds with large grains; bb gives wrinkled seeds with small grains; Bb gives round seeds with intermediate grains. So A is correct.",
+          "Bb seeds are round like BB, so seed shape shows dominance. B is correct.",
+          "Bb grain size is intermediate, so grain size shows incomplete dominance. C is correct.",
+          "bb seeds have small grains, not large ones. D is incorrect."
+        ],
+        "final_answer": "Option (2): A, B and C only",
+        "why_not_others": "Options (3) and (4) include the false statement D. Option (1) leaves out the correct statement C.",
+        "common_trap": "Assuming that a single gene must show the same type of dominance for every trait it affects.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t02_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Polygenic inheritance (elementary idea)",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following correctly describes the pattern of variation shown by a polygenic trait such as human height?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Discrete classes in a 3 : 1 ratio",
+        "Continuous variation with a bell-shaped distribution",
+        "Two sharply distinct phenotypes in a 1 : 1 ratio",
+        "Discrete classes in a 9 : 3 : 3 : 1 ratio"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Polygenic traits are quantitative and show continuous variation.",
+        "steps": [
+          "Several genes act additively, and the environment also modifies the trait.",
+          "This produces many intergrading phenotypes that form a bell-shaped curve."
+        ],
+        "final_answer": "Option (2): Continuous variation with a bell-shaped distribution",
+        "why_not_others": "The 3:1, 1:1 and 9:3:3:1 ratios are discrete classes typical of Mendel's qualitative traits.",
+        "common_trap": "Expecting Mendelian ratios for quantitative traits.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t02_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Polygenic inheritance (elementary idea)",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A quantitative trait is controlled by four genes with additive effects. An individual heterozygous for all four genes is selfed. How many phenotypic classes are expected in the F2?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "7",
+        "16",
+        "9",
+        "8"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The number of F2 phenotypic classes for n polygenes is 2n + 1.",
+        "steps": [
+          "Substitute n = 4.",
+          "2(4) + 1 = 9, corresponding to 0 to 8 dominant alleles."
+        ],
+        "final_answer": "Option (3): 9",
+        "why_not_others": "7 is the value for three genes. 16 is $2^4$, the count under complete dominance. 8 forgets to count the class with zero dominant alleles.",
+        "common_trap": "Using $2^n$ for an additive polygenic trait.",
+        "time_saving_tip": "Count the possible numbers of dominant alleles: 0 to 2n."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t02_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Polygenic inheritance (elementary idea)",
+      "topic_index": 2,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Skin colour is controlled by three genes A, B and C, and each dominant allele adds one unit of pigment. In the F2 of AaBbCc x AaBbCc, what fraction of the progeny will show either of the two extreme phenotypes (darkest or lightest)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1/32$",
+        "$1/64$",
+        "$1/16$",
+        "$20/64$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each extreme phenotype is $(1/4)^n$ of the F2, and both extremes together make up $2 \\times (1/4)^n$.",
+        "steps": [
+          "The darkest class (AABBCC) is $(1/4)^3 = 1/64$.",
+          "The lightest class (aabbcc) is also $1/64$.",
+          "Together they make up $2/64 = 1/32$."
+        ],
+        "final_answer": "Option (1): $1/32$",
+        "why_not_others": "$1/64$ counts only one extreme. $1/16$ is the extreme fraction for two genes. $20/64$ is the intermediate class.",
+        "common_trap": "Reporting only one extreme when the question asks for both.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t02_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Polygenic inheritance (elementary idea)",
+      "topic_index": 2,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In a three-gene additive model of skin colour, individuals of genotype AABbcc and AaBbCc have the same skin colour.",
+        "R": "In polygenic inheritance, phenotype depends on the number of dominant alleles present, not on which particular alleles they are."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In polygenic inheritance, alleles have an additive effect.",
+        "steps": [
+          "AABbcc has 3 dominant alleles.",
+          "AaBbCc also has 3 dominant alleles.",
+          "Because phenotype depends only on the number of dominant alleles, both have the same colour. R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "R is the exact reason the two genotypes match, so option (2) is wrong. Both statements are true, so options (3) and (4) are wrong.",
+        "common_trap": "Thinking that different genotypes must give different phenotypes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t02_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Polygenic inheritance (elementary idea)",
+      "topic_index": 2,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In the F2 of AaBbCc x AaBbCc for an additive skin-colour trait, the most frequent phenotypic class is the intermediate one, forming $20/64$ of the progeny.",
+        "II": "Polygenic inheritance is the opposite of pleiotropy, because in polygenic inheritance many genes control a single trait."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The F2 ratio for three polygenes is 1:6:15:20:15:6:1. Polygenic inheritance means many genes and one trait, while pleiotropy means one gene and many traits.",
+        "steps": [
+          "The ratio 1:6:15:20:15:6:1 totals 64, and the middle class is 20, so Statement I is correct.",
+          "Polygenic inheritance (many genes, one trait) is the opposite of pleiotropy (one gene, many traits), so Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Both statements match the notes, so options (2), (3) and (4) are wrong.",
+        "common_trap": "Reversing the definitions of polygenic inheritance and pleiotropy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t03_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosome theory of inheritance; chromosomes and genes",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The chromosome theory of inheritance, which united chromosomal segregation with Mendelian principles, was proposed by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Gregor Mendel",
+        "Thomas Hunt Morgan",
+        "Walter Sutton and Theodore Boveri",
+        "de Vries, Correns and von Tschermak"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Sutton and Boveri proposed the chromosome theory of inheritance in 1902.",
+        "steps": [
+          "Sutton and Boveri connected the behaviour of chromosomes at meiosis with Mendel's factors."
+        ],
+        "final_answer": "Option (3): Walter Sutton and Theodore Boveri",
+        "why_not_others": "Mendel proposed factors without any chromosomal basis. Morgan verified the theory experimentally. de Vries, Correns and von Tschermak rediscovered Mendel's work.",
+        "common_trap": "Crediting Morgan, who verified the theory, as the one who proposed it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t03_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosome theory of inheritance; chromosomes and genes",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "According to the chromosome theory of inheritance, which meiotic event provides the physical basis of independent assortment?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Pairing of homologous chromosomes during prophase I",
+        "Separation of sister chromatids at anaphase II",
+        "Separation of homologous chromosomes at anaphase I",
+        "Independent orientation of non-homologous chromosome pairs at metaphase I"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Independent assortment is explained by the independent orientation of non-homologous pairs at metaphase I.",
+        "steps": [
+          "Each homologous pair lines up at metaphase I independently of the other pairs.",
+          "As a result, alleles on different chromosomes are distributed independently into gametes."
+        ],
+        "final_answer": "Option (4): Independent orientation of non-homologous chromosome pairs at metaphase I",
+        "why_not_others": "Separation of homologues at anaphase I explains segregation, not independent assortment. Pairing of homologues and separation of sister chromatids are not given as the basis of either principle.",
+        "common_trap": "Mixing up the meiotic basis of segregation with that of independent assortment.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t03_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosome theory of inheritance; chromosomes and genes",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which one of the following is NOT a reason why Drosophila melanogaster is a convenient organism for genetic studies?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It can be grown on a simple synthetic medium",
+        "It completes its life cycle in about two weeks",
+        "Its male and female flies are clearly distinguishable",
+        "A single mating produces very few progeny, which makes counting easy"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Drosophila is useful because it is easy to culture, breeds quickly and produces many offspring with visible variations.",
+        "steps": [
+          "A single mating of Drosophila produces a large number of progeny, not a few.",
+          "So the statement about very few progeny is not a valid reason."
+        ],
+        "final_answer": "Option (4): A single mating produces very few progeny, which makes counting easy",
+        "why_not_others": "Growth on a synthetic medium, a two-week life cycle and clearly distinguishable sexes are all genuine advantages.",
+        "common_trap": "Thinking that a small number of offspring would be an advantage; large samples are what make genetic analysis reliable.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t03_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosome theory of inheritance; chromosomes and genes",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Walter Sutton and Theodore Boveri"
+          },
+          {
+            "label": "B",
+            "text": "Thomas Hunt Morgan"
+          },
+          {
+            "label": "C",
+            "text": "de Vries, Correns and von Tschermak"
+          },
+          {
+            "label": "D",
+            "text": "Reginald C. Punnett"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Rediscovery of Mendel's work in 1900"
+          },
+          {
+            "label": "II",
+            "text": "Experimental verification of the chromosome theory using Drosophila"
+          },
+          {
+            "label": "III",
+            "text": "Chromosome theory of inheritance (1902)"
+          },
+          {
+            "label": "IV",
+            "text": "Graphical checkerboard for predicting the progeny of a cross"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each scientist is linked with a specific contribution to genetics.",
+        "steps": [
+          "Sutton and Boveri proposed the chromosome theory (III).",
+          "Morgan verified it using Drosophila (II).",
+          "de Vries, Correns and von Tschermak rediscovered Mendel's work (I).",
+          "Punnett developed the Punnett square (IV)."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-I, D-IV",
+        "why_not_others": "Option (1) swaps proposing and verifying the theory. Option (2) swaps Morgan with the rediscoverers. Option (4) swaps Sutton and Boveri with Punnett.",
+        "common_trap": "Confusing who proposed the chromosome theory with who verified it.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t03_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosome theory of inheritance; chromosomes and genes",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the chromosome theory of inheritance are correct?",
+      "statements": {
+        "A": "Genes are located on chromosomes in a linear order.",
+        "B": "Separation of homologous chromosomes at anaphase I explains the law of segregation.",
+        "C": "One reason Mendel's work remained unrecognised was the absence of physical proof for his factors.",
+        "D": "Sutton and Boveri experimentally verified the chromosome theory using Drosophila.",
+        "E": "Gametes receive both chromosomes of each homologous pair."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B, C and D only",
+        "B, C and E only",
+        "A, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Genes lie on chromosomes, and chromosome behaviour at meiosis explains Mendel's laws.",
+        "steps": [
+          "A, B and C are correct statements of the theory and its background.",
+          "D is incorrect: Morgan, not Sutton and Boveri, verified the theory using Drosophila.",
+          "E is incorrect: gametes receive only one chromosome of each pair."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Option (2) includes D. Options (3) and (4) include E, and option (4) also includes D.",
+        "common_trap": "Attributing Morgan's experimental verification to Sutton and Boveri.",
+        "time_saving_tip": "Rejecting E alone eliminates options (3) and (4)."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t04_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex determination in humans, birds and honey bee",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In birds, the sex of the offspring is decided by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the male parent, because males are ZW",
+        "the female parent, because females are ZW",
+        "the male parent, because males are XY",
+        "the female parent, because females are XO"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Birds follow the ZW-ZZ type of sex determination, with female heterogamety.",
+        "steps": [
+          "In birds, females are ZW and males are ZZ.",
+          "Females produce two kinds of eggs, Z-bearing and W-bearing, while all sperms carry Z.",
+          "The egg therefore decides the sex, so the mother determines the sex of the offspring."
+        ],
+        "final_answer": "Option (2): the female parent, because females are ZW",
+        "why_not_others": "Option 1 is wrong because males are ZZ, which makes them homogametic. Option 3 describes the human XY system, not birds. Option 4 describes the XO system of grasshoppers.",
+        "common_trap": "Students often carry over the human rule that the father determines sex and apply it to birds.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t04_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex determination in humans, birds and honey bee",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A male honey bee (drone) has how many chromosomes in its cells, and by which division does it produce sperms?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "32 chromosomes; meiosis",
+        "16 chromosomes; mitosis",
+        "16 chromosomes; meiosis",
+        "32 chromosomes; mitosis"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Haplodiploid sex determination in the honey bee.",
+        "steps": [
+          "A drone develops from an unfertilised egg by parthenogenesis.",
+          "It is therefore haploid, with n = 16 chromosomes.",
+          "Because it is already haploid, it produces sperms by mitosis."
+        ],
+        "final_answer": "Option (2): 16 chromosomes; mitosis",
+        "why_not_others": "32 is the diploid number found in females (queens and workers). A haploid cell cannot undergo normal meiosis to form gametes, so meiosis is incorrect.",
+        "common_trap": "Assuming all sperms arise by meiosis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t04_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex determination in humans, birds and honey bee",
+      "topic_index": 4,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a grasshopper showing the XO type of sex determination, the somatic cells of a female contain 24 chromosomes. How many chromosomes will the somatic cells of a male contain?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "24",
+        "22",
+        "23",
+        "12"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the XO type, males have a single X and therefore one chromosome fewer than females.",
+        "steps": [
+          "Females are XX and have 24 chromosomes.",
+          "Males have only one X, with no partner sex chromosome.",
+          "Male number = 24 - 1 = 23."
+        ],
+        "final_answer": "Option (3): 23",
+        "why_not_others": "24 ignores the missing X. 22 subtracts both X chromosomes. 12 is a haploid count, not a somatic number.",
+        "common_trap": "Assuming that males and females of a species always have equal chromosome numbers.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t04_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex determination in humans, birds and honey bee",
+      "topic_index": 4,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In humans, the sex of the child is determined by the father.",
+        "R": "Human males produce two types of sperms in equal proportion, X-bearing and Y-bearing, while all eggs carry an X chromosome."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Male heterogamety in humans (XX-XY type).",
+        "steps": [
+          "All eggs carry X, so the egg makes no difference to sex.",
+          "The sperm carries either X (giving a girl) or Y (giving a boy).",
+          "Since the sperm decides the sex, the father determines it. R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true facts, and R gives the direct cause of A, so options 2, 3 and 4 do not apply.",
+        "common_trap": "Thinking the mother contributes to sex determination in humans.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t04_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex determination in humans, birds and honey bee",
+      "topic_index": 4,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A drone honey bee has no father but does have a grandfather.",
+        "II": "A queen honey bee develops from a fertilised egg, whereas a worker develops from an unfertilised egg."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the honey bee, all females are diploid; queen and worker differ only in nutrition.",
+        "steps": [
+          "A drone comes from an unfertilised egg, so it has no father.",
+          "Its mother (the queen) had a father, so the drone has a grandfather. Statement I is correct.",
+          "Both queen and worker develop from fertilised diploid eggs (2n = 32).",
+          "Their difference comes from nutrition (royal jelly), not from fertilisation. Statement II is incorrect."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II wrongly attributes the queen-worker difference to fertilisation. Only drones arise from unfertilised eggs.",
+        "common_trap": "Believing workers are haploid or genetically different from queens.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t05_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Linkage and crossing over",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Who used recombination frequency as a measure of the distance between genes and constructed the first chromosome maps?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Thomas Hunt Morgan",
+        "Henking",
+        "Alfred Sturtevant",
+        "Gregor Mendel"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Origin of chromosome mapping.",
+        "steps": [
+          "Morgan discovered linkage and coined the terms linkage and recombination.",
+          "His student Alfred Sturtevant used recombination frequency as a measure of gene distance.",
+          "Using this, Sturtevant constructed the first chromosome maps."
+        ],
+        "final_answer": "Option (3): Alfred Sturtevant",
+        "why_not_others": "Morgan coined the term linkage but did not make the first maps. Henking described the X body. Mendel did not work on linkage.",
+        "common_trap": "Crediting Morgan with mapping because he did the Drosophila linkage work.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t05_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Linkage and crossing over",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A test cross involving two linked genes produced 500 progeny, of which 60 showed recombinant (non-parental) combinations. What is the distance between the two genes?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "88 cM",
+        "13.6 cM",
+        "6 cM",
+        "12 cM"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$RF = \\frac{\\text{number of recombinants}}{\\text{total progeny}} \\times 100$, and 1% recombination = 1 cM.",
+        "steps": [
+          "Recombinants = 60 and total progeny = 500.",
+          "$RF = \\frac{60}{500} \\times 100 = 12\\%$.",
+          "Since 1% recombination = 1 cM, the distance is 12 cM."
+        ],
+        "final_answer": "Option (4): 12 cM",
+        "why_not_others": "88 cM uses the parental count (440) instead of the recombinant count. 13.6 cM divides by the parentals (60/440) instead of the total. 6 cM wrongly halves the frequency.",
+        "common_trap": "Dividing recombinants by parentals instead of by total progeny.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t05_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Linkage and crossing over",
+      "topic_index": 5,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Recombination by crossing over during meiosis occurs",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "at zygotene, between sister chromatids",
+        "at pachytene, between non-sister chromatids, mediated by recombinase",
+        "at pachytene, between sister chromatids, mediated by ligase",
+        "at diplotene, between non-homologous chromosomes"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Crossing over takes place at pachytene of prophase I.",
+        "steps": [
+          "Crossing over occurs at the pachytene stage of prophase I.",
+          "It takes place between non-sister chromatids of homologous chromosomes.",
+          "The enzyme recombinase mediates it."
+        ],
+        "final_answer": "Option (2): at pachytene, between non-sister chromatids, mediated by recombinase",
+        "why_not_others": "Exchange between sister chromatids would produce no new combinations. Zygotene and diplotene are the wrong stages. Ligase is not the enzyme named for crossing over.",
+        "common_trap": "Confusing pachytene with zygotene (synapsis) or diplotene (chiasmata become visible).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t05_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Linkage and crossing over",
+      "topic_index": 5,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Yellow body and white eye genes"
+          },
+          {
+            "label": "B",
+            "text": "White eye and miniature wing genes"
+          },
+          {
+            "label": "C",
+            "text": "1% recombination"
+          },
+          {
+            "label": "D",
+            "text": "Complete linkage"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "1 map unit (centiMorgan)"
+          },
+          {
+            "label": "II",
+            "text": "37.2% recombination"
+          },
+          {
+            "label": "III",
+            "text": "Only parental types in a test cross"
+          },
+          {
+            "label": "IV",
+            "text": "1.3% recombination"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-IV, B-II, C-I, D-III",
+        "A-I, B-II, C-IV, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Recombination frequency reflects the tightness of linkage between genes.",
+        "steps": [
+          "Yellow-white genes are tightly linked and show 1.3% recombination (A-IV).",
+          "White-miniature genes are loosely linked and show 37.2% recombination (B-II).",
+          "1% recombination equals 1 cM (C-I).",
+          "Complete linkage gives only parental types in a test cross (D-III)."
+        ],
+        "final_answer": "Option (3): A-IV, B-II, C-I, D-III",
+        "why_not_others": "Option 1 swaps the tight and loose pairs. Option 2 swaps C and D. Option 4 mismatches A and C.",
+        "common_trap": "Swapping the yellow-white and white-miniature recombination values.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t05_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Linkage and crossing over",
+      "topic_index": 5,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about linkage and recombination are correct?",
+      "statements": {
+        "A": "In Morgan's dihybrid crosses with X-linked genes in Drosophila, F2 ratios deviated strongly from 9:3:3:1.",
+        "B": "Tightly linked genes show high recombination.",
+        "C": "Recombination frequency is proportional to the distance between genes.",
+        "D": "Morgan coined the term linkage for the physical association of genes on a chromosome.",
+        "E": "In Morgan's crosses, recombinant combinations outnumbered parental combinations."
+      },
+      "match_lists": null,
+      "options": [
+        "A, C and D only",
+        "A, B and C only",
+        "C, D and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Linkage keeps parental combinations together; recombination increases with distance between genes.",
+        "steps": [
+          "A is correct: Morgan's F2 ratios deviated strongly from 9:3:3:1.",
+          "B is incorrect: tightly linked genes show low recombination.",
+          "C and D are correct statements of fact.",
+          "E is incorrect: parental combinations far outnumbered recombinants."
+        ],
+        "final_answer": "Option (1): A, C and D only",
+        "why_not_others": "Option 2 includes B, which is false. Options 3 and 4 include E, which is false.",
+        "common_trap": "Associating tight linkage with high recombination.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t06_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex-linked inheritance: haemophilia and colour blindness",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A haemophilic man marries a woman who is neither haemophilic nor a carrier. What is expected among their children?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "All sons haemophilic and all daughters normal",
+        "All daughters carriers and all sons normal",
+        "Half the sons haemophilic and half the daughters carriers",
+        "All daughters haemophilic and all sons normal"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "An affected father passes his X only to his daughters.",
+        "steps": [
+          "The father gives his X (carrying the haemophilia allele) to every daughter and his Y to every son.",
+          "Daughters receive a normal X from the mother as well, so all daughters are carriers.",
+          "Sons receive their X from the normal mother, so all sons are normal."
+        ],
+        "final_answer": "Option (2): All daughters carriers and all sons normal",
+        "why_not_others": "Option 1 wrongly assumes father-to-son transmission. Option 3 is the outcome for a carrier mother and normal father. Option 4 is wrong because daughters also get a normal X from the mother.",
+        "common_trap": "Assuming an affected father passes an X-linked trait to his son.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t06_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex-linked inheritance: haemophilia and colour blindness",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A woman with normal vision, whose father was colour blind, marries a man with normal vision. What proportion of their sons is expected to be colour blind?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "0%",
+        "25%",
+        "100%",
+        "50%"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A daughter of an affected father is a carrier, and a carrier mother passes the allele to half her sons.",
+        "steps": [
+          "The woman received the colour-blind X from her father, so she is a carrier.",
+          "Each son receives one of her two X chromosomes.",
+          "Half her sons therefore receive the defective X and are colour blind."
+        ],
+        "final_answer": "Option (4): 50%",
+        "why_not_others": "0% ignores her carrier status. 25% is the chance of an affected son among all children, not among sons. 100% would require the mother to be colour blind.",
+        "common_trap": "Confusing the fraction among sons with the fraction among all children.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t06_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex-linked inheritance: haemophilia and colour blindness",
+      "topic_index": 6,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "For a daughter to be born haemophilic, her parents must be",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "a haemophilic father and a mother who is at least a carrier",
+        "a normal father and a carrier mother",
+        "a haemophilic father and a normal non-carrier mother",
+        "a normal father and a haemophilic mother"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A female needs two recessive X-linked alleles, one from each parent.",
+        "steps": [
+          "A daughter receives one X from each parent.",
+          "To be affected, both X chromosomes must carry the haemophilia allele.",
+          "So the father must be haemophilic and the mother must be at least a carrier, which is why such females are very rare."
+        ],
+        "final_answer": "Option (1): a haemophilic father and a mother who is at least a carrier",
+        "why_not_others": "In options 2 and 4 the normal father gives a normal X, so the daughter can only be a carrier. In option 3 the normal mother gives a normal X, so the daughter is again only a carrier.",
+        "common_trap": "Thinking a carrier mother alone can produce an affected daughter.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t06_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex-linked inheritance: haemophilia and colour blindness",
+      "topic_index": 6,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Colour blindness occurs in about 8% of males but only about 0.4% of females.",
+        "R": "Colour blindness results from defects in the red or green cones of the eye."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Sex difference in X-linked recessive traits arises from male hemizygosity.",
+        "steps": [
+          "A is a correct frequency statement.",
+          "R correctly describes the cone defect behind colour blindness.",
+          "The higher frequency in males is explained by males being hemizygous for the X-linked recessive allele, not by the cone defect. So R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out options 3 and 4. R does not explain the male-female difference, which rules out option 1.",
+        "common_trap": "Choosing option 1 simply because both statements concern colour blindness.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t06_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Sex-linked inheritance: haemophilia and colour blindness",
+      "topic_index": 6,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "In criss-cross inheritance, an X-linked trait passes directly from an affected father to his son.",
+        "II": "When a carrier woman marries a normal man, all their daughters are expected to be carriers."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Criss-cross inheritance and the carrier mother x normal father cross.",
+        "steps": [
+          "Criss-cross inheritance runs from an affected father, through a carrier daughter, to her son. A son never receives his father's X, so Statement I is incorrect.",
+          "A carrier mother x normal father gives 50% of daughters as carriers, not all. Statement II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contains an error, so no option that marks either one as correct can apply.",
+        "common_trap": "Mixing up this cross with the affected father x normal mother cross, which does give all daughters as carriers.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t07_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian disorders: thalassemia",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Thalassemia is inherited as a/an",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "autosomal dominant disorder",
+        "autosomal recessive disorder",
+        "X-linked recessive disorder",
+        "Y-linked disorder"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Thalassemia is an autosomal recessive Mendelian disorder.",
+        "steps": [
+          "Thalassemia is transmitted when both parents are unaffected carriers.",
+          "Unaffected carrier parents producing an affected child is the pattern of a recessive trait.",
+          "The genes involved lie on autosomes (chromosomes 16 and 11)."
+        ],
+        "final_answer": "Option (2): autosomal recessive disorder",
+        "why_not_others": "A dominant disorder would show in carriers. The genes lie on chromosomes 16 and 11, not on X or Y.",
+        "common_trap": "Grouping all blood disorders with haemophilia as X-linked.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t07_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian disorders: thalassemia",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes the genetic basis of beta thalassemia?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A single gene, HBB, on chromosome 11 of each parent, giving two genes in total",
+        "Two closely linked genes, HBA1 and HBA2, on chromosome 16 of each parent, giving four genes in total",
+        "A single gene, HBB, on chromosome 16 of each parent, giving two genes in total",
+        "A single gene, HBB, on chromosome 11 of each parent, giving four genes in total"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Beta thalassemia involves HBB on chromosome 11; alpha thalassemia involves HBA1 and HBA2 on chromosome 16.",
+        "steps": [
+          "Beta chain production is controlled by the single gene HBB.",
+          "HBB lies on chromosome 11.",
+          "One copy comes from each parent, giving two genes in total."
+        ],
+        "final_answer": "Option (1): A single gene, HBB, on chromosome 11 of each parent, giving two genes in total",
+        "why_not_others": "Option 2 describes alpha thalassemia. Option 3 gives the wrong chromosome. Option 4 gives the wrong gene count.",
+        "common_trap": "Swapping chromosome 16 (alpha) with chromosome 11 (beta).",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t07_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian disorders: thalassemia",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which statement correctly distinguishes thalassemia from sickle-cell anaemia?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Thalassemia is a qualitative defect, while sickle-cell anaemia is a quantitative defect",
+        "Both are X-linked recessive disorders of haemoglobin",
+        "In thalassemia too few globin chains are synthesised, while in sickle-cell anaemia an incorrectly functioning globin is made",
+        "Sickle-cell anaemia results from substitution at the 6th position of the alpha globin chain"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Thalassemia is a quantitative defect; sickle-cell anaemia is a qualitative defect.",
+        "steps": [
+          "In thalassemia, a mutation or deletion reduces how much of a globin chain is made, which is a quantitative problem.",
+          "In sickle-cell anaemia, Glu is replaced by Val at position 6 of the beta chain, producing a faulty globin, which is a qualitative problem."
+        ],
+        "final_answer": "Option (3): In thalassemia too few globin chains are synthesised, while in sickle-cell anaemia an incorrectly functioning globin is made",
+        "why_not_others": "Option 1 reverses the two terms. Both disorders are autosomal recessive, not X-linked. The sickle-cell substitution is in the beta chain, not the alpha chain.",
+        "common_trap": "Reversing the qualitative and quantitative labels.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t07_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian disorders: thalassemia",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Sickle-cell anaemia"
+          },
+          {
+            "label": "B",
+            "text": "Phenylketonuria"
+          },
+          {
+            "label": "C",
+            "text": "Alpha thalassemia"
+          },
+          {
+            "label": "D",
+            "text": "Beta thalassemia"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Glu replaced by Val at the 6th position of the beta chain"
+          },
+          {
+            "label": "II",
+            "text": "Missing enzyme that converts phenylalanine to tyrosine"
+          },
+          {
+            "label": "III",
+            "text": "HBA1 and HBA2 genes on chromosome 16"
+          },
+          {
+            "label": "IV",
+            "text": "HBB gene on chromosome 11"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The molecular basis of common Mendelian disorders.",
+        "steps": [
+          "Sickle-cell anaemia: GAG becomes GUG, so Glu is replaced by Val at position 6 of the beta chain (A-I).",
+          "Phenylketonuria: the enzyme converting phenylalanine to tyrosine is missing (B-II).",
+          "Alpha thalassemia: HBA1 and HBA2 on chromosome 16 (C-III).",
+          "Beta thalassemia: HBB on chromosome 11 (D-IV)."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option 2 swaps the alpha and beta thalassemia genes. Option 3 swaps sickle-cell and phenylketonuria. Option 4 mismatches A and C.",
+        "common_trap": "Swapping the chromosome 16 and chromosome 11 assignments.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t07_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mendelian disorders: thalassemia",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about thalassemia and related Mendelian disorders are correct?",
+      "statements": {
+        "A": "Thalassemia is transmitted to offspring when both parents are unaffected carriers.",
+        "B": "In alpha thalassemia, the more of the four alpha globin genes that are affected, the less alpha globin is produced.",
+        "C": "Two carrier parents have a 25% chance of having a thalassemic child.",
+        "D": "Thalassemia is a sex-linked recessive disorder.",
+        "E": "Phenylketonuria is an autosomal dominant disorder."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B, C and D only",
+        "B, C and E only",
+        "A and C only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Thalassemia is autosomal recessive, and alpha thalassemia severity depends on how many genes are affected.",
+        "steps": [
+          "A is correct: carriers transmit the disorder.",
+          "B is correct: the more genes affected, the less alpha globin is made.",
+          "C is correct: Aa x Aa gives 1/4 aa.",
+          "D is incorrect: thalassemia is autosomal. E is incorrect: phenylketonuria is autosomal recessive."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Option 2 includes D, which is false. Option 3 includes E, which is false, and omits A. Option 4 omits B, which is true.",
+        "common_trap": "Labelling every blood disorder as sex-linked, as with haemophilia.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t08_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosomal disorders: Down's, Turner's and Klinefelter's syndromes",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Down's syndrome in humans is caused by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Trisomy of chromosome 21",
+        "Absence of one X chromosome",
+        "Presence of an extra X chromosome in a male",
+        "Failure of cytokinesis after telophase"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Down's syndrome is an autosomal aneuploidy: trisomy of chromosome 21.",
+        "steps": [
+          "Down's syndrome has an extra copy of chromosome 21, giving 47 chromosomes.",
+          "Chromosome 21 is an autosome, so the condition occurs in both sexes."
+        ],
+        "final_answer": "Option (1): Trisomy of chromosome 21",
+        "why_not_others": "Absence of one X is Turner's syndrome. An extra X in a male is Klinefelter's syndrome. Failure of cytokinesis causes polyploidy, not trisomy.",
+        "common_trap": "Treating Down's syndrome as a sex-chromosome defect.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t08_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosomal disorders: Down's, Turner's and Klinefelter's syndromes",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The total chromosome number in a person with Turner's syndrome and in a person with Klinefelter's syndrome is, respectively,",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "47 and 45",
+        "46 and 47",
+        "45 and 47",
+        "45 and 46"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Turner's syndrome is 45, XO and Klinefelter's syndrome is 47, XXY.",
+        "steps": [
+          "Turner's syndrome: 44 autosomes + X = 45 chromosomes.",
+          "Klinefelter's syndrome: 44 autosomes + XXY = 47 chromosomes."
+        ],
+        "final_answer": "Option (3): 45 and 47",
+        "why_not_others": "47 and 45 reverses the two conditions. 46 is the normal number and fits neither syndrome.",
+        "common_trap": "Thinking Turner's syndrome involves an extra chromosome, when it is actually a monosomy.",
+        "time_saving_tip": "XO means one chromosome missing (45); XXY means one extra (47)."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t08_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosomal disorders: Down's, Turner's and Klinefelter's syndromes",
+      "topic_index": 8,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which one of the following is NOT a feature of Down's syndrome?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Small round head",
+        "Furrowed tongue and partially open mouth",
+        "Characteristic palm crease",
+        "Overall masculine development with gynaecomastia"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each chromosomal disorder has its own set of characteristic features.",
+        "steps": [
+          "Down's syndrome features: short stature, small round head, furrowed tongue, partially open mouth, palm crease, and retarded physical, psychomotor and mental development.",
+          "Overall masculine development with gynaecomastia is a feature of Klinefelter's syndrome (XXY)."
+        ],
+        "final_answer": "Option (4): Overall masculine development with gynaecomastia",
+        "why_not_others": "Options 1, 2 and 3 are all listed features of Down's syndrome.",
+        "common_trap": "Mixing up the features of Down's and Klinefelter's syndromes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t08_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosomal disorders: Down's, Turner's and Klinefelter's syndromes",
+      "topic_index": 8,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Turner's syndrome is an example of aneuploidy.",
+        "R": "Turner's syndrome results from the presence of an additional X chromosome."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Aneuploidy is the gain or loss of a chromosome. Turner's syndrome is the loss of one X (45, XO).",
+        "steps": [
+          "Turner's syndrome involves the loss of one chromosome, so it is aneuploidy. A is true.",
+          "It is caused by the absence of one X chromosome, not an extra one. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1, 2 and 4 cannot be correct.",
+        "common_trap": "Calling Turner's syndrome a trisomy.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t08_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Chromosomal disorders: Down's, Turner's and Klinefelter's syndromes",
+      "topic_index": 8,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "A person with Klinefelter's syndrome has 44 autosomes and an XO sex chromosome complement.",
+        "II": "Failure of chromatids to segregate during cell division leads to polyploidy, which is common in plants."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Klinefelter's is 44 + XXY. Non-disjunction causes aneuploidy, while failure of cytokinesis causes polyploidy.",
+        "steps": [
+          "44 + XO is Turner's syndrome; Klinefelter's is 44 + XXY. So I is incorrect.",
+          "Failure of chromatid segregation causes aneuploidy. Polyploidy comes from failure of cytokinesis after telophase. So II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Each statement contains a factual error, so every option that calls either statement correct is wrong.",
+        "common_trap": "Accepting II because polyploidy really is common in plants, while missing that its stated cause is wrong.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t09_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Search for genetic material; DNA as genetic material",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The scientists who gave biochemical proof that the transforming principle is DNA were",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Frederick Griffith",
+        "Hershey and Chase",
+        "Meselson and Stahl",
+        "Avery, MacLeod and McCarty"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Avery, MacLeod and McCarty purified cell components and identified DNA as the transforming principle.",
+        "steps": [
+          "Griffith discovered transformation but could not identify the transforming principle.",
+          "Avery, MacLeod and McCarty (1933-44) showed biochemically that it is DNA."
+        ],
+        "final_answer": "Option (4): Avery, MacLeod and McCarty",
+        "why_not_others": "Hershey and Chase used bacteriophages. Meselson and Stahl proved semiconservative replication.",
+        "common_trap": "Crediting Griffith with identifying DNA.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t09_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Search for genetic material; DNA as genetic material",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In the experiments of Avery, MacLeod and McCarty, transformation of R strain bacteria was prevented by treatment with",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "DNase",
+        "Protease",
+        "RNase",
+        "Protease and RNase together"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Only destroying DNA stopped transformation, which showed that DNA is the transforming principle.",
+        "steps": [
+          "Proteases and RNases did not stop transformation.",
+          "DNase digested the DNA and blocked transformation."
+        ],
+        "final_answer": "Option (1): DNase",
+        "why_not_others": "Protease and RNase, used alone or together, left DNA intact, so transformation still occurred.",
+        "common_trap": "Assuming protein is the hereditary material.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t09_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Search for genetic material; DNA as genetic material",
+      "topic_index": 9,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In the Hershey and Chase experiment, radioactive sulphur ($^{35}S$) was used to label the bacteriophage because",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Sulphur is present in protein but absent in DNA",
+        "Sulphur is present in DNA but absent in protein",
+        "Sulphur is present in both DNA and protein",
+        "Phosphorus is absent from DNA"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Protein has sulphur but no phosphorus; DNA has phosphorus but no sulphur.",
+        "steps": [
+          "$^{35}S$ therefore labels only the protein coat.",
+          "$^{32}P$ labels only the DNA.",
+          "Only $^{32}P$ entered the bacteria, which proved that DNA is the genetic material."
+        ],
+        "final_answer": "Option (1): Sulphur is present in protein but absent in DNA",
+        "why_not_others": "DNA lacks sulphur, so options 2 and 3 are wrong. DNA contains phosphorus, so option 4 is wrong.",
+        "common_trap": "Swapping which isotope labels DNA and which labels protein.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t09_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Search for genetic material; DNA as genetic material",
+      "topic_index": 9,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Frederick Griffith"
+          },
+          {
+            "label": "B",
+            "text": "Avery, MacLeod and McCarty"
+          },
+          {
+            "label": "C",
+            "text": "Hershey and Chase"
+          },
+          {
+            "label": "D",
+            "text": "RNA"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Discovery of transformation in Streptococcus pneumoniae"
+          },
+          {
+            "label": "II",
+            "text": "Biochemical proof that the transforming principle is DNA"
+          },
+          {
+            "label": "III",
+            "text": "Radioactive labelling of bacteriophages"
+          },
+          {
+            "label": "IV",
+            "text": "First genetic material"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-III, B-II, C-I, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each milestone in the search for the genetic material belongs to a specific worker or molecule.",
+        "steps": [
+          "Griffith discovered transformation using S and R strains: A-I.",
+          "Avery, MacLeod and McCarty proved the transforming principle is DNA: B-II.",
+          "Hershey and Chase used $^{32}P$ and $^{35}S$ labelled phages: C-III.",
+          "RNA was the first genetic material (RNA world): D-IV."
+        ],
+        "final_answer": "Option (1): A-I, B-II, C-III, D-IV",
+        "why_not_others": "The other matchings swap the contributions of Griffith, Avery and colleagues, and Hershey-Chase.",
+        "common_trap": "Assigning the identification of DNA to Griffith.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t09_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Search for genetic material; DNA as genetic material",
+      "topic_index": 9,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the genetic material are correct?",
+      "statements": {
+        "A": "DNA is more stable than RNA because it lacks the 2'-OH group.",
+        "B": "RNA mutates at a faster rate, which suits RNA viruses.",
+        "C": "The presence of thymine instead of uracil adds to the stability of DNA.",
+        "D": "Griffith identified DNA as the transforming principle."
+      },
+      "match_lists": null,
+      "options": [
+        "A and B only",
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "DNA's stability comes from lacking the 2'-OH group and having thymine. RNA is reactive and mutates faster.",
+        "steps": [
+          "A is correct: the 2'-OH makes RNA more reactive.",
+          "B is correct: faster mutation suits RNA viruses.",
+          "C is correct: thymine in place of uracil adds stability.",
+          "D is wrong: Griffith did not identify the transforming principle."
+        ],
+        "final_answer": "Option (2): A, B and C only",
+        "why_not_others": "Options 3 and 4 include the false statement D. Option 1 leaves out the true statement C.",
+        "common_trap": "Giving Griffith credit for identifying DNA.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t10_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Structure of DNA and RNA; DNA packaging",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the Watson-Crick model of DNA, guanine pairs with cytosine through",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "One hydrogen bond",
+        "Two hydrogen bonds",
+        "Four hydrogen bonds",
+        "Three hydrogen bonds"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A pairs with T through 2 hydrogen bonds; G pairs with C through 3.",
+        "steps": [
+          "G and C are joined by three hydrogen bonds."
+        ],
+        "final_answer": "Option (4): Three hydrogen bonds",
+        "why_not_others": "Two hydrogen bonds is the A=T pair. One and four do not occur in Watson-Crick pairing.",
+        "common_trap": "Mixing up the A-T and G-C bond numbers.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t10_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Structure of DNA and RNA; DNA packaging",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A double-stranded DNA sample contains 20% adenine. The percentage of cytosine in it is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20%",
+        "80%",
+        "60%",
+        "30%"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Chargaff's rule: A = T and G = C in double-stranded DNA.",
+        "steps": [
+          "A = T = 20%, so A + T = 40%.",
+          "G + C = 100 - 40 = 60%.",
+          "C = 60/2 = 30%."
+        ],
+        "final_answer": "Option (4): 30%",
+        "why_not_others": "20% assumes C = A. 80% is 100 - A. 60% is G + C together, not C alone.",
+        "common_trap": "Forgetting to divide G + C by 2.",
+        "time_saving_tip": "C = (100 - 2A)/2 = 50 - A."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t10_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Structure of DNA and RNA; DNA packaging",
+      "topic_index": 10,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The length of a double-stranded DNA molecule containing $5 \\times 10^6$ base pairs is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.7 \\times 10^{-2}$ m",
+        "$3.4 \\times 10^{-3}$ m",
+        "$1.7 \\times 10^{-3}$ m",
+        "$1.7 \\times 10^{-4}$ m"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$L = \\text{bp} \\times 0.34 \\times 10^{-9}$ m",
+        "steps": [
+          "$L = 5 \\times 10^6 \\times 0.34 \\times 10^{-9}$ m",
+          "$= 1.7 \\times 10^{-3}$ m"
+        ],
+        "final_answer": "Option (3): $1.7 \\times 10^{-3}$ m",
+        "why_not_others": "$1.7 \\times 10^{-2}$ m uses the pitch of 3.4 nm per bp instead of 0.34 nm. $3.4 \\times 10^{-3}$ m counts both strands separately. $1.7 \\times 10^{-4}$ m is a power-of-ten error.",
+        "common_trap": "Using 3.4 nm (the pitch of one turn) as the distance per base pair.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t10_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Structure of DNA and RNA; DNA packaging",
+      "topic_index": 10,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In eukaryotes, negatively charged DNA wraps around the histone octamer to form a nucleosome.",
+        "R": "Histones are rich in acidic amino acids and are therefore negatively charged."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Histones are positively charged because they are rich in the basic amino acids lysine and arginine.",
+        "steps": [
+          "DNA wraps around the histone octamer to form a nucleosome. A is true.",
+          "Histones are rich in lysine and arginine and are positively charged. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options 1, 2 and 4 are ruled out.",
+        "common_trap": "Forgetting that the binding depends on opposite charges.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t10_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Structure of DNA and RNA; DNA packaging",
+      "topic_index": 10,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Euchromatin is densely packed, stains dark and is transcriptionally inactive.",
+        "II": "The histone octamer consists of two molecules each of H1, H2A, H2B and H3."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Euchromatin is loose and active. The octamer is two each of H2A, H2B, H3 and H4, and H1 is the linker histone.",
+        "steps": [
+          "Statement I describes heterochromatin, not euchromatin, so it is incorrect.",
+          "The octamer contains H4, not H1, so II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements contain errors, so the other three options fail.",
+        "common_trap": "Including H1 in the histone octamer.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t11_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "DNA replication",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Meselson and Stahl's experiment with E. coli proved that DNA replication is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Conservative",
+        "Semiconservative",
+        "Dispersive",
+        "Discontinuous on both strands"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each daughter duplex has one parental and one new strand.",
+        "steps": [
+          "After one generation in $^{14}N$, all DNA was hybrid.",
+          "This result fits semiconservative replication."
+        ],
+        "final_answer": "Option (2): Semiconservative",
+        "why_not_others": "Conservative replication would give heavy and light DNA, not hybrid. Dispersive replication was not supported. Synthesis is continuous on the leading strand.",
+        "common_trap": "Confusing the mode of replication with leading/lagging strand synthesis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t11_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "DNA replication",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "E. coli cells fully labelled with $^{15}N$ are transferred to a $^{14}N$ medium and allowed to divide for 60 minutes (generation time 20 minutes). The DNA extracted would be",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "50% hybrid, 50% light",
+        "100% hybrid",
+        "25% hybrid, 75% light",
+        "12.5% hybrid, 87.5% light"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Fraction of hybrid DNA after n generations = $\\frac{2}{2^n}$.",
+        "steps": [
+          "60 minutes / 20 minutes = 3 generations.",
+          "Hybrid fraction = $\\frac{2}{2^3} = \\frac{1}{4}$ = 25%.",
+          "The remaining 75% is light DNA."
+        ],
+        "final_answer": "Option (3): 25% hybrid, 75% light",
+        "why_not_others": "50:50 is the result after 40 minutes. 100% hybrid is after 20 minutes. 12.5% uses $\\frac{1}{2^n}$ instead of $\\frac{2}{2^n}$.",
+        "common_trap": "Using $\\frac{1}{2^n}$ instead of $\\frac{2}{2^n}$.",
+        "time_saving_tip": "The two hybrid molecules persist; only the total number doubles each generation."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t11_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "DNA replication",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Okazaki fragments are formed during DNA replication because",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "DNA polymerase can polymerise nucleotides only in the $5' \\rightarrow 3'$ direction",
+        "DNA ligase can act only on the leading strand",
+        "DNA polymerase can initiate replication on its own",
+        "The template of the lagging strand runs $3' \\rightarrow 5'$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Polymerisation only in the $5' \\rightarrow 3'$ direction forces discontinuous synthesis on one strand.",
+        "steps": [
+          "The leading strand (template $3' \\rightarrow 5'$) is synthesised continuously.",
+          "On the other strand, synthesis happens in short pieces (Okazaki fragments), which DNA ligase joins."
+        ],
+        "final_answer": "Option (1): DNA polymerase can polymerise nucleotides only in the $5' \\rightarrow 3'$ direction",
+        "why_not_others": "Ligase joins Okazaki fragments on the lagging strand. DNA polymerase cannot initiate replication on its own. The $3' \\rightarrow 5'$ template belongs to the leading strand.",
+        "common_trap": "Mixing up which template orientation gives continuous synthesis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t11_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "DNA replication",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "DNA ligase"
+          },
+          {
+            "label": "B",
+            "text": "Deoxyribonucleoside triphosphates"
+          },
+          {
+            "label": "C",
+            "text": "$^{15}NH_4Cl$"
+          },
+          {
+            "label": "D",
+            "text": "Radioactive thymidine"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Substrate and energy source for polymerisation"
+          },
+          {
+            "label": "II",
+            "text": "Joining of Okazaki fragments"
+          },
+          {
+            "label": "III",
+            "text": "Semiconservative replication shown in Vicia faba"
+          },
+          {
+            "label": "IV",
+            "text": "Heavy nitrogen source for E. coli"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-II, C-IV, D-III",
+        "A-II, B-I, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-II, B-IV, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each enzyme, substrate and tracer has a defined role in replication or in its experimental proof.",
+        "steps": [
+          "DNA ligase joins Okazaki fragments: A-II.",
+          "dNTPs act as substrates and energy source: B-I.",
+          "$^{15}NH_4Cl$ supplied heavy nitrogen in the Meselson-Stahl experiment: C-IV.",
+          "Taylor used radioactive thymidine in Vicia faba: D-III."
+        ],
+        "final_answer": "Option (3): A-II, B-I, C-IV, D-III",
+        "why_not_others": "Option 1 swaps A and B. Option 2 swaps C and D. Option 4 swaps B and C.",
+        "common_trap": "Forgetting that dNTPs also supply the energy for polymerisation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t11_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "DNA replication",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about DNA replication are correct?",
+      "statements": {
+        "A": "E. coli replicates its DNA at a rate of roughly 2000 bp per second.",
+        "B": "In eukaryotes, DNA replication takes place in the S phase.",
+        "C": "Synthesis is continuous on the strand whose template runs $3' \\rightarrow 5'$.",
+        "D": "DNA polymerase can initiate the synthesis of a new strand on its own.",
+        "E": "Failure of cell division after DNA replication results in polyploidy."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B, C and E only",
+        "B, C, D and E only",
+        "A, C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Facts about the rate, timing and direction of replication, and what follows if division fails.",
+        "steps": [
+          "A is true: $4.6 \\times 10^6$ bp in about 18 minutes is roughly 2000 bp per second.",
+          "B is true: replication occurs in the S phase.",
+          "C is true: the leading strand template runs $3' \\rightarrow 5'$.",
+          "D is false: DNA polymerase cannot initiate replication on its own.",
+          "E is true: replication without division leads to polyploidy."
+        ],
+        "final_answer": "Option (2): A, B, C and E only",
+        "why_not_others": "Options 3 and 4 include the false statement D. Option 1 leaves out the true statement E.",
+        "common_trap": "Believing that DNA polymerase can start synthesis by itself.",
+        "time_saving_tip": "Spot D as false first; only options 1 and 2 remain, and E is true."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t12_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Central dogma, transcription, genetic code and translation",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following codons codes for the amino acid phenylalanine?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "AUG",
+        "UUU",
+        "UAA",
+        "UGA"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The genetic code assigns UUU to phenylalanine. AUG codes for methionine, and UAA, UAG and UGA are stop codons.",
+        "steps": [
+          "AUG is the start codon and codes for methionine.",
+          "UAA and UGA are stop codons and code for no amino acid.",
+          "UUU codes for phenylalanine."
+        ],
+        "final_answer": "Option (2): UUU",
+        "why_not_others": "AUG codes for methionine. UAA and UGA are stop codons.",
+        "common_trap": "Picking AUG simply because it is the best-known codon.",
+        "time_saving_tip": "Rule out the stop codons UAA, UAG and UGA first."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t12_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Central dogma, transcription, genetic code and translation",
+      "topic_index": 12,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In eukaryotes, RNA polymerase III is responsible for the synthesis of",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "28S rRNA",
+        "hnRNA",
+        "18S rRNA",
+        "tRNA and 5S rRNA"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Eukaryotes have three nuclear RNA polymerases. RNA polymerase I makes 28S, 18S and 5.8S rRNA. RNA polymerase II makes hnRNA. RNA polymerase III makes tRNA, 5S rRNA and snRNAs.",
+        "steps": [
+          "28S and 18S rRNA are made by RNA polymerase I.",
+          "hnRNA is made by RNA polymerase II.",
+          "tRNA and 5S rRNA are made by RNA polymerase III."
+        ],
+        "final_answer": "Option (4): tRNA and 5S rRNA",
+        "why_not_others": "28S and 18S rRNA are products of RNA polymerase I. hnRNA is the product of RNA polymerase II.",
+        "common_trap": "Assuming every rRNA is made by RNA polymerase I. The 5S rRNA is an exception and is made by RNA polymerase III.",
+        "time_saving_tip": "Remember 5S rRNA as the odd one out that goes with tRNA."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t12_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Central dogma, transcription, genetic code and translation",
+      "topic_index": 12,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "In bacteria, transcription and translation cannot occur together because the mRNA must first be spliced.",
+        "R": "Bacterial mRNA does not require processing to become functional."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Prokaryotic transcription and translation are coupled because their mRNA needs no processing.",
+        "steps": [
+          "Bacterial mRNA needs no splicing or other processing, so R is true.",
+          "Because no processing is needed, transcription and translation are coupled in bacteria.",
+          "A claims the opposite, so A is false."
+        ],
+        "final_answer": "Option (4): A is false but R is true",
+        "why_not_others": "A is false, so the options that call A true are wrong.",
+        "common_trap": "Applying eukaryotic split-gene splicing to bacteria.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t12_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Central dogma, transcription, genetic code and translation",
+      "topic_index": 12,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "During processing of eukaryotic hnRNA, capping adds 200-300 adenylate residues at the 5' end.",
+        "II": "Charging of tRNA requires ATP, and in bacteria the 23S rRNA acts as the ribozyme that forms peptide bonds."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Capping adds methyl guanosine triphosphate at the 5' end, and tailing adds 200-300 adenylates at the 3' end. Aminoacylation of tRNA uses ATP, and 23S rRNA acts as peptidyl transferase in bacteria.",
+        "steps": [
+          "Statement I describes tailing but calls it capping and puts it at the wrong end, so it is incorrect.",
+          "Charging of tRNA uses ATP, so the first part of Statement II is true.",
+          "23S rRNA is the bacterial ribozyme (peptidyl transferase), so Statement II is correct."
+        ],
+        "final_answer": "Option (4): Statement I is incorrect but Statement II is correct",
+        "why_not_others": "Statement I mixes up capping with tailing, so no option that calls it correct can be right.",
+        "common_trap": "Placing the poly-A tail at the 5' end, or mixing up capping with tailing.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t13_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene expression and regulation: lac operon",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In the lac operon of E. coli, gene z codes for",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "beta-galactosidase",
+        "permease",
+        "transacetylase",
+        "the repressor"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the lac operon, z codes for beta-galactosidase, y for permease and a for transacetylase. The i gene codes for the repressor.",
+        "steps": [
+          "Gene z codes for beta-galactosidase, which hydrolyses lactose into galactose and glucose.",
+          "Genes y and a code for permease and transacetylase.",
+          "The i gene codes for the repressor."
+        ],
+        "final_answer": "Option (1): beta-galactosidase",
+        "why_not_others": "Permease is coded by y, transacetylase by a and the repressor by i.",
+        "common_trap": "Swapping the products of the y and z genes.",
+        "time_saving_tip": "Read the genes in order: z, y, a gives beta-galactosidase, permease, transacetylase."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t13_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene expression and regulation: lac operon",
+      "topic_index": 13,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Lactose switches on the lac operon by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "binding directly to the operator and pulling RNA polymerase onto it",
+        "binding to the repressor and inactivating it",
+        "activating the repressor so that it binds the operator",
+        "being hydrolysed first into galactose, which then acts as the inducer"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Lactose is the inducer. It binds the repressor and inactivates it, which frees the operator so RNA polymerase can transcribe the structural genes.",
+        "steps": [
+          "When lactose is absent, the repressor binds the operator and blocks RNA polymerase.",
+          "When present, lactose binds the repressor and inactivates it.",
+          "The operator is now free, and z, y and a are transcribed."
+        ],
+        "final_answer": "Option (2): binding to the repressor and inactivating it",
+        "why_not_others": "Lactose does not bind the operator. It inactivates the repressor rather than activating it. Galactose is a product of lactose breakdown, not the inducer.",
+        "common_trap": "Believing that lactose activates the repressor.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t13_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene expression and regulation: lac operon",
+      "topic_index": 13,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Gene i"
+          },
+          {
+            "label": "B",
+            "text": "Gene z"
+          },
+          {
+            "label": "C",
+            "text": "Gene y"
+          },
+          {
+            "label": "D",
+            "text": "Gene a"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Permease"
+          },
+          {
+            "label": "II",
+            "text": "Transacetylase"
+          },
+          {
+            "label": "III",
+            "text": "Repressor"
+          },
+          {
+            "label": "IV",
+            "text": "Beta-galactosidase"
+          }
+        ]
+      },
+      "options": [
+        "A-IV, B-III, C-I, D-II",
+        "A-III, B-IV, C-II, D-I",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-I, C-IV, D-II"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each lac operon gene has a fixed product: i gives the repressor, z gives beta-galactosidase, y gives permease and a gives transacetylase.",
+        "steps": [
+          "Gene i codes for the repressor (A-III).",
+          "Gene z codes for beta-galactosidase (B-IV).",
+          "Gene y codes for permease (C-I).",
+          "Gene a codes for transacetylase (D-II)."
+        ],
+        "final_answer": "Option (3): A-III, B-IV, C-I, D-II",
+        "why_not_others": "Option 1 swaps the products of i and z. Option 2 swaps those of y and a. Option 4 swaps those of z and y.",
+        "common_trap": "Swapping the products of y and a.",
+        "time_saving_tip": "Only two options pair A with III and B with IV. Check C to decide between them."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t13_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene expression and regulation: lac operon",
+      "topic_index": 13,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about gene regulation and the lac operon are correct?",
+      "statements": {
+        "A": "In prokaryotes, control of the rate of transcription initiation is the predominant site of regulating gene expression.",
+        "B": "In the absence of lactose, the repressor binds the operator and prevents RNA polymerase from transcribing the operon.",
+        "C": "The lac operon is an example of positive regulation in which lactose activates the repressor.",
+        "D": "A very low level of lac operon expression is always present so that some lactose can enter the cell.",
+        "E": "Once lactose is used up, the operon stays switched on permanently."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and D only",
+        "A, B and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The lac operon is under negative regulation. The inducer inactivates the repressor, the operon always has basal expression, and it switches off again when lactose is used up.",
+        "steps": [
+          "A is correct: in prokaryotes, control of transcription initiation predominates.",
+          "B is correct: without lactose, the repressor blocks the operator.",
+          "C is incorrect: regulation is negative, and lactose inactivates the repressor.",
+          "D is correct: basal expression lets some lactose enter the cell.",
+          "E is incorrect: the operon switches off once lactose is used up."
+        ],
+        "final_answer": "Option (4): A, B and D only",
+        "why_not_others": "The other options include C or E, which are false, or leave out true statements.",
+        "common_trap": "Calling the lac operon positively regulated.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t14_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Genome, Human Genome Project and DNA fingerprinting",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The technique of DNA fingerprinting was developed by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Jacques Monod",
+        "Frederick Sanger",
+        "Alec Jeffreys",
+        "George Gamow"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Alec Jeffreys developed DNA fingerprinting using VNTRs.",
+        "steps": [
+          "Monod co-described the lac operon.",
+          "Sanger's method is the basis of automated DNA sequencing.",
+          "Gamow proposed the triplet code.",
+          "Alec Jeffreys developed DNA fingerprinting."
+        ],
+        "final_answer": "Option (3): Alec Jeffreys",
+        "why_not_others": "Each of the other scientists is linked with a different discovery.",
+        "common_trap": "Confusing Sanger's sequencing method with DNA fingerprinting.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t14_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Genome, Human Genome Project and DNA fingerprinting",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following is a correct finding of the Human Genome Project?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Chromosome 1 has the fewest genes, 231",
+        "About 50% of the human genome codes for proteins",
+        "The average gene consists of about 2.4 million bases",
+        "Dystrophin is the largest known human gene, at 2.4 million bases"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Key HGP findings: the average gene is 3000 bases, dystrophin is the largest at 2.4 million bases, less than 2% of the genome codes for proteins, chromosome 1 has the most genes (2968) and Y the fewest (231).",
+        "steps": [
+          "Chromosome 1 has the most genes (2968). The Y chromosome has 231, the fewest.",
+          "Less than 2% of the genome codes for proteins.",
+          "The average gene is 3000 bases long.",
+          "Dystrophin, at 2.4 million bases, is the largest gene."
+        ],
+        "final_answer": "Option (4): Dystrophin is the largest known human gene, at 2.4 million bases",
+        "why_not_others": "Option 1 gives Y's gene count to chromosome 1. Option 2 inflates the protein-coding fraction. Option 3 gives dystrophin's size as the average gene size.",
+        "common_trap": "Mixing up the gene counts of chromosome 1 and the Y chromosome.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t14_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Genome, Human Genome Project and DNA fingerprinting",
+      "topic_index": 14,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The correct sequence of steps in DNA fingerprinting is",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "DNA isolation, restriction digestion, gel electrophoresis, Southern blotting, hybridisation with VNTR probe, autoradiography",
+        "DNA isolation, gel electrophoresis, restriction digestion, hybridisation with VNTR probe, Southern blotting, autoradiography",
+        "Restriction digestion, DNA isolation, Southern blotting, gel electrophoresis, autoradiography, hybridisation with VNTR probe",
+        "DNA isolation, restriction digestion, Southern blotting, gel electrophoresis, hybridisation with VNTR probe, autoradiography"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "DNA fingerprinting follows this order: isolation, digestion, electrophoresis, blotting, hybridisation, autoradiography.",
+        "steps": [
+          "DNA is isolated and cut with restriction endonucleases.",
+          "The fragments are separated by gel electrophoresis.",
+          "The separated DNA is transferred to a membrane by Southern blotting.",
+          "The membrane is hybridised with a labelled VNTR probe and detected by autoradiography."
+        ],
+        "final_answer": "Option (1): DNA isolation, restriction digestion, gel electrophoresis, Southern blotting, hybridisation with VNTR probe, autoradiography",
+        "why_not_others": "Fragments must be produced before electrophoresis, and they must be separated before they can be blotted. The other options break this order.",
+        "common_trap": "Placing Southern blotting before gel electrophoresis.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t14_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Genome, Human Genome Project and DNA fingerprinting",
+      "topic_index": 14,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "DNA fingerprinting can be carried out even on very tiny biological samples collected from a crime scene.",
+        "R": "VNTRs are a type of satellite DNA that shows high polymorphism, with sizes ranging from 0.1 to 20 kb."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "PCR amplifies DNA from tiny samples. VNTR polymorphism explains why individuals can be told apart, not why small samples are enough.",
+        "steps": [
+          "A is true: DNA from tiny samples can be amplified by PCR.",
+          "R is true: VNTRs are highly polymorphic satellite DNA, 0.1-20 kb in size.",
+          "The ability to work with tiny samples comes from PCR amplification, not from VNTR polymorphism, so R does not explain A."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 are out. Option 1 fails because R does not explain A.",
+        "common_trap": "Treating any true, related fact as the explanation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t14_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Genome, Human Genome Project and DNA fingerprinting",
+      "topic_index": 14,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The Expressed Sequence Tags approach of the HGP sequenced the whole genome first and later assigned functions to its different regions.",
+        "II": "Over 50% of the human genome codes for proteins, whereas the functions of less than 2% of the discovered genes are unknown."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Expressed Sequence Tags identify genes expressed as RNA, while sequence annotation sequences the whole genome and then assigns functions. Less than 2% of the genome codes for proteins, and the functions of over 50% of discovered genes are unknown.",
+        "steps": [
+          "Statement I describes sequence annotation, not Expressed Sequence Tags, so it is incorrect.",
+          "Statement II swaps the two figures: less than 2% of the genome codes for proteins, and over 50% of genes have unknown functions. It is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements contain an error, so every other option fails.",
+        "common_trap": "Mixing up the two HGP approaches, or mixing up the 2% and 50% figures.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t15_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Origin of life",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The theory of spontaneous generation was disproved by",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "A. I. Oparin",
+        "J. B. S. Haldane",
+        "Louis Pasteur",
+        "Stanley Miller"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Pasteur's swan-neck flask experiments showed that life comes only from pre-existing life.",
+        "steps": [
+          "Oparin and Haldane proposed chemical evolution.",
+          "Miller obtained amino acids in an electric discharge experiment.",
+          "Pasteur disproved spontaneous generation with swan-neck flasks."
+        ],
+        "final_answer": "Option (3): Louis Pasteur",
+        "why_not_others": "The other scientists worked on chemical evolution, not on spontaneous generation.",
+        "common_trap": "Linking Miller's experiment with disproving spontaneous generation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t15_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Origin of life",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In Stanley Miller's experiment, the closed flask in which electric discharge was created contained",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$CH_4$, $O_2$, $NH_3$ and water vapour",
+        "$CO_2$, $N_2$, $O_2$ and $H_2$",
+        "$CH_4$, $H_2$, $NH_3$ and water vapour",
+        "$CH_4$, $H_2$, $O_2$ and $NH_3$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Miller recreated the reducing early atmosphere, which had no free oxygen: $CH_4$, $H_2$, $NH_3$ and water vapour at 800 degrees C.",
+        "steps": [
+          "The early atmosphere was reducing and had no free $O_2$.",
+          "Every option containing $O_2$ can be eliminated.",
+          "The remaining mixture is $CH_4$, $H_2$, $NH_3$ and water vapour."
+        ],
+        "final_answer": "Option (3): $CH_4$, $H_2$, $NH_3$ and water vapour",
+        "why_not_others": "Options 1, 2 and 4 all include free oxygen, which was absent from the reducing early atmosphere.",
+        "common_trap": "Assuming the early atmosphere contained oxygen like today's air.",
+        "time_saving_tip": "Strike out every option that contains $O_2$."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t15_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Origin of life",
+      "topic_index": 15,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The first non-cellular forms of life probably originated about",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "20 billion years ago",
+        "4.5 billion years ago",
+        "2000 million years ago",
+        "3 billion years ago"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Key dates: the universe about 20 billion years ago, Earth about 4.5 billion years ago, non-cellular life about 3 billion years ago, cellular life about 2000 million years ago.",
+        "steps": [
+          "20 billion years ago is the origin of the universe.",
+          "4.5 billion years ago is the formation of Earth.",
+          "2000 million years ago is when the first cellular forms appeared.",
+          "Non-cellular life arose about 3 billion years ago."
+        ],
+        "final_answer": "Option (4): 3 billion years ago",
+        "why_not_others": "Each wrong option is the date of a different event in the timeline.",
+        "common_trap": "Confusing the origin of non-cellular life with that of cellular life.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t15_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Origin of life",
+      "topic_index": 15,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Oparin and Haldane"
+          },
+          {
+            "label": "B",
+            "text": "Louis Pasteur"
+          },
+          {
+            "label": "C",
+            "text": "Stanley Miller"
+          },
+          {
+            "label": "D",
+            "text": "Panspermia"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Spores transferred to Earth from outer space"
+          },
+          {
+            "label": "II",
+            "text": "Swan-neck flask experiment"
+          },
+          {
+            "label": "III",
+            "text": "First life formed from pre-existing non-living organic molecules"
+          },
+          {
+            "label": "IV",
+            "text": "Amino acids obtained by electric discharge in a closed flask"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-II, C-IV, D-I",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each idea or experiment on the origin of life belongs to a specific person or theory.",
+        "steps": [
+          "Oparin and Haldane proposed chemical evolution (A-III).",
+          "Pasteur performed the swan-neck flask experiment (B-II).",
+          "Miller obtained amino acids by electric discharge (C-IV).",
+          "Panspermia holds that spores came from outer space (D-I)."
+        ],
+        "final_answer": "Option (3): A-III, B-II, C-IV, D-I",
+        "why_not_others": "Option 1 swaps A and B. Option 2 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Crediting Miller's experiment to Oparin and Haldane.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t15_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Origin of life",
+      "topic_index": 15,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the origin of life are correct?",
+      "statements": {
+        "A": "Earth formed about 4.5 billion years ago, and life appeared roughly 500 million years later.",
+        "B": "The early atmosphere of Earth was oxidising and rich in free oxygen.",
+        "C": "Apart from amino acids, similar experiments by other scientists yielded sugars, nitrogen bases, pigments and fats.",
+        "D": "According to the Big Bang theory, the universe originated about 4.5 billion years ago.",
+        "E": "The first life forms were probably giant molecules such as RNA, proteins and polysaccharides that could reproduce."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "C, D and E only",
+        "A and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Earth is about 4.5 billion years old, the universe about 20 billion. The early atmosphere was reducing, and the first life was probably self-reproducing giant molecules.",
+        "steps": [
+          "A is correct.",
+          "B is incorrect: the early atmosphere was reducing, with no free $O_2$.",
+          "C is correct.",
+          "D is incorrect: the universe originated about 20 billion years ago. 4.5 billion years is the age of Earth.",
+          "E is correct."
+        ],
+        "final_answer": "Option (2): A, C and E only",
+        "why_not_others": "Options 1 and 3 include a false statement (B or D). Option 4 leaves out the true statement C.",
+        "common_trap": "Confusing the age of Earth with the age of the universe.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t16_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Evidences for biological evolution",
+      "topic_index": 16,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which one of the following pairs represents homologous organs?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Thorns of Bougainvillea and tendrils of Cucurbita",
+        "Wings of butterfly and wings of bird",
+        "Eyes of octopus and eyes of mammals",
+        "Flippers of penguin and flippers of dolphin"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Homologous organs share the same structure and origin but perform different functions. They indicate divergent evolution.",
+        "steps": [
+          "Bougainvillea thorns and Cucurbita tendrils have the same origin but perform different functions, so they are homologous.",
+          "Butterfly and bird wings, octopus and mammal eyes, and penguin and dolphin flippers do similar jobs but differ in origin, so they are analogous."
+        ],
+        "final_answer": "Option (1): Thorns of Bougainvillea and tendrils of Cucurbita",
+        "why_not_others": "Options 2, 3 and 4 are standard examples of analogous organs, which indicate convergent evolution.",
+        "common_trap": "Picking a pair only because the two organs look alike or do the same job. That describes analogy, not homology.",
+        "time_saving_tip": "Same function with a different origin means analogous. Different function with the same origin means homologous."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t16_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Evidences for biological evolution",
+      "topic_index": 16,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Sweet potato and potato are best described as",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "homologous organs indicating divergent evolution",
+        "analogous organs indicating convergent evolution",
+        "homologous organs indicating convergent evolution",
+        "analogous organs indicating divergent evolution"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Analogous organs perform similar functions but differ in structure and origin. They indicate convergent evolution.",
+        "steps": [
+          "Sweet potato is a modified root, while potato is a modified stem.",
+          "Both perform a similar function, but their origins differ, so they are analogous.",
+          "Analogy indicates convergent evolution."
+        ],
+        "final_answer": "Option (2): analogous organs indicating convergent evolution",
+        "why_not_others": "They are not homologous because their origins differ. Analogy is never linked with divergent evolution, and homology is never linked with convergent evolution.",
+        "common_trap": "Calling them homologous because both are underground storage organs.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t16_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Evidences for biological evolution",
+      "topic_index": 16,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which observation was recorded for the peppered moth Biston betularia in England after industrialisation?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "White-winged moths outnumbered dark-winged moths",
+        "Individual white moths turned dark because soot settled on them",
+        "Dark-winged moths outnumbered white-winged moths",
+        "White-winged and dark-winged moths became equal in number"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Industrial melanism: the ratio of white to dark moths reversed after industrialisation.",
+        "steps": [
+          "Before industrialisation, white moths outnumbered dark moths.",
+          "After industrialisation, the reverse was seen, so dark moths outnumbered white moths."
+        ],
+        "final_answer": "Option (3): Dark-winged moths outnumbered white-winged moths",
+        "why_not_others": "Option 1 describes the situation before industrialisation. Option 2 is a Lamarckian idea of individuals changing, not selection acting on the population. Option 4 was not observed.",
+        "common_trap": "Mixing up the before and after situations.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t16_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Evidences for biological evolution",
+      "topic_index": 16,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "The forelimbs of whale, bat, cheetah and human perform different functions, yet they are homologous organs.",
+        "R": "The wings of butterfly and bird are analogous organs that indicate convergent evolution."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Homology means the same origin with different functions. Analogy means a similar function with a different origin.",
+        "steps": [
+          "A is true: these forelimbs share the same structure and origin, so they are homologous.",
+          "R is true: butterfly and bird wings are analogous and indicate convergent evolution.",
+          "R describes analogy, so it does not explain why the forelimbs are homologous."
+        ],
+        "final_answer": "Option (2): Both A and R are true but R is not the correct explanation of A",
+        "why_not_others": "Both statements are true, which rules out options 3 and 4. R is about analogous organs, so it cannot explain a statement about homology, which rules out option 1.",
+        "common_trap": "Assuming that two true, related-sounding statements must form an explanation pair.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t16_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Evidences for biological evolution",
+      "topic_index": 16,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The embryological support for evolution proposed by Ernst Haeckel was disapproved by Karl Ernst von Baer, who noted that embryos never pass through the adult stages of other animals.",
+        "II": "The flippers of penguin and dolphin are homologous organs and indicate divergent evolution."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Haeckel's embryological evidence was disapproved by von Baer. Penguin and dolphin flippers are analogous organs.",
+        "steps": [
+          "Statement I is correct: von Baer disapproved Haeckel's idea because embryos never pass through the adult stages of other animals.",
+          "Statement II is incorrect: penguin and dolphin flippers are analogous and indicate convergent evolution."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II wrongly calls analogous organs homologous, so options 1 and 4 are wrong. Statement I is true, so option 2 is wrong.",
+        "common_trap": "Treating Haeckel's embryological evidence as valid, or classifying flippers as homologous because their shapes look similar.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t17_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Darwin's contribution and modern synthetic theory",
+      "topic_index": 17,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Hugo de Vries proposed his mutation theory of evolution on the basis of his work on",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Galapagos finches",
+        "Biston betularia",
+        "the giraffe",
+        "Oenothera lamarckiana"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Hugo de Vries worked on the evening primrose, Oenothera lamarckiana, and proposed that mutation causes evolution.",
+        "steps": [
+          "De Vries studied the evening primrose.",
+          "From this work he proposed the mutation theory and described saltation."
+        ],
+        "final_answer": "Option (4): Oenothera lamarckiana",
+        "why_not_others": "Galapagos finches are linked with Darwin. Biston betularia is the example of industrial melanism. The giraffe is Lamarck's example.",
+        "common_trap": "Linking the species name 'lamarckiana' with Lamarck instead of de Vries.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t17_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Darwin's contribution and modern synthetic theory",
+      "topic_index": 17,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In Darwin's theory of natural selection, the term fitness refers to",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the physical strength of an individual",
+        "the ability to acquire new characters through use of organs",
+        "the longevity of an individual",
+        "reproductive fitness, so that fitter individuals leave more progeny"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Darwinian fitness means reproductive fitness.",
+        "steps": [
+          "Darwin measured fitness by reproductive success.",
+          "Fitter individuals leave more progeny, so their traits spread through the population."
+        ],
+        "final_answer": "Option (4): reproductive fitness, so that fitter individuals leave more progeny",
+        "why_not_others": "Strength and longevity matter only if they increase the number of offspring. Acquiring characters through use is Lamarck's idea.",
+        "common_trap": "Reading 'survival of the fittest' as 'survival of the strongest'.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t17_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Darwin's contribution and modern synthetic theory",
+      "topic_index": 17,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which statement correctly distinguishes the mutations described by Hugo de Vries from the variations described by Darwin?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Mutations are small and directional, whereas Darwinian variations are large and random",
+        "Mutations are random and directionless, whereas Darwinian variations are small and directional",
+        "Both mutations and Darwinian variations are small and directional",
+        "Mutations are large and directional, whereas Darwinian variations are random and directionless"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Darwinian variations are small and directional. Mutations are random and directionless, and saltation refers to large single-step changes.",
+        "steps": [
+          "De Vries described mutations as random and directionless, and called large single-step mutations saltation.",
+          "Darwin's variations were small and directional."
+        ],
+        "final_answer": "Option (2): Mutations are random and directionless, whereas Darwinian variations are small and directional",
+        "why_not_others": "Options 1 and 4 swap the properties of the two kinds of change. Option 3 ignores the difference between them.",
+        "common_trap": "Reversing the descriptions of mutation and variation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t17_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Darwin's contribution and modern synthetic theory",
+      "topic_index": 17,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Lamarck"
+          },
+          {
+            "label": "B",
+            "text": "Charles Darwin"
+          },
+          {
+            "label": "C",
+            "text": "Hugo de Vries"
+          },
+          {
+            "label": "D",
+            "text": "Alfred Wallace"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Malay Archipelago"
+          },
+          {
+            "label": "II",
+            "text": "Inheritance of acquired characters"
+          },
+          {
+            "label": "III",
+            "text": "Saltation"
+          },
+          {
+            "label": "IV",
+            "text": "Branching descent and natural selection"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-IV, D-I",
+        "A-I, B-IV, C-III, D-II",
+        "A-II, B-IV, C-III, D-I",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each scientist is linked to a specific idea or region.",
+        "steps": [
+          "Lamarck proposed the inheritance of acquired characters (A-II).",
+          "Darwin's two key concepts were branching descent and natural selection (B-IV).",
+          "De Vries described saltation (C-III).",
+          "Wallace worked in the Malay Archipelago (D-I)."
+        ],
+        "final_answer": "Option (3): A-II, B-IV, C-III, D-I",
+        "why_not_others": "Option 1 gives saltation to Darwin. Option 2 swaps Lamarck and Wallace. Option 4 mismatches every pair.",
+        "common_trap": "Assigning saltation to Darwin, whose variations were small.",
+        "time_saving_tip": "Fixing A-II and C-III leaves only option 3."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t17_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Darwin's contribution and modern synthetic theory",
+      "topic_index": 17,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about Darwinism and the modern synthetic theory are correct?",
+      "statements": {
+        "A": "Darwin explained that mutation is the source of variation.",
+        "B": "Darwin was influenced by Malthus's ideas on population.",
+        "C": "Gene flow and genetic drift are among the factors of the modern synthetic theory.",
+        "D": "Lamarck explained the long neck of the giraffe through the use and disuse of organs, a view that is now rejected.",
+        "E": "Darwinian variations are random and directionless."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and E only",
+        "A, D and E only",
+        "B, C and D only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Darwin could not explain the source of variation, and the synthetic theory later added genetics.",
+        "steps": [
+          "A is false: Darwin could not explain the source of variation; genetics later supplied it.",
+          "B is true: Darwin was influenced by Malthus.",
+          "C is true: the synthetic theory factors are gene mutation, recombination, gene flow, genetic drift and natural selection.",
+          "D is true: Lamarck used the giraffe example, and his view is now rejected.",
+          "E is false: Darwinian variations are small and directional."
+        ],
+        "final_answer": "Option (4): B, C and D only",
+        "why_not_others": "Options 1 and 3 include the false statement A. Options 2 and 3 include the false statement E.",
+        "common_trap": "Crediting Darwin with explaining mutation as the source of variation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t18_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mechanism of evolution: variation and natural selection; types of natural selection",
+      "topic_index": 18,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "In stabilising selection acting on a continuously varying trait,",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "the peak of the distribution shifts in one direction",
+        "two peaks are produced at the extremes",
+        "more individuals acquire the mean character value, so the peak becomes higher and narrower",
+        "individuals at both extremes are favoured over the mean"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Stabilising selection favours the average value and reduces variation.",
+        "steps": [
+          "Individuals with the mean value are favoured.",
+          "As a result, the peak rises and narrows, and variation decreases."
+        ],
+        "final_answer": "Option (3): more individuals acquire the mean character value, so the peak becomes higher and narrower",
+        "why_not_others": "Option 1 describes directional selection. Options 2 and 4 describe disruptive selection.",
+        "common_trap": "Confusing stabilising selection with disruptive selection.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t18_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mechanism of evolution: variation and natural selection; types of natural selection",
+      "topic_index": 18,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Lederberg's replica plating experiment demonstrated that",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "mutations for antibiotic resistance are induced by the antibiotic",
+        "acquired characters are inherited by bacteria",
+        "evolution in bacteria takes millions of years",
+        "mutations pre-exist in a population and are not induced by the environment"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Replica plating showed that mutations pre-exist in a population.",
+        "steps": [
+          "Resistant forms were already present in the population before exposure to the antibiotic.",
+          "The environment only selects these variants; it does not create them."
+        ],
+        "final_answer": "Option (4): mutations pre-exist in a population and are not induced by the environment",
+        "why_not_others": "Option 1 is the exact idea the experiment disproved. Option 2 is Lamarckian. Option 3 is wrong because resistant forms appear within days.",
+        "common_trap": "Believing that the antibiotic causes the resistance mutation.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t18_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mechanism of evolution: variation and natural selection; types of natural selection",
+      "topic_index": 18,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a population, both very small and very large individuals leave more offspring than individuals of medium size. After many generations, the frequency distribution of body size will most likely show",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "two peaks, due to disruptive selection",
+        "a single higher and narrower peak, due to stabilising selection",
+        "a single peak shifted towards one extreme, due to directional selection",
+        "no change, because this is genetic drift"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Disruptive selection favours both extremes over the mean.",
+        "steps": [
+          "Both extremes are favoured and the mean is selected against.",
+          "The distribution therefore splits into two peaks."
+        ],
+        "final_answer": "Option (1): two peaks, due to disruptive selection",
+        "why_not_others": "Stabilising selection favours the mean. Directional selection favours only one extreme. Drift is a chance process, not selection on fitness.",
+        "common_trap": "Choosing directional selection without noticing that both extremes are favoured.",
+        "time_saving_tip": "Both extremes favoured means two peaks, which means disruptive selection."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t18_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mechanism of evolution: variation and natural selection; types of natural selection",
+      "topic_index": 18,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "When bacteria are grown on a medium containing an antibiotic, resistant forms can be detected within days.",
+        "R": "Antibiotic-resistant variants already exist in the bacterial population and are selected when the antibiotic is applied."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Pre-existing variation combined with selection allows evolution on a short timescale.",
+        "steps": [
+          "A is true: resistant forms appear within days on an antibiotic medium.",
+          "R is true: replica plating showed that mutations pre-exist and are not induced.",
+          "Selection of these pre-existing resistant forms is the reason they appear so quickly, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, and R directly accounts for A, so options 2, 3 and 4 are wrong.",
+        "common_trap": "Thinking the antibiotic induces the mutations, which would make R seem false.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t18_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Mechanism of evolution: variation and natural selection; types of natural selection",
+      "topic_index": 18,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Evolution is a stochastic process based on chance events in nature and chance mutations in organisms.",
+        "II": "In directional selection, more individuals acquire a character value other than the mean, at one extreme of the distribution."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Evolution is stochastic, and directional selection shifts the peak towards one extreme.",
+        "steps": [
+          "Statement I matches the description of evolution as a chance-based, stochastic process.",
+          "Statement II correctly describes directional selection."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Neither statement contains an error, so options 2, 3 and 4 are wrong.",
+        "common_trap": "Thinking that 'stochastic' conflicts with natural selection, or confusing 'one extreme' with the two extremes of disruptive selection.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t19_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene flow, genetic drift and Hardy-Weinberg principle",
+      "topic_index": 19,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "A population is in Hardy-Weinberg equilibrium for a gene with two alleles, A and a. If the frequency of allele a is $0.3$, what is the frequency of heterozygotes (Aa)?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.21$",
+        "$0.09$",
+        "$0.42$",
+        "$0.49$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Heterozygote frequency is $2pq$.",
+        "steps": [
+          "$q = 0.3$, so $p = 1 - 0.3 = 0.7$.",
+          "$2pq = 2 \\times 0.7 \\times 0.3 = 0.42$."
+        ],
+        "final_answer": "Option (3): $0.42$",
+        "why_not_others": "$0.21$ is $pq$, where the factor 2 was left out. $0.09$ is $q^2$, the aa frequency. $0.49$ is $p^2$, the AA frequency.",
+        "common_trap": "Forgetting the factor 2 in $2pq$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t19_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene flow, genetic drift and Hardy-Weinberg principle",
+      "topic_index": 19,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "In a population at Hardy-Weinberg equilibrium, $16\\%$ of individuals show the recessive phenotype (aa). What is the frequency of homozygous dominant (AA) individuals?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.36$",
+        "$0.48$",
+        "$0.84$",
+        "$0.60$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "When $q^2$ is known, take its square root to get q, then use $p = 1 - q$.",
+        "steps": [
+          "$q^2 = 0.16$, so $q = 0.4$.",
+          "$p = 1 - 0.4 = 0.6$.",
+          "AA $= p^2 = 0.36$."
+        ],
+        "final_answer": "Option (1): $0.36$",
+        "why_not_others": "$0.48$ is $2pq$, the heterozygote frequency. $0.84$ is $1 - q^2$, all dominant phenotypes together. $0.60$ is p, an allele frequency rather than a genotype frequency.",
+        "common_trap": "Using $p = 1 - q^2$ instead of taking the square root first.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t19_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene flow, genetic drift and Hardy-Weinberg principle",
+      "topic_index": 19,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A small group of individuals from a large mainland population colonises a remote island. Over generations, the island population becomes genetically different from the original population. This phenomenon is called",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "gene flow",
+        "bottleneck effect",
+        "disruptive selection",
+        "founder effect"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In the founder effect, a small colonising group becomes genetically different from the parent population.",
+        "steps": [
+          "A small group colonised a new area, and these colonisers are called founders.",
+          "Their gene pool drifts away from that of the original population, which is the founder effect."
+        ],
+        "final_answer": "Option (4): founder effect",
+        "why_not_others": "Gene flow is the movement of alleles between interbreeding populations. The bottleneck effect is a drastic reduction in the size of a population. Disruptive selection is a type of natural selection, not a chance effect.",
+        "common_trap": "Confusing the founder effect with the bottleneck effect, since both are forms of drift.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t19_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene flow, genetic drift and Hardy-Weinberg principle",
+      "topic_index": 19,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$p^2$"
+          },
+          {
+            "label": "B",
+            "text": "$2pq$"
+          },
+          {
+            "label": "C",
+            "text": "$q^2$"
+          },
+          {
+            "label": "D",
+            "text": "$p + q$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Frequency of homozygous recessive (aa)"
+          },
+          {
+            "label": "II",
+            "text": "Equal to 1"
+          },
+          {
+            "label": "III",
+            "text": "Frequency of heterozygotes (Aa)"
+          },
+          {
+            "label": "IV",
+            "text": "Frequency of homozygous dominant (AA)"
+          }
+        ]
+      },
+      "options": [
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-I, C-III, D-II",
+        "A-II, B-III, C-I, D-IV",
+        "A-IV, B-III, C-I, D-II"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In Hardy-Weinberg, AA $= p^2$, Aa $= 2pq$, aa $= q^2$, and $p + q = 1$.",
+        "steps": [
+          "$p^2$ is the AA frequency (A-IV).",
+          "$2pq$ is the Aa frequency (B-III).",
+          "$q^2$ is the aa frequency (C-I).",
+          "$p + q = 1$ (D-II)."
+        ],
+        "final_answer": "Option (4): A-IV, B-III, C-I, D-II",
+        "why_not_others": "Option 1 swaps $p^2$ and $2pq$. Option 2 swaps $2pq$ and $q^2$. Option 3 swaps $p^2$ and $p + q$.",
+        "common_trap": "Writing $p^2$ for the heterozygote frequency.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t19_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Gene flow, genetic drift and Hardy-Weinberg principle",
+      "topic_index": 19,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about genetic drift and the Hardy-Weinberg principle are correct?",
+      "statements": {
+        "A": "Genetic drift is strongest in small populations.",
+        "B": "Random mating is one of the conditions for Hardy-Weinberg equilibrium.",
+        "C": "The bottleneck effect is a form of genetic drift.",
+        "D": "Gene flow helps maintain Hardy-Weinberg equilibrium in a population.",
+        "E": "Genetic drift is a type of natural selection."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, C and E only",
+        "B, D and E only",
+        "A, B, C and D"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Drift is a chance change in allele frequency. Gene flow disturbs genetic equilibrium.",
+        "steps": [
+          "A is true: drift is strongest in small populations.",
+          "B is true: equilibrium requires random mating.",
+          "C is true: the bottleneck effect is a form of drift.",
+          "D is false: gene migration is one of the five factors that disturb equilibrium.",
+          "E is false: drift is a chance process, not a type of natural selection."
+        ],
+        "final_answer": "Option (1): A, B and C only",
+        "why_not_others": "Options 2 and 3 include the false statement E. Options 3 and 4 include the false statement D.",
+        "common_trap": "Listing genetic drift as a type of natural selection.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t20_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Adaptive radiation",
+      "topic_index": 20,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The variety of finches on the Galapagos Islands, with beaks suited to different food habits, is a classic example of",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Convergent evolution among unrelated groups",
+        "Genetic drift in a small island population",
+        "Adaptive radiation from a seed-eating ancestral finch",
+        "Disruptive selection acting on placental mammals"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Adaptive radiation is the evolution of different species in a geographical area, starting from one point and radiating into other habitats.",
+        "steps": [
+          "Darwin's finches arose from a seed-eating ancestral finch.",
+          "This ancestor gave rise to many forms with altered beaks, including insectivorous and vegetarian types.",
+          "Many species arising from one ancestor in one area is adaptive radiation."
+        ],
+        "final_answer": "Option (3): Adaptive radiation from a seed-eating ancestral finch",
+        "why_not_others": "The finches share one ancestor, so this is not convergence between unrelated groups. Genetic drift is a chance process, not radiation into habitats. Disruptive selection is not the example given for the finches, and finches are not placental mammals.",
+        "common_trap": "Thinking that different beak shapes mean convergent evolution. All the finches come from one ancestor, so this is divergent evolution.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t20_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Adaptive radiation",
+      "topic_index": 20,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following is a correctly matched pair of an Australian placental mammal and the marsupial it resembles?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Anteater and numbat",
+        "Flying squirrel and Tasmanian wolf",
+        "Lemur and marsupial mole",
+        "Bobcat and spotted cuscus"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Australian placental mammals have radiated into forms that each resemble a corresponding marsupial. This is convergent evolution.",
+        "steps": [
+          "The correct pairs are: placental wolf and Tasmanian wolf; flying squirrel and flying phalanger; mole and marsupial mole.",
+          "The remaining pairs are: anteater and numbat; lemur and spotted cuscus; bobcat and Tasmanian tiger cat.",
+          "Of the options given, only anteater and numbat is a correct pair."
+        ],
+        "final_answer": "Option (1): Anteater and numbat",
+        "why_not_others": "The flying squirrel matches the flying phalanger. The lemur matches the spotted cuscus. The bobcat matches the Tasmanian tiger cat.",
+        "common_trap": "Mixing up the partners, for example linking the bobcat with the cuscus instead of the Tasmanian tiger cat.",
+        "time_saving_tip": "Learn the six pairs by their shared lifestyle: flying, burrowing, ant-eating, tree-dwelling, hunting."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t20_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Adaptive radiation",
+      "topic_index": 20,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "The evolution of many different marsupials from a common ancestral stock within the Australian island continent is an example of",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Convergent evolution",
+        "Divergent evolution",
+        "Genetic drift",
+        "Stabilising selection"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Adaptive radiation from a single ancestor is divergent evolution.",
+        "steps": [
+          "All the Australian marsupials come from one common ancestral stock.",
+          "They radiated into different forms within one geographical area.",
+          "Radiation within one lineage is divergent evolution."
+        ],
+        "final_answer": "Option (2): Divergent evolution",
+        "why_not_others": "Convergent evolution describes the resemblance between placental mammals and marsupials, not radiation within the marsupials. Genetic drift is a chance change in allele frequency. Stabilising selection keeps a population around a mean value and does not produce many forms.",
+        "common_trap": "Calling every Australian example convergent. Radiation within the marsupials is divergent; only the placental-marsupial resemblance is convergent.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t20_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Adaptive radiation",
+      "topic_index": 20,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Darwin's finches on the Galapagos Islands show variation in beak type.",
+        "R": "A seed-eating ancestral finch gave rise to many forms with beaks altered to suit different food habits, such as insectivorous and vegetarian types."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In Darwin's finches, beak type varies according to food habit through adaptive radiation from a seed-eating ancestor.",
+        "steps": [
+          "A is true: the finches show different beak types.",
+          "R is true: a seed-eating ancestor gave rise to insectivorous and vegetarian forms with altered beaks.",
+          "Radiation into different food habits is exactly why the beaks vary, so R explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are true and R is the correct explanation of A",
+        "why_not_others": "Both statements are true, so options 3 and 4 are wrong. R directly gives the cause of the beak variation, so option 2 is wrong.",
+        "common_trap": "Believing the ancestral finch was insectivorous. According to the notes, the ancestor was seed-eating.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t20_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Adaptive radiation",
+      "topic_index": 20,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "The resemblance between the Australian flying squirrel, a placental mammal, and the flying phalanger, a marsupial, is an example of convergent evolution.",
+        "II": "The origin of many different marsupials from a common ancestral stock within Australia is an example of divergent evolution."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Radiation within one lineage is divergent evolution. The resemblance between placental mammals and marsupials in Australia is convergent evolution.",
+        "steps": [
+          "The flying squirrel (placental) and the flying phalanger (marsupial) belong to different lineages but look alike. This is convergence, so Statement I is correct.",
+          "Many marsupials arising from one ancestral stock is adaptive radiation, which is divergent evolution. So Statement II is correct."
+        ],
+        "final_answer": "Option (1): Both Statement I and Statement II are correct",
+        "why_not_others": "Each statement correctly places its example as convergent or divergent, so no option that calls either statement incorrect can be right.",
+        "common_trap": "Treating the placental-marsupial similarity as divergent evolution simply because both groups live in Australia.",
+        "time_saving_tip": "Ask whether the forms share one ancestral stock (divergent) or come from separate lineages that look alike (convergent)."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t21_1",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Human evolution",
+      "topic_index": 21,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "The brain capacity of Homo erectus was about",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "650-800 cc",
+        "900 cc",
+        "1400 cc",
+        "1100 cc"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Brain capacity increased through human evolution: H. habilis 650-800 cc, H. erectus 900 cc, Neanderthal 1400 cc.",
+        "steps": [
+          "Homo erectus lived about 1.5 million years ago.",
+          "Its brain capacity was about 900 cc."
+        ],
+        "final_answer": "Option (2): 900 cc",
+        "why_not_others": "650-800 cc is the brain capacity of Homo habilis. 1400 cc is the brain capacity of Neanderthal man. 1100 cc is not the value given for Homo erectus.",
+        "common_trap": "Swapping the values for Homo habilis and Homo erectus.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t21_2",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Human evolution",
+      "topic_index": 21,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which hominid used hides to protect the body and buried its dead?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Homo habilis",
+        "Homo erectus",
+        "Australopithecus",
+        "Neanderthal man"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Neanderthal man had a brain of 1400 cc and lived in the Near East and Central Asia between 1,00,000 and 40,000 years ago.",
+        "steps": [
+          "Neanderthals used hides to protect their bodies.",
+          "Neanderthals buried their dead."
+        ],
+        "final_answer": "Option (4): Neanderthal man",
+        "why_not_others": "Homo habilis is described as the first human-like being that probably did not eat meat. Homo erectus is known for its 900 cc brain and its fossils found in Java. Australopithecines hunted with stone weapons but essentially ate fruit. None of these is described as using hides or burying the dead.",
+        "common_trap": "Linking burial of the dead with Homo erectus because of the well-known Java fossils.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t21_3",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Human evolution",
+      "topic_index": 21,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which of the following statements correctly describes the australopithecines?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "They existed about 15 million years ago and walked like gorillas and chimpanzees",
+        "They had a brain capacity of about 900 cc and probably ate meat",
+        "They lived in the Near East and Central Asia and buried their dead",
+        "They probably lived in East African grasslands about 2 million years ago and essentially ate fruit"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "About 2 million years ago, australopithecines probably lived in East African grasslands. They hunted with stone weapons but essentially ate fruit.",
+        "steps": [
+          "Match each option to the correct hominid.",
+          "Option 1 describes Dryopithecus and Ramapithecus.",
+          "Option 2 describes Homo erectus.",
+          "Option 3 describes Neanderthal man.",
+          "Only option 4 describes the australopithecines."
+        ],
+        "final_answer": "Option (4): They probably lived in East African grasslands about 2 million years ago and essentially ate fruit",
+        "why_not_others": "Options 1, 2 and 3 describe Dryopithecus/Ramapithecus, Homo erectus and Neanderthal man respectively.",
+        "common_trap": "Assuming australopithecines ate meat because they hunted with stone weapons. They essentially ate fruit.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t21_4",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Human evolution",
+      "topic_index": 21,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Homo habilis"
+          },
+          {
+            "label": "B",
+            "text": "Homo erectus"
+          },
+          {
+            "label": "C",
+            "text": "Neanderthal man"
+          },
+          {
+            "label": "D",
+            "text": "Ramapithecus"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Brain capacity of 1400 cc"
+          },
+          {
+            "label": "II",
+            "text": "Brain of 900 cc; fossils discovered in Java in 1891"
+          },
+          {
+            "label": "III",
+            "text": "First human-like being; brain capacity of 650-800 cc"
+          },
+          {
+            "label": "IV",
+            "text": "Existed about 15 million years ago; more man-like"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-III, C-I, D-IV",
+        "A-III, B-II, C-I, D-IV",
+        "A-III, B-I, C-II, D-IV",
+        "A-IV, B-II, C-I, D-III"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each hominid stage has a characteristic time period, brain capacity and fossil record.",
+        "steps": [
+          "Homo habilis was the first human-like being, with a brain of 650-800 cc: A-III.",
+          "Homo erectus had a 900 cc brain, and its fossils were found in Java in 1891: B-II.",
+          "Neanderthal man had a 1400 cc brain: C-I.",
+          "Ramapithecus existed about 15 million years ago and was more man-like: D-IV."
+        ],
+        "final_answer": "Option (2): A-III, B-II, C-I, D-IV",
+        "why_not_others": "Option 1 swaps H. habilis and H. erectus. Option 3 swaps the Neanderthal and H. erectus brain sizes. Option 4 places Ramapithecus as the first human-like being.",
+        "common_trap": "Calling Ramapithecus the first human-like being. It was more man-like than Dryopithecus, but Homo habilis is the first human-like being.",
+        "time_saving_tip": "Fix C-I first (1400 cc is unique). Then B-II using the Java clue, which leaves only option 2."
+      }
+    },
+    {
+      "q_id": "neet_bio_u07_t21_5",
+      "source": "generated",
+      "subject": "biology",
+      "unit_id": "bio_u07",
+      "topic": "Human evolution",
+      "topic_index": 21,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about human evolution are correct?",
+      "statements": {
+        "A": "Dryopithecus was more ape-like while Ramapithecus was more man-like.",
+        "B": "Prehistoric cave art developed about 18,000 years ago, as seen at Bhimbetka in Madhya Pradesh.",
+        "C": "Agriculture began about 75,000 years ago, along with human settlements.",
+        "D": "Homo erectus probably did not eat meat.",
+        "E": "Homo sapiens arose in Africa and moved across continents."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "A, B and E only",
+        "B, D and E only",
+        "A, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Human evolution has a set sequence of events, each with fixed dates and features.",
+        "steps": [
+          "A is correct: Dryopithecus was more ape-like and Ramapithecus more man-like.",
+          "B is correct: cave art developed about 18,000 years ago, as at Bhimbetka.",
+          "C is incorrect: agriculture began about 10,000 years ago, not 75,000 years ago.",
+          "D is incorrect: Homo erectus probably ate meat; it was Homo habilis that probably did not.",
+          "E is correct: Homo sapiens originated in Africa."
+        ],
+        "final_answer": "Option (2): A, B and E only",
+        "why_not_others": "Options 1 and 4 include C, which uses the wrong date for agriculture. Option 3 includes D, which gives Homo erectus the diet of Homo habilis.",
+        "common_trap": "Confusing 75,000 years ago, the start of the ice-age period in which modern Homo sapiens arose, with the start of agriculture about 10,000 years ago.",
+        "time_saving_tip": "Rule out C and D by date and diet. Only one option contains neither."
+      }
+    }
+  ]
 }

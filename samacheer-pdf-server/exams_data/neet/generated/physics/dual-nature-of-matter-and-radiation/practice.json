@@ -592,6 +592,229 @@
         "common_trap": "Thinking that the slope of the $V_0$ vs $\\nu$ graph depends on the metal.",
         "time_saving_tip": null
       }
+    },
+    {
+      "q_id": "neet_phy_u17_t03_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Matter waves and de Broglie relation",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An electron and a proton have equal linear momenta. What is the ratio of the de Broglie wavelength of the electron to that of the proton?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$\\sqrt{m_p/m_e}$",
+        "$m_p/m_e$",
+        "$1$",
+        "$\\sqrt{m_e/m_p}$"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda = h/p$ depends only on momentum.",
+        "steps": [
+          "$\\lambda_e = h/p$ and $\\lambda_p = h/p$.",
+          "The ratio is $1$."
+        ],
+        "final_answer": "Option (3): $1$",
+        "why_not_others": "The square-root options apply only at equal kinetic energy. $m_p/m_e$ would apply only at equal speeds.",
+        "common_trap": "Assuming the heavier particle always has the smaller wavelength.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t03_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Matter waves and de Broglie relation",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An electron is accelerated from rest through a potential difference of $100$ V. What is its de Broglie wavelength?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$1.227$ nm",
+        "$0.1227$ nm",
+        "$0.01227$ nm",
+        "$12.27$ nm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda_e = 1.227/\\sqrt{V}$ nm.",
+        "steps": [
+          "$\\sqrt{100} = 10$.",
+          "$\\lambda = 1.227/10 = 0.1227$ nm."
+        ],
+        "final_answer": "Option (2): $0.1227$ nm",
+        "why_not_others": "$0.01227$ nm divides by $V$ instead of $\\sqrt{V}$. $12.27$ nm multiplies by $\\sqrt{V}$. $1.227$ nm ignores $V$.",
+        "common_trap": "Dropping the square root on $V$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t03_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Matter waves and de Broglie relation",
+      "topic_index": 3,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A proton and an alpha particle are each accelerated from rest through the same potential difference. What is the ratio of the de Broglie wavelength of the proton to that of the alpha particle? (Take $m_\\alpha = 4m_p$ and $q_\\alpha = 2e$)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2$",
+        "$\\sqrt{2}$",
+        "$\\frac{1}{2\\sqrt{2}}$",
+        "$2\\sqrt{2}$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda = h/\\sqrt{2mqV}$, so $\\lambda \\propto 1/\\sqrt{mq}$ at the same $V$.",
+        "steps": [
+          "$\\lambda_p/\\lambda_\\alpha = \\sqrt{m_\\alpha q_\\alpha / (m_p q_p)}$.",
+          "$= \\sqrt{4 \\times 2} = \\sqrt{8} = 2\\sqrt{2}$."
+        ],
+        "final_answer": "Option (4): $2\\sqrt{2}$",
+        "why_not_others": "$2$ ignores the alpha particle's double charge. $\\sqrt{2}$ uses only the charge ratio and ignores mass. $\\frac{1}{2\\sqrt{2}}$ is the inverted ratio.",
+        "common_trap": "Using $q = e$ for the alpha particle.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t03_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Matter waves and de Broglie relation",
+      "topic_index": 3,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Particle with linear momentum $p$"
+          },
+          {
+            "label": "B",
+            "text": "Particle of mass $m$ with kinetic energy $K$"
+          },
+          {
+            "label": "C",
+            "text": "Charge $q$, mass $m$, accelerated from rest through potential $V$"
+          },
+          {
+            "label": "D",
+            "text": "Particle of mass $m$ in thermal equilibrium at temperature $T$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$\\lambda = h/\\sqrt{2mK}$"
+          },
+          {
+            "label": "II",
+            "text": "$\\lambda = h/\\sqrt{3mk_BT}$"
+          },
+          {
+            "label": "III",
+            "text": "$\\lambda = h/p$"
+          },
+          {
+            "label": "IV",
+            "text": "$\\lambda = h/\\sqrt{2mqV}$"
+          }
+        ]
+      },
+      "options": [
+        "A-I, B-III, C-IV, D-II",
+        "A-III, B-IV, C-I, D-II",
+        "A-III, B-I, C-IV, D-II",
+        "A-III, B-I, C-II, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Each form of the de Broglie wavelength follows from $\\lambda = h/p$ with the appropriate expression for $p$.",
+        "steps": [
+          "A: $\\lambda = h/p$ (III).",
+          "B: $p = \\sqrt{2mK}$ (I).",
+          "C: $K = qV$, so $\\lambda = h/\\sqrt{2mqV}$ (IV).",
+          "D: $K = \\frac{3}{2}k_BT$, so $\\lambda = h/\\sqrt{3mk_BT}$ (II)."
+        ],
+        "final_answer": "Option (3): A-III, B-I, C-IV, D-II",
+        "why_not_others": "The other options swap the kinetic-energy, potential and thermal forms.",
+        "common_trap": "Writing $\\sqrt{2mk_BT}$ for the thermal case instead of $\\sqrt{3mk_BT}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u17_t03_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u17",
+      "topic": "Matter waves and de Broglie relation",
+      "topic_index": 3,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about matter waves are correct?",
+      "statements": {
+        "A": "Matter waves associated with moving electrons are electromagnetic waves.",
+        "B": "At equal kinetic energy, an electron has a longer de Broglie wavelength than a proton.",
+        "C": "If the speed of a non-relativistic particle is doubled, its de Broglie wavelength is halved.",
+        "D": "The wave nature of electrons was confirmed by electron diffraction experiments.",
+        "E": "A heavier particle always has a smaller de Broglie wavelength than a lighter one, whatever their speeds."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, C and D only",
+        "B, D and E only",
+        "C, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\lambda = h/p$; matter waves are not electromagnetic waves.",
+        "steps": [
+          "A is false: matter waves are not electromagnetic waves.",
+          "B is true: at equal $K$, $\\lambda \\propto 1/\\sqrt{m}$.",
+          "C is true: $\\lambda = h/mv$.",
+          "D is true: Davisson and Germer confirmed electron diffraction.",
+          "E is false: at equal momentum, the wavelengths are equal."
+        ],
+        "final_answer": "Option (2): B, C and D only",
+        "why_not_others": "Options 1, 3 and 4 each include the false statement A or E.",
+        "common_trap": "Believing that greater mass always means a smaller de Broglie wavelength.",
+        "time_saving_tip": null
+      }
     }
   ]
 }

@@ -1422,6 +1422,231 @@
       }
     },
     {
+      "q_id": "neet_che_u06_t07_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Weak and strong electrolytes; ionization",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which of the following is a weak electrolyte in aqueous solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$HCN$",
+        "$KOH$",
+        "$H_2SO_4$",
+        "$NaCl$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Weak electrolytes ionise only partially, so $\\alpha \\ll 1$.",
+        "steps": [
+          "$HCN$ ionises only partially, so it is a weak electrolyte.",
+          "$KOH$ (a strong base), $H_2SO_4$ (a strong acid) and $NaCl$ (a salt) are almost completely ionised."
+        ],
+        "final_answer": "Option (1): $HCN$",
+        "why_not_others": "$KOH$, $H_2SO_4$ and $NaCl$ are strong electrolytes with $\\alpha \\approx 1$.",
+        "common_trap": "Thinking that all acids are strong electrolytes.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t07_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Weak and strong electrolytes; ionization",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A weak monobasic acid has an ionisation constant of $2.0 \\times 10^{-5}$. What is its percentage degree of ionisation in a 0.2 M solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$0.01\\%$",
+        "$0.2\\%$",
+        "$10\\%$",
+        "$1\\%$"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Ostwald's dilution law: $\\alpha = \\sqrt{K/c}$ when $\\alpha \\ll 1$.",
+        "steps": [
+          "$K/c = \\frac{2.0 \\times 10^{-5}}{0.2} = 1.0 \\times 10^{-4}$.",
+          "$\\alpha = \\sqrt{1.0 \\times 10^{-4}} = 0.01$.",
+          "Percentage ionisation $= 0.01 \\times 100 = 1\\%$."
+        ],
+        "final_answer": "Option (4): $1\\%$",
+        "why_not_others": "$0.01\\%$ uses $K/c$ without taking the square root. $0.2\\%$ uses $\\sqrt{Kc}$. $10\\%$ comes from a slip in the exponent while taking the square root.",
+        "common_trap": "Forgetting the square root in $\\alpha = \\sqrt{K/c}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t07_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Weak and strong electrolytes; ionization",
+      "topic_index": 7,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A solution of a weak monobasic acid is diluted from 0.1 M to 0.001 M at constant temperature. How does its degree of ionisation change? (Assume $\\alpha \\ll 1$.)",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "It increases 10 times",
+        "It increases 100 times",
+        "It decreases 10 times",
+        "It remains unchanged because $K$ is constant"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$\\alpha = \\sqrt{K/c}$, so $\\alpha \\propto 1/\\sqrt{c}$.",
+        "steps": [
+          "The concentration decreases by a factor of 100.",
+          "$\\alpha$ therefore increases by $\\sqrt{100} = 10$ times.",
+          "$K$ stays constant because the temperature is constant, but $\\alpha$ changes."
+        ],
+        "final_answer": "Option (1): It increases 10 times",
+        "why_not_others": "100 times ignores the square root. 'Decreases' contradicts Ostwald's dilution law. A constant $K$ does not mean a constant $\\alpha$.",
+        "common_trap": "Assuming $\\alpha$ is inversely proportional to $c$ rather than to $\\sqrt{c}$.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t07_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Weak and strong electrolytes; ionization",
+      "topic_index": 7,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "$HNO_3$"
+          },
+          {
+            "label": "B",
+            "text": "$CH_3COOH$"
+          },
+          {
+            "label": "C",
+            "text": "Glucose"
+          },
+          {
+            "label": "D",
+            "text": "$KOH$"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "Strong acid, $\\alpha \\approx 1$"
+          },
+          {
+            "label": "II",
+            "text": "Weak acid, $\\alpha \\ll 1$"
+          },
+          {
+            "label": "III",
+            "text": "Non-electrolyte"
+          },
+          {
+            "label": "IV",
+            "text": "Strong base, $\\alpha \\approx 1$"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-I, C-III, D-IV",
+        "A-I, B-III, C-II, D-IV",
+        "A-IV, B-II, C-III, D-I",
+        "A-I, B-II, C-III, D-IV"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Electrolytes are classified by their degree of ionisation.",
+        "steps": [
+          "$HNO_3$ is a strong acid (I).",
+          "$CH_3COOH$ is a weak acid (II).",
+          "Glucose gives no ions, so it is a non-electrolyte (III).",
+          "$KOH$ is a strong base (IV)."
+        ],
+        "final_answer": "Option (4): A-I, B-II, C-III, D-IV",
+        "why_not_others": "Option (1) swaps the strong and weak acids. Option (2) wrongly calls acetic acid a non-electrolyte. Option (3) swaps $HNO_3$ and $KOH$.",
+        "common_trap": "Treating acetic acid as a strong acid.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t07_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Weak and strong electrolytes; ionization",
+      "topic_index": 7,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about electrolytes and ionisation are correct?",
+      "statements": {
+        "A": "Ostwald's dilution law applies equally to strong and weak electrolytes.",
+        "B": "The degree of ionisation of acetic acid increases on dilution.",
+        "C": "Ionisation of a weak electrolyte is generally endothermic, so its degree of ionisation increases with rise in temperature.",
+        "D": "An ionic equilibrium between ions and unionised molecules exists in an aqueous solution of $NaCl$.",
+        "E": "For a weak binary electrolyte with $\\alpha \\ll 1$, $K \\approx c\\alpha^2$."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and C only",
+        "B, D and E only",
+        "A, C and E only",
+        "B, C and E only"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Ostwald's dilution law and ionic equilibrium apply only to weak electrolytes.",
+        "steps": [
+          "A is false. The law is valid only for weak electrolytes.",
+          "B is true. $\\alpha$ increases on dilution.",
+          "C is true. Ionisation is endothermic, so $K$ and $\\alpha$ rise with temperature.",
+          "D is false. $NaCl$ is a strong electrolyte that is almost completely ionised, so there is no ionic equilibrium.",
+          "E is true. This is the approximate form of Ostwald's dilution law."
+        ],
+        "final_answer": "Option (4): B, C and E only",
+        "why_not_others": "Options (1), (2) and (3) each include the false statement A or D.",
+        "common_trap": "Applying Ostwald's dilution law or ionic equilibrium to strong electrolytes.",
+        "time_saving_tip": "Rejecting A and D leaves only option (4)."
+      }
+    },
+    {
       "q_id": "neet_che_u06_t08_1",
       "source": "generated",
       "subject": "chemistry",
@@ -2012,6 +2237,230 @@
         "why_not_others": "Both statements are false, so every option that calls either one correct is wrong.",
         "common_trap": "Thinking that a numerically lower pH means a lower $[H^+]$.",
         "time_saving_tip": "Lower pH always means higher $[H^+]$."
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t11_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Common ion effect",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "When solid sodium acetate is dissolved in an aqueous solution of acetic acid at constant temperature, which of the following occurs?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "The pH of the solution decreases",
+        "The pH of the solution increases because the ionisation of acetic acid is suppressed",
+        "The $K_a$ of acetic acid increases",
+        "The $K_a$ of acetic acid decreases"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "The common ion effect suppresses the ionisation of a weak electrolyte.",
+        "steps": [
+          "$CH_3COONa$ supplies the common ion $CH_3COO^-$.",
+          "By Le Chatelier's principle, $CH_3COOH \\rightleftharpoons CH_3COO^- + H^+$ shifts to the left.",
+          "$[H^+]$ falls, so the pH rises. $K_a$ stays the same because the temperature is constant."
+        ],
+        "final_answer": "Option (2): The pH of the solution increases because the ionisation of acetic acid is suppressed",
+        "why_not_others": "The pH cannot decrease because $[H^+]$ falls. $K_a$ changes only with temperature, so it neither increases nor decreases.",
+        "common_trap": "Believing that the equilibrium constant changes when a common ion is added.",
+        "time_saving_tip": "A common ion shifts the position of equilibrium, never the value of $K$ at constant temperature."
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t11_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Common ion effect",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A sparingly soluble salt $MX$ has $K_{sp} = 4\\times10^{-10}$ at 298 K. What is its approximate molar solubility in a $0.02$ M solution of $NaX$?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$2\\times10^{-5}$ M",
+        "$8\\times10^{-12}$ M",
+        "$2\\times10^{-6}$ M",
+        "$2\\times10^{-8}$ M"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For an AB-type salt in a solution of a common ion, $s \\approx K_{sp}/[\\text{common ion}]$.",
+        "steps": [
+          "The common ion is $X^-$, with $[X^-] = 0.02$ M.",
+          "$s = 4\\times10^{-10}/(2\\times10^{-2}) = 2\\times10^{-8}$ M"
+        ],
+        "final_answer": "Option (4): $2\\times10^{-8}$ M",
+        "why_not_others": "$2\\times10^{-5}$ M is the solubility in pure water, $\\sqrt{K_{sp}}$. $8\\times10^{-12}$ M comes from multiplying instead of dividing. $2\\times10^{-6}$ M is an exponent error.",
+        "common_trap": "Using $\\sqrt{K_{sp}}$ and ignoring the common ion.",
+        "time_saving_tip": "Divide the coefficients and subtract the exponents: $4/2 = 2$ and $-10 - (-2) = -8$."
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t11_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Common ion effect",
+      "topic_index": 11,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A solution contains $0.1$ M of a weak acid $HA$ ($K_a = 2\\times10^{-5}$) and $0.2$ M of its sodium salt $NaA$. What is the hydrogen ion concentration of the solution?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$4\\times10^{-5}$ M",
+        "$1.4\\times10^{-3}$ M",
+        "$2\\times10^{-5}$ M",
+        "$1\\times10^{-5}$ M"
+      ],
+      "image": null,
+      "answer": [
+        4
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a weak acid in the presence of its salt, $[H^+] = K_a[HA]/[A^-]$.",
+        "steps": [
+          "$[H^+] = 2\\times10^{-5} \\times 0.1/0.2$",
+          "$[H^+] = 1\\times10^{-5}$ M"
+        ],
+        "final_answer": "Option (4): $1\\times10^{-5}$ M",
+        "why_not_others": "$4\\times10^{-5}$ M inverts the concentration ratio. $1.4\\times10^{-3}$ M is $\\sqrt{K_a c}$, which ignores the salt. $2\\times10^{-5}$ M ignores the ratio altogether.",
+        "common_trap": "Writing the ratio as $[A^-]/[HA]$ instead of $[HA]/[A^-]$.",
+        "time_saving_tip": "Extra salt suppresses ionisation, so $[H^+]$ must be smaller than $K_a$ when $[A^-] > [HA]$."
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t11_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Common ion effect",
+      "topic_index": 11,
+      "type": "match_list",
+      "difficulty": "medium",
+      "question": "Match List-I with List-II and choose the correct answer.",
+      "statements": null,
+      "match_lists": {
+        "list_I": [
+          {
+            "label": "A",
+            "text": "Purification of common salt"
+          },
+          {
+            "label": "B",
+            "text": "Salting out of soap"
+          },
+          {
+            "label": "C",
+            "text": "Precipitation of Group II sulphides"
+          },
+          {
+            "label": "D",
+            "text": "Precipitation of Group III hydroxides"
+          }
+        ],
+        "list_II": [
+          {
+            "label": "I",
+            "text": "$HCl$ suppresses the ionisation of $H_2S$"
+          },
+          {
+            "label": "II",
+            "text": "Passing $HCl$ gas through a saturated brine solution"
+          },
+          {
+            "label": "III",
+            "text": "$NH_4Cl$ suppresses the ionisation of $NH_4OH$"
+          },
+          {
+            "label": "IV",
+            "text": "Adding $NaCl$ to the soap solution"
+          }
+        ]
+      },
+      "options": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-I, D-III",
+        "A-II, B-IV, C-III, D-I",
+        "A-I, B-IV, C-II, D-III"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "These are standard applications of the common ion effect.",
+        "steps": [
+          "$NaCl$ is purified by passing $HCl$ gas through brine (common ion $Cl^-$), so A-II.",
+          "Soap is salted out by adding $NaCl$ (common ion $Na^+$), so B-IV.",
+          "Group II sulphides are precipitated by $H_2S$ in acidic medium, where $HCl$ keeps $[S^{2-}]$ low, so C-I.",
+          "Group III hydroxides are precipitated by $NH_4OH$ with $NH_4Cl$, which keeps $[OH^-]$ low, so D-III."
+        ],
+        "final_answer": "Option (1): A-II, B-IV, C-I, D-III",
+        "why_not_others": "Option 2 swaps A and B. Option 3 swaps C and D. Option 4 swaps A and C.",
+        "common_trap": "Confusing the roles of $HCl$ in Group II and $NH_4Cl$ in Group III.",
+        "time_saving_tip": "Group II needs acid, so it pairs with $HCl$. Group III needs $NH_4OH$, so it pairs with $NH_4Cl$."
+      }
+    },
+    {
+      "q_id": "neet_che_u06_t11_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u06",
+      "topic": "Common ion effect",
+      "topic_index": 11,
+      "type": "multi_statement",
+      "difficulty": "hard",
+      "question": "Which of the following statements about the common ion effect are correct?",
+      "statements": {
+        "A": "The common ion effect is an application of Le Chatelier's principle.",
+        "B": "Adding $NaCl$ decreases the solubility of $AgCl$, but the $K_{sp}$ of $AgCl$ remains unchanged.",
+        "C": "Adding $NH_4Cl$ to an $NH_4OH$ solution increases $[OH^-]$.",
+        "D": "Adding a common ion increases the $K_a$ of a weak acid.",
+        "E": "The common ion effect is the basis of buffer action."
+      },
+      "match_lists": null,
+      "options": [
+        "A, B and E only",
+        "A, C and D only",
+        "B, C and E only",
+        "A, B, D and E only"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A common ion shifts the position of equilibrium and suppresses ionisation or solubility. $K$ changes only with temperature.",
+        "steps": [
+          "A is true: adding a common ion shifts the equilibrium according to Le Chatelier's principle.",
+          "B is true: solubility falls, but $K_{sp}$ is constant at a given temperature.",
+          "C is false: $NH_4^+$ suppresses the ionisation of $NH_4OH$, so $[OH^-]$ decreases.",
+          "D is false: $K_a$ does not change.",
+          "E is true: buffer action is based on the common ion effect."
+        ],
+        "final_answer": "Option (1): A, B and E only",
+        "why_not_others": "Every other combination includes C or D, both of which are false.",
+        "common_trap": "Thinking a common ion changes $K_a$ or $K_{sp}$.",
+        "time_saving_tip": "Eliminate any option that contains C or D; only option 1 remains."
       }
     },
     {

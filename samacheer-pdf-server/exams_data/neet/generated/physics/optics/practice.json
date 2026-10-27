@@ -5,6 +5,191 @@
   "slug": "optics",
   "questions": [
     {
+      "q_id": "neet_phy_u16_t00_1",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Reflection of light; spherical mirrors and mirror formula",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "An object is placed 30 cm in front of a concave mirror of focal length 20 cm. Where is the image formed, and what is its nature?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "60 cm in front of the mirror, real and inverted",
+        "12 cm in front of the mirror, real and inverted",
+        "60 cm behind the mirror, virtual and erect",
+        "12 cm behind the mirror, virtual and erect"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Mirror formula $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$ with the Cartesian sign convention.",
+        "steps": [
+          "For the concave mirror, $u = -30$ cm and $f = -20$ cm.",
+          "$\\frac{1}{v} = \\frac{1}{f} - \\frac{1}{u} = -\\frac{1}{20} + \\frac{1}{30} = -\\frac{1}{60}$.",
+          "So $v = -60$ cm. The negative sign means the image is in front of the mirror, so it is real and inverted."
+        ],
+        "final_answer": "Option (1): 60 cm in front of the mirror, real and inverted",
+        "why_not_others": "A distance of 12 cm comes from adding the reciprocals wrongly. An image behind the mirror would need the object to lie between F and P, but here the object lies beyond F.",
+        "common_trap": "Writing $\\frac{1}{v} = \\frac{1}{f} + \\frac{1}{u}$, which gives 12 cm.",
+        "time_saving_tip": "The object lies between F and C, so the real image must form beyond C (beyond 40 cm)."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t00_2",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Reflection of light; spherical mirrors and mirror formula",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "An object 6 cm tall is placed 30 cm in front of a convex mirror of focal length 15 cm. What are the size, nature and position of the image?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "2 cm, inverted, real, 10 cm in front of the mirror",
+        "6 cm, erect, virtual, 30 cm behind the mirror",
+        "2 cm, erect, virtual, 10 cm behind the mirror",
+        "6 cm, inverted, real, 30 cm in front of the mirror"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A convex mirror ($f > 0$) always forms a virtual, erect and diminished image.",
+        "steps": [
+          "Take $u = -30$ cm and $f = +15$ cm.",
+          "$\\frac{1}{v} = \\frac{1}{15} + \\frac{1}{30} = \\frac{1}{10}$, so $v = +10$ cm, which is behind the mirror.",
+          "$m = -\\frac{v}{u} = -\\frac{10}{-30} = +\\frac{1}{3}$.",
+          "Image height $= 6 \\times \\frac{1}{3} = 2$ cm, and the image is erect and virtual."
+        ],
+        "final_answer": "Option (3): 2 cm, erect, virtual, 10 cm behind the mirror",
+        "why_not_others": "Option (1) has the wrong sign of m and v. Option (2) comes from taking u as positive. Option (4) comes from treating the convex mirror's f as negative.",
+        "common_trap": "Using $f = -15$ cm for a convex mirror.",
+        "time_saving_tip": "A convex mirror can never give a real or magnified image, so options (1), (2) and (4) can be rejected at once."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t00_3",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Reflection of light; spherical mirrors and mirror formula",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "A concave mirror of focal length 15 cm forms a real image that is three times the size of the object. What is the distance of the object from the mirror?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "10 cm",
+        "20 cm",
+        "30 cm",
+        "60 cm"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A real image has negative magnification, $m = -\\frac{v}{u}$.",
+        "steps": [
+          "For a real image, $m = -3$, so $v = 3u$.",
+          "$\\frac{1}{3u} + \\frac{1}{u} = \\frac{4}{3u} = -\\frac{1}{15}$.",
+          "This gives $u = -20$ cm, so the object is 20 cm from the mirror."
+        ],
+        "final_answer": "Option (2): 20 cm",
+        "why_not_others": "10 cm would give a virtual image with $m = +3$. 30 cm is the centre of curvature, where $m = -1$. 60 cm is the image distance, not the object distance.",
+        "common_trap": "Taking $m = +3$, which gives the virtual-image answer of 10 cm.",
+        "time_saving_tip": "A real magnified image needs the object between F and C, that is, between 15 cm and 30 cm. Only 20 cm lies in this range."
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t00_4",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Reflection of light; spherical mirrors and mirror formula",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "A concave mirror of radius of curvature 40 cm has a focal length of magnitude 20 cm both in air and when immersed in water.",
+        "R": "The focal length of a spherical mirror depends on the refractive index of the surrounding medium."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "For a mirror, $f = R/2$, which depends only on geometry.",
+        "steps": [
+          "$f = R/2 = 20$ cm whatever the medium, so A is true.",
+          "Reflection does not involve the refractive index, so the focal length of a mirror is independent of the medium. R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1), (2) and (4) are ruled out.",
+        "common_trap": "Confusing mirrors with lenses, whose focal length does change with the surrounding medium.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_phy_u16_t00_5",
+      "source": "generated",
+      "subject": "physics",
+      "unit_id": "phy_u16",
+      "topic": "Reflection of light; spherical mirrors and mirror formula",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "An object placed 20 cm in front of a convex mirror of focal length 20 cm forms its image at infinity.",
+        "II": "If a plane mirror is rotated through $15^\\circ$ while the incident ray is kept fixed, the reflected ray turns through $15^\\circ$."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "A convex mirror always forms a virtual image within its focal length. Rotating a mirror by $\\theta$ turns the reflected ray by $2\\theta$.",
+        "steps": [
+          "Statement I: $u = -20$ cm and $f = +20$ cm, so $\\frac{1}{v} = \\frac{1}{20} + \\frac{1}{20}$, giving $v = +10$ cm. The image is not at infinity, so I is incorrect.",
+          "Statement II: the reflected ray turns through $2 \\times 15^\\circ = 30^\\circ$, so II is incorrect."
+        ],
+        "final_answer": "Option (2): Both Statement I and Statement II are incorrect",
+        "why_not_others": "Both statements are false, so every option that calls either one correct is wrong.",
+        "common_trap": "Applying the concave-mirror rule (object at F gives image at infinity) to a convex mirror, and forgetting the factor of 2 for a rotating mirror.",
+        "time_saving_tip": null
+      }
+    },
+    {
       "q_id": "neet_phy_u16_t01_1",
       "source": "generated",
       "subject": "physics",

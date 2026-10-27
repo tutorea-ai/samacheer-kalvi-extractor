@@ -5,6 +5,191 @@
   "slug": "organic-compounds-containing-nitrogen",
   "questions": [
     {
+      "q_id": "neet_che_u18_t00_1",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u18",
+      "topic": "General methods of preparation, properties, reactions and uses",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "easy",
+      "question": "Which reagent, followed by neutralisation, converts nitrobenzene into aniline?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "$Fe/HCl$",
+        "$NaBH_4$",
+        "$Br_2/NaOH$",
+        "$CHCl_3$/alcoholic $KOH$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Nitro compounds are reduced to amines by $Sn/HCl$, $Fe/HCl$ or $H_2/Pd$.",
+        "steps": [
+          "Converting $-NO_2$ to $-NH_2$ is a reduction.",
+          "$Fe/HCl$ is the preferred reagent because the $FeCl_2$ formed is hydrolysed back to $HCl$.",
+          "Neutralising the anilinium salt releases aniline."
+        ],
+        "final_answer": "Option (1): $Fe/HCl$",
+        "why_not_others": "$NaBH_4$ does not reduce $-NO_2$. $Br_2/NaOH$ is the Hofmann reagent, which acts on amides. $CHCl_3$/alcoholic $KOH$ is the carbylamine reagent, which acts on 1° amines.",
+        "common_trap": "Assuming that any hydride reagent such as $NaBH_4$ will reduce a nitro group.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u18_t00_2",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u18",
+      "topic": "General methods of preparation, properties, reactions and uses",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Benzonitrile ($C_6H_5CN$) is reduced with $LiAlH_4$. What is the major product?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Benzylamine, $C_6H_5CH_2NH_2$",
+        "Aniline, $C_6H_5NH_2$",
+        "Benzamide, $C_6H_5CONH_2$",
+        "N-Methylaniline, $C_6H_5NHCH_3$"
+      ],
+      "image": null,
+      "answer": [
+        1
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "$RCN \\xrightarrow{LiAlH_4} RCH_2NH_2$; the cyano carbon is retained.",
+        "steps": [
+          "The $C\\equiv N$ group is reduced to $-CH_2NH_2$.",
+          "With $R = C_6H_5$, the product is $C_6H_5CH_2NH_2$, which is benzylamine."
+        ],
+        "final_answer": "Option (1): Benzylamine, $C_6H_5CH_2NH_2$",
+        "why_not_others": "Forming aniline would require losing the cyano carbon. Benzamide is a hydrolysis product, not a reduction product. N-Methylaniline would need the cyano carbon to end up on nitrogen.",
+        "common_trap": "Thinking benzonitrile gives aniline.",
+        "time_saving_tip": "Nitrile reduction adds one carbon to the chain; Hofmann degradation removes one."
+      }
+    },
+    {
+      "q_id": "neet_che_u18_t00_3",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u18",
+      "topic": "General methods of preparation, properties, reactions and uses",
+      "topic_index": 0,
+      "type": "single_correct",
+      "difficulty": "medium",
+      "question": "Which reaction gives a primary amine containing one carbon atom fewer than the starting compound?",
+      "statements": null,
+      "match_lists": null,
+      "options": [
+        "Reduction of propanenitrile with $LiAlH_4$",
+        "Treatment of propanamide with $Br_2$ and $NaOH$",
+        "Reduction of propanamide with $LiAlH_4$ followed by $H_2O$",
+        "Gabriel phthalimide synthesis using 1-bromopropane"
+      ],
+      "image": null,
+      "answer": [
+        2
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Hofmann bromamide degradation: $RCONH_2 + Br_2 + 4NaOH \\rightarrow RNH_2 + Na_2CO_3 + 2NaBr + 2H_2O$",
+        "steps": [
+          "In Hofmann degradation, the carbonyl carbon is lost as $Na_2CO_3$.",
+          "Propanamide ($C_3$) therefore gives ethanamine ($C_2$).",
+          "Nitrile reduction, amide reduction and Gabriel synthesis all keep the carbon count, so each gives propan-1-amine."
+        ],
+        "final_answer": "Option (2): Treatment of propanamide with $Br_2$ and $NaOH$",
+        "why_not_others": "Reducing propanenitrile or propanamide with $LiAlH_4$ gives propan-1-amine ($C_3$). Gabriel synthesis with 1-bromopropane also gives propan-1-amine.",
+        "common_trap": "Confusing $LiAlH_4$ reduction of an amide, which keeps the carbon count, with Hofmann degradation, which removes one carbon.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u18_t00_4",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u18",
+      "topic": "General methods of preparation, properties, reactions and uses",
+      "topic_index": 0,
+      "type": "assertion_reason",
+      "difficulty": "medium",
+      "question": "Given below are two statements: Assertion A and Reason R. Choose the correct answer.",
+      "statements": {
+        "A": "Gabriel phthalimide synthesis cannot be used to prepare aniline.",
+        "R": "The phthalimide anion readily displaces the halogen from aryl halides by nucleophilic substitution."
+      },
+      "match_lists": null,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Gabriel synthesis gives only 1° aliphatic amines.",
+        "steps": [
+          "Gabriel synthesis requires $S_N$ attack of the phthalimide anion on a halide.",
+          "Aryl halides do not undergo this substitution, so aromatic 1° amines such as aniline cannot be made this way. A is true.",
+          "R claims the opposite, so R is false."
+        ],
+        "final_answer": "Option (3): A is true but R is false",
+        "why_not_others": "R is false, so options (1) and (2) cannot be correct. A is a correct statement, so option (4) is ruled out.",
+        "common_trap": "Using Gabriel synthesis to make aniline.",
+        "time_saving_tip": null
+      }
+    },
+    {
+      "q_id": "neet_che_u18_t00_5",
+      "source": "generated",
+      "subject": "chemistry",
+      "unit_id": "che_u18",
+      "topic": "General methods of preparation, properties, reactions and uses",
+      "topic_index": 0,
+      "type": "statement_pair",
+      "difficulty": "hard",
+      "question": "Given below are two statements. Choose the most appropriate answer.",
+      "statements": {
+        "I": "Direct nitration of aniline gives a substantial amount (about 47%) of m-nitroaniline, because the anilinium ion is formed in the acidic medium.",
+        "II": "Acetylating aniline before nitration increases the activating effect of nitrogen on the ring, because the nitrogen lone pair becomes more available to the ring."
+      },
+      "match_lists": null,
+      "options": [
+        "Both Statement I and Statement II are correct",
+        "Both Statement I and Statement II are incorrect",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "image": null,
+      "answer": [
+        3
+      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "Protonation produces the meta-directing $-NH_3^+$ group; acetylation moderates the activating effect of $-NH_2$.",
+        "steps": [
+          "In acid, aniline is protonated to $C_6H_5NH_3^+$, which directs to the meta position, giving about 47% meta product. Statement I is correct.",
+          "In acetanilide, the nitrogen lone pair is delocalised onto the carbonyl group, so activation is reduced, not increased. Statement II is incorrect.",
+          "Acetylation is used to obtain mainly the para product."
+        ],
+        "final_answer": "Option (3): Statement I is correct but Statement II is incorrect",
+        "why_not_others": "Statement II reverses the real effect of acetylation, so any option calling it correct is wrong. Statement I is factual, so options (2) and (4) are ruled out.",
+        "common_trap": "Believing acetylation is done to increase reactivity, when its purpose is to moderate it and favour para substitution.",
+        "time_saving_tip": null
+      }
+    },
+    {
       "q_id": "neet_che_u18_t01_1",
       "source": "generated",
       "subject": "chemistry",
