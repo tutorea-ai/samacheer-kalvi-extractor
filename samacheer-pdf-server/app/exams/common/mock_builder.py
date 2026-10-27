@@ -7,7 +7,7 @@ Build a self-contained mock test JSON (schema agreed with the Node team).
 
 Usage:
     python -m app.exams.common.mock_builder --paper re_neet_2026 --mock-id re-neet-2026 \
-        --title "Re-NEET (UG) 2026 · Full paper"
+        --title "NEET (UG) 2026 · Full paper"
 """
 import argparse
 import json

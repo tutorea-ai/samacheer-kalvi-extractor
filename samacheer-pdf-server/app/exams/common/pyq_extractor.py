@@ -36,7 +36,7 @@ MODEL = os.getenv("NEET_EXTRACT_MODEL", "claude-opus-5-5")
 DEFAULT_PAGES = list(range(2, 23))   # page 1 = instructions
 TOTAL_QUESTIONS = 180
 
-# Re-NEET 2026 section split (Code 50)
+# NEET 2026 section split (Code 50)
 SUBJECT_RANGES = [
     (1, 45, "physics"),
     (46, 90, "chemistry"),
@@ -232,7 +232,7 @@ def build_final(questions: dict, answer_key: dict) -> dict:
         final.append({
             "q_id": f"{PAPER_ID}_c{BOOKLET_CODE}_q{n:03d}",
             "source": "pyq",
-            "exam_ref": f"Re-NEET (UG) 2026 · Code {BOOKLET_CODE} · Q{n}",
+            "exam_ref": f"NEET (UG) 2026 · Code {BOOKLET_CODE} · Q{n}",
             "q_no": n,
             "subject": subject_for(n),
             "unit_id": None,       # filled by tagger
@@ -256,7 +256,7 @@ def build_final(questions: dict, answer_key: dict) -> dict:
     return {
         "exam": "neet",
         "paper_id": PAPER_ID,
-        "paper_name": "Re-NEET (UG) 2026",
+        "paper_name": "NEET (UG) 2026",
         "booklet_code": BOOKLET_CODE,
         "exam_date": answer_key.get("exam_date"),
         "answer_source": answer_key.get("source"),

@@ -262,7 +262,7 @@ def build_review(questions: list):
 </section>""")
     REVIEW_HTML.parent.mkdir(parents=True, exist_ok=True)
     REVIEW_HTML.write_text(f"""<!doctype html><html><head><meta charset="utf-8">
-<title>Re-NEET 2026 figure review</title>
+<title>NEET 2026 figure review</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
@@ -276,7 +276,7 @@ section{{background:#fff;padding:16px;margin-bottom:24px;border-radius:8px}}
 .missing{{color:#b00}} .qt{{color:#333}} small{{color:#777;font-weight:normal}}
 table{{border-collapse:collapse}} td,th{{border:1px solid #999;padding:4px 10px}}
 .chemistry .katex .mathnormal{{font-style:normal}}
-</style></head><body><h1>Re-NEET 2026 · figure review</h1>{"".join(rows)}</body></html>""",
+</style></head><body><h1>NEET 2026 · figure review</h1>{"".join(rows)}</body></html>""",
                            encoding="utf-8")
 
 

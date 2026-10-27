@@ -79,7 +79,7 @@ def main():
     data = {
         "exam": "neet",
         "paper_id": "re_neet_2026",
-        "paper_name": "Re-NEET (UG) 2026",
+        "paper_name": "NEET (UG) 2026",
         "source": "NTA Final Answer Key (16-07-2026)",
         **data,
     }
