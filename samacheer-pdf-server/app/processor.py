@@ -944,6 +944,38 @@ class PDFProcessor:
                     "message":   msg
                 }
 
+            # ── BEYOND THE BOOK (self-contained module; delete this branch to remove BB) ──
+            elif output_format == "beyond_only":
+
+                bridge_meta = {
+                    "class_num":     class_num,
+                    "term":          term,
+                    "unit":          unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject":       subject,
+                    "medium":        medium,
+                    "discipline":    discipline,
+                }
+
+                print("🌏 Starting Beyond the Book generation...")
+                lp_path = bridge.find_deployed(bridge_meta, "lp")
+                if not lp_path:
+                    return {
+                        "error":   True,
+                        "message": "No Lesson Plan deployed for this lesson yet — generate the LP first (output_format=lp_only)"
+                    }
+                print(f"   📄 Using LP: {lp_path}")
+
+                from .content_builder.beyond_book.service import run_beyond, lesson_title
+                bb_title = lesson_title(index_data, term_key, subject, discipline, unit_num, filename_base)
+                return run_beyond(lp_path, {
+                    "class":      class_num,
+                    "subject":    subject,
+                    "unit":       unit_num,
+                    "title":      bb_title,
+                    "discipline": discipline,
+                }, force, self.temp_dir, filename_base)
+
             elif output_format == "lp_only":
 
                 bridge_meta = {
