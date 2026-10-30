@@ -16,7 +16,7 @@ DEFAULT_CONNECTIONS: Tuple[Tuple[str, str], ...] = (
     ("tech", "Technology"),
     ("nature", "Nature"),
     ("careers", "Careers"),
-    ("building", "Building Block"),
+    ("building", "Behind the Scenes"),
 )
 
 # Classroom-only classes dropped for every subject.
@@ -33,6 +33,7 @@ DEFAULT_LIMITS: Dict[str, int] = {
     "MAX_TRY_WORDS": 30,
     "MAX_TAMIL_CHARS": 160,
     "MAX_BIGWHY_WORDS": 90,
+    "MAX_PICTURE_WORDS": 60,
 }
 
 
@@ -69,6 +70,15 @@ class SubjectProfile:
         "old-style words, and English only for technical terms"
     )
     try_this: bool = True              # the optional home-observation field
+    pictures: bool = False             # one AI picture per card (OpenAI images)
+    picture_model: str = "gpt-image-2.5-sunburst"
+    picture_style: str = (
+        "clean modern flat illustration, soft warm colours, friendly realistic proportions, "
+        "everyday Tamil Nadu setting and people, no text, no labels, no letters or numbers "
+        "anywhere in the image"
+    )
+    picture_size: str = "1536x1024"
+    picture_quality: str = "medium"
     extra_rules: str = ""
     batch_size: int = 6
     limits: Dict[str, int] = field(default_factory=dict)

@@ -28,6 +28,7 @@ class Settings(BaseSettings):
     # AI — Anthropic Claude (replaced Kimi)
     # ================================================================
     ANTHROPIC_API_KEY: str = ""
+    OPENAI_API_KEY: str = ""      # Beyond the Book: picture generation
     ANTHROPIC_MODEL: str = "claude-sonnet-4-6"
 
     # ── Google Document AI ─────────────────────────────────────────────────

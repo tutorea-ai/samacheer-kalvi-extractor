@@ -14,7 +14,8 @@ PHYSICS = SubjectProfile(
     extra_drop_classes=("lp-section-student-task", "lp-section-closing"),
     max_text_per_day=9000,
     recap_keywords=("revision",),
-    building_mode="skip",   # only days with a real-life link get a card (TL review, Oct 29)
+    building_mode="card",   # lab days shown as "Behind the Scenes" (TL feedback, Oct 30)
+    pictures=True,          # picture-first cards (TL feedback, Oct 30)
     try_this=False,         # safe, honest home experiments are rare in electricity (Oct 29)
 
     # Cards

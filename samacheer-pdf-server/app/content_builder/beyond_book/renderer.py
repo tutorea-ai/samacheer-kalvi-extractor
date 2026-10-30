@@ -47,21 +47,25 @@ def _hero(b: Dict) -> str:
             f'<p class="hero-story">{_e(b.get("story"))}</p>{ta}</section>')
 
 
-def _card(c: Dict, labels: Dict[str, str]) -> str:
+def _card(c: Dict, labels: Dict[str, str], building_key: str = "building") -> str:
     key = c.get("connection", "")
     label = labels.get(key, key)
     icon = _svg(ICONS.get(key, DOT))
+    behind = key == building_key
+    pic = (f'<figure class="pic"><img src="{c["image"]}" alt="{_e(c.get("picture"))}" '
+           f'loading="lazy"></figure>' if c.get("image") else "")
     panels = []
     if c.get("where_you_see_it"):
         panels.append(f'<section class="panel see"><h3>{_svg(EYE)}Where you see it</h3>'
                       f'<p>{_e(c["where_you_see_it"])}</p></section>')
     if c.get("beyond_school"):
-        panels.append(f'<section class="panel beyond"><h3>{_svg(ARROW)}Beyond school</h3>'
+        head = "This idea powers" if behind else "Beyond school"
+        panels.append(f'<section class="panel beyond"><h3>{_svg(ARROW)}{head}</h3>'
                       f'<p>{_e(c["beyond_school"])}</p></section>')
     try_this = (f'<p class="try">{_svg(SPARK)}<span><b>Try this:</b> {_e(c["try_this"])}</span></p>'
                 if c.get("try_this") else "")
     ta = f'<p class="ta" lang="ta">{_e(c["tamil_line"])}</p>' if c.get("tamil_line") else ""
-    return (f'<article class="card" data-conn="{_e(key)}">'
+    return (f'<article class="card{" behind" if behind else ""}" data-conn="{_e(key)}">{pic}'
             f'<div class="card-top"><span class="day">Day {_e(c.get("day"))}</span>'
             f'<span class="topic">{_e(c.get("title"))}</span>'
             f'<span class="conn">{icon}{_e(label)}</span></div>'
@@ -136,6 +140,11 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 22px 20px;
       box-shadow:var(--shadow);border-top:4px solid var(--warm)}
 .card[hidden]{display:none}
+.pic{margin:-22px -22px 16px;border-radius:12px 12px 0 0;overflow:hidden;
+     background:#F3EAD3;aspect-ratio:3/2}
+.pic img{display:block;width:100%;height:100%;object-fit:cover}
+.card.behind{border-top-color:var(--accent)}
+.card.behind .day{background:var(--accent-soft);color:var(--accent)}
 .card-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-bottom:10px}
 .day{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
      background:var(--warm-soft);color:var(--warm);padding:3px 9px;border-radius:6px}
@@ -167,6 +176,7 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
   .hero{padding:22px 18px}
   .hero h2{font-size:21px}
   .card{padding:18px 16px}
+  .pic{margin:-18px -16px 14px}
   .hook{font-size:19px}
 }
 </style>
@@ -206,7 +216,8 @@ def render_deck(deck: Dict) -> str:
     title = lesson.get("title") or "Beyond the Book"
     conns = deck.get("connections") or []
     labels = {x["key"]: x["label"] for x in conns}
-    cards = "".join(_card(c, labels) for c in deck.get("cards") or [])
+    bk = deck.get("building_key", "building")
+    cards = "".join(_card(c, labels, bk) for c in deck.get("cards") or [])
     return (TEMPLATE
             .replace("%%PAGE_TITLE%%", _e(f"{title} · Beyond the Book"))
             .replace("%%TITLE%%", _e(title))

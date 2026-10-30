@@ -72,6 +72,12 @@ def run_beyond(lp_path, lesson: Dict, force: bool, temp_dir: Path, filename_base
     html_tmp = Path(temp_dir) / f"{filename_base}_beyond.html"
     with open(json_tmp, "w", encoding="utf-8") as f:
         json.dump(deck, f, ensure_ascii=False, indent=2)
+
+    # Pictures after the JSON: beyond.json keeps descriptions, the page carries the images.
+    from .pictures import picture_maker
+    from .subjects import get_profile
+    picture_maker.add_pictures(deck, get_profile(lesson.get("subject", "")))
+
     with open(html_tmp, "w", encoding="utf-8") as f:
         f.write(render_deck(deck))
 
@@ -85,6 +91,8 @@ def run_beyond(lp_path, lesson: Dict, force: bool, temp_dir: Path, filename_base
 
     msg = f"Beyond the Book generated and deployed — {len(deck['cards'])} cards"
     msg += " + big why" if deck.get("big_why") else ""
+    if deck.get("pictures"):
+        msg += f", {deck['pictures']['made']}/{deck['pictures']['wanted']} pictures"
     if deck.get("left_out_days"):
         msg += f" (left out days {[d['day'] for d in deck['left_out_days']]})"
     if deck.get("skipped_days"):

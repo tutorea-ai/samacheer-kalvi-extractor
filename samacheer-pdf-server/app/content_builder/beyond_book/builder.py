@@ -95,6 +95,7 @@ REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context}, chec
 - a tamil_line whose meaning is wrong or differs from the card
 - a where_you_see_it the student would not have personally seen or used
 - a where_you_see_it that is only the lab apparatus used to teach this lesson
+- a picture that would show something false or unsafe, or a different scene from the card
 Do not flag style, length or wording (Tamil fluency is checked by teachers). For each problem, say in one sentence
 what is wrong and what is true.
 Do your thinking in notes. List in problems only errors you are sure of;
@@ -117,7 +118,7 @@ REVIEW_TOOL = {
                              "Only confirmed errors. Empty when the card is correct.",
                              "items": {"type": "object", "properties": {
                                  "field": {"type": "string",
-                                           "enum": list(TEXT_FIELDS) + ["tamil_line"]},
+                                           "enum": list(TEXT_FIELDS) + ["tamil_line", "picture"]},
                                  "problem": {"type": "string", "description":
                                              "One sentence: what is wrong and what is true."},
                              }, "required": ["field", "problem"]}},
@@ -172,6 +173,13 @@ class BeyondBuilder:
         }
         if not p.try_this:
             props.pop("try_this")
+        if p.pictures:
+            props["picture"] = {"type": "string", "description":
+                     f"One picture for this card: describe the real-life scene concretely "
+                     f"(place, people, object, what is happening) in {p.local_context}. "
+                     f"For a \"{p.building_key}\" card, show what this idea makes possible "
+                     f"(the device or situation it powers). Never describe text, labels, "
+                     f"numbers, formulas or diagrams. Max {p.limit('MAX_PICTURE_WORDS')} words."}
         if p.tamil_line:
             props["tamil_line"] = {"type": "string", "description":
                      f"The card's hook or its why (not a definition), written as "
@@ -254,6 +262,12 @@ class BeyondBuilder:
                 probs.append("tamil_line must be written in Tamil")
             else:
                 length("tamil_line", len(tl), p.limit("MAX_TAMIL_CHARS"), "chars")
+        if p.pictures:
+            pic = (c.get("picture") or "").strip()
+            if not pic:
+                probs.append("picture is empty")
+            else:
+                length("picture", _words(pic), p.limit("MAX_PICTURE_WORDS"))
         c["warnings"] = warns
         if c.get("connection") not in {k for k, _ in p.connections}:
             probs.append("connection must be one of the allowed values")
@@ -274,7 +288,8 @@ class BeyondBuilder:
         parts = [f"Check these {len(days)} cards. Return one review per card."]
         for d in days:
             fields = (tuple(f for f in TEXT_FIELDS if p.try_this or f != "try_this")
-                      + (("tamil_line",) if p.tamil_line else ()))
+                      + (("tamil_line",) if p.tamil_line else ())
+                      + (("picture",) if p.pictures else ()))
             card = {f: cards[d["day"]].get(f, "") for f in fields}
             parts.append(f"\n=== DAY {d['day']}: {d['title']} ===\nCard:\n"
                          + json.dumps(card, ensure_ascii=False, indent=1)
@@ -510,6 +525,7 @@ class BeyondBuilder:
             "lesson": lesson,
             "subject": p.key,
             "connections": [{"key": k, "label": l} for k, l in p.connections if k in used],
+            "building_key": p.building_key,
             "big_why": big_why,
             "cards": cards,
             "skipped_days": skipped,
