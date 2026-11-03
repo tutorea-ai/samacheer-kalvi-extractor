@@ -16,6 +16,12 @@ PHYSICS = SubjectProfile(
     recap_keywords=("revision",),
     building_mode="card",   # lab days shown as "Behind the Scenes" (TL feedback, Oct 30)
     pictures=True,          # picture-first cards (TL feedback, Oct 30)
+    # Students see themselves: mostly school students of their own age (TL feedback, Nov 3).
+    picture_people=(
+        "a school boy of about 16", "a school girl of about 16",
+        "a boy and a girl, classmates of about 16", "a school girl of about 16",
+        "a school boy of about 16", "three classmates of about 16, boys and girls",
+    ),
     try_this=False,         # safe, honest home experiments are rare in electricity (Oct 29)
 
     # Cards

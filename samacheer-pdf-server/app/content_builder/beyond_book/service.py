@@ -49,6 +49,25 @@ def lesson_title(index_data: dict, term_key: str, subject: str,
     return fallback
 
 
+OVERRIDES_DIR = Path(__file__).resolve().parent / "overrides"
+
+
+def load_overrides(lp_path, lesson: Dict) -> Dict:
+    """overrides/{subject}_{class}_{lesson_folder}.json: {"12": {"picture": "..."}, ...}"""
+    folder = beyond_dir(lp_path)
+    if folder is None:
+        return {}
+    f = OVERRIDES_DIR / f"{str(lesson.get('subject', '')).lower()}_{lesson.get('class')}_{folder.name}.json"
+    if not f.exists():
+        return {}
+    try:
+        with open(f, encoding="utf-8") as fh:
+            return json.load(fh)
+    except Exception as e:
+        print(f"   ⚠️  Beyond: could not read overrides {f.name}: {e}")
+        return {}
+
+
 def run_beyond(lp_path, lesson: Dict, force: bool, temp_dir: Path, filename_base: str) -> Dict:
     folder = beyond_dir(lp_path)
     if folder is None:
@@ -64,7 +83,8 @@ def run_beyond(lp_path, lesson: Dict, force: bool, temp_dir: Path, filename_base
     from .builder import beyond_builder
     from .renderer import render_deck
 
-    deck = beyond_builder.generate(str(lp_path), lesson)
+    deck = beyond_builder.generate(str(lp_path), lesson,
+                                   overrides=load_overrides(lp_path, lesson))
     if not deck or not deck.get("cards"):
         return {"error": True, "message": "Beyond the Book generation failed — no cards passed the checks"}
 

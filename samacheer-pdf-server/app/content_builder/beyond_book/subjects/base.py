@@ -73,9 +73,23 @@ class SubjectProfile:
     pictures: bool = False             # one AI picture per card (OpenAI images)
     picture_model: str = "gpt-image-2.5-sunburst"
     picture_style: str = (
-        "clean modern flat illustration, soft warm colours, friendly realistic proportions, "
-        "everyday Tamil Nadu setting and people, no text, no labels, no letters or numbers "
-        "anywhere in the image"
+        "clean, realistic illustration with natural warm colours and true-to-life proportions. "
+        "One clear everyday object or moment, close up, large, in sharp focus and drawn "
+        "accurately, with a simple uncluttered background; at most one or two people; any TV, "
+        "phone or computer screen is switched off. Everyday setting in a "
+        "modern Tamil Nadu town: homes, streets, shops, schools. Strictly religion-neutral: no "
+        "temples, gopurams, churches, mosques, shrines, deities, idols, prayer lamps or "
+        "religious symbols, and no religious marks or religious clothing on people. Positive, "
+        "respectful and safe for school students: no gender stereotypes, no unsafe actions, "
+        "no brand names or logos, no flags or political symbols. No written words, captions "
+        "or labels anywhere; small natural markings on devices (meter digits, dial scales) "
+        "are fine. Show the real moment itself, never a sketch, chart or diagram."
+    )
+    # People rotate day by day, so a lesson shows everyone doing everything.
+    picture_people: Tuple[str, ...] = (
+        "a teenage boy", "a teenage girl", "a man", "a woman",
+        "a young man", "a young woman", "an elderly man", "an elderly woman",
+        "a girl and a boy together",
     )
     picture_size: str = "1536x1024"
     picture_quality: str = "medium"

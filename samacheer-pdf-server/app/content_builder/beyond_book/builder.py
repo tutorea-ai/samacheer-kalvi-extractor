@@ -96,6 +96,10 @@ REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context}, chec
 - a where_you_see_it the student would not have personally seen or used
 - a where_you_see_it that is only the lab apparatus used to teach this lesson
 - a picture that would show something false or unsafe, or a different scene from the card
+- a picture with any religious element, a gender or social stereotype, or where the card's
+  object is not the clear focus
+- a picture that shows a sketch, drawing, diagram, lab instruments, test meters or circuit
+  boards instead of a real-life moment, or a busy scene with many devices
 Do not flag style, length or wording (Tamil fluency is checked by teachers). For each problem, say in one sentence
 what is wrong and what is true.
 Do your thinking in notes. List in problems only errors you are sure of;
@@ -175,11 +179,23 @@ class BeyondBuilder:
             props.pop("try_this")
         if p.pictures:
             props["picture"] = {"type": "string", "description":
-                     f"One picture for this card: describe the real-life scene concretely "
-                     f"(place, people, object, what is happening) in {p.local_context}. "
-                     f"For a \"{p.building_key}\" card, show what this idea makes possible "
-                     f"(the device or situation it powers). Never describe text, labels, "
-                     f"numbers, formulas or diagrams. Max {p.limit('MAX_PICTURE_WORDS')} words."}
+                     f"One picture for this card. The exact object or moment from "
+                     f"where_you_see_it (for a \"{p.building_key}\" card: what this idea powers) "
+                     f"is the large, clear focus, shown realistically so a student sees the "
+                     f"concept at work. Keep it simple: one object or moment, close up, at most "
+                     f"one or two people, a plain background, no other devices, any screen "
+                     f"switched off. For a \"{p.building_key}\" card show only the everyday "
+                     f"thing this idea powers, never lab instruments, test meters or circuit "
+                     f"boards. Set it in {p.local_context}. Use the people named for this day; they do the task "
+                     f"themselves; if the scene needs a worker (a shopkeeper, a mechanic), the "
+                     f"named people are there too, as customers or helpers. Never a stereotype: "
+                     f"anyone can do any task; for household chores (ironing, cooking, cleaning) "
+                     f"a boy does the chore, even if this day's person is a girl (she can be "
+                     f"beside him). Nobody touches or reaches into a switchboard, panel, socket "
+                     f"or wire; panels stay closed. Never religious "
+                     f"buildings, symbols or marks, unsafe actions, brands, or written words. "
+                     f"Show the real-life moment itself: never a sketch, drawing, chart, "
+                     f"diagram, formula or lab apparatus. Max {p.limit('MAX_PICTURE_WORDS')} words."}
         if p.tamil_line:
             props["tamil_line"] = {"type": "string", "description":
                      f"The card's hook or its why (not a definition), written as "
@@ -212,7 +228,8 @@ class BeyondBuilder:
                 "input_schema": {"type": "object", "properties": props, "required": list(props)}}
 
     def _cards_prompt(self, batch: List[Dict], feedback: Dict[int, List[str]],
-                      used: Optional[List[str]] = None) -> str:
+                      used: Optional[List[str]] = None,
+                      p: Optional[SubjectProfile] = None) -> str:
         parts = [f"Write one card for each of these {len(batch)} lesson days. "
                  f"Use each day's number as the card's day."]
         if used:
@@ -224,6 +241,9 @@ class BeyondBuilder:
                      f"Day type: {d['day_type'] or '-'}"]
             if d["hint"]:
                 block.append(f"Connection hint: {d['hint']}")
+            if p is not None and p.pictures and p.picture_people:
+                who = p.picture_people[(d["day"] - 1) % len(p.picture_people)]
+                block.append(f"People in this day's picture, if any: {who}")
             if d["day"] in feedback:
                 block.append("Your previous card for this day had problems — fix them: "
                              + "; ".join(feedback[d["day"]]))
@@ -330,7 +350,8 @@ class BeyondBuilder:
         return all(("too long" in x) or ("generic phrase" in x) for x in probs)
 
     # ── Generation ───────────────────────────────────────────
-    def _generate_cards(self, days: List[Dict], p: SubjectProfile):
+    def _generate_cards(self, days: List[Dict], p: SubjectProfile,
+                        overrides: Optional[Dict] = None):
         system, tool = self._system(p), self._card_tool(p)
         pending = {d["day"]: d for d in days}
         done: Dict[int, dict] = {}
@@ -348,7 +369,7 @@ class BeyondBuilder:
                 in_batch = {d["day"] for d in batch}
                 used = [f"Day {n}: {c.get('hook', '')} | seen in: {c.get('where_you_see_it') or '-'}"
                         for n, c in sorted(done.items()) if n not in in_batch]
-                data = self._call_tool(system, self._cards_prompt(batch, feedback, used), tool, 6000)
+                data = self._call_tool(system, self._cards_prompt(batch, feedback, used, p), tool, 6000)
                 got = {c.get("day"): c for c in (data or {}).get("cards", []) if isinstance(c, dict)}
                 checked: Dict[int, tuple] = {}
                 for d in batch:
@@ -357,6 +378,8 @@ class BeyondBuilder:
                     if c is None:
                         feedback[n] = ["the card was missing — write it"]
                         continue
+                    if overrides and str(n) in overrides:
+                        c.update(overrides[str(n)])   # human-written fields win, then get checked
                     if p.building_mode == "skip" and c.get("connection") == p.building_key:
                         # Left out later in generate(): spend no review or retries on it.
                         done[n] = c
@@ -501,7 +524,8 @@ class BeyondBuilder:
                     probs.append(f"review: {x['problem']}")
         return probs
 
-    def generate(self, lp_path: str, lesson: Dict, only_days: Optional[List[int]] = None) -> Dict:
+    def generate(self, lp_path: str, lesson: Dict, only_days: Optional[List[int]] = None,
+                 overrides: Optional[Dict] = None) -> Dict:
         p = get_profile(lesson.get("subject", ""))
         lp = load_lp(lp_path, lesson.get("subject", ""))
         days = lp["days"]
@@ -510,7 +534,9 @@ class BeyondBuilder:
         title = lesson.get("title", "")
         print(f"[Beyond] {title} — {len(days)} days (profile: {p.key})")
 
-        cards, skipped = self._generate_cards(days, p)
+        if overrides:
+            print(f"   ✍️  Overrides for days {sorted(k for k in overrides if k.isdigit())}")
+        cards, skipped = self._generate_cards(days, p, overrides)
         left_out: List[Dict] = []
         if p.building_mode == "skip":
             left_out = [{"day": c["day"], "title": c["title"]}
