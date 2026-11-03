@@ -29,7 +29,7 @@ WEBP_QUALITY = 78
 
 PROBLEM_KINDS = (
     "religious", "stereotype", "unsafe", "words_or_logo", "screen_on",
-    "not_real_life", "wrong_or_missing_object", "busy_scene",
+    "not_real_life", "wrong_or_missing_object", "busy_scene", "malformed_body",
 )
 
 # Short, positive instructions for a retry. The problem text itself is never sent to the
@@ -43,6 +43,7 @@ KIND_FIX = {
     "not_real_life": "Show the real everyday moment, not a drawing or diagram.",
     "wrong_or_missing_object": "Make the main object large, accurate and clearly recognisable.",
     "busy_scene": "Use a plain background with only the main object and the people.",
+    "malformed_body": "Draw every hand with five natural fingers and every face and body naturally; keep hands simple and relaxed.",
 }
 
 
@@ -91,6 +92,8 @@ List a problem only if you can actually see it in the picture:
 - a switched-on TV, phone or computer screen showing content
 - lab instruments, test meters or circuit boards when the card should show an everyday thing
 - a busy scene where extra devices or objects distract from the main object
+- malformed hands, fingers, limbs or faces: extra or missing fingers, twisted or fused
+  hands, distorted faces (look closely at every hand)
 - the brief's main object or moment is missing, wrong or unclear, or drawn in a way that
   would teach something false
 Do not judge artistic style."""
