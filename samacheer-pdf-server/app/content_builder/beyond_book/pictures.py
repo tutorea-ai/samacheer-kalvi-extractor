@@ -87,8 +87,9 @@ List a problem only if you can actually see it in the picture:
 - anything unsafe, violent, frightening or unsuitable for students
 - anyone touching or reaching into a switchboard, open panel, socket or wire
 - a brand name, logo, flag or political symbol
-- brand names, logos, or garbled or misspelt words (labels, bills or markings that the
-  brief itself mentions are fine, and so are meter digits and dial scales)
+- a readable brand name, a recognisable real logo, or garbled or misspelt words (colourful
+  generic packaging is fine; labels, bills or markings that the brief itself mentions are
+  fine, and so are meter digits and dial scales)
 - a sketch, drawing, chart, diagram or lab apparatus instead of a real-life moment
 - a switched-on TV, phone or computer screen showing content
 - lab instruments, test meters or circuit boards when the card should show an everyday thing
