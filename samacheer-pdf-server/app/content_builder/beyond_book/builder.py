@@ -472,7 +472,7 @@ class BeyondBuilder:
             if not data:
                 feedback = []
                 continue
-            feedback = self._check_big_why(data, p) or self._review_big_why(data, title, recap_days, p)
+            feedback = self._check_big_why(data, p) or self._review_big_why(data, title, cards, p)
             if not feedback:
                 return data
             print(f"      big why — {'; '.join(feedback)}")
@@ -503,7 +503,7 @@ class BeyondBuilder:
                 probs.append(f'generic phrase "{g}" — name a specific thing instead')
         return probs
 
-    def _review_big_why(self, b: dict, title: str, recap_days: List[Dict],
+    def _review_big_why(self, b: dict, title: str, cards: List[Dict],
                         p: SubjectProfile) -> List[str]:
         subject = p.display_name or p.key
         system = REVIEW_TEMPLATE.format(subject=subject, local_context=p.local_context,
@@ -511,12 +511,15 @@ class BeyondBuilder:
         card = {"hook": b.get("question", ""), "link": b.get("story", "")}
         if p.tamil_line:
             card["tamil_line"] = b.get("tamil_line", "")
-        text = recap_days[0]["text"][:6000] if recap_days else ""
+        # Check against the lesson's already-reviewed cards, which cover every day,
+        # not against one revision day's text.
+        text = "\n".join(f"Day {c['day']} ({c['title']}): {c.get('hook', '')} {c.get('link', '')}"
+                         for c in cards)
         prompt = (f"Check this 1 card: the opening card of the lesson \"{title}\". Its hook is the "
                   f"lesson's question and its link is why the lesson matters. Return one review "
                   f"with day 0.\n\n=== DAY 0: {title} ===\nCard:\n"
                   + json.dumps(card, ensure_ascii=False, indent=1)
-                  + "\nLesson text:\n" + text)
+                  + "\nThe lesson's day cards (already checked against the lesson):\n" + text)
         data = self._call_tool(system, prompt, REVIEW_TOOL, 2000)
         if data is None:
             return [REVIEW_FAILED]
