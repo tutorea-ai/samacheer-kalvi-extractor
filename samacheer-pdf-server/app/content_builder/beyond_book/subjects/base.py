@@ -55,6 +55,9 @@ class SubjectProfile:
     title_strip: Tuple[str, ...] = (r"^Day\s+\d+(\s+of\s+\d+)?\s*[—–:-]\s*",)
     max_text_per_day: int = 6000
     recap_keywords: Tuple[str, ...] = ("revision",)
+    title_meta_before: bool = False          # title + meta sit just BEFORE the day block
+    title_from_type: Tuple[str, ...] = ()    # titles matching these regexes -> use day_type
+    meta_separator: str = " "                # joins the meta's text pieces (" | " for tables)
 
     # ── Cards ────────────────────────────────────────────────
     connections: Tuple[Tuple[str, str], ...] = DEFAULT_CONNECTIONS

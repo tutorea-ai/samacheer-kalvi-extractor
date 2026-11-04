@@ -25,6 +25,16 @@ def _first(block, classes: Tuple[str, ...]):
     return None
 
 
+def _before(block, classes: Tuple[str, ...], block_ids: set):
+    """Nearest element before this day block (after the previous one) with one of the classes."""
+    for sib in block.find_previous_siblings():
+        if id(sib) in block_ids:
+            return None
+        if any(c in (sib.get("class") or []) for c in classes):
+            return sib
+    return None
+
+
 def _clean_lines(text: str) -> List[str]:
     """Drop blank lines and any line containing Tamil; BB writes its own Tamil."""
     out = []
@@ -49,22 +59,30 @@ def parse_lp(html: str, profile: SubjectProfile) -> Dict:
     days: List[Dict] = []
     recap_days: List[Dict] = []
 
-    for block in soup.select(profile.day_selector):
+    blocks = soup.select(profile.day_selector)
+    block_ids = {id(b) for b in blocks}
+    for block in blocks:
         m = re.search(r"(\d+)$", block.get("id", ""))
         num = int(m.group(1)) if m else len(days) + len(recap_days) + 1
 
         # Title and meta are read first, then removed from the text.
-        title_el = _first(block, profile.title_classes)
-        meta_el = _first(block, profile.meta_classes)
+        if profile.title_meta_before:
+            title_el = _before(block, profile.title_classes, block_ids)
+            meta_el = _before(block, profile.meta_classes, block_ids)
+        else:
+            title_el = _first(block, profile.title_classes)
+            meta_el = _first(block, profile.meta_classes)
 
         title = title_el.get_text(" ", strip=True) if title_el else ""
         for pat in profile.title_strip:
             title = re.sub(pat, "", title).strip()
         title = title or f"Day {num}"
 
-        meta = _SPACES.sub(" ", meta_el.get_text(" ", strip=True)) if meta_el else ""
+        meta = _SPACES.sub(" ", meta_el.get_text(profile.meta_separator, strip=True)) if meta_el else ""
         tm = re.search(profile.day_type_pattern, meta, re.I)
         day_type = tm.group(1).strip() if tm else ""
+        if day_type and any(re.search(pat, title, re.I) for pat in profile.title_from_type):
+            title = day_type
 
         for el in (title_el, meta_el):
             if el is not None:

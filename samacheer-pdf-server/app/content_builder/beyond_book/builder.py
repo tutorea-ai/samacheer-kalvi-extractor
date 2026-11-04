@@ -100,6 +100,8 @@ REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context}, chec
   object is not the clear focus
 - a picture that shows a sketch, drawing, diagram, lab instruments, test meters or circuit
   boards instead of a real-life moment, or a busy scene with many devices
+- a picture brief that depends on an on/off state, an exact comparison (taller/shorter,
+  only one colour) or a real object without its natural printing
 Do not flag style, length or wording (Tamil fluency is checked by teachers). For each problem, say in one sentence
 what is wrong and what is true.
 Do your thinking in notes. List in problems only errors you are sure of;
@@ -184,8 +186,10 @@ class BeyondBuilder:
                      f"is the large, clear focus, shown realistically so a student sees the "
                      f"concept at work. Keep it simple: one object or moment, close up, at most "
                      f"one or two people, a plain background, no other devices, any screen "
-                     f"switched off. Show objects, never on/off states or before/after "
-                     f"comparisons (a picture cannot show that something is off). "
+                     f"switched off. Show objects, never on/off states, before/after scenes or "
+                     f"exact comparisons such as taller/shorter or only-one-colour (a picture "
+                     f"cannot guarantee them), and never ask for real objects without their "
+                     f"natural printing. "
                      f"For a \"{p.building_key}\" card show only the everyday "
                      f"thing this idea powers, never lab instruments, test meters or circuit "
                      f"boards. Set it in {p.local_context}. Use the people named for this day; they do the task "
