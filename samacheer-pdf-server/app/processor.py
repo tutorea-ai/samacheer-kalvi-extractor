@@ -967,7 +967,8 @@ class PDFProcessor:
                 print(f"   📄 Using LP: {lp_path}")
 
                 from .content_builder.beyond_book.service import run_beyond, lesson_title
-                bb_title = lesson_title(index_data, term_key, subject, discipline, unit_num, filename_base)
+                bb_title = lesson_title(index_data, term_key, subject, discipline, unit_num,
+                                        filename_base, lesson_choice)
                 return run_beyond(lp_path, {
                     "class":      class_num,
                     "subject":    subject,

@@ -82,7 +82,8 @@ List a problem only if you can actually see it in the picture:
   religious symbol, or religious marks or clothing on people
 - a gender or social stereotype that is clearly shown: a girl or woman doing housework
   while a boy or man watches, or a girl or woman passive while a boy or man does the
-  technical work (never flag a stereotype that only "could" be read into the picture)
+  technical work (never flag a stereotype that only "could" be read into the picture; a
+  boy or man doing household work is intended and is never a stereotype)
 - anything unsafe, violent, frightening or unsuitable for students
 - anyone touching or reaching into a switchboard, open panel, socket or wire
 - a brand name, logo, flag or political symbol

@@ -8,8 +8,9 @@ from .base import SubjectProfile
 from .physics import PHYSICS
 from .biology import BIOLOGY
 from .maths import MATHS
+from .socialscience import SOCIALSCIENCE
 
-PROFILES: Dict[str, SubjectProfile] = {p.key: p for p in (PHYSICS, BIOLOGY, MATHS)}
+PROFILES: Dict[str, SubjectProfile] = {p.key: p for p in (PHYSICS, BIOLOGY, MATHS, SOCIALSCIENCE)}
 
 # Unlisted subjects get generic defaults, never another subject's settings.
 DEFAULT = SubjectProfile(key="default")

@@ -31,21 +31,43 @@ def is_deployed(folder: Path) -> bool:
     return html_f.exists() and html_f.stat().st_size > MIN_HTML_BYTES and json_f.exists()
 
 
-def lesson_title(index_data: dict, term_key: str, subject: str,
-                 discipline: str, unit_num, fallback: str) -> str:
-    """Chapter title from the curriculum index; falls back to the file name base."""
+def lesson_title(index_data: dict, term_key: str, subject: str, discipline: str,
+                 unit_num, fallback: str, lesson_choice: int = 1) -> str:
+    """Lesson title from the curriculum index (3 index shapes); falls back to the file name base."""
+    same = lambda a, b: str(a) == str(b)
     try:
-        chapters = index_data[term_key].get("chapters", {})
+        term = index_data[term_key]
+
+        # Physics, Biology, Pure Science, Maths: term -> chapters -> {discipline|subject: [{chapter, title}]}
+        chapters = term.get("chapters", {})
         keys = [discipline, (subject or "").lower()]
         if (subject or "").lower() in ("maths", "math", "mathematics"):
             keys.append("maths")
         for k in keys:
             if k and k in chapters:
-                sel = next((c for c in chapters[k] if c.get("chapter") == unit_num), None)
+                sel = next((c for c in chapters[k] if same(c.get("chapter"), unit_num)), None)
                 if sel and sel.get("title"):
                     return sel["title"]
+
+        # Social Science: term -> disciplines -> {history: [{unit, title}]} (or without the wrapper)
+        disc = term.get("disciplines", term)
+        if discipline and isinstance(disc, dict) and isinstance(disc.get(discipline), list):
+            sel = next((u for u in disc[discipline] if same(u.get("unit"), unit_num)), None)
+            if sel and sel.get("title"):
+                return sel["title"]
+
+        # English: term -> units -> [{unit, prose: {title}, poem: {title}, ...}]
+        units = term.get("units")
+        if units:
+            seq = units if isinstance(units, list) else list(units.values())
+            u = next((x for x in seq if isinstance(x, dict) and same(x.get("unit"), unit_num)), None)
+            if u:
+                parts = [u[k] for k in ("prose", "poem", "supplementary", "play", "drama")
+                         if isinstance(u.get(k), dict)]
+                if 1 <= int(lesson_choice) <= len(parts) and parts[int(lesson_choice) - 1].get("title"):
+                    return parts[int(lesson_choice) - 1]["title"]
     except Exception as e:
-        print(f"   ⚠️  Beyond: could not read chapter title: {e}")
+        print(f"   ⚠️  Beyond: could not read lesson title: {e}")
     return fallback
 
 
