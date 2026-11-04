@@ -27,6 +27,8 @@ ENGLISH = SubjectProfile(
         ("grammar", "show where the student already uses this grammar every day: talking at "
                     "the shop, messages to friends, reading signs and notices"),
     ),
+    default_hint=("connect the text to the student's own life: where its subject, idea or "
+                  "feeling shows up around them in Tamil Nadu today"),
     building_mode="card",
     try_this=False,
     pictures=True,
@@ -40,5 +42,6 @@ ENGLISH = SubjectProfile(
         "\n  up in the student's own life, not a job that uses it."
         "\n- Write for an 11-year-old: short sentences and everyday words."
         "\n- Name a place, organisation, date or number only if the lesson text names it."
+        "\n- Describe a poem or story in your own words; quote at most a few words from it."
     ),
 )

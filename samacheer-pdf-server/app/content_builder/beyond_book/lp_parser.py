@@ -99,6 +99,8 @@ def parse_lp(html: str, profile: SubjectProfile) -> Dict:
         probe = (day_type or title).lower()
         is_recap = any(k in probe for k in profile.recap_keywords)
         hint_key, hint = _match(day_type, profile.type_hints)
+        if not hint and profile.default_hint:
+            hint_key, hint = "default", profile.default_hint
 
         day = {
             "day": num,

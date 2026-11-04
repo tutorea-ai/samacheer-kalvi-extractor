@@ -64,6 +64,7 @@ class SubjectProfile:
     building_key: str = "building"   # the connection that may leave where_you_see_it empty
     building_mode: str = "card"      # "card": keep building cards | "skip": leave them out
     type_hints: Tuple[Tuple[str, str], ...] = ()
+    default_hint: str = ""             # used when a day matches no type hint
     audience: str = ""
     local_context: str = "Tamil Nadu and India"
     tamil_line: bool = True
