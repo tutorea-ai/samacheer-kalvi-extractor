@@ -36,7 +36,7 @@ PROBLEM_KINDS = (
 # image model: its own safety filter can reject prompts that describe hazards.
 KIND_FIX = {
     "religious": "Keep the scene free of any religious buildings, symbols or marks.",
-    "stereotype": "Show everyone equally active; a boy does any household chore.",
+    "stereotype": "Show everyone equally active; a boy does any household chore; heights and sizes are mixed across boys and girls.",
     "unsafe": "Everyone keeps their hands well away from switchboards, sockets and wires; all panels are closed.",
     "words_or_logo": "No brand names or logos; keep any label simple and clean.",
     "screen_on": "Every screen is switched off.",
@@ -82,7 +82,8 @@ List a problem only if you can actually see it in the picture:
   religious symbol, or religious marks or clothing on people
 - a gender or social stereotype that is clearly shown: a girl or woman doing housework
   while a boy or man watches, or a girl or woman passive while a boy or man does the
-  technical work (never flag a stereotype that only "could" be read into the picture; a
+  technical work, or height, strength or size shown by gender, such as boys always taller
+  or stronger (never flag a stereotype that only "could" be read into the picture; a
   boy or man doing household work is intended and is never a stereotype)
 - anything unsafe, violent, frightening or unsuitable for students
 - anyone touching or reaching into a switchboard, open panel, socket or wire

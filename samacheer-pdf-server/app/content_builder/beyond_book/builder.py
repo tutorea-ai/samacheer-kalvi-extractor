@@ -99,6 +99,7 @@ REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context}, chec
 - a picture with any religious element, a gender or social stereotype, or where the card's
   object is not the clear focus (a boy or man doing household work is intended and is
   never a stereotype)
+- a picture brief that links height, strength or size to gender (boys taller or stronger)
 - a picture that shows a sketch, drawing, diagram, lab instruments, test meters or circuit
   boards instead of a real-life moment, or a busy scene with many devices
 - a picture brief that depends on an on/off state, an exact comparison (taller/shorter,
