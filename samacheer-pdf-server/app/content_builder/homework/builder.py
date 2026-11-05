@@ -62,7 +62,13 @@ Rules:
   student must give.
 - Ignore classroom instructions in the lesson text (pair work, timings,
   cold-calls, exit tickets), and never copy an in-class question word for word.
+- A concept task may use the lesson's own example (often the only one it
+  teaches) but must ask something the class did not: a changed condition,
+  a 'why', or a comparison. Never bring in a new example the lesson does
+  not support.
 - Do not repeat a task idea already used on another day of this lesson.
+- Never use double quotation marks (") inside a task or hint. For quoted
+  speech or a statement to judge, use single quotes: 'A friend says: ...'.
 - Plain English a student of this age reads easily. {language_rule}{extra_rules}"""
 
 REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context}, checking
@@ -77,7 +83,10 @@ notes before judging it. Flag only real problems:
 - a task that points to the textbook (an exercise, example, figure, table,
   page or question number) or depends on something it does not give
 - a task a student cannot do at home alone with a notebook and pen
-- a task that repeats an in-class problem from the lesson text with the same values
+- a numerical that repeats an in-class problem from the lesson text with the
+  same values, or any task that asks the same question the class already
+  answered. A concept task may reuse the lesson's own example (often the only
+  one it teaches) when it asks something new about it: never flag that.
 - a task that does not match its kind ({kinds})
 - a task that states the formula or method to use (that belongs in the hint)
 - a hint that states the answer itself: the final value, a worked-out step,
@@ -129,11 +138,13 @@ class HomeworkBuilder:
         for key, label, guide in p.tasks:
             props[f"{key}_task"] = {"type": "string", "description":
                 f"The {label} task. {guide} Complete on its own, every value given. "
+                f"No double quotation marks; use single quotes for quoted speech. "
                 f"Max {p.limit('MAX_TASK_WORDS')} words."}
             if p.hints:
                 props[f"{key}_hint"] = {"type": "string", "description":
                     f"A nudge for the {label} task: which idea or formula to use, or the first "
-                    f"step. Never the answer. Max {p.limit('MAX_HINT_WORDS')} words."}
+                    f"step. Never the answer. No double quotation marks. "
+                    f"Max {p.limit('MAX_HINT_WORDS')} words."}
                 if p.tamil_hint:
                     props[f"{key}_hint_ta"] = {"type": "string", "description":
                         f"The {label} hint in simple written Tamil, technical terms in English."}
@@ -264,7 +275,13 @@ class HomeworkBuilder:
             return {d["day"]: [REVIEW_FAILED] for d in days}
         out: Dict[int, List[str]] = {}
         seen = set()
-        for r in data.get("reviews", []):
+        reviews = data.get("reviews", [])
+        if isinstance(reviews, str):
+            try:
+                reviews = json.loads(reviews)
+            except ValueError:
+                reviews = []
+        for r in reviews if isinstance(reviews, list) else []:
             if not isinstance(r, dict):
                 continue
             try:
@@ -281,6 +298,26 @@ class HomeworkBuilder:
         for d in days:
             if d["day"] not in seen:
                 out[d["day"]] = [REVIEW_FAILED]
+        return out
+
+    @staticmethod
+    def _days_from(data) -> Dict[int, dict]:
+        """Writer reply -> {day: homework}. Handles the list arriving as a JSON string
+        and day numbers arriving as text."""
+        raw = (data or {}).get("days", [])
+        if isinstance(raw, str):
+            try:
+                raw = json.loads(raw)
+            except ValueError:
+                return {}
+        out: Dict[int, dict] = {}
+        for h in raw if isinstance(raw, list) else []:
+            if not isinstance(h, dict):
+                continue
+            try:
+                out[int(h.get("day"))] = h
+            except (TypeError, ValueError):
+                continue
         return out
 
     @staticmethod
@@ -311,7 +348,10 @@ class HomeworkBuilder:
                         for n, h in sorted(done.items()) if n not in in_batch]
                 data = self._call_tool(system, self._days_prompt(batch, feedback, used, topics),
                                        tool, 6000)
-                got = {h.get("day"): h for h in (data or {}).get("days", []) if isinstance(h, dict)}
+                got = self._days_from(data)
+                if not got:
+                    print(f"      ⚠️  Writer returned no usable days for {sorted(in_batch)}: "
+                          f"{str(data)[:300]!r}")
                 checked: Dict[int, tuple] = {}
                 for d in batch:
                     n = d["day"]
