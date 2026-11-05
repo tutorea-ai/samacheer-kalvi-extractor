@@ -65,9 +65,9 @@ class PDFRequest(BaseModel):
         description="Book volume — only for full_book mode on split-volume subjects (e.g. Physics 11-12). Lesson mode reads volume from the index."
     )
 
-    output_format: Literal["pdf", "txt", "md", "html", "content_only", "lp_only", "qa_only", "flashcards_only", "beyond_only"] = Field(
+    output_format: Literal["pdf", "txt", "md", "html", "content_only", "lp_only", "qa_only", "flashcards_only", "beyond_only", "homework_only"] = Field(
         "pdf",
-        description="Output format: pdf, txt, md (markdown), html (Content+QA+LP), content_only (Content HTML only), lp_only (Lesson Plan HTML only), qa_only (Q&A HTML only), or flashcards_only (Flash Cards built from the deployed LP)"
+        description="Output format: pdf, txt, md (markdown), html (Content+QA+LP), content_only (Content HTML only), lp_only (Lesson Plan HTML only), qa_only (Q&A HTML only), flashcards_only (Flash Cards built from the deployed LP), beyond_only (Beyond the Book built from the deployed LP), or homework_only (Homework built from the deployed LP)"
     )
 
     force: Optional[bool] = Field(

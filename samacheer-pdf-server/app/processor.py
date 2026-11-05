@@ -977,6 +977,39 @@ class PDFProcessor:
                     "discipline": discipline,
                 }, force, self.temp_dir, filename_base)
 
+            # ── HOMEWORK (self-contained module; delete this branch to remove Homework) ──
+            elif output_format == "homework_only":
+
+                bridge_meta = {
+                    "class_num":     class_num,
+                    "term":          term,
+                    "unit":          unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject":       subject,
+                    "medium":        medium,
+                    "discipline":    discipline,
+                }
+
+                print("📝 Starting Homework generation...")
+                lp_path = bridge.find_deployed(bridge_meta, "lp")
+                if not lp_path:
+                    return {
+                        "error":   True,
+                        "message": "No Lesson Plan deployed for this lesson yet — generate the LP first (output_format=lp_only)"
+                    }
+                print(f"   📄 Using LP: {lp_path}")
+
+                from .content_builder.homework.service import run_homework, lesson_title as hw_lesson_title
+                hw_title = hw_lesson_title(index_data, term_key, subject, discipline, unit_num,
+                                           filename_base, lesson_choice)
+                return run_homework(lp_path, {
+                    "class":      class_num,
+                    "subject":    subject,
+                    "unit":       unit_num,
+                    "title":      hw_title,
+                    "discipline": discipline,
+                }, force, self.temp_dir, filename_base)
+
             elif output_format == "lp_only":
 
                 bridge_meta = {
