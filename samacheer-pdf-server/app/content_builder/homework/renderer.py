@@ -7,6 +7,7 @@ Cards and Beyond the Book: one scrolling page of day cards, day chips to
 jump to a day, a tap-to-reveal hint per task.
 """
 import html
+import re
 from typing import Dict, List
 
 BULB = ('<path d="M9 18h6M10 21h4"/>'
@@ -18,6 +19,17 @@ PENDING_NOTE = "Answer is being checked by our teachers. It will appear here soo
 
 def _e(s) -> str:
     return html.escape(str(s or ""), quote=True)
+
+
+# v_d -> v<sub>d</sub>, l_AJ -> l<sub>AJ</sub>, R_(eq) -> R<sub>eq</sub>. Only after a
+# letter or Greek symbol, and only 1–4 characters: anything else is left for the audit.
+SUBSCRIPT_RE = re.compile(
+    r"(?<=[A-Za-zα-ωΑ-Ω])_(?:\(([A-Za-z0-9]{1,6})\)|([A-Za-z0-9]{1,4})(?![A-Za-z0-9]))")
+
+
+def _t(s) -> str:
+    """Escape, then show subscripts the way the textbook does."""
+    return SUBSCRIPT_RE.sub(lambda m: f"<sub>{m.group(1) or m.group(2)}</sub>", _e(s))
 
 
 def _svg(inner: str) -> str:
@@ -34,7 +46,7 @@ def _answer(t: Dict, answers_on: bool) -> str:
         if not line:
             continue
         final = line.lower().startswith("final answer")
-        lines.append(f'<p class="{"final" if final else "step"}">{_e(line)}</p>')
+        lines.append(f'<p class="{"final" if final else "step"}">{_t(line)}</p>')
     return (f'<details class="answer"><summary>{_svg(CHECK)}<span>Show answer</span>'
             f'{_svg(CHEVRON)}</summary><div class="answer-body">{"".join(lines)}</div></details>')
 
@@ -44,13 +56,13 @@ def _task(i: int, t: Dict, answers_on: bool = False) -> str:
     if t.get("hint"):
         ta = (f'<p class="ta" lang="ta">{_e(t["hint_ta"])}</p>' if t.get("hint_ta") else "")
         hint = (f'<details class="hint"><summary>{_svg(BULB)}<span>Show hint</span>'
-                f'{_svg(CHEVRON)}</summary><div class="hint-body"><p>{_e(t["hint"])}</p>{ta}'
+                f'{_svg(CHEVRON)}</summary><div class="hint-body"><p>{_t(t["hint"])}</p>{ta}'
                 f'</div></details>')
     answer = _answer(t, answers_on)
     reveal = f'<div class="reveal">{hint}{answer}</div>' if (hint or answer) else ""
     return (f'<section class="task {_e(t.get("kind"))}">'
             f'<p class="task-label"><span class="num">{i}</span>{_e(t.get("label"))}</p>'
-            f'<p class="task-text">{_e(t.get("task"))}</p>{reveal}</section>')
+            f'<p class="task-text">{_t(t.get("task"))}</p>{reveal}</section>')
 
 
 def _day(d: Dict, answers_on: bool = False) -> str:
@@ -59,7 +71,7 @@ def _day(d: Dict, answers_on: bool = False) -> str:
     return (f'<article class="card{" review" if d.get("is_review") else ""}" '
             f'id="hw-day-{_e(d.get("day"))}">'
             f'<div class="card-top"><span class="day">Day {_e(d.get("day"))}</span>{review}'
-            f'<h2 class="topic">{_e(d.get("title"))}</h2></div>{tasks}</article>')
+            f'<h2 class="topic">{_t(d.get("title"))}</h2></div>{tasks}</article>')
 
 
 def _chips(days: List[Dict]) -> str:

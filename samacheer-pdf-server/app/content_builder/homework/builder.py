@@ -37,12 +37,18 @@ BOOK_REF_RE = re.compile(
 # Powers written flat ("× 10−19", "s−1", "m2") instead of as superscripts (10⁻¹⁹, s⁻¹, m²).
 FLAT_POWER_RE = re.compile(
     r"10\^"
+    r"|(?<![\d.,])10[−-]\d{1,2}(?=\s*[A-Za-zΩμ°])"
     r"|\d\.\d+\s*×\s*10\s*\d"
     r"|[×x]\s*10\s*[−-]\s*\d"
     r"|(?<![A-Za-z])(?:m|cm|mm|km|s|C|kg|g|V|K|N|A|J|W|Ω|mol)[−-][1-9]\b"
     r"|(?<![A-Za-z])(?:m|cm|mm|km|s)[23]\b")
 POWER_RULE = ("write powers with superscript characters (10⁻¹⁹, m s⁻², m², x³), "
               "never flat (10−19, s−1, m2)")
+
+# Numbered symbols written flat ("R2", "T0", "F1") instead of with subscript digits (R₂, T₀, F₁).
+FLAT_SUB_RE = re.compile(r"(?<![A-Za-z0-9])[A-Za-z][0-9](?![A-Za-z0-9])")
+SUB_RULE = ("write numbered symbols with subscript digits (R₁, R₂, T₀, F₁) and powers as "
+            "superscripts (x²); never flat (R1, T0, x2)")
 
 SYSTEM_TEMPLATE = """You write daily homework for {audience}.
 Each lesson day gets exactly {n} tasks, in this order:
@@ -80,7 +86,9 @@ Rules:
 - Never use double quotation marks (") inside a task or hint. For quoted
   speech or a statement to judge, use single quotes: 'A friend says: ...'.
 - Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
-  write them flat (10−19, s−1, m2). Keep subscripts as the lesson writes them.
+  write them flat (10−19, s−1, m2). Write numbered symbols with subscript
+  digits (R₁, R₂, T₀, F₁), never R1 or T0. Keep letter subscripts as the
+  lesson writes them (v_d).
 - Plain English a student of this age reads easily. {language_rule}{extra_rules}"""
 
 REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context}, checking
@@ -130,7 +138,9 @@ Rules:
   sensibly (2 to 3 significant figures) and keep units throughout.
 - Never use double quotation marks ("); use single quotes if you must quote.
 - Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
-  write them flat (10−19, s−1, m2). Keep subscripts as the lesson writes them.
+  write them flat (10−19, s−1, m2). Write numbered symbols with subscript
+  digits (R₁, R₂, T₀, F₁), never R1 or T0. Keep letter subscripts as the
+  lesson writes them (v_d).
 - Plain English a student of this age reads easily. English only.{extra_rules}"""
 
 ANSWER_REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context},
@@ -292,6 +302,9 @@ class HomeworkBuilder:
             flat = FLAT_POWER_RE.search(task + " " + (h.get(f"{key}_hint") or ""))
             if flat:
                 probs.append(f'{key} has a flat power ("{flat.group(0)}") — {POWER_RULE}')
+            fsub = FLAT_SUB_RE.search(task + " " + (h.get(f"{key}_hint") or ""))
+            if fsub:
+                probs.append(f'{key} has a flat symbol ("{fsub.group(0)}") — {SUB_RULE}')
             if not p.hints:
                 continue
             hint = (h.get(f"{key}_hint") or "").strip()
@@ -606,6 +619,9 @@ class HomeworkBuilder:
         flat = FLAT_POWER_RE.search(a)
         if flat:
             probs.append(f'answer has a flat power ("{flat.group(0)}") — {POWER_RULE}')
+        fsub = FLAT_SUB_RE.search(a)
+        if fsub:
+            probs.append(f'answer has a flat symbol ("{fsub.group(0)}") — {SUB_RULE}')
         return probs
 
     def _review_answers(self, keys: List[tuple], given: Dict[tuple, str],
