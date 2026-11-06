@@ -52,8 +52,35 @@ def _clean_lines(text: str) -> List[str]:
     return out
 
 
+_SUP = str.maketrans("0123456789+-−=()", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁻⁼⁽⁾")
+_SUB = str.maketrans("0123456789+-−=()", "₀₁₂₃₄₅₆₇₈₉₊₋₋₌₍₎")
+_SCRIPT_OK = set("0123456789+-−=() ")
+_ORDINALS = {"st", "nd", "rd", "th"}
+
+
+def _scripts(soup) -> None:
+    """Keep powers and indices when the LP becomes text:
+    10<sup>−19</sup> -> 10⁻¹⁹, m<sup>2</sup> -> m², H<sub>2</sub>O -> H₂O, v<sub>d</sub> -> v_d."""
+    for el in soup.find_all("sup"):
+        t = el.get_text("", strip=True)
+        if t and set(t) <= _SCRIPT_OK:
+            el.replace_with(t.replace(" ", "").translate(_SUP))
+        elif t.lower() in _ORDINALS:
+            el.replace_with(t)
+        else:
+            el.replace_with(f"^{t}" if len(t) == 1 else f"^({t})")
+    for el in soup.find_all("sub"):
+        t = el.get_text("", strip=True)
+        if t and set(t) <= _SCRIPT_OK:
+            el.replace_with(t.replace(" ", "").translate(_SUB))
+        else:
+            el.replace_with(f"_{t}" if len(t) == 1 or t.isalnum() else f"_({t})")
+    soup.smooth()   # join "× 10" + "⁻¹⁹" back into one piece of text
+
+
 def parse_lp(html: str, profile: SubjectProfile) -> Dict:
     soup = BeautifulSoup(html, "html.parser", on_duplicate_attribute="ignore")
+    _scripts(soup)
     days: List[Dict] = []
 
     blocks = soup.select(profile.day_selector)

@@ -34,6 +34,16 @@ BOOK_REF_RE = re.compile(
     r"\b(exercises?|examples?|questions?|q\.|evaluation|figures?|fig\.|tables?|pages?|"
     r"sections?)\s*\(?\d", re.I)
 
+# Powers written flat ("× 10−19", "s−1", "m2") instead of as superscripts (10⁻¹⁹, s⁻¹, m²).
+FLAT_POWER_RE = re.compile(
+    r"10\^"
+    r"|\d\.\d+\s*×\s*10\s*\d"
+    r"|[×x]\s*10\s*[−-]\s*\d"
+    r"|(?<![A-Za-z])(?:m|cm|mm|km|s|C|kg|g|V|K|N|A|J|W|Ω|mol)[−-][1-9]\b"
+    r"|(?<![A-Za-z])(?:m|cm|mm|km|s)[23]\b")
+POWER_RULE = ("write powers with superscript characters (10⁻¹⁹, m s⁻², m², x³), "
+              "never flat (10−19, s−1, m2)")
+
 SYSTEM_TEMPLATE = """You write daily homework for {audience}.
 Each lesson day gets exactly {n} tasks, in this order:
 {task_list}
@@ -69,6 +79,8 @@ Rules:
 - Do not repeat a task idea already used on another day of this lesson.
 - Never use double quotation marks (") inside a task or hint. For quoted
   speech or a statement to judge, use single quotes: 'A friend says: ...'.
+- Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
+  write them flat (10−19, s−1, m2). Keep subscripts as the lesson writes them.
 - Plain English a student of this age reads easily. {language_rule}{extra_rules}"""
 
 REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context}, checking
@@ -117,6 +129,8 @@ Rules:
 - Work every calculation carefully and check it before writing. Round
   sensibly (2 to 3 significant figures) and keep units throughout.
 - Never use double quotation marks ("); use single quotes if you must quote.
+- Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
+  write them flat (10−19, s−1, m2). Keep subscripts as the lesson writes them.
 - Plain English a student of this age reads easily. English only.{extra_rules}"""
 
 ANSWER_REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context},
@@ -275,6 +289,9 @@ class HomeworkBuilder:
                              f"write the question out in full")
             if TAMIL_RE.search(task):
                 probs.append(f"{key}_task must be in English")
+            flat = FLAT_POWER_RE.search(task + " " + (h.get(f"{key}_hint") or ""))
+            if flat:
+                probs.append(f'{key} has a flat power ("{flat.group(0)}") — {POWER_RULE}')
             if not p.hints:
                 continue
             hint = (h.get(f"{key}_hint") or "").strip()
@@ -586,6 +603,9 @@ class HomeworkBuilder:
             probs.append(f"answer too long ({n} words, max {limit})")
         if TAMIL_RE.search(a):
             probs.append("answer must be in English")
+        flat = FLAT_POWER_RE.search(a)
+        if flat:
+            probs.append(f'answer has a flat power ("{flat.group(0)}") — {POWER_RULE}')
         return probs
 
     def _review_answers(self, keys: List[tuple], given: Dict[tuple, str],
