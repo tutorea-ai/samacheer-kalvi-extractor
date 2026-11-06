@@ -31,6 +31,7 @@ DEFAULT_APPLY_GUIDE = (
 DEFAULT_LIMITS: Dict[str, int] = {
     "MAX_TASK_WORDS": 60,
     "MAX_HINT_WORDS": 30,
+    "MAX_ANSWER_WORDS": 150,
 }
 
 
@@ -61,6 +62,7 @@ class SubjectProfile:
     local_context: str = "Tamil Nadu and India"
     apply_style: str = DEFAULT_APPLY_GUIDE
     hints: bool = True                     # one hidden hint per task
+    answers: bool = True                   # one hidden, reviewer-checked answer per task
     tamil_hint: bool = False               # Tamil version of each hint (off for all subjects)
     extra_rules: str = ""                  # subject rules appended to the writer prompt, each "\n- …"
     batch_size: int = 6

@@ -34,6 +34,15 @@ def is_deployed(folder: Path) -> bool:
     return html_f.exists() and html_f.stat().st_size > MIN_HTML_BYTES and json_f.exists()
 
 
+def missing_answers(deck: Dict) -> bool:
+    """True when the subject has answers on and any task still has no answer."""
+    from .subjects import get_profile
+    if not get_profile(deck.get("subject", "")).answers:
+        return False
+    return any(not (t.get("answer") or "").strip()
+               for d in deck.get("days", []) for t in d.get("tasks", []))
+
+
 def lesson_title(index_data: dict, term_key: str, subject: str, discipline: str,
                  unit_num, fallback: str, lesson_choice: int = 1) -> str:
     """Lesson title from the curriculum index (3 index shapes); falls back to the file name base."""
@@ -79,19 +88,26 @@ def run_homework(lp_path, lesson: Dict, force: bool, temp_dir: Path, filename_ba
     if folder is None:
         return {"error": True, "message": "Could not derive the Homework folder from the LP path"}
 
+    answers_only = False
     if not force and is_deployed(folder):
-        print(f"⏭️  Homework: already deployed at {folder} — skipping")
-        return {"error": False, "filename": f"{filename_base}_homework.html", "file_path": "",
-                "deployed": ["homework"], "skipped": True,
-                "message": "Homework already deployed — skipped (send force=true to rebuild)"}
+        deck = json.loads((folder / "homework.json").read_text(encoding="utf-8"))
+        if not missing_answers(deck):
+            print(f"⏭️  Homework: already deployed with every answer at {folder} — skipping")
+            return {"error": False, "filename": f"{filename_base}_homework.html", "file_path": "",
+                    "deployed": ["homework"], "skipped": True,
+                    "message": "Homework already deployed — skipped (send force=true to rebuild)"}
+        answers_only = True
+        print(f"📝 Homework: deployed at {folder} — adding missing answers only, tasks unchanged")
 
     # Imported here so the Claude client is created only when Homework actually runs.
     from .builder import homework_builder
     from .renderer import render_deck
 
-    deck = homework_builder.generate(str(lp_path), lesson)
-    if not deck or not deck.get("days"):
-        return {"error": True, "message": "Homework generation failed — no day passed the checks"}
+    if not answers_only:
+        deck = homework_builder.generate(str(lp_path), lesson)
+        if not deck or not deck.get("days"):
+            return {"error": True, "message": "Homework generation failed — no day passed the checks"}
+    homework_builder.generate_answers(str(lp_path), deck)
 
     json_tmp = Path(temp_dir) / f"{filename_base}_homework.json"
     html_tmp = Path(temp_dir) / f"{filename_base}_homework.html"
@@ -108,7 +124,10 @@ def run_homework(lp_path, lesson: Dict, force: bool, temp_dir: Path, filename_ba
     except Exception as e:
         return {"error": True, "message": f"Homework built but deploy failed: {e}"}
 
-    msg = f"Homework generated and deployed — {len(deck['days'])} days"
+    total = sum(len(d["tasks"]) for d in deck["days"])
+    answered = sum(1 for d in deck["days"] for t in d["tasks"] if (t.get("answer") or "").strip())
+    msg = (f"Homework answers added — {answered}/{total} answers" if answers_only
+           else f"Homework generated and deployed — {len(deck['days'])} days, {answered}/{total} answers")
     if deck.get("skipped_days"):
         msg += f" (skipped days {[d['day'] for d in deck['skipped_days']]})"
     print(f"✅ {msg}")

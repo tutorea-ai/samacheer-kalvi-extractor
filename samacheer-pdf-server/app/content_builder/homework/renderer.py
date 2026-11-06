@@ -12,6 +12,8 @@ from typing import Dict, List
 BULB = ('<path d="M9 18h6M10 21h4"/>'
         '<path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2h5c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3z"/>')
 CHEVRON = '<path d="M6 9l6 6 6-6"/>'
+CHECK = '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16 10"/>'
+PENDING_NOTE = "Answer is being checked by our teachers. It will appear here soon."
 
 
 def _e(s) -> str:
@@ -22,21 +24,38 @@ def _svg(inner: str) -> str:
     return f'<svg viewBox="0 0 24 24" aria-hidden="true">{inner}</svg>'
 
 
-def _task(i: int, t: Dict) -> str:
+def _answer(t: Dict, answers_on: bool) -> str:
+    text = (t.get("answer") or "").strip()
+    if not text:
+        return f'<p class="answer-note">{_e(PENDING_NOTE)}</p>' if answers_on else ""
+    lines = []
+    for line in text.split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        final = line.lower().startswith("final answer")
+        lines.append(f'<p class="{"final" if final else "step"}">{_e(line)}</p>')
+    return (f'<details class="answer"><summary>{_svg(CHECK)}<span>Show answer</span>'
+            f'{_svg(CHEVRON)}</summary><div class="answer-body">{"".join(lines)}</div></details>')
+
+
+def _task(i: int, t: Dict, answers_on: bool = False) -> str:
     hint = ""
     if t.get("hint"):
         ta = (f'<p class="ta" lang="ta">{_e(t["hint_ta"])}</p>' if t.get("hint_ta") else "")
         hint = (f'<details class="hint"><summary>{_svg(BULB)}<span>Show hint</span>'
                 f'{_svg(CHEVRON)}</summary><div class="hint-body"><p>{_e(t["hint"])}</p>{ta}'
                 f'</div></details>')
+    answer = _answer(t, answers_on)
+    reveal = f'<div class="reveal">{hint}{answer}</div>' if (hint or answer) else ""
     return (f'<section class="task {_e(t.get("kind"))}">'
             f'<p class="task-label"><span class="num">{i}</span>{_e(t.get("label"))}</p>'
-            f'<p class="task-text">{_e(t.get("task"))}</p>{hint}</section>')
+            f'<p class="task-text">{_e(t.get("task"))}</p>{reveal}</section>')
 
 
-def _day(d: Dict) -> str:
+def _day(d: Dict, answers_on: bool = False) -> str:
     review = '<span class="tag">Revision</span>' if d.get("is_review") else ""
-    tasks = "".join(_task(i, t) for i, t in enumerate(d.get("tasks") or [], 1))
+    tasks = "".join(_task(i, t, answers_on) for i, t in enumerate(d.get("tasks") or [], 1))
     return (f'<article class="card{" review" if d.get("is_review") else ""}" '
             f'id="hw-day-{_e(d.get("day"))}">'
             f'<div class="card-top"><span class="day">Day {_e(d.get("day"))}</span>{review}'
@@ -132,6 +151,25 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
     border:1px solid var(--ta-line);color:var(--ta-ink) !important;
     font:500 15px/1.75 'Noto Sans Tamil','Noto Sans',sans-serif !important}
 
+.reveal{display:flex;flex-wrap:wrap;align-items:flex-start;gap:8px;margin-top:12px}
+.reveal .hint{margin-top:0}
+.reveal details[open]{flex-basis:100%}
+.answer summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;
+                font:600 14px 'Noto Sans',sans-serif;color:var(--ink-3);padding:6px 12px;
+                border:1px dashed var(--line);border-radius:999px;background:transparent}
+.answer summary::-webkit-details-marker{display:none}
+.answer summary svg{width:16px;height:16px}
+.answer summary svg:last-child{transition:transform .15s}
+.answer[open] summary{color:var(--accent);border-style:solid;border-color:var(--accent)}
+.answer[open] summary svg:last-child{transform:rotate(180deg)}
+.answer summary:focus-visible{outline:2px solid var(--warm);outline-offset:2px}
+.answer-body{margin-top:10px;padding:10px 14px;border-radius:10px;background:var(--accent-soft);
+             border:1px solid #BFDCD8}
+.answer-body p{margin:0;font-size:15px;color:var(--ink)}
+.answer-body p + p{margin-top:4px}
+.answer-body .final{margin-top:8px;font-weight:700;color:var(--accent)}
+.answer-note{margin:0;align-self:center;font-size:13px;font-style:italic;color:var(--ink-3)}
+
 @media (max-width:560px){
   .wrap{padding:20px 16px 36px}
   .top h1{font-size:25px}
@@ -183,4 +221,4 @@ def render_deck(deck: Dict) -> str:
             .replace("%%PAGE_TITLE%%", _e(f"{title} · Homework"))
             .replace("%%TITLE%%", _e(title))
             .replace("%%CHIPS%%", _chips(days))
-            .replace("%%DAYS%%", "".join(_day(d) for d in days)))
+            .replace("%%DAYS%%", "".join(_day(d, bool(deck.get("answers"))) for d in days)))

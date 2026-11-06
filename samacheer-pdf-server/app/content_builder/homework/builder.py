@@ -99,6 +99,43 @@ what is wrong and how to fix it.
 Do your thinking in notes. List in problems only errors you are sure of;
 if you conclude a field is fine, do not list it."""
 
+ANSWER_TEMPLATE = """You write the answers to daily homework for {audience}.
+Every task below was already checked and approved by teachers: answer it
+exactly as written, never change or reinterpret it.
+
+Rules:
+- Use only what the lesson text teaches: its formulas, symbols, units,
+  values and explanations. Never add a law, formula or fact the lesson
+  does not contain.
+- Apply tasks: a short worked answer. Put each step on its own line: the
+  idea or formula used, the substitution with units, the result. For a
+  numerical, end with a line starting 'Final answer:' that gives every
+  final value with its unit, one per part ((a), (b), ...). Follow the
+  approach the hint suggests.
+- Understand tasks: a model answer of 3 to 4 sentences that a good student
+  would write, answering every part of the task.
+- Work every calculation carefully and check it before writing. Round
+  sensibly (2 to 3 significant figures) and keep units throughout.
+- Never use double quotation marks ("); use single quotes if you must quote.
+- Plain English a student of this age reads easily. English only.{extra_rules}"""
+
+ANSWER_REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context},
+checking the answers to daily homework before students see them.
+For every task, FIRST solve it yourself in your notes, using only the lesson
+text, before you look at the given answer. THEN compare your result with the
+given answer. Flag only real problems:
+- a wrong final value, a wrong or missing unit, or a calculation error
+- a wrong step or formula, or a skipped step a student would need
+- a part of the task, such as (a) or (b), left unanswered
+- a statement that is wrong, contradicts the lesson, or uses ideas the
+  lesson does not teach
+- an answer to a different question from the task as written
+Rounding differences within about 2% are not errors. Do not flag style,
+length or wording. For each problem, say in one sentence what is wrong and
+what the correct result is.
+List in problems only errors you are sure of; if an answer is correct, do
+not list it."""
+
 
 def _words(s: str) -> int:
     return len((s or "").split())
@@ -440,6 +477,237 @@ class HomeworkBuilder:
             "model": self.model,
             "generated_at": datetime.now().isoformat(timespec="seconds"),
         }
+
+    # ── Answers (a separate pass over already-approved tasks) ─
+    @staticmethod
+    def _by_day(data, key: str) -> Dict[int, dict]:
+        """Tool reply -> {day: item} for data[key]. Handles the list arriving as a JSON
+        string and day numbers arriving as text."""
+        raw = (data or {}).get(key, [])
+        if isinstance(raw, str):
+            try:
+                raw = json.loads(raw)
+            except ValueError:
+                return {}
+        out: Dict[int, dict] = {}
+        for item in raw if isinstance(raw, list) else []:
+            if not isinstance(item, dict):
+                continue
+            try:
+                out[int(item.get("day"))] = item
+            except (TypeError, ValueError):
+                continue
+        return out
+
+    def _answer_system(self, p: SubjectProfile) -> str:
+        audience = p.audience or f"{p.display_name or p.key} students"
+        return ANSWER_TEMPLATE.format(audience=audience, extra_rules=p.extra_rules)
+
+    def _answer_tool(self, p: SubjectProfile) -> dict:
+        props = {"day": {"type": "integer"}}
+        for key, label, _ in p.tasks:
+            props[f"{key}_answer"] = {"type": "string", "description":
+                f"The answer to the {label} task, only if it is listed for this day. "
+                f"Steps on separate lines. No double quotation marks. "
+                f"Max {p.limit('MAX_ANSWER_WORDS')} words."}
+        return {
+            "name": "write_answers",
+            "description": "Return the answers for each lesson day.",
+            "input_schema": {
+                "type": "object",
+                "properties": {"answers": {"type": "array", "items": {
+                    "type": "object", "properties": props, "required": ["day"]}}},
+                "required": ["answers"],
+            },
+        }
+
+    def _answer_review_tool(self, p: SubjectProfile) -> dict:
+        return {
+            "name": "review_answers",
+            "description": "Return one review per day.",
+            "input_schema": {
+                "type": "object",
+                "properties": {"reviews": {"type": "array", "items": {
+                    "type": "object",
+                    "properties": {
+                        "day": {"type": "integer"},
+                        "notes": {"type": "string", "description":
+                                  "Your own full solution of each task first, then the "
+                                  "comparison with the given answer. Think here, never in problems."},
+                        "problems": {"type": "array", "description":
+                                     "Only confirmed errors. Empty when every answer is correct.",
+                                     "items": {"type": "object", "properties": {
+                                         "field": {"type": "string",
+                                                   "enum": [f"{k}_answer" for k, _, _ in p.tasks]},
+                                         "problem": {"type": "string", "description":
+                                                     "One sentence: what is wrong and what the "
+                                                     "correct result is."},
+                                     }, "required": ["field", "problem"]}},
+                    },
+                    "required": ["day", "notes", "problems"],
+                }}},
+                "required": ["reviews"],
+            },
+        }
+
+    def _answers_prompt(self, days: List[int], wanted: Dict[int, List[str]],
+                        tasks: Dict[int, Dict[str, dict]], lp_days: Dict[int, Dict],
+                        topics: List[Tuple[int, str, str]], feedback: Dict[int, List[str]],
+                        given: Optional[Dict[tuple, str]] = None) -> str:
+        if given is None:
+            parts = [f"Write the answers for the tasks below, for {len(days)} lesson days. "
+                     f"Use each day's number as its day, and fill only the answer fields listed."]
+        else:
+            parts = [f"Check the answers below, for {len(days)} lesson days. "
+                     f"Return one review per day."]
+        for n in days:
+            d = lp_days[n]
+            block = [f"\n=== DAY {n}: {d['title']} ===", self._scope(d, topics)]
+            for k in wanted[n]:
+                t = tasks[n][k]
+                block.append(f"[{k}_answer] {t['label']} task: {t['task']}")
+                if t.get("hint"):
+                    block.append(f"   Hint given to students: {t['hint']}")
+                if given is not None:
+                    block.append(f"   Given answer:\n{given[(n, k)]}")
+            if given is None and n in feedback:
+                block.append("Your previous answers for this day had problems — fix them: "
+                             + "; ".join(feedback[n]))
+            block.append("Lesson text:\n" + d["text"])
+            parts.append("\n".join(block))
+        return "\n".join(parts)
+
+    def _check_answer(self, a: str, p: SubjectProfile) -> List[str]:
+        if not a:
+            return ["answer is empty"]
+        probs = []
+        n, limit = _words(a), p.limit("MAX_ANSWER_WORDS")
+        if n > limit * HARD_FACTOR:
+            probs.append(f"answer too long ({n} words, max {limit})")
+        if TAMIL_RE.search(a):
+            probs.append("answer must be in English")
+        return probs
+
+    def _review_answers(self, keys: List[tuple], given: Dict[tuple, str],
+                        tasks: Dict[int, Dict[str, dict]], lp_days: Dict[int, Dict],
+                        topics: List[Tuple[int, str, str]], p: SubjectProfile) -> Dict[tuple, List[str]]:
+        """Reviewer solves each task itself, then compares. Returns {(day, kind): [problems]}."""
+        if not keys:
+            return {}
+        by_day: Dict[int, List[str]] = {}
+        for n, k in keys:
+            by_day.setdefault(n, []).append(k)
+        days = sorted(by_day)
+        subject = p.display_name or p.key
+        system = ANSWER_REVIEW_TEMPLATE.format(subject=subject, local_context=p.local_context)
+        prompt = self._answers_prompt(days, by_day, tasks, lp_days, topics, {}, given)
+        data = self._call_tool(system, prompt, self._answer_review_tool(p), 12000)
+        if data is None:
+            print("      ⚠️  Answer review call failed — answers sent back, not accepted unchecked")
+            return {key: [REVIEW_FAILED] for key in keys}
+        reviews = self._by_day(data, "reviews")
+        out: Dict[tuple, List[str]] = {}
+        for n in days:
+            r = reviews.get(n)
+            if r is None:
+                # A day the reviewer left out was never checked: send it back.
+                for k in by_day[n]:
+                    out[(n, k)] = [REVIEW_FAILED]
+                continue
+            for x in r.get("problems") or []:
+                if not (isinstance(x, dict) and x.get("problem")):
+                    continue
+                k = str(x.get("field", "")).replace("_answer", "")
+                if k in by_day[n]:
+                    out.setdefault((n, k), []).append(x["problem"])
+        return out
+
+    def generate_answers(self, lp_path: str, deck: Dict) -> Dict:
+        """Fill missing answers in a homework deck, in place. Tasks and hints are never
+        changed. Unconfirmed answers are left out and listed in deck['answers_pending']."""
+        subject = deck.get("subject") or (deck.get("lesson") or {}).get("subject", "")
+        p = get_profile(subject)
+        if not p.answers:
+            return {"wanted": 0, "made": 0, "pending": []}
+        lp = load_lp(lp_path, subject)
+        topics = [(d["day"], d["title"], d["day_type"]) for d in lp["days"]]
+        lp_days = {d["day"]: d for d in lp["days"]}
+        tasks = {d["day"]: {t["kind"]: t for t in d["tasks"]} for d in deck.get("days", [])}
+
+        pending: Dict[int, List[str]] = {}
+        for n, by_kind in tasks.items():
+            keys = [k for k, t in by_kind.items() if not (t.get("answer") or "").strip()]
+            if keys and n in lp_days:
+                pending[n] = keys
+        wanted = sum(len(v) for v in pending.values())
+        deck["answers"] = True
+        if not wanted:
+            deck["answers_pending"] = []
+            return {"wanted": 0, "made": 0, "pending": []}
+        print(f"[Homework answers] {wanted} answers for days {sorted(pending)}")
+
+        system, tool = self._answer_system(p), self._answer_tool(p)
+        feedback: Dict[int, List[str]] = {}
+        last: Dict[tuple, tuple] = {}
+        made = 0
+
+        for attempt in range(MAX_RETRIES + 1):
+            todo = sorted(pending)
+            if not todo:
+                break
+            if attempt:
+                print(f"   🔁 Answer retry {attempt}: days {todo}")
+            for i in range(0, len(todo), p.batch_size):
+                batch = todo[i:i + p.batch_size]
+                data = self._call_tool(system, self._answers_prompt(
+                    batch, pending, tasks, lp_days, topics, feedback), tool, 8000)
+                got = self._by_day(data, "answers")
+                if not got:
+                    print(f"      ⚠️  Answer writer returned nothing usable for {batch}: "
+                          f"{str(data)[:300]!r}")
+
+                cand: Dict[tuple, str] = {}
+                probs: Dict[tuple, List[str]] = {}
+                for n in batch:
+                    for k in pending[n]:
+                        a = ((got.get(n) or {}).get(f"{k}_answer") or "").strip()
+                        cand[(n, k)] = a
+                        probs[(n, k)] = self._check_answer(a, p)
+
+                to_review = [key for key, pr in probs.items() if cand[key] and self._soft(pr)]
+                for key, rp in self._review_answers(to_review, cand, tasks, lp_days, topics, p).items():
+                    probs[key].extend(f"review: {x}" for x in rp)
+
+                for n in batch:
+                    feedback.pop(n, None)
+                for (n, k), pr in probs.items():
+                    last[(n, k)] = (cand[(n, k)], pr)
+                    if pr:
+                        fb = [f"[{k}_answer] {x}" for x in pr if REVIEW_FAILED not in x]
+                        if fb:
+                            feedback.setdefault(n, []).extend(fb)
+                        print(f"      day {n} {k} — {'; '.join(pr)}")
+                    else:
+                        tasks[n][k]["answer"] = cand[(n, k)]
+                        made += 1
+                        pending[n].remove(k)
+                for n in batch:
+                    if not pending[n]:
+                        pending.pop(n)
+
+        still = []
+        for n in sorted(pending):
+            for k in pending[n]:
+                a, pr = last.get((n, k), ("", ["no answer returned"]))
+                if a and self._soft(pr):
+                    tasks[n][k]["answer"] = a        # only a small length overflow
+                    made += 1
+                else:
+                    still.append({"day": n, "kind": k, "reasons": pr})
+        deck["answers_pending"] = still
+        print(f"   ✅ Answers: {made}/{wanted} confirmed"
+              + (f", pending {[(s['day'], s['kind']) for s in still]}" if still else ""))
+        return {"wanted": wanted, "made": made, "pending": still}
 
     # ── API ──────────────────────────────────────────────────
     def _call_tool(self, system: str, prompt: str, tool: dict, max_tokens: int) -> Optional[dict]:
