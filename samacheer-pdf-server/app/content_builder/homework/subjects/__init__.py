@@ -11,11 +11,13 @@ one name in PROFILES below.
 from typing import Dict
 
 from .base import SubjectProfile
+from .biology import BIOLOGY
 from .physics import PHYSICS
 
 PROFILES: Dict[str, SubjectProfile] = {
     p.key: p for p in (
         PHYSICS,
+        BIOLOGY,
     )
 }
 

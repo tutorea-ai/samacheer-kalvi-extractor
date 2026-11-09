@@ -23,8 +23,8 @@ PHYSICS = SubjectProfile(
         "lines with the day's formulas, realistic values in SI units, every needed value "
         "given. On derivation days: reproduce one key step of the derivation or explain why "
         "a step is valid. On process or lab days: explain the measurement procedure, or "
-        "calculate a result from given readings. On review days: one numerical that combines "
-        "two ideas from the lesson so far."
+        "calculate a result from given readings. On review days: prefer one numerical that "
+        "combines two ideas from the lesson so far."
     ),
     extra_rules=(
         "\n- A numerical may follow the pattern of a worked example or student task in the "

@@ -82,9 +82,14 @@ Rules:
   teaches) but must ask something the class did not: a changed condition,
   a 'why', or a comparison. Never bring in a new example the lesson does
   not support.
-- Do not repeat a task idea already used on another day of this lesson.
+- The two tasks of a day must test different ideas from that day. Never
+  repeat the idea, cross, example or question of another day's task, both
+  the days listed as already done and the other days you write now. On a
+  review day, prefer topics the earlier days' homework has not tested yet.
 - Never use double quotation marks (") inside a task or hint. For quoted
   speech or a statement to judge, use single quotes: 'A friend says: ...'.
+- Use | only in grid rows (each row written | a | b |, every row with the
+  same number of cells); anywhere else use commas or semicolons.
 - Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
   write them flat (10−19, s−1, m2). Write numbered symbols with subscript
   digits (R₁, R₂, T₀, F₁), never R1 or T0. Keep letter subscripts as the
@@ -103,12 +108,15 @@ notes before judging it. Flag only real problems:
 - a task that points to the textbook (an exercise, example, figure, table,
   page or question number) or depends on something it does not give
 - a task a student cannot do at home alone with a notebook and pen
-- a numerical that repeats an in-class problem from the lesson text with the
-  same values, or any task that asks the same question the class already
-  answered. A concept task may reuse the lesson's own example (often the only
-  one it teaches) when it asks something new about it: never flag that.
+- a task that is the same question, with the same values, parents or
+  examples, as a problem worked or asked in class. Practising the same topic
+  or type of problem with different values, parents or examples is the point
+  of homework: never flag that. A concept task may reuse the lesson's own
+  example when it asks something new about it: never flag that either.
 - a task that does not match its kind ({kinds})
 - a task that states the formula or method to use (that belongs in the hint)
+- a task that tests the same idea as the other task of its day, or repeats
+  the idea, cross, example or question of a task on another day in this check
 - a hint that states the answer itself: the final value, a worked-out step,
   or (for an explain task) the explanation the student is asked to give.
   Naming the idea or formula to use, or the first step, is the intended
@@ -117,9 +125,9 @@ notes before judging it. Flag only real problems:
 Do not flag style, length or wording. For each problem, say in one sentence
 what is wrong and how to fix it.
 Do your thinking in notes. List in problems only errors you are sure of;
-if you conclude a field is fine, do not list it."""
+if you conclude a field is fine, do not list it.{subject_rules}"""
 
-ANSWER_TEMPLATE = """You write the answers to daily homework for {audience}.
+ANSWER_TEMPLATE ="""You write the answers to daily homework for {audience}.
 Every task below was already checked and approved by teachers: answer it
 exactly as written, never change or reinterpret it.
 
@@ -136,6 +144,18 @@ Rules:
   would write, answering every part of the task.
 - Work every calculation carefully and check it before writing. Round
   sensibly (2 to 3 significant figures) and keep units throughout.
+- When an answer needs a grid (a Punnett square, a table), write each row
+  on its own line, starting and ending with |, cells separated by |, every
+  row with the same number of cells. The first row is the header; for a
+  Punnett square its first cell is empty, for example:
+  | | R | r |
+  | r | Rr | rr |
+- When a task asks the student to draw a diagram, never draw it with
+  characters (no lines of |, —, - or /). Describe the expected diagram in
+  labelled lines instead, for example 'Top: …', 'Branch 1 — …: …',
+  'Labels: …', so a teacher can check the student's drawing against it.
+- Use | only in grid rows. Anywhere else, separate items with commas or
+  semicolons.
 - Never use double quotation marks ("); use single quotes if you must quote.
 - Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
   write them flat (10−19, s−1, m2). Write numbered symbols with subscript
@@ -154,15 +174,41 @@ given answer. Flag only real problems:
 - a statement that is wrong, contradicts the lesson, or uses ideas the
   lesson does not teach
 - an answer to a different question from the task as written
-Rounding differences within about 2% are not errors. Do not flag style,
-length or wording. For each problem, say in one sentence what is wrong and
-what the correct result is.
+- a sentence that contradicts itself or another part of the answer, or
+  that could mislead a student who copies it as the model answer
+Rounding differences within about 2% are not errors. Do not flag style or
+length; flag wording only when it is wrong, self-contradicting or
+misleading. For each problem, say in one sentence what is wrong and what
+the correct result is.
 List in problems only errors you are sure of; if an answer is correct, do
 not list it."""
 
 
 def _words(s: str) -> int:
     return len((s or "").split())
+
+
+# Markdown table separator lines ("|---|:---:|"): no content, so dropped before any check.
+MD_SEPARATOR_RE = re.compile(r"^\s*\|(?=[^\n]*-)[\s:|-]+\|\s*$")
+
+
+def _strip_separators(a: str) -> str:
+    return "\n".join(l for l in (a or "").split("\n") if not MD_SEPARATOR_RE.match(l))
+
+
+def _grid_problems(text: str) -> List[str]:
+    """| only in grid rows; every row of a grid with the same number of cells."""
+    widths: List[int] = []
+    for line in [l.strip() for l in (text or "").split("\n")] + [""]:
+        if len(line) > 1 and line.startswith("|") and line.endswith("|"):
+            widths.append(line[1:-1].count("|") + 1)
+            continue
+        if "|" in line:
+            return ["use | only in grid rows (| a | b |); elsewhere use commas or semicolons"]
+        if widths and len(set(widths)) > 1:
+            return ["grid rows have different numbers of cells — every row needs the same columns"]
+        widths = []
+    return []
 
 
 class HomeworkBuilder:
@@ -305,6 +351,8 @@ class HomeworkBuilder:
             fsub = FLAT_SUB_RE.search(task + " " + (h.get(f"{key}_hint") or ""))
             if fsub:
                 probs.append(f'{key} has a flat symbol ("{fsub.group(0)}") — {SUB_RULE}')
+            probs += [f"{key}_task: {x}" for x in _grid_problems(task)]
+            probs += [f"{key}_hint: {x}" for x in _grid_problems(h.get(f"{key}_hint") or "")]
             if not p.hints:
                 continue
             hint = (h.get(f"{key}_hint") or "").strip()
@@ -328,7 +376,10 @@ class HomeworkBuilder:
             return {}
         subject = p.display_name or p.key
         kinds = "; ".join(f"{label}: {guide}" for _, label, guide in p.tasks)
-        system = REVIEW_TEMPLATE.format(subject=subject, local_context=p.local_context, kinds=kinds)
+        subject_rules = ("\nSubject rules the writer followed (never flag what they allow):"
+                         + p.extra_rules) if p.extra_rules else ""
+        system = REVIEW_TEMPLATE.format(subject=subject, local_context=p.local_context,
+                                        kinds=kinds, subject_rules=subject_rules)
         parts = [f"Check the homework for these {len(days)} days. Return one review per day."]
         for d in days:
             hw = {f: homework[d["day"]].get(f, "") for f in self._fields(p)}
@@ -426,6 +477,9 @@ class HomeworkBuilder:
                     if h is None:
                         feedback[n] = ["the homework was missing — write it"]
                         continue
+                    for key, _, _ in p.tasks:
+                        if h.get(f"{key}_task"):
+                            h[f"{key}_task"] = _strip_separators(h[f"{key}_task"]).strip()
                     checked[n] = (h, self._check(h, p))
 
                 # Review every day whose only code issues are small length overflows.
@@ -611,7 +665,11 @@ class HomeworkBuilder:
         if not a:
             return ["answer is empty"]
         probs = []
-        n, limit = _words(a), p.limit("MAX_ANSWER_WORDS")
+        # Grid rows (| a | b |) are not counted: a Punnett square must not eat the limit.
+        prose = "\n".join(l for l in a.split("\n")
+                          if not (len(l.strip()) > 1 and l.strip().startswith("|")
+                                  and l.strip().endswith("|")))
+        n, limit = _words(prose), p.limit("MAX_ANSWER_WORDS")
         if n > limit * HARD_FACTOR:
             probs.append(f"answer too long ({n} words, max {limit})")
         if TAMIL_RE.search(a):
@@ -622,6 +680,11 @@ class HomeworkBuilder:
         fsub = FLAT_SUB_RE.search(a)
         if fsub:
             probs.append(f'answer has a flat symbol ("{fsub.group(0)}") — {SUB_RULE}')
+        drawn = re.search(r"[—–_=-]{3,}", a) or any(
+            l.strip() and set(l.strip()) <= set("|—–-_/\\ ") for l in a.split("\n"))
+        if drawn:
+            probs.append("no drawings made of characters — describe the diagram in labelled lines")
+        probs += _grid_problems(a)
         return probs
 
     def _review_answers(self, keys: List[tuple], given: Dict[tuple, str],
@@ -706,7 +769,7 @@ class HomeworkBuilder:
                 probs: Dict[tuple, List[str]] = {}
                 for n in batch:
                     for k in pending[n]:
-                        a = ((got.get(n) or {}).get(f"{k}_answer") or "").strip()
+                        a = _strip_separators(((got.get(n) or {}).get(f"{k}_answer") or "").strip())
                         cand[(n, k)] = a
                         probs[(n, k)] = self._check_answer(a, p)
 

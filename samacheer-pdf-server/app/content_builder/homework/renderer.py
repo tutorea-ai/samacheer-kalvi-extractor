@@ -8,7 +8,13 @@ jump to a day, a tap-to-reveal hint per task.
 """
 import html
 import re
+from contextvars import ContextVar
 from typing import Dict, List
+
+from .subjects import get_profile
+
+# Set once per page from the deck's subject profile.
+_LETTER_SUBS: ContextVar[bool] = ContextVar("letter_subs", default=True)
 
 BULB = ('<path d="M9 18h6M10 21h4"/>'
         '<path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2h5c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3z"/>')
@@ -29,6 +35,8 @@ SUBSCRIPT_RE = re.compile(
 
 def _t(s) -> str:
     """Escape, then show subscripts the way the textbook does."""
+    if not _LETTER_SUBS.get():
+        return _e(s)
     return SUBSCRIPT_RE.sub(lambda m: f"<sub>{m.group(1) or m.group(2)}</sub>", _e(s))
 
 
@@ -36,19 +44,55 @@ def _svg(inner: str) -> str:
     return f'<svg viewBox="0 0 24 24" aria-hidden="true">{inner}</svg>'
 
 
+def _grid(rows: List[List[str]]) -> str:
+    """| | R | r | lines -> a table; the first row and first column are headings."""
+    out = []
+    for i, cells in enumerate(rows):
+        tds = "".join(f'<{"th" if i == 0 or j == 0 else "td"}>{_t(c)}'
+                      f'</{"th" if i == 0 or j == 0 else "td"}>' for j, c in enumerate(cells))
+        out.append(f"<tr>{tds}</tr>")
+    return f'<div class="grid"><table>{"".join(out)}</table></div>'
+
+
+_SEP_RE = re.compile(r"^\|(?=.*-)[\s:|-]+\|$")   # Markdown "|---|---|": no content
+
+
+def _is_row(line: str) -> bool:
+    return len(line) > 1 and line.startswith("|") and line.endswith("|")
+
+
+def _block(text: str, finals: bool = False) -> str:
+    """Text -> paragraphs, with | a | b | lines as a table. Used by tasks and answers alike."""
+    out, grid = [], []
+
+    def flush():
+        if grid:
+            out.append(_grid(grid))
+            grid.clear()
+
+    for line in (text or "").split("\n"):
+        line = line.strip()
+        if _SEP_RE.match(line):
+            continue
+        if _is_row(line):
+            grid.append([c.strip() for c in line[1:-1].split("|")])
+            continue
+        flush()
+        if not line:
+            continue
+        final = finals and line.lower().startswith("final answer")
+        out.append(f'<p class="{"final" if final else "step"}">{_t(line)}</p>')
+    flush()
+    return "".join(out)
+
+
 def _answer(t: Dict, answers_on: bool) -> str:
     text = (t.get("answer") or "").strip()
     if not text:
         return f'<p class="answer-note">{_e(PENDING_NOTE)}</p>' if answers_on else ""
-    lines = []
-    for line in text.split("\n"):
-        line = line.strip()
-        if not line:
-            continue
-        final = line.lower().startswith("final answer")
-        lines.append(f'<p class="{"final" if final else "step"}">{_t(line)}</p>')
     return (f'<details class="answer"><summary>{_svg(CHECK)}<span>Show answer</span>'
-            f'{_svg(CHEVRON)}</summary><div class="answer-body">{"".join(lines)}</div></details>')
+            f'{_svg(CHEVRON)}</summary><div class="answer-body">{_block(text, finals=True)}'
+            f'</div></details>')
 
 
 def _task(i: int, t: Dict, answers_on: bool = False) -> str:
@@ -62,7 +106,7 @@ def _task(i: int, t: Dict, answers_on: bool = False) -> str:
     reveal = f'<div class="reveal">{hint}{answer}</div>' if (hint or answer) else ""
     return (f'<section class="task {_e(t.get("kind"))}">'
             f'<p class="task-label"><span class="num">{i}</span>{_e(t.get("label"))}</p>'
-            f'<p class="task-text">{_t(t.get("task"))}</p>{reveal}</section>')
+            f'<div class="task-text">{_block(t.get("task"))}</div>{reveal}</section>')
 
 
 def _day(d: Dict, answers_on: bool = False) -> str:
@@ -77,7 +121,7 @@ def _day(d: Dict, answers_on: bool = False) -> str:
 def _chips(days: List[Dict]) -> str:
     if len(days) < 2:
         return ""
-    links = "".join(f'<a class="chip{" review" if d.get("is_review") else ""}" '
+    links = "".join(f'<a class="chip" '
                     f'href="#hw-day-{_e(d.get("day"))}" data-target="hw-day-{_e(d.get("day"))}" '
                     f'title="{_e(d.get("title"))}">{_e(d.get("day"))}</a>'
                     for d in days)
@@ -121,7 +165,6 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
       padding:0 10px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);
       font:600 14px 'Noto Sans',sans-serif;border-radius:999px;text-decoration:none}
 .chip:hover{border-color:var(--warm);color:var(--warm)}
-.chip.review{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 .chip:focus-visible{outline:2px solid var(--warm);outline-offset:2px}
 
 .cards{display:grid;gap:18px}
@@ -144,7 +187,9 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;
      border-radius:50%;background:var(--warm);color:#fff;font-size:12px;letter-spacing:0}
 .task.apply .num{background:var(--accent)}
-.task-text{margin:0;font-size:16px;color:var(--ink)}
+.task-text{font-size:16px;color:var(--ink)}
+.task-text p{margin:0}
+.task-text p + p{margin-top:6px}
 
 .hint{margin-top:12px}
 .hint summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;
@@ -180,6 +225,12 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .answer-body p{margin:0;font-size:15px;color:var(--ink)}
 .answer-body p + p{margin-top:4px}
 .answer-body .final{margin-top:8px;font-weight:700;color:var(--accent)}
+.grid{overflow-x:auto;margin:8px 0}
+.grid table{border-collapse:collapse;background:var(--surface)}
+.grid th,.grid td{border:1px solid #BFDCD8;padding:5px 12px;text-align:center;font-size:15px}
+.grid th{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.grid tr:first-child th:first-child{background:transparent;border-top-color:transparent;
+                                    border-left-color:transparent}
 .answer-note{margin:0;align-self:center;font-size:13px;font-style:italic;color:var(--ink-3)}
 
 @media (max-width:560px){
@@ -229,8 +280,12 @@ def render_deck(deck: Dict) -> str:
     lesson = deck.get("lesson") or {}
     title = lesson.get("title") or "Homework"
     days = deck.get("days") or []
-    return (TEMPLATE
-            .replace("%%PAGE_TITLE%%", _e(f"{title} · Homework"))
-            .replace("%%TITLE%%", _e(title))
-            .replace("%%CHIPS%%", _chips(days))
-            .replace("%%DAYS%%", "".join(_day(d, bool(deck.get("answers"))) for d in days)))
+    token = _LETTER_SUBS.set(get_profile(deck.get("subject", "")).letter_subscripts)
+    try:
+        return (TEMPLATE
+                .replace("%%PAGE_TITLE%%", _e(f"{title} · Homework"))
+                .replace("%%TITLE%%", _e(title))
+                .replace("%%CHIPS%%", _chips(days))
+                .replace("%%DAYS%%", "".join(_day(d, bool(deck.get("answers"))) for d in days)))
+    finally:
+        _LETTER_SUBS.reset(token)

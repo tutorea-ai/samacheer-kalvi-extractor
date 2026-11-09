@@ -63,6 +63,8 @@ class SubjectProfile:
     apply_style: str = DEFAULT_APPLY_GUIDE
     hints: bool = True                     # one hidden hint per task
     answers: bool = True                   # one hidden, reviewer-checked answer per task
+    letter_subscripts: bool = True         # show v_d as v + subscript d; off where "_" means
+                                           # something else (genetics: R_Y_ = any allele)
     tamil_hint: bool = False               # Tamil version of each hint (off for all subjects)
     extra_rules: str = ""                  # subject rules appended to the writer prompt, each "\n- …"
     batch_size: int = 6
