@@ -65,6 +65,7 @@ class SubjectProfile:
     answers: bool = True                   # one hidden, reviewer-checked answer per task
     letter_subscripts: bool = True         # show v_d as v + subscript d; off where "_" means
                                            # something else (genetics: R_Y_ = any allele)
+    max_sentence_words: int = 0            # longest sentence allowed (young classes); 0 = off
     pipe_rules: bool = True                # "|" only in grid rows; off where | is notation
                                            # (Maths: |x|, |A|): tables fenced in [table]…[/table]
     tamil_hint: bool = False               # Tamil version of each hint (off for all subjects)

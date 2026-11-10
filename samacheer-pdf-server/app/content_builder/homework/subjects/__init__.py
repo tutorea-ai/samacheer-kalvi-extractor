@@ -14,12 +14,14 @@ from .base import SubjectProfile
 from .biology import BIOLOGY
 from .maths import MATHS
 from .physics import PHYSICS
+from .socialscience import SOCIALSCIENCE
 
 PROFILES: Dict[str, SubjectProfile] = {
     p.key: p for p in (
         PHYSICS,
         BIOLOGY,
         MATHS,
+        SOCIALSCIENCE,
     )
 }
 

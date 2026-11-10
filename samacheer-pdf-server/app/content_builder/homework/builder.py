@@ -227,6 +227,31 @@ def _strip_separators(a: str) -> str:
     return "\n".join(l for l in (a or "").split("\n") if not MD_SEPARATOR_RE.match(l))
 
 
+def _long_sentences(text: str, limit: int) -> List[str]:
+    """Sentences over the profile's limit (grid rows ignored). Empty when the limit is off."""
+    if not limit:
+        return []
+    out = []
+    for line in (text or "").split("\n"):
+        line = line.strip()
+        if not line or (line.startswith("|") and line.endswith("|")):
+            continue
+        # ; and : end a piece too, so a list is counted item by item, not as one long sentence
+        out += [s for s in re.split(r"(?<=[.!?;:])\s+", line) if len(s.split()) > limit]
+    return out
+
+
+def _rules(p) -> str:
+    """The profile's subject rules, plus the sentence limit when it is set."""
+    extra = p.extra_rules
+    if p.max_sentence_words:
+        extra += (f"\n- Keep every sentence to at most {p.max_sentence_words} words: "
+                  f"split longer ones into two."
+                  f"\n- Put a list of items on separate lines, one item per line, after a "
+                  f"short lead-in line.")
+    return extra
+
+
 FENCE_OPEN_RE = re.compile(r"^\[(table|matrix)(?:\s+([^\]]+))?\]$", re.I)
 FENCE_CLOSE_RE = re.compile(r"^\[/(table|matrix)\]$", re.I)
 
@@ -302,7 +327,7 @@ class HomeworkBuilder:
                          "Tamil, technical terms in English. Everything else is English."
                          if p.tamil_hint else "English only: no Tamil anywhere.")
         return SYSTEM_TEMPLATE.format(audience=audience, n=len(p.tasks), task_list=task_list,
-                                      language_rule=language_rule, extra_rules=p.extra_rules,
+                                      language_rule=language_rule, extra_rules=_rules(p),
                                       grid_rule=_grid_rule(p))
 
     def _homework_tool(self, p: SubjectProfile) -> dict:
@@ -417,6 +442,9 @@ class HomeworkBuilder:
             if fsub:
                 probs.append(f'{key} has a flat symbol ("{fsub.group(0)}") — {SUB_RULE}')
             both = task + "\n" + (h.get(f"{key}_hint") or "")
+            for s in _long_sentences(both, p.max_sentence_words)[:1]:
+                probs.append(f"{key} has a sentence over {p.max_sentence_words} words — split it: "
+                             f"'{s[:90]}'")
             code = INLINE_MATRIX_RE.search(both) or CODE_ELEMENT_RE.search(both)
             if code:
                 probs.append(f'{key} writes a matrix like code ("{code.group(0)}") — {MATRIX_RULE}')
@@ -655,7 +683,7 @@ class HomeworkBuilder:
 
     def _answer_system(self, p: SubjectProfile) -> str:
         audience = p.audience or f"{p.display_name or p.key} students"
-        return ANSWER_TEMPLATE.format(audience=audience, extra_rules=p.extra_rules,
+        return ANSWER_TEMPLATE.format(audience=audience, extra_rules=_rules(p),
                                       grid_rule=_grid_rule(p))
 
     def _answer_tool(self, p: SubjectProfile) -> dict:
@@ -755,6 +783,9 @@ class HomeworkBuilder:
             l.strip() and set(l.strip()) <= set("|—–-_/\\ ") for l in a.split("\n"))
         if drawn:
             probs.append("no drawings made of characters — describe the diagram in labelled lines")
+        for s in _long_sentences(a, p.max_sentence_words)[:1]:
+            probs.append(f"answer has a sentence over {p.max_sentence_words} words — split it: "
+                         f"'{s[:90]}'")
         code = INLINE_MATRIX_RE.search(a) or CODE_ELEMENT_RE.search(a)
         if code:
             probs.append(f'answer writes a matrix like code ("{code.group(0)}") — {MATRIX_RULE}')
