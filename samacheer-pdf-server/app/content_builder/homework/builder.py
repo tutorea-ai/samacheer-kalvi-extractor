@@ -50,6 +50,42 @@ FLAT_SUB_RE = re.compile(r"(?<![A-Za-z0-9])[A-Za-z][0-9](?![A-Za-z0-9])")
 SUB_RULE = ("write numbered symbols with subscript digits (R₁, R₂, T₀, F₁) and powers as "
             "superscripts (x²); never flat (R1, T0, x2)")
 
+# Matrices written like code: "[2,1; 1,3]" inside a sentence, "AB[1,1]" for an element.
+INLINE_MATRIX_RE = re.compile(r"\[[^\[\]\n]*;[^\[\]\n]*\]")
+CODE_ELEMENT_RE = re.compile(r"[A-Za-z)]\s*\[\s*\d+\s*,\s*\d+\s*\]")
+MATRIX_RULE = ("write a whole matrix only in a [matrix] block on its own lines, and an element "
+               "in words or textbook notation (the element in row 1, column 1 of AB, or (AB)₁₁); "
+               "never [2,1; 1,3] or AB[1,1]")
+
+# Grid rules, chosen by the profile's pipe_rules switch.
+GRID_RULE_PLAIN = """
+- When a grid is needed (a Punnett square, a table), write each row on its
+  own line, starting and ending with |, cells separated by |, every row with
+  the same number of cells. The first row is the header; for a Punnett
+  square its first cell is empty, for example:
+  | | R | r |
+  | r | Rr | rr |
+- Use | only in grid rows; anywhere else use commas or semicolons."""
+
+GRID_RULE_FENCED = """
+- | is ordinary notation here (|x|, |A|, P(A|B), {x | x > 0}): use it freely.
+- When a table is needed (for example a table of values), put it between a
+  line [table] and a line [/table]. Inside, write each row as | a | b |, every
+  row with the same number of cells, the first row as the header. Never
+  write a table outside these lines.
+- Write every matrix in its own block, never inside a sentence: a line
+  [matrix A] (or just [matrix] for an unnamed result), then each row as
+  | 1 | 2 |, every row with the same number of entries, then a line
+  [/matrix]. Put the words around it on their own lines.
+- Never write a matrix inside a sentence (no [2,1; 1,3]), even in a short
+  explanation: use a [matrix] block. Write a single element in words or
+  textbook notation (the element in row 1, column 1 of AB, or (AB)₁₁),
+  never like code (AB[1,1])."""
+
+
+def _grid_rule(p) -> str:
+    return GRID_RULE_PLAIN if p.pipe_rules else GRID_RULE_FENCED
+
 SYSTEM_TEMPLATE = """You write daily homework for {audience}.
 Each lesson day gets exactly {n} tasks, in this order:
 {task_list}
@@ -87,9 +123,7 @@ Rules:
   the days listed as already done and the other days you write now. On a
   review day, prefer topics the earlier days' homework has not tested yet.
 - Never use double quotation marks (") inside a task or hint. For quoted
-  speech or a statement to judge, use single quotes: 'A friend says: ...'.
-- Use | only in grid rows (each row written | a | b |, every row with the
-  same number of cells); anywhere else use commas or semicolons.
+  speech or a statement to judge, use single quotes: 'A friend says: ...'.{grid_rule}
 - Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
   write them flat (10−19, s−1, m2). Write numbered symbols with subscript
   digits (R₁, R₂, T₀, F₁), never R1 or T0. Keep letter subscripts as the
@@ -143,19 +177,11 @@ Rules:
 - Understand tasks: a model answer of 3 to 4 sentences that a good student
   would write, answering every part of the task.
 - Work every calculation carefully and check it before writing. Round
-  sensibly (2 to 3 significant figures) and keep units throughout.
-- When an answer needs a grid (a Punnett square, a table), write each row
-  on its own line, starting and ending with |, cells separated by |, every
-  row with the same number of cells. The first row is the header; for a
-  Punnett square its first cell is empty, for example:
-  | | R | r |
-  | r | Rr | rr |
+  sensibly (2 to 3 significant figures) and keep units throughout.{grid_rule}
 - When a task asks the student to draw a diagram, never draw it with
   characters (no lines of |, —, - or /). Describe the expected diagram in
   labelled lines instead, for example 'Top: …', 'Branch 1 — …: …',
   'Labels: …', so a teacher can check the student's drawing against it.
-- Use | only in grid rows. Anywhere else, separate items with commas or
-  semicolons.
 - Never use double quotation marks ("); use single quotes if you must quote.
 - Write powers with superscript characters: 10⁻¹⁹, m s⁻², m², x³. Never
   write them flat (10−19, s−1, m2). Write numbered symbols with subscript
@@ -165,9 +191,12 @@ Rules:
 
 ANSWER_REVIEW_TEMPLATE = """You are a strict {subject} teacher in {local_context},
 checking the answers to daily homework before students see them.
-For every task, FIRST solve it yourself in your notes, using only the lesson
-text, before you look at the given answer. THEN compare your result with the
-given answer. Flag only real problems:
+For every task, FIRST solve it yourself in your notes, using the lesson's
+methods and facts, before you look at the given answer. THEN compare your
+result with the given answer. The task as written is the question: when its
+numbers or expressions differ from the lesson's own example, solve with the
+task's values; the lesson is only the source of methods and facts.
+Flag only real problems:
 - a wrong final value, a wrong or missing unit, or a calculation error
 - a wrong step or formula, or a skipped step a student would need
 - a part of the task, such as (a) or (b), left unanswered
@@ -176,6 +205,8 @@ given answer. Flag only real problems:
 - an answer to a different question from the task as written
 - a sentence that contradicts itself or another part of the answer, or
   that could mislead a student who copies it as the model answer
+- a step that does nothing or makes no sense (for example 'multiply by
+  nothing'), or a step that does not follow from the line before it
 Rounding differences within about 2% are not errors. Do not flag style or
 length; flag wording only when it is wrong, self-contradicting or
 misleading. For each problem, say in one sentence what is wrong and what
@@ -196,8 +227,41 @@ def _strip_separators(a: str) -> str:
     return "\n".join(l for l in (a or "").split("\n") if not MD_SEPARATOR_RE.match(l))
 
 
-def _grid_problems(text: str) -> List[str]:
-    """| only in grid rows; every row of a grid with the same number of cells."""
+FENCE_OPEN_RE = re.compile(r"^\[(table|matrix)(?:\s+([^\]]+))?\]$", re.I)
+FENCE_CLOSE_RE = re.compile(r"^\[/(table|matrix)\]$", re.I)
+
+
+def _grid_problems(text: str, fenced: bool = False) -> List[str]:
+    """Plain mode: | only in grid rows; even grids.
+    Fenced mode (| is notation): only [table] … [/table] blocks are checked."""
+    if fenced:
+        open_kind, widths = None, []
+        for line in [l.strip() for l in (text or "").split("\n")]:
+            mo = FENCE_OPEN_RE.match(line)
+            mc = FENCE_CLOSE_RE.match(line)
+            if mo:
+                if open_kind:
+                    return [f"a [{open_kind}] block is still open — close it with [/{open_kind}] first"]
+                open_kind, widths = mo.group(1).lower(), []
+                if open_kind == "table" and mo.group(2):
+                    return ["write a table fence exactly as [table]"]
+                continue
+            if mc:
+                kind = mc.group(1).lower()
+                if open_kind != kind:
+                    return [f"[/{kind}] without a matching [{kind}] line"]
+                if not widths:
+                    return [f"the [{kind}] block has no rows"]
+                if len(set(widths)) > 1:
+                    return [f"{kind} rows have different numbers of "
+                            f"{'entries' if kind == 'matrix' else 'cells'} — every row needs the same"]
+                open_kind = None
+                continue
+            if open_kind and line:
+                if not (len(line) > 1 and line.startswith("|") and line.endswith("|")):
+                    return [f"inside [{open_kind}] … [/{open_kind}], write every row as | a | b |"]
+                widths.append(line[1:-1].count("|") + 1)
+        return [f"a [{open_kind}] block is not closed with [/{open_kind}]"] if open_kind else []
     widths: List[int] = []
     for line in [l.strip() for l in (text or "").split("\n")] + [""]:
         if len(line) > 1 and line.startswith("|") and line.endswith("|"):
@@ -238,7 +302,8 @@ class HomeworkBuilder:
                          "Tamil, technical terms in English. Everything else is English."
                          if p.tamil_hint else "English only: no Tamil anywhere.")
         return SYSTEM_TEMPLATE.format(audience=audience, n=len(p.tasks), task_list=task_list,
-                                      language_rule=language_rule, extra_rules=p.extra_rules)
+                                      language_rule=language_rule, extra_rules=p.extra_rules,
+                                      grid_rule=_grid_rule(p))
 
     def _homework_tool(self, p: SubjectProfile) -> dict:
         props = {"day": {"type": "integer"}}
@@ -351,8 +416,13 @@ class HomeworkBuilder:
             fsub = FLAT_SUB_RE.search(task + " " + (h.get(f"{key}_hint") or ""))
             if fsub:
                 probs.append(f'{key} has a flat symbol ("{fsub.group(0)}") — {SUB_RULE}')
-            probs += [f"{key}_task: {x}" for x in _grid_problems(task)]
-            probs += [f"{key}_hint: {x}" for x in _grid_problems(h.get(f"{key}_hint") or "")]
+            both = task + "\n" + (h.get(f"{key}_hint") or "")
+            code = INLINE_MATRIX_RE.search(both) or CODE_ELEMENT_RE.search(both)
+            if code:
+                probs.append(f'{key} writes a matrix like code ("{code.group(0)}") — {MATRIX_RULE}')
+            fenced = not p.pipe_rules
+            probs += [f"{key}_task: {x}" for x in _grid_problems(task, fenced)]
+            probs += [f"{key}_hint: {x}" for x in _grid_problems(h.get(f"{key}_hint") or "", fenced)]
             if not p.hints:
                 continue
             hint = (h.get(f"{key}_hint") or "").strip()
@@ -585,7 +655,8 @@ class HomeworkBuilder:
 
     def _answer_system(self, p: SubjectProfile) -> str:
         audience = p.audience or f"{p.display_name or p.key} students"
-        return ANSWER_TEMPLATE.format(audience=audience, extra_rules=p.extra_rules)
+        return ANSWER_TEMPLATE.format(audience=audience, extra_rules=p.extra_rules,
+                                      grid_rule=_grid_rule(p))
 
     def _answer_tool(self, p: SubjectProfile) -> dict:
         props = {"day": {"type": "integer"}}
@@ -684,7 +755,10 @@ class HomeworkBuilder:
             l.strip() and set(l.strip()) <= set("|—–-_/\\ ") for l in a.split("\n"))
         if drawn:
             probs.append("no drawings made of characters — describe the diagram in labelled lines")
-        probs += _grid_problems(a)
+        code = INLINE_MATRIX_RE.search(a) or CODE_ELEMENT_RE.search(a)
+        if code:
+            probs.append(f'answer writes a matrix like code ("{code.group(0)}") — {MATRIX_RULE}')
+        probs += _grid_problems(a, fenced=not p.pipe_rules)
         return probs
 
     def _review_answers(self, keys: List[tuple], given: Dict[tuple, str],

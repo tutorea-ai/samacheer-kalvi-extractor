@@ -15,6 +15,7 @@ from .subjects import get_profile
 
 # Set once per page from the deck's subject profile.
 _LETTER_SUBS: ContextVar[bool] = ContextVar("letter_subs", default=True)
+_FENCED: ContextVar[bool] = ContextVar("fenced", default=False)   # tables only in [table] fences
 
 BULB = ('<path d="M9 18h6M10 21h4"/>'
         '<path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2h5c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3z"/>')
@@ -55,6 +56,16 @@ def _grid(rows: List[List[str]]) -> str:
 
 
 _SEP_RE = re.compile(r"^\|(?=.*-)[\s:|-]+\|$")   # Markdown "|---|---|": no content
+_OPEN_RE = re.compile(r"^\[(table|matrix)(?:\s+([^\]]+))?\]$", re.I)
+_CLOSE_RE = re.compile(r"^\[/(table|matrix)\]$", re.I)
+
+
+def _matrix(name: str, rows: List[List[str]]) -> str:
+    """[matrix A] block -> 'A =' + a matrix in square brackets, no heading styles."""
+    body = "".join("<tr>" + "".join(f"<td>{_t(c)}</td>" for c in r) + "</tr>" for r in rows)
+    label = f'<span class="mx-name">{_t(name)} =</span>' if name else ""
+    return (f'<div class="mx">{label}<span class="mx-br"><table class="mx-table">{body}'
+            f'</table></span></div>')
 
 
 def _is_row(line: str) -> bool:
@@ -70,11 +81,31 @@ def _block(text: str, finals: bool = False) -> str:
             out.append(_grid(grid))
             grid.clear()
 
+    fenced, inside = _FENCED.get(), None      # None, "table" or "matrix"
+    mname, mrows = "", []
     for line in (text or "").split("\n"):
         line = line.strip()
-        if _SEP_RE.match(line):
+        if fenced:
+            mo, mc = _OPEN_RE.match(line), _CLOSE_RE.match(line)
+            if mo:
+                flush()
+                inside, mname, mrows = mo.group(1).lower(), (mo.group(2) or "").strip(), []
+                continue
+            if mc:
+                if inside == "matrix":
+                    out.append(_matrix(mname, mrows))
+                else:
+                    flush()
+                inside = None
+                continue
+            if inside == "matrix":
+                if _is_row(line):
+                    mrows.append([c.strip() for c in line[1:-1].split("|")])
+                continue
+        table_line = inside == "table" or not fenced   # in fenced mode |x − 2| = |x + 4| stays text
+        if table_line and _SEP_RE.match(line):
             continue
-        if _is_row(line):
+        if table_line and _is_row(line):
             grid.append([c.strip() for c in line[1:-1].split("|")])
             continue
         flush()
@@ -82,6 +113,8 @@ def _block(text: str, finals: bool = False) -> str:
             continue
         final = finals and line.lower().startswith("final answer")
         out.append(f'<p class="{"final" if final else "step"}">{_t(line)}</p>')
+    if inside == "matrix" and mrows:
+        out.append(_matrix(mname, mrows))
     flush()
     return "".join(out)
 
@@ -225,6 +258,15 @@ svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:
 .answer-body p{margin:0;font-size:15px;color:var(--ink)}
 .answer-body p + p{margin-top:4px}
 .answer-body .final{margin-top:8px;font-weight:700;color:var(--accent)}
+.mx{display:flex;align-items:center;gap:8px;margin:8px 0;overflow-x:auto}
+.mx-name{font-size:16px;white-space:nowrap}
+.mx-br{position:relative;display:inline-block;padding:2px 10px}
+.mx-br::before,.mx-br::after{content:"";position:absolute;top:0;bottom:0;width:6px;
+                             border:2px solid var(--ink)}
+.mx-br::before{left:0;border-right:none}
+.mx-br::after{right:0;border-left:none}
+.mx-table{border-collapse:separate;border-spacing:12px 3px}
+.mx-table td{text-align:center;font-size:15px;padding:0}
 .grid{overflow-x:auto;margin:8px 0}
 .grid table{border-collapse:collapse;background:var(--surface)}
 .grid th,.grid td{border:1px solid #BFDCD8;padding:5px 12px;text-align:center;font-size:15px}
@@ -280,7 +322,9 @@ def render_deck(deck: Dict) -> str:
     lesson = deck.get("lesson") or {}
     title = lesson.get("title") or "Homework"
     days = deck.get("days") or []
-    token = _LETTER_SUBS.set(get_profile(deck.get("subject", "")).letter_subscripts)
+    prof = get_profile(deck.get("subject", ""))
+    token = _LETTER_SUBS.set(prof.letter_subscripts)
+    ftoken = _FENCED.set(not prof.pipe_rules)
     try:
         return (TEMPLATE
                 .replace("%%PAGE_TITLE%%", _e(f"{title} · Homework"))
@@ -289,3 +333,4 @@ def render_deck(deck: Dict) -> str:
                 .replace("%%DAYS%%", "".join(_day(d, bool(deck.get("answers"))) for d in days)))
     finally:
         _LETTER_SUBS.reset(token)
+        _FENCED.reset(ftoken)
