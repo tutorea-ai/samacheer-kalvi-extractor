@@ -202,6 +202,9 @@ Flag only real problems:
 - a part of the task, such as (a) or (b), left unanswered
 - a statement that is wrong, contradicts the lesson, or uses ideas the
   lesson does not teach
+- a number, date or statistic that neither the task nor the lesson gives
+  (for example 'perhaps 50 or 60 years'), or a claim stronger or more
+  sweeping than the lesson makes
 - an answer to a different question from the task as written
 - a sentence that contradicts itself or another part of the answer, or
   that could mislead a student who copies it as the model answer
@@ -212,7 +215,7 @@ length; flag wording only when it is wrong, self-contradicting or
 misleading. For each problem, say in one sentence what is wrong and what
 the correct result is.
 List in problems only errors you are sure of; if an answer is correct, do
-not list it."""
+not list it.{answer_rules}"""
 
 
 def _words(s: str) -> int:
@@ -248,7 +251,10 @@ def _rules(p) -> str:
         extra += (f"\n- Keep every sentence to at most {p.max_sentence_words} words: "
                   f"split longer ones into two."
                   f"\n- Put a list of items on separate lines, one item per line, after a "
-                  f"short lead-in line.")
+                  f"short lead-in line."
+                  f"\n- In a model answer to a writing task, short sentences come first: it may "
+                  f"use one or two more sentences than the task asks, to keep every sentence "
+                  f"within {p.max_sentence_words} words.")
     return extra
 
 
@@ -803,7 +809,14 @@ class HomeworkBuilder:
             by_day.setdefault(n, []).append(k)
         days = sorted(by_day)
         subject = p.display_name or p.key
-        system = ANSWER_REVIEW_TEMPLATE.format(subject=subject, local_context=p.local_context)
+        answer_rules = ""
+        if p.max_sentence_words:
+            answer_rules = (f"\nA model answer to a writing task may use one or two more "
+                            f"sentences than the task asks, to keep every sentence within "
+                            f"{p.max_sentence_words} words: never flag that.")
+        answer_rules += p.answer_review_rules
+        system = ANSWER_REVIEW_TEMPLATE.format(subject=subject, local_context=p.local_context,
+                                               answer_rules=answer_rules)
         prompt = self._answers_prompt(days, by_day, tasks, lp_days, topics, {}, given)
         data = self._call_tool(system, prompt, self._answer_review_tool(p), 12000)
         if data is None:

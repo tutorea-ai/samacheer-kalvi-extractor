@@ -70,6 +70,7 @@ class SubjectProfile:
                                            # (Maths: |x|, |A|): tables fenced in [table]…[/table]
     tamil_hint: bool = False               # Tamil version of each hint (off for all subjects)
     extra_rules: str = ""                  # subject rules appended to the writer prompt, each "\n- …"
+    answer_review_rules: str = ""          # extra rules for the answer reviewer only, each "\n- …"
     batch_size: int = 6
     limits: Dict[str, int] = field(default_factory=dict)
 

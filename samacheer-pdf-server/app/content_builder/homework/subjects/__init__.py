@@ -12,6 +12,7 @@ from typing import Dict
 
 from .base import SubjectProfile
 from .biology import BIOLOGY
+from .english import ENGLISH
 from .maths import MATHS
 from .physics import PHYSICS
 from .socialscience import SOCIALSCIENCE
@@ -22,6 +23,7 @@ PROFILES: Dict[str, SubjectProfile] = {
         BIOLOGY,
         MATHS,
         SOCIALSCIENCE,
+        ENGLISH,
     )
 }
 
