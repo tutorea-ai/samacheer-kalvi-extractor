@@ -137,6 +137,9 @@ notes before judging it. Flag only real problems:
   anything not in that day's text; on a review day: anything outside the
   topics taught so far)
 - a {subject} statement that is wrong, or that contradicts the lesson text
+- an example or statement that contradicts what another day of the lesson
+  teaches (see the whole-lesson list), or an organism, object or trait that
+  does not exist as described
 - a numerical that cannot be solved from the data given, or has missing,
   inconsistent or unrealistic values or units
 - a task that points to the textbook (an exercise, example, figure, table,
@@ -202,6 +205,8 @@ Flag only real problems:
 - a part of the task, such as (a) or (b), left unanswered
 - a statement that is wrong, contradicts the lesson, or uses ideas the
   lesson does not teach
+- a statement that contradicts what another day of the lesson teaches (see
+  the whole-lesson list), or a trait or fact that does not exist as described
 - a number, date or statistic that neither the task nor the lesson gives
   (for example 'perhaps 50 or 60 years'), or a claim stronger or more
   sweeping than the lesson makes
@@ -392,7 +397,10 @@ class HomeworkBuilder:
     @staticmethod
     def _scope(d: Dict, topics: List[Tuple[int, str, str]]) -> str:
         if not d["is_review"]:
-            return "Teaching day: the tasks cover only this day's content."
+            whole = "\n".join(f"- Day {n}: {t}" + (f" ({ty})" if ty else "") for n, t, ty in topics)
+            return ("Teaching day: the tasks cover only this day's content.\n"
+                    "The whole lesson, for consistency only (never use a later day's content, "
+                    "and never contradict what any day teaches):\n" + whole)
         so_far = [f"- Day {n}: {t}" + (f" ({ty})" if ty else "")
                   for n, t, ty in topics if n <= d["day"]]
         return ("REVIEW day: the tasks may combine any of these topics taught so far:\n"
