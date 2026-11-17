@@ -1010,6 +1010,39 @@ class PDFProcessor:
                     "discipline": discipline,
                 }, force, self.temp_dir, filename_base)
 
+            elif output_format == "concept_canvas_only":
+
+                bridge_meta = {
+                    "class_num":     class_num,
+                    "term":          term,
+                    "unit":          unit_num,
+                    "lesson_choice": lesson_choice,
+                    "subject":       subject,
+                    "medium":        medium,
+                    "discipline":    discipline,
+                }
+
+                print("🎨 Starting Concept Canvas generation...")
+                lp_path = bridge.find_deployed(bridge_meta, "lp")
+                if not lp_path:
+                    return {
+                        "error":   True,
+                        "message": "No Lesson Plan deployed for this lesson yet — generate the LP first (output_format=lp_only)"
+                    }
+                print(f"   📄 Using LP: {lp_path}")
+
+                from .content_builder.concept_canvas.service import (
+                    run_concept_canvas, lesson_title as cc_lesson_title)
+                cc_title = cc_lesson_title(index_data, term_key, subject, discipline, unit_num,
+                                           filename_base, lesson_choice)
+                return run_concept_canvas(lp_path, {
+                    "class":      class_num,
+                    "subject":    subject,
+                    "unit":       unit_num,
+                    "title":      cc_title,
+                    "discipline": discipline,
+                }, force, self.temp_dir, filename_base)
+
             elif output_format == "lp_only":
 
                 bridge_meta = {
