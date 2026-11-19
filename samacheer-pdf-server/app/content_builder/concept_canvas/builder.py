@@ -28,7 +28,7 @@ from .subjects.base import SubjectProfile
 MAX_RETRIES = 2          # re-asks for days that fail checks or review
 REVIEW_FAILED = "not checked (review call failed)"
 NOT_ERROR_RE = re.compile(r"(\bno (confirmed )?(factual )?error( here)?|\bnot (an|a confirmed) error"
-                          r"|\bwithdrawn|\bthis is correct)\W*$", re.I)
+                          r"|\bwithdraw(n|ing)|\bthis is correct)\W*$", re.I)
 API_ATTEMPTS = 3
 API_BACKOFF = 30
 
@@ -39,6 +39,12 @@ TEMPLATE_GUIDE = {
     "compare": "compare: two cases side by side, point against point (needs left_title, right_title, and side on every step)",
     "timeline": "timeline: events in time order (needs time on every step)",
     "concept_map": "concept_map: one central idea with related branches (needs center)",
+    "punnett": ("punnett: a genetic cross drawn as a Punnett square (needs parent_1, parent_2, gametes_1 "
+                "(columns), gametes_2 (rows), grid, phenotypes, ratio, and exactly 4 steps with phase "
+                "parents, gametes, grid, ratio in that order; the ratio step is the highlight). "
+                "parent_1 and parent_2 are the two plants crossed IN THIS GRID, genotype only "
+                "(for an F₂ ratio both are the F₁ hybrids); put their names in parent_1_label / "
+                "parent_2_label (for example \"Tall F₁\")"),
 }
 
 SYSTEM_TEMPLATE = """You design Concept Canvas storyboards for {audience}.
@@ -85,7 +91,7 @@ Compare each day with its lesson text and flag only confirmed errors:
 - a caption that is wrong, or about a different idea than the steps show
 - compare: points on the two sides that do not correspond
 Do not flag icons, wording, length, style, omissions, or a choice that is merely different from yours.
-List only real errors in the storyboard. Never flag errors in the lesson text itself. Never include a note that concludes "no error" or that you withdraw: if a check passes, leave it out.
+List only real errors in the storyboard. Never flag errors in the lesson text itself. Never include a note that concludes "no error" or that you withdraw: if a check passes, leave it out. Every problem carries "confirmed": true only for a real error you stand by; if on reflection it is not an error, set "confirmed": false.
 Subject rules the writer followed (never flag what they allow):{extra_rules}{review_rules}
 Return one review per day; an empty problems list when the day is correct."""
 
@@ -117,6 +123,8 @@ class ConceptCanvasBuilder:
         }
         if p.formulas:
             step["formula"] = {"type": "string"}
+        if "punnett" in p.allowed_templates:
+            step["phase"] = {"type": "string", "enum": ["parents", "gametes", "grid", "ratio"]}
         day = {
             "day": {"type": "integer"},
             "skip": {"type": "boolean"},
@@ -130,6 +138,19 @@ class ConceptCanvasBuilder:
             "steps": {"type": "array", "items": {
                 "type": "object", "properties": step, "required": ["label", "text"]}},
         }
+        if "punnett" in p.allowed_templates:
+            gametes = {"type": "array", "items": {"type": "string"}}
+            day.update({
+                "parent_1": {"type": "string"},
+                "parent_1_label": {"type": "string"},
+                "parent_2": {"type": "string"},
+                "parent_2_label": {"type": "string"},
+                "gametes_1": gametes,
+                "gametes_2": gametes,
+                "grid": {"type": "array", "items": gametes},
+                "phenotypes": {"type": "object", "additionalProperties": {"type": "string"}},
+                "ratio": {"type": "string"},
+            })
         return {
             "name": "save_storyboards",
             "description": "Save one storyboard (or a skip) per lesson day.",
@@ -148,20 +169,24 @@ class ConceptCanvasBuilder:
                     "type": "object", "required": ["day", "problems"], "properties": {
                         "day": {"type": "integer"},
                         "problems": {"type": "array", "items": {
-                            "type": "object", "required": ["problem"], "properties": {
+                            "type": "object", "required": ["problem", "confirmed"], "properties": {
                                 "field": {"type": "string"},
-                                "problem": {"type": "string"}}}}}}}}},
+                                "problem": {"type": "string"},
+                                "confirmed": {"type": "boolean"}}}}}}}}},
         }
 
     @staticmethod
-    def _days_prompt(batch: List[Dict], feedback: Dict[int, List[str]]) -> str:
+    def _days_prompt(batch: List[Dict], feedback: Dict[int, List[str]],
+                     notes: Dict[int, str]) -> str:
         parts = [f"Design storyboards for these {len(batch)} days. Return one entry per day."]
         for d in batch:
+            note = notes.get(d["day"])
+            ask = f"\nInstruction for this day (follow it): {note}" if note else ""
             fb = feedback.get(d["day"])
             fix = ("\nYour previous storyboard for this day had these problems; fix them:\n- "
                    + "\n- ".join(fb)) if fb else ""
             parts.append(f"\n=== DAY {d['day']}: {d['title']} ===\nDay type: {d['day_type'] or '-'}"
-                         f"{fix}\nLesson text:\n{d['text']}")
+                         f"{ask}{fix}\nLesson text:\n{d['text']}")
         return "\n".join(parts)
 
     # ── Parsing ──────────────────────────────────────────────
@@ -268,6 +293,7 @@ class ConceptCanvasBuilder:
             seen.add(n)
             probs = [f"[{x.get('field', '?')}] {x['problem']}" for x in (r.get("problems") or [])
                      if isinstance(x, dict) and x.get("problem")
+                     and x.get("confirmed") is not False
                      and not NOT_ERROR_RE.search(x["problem"])]
             if probs:
                 out[n] = probs
@@ -277,12 +303,15 @@ class ConceptCanvasBuilder:
         return out
 
     # ── Generation ───────────────────────────────────────────
-    def _generate_days(self, days: List[Dict], p: SubjectProfile) -> Tuple[Dict[int, dict], List[Dict]]:
+    def _generate_days(self, days: List[Dict], p: SubjectProfile,
+                       notes: Optional[Dict[int, str]] = None) -> Tuple[Dict[int, dict], List[Dict]]:
+        notes = notes or {}
         system, tool = self._system(p), self._writer_tool(p)
         pending = {d["day"]: d for d in days}
         done: Dict[int, dict] = {}
         skipped: List[Dict] = []
         last: Dict[int, List[str]] = {}
+        drafts: Dict[int, dict] = {}
         feedback: Dict[int, List[str]] = {}
 
         for attempt in range(MAX_RETRIES + 1):
@@ -293,7 +322,7 @@ class ConceptCanvasBuilder:
                 print(f"   🔁 Retry {attempt}: days {[d['day'] for d in todo]}")
             for i in range(0, len(todo), p.batch_size):
                 batch = todo[i:i + p.batch_size]
-                got = self._days_from(self._call_tool(system, self._days_prompt(batch, feedback), tool, 8000))
+                got = self._days_from(self._call_tool(system, self._days_prompt(batch, feedback, notes), tool, 8000))
                 if not got:
                     print(f"      ⚠️  Writer returned no usable days for {[d['day'] for d in batch]}")
 
@@ -332,6 +361,7 @@ class ConceptCanvasBuilder:
                 for n, (h, probs, warns) in checked.items():
                     if probs:
                         last[n] = probs
+                        drafts[n] = h
                         fb = [x for x in probs if REVIEW_FAILED not in x]
                         if fb:
                             feedback[n] = fb
@@ -347,10 +377,14 @@ class ConceptCanvasBuilder:
                         feedback.pop(n, None)
 
         for n in sorted(pending):
-            skipped.append({"day": n, "reasons": last.get(n, ["no storyboard returned"])})
+            entry = {"day": n, "reasons": last.get(n, ["no storyboard returned"])}
+            if n in drafts:
+                entry["draft"] = drafts[n]       # last failed attempt, for diagnosis only
+            skipped.append(entry)
         return done, skipped
 
-    def generate(self, lp_path: str, lesson: Dict, only_days: Optional[List[int]] = None) -> Dict:
+    def generate(self, lp_path: str, lesson: Dict, only_days: Optional[List[int]] = None,
+                 notes: Optional[Dict[int, str]] = None) -> Dict:
         """lesson = {"class": 12, "subject": "physics", "slug": "...", "title": "..."}"""
         p = get_profile(lesson["subject"])
         lp = load_lp(lp_path, lesson["subject"])
@@ -368,14 +402,14 @@ class ConceptCanvasBuilder:
             else:
                 todo.append(d)
 
-        done, more = self._generate_days(todo, p)
+        done, more = self._generate_days(todo, p, notes)
         skipped = sorted(skipped + more, key=lambda s: s["day"])
         print(f"   ✅ {len(done)} storyboards, {len(skipped)} skipped — "
               f"{self.usage['calls']} calls, {self.usage['input_tokens']} in / "
               f"{self.usage['output_tokens']} out tokens")
         return {
             "module": MODULE,
-            "version": CONTRACT_VERSION,
+            "version": 2 if any(done[n]["template"] == "punnett" for n in done) else CONTRACT_VERSION,
             "subject": p.key,
             "class": lesson["class"],
             "lesson": lesson["slug"],
@@ -385,6 +419,7 @@ class ConceptCanvasBuilder:
             "skipped_days": skipped,
             "model": self.model,
             "usage": dict(self.usage),
+            **({"notes": {str(k): v for k, v in notes.items()}} if notes else {}),
         }
 
     # ── API ──────────────────────────────────────────────────

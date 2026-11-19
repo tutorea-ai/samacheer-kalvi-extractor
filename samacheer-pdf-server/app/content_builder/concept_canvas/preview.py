@@ -29,6 +29,10 @@ li.hl{background:#fff3df;border-left:3px solid #d08a2c;padding:4px 8px;border-ra
 .f{margin-top:4px;font-size:1.1em}
 .skip{background:#fff;border:1px dashed #d8c8b4;border-radius:12px;padding:12px 18px;margin:14px 0}
 .usage{font-family:monospace;font-size:12px;color:#7a6a5c}
+.pn{margin:10px 0 14px} .pn table{border-collapse:collapse;margin:8px 0}
+.pn td,.pn th{border:1px solid #d8c8b4;padding:6px 10px;text-align:center;font-family:monospace}
+.pn th{background:#efe6da} .pn .tr{display:block;font-family:system-ui;font-size:11px;color:#7a6a5c}
+.pn .lethal{text-decoration:line-through;color:#b00} .pn .ratio{font-weight:600}
 """
 
 
@@ -38,6 +42,7 @@ def _e(s) -> str:
 
 def _step(s: dict) -> str:
     meta = [f"icon: {s['icon']}"] if s.get("icon") else []
+    meta += [f"phase: {s['phase']}"] if s.get("phase") else []
     meta += [f"side: {s['side']}"] if s.get("side") else []
     meta += [f"time: {s['time']}"] if s.get("time") else []
     f = f'<div class="f" data-tex="{_e(s["formula"])}"></div>' if s.get("formula") else ""
@@ -53,6 +58,20 @@ def _day(d: dict) -> str:
         extra = f'<div class="sides"><span>◀ {_e(d["left_title"])}</span><span>{_e(d["right_title"])} ▶</span></div>'
     if d.get("center"):
         extra = f'<div class="sides">● {_e(d["center"])}</div>'
+    if d.get("template") == "punnett":
+        ph = d.get("phenotypes", {})
+        head = "".join(f"<th>{_e(g)}</th>" for g in d.get("gametes_1", []))
+        rows = ""
+        for rg, row in zip(d.get("gametes_2", []), d.get("grid", [])):
+            cells = ""
+            for g in row:
+                t = ph.get(g, "?")
+                cls = ' class="lethal"' if t == "Lethal" else ""
+                cells += f'<td{cls}>{_e(g)}<span class="tr">{_e(t)}</span></td>'
+            rows += f"<tr><th>{_e(rg)}</th>{cells}</tr>"
+        extra = (f'<div class="pn">Parents: <b>{_e(d.get("parent_1"))}</b> × <b>{_e(d.get("parent_2"))}</b>'
+                 f'<table><tr><th></th>{head}</tr>{rows}</table>'
+                 f'<span class="ratio">Ratio {_e(d.get("ratio"))}</span></div>')
     steps = "".join(_step(s) for s in d["steps"])
     return (f'<div class="card"><div class="top"><span class="day">Day {d["day"]}</span>'
             f'<b>{_e(d["title"])}</b><span class="tpl">{_e(d["template"])}</span></div>'

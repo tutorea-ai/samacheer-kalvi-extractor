@@ -9,6 +9,10 @@ validate_day() returns (problems, warnings):
   warnings -> small issues already fixed in place (e.g. unknown icon removed)
 """
 import re
+from collections import Counter
+from functools import reduce
+from itertools import product
+from math import gcd
 from typing import Dict, List, Tuple
 
 from .subjects.base import SubjectProfile
@@ -24,10 +28,13 @@ TEMPLATE_DAY_FIELDS: Dict[str, Tuple[str, ...]] = {
     "compare": ("left_title", "right_title"),
     "timeline": (),
     "concept_map": ("center",),
+    "punnett": ("parent_1", "parent_1_label", "parent_2", "parent_2_label",
+                "gametes_1", "gametes_2", "grid", "phenotypes", "ratio"),
 }
 TEMPLATE_STEP_FIELDS: Dict[str, Tuple[str, ...]] = {
     "compare": ("side",),
     "timeline": ("time",),
+    "punnett": ("phase",),
 }
 
 # ── Hard limits (characters). No tolerance: Node's layout depends on them ──
@@ -126,7 +133,8 @@ def validate_day(day: Dict, profile: SubjectProfile) -> Tuple[List[str], List[st
     _text_ok("title", day.get("title"), DAY_LIMITS["title"], probs)
     _text_ok("caption", day.get("caption"), DAY_LIMITS["caption"], probs)
     for f in TEMPLATE_DAY_FIELDS[tpl]:
-        _text_ok(f, day.get(f), DAY_LIMITS[f], probs)
+        if f in DAY_LIMITS:          # punnett's structured fields are checked in check_punnett
+            _text_ok(f, day.get(f), DAY_LIMITS[f], probs)
 
     steps = day.get("steps")
     if not isinstance(steps, list) or not (MIN_STEPS <= len(steps) <= MAX_STEPS):
@@ -147,6 +155,8 @@ def validate_day(day: Dict, profile: SubjectProfile) -> Tuple[List[str], List[st
             if f == "side":
                 if s.get("side") not in ("left", "right"):
                     probs.append(f"{tag} side must be 'left' or 'right'")
+            elif f == "phase":
+                continue                     # checked in check_punnett
             else:
                 _text_ok(f"{tag} {f}", s.get(f), STEP_LIMITS[f], probs)
 
@@ -185,4 +195,200 @@ def validate_day(day: Dict, profile: SubjectProfile) -> Tuple[List[str], List[st
         if sides != {"left", "right"}:
             probs.append("compare needs points on both sides")
 
+    if tpl == "punnett":
+        p2, w2 = check_punnett(day)
+        probs += p2
+        warns += w2
+
+    return probs, warns
+
+
+# ── Punnett square (contract version 2) ──
+PUNNETT_PHASES = ("parents", "gametes", "grid", "ratio")
+LETHAL = "Lethal"                 # drawn in the grid, never counted in the ratio
+MAX_PARENT, MAX_PHENOTYPE, MAX_RATIO = 12, 20, 30
+# An allele is a letter plus optional digits (T, t, R₁, R₂); digits become subscripts.
+_SUBDIGITS = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+_ALLELE = re.compile(r"[A-Za-z][0-9₀-₉]*")
+_GENOTYPE = re.compile(r"^(?:[A-Za-z][0-9₀-₉]*)+$")
+_LABELLED = re.compile(r"^\s*([A-Za-z0-9₀-₉]+)\s*\((.+)\)\s*$")    # "Tt (Tall F1)"
+
+
+def _tokens(genotype: str) -> List[str]:
+    return [a.translate(_SUBDIGITS) for a in _ALLELE.findall(genotype)]
+
+
+def _dom_first(alleles) -> List[str]:
+    return sorted(alleles, key=lambda a: (a[0].islower(), a))
+
+
+def _norm(genotype: str, order: List[str]) -> str:
+    """Group alleles by gene in `order`, dominant (capital) first: tTyY -> TtYy, R2R1 -> R₁R₂."""
+    by: Dict[str, List[str]] = {}
+    for a in _tokens(genotype):
+        by.setdefault(a[0].lower(), []).append(a)
+    return "".join("".join(_dom_first(by.get(g, []))) for g in order)
+
+
+def _gametes(parent: str, order: List[str]) -> List[str]:
+    toks = _tokens(parent)
+    alleles = [_dom_first({a for a in toks if a[0].lower() == g}) for g in order]
+    return sorted({"".join(p) for p in product(*alleles)})
+
+
+def _parent_from(gametes: List[str], order: List[str]):
+    """The one genotype whose gametes are exactly this set (R₁, R₂ -> R₁R₂), or None."""
+    genes = []
+    for i, g in enumerate(order):
+        alleles = {_tokens(x)[i] for x in gametes}
+        if not 1 <= len(alleles) <= 2 or any(a[0].lower() != g for a in alleles):
+            return None
+        a = _dom_first(alleles)
+        genes.append(a * 2 if len(a) == 1 else a)
+    parent = "".join("".join(x) for x in genes)
+    return parent if sorted(gametes) == _gametes(parent, order) else None
+
+
+def check_punnett(day: Dict) -> Tuple[List[str], List[str]]:
+    """Verify a punnett day mechanically. Fixes letter order in place."""
+    probs: List[str] = []
+    warns: List[str] = []
+
+    # Parents ("Tt (Tall F1)" is split into genotype + label for free)
+    for key in ("parent_1", "parent_2"):
+        v = day.get(key)
+        m = _LABELLED.match(v) if isinstance(v, str) else None
+        if m:
+            day[key] = m.group(1)
+            day.setdefault(f"{key}_label", m.group(2).strip())
+            warns.append(f"{key} label moved to {key}_label")
+        v = day.get(key)
+        if (not isinstance(v, str) or not _GENOTYPE.match(v) or len(v) > MAX_PARENT
+                or len(_tokens(v)) % 2):
+            probs.append(f"{key} must be alleles only (T, t, R1), two per gene, max {MAX_PARENT}: {v!r}")
+        lab = day.get(f"{key}_label")
+        if lab is not None and (not isinstance(lab, str) or not lab.strip() or len(lab) > MAX_PHENOTYPE):
+            probs.append(f"{key}_label must be 1-{MAX_PHENOTYPE} characters")
+    if probs:
+        return probs, warns
+    order = list(dict.fromkeys(a[0].lower() for a in _tokens(day["parent_1"])))
+    if set(order) != {a[0].lower() for a in _tokens(day["parent_2"])}:
+        probs.append("both parents must carry the same genes")
+    if len(order) > 2:
+        probs.append("at most two genes (a 4 x 4 grid)")
+    for key in ("parent_1", "parent_2"):
+        for g in order:
+            if sum(a[0].lower() == g for a in _tokens(day[key])) != 2:
+                probs.append(f"{key} needs exactly two alleles for gene {g.upper()}")
+    if probs:
+        return probs, warns
+    for key in ("parent_1", "parent_2"):
+        n = _norm(day[key], order)
+        if n != day[key]:
+            warns.append(f"{key} {day[key]!r} written as {n!r}")
+            day[key] = n
+
+    # Gametes. One known slip is fixed in place: an F₂ grid drawn under the P-generation
+    # parents (R₁R₁ × R₂R₂ with R₁, R₂ gametes on both sides). Only when BOTH parents fail,
+    # both derive from their gametes, and the two derived genotypes are identical; then
+    # the parents are just the grid's header. Anything else goes to the retry (fail closed).
+    pairs = (("gametes_1", "parent_1"), ("gametes_2", "parent_2"))
+    norm: Dict[str, List[str]] = {}
+    for key, pkey in pairs:
+        g = day.get(key)
+        if not isinstance(g, list) or not all(isinstance(x, str) for x in g):
+            probs.append(f"{key} must be a list of gametes")
+            continue
+        got = [_norm(x, order) for x in g]
+        if len(got) == len(set(got)) and all(len(_tokens(x)) == len(order) for x in got):
+            norm[key] = got
+    if probs:
+        return probs, warns
+    if (len(norm) == 2
+            and all(sorted(norm[k]) != _gametes(day[p], order) for k, p in pairs)):
+        derived = [_parent_from(norm[k], order) for k, _ in pairs]
+        if derived[0] and derived[0] == derived[1]:
+            for (_, pkey), d in zip(pairs, derived):
+                warns.append(f"{pkey} {day[pkey]!r} changed to {d!r} to match its gametes")
+                day[pkey] = d
+                lab = day.pop(f"{pkey}_label", None)
+                if lab is not None:
+                    warns.append(f"{pkey}_label {lab!r} removed: parent derived from gametes")
+    for key, pkey in pairs:
+        parent = day[pkey]
+        if key not in norm or sorted(norm[key]) != _gametes(parent, order):
+            probs.append(f"{key} {day[key]} are not the gametes of {parent} "
+                         f"(expected {_gametes(parent, order)})")
+        else:
+            day[key] = norm[key]
+    if probs:
+        return probs, warns
+
+    # Grid: every cell = row gamete + column gamete
+    g1, g2 = day["gametes_1"], day["gametes_2"]
+    grid = day.get("grid")
+    if not (isinstance(grid, list) and len(grid) == len(g2)
+            and all(isinstance(r, list) and len(r) == len(g1) for r in grid)):
+        probs.append(f"grid must be {len(g2)} rows x {len(g1)} columns")
+        return probs, warns
+    reordered = False
+    for r, rg in enumerate(g2):
+        for c, cg in enumerate(g1):
+            want = _norm(rg + cg, order)
+            cell = grid[r][c]
+            if not isinstance(cell, str) or len(_tokens(cell)) != 2 * len(order) or _norm(cell, order) != want:
+                probs.append(f"grid[{r}][{c}] is {cell!r}, should be {want!r}")
+            elif cell != want:
+                grid[r][c] = want
+                reordered = True
+    if reordered:
+        warns.append("grid genotypes rewritten dominant letter first")
+    if probs:
+        return probs, warns
+
+    # Phenotypes: every cell has one; keys normalised; unused removed
+    ph = day.get("phenotypes")
+    if not isinstance(ph, dict):
+        probs.append("phenotypes must map every genotype in the grid to a trait")
+        return probs, warns
+    ph = {_norm(k, order): v for k, v in ph.items() if isinstance(k, str)}
+    cells = [x for row in grid for x in row]
+    missing = sorted({x for x in cells if x not in ph})
+    if missing:
+        probs.append(f"phenotypes missing for {missing}")
+    for k, v in ph.items():
+        if not isinstance(v, str) or not v.strip() or len(v) > MAX_PHENOTYPE:
+            probs.append(f"phenotype for {k} must be 1-{MAX_PHENOTYPE} characters")
+    unused = [k for k in ph if k not in cells]
+    for k in unused:
+        ph.pop(k)
+    if unused:
+        warns.append(f"unused phenotypes removed: {unused}")
+    day["phenotypes"] = ph
+    if probs:
+        return probs, warns
+
+    # Ratio: must match the real phenotype counts (Lethal excluded), any order
+    counts = Counter(ph[x] for x in cells if ph[x] != LETHAL)
+    nums = list(counts.values())
+    k = reduce(gcd, nums) if nums else 1
+    want_ratio = sorted(n // k for n in nums)
+    r = day.get("ratio")
+    try:
+        got_ratio = sorted(int(x) for x in str(r).split(":"))
+    except ValueError:
+        got_ratio = None
+    if not isinstance(r, str) or len(r) > MAX_RATIO or got_ratio != want_ratio:
+        probs.append(f"ratio {r!r} does not match the grid (phenotype counts {dict(counts)})")
+
+    # Steps: exactly the four phases in order; the ratio step is the highlight
+    steps = day.get("steps") or []
+    phases = [s.get("phase") for s in steps if isinstance(s, dict)]
+    if phases != list(PUNNETT_PHASES):
+        probs.append(f"punnett needs 4 steps with phases {list(PUNNETT_PHASES)}, got {phases}")
+    elif steps[-1].get("highlight") is not True:
+        for s in steps:
+            s.pop("highlight", None)
+        steps[-1]["highlight"] = True
+        warns.append("highlight moved to the ratio step")
     return probs, warns

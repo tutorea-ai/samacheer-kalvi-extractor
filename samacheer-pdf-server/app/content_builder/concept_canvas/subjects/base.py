@@ -19,7 +19,7 @@ DEFAULT_DROP_CLASSES: Tuple[str, ...] = (
 )
 
 ALL_TEMPLATES: Tuple[str, ...] = (
-    "step_build", "process_flow", "cycle", "compare", "timeline", "concept_map",
+    "step_build", "process_flow", "cycle", "compare", "timeline", "concept_map", "punnett",
 )
 
 
