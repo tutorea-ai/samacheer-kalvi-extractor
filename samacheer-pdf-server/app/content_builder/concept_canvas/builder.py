@@ -27,6 +27,26 @@ from .subjects.base import SubjectProfile
 
 MAX_RETRIES = 2          # re-asks for days that fail checks or review
 REVIEW_FAILED = "not checked (review call failed)"
+# A day list that arrives as a JSON *string* may hold LaTeX with single backslashes
+# (\frac, \begin): \f and \b are JSON escapes, \m is invalid. Double every lone
+# backslash (keep \\ pairs and \") before decoding.
+# A LaTeX command (\frac, \begin) behind an odd number of backslashes means the string
+# holds raw LaTeX, not JSON escapes: then every backslash is literal (\\ = matrix row break).
+_RAW_LATEX = re.compile(r'(?<!\\)(?:\\\\)*\\[A-Za-z]{2,}')
+
+
+def _loads_latex_safe(s: str):
+    if _RAW_LATEX.search(s):
+        try:
+            return json.loads(re.sub(r'\\(?!")', r'\\\\', s))
+        except ValueError:
+            pass
+    try:
+        return json.loads(s)
+    except ValueError:
+        return None
+
+
 NOT_ERROR_RE = re.compile(r"(\bno (confirmed )?(factual )?error( here)?|\bnot (an|a confirmed) error"
                           r"|\bwithdraw(n|ing)|\bthis is correct)\W*$", re.I)
 API_ATTEMPTS = 3
@@ -194,10 +214,7 @@ class ConceptCanvasBuilder:
     def _list_from(data, key: str) -> list:
         raw = (data or {}).get(key, [])
         if isinstance(raw, str):
-            try:
-                raw = json.loads(raw)
-            except ValueError:
-                return []
+            raw = _loads_latex_safe(raw)
         return raw if isinstance(raw, list) else []
 
     def _days_from(self, data) -> Dict[int, dict]:
@@ -322,9 +339,14 @@ class ConceptCanvasBuilder:
                 print(f"   🔁 Retry {attempt}: days {[d['day'] for d in todo]}")
             for i in range(0, len(todo), p.batch_size):
                 batch = todo[i:i + p.batch_size]
-                got = self._days_from(self._call_tool(system, self._days_prompt(batch, feedback, notes), tool, 8000))
+                data = self._call_tool(system, self._days_prompt(batch, feedback, notes), tool, 8000)
+                got = self._days_from(data)
                 if not got:
-                    print(f"      ⚠️  Writer returned no usable days for {[d['day'] for d in batch]}")
+                    raw_path = f"/tmp/cc_raw_{int(time.time())}.json"
+                    with open(raw_path, "w", encoding="utf-8") as fh:
+                        fh.write(json.dumps(data, ensure_ascii=False, default=str))
+                    print(f"      ⚠️  Writer returned no usable days for {[d['day'] for d in batch]}"
+                          f" — raw reply saved to {raw_path}")
 
                 checked: Dict[int, Tuple[dict, List[str], List[str]]] = {}
                 for d in batch:

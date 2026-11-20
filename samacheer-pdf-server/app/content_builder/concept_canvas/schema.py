@@ -41,7 +41,7 @@ TEMPLATE_STEP_FIELDS: Dict[str, Tuple[str, ...]] = {
 DAY_LIMITS = {"title": 40, "caption": 100, "left_title": 25, "right_title": 25, "center": 30}
 STEP_LIMITS = {"label": 25, "text": 80, "time": 20}
 MIN_STEPS, MAX_STEPS = 3, 6
-MAX_FORMULA = 120
+MAX_FORMULA = 160
 
 # ── Icons by group (same list as the contract doc) ──
 ICONS: Dict[str, Tuple[str, ...]] = {
@@ -68,6 +68,8 @@ sum int oint infty partial nabla to rightarrow leftarrow Rightarrow leftrightarr
 left right text mathrm mathbf vec overline bar hat dot ddot prime circ degree
 quad qquad log ln sin cos tan exp lim cdots ldots parallel perp angle
 implies iff Longrightarrow longrightarrow ll gg sim simeq equiv therefore because
+begin end mid lt gt boxed displaystyle tfrac
+gcd operatorname max min deg
 alpha beta gamma delta epsilon varepsilon zeta eta theta kappa lambda mu nu xi
 pi rho sigma tau phi varphi chi psi omega
 Gamma Delta Theta Lambda Xi Pi Sigma Phi Psi Omega
@@ -78,7 +80,7 @@ _RELATION = re.compile(r"=|<|>|\\(propto|approx|leq|geq|le|ge|neq|ne|equiv|sim|s
 _TEXT_ARG = re.compile(r"\\text\{([^{}]*)\}")
 
 
-def check_formula(f: str) -> List[str]:
+def check_formula(f: str, text_words: int = 1, need_relation: bool = True) -> List[str]:
     probs: List[str] = []
     if "$" in f:
         probs.append("formula contains '$' (send bare LaTeX)")
@@ -95,10 +97,10 @@ def check_formula(f: str) -> List[str]:
     unknown = sorted({c for c in _CMD.findall(f) if c not in LATEX_COMMANDS})
     if unknown:
         probs.append(f"formula uses unsupported commands: {unknown}")
-    if not _RELATION.search(f):
+    if need_relation and not _RELATION.search(f):
         probs.append("formula is not a relation (needs =, \\propto, <, > …); put words in text")
     for t in _TEXT_ARG.findall(f):
-        if len(t.split()) > 1:
+        if len(t.split()) > text_words:
             probs.append(f"formula has words in \\text{{{t}}}; put words in text")
     return probs
 
@@ -168,7 +170,8 @@ def validate_day(day: Dict, profile: SubjectProfile) -> Tuple[List[str], List[st
                 s.pop("formula")
                 warns.append(f"{tag} empty formula removed")
             else:
-                probs += [f"{tag} {p}" for p in check_formula(s["formula"])]
+                probs += [f"{tag} {p}" for p in check_formula(
+                    s["formula"], profile.formula_text_words, profile.formula_relation)]
 
         if "icon" in s and s["icon"] not in icons:
             warns.append(f"{tag} icon {s['icon']!r} not in list, removed")

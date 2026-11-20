@@ -50,6 +50,8 @@ class SubjectProfile:
     allowed_templates: Tuple[str, ...] = ALL_TEMPLATES
     icon_groups: Tuple[str, ...] = ("general",)   # icon sets from schema.ICONS
     formulas: bool = True                  # allow the LaTeX "formula" field
+    formula_text_words: int = 1            # max words inside one \text{} in a formula
+    formula_relation: bool = True          # a formula must contain =, <, \propto …
     skip_review_days: bool = True          # no Claude call for revision/assessment days
     extra_rules: str = ""                  # subject rules for the writer + reviewer, each "\n- …"
     review_rules: str = ""                 # extra rules for the reviewer only, each "\n- …"
