@@ -8814,13 +8814,13 @@
       "exam_ref": "NEET (UG) 2026 · Code 50 · Q163",
       "q_no": 163,
       "subject": "biology",
-      "unit_id": "bio_u09",
-      "topic": "Principles and process of biotechnology: recombinant DNA technology",
+      "unit_id": "bio_u10",
+      "topic": "Population attributes: growth, birth rate, death rate and age distribution",
       "type": "assertion_reason",
       "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. In the light of the above statements, choose the most appropriate answer from the options given below:",
       "statements": {
-        "A": "In recombinant DNA technology, lysozyme is used for disrupting bacterial cells while cellulase is for plant cells.",
-        "R": "Isolation of genetic material needs disruption of cells."
+        "A": "The logistic growth model of populations is considered more realistic than the exponential growth model.",
+        "R": "Resources are finite."
       },
       "match_lists": null,
       "options": [
@@ -8838,19 +8838,18 @@
       ],
       "status": "normal",
       "solution": {
-        "key_concept": "In rDNA technology, DNA is isolated by first breaking open cells with enzymes specific to their wall: lysozyme for bacterial cells, cellulase for plant cells and chitinase for fungal cells.",
+        "key_concept": "Because resources in nature are finite, population growth is eventually limited by carrying capacity $K$, so the logistic (Verhulst–Pearl) model, $\\frac{dN}{dt} = rN\\left(\\frac{K-N}{K}\\right)$, describes real populations better than exponential growth, $\\frac{dN}{dt} = rN$.",
         "steps": [
-          "Recall the first step of rDNA technology: the DNA lies inside membranes and cell walls, so cells must be broken open (lysed) before DNA can be released.",
-          "Judge Assertion A: the bacterial cell wall is made of peptidoglycan, which lysozyme hydrolyses. The plant cell wall is mainly cellulose, which cellulase digests. A is correct.",
-          "Judge Reason R: genetic material cannot be isolated from intact cells, so cell disruption is a necessary first step. R is correct.",
-          "Check the link: these enzymes are used precisely because DNA isolation requires the cells to be disrupted. R therefore explains why A is done.",
-          "After lysis, RNA is removed by ribonuclease and proteins by protease. Purified DNA is then precipitated by adding chilled ethanol.",
-          "Conclusion: both A and R are true, and R correctly explains A."
+          "Exponential model: $\\frac{dN}{dt} = rN$ assumes unlimited resources. This gives a J-shaped curve, with $N$ rising without any limit.",
+          "Logistic model: $\\frac{dN}{dt} = rN\\left(\\frac{K-N}{K}\\right)$. As $N$ approaches $K$, the term $\\frac{K-N}{K}$ approaches $0$, so growth slows and levels off. This gives a sigmoid (S-shaped) curve.",
+          "Judge Assertion A: no population in nature has unlimited resources, so growth cannot stay exponential forever. The logistic model is therefore considered more realistic. A is correct.",
+          "Judge Reason R: resources such as food and space are finite. This causes competition among individuals and allows only the 'fittest' to survive and reproduce. R is correct.",
+          "Link R to A: finite resources are exactly what create the carrying capacity $K$, the factor that makes the logistic model realistic. So R correctly explains A."
         ],
         "final_answer": "Option (1): Both A and R are correct and R is the correct explanation of A",
-        "why_not_others": "Options (3) and (4) fail because both statements are factually true. Option (2) fails because R states the very purpose for which lysozyme and cellulase are used, so it does explain A.",
-        "common_trap": "Students often swap the enzymes (for example, chitinase for plants or cellulase for bacteria), or reject R as too general to count as an explanation.",
-        "time_saving_tip": "Memorise the trio 'Bacteria–lysozyme, Plant–cellulase, Fungus–chitinase'. A general 'why' statement like R usually explains A when A describes a step serving that purpose.",
+        "why_not_others": "Option (2) fails because finite resources are the very basis of carrying capacity, which is what makes the logistic model realistic, so R does explain A. Options (3) and (4) fail because each one wrongly marks a true statement as false.",
+        "common_trap": "Students sometimes treat R as a general true fact that is unrelated to A and pick option (2), missing that finite resources directly define $K$ in the logistic equation.",
+        "time_saving_tip": "Recall the textbook line: 'since resources are finite and become limiting sooner or later, the logistic growth model is considered more realistic.' A and R together form that single cause-and-effect sentence, so the answer is option (1).",
         "agrees_with_key": true,
         "key_check_note": null
       },
@@ -8858,7 +8857,59 @@
       "source_pages": [
         20
       ],
-      "out_of_syllabus": false
+      "out_of_syllabus": false,
+      "corrections": [
+        {
+          "field": "statements",
+          "index": null,
+          "old": {
+            "A": "In recombinant DNA technology, lysozyme is used for disrupting bacterial cells while cellulase is for plant cells.",
+            "R": "Isolation of genetic material needs disruption of cells."
+          },
+          "new": {
+            "A": "The logistic growth model of populations is considered more realistic than the exponential growth model.",
+            "R": "Resources are finite."
+          },
+          "note": "Source copy (PW retype) printed Q176 (rDNA) in place of Q163. Checked against the Aakash Code 50 copy (Questions & Answers, 21/06/2026). Real Q163 is the logistic growth Assertion-Reason; NTA answer (1) unchanged."
+        },
+        {
+          "field": "unit_id",
+          "index": null,
+          "old": "bio_u09",
+          "new": "bio_u10",
+          "note": "Real Q163 is ecology (population growth). Checked against the Aakash Code 50 copy (Questions & Answers, 21/06/2026)."
+        },
+        {
+          "field": "topic",
+          "index": null,
+          "old": "Principles and process of biotechnology: recombinant DNA technology",
+          "new": "Population attributes: growth, birth rate, death rate and age distribution",
+          "note": "Real Q163 is ecology (population growth). Checked against the Aakash Code 50 copy (Questions & Answers, 21/06/2026)."
+        },
+        {
+          "field": "solution",
+          "index": null,
+          "old": {
+            "key_concept": "In rDNA technology, DNA is isolated by first breaking open cells with enzymes specific to their wall: lysozyme for bacterial cells, cellulase for plant cells and chitinase for fungal cells.",
+            "steps": [
+              "Recall the first step of rDNA technology: the DNA lies inside membranes and cell walls, so cells must be broken open (lysed) before DNA can be released.",
+              "Judge Assertion A: the bacterial cell wall is made of peptidoglycan, which lysozyme hydrolyses. The plant cell wall is mainly cellulose, which cellulase digests. A is correct.",
+              "Judge Reason R: genetic material cannot be isolated from intact cells, so cell disruption is a necessary first step. R is correct.",
+              "Check the link: these enzymes are used precisely because DNA isolation requires the cells to be disrupted. R therefore explains why A is done.",
+              "After lysis, RNA is removed by ribonuclease and proteins by protease. Purified DNA is then precipitated by adding chilled ethanol.",
+              "Conclusion: both A and R are true, and R correctly explains A."
+            ],
+            "final_answer": "Option (1): Both A and R are correct and R is the correct explanation of A",
+            "why_not_others": "Options (3) and (4) fail because both statements are factually true. Option (2) fails because R states the very purpose for which lysozyme and cellulase are used, so it does explain A.",
+            "common_trap": "Students often swap the enzymes (for example, chitinase for plants or cellulase for bacteria), or reject R as too general to count as an explanation.",
+            "time_saving_tip": "Memorise the trio 'Bacteria–lysozyme, Plant–cellulase, Fungus–chitinase'. A general 'why' statement like R usually explains A when A describes a step serving that purpose.",
+            "agrees_with_key": true,
+            "key_check_note": null
+          },
+          "new": null,
+          "note": "Old solution was for the rDNA question (moved to Q176). Regenerate and blind-verify."
+        }
+      ]
     },
     {
       "q_id": "re_neet_2026_c50_q164",
@@ -9524,11 +9575,25 @@
       "answer": [
         1
       ],
-      "status": "hidden",
-      "solution": null,
-      "review_flags": [
-        "duplicate_of_q163"
-      ],
+      "status": "normal",
+      "solution": {
+        "key_concept": "In rDNA technology, DNA is isolated by first breaking open cells with enzymes specific to their wall: lysozyme for bacterial cells, cellulase for plant cells and chitinase for fungal cells.",
+        "steps": [
+          "Recall the first step of rDNA technology: the DNA lies inside membranes and cell walls, so cells must be broken open (lysed) before DNA can be released.",
+          "Judge Assertion A: the bacterial cell wall is made of peptidoglycan, which lysozyme hydrolyses. The plant cell wall is mainly cellulose, which cellulase digests. A is correct.",
+          "Judge Reason R: genetic material cannot be isolated from intact cells, so cell disruption is a necessary first step. R is correct.",
+          "Check the link: these enzymes are used precisely because DNA isolation requires the cells to be disrupted. R therefore explains why A is done.",
+          "After lysis, RNA is removed by ribonuclease and proteins by protease. Purified DNA is then precipitated by adding chilled ethanol.",
+          "Conclusion: both A and R are true, and R correctly explains A."
+        ],
+        "final_answer": "Option (1): Both A and R are correct and R is the correct explanation of A",
+        "why_not_others": "Options (3) and (4) fail because both statements are factually true. Option (2) fails because R states the very purpose for which lysozyme and cellulase are used, so it does explain A.",
+        "common_trap": "Students often swap the enzymes (for example, chitinase for plants or cellulase for bacteria), or reject R as too general to count as an explanation.",
+        "time_saving_tip": "Memorise the trio 'Bacteria–lysozyme, Plant–cellulase, Fungus–chitinase'. A general 'why' statement like R usually explains A when A describes a step serving that purpose.",
+        "agrees_with_key": true,
+        "key_check_note": null
+      },
+      "review_flags": [],
       "source_pages": [
         21
       ],
@@ -9538,8 +9603,40 @@
           "field": "status",
           "index": null,
           "old": "hidden",
-          "new": "hidden",
-          "note": "Source copy (PW retype) printed Q163 twice. Real Q176 unknown until another copy is checked. Hidden from site until fixed."
+          "new": "normal",
+          "note": "Real Q176 is the rDNA Assertion-Reason; it is not a duplicate. Checked against the Aakash Code 50 copy (Questions & Answers, 21/06/2026). Shown again so the paper has all 180 questions."
+        },
+        {
+          "field": "review_flags",
+          "index": null,
+          "old": [
+            "duplicate_of_q163"
+          ],
+          "new": [],
+          "note": "duplicate_of_q163 flag no longer applies. Checked against the Aakash Code 50 copy (Questions & Answers, 21/06/2026)."
+        },
+        {
+          "field": "solution",
+          "index": null,
+          "old": null,
+          "new": {
+            "key_concept": "In rDNA technology, DNA is isolated by first breaking open cells with enzymes specific to their wall: lysozyme for bacterial cells, cellulase for plant cells and chitinase for fungal cells.",
+            "steps": [
+              "Recall the first step of rDNA technology: the DNA lies inside membranes and cell walls, so cells must be broken open (lysed) before DNA can be released.",
+              "Judge Assertion A: the bacterial cell wall is made of peptidoglycan, which lysozyme hydrolyses. The plant cell wall is mainly cellulose, which cellulase digests. A is correct.",
+              "Judge Reason R: genetic material cannot be isolated from intact cells, so cell disruption is a necessary first step. R is correct.",
+              "Check the link: these enzymes are used precisely because DNA isolation requires the cells to be disrupted. R therefore explains why A is done.",
+              "After lysis, RNA is removed by ribonuclease and proteins by protease. Purified DNA is then precipitated by adding chilled ethanol.",
+              "Conclusion: both A and R are true, and R correctly explains A."
+            ],
+            "final_answer": "Option (1): Both A and R are correct and R is the correct explanation of A",
+            "why_not_others": "Options (3) and (4) fail because both statements are factually true. Option (2) fails because R states the very purpose for which lysozyme and cellulase are used, so it does explain A.",
+            "common_trap": "Students often swap the enzymes (for example, chitinase for plants or cellulase for bacteria), or reject R as too general to count as an explanation.",
+            "time_saving_tip": "Memorise the trio 'Bacteria–lysozyme, Plant–cellulase, Fungus–chitinase'. A general 'why' statement like R usually explains A when A describes a step serving that purpose.",
+            "agrees_with_key": true,
+            "key_check_note": null
+          },
+          "note": "Solution written and blind-verified for this rDNA question, moved here from Q163."
         }
       ]
     },

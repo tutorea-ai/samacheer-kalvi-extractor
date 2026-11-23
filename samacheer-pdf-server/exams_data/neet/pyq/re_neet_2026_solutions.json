@@ -2831,19 +2831,18 @@
       "_model": "claude-opus-5-5"
     },
     "163": {
-      "key_concept": "In rDNA technology, DNA is isolated by first breaking open cells with enzymes specific to their wall: lysozyme for bacterial cells, cellulase for plant cells and chitinase for fungal cells.",
+      "key_concept": "Because resources in nature are finite, population growth is eventually limited by carrying capacity $K$, so the logistic (Verhulst–Pearl) model, $\\frac{dN}{dt} = rN\\left(\\frac{K-N}{K}\\right)$, describes real populations better than exponential growth, $\\frac{dN}{dt} = rN$.",
       "steps": [
-        "Recall the first step of rDNA technology: the DNA lies inside membranes and cell walls, so cells must be broken open (lysed) before DNA can be released.",
-        "Judge Assertion A: the bacterial cell wall is made of peptidoglycan, which lysozyme hydrolyses. The plant cell wall is mainly cellulose, which cellulase digests. A is correct.",
-        "Judge Reason R: genetic material cannot be isolated from intact cells, so cell disruption is a necessary first step. R is correct.",
-        "Check the link: these enzymes are used precisely because DNA isolation requires the cells to be disrupted. R therefore explains why A is done.",
-        "After lysis, RNA is removed by ribonuclease and proteins by protease. Purified DNA is then precipitated by adding chilled ethanol.",
-        "Conclusion: both A and R are true, and R correctly explains A."
+        "Exponential model: $\\frac{dN}{dt} = rN$ assumes unlimited resources. This gives a J-shaped curve, with $N$ rising without any limit.",
+        "Logistic model: $\\frac{dN}{dt} = rN\\left(\\frac{K-N}{K}\\right)$. As $N$ approaches $K$, the term $\\frac{K-N}{K}$ approaches $0$, so growth slows and levels off. This gives a sigmoid (S-shaped) curve.",
+        "Judge Assertion A: no population in nature has unlimited resources, so growth cannot stay exponential forever. The logistic model is therefore considered more realistic. A is correct.",
+        "Judge Reason R: resources such as food and space are finite. This causes competition among individuals and allows only the 'fittest' to survive and reproduce. R is correct.",
+        "Link R to A: finite resources are exactly what create the carrying capacity $K$, the factor that makes the logistic model realistic. So R correctly explains A."
       ],
       "final_answer": "Option (1): Both A and R are correct and R is the correct explanation of A",
-      "why_not_others": "Options (3) and (4) fail because both statements are factually true. Option (2) fails because R states the very purpose for which lysozyme and cellulase are used, so it does explain A.",
-      "common_trap": "Students often swap the enzymes (for example, chitinase for plants or cellulase for bacteria), or reject R as too general to count as an explanation.",
-      "time_saving_tip": "Memorise the trio 'Bacteria–lysozyme, Plant–cellulase, Fungus–chitinase'. A general 'why' statement like R usually explains A when A describes a step serving that purpose.",
+      "why_not_others": "Option (2) fails because finite resources are the very basis of carrying capacity, which is what makes the logistic model realistic, so R does explain A. Options (3) and (4) fail because each one wrongly marks a true statement as false.",
+      "common_trap": "Students sometimes treat R as a general true fact that is unrelated to A and pick option (2), missing that finite resources directly define $K$ in the logistic equation.",
+      "time_saving_tip": "Recall the textbook line: 'since resources are finite and become limiting sooner or later, the logistic growth model is considered more realistic.' A and R together form that single cause-and-effect sentence, so the answer is option (1).",
       "agrees_with_key": true,
       "key_check_note": null,
       "_model": "claude-opus-5-5"
@@ -3054,6 +3053,24 @@
       "why_not_others": "Option (2) would require dominance to be unrelated to the uniform tall F1, but dominance is exactly what causes it. Options (3) and (4) fail because both statements are factually correct.",
       "common_trap": "Students mix up F1 with F2 and expect a $3:1$ tall-to-dwarf ratio. That ratio appears only in F2, after the $Tt \\times Tt$ self-cross.",
       "time_saving_tip": "Ask whether R answers 'why A?'. Here 'Why is the F1 all tall?' is answered by 'Because tall is dominant', so pick option (1) directly.",
+      "agrees_with_key": true,
+      "key_check_note": null,
+      "_model": "claude-opus-5-5"
+    },
+    "176": {
+      "key_concept": "In rDNA technology, DNA is isolated by first breaking open cells with enzymes specific to their wall: lysozyme for bacterial cells, cellulase for plant cells and chitinase for fungal cells.",
+      "steps": [
+        "Recall the first step of rDNA technology: the DNA lies inside membranes and cell walls, so cells must be broken open (lysed) before DNA can be released.",
+        "Judge Assertion A: the bacterial cell wall is made of peptidoglycan, which lysozyme hydrolyses. The plant cell wall is mainly cellulose, which cellulase digests. A is correct.",
+        "Judge Reason R: genetic material cannot be isolated from intact cells, so cell disruption is a necessary first step. R is correct.",
+        "Check the link: these enzymes are used precisely because DNA isolation requires the cells to be disrupted. R therefore explains why A is done.",
+        "After lysis, RNA is removed by ribonuclease and proteins by protease. Purified DNA is then precipitated by adding chilled ethanol.",
+        "Conclusion: both A and R are true, and R correctly explains A."
+      ],
+      "final_answer": "Option (1): Both A and R are correct and R is the correct explanation of A",
+      "why_not_others": "Options (3) and (4) fail because both statements are factually true. Option (2) fails because R states the very purpose for which lysozyme and cellulase are used, so it does explain A.",
+      "common_trap": "Students often swap the enzymes (for example, chitinase for plants or cellulase for bacteria), or reject R as too general to count as an explanation.",
+      "time_saving_tip": "Memorise the trio 'Bacteria–lysozyme, Plant–cellulase, Fungus–chitinase'. A general 'why' statement like R usually explains A when A describes a step serving that purpose.",
       "agrees_with_key": true,
       "key_check_note": null,
       "_model": "claude-opus-5-5"
