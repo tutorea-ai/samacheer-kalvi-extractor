@@ -81,7 +81,6 @@ SUBJECTS = {
         "biochemistry": ("biochemistry", {"en": "Biochemistry", "ta": "உயிர் வேதியியல்"}),
         "microbiology": ("microbiology", {"en": "Microbiology", "ta": "நுண்ணுயிரியல்"}),
         "computerscience": ("computer-science", {"en": "Computer Science", "ta": "கணினி அறிவியல்"}),
-        "computerapplications": ("computer-applications", {"en": "Computer Applications", "ta": "கணினிப் பயன்பாடுகள்"}),
         # Commerce
         "accountancy": ("accountancy", {"en": "Accountancy", "ta": "கணக்குப்பதிவியல்"}),
         "commerce": ("commerce", {"en": "Commerce", "ta": "வணிகவியல்"}),
@@ -89,6 +88,7 @@ SUBJECTS = {
         "businessmathsandstatistics": ("business-maths-and-statistics",
                                        {"en": "Business Maths and Statistics", "ta": "வணிகக் கணிதம் மற்றும் புள்ளியியல்"}),
         "statistics": ("statistics", {"en": "Statistics", "ta": "புள்ளியியல்"}),
+        "computerapplications": ("computer-applications", {"en": "Computer Applications", "ta": "கணினிப் பயன்பாடுகள்"}),
         # Arts
         "history": ("history", {"en": "History", "ta": "வரலாறு"}),
         "geography": ("geography", {"en": "Geography", "ta": "புவியியல்"}),
@@ -103,7 +103,43 @@ SUBJECTS = {
     },
 }
 
+# Optional subject groups per exam, in display order: (id, titles, member slugs in order).
+# An exam with groups must place every one of its subjects in exactly one group
+# (checked at import, before anything runs). An exam without groups stays flat.
+GROUPS = {
+    "hsc": [
+        ("languages", {"en": "Languages", "ta": "மொழிகள்"},
+         ["tamil", "advanced-tamil", "english", "communicative-english"]),
+        ("science", {"en": "Science", "ta": "அறிவியல்"},
+         ["maths", "physics", "chemistry", "biology", "botany", "zoology",
+          "biochemistry", "microbiology", "computer-science"]),
+        ("commerce", {"en": "Commerce", "ta": "வணிகவியல்"},
+         ["accountancy", "commerce", "economics", "business-maths-and-statistics",
+          "statistics", "computer-applications"]),
+        ("arts", {"en": "Arts", "ta": "கலை"},
+         ["history", "geography", "political-science", "ethics-and-indian-culture"]),
+        ("vocational", {"en": "Vocational", "ta": "தொழிற்கல்வி"},
+         ["home-science", "nutrition-and-dietetics", "general-nursing"]),
+    ],
+}
+
+
+def _check_groups() -> None:
+    for exam, groups in GROUPS.items():
+        slugs = [slug for slug, _ in SUBJECTS[exam].values()]
+        placed = [s for _, _, members in groups for s in members]
+        unknown = sorted(set(placed) - set(slugs))
+        twice = sorted({s for s in placed if placed.count(s) > 1})
+        missing = [s for s in slugs if s not in placed]
+        if unknown or twice or missing:
+            raise RuntimeError(f"GROUPS['{exam}'] is wrong: unknown {unknown}, "
+                               f"in two groups {twice}, in no group {missing}")
+
+
+_check_groups()
+
 SESSIONS = ("march",)  # supplementary later: add "supplementary" here
+FILE_MODE = 0o644  # readable by a Node process running as another user
 FILE_RE = re.compile(r"^(?P<subject>[A-Za-z]+)_Q_paper_(?P<tag>[A-Za-z0-9]+)_(?P<year>\d{4})\.pdf$")
 
 
@@ -186,14 +222,19 @@ def build_catalog(root: Path) -> dict:
     base = root / FOLDER
     exams = []
     for exam, info in EXAMS.items():
-        order = {slug: i for i, (slug, _) in enumerate(SUBJECTS[exam].values())}
         titles = {slug: t for slug, t in SUBJECTS[exam].values()}
+        groups = GROUPS.get(exam, [])
+        group_of = {s: gid for gid, _, members in groups for s in members}
+        if groups:  # display order: group order, then member order within the group
+            order = {s: i for i, s in enumerate(s for _, _, members in groups for s in members)}
+        else:
+            order = {slug: i for i, (slug, _) in enumerate(SUBJECTS[exam].values())}
         papers = []
         for pdf in sorted((base / exam).glob(f"*/*/*/{PDF_NAME}")):
             year_s, session, slug = pdf.parts[-4], pdf.parts[-3], pdf.parts[-2]
             if not year_s.isdigit() or session not in SESSIONS or slug not in titles:
                 raise CatalogError(f"unexpected folder on disk: {pdf.relative_to(base)}")
-            papers.append({
+            paper = {
                 "year": int(year_s),
                 "session": session,
                 "subject": slug,
@@ -201,9 +242,16 @@ def build_catalog(root: Path) -> dict:
                 "pdf": pdf.relative_to(base).as_posix(),
                 "pages": _pdf_pages(pdf),
                 "size_kb": round(pdf.stat().st_size / 1024),
-            })
+            }
+            if groups:
+                paper["group"] = group_of[slug]
+            papers.append(paper)
         papers.sort(key=lambda p: (-p["year"], SESSIONS.index(p["session"]), order[p["subject"]]))
-        exams.append({"exam": exam, "class": info["class"], "title": info["title"], "papers": papers})
+        entry = {"exam": exam, "class": info["class"], "title": info["title"]}
+        if groups:
+            entry["groups"] = [{"id": gid, "title": t} for gid, t, _ in groups]
+        entry["papers"] = papers
+        exams.append(entry)
     return {
         "module": MODULE,
         "version": VERSION,
@@ -219,6 +267,7 @@ def _write_atomic(path: Path, data: bytes) -> None:
     try:
         with os.fdopen(fd, "wb") as fh:
             fh.write(data)
+        os.chmod(tmp, FILE_MODE)  # mkstemp creates 0600; set before the rename so the file is never 0600
         os.replace(tmp, path)
     except BaseException:
         if os.path.exists(tmp):
@@ -239,6 +288,8 @@ def run(src_dirs: list[Path], data_root: Path, session: str = "march", dry_run: 
         print(f"  {action:6} {item['src'].name:42} -> {FOLDER}/{item['rel']}  ({item['pages']} pages)")
         if same:
             unchanged += 1
+            if not dry_run:
+                os.chmod(target, FILE_MODE)  # repairs PDFs written as 0600 by earlier runs
         elif not dry_run:
             _write_atomic(target, item["src"].read_bytes())
             copied += 1
