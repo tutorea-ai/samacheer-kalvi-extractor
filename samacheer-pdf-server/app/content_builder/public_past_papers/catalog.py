@@ -66,8 +66,12 @@ SUBJECTS = {
         "socialscience": ("social-science", {"en": "Social Science", "ta": "சமூக அறிவியல்"}),
     },
     "hsc": {
+        # Languages
         "tamil": ("tamil", {"en": "Tamil", "ta": "தமிழ்"}),
+        "advancedtamil": ("advanced-tamil", {"en": "Advanced Tamil", "ta": "சிறப்புத் தமிழ்"}),
         "english": ("english", {"en": "English", "ta": "ஆங்கிலம்"}),
+        "communicativeenglish": ("communicative-english", {"en": "Communicative English", "ta": "தொடர்பு ஆங்கிலம்"}),
+        # Science
         "maths": ("maths", {"en": "Maths", "ta": "கணிதம்"}),
         "physics": ("physics", {"en": "Physics", "ta": "இயற்பியல்"}),
         "chemistry": ("chemistry", {"en": "Chemistry", "ta": "வேதியியல்"}),
@@ -75,6 +79,27 @@ SUBJECTS = {
         "botany": ("botany", {"en": "Botany", "ta": "தாவரவியல்"}),
         "zoology": ("zoology", {"en": "Zoology", "ta": "விலங்கியல்"}),
         "biochemistry": ("biochemistry", {"en": "Biochemistry", "ta": "உயிர் வேதியியல்"}),
+        "microbiology": ("microbiology", {"en": "Microbiology", "ta": "நுண்ணுயிரியல்"}),
+        "computerscience": ("computer-science", {"en": "Computer Science", "ta": "கணினி அறிவியல்"}),
+        "computerapplications": ("computer-applications", {"en": "Computer Applications", "ta": "கணினிப் பயன்பாடுகள்"}),
+        # Commerce
+        "accountancy": ("accountancy", {"en": "Accountancy", "ta": "கணக்குப்பதிவியல்"}),
+        "commerce": ("commerce", {"en": "Commerce", "ta": "வணிகவியல்"}),
+        "economics": ("economics", {"en": "Economics", "ta": "பொருளியல்"}),
+        "businessmathsandstatistics": ("business-maths-and-statistics",
+                                       {"en": "Business Maths and Statistics", "ta": "வணிகக் கணிதம் மற்றும் புள்ளியியல்"}),
+        "statistics": ("statistics", {"en": "Statistics", "ta": "புள்ளியியல்"}),
+        # Arts
+        "history": ("history", {"en": "History", "ta": "வரலாறு"}),
+        "geography": ("geography", {"en": "Geography", "ta": "புவியியல்"}),
+        "politicalscience": ("political-science", {"en": "Political Science", "ta": "அரசியல் அறிவியல்"}),
+        "ethicsandindianculture": ("ethics-and-indian-culture",
+                                   {"en": "Ethics and Indian Culture", "ta": "அறவியலும் இந்தியப் பண்பாடும்"}),
+        # Vocational
+        "homescience": ("home-science", {"en": "Home Science", "ta": "மனையியல்"}),
+        "nutritionanddietetics": ("nutrition-and-dietetics",
+                                  {"en": "Nutrition and Dietetics", "ta": "ஊட்டச்சத்து மற்றும் உணவுமுறையியல்"}),
+        "generalnursing": ("general-nursing", {"en": "General Nursing", "ta": "பொது செவிலியம்"}),
     },
 }
 
